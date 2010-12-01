@@ -1,0 +1,198 @@
+
+/* style/kiyuko.css
+ * Style component for <drachlyznardh.altervista.org>
+ * Copyright (C) 2009  DrachLyznardh <drachlyznardh@roundhousecode.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+@import "common.css";
+
+div#main {
+
+	background: white;
+
+    font-family: 'Bistream Vera Sans', sans-serif;
+	font-size: 0.9em;
+}
+
+div#head {
+
+	text-align: left;
+}
+
+h1#title {
+
+	padding: 0.3em;
+	margin: 0px;
+
+	background: #b8d4f3;
+	border: 1px dotted gray;
+}
+
+p#home {
+
+	padding: 0.3em;
+	margin: 0px;
+
+	border-top: 1px dotted gray;
+	border-left: 1px dotted gray;
+	border-right: 1px dotted gray;
+}
+
+p#subtitle {
+
+	padding: 0.3em;
+	margin: 0px;
+
+	border-left: 1px dotted gray;
+	border-right: 1px dotted gray;
+	border-bottom: 1px dotted gray;
+}
+
+div#foot {
+
+	font-size: 0.7em;
+	text-align: center;
+}
+
+div#side {
+
+	border-right: 1px dotted gray;
+}
+
+div.wide {
+
+	margin: 0px;
+	padding: 0px;
+}
+
+div.next {
+
+	text-align: left;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.top {
+
+	text-align: center;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.prev {
+
+	text-align: right;
+
+	float: left;
+	float: left;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.darkbox {
+
+	background: white;
+	
+	padding: 0px;
+	margin: 0px;
+	border: solid 5px white;
+}
+
+div.clearbox {
+
+	background: transparent;
+	
+	border: solid 5px transparent;
+}
+
+div.nav div.clearbox {
+
+	border-left: 1px dotted gray;
+}
+
+div#foot div.darkbox,
+div#container div.wide div.darkbox {
+
+	border-top: 1px dotted gray;
+}
+
+div.section {
+
+	background: transparent;
+	border: solid 2px white;
+
+	margin-top: 5px;
+}
+
+div.section:first-child {
+
+	margin-top: 0px;
+}
+
+div.section p {
+
+	text-align: justify;
+	text-indent: 20px;
+
+	padding: 0px 2px 0px 2px;
+	margin: 2px 5px 2px 2px;
+}
+
+div.clearbox h2 {
+
+	background: transparent;
+
+	border: 0;
+	border-bottom: 1px dotted gray;
+	
+	padding: 3px 2px 3px 15px;
+	margin: 2px 5px 2px 0px;
+}
+
+a {
+
+	text-decoration: none;
+
+	color: #3e7cc9;
+}
+
+a:hover {
+
+	text-decoration: underline;
+}
+
+div.dream, div.dream_1, div.dream_2, div.dream_3, div.inside, div.outside {
+
+	background-color: #ffffff;
+	border: solid 2px #ffffff;
+
+}
+
+.simak, .a_simak, .sacomne, .ci, .togan, .simadran {
+
+	background-color: #aaaaaa;
+	padding: 1px;
+}
+
+.spoiler {
+
+	background-color: black;
+}
+

@@ -1,0 +1,170 @@
+
+/* style/raw.css
+ * Style component for <drachlyznardh.altervista.org>
+ * Copyright (C) 2009  DrachLyznardh <drachlyznardh@roundhousecode.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+@import "common.css";
+
+div#main {
+
+	background: #121212;
+
+	font: 8pt/10pt "Georgia", sans-serif;
+}
+
+form table {
+
+	font: 8pt/10pt "Georgia", sans-serif;
+}
+
+div#head,
+div#foot {
+
+	font: 7pt/9pt Georgia;
+	text-align: center;
+}
+
+div#head h1 {
+
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+div.next {
+
+	text-align: left;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.top {
+
+	text-align: center;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.prev {
+
+	text-align: right;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.darkbox {
+
+	background-color: #666666;
+
+	border: solid 5px white;
+}
+
+div.clearbox {
+
+	background-color: transparent;
+	
+	border: solid 5px transparent;
+}
+
+div.section {
+
+	background-color: #666666;
+	border: solid 2px white;
+
+	margin-top: 5px;
+}
+
+div.section:first-child {
+
+	margin-top: 0px;
+}
+
+div.section p {
+
+	text-align: justify;
+	text-indent: 20px;
+
+	padding: 0px 2px 0px 2px;
+	margin: 2px 2px 2px 2px;
+}
+
+div.clearbox h2 {
+
+	background-color: #444444;
+	border: solid 2px white;
+	
+	padding: 3px 2px 3px 15px;
+	margin: 2px 2px 2px -5px;
+}
+
+ul.tabs {
+
+	margin: 4px 0px -2px 2px;
+	padding: 0px;
+}
+
+li.tab {
+
+	background-color: #444444
+	padding: 5px 2px 5px 2px;
+	border: 2px white solid;
+	border-bottom: 0px;
+
+	cursor: pointer;
+	display: inline;
+}
+
+form.big {
+
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+
+a {
+
+	text-decoration: none;
+
+	color: #eeeeee;
+}
+
+a:hover {
+
+	text-decoration: underline;
+}
+
+div.dream, div.dream_1, div.dream_2, div.dream_3, div.inside, div.outside,
+div.intro, div.verse {
+
+	background-color: #555555;
+	border: solid 2px #ffffff;
+
+}
+
+.dark {
+
+	background-color: #444444;
+}
+
+.spoiler {
+
+	background-color: black;
+}
+

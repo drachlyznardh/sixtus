@@ -1,0 +1,202 @@
+
+/* style/common.css
+ * Style component for <drachlyznardh.altervista.org>
+ * Copyright (C) 2009  DrachLyznardh <drachlyznardh@roundhousecode.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+@import "db.css";
+
+div#main {
+
+	position: fixed;
+
+	width: 100%;
+	height: 100%;
+	
+	left: 0;
+	top: 0;
+}
+
+div#head,
+div#foot {
+
+	width: 100%;
+
+	float: none;
+	clear: both;
+
+	overflow: hidden;
+}
+
+div#side {
+
+	position: fixed;
+	
+	width: 19%;
+	height: 98%;
+	
+	left: 1%;
+	right: 80%;
+	top: 1%;
+	
+	overflow: auto;
+}
+
+div#nav {
+
+	overflow: auto;
+}
+
+div#style {
+
+	overflow: hidden;
+}
+
+div#logger {
+
+	overflow: hidden;
+}
+
+div#container {
+
+	position: fixed;
+
+	width: 78%;
+	height: 98%;
+	
+	left: 21%;
+	right: 1%;
+	top: 1%;
+	
+	overflow: auto;
+}
+
+div.content {
+
+	width: 75%;
+
+	float: left;
+	clear: left;
+}
+
+div.nav {
+
+	width: 25%;
+
+	float: right;
+	clear: right;
+}
+
+div.wide {
+
+	width: 100%;
+	
+	float: none;
+	clear: both;
+}
+
+div.next {
+
+	width: 33%;
+
+	text-align: left;
+
+	float: right;
+	clear: right;
+}
+
+div.top {
+
+	text-align: center;
+}
+
+div.prev {
+
+	width: 33%;
+
+	text-align: right;
+
+	float: left;
+	float: left;
+}
+
+div.section:first-child {
+
+	margin-top: 0px;
+}
+
+img.valid {
+
+	border: 0;
+	
+	width: 88px;
+	height: 31px;
+}
+
+p#home,
+p#subtitle,
+p#copyright,
+p#good_source {
+
+	padding-top: 3px;
+	padding-bottom: 3px;
+	
+	margin: 0px;
+}
+
+div.dream, div.dream_1, div.dream_2, div.dream_3, div.inside, div.outside {
+
+	padding: 3px 2px 3px 15px;
+	margin: 2px 2px 2px -5px;
+
+}
+
+div.intro, div.verse {
+
+	padding: 3px 2px 3px 15px;
+	margin: 2px -5px 2px 2px;
+}
+
+table.volume {
+
+	width: 100%;
+}
+
+td.dash {
+
+	width: 3%;
+	
+	text-align: center;
+}
+
+td.chno {
+
+	width: 15%;
+
+	text-align: right;
+}
+
+td.chti {
+
+	text-align: left;
+}
+
+.spoiler:hover {
+
+	background-color: transparent;
+}
+
