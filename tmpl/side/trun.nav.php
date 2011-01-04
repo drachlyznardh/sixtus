@@ -1,33 +1,38 @@
 
 				<div class="section">
 					<h2>Tru Naluten</h2>
-					<p><?php $s->pilink ('Tru/Naluten/', 'Indice'); ?></p>
-					<p><?php $s->pilink ('Tru/Naluten/Personaggi/', 'Personaggi'); ?></p>
+					<p><?=$s->ilink('Tru/Naluten/', 'Indice'); ?></p>
+					<p><?=$s->ilink('Tru/Naluten/Personaggi/', 'Personaggi'); ?></p>
 				</div>
 				
 				<div class="section">
 					<h2>Volume I</h2>
-					<p>I &ndash; <?php $s->pilink ('Tru/Naluten/I/', 'Camminavo'); ?></p>
-					<p>II &ndash; <?php $s->pilink ('Tru/Naluten/II/', 'Sacomne'); ?></p>
-					<p>III &ndash; <?php $s->pilink ('Tru/Naluten/III/', 'Il mio nome'); ?></p>
-					<p>IV &ndash; <?php $s->pilink ('Tru/Naluten/IV/', 'Le altre voci'); ?></p>
-					<p>V &ndash; <?php $s->pilink ('Tru/Naluten/V/', 'La mia faccia'); ?></p>
-					<p>VI &ndash; <?php $s->pilink ('Tru/Naluten/VI/', 'L&apos;altro me'); ?></p>
-					<p>VII &ndash; <?php $s->pilink ('Tru/Naluten/VII/', 'La meta'); ?></p>
-					<p>VIII &ndash;<?php $s->pilink ('Tru/Naluten/VIII/', 'La Porta'); ?></p>
-					<p>IX &ndash; <?php $s->pilink ('Tru/Naluten/IX/', 'La fine del mondo'); ?></p>
+					<ol style="list-style-type: upper-roman">
+						<li><?=$s->ilink('Tru/Naluten/I/', 'Camminavo')?></li>
+						<li><?=$s->ilink('Tru/Naluten/II/', 'Sacomne')?></li>
+						<li><?=$s->ilink('Tru/Naluten/III/', 'Il mio nome')?></li>
+						<li><?=$s->ilink('Tru/Naluten/IV/', 'Le altre voci')?></li>
+						<li><?=$s->ilink('Tru/Naluten/V/', 'La mia faccia')?></li>
+						<li><?=$s->ilink('Tru/Naluten/VI/', 'L&apos;altro me')?></li>
+						<li><?=$s->ilink('Tru/Naluten/VII/', 'La meta')?></li>
+						<li><?=$s->ilink('Tru/Naluten/VIII/', 'La Porta')?></li>
+						<li><?=$s->ilink('Tru/Naluten/IX/', 'La fine del mondo')?></li>
+					</ol>
 				</div>
 				
 				<div class="section">
 					<h2>Volume II</h2>
-					<p>X &ndash; <?php $s->pilink ('Tru/Naluten/X/', 'La trovatella'); ?></p>
-					<p>XI &ndash; <?php $s->pilink ('Tru/Naluten/XI/', 'Abbandono &amp; recupero'); ?></p>
-					<p>XII &ndash; <?php $s->pilink ('Tru/Naluten/XII/', 'Conversazione'); ?></p>
-					<p>XIII &ndash; <?php $s->pilink ('Tru/Naluten/XIII/', 'Dubbio'); ?></p>
-					<p>XIV &ndash; <?php $s->pilink ('Tru/Naluten/XIV/', 'Proposta'); ?></p>
-					<p>XV &ndash; <?php $s->pilink ('Tru/Naluten/XV/', 'La fuga'); ?></p>
-					<p>XVI &ndash; <?php $s->pilink ('Tru/Naluten/XVI/', 'La sua gente'); ?></p>
-					<p>XVII &ndash; <?php $s->pilink ('Tru/Naluten/XVII/', 'Battaglia navale'); ?></p>
-					<p>XVIII &ndash; <?php $s->pilink ('Tru/Naluten/XVIII/', 'Duello'); ?></p>
+					<ol start="10" style="list-style-type: upper-roman">
+						<li><?=$s->ilink('Tru/Naluten/X/', 'La trovatella'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XI/', 'Abbandono &amp; recupero'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XII/', 'Conversazione'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XIII/', 'Dubbio'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XIV/', 'Proposta'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XV/', 'La fuga'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XVI/', 'La sua gente'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XVII/', 'Battaglia navale'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XVIII/', 'Duello'); ?></li>
+						<li><?=$s->ilink('Tru/Naluten/XIX/', 'Lezione')?></li>
+					</ol>
 				</div>
 				

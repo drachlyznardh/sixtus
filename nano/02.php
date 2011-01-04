@@ -2,15 +2,11 @@
 
 	$page['title'] = 'Campeggio';
 	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 02';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 02';
-	$page['side'] = 'nano.nav.php';
 
 	$related['prev']['request'] = 'NaNoWriMo/01/';
 	$related['prev']['title'] = 'Capitolo 01';
 	$related['next']['request'] = 'NaNoWriMo/03/';
 	$related['next']['title'] = 'Capitolo 03';
-	$related['download']['request'] = '03.tex';
-	$related['download']['title'] = 'Capitolo 03';
 
 	function mkpage () {
 ?>

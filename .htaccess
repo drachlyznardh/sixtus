@@ -1,22 +1,5 @@
-<Files *.php>
-	Deny from All
-</Files>
-<Files d.php>
-	Allow from All
-</Files>
-<Files index.php>
-	Allow from All
-</Files>
 
-#Motore acceso
-RewriteEngine On
+ReWriteEngine On
+ReWriteBase /faiv/
 
-#Rewrite a partire dalla root-directory
-RewriteBase /faiv
-
-ErrorDocument 404 /faiv/d.php?uri=Not/Found/
-ErrorDocument 403 /faiv/d.php?uri=Not/Permitted/
-
-RewriteCond ${REQUEST_URI} !^d\.php$
-RewriteRule ^(.*)/$ d.php?uri=$1/ [L]
-
+RewriteRule ^.*$ d.php

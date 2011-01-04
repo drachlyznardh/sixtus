@@ -1,25 +1,21 @@
 <?php
 
 	$page['title'] = 'Campeggio';
-	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 02';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 02';
-	$page['side'] = 'nano.nav.php';
+	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte II &ndash; Capitolo 08';
 
-	$related['prev']['request'] = 'NaNoWriMo/01/';
-	$related['prev']['title'] = 'Capitolo 01';
-	$related['next']['request'] = 'NaNoWriMo/03/';
-	$related['next']['title'] = 'Capitolo 03';
-	$related['download']['request'] = '03.tex';
-	$related['download']['title'] = 'Capitolo 03';
+	$related['prev']['request'] = 'NaNoWriMo/07/';
+	$related['prev']['title'] = 'Capitolo 07';
+	$related['next']['request'] = 'NaNoWriMo/09/';
+	$related['next']['title'] = 'Capitolo 09';
 
 	function mkpage () {
 ?>
 
 <h2>La corsa</h2>
-</p><p>
-\first{Grazie a quella che poi chiamai `acquisizione', finii ben presto per
-saperne un sacco.}
-</p><p>
+<div class="intro"><p>
+Grazie a quella che poi chiamai `acquisizione', finii ben presto per
+saperne un sacco.
+</p></div><p>
 Soltanto in quel pomeriggio conobbi il contenuto di tutto quello che di stampato
 avevo in camera. Prima ogni libro scolastico, poi anche il resto.
 </p><p>
@@ -268,5 +264,6 @@ Ed erano soltanto le sei di mattina. Essendo sabato, probabilmente nessun altro
 si sarebbe alzato prima di un paio d'ore.
 </p><p>
 E fu così che capii quanto essere superiore possa essere noioso.
-</p><p>
 </p>
+
+<?php } ?>

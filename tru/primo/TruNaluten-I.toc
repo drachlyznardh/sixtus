@@ -1,0 +1,4 @@
+\select@language {italian}
+\vspace {-\cftbeforepartskip }
+\contentsline {part}{i\hspace {1em}}{5}{part.1}
+\contentsline {chapter}{\numberline {1}Camminavo}{7}{chapter.1}

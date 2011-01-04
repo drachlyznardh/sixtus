@@ -16,16 +16,21 @@
 		
 		public function complete ($author, $humour, $speech) {
 		
-			$first = $this->speakers[$author][0];
-			$last = $this->speakers[$author][1];
+			if (isset($this->speakers[$author])) {
+				$first = $this->speakers[$author][0];
+				$last = $this->speakers[$author][1];
+			} else {
+				$first = '';
+				$last = '';
+			}
 
 			$class = $author;
 			if ($humour != '') $class = "$class $humour";
 			
-			if ($this->show)
-				echo "$tab<p><a class=\"author\" href=\"Tru/Naluten/Personaggi/#$author\">$author</a>: <span class=\"$class\">&laquo;$first$speech$last&raquo;</span></p>\n";
+			if ($this->bounce)
+				echo "$this->tab<p><a class=\"author\" href=\"Tru/Naluten/Personaggi/#$author\">$author</a>: <span class=\"$class\">&laquo;$first$speech$last&raquo;</span></p>\n";
 			else
-				echo "$tab<p class=\"$class\">&laquo;$first$speech$last&raquo;</p>\n";
+				echo "$this->tab<p class=\"$class\">&laquo;$first$speech$last&raquo;</p>\n";
 		}
 
 		public function t ($meaning, $original) {
@@ -45,8 +50,13 @@
 		
 		public function inline ($author, $speech) {
 		
-			$first = $this->speakers[$author][0];
-			$last = $this->speakers[$author][1];
+			if (isset($this->speakers[$author])) {
+				$first = $this->speakers[$author][0];
+				$last = $this->speakers[$author][1];
+			} else {
+				$first = '';
+				$last = '';
+			}
 
 			echo ("<span class=\"$author\">&laquo;$first$speech$last&raquo;</span>");
 		}

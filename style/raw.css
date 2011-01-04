@@ -1,7 +1,9 @@
 
+@import "debug.css";
+
 /* style/raw.css
  * Style component for <drachlyznardh.altervista.org>
- * Copyright (C) 2009  DrachLyznardh <drachlyznardh@roundhousecode.com>
+ * Copyright (C) 2009-2010 DrachLyznardh <drachlyznardh@roundhousecode.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,25 +20,88 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-@import "common.css";
-
 div#main {
 
+	position: fixed;
+
+	width: 100%;
+	height: 100%;
+	
+	left: 0;
+	top: 0;
+
 	background: #121212;
-
 	font: 8pt/10pt "Georgia", sans-serif;
 }
 
-form table {
+div#head {
 
-	font: 8pt/10pt "Georgia", sans-serif;
-}
-
-div#head,
-div#foot {
+	position: fixed;
+	width: 100%;
+	height: 16%;
+	left: 0%;
+	top: 0%;
 
 	font: 7pt/9pt Georgia;
 	text-align: center;
+}
+
+div#foot {
+
+	position: fixed;
+	width: 100%;
+	height: 16%;
+	left: 0%;
+	top: 84%;
+
+	font: 7pt/9pt Georgia;
+	text-align: center;
+}
+
+div#container {
+
+	position: fixed;
+
+	width: 58%;
+	height: 64%;
+
+	top: 18%;
+	left: 21%;
+}
+
+div#fixed-nav {
+
+	position: fixed;
+
+	width: 19%;
+	height: 64%;
+
+	top: 18%;
+	left: 80%;
+
+	background-color: #121212;
+}
+
+div#side {
+
+	position: fixed;
+	
+	width: 19%;
+	height: 64%;
+	
+	left: 1%;
+	right: 80%;
+	top: 18%;
+	
+	overflow: auto;
+}
+
+div#fixed-nav,
+div#foot,
+div#head,
+div#container {
+
+	overflow: auto;
 }
 
 div#head h1 {
@@ -70,11 +135,12 @@ div.prev {
 	padding-bottom: 5px;
 }
 
-div.darkbox {
+div.wide {
 
-	background-color: #666666;
+	float: none;
+	clear: both;
 
-	border: solid 5px white;
+	border: 1px solid white;
 }
 
 div.clearbox {
@@ -84,10 +150,26 @@ div.clearbox {
 	border: solid 5px transparent;
 }
 
+div.content {
+
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+div.nav {
+
+	width: 25%;
+	float: right;
+	clear: right;
+}
+
 div.section {
 
 	background-color: #666666;
 	border: solid 2px white;
+	border-bottom-color: #aaaaaa;
+	border-right-color: #aaaaaa;
 
 	margin-top: 5px;
 }
@@ -110,6 +192,8 @@ div.clearbox h2 {
 
 	background-color: #444444;
 	border: solid 2px white;
+	border-bottom: solid 2px #aaaaaa;
+	border-right: solid 2px #aaaaaa;
 	
 	padding: 3px 2px 3px 15px;
 	margin: 2px 2px 2px -5px;
@@ -123,7 +207,7 @@ ul.tabs {
 
 li.tab {
 
-	background-color: #444444
+	background-color: #444444;
 	padding: 5px 2px 5px 2px;
 	border: 2px white solid;
 	border-bottom: 0px;
@@ -150,14 +234,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-div.dream, div.dream_1, div.dream_2, div.dream_3, div.inside, div.outside,
-div.intro, div.verse {
-
-	background-color: #555555;
-	border: solid 2px #ffffff;
-
-}
-
 .dark {
 
 	background-color: #444444;
@@ -166,5 +242,70 @@ div.intro, div.verse {
 .spoiler {
 
 	background-color: black;
+}
+
+div.next {
+
+	width: 33%;
+
+	text-align: left;
+
+	float: right;
+	clear: right;
+}
+
+div.top {
+
+	text-align: center;
+}
+
+div.prev {
+
+	width: 33%;
+
+	text-align: right;
+
+	float: left;
+	float: left;
+}
+
+img.valid {
+
+	border: 0;
+	
+	width: 88px;
+	height: 31px;
+}
+
+p#home,
+p#subtitle,
+p#copyright,
+p#good_source {
+
+	padding-top: 3px;
+	padding-bottom: 3px;
+	
+	margin: 0px;
+}
+
+div.inside, div.outside {
+
+	background-color: #555555;
+	border: solid 2px #ffffff;
+
+}
+
+div.inside {
+
+	padding: 3px 2px 3px 15px;
+	margin: 2px 2px 2px -5px;
+
+}
+
+div.outside {
+
+	padding: 3px 2px 3px 15px;
+	margin: 2px -5px 2px 2px;
+
 }
 

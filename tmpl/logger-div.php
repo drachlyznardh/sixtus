@@ -2,7 +2,7 @@
 							<h2 style="cursor: pointer"
 									onmousedown="javascript: showOrHide('logger-option')">Opzioni</h2>
 							<div id="logger-option-div">
-								<form id="logout-form" action="<?=$uri?>" method="post" style="display: none">
+								<form id="logout-form" action="<?=$request?>" method="post" style="display: none">
 									<fieldset>
 										<legend>Hidden</legend>
 										<input type="hidden" name="action" value="logout" />
@@ -16,7 +16,7 @@
 							<h2 style="cursor: pointer"
 									onmousedown="javascript: showOrHide ('logger-login')">Login</h2>
 							<div id="logger-login-div" style="display: none">
-								<form action="<?=$uri?>" method="post">
+								<form action="<?=$request?>" method="post">
 									<fieldset>
 										<legend>Inserisci i tuoi dati</legend>
 										<table class="ft"><tr><td>
@@ -38,4 +38,4 @@
 								</form>
 							</div>
 <?php } ?>
-							<p>Questa <span title="<?=$uri?>">pagina</span> è <?php switch ($page['permission']) { case 3: echo ('libera'); break; case 2: echo ('riservata'); break; case 1: echo ('protetta'); break;} ?>.</p>
+							<p>Questa <span title="<?=$request?>">pagina</span> è <?php switch ($page['permission']) { case 3: echo ('libera'); break; case 2: echo ('riservata'); break; case 1: echo ('protetta'); break;} ?>.</p>

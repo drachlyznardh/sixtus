@@ -1,11 +1,13 @@
 				<div id="head">
-					<div class="darkbox">
+					<div class="clearbox">
 
-						<p id="home"><?=$s->pilink ('home/', 'home');?></p>
-						<h1 id="title"><?=$page['title']?></h1>
-						<p id="subtitle"><?=$page['subtitle']?></p>
+						<div class="section">
+							<p id="home"><?=$s->ilink ('','home');?></p>
+							<h1 id="title"><?=$page['title']?></h1>
+							<p id="subtitle"><?=$page['subtitle']?></p>
+						</div>
 
-					</div> <!-- Dark Box -->
+					</div> <!-- Clear Box -->
 				</div> <!-- Head -->
 
 				<div class="content">
@@ -15,17 +17,17 @@
 						<?php if (isset($related['prev'])) { ?>
 							<h2>Negli episodi precedenti</h2>
 							<p>Questa serie continua dalla pagina precedente,
-								<?php $s->pilink ($related['prev']['request'], $related['prev']['title']); ?>
+								<?=$s->ilink ($related['prev'])?>
 							</p></div><div class="section">
 						<? } ?>
 						
-						<?=mkpage()?>
+						<?=mkpage($d, $s, $context)?>
 						
 						<?php if (isset($related['next'])) { ?>
 							</div><div class="section">
 							<h2>Continua...</h2>
 							<p>Questa serie prosegue alla pagina successiva,
-								<?php $s->pilink ($related['next']['request'], $related['next']['title']); ?>
+								<?=$s->ilink ($related['next'])?>
 							</p>
 						<?php } ?>
 						
@@ -34,39 +36,48 @@
 					</div> <!-- Clear Box -->
 				</div> <!-- Content -->
 
-				<div class="nav">
-					<div class="clearbox">
+				<div <?php if (isset($flag['fixed-nav']) && !$flag['fixed-nav']) echo ('class="nav"');
+					else echo ('id="fixed-nav"'); ?>>
+					<div class="content"><div class="clearbox">
 <?php } ?>
 <?php if (isset($related['prev']) || isset($related['index']) || isset($related['next'])) { ?>
 						<div class="section">
 							<h2>Pagine collegate</h2>
 							<?php if (isset($related['prev'])) { ?>
 								<p>Precedente:
-									<?php $s->pilink ($related['prev']['request'], $related['prev']['title']); ?>
+									<?=$s->ilink ($related['prev'])?>
 								</p>
 							<?php }
 							if (isset($related['index'])) { ?>
 								<p>Indice:
-									<?php $s->pilink ($related['index']['request'], $related['index']['title']); ?>
+									<?=$s->ilink ($related['index'])?>
 								</p>
 							<?php }
 							if (isset($related['next'])) { ?>
 								<p>Successivo:
-									<?php $s->pilink ($related['next']['request'], $related['next']['title']); ?>
+									<?=$s->ilink ($related['next'])?>
 								</p>
-							<?php } ?>
+							<?php }
+							if (isset($related['download'])) { ?>
 								<p><a href="<?=$request?>download/">Download</a></p>
+							<?php } ?>
 						</div> <!-- Section -->
 <?php } 
-if ($page['side']) require_once ($sides .'/'. $page['side']); ?>
-					</div> <!-- Clear Box -->
+	if (isset($page['side'])) {
+		echo ('<!-- Requiring ['. $page['side'] .'] -->');
+		require_once ($sides .'/'. $page['side']);
+		echo ('<!-- Requiring ['. $page['side'] .'] End -->');
+		echo ("\n");
+	}
+?>
+					</div> <!-- Clear Box --> </div> <!-- Content -->
 				</div> <!-- Nav -->
 				
-<?php require_once ($tmpl . '/comment-div.php'); ?>
-
 				<div id="foot">
-					<div class="darkbox">
+					<div class="clearbox">
+						<div class="section">
 
 <?php require_once ($tmpl . '/footer-div.php') ?>
-					</div> <!-- Dark Box -->
+						</div>
+					</div> <!-- Clear Box -->
 				</div> <!-- Foot -->

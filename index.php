@@ -1,1 +1,1 @@
-<?php header ('Location: Tru/Naluten/'); ?>
+<?php require_once ('tru/index.php'); ?>

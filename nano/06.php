@@ -1,26 +1,20 @@
 <?php
 
-	$page['title'] = 'Campeggio';
-	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 02';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 02';
-	$page['side'] = 'nano.nav.php';
+	$page['title'] = 'Il lampione';
+	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte II &ndash; Capitolo 06';
 
-	$related['prev']['request'] = 'NaNoWriMo/01/';
-	$related['prev']['title'] = 'Capitolo 01';
-	$related['next']['request'] = 'NaNoWriMo/03/';
-	$related['next']['title'] = 'Capitolo 03';
-	$related['download']['request'] = '03.tex';
-	$related['download']['title'] = 'Capitolo 03';
+	$related['prev']['request'] = 'NaNoWriMo/05/';
+	$related['prev']['title'] = 'Capitolo 05';
+	$related['next']['request'] = 'NaNoWriMo/07/';
+	$related['next']['title'] = 'Capitolo 07';
 
 	function mkpage () {
 ?>
 
 <h2>Il lampione</h2>
-</p><p>
+<div class="intro"><p>
 La mattina seguente ci fu quella dannata prova di latino.
-</p><p>
-
-</p><p>
+</p></div><p>
 Traduzione di un qualche passo di un qualche autore, che narrava di come un
 qualche tizio che dopo essere sfuggito ad una marmaglia che intendeva ucciderlo
 per un crimine non commesso, riesce a raggiungere una piazza e a tenere un
@@ -405,3 +399,5 @@ Così potei salire le scale con tutta calma, entrare in casa, togliermi le
 scarpe, appendere la giacca e andarmene a dormire tutto tranquillo.
 </p><p>
 </p>
+
+<?php } ?>

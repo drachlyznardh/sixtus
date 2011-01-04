@@ -1,1 +1,1 @@
-<?php require_once ('/tru/indice.php'); ?>
+<?php require_once ('tru/index.php'); ?>

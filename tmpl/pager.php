@@ -5,7 +5,8 @@
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
-		<meta name="keywords" content="<?=$page['keyword']?>" />
+		<meta name="keywords" content="Tru Naluten <?=isset($page['keyword'])?$page['keyword']:''?>" />
+		<link rel="alternate" type="application/rss+xml" title="TruNaluten - News" href="rss.xml" />
 
 		<title><?=$page['title']?></title>
 		
@@ -22,7 +23,7 @@
 
 ?>
 
-		<link rel="shortcut icon" type="image/x-icon" href="style/ico/<?=$s->style?>.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
 		
 	</head>
 	<body>

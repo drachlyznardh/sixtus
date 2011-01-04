@@ -1,26 +1,20 @@
 <?php
 
-	$page['title'] = 'Campeggio';
-	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 02';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 02';
-	$page['side'] = 'nano.nav.php';
+	$page['title'] = 'Nel bosco';
+	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 04';
 
-	$related['prev']['request'] = 'NaNoWriMo/01/';
-	$related['prev']['title'] = 'Capitolo 01';
-	$related['next']['request'] = 'NaNoWriMo/03/';
-	$related['next']['title'] = 'Capitolo 03';
-	$related['download']['request'] = '03.tex';
-	$related['download']['title'] = 'Capitolo 03';
+	$related['prev']['request'] = 'NaNoWriMo/03/';
+	$related['prev']['title'] = 'Capitolo 03';
+	$related['next']['request'] = 'NaNoWriMo/05/';
+	$related['next']['title'] = 'Capitolo 05';
 
 	function mkpage () {
 ?>
 
 <h2>Nel bosco</h2>
-</p><p>
+<div class="intro"><p>
 E andò anche peggio di così, in realtà.
-</p><p>
-
-</p><p>
+</p></div><p>
 Ebbi la grande idea di raccontare questa cosa a quei due, che guarda caso erano
 i miei compagni di tenda. Credo che stiano tuttora ridendo. E quella non fu
 nemmeno la cosa peggiore che feci.
@@ -453,3 +447,5 @@ dimenticarla e non cercarla oltre.o
 Poi venne il giorno che cambiò la mia vita. E' stato il 23 novembre 2005.
 </p><p>
 </p>
+
+<?php } ?>

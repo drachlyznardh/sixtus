@@ -23,6 +23,13 @@ class PageMaster {
 
 	public function parse ($request) {
 	
+		if ($request == '') {
+			$this->file = false;
+			$this->source['src'] = '.';
+			$this->source['ext'] = 'php';
+			return;
+		}
+
 		$tokens = explode ('/', $request);
 
 		foreach (array_keys($tokens) as $key) {
@@ -48,21 +55,33 @@ class PageMaster {
 				}
 			}
 
+			if  ($on && isset($this->source['ignore'])) foreach ($this->source['ignore'] as $ignore) {
+
+				if ($token == $ignore) {
+					unset ($tokens[$key]);
+					break;
+				}
+			}
 		}
 
-		$this->file = substr (implode ("/", $tokens), 0, -1);
+		switch (count($tokens)) {
+			
+			case 0: $this->file = 'index'; break;
+			case 1: $this->file = implode ('/', $tokens); break;
+			default: $this->file = substr (implode ('/', $tokens), 0, -1);
+		}
 
 		return $request;
 	}
 
 	public function show () {
 	
-		echo '<p>Debug    : '. $this->debug .'</p>';
-		echo '<p>Bounce   : '. $this->bounce .'</p>';
-		echo '<p>Download : '. $this->download .'</p>';
+		echo '<p>Debug    : `'. $this->debug .'`</p>';
+		echo '<p>Bounce   : `'. $this->bounce .'`</p>';
+		echo '<p>Download : `'. $this->download .'`</p>';
 
-		echo '<p>Source : '; print_r ($this->source); echo '</p>';
-		echo '<p>File : '. $this->file .'</p>';
+		echo '<p>Source   : `'; print_r ($this->source); echo '`</p>';
+		echo '<p>File     : `'. $this->file .'`</p>';
 	}
 }
 

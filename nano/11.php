@@ -2,8 +2,6 @@
 
 	$page['title'] = 'Il sogno';
 	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte II &ndash; Capitolo 11';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 11';
-	$page['side'] = 'nano.nav.php';
 
 	$related['prev']['request'] = 'NaNoWriMo/10/';
 	$related['prev']['title'] = 'Capitolo 10';
@@ -14,11 +12,11 @@
 ?>
 
 <h2>Il sogno</h2>
-</p><p>
-\first{Non mi venne sonno per la stanchezza: non era stanco, non lo ero da mesi
+<div class="intro"><p>
+Non mi venne sonno per la stanchezza: non era stanco, non lo ero da mesi
 e non lo fui per un sacco di tempo anche dopo; mi venne sonno perché c'erano
-cose che avrei dovuto sognare.}
-</p><p>
+cose che avrei dovuto sognare.
+</p></div><p>
 Una di queste fu il cane.
 </p><p>
 E non era un cane. Era troppo grosso, troppo scuro, troppo cattivo per essere un

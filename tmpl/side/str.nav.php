@@ -1,7 +1,6 @@
 
 				<div class="section">
-					<h2>Storie</h2>
-					<p><?=$s->ilink('Storie/', 'Indice')?></p>
+					<h2>Storie 2010</h2>
 					<ol style="list-style-type: upper-roman;">
 						<li><?=$s->ilink('Storie/I/', 'Apologia')?></li>
 						<li><?=$s->ilink('Storie/II/', 'Correre')?></li>
@@ -17,6 +16,13 @@
 						<li><?=$s->ilink('Storie/XII/', 'La musa')?></li>
 						<li><?=$s->ilink('Storie/XIII/', 'Il modello definitivo')?></li>
 						<li><?=$s->ilink('Storie/XIV/', 'L&apos;incontro')?></li>
+						<li><?=$s->ilink('Storie/XV/', 'La spinta')?></li>
+						<li><?=$s->ilink('Storie/XVI/', 'Il lunedì della verità')?></li>
+						<li><?=$s->ilink('Storie/XVII/', 'Il finale')?></li>
+					</ol>
+					<h2>Storie 2011</h2>
+					<ol start="18" style="list-style-type: upper-roman;">
+						<li><?=$s->ilink('Storie/XVIII/', 'Liber Javae')?></li>
 					</ol>
 					<h2>Attenzione!!!</h2>
 					<p>

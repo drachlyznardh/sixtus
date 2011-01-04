@@ -1,27 +1,23 @@
 <?php
 
-	$page['title'] = 'Campeggio';
-	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 02';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 02';
-	$page['side'] = 'nano.nav.php';
+	$page['title'] = 'La dichiarazione';
+	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 05';
 
-	$related['prev']['request'] = 'NaNoWriMo/01/';
-	$related['prev']['title'] = 'Capitolo 01';
-	$related['next']['request'] = 'NaNoWriMo/03/';
-	$related['next']['title'] = 'Capitolo 03';
-	$related['download']['request'] = '03.tex';
-	$related['download']['title'] = 'Capitolo 03';
+	$related['prev']['request'] = 'NaNoWriMo/04/';
+	$related['prev']['title'] = 'Capitolo 04';
+	$related['next']['request'] = 'NaNoWriMo/06/';
+	$related['next']['title'] = 'Capitolo 06';
 
 	function mkpage () {
 ?>
 
 <h2>La dichiarazione</h2>
-\first{Quel giorno ce ne andammo in gita. Una gita di quelle in cui si prende
+<div class="intro"><p>Quel giorno ce ne andammo in gita. Una gita di quelle in cui si prende
 una corriera, si fanno cinque ore di strada per arrivare in una cittadina grande
 così, con le strade troppo strette per le corriere, che però racchiude un tesoro
 unico al mondo, qualcosa riconosciuto dal FAI, dall'UNICEF, dal WWF, insomma
-qualcosa di immensamente importante per qualcuno che non sono io.}
-</p><p>
+qualcosa di immensamente importante per qualcuno che non sono io.
+</p></div><p>
 A me non frega un cazzo.
 </p><p>
 E passa le cinque ore sulla corriera a cazzeggiare.
@@ -164,3 +160,5 @@ stavo galleggiando per aria. Entrai in camera mia dal balcone. E me ne andai
 fresco fresco a dormire.
 </p><p>
 </p>
+
+<?php } ?>

@@ -1,26 +1,20 @@
 <?php
 
-	$page['title'] = 'Campeggio';
-	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte I &ndash; Capitolo 02';
-	$page['keyword'] = 'NaNoWrimo 2010 capitolo 02';
-	$page['side'] = 'nano.nav.php';
+	$page['title'] = 'L&apos;estate';
+	$page['subtitle'] = 'NaNoWriMo 2010 &ndash; Parte II &ndash; Capitolo 10';
 
-	$related['prev']['request'] = 'NaNoWriMo/01/';
-	$related['prev']['title'] = 'Capitolo 01';
-	$related['next']['request'] = 'NaNoWriMo/03/';
-	$related['next']['title'] = 'Capitolo 03';
-	$related['download']['request'] = '03.tex';
-	$related['download']['title'] = 'Capitolo 03';
+	$related['prev']['request'] = 'NaNoWriMo/08/';
+	$related['prev']['title'] = 'Capitolo 08';
+	$related['next']['request'] = 'NaNoWriMo/10/';
+	$related['next']['title'] = 'Capitolo 10';
 
 	function mkpage () {
 ?>
 
 <h2>L'estate</h2>
-</p><p>
+<div class="intro"><p>
 Che palle.
-</p><p>
-
-</p><p>
+</p></div><p>
 Che due enormi palle, gonfie fino al punto di scoppiare.
 </p><p>
 Due giorni dopo aver scoperto di poter leggere a contantto, un giorno dopo aver
@@ -105,5 +99,6 @@ anziani che tutti chiamano zii ma che magari non sono neanche parenti; ecco, una
 perpetua cena così. Un eterno posto sbagliato.
 </p><p>
 La storia non cambiò per un pezzo, fino al 13 agosto 2005.
-</p><p>
 </p>
+
+<?php } ?>

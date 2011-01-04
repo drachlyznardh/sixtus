@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+    <channel>
+	    <atom:link rel="self" href="http://trunaluten.99k.org/rss.xml" type="application/rss+xml" />
+        <title>trunaluten.99k.org</title>
+        <link>http://trunaluten.99k.org/</link>
+        <description>Storie stupide e divertenti, ma anche no</description>
+        <language>it</language>
+
+	<item>
+		<title>Storia XVI / Aggiornamento</title>
+		<description>Di come ho finalmente consegnato quel fiore</description>
+		<pubDate>Tue, 15 Dec 2010 18:32:00 +0100</pudDate>
+		<link>http://trunaluten.99k.org/Storie/XVI/</link>
+	</item>
+
+	<item>
+		<title>Tru Naluten XIX</title>
+		<description>Dopo un'eternità, ecco la conclusione del secondo volume</description>
+		<pubDate>Tue, 15 Dec 2010 18:32:00 +0100</pudDate>
+		<link>http://trunaluten.99k.org/Tru/Naluten/XIX/</link>
+	</item>
+
+        <item>
+            <title>Motore 0.7.3 online</title>
+            <description>Niente database (pesa troppissimo), molta yadda e il mio NaNoWriMo 2010</description>
+            <pubDate>Fri, 03 Dec 2010 13:04:00 +0000</pubDate>
+            <link>http://trunaluten.99k.org/NaNoWriMo/</link>
+        </item>
+
+    </channel>
+
+</rss>
+

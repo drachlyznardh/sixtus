@@ -2,41 +2,22 @@
 
 	class Styler {
 	
-		public function parse ($url) {
+		public function ilink ($data, $second=false, $third=false) {
 		
-			foreach ($this->choose as $key) {
-				$match = "/($key)\//";
-				if (preg_match ($match, $url)) {
-					$this->style = $key;
-					$url = preg_replace ($match, '', $url);
-				}
-			}
-		
-			return $url;
-		}
-	
-		public function pilinksharp ($url, $name, $lbl) {
-		
-			echo $this->ilinksharp ($url, $name, $lbl);
-		}
-		
-		public function ilinksharp ($url, $name, $lbl) {
-		
-			$url = preg_replace ('/(.*)\//', '$1', $url);
-		
-			return "<a href=\"$url/#$name\">$lbl</a>";
-		}
+			if (is_array($data)) {
 
-		public function pilink ($url, $lbl) {
-		
-			echo $this->ilink ($url, $lbl);
-		}
-	
-		public function ilink ($url, $lbl) {
-		
-			$url = preg_replace ('/(.*)\//', '$1', $url);
-		
-			return "<a href=\"$url/\">$lbl</a>";
+				$url = $data['request'];
+				if (isset($data['sharp'])) $url = $url .'#'. $data['sharp'];
+				$title = $data['title'];
+
+			} else {
+			
+				$url = $data;
+				$title = $second;
+				if ($third) $url = $url .'#'. $third;
+			}
+
+			return '<a href="'. $url .'">'. $title .'</a>';
 		}
 	}
 
