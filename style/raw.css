@@ -36,11 +36,7 @@ div#main {
 
 div#head {
 
-	position: fixed;
 	width: 100%;
-	height: 16%;
-	left: 0%;
-	top: 0%;
 
 	font: 7pt/9pt Georgia;
 	text-align: center;
@@ -48,11 +44,10 @@ div#head {
 
 div#foot {
 
-	position: fixed;
 	width: 100%;
-	height: 16%;
-	left: 0%;
-	top: 84%;
+
+	float: none;
+	clear: both;
 
 	font: 7pt/9pt Georgia;
 	text-align: center;
@@ -62,38 +57,43 @@ div#container {
 
 	position: fixed;
 
-	width: 58%;
-	height: 64%;
+	width: 56%;
+	height: 100%;
+	left:  22%;
+	right: 22%;
 
-	top: 18%;
-	left: 21%;
+	overflow: hidden;
 }
 
-div#fixed-nav {
+div#rightside {
+	
+	position: fixed;
+
+	width: 20%;
+	height: 90%;
+	right: 1%;
+	top: 5%;
+
+	overflow: hidden;
+}
+
+div#content {
+
+	padding-left: 5%;
+	padding-right: 5%;
+
+}
+
+div#leftside {
 
 	position: fixed;
 
-	width: 19%;
-	height: 64%;
-
-	top: 18%;
-	left: 80%;
-
-	background-color: #121212;
-}
-
-div#side {
-
-	position: fixed;
-	
-	width: 19%;
-	height: 64%;
-	
+	width: 20%;
+	height: 90%;
 	left: 1%;
-	right: 80%;
-	top: 18%;
+	top: 5%;
 	
-	overflow: auto;
+	overflow: hidden;
 }
 
 div#fixed-nav,
@@ -101,7 +101,7 @@ div#foot,
 div#head,
 div#container {
 
-	overflow: auto;
+	overflow: hidden;
 }
 
 div#head h1 {
