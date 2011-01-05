@@ -5,6 +5,8 @@
 
 	$related['prev']['title'] = 'Storia XVI';
 	$related['prev']['request'] = 'Storie/XVI/';
+	$related['next']['title'] = 'Storia XVIII';
+	$related['next']['request'] = 'Storie/XVIII/';
 
 	$flag['fixed-nav'] = true;
 

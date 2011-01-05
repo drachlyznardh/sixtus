@@ -1,32 +1,30 @@
-				<div id="nav">
 					<div class="clearbox">
 						<div class="section">
 
-		<h2 style="cursor: pointer" onmousedown="javascript: showOrHide('tn-nav')">Tru Naluten</h2>
-		<div id="tn-nav-div">
-			<p><?=$s->ilink ('Tru/Naluten/', 'Indice')?></p>
-			<p><?=$s->ilink ('Tru/Naluten/Personaggi/', 'Personaggi')?></p>
-			<p><?=$s->ilink('Tru/Naluten/I/', 'Volume I')?></p>
-			<p><?=$s->ilink('Tru/Naluten/X/', 'Volume II')?></p>
-		</div>
+	<?=mkcascade('tru-lside','Tru Naluten',false)?>
+	<div id="longtru-lside">
+		<p><?=ilink ('Tru/Naluten/', 'Indice')?></p>
+		<p><?=ilink ('Tru/Naluten/Personaggi/', 'Personaggi')?></p>
+		<p><?=ilink('Tru/Naluten/I/', 'Volume I')?></p>
+		<p><?=ilink('Tru/Naluten/X/', 'Volume II')?></p>
 	</div>
-	<div class="section">
-		<h2 style="cursor: pointer" onmousedown="javascript: showOrHide('str-nav')">Storie</h2>
-		<div id="str-nav-div">
-			<p><?=$s->ilink('Storie/','Tutte le storie')?></p>
-			<p><?=$s->ilink('Storie/#2010','Storie 2010')?></p>
-			<p><?=$s->ilink('Storie/#2011','Storie 2011')?></p>
-		</div>
+</div>
+<div class="section">
+	<?=mkcascade('str-lside','Storie',false)?>
+	<div id="longstr-lside">
+		<p><?=ilink('Storie/','Tutte le storie')?></p>
+		<p><?=ilink('Storie/I/','Storie 2010')?></p>
+		<p><?=ilink('Storie/XVIII/','Storie 2011')?></p>
 	</div>
-	<div class="section">
-		<h2 style="cursor: pointer" onmousedown="javascript: showOrHide('nano2010-nav')">NaNoWriMo 2010</h2>
-		<div id="nano2010-nav-div">
-			<p><?=$s->ilink('NaNoWriMo/','Indice')?></p>
-			<p><?=$s->ilink('NaNoWriMo/01/','Parte I')?></p>
-			<p><?=$s->ilink('NaNoWriMo/06/','Parte II')?></p>
-			<p><?=$s->ilink('NaNoWriMo/16/','Parte III')?></p>
-		</div>
+</div>
+<div class="section">
+	<?=mkcascade('nano2010-lside','NaNoWriMo 2010',false)?>
+	<div id="longnano2010-lside">
+		<p><?=ilink('NaNoWriMo/','Indice')?></p>
+		<p><?=ilink('NaNoWriMo/01/','Parte I')?></p>
+		<p><?=ilink('NaNoWriMo/06/','Parte II')?></p>
+		<p><?=ilink('NaNoWriMo/16/','Parte III')?></p>
+	</div>
 
 						</div> <!-- Section -->
 					</div> <!-- Clear Box -->
-				</div> <!-- Nav -->

@@ -137,16 +137,15 @@ div.prev {
 
 div.wide {
 
+	width: 100%;
+
 	float: none;
 	clear: both;
-
-	border: 1px solid white;
 }
 
 div.clearbox {
 
 	background-color: transparent;
-	
 	border: solid 5px transparent;
 }
 
@@ -172,6 +171,8 @@ div.section {
 	border-right-color: #aaaaaa;
 
 	margin-top: 5px;
+	float: none;
+	clear: both;
 }
 
 div.section:first-child {
@@ -188,7 +189,7 @@ div.section p {
 	margin: 2px 2px 2px 2px;
 }
 
-div.clearbox h2 {
+div.section h2 {
 
 	background-color: #444444;
 	border: solid 2px white;
@@ -199,27 +200,14 @@ div.clearbox h2 {
 	margin: 2px 2px 2px -5px;
 }
 
-ul.tabs {
+.closed:after {
 
-	margin: 4px 0px -2px 2px;
-	padding: 0px;
+	content:url('img/downarrow.png');
 }
 
-li.tab {
+.opened:after {
 
-	background-color: #444444;
-	padding: 5px 2px 5px 2px;
-	border: 2px white solid;
-	border-bottom: 0px;
-
-	cursor: pointer;
-	display: inline;
-}
-
-form.big {
-
-	width: 80%;
-	margin: 0 auto 0 auto;
+	content:url('img/uparrow.png');
 }
 
 a {
@@ -234,21 +222,32 @@ a:hover {
 	text-decoration: underline;
 }
 
-.dark {
+div.wider {
 
-	background-color: #444444;
+	width: 110%;
+	margin-left: -5%;
 }
 
-.spoiler {
+div.floatleft {
 
-	background-color: black;
+	width: 60%;
+	float: left;
+	clear: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.floatright {
+	width: 39%;
+	float: right;
+	clear: right;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 div.next {
 
-	width: 33%;
-
-	text-align: left;
+	width: 28%;
 
 	float: right;
 	clear: right;
@@ -256,14 +255,14 @@ div.next {
 
 div.top {
 
+	width: 40%;
+	float: left;
 	text-align: center;
 }
 
 div.prev {
 
-	width: 33%;
-
-	text-align: right;
+	width: 28%;
 
 	float: left;
 	float: left;
@@ -290,21 +289,22 @@ p#good_source {
 
 div.inside, div.outside {
 
+	margin: 3px 2px 3px 2px;
 	background-color: #555555;
 	border: solid 2px #ffffff;
 
+	border-bottom-color: #aaaaaa;
+	border-right-color: #aaaaaa;
 }
 
 div.inside {
 
-	padding: 3px 2px 3px 15px;
 	margin: 2px 2px 2px -5px;
 
 }
 
 div.outside {
 
-	padding: 3px 2px 3px 15px;
 	margin: 2px -5px 2px 2px;
 
 }

@@ -12,17 +12,6 @@
 		
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
 		<script type="text/javascript" src="lib/scr.js"></script>
-		<script type="text/javascript" src="lib/scroll.js"></script>
-<?php
-	if (isset($master->source['scripts']))
-		foreach ($master->source['scripts'] as $script)
-			echo "\n\t\t" . '<script type="text/javascript" src="lib/'. $script .'"></script>';
-
-	if (isset($master->source['styles']))
-		foreach ($master->source['styles'] as $style)
-			echo "\n\t\t" . '<link rel="stylesheet" type="text/css" href="style/'. $style .'" />';
-
-?>
 
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
 		
@@ -38,9 +27,9 @@
 					<div class="clearbox">
 
 						<div class="section">
-							<p id="home"><?=$s->ilink ('','home');?></p>
+							<h2 id="home"><?=nnk('','99k')?>|<?=alter('', 'altervista')?></h2>
 							<h1 id="title"><?=$page['title']?></h1>
-							<p id="subtitle"><?=$page['subtitle']?></p>
+							<h2 id="subtitle"><?=$page['subtitle']?></h2>
 						</div>
 
 					</div> <!-- Clear Box -->

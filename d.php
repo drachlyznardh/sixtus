@@ -77,8 +77,8 @@
 	$lib   = $site .'lib/';
 
 	require_once ($lib .'pagemaster.php');
-	require_once ($lib .'styler.php');
 	require_once ($lib .'dialog.php');
+	require_once ($lib .'util.php');
 
 	$sources['Not'] = array (
 		'src' => './',
@@ -106,7 +106,6 @@
 		} else $master->mkNotFound();
 	}
 
-	$s = new Styler();
 	$d = new Dialog($master->bounce);
 
 	if ($master->file) {

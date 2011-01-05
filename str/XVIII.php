@@ -3,6 +3,9 @@
 	$page['title'] = 'Liber Javae';
 	$page['subtitle'] = 'Opera seconda dell&apos;Arabo pazzo';
 
+	$related['prev']['title'] = 'Storia XVII';
+	$related['prev']['request'] = 'Storie/XVII/';
+
 	function mkpage () {
 ?>
 <h2>Liber Javae</h2><p>
