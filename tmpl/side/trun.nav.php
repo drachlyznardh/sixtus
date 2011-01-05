@@ -1,5 +1,4 @@
 
-<div class="section">
 	<?=mkcascade('tru-rside','Tru Naluten',false)?>
 	<div id="longtru-rside">
 		<p><?=ilink('Tru/Naluten/', 'Indice'); ?></p>
@@ -36,5 +35,4 @@
 			<li><?=ilink('Tru/Naluten/XIX/', 'Lezione')?></li>
 		</ol>
 	</div>
-</div>
 
