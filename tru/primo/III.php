@@ -5,10 +5,10 @@
 
 	$related['prev']['title'] = 'Capitolo II';
 	$related['prev']['request'] = 'Tru/Naluten/II/';
-	$related['next']['title'] = 'Capitolo III';
-	$related['next']['request'] = 'Tru/Naluten/III/';
+	$related['next']['title'] = 'Capitolo IV';
+	$related['next']['request'] = 'Tru/Naluten/IV/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 
 <p>Tru Naluten &egrave; giunto al terzo capitolo. D&apos;ora in poi, terr&ograve; un breve riassunto dei capitoli precedenti, cosicch&eacute; la lentezza della pubblicazione non sia un problema troppo grave.</p>

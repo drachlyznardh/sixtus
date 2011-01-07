@@ -1,11 +1,12 @@
 <?php
 
 	$page['title'] = 'La lezione';
+	$page['subtitle'] = 'Che zittisce';
 
 	$related['prev']['title'] = 'Capitolo XVIII';
 	$related['prev']['request'] = 'Tru/Naluten/XVIII/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $master) {
 ?>
 <h2>Tru Naluten II, XIX &ndash; La Lezione</h2>
 <div class="outside">

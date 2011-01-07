@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'La mia faccia';
+	$page['subtitle'] = 'É parecchio brutta';
 
 	$related['prev']['title'] = 'Capitolo IV';
 	$related['prev']['request'] = 'Tru/Naluten/IV/';
 	$related['next']['title'] = 'Capitolo VI';
 	$related['next']['request'] = 'Tru/Naluten/VI/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 						<h2>Nei capitoli precedenti...</h2>
 						<p>Simak colleziona conoscenze bizzarre: Sacomne compare ancora di tanto in tanto in aiuto, ma scompare immediatamente dopo. Inoltre, ha fatto la sua comparsa anche una voce rossa, la Coscenza di Simak, la cui affidabilit&agrave; non &egrave; ancora stata messa alla prova. Ma ora, Simak sta per (ri)scoprire il proprio aspetto...</p>

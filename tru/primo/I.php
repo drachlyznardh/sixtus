@@ -6,7 +6,7 @@
 	$related['next']['title'] = 'Capitolo II';
 	$related['next']['request'] = 'Tru/Naluten/II/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 							<p>Il primo capitolo di Tru Naluten &egrave; su Internet!</p>
 							<h2>Tru Naluten I, I &ndash; Camminavo...</h2>

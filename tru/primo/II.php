@@ -8,7 +8,7 @@
 	$related['next']['title'] = 'Capitolo III';
 	$related['next']['request'] = 'Tru/Naluten/III/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 						<h2 class="titolo">Tru Naluten I, II &ndash; Sacomne</h2>
 					</div><div class="section">

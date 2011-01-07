@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'La fuga';
+	$page['subtitle'] = 'Via via via via!!!';
 
 	$related['prev']['title'] = 'Capitolo XIV';
 	$related['prev']['request'] = 'Tru/Naluten/XIV/';
 	$related['next']['title'] = 'Capitolo XVI';
 	$related['next']['request'] = 'Tru/Naluten/XVI/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 
 	<h2>Tru Naluten XV &ndash; La fuga</h2>

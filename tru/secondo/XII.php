@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'Conversazione';
+	$page['subtitle'] = 'Una bella lunga';
 
 	$related['prev']['title'] = 'Capitolo XI';
 	$related['prev']['request'] = 'Tru/Naluten/XI/';
 	$related['next']['title'] = 'Capitolo XIII';
 	$related['next']['request'] = 'Tru/Naluten/XIII/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 	<h2>Tru Naluten XII - Conversazione</h2>
 	<p>Dopo che l'uomo incappucciato ebbe parlato, fu come se il tempo si fosse fermato. Rimanemmo soltanto io e lui, immersi in un mare di nebbia; mio padre, la festa, il villaggio, le colline erano scomparsi. Sperai con tutto il cuore che fossero soltanto nascosti dalla foschia, ma il freddo che m'avvolse mi fece temere il peggio. Ebbi un brivido lungo la schiena al pensiero che tutto fosse perduto per sempre, ed ebbi l&apos;impressione che non fosse la prima volta...</p>

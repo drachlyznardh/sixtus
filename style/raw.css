@@ -1,6 +1,4 @@
 
-@import "debug.css";
-
 /* style/raw.css
  * Style component for <drachlyznardh.altervista.org>
  * Copyright (C) 2009-2010 DrachLyznardh <drachlyznardh@roundhousecode.com>
@@ -111,30 +109,6 @@ div#head h1 {
 	font-size: 30px;
 }
 
-div.next {
-
-	text-align: left;
-
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-div.top {
-
-	text-align: center;
-	
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-div.prev {
-
-	text-align: right;
-	
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
 div.wide {
 
 	width: 100%;
@@ -171,6 +145,7 @@ div.section {
 	border-right-color: #aaaaaa;
 
 	margin-top: 5px;
+	margin-bottom: 5px;
 	float: none;
 	clear: both;
 }
@@ -233,16 +208,12 @@ div.floatleft {
 	width: 60%;
 	float: left;
 	clear: left;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 div.floatright {
 	width: 39%;
 	float: right;
 	clear: right;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 div.next {
@@ -251,13 +222,15 @@ div.next {
 
 	float: right;
 	clear: right;
+
+	margin-left: 2%;
 }
 
 div.top {
 
 	width: 40%;
 	float: left;
-	text-align: center;
+	clear: none;
 }
 
 div.prev {
@@ -266,6 +239,8 @@ div.prev {
 
 	float: left;
 	float: left;
+
+	margin-right: 2%;
 }
 
 img.valid {

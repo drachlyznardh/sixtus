@@ -8,7 +8,7 @@
 	$related['next']['title'] = 'Capitolo VIII';
 	$related['next']['request'] = 'Tru/Naluten/VIII/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 						<p>Simak ha riacquistato la memoria &ndash; almeno in parte &ndash; e ritrovato la sua identit&agrave;, ed ora si prepara a riprendere il suo viaggio.</p>
 					</div><div class="section">

@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'Abbandono&amp;Recupero';
+	$page['subtitle'] = 'Per alimentare il dubbio';
 
 	$related['prev']['title'] = 'Capitolo X';
 	$related['prev']['request'] = 'Tru/Naluten/X/';
 	$related['next']['title'] = 'Capitolo XII';
 	$related['next']['request'] = 'Tru/Naluten/XII/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 	<h2>Tru Naluten XI &ndash; Abbandono &amp; Recupero</h2>
 	<p>Oggi &egrave; il mio 25&deg; compleanno, mio chiamo Jo e sono una fioraia.</p>

@@ -1,7 +1,7 @@
 <?php
 
 	$page['title'] = 'Gundam';
-	$page['subtitle'] = '';
+	$page['subtitle'] = 'I gundam sono strafighi a botta';
 	
 	$related['prev']['title'] = 'Storia VI';
 	$related['prev']['request'] = 'Storie/VI/';
@@ -10,7 +10,9 @@
 
 	function mkpage ($d) {
 ?>
-	<p>
+	<h2>
+		La storia di come (non) ottenni il mio Gundam 00Raiser PG
+	</h2><p>
 		Si avvicinino, gentili signore e signori, mi chiamo Ivan ed ora
 		mi esibirò nella danza che la mia gente chiama "Fatti capire
 		dagli altri"

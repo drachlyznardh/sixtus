@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'La sua gente';
+	$page['subtitle'] = 'E i loro buffi copricapi';
 
 	$related['prev']['title'] = 'Capitolo XV';
 	$related['prev']['request'] = 'Tru/Naluten/XV/';
 	$related['next']['title'] = 'Capitolo XVII';
 	$related['next']['request'] = 'Tru/Naluten/XVII';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un

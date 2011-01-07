@@ -1,31 +1,65 @@
 <?php
-	$sources['Tru'] = array (
-		'src' => array ('tru', 'tru/primo', 'tru/secondo'),
-		'ext' => 'php',
-		'side' => 'trun.nav.php',
-		'subtitle' => '',
-		'keyword' => 'Tru Naluten',
-		'ignore' => array ('Naluten'),
-		'styles' => array ('voices.css')
+
+	class Category {
+	
+		public $cat;
+		public $src;
+		public $key;
+		public $ext;
+		public $down;
+		public $mime;
+		public $ignore;
+		public $subcat;
+
+		public function __construct ($cat, $src, $key, $ext,
+		$ignore=false, $down=false, $mime=false, $subcat=false) {
+		
+			$this->cat    = $cat;
+			$this->src    = $src;
+			$this->key    = $key;
+			$this->ext    = $ext;
+			$this->ignore = $ignore;
+			$this->down   = $down;
+			$this->mime   = $mime;
+			$this->subcat = $subcat;
+		}
+
+		public function getSrc ($index = 0) {
+		
+			return $this->src[$index];
+		}
+	}
+
+	$categories['Tru'] = new Category (
+		array('Tru', 'Naluten'),
+		array ('tru', 'tru/primo', 'tru/secondo'),
+		'Tru Naluten',
+		'php',
+		array ('Naluten')
 	);
-	$sources['NaNoWriMo'] = array (
-		'src' => 'nano',
-		'ext' => 'php',
-		'download' => 'pdf',
-		'mime' => 'application/pdf',
-		'scripts' => array ('db.js'),
-		'styles' => array ('voices.css'),
-		'keyword' => 'NaNoWriMo 2010',
-		'side' => 'nano.nav.php'
+	$categories['NaNoWriMo'] = new Category (
+		array ('NaNoWriMo'),
+		array ('nano'),
+		'NaNoWriMo 2010',
+		'php',
+		false,
+		'pdf',
+		'application/pdf',
+		array('2010' => new Category (
+			array ('2010'),
+			array ('nano/2010/'),
+			'Corvino Multicolore',
+			'php',
+			false,
+			'pdf',
+			'application/pdf',
+			false
+		))
 	);
-	$sources['Storie'] = array (
-		'src' => 'str',
-		'ext' => 'php',
-		#'download' => 'pdf',
-		'mime' => 'application/pdf',
-		'side' => 'str.nav.php',
-		'title' => 'Storie',
-		'subtitle' => '',
-		'keyword' => 'Storie'
+	$categories['Storie'] = new Category (
+		array ('Storie'),
+		array ('str'),
+		'Storie',
+		'php'
 	);
 ?>

@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'Battaglia navale';
+	$page['subtitle'] = 'Si combatte sul mare';
 
 	$related['prev']['title'] = 'Capitolo XVI';
 	$related['prev']['request'] = 'Tru/Naluten/XVI/';
 	$related['next']['title'] = 'Capitolo XVIII';
 	$related['next']['request'] = 'Tru/Naluten/XVIII/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 
 <!--

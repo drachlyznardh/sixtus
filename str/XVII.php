@@ -8,9 +8,7 @@
 	$related['next']['title'] = 'Storia XVIII';
 	$related['next']['request'] = 'Storie/XVIII/';
 
-	$flag['fixed-nav'] = true;
-
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 
 <h2>

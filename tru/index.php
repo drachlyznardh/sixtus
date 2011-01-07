@@ -4,7 +4,7 @@
 	$page['subtitle'] = 'Per saper dov&apos;andare';
 	$page['side'] = 'trun.nav.php';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $master) {
 ?>
 	<p>Questa &egrave; la pagina giusta per chi vuole informazioni su Tru Naluten.</p>
 	<h2>Tru Naluten</h2>

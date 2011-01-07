@@ -1,6 +1,7 @@
 <?php 
 
 	$page['title'] = 'Il modello definitivo';
+	$page['subtitle'] = 'Che mi costò >9000 ore di lavoro';
 
 	$related['prev']['title'] = 'Storia XII';
 	$related['prev']['request'] = 'Storie/XII/';

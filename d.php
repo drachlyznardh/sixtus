@@ -1,5 +1,54 @@
 <?php
 
+	class Loco {
+	
+		public $site;
+		public $base;
+		public $local;
+		public $tmpl;
+		public $side;
+		public $lib;
+
+		public function __construct ($site, $base, $local=false) {
+		
+			$this->site  = $site;
+			$this->base  = $base;
+			$this->local = $local;
+
+			$this->tmpl = $site .'tmpl/';
+			$this->side = $this->tmpl .'side/';
+			$this->lib  = $site .'lib/';
+		}
+
+		public function mktmpl ($tmpl) {
+		
+			return $this->tmpl . $tmpl .'.php';
+		}
+
+		public function mklib ($lib) {
+		
+			return $this->lib . $lib .'.php';
+		}
+
+		public function mkstyle ($style, $ext=false) {
+		
+			if ($ext)
+				if ($ext == 'img')
+					return $this->style .'img/'. $style .'.png';
+				else if ($ext == 'ico')
+					return $this->style .'ico/'. $style .'.ico';
+			
+			return $this->style . $style .'.css';
+		}
+
+		public function mkdefault ($categories) {
+		
+			if ($this->base == 'http::/trunaluten.99k.org/') return $categories['Tru'];
+
+			return $categories['Storie'];
+		}
+	}
+
 	/* Set up configuration */
 	$servername = $_SERVER['SERVER_NAME'];
 	
@@ -9,24 +58,15 @@
 
 	if ($servername == 'localhost') {
 
-		$site = '/opt/lampp/htdocs/faiv/';
-		$base = 'http://localhost/faiv';
-		$db_name = 'trunaluten';
-		$db_user = 'root';
-		$db_pass = 'lamorte';
+		$loco = new Loco ('/opt/lampp/htdocs/faiv/', 'http://localhost/faiv', true);
 
 	} else if ($servername == 'trunaluten.99k.org') {
 	
-		$site = './';
-		$base = 'http://trunaluten.99k.org';
-		$db_name = 'trunaluten_99k_pages';
-		$db_user = '236153_lyznardh';
-		$db_pass = 'sexsecretgod';
+		$loco = new Loco ('./', 'http://trunaluten.99k.org');
 
 	} else if ($servername == 'drachlyznardh.altervista.org') {
 	
-		$site = './';
-		$base = 'http://drachlyznardh.altervista.org';
+		$loco = new Loco ('./', 'http://drachlyznardh.altervista.org');
 	}
 
 	$request = $_SERVER['REQUEST_URI'];
@@ -70,31 +110,21 @@
 		die ();
 	}
 
-	/* Load libraries */
-	$tmpl  = $site .'tmpl/';
-	$sides = $tmpl .'side/';
-	$forms = $tmpl .'form/';
-	$lib   = $site .'lib/';
-
-	require_once ($lib .'pagemaster.php');
-	require_once ($lib .'dialog.php');
-	require_once ($lib .'util.php');
-
-	$sources['Not'] = array (
-		'src' => './',
-		'ext' => 'php',
-	);
+	require_once ($loco->mklib('pagemaster'));
+	require_once ($loco->mklib('dialog'));
+	require_once ($loco->mklib('util'));
 
 	require_once ('sources.php');
 
-	$master = new PageMaster ($sources);
-	$master->parse($request);
+	$master = new PageMaster ($loco);
+	$master->parse($request, $categories, $loco->mkdefault($categories));
 
 	if ($master->download) {
 		 
-		$path = $master->source['src'] .'/'. $master->file .'.'. $master->source['download'];
+		$filename = $master->file .'.'. $master->category->download;
+		$path = $master->mkpath($filename);
 
-		header ('Content-Type: '. $master->source['mime']);
+		header ('Content-Type: '. $master->category->mime);
 		header ('Content-Disposition: attachment; filename='. $master->file .'.'. $master->source['download']);
 		
 		$file = fopen ($path, 'r');
@@ -109,39 +139,19 @@
 	$d = new Dialog($master->bounce);
 
 	if ($master->file) {
-		if (is_array($master->source['src'])) {
-		
-			foreach ($master->source['src'] as $src) {
-			
-				$path = $src .'/'. $master->file .'.'. $master->source['ext'];
-				if (file_exists($path)) break;
-			}
-		
-		} else $path = $master->source['src'] .'/'. $master->file .'.'. $master->source['ext'];
+		$path = $master->mkpath($master->file .'.'. $master->category->ext);
 	} else {
-		if (is_array($master->source['src'])) $path = $master->source['src'][0] .'/index.php';
-		else $path = $master->source['src'] .'/index.php';
+		$path = $master->mkpath('index.php');
 	}
-
-	if (isset ($master->source['side']))
-		$page['side'] = $master->source['side'];
-	if (isset ($master->source['title']))
-		$page['title'] = $master->source['title'];
-	if (isset ($master->source['subtitle']))
-		$page['subtitle'] = $master->source['subtitle'];
-	if (isset ($master->source['keyword']))
-		$page['keyword'] = $master->source['keyword'] .' '. $master->file;
-	if (isset ($master->source['download']))
-		$related['download'] = true;
 
 	if (file_exists($path))
 		require_once ($path);
 	else
 		require_once ('error404.php');
 	
-	$context = array ();
+	$m = $master;
 
-	require_once ($tmpl .'/pager.php');
+	require_once ($loco->mktmpl('pager'));
 	die ();
 
 ?>

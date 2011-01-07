@@ -5,6 +5,8 @@
 
 	$related['prev']['title'] = 'Storia XIII';
 	$related['prev']['request'] = 'Storie/XIII/';
+	$related['next']['title'] = 'Storia XV';
+	$related['next']['request'] = 'Storie/XV/';
 
 	function mkpage ($d) {
 ?>

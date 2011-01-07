@@ -8,9 +8,7 @@
 	$related['next']['title'] = 'Capitolo VII';
 	$related['next']['request'] = 'Tru/Naluten/VII/';
 
-	$flag['fixed-nav'] = true;
-
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 	<h2>
 		Tru Naluten I,VI &ndash; L'altro me

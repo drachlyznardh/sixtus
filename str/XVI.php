@@ -3,14 +3,12 @@
 	$page['title'] = 'Il lunedì della verità';
 	$page['subtitle'] = 'Ma in realtà, non credo';
 
-	$flag['fixed-nav'] = true;
-
 	$related['prev']['title'] = 'Storia XV';
 	$related['prev']['request'] = 'Storie/XV/';
 	$related['next']['title'] = 'Storia XVII';
 	$related['next']['request'] = 'Storie/XVII/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 <p>
 	E così, dopo il giovedì del fallimento, il venerdì inutile e un

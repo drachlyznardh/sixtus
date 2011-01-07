@@ -1,14 +1,14 @@
 <?php
 
 	$page['title'] = 'La Porta';
-	$page['subtitle'] = 'Non s&apre; per conto suo';
+	$page['subtitle'] = 'Non s&apos;apre per conto suo';
 
 	$related['prev']['title'] = 'Capitolo VII';
 	$related['prev']['request'] = 'Tru/Naluten/VII/';
 	$related['next']['title'] = 'Capitolo IX';
 	$related['next']['request'] = 'Tru/Naluten/IX/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>	
 	<h2>Nei capitoli precedenti...</h2>
 	<p>Simak ha ripreso a camminare verso la sua meta, una certa Porta... Nel frattempo ha avuto il suo bel daffare per farsi valere con eLyz e con la Coscienza.</p>

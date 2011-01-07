@@ -1,13 +1,14 @@
 <?php
 
 	$page['title'] = 'La trovatella';
+	$page['subtitle'] = 'L&apos;abbandono non è definitivo';
 
 	$related['prev']['title'] = 'Volume I';
 	$related['prev']['request'] = 'Tru/Naluten/IX/';
 	$related['next']['title'] = 'Capitolo XI';
 	$related['next']['request'] = 'Tru/Naluten/XI/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 
 	<p>Oggi inizia la storia di Jo.</p>

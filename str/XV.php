@@ -8,7 +8,7 @@
 	$related['next']['title'] = 'Storia XVI';
 	$related['next']['request'] = 'Storie/XVI/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 
 <p>

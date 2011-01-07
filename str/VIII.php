@@ -1,7 +1,7 @@
 <?php
 
 	$page['title'] = 'Sassi';
-	$page['subtitle'] = '';
+	$page['subtitle'] = 'E pensieri sui sassi';
 
 	$related['prev']['title'] = 'Storia VII';
 	$related['prev']['request'] = 'Storie/VII/';

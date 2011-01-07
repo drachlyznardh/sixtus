@@ -8,7 +8,7 @@
 	$related['next']['title'] = 'Volume II';
 	$related['next']['request'] = 'Tru/Naluten/X/';
 
-	function mkpage ($d, $s, $context) {
+	function mkpage ($d, $m) {
 ?>
 							<h2>Nei capitoli precedenti...</h2>
 							<p>Una strana creatura &egrave; uscita dalla Porta, ed assieme ad altri suoi simili ha sterminato gli abitanti del pianeta. Senza chiedere il supporto di Ci e di eLyz, Simak ha sistemato l'intero gruppo.</p>
