@@ -2,64 +2,64 @@
 
 	class Category {
 	
-		public $cat;
+		private $index;
+		private $match;
+
 		public $src;
-		public $key;
-		public $ext;
+		public $section;
 		public $down;
-		public $mime;
-		public $ignore;
 		public $subcat;
 
-		public function __construct ($cat, $src, $key, $ext,
-		$ignore=false, $down=false, $mime=false, $subcat=false) {
+		public function __construct ($match, $src, $section, $down=false, $subcat=false) {
 		
-			$this->cat    = $cat;
-			$this->src    = $src;
-			$this->key    = $key;
-			$this->ext    = $ext;
-			$this->ignore = $ignore;
-			$this->down   = $down;
-			$this->mime   = $mime;
-			$this->subcat = $subcat;
+			$this->index = 0;
+
+			$this->match   = $match;
+			$this->src     = $src;
+			$this->section = $section;
+			$this->down    = $down;
+			$this->subcat  = $subcat;
 		}
 
-		public function getSrc ($index = 0) {
+		public function search () {
 		
-			return $this->src[$index];
+			if (count($this->src) > $this->index)
+				return $this->src[$this->index++];
+			$this->index = 0;
+			return false;
+		}
+
+		public function getMatch () {
+			return $this->match;
+		}
+
+		public function getName () {
+			return $this->name;
 		}
 	}
 
 	$categories['Tru'] = new Category (
-		array('Tru', 'Naluten'),
-		array ('tru', 'tru/primo', 'tru/secondo'),
-		'Tru Naluten',
-		'php',
-		array ('Naluten')
+		'/Tru\/Naluten\//',
+		array ('tru/', 'tru/primo/', 'tru/secondo/'),
+		'Tru Naluten'
 	);
 	$categories['NaNoWriMo'] = new Category (
-		array ('NaNoWriMo'),
-		array ('nano'),
-		'NaNoWriMo 2010',
-		'php',
-		false,
-		'pdf',
-		'application/pdf',
+		'/NaNoWriMo\//',
+		array ('nano/'),
+		'NaNoWriMo',
+		array ('ext' => 'pdf',
+			'mime' => 'application/pdf'),
 		array('2010' => new Category (
-			array ('2010'),
+			'/2010\//',
 			array ('nano/2010/'),
-			'Corvino Multicolore',
-			'php',
-			false,
-			'pdf',
-			'application/pdf',
-			false
+			'2010',
+			array ('ext' => 'pdf',
+				'mime' => 'application/pdf')
 		))
 	);
 	$categories['Storie'] = new Category (
-		array ('Storie'),
-		array ('str'),
-		'Storie',
-		'php'
+		'/Storie\//',
+		array ('str/'),
+		'Storie'
 	);
 ?>

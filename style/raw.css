@@ -59,6 +59,7 @@ div#container {
 	height: 100%;
 	left:  22%;
 	right: 22%;
+	top: 0%;
 
 	overflow: hidden;
 }
@@ -77,8 +78,8 @@ div#rightside {
 
 div#content {
 
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 15%;
+	padding-right: 15%;
 
 }
 
@@ -120,7 +121,7 @@ div.wide {
 div.clearbox {
 
 	background-color: transparent;
-	border: solid 5px transparent;
+	border: solid 5px transparent;pink;
 }
 
 div.content {
@@ -145,7 +146,6 @@ div.section {
 	border-right-color: #aaaaaa;
 
 	margin-top: 5px;
-	margin-bottom: 5px;
 	float: none;
 	clear: both;
 }
@@ -199,8 +199,8 @@ a:hover {
 
 div.wider {
 
-	width: 110%;
-	margin-left: -5%;
+	width: 140%;
+	margin-left: -20%;
 }
 
 div.floatleft {
@@ -214,6 +214,12 @@ div.floatright {
 	width: 39%;
 	float: right;
 	clear: right;
+}
+
+div.floatleft,
+div.floatright {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 div.next {
@@ -241,6 +247,14 @@ div.prev {
 	float: left;
 
 	margin-right: 2%;
+}
+
+div.next,
+div.top,
+div.prev {
+
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 img.valid {

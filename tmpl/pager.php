@@ -31,9 +31,9 @@
 								<?=$m->nnk('','99k')?>
 							|
 								<?=$m->alter('', 'altervista')?>
-							] /
+							] 
 								<?=$m->showPath()?>
-							/</h2>
+							</h2>
 							<h1 id="title"><?=$page['title']?></h1>
 							<h2 id="subtitle"><?=$page['subtitle']?></h2>
 						</div>

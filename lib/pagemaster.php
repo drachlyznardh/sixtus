@@ -9,8 +9,12 @@ class PageMaster {
 
 	public $category;
 	public $file;
+	public $side;
 
 	public $loco;
+
+	private $request;
+	private $section;
 
 	public function __construct ($loco) {
 	
@@ -20,6 +24,7 @@ class PageMaster {
 		$this->flags = array ('debug', 'bounce', 'download');
 
 		$this->loco = $loco;
+		$this->request = array ();
 	}
 
 	public function searchForFlag ($request) {
@@ -29,6 +34,7 @@ class PageMaster {
 		foreach (array_keys($token) as $key) {
 			foreach ($this->flags as $flag) {
 				if ($flag == $token[$key]) {
+					$this->$flag = true;
 					unset ($token[$key]);
 					break;
 				}
@@ -40,101 +46,105 @@ class PageMaster {
 
 	public function searchForKeyword ($request, $category) {
 	
-		$token = explode('/', $request);
-		$found = false;
+		$match = $category->getMatch();
 
-		foreach (array_keys($token) as $key) {
-			foreach ($category->cat as $cat) {
-				if ($cat == $token[$key]) {
-					unset ($token[$key]);
-					$found = true;
-					break;
-				}
-			}
-		}
-
-		if ($found) {
+		if (preg_match($match, $request)) {
 			$this->category = $category;
-			return implode ('/', $token);
+			$this->section[] = $this->category->section;
+			$request = preg_replace($match, '', $request);
+			return $request;
 		}
-
-		echo ('No match for ');
-		print_r($token);
-		print_r($category->cat);
 
 		return false;
 	}
 
 	public function searchForCatarray ($request, $cats) {
+
 		foreach ($cats as $cat) {
 			$result = $this->searchForKeyword($request, $cat);
 			if ($result) {
 				$this->category = $cat;
-				echo ('<p>Result `'.$result.'`</p>');
-				print_r ($this->category->subcat);
-				if (isset($this->category->subcat))
-					$this->searchForCatarray($result, $this->category->subcat);
+				if ($this->category->subcat)
+					$result = $this->searchForCatarray($result, $this->category->subcat);
 				break;
 			}
 		}
+
+		return $result;
 	}
 
 	public function parse ($request, $categories, $default) {
 	
-		echo ('<p>'.$request.'</p>'."\n");
+		$this->request = $request;
+
 		$request = $this->searchForFlag($request);
-		echo ('<p>'.$request.'</p>'."\n");
 		$request = $this->searchForCatarray($request, $categories);
-		echo ('<p>'.$request.'</p>'."\n");
-		$this->file = $request;
 
-		$this->show();
+		if ($request) $this->file = substr($request, 0, -1);
+		else $this->file = 'index';
 
-		return $request;
+		$this->side = preg_replace ('/\//', '.', $this->category->src[0]);
 	}
 
 	public function show () {
-	
-		echo '<div class="section">';
-		echo '<p>Debug    : `'. $this->debug .'`</p>';
-		echo '<p>Bounce   : `'. $this->bounce .'`</p>';
-		echo '<p>Download : `'. $this->download .'`</p>';
-
-		echo '<p>Source   : <pre>'; print_r ($this->category); echo '</pre></p>';
-		echo '<p>File     : `'. $this->file .'`</p>';
-		echo '</div>';
+?>
+		<div class="wider">
+			<div class="floatleft">
+				<div class="section">
+					<h2>Category</h2>
+					<p>
+						<pre><?print_r ($this->category)?></pre>
+					</p>
+				</div>
+			</div><div class="floatright">
+				<div class="section">
+					<h2>Now debugging...</h2>
+					<p>Request: `<?=$this->request?>`</p>
+					<p>Debug: `<?=$this->debug?>`</p>
+					<p>Bounce: `<?=$this->bounce?>`</p>
+					<p>Download: `<?=$this->download?>`</p>
+					<p>File: `<?=$this->file?>`</p>
+					<p>Side: `<?=$this->side?>`</p>
+				</div><div class="section">
+					<h2>Sections (<?=count($this->section)?>)</h2><ol>
+					<?php foreach ($this->section as $key) echo ('<li>'.$key.'</li>'); ?>
+					</ol>
+				</div>
+			</div>
+		</div>
+<?php
 	}
 
 	public function showPath () {
 	
-		$section = implode('/', $this->category->cat);
+		$path = '';
+		$descent = '';
+		foreach ($this->section as $section) {
+			$descent = $descent . $section .'/';
+			$path = $path . $this->ilink($descent, $section, false) .' / ';
+		}
 
-		if ($this->file) {
-			$page = ' / '. $this->ilink ($section .'/'. $this->file, $this->file);
-		} else $page = '';
-
-		return $this->ilink($section, $section) . $page;
+		return $path;
 	}
 
 	public function mkpath ($filename) {
 	
-		for ($index = 0; $index < count($this->category->src); $index++) {
-		
-			$filepath = $this->category->src[$index] .'/'. $filename;
-			if (file_exists($filepath)) break;
+		$filepath = '';
+
+		while (($path = $this->category->search())) {
+			
+			$filepath = $path.$filename;
+
+			if (file_exists($filepath))
+				return $filepath;
 		}
 
-		if (isset($filepath))
-			return $filepath;
-		print_r ($this);
-		print_r ($this->category);
-		print_r ($this->category->src);
 		die($filename .' has no valid path');
 	}
 
 	public function thispage () {
 	
-		return $this->category->cat .'/'. $this->file .'/';
+		return $this->category->request;
 	}
 
 	public function thisstyle () {
@@ -144,12 +154,12 @@ class PageMaster {
 
 	public function thisside () {
 	
-		return $this->loco->side . $this->category->getSrc() .'.nav.php';
+		return $this->loco->side . $this->side .'nav.php';
 	}
 
 	public function thiskeyword () {
 	
-		return $this->category->key .' '. ($this->file?$this->file:'index');
+		return implode (' ', $this->section) .' '. ($this->file?$this->file:'index');
 	}
 	
 	public function mkcascade($title, $name, $flag=true) {
@@ -161,7 +171,6 @@ class PageMaster {
 		
 			if (is_array($data)) {
 
-				echo ('Data is array');print_r($data);
 				$url = $data['request'];
 				if (isset($data['sharp'])) $url = $url .'#'. $data['sharp'];
 				$title = $data['title'];
@@ -172,6 +181,13 @@ class PageMaster {
 				$title = $second;
 				if ($third) $url = $url .'#'. $third;
 			}
+
+			if ($this->debug)
+				$url = $url .'debug/';
+			if ($this->bounce)
+				$url = $url .'bounce/';
+			if ($this->download)
+				$url = $url .'download/';
 
 			return '<a href="'. $url .'">'. $title .'</a>';
 	}

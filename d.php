@@ -2,6 +2,8 @@
 
 	class Loco {
 	
+		public $whereAmI;
+
 		public $site;
 		public $base;
 		public $local;
@@ -9,8 +11,10 @@
 		public $side;
 		public $lib;
 
-		public function __construct ($site, $base, $local=false) {
+		public function __construct ($whereAmI, $site, $base, $local=false) {
 		
+			$this->whereAmI = $whereAmI;
+
 			$this->site  = $site;
 			$this->base  = $base;
 			$this->local = $local;
@@ -41,9 +45,11 @@
 			return $this->style . $style .'.css';
 		}
 
-		public function mkdefault ($categories) {
+		public function mkdefault () {
 		
-			if ($this->base == 'http::/trunaluten.99k.org/') return $categories['Tru'];
+			if ($this->whereAmI == 'localhost') return 'Storie/';
+			else if ($this->whereAmI == '99k.org') return 'Tru/Naluten/';
+			else if ($this->whereAmI == 'altervista') return 'Storie/';
 
 			return $categories['Storie'];
 		}
@@ -56,22 +62,17 @@
 	$admin['name'] = 'simak';
 	$admin['password'] = '020eb5a55e7b0512016dd9e182312438';
 
-	if ($servername == 'localhost') {
-
-		$loco = new Loco ('/opt/lampp/htdocs/faiv/', 'http://localhost/faiv', true);
-
-	} else if ($servername == 'trunaluten.99k.org') {
-	
-		$loco = new Loco ('./', 'http://trunaluten.99k.org');
-
-	} else if ($servername == 'drachlyznardh.altervista.org') {
-	
-		$loco = new Loco ('./', 'http://drachlyznardh.altervista.org');
-	}
+	if ($servername == 'localhost')
+		$loco = new Loco ('localhost', '/opt/lampp/htdocs/faiv/', 'http://localhost/faiv', true);
+	else if ($servername == 'trunaluten.99k.org')
+		$loco = new Loco ('99k.org', './', 'http://trunaluten.99k.org');
+	else if ($servername == 'drachlyznardh.altervista.org')
+		$loco = new Loco ('altervista', './', 'http://drachlyznardh.altervista.org');
 
 	$request = $_SERVER['REQUEST_URI'];
 	if (preg_match ('/\/(.*)/', $request)) $request = preg_replace ('/\/(.*)/', '$1', $request);
 	if (preg_match ('/faiv\//', $request)) $request = preg_replace ('/faiv\/(.*)/', '$1', $request);
+	if ($request == '') header ('Location: ' . $loco->mkdefault());
 
 	if (preg_match('/style/', $request) && file_exists ($request)) {
 		
@@ -112,7 +113,6 @@
 
 	require_once ($loco->mklib('pagemaster'));
 	require_once ($loco->mklib('dialog'));
-	require_once ($loco->mklib('util'));
 
 	require_once ('sources.php');
 
@@ -139,7 +139,7 @@
 	$d = new Dialog($master->bounce);
 
 	if ($master->file) {
-		$path = $master->mkpath($master->file .'.'. $master->category->ext);
+		$path = $master->mkpath($master->file .'.php');
 	} else {
 		$path = $master->mkpath('index.php');
 	}
