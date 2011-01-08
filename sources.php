@@ -47,8 +47,7 @@
 		'/NaNoWriMo\//',
 		array ('nano/'),
 		'NaNoWriMo',
-		array ('ext' => 'pdf',
-			'mime' => 'application/pdf'),
+		false,
 		array('2010' => new Category (
 			'/2010\//',
 			array ('nano/2010/'),
@@ -59,7 +58,17 @@
 	);
 	$categories['Storie'] = new Category (
 		'/Storie\//',
-		array ('str/'),
-		'Storie'
+		array ('str/', 'str/2010/', 'str/2011/'),
+		'Storie',
+		false,
+		array('2010' => new Category (
+			'/2010\//',
+			array ('str/2010/'),
+			'2010'
+		), '2011' => new Category (
+			'/2011\//',
+			array ('str/2011/'),
+			'2011'
+		))
 	);
 ?>

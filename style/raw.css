@@ -77,10 +77,7 @@ div#rightside {
 }
 
 div#content {
-
-	padding-left: 15%;
-	padding-right: 15%;
-
+	background-color: pink;
 }
 
 div#leftside {
@@ -121,21 +118,27 @@ div.wide {
 div.clearbox {
 
 	background-color: transparent;
-	border: solid 5px transparent;pink;
+	border: solid 5px transparent;
 }
 
-div.content {
+div.small {
+
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5px;
+}
+
+div.small:first-child {
+
+	margin-top: 0px;
+}
+
+div.wider {
 
 	width: 100%;
-	float: left;
-	clear: left;
-}
-
-div.nav {
-
-	width: 25%;
-	float: right;
-	clear: right;
+	margin-left: 0%;
+	margin-right: 0%;
 }
 
 div.section {
@@ -195,12 +198,6 @@ a {
 a:hover {
 
 	text-decoration: underline;
-}
-
-div.wider {
-
-	width: 140%;
-	margin-left: -20%;
 }
 
 div.floatleft {

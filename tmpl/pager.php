@@ -8,7 +8,7 @@
 		<meta name="keywords" content="<?=$master->thiskeyword()?>" />
 		<link rel="alternate" type="application/rss+xml" title="TruNaluten - News" href="rss.xml" />
 
-		<title><?=$page['title']?></title>
+		<title><?=$m->page['title']?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
 		<script type="text/javascript" src="lib/scr.js"></script>
@@ -34,8 +34,8 @@
 							] 
 								<?=$m->showPath()?>
 							</h2>
-							<h1 id="title"><?=$page['title']?></h1>
-							<h2 id="subtitle"><?=$page['subtitle']?></h2>
+							<h1 id="title"><?=$m->page['title']?></h1>
+							<h2 id="subtitle"><?=$m->page['subtitle']?></h2>
 						</div>
 
 					</div> <!-- Clear Box -->
@@ -44,26 +44,29 @@
 				<div id="content">
 					<div class="clearbox">
 
-<?php if ($m->debug) $m->show(); ?>
+<?php if ($m->debug) $m->show();
+	if (isset($related['prev'])) {
+?>
 						<div class="section">
-<?php if (isset($related['prev'])) { ?>
 							<h2>Negli episodi precedenti</h2>
 							<p>Questa serie continua dalla pagina precedente,
 								<?=$m->ilink ($related['prev'])?>
-							</p></div><div class="section">
+							</p>
+						</div>
 <? }
 
 	mkpage($d, $m);
 
-	if (isset($related['next'])) { ?>
-							</div><div class="section">
+	if (isset($related['next'])) {
+?>
+						<div class="section">
 							<h2>Continua...</h2>
 							<p>Questa serie prosegue alla pagina successiva,
 								<?=$m->ilink ($related['next'])?>
 							</p>
+						</div> <!-- Section -->
 <?php } ?>
 						
-						</div> <!-- Section -->
 					</div> <!-- Clear Box -->
 				</div> <!-- Content -->
 

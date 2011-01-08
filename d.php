@@ -144,13 +144,8 @@
 		$path = $master->mkpath('index.php');
 	}
 
-	if (file_exists($path))
-		require_once ($path);
-	else
-		require_once ('error404.php');
-	
 	$m = $master;
-
+	require_once ($path);
 	require_once ($loco->mktmpl('pager'));
 	die ();
 

@@ -1,28 +1,29 @@
 <?php
 
-	$page['title'] = 'Tru Naluten';
-	$page['subtitle'] = 'Per saper dov&apos;andare';
+	$m->mkpage('Personaggi', 'Per saper chi sono e dove vanno');
 
 	function mkpage ($d, $m) {
 ?>
-	<h2>Leggere con attenzione</h2>
-	<p>
-		Attenzione prego: questa pagina, oltre ad essere
-		potentemente incompleta, non si preoccupa di
-		eliminare eventuali spoiler; pertanto se
-		girovagando qui doveste trovare informazioni che
-		non avreste voluto trovare, prendetevela con voi
-		stessi.
-	</p>
-</div><div class="section">
-	<?=$m->mkcascade('ELyznardh', 'eLyznardh')?>
-	<p>
-		Se avete gi&agrave; letto i primi capitoli,
-		saprete che eLyznardh &egrave; diviso in
-		pi&ugrave; persone.
-	</p>
-</div>
-<div class="wider" id="longELyznardh" style="display: none">
+<div class="small">
+	<div class="section">
+		<h2>Leggere con attenzione</h2>
+		<p>
+			Attenzione prego: questa pagina, oltre ad essere
+			potentemente incompleta, non si preoccupa di
+			eliminare eventuali spoiler; pertanto se
+			girovagando qui doveste trovare informazioni che
+			non avreste voluto trovare, prendetevela con voi
+			stessi.
+		</p>
+	</div><div class="section">
+		<?=$m->mkcascade('ELyznardh', 'eLyznardh')?>
+		<p>
+			Se avete gi&agrave; letto i primi capitoli,
+			saprete che eLyznardh &egrave; diviso in
+			pi&ugrave; persone.
+		</p>
+	</div>
+</div><div class="wider" id="longELyznardh" style="display: none">
 	<div class="floatleft">
 
 		<div class="section">
@@ -33,7 +34,6 @@
 			</p>
 			<div id="longsimak" style="display: none">
 <p>
-</p><p>
 	Nato come più anziano dei sette fratelli Cheskalen, si dimostra
 	immediatamente indipendente, immensamente rapido, brutalmente sincero e
 	impunemente emozionale.
@@ -69,14 +69,14 @@
 			</div>
 		</div> <!-- Section -->
 	</div>
-</div>
-<div class="section">
-	<?=$m->mkcascade('goodguys', 'Protagonisti')?>
-	<p>
-		Ci sono anche altri protagonisti, in effetti.
-	</p>
-</div>
-<div class="wider" id="longgoodguys" style="display: none">
+</div><div class="small">
+	<div class="section">
+		<?=$m->mkcascade('goodguys', 'Protagonisti')?>
+		<p>
+			Ci sono anche altri protagonisti, in effetti.
+		</p>
+	</div>
+</div><div class="wider" id="longgoodguys" style="display: none">
 	<div class="floatleft">
 		<div class="section">
 			<a id="sacomne"></a>
@@ -132,68 +132,68 @@
 			</div>
 		</div> <!-- Section -->
 	</div>
-</div>
-<div class="section">
-	<?=$m->mkcascade('badguys','Antagonisti')?>
-	<p>
-		Perché, anche se molti di voi non lo sa ancora,
-		ci sono degli antagonisti, in Tru Naluten. Molti
-		di essi sono già morti, in realtà. Ma alcuni
-		sono ancora in agguato.
-	</p><p>
-		Questa sezione &egrave; chiusa per via dei gravi
-		spoiler che comporta.
-	</p><p>
-		Cliccate pure sul men&ugrave; a destra per
-		evindenziarne il contenuto.
-	</p>
-</div>
-<div class="wider" id="longbadguys" style="display: none">
-<div class="floatleft">
+</div><div class="small">
 	<div class="section">
-		<a id="son"></a>
-		<?=$m->mkcascade('son_enka', 'Il Primo &ndash; Son Enkà')?>
-		<div id="longson_enka" style="display: none">
+		<?=$m->mkcascade('badguys','Antagonisti')?>
+		<p>
+			Perché, anche se molti di voi non lo sa ancora,
+			ci sono degli antagonisti, in Tru Naluten. Molti
+			di essi sono già morti, in realtà. Ma alcuni
+			sono ancora in agguato.
+		</p><p>
+			Questa sezione &egrave; chiusa per via dei gravi
+			spoiler che comporta.
+		</p><p>
+			Cliccate pure sul men&ugrave; a destra per
+			evindenziarne il contenuto.
+		</p>
+	</div>
+</div><div class="wider" id="longbadguys" style="display: none">
+	<div class="floatleft">
+		<div class="section">
+			<a id="son"></a>
+			<?=$m->mkcascade('son_enka', 'Il Primo &ndash; Son Enkà')?>
+			<div id="longson_enka" style="display: none">
 <p>
 	Prima volont&agrave; di Zathot, primo Zathotan a valicare i confini di
 	Cheskaldhum; morto per mano del Lyznardh.
 </p>
-		</div>
-	</div><div class="section">
-		<a id="vad"></a>
-		<?=$m->mkcascade('vad_enka', 'Il Secondo &ndash; Vad Enkà')?>
-		<div id="longvad_enka" style="display: none">
+			</div>
+		</div><div class="section">
+			<a id="vad"></a>
+			<?=$m->mkcascade('vad_enka', 'Il Secondo &ndash; Vad Enkà')?>
+			<div id="longvad_enka" style="display: none">
 <p>
 	Seconda volont&agrave; di Zathot, giunta in soccorso di Son Enk&agrave;,
 	fugg&igrave; da Cheskaldhum dopo aver recuperato la Corona,
 	organizz&ograve; l'invasione di Umundhum; morto per mano del Lyznardh.
 </p>
-		</div>
-	</div><div class="section">
-		<a id="zan"></a>
-		<?=$m->mkcascade('zan_enka', 'Il Terzo &ndash; Enka Zan')?>
-		<div id="longzan_enka" style="display: none">
+			</div>
+		</div><div class="section">
+			<a id="zan"></a>
+			<?=$m->mkcascade('zan_enka', 'Il Terzo &ndash; Enka Zan')?>
+			<div id="longzan_enka" style="display: none">
 <p>
 	Terza volont&agrave; di Zathot, organizz&ograve; la grande invasione di
 	Umundhum con l'esercito dei dannati; dopo l'annientamento del suo
 	esercito, mor&igrave; per mano del Lyznardh.
 </p>
-		</div>
-	</div><div class="section">
-		<a id="zen"></a>
-		<?=$m->mkcascade('zen_enka', 'Il Quarto &ndash; Zen Enkà')?>
-		<div  id="longzen_enka" style="display: none">
+			</div>
+		</div><div class="section">
+			<a id="zen"></a>
+			<?=$m->mkcascade('zen_enka', 'Il Quarto &ndash; Zen Enkà')?>
+			<div  id="longzen_enka" style="display: none">
 <p>
 	Quarta volont&agrave; di Zathot, guid&ograve; il commando per la
 	distruzione di Cheskaldhum, affront&ograve; eLyznardh in combattimento e
 	lo spinse infine al tradimento; resse Cheskaldhum fino all&apos;arrivo
 	del Quinto.
 </p>
-		</div>
-	</div><div class="section">
-		<a id="simak_enka"></a>
-		<?=$m->mkcascade('simak_enka', 'Il Quinto &ndash; Simák Enkà')?>
-		<div id="longsimak_enka" style="display: none">
+			</div>
+		</div><div class="section">
+			<a id="simak_enka"></a>
+			<?=$m->mkcascade('simak_enka', 'Il Quinto &ndash; Simák Enkà')?>
+			<div id="longsimak_enka" style="display: none">
 <p>
 	Quinta volont&agrave; di Zathot, riconquist&ograve; Zathot con la forza,
 	si mosse in segreto fino ai confini di Cheskaldhum, ne liber&ograve; i
@@ -205,11 +205,8 @@
 	il resto della sua vita al fianco di Sacomne.
 </p>
 			</div>
-		</div> <!-- Section -->
-		
-</div> <!-- Content -->
-
-<div class="floatright">
+		</div>
+	</div><div class="floatright">
 		<div class="section">
 			<?=$m->mkcascade('badlist', 'Antagonisti', false)?>
 			<div id="longbadlist">
@@ -220,5 +217,6 @@
 				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Simák_Enkà', 'simak_enka')?></p>
 			</div>
 		</div>
+	</div>
 </div>
 <?php } ?>

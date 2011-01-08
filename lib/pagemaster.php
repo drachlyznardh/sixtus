@@ -25,6 +25,7 @@ class PageMaster {
 
 		$this->loco = $loco;
 		$this->request = array ();
+		$this->section = array ();
 	}
 
 	public function searchForFlag ($request) {
@@ -80,10 +81,20 @@ class PageMaster {
 		$request = $this->searchForFlag($request);
 		$request = $this->searchForCatarray($request, $categories);
 
+		if ($this->category == null)
+			$this->category = new Category (
+				'',
+				array (),
+				''
+			);
+
 		if ($request) $this->file = substr($request, 0, -1);
 		else $this->file = 'index';
 
-		$this->side = preg_replace ('/\//', '.', $this->category->src[0]);
+		if ($this->category)
+			$this->side = preg_replace ('/\//', '.', $this->category->src[0]);
+		else
+			$this->side = '';
 	}
 
 	public function show () {
@@ -139,6 +150,7 @@ class PageMaster {
 				return $filepath;
 		}
 
+		return 'error404.php';
 		die($filename .' has no valid path');
 	}
 
@@ -218,6 +230,16 @@ class PageMaster {
 		}
 
 		return $this->ilink ('');
+	}
+
+	public function mkpage ($title, $subtitle) {
+	
+		$this->page = array ('title' => $title, 'subtitle' => $subtitle);
+	}
+
+	public function mkrelated ($rel, $request, $title, $sharp=false) {
+	
+		$this->$rel = array ($request, $title, $sharp);
 	}
 }
 

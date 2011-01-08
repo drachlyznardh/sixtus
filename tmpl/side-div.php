@@ -13,8 +13,8 @@
 	<?=$m->mkcascade('str-lside','Storie',false)?>
 	<div id="longstr-lside">
 		<p><?=$m->ilink('Storie/','Tutte le storie')?></p>
-		<p><?=$m->ilink('Storie/I/','Storie 2010')?></p>
-		<p><?=$m->ilink('Storie/XVIII/','Storie 2011')?></p>
+		<p><?=$m->ilink('Storie/2010/','Storie 2010')?></p>
+		<p><?=$m->ilink('Storie/2011/','Storie 2011')?></p>
 	</div>
 </div>
 <div class="section">
