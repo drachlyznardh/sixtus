@@ -16,7 +16,7 @@
 			probabilmente non ve ne frega.
 		</p>
 	</div>
-</div><div class="wider" id="longumanoidi">
+</div><div class="wider">
 	<div class="widecontent">
 		<div class="section"><a id="Corvino"></a>
 			<h2>
@@ -47,15 +47,16 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkreverse('umanoidi', 'Uman(oid)i')?>
-			<p>
+			<h2>
+				Uman(oid)i
+			</h2><p>
 				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Corvino', 'Corvino')?>
 			</p><p>
 				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Camelia', 'Camelia')?>
 			</p>
 		</div>
 	</div>
-</div><div class="revwider" id="longanimali">
+</div><div class="revwider">
 	<div class="widecontent">
 		<div class="section"><a id="Battesimo"></a>
 			<h2>
@@ -87,8 +88,9 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkreverse('animali', 'Animali')?>
-			<p>
+			<h2>
+				Animali
+			</h2><p>
 				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Battesimo', 'Battesimo')?>
 			</p><p>
 				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Smeraldino', 'Smeraldino')?>

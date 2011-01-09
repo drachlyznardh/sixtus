@@ -53,7 +53,11 @@
 			array ('nano/2010/'),
 			'2010',
 			array ('ext' => 'pdf',
-				'mime' => 'application/pdf')
+				'mime' => 'application/pdf')),
+		new Category (
+			'/Corvino\/Multicolore\//',
+			array('nano/corvino/'),
+			'Corvino Multicolore'
 		))
 	);
 	$categories['Storie'] = new Category (

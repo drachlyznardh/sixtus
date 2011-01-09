@@ -134,11 +134,23 @@ class PageMaster {
 		$path = '';
 		$descent = '';
 		foreach ($this->section as $section) {
-			$descent = $descent . $section .'/';
+			$descent = $descent . preg_replace('/ /', '/', $section) .'/';
 			$path = $path . $this->ilink($descent, $section, false) .' / ';
 		}
 
 		return $path;
+	}
+
+	public function mkCharBase () {
+	
+		$path = '';
+		$descent = '';
+
+		foreach ($this->section as $section) {
+			$path = $path .'/'. preg_replace('/ /', '/', $section);
+		}
+
+		return $this->loco->base . $path .'/Personaggi/';
 	}
 
 	public function mkpath ($filename) {
@@ -159,7 +171,7 @@ class PageMaster {
 
 	public function thispage () {
 	
-		return $this->category->request;
+		return $this->request;
 	}
 
 	public function thisstyle () {

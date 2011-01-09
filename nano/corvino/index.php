@@ -1,6 +1,6 @@
 <?php
 
-	$m->mkpage('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
+	$m->mkpage('Corvino Multicolore', '50,000 parole scritte in ventuno giorni');
 
 	function mkpage ($d, $m) {
 ?>
@@ -78,11 +78,11 @@
 
 	<?=$m->mkreverse('parteI', 'Parte I: La gioventù')?>
 	<ol style="list-style-type: decimal-leading-zero">
-		<li><?=$m->ilink('NaNoWriMo/01/download/', 'Una sera, al parco')?></li>
-		<li><?=$m->ilink('NaNoWriMo/02/download/', 'Campeggio')?></li>
-		<li><?=$m->ilink('NaNoWriMo/03/download/', 'A contatto')?></li>
-		<li><?=$m->ilink('NaNoWriMo/04/download/', 'Nel bosco')?></li>
-		<li><?=$m->ilink('NaNoWriMo/05/download/', 'La dichiarazione')?></li>
+		<li><?=$m->ilink('NaNoWriMo/01/', 'Una sera, al parco')?></li>
+		<li><?=$m->ilink('NaNoWriMo/02/', 'Campeggio')?></li>
+		<li><?=$m->ilink('NaNoWriMo/03/', 'A contatto')?></li>
+		<li><?=$m->ilink('NaNoWriMo/04/', 'Nel bosco')?></li>
+		<li><?=$m->ilink('NaNoWriMo/05/', 'La dichiarazione')?></li>
 	</ol>
 
 		</div>
@@ -122,16 +122,16 @@
 
 		<?=$m->mkreverse('parteII', 'Parte II: Il Potere')?>
 		<ol start="6" style="list-style-type: decimal-leading-zero">
-			<li><?=$m->ilink('NaNoWriMo/06/download/', 'Il lampione')?></li>
-			<li><?=$m->ilink('NaNoWriMo/07/download/', 'La lettura')?></li>
-			<li><?=$m->ilink('NaNoWriMo/08/download/', 'La corsa')?></li>
-			<li><?=$m->ilink('NaNoWriMo/09/download/', 'L&apos;estate')?></li>
-			<li><?=$m->ilink('NaNoWriMo/10/download/', 'La morte')?></li>
-			<li><?=$m->ilink('NaNoWriMo/11/download/', 'Il sogno')?></li>
-			<li><?=$m->ilink('NaNoWriMo/12/download/', 'Il lupo e il corvo')?></li>
-			<li><?=$m->ilink('NaNoWriMo/13/download/', 'Il funerale')?></li>
-			<li><?=$m->ilink('NaNoWriMo/14/download/', 'La rivelazione')?></li>
-			<li><?=$m->ilink('NaNoWriMo/15/download/', 'Il mondo &lsquo;di là&rsquo;')?></li>
+			<li><?=$m->ilink('NaNoWriMo/06/', 'Il lampione')?></li>
+			<li><?=$m->ilink('NaNoWriMo/07/', 'La lettura')?></li>
+			<li><?=$m->ilink('NaNoWriMo/08/', 'La corsa')?></li>
+			<li><?=$m->ilink('NaNoWriMo/09/', 'L&apos;estate')?></li>
+			<li><?=$m->ilink('NaNoWriMo/10/', 'La morte')?></li>
+			<li><?=$m->ilink('NaNoWriMo/11/', 'Il sogno')?></li>
+			<li><?=$m->ilink('NaNoWriMo/12/', 'Il lupo e il corvo')?></li>
+			<li><?=$m->ilink('NaNoWriMo/13/', 'Il funerale')?></li>
+			<li><?=$m->ilink('NaNoWriMo/14/', 'La rivelazione')?></li>
+			<li><?=$m->ilink('NaNoWriMo/15/', 'Il mondo &lsquo;di là&rsquo;')?></li>
 		</ol>
 
 			</div>
@@ -170,14 +170,14 @@
 
 	<?=$m->mkreverse('parteIII', 'Parte III: Le streghe')?>
 	<ol start="16" style="list-style-type: decimal-leading-zero">
-		<li><?=$m->ilink('NaNoWriMo/16/download/', 'Il da farsi')?></li>
-		<li><?=$m->ilink('NaNoWriMo/17/download/', 'Le botte')?></li>
-		<li><?=$m->ilink('NaNoWriMo/18/download/', 'La sua storia')?></li>
-		<li><?=$m->ilink('NaNoWriMo/19/download/', 'Io, Strega')?></li>
-		<li><?=$m->ilink('NaNoWriMo/20/download/', 'L&apos;offensiva')?></li>
-		<li><?=$m->ilink('NaNoWriMo/21/download/', 'L&apos;oracolo')?></li>
-		<li><?=$m->ilink('NaNoWriMo/22/download/', 'Il drago')?></li>
-		<li><?=$m->ilink('NaNoWriMo/finale/download/', 'Epilogo')?></li>
+		<li><?=$m->ilink('NaNoWriMo/16/', 'Il da farsi')?></li>
+		<li><?=$m->ilink('NaNoWriMo/17/', 'Le botte')?></li>
+		<li><?=$m->ilink('NaNoWriMo/18/', 'La sua storia')?></li>
+		<li><?=$m->ilink('NaNoWriMo/19/', 'Io, Strega')?></li>
+		<li><?=$m->ilink('NaNoWriMo/20/', 'L&apos;offensiva')?></li>
+		<li><?=$m->ilink('NaNoWriMo/21/', 'L&apos;oracolo')?></li>
+		<li><?=$m->ilink('NaNoWriMo/22/', 'Il drago')?></li>
+		<li><?=$m->ilink('NaNoWriMo/finale/', 'Epilogo')?></li>
 	</ol>
 
 		</div>

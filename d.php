@@ -135,7 +135,7 @@
 		} else $m->mkNotFound();
 	}
 
-	$d = new Dialog($m->bounce);
+	$d = new Dialog($m->bounce, $m->mkCharBase());
 
 	if ($m->file) {
 		$path = $m->mkpath($m->file .'.php');

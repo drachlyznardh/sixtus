@@ -9,13 +9,16 @@
 			'corona' => array ('-- ', ' --')
 		);
 		
-		public function __construct ($bounce) {
+		public function __construct ($bounce, $base) {
 		
 			$this->bounce = $bounce;
+			$this->base = $base;
 		}
 		
 		public function complete ($author, $humour, $speech) {
 		
+			if(!$author) $author = 'unknown';
+
 			if (isset($this->speakers[$author])) {
 				$first = $this->speakers[$author][0];
 				$last = $this->speakers[$author][1];
@@ -28,7 +31,8 @@
 			if ($humour != '') $class = "$class $humour";
 			
 			if ($this->bounce)
-				echo "$this->tab<p><a class=\"author\" href=\"Tru/Naluten/Personaggi/#$author\">$author</a>: <span class=\"$class\">&laquo;$first$speech$last&raquo;</span></p>\n";
+				echo "$this->tab<p><a class=\"author\"
+				href=\"$this->base#$author\">$author</a>: <span class=\"$class\">&laquo;$first$speech$last&raquo;</span></p>\n";
 			else
 				echo "$this->tab<p class=\"$class\">&laquo;$first$speech$last&raquo;</p>\n";
 		}
@@ -50,6 +54,8 @@
 		
 		public function inline ($author, $speech) {
 		
+			if(!$author) $author = 'unknown';
+
 			if (isset($this->speakers[$author])) {
 				$first = $this->speakers[$author][0];
 				$last = $this->speakers[$author][1];

@@ -18,12 +18,11 @@
 	</div>
 </div>
 <div class="section">
-	<?=$m->mkcascade('nano2010-lside','NaNoWriMo 2010',false)?>
-	<div id="longnano2010-lside">
-		<p><?=$m->ilink('NaNoWriMo/2010/','Indice')?></p>
-		<p><?=$m->ilink('NaNoWriMo/2010/01/','Parte I')?></p>
-		<p><?=$m->ilink('NaNoWriMo/2010/06/','Parte II')?></p>
-		<p><?=$m->ilink('NaNoWriMo/2010/16/','Parte III')?></p>
+	<?=$m->mkcascade('nano-lside','NaNoWriMo',false)?>
+	<div id="longnano-lside">
+		<p><?=$m->ilink('NaNoWriMo/','Indice')?></p>
+		<p><?=$m->ilink('NaNoWriMo/2010/','NaNoWriMo 2010')?></p>
+		<p><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/','Corvino Multicolore')?></p>
 	</div>
 
 						</div> <!-- Section -->

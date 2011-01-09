@@ -18,28 +18,38 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+.unknown {
+
+	font-style: italic;
+	color: #dddddd;
+}
+
 .lyznardh { 
 	font: 17pt/20pt Georgia;
 	color: #0000ff;
 }
 
-.simak {
+.simak,
+.Corvino {
 	font: 10pt/13pt Georgia;
 	color: #eeeeee;
 }
 
-.sacomne {
+.sacomne,
+.Camelia {
 	font: 10pt/13pt Georgia;
 	font-style: italic;
 	color: #ffee22;
 }
 
-.lyz {
+.lyz,
+.Sgrebeno{
 	font: 12pt/15pt Impact;
 	color: #000000;
 }
 
-.ci {
+.ci,
+.Matta {
 	font: 10pt/13pt Lucida console;
 	color: #ffdd00;
 }
