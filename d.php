@@ -116,16 +116,15 @@
 
 	require_once ('sources.php');
 
-	$master = new PageMaster ($loco);
-	$master->parse($request, $categories, $loco->mkdefault($categories));
+	$m = new PageMaster ($loco);
+	$m->parse($request, $categories, $loco->mkdefault($categories));
 
-	if ($master->download) {
+	if ($m->download) {
 		 
-		$filename = $master->file .'.'. $master->category->download;
-		$path = $master->mkpath($filename);
+		$path = $m->mkpath($m->file .'.'. $m->category->down['ext']);
 
-		header ('Content-Type: '. $master->category->mime);
-		header ('Content-Disposition: attachment; filename='. $master->file .'.'. $master->source['download']);
+		header ('Content-Type: '. $m->category->down['mime']);
+		header ('Content-Disposition: attachment; filename='. $m->file .'.'. $m->category->down['ext']);
 		
 		$file = fopen ($path, 'r');
 
@@ -133,18 +132,17 @@
 			while (!feof($file)) print(fread($file, 1024*1024));
 			fclose ($file);
 			die ();
-		} else $master->mkNotFound();
+		} else $m->mkNotFound();
 	}
 
-	$d = new Dialog($master->bounce);
+	$d = new Dialog($m->bounce);
 
-	if ($master->file) {
-		$path = $master->mkpath($master->file .'.php');
+	if ($m->file) {
+		$path = $m->mkpath($m->file .'.php');
 	} else {
-		$path = $master->mkpath('index.php');
+		$path = $m->mkpath('index.php');
 	}
 
-	$m = $master;
 	require_once ($path);
 	require_once ($loco->mktmpl('pager'));
 	die ();

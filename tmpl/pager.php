@@ -5,7 +5,7 @@
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
-		<meta name="keywords" content="<?=$master->thiskeyword()?>" />
+		<meta name="keywords" content="<?=$m->thiskeyword()?>" />
 		<link rel="alternate" type="application/rss+xml" title="TruNaluten - News" href="rss.xml" />
 
 		<title><?=$m->page['title']?></title>

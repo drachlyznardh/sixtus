@@ -1,12 +1,8 @@
 <?php
 
-	$page['title']    = 'Capitolo 01';
-	$page['subtitle'] = '';
-	$page['keyword']  = 'NaNoWriMo 2010 capitolo 01';
-	$page['side']     = 'nano.nav.php';
-
-	$related['next']['request'] = 'NaNoWriMo/02/';
-	$related['next']['title'] = 'Capitolo 02';
+	$m->mkpage('Capitolo 01', 'Corvino Multicolore, I, 01');
+	$m->mkrelated('next', 'Capitolo 02', 'NaNoWriMo/02/');
+	$m->mkrelated('downloadable', false, false);
 
 	function mkpage () {
 ?>
