@@ -178,6 +178,13 @@ div.section h2 {
 	margin: 2px 2px 2px -5px;
 }
 
+div.section h2.reverse {
+	
+	text-align: right;
+	padding: 3px 15px 3px 2px;
+	margin: 2px -5px 2px 2px;
+}
+
 .closed:after {
 
 	content:url('img/downarrow.png');

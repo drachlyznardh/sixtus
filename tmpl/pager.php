@@ -11,6 +11,7 @@
 		<title><?=$m->page['title']?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
+		<link rel="stylesheet" type="text/css" href="style/voices.css" />
 		<script type="text/javascript" src="lib/scr.js"></script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
@@ -45,24 +46,24 @@
 					<div class="clearbox">
 
 <?php if ($m->debug) $m->show();
-	if (isset($related['prev'])) {
+	if (isset($m->prev)) {
 ?>
 						<div class="section">
 							<h2>Negli episodi precedenti</h2>
 							<p>Questa serie continua dalla pagina precedente,
-								<?=$m->ilink ($related['prev'])?>
+								<?=$m->ilink($m->prev)?>
 							</p>
 						</div>
 <? }
 
 	mkpage($d, $m);
 
-	if (isset($related['next'])) {
+	if (isset($m->next)) {
 ?>
 						<div class="section">
 							<h2>Continua...</h2>
 							<p>Questa serie prosegue alla pagina successiva,
-								<?=$m->ilink ($related['next'])?>
+								<?=$m->ilink($m->next)?>
 							</p>
 						</div> <!-- Section -->
 <?php } ?>

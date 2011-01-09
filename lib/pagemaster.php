@@ -53,7 +53,8 @@ class PageMaster {
 			$this->category = $category;
 			$this->section[] = $this->category->section;
 			$request = preg_replace($match, '', $request);
-			return $request;
+			if ($request) return $request;
+			return 'index/';
 		}
 
 		return false;
@@ -62,16 +63,18 @@ class PageMaster {
 	public function searchForCatarray ($request, $cats) {
 
 		foreach ($cats as $cat) {
-			$result = $this->searchForKeyword($request, $cat);
-			if ($result) {
+			$first = $this->searchForKeyword($request, $cat);
+			if ($first) {
 				$this->category = $cat;
-				if ($this->category->subcat)
-					$result = $this->searchForCatarray($result, $this->category->subcat);
-				break;
+				if ($this->category->subcat) {
+					$second = $this->searchForCatarray($first, $this->category->subcat);
+					if ($second) return $second;
+					return $first;
+				}
+				return $first;
 			}
 		}
-
-		return $result;
+		return false;
 	}
 
 	public function parse ($request, $categories, $default) {
@@ -184,7 +187,7 @@ class PageMaster {
 			if (is_array($data)) {
 
 				$url = $data['request'];
-				if (isset($data['sharp'])) $url = $url .'#'. $data['sharp'];
+				if (isset($data['sharp']) && $data['sharp']) $url = $url .'#'. $data['sharp'];
 				$title = $data['title'];
 
 			} else {
@@ -237,9 +240,9 @@ class PageMaster {
 		$this->page = array ('title' => $title, 'subtitle' => $subtitle);
 	}
 
-	public function mkrelated ($rel, $request, $title, $sharp=false) {
+	public function mkrelated ($rel, $title, $request, $sharp=false) {
 	
-		$this->$rel = array ($request, $title, $sharp);
+		$this->$rel = array ('title' => $title, 'request' => $request, 'sharp' => $sharp);
 	}
 }
 
