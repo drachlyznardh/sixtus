@@ -181,6 +181,11 @@ class PageMaster {
 
 		return '<h2 id="arrow'.$title.'" class="'.($flag?'closed':'opened').'" onmousedown="javascript:cascade(\''.$title.'\')">'.$name.'</h2>'."\n";
 	}
+
+	public function mkreverse($title, $name, $flag=true) {
+	
+		return '<h2 id="straight'.$title.'" class="reverse '.($flag?'wider':'revwider').'" onmousedown="javascript:reverse(\''.$title.'\')">'.$name.'</h2>'."\n";
+	}
 	
 	public function ilink ($data, $second=false, $third=false) {
 		

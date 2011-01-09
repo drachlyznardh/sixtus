@@ -19,26 +19,20 @@
 			esami da dare e nessuna voglia di lavorare.
 		</p>
 	</div>
-</div><div class="wider">
-	<div class="floatleft">
+</div><div class="wider" id="longstr2011">
+	<div class="widecontent">
 		<div class="section">
-
-<a id="2011"></a>
-<p>
-	Scriverò quando ci sarà qualcosa da scrivere.
-</p>
-
+			<a id="2011"></a>
+			<p>
+				Scriverò quando ci sarà qualcosa da scrivere.
+			</p>
 		</div>
-	</div><div class="floatright">
+	</div><div class="widelist">
 		<div class="section">
-
-	<?=$m->mkcascade('str2011', 'Storie 2011', false)?>
-	<div id="longstr2011">
-		<ol start="18" style="list-style-type: upper-roman">
-			<li><?=$m->ilink('Storie/XVIII/', 'Liber Javae')?></li>
-		</ol>
-	</div>
-
+			<?=$m->mkreverse('str2011', 'Storie 2011')?>
+			<ol start="18" style="list-style-type: upper-roman">
+				<li><?=$m->ilink('Storie/XVIII/', 'Liber Javae')?></li>
+			</ol>
 		</div>
 	</div>
 </div>

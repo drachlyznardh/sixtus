@@ -52,7 +52,7 @@
 	</div>
 
 </div><div class="wider" id="longparteI" style="display: none">
-	<div class="floatleft">
+	<div class="widecontent">
 		<div class="section">
 
 	<p>
@@ -73,10 +73,10 @@
 	</p>
 
 		</div>
-	</div><div class="floatright">
+	</div><div class="widelist">
 		<div class="section">
 
-	<h2>Parte I: La gioventù</h2>
+	<?=$m->mkreverse('parteI', 'Parte I: La gioventù')?>
 	<ol style="list-style-type: decimal-leading-zero">
 		<li><?=$m->ilink('NaNoWriMo/01/', 'Una sera, al parco')?></li>
 		<li><?=$m->ilink('NaNoWriMo/02/', 'Campeggio')?></li>
@@ -97,8 +97,8 @@
 			ad imbattersi in individui pericolosi...
 		</p>
 	</div>
-</div><div class="wider" id="longparteII" style="display: none">
-		<div class="floatleft">
+</div><div class="revwider" id="longparteII" style="display: none">
+		<div class="widecontent">
 			<div class="section">
 
 	<p>
@@ -117,10 +117,10 @@
 	</p>
 				
 			</div>
-		</div><div class="floatright">
+		</div><div class="widelist">
 			<div class="section">
 
-		<h2>Parte II: Il Potere</h2>
+		<?=$m->mkreverse('parteII', 'Parte II: Il Potere')?>
 		<ol start="6" style="list-style-type: decimal-leading-zero">
 			<li><?=$m->ilink('NaNoWriMo/06/', 'Il lampione')?></li>
 			<li><?=$m->ilink('NaNoWriMo/07/', 'La lettura')?></li>
@@ -148,7 +148,7 @@
 		</p>
 	</div>
 </div><div class="wider" id="longparteIII" style="display: none">
-	<div class="floatleft">
+	<div class="widecontent">
 		<div class="section">
 
 	<p>
@@ -165,10 +165,10 @@
 	</p>
 
 		</div>
-	</div><div class="floatright">
+	</div><div class="widelist">
 		<div class="section">
 
-	<h2>Parte III: Le streghe</h2>
+	<?=$m->mkreverse('parteIII', 'Parte III: Le streghe')?>
 	<ol start="16" style="list-style-type: decimal-leading-zero">
 		<li><?=$m->ilink('NaNoWriMo/16/', 'Il da farsi')?></li>
 		<li><?=$m->ilink('NaNoWriMo/17/', 'Le botte')?></li>

@@ -11,8 +11,8 @@
 			<li><?=$m->ilink('Storie/VII/', 'Gundam')?></li>
 			<li><?=$m->ilink('Storie/VIII/', 'Sassi')?></li>
 		</ol>
+		<h2 class="reverse">La Saga di $rossa</h2>
 		<div class="inside">
-			<h2>La Saga di $rossa</h2>
 			<ol start="9" style="list-style-type:upper-roman">
 				<li><?=$m->ilink('Storie/IX/', 'Attenzione')?></li>
 				<li><?=$m->ilink('Storie/X/', 'Due Storie')?></li>

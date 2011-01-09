@@ -76,10 +76,6 @@ div#rightside {
 	overflow: hidden;
 }
 
-div#content {
-	background-color: pink;
-}
-
 div#leftside {
 
 	position: fixed;
@@ -134,7 +130,8 @@ div.small:first-child {
 	margin-top: 0px;
 }
 
-div.wider {
+div.wider,
+div.revwider {
 
 	width: 100%;
 	margin-left: 0%;
@@ -185,14 +182,24 @@ div.section h2.reverse {
 	margin: 2px -5px 2px 2px;
 }
 
-.closed:after {
+div.section h2.closed:after {
 
 	content:url('img/downarrow.png');
 }
 
-.opened:after {
+div.section h2.opened:after {
 
 	content:url('img/uparrow.png');
+}
+
+div.section h2.wider:before {
+
+	content:url('img/straight.png');
+}
+
+div.section h2.revwider:before {
+
+	content:url('img/reverse.png');
 }
 
 a {
@@ -207,21 +214,34 @@ a:hover {
 	text-decoration: underline;
 }
 
-div.floatleft {
+div.wider div.widecontent {
 
 	width: 60%;
 	float: left;
 	clear: left;
 }
 
-div.floatright {
+div.wider div.widelist {
 	width: 39%;
 	float: right;
 	clear: right;
 }
 
-div.floatleft,
-div.floatright {
+div.revwider div.widecontent {
+
+	width: 60%;
+	float: right;
+	clear: right;
+}
+
+div.revwider div.widelist {
+	width: 39%;
+	float: left;
+	clear: left;
+}
+
+div.widecontent,
+div.widelist {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }

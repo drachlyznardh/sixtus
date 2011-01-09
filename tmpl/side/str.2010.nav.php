@@ -11,8 +11,8 @@
 			<li><?=$m->ilink('Storie/VII/', 'Gundam')?></li>
 			<li><?=$m->ilink('Storie/VIII/', 'Sassi')?></li>
 		</ol>
+		<h2 class="reverse">La Saga di $rossa</h2>
 		<div class="inside">
-			<h2>La Saga di $rossa</h2>
 			<ol start="9" style="list-style-type:upper-roman">
 				<li><?=$m->ilink('Storie/IX/', 'Attenzione')?></li>
 				<li><?=$m->ilink('Storie/X/', 'Due Storie')?></li>
@@ -26,13 +26,6 @@
 		</div>
 		<ol start="17" style="list-style-type:upper-roman">	
 			<li><?=$m->ilink('Storie/XVII/', 'Il finale')?></li>
-		</ol>
-	</div>
-</div><div class="section">
-	<?=$m->mkcascade('str2011-rside', 'Storie 2011', false)?>
-	<div id="longstr2011-rside">
-		<ol start="18" style="list-style-type: upper-roman;">
-			<li><?=$m->ilink('Storie/XVIII/', 'Liber Javae')?></li>
 		</ol>
 	</div>
 </div><div class="section">

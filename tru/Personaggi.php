@@ -24,7 +24,7 @@
 		</p>
 	</div>
 </div><div class="wider" id="longELyznardh" style="display: none">
-	<div class="floatleft">
+	<div class="widecontent">
 
 		<div class="section">
 			<a id="simak"></a>
@@ -58,15 +58,13 @@
 			provoca la parlata in terza persona ed alcuni
 			imprevedibili cambi di personalit&agrave;.</p>
 		</div> <!-- Section -->
-	</div><div class="floatright">
+	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkcascade('ELyznardhlist', 'eLyznardh', false)?>
-			<div id="longELyznardhlist">
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Simak', 'simak')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Ci', 'ci')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Lyz', 'lyz')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Lyznardh', 'lyznardh')?></p>
-			</div>
+			<?=$m->mkreverse('ELyznardh', 'eLyznardh')?></h2>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Simak', 'simak')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Ci', 'ci')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Lyz', 'lyz')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Lyznardh', 'lyznardh')?></p>
 		</div> <!-- Section -->
 	</div>
 </div><div class="small">
@@ -76,8 +74,8 @@
 			Ci sono anche altri protagonisti, in effetti.
 		</p>
 	</div>
-</div><div class="wider" id="longgoodguys" style="display: none">
-	<div class="floatleft">
+</div><div class="revwider" id="longgoodguys" style="display: none">
+	<div class="widecontent">
 		<div class="section">
 			<a id="sacomne"></a>
 			<?=$m->mkcascade('sacomne','Sacomne')?>
@@ -120,16 +118,14 @@
 </p>
 			</div>
 		</div> <!-- Section -->
-	</div><div class="floatright">
+	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkcascade('goodlist', 'Protagonisti', false)?>
-			<div id="longgoodlist">
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Sacomne', 'sacomne')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Corona', 'corona')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Jo', 'jo')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Togan', 'togan')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Antico Simak', 'a_simak')?></p>
-			</div>
+			<?=$m->mkreverse('goodguys', 'Protagonisti')?>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Sacomne', 'sacomne')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Corona', 'corona')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Jo', 'jo')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Togan', 'togan')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Antico Simak', 'a_simak')?></p>
 		</div> <!-- Section -->
 	</div>
 </div><div class="small">
@@ -149,7 +145,7 @@
 		</p>
 	</div>
 </div><div class="wider" id="longbadguys" style="display: none">
-	<div class="floatleft">
+	<div class="widecontent">
 		<div class="section">
 			<a id="son"></a>
 			<?=$m->mkcascade('son_enka', 'Il Primo &ndash; Son Enkà')?>
@@ -206,16 +202,14 @@
 </p>
 			</div>
 		</div>
-	</div><div class="floatright">
+	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkcascade('badlist', 'Antagonisti', false)?>
-			<div id="longbadlist">
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Son_Enkà', 'son')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Vad_Enkà', 'vad')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Enka_Zan', 'zan')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Zen_Enkà', 'zen')?></p>
-				<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Simák_Enkà', 'simak_enka')?></p>
-			</div>
+			<?=$m->mkreverse('badguys', 'Antagonisti')?>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Son_Enkà', 'son')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Vad_Enkà', 'vad')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Enka_Zan', 'zan')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Zen_Enkà', 'zen')?></p>
+			<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Simák_Enkà', 'simak_enka')?></p>
 		</div>
 	</div>
 </div>
