@@ -1,17 +1,13 @@
 <?php 
 	
-	$page['title'] = 'Correre';
-	$page['subtitle'] = 'Di corsa';
-	$page['side'] = 'str.nav.php';
-
-	$related['prev']['title'] = 'Storia I';
-	$related['prev']['request'] = 'Storie/I/';
-	$related['next']['title'] = ' Storia III';
-	$related['next']['request'] = 'Storie/III/';
+	$m->mkpage('Correre', 'Di corsa');
+	$m->mkrelated('prev', 'Storia I', 'Storie/I/');
+	$m->mkrelated('next', 'Storia III', 'Storie/III/');
 
 	function mkpage () {
 ?>
-
+<div class="small">
+	<div class="section">
 <p>
 Ci sono giorni in cui ti succedono tante cose. A volte torni a casa la sera
 e ti rendi conto di quanto lavoro hai fatto, a volte guardi la TV e mentre
@@ -74,5 +70,6 @@ quello aggiunge: "E ti ricordo che il limite è di 18 anni, e le ragazze di
 18 anni, ormai, sono parecchio più giovani". In quel momento ho realizzato
 che 24 corrisponde ai 4/3 di 18. E mi sono sentito molto vecchio.
 </p>
-
+	</div>
+</div>
 <?php } ?>

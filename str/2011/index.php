@@ -1,7 +1,6 @@
 <?php
 	
 	$m->mkpage('Storie 2011', 'Forse meno tristi dell&apos;anno passato');
-	$m->mkrelated('prev', 'Storie/XVII/', 'Storia XVII');
 	
 	function mkpage($d, $m) {
 ?>

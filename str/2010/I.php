@@ -1,15 +1,12 @@
 <?php
 
-	$page['title'] = 'Apologia';
-	$page['subtitle'] = 'Ossia giustificazione di quello che ho fatto';
-	$page['side'] = 'str.nav.php';
-
-	$related['next']['request'] = 'Storie/II/';
-	$related['next']['title'] = 'Storia II';
+	$m->mkpage('Apologia', 'Ossia giustificazione di quello che ho fatto');
+	$m->mkrelated('next', 'Storia II', 'Storie/II/');
 
 	function mkpage () {
 ?>
-
+<div class="small">
+	<div class="section">
 <p>
 C'era una volta un ragazzo, giovane e ingenuo, che passava il suo tempo
 aspettando il futuro. In possesso di un certo talento per la progettazione e
@@ -121,5 +118,6 @@ quell'altro, dai! Dai!".
 Il ragazzo prese la via del ritorno, si voltò e dichiarò: "Ma anche no.
 Ciao." e se tornò a casa sua.
 </p>
-
+	</div>
+</div>
 <?php } ?>
