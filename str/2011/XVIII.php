@@ -2,6 +2,7 @@
 
 	$m->mkpage('Liber Javae', 'Opera seconda dell&apos;Arabo pazzo');
 	$m->mkrelated('prev', 'Storia XVII', 'Storie/XVII/');
+	$m->mkrelated('next', 'Storia XIX', 'Storie/XIX/');
 
 	function mkpage () {
 ?>

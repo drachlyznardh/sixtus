@@ -18,115 +18,78 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-div#main {
-
+div#main
+{
 	position: fixed;
-
 	width: 100%;
 	height: 100%;
-	
 	left: 0;
 	top: 0;
-
 	background: #121212;
 	font: 8pt/10pt "Georgia", sans-serif;
 }
 
-div#head {
-
+div#head, div#foot
+{
 	width: 100%;
-
 	font: 7pt/9pt Georgia;
 	text-align: center;
 }
 
-div#foot {
-
-	width: 100%;
-
-	float: none;
-	clear: both;
-
-	font: 7pt/9pt Georgia;
-	text-align: center;
-}
-
-div#container {
-
+div#container
+{
 	position: fixed;
-
 	width: 56%;
 	height: 100%;
 	left:  22%;
 	right: 22%;
 	top: 0%;
-
 	overflow: hidden;
 }
 
-div#rightside {
-	
+div#rightside
+{
 	position: fixed;
-
 	width: 20%;
 	height: 90%;
 	right: 1%;
 	top: 5%;
-
 	overflow: hidden;
 }
 
-div#leftside {
-
+div#leftside
+{
 	position: fixed;
-
 	width: 20%;
 	height: 90%;
 	left: 1%;
 	top: 5%;
-	
 	overflow: hidden;
 }
 
-div#fixed-nav,
-div#foot,
-div#head,
-div#container {
-
-	overflow: hidden;
-}
-
-div#head h1 {
-
+div#head h1
+{
 	font-family: Georgia;
 	font-weight: bold;
 	font-size: 30px;
 }
 
-div.wide {
-
-	width: 100%;
-
-	float: none;
-	clear: both;
-}
-
-div.clearbox {
-
+div.clearbox
+{
 	background-color: transparent;
 	border: solid 5px transparent;
 }
 
-div.small {
-
+div.small
+{
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-top: 5px;
 }
 
-div.small:first-child {
-
+div.small:first-child
+{
 	margin-top: 0px;
 }
 
@@ -138,187 +101,163 @@ div.revwider {
 	margin-right: 0%;
 }
 
-div.section {
-
+div.section
+{
 	background-color: #666666;
 	border: solid 2px white;
 	border-bottom-color: #aaaaaa;
 	border-right-color: #aaaaaa;
-
 	margin-top: 5px;
 	float: none;
 	clear: both;
 }
 
-div.section:first-child {
-
+div.section:first-child
+{
 	margin-top: 0px;
 }
 
-div.section p {
-
+div.section p 
+{
 	text-align: justify;
 	text-indent: 20px;
-
 	padding: 0px 2px 0px 2px;
 	margin: 2px 2px 2px 2px;
 }
 
-div.section h2 {
-
+div.section h2
+{
 	background-color: #444444;
 	border: solid 2px white;
-	border-bottom: solid 2px #aaaaaa;
-	border-right: solid 2px #aaaaaa;
-	
+	border-bottom-color: #aaaaaa;
+	border-right-color: #aaaaaa;
 	padding: 3px 2px 3px 15px;
 	margin: 2px 2px 2px -5px;
 }
 
-div.section h2.reverse {
-	
+div.section h2.reverse
+{	
 	text-align: right;
 	padding: 3px 15px 3px 2px;
 	margin: 2px -5px 2px 2px;
 }
 
-div.section h2.closed:after {
-
+div.section h2.closed:after
+{
 	content:url('img/downarrow.png');
 }
 
-div.section h2.opened:after {
-
+div.section h2.opened:after
+{
 	content:url('img/uparrow.png');
 }
 
-div.section h2.wider:before {
-
+div.section h2.wider:before
+{
 	content:url('img/straight.png');
 }
 
-div.section h2.revwider:before {
-
+div.section h2.revwider:before
+{
 	content:url('img/reverse.png');
 }
 
-a {
-
+a
+{
 	text-decoration: none;
-
 	color: #eeeeee;
 }
 
-a:hover {
-
+a:hover
+{
 	text-decoration: underline;
 }
 
-div.wider div.widecontent {
-
+div.wider div.widecontent
+{
 	width: 60%;
 	float: left;
 	clear: left;
 }
 
-div.wider div.widelist {
+div.wider div.widelist
+{
 	width: 39%;
 	float: right;
 	clear: right;
 }
 
-div.revwider div.widecontent {
-
+div.revwider div.widecontent
+{
 	width: 60%;
 	float: right;
 	clear: right;
 }
 
-div.revwider div.widelist {
+div.revwider div.widelist
+{
 	width: 39%;
 	float: left;
 	clear: left;
 }
 
-div.widecontent,
-div.widelist {
+div.widecontent, div.widelist
+{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 
-div.next {
-
+div.next
+{
 	width: 28%;
-
 	float: right;
 	clear: right;
-
 	margin-left: 2%;
 }
 
-div.top {
-
+div.top
+{
 	width: 40%;
 	float: left;
 	clear: none;
 }
 
-div.prev {
-
+div.prev
+{
 	width: 28%;
-
 	float: left;
 	float: left;
-
 	margin-right: 2%;
 }
 
-div.next,
-div.top,
-div.prev {
-
+div.next, div.top, div.prev
+{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 
-img.valid {
-
-	border: 0;
-	
-	width: 88px;
-	height: 31px;
-}
-
-p#home,
-p#subtitle,
-p#copyright,
-p#good_source {
-
-	padding-top: 3px;
-	padding-bottom: 3px;
-	
-	margin: 0px;
-}
-
-div.inside, div.outside {
-
+div.inside, div.outside
+{
 	margin: 3px 2px 3px 2px;
 	background-color: #555555;
 	border: solid 2px #ffffff;
-
 	border-bottom-color: #aaaaaa;
 	border-right-color: #aaaaaa;
 }
 
-div.inside {
-
+div.inside
+{
 	margin: 2px 2px 2px -5px;
-
 }
 
-div.outside {
-
+div.outside
+{
 	margin: 2px -5px 2px 2px;
+}
 
+div.outside input
+{
+	width: 100%;
+	border: 0px;
 }
 

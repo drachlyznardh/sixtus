@@ -8,38 +8,15 @@
 	<div class="section">
 
 		<h2>
-			NaNoWriMo
+			Corvino Multicolore
 		</h2><p>
-			Il <a href="http://www.nanowrimo.org/">NaNoWriMo</a> è
-			un'allegra cosa stupida che permette alla gente di perdere un
-			sacco di tempo in maniera creativa.
+			Le correzioni erano completamente opzionali.
 		</p><p>
-			Il suo scopo è riuscire a scrivere un racconto di almeno
-			cinquantamila parole, dal primo al trenta novembre. Ovviamente,
-			questo può portare risultati altamente variabili; in alcuni casi
-			vien male, in altri casi vien molto male.
+			Ma ho voglia di scrivere, anziché di studiare.
 		</p><p>
-			Se vi andasse di darci un'occhiata, io lo metto qui. State
-			attenti, perché queste parole sono il frutto di una scrittura
-			nervosa e forzata, e possono piacere come non piacere. Inoltre,
-			non spaccate le palle se trovate degli errori dentro, perché
-			questo era il mese della scrittura, il mese delle correzioni è
-			invece dicembre. E le correzioni sono completamente opzionali.
-		</p><p>
-			Capito, Andrea?
-		</p><p>
-			Capito, Mitch?
-		</p><p>
-			Completamente opzionali.
-		</p>
-	</div><div class="section">
-		<h2>
-			Download
-		</h2><p>
-			Ciascun capitolo è disponibile singolarmente per il download, ma
-			in realtà questo frazionamento è stato effettuato soltato per
-			sfizio. Se voleste scaricare il pdf completo, cliccate <a
-			href="NaNoWriMo/NaNoWriMo2010/download/">questo</a>.
+			Sto cominciando a risistemare tutto. Se per caso andate
+			troppo avanti e trovate una pagina che non risponde
+			bene, è perché non ci sono ancora arrivato.
 		</p>
 	</div><div class="section">
 		<?=$m->mkcascade('parteI', 'Parte I &ndash; La gioventù')?>

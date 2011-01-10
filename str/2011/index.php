@@ -31,7 +31,9 @@
 		<div class="section">
 			<?=$m->mkreverse('str2011', 'Storie 2011')?>
 			<ol start="18" style="list-style-type: upper-roman">
-				<li><?=$m->ilink('Storie/XVIII/', 'Liber Javae')?></li>
+				<li><?=$m->ilink('Storie/2011/XVIII/', 'Liber Javae')?></li>
+				<li><?=$m->ilink('Storie/2011/XIX/', 'Permessi')?></li>
+				<li><?=$m->ilink('Storie/2011/XX/', 'Guida')?></li>
 			</ol>
 		</div>
 	</div>

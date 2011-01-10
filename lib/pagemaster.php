@@ -102,15 +102,16 @@ class PageMaster {
 
 	public function show () {
 ?>
+		<div class="section"><p>Debug! Debug infos everywhere!!!</p></div>
 		<div class="wider">
-			<div class="floatleft">
+			<div class="widecontent">
 				<div class="section">
 					<h2>Category</h2>
 					<p>
 						<pre><?print_r ($this->category)?></pre>
 					</p>
 				</div>
-			</div><div class="floatright">
+			</div><div class="widelist">
 				<div class="section">
 					<h2>Now debugging...</h2>
 					<p>Request: `<?=$this->request?>`</p>

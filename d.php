@@ -140,7 +140,7 @@
 		die ();
 	} else if (preg_match('/rss\.xml/', $request)) {
 	
-		header ('Content-Type: text/xml');
+		header ('Content-Type: application/rss+xml');
 		$file = fopen ('rss.xml', 'r');
 		while (!feof($file)) print(fread($file,1024*1024));
 		fclose ($file);
@@ -155,7 +155,7 @@
 	$m = new PageMaster ($loco);
 	$m->parse($request, $categories, $loco->mkdefault($categories));
 
-	if ($m->download) {
+	if ($m->download && $m->category->down) {
 		 
 		$path = $m->mkpath($m->file .'.'. $m->category->down['ext']);
 
