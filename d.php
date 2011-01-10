@@ -60,7 +60,43 @@
 	
 	/* Set Admin data */
 	$admin['name'] = 'simak';
-	$admin['password'] = '020eb5a55e7b0512016dd9e182312438';
+	$admin['pass'] = '020eb5a55e7b0512016dd9e182312438';
+
+	session_name('lyzid');
+	session_start();
+
+	if (isset($_POST['action'])) {
+	
+		if (strcmp($_POST['action'], 'login') == 0) {
+			$name = mysql_real_escape_string ($_POST['name']);
+			$pass = mysql_real_escape_string ($_POST['pass']);
+
+			if (strcmp($name, $admin['name']) == 0 &&
+			strcmp(md5($pass), $admin['pass']) == 0) {
+				$_SESSION['login'] = true;
+				$_SESSION['name'] = $name;
+			}
+		} else if (strcmp($_POST['action'], 'logout') == 0) {
+			$_SESSION = array();
+			session_destroy();
+		} else if (strcmp($_POST['action'], 'delete') == 0) {
+		
+			if (isset($_SESSION['login']) && $_SESSION['login']) {
+				$_SESSION['delete'] = $_POST['delete'].' is here';
+				if (file_exists($_POST['delete'])) {
+					if (is_dir($_POST['delete']))
+						$_SESSION['delete'] = exec('rmdir '. $_POST['delete']);//rmdir($_POST['delete'])?'success':'failure';
+						//$_SESSION['delete'] = rmdir($_POST['delete'])?'success':'failure';
+					else	
+						$_SESSION['delete'] = exec('chmod 775 lol/');//rm '.$_POST['delete']);//rmdir($_POST['delete'])?'success':'failure';
+						//$_SESSION['delete'] = rename($_POST['delete'], 'fuffa.php')?'success':'failure';
+				} else
+					$_SESSION['delete'] = $_POST['delete'] .' does not exists';
+			}
+		}
+	}
+
+	session_write_close();
 
 	if ($servername == 'localhost')
 		$loco = new Loco ('localhost', '/opt/lampp/htdocs/faiv/', 'http://localhost/faiv', true);
