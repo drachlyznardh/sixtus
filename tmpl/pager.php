@@ -13,11 +13,29 @@
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
 		<link rel="stylesheet" type="text/css" href="style/voices.css" />
 		<script type="text/javascript" src="lib/scr.js"></script>
+		<script type="text/javascript">
+document.onkeypress = myKeyUp;
+function myKeyUp (e) {
+	var key = (window.event) ? event.keyCode : e.keyCode;
+	var div = document.getElementById('container');
+	switch (key) {
+	
+		case 38: div.scrollTop -= 30; break;
+		case 33: div.scrollTop -= 300; break;
+		case 36: div.scrollTop = 0; break;
+		case 40: div.scrollTop += 30; break;
+		case 34: div.scrollTop += 300; break;
+		case 35: div.scrollTop = 10000; break;
+	}
+}
+		</script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
 		
 	</head>
 	<body>
+
+
 		<div id="main">
 			<div id="leftside" class="scrollable">
 	

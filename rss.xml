@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Storia XX</title>
+			<description>Una guida per capire come funziona questo sito.</description>
+			<pubDate>Tue, 11 Jan 2011 12:15:00 +0100</pubDate>
+			<link>http://drachlyznardh.altervista.org/Storie/2011/XX/</link>
+			<guid>http://drachlyznardh.altervista.org/Storie/2011/XX/</guid>
+		<item></item>
 			<title>Storia XIX</title>
 			<description>Dannati permessi di scrittura insufficienti!</description>
 			<pubDate>Mon, 10 Jan 2011 18:21:00 +0100</pubDate>
@@ -18,12 +24,6 @@
 			<pubDate>Wed, 15 Dec 2010 18:32:00 +0100</pubDate>
 			<link>http://drachlyznardh.altervista.org/Storie/XVI/</link>
 			<guid>http://drachlyznardh.altervista.org/Storie/XVI/</guid>
-		</item><item>
-			<title>Tru Naluten XIX</title>
-			<description>Dopo un'eternità, ecco la conclusione del secondo volume</description>
-			<pubDate>Wed, 15 Dec 2010 18:32:00 +0100</pubDate>
-			<link>http://drachlyznardh.altervista.org/Tru/Naluten/XIX/</link>
-			<guid>http://drachlyznardh.altervista.org/Tru/Naluten/XIX/</guid>
 		</item>
 	</channel>
 </rss>

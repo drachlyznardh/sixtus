@@ -50,9 +50,9 @@
 			<h2>
 				Uman(oid)i
 			</h2><p>
-				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Corvino', 'Corvino')?>
+				<?=$m->legend('Corvino')?>
 			</p><p>
-				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Camelia', 'Camelia')?>
+				<?=$m->legend('Camelia')?>
 			</p>
 		</div>
 	</div>
@@ -91,11 +91,43 @@
 			<h2>
 				Animali
 			</h2><p>
-				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Battesimo', 'Battesimo')?>
+				<?=$m->legend('Battesimo')?>
 			</p><p>
-				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Smeraldino', 'Smeraldino')?>
+				<?=$m->legend('Smeraldino')?>
 			</p><p>
-				<?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Fisthanlarunai', 'Fisthanlarunai')?>
+				<?=$m->legend('Fisthanlarunai')?>
+			</p>
+		</div>
+	</div>
+</div><div id="longstreghe" class="wider">
+	<div class="widecontent">
+		<div class="section">
+			<h2>
+				Streghe	
+			</h2><a id="Strega"></a><a id="Streghe"></a><p>
+				Le streghe sono terribili creature &ndash; dotate di
+				spaventosi poteri magici &ndash; che vivono sia
+				<?=$m->legend('di qua')?> che <?=$m->legend('di
+				là')?>.
+			</p>
+		</div><div class="section">
+			<h2>
+				Multicolore
+			</h2><a id="Multicolore"></a><p>
+				Uno degli appellativi di
+				<?=$m->legend('Corvino')?>, dicesi di colui che
+				può assumere più d'un colore contemporaneamente.
+			</p>
+		</div><div class="section">
+			<h2>
+				Trasparente
+			</h2><a id="Trasparente"></a><p>
+				Altro appellativo per
+				<?=$m->legend('Corvino')?>, dicesi di colui che
+				può evitare di assumere un colore. &Egrave;
+				grazie a questo potere che il ragazzo riesce a
+				passare <?=$m->legend('di là')?> senza lasciare
+				traccia.
 			</p>
 		</div>
 	</div>

@@ -10,6 +10,7 @@ class PageMaster {
 	public $category;
 	public $file;
 	public $side;
+	public $charbase;
 
 	public $loco;
 
@@ -98,6 +99,8 @@ class PageMaster {
 			$this->side = preg_replace ('/\//', '.', $this->category->src[0]);
 		else
 			$this->side = '';
+
+		$this->mkCharBase();
 	}
 
 	public function show () {
@@ -142,7 +145,7 @@ class PageMaster {
 		return $path;
 	}
 
-	public function mkCharBase () {
+	private function mkCharBase () {
 	
 		$path = '';
 		$descent = '';
@@ -151,7 +154,7 @@ class PageMaster {
 			$path = $path .'/'. preg_replace('/ /', '/', $section);
 		}
 
-		return $this->loco->base . $path .'/Personaggi/';
+		$this->charbase = $this->loco->base . $path .'/Personaggi/';
 	}
 
 	public function mkpath ($filename) {
@@ -205,14 +208,12 @@ class PageMaster {
 			if (is_array($data)) {
 
 				$url = $data['request'];
-				if (isset($data['sharp']) && $data['sharp']) $url = $url .'#'. $data['sharp'];
 				$title = $data['title'];
 
 			} else {
 			
 				$url = $data;
 				$title = $second;
-				if ($third) $url = $url .'#'. $third;
 			}
 
 			if ($this->debug)
@@ -221,6 +222,10 @@ class PageMaster {
 				$url = $url .'bounce/';
 			if ($this->download)
 				$url = $url .'download/';
+			if (is_array($data) && $data['sharp'])
+				$url = $url .'#'. $data['sharp'];
+			if ($third)
+				$url = $url .'#'. $third;
 
 			return '<a href="'. $url .'">'. $title .'</a>';
 	}
@@ -261,6 +266,11 @@ class PageMaster {
 	public function mkrelated ($rel, $title, $request, $sharp=false) {
 	
 		$this->$rel = array ('title' => $title, 'request' => $request, 'sharp' => $sharp);
+	}
+
+	public function legend($article) {
+	
+		return '<a class="legend" href="'.$this->charbase.'#'.$article.'">'.$article.'</a>';
 	}
 }
 

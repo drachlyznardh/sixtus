@@ -162,6 +162,12 @@ div.section h2.revwider:before
 	content:url('img/reverse.png');
 }
 
+div.section ul
+{
+	margin-left: 5%;
+	margin-right: 15%;
+}
+
 a
 {
 	text-decoration: none;
@@ -171,6 +177,12 @@ a
 a:hover
 {
 	text-decoration: underline;
+}
+
+a.legend
+{
+	font-style: italic;
+	color: #cccccc;
 }
 
 div.wider div.widecontent
