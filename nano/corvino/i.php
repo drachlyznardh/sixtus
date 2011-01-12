@@ -1,7 +1,7 @@
 <?php
 
-	$m->mkpage('Una sera, al parco', 'Corvino Multicolore, I, 01');
-	$m->mkrelated('next', 'Capitolo 02', 'NaNoWriMo/Corvino/Multicolore/02/');
+	$m->mkpage('Una sera, al parco', 'Corvino Multicolore &ndash; I');
+	$m->mkrelated('next', 'Capitolo II', 'NaNoWriMo/Corvino/Multicolore/II/');
 
 	function mkpage ($d, $m) {
 ?>
@@ -12,7 +12,9 @@
 		</h2><p>
 			É cominciato quel giorno che mi persi nel verde.
 		</p><p>
-			Era una sera di giugno, se ricordo bene, e per un qualche motivo stavo passando per il parco. Mi pare che ci fosse un concerto all'aperto, uno di quelli che
+			Era una sera di giugno, se ricordo bene, e per un
+			qualche motivo stavo passando per il parco. Mi pare che
+			ci fosse un concerto all'aperto, uno di quelli che
 		</p><div class="outside">
 			<?=$d->speak('', 'dai, Corvino, vieni con noi che ci divertiamo')?>
 		</div><p>

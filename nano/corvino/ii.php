@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Campeggio', 'Corvino Multicolore &ndash; I, 02');
-	$m->mkrelated('prev', 'Capitolo 01', 'NaNoWriMo/Corvino/Multicolore/01/');
-	$m->mkrelated('next', 'Capitolo 03', 'NaNoWriMo/Corvino/Multicolore/03/');
+	$m->mkpage('Campeggio', 'Corvino Multicolore &ndash; II');
+	$m->mkrelated('prev', 'Capitolo I', 'NaNoWriMo/Corvino/Multicolore/I/');
+	$m->mkrelated('next', 'Capitolo III', 'NaNoWriMo/Corvino/Multicolore/III/');
 
 	function mkpage ($d, $m) {
 ?>

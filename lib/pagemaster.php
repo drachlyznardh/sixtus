@@ -92,7 +92,7 @@ class PageMaster {
 				''
 			);
 
-		if ($request) $this->file = substr($request, 0, -1);
+		if ($request) $this->file = strtolower(substr($request, 0, -1));
 		else $this->file = 'index';
 
 		if ($this->category)

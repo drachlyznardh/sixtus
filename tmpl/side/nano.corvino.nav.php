@@ -1,16 +1,60 @@
-	<h2>Corvino Multicolore</h2>
-	<p><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/', 'Indice')?></p>
-	<p><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/Personaggi/', 'Personaggi')?></p>
-</div><div class="section">
-	<?=$m->mkcascade('nano2010I-rside', 'Parte I: La gioventù', false)?>
-	<div id="longnano2010I-rside">
-		<ol style="list-style-type: decimal-leading-zero">
-			<li><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/01/', 'Una sera, al parco')?></li>
-			<li><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/02/', 'Campeggio')?></li>
-			<li><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/03/', 'A contatto')?></li>
-			<li><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/04/', 'Nel bosco')?></li>
-			<li><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/05/', 'La dichiarazione')?></li>
-		</ol>
+
+	<?php $p = 'NaNoWriMo/Corvino/Multicolore/'; ?>
+
+	<h2 class="opened" id="arrowchapters" onmousedown="javascript:cascade('chapters')">
+		Corvino Multicolore
+	</h2><p>
+		<?=$m->ilink($p, 'Indice')?>
+	</p><p>
+		<?=$m->ilink('NaNoWriMo/Corvino/Multicolore/Personaggi/', 'Personaggi')?>
+	</p><p>
+		<?=$m->ilink('NaNoWriMo/Corvino/Multicolore/Extra/', 'Extra')?>
+	</p><div id="longchapters">
+		<h2 class="reverse">
+			La Gioventù
+		</h2><div class="inside">
+			<ol style="list-style-type:upper-roman">
+				<li>
+					<?=$m->ilink($p.'I/', 'Una sera, al parco')?>
+				</li><li>
+					<?=$m->ilink($p.'II/', 'Al campeggio')?>
+				</li><li>
+					<?=$m->ilink($p.'III/', 'A contatto')?>
+				</li><li>
+					<?=$m->ilink($p.'IV/', 'Nel bosco')?>
+				</li><li>
+					<?=$m->ilink($p.'V/', 'Di notte')?>
+				</li><li>
+					<?=$m->ilink($p.'VI/', 'Gli ultimi giorni')?>
+				</li><li>
+					<?=$m->ilink($p.'VII/', 'La dichiarazione')?>
+				</li>
+			</ol>
+		</div><h2 class="reverse">
+			Il Potere
+		</h2><div class="inside">
+			<ol style="list-style-type:upper-roman" start="8">
+				<li>
+					<?=$m->ilink($p.'VIII/', 'Il lampione')?>
+				</li>
+			</ol>
+		</div><h2 class="reverse">
+			Le Streghe
+		</h2><div class="inside">
+			<ol style="list-style-type:upper-roman" start="7">
+				<li>
+					La morte
+				</li>
+			</ol>
+		</div><h2 class="reverse">
+			I Demoni
+		</h2><div class="inside">
+			<ol style="list-style-type:upper-roman" start="7">
+				<li>
+					La morte
+				</li>
+			</ol>
+		</div>
 	</div>
 </div><div class="section">
 	<?=$m->mkcascade('nano2010II-rside', 'Parte II: Il Potere', false)?>
