@@ -13,6 +13,39 @@
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
 		<link rel="stylesheet" type="text/css" href="style/voices.css" />
 		<script type="text/javascript" src="lib/scr.js"></script>
+		<script type="text/javascript">
+function Tabler(name) {
+
+	var arrow = document.getElementById('tarrow'+name);
+	var tab = document.getElementById('tab'+name);
+	
+	this.arrow = arrow;
+	this.tab = tab;
+	this.show = show;
+	this.check = check;
+	this.check();
+}
+function show(name, flag) {
+
+	if (this.arrow != undefined) this.arrow.className = '';
+	if (this.tab != undefined) this.tab.style.display = 'none';
+
+	this.arrow = document.getElementById('tarrow'+name);
+	this.tab = document.getElementById('tab'+name);
+
+	if (this.arrow != undefined) this.arrow.className = 'selected';
+	if (this.tab != undefined) this.tab.style.display = 'block';
+	
+	if (flag != undefined) document.getElementById('container').scrollTop=0;
+}
+function check() {
+	if (location.hash == '#I') this.show('first');
+	else if (location.hash == '#II') this.show('second');
+	else if (location.hash == '#III') this.show('third');
+	else if (location.hash == '#IV') this.show('fourth');
+	else if (location.hash == '#V') this.show('fifth');
+}
+		</script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
 		

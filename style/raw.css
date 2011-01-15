@@ -168,6 +168,12 @@ div.section ul
 	margin-right: 15%;
 }
 
+div.section ol li.selected
+{
+	font-style: italic;
+	font-weight: bold;
+}
+
 a
 {
 	text-decoration: none;

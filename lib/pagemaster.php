@@ -5,6 +5,7 @@ class PageMaster {
 	public $debug;    // Debug flag
 	public $bounce;   // Character name flag
 	public $download; // Download flag
+	public $unparted;
 	public $flags;
 
 	public $category;
@@ -22,7 +23,8 @@ class PageMaster {
 		$this->debug = false;
 		$this->bounce = false;
 		$this->download = false;
-		$this->flags = array ('debug', 'bounce', 'download');
+		$this->unparted = false;
+		$this->flags = array ('debug', 'bounce', 'download', 'unparted');
 
 		$this->loco = $loco;
 		$this->request = array ();
