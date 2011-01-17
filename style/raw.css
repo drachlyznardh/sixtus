@@ -168,6 +168,11 @@ div.section ul
 	margin-right: 15%;
 }
 
+div.widelist ol
+{
+	list-style-type: lower-roman;
+}
+
 div.section ol li.selected
 {
 	font-style: italic;

@@ -1,4 +1,7 @@
-	<p>
+<div class="section">
+	<h2>
+		Quella mattina
+	</h2><p>
 		Quella mattina ci fu la prova di latino.
 	</p><p>
 		Traduzione di un qualche passo di un qualche autore, che
@@ -106,3 +109,8 @@
 		ma molto in fretta. Non molto in fretta (ero già prima
 		il più veloce ad andarsene) ma comunque non lento.
 	</p>
+</div><div class="section">
+	<p>Continua alla
+		<a onclick="javascript:tab.load('ii')">prossima sezione</a>.
+	</p>
+</div>

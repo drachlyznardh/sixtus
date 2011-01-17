@@ -1,4 +1,7 @@
-	<p>
+<div class="section">
+	<h2>
+		A casa, di nuovo
+	</h2><p>
 		Appena uscito dalla doccia, vista l'ora, trovai mio padre sul
 		divano intento a seguire il telegiornale.
 	</p><p>
@@ -59,3 +62,4 @@
 		Ma noto che non è poi uniformemente bianco come m'aspetterei.
 		Vedo infatti una specie di linea scura...
 	</p></div>
+</div>

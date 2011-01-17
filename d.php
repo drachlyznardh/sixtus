@@ -79,20 +79,6 @@
 		} else if (strcmp($_POST['action'], 'logout') == 0) {
 			$_SESSION = array();
 			session_destroy();
-		} else if (strcmp($_POST['action'], 'delete') == 0) {
-		
-			if (isset($_SESSION['login']) && $_SESSION['login']) {
-				$_SESSION['delete'] = $_POST['delete'].' is here';
-				if (file_exists($_POST['delete'])) {
-					if (is_dir($_POST['delete']))
-						$_SESSION['delete'] = exec('rmdir '. $_POST['delete']);//rmdir($_POST['delete'])?'success':'failure';
-						//$_SESSION['delete'] = rmdir($_POST['delete'])?'success':'failure';
-					else	
-						$_SESSION['delete'] = exec('chmod 775 lol/');//rm '.$_POST['delete']);//rmdir($_POST['delete'])?'success':'failure';
-						//$_SESSION['delete'] = rename($_POST['delete'], 'fuffa.php')?'success':'failure';
-				} else
-					$_SESSION['delete'] = $_POST['delete'] .' does not exists';
-			}
 		}
 	}
 
@@ -170,8 +156,16 @@
 			die ();
 		} else $m->mkNotFound();
 	}
-
+	
 	$d = new Dialog($m->bounce, $m->charbase);
+
+	if ($m->dynamic) {
+	
+		list($folder, $file) = explode('/', $m->file);
+		$path = $m->category->src[0].$folder .'.d/'. $file .'.php';
+		if (file_exists($path)) include ($path);
+		die ();
+	}
 
 	if ($m->file) {
 		$path = $m->mkpath($m->file .'.php');

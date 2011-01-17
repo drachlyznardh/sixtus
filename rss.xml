@@ -7,12 +7,18 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Storia XXI</title>
+			<description>Alcuni programmano male</description>
+			<pubDate>Mon, 17 Jan 2011 15:17:00 +0100</pubDate>
+			<link>http://drachlyznardh.altervista.org/Storie/2011/XXI/</link>
+			<guid>http://drachlyznardh.altervista.org/Storie/2011/XXI/</guid>
+		</item><item>
 			<title>Storia XX</title>
 			<description>Una guida per capire come funziona questo sito.</description>
 			<pubDate>Tue, 11 Jan 2011 12:15:00 +0100</pubDate>
 			<link>http://drachlyznardh.altervista.org/Storie/2011/XX/</link>
 			<guid>http://drachlyznardh.altervista.org/Storie/2011/XX/</guid>
-		<item></item>
+		</item><item>
 			<title>Storia XIX</title>
 			<description>Dannati permessi di scrittura insufficienti!</description>
 			<pubDate>Mon, 10 Jan 2011 18:21:00 +0100</pubDate>

@@ -1,4 +1,7 @@
-	<p>
+<div class="section">
+	<h2>
+		Al parcheggio
+	</h2><p>
 		Dannato lampione.
 	</p><div class="inside"><p>
 		Non male, dato che soltanto un giorno prima doveva
@@ -68,3 +71,8 @@
 		Quando mi svegliai, era un altro giorno. Un giorno di lezione.
 		Di nuovo.
 	</p>
+</div><div class="section">
+	<p>Continua alla
+		<a onclick="javascript:tab.load('iv')">prossima sezione</a>.
+	</p>
+</div>

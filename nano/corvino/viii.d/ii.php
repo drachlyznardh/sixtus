@@ -1,4 +1,7 @@
-	<p>
+<div class="section">
+	<h2>
+		A casa
+	</h2><p>
 		Arrivato a casa mi sedetti a riflettere seriamente sulla
 		sera del giorno prima, cercando di capire come e se
 		avrei potuto verificare l'accaduto. Presi anche in
@@ -68,3 +71,8 @@
 	</p><p>
 		E notai che il lampione stava bene.
 	</p>
+</div><div class="section">
+	<p>Continua alla
+		<a onclick="javascript:tab.load('iii')">prossima sezione</a>.
+	</p>
+</div>

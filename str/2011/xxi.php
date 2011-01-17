@@ -17,7 +17,7 @@
 	</div>
 </div><div class="wider">
 	<div class="widecontent">
-		<div class="tab" id="tabfirst">
+		<div class="tab" id="tabi" style="display:none">
 			<div class="section">
 				<h2>
 					La storia
@@ -105,7 +105,7 @@
 					morite?
 				</p>
 			</div>
-		</div><div class="tab" id="tabsecond" style="display:none">
+		</div><div class="tab" id="tabii" style="display:none">
 			<div class="section">
 				<h2>
 					La storia vera
@@ -175,13 +175,13 @@
 	</div><div class="widelist">
 		<div class="section">
 			<ol style="list-style-type:lower-roman">
-				<li id="tarrowfirst" class="selected"
-					onclick="javascript:tab.show('first')">
+				<li id="tarrowi"> 
+					<a onclick="javascript:tab.show('i')">
 					La storia
-				</li><li id="tarrowsecond"
-					onclick="javascript:tab.show('second')">
+				</a></li><li id="tarrowii">
+					<a onclick="javascript:tab.show('ii')">
 					La storia vera
-				</li>
+				</a></li>
 			</ol>
 		</div>
 	</div>

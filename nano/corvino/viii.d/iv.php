@@ -1,4 +1,7 @@
-	<p>
+<div class="section">
+	<h2>
+		Di corsa
+	</h2><p>
 		Di nuovo la mia vecchia vita, quella che odiavo ma che già mi
 		mancava.
 	<p></p>
@@ -187,3 +190,9 @@
 		nonostante tutto insuperabile &ndash; fui a casa, mi buttai
 		nella doccia e ne uscii fresco come una rosa.
 	</p>
+</div><div class="section">
+	<p>
+		Continua alla
+		<a onclick="javascript:tab.load('v')">prossima sezione</a>.
+	</p>
+</div>
