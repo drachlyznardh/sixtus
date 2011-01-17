@@ -2,6 +2,7 @@
 
 	$m->mkpage('Guida', 'Non fatevi prendere dal panico');
 	$m->mkrelated('prev', 'Storia XIX', 'Storie/2011/XIX/');
+	$m->mkrelated('next', 'Storia XXI', 'Storie/2011/XXI/');
 
 	function mkpage ($d, $m) {
 ?>

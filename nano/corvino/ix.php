@@ -1,52 +1,36 @@
 <?php
 
 	$m->mkpage('Test','For Gr8 Justice');
+	$m->mkrelated('prev','Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
+	$m->mkrelated('next','Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
 
 	function mkpage ($d, $m) {
 ?>
-<div class="small">
-	<div class="section">
-		<h2>
-			Test
-		</h2><p>
-			Testing...
-		</p>
-	</div>
-</div><div class="wider">
-	<div class="widecontent" id="dynamic">
+<div class="wider">
+	<div class="widecontent">
+		<div class="tab" id="dynamic">
+		</div>
 	</div><div class="widelist">
 		<div class="section">
 			<h2>
 				Wide List
 			</h2><ol>
-				<li id="li1">
+				<li id="lii" class="selected">
 					<a onclick="javascript:tab.load('i')">Test I</a>
-				</li><li id="li2">
+				</li><li id="liii">
 					<a onclick="javascript:tab.load('ii')">Test II</a>
-				</li><li id="li3">
+				</li><li id="liiii">
 					<a onclick="javascript:tab.load('iii')">Test III</a>
-				</li><li id="li4">
+				</li><li id="liiv">
 					<a onclick="javascript:tab.load('iv')">Test IV</a>
 				</li>
-			</ol>
+			</ol><p>
+				Mostra <a onclick="javascript:tab.all(new Array('i','ii','iii','iv','i'))">tutto</a>.
+			</p>
 		</div>
 	</div>
 </div><script type="text/javascript">
-function TLoader (pref) {
-	this.pref = pref;
-	this.load = TLoader_load;
-}
-var tab = new TLoader('NaNoWriMo/Corvino/Multicolore/VIII/');
-function TLoader_load (name) {
-	xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange=function(){
-		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			document.getElementById('dynamic').innerHTML=xmlhttp.responseText;
-			document.getElementById('container').scrollTop = 0;
-		}
-	}
-	xmlhttp.open('GET', 'dynamic/'+this.pref+name+'/', true);
-	xmlhttp.send();
-}
+	var tab = new TLoader('NaNoWriMo/Corvino/Multicolore/VIII/');
+	tab.load('i');
 </script>
 <?php } ?>

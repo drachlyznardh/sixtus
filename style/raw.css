@@ -88,6 +88,8 @@ div.small
 	margin-top: 5px;
 }
 
+div.wider:first-child,
+div.revwider:first-child,
 div.small:first-child
 {
 	margin-top: 0px;
@@ -99,6 +101,7 @@ div.revwider {
 	width: 100%;
 	margin-left: 0%;
 	margin-right: 0%;
+	margin-top: 5px;
 }
 
 div.section
@@ -226,7 +229,6 @@ div.revwider div.widelist
 
 div.widecontent, div.widelist
 {
-	margin-top: 5px;
 	margin-bottom: 5px;
 }
 

@@ -135,6 +135,7 @@
 
 	require_once ($loco->mklib('pagemaster'));
 	require_once ($loco->mklib('dialog'));
+	require_once ($loco->mklib('category'));
 
 	require_once ('sources.php');
 
@@ -159,7 +160,7 @@
 	
 	$d = new Dialog($m->bounce, $m->charbase);
 
-	if ($m->dynamic) {
+	if (isset ($m->mode['dynamic']) && $m->mode['dynamic']) {
 	
 		list($folder, $file) = explode('/', $m->file);
 		$path = $m->category->src[0].$folder .'.d/'. $file .'.php';

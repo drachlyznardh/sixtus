@@ -24,17 +24,32 @@ class PageMaster {
 		$this->bounce = false;
 		$this->download = false;
 		$this->unparted = false;
-		$this->flags = array ('debug', 'bounce', 'download', 'dynamic');
+		$this->modes = array ('download', 'dynamic');
+		$this->flags = array ('debug', 'bounce', 'download');
 
 		$this->loco = $loco;
 		$this->request = array ();
 		$this->section = array ();
 	}
 
+	public function searchForMode ($request) {
+	
+		$token = explode ('/', $request);
+		foreach (array_keys($token) as $key) {
+			foreach ($this->modes as $mode) {
+				if ($mode == $token[$key]) {
+					$this->mode[$mode] = true;
+					unset ($token[$key]);
+					break;
+				}
+			}
+		}
+		return implode ('/', $token);
+	}
+
 	public function searchForFlag ($request) {
 	
 		$token = explode ('/', $request);
-
 		foreach (array_keys($token) as $key) {
 			foreach ($this->flags as $flag) {
 				if ($flag == $token[$key]) {
@@ -44,7 +59,6 @@ class PageMaster {
 				}
 			}
 		}
-
 		return implode ('/', $token);
 	}
 
@@ -85,6 +99,7 @@ class PageMaster {
 		$this->request = $request;
 
 		$request = $this->searchForFlag($request);
+		$request = $this->searchForMode($request);
 		$request = $this->searchForCatarray($request, $categories);
 
 		if ($this->category == null)

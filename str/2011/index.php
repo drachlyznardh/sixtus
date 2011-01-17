@@ -34,6 +34,7 @@
 				<li><?=$m->ilink('Storie/2011/XVIII/', 'Liber Javae')?></li>
 				<li><?=$m->ilink('Storie/2011/XIX/', 'Permessi')?></li>
 				<li><?=$m->ilink('Storie/2011/XX/', 'Guida')?></li>
+				<li><?=$m->ilink('Storie/2011/XXI/','Programmazione 40.000')?></li>
 			</ol>
 		</div>
 	</div>
