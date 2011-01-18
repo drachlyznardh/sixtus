@@ -4,7 +4,22 @@
 	$m->mkrelated('prev','Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
 	$m->mkrelated('next','Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
 
+	$m->getPage()->setOption('multipart');
+	$m->getPage()->setOption('downloadable');
+	$m->getPage()->setRelated('prev','Capitolo IX','NaNoWriMo/Corvino/Multicolore/IX/');
+	$m->getPage()->setRelated('next','Capitolo XI','NaNoWriMo/Corvino/Multicolore/XI/');
+
 	function mkpage ($d, $m) {
+		if ($m->checkMode('complete')) {
+			$pref = 'nano/corvino/viii.d/';
+			echo ('<div class="small">'."\n");
+			require_once ($pref.'i.php');
+			require_once ($pref.'ii.php');
+			require_once ($pref.'iii.php');
+			require_once ($pref.'iv.php');
+			require_once ($pref.'v.php');
+			echo ('</div>'."\n");
+		} else {
 ?>
 <div class="wider">
 	<div class="widecontent">
@@ -25,12 +40,12 @@
 					<a onclick="javascript:tab.load('iv')">Test IV</a>
 				</li>
 			</ol><p>
-				Mostra <a onclick="javascript:tab.all(new Array('i','ii','iii','iv','i'))">tutto</a>.
+				Mostra <a href="<?=$m->getWell()?>">tutto</a>.
 			</p>
 		</div>
 	</div>
-</div><script type="text/javascript">
-	var tab = new TLoader('NaNoWriMo/Corvino/Multicolore/VIII/');
-	tab.load('i');
+</div><script type="text/javascript" src="lib/dloader.js">
+</script><script type="text/javascript">
+	var tab = new DLoader('NaNoWriMo/Corvino/Multicolore/VIII/', new Array('i','ii','iii','iv','i'));
 </script>
-<?php } ?>
+<?php }} ?>

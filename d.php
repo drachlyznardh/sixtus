@@ -165,6 +165,7 @@
 		list($folder, $file) = explode('/', $m->file);
 		$path = $m->category->src[0].$folder .'.d/'. $file .'.php';
 		if (file_exists($path)) include ($path);
+		else include ('frag404.php');
 		die ();
 	}
 

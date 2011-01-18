@@ -1,4 +1,4 @@
-
+<div class="section">
 	<?=$m->mkcascade('str-rside', 'Tutte le storie', false)?>
 	<div id="longstr-rside">
 		<p><?=$m->ilink('Storie/', 'Indice')?></p>
@@ -22,4 +22,4 @@
 		La lettura può indurre, nelle persone particolarmente sensibili,
 		casi di suicidio anche reiterati.
 	</p>
-
+</div>

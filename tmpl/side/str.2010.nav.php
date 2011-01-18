@@ -1,4 +1,4 @@
-
+<div class="section">
 	<?=$m->mkcascade('str2010-rside', 'Storie 2010', false)?>
 	<div id="longstr2010-rside">
 		<ol style="list-style-type: upper-roman;">
@@ -36,4 +36,4 @@
 		La lettura può indurre, nelle persone particolarmente sensibili,
 		casi di suicidio anche reiterati.
 	</p>
-
+</div>

@@ -1,5 +1,46 @@
 <?php
 
+class Page {
+
+	private $location;
+	private $filename;
+
+	private $option;
+	private $related;
+
+	public function __construct ($path, $file) {
+		$this->location = $path;
+		$this->filename = $file;
+		$this->option = array ();
+		$this->related = array ();
+	}
+
+	public function hasOptions () {
+		return count($this->option) > 0;
+	}
+	public function hasOption ($option) {
+		if (isset($this->option[$option])) return $this->option[$option];
+		return false;
+	}
+	public function setOption ($option) {
+		$this->option[$option] = true;
+	}
+	public function hasRelated () {
+		return count($this->related) > 0;
+	}
+	public function getRelated ($related) {
+		if (isset($this->related[$related]))
+			return $this->related[$related];
+		return null;
+	}
+	public function setRelated ($related, $title, $request, $sharp=false) {
+		$this->related[$related] = array (
+			'title' => $title,
+			'request' => $request,
+			'sharp' => $sharp);
+	}
+}
+
 class PageMaster {
 
 	public $debug;    // Debug flag
@@ -14,8 +55,10 @@ class PageMaster {
 	public $charbase;
 
 	public $loco;
+	private $pageattr;
 
 	private $request;
+	private $well;
 	private $section;
 
 	public function __construct ($loco) {
@@ -24,12 +67,23 @@ class PageMaster {
 		$this->bounce = false;
 		$this->download = false;
 		$this->unparted = false;
-		$this->modes = array ('download', 'dynamic');
+		$this->modes = array ('download', 'dynamic', 'complete');
 		$this->flags = array ('debug', 'bounce', 'download');
 
 		$this->loco = $loco;
 		$this->request = array ();
 		$this->section = array ();
+		$this->well = '';
+
+		$this->pageattr = new Page('lol','LaMorte.php');
+	}
+
+	public function getPage () { return $this->pageattr; }
+
+	public function checkMode ($mode) {
+		if (isset($this->mode[$mode]))
+			return $this->mode[$mode];
+		return false;
 	}
 
 	public function searchForMode ($request) {
@@ -69,12 +123,18 @@ class PageMaster {
 		if (preg_match($match, $request)) {
 			$this->category = $category;
 			$this->section[] = $this->category->section;
+			$this->well .= $this->category->getWell();
 			$request = preg_replace($match, '', $request);
 			if ($request) return $request;
 			return 'index/';
 		}
 
 		return false;
+	}
+
+	public function getWell () {
+	
+		return $this->well;
 	}
 
 	public function searchForCatarray ($request, $cats) {

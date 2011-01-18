@@ -1,3 +1,4 @@
+<div class="section">
 	<h2>NaNoWrimo 2010</h2>
 	<p><?=$m->ilink('NaNoWriMo/2010/', 'Indice')?></p>
 	<p><?=$m->ilink('NaNoWriMo/2010/Personaggi/', 'Personaggi')?></p>
@@ -51,3 +52,4 @@
 		La lettura può indurre, nelle persone particolarmente sensibili,
 		casi di suicidio anche reiterati.
 	</p>
+</div>

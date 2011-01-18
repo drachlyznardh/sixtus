@@ -84,11 +84,9 @@
 			</div>	
 			<div id="rightside" class="scrollable">
 				<div class="clearbox">
-					<div class="section">
 
 <?php require_once ($loco->mktmpl('/related')); ?>
 <?php require_once ($m->thisside()); ?>
-					</div> <!-- Section -->	
 				</div> <!-- ClearBox -->
 			</div> <!-- RightSide -->
 		</div> <!-- Main -->

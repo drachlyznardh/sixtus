@@ -1,4 +1,4 @@
-
+<div class="section">
 	<?=$m->mkcascade('tru-rside','Tru Naluten',false)?>
 	<div id="longtru-rside">
 		<p><?=$m->ilink('Tru/Naluten/', 'Indice'); ?></p>
@@ -35,4 +35,4 @@
 			<li><?=$m->ilink('Tru/Naluten/XIX/', 'Lezione')?></li>
 		</ol>
 	</div>
-
+</div>
