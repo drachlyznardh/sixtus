@@ -7,7 +7,8 @@
 			if ($m->checkMode('complete'))
 				echo ("\t\t".'<p>Visualizza in <a href="'.'">parti</a>.</p>'."\n");
 			else
-				echo ("\t\t".'<p>Visualizza in <a href="'.'">parti</a>.</p>'."\n");
+				echo ("\t\t".'<p>Visualizza in <a
+				href="'.'">parti</a>.</p>'."\n");
 		if ($m->getPage()->hasOption('downloadable'))
 			echo ("\t\t".'<p>Scarica questa pagina come <a href="">PDF</a>.</p>'."\n");
 		echo ("\t".'</div>'."\n");
@@ -17,6 +18,7 @@
 	if ($m->getPage()->hasRelated()) {
 		echo ('<!-- Related -->');
 		echo ("\t".'<div class="section">'."\n");
+		echo ("\t".'<h2>Collegamenti</h2>'."\n");
 		$prev = $m->getPage()->getRelated('prev');
 		$index = $m->getPage()->getRelated('index');
 		$next = $m->getPage()->getRelated('next');

@@ -46,6 +46,6 @@
 	</div>
 </div><script type="text/javascript" src="lib/dloader.js">
 </script><script type="text/javascript">
-	var tab = new DLoader('NaNoWriMo/Corvino/Multicolore/VIII/', new Array('i','ii','iii','iv','i'));
+	var tab = new DLoader('NaNoWriMo/Corvino/Multicolore/VIII/', new Array('i','ii','iii','iv','v'));
 </script>
 <?php }} ?>

@@ -5,6 +5,9 @@ class Page {
 	private $location;
 	private $filename;
 
+	private $title;
+	private $subtitle;
+
 	private $option;
 	private $related;
 
@@ -39,6 +42,12 @@ class Page {
 			'request' => $request,
 			'sharp' => $sharp);
 	}
+	public function setAttr($title, $subtitle) {
+		$this->title = $title;
+		$this->subtitle = $subtitle;
+	}
+	public function getTitle(){return $this->title;}
+	public function getSubtitle(){return $this->subtitle;}
 }
 
 class PageMaster {

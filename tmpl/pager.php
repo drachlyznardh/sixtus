@@ -8,7 +8,7 @@
 		<meta name="keywords" content="<?=$m->thiskeyword()?>" />
 		<link rel="alternate" type="application/rss+xml" title="TruNaluten - News" href="rss.xml" />
 
-		<title><?=$m->page['title']?></title>
+		<title><?=$m->getPage()->getTitle()?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
 		<link rel="stylesheet" type="text/css" href="style/voices.css" />
@@ -30,15 +30,13 @@
 					<div class="clearbox">
 
 						<div class="section">
-							<h2 id="home">[
-								<?=$m->nnk('','99k')?>
-							|
-								<?=$m->alter('', 'altervista')?>
-							] 
-								<?=$m->showPath()?>
+							<h2 id="home">
+								/ <?=$m->showPath()?>
 							</h2>
-							<h1 id="title"><?=$m->page['title']?></h1>
-							<h2 id="subtitle"><?=$m->page['subtitle']?></h2>
+							<h1
+							id="title"><?=$m->getPage()->getTitle()?></h1>
+							<h2
+							id="subtitle"><?=$m->getPage()->getSubtitle()?></h2>
 						</div>
 
 					</div> <!-- Clear Box -->
