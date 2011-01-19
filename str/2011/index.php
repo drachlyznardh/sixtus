@@ -1,8 +1,8 @@
 <?php
 	
-	$m->mkpage('Storie 2011', 'Forse meno tristi dell&apos;anno passato');
+	$title = array('Storie 2011', 'Forse meno tristi dell&apos;anno passato');
 	
-	function mkpage($d, $m) {
+	function mkpage($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -29,12 +29,13 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkreverse('str2011', 'Storie 2011')?>
-			<ol start="18" style="list-style-type: upper-roman">
-				<li><?=$m->ilink('Storie/2011/XVIII/', 'Liber Javae')?></li>
-				<li><?=$m->ilink('Storie/2011/XIX/', 'Permessi')?></li>
-				<li><?=$m->ilink('Storie/2011/XX/', 'Guida')?></li>
-				<li><?=$m->ilink('Storie/2011/XXI/','Programmazione 40.000')?></li>
+			<h2 id="straightstr2011" class="reverse wider" onclick="javascript:reverse('str2011')">
+				Storie 2011
+			</h2><ol start="18" style="list-style-type: upper-roman">
+				<li><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
+				<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
+				<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
+				<li><?=$d->link('Storie/2011/XXI/','Programmazione 40.000')?></li>
 			</ol>
 		</div>
 	</div>

@@ -1,28 +1,31 @@
 					<div class="clearbox">
 						<div class="section">
 
-	<?=$m->mkcascade('tru-lside','Tru Naluten',false)?>
-	<div id="longtru-lside">
-		<p><?=$m->ilink ('Tru/Naluten/', 'Indice')?></p>
-		<p><?=$m->ilink ('Tru/Naluten/Personaggi/', 'Personaggi')?></p>
-		<p><?=$m->ilink('Tru/Naluten/I/', 'Volume I')?></p>
-		<p><?=$m->ilink('Tru/Naluten/X/', 'Volume II')?></p>
+	<h2 id="arrowtru-lside" class="opened" onclick="javascript:cascade('tru-lside')">
+		Tru Naluten
+	</h2><div id="longtru-lside">
+		<p><?=$d->link ('Tru/Naluten/', 'Indice')?></p>
+		<p><?=$d->link ('Tru/Naluten/Personaggi/', 'Personaggi')?></p>
+		<p><?=$d->link('Tru/Naluten/I/', 'Volume I')?></p>
+		<p><?=$d->link('Tru/Naluten/X/', 'Volume II')?></p>
 	</div>
 </div>
 <div class="section">
-	<?=$m->mkcascade('str-lside','Storie',false)?>
-	<div id="longstr-lside">
-		<p><?=$m->ilink('Storie/','Tutte le storie')?></p>
-		<p><?=$m->ilink('Storie/2010/','Storie 2010')?></p>
-		<p><?=$m->ilink('Storie/2011/','Storie 2011')?></p>
+	<h2 id="arrowstr-lside" class="opened" onclick="javascript:cascade('str-lside')">
+		Storie
+	</h2><div id="longstr-lside">
+		<p><?=$d->link('Storie/','Tutte le storie')?></p>
+		<p><?=$d->link('Storie/2010/','Storie 2010')?></p>
+		<p><?=$d->link('Storie/2011/','Storie 2011')?></p>
 	</div>
 </div>
 <div class="section">
-	<?=$m->mkcascade('nano-lside','NaNoWriMo',false)?>
-	<div id="longnano-lside">
-		<p><?=$m->ilink('NaNoWriMo/','Indice')?></p>
-		<p><?=$m->ilink('NaNoWriMo/2010/','NaNoWriMo 2010')?></p>
-		<p><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/','Corvino Multicolore')?></p>
+	<h2 id="arrownano-lside" class="opened" onclick="javascript:cascade('nano-lside')">
+		NaNoWriMo
+	</h2><div id="longnano-lside">
+		<p><?=$d->link('NaNoWriMo/','Indice')?></p>
+		<p><?=$d->link('NaNoWriMo/2010/','NaNoWriMo 2010')?></p>
+		<p><?=$d->link('NaNoWriMo/Corvino/Multicolore/','Corvino Multicolore')?></p>
 	</div>
 
 						</div> <!-- Section -->

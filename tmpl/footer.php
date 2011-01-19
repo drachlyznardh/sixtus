@@ -27,13 +27,13 @@
 	<div class="section">
 		<div class="inside">
 			<p>
-				<a href="http://validator.w3.org/check?uri=<?=$m->thispage()?>">HTML Valido</a>
+				<a href="http://validator.w3.org/check?uri=<?=$request?>">HTML Valido</a>
 			</p>
 		</div><p style="text-align: center">
 			<a href="http://users.skynet.be/mgueury/mozilla/">HTML5 Valido</a>
 		</p><div class="outside">
 			<p style="text-align: right">
-				<a href="http://jigsaw.w3.org/css-validator/validator?uri=<?=$m->thisstyle()?>">CSS Valido</a>
+				<a href="http://jigsaw.w3.org/css-validator/validator?uri=style/raw.css">CSS Valido</a>
 			</p>
 		</div>
 	</div>

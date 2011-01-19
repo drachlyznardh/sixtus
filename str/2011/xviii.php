@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Liber Javae', 'Opera seconda dell&apos;Arabo pazzo');
-	$m->mkrelated('prev', 'Storia XVII', 'Storie/XVII/');
-	$m->mkrelated('next', 'Storia XIX', 'Storie/XIX/');
+	$title = array('Liber Javae', 'Opera seconda dell&apos;Arabo pazzo');
+	$prev = array('Storia XVII', 'Storie/XVII/');
+	$next = array('Storia XIX', 'Storie/XIX/');
 
 	function mkpage () {
 ?>

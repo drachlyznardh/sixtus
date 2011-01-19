@@ -1,55 +1,5 @@
 <?php
 
-class Page {
-
-	private $location;
-	private $filename;
-
-	private $title;
-	private $subtitle;
-
-	private $option;
-	private $related;
-
-	public function __construct ($path, $file) {
-		$this->location = $path;
-		$this->filename = $file;
-		$this->option = array ();
-		$this->related = array ();
-	}
-
-	public function hasOptions () {
-		return count($this->option) > 0;
-	}
-	public function hasOption ($option) {
-		if (isset($this->option[$option])) return $this->option[$option];
-		return false;
-	}
-	public function setOption ($option) {
-		$this->option[$option] = true;
-	}
-	public function hasRelated () {
-		return count($this->related) > 0;
-	}
-	public function getRelated ($related) {
-		if (isset($this->related[$related]))
-			return $this->related[$related];
-		return null;
-	}
-	public function setRelated ($related, $title, $request, $sharp=false) {
-		$this->related[$related] = array (
-			'title' => $title,
-			'request' => $request,
-			'sharp' => $sharp);
-	}
-	public function setAttr($title, $subtitle) {
-		$this->title = $title;
-		$this->subtitle = $subtitle;
-	}
-	public function getTitle(){return $this->title;}
-	public function getSubtitle(){return $this->subtitle;}
-}
-
 class PageMaster {
 
 	public $debug;    // Debug flag

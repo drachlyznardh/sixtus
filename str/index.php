@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
+	$title = array('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

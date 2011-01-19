@@ -1,7 +1,7 @@
 <?php
 
-	$m->mkpage('Apologia', 'Ossia giustificazione di quello che ho fatto');
-	$m->mkrelated('next', 'Storia II', 'Storie/II/');
+	$title = array('Apologia', 'Ossia giustificazione di quello che ho fatto');
+	$next = array ('Storia II', 'Storie/II/');
 
 	function mkpage () {
 ?>

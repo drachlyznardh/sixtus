@@ -1,8 +1,8 @@
 <?php 
 
-	$m->mkpage('Storie 2010', 'Le prime storie');
+	$title = array('Storie 2010', 'Le prime storie');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -32,16 +32,17 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-		<?=$m->mkreverse('str2010','Storie 2010')?>
-			<ol style="list-style-type: upper-roman">
-				<li><?=$m->ilink('Storie/I/', 'Apologia')?></li>
-				<li><?=$m->ilink('Storie/II/', 'Correre')?></li>
-				<li><?=$m->ilink('Storie/III/', 'Progetti')?></li>
-				<li><?=$m->ilink('Storie/IV/', 'Impresa')?></li>
-				<li><?=$m->ilink('Storie/V/', 'Condizioni')?></li>
-				<li><?=$m->ilink('Storie/VI/', 'Un posto in cui stare')?></li>
-				<li><?=$m->ilink('Storie/VII/', 'Gundam')?></li>
-				<li><?=$m->ilink('Storie/VIII/', 'Sassi')?></li>
+			<h2 id="straightstr2010" class="reverse wider" onclick="javascript:reverse('str2010')">
+				Storie 2010
+			</h2><ol style="list-style-type: upper-roman">
+				<li><?=$d->link('Storie/I/', 'Apologia')?></li>
+				<li><?=$d->link('Storie/II/', 'Correre')?></li>
+				<li><?=$d->link('Storie/III/', 'Progetti')?></li>
+				<li><?=$d->link('Storie/IV/', 'Impresa')?></li>
+				<li><?=$d->link('Storie/V/', 'Condizioni')?></li>
+				<li><?=$d->link('Storie/VI/', 'Un posto in cui stare')?></li>
+				<li><?=$d->link('Storie/VII/', 'Gundam')?></li>
+				<li><?=$d->link('Storie/VIII/', 'Sassi')?></li>
 			</ol>
 		</div>
 	</div>
@@ -64,16 +65,17 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkreverse('sagarossa', 'La Saga di $rossa')?>
-			<ol start="9" style="list-style-type: upper-roman">
-				<li><?=$m->ilink('Storie/IX/', 'Attenzione')?></li>
-				<li><?=$m->ilink('Storie/X/', 'Due Storie')?></li>
-				<li><?=$m->ilink('Storie/XI/', 'Tre Storie')?></li>
-				<li><?=$m->ilink('Storie/XII/', 'La musa')?></li>
-				<li><?=$m->ilink('Storie/XIII/', 'Il modello definitivo')?></li>
-				<li><?=$m->ilink('Storie/XIV/', 'L&apos;incontro')?></li>
-				<li><?=$m->ilink('Storie/XV/', 'La spinta')?></li>
-				<li><?=$m->ilink('Storie/XVI/', 'Il lunedì della verità')?></li>
+			<h2 id="straightsagarossa" class="wider" onclick="javascript:reverse('sagarossa')">
+				La Saga di $rossa
+			</h2><ol start="9" style="list-style-type: upper-roman">
+				<li><?=$d->link('Storie/IX/', 'Attenzione')?></li>
+				<li><?=$d->link('Storie/X/', 'Due Storie')?></li>
+				<li><?=$d->link('Storie/XI/', 'Tre Storie')?></li>
+				<li><?=$d->link('Storie/XII/', 'La musa')?></li>
+				<li><?=$d->link('Storie/XIII/', 'Il modello definitivo')?></li>
+				<li><?=$d->link('Storie/XIV/', 'L&apos;incontro')?></li>
+				<li><?=$d->link('Storie/XV/', 'La spinta')?></li>
+				<li><?=$d->link('Storie/XVI/', 'Il lunedì della verità')?></li>
 			</ol>
 		</div>
 	</div>
@@ -88,9 +90,10 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkreverse('finale', 'Storie 2010')?>
-			<ol start="17" style="list-style-type:upper-roman">
-				<li><?=$m->ilink('Storie/XVII/', 'Il finale')?></li>
+			<h2 id="straightfinale" class="reverse wider" onclick="javascript:reverse('finale')">
+				Storie 2010
+			</h2><ol start="17" style="list-style-type:upper-roman">
+				<li><?=$d->link('Storie/XVII/', 'Il finale')?></li>
 			</ol>
 		</div>
 	</div>

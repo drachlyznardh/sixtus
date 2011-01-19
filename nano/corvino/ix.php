@@ -1,16 +1,11 @@
 <?php
 
-	$m->mkpage('Test','For Gr8 Justice');
-	$m->mkrelated('prev','Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
-	$m->mkrelated('next','Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
+	$title = array('Test','For Gr8 Justice');
+	$prev = array('Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
+	$next = array('Fuffa','NaNoWriMo/Corvino/Multicolore/X/');
 
-	$m->getPage()->setOption('multipart');
-	$m->getPage()->setOption('downloadable');
-	$m->getPage()->setRelated('prev','Capitolo IX','NaNoWriMo/Corvino/Multicolore/IX/');
-	$m->getPage()->setRelated('next','Capitolo XI','NaNoWriMo/Corvino/Multicolore/XI/');
-
-	function mkpage ($d, $m) {
-		if ($m->checkMode('complete')) {
+	function mkpage ($d) {
+		if ($d->isComplete()) {
 			$pref = 'nano/corvino/viii.d/';
 			echo ('<div class="small">'."\n");
 			require_once ($pref.'i.php');
@@ -38,6 +33,8 @@
 					<a onclick="javascript:tab.load('iii')">Test III</a>
 				</li><li id="liiv">
 					<a onclick="javascript:tab.load('iv')">Test IV</a>
+				</li><li id="liv">
+					<a onclick="javascript:tab.load('v')">Test V</a>
 				</li>
 			</ol><p>
 				Mostra <a href="<?=$m->getWell()?>">tutto</a>.

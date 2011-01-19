@@ -1,17 +1,19 @@
 <div class="section">
-	<?=$m->mkcascade('str-rside', 'Tutte le storie', false)?>
-	<div id="longstr-rside">
-		<p><?=$m->ilink('Storie/', 'Indice')?></p>
-		<p><?=$m->ilink('Storie/2010/', 'Serie &apos;10')?></p>
+	<h2 id="arrowstr-rside" class="opened" onclick="javascript:cascade('str-rside')">
+		Tutte le storie
+	</h2><div id="longstr-rside">
+		<p><?=$d->link('Storie/', 'Indice')?></p>
+		<p><?=$d->link('Storie/2010/', 'Serie &apos;10')?></p>
 	</div>
 </div><div class="section">
-	<?=$m->mkcascade('str2011-rside', 'Storie 2011', false)?>
-	<div id="longstr2011-rside">
+	<h2 id="arrowstr2011-rside" class="opened" onclick="javascript:cascade('str2011-rside')">
+		Storie 2011
+	</h2><div id="longstr2011-rside">
 		<ol start="18" style="list-style-type: upper-roman;">
-			<li><?=$m->ilink('Storie/2011/XVIII/', 'Liber Javae')?></li>
-			<li><?=$m->ilink('Storie/2011/XIX/', 'Permessi')?></li>
-			<li><?=$m->ilink('Storie/2011/XX/', 'Guida')?></li>
-			<li><?=$m->ilink('Storie/2011/XXI/', 'Programmazione 40.000')?></li>
+			<li><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
+			<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
+			<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
+			<li><?=$d->link('Storie/2011/XXI/', 'Programmazione 40.000')?></li>
 		</ol>
 	</div>
 </div><div class="section">

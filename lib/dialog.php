@@ -8,13 +8,28 @@
 			'ci' => array ('Ci@Lyznardh&gt;$: ', ''),
 			'corona' => array ('-- ', ' --')
 		);
+		private $opt;
+		private $complete;
 		
-		public function __construct ($bounce, $base) {
+		public function __construct ($bounce, $base, $opt) {
 		
 			$this->bounce = $bounce;
-			$this->base = $base;
+			$this->base = $base.'Personaggi/';
+			$this->opt = implode ('/',$opt);
+			$this->complete = isset($opt['complete']);
 		}
 		
+		public function isComplete() {
+			return $this->complete;
+		}
+
+		public function link($request, $title, $sharp=false) {
+			$ref = $request;
+			if ($sharp) $ref .= '#'.$sharp;
+			if ($this->opt) $ref .= $this->opt;
+			return '<a href="'.$ref.'">'.$title.'</a>';
+		}
+
 		public function complete ($author, $humour, $speech) {
 		
 			if(!$author) $author = 'unknown';

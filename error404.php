@@ -1,6 +1,7 @@
 <?php
 
-	$m->mkpage('404 Not Found', 'There is no such file here');
+	$title='404 Not Found';
+	$subtitle='There is no such file here';
 
 	function mkpage ($d) {
 ?>

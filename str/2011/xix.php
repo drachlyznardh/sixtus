@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Permessi', 'Per fare le mie cose');
-	$m->mkrelated('prev', 'Storia XVIII', 'Storie/2011/XVIII/');
-	$m->mkrelated('next', 'Storie XX', 'Storie/2011/XX/');
+	$title = array('Permessi', 'Per fare le mie cose');
+	$prev = array ('Storia XVIII', 'Storie/2011/XVIII/');
+	$next = array ('Storie XX', 'Storie/2011/XX/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

@@ -1,11 +1,19 @@
 <?php
 
-	$m->mkpage(
+	$title = array(
 		'Progammazione 40.000',
 		'L&apos;Imperium contro gli orrori del Warp');
-	$m->mkrelated('prev','Storia XX','Storie/2011/XX/');
+	$prev = array('Storia XX','Storie/2011/XX/');
 
-	function mkpage($d, $m) {
+	function mkpage($d) {
+		if ($d->isComplete()) {
+			$pref = 'str/2011/xxi.d/';
+			echo ('<div class="small">'."\n");
+			require_once($pref.'i.php');
+			require_once($pref.'ii.php');
+			require_once($pref.'iii.php');
+			echo ('</div>'."\n");
+		} else {
 ?>
 <div class="wider">
 	<div class="widecontent">
@@ -22,14 +30,11 @@
 				</li><li id="liiii">
 					<a onclick="javascript:tab.load('iii')">La fine che dovrebbero fare</a>
 				</li>
-			</ol><p>
-				Oppure, <a onclick="javascript:tab.all(new
-				Array('i','ii','iii'))">mostra</a> tutte le sezioni.
-			</p>
+			</ol>
 		</div>
 	</div>
-</div><script type="text/javascript">
-	tab = new TLoader('Storie/2011/XXI/');
-	tab.load('i');
+</div><script type="text/javascript" src="lib/dloader.js">
+</script><script type="text/javascript">
+	var tab = new DLoader('Storie/2011/XXI/', new Array('i','ii','iii'));
 </script>
-<?php } ?>
+<?php }} ?>

@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Guida', 'Non fatevi prendere dal panico');
-	$m->mkrelated('prev', 'Storia XIX', 'Storie/2011/XIX/');
-	$m->mkrelated('next', 'Storia XXI', 'Storie/2011/XXI/');
+	$title=array('Guida', 'Non fatevi prendere dal panico');
+	$prev=array('Storia XIX', 'Storie/2011/XIX/');
+	$next=array('Storia XXI', 'Storie/2011/XXI/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -117,8 +117,9 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<?=$m->mkreverse('revertable', 'Lista')?>
-			<p>
+			<h2 id="straightrevertable" class="reverse wider" onclick="javascript:reverse('revertable')">
+				Lista
+			</h2><p>
 				La lista
 			</p><p>
 				Può contenere

@@ -62,8 +62,10 @@
 		tutti sono in guerra. Tutti. E nessuno
 		vince.
 	</p>
+<?php if (!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>
 		Continua nella <a onclick="javascript:tab.load('iii')">prossima sezione</a>.
 	</p>
+<?php } ?>
 </div>

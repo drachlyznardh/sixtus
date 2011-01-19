@@ -92,8 +92,10 @@
 		Perché invece non vi gettate nel magma e
 		morite?
 	</p>
+<?php if(!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>
 		Continua nella <a onclick="javascript:tab.load('ii')">prossima sezione</a>.
 	</p>
+<?php } ?>
 </div>

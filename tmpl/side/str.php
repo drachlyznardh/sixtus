@@ -1,41 +1,43 @@
 <div class="section">
-	<?=$m->mkcascade('str2010-rside', 'Storie 2010', false)?>
-	<div id="longstr2010-rside">
+	<h2 id="arrowstr2010-rside" onclick="javascript:cascade('str2010-rside')">
+		Storie 2010
+	</h2><div id="longstr2010-rside">
 		<ol style="list-style-type: upper-roman;">
-			<li><?=$m->ilink('Storie/2010/I/', 'Apologia')?></li>
-			<li><?=$m->ilink('Storie/2010/II/', 'Correre')?></li>
-			<li><?=$m->ilink('Storie/2010/III/', 'Progetti')?></li>
-			<li><?=$m->ilink('Storie/2010/IV/', 'Impresa')?></li>
-			<li><?=$m->ilink('Storie/2010/V/', 'Condizioni')?></li>
-			<li><?=$m->ilink('Storie/2010/VI/', 'Un posto in cui stare')?></li>
-			<li><?=$m->ilink('Storie/2010/VII/', 'Gundam')?></li>
-			<li><?=$m->ilink('Storie/2010/VIII/', 'Sassi')?></li>
+			<li><?=$d->link('Storie/2010/I/', 'Apologia')?></li>
+			<li><?=$d->link('Storie/2010/II/', 'Correre')?></li>
+			<li><?=$d->link('Storie/2010/III/', 'Progetti')?></li>
+			<li><?=$d->link('Storie/2010/IV/', 'Impresa')?></li>
+			<li><?=$d->link('Storie/2010/V/', 'Condizioni')?></li>
+			<li><?=$d->link('Storie/2010/VI/', 'Un posto in cui stare')?></li>
+			<li><?=$d->link('Storie/2010/VII/', 'Gundam')?></li>
+			<li><?=$d->link('Storie/2010/VIII/', 'Sassi')?></li>
 		</ol>
 		<h2 class="reverse">La Saga di $rossa</h2>
 		<div class="inside">
 			<ol start="9" style="list-style-type:upper-roman">
-				<li><?=$m->ilink('Storie/2010/IX/', 'Attenzione')?></li>
-				<li><?=$m->ilink('Storie/2010/X/', 'Due Storie')?></li>
-				<li><?=$m->ilink('Storie/2010/XI/', 'Tre Storie')?></li>
-				<li><?=$m->ilink('Storie/2010/XII/', 'La musa')?></li>
-				<li><?=$m->ilink('Storie/2010/XIII/', 'Il modello definitivo')?></li>
-				<li><?=$m->ilink('Storie/2010/XIV/', 'L&apos;incontro')?></li>
-				<li><?=$m->ilink('Storie/2010/XV/', 'La spinta')?></li>
-				<li><?=$m->ilink('Storie/2010/XVI/', 'Il lunedì della verità')?></li>
+				<li><?=$d->link('Storie/2010/IX/', 'Attenzione')?></li>
+				<li><?=$d->link('Storie/2010/X/', 'Due Storie')?></li>
+				<li><?=$d->link('Storie/2010/XI/', 'Tre Storie')?></li>
+				<li><?=$d->link('Storie/2010/XII/', 'La musa')?></li>
+				<li><?=$d->link('Storie/2010/XIII/', 'Il modello definitivo')?></li>
+				<li><?=$d->link('Storie/2010/XIV/', 'L&apos;incontro')?></li>
+				<li><?=$d->link('Storie/2010/XV/', 'La spinta')?></li>
+				<li><?=$d->link('Storie/2010/XVI/', 'Il lunedì della verità')?></li>
 			</ol>
 		</div>
 		<ol start="17" style="list-style-type:upper-roman">	
-			<li><?=$m->ilink('Storie/2010/XVII/', 'Il finale')?></li>
+			<li><?=$d->link('Storie/2010/XVII/', 'Il finale')?></li>
 		</ol>
 	</div>
 </div><div class="section">
-	<?=$m->mkcascade('str2011-rside', 'Storie 2011', false)?>
-	<div id="longstr2011-rside">
+	<h2 id="arrowstr2011-rside" class="opened" onclick="javascript:cascade('str2011-rside')">
+		Storie 2011
+	</h2><div id="longstr2011-rside">
 		<ol start="18" style="list-style-type: upper-roman;">
-			<li><?=$m->ilink('Storie/2011/XVIII/', 'Liber Javae')?></li>
-			<li><?=$m->ilink('Storie/2011/XIX/', 'Permessi')?></li>
-			<li><?=$m->ilink('Storie/2011/XX/', 'Guida')?></li>
-			<li><?=$m->ilink('Storie/2011/XXI/', 'Programmazione 40.000')?></li>
+			<li><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
+			<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
+			<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
+			<li><?=$d->link('Storie/2011/XXI/', 'Programmazione 40.000')?></li>
 		</ol>
 	</div>
 </div><div class="section">
