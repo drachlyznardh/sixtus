@@ -75,7 +75,7 @@
 					<div class="clearbox">
 						<div class="section">
 
-<?php require_once ($loco->mktmpl('/footer-div')); ?>
+<?php require_once ('tmpl/footer.php'); ?>
 						</div>
 					</div> <!-- Clear Box -->
 				</div> <!-- Foot -->
@@ -83,8 +83,8 @@
 			<div id="rightside" class="scrollable">
 				<div class="clearbox">
 
-<?php require_once ($loco->mktmpl('/related')); ?>
-<?php require_once ($m->thisside()); ?>
+<?php require_once ('tmpl/related.php'); ?>
+<?php require_once ('tmpl/side/'.$rside.'.php'); ?>
 				</div> <!-- ClearBox -->
 			</div> <!-- RightSide -->
 		</div> <!-- Main -->
