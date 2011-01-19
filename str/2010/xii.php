@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('La musa', 'E quello che la musa fa');
-	$m->mkrelated('prev', 'Storia XI', 'Storie/XI/');
-	$m->mkrelated('next', 'Storia XIII', 'Storie/XIII/');
+	$title=array('La musa', 'E quello che la musa fa');
+	$prev=array('Storia XI', 'Storie/XI/');
+	$next=array('Storia XIII', 'Storie/XIII/');
 
 	function mkpage ($d) {
 ?>

@@ -1,10 +1,10 @@
 <?php 
 
-	$m->mkpage('Il finale', 'Perché arriva alla fine');
-	$m->mkrelated('prev', 'Storia XVI', 'Storie/XVI/');
-	$m->mkrelated('next', 'Storia XVIII', 'Storie/XVIII/');
+	$title=array('Il finale', 'Perché arriva alla fine');
+	$prev=array('Storia XVI', 'Storie/XVI/');
+	$next=array('Storia XVIII', 'Storie/XVIII/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

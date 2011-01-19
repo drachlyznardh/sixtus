@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Condizioni che cambiano', 'Vecchie cose che tornano');
-	$m->mkrelated('prev', 'Storia IV', 'Storie/IV/');
-	$m->mkrelated('next', 'Storia VI', 'Storie/VI/');
+	$title = array('Condizioni che cambiano', 'Vecchie cose che tornano');
+	$prev = array('Storia IV', 'Storie/IV/');
+	$next = array('Storia VI', 'Storie/VI/');
 
 	function mkpage ($s) {
 ?>

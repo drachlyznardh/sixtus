@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Un posto in cui stare', 'No fun allowed');
-	$m->mkrelated('prev', 'Storia V', 'Storie/V/');
-	$m->mkrelated('next', 'Storia VII', 'Storie/VII/');
+	$title = array('Un posto in cui stare', 'No fun allowed');
+	$prev = array('Storia V', 'Storie/V/');
+	$next = array('Storia VII', 'Storie/VII/');
 
 	function mkpage ($d) {
 ?>

@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Tre storie', 'Certamente non divertenti');
-	$m->mkrelated('prev', 'Storia X', 'Storie/X/');
-	$m->mkrelated('next', 'Storia XII', 'Storie/XII/');
+	$title=array('Tre storie', 'Certamente non divertenti');
+	$prev=array('Storia X', 'Storie/X/');
+	$next=array('Storia XII', 'Storie/XII/');
 
 	function mkpage ($d) {
 ?>

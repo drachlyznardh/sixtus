@@ -1,8 +1,8 @@
 <?php 
 
-	$m->mkpage('Il modello definitivo', 'Che mi costò >9000 ore di lavoro');
-	$m->mkrelated('prev', 'Storia XII', 'Storie/XII/');
-	$m->mkrelated('next', 'Storia XIV', 'Storie/XIV/');
+	$title=array('Il modello definitivo', 'Che mi costò >9000 ore di lavoro');
+	$prev=array('Storia XII', 'Storie/XII/');
+	$next=array('Storia XIV', 'Storie/XIV/');
 
 	function mkpage ($d) {
 ?>

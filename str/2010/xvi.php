@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Il lunedì della verità', 'Ma in realtà, non credo');
-	$m->mkrelated('prev', 'Storia XV', 'Storie/XV/');
-	$m->mkrelated('next', 'Storia XVII', 'Storie/XVII/');
+	$title=array('Il lunedì della verità', 'Ma in realtà, non credo');
+	$prev=array('Storia XV', 'Storie/XV/');
+	$next=array('Storia XVII', 'Storie/XVII/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
