@@ -162,15 +162,14 @@
 			die();
 		}
 
-		echo ($file);
-		echo ($parsed);
-
-		if (file_exists($file)) {include($file);die();}
 		list($folder, $file) = explode('/', $file);
-		$path = $srcdir[0].$folder .'.d/'. $file .'.php';
-		if (file_exists($path)) include ($path);
-		else include ('frag404.php');
-		die ();
+		$inner = $srcdir[0].$folder.'.d/'.$file.'.php';
+		$outer = $srcdir[0].$folder.'.php';
+
+		if (file_exists($inner)) require_once ($inner);
+		else if (file_exists($outer)) require_once ($outer);
+		else require_once ('frag404.php');
+		die();
 	}
 
 	require_once ($include);

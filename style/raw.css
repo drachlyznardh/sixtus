@@ -145,6 +145,16 @@ div.section h2.reverse
 	margin: 2px -5px 2px 2px;
 }
 
+div.section h2.addable:after
+{
+	content:url('img/plus.png');
+}
+
+div.section h2.removable:after
+{
+	content:url('img/minus.png');
+}
+
 div.section h2.closed:after
 {
 	content:url('img/downarrow.png');
