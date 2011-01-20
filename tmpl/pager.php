@@ -5,7 +5,7 @@
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
-		<meta name="keywords" content="<?=$keyword?>" />
+		<meta name="keywords" content="<?=$section.$file.' '.$title[0]?>" />
 		<link rel="alternate" type="application/rss+xml" title="TruNaluten - News" href="rss.xml" />
 
 		<title><?=$title[0]?></title>
@@ -31,7 +31,7 @@
 
 						<div class="section">
 							<h2 id="home">
-								<?=$section?>
+								<?=$d->link($location,$section)?>
 							</h2>
 							<h1
 							id="title"><?=$title[0]?></h1>

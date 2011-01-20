@@ -112,14 +112,17 @@
 
 	foreach (array_keys($cats) as $key) {
 		if (preg_match($key, $parsed)) {
-			$location = preg_replace('/\//', '', $key);
-			$section = ucfirst(preg_replace('/\\\/',' ',$location));
+			$location = preg_replace('/\\\/', '',substr($key, 1, -1));
+			$section = ucwords(preg_replace('/\//',' ',$location));
+			$location = preg_replace('/ /','/',$section);
 			$file = strtolower(substr(preg_replace($key, '', $parsed), 0, -1));
 			$srcdir = $cats[$key];
 			break;
 		}
 	}
-	if ($file == '') $file = 'index';
+	if (!$file) $file = 'index';
+	if (!$section) $section = '/';
+	if (!$location) $location = 'Storie/';
 	foreach ($srcdir as $dir) {
 		if (file_exists($dir.$file.'.php')) {
 			$include = $dir.$file.'.php';
