@@ -41,7 +41,7 @@
 	if (preg_match ('/faiv\//', $request))
 		$request = preg_replace ('/faiv\/(.*)/', '$1', $request);
 	if ($request == '')
-		header ('Location: '.$base.'/Home/');
+		header ('Location: '.$base.'/Storie/');
 
 	if (preg_match('/style/', $request) && file_exists ($request)) {
 		
@@ -107,7 +107,8 @@
 	$location = false;
 	$file = false;
 	$srcdir = array ();
-	$include = '';
+	$include = false;
+	$rside = false;
 
 	foreach (array_keys($cats) as $key) {
 		if (preg_match($key, $parsed)) {
@@ -126,6 +127,8 @@
 			break;
 		}
 	}
+	if (!$include) $include = 'error404.php';
+	if (!$rside) $rside = 'nav.php';
 
 	require_once ('lib/dialog.php');
 
@@ -151,7 +154,18 @@
 	$d = new Dialog(isset($opt['bounce']), $section, $opt);
 
 	if (isset ($opt['dynamic'])) {
-	
+
+		if (preg_match('/tmpl\/(.*)\//', $parsed)) {
+			$frag = substr($parsed, 0, -1);
+			if (file_exists($frag)) include ($frag);
+			else include ('frag404.php');
+			die();
+		}
+
+		echo ($file);
+		echo ($parsed);
+
+		if (file_exists($file)) {include($file);die();}
 		list($folder, $file) = explode('/', $file);
 		$path = $srcdir[0].$folder .'.d/'. $file .'.php';
 		if (file_exists($path)) include ($path);

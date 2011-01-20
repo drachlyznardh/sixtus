@@ -1,7 +1,6 @@
 <?php
 
-	$title='404 Not Found';
-	$subtitle='There is no such file here';
+	$title=array('404 Not Found','There is no such file here');
 
 	function mkpage ($d) {
 ?>

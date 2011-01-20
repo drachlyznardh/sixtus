@@ -22,6 +22,7 @@
 					<p>Request: `<?=$request?>`</p>
 					<p>Parsed: `<?=$parsed?>`</p>
 					<p>File: `<?=$file?>`</p>
+					<p>Include: <?=$include?></p>
 					<p>RSide: `<?=$rside?>`</p>
 				</div><div class="section">
 					<h2>
