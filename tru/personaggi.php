@@ -49,5 +49,5 @@
 		</p>
 	</div>
 </div><div class="wider" id="dynamic-badguys" style="display:none">
-</div>
+</div><script type="text/javascript" src="lib/tloader.js"></script>
 <?php } ?>

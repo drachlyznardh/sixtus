@@ -75,16 +75,20 @@
 			<h2 id="straightbadguys" class="wider reverse"
 				onclick="javascript:reverse('badguys')">
 				Antagonisti
-			</h2><p>
-				<a onclick="javascript:showTab('badguys-tab', 'secson_enka')">Son Enkà
-			</p><p>
-				<a onclick="javascript:showTab('badguys-tab', 'secvad_enka')">Vad Enkà
-			</p><p>
-				<a onclick="javascript:showTab('badguys-tab', 'seczan_enka')">Enka Zan
-			</p><p>
-				<a onclick="javascript:showTab('badguys-tab', 'seczen_enka')">Zen Enkà
-			</p><p>
-				<a onclick="javascript:showTab('badguys-tab', 'secsimak_enka')">Simak Enkà
-			</p>
+			</h2><ol>
+				<li id="li-son">
+					<a onclick="javascript:bad.show('son')">Son Enkà
+				</li><li id="li-vad">
+					<a onclick="javascript:bad.show('vad')">Vad Enkà
+				</li><li id="li-zan">
+					<a onclick="javascript:bad.show('zan')">Enka Zan
+				</li><li id="li-zen">
+					<a onclick="javascript:bad.show('zen')">Zen Enkà
+				</li><li id="li-simakenka">
+					<a onclick="javascript:bad.show('simakenka')">Simak Enkà
+				</li>
+			</ol>
 		</div>
-	</div>
+	</div><script type="text/javascript">
+		var bad = new TLoader(Array('son','vad','zan','zen','simakenka'));
+	</script>
