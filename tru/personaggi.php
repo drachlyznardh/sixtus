@@ -6,8 +6,9 @@
 ?>
 <div class="small">
 	<div class="section">
-		<h2>Leggere con attenzione</h2>
-		<p>
+		<h2>
+			Leggere con attenzione
+		</h2><p>
 			Attenzione prego: questa pagina, oltre ad essere
 			potentemente incompleta, non si preoccupa di
 			eliminare eventuali spoiler; pertanto se
@@ -16,8 +17,7 @@
 			stessi.
 		</p>
 	</div><div class="section">
-		<h2 id="plus-ELyznardh" class="addable"
-			onclick="javascript:dadd('ELyznardh','Tru/Naluten/char/elyznardh')">
+		<h2 id="plus-ELyznardh" class="addable" onclick="javascript:if(dadd('ELyznardh','Tru/Naluten/char/elyznardh'))elyz.show('simak');">
 			eLyznardh
 		</h2><p>
 			Se avete gi&agrave; letto i primi capitoli,
@@ -25,21 +25,19 @@
 			pi&ugrave; persone.
 		</p>
 	</div>
-</div><div class="wider" id="dynamic-ELyznardh" style="display:none">
+</div><div id="dynamic-ELyznardh">
 </div><div class="small">
 	<div class="section">
-		<h2 id="plus-goodguys" class="addable"
-			onclick="javascript:dadd('goodguys','Tru/Naluten/char/goodguys')">
+		<h2 id="plus-goodguys" class="addable" onclick="javascript:if(dadd('goodguys','Tru/Naluten/char/goodguys'))good.show('sacomne');">
 			Protagonisti
 		</h2><p>
 			Ci sono anche altri protagonisti, in effetti.
 		</p>
 	</div>
-</div><div class="revwider" id="dynamic-goodguys" style="display:none">
+</div><div id="dynamic-goodguys">
 </div><div class="small">
 	<div class="section">
-		<h2 id="plus-badguys" class="addable"
-			onclick="javascript:dadd('badguys','Tru/Naluten/char/badguys')">
+		<h2 id="plus-badguys" class="addable" onclick="javascript:if(dadd('badguys','Tru/Naluten/char/badguys'))bad.show('son');">
 			Antagonisti
 		</h2><p>
 			Perché, anche se molti di voi non lo sa ancora,
@@ -48,6 +46,11 @@
 			sono ancora in agguato.
 		</p>
 	</div>
-</div><div class="wider" id="dynamic-badguys" style="display:none">
-</div><script type="text/javascript" src="lib/tloader.js"></script>
+</div><div id="dynamic-badguys">
+</div><script type="text/javascript" src="lib/tloader.js">
+</script><script type="text/javascript">
+	var bad = new TLoader();
+	var good = new TLoader();
+	var elyz = new TLoader();
+</script>
 <?php } ?>

@@ -102,6 +102,7 @@ div.revwider {
 	margin-left: 0%;
 	margin-right: 0%;
 	margin-top: 5px;
+	padding-top: 5px;
 }
 
 div.section
@@ -180,6 +181,9 @@ div.section ul
 	margin-left: 5%;
 	margin-right: 15%;
 }
+
+div.tab { display:none; }
+div.dynamic { padding-bottom:  }
 
 div.widelist ol
 {
