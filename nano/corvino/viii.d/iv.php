@@ -194,7 +194,7 @@
 </div><div class="section">
 	<p>
 		Continua alla
-		<a onclick="javascript:tab.load('v')">prossima sezione</a>.
+		<a onclick="javascript:t.load('v')">prossima sezione</a>.
 	</p>
 <?php } ?>
 </div>

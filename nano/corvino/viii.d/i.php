@@ -112,7 +112,7 @@
 <?php if(!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>Continua alla
-		<a onclick="javascript:tab.load('ii')">prossima sezione</a>.
+		<a onclick="javascript:t.load('ii')">prossima sezione</a>.
 	</p>
 <?php } ?>
 </div>

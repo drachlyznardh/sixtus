@@ -30,15 +30,20 @@
 					<a onclick="javascript:t.load('iv')">Di corsa</a>
 				</li><li id="liv">
 					<a onclick="javascript:t.load('v')">A casa, di nuovo</a>
+				</li><li id="livi">
+					<a onclick="javascript:t.load('vi')">Al parco</a>
 				</li>
 			</ol>
 		</div>
 	</div><div class="widecontent">
-		<div id="dynamic" />
+		<div id="dynamic"></div>
 	</div>
 </div>
 <script type="text/javascript" src="lib/dloader.js"></script><script type="text/javascript">
 	var t = new DLoader('NaNoWriMo/Corvino/Multicolore/VIII/');
-	tab.load('i');
+	var h = location.hash.substring(1).toLowerCase();
+	var g = document.getElementById('li'+h);
+	if (g == undefined) t.load('i');
+	else t.load(h);
 </script>
 <?php }} ?>
