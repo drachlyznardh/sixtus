@@ -21,10 +21,6 @@
 
 
 		<div id="main">
-			<div id="leftside" class="scrollable">
-	
-<?php require ('tmpl/lside.php'); ?>
-			</div> <!-- Side -->
 			<div id="container" class="scrollable">
 				<div id="head">
 					<div class="clearbox">
@@ -87,6 +83,11 @@
 <?php require_once ('tmpl/side/'.$rside); ?>
 				</div> <!-- ClearBox -->
 			</div> <!-- RightSide -->
+
+			<div id="leftside" class="scrollable">
+	
+<?php require ('tmpl/lside.php'); ?>
+			</div> <!-- LeftSide -->
 		</div> <!-- Main -->
 	</body> <!-- Body -->
 </html>
