@@ -117,6 +117,21 @@
 	if (!$file) $file = 'index';
 	if (!$section) $section = '/';
 	if (!$location) $location = 'Storie/';
+	if (isset($opt['download'])) {
+		foreach ($srcdir as $dir) {
+			$include = $dir.$file.'.pdf';
+			if (file_exists($include)) {
+				header('Content-Type: application/pdf');
+				header('Content-Disposition: attachment; filename='.$file.'.pdf');
+				if ($stream = fopen($include,'r')){
+					while(!feof($stream))
+						print(fread($stream,1024));
+					fclose($stream);
+				}
+				die();
+			}
+		}
+	}
 	foreach ($srcdir as $dir) {
 		if (file_exists($dir.$file.'.php')) {
 			$include = $dir.$file.'.php';
@@ -129,25 +144,6 @@
 
 	require_once ('lib/dialog.php');
 
-	if (isset($opt['download'])) {
-		 
-		$path = preg_replace ('/\.php/', '.pdf', $file);
-		if (file_exists ($path)) {
-			header ('Content-Type: application/pdf');
-			header ('Content-Disposition: attachment; filename='.$file.'.pdf');
-			
-			$file = fopen ($path, 'r');
-
-			if ($file) {
-				while (!feof($file)) print(fread($file, 1024*1024));
-				fclose ($file);
-				die ();
-			} else $file = 'error404.php';
-			die();
-		} else $file = 'error404.php';
-
-	}
-	
 	$d = new Dialog(isset($opt['bounce']), $section, $opt);
 
 	if (isset ($opt['dynamic'])) {
