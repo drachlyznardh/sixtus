@@ -17,7 +17,7 @@
 ?>
 <div class="wider">
 	<div class="widecontent">
-		<div class="tab" id="dynamic"></div>
+		<div id="dynamic"></div>
 	</div><div class="widelist">
 		<div class="section">
 			<h2>
