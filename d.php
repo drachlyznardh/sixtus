@@ -144,7 +144,7 @@
 
 	require_once ('lib/dialog.php');
 
-	$d = new Dialog(isset($opt['bounce']), $section, $opt);
+	$d = new Dialog(isset($opt['bounce']), $location, $opt);
 
 	if (isset ($opt['dynamic'])) {
 

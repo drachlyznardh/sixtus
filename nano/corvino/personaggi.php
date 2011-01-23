@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Personaggi', 'Chi sono e cosa fanno');
+	$title=array('Personaggi', 'Chi sono e cosa fanno');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -50,9 +50,9 @@
 			<h2>
 				Uman(oid)i
 			</h2><p>
-				<?=$m->legend('Corvino')?>
+				<?=$d->legend('Corvino')?>
 			</p><p>
-				<?=$m->legend('Camelia')?>
+				<?=$d->legend('Camelia')?>
 			</p>
 		</div>
 	</div>
@@ -91,11 +91,11 @@
 			<h2>
 				Animali
 			</h2><p>
-				<?=$m->legend('Battesimo')?>
+				<?=$d->legend('Battesimo')?>
 			</p><p>
-				<?=$m->legend('Smeraldino')?>
+				<?=$d->legend('Smeraldino')?>
 			</p><p>
-				<?=$m->legend('Fisthanlarunai')?>
+				<?=$d->legend('Fisthanlarunai')?>
 			</p>
 		</div>
 	</div>
@@ -107,7 +107,7 @@
 			</h2><a id="Strega"></a><a id="Streghe"></a><p>
 				Le streghe sono terribili creature &ndash; dotate di
 				spaventosi poteri magici &ndash; che vivono sia
-				<?=$m->legend('di qua')?> che <?=$m->legend('di
+				<?=$d->legend('di qua')?> che <?=$d->legend('di
 				là')?>.
 			</p>
 		</div><div class="section">
@@ -115,7 +115,7 @@
 				Multicolore
 			</h2><a id="Multicolore"></a><p>
 				Uno degli appellativi di
-				<?=$m->legend('Corvino')?>, dicesi di colui che
+				<?=$d->legend('Corvino')?>, dicesi di colui che
 				può assumere più d'un colore contemporaneamente.
 			</p>
 		</div><div class="section">
@@ -123,10 +123,10 @@
 				Trasparente
 			</h2><a id="Trasparente"></a><p>
 				Altro appellativo per
-				<?=$m->legend('Corvino')?>, dicesi di colui che
+				<?=$d->legend('Corvino')?>, dicesi di colui che
 				può evitare di assumere un colore. &Egrave;
 				grazie a questo potere che il ragazzo riesce a
-				passare <?=$m->legend('di là')?> senza lasciare
+				passare <?=$d->legend('di là')?> senza lasciare
 				traccia.
 			</p>
 		</div>

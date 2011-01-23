@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('Corvino Multicolore', '50,000 parole scritte in ventuno giorni');
+	$title=array('Corvino Multicolore', '50,000 parole scritte in ventuno giorni');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -19,8 +19,9 @@
 			bene, è perché non ci sono ancora arrivato.
 		</p>
 	</div><div class="section">
-		<?=$m->mkcascade('parteI', 'Parte I &ndash; La gioventù')?>
-		<p>
+		<h2 class="closed" id="arrowparteI" onclick="javascript:cascade('parteI')">
+			Parte I &ndash; La gioventù
+		</h2><p>
 			La prima parte del mio NaNoWriMo è certamente la più divertente,
 			o per lo meno è stata la più divertente da scrivere. Si tratta,
 			in breve, della lunga serie di lamentazioni di uno studente, che
@@ -53,21 +54,33 @@
 	</div><div class="widelist">
 		<div class="section">
 
-	<?=$m->mkreverse('parteI', 'Parte I: La gioventù')?>
-	<ol style="list-style-type: decimal-leading-zero">
-		<li><?=$m->ilink('NaNoWriMo/01/', 'Una sera, al parco')?></li>
-		<li><?=$m->ilink('NaNoWriMo/02/', 'Campeggio')?></li>
-		<li><?=$m->ilink('NaNoWriMo/03/', 'A contatto')?></li>
-		<li><?=$m->ilink('NaNoWriMo/04/', 'Nel bosco')?></li>
-		<li><?=$m->ilink('NaNoWriMo/05/', 'La dichiarazione')?></li>
+	<h2 class="reverse wider" id="straightparteI" onclick="javascript:reverse('parteI')">
+		Parte I: La gioventù
+	</h2><ol style="list-style-type: decimal-leading-zero">
+		<li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/I/', 'Una sera, al parco')?>
+		</li><li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/II/', 'Campeggio')?>
+		</li><li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/III/', 'A contatto')?>
+		</li><li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/IV/', 'Nel bosco')?>
+		</li><li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/V/', 'Di notte')?>
+		</li><li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/VI/', 'Gli ultimi giorni')?>
+		</li><li>
+			<?=$d->link('NaNoWriMo/Corvino/Multicolore/VII/', 'La dichiarazione')?>
+		</li>
 	</ol>
 
 		</div>
 	</div>
 </div><div class="small">
 	<div class="section">
-		<?=$m->mkcascade('parteII', 'Parte II: Il Potere')?>
-		<p>
+		<h2 class="closed" id="arrowparteII" onclick="javascript:cascade('parteII')">
+			Parte II: Il Potere
+		</h2><p>
 			La seconda parte è un lungo e grosso polpettone, fatto di prove ed
 			errori, che vedono le sofferenze del protagonista alla scoperta di
 			improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
@@ -97,18 +110,12 @@
 		</div><div class="widelist">
 			<div class="section">
 
-		<?=$m->mkreverse('parteII', 'Parte II: Il Potere')?>
-		<ol start="6" style="list-style-type: decimal-leading-zero">
-			<li><?=$m->ilink('NaNoWriMo/06/', 'Il lampione')?></li>
-			<li><?=$m->ilink('NaNoWriMo/07/', 'La lettura')?></li>
-			<li><?=$m->ilink('NaNoWriMo/08/', 'La corsa')?></li>
-			<li><?=$m->ilink('NaNoWriMo/09/', 'L&apos;estate')?></li>
-			<li><?=$m->ilink('NaNoWriMo/10/', 'La morte')?></li>
-			<li><?=$m->ilink('NaNoWriMo/11/', 'Il sogno')?></li>
-			<li><?=$m->ilink('NaNoWriMo/12/', 'Il lupo e il corvo')?></li>
-			<li><?=$m->ilink('NaNoWriMo/13/', 'Il funerale')?></li>
-			<li><?=$m->ilink('NaNoWriMo/14/', 'La rivelazione')?></li>
-			<li><?=$m->ilink('NaNoWriMo/15/', 'Il mondo &lsquo;di là&rsquo;')?></li>
+		<h2 class="reverse revwider" id="straightparteII" onclick="javascript:reverse('parteII')">
+			Parte II: Il Potere
+		</h2><ol start="8" style="list-style-type: decimal-leading-zero">
+			<li>
+				<?=$d->link('NaNoWriMo/Corvino/Multicolore/VIII/','Il lampione')?>
+			</li>
 		</ol>
 
 			</div>
@@ -116,8 +123,9 @@
 	</div>
 <div class="small">
 	<div class="section">
-		<?=$m->mkcascade('parteIII', 'Parte III: Le streghe')?>
-		<p>
+		<h2 class="closed" id="arrowparteIII" onclick="javascript:cascade('parteIII')">
+			Parte III: Le streghe
+		</h2><p>
 			Nella terza parte, la più assurda e frammentaria, il protagonista e i
 			suoi compagni danno inizio ad una sconsiderata lotta per la
 			sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
@@ -145,19 +153,28 @@
 	</div><div class="widelist">
 		<div class="section">
 
-	<?=$m->mkreverse('parteIII', 'Parte III: Le streghe')?>
-	<ol start="16" style="list-style-type: decimal-leading-zero">
-		<li><?=$m->ilink('NaNoWriMo/16/', 'Il da farsi')?></li>
-		<li><?=$m->ilink('NaNoWriMo/17/', 'Le botte')?></li>
-		<li><?=$m->ilink('NaNoWriMo/18/', 'La sua storia')?></li>
-		<li><?=$m->ilink('NaNoWriMo/19/', 'Io, Strega')?></li>
-		<li><?=$m->ilink('NaNoWriMo/20/', 'L&apos;offensiva')?></li>
-		<li><?=$m->ilink('NaNoWriMo/21/', 'L&apos;oracolo')?></li>
-		<li><?=$m->ilink('NaNoWriMo/22/', 'Il drago')?></li>
-		<li><?=$m->ilink('NaNoWriMo/finale/', 'Epilogo')?></li>
+	<h2 class="reverse wider" id="straightparteIII" onclick="javascript:reverse('parteIII')">
+		Parte III &ndash; Le streghe
+	</h2><ol start="16" style="list-style-type: decimal-leading-zero">
 	</ol>
 
 		</div>
+	</div>
+</div><div class="small">
+	<div class="section">
+		<h2>
+			Parte IV &ndash; I Demoni
+		</h2><p>
+			Ebbene sì, demoni. A fiotti, a fiumi, a secchiate. Perché Corvino pensava queste due cose:
+		</p><ul>
+			<li>
+				che i colori fossero solo colori, e che i suoi poteri fossero doni, da utilizzare a piacimento
+			</li><li>
+				che le streghe fossero ignare della sua presenza e quindi impreparate al suo arrivo
+			</li>
+		</ul><p>
+			Corvino si sbagliava! Voi vi sbagliavate! Persino l'autore si sbagliava!
+		</p>
 	</div>
 </div>
 <?php } ?>

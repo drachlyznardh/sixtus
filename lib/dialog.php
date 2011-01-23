@@ -56,6 +56,10 @@
 		
 			return "<span class=\"em\" title=\"che significa: &laquo;$meaning&raquo;\">$original</span>";
 		}
+
+		public function legend ($author) {
+			return '<a class="legend" href="'.$this->base.'#'.$author.'">'.$author.'</a>';
+		}
 		
 		public function shout ($author, $speech) {
 		
