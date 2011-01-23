@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
+	$title=array('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -39,11 +39,12 @@
 			Ciascun capitolo è disponibile singolarmente per il download, ma
 			in realtà questo frazionamento è stato effettuato soltato per
 			sfizio. Se voleste scaricare il pdf completo, cliccate <a
-			href="NaNoWriMo/NaNoWriMo2010/download/">questo</a>.
+			href="NaNoWriMo/2010/NaNoWriMo2010/download/">questo</a>.
 		</p>
 	</div><div class="section">
-		<?=$m->mkcascade('parteI', 'Parte I &ndash; La gioventù')?>
-		<p>
+		<h2 class="closed" id="arrowparteI" onclick="javascript:cascade('parteI')">
+			'Parte I &ndash; La gioventù'
+		</h2><p>
 			La prima parte del mio NaNoWriMo è certamente la più divertente,
 			o per lo meno è stata la più divertente da scrivere. Si tratta,
 			in breve, della lunga serie di lamentazioni di uno studente, che
@@ -76,21 +77,23 @@
 	</div><div class="widelist">
 		<div class="section">
 
-	<?=$m->mkreverse('parteI', 'Parte I: La gioventù')?>
-	<ol style="list-style-type: decimal-leading-zero">
-		<li><?=$m->ilink('NaNoWriMo/01/download/', 'Una sera, al parco')?></li>
-		<li><?=$m->ilink('NaNoWriMo/02/download/', 'Campeggio')?></li>
-		<li><?=$m->ilink('NaNoWriMo/03/download/', 'A contatto')?></li>
-		<li><?=$m->ilink('NaNoWriMo/04/download/', 'Nel bosco')?></li>
-		<li><?=$m->ilink('NaNoWriMo/05/download/', 'La dichiarazione')?></li>
+	<h2 class="reverse wider" id="straightparteI" onclick="javascript:reverse('parteI')">
+		Parte I: La gioventù
+	</h2><ol style="list-style-type: decimal-leading-zero">
+		<li><?=$d->link('NaNoWriMo/2010/01/download/', 'Una sera, al parco')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/02/download/', 'Campeggio')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/03/download/', 'A contatto')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/04/download/', 'Nel bosco')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/05/download/', 'La dichiarazione')?></li>
 	</ol>
 
 		</div>
 	</div>
 </div><div class="small">
 	<div class="section">
-		<?=$m->mkcascade('parteII', 'Parte II: Il Potere')?>
-		<p>
+		<h2 class="closed" id="arrowparteII" onclick="javascript:cascade('parteII')">
+			Parte II: Il Potere
+		</h2><p>
 			La seconda parte è un lungo e grosso polpettone, fatto di prove ed
 			errori, che vedono le sofferenze del protagonista alla scoperta di
 			improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
@@ -120,18 +123,19 @@
 		</div><div class="widelist">
 			<div class="section">
 
-		<?=$m->mkreverse('parteII', 'Parte II: Il Potere')?>
-		<ol start="6" style="list-style-type: decimal-leading-zero">
-			<li><?=$m->ilink('NaNoWriMo/06/download/', 'Il lampione')?></li>
-			<li><?=$m->ilink('NaNoWriMo/07/download/', 'La lettura')?></li>
-			<li><?=$m->ilink('NaNoWriMo/08/download/', 'La corsa')?></li>
-			<li><?=$m->ilink('NaNoWriMo/09/download/', 'L&apos;estate')?></li>
-			<li><?=$m->ilink('NaNoWriMo/10/download/', 'La morte')?></li>
-			<li><?=$m->ilink('NaNoWriMo/11/download/', 'Il sogno')?></li>
-			<li><?=$m->ilink('NaNoWriMo/12/download/', 'Il lupo e il corvo')?></li>
-			<li><?=$m->ilink('NaNoWriMo/13/download/', 'Il funerale')?></li>
-			<li><?=$m->ilink('NaNoWriMo/14/download/', 'La rivelazione')?></li>
-			<li><?=$m->ilink('NaNoWriMo/15/download/', 'Il mondo &lsquo;di là&rsquo;')?></li>
+		<h2 class="reverse revwider" id="straightparteII" onclick="javascript:reverse('parteII')">
+			Parte II: Il Potere
+		</h2><ol start="6" style="list-style-type: decimal-leading-zero">
+			<li><?=$d->link('NaNoWriMo/2010/06/download/', 'Il lampione')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/07/download/', 'La lettura')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/08/download/', 'La corsa')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/09/download/', 'L&apos;estate')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/10/download/', 'La morte')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/11/download/', 'Il sogno')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/12/download/', 'Il lupo e il corvo')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/13/download/', 'Il funerale')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/14/download/', 'La rivelazione')?></li>
+			<li><?=$d->link('NaNoWriMo/2010/15/download/', 'Il mondo &lsquo;di là&rsquo;')?></li>
 		</ol>
 
 			</div>
@@ -139,8 +143,9 @@
 	</div>
 <div class="small">
 	<div class="section">
-		<?=$m->mkcascade('parteIII', 'Parte III: Le streghe')?>
-		<p>
+		<h2 class="closed" id="arrowparteIII" onclick="javascript:cascade('parteIII')">
+			Parte III: Le streghe
+		</h2><p>
 			Nella terza parte, la più assurda e frammentaria, il protagonista e i
 			suoi compagni danno inizio ad una sconsiderata lotta per la
 			sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
@@ -168,16 +173,17 @@
 	</div><div class="widelist">
 		<div class="section">
 
-	<?=$m->mkreverse('parteIII', 'Parte III: Le streghe')?>
-	<ol start="16" style="list-style-type: decimal-leading-zero">
-		<li><?=$m->ilink('NaNoWriMo/16/download/', 'Il da farsi')?></li>
-		<li><?=$m->ilink('NaNoWriMo/17/download/', 'Le botte')?></li>
-		<li><?=$m->ilink('NaNoWriMo/18/download/', 'La sua storia')?></li>
-		<li><?=$m->ilink('NaNoWriMo/19/download/', 'Io, Strega')?></li>
-		<li><?=$m->ilink('NaNoWriMo/20/download/', 'L&apos;offensiva')?></li>
-		<li><?=$m->ilink('NaNoWriMo/21/download/', 'L&apos;oracolo')?></li>
-		<li><?=$m->ilink('NaNoWriMo/22/download/', 'Il drago')?></li>
-		<li><?=$m->ilink('NaNoWriMo/finale/download/', 'Epilogo')?></li>
+	<h2 class="reverse wider" id="straightparteIII" onclick="javascript:reverse('parteIII')">
+		Parte III: Le streghe
+	</h2><ol start="16" style="list-style-type: decimal-leading-zero">
+		<li><?=$d->link('NaNoWriMo/2010/16/download/', 'Il da farsi')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/17/download/', 'Le botte')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/18/download/', 'La sua storia')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/19/download/', 'Io, Strega')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/20/download/', 'L&apos;offensiva')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/21/download/', 'L&apos;oracolo')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/22/download/', 'Il drago')?></li>
+		<li><?=$d->link('NaNoWriMo/2010/finale/download/', 'Epilogo')?></li>
 	</ol>
 
 		</div>

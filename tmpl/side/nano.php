@@ -1,6 +1,6 @@
 <div class="section">
 	<h2>NaNoWrimo</h2>
-	<p><?=$m->ilink('NaNoWriMo/', 'Indice')?></p>
-	<p><?=$m->ilink('NaNoWriMo/2010/', 'NaNoWriMo 2010')?></p>
-	<p><?=$m->ilink('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore')?></p>
+	<p><?=$d->link('NaNoWriMo/', 'Indice')?></p>
+	<p><?=$d->link('NaNoWriMo/2010/', 'NaNoWriMo 2010')?></p>
+	<p><?=$d->link('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore')?></p>
 </div>

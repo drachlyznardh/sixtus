@@ -1,8 +1,8 @@
 <?php
 
-	$m->mkpage('NaNoWriMo', 'Cosa, come, perché');
+	$title=array('NaNoWriMo', 'Cosa, come, perché');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
