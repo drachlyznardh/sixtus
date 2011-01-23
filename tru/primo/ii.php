@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Sacomne', '&Egrave; il suo nome');
-	$m->mkrelated('prev', 'Capitolo I', 'Tru/Naluten/I/');
-	$m->mkrelated('next', 'Capitolo III', 'Tru/Naluten/III/');
+	$title=array('Sacomne', '&Egrave; il suo nome');
+	$prev=array('Capitolo I', 'Tru/Naluten/I/');
+	$next=array('Capitolo III', 'Tru/Naluten/III/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

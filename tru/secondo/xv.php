@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('La fuga', 'Via via via via!!!');
-	$m->mkrelated('prev', 'Capitolo XIV', 'Tru/Naluten/XIV/');
-	$m->mkrelated('next', 'Capitolo XVI', 'Tru/Naluten/XVI/');
+	$title=array('La fuga', 'Via via via via!!!');
+	$prev=array('Capitolo XIV', 'Tru/Naluten/XIV/');
+	$next=array('Capitolo XVI', 'Tru/Naluten/XVI/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('La sua gente', 'E i loro buffi copricapi');
-	$m->mkrelated('prev', 'Capitolo XV', 'Tru/Naluten/XV/');
-	$m->mkrelated('next', 'Capitolo XVII', 'Tru/Naluten/XVII');
+	$title=array('La sua gente', 'E i loro buffi copricapi');
+	$prev=array('Capitolo XV', 'Tru/Naluten/XV/');
+	$next=array('Capitolo XVII', 'Tru/Naluten/XVII');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un

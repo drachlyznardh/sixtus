@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Le altre voci', 'Meglio soli che male accompagnati');
-	$m->mkrelated('prev', 'Capitolo III', 'Tru/Naluten/III/');
-	$m->mkrelated('next', 'Capitolo V', 'Tru/Naluten/V/');
+	$title=array('Le altre voci', 'Meglio soli che male accompagnati');
+	$prev=array('Capitolo III', 'Tru/Naluten/III/');
+	$next=array('Capitolo V', 'Tru/Naluten/V/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

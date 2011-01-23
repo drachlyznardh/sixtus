@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Proposta', 'Non indecente, solo strana');
-	$m->mkrelated('prev', 'Capitolo XIII', 'Tru/Naluten/XIII/');
-	$m->mkrelated('next', 'Capitolo XV', 'Tru/Naluten/XV/');
+	$title=array('Proposta', 'Non indecente, solo strana');
+	$prev=array('Capitolo XIII', 'Tru/Naluten/XIII/');
+	$next=array('Capitolo XV', 'Tru/Naluten/XV/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

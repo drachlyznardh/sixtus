@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('La fine del mondo', 'I accidentally everything');
-	$m->mkrelated('prev', 'Capitolo VIII', 'Tru/Naluten/VIII/');
-	$m->mkrelated('next', 'Volume II', 'Tru/Naluten/X/');
+	$title=array('La fine del mondo', 'I accidentally everything');
+	$prev=array('Capitolo VIII', 'Tru/Naluten/VIII/');
+	$next=array('Volume II', 'Tru/Naluten/X/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Battaglia navale', 'Si combatte sul mare');
-	$m->mkrelated('prev', 'Capitolo XVI', 'Tru/Naluten/XVI/');
-	$m->mkrelated('next', 'Capitolo XVIII', 'Tru/Naluten/XVIII/');
+	$title=array('Battaglia navale', 'Si combatte sul mare');
+	$prev=array('Capitolo XVI', 'Tru/Naluten/XVI/');
+	$next=array('Capitolo XVIII', 'Tru/Naluten/XVIII/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 
 <!--

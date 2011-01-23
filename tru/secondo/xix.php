@@ -1,9 +1,9 @@
 <?php
 
-	$m->mkpage('La lezione', 'Che zittisce. Tutti.');
-	$m->mkrelated('prev', 'Capitolo XVIII', 'Tru/Naluten/XVIII/');
+	$title=array('La lezione', 'Che zittisce. Tutti.');
+	$prev=array('Capitolo XVIII', 'Tru/Naluten/XVIII/');
 
-	function mkpage ($d, $master) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

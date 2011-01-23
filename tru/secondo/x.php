@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('La trovatella', 'L&apos;abbandono non è definitivo');
-	$m->mkrelated('prev', 'Volume I', 'Tru/Naluten/IX/');
-	$m->mkrelated('next', 'Capitolo XI', 'Tru/Naluten/XI/');
+	$title=array('La trovatella', 'L&apos;abbandono non è definitivo');
+	$prev=array('Volume I', 'Tru/Naluten/IX/');
+	$next=array('Capitolo XI', 'Tru/Naluten/XI/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
