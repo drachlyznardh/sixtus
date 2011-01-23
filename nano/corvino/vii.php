@@ -1,12 +1,27 @@
 <?php
 
-	$m->mkpage('La dichiarazione', 'Corvino Multicolore &ndash; VII');
-	$m->mkrelated('prev', 'Capitolo VI', 'NaNoWriMo/Corvino/Multicolore/VI/');
-	$m->mkrelated('next', 'Capitolo VIII', 'NaNoWriMo/Corvino/Multicolore/VIII/');
+	$title=array('La dichiarazione', 'Corvino Multicolore &ndash; VII');
+	$prev=array('Capitolo VI', 'NaNoWriMo/Corvino/Multicolore/VI/');
+	$next=array('Capitolo VIII', 'NaNoWriMo/Corvino/Multicolore/VIII/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
-<div class="small">
+<div id="longs" class="wider">
+	<div class="widelist">
+		<div class="section">
+			<h2 id="straights" class="reverse wider" onclick="javascript:reverse('s')">
+				La dichiarazione
+			</h2><ol>
+				<li id="li-i">
+					<a onclick="javascript:t.show('i')">A casa mia</a>
+				</li><li id="li-ii">
+					<a onclick="javascript:t.show('ii')">A casa sua</a>
+				</li>
+			</ol>
+		</div>
+	</div><div class="widecontent">
+	
+<div class="tab" id="tab-i">
 	<div class="section">
 		<div class="inside"><p>
 			Quel giorno ce ne andammo in gita.
@@ -121,13 +136,11 @@
 			<?=$d->speak('Camelia','Ti va di salire?')?>
 		</div><p>
 			E dissi di sì per l'ultima volta.
-		</p></div>
-	</div><div class="section">
-		<div class="inside"><p>...</p></div>
-		<p style="text-align:center">...</p>
-		<div class="outside"><p style="text-align:right">...</p></div>
-	</div><div class="small">	
-		<div class="section"><p>
+		</p><p>Continua alla <a onclick="javascript:t.show('ii')">prossima sezione</a>.</p>
+	</div>
+</div><div class="tab" id="tab-ii">
+	<div class="section">
+		<p>
 			Bella casa, cane simpatico. Un sacco di film che anch'io
 			avevo. E qualche bel quarto d'ora di discorsi inutili.
 			Poi mi decisi... più o meno.
@@ -289,4 +302,9 @@
 		</p>
 	</div>
 </div>
+
+</div><script type="text/javascript" src="lib/tloader.js"></script><script type="text/javascript">
+	var t = new TLoader();
+	t.show('i');
+</script>
 <?php } ?>

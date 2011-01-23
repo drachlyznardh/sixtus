@@ -109,8 +109,10 @@
 		ma molto in fretta. Non molto in fretta (ero già prima
 		il più veloce ad andarsene) ma comunque non lento.
 	</p>
+<?php if(!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>Continua alla
 		<a onclick="javascript:tab.load('ii')">prossima sezione</a>.
 	</p>
+<?php } ?>
 </div>

@@ -190,9 +190,11 @@
 		nonostante tutto insuperabile &ndash; fui a casa, mi buttai
 		nella doccia e ne uscii fresco come una rosa.
 	</p>
+<?php if(!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>
 		Continua alla
 		<a onclick="javascript:tab.load('v')">prossima sezione</a>.
 	</p>
+<?php } ?>
 </div>

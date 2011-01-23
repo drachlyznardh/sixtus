@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Nel bosco', 'Corvino Multicolore &ndash; IV');
-	$m->mkrelated('prev', 'Capitolo III', 'NaNoWriMo/Corvino/Multicolore/III/');
-	$m->mkrelated('next', 'Capitolo V', 'NaNoWriMo/Corvino/Multicolore/V/');
+	$title=array('Nel bosco', 'Corvino Multicolore &ndash; IV');
+	$prev=array('Capitolo III', 'NaNoWriMo/Corvino/Multicolore/III/');
+	$next=array('Capitolo V', 'NaNoWriMo/Corvino/Multicolore/V/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -82,7 +82,8 @@
 			Perché tutti sono capaci di andare nel bosco e guardarsi
 			bene attorno prima di allentare la cintura.
 		</p><div class="inside"><p>
-			Ma quella non è libertà: libertà è allentare la cintura in un punto scelto a caso: decidi
+			Ma quella non è libertà: libertà è allentare la cintura
+			in un punto scelto a caso: decidi
 		</p></div><div class="outside"><p>
 			<?=$d->inline('Corvino','Vado a farla lì')?>, ci vai e la fai.
 		</p></div><div class="inside"><p>
@@ -154,7 +155,8 @@
 		</p>
 	</div><div class="section">
 		<p>
-			E per una coincidenza impossibile stiamo per fare entrambi la stessa cosa.
+			E per una coincidenza impossibile stiamo per fare
+			entrambi la stessa cosa.
 		</p><p>
 			In mezzo al bosco, entrambi con le mutande calate, ad un
 			metro di distanza. Così scoprii che era rossa naturale.
@@ -199,15 +201,36 @@
 			rimangono separate, là dove il grasso forma una
 			minuscola gobba, là dove tutto ha origine e dove tutti
 			vogliono arrivare.
-		</p><p>
+		</p></div><p>
 			E là dove mi sarei aspettato chissà quale stile di
 			rasatura elaborato, vidi qualcosa che ricordava l'erbetta
-			di un giardino ben tenuto.
+			di un giardino ben tenuto. Quell'erbetta da campo da
+			golf, bassa bassa, tutta uniforme.
+		</p><div class="inside"><p>
+			A che scopo poi? Perché lasciare la peluria così corta?!
 		</p><p>
-			E finalmente capii cosa simboleggiano veramente le mani
-			con l'indice e il mignolo alzati, quando s'ineggia
-			all'amore ai concerti rock.
+			Per pizzicare quando ci si avvicina? Per il solo gusto
+			di dar fastidio? Perché?!?
+		</p><p>
+			Non si potrebbero lasciare un po' più lunghi? Un po' più
+			liberi? Se avessero una lunghezza sufficiente,
+			potrebbero piegarsi morbidamente, invece vengono
+			lasciati giusto giusto della lunghezza perché restino
+			diritti e ti si piantino nella pelle.
+		</p><p>
+			O forse, peggio, quello che pareva la rasata più
+			bastarda del mondo era una semplice dimenticanza? Era la
+			ricrescita?!?
+		</p><p>
+			Quale genere di ragazza si presenterebbe impreparata in
+			una situazione del genere? Probabilmente l'idea di stare
+			in campeggio per dieci giorni non era poi 'sto grande
+			stimolo a tenersi pronti per certe evenienze, ma...
 		</p></div><p>
+			Fatto sta che finalmente capii cosa simboleggiano
+			veramente le mani con l'indice e il mignolo alzati,
+			quando s'ineggia all'amore ai concerti rock.
+		</p><p>
 			Non so dire quanto tempo rimasi a fissare quello
 			spettacolo. Ore, potrei giurare. Poi realizzai qualcosa.
 		</p>

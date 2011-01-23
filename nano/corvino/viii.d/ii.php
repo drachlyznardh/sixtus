@@ -71,8 +71,10 @@
 	</p><p>
 		E notai che il lampione stava bene.
 	</p>
+<?php if (!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>Continua alla
 		<a onclick="javascript:tab.load('iii')">prossima sezione</a>.
 	</p>
+<?php } ?>
 </div>

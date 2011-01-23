@@ -71,8 +71,10 @@
 		Quando mi svegliai, era un altro giorno. Un giorno di lezione.
 		Di nuovo.
 	</p>
+<?php if(!$d->isComplete()) { ?>
 </div><div class="section">
 	<p>Continua alla
 		<a onclick="javascript:tab.load('iv')">prossima sezione</a>.
 	</p>
+<?php } ?>
 </div>

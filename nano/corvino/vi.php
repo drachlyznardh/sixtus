@@ -1,10 +1,10 @@
 <?php
 
-	$m->mkpage('Gli ultimi giorni', 'Corvino Multicolore &ndash; VI');
-	$m->mkrelated('prev', 'Capitolo V', 'NaNoWriMo/Corvino/Multicolore/V/');
-	$m->mkrelated('next', 'Capitolo VII', 'NaNoWriMo/Corvino/Multicolore/VII/');
+	$title=array('Gli ultimi giorni', 'Corvino Multicolore &ndash; VI');
+	$prev=array('Capitolo V', 'NaNoWriMo/Corvino/Multicolore/V/');
+	$next=array('Capitolo VII', 'NaNoWriMo/Corvino/Multicolore/VII/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -161,10 +161,19 @@
 			scendono. Quando metto a fuoco la scena (per qualche
 			valore di &quot;fuoco&quot;) riesco a inquadrare due
 			capi di biancheria intima con un singolo sguardo.
-		</p><p>
+		</p></div><p>
 			Non so dire quanto durò questa pausa, ma di certo una
 			pausa ci fu.
 		</p><p>
+			Mi venne il sincero dubbio che qualcosa non andasse.
+		</p><p>
+			Nella vita vera non capita di ritrovarsi così attaccato
+			ad un ragazza per tre diverse volte in una settimana.
+			E non con la stessa ragazza. E non con la ragazza che
+			adori.
+		</p><p>
+			Questa cosa era troppo improbabile.
+		</p><div class="inside"><p>
 			E non so come, ma per un qualche motivo smisi di
 			guardarle la pancia e portai lo sguardo più in su, verso
 			la faccia. Forse avrei potuto sfruttare questo momento

@@ -1,9 +1,9 @@
 <?php
 
-	$m->mkpage('Una sera, al parco', 'Corvino Multicolore &ndash; I');
-	$m->mkrelated('next', 'Capitolo II', 'NaNoWriMo/Corvino/Multicolore/II/');
+	$title=array('Una sera, al parco', 'Corvino Multicolore &ndash; I');
+	$next=array('Capitolo II', 'NaNoWriMo/Corvino/Multicolore/II/');
 
-	function mkpage ($d, $m) {
+	function mkpage ($d) {
 ?>
 <div class="small">
 	<div class="section">

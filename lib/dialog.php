@@ -82,7 +82,7 @@
 				$first = '';
 				$last = '';
 			}
-
+			if ($this->bounce) echo ('<a href="'.$this->base.'#'.$author.'">'.$author.'</a>: ');
 			echo ("<span class=\"$author\">&laquo;$first$speech$last&raquo;</span>");
 		}
 	}
