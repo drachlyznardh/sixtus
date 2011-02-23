@@ -8,6 +8,8 @@
 		<?=$d->link('Tru/Naluten/Personaggi','Personaggi')?>
 	</p><p>
 		<?=$d->link('Tru/Naluten/I/','Volume I')?>
+	</p><p>
+		<?=$d->link('Tru/Naluten/XX/','Volume III')?>
 	</p>
 </div>
 <?php } ?>

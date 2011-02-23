@@ -36,7 +36,8 @@
 		</p><p>
 			Le <a href="http://mikezasch.wordpress.com/">lamentele</a> di Mitch
 		</p><p>
-			Le <a href="http://jazzinghen.wordpress.com/">tristi videogiocate</a> di Jazzinghen
+			Le <span style="text-decoration:line-through">tristi</span>
+			<a href="http://jazzinghen.wordpress.com/">videogiocate</a> di Jazzinghen
 		</p><p>
 			Le <a href="http://mecharete.blogspot.com/">cose fighe</a> di Luber
 		</p>

@@ -80,7 +80,7 @@
 	}
 
 	$token = explode ('/', $request);
-	$voption = array ('debug','complete','bounce','download','dynamic');
+	$voption = array('debug','complete','bounce','download','dynamic','book','pdf');
 	$opt = array ();
 	foreach (array_keys($token) as $key) {
 		foreach ($voption as $option)
@@ -166,7 +166,9 @@
 	}
 
 	require_once ($include);
-	require_once ('tmpl/pager.php');
+	if (isset($opt['book'])) require_once('tmpl/book.php');
+	else if (isset($opt['pdf'])) require_once('tmpl/pdf.php');
+	else require_once ('tmpl/pager.php');
 	die ();
 
 ?>

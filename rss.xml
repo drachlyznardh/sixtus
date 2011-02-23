@@ -7,29 +7,31 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
-			<title>Storia XXI</title>
-			<description>Alcuni programmano male</description>
-			<pubDate>Mon, 17 Jan 2011 15:17:00 +0100</pubDate>
-			<link>http://drachlyznardh.altervista.org/Storie/2011/XXI/</link>
-			<guid>http://drachlyznardh.altervista.org/Storie/2011/XXI/</guid>
+			<title>Tru Naluten XX<title>
+			<description>Altro pianeta, altra situazione, di nuovo.
+			E Simak continua a combinare cose, un po' come fa di
+			solito</description>
+			<pubDate>Wed, 02 Feb 2011 15:07:00 +0100</pubDate>
+			<link>http://drachlyznardh.altervista.org/Tru/Naluten/XX/</link>
+			<guid>http://drachlyznardh.altervista.org/Tru/Naluten/XX/</guid>
 		</item><item>
-			<title>Storia XX</title>
-			<description>Una guida per capire come funziona questo sito.</description>
-			<pubDate>Tue, 11 Jan 2011 12:15:00 +0100</pubDate>
-			<link>http://drachlyznardh.altervista.org/Storie/2011/XX/</link>
-			<guid>http://drachlyznardh.altervista.org/Storie/2011/XX/</guid>
+			<title>Storia XXVI</title>
+			<description>Eh, si tira avanti...</description>
+			<pubDate>Thu, 10 Feb 2011 15:27:00 +0100</pubDate>
+			<link>http://drachlyznardh.altervista.org/Storie/2011/XXVI/</link>
+			<guid>http://drachlyznardh.altervista.org/Storie/2011/XXVI/</guid>
 		</item><item>
-			<title>Storia XIX</title>
-			<description>Dannati permessi di scrittura insufficienti!</description>
-			<pubDate>Mon, 10 Jan 2011 18:21:00 +0100</pubDate>
-			<link>http://drachlyznardh.altervista.org/Storie/2011/XIX/</link>
-			<guid>http://drachlyznardh.altervista.org/Storie/2011/XIX/</guid>
+			<title>Storia XXV</title>
+			<description>Sono triste. Ergo, storia triste.</description>
+			<pubDate>Mon, 7 Feb 2011 15:33:00 +0100</pubDate>
+			<link>http://drachlyznardh.altervista.org/Storie/2011/XXV/</link>
+			<guid>http://drachlyznardh.altervista.org/Storie/2011/XXV/</guid>
 		</item><item>
-			<title>Storia XVI / Aggiornamento</title>
-			<description>Di come ho finalmente consegnato quel fiore</description>
-			<pubDate>Wed, 15 Dec 2010 18:32:00 +0100</pubDate>
-			<link>http://drachlyznardh.altervista.org/Storie/XVI/</link>
-			<guid>http://drachlyznardh.altervista.org/Storie/XVI/</guid>
+			<title>Storia XXIV</title>
+			<description>Vedo nuvole all'orizzonte</description>
+			<pubDate>Mon, 7 Feb 2011 10:00:00 +0100</pubDate>
+			<link>http://drachlyznardh.altervista.org/Storie/2011/XXIV/</link>
+			<guid>http://drachlyznardh.altervista.org/Storie/2011/XXIV/</guid>
 		</item>
 	</channel>
 </rss>

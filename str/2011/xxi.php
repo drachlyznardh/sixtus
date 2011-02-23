@@ -4,6 +4,7 @@
 		'Progammazione 40.000',
 		'L&apos;Imperium contro gli orrori del Warp');
 	$prev = array('Storia XX','Storie/2011/XX/');
+	$next = array('Storia XXII', 'Storie/2011/XXII/');
 
 	function mkpage($d) {
 		if ($d->isComplete()) {

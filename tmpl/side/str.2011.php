@@ -14,6 +14,11 @@
 			<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
 			<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
 			<li><?=$d->link('Storie/2011/XXI/', 'Programmazione 40.000')?></li>
+			<li><?=$d->link('Storie/2011/XXII/', 'Tecniche avanzate')?></li>
+			<li><?=$d->link('Storie/2011/XXIII/', 'Cose complicate')?></li>
+			<li><?=$d->link('Storie/2011/XXIV/', 'Il futuro')?></li>
+			<li><?=$d->link('Storie/2011/XXV/', 'No')?></li>
+			<li><?=$d->link('Storie/2011/XXVI/', 'La sconfitta')?></li>
 		</ol>
 	</div>
 </div><div class="section">

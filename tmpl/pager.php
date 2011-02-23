@@ -28,11 +28,11 @@
 						<div class="section">
 							<h2 id="home">
 								<?=$d->link($location,$section)?>
+							</h2><h1 id="title">
+								<?=$title[0]?>
+							</h1><h2 id="subtitle">
+								<?=$title[1]?>
 							</h2>
-							<h1
-							id="title"><?=$title[0]?></h1>
-							<h2
-							id="subtitle"><?=$title[1]?></h2>
 						</div>
 
 					</div> <!-- Clear Box -->
@@ -81,6 +81,7 @@
 
 <?php require_once ('tmpl/related.php'); ?>
 <?php require_once ('tmpl/side/'.$rside); ?>
+<?php require_once ('tmpl/dolike.php'); ?>
 				</div> <!-- ClearBox -->
 			</div> <!-- RightSide -->
 

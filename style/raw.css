@@ -185,6 +185,11 @@ div.section ul
 div.tab { display:none; }
 div.dynamic { padding-bottom:  }
 
+div.section ol {
+	margin: 2px;
+	list-style-type: upper-roman;
+}
+
 div.widelist ol
 {
 	list-style-type: lower-roman;

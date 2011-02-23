@@ -2,6 +2,7 @@
 
 	$title=array('La lezione', 'Che zittisce. Tutti.');
 	$prev=array('Capitolo XVIII', 'Tru/Naluten/XVIII/');
+	$next=array('Volume III', 'Tru/Naluten/XX/');
 
 	function mkpage ($d) {
 ?>

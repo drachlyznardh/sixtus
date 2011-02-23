@@ -1,0 +1,85 @@
+
+/* style/pdf.css
+ * Style component for <drachlyznardh.altervista.org>
+ * Copyright (C) 2009-2010 DrachLyznardh <drachlyznardh@roundhousecode.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+@page {
+	size: A5;
+	margin: 20pt 30pt 20pt 30pt;
+	@bottom {
+		content: counter(page, decimal);
+	}
+}
+
+body {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+div#main
+{
+	background-color: white;
+	color: black;
+	font: 11pt/15pt "Georgia", sans-serif;
+}
+
+div.corset {
+	width: 90%;
+	margin-left: 5%;
+}
+
+div.section
+{
+	background-color: transparent;
+	margin: 3px;
+	padding: 3px;
+	text-align: justify;
+}
+
+div.section p { text-indent: 2%; }
+div.section h3, div.section h4 { text-indent: 4%; }
+
+h2, h3, h4 {
+	font-family: "Times New Roman";
+}
+
+a, a:visited { text-decoration: none; color: #6666ff }
+
+/* a[href]::after { content: target-counter(attr(href), page, upper-roman) } */
+h2 { counter-increment: h2; counter-reset:; }
+h3 { counter-increment: h3 }
+h4 { counter-increment: h4 }
+h2::before { content: counter(h2, lower-alpha)" | "; }
+h3::before { content: counter(h2, lower-alpha)"."counter(h3, decimal)" — "; }
+h4::before { content: counter(h2, lower-alpha)"."counter(h3, decimal)"."counter(h4, lower-roman)" — "; }
+
+h2 { text-align: center; font-size: 30px; }
+h3, h4 { border-bottom: 1px solid black; }
+
+.reverse { text-align: right; }
+.middle { text-align: center; }
+.relevant { font-weight: bold; }
+
+div.minitoc { background-color: transparent; }
+div.minitoc p { border-bottom: 1px solid black; }
+div.minitoc ol.toplevel {
+	border-bottom: 1px solid black;
+	background-color: transparent;
+}
+

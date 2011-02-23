@@ -10,4 +10,5 @@
 	$multinav = true;
 	require_once('tru.primo.php');
 	require_once('tru.secondo.php');
+        require_once('tru.terzo.php');
 ?>
