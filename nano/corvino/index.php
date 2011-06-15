@@ -6,7 +6,6 @@
 ?>
 <div class="small">
 	<div class="section">
-
 		<h2>
 			Corvino Multicolore
 		</h2><p>
@@ -18,18 +17,17 @@
 			troppo avanti e trovate una pagina che non risponde
 			bene, è perché non ci sono ancora arrivato.
 		</p>
-	</div><div class="section">
-		<h2 class="closed" id="arrowparteI" onclick="javascript:cascade('parteI')">
-			Parte I &ndash; La gioventù
-		</h2><p>
-			La prima parte del mio NaNoWriMo è certamente la più divertente,
-			o per lo meno è stata la più divertente da scrivere. Si tratta,
-			in breve, della lunga serie di lamentazioni di uno studente, che
-			non ama nulla nella sua vita ad eccezione d'una certa ragazza.
-		</p>
 	</div>
-
-</div><div class="wider" id="longparteI" style="display: none">
+</div><div class="section">
+	<h2>
+		Parte I – La gioventù
+	</h2><p>
+		La prima parte del mio NaNoWriMo è certamente la più divertente,
+		o per lo meno è stata la più divertente da scrivere. Si tratta,
+		in breve, della lunga serie di lamentazioni di uno studente, che
+		non ama nulla nella sua vita ad eccezione d'una certa ragazza.
+	</p>
+</div><div class="wider">
 	<div class="widecontent">
 		<div class="section">
 
@@ -54,8 +52,8 @@
 	</div><div class="widelist">
 		<div class="section">
 
-	<h2 class="reverse wider" id="straightparteI" onclick="javascript:reverse('parteI')">
-		Parte I: La gioventù
+	<h2 class="reverse">
+		Parte I – La gioventù
 	</h2><ol style="list-style-type: decimal-leading-zero">
 		<li>
 			<?=$d->link('NaNoWriMo/Corvino/Multicolore/I/', 'Una sera, al parco')?>
@@ -76,18 +74,16 @@
 
 		</div>
 	</div>
-</div><div class="small">
-	<div class="section">
-		<h2 class="closed" id="arrowparteII" onclick="javascript:cascade('parteII')">
-			Parte II: Il Potere
-		</h2><p>
-			La seconda parte è un lungo e grosso polpettone, fatto di prove ed
-			errori, che vedono le sofferenze del protagonista alla scoperta di
-			improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
-			ad imbattersi in individui pericolosi...
-		</p>
-	</div>
-</div><div class="revwider" id="longparteII" style="display: none">
+</div><div class="section">
+	<h2>
+		Parte II – Il Potere
+	</h2><p>
+		La seconda parte è un lungo e grosso polpettone, fatto di prove ed
+		errori, che vedono le sofferenze del protagonista alla scoperta di
+		improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
+		ad imbattersi in individui pericolosi...
+	</p>
+</div><div class="wider">
 		<div class="widecontent">
 			<div class="section">
 
@@ -106,33 +102,28 @@
 		coscenza del nuovo sé.
 	</p>
 				
-			</div>
-		</div><div class="widelist">
-			<div class="section">
-
-		<h2 class="reverse revwider" id="straightparteII" onclick="javascript:reverse('parteII')">
-			Parte II: Il Potere
-		</h2><ol start="8" style="list-style-type: decimal-leading-zero">
-			<li>
-				<?=$d->link('NaNoWriMo/Corvino/Multicolore/VIII/','Il lampione')?>
-			</li>
-		</ol>
-
-			</div>
+		</div>
+	</div><div class="widelist">
+		<div class="section">
+			<h2 class="reverse">
+				Parte II – Il Potere
+			</h2><ol start="8" style="list-style-type: decimal-leading-zero">
+				<li>
+					<?=$d->link('NaNoWriMo/Corvino/Multicolore/VIII/','Il lampione')?>
+				</li>
+			</ol>
 		</div>
 	</div>
-<div class="small">
-	<div class="section">
-		<h2 class="closed" id="arrowparteIII" onclick="javascript:cascade('parteIII')">
-			Parte III: Le streghe
-		</h2><p>
-			Nella terza parte, la più assurda e frammentaria, il protagonista e i
-			suoi compagni danno inizio ad una sconsiderata lotta per la
-			sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
-			e altre cose impossibili.
-		</p>
-	</div>
-</div><div class="wider" id="longparteIII" style="display: none">
+</div><div class="section">
+	<h2>
+		Parte III – Le streghe
+	</h2><p>
+		Nella terza parte, la più assurda e frammentaria, il protagonista e i
+		suoi compagni danno inizio ad una sconsiderata lotta per la
+		sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
+		e altre cose impossibili.
+	</p>
+</div><div class="wider">
 	<div class="widecontent">
 		<div class="section">
 
@@ -152,29 +143,42 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-
-	<h2 class="reverse wider" id="straightparteIII" onclick="javascript:reverse('parteIII')">
-		Parte III &ndash; Le streghe
-	</h2><ol start="16" style="list-style-type: decimal-leading-zero">
-	</ol>
-
+			<h2 class="reverse">
+				Parte III – Le streghe
+			</h2><p>
+				Prossimamente
+			</p>
 		</div>
 	</div>
-</div><div class="small">
-	<div class="section">
-		<h2>
-			Parte IV &ndash; I Demoni
-		</h2><p>
-			Ebbene sì, demoni. A fiotti, a fiumi, a secchiate. Perché Corvino pensava queste due cose:
-		</p><ul>
-			<li>
-				che i colori fossero solo colori, e che i suoi poteri fossero doni, da utilizzare a piacimento
-			</li><li>
-				che le streghe fossero ignare della sua presenza e quindi impreparate al suo arrivo
-			</li>
-		</ul><p>
-			Corvino si sbagliava! Voi vi sbagliavate! Persino l'autore si sbagliava!
-		</p>
+</div><div class="section">
+	<h2>
+		Parte IV – I Demoni
+	</h2><p>
+		Ebbene sì, demoni. A fiotti, a fiumi, a secchiate. Perché Corvino pensava queste due cose:
+	</p><ul>
+		<li>
+			che i colori fossero solo colori, e che i suoi poteri fossero doni, da utilizzare a piacimento
+		</li><li>
+			che le streghe fossero ignare della sua presenza e quindi impreparate al suo arrivo
+		</li>
+	</ul><p>
+		Corvino si sbagliava! Voi vi sbagliavate! Persino l'autore si sbagliava!
+	</p>
+</div><div class="wider">
+	<div class="widelist">
+		<div class="section">
+			<h2 class="reverse">
+				Parte VI – I Demoni
+			</h2><p>
+				Prossimamente...
+			</p>
+		</div>
+	</div><div class="widecontent">
+		<div class="section">
+			<p>
+				Prossimamente... quando avrò tempo e voglia.
+			</p>
+		</div>
 	</div>
 </div>
 <?php } ?>

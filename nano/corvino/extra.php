@@ -21,6 +21,8 @@
 					<a onclick="javascript:t.show('i')">La visione</a> &ndash; 11/01/2011
 				</li><li id="li-ii">
 					<a onclick="javascript:t.show('ii')">Le sezioni</a> &ndash; 23/01/2011
+				</li><li id="li-iii">
+					<a onclick="javascript:t.show('iii')">L'ispirazione</a> &ndash; 16/04/2011
 				</li>
 			</ol>
 		</div>
@@ -99,9 +101,46 @@
 	</p>
 </div>
 
+	</div><div class="tab" id="tab-iii">
+		<div class="section">
+			<p>
+				Dunque, mi sono rimesso a guardare un po' di serie robottose,
+				tra le quali il caro Gundam SEED. Se /m/ sapesse, probabilmente
+				(ri)comincerei a ricevere lettere di minaccia e cose del genere.
+			</p><p>
+				La cosa importante è un'altra, però; m'è infatti tornato in
+				mente quando - all'inizio almeno - la serie mi fosse piaciuta
+				per il motivo che spesso ci fa piacere le storie. Trattasi
+				dell'identificazione con i protagonisti; giungo quindi alla
+				conclusione che Corvino non dovrebbe scatenare il conflitto dal
+				nulla, né dovrebbe fuggire, ma dovrebbe combattere contro (o forse
+				scappare da) qualcosa di concreto. Qualcosa di cattivo che mi
+				dia fastidio scrivere.
+			</p><p>
+				Qualcosa da odiare veramente; non per quello che è ma per quello
+				che fa; credo che a Corvino, dopo la crisi sentimentale e la
+				scoperta dei propri poteri, occorra perdere qualcosa
+				d'importante. Difatto, credo che non sarà più un incidente a
+				uccidere i suoi genitori, ma qualcosa di più spettacolare e
+				malvagio; Corvino dev'essere molto più Batman e molto più Amuro.
+			</p><p>
+				Questo significa, probabilmente, che dovrò in qualche modo
+				posticipare il funerale, chiudere un poco la parte
+				dell'apprendistato, dei due duelli con Battesimo e Smeraldino,
+				trovare una scusa per anticipare l'uccisione di Camelia, far
+				scoppiare un gran casino, uccidere i genitori, dare un qualche
+				ruolo allo zio Torto, scatenare qualche casino che metta Corvino
+				alla disperata ricerca dell'Oracolo e di Fisthanlarunai, e poi
+				qualche guerra.
+			</p><p>
+				Tutta la storia dei demoni colorati verrà dopo, qualche tempo
+				dopo l'inizio del regno.
+			</p>
+		</div>
 	</div>
 </div><script type="text/javascript" src="lib/tloader.js"></script><script type="text/javascript">
 	var t = new TLoader();
-	t.show('i');
+	if (location.hash) t.show(location.hash.substr(1).toLowerCase());
+	else t.show('i');
 </script>
 <?php } ?>
