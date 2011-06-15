@@ -9,24 +9,27 @@
 			'corona' => array ('-- ', ' --')
 		);
 		private $opt;
+		private $mode;
 		private $complete;
 		
-		public function __construct ($bounce, $base, $opt) {
+		public function __construct ($bounce, $base, $opt, $mode) {
 		
 			$this->bounce = $bounce;
 			$this->base = $base.'Personaggi/';
 			$this->opt = implode ('/',$opt);
+			$this->mode = $mode;
 			$this->complete = isset($opt['complete']);
 		}
-		
+
 		public function isComplete() {
 			return $this->complete;
 		}
 
 		public function link($request, $title, $sharp=false) {
 			$ref = $request;
+			if ($this->opt) $ref .= $this->opt .'/';
+			if ($this->mode != 'gods') $ref .= $this->mode .'/';
 			if ($sharp) $ref .= '#'.$sharp;
-			if ($this->opt) $ref .= $this->opt;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
