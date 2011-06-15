@@ -16,6 +16,7 @@
 			'world/intro/',
 			'world/I/', 'world/II/', 'world/III/',
 			'world/extra/'
-		)
+		),
+		'/recensioni\//' => array ('film/')
 	);
 ?>

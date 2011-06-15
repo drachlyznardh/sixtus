@@ -80,18 +80,33 @@
 	}
 
 	$token = explode ('/', $request);
-	$voption = array('debug','complete','bounce','download','dynamic','book','pdf');
+	$voption = array(
+		'debug',
+		'complete',
+		'bounce',
+		'download',
+		'dynamic',
+		'book',
+		'pdf');
 	$opt = array ();
+	$modes = array ('Gods','Luber','Bolo');
+	$amode = 'gods';
 	foreach (array_keys($token) as $key) {
 		foreach ($voption as $option)
-		if ($token[$key] == '') {
-			unset ($token[$key]);
-			break;
-		} else if ($token[$key] == $option) {
-			$opt[$option] = $option;
-			unset ($token[$key]);
-			break;
-		} 
+			if ($token[$key] == '') {
+				unset ($token[$key]);
+				break;
+			} else if ($token[$key] == $option) {
+				$opt[$option] = $option;
+				unset ($token[$key]);
+				break;
+			} 
+		if (isset($token[$key])) foreach ($modes as $mode)
+			if ($token[$key] == $mode) {
+				$amode = $mode;
+				unset ($token[$key]);
+				break;
+			}
 	}
 	$parsed = strtolower(implode('/', $token).'/');
 
@@ -144,7 +159,7 @@
 
 	require_once ('lib/dialog.php');
 
-	$d = new Dialog(isset($opt['bounce']), $location, $opt);
+	$d = new Dialog(isset($opt['bounce']), $location, $opt, $amode);
 
 	if (isset ($opt['dynamic'])) {
 
