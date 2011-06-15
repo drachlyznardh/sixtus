@@ -41,13 +41,11 @@
 		</div><h2 class="reverse">
 			Le Streghe
 		</h2><div class="inside">
-			<ol style="list-style-type:upper-roman" start="7">
-			<ol>
+			<p>Prossimamente...</p>
 		</div><h2 class="reverse">
 			I Demoni
 		</h2><div class="inside">
-			<ol style="list-style-type:upper-roman" start="7">
-			</ol>
+			<p>Prossimamente...</p>
 		</div>
 	</div>
 </div><div class="section">

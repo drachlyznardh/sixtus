@@ -1,3 +1,4 @@
+<div class="section">
 	<div class="inside"><p>
 		Il codice sorgente di questa pagina &egrave; valido secondo gli
 		standard del <a href="http://www.w3.org">w3c</a>.
@@ -6,26 +7,19 @@
 		visualizzi bene i contenuti, la colpa &egrave; necessariamente
 		tua: procurati un <a href="http://www.mozilla.com">vero
 		browser</a>.
-	</p></div>
-</div>
-<!--div class="section"-->
-	<div class="prev">
-	<div class="section">
+	</p></div><div style="width: 31%; float: left;">
 		<div class="inside">
 			<p>
 				If you love to sail the sea
 			</p>
-		</div><p style="text-align: center"
-		onmousedown="javascript:add('secret','dynamic/tmpl/logger.php')">
+		</div><p style="text-align: center">
 			You are a Pirate.
 		</p><div class="outside">
 			<p title="dice il nonno: &laquo;Fate i bravi, guidate piano&raquo;" style="text-align: right">
 				Dis 'l nono: &laquo;Fe' i bravi, ne' pian&raquo;
 			</p>
 		</div>
-	</div>
-	</div><div class="top">
-	<div class="section">
+	</div><div style="width: 31%; margin-left: 4%; margin-right: 3%; float: left;">
 		<div class="inside">
 			<p>
 				<a href="http://validator.w3.org/check?uri=<?=$request?>">HTML Valido</a>
@@ -37,9 +31,7 @@
 				<a href="http://jigsaw.w3.org/css-validator/validator?uri=style/raw.css">CSS Valido</a>
 			</p>
 		</div>
-	</div>
-	</div><div class="next">
-	<div class="section">
+	</div><div style="width: 31%; float: right;">
 		<div class="inside">
 			<p>
 				Roses are <span style="font-family:monospace; color:#ff0000" title="red">#FF0000</span>
@@ -51,11 +43,7 @@
 				4ll my b4s3 r b3long 2 U
 			</p>
 		</div>
-	</div>
-	</div>
-<div id="secret"></div>
-<!--/div-->
-<div class="section">
+	</div><div style="float: none; clear: both"></div>
 	<div class="inside"><p>
 		Questa pagina è spinta da
 			<a href="http://www.w3schools.com/php/default.asp">
@@ -71,3 +59,4 @@
 		Tutto questo &egrave; opera mia, pertanto ogni merito e colpa
 		sono miei.
 	</p></div>
+</div>

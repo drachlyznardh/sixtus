@@ -1,6 +1,5 @@
 					<div class="clearbox">
-						<div class="section">
-
+<div class="section">
 	<h2 id="arrowtru-lside" class="opened" onclick="javascript:cascade('tru-lside')">
 		Tru Naluten
 	</h2><div id="longtru-lside">
@@ -8,6 +7,7 @@
 		<p><?=$d->link ('Tru/Naluten/Personaggi/', 'Personaggi')?></p>
 		<p><?=$d->link('Tru/Naluten/I/', 'Volume I')?></p>
 		<p><?=$d->link('Tru/Naluten/X/', 'Volume II')?></p>
+		<p><?=$d->link('Tru/Naluten/XX/', 'Volume III')?></p>
 	</div>
 </div><div class="section">
 	<h2 id="arrowstr-lside" class="opened" onclick="javascript:cascade('str-lside')">
@@ -16,6 +16,7 @@
 		<p><?=$d->link('Storie/','Tutte le storie')?></p>
 		<p><?=$d->link('Storie/2010/','Storie 2010')?></p>
 		<p><?=$d->link('Storie/2011/','Storie 2011')?></p>
+		<p><?=$d->link('Recensioni/','Recensioni')?></p>
 	</div>
 </div><div class="section">
 	<h2 id="arrownano-lside" class="opened" onclick="javascript:cascade('nano-lside')">

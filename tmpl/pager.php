@@ -11,45 +11,46 @@
 		<title><?=$title[0]?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
+		<?php if ($amode == 'Luber' || $amode == 'Bolo') { ?>
+		<link rel="stylesheet" type="text/css" href="style/notab.css" />
+		<?php } else { ?>
+		<script type="text/javascript" src="lib/tloader.js"></script>
+		<?php } ?>
 		<link rel="stylesheet" type="text/css" href="style/voices.css" />
-		<script type="text/javascript" src="lib/scr.js"></script>
+		<script type="text/javascript" src="lib/tricks.js"></script>
 
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
 		
 	</head>
-	<body>
-
+	<body 
+		<?php if ($amode=='gods') { ?>onload="javascript:tcheck();
+			if(location.hash)t.show(location.hash.substr(1)); else t.show('i')"
+		<?php } ?>
+		onhashchange="javascript:t.show(location.hash.substr(1))">
 
 		<div id="main">
 			<div id="container" class="scrollable">
 				<div id="head">
-					<div class="clearbox">
-
-						<div class="section">
-							<h2 id="home">
-								<?=$d->link($location,$section)?>
-							</h2><h1 id="title">
-								<?=$title[0]?>
-							</h1><h2 id="subtitle">
-								<?=$title[1]?>
-							</h2>
-						</div>
-
-					</div> <!-- Clear Box -->
-				</div> <!-- Head -->
-
-				<div id="content">
-					<div class="clearbox">
+					<div class="section">
+						<h2 id="home">
+							<?=$d->link($location,$section)?>
+						</h2><h1 id="title">
+							<?=$title[0]?>
+						</h1><h2 id="subtitle">
+							<?=$title[1]?>
+						</h2>
+					</div>
+				</div><div id="content">
 
 <?php if (isset($opt['debug'])) require_once('tmpl/debug.php');
 	if (isset($prev)) {
 ?>
-						<div class="section">
-							<h2>Negli episodi precedenti</h2>
-							<p>Questa serie continua dalla pagina precedente,
-								<?=$d->link($prev[1], $prev[0])?>
-							</p>
-						</div>
+					<div class="section">
+						<h2>Negli episodi precedenti</h2>
+						<p>Questa serie continua dalla pagina precedente,
+							<?=$d->link($prev[1], $prev[0])?>
+						</p>
+					</div>
 <? }
 
 	mkpage($d);
@@ -64,25 +65,18 @@
 						</div> <!-- Section -->
 <?php } ?>
 						
-					</div> <!-- Clear Box -->
 				</div> <!-- Content -->
 
 				<div id="foot">
-					<div class="clearbox">
-						<div class="section">
 
 <?php require_once ('tmpl/footer.php'); ?>
-						</div>
-					</div> <!-- Clear Box -->
 				</div> <!-- Foot -->
 			</div>	
 			<div id="rightside" class="scrollable">
-				<div class="clearbox">
 
 <?php require_once ('tmpl/related.php'); ?>
 <?php require_once ('tmpl/side/'.$rside); ?>
-<?php require_once ('tmpl/dolike.php'); ?>
-				</div> <!-- ClearBox -->
+<!--?php require_once ('tmpl/dolike.php'); ?-->
 			</div> <!-- RightSide -->
 
 			<div id="leftside" class="scrollable">

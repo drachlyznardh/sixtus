@@ -45,6 +45,14 @@
 						Complete <?=isset($opt['complete'])?'true':'false'?>
 					</p><p>
 						Download <?=isset($opt['download'])?'true':'false'?>
+					</p><p>
+						(a)Mode <?=$amode?>
 					</p>
+			</div><div class="section">
+				<h2>
+					Mode
+				</h2><p>
+					Mode is <?=$amode?>.
+				</p>
 			</div>
 		</div>
