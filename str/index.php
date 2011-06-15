@@ -1,7 +1,5 @@
 <?php
-
 	$title = array('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
-
 	function mkpage ($d) {
 ?>
 <div class="small">
@@ -31,4 +29,8 @@
 		</p>
 	</div>
 </div>
-<?php } ?>
+<?php
+		require_once('str/synopsis/2010.php');
+		require_once('str/synopsis/2011.php');
+	}
+?>

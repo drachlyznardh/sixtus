@@ -1,6 +1,7 @@
 <?php
 	$title=array('La sconfitta','E il disonore, forse');
 	$prev=array('Storia XXV', 'Storie/2011/XXV/');
+	$next=array('Storia XXVII', 'Storie/2011/XXVII');
 	function mkpage($d){
 ?>
 <div class="small">
