@@ -18,6 +18,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+@import "coolstories.css";
+
 .unknown {
 
 	font-style: italic;
@@ -117,7 +119,8 @@
 }
 
 .code {
-	font-family: Lucida;
+	font-size: 120%;
+	font-family: monospace;
 }
 
 .simadran {

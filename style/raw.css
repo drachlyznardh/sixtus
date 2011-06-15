@@ -1,30 +1,6 @@
 
-/* style/raw.css
- * Style component for <drachlyznardh.altervista.org>
- * Copyright (C) 2009-2010 DrachLyznardh <drachlyznardh@roundhousecode.com>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- */
-
-div#main
-{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
+body {
+	margin: 0;
 	background: #121212;
 	font: 8pt/10pt "Georgia", sans-serif;
 }
@@ -38,12 +14,11 @@ div#head, div#foot
 
 div#container
 {
-	position: fixed;
 	width: 56%;
-	height: 100%;
-	left:  22%;
-	right: 22%;
-	top: 0%;
+	padding-left:  22%;
+	padding-right: 22%;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	overflow: hidden;
 }
 
@@ -54,7 +29,7 @@ div#rightside
 	height: 90%;
 	right: 1%;
 	top: 5%;
-	overflow: hidden;
+	overflow: auto;
 }
 
 div#leftside
@@ -64,7 +39,7 @@ div#leftside
 	height: 90%;
 	left: 1%;
 	top: 5%;
-	overflow: hidden;
+	overflow: auto;
 }
 
 div#head h1
@@ -72,12 +47,6 @@ div#head h1
 	font-family: Georgia;
 	font-weight: bold;
 	font-size: 30px;
-}
-
-div.clearbox
-{
-	background-color: transparent;
-	border: solid 5px transparent;
 }
 
 div.small
@@ -89,20 +58,16 @@ div.small
 }
 
 div.wider:first-child,
-div.revwider:first-child,
 div.small:first-child
 {
 	margin-top: 0px;
 }
 
-div.wider,
-div.revwider {
+div.wider {
 
 	width: 100%;
 	margin-left: 0%;
 	margin-right: 0%;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 div.section
@@ -111,7 +76,7 @@ div.section
 	border: solid 2px white;
 	border-bottom-color: #aaaaaa;
 	border-right-color: #aaaaaa;
-	margin-top: 5px;
+	margin: 5px;
 	float: none;
 	clear: both;
 }
@@ -188,11 +153,7 @@ div.dynamic { padding-bottom:  }
 div.section ol {
 	margin: 2px;
 	list-style-type: upper-roman;
-}
-
-div.widelist ol
-{
-	list-style-type: lower-roman;
+	margin-left: 1em;
 }
 
 div.section ol li.selected
@@ -218,66 +179,18 @@ a.legend
 	color: #cccccc;
 }
 
-div.wider div.widecontent
+div.widecontent
 {
 	width: 60%;
 	float: left;
 	clear: left;
 }
 
-div.wider div.widelist
+div.widelist
 {
 	width: 39%;
 	float: right;
 	clear: right;
-}
-
-div.revwider div.widecontent
-{
-	width: 60%;
-	float: right;
-	clear: right;
-}
-
-div.revwider div.widelist
-{
-	width: 39%;
-	float: left;
-	clear: left;
-}
-
-div.widecontent, div.widelist
-{
-	margin-bottom: 5px;
-}
-
-div.next
-{
-	width: 28%;
-	float: right;
-	clear: right;
-	margin-left: 2%;
-}
-
-div.top
-{
-	width: 40%;
-	float: left;
-	clear: none;
-}
-
-div.prev
-{
-	width: 28%;
-	float: left;
-	float: left;
-	margin-right: 2%;
-}
-
-div.next, div.top, div.prev
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
 
 div.inside, div.outside
@@ -297,11 +210,5 @@ div.inside
 div.outside
 {
 	margin: 2px -5px 2px 2px;
-}
-
-div.outside input
-{
-	width: 100%;
-	border: 0px;
 }
 
