@@ -142,7 +142,9 @@
 		</div>
 	</div><div class="widelist">
 		<div class="section">
-			<img width="100%" src="style/img/Richaaaaaaaaards.gif" />
+			<a target="_blank" href="Extra/Richaaaaaaaaards.gif">
+				<img width="100%" src="Extra/Richaaaaaaaaards.gif" />
+			</a>
 			<p>«<span class="gods char">Richaaaaaaaards!!!</span>»</p>
 		</div>
 	</div>

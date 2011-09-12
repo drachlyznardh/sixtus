@@ -6,9 +6,9 @@
 ?>
 <div class="small">
 	<div class="section">
-		<p id="12/17:00">
+		<p id="12/23:00">
 			<span class="em"><?=$d->link($self,'12/09/2011,
-			17:00','12/17:00')?></span> –
+			23:00','12/23:00')?></span> –
 			Dopo essermi rilassato un pochettino, dopo aver visionato un poco di
 			Kamen Rider Fourze (work in progress…) mi sono ricordato d'una cosa.
 		</p><div class="outside"><p>

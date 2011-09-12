@@ -389,8 +389,8 @@
 		&gt; sentimmi pronunziare le celesti parole
 	</p><div class="outside"><p>
 			&gt; «Ti devo due caffé»
-	</p></div><p style="text-align:center;text-indent:0"><a href="style/img/alpha.png">
-		<img src="style/img/alpha.png"
+	</p></div><p style="text-align:center;text-indent:0"><a target="_blank" href="Extra/Alpha.png">
+		<img src="Extra/Alpha.png"
 				style="width:90%;border:1px solid black"/>
 	</a></p><p>
 		&gt; Anche se poteva andare meglio…
