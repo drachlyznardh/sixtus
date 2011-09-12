@@ -1,22 +1,17 @@
 <?php
+	$localbase = 'http://localhost/faiv';
+	$localhome = '/News/';
+	$localmatch = 'faiv';
 	$cats = array (
-		'/tru\/naluten\//' => array (
-			'tru/',
-			'tru/primo/',
-			'tru/secondo/',
-			'tru/terzo/'),
-		'/nanowrimo\/corvino\/multicolore\//' => array ('nano/corvino/'),
-		'/nanowrimo\/2010\//' => array('nano/2010/'),
-		'/nanowrimo\//' => array ('nano/'),
-		'/storie\/2010\//' => array ('str/2010/'),
-		'/storie\/2011\//' => array ('str/2011/'),
-		'/storie\//' => array ('str/', 'str/2010/', 'str/2011/'),
-		'/world\/of\/the\/gods\//' => array (
-			'world/',
-			'world/intro/',
-			'world/I/', 'world/II/', 'world/III/',
-			'world/extra/'
-		),
-		'/recensioni\//' => array ('film/')
+		'/nanowrimo\/corvino\/multicolore\//' => 'nano/corvino/',
+		'/nanowrimo\/2010\//' => 'nano/2010/',
+		'/nanowrimo\//' => 'nano/',
+		'/news\//' => 'new/',
+		'/news\/2011\//' => 'new/2011/',
+		'/storie\/2010\//' => 'str/2010/',
+		'/storie\/2011\//' => 'str/2011/',
+		'/recensioni\//' => 'film/',
+		'/filmbrutti\//' => 'brutti/',
+		'/extra\//' => 'extra/'
 	);
 ?>

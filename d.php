@@ -28,22 +28,22 @@
 	}
 
 	session_write_close();
+	require_once ('sources.php');
 
 	if ($servername == 'localhost') {
-		$base = 'http://localhost/faiv';
+		$base = $localbase;
 	} else if ($servername == 'trunaluten.99k.org') {
 		$base = 'http://trunaluten.99k.org';
 	} else if ($servername == 'drachlyznardh.altervista.org') {
 		$base = 'http://drachlyznardh.altervista.org';
 	}
 
-	$request = substr($_SERVER['REQUEST_URI'], 1);
-	if (preg_match ('/faiv\//', $request))
-		$request = preg_replace ('/faiv\/(.*)/', '$1', $request);
-	if ($request == '')
-		header ('Location: '.$base.'/Storie/');
+	$request = strtolower(substr($_SERVER['REQUEST_URI'], 1));
+	if (preg_match ('/'.$localmatch.'\//', $request))
+		$request = preg_replace ('/'.$localmatch.'\/(.*)/', '$1', $request);
+	if ($localhome && $request == '') header ('Location: '.$base.$localhome);
 
-	if (preg_match('/style/', $request) && file_exists ($request)) {
+	if ((preg_match('/style/', $request) || preg_match('/extra/',$request)) && file_exists ($request)) {
 		
 		if (preg_match('/\.css$/', $request)) {
 		
@@ -54,11 +54,11 @@
 
 		if (preg_match('/\.gif$/', $request)) $mime = 'image/gif';
 		else if (preg_match('/\.png$/', $request)) $mime = 'image/png';
+		else if (preg_match('/\.jpg$/', $request)) $mime = 'image/jpeg';
 		else if (preg_match('/\.ico$/', $request)) $mime = 'image/x-icon';
 		else header ('Location: '. $base .'/Not/Found/');
 
 		header ('Content-Type: '. $mime);
-		#header ('Content-Type: text/html');
 		$file = fopen ($request, 'r');
 		while (!feof($file)) print(fread($file, 1024*1024));
 		fclose($file);
@@ -86,10 +86,11 @@
 		'bounce',
 		'download',
 		'dynamic',
+		'dado',
 		'book',
 		'pdf');
 	$opt = array ();
-	$modes = array ('Gods','Luber','Bolo');
+	$modes = array ('gods','luber','bolo');
 	$amode = 'gods';
 	foreach (array_keys($token) as $key) {
 		foreach ($voption as $option)
@@ -110,8 +111,6 @@
 	}
 	$parsed = strtolower(implode('/', $token).'/');
 
-	require_once ('sources.php');
-	
 	$section = false;
 	$location = false;
 	$file = false;
@@ -133,26 +132,22 @@
 	if (!$section) $section = '/';
 	if (!$location) $location = 'Storie/';
 	if (isset($opt['download'])) {
-		foreach ($srcdir as $dir) {
-			$include = $dir.$file.'.pdf';
-			if (file_exists($include)) {
-				header('Content-Type: application/pdf');
-				header('Content-Disposition: attachment; filename='.$file.'.pdf');
-				if ($stream = fopen($include,'r')){
-					while(!feof($stream))
-						print(fread($stream,1024));
-					fclose($stream);
-				}
-				die();
+		$include = $srcdir.$file.'.pdf';
+		if (file_exists($include)) {
+			header('Content-Type: application/pdf');
+			header('Content-Disposition: attachment; filename='.$file.'.pdf');
+			if ($stream = fopen($include,'r')){
+				while(!feof($stream))
+					print(fread($stream,1024));
+				fclose($stream);
 			}
+			die();
 		}
 	}
-	foreach ($srcdir as $dir) {
-		if (file_exists($dir.$file.'.php')) {
-			$include = $dir.$file.'.php';
-			$rside = preg_replace ('/\//','.',$dir).'php';
-			break;
-		}
+	
+	if (file_exists($srcdir.$file.'.php')) {
+		$include = $srcdir.$file.'.php';
+		$rside = preg_replace ('/\//','.',$srcdir).'php';
 	}
 	if (!$include) $include = 'error404.php';
 	if (!$rside) $rside = 'nav.php';
