@@ -1,0 +1,18 @@
+a {color: #0101ff; }
+
+body,
+div.section,
+div.section h2,
+div.inside,
+div.outside {
+	background: #ffffff;
+}
+
+div.section,
+div.section h2,
+div.inside,
+div.outside {
+	border-color: #000000;
+	border-top-color: #888888;
+	border-left-color: #888888;
+}

@@ -212,3 +212,14 @@ div.outside
 	margin: 2px -5px 2px 2px;
 }
 
+.cat-heart:after {
+	content:url('img/heart.png');
+}
+
+.cat-cosefighe:after {
+	content:url('img/mboard.png');
+}
+
+.cat-film:after {
+	content:url('img/pizza.png');
+}
