@@ -1,6 +1,7 @@
 <?php
 	$title=array('La vecchiaia','Ossia gli anni percepiti');
 	$prev=array('Storia XLI','Storie/2011/XLI/');
+	$next=array('Storie XLIII','Storie/2011/XLIII/');
 	function mkpage($d) {
 ?>
 <div class="wider">

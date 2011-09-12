@@ -142,100 +142,110 @@
 			dalle medie, è l'unica cosa interessante che ho fatto alle
 			superiori, non vedo perché all'università dovrei smettere.
 		</p>
-</div></div><div class="wider"><div class="widecontent"><div class="section">
-		<p>
-			Un bel dì, ad esempio, me ne vado al bar con il <span
-			class="jazz">signor Jazzinghen</span> a prendere il caffè.
-		</p><div class="inside"><p>
-				So bene che stuoli di medici vengono a bussare alla mia porta
-				ogni giorno per dirmi di non berne così tanto che poi fa male,
-				ma io applico la teoria del disimpegno, ch'è la branca che io
-				preferisco...
-		</p></div><p>
-			In quella, lì al bar, ci son tre biologhi: $tamara, $michela e $son
-			(come si chiama, lui, poi? Mica me lo ricordo...) che prendono il
-			caffè anche loro.
-		</p><p>
-			Mentre aspetto il mio caffè, eccomi notare come $tamara e $michela
-			stiano consumando la loro colazione, caffè&amp;krapfen. In quanto
-			adoratore di krapfen, mi metto a fissare il krapfen più fermo,
-			quello di $michela.
-		</p><p>
-			Il krapfen in questione, come alcune specializzatissime parti del
-			mio cervello rivelano immediatamente, è tenuto ragionevolmente
-			vicino al seno. Ed ovviamente, dalla distanza e senza sapere a cosa
-			miro, è veramente difficile per l'osservatore esterno capire che sto
-			effettivamente fissando il krapfen e non le tette.
-		</p>
-	</div><div class="section">
-		<p>
-			Quando poi finalmente $michela s'accorge della nostra presenza
-			(ch'avrà anche due occhioni senza occhiali, ma l'attenzione invece è
-			scarsetta...) fa un salutino con la manina, che prontamente
-			ricambio.
-		</p><p>
-			Ma non volendo parer cafone nel fissare ben più in basso degli
-			occhi, e captando la ghiotta occasione di battuta, senza spostar lo
-			sguardo e sfoderando la mia fresca faccia (oh, che dico
-			‘sfoderando’, è sempre stata visibile) dico
-		</p><div class="outside"><p>
-				«Oh, ciao Michela. Scusa, sto fissando il krapfen»
-		</p</div><p>
-			In quel preciso momento, quasi fossimo d'accordo, ecco pronto il mio
-			caffé. Dunque mi volto e me lo bevo - &lt;<span class="em">le
-			sip</span>&gt; - come se niente fosse.
-		</p><p style="text-align:center">
-			<span class="em">Like a boss</span>
-		</p><p>
-			Seguono dietro di me alcune risatine. Missione compiuta.
-		</p>
-</div></div><div class="widelist"><div class="section">
-		<p>
-			Se vi state chiedendo o se vi chiederete perché $tamara, $michela e
-			$son siano variabili e non costanti, <span
-			class="dacav">Dacav</span>, sappiate che ne faccio uso soltanto
-			perché sono personaggi che non compaiono spesso.
-		</p><p>
-			Come ho avuto modo di scrivere e di dire, le variabili vengono
-			utilizzate per identificare personaggi secondari che non sono nella
-			ristretta cerchia delle amicizie, e soprattutto per quelle persone
-			che compaiono una o due volte.
-		</p><p>
-			Ad esempio il <span class="bolo">Bolo</span>, poverino, era stato
-			lasciato fuori da questa lista...
-		</p><div class="outside"><p>
-			e per questo, forse, sta ancora piangendo, il tapino
-		</p></div><p>
-			Ma poi me ne sono ricordato e gli ho fabbricato, con queste mani,
-			una classe CSS apposita, di quello strano blu scuro, ottenuto con il
-			mio indice destro, strusciato sulla tastiera.
-		</p><p>
-			Quel colore infatti è nient'altro che il risultato di <span
-			class="code">color:#123456</span>.
-		</p>
-	</div><div class="section">
-		<p>
-			Comunque, $michela e $tamara non sono variaibili per uso
-			dispregiativo, soltanto per comodità d'uso, senz'alcuna offesa.
-		</p><p>
-			Grazie per l'attenzione, tornate alla storia principale.
-		</p>
-</div></div></div><div class="small"><div class="section">
+	</div>
+</div><div class="wider">
+	<div class="widecontent">
+		<div class="section">
+	<p>
+		Un bel dì, ad esempio, me ne vado al bar con il <span
+		class="jazz">signor Jazzinghen</span> a prendere il caffè.
+	</p><div class="inside"><p>
+			So bene che stuoli di medici vengono a bussare alla mia porta
+			ogni giorno per dirmi di non berne così tanto che poi fa male,
+			ma io applico la teoria del disimpegno, ch'è la branca che io
+			preferisco...
+	</p></div><p>
+		In quella, lì al bar, ci son tre biologhi: $tamara, $michela e $son
+		(come si chiama, lui, poi? Mica me lo ricordo...) che prendono il
+		caffè anche loro.
+	</p><p>
+		Mentre aspetto il mio caffè, eccomi notare come $tamara e $michela
+		stiano consumando la loro colazione, caffè&amp;krapfen. In quanto
+		adoratore di krapfen, mi metto a fissare il krapfen più fermo,
+		quello di $michela.
+	</p><p>
+		Il krapfen in questione, come alcune specializzatissime parti del
+		mio cervello rivelano immediatamente, è tenuto ragionevolmente
+		vicino al seno. Ed ovviamente, dalla distanza e senza sapere a cosa
+		miro, è veramente difficile per l'osservatore esterno capire che sto
+		effettivamente fissando il krapfen e non le tette.
+	</p>
+</div><div class="section">
+	<p>
+		Quando poi finalmente $michela s'accorge della nostra presenza
+		(ch'avrà anche due occhioni senza occhiali, ma l'attenzione invece è
+		scarsetta...) fa un salutino con la manina, che prontamente
+		ricambio.
+	</p><p>
+		Ma non volendo parer cafone nel fissare ben più in basso degli
+		occhi, e captando la ghiotta occasione di battuta, senza spostar lo
+		sguardo e sfoderando la mia fresca faccia (oh, che dico
+		‘sfoderando’, è sempre stata visibile) dico
+	</p><div class="outside"><p>
+			«Oh, ciao Michela. Scusa, sto fissando il krapfen»
+	</p></div><p>
+		In quel preciso momento, quasi fossimo d'accordo, ecco pronto il mio
+		caffé. Dunque mi volto e me lo bevo - &lt;<span class="em">le
+		sip</span>&gt; - come se niente fosse.
+	</p><p style="text-align:center">
+		<span class="em">Like a boss</span>
+	</p><p>
+		Seguono dietro di me alcune risatine. Missione compiuta.
+	</p>
+		</div><!--Section-->
+	</div><div class="widelist">
+		<div class="section">
+	<p>
+		Se vi state chiedendo o se vi chiederete perché $tamara, $michela e
+		$son siano variabili e non costanti, <span
+		class="dacav">Dacav</span>, sappiate che ne faccio uso soltanto
+		perché sono personaggi che non compaiono spesso.
+	</p><p>
+		Come ho avuto modo di scrivere e di dire, le variabili vengono
+		utilizzate per identificare personaggi secondari che non sono nella
+		ristretta cerchia delle amicizie, e soprattutto per quelle persone
+		che compaiono una o due volte.
+	</p><p>
+		Ad esempio il <span class="bolo">Bolo</span>, poverino, era stato
+		lasciato fuori da questa lista...
+	</p><div class="outside"><p>
+		e per questo, forse, sta ancora piangendo, il tapino
+	</p></div><p>
+		Ma poi me ne sono ricordato e gli ho fabbricato, con queste mani,
+		una classe CSS apposita, di quello strano blu scuro, ottenuto con il
+		mio indice destro, strusciato sulla tastiera.
+	</p><p>
+		Quel colore infatti è nient'altro che il risultato di <span
+		class="code">color:#123456</span>.
+	</p>
+</div><div class="section">
+	<p>
+		Comunque, $michela e $tamara non sono variaibili per uso
+		dispregiativo, soltanto per comodità d'uso, senz'alcuna offesa.
+	</p><p>
+		Grazie per l'attenzione, tornate alla storia principale.
+	</p>
+		</div>
+	</div>
+</div><div class="small">
+	<div class="section">
 		<p>
 			E queste sono alcune delle mie battutine del bar; poi ci sono quelle
 			che faccio sugli ingegneri, quando sono in coda per il panino...
 			quelle le risparmio per loro.
 		</p>
-	</div></div><div class="section">
-		<p id="V">
-			Ma c'è anche un'altra situazione simile, dalla quale non riesco a
-			distaccarmi.
-		</p><h2>
-			<span class="em">QUEL tizio</span>
-		</h2><p>
-			Vi ricordate le amiche luogotenenti di $rossa?
-		</p>
-	</div><div class="small"><div class="section">
+	</div>
+</div><div class="section">
+	<p id="V">
+		Ma c'è anche un'altra situazione simile, dalla quale non riesco a
+		distaccarmi.
+	</p><h2>
+		<span class="em">QUEL tizio</span>
+	</h2><p>
+		Vi ricordate le amiche luogotenenti di $rossa?
+	</p>
+</div><div class="small">
+	<div class="section">
 		<p>
 			Dunque... qualche storia fa ho parlato di come le amiche della
 			$rossa abbiamo il <span class="magnet">magnetico</span> potere di

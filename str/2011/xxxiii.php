@@ -12,11 +12,8 @@
 		Innanzitutto, comincia con un frammento che a posteriori non c'entra
 		nulla.
 	</p>
-</div><div class="small"><div class="section" style="padding-left: 5px;
-padding-right: 5px;">
-	<div class="wider">
-		<div class="widecontent">
-			<div class="section">
+</div><div class="small"><div>
+	<div class="section" style="width: 80%; margin-left: -1%">
 		<p>
 			Lunedì mattina ho scritto
 		</p><div class="inside"><p>
@@ -25,11 +22,7 @@ padding-right: 5px;">
 		</p></div><p>
 			E oggi ch'è mercoledì sono ancora allo stesso punto.
 		</p>
-			</div>
-		</div>
-	</div><div class="revwider">
-		<div class="widecontent">
-			<div class="section">
+	</div><div class="section" style="width: 80%; margin-left: 20%">
 		<p>
 			Ci sono nella vita momenti in cui ti puoi permettere di andare come
 			un treno; sono limitati.
@@ -51,22 +44,14 @@ padding-right: 5px;">
 			il calcolo delle probabilità è una delle cose che non mi vanno e non
 			mi piacciono.
 		</p>
-			</div>
-		</div>
-	</div><div class="wider">
-		<div class="widecontent">
-			<div class="section">
+	</div><div class="section" style="width: 80%; margin-left:-1%">
 		<p>
 			Fondamentalmente, oggi come nelle ultime due settimane, non ho
 			voglia di fare un cazzo. Tutto quello che riesco a fare senza avere
 			la nausea alla bocca dello stomaco è seguire le lezioni di quel
 			sant'uomo ch'è il <span class="em">Macii</span>. E questo è quanto.
 		</p>
-			</div>
-		</div>
-	</div><div class="revwider">
-		<div class="widecontent">
-			<div class="section">
+	</div><div class="section" style="width: 80%; margin-left: 20%">
 		<p>
 			La cosa più utile che sono stato capace di fare è stato <span
 			class="em">NON</span> programmare. Se l'avessi fatto, infatti, mi
@@ -75,10 +60,8 @@ padding-right: 5px;">
 			cancellarlo - che dico, a <span class="code">git
 			checkout</span>arlo.
 		</p>
-			</div>
-		</div>
-	</div><div style="float:none;clear:both;"></div></div>
-</div><div class="section">
+	</div>
+</div></div><div class="section">
 	<p id="II">
 		Ma poi è accaduta una cosa degna d'essere scritta.
 	</p><h2>

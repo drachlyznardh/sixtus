@@ -1,6 +1,7 @@
 <?php
 	$title=array('Impresa (II)','Presi la mia bici un giorno…');
 	$prev=array('Storia XLVI','Storie/2011/XLVI/');
+	$next=array('Storia XLVIII','Storie/2011/XLVIII/');
 	function mkpage($d){
 		$self='Storie/2011/XLVII/';
 ?>

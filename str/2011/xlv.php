@@ -34,7 +34,7 @@
 	</div>
 </div><div class="section">
 	<p id="II">
-		Grazie al <span class="jazz">signor Jazzinghe</span>, eccomi in possesso
+		Grazie al <span class="jazz">signor Jazzinghen</span>, eccomi in possesso
 		d'un router nuovo nuovo.
 	</p><h2>
 		Avere un router in casa

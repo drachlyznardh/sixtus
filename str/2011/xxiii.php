@@ -1,8 +1,7 @@
 <?php
 	$title = array ('Cose complicate','Tante cose, tanto complicate');
-	$prev = array ('Storie XXII', '/Storie/2011/XXII/');
-	$next = array ('Storie XXIV', '/Storie/2011/XXIV/');
-	
+	$prev = array ('Storie XXII', 'Storie/2011/XXII/');
+	$next = array ('Storie XXIV', 'Storie/2011/XXIV/');
 	function mkpage ($d) {
 ?>
 <div class="wider">

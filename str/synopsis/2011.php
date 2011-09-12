@@ -30,16 +30,16 @@
 			<h2 class="reverse">
 				Storie 2011
 			</h2><ol start="18">
-				<li><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
 				<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
 				<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
 				<li><?=$d->link('Storie/2011/XXI/','Programmazione 40.000')?></li>
-				<li><?=$d->link('Storie/2011/XXII/', 'Tecniche avanzate')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2011/XXII/', 'Tecniche avanzate')?></li>
 				<li><?=$d->link('Storie/2011/XXIII/', 'Cose complicate')?></li>
 				<li><?=$d->link('Storie/2011/XXIV', 'Il futuro')?></li>
 				<li><?=$d->link('Storie/2011/XXV/', 'No')?></li>
 				<li><?=$d->link('Storie/2011/XXVI/', 'La sconfitta')?></li>
-				<li><?=$d->link('Storie/2011/XXVII/', 'LaTeX')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2011/XXVII/', 'LaTeX')?></li>
 			</ol>
 		</div>
 	</div>
@@ -104,7 +104,7 @@
 				<li><?=$d->link('Storie/2011/XXXIV/','Considerazioni')?></li>
 				<li><?=$d->link('Storie/2011/XXXV/','Accuse')?></li>
 				<li><?=$d->link('Storie/2011/XXXVI/','Quel tizio')?></li>
-				<li><?=$d->link('Storie/2011/XXXVII/','PHP')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2011/XXXVII/','PHP')?></li>
 				<li><?=$d->link('Storie/2011/XXXVIII/','Raccontare')?></li>
 				<li><?=$d->link('Storie/2011/XXXIX/','Forever Alone')?></li>
 				<li><?=$d->link('Storie/2011/XL/','Domanda&amp;Offerta')?></li>
@@ -112,9 +112,40 @@
 				<li><?=$d->link('Storie/2011/XLII/','La vecchiaia')?></li>
 				<li><?=$d->link('Storie/2011/XLIII/','Gli anni')?></li>
 				<li><?=$d->link('Storie/2011/XLIV/','Pillole')?></li>
-				<li><?=$d->link('Storie/2011/XLV/','Wireless')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2011/XLV/','Wireless')?></li>
 				<li><?=$d->link('Storie/2011/XLVI/','L&apos;uomo con due ombrelli')?></li>
 				<li><?=$d->link('Storie/2011/XLVII/','Impresa (II)')?></li>
+			</ol>
+		</div>
+	</div>
+</div><div class="section">
+	<p>
+		E poi la primavera passò, venne il caldo e cominciò l'estate.
+	</p>
+</div><div class="wider">
+	<div class="widecontent">
+		<div class="section">
+			<h2>
+				Estate 2011
+			</h2>
+		</div>
+	</div><div class="widelist">
+		<div class="section">
+			<h2 class="reverse">
+				Estate 2011
+			</h2><ol start="48" style="padding-left: 4em">
+				<li class="cat-heart"><?=$d->link('Storie/2011/XLVIII/','Non ce n&apos;è abbastanza')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2011/XLIX/','Quel che non è abbastanza')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2011/L/','Quel che dovrei fare')?></li>
+				<li><?=$d->link('Storie/2011/LI/', 'Il Druido')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2011/LII/', 'Sgaggio Tiem')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2011/LIII/', 'Quel che ho fatto')?></li>
+				<li><?=$d->link('Storie/2011/LIV/','Niente')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2011/LV/','Spezzato')?></li>
+				<li><?=$d->link('Storie/2011/LVI/','Correre di notte')?></li>
+				<li><?=$d->link('Storie/2011/LVII/','Il potere')?></li>
+				<li><?=$d->link('Storie/2011/LVIII/','Deus Ex Machina Evolved')?></li>
+				<li><?=$d->link('Storie/2011/LIX/','Violenza e soddisfazione')?></li>
 			</ol>
 		</div>
 	</div>

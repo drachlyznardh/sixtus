@@ -32,7 +32,7 @@
 				<li><?=$d->link('Storie/I/', 'Apologia')?></li>
 				<li><?=$d->link('Storie/II/', 'Correre')?></li>
 				<li><?=$d->link('Storie/III/', 'Progetti')?></li>
-				<li><?=$d->link('Storie/IV/', 'Impresa')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/IV/', 'Impresa')?></li>
 				<li><?=$d->link('Storie/V/', 'Condizioni')?></li>
 				<li><?=$d->link('Storie/VI/', 'Un posto in cui stare')?></li>
 				<li><?=$d->link('Storie/VII/', 'Gundam')?></li>
@@ -60,14 +60,14 @@
 			<h2 class="reverse">
 				La Saga di $rossa
 			</h2><ol start="9" style="list-style-type: upper-roman">
-				<li><?=$d->link('Storie/IX/', 'Attenzione')?></li>
-				<li><?=$d->link('Storie/X/', 'Due Storie')?></li>
-				<li><?=$d->link('Storie/XI/', 'Tre Storie')?></li>
-				<li><?=$d->link('Storie/XII/', 'La musa')?></li>
-				<li><?=$d->link('Storie/XIII/', 'Il modello definitivo')?></li>
-				<li><?=$d->link('Storie/XIV/', 'L&apos;incontro')?></li>
-				<li><?=$d->link('Storie/XV/', 'La spinta')?></li>
-				<li><?=$d->link('Storie/XVI/', 'Il lunedì della verità')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/IX/', 'Attenzione')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/X/', 'Due Storie')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/XI/', 'Tre Storie')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/XII/', 'La musa')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/XIII/', 'Il modello definitivo')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/XIV/', 'L&apos;incontro')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/XV/', 'La spinta')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/XVI/', 'Il lunedì della verità')?></li>
 			</ol>
 		</div>
 	</div>
