@@ -1,22 +1,27 @@
 					<div class="clearbox">
 <div class="section">
-	<h2 id="arrowtru-lside" class="opened" onclick="javascript:cascade('tru-lside')">
-		Tru Naluten
-	</h2><div id="longtru-lside">
-		<p><?=$d->link ('Tru/Naluten/', 'Indice')?></p>
-		<p><?=$d->link ('Tru/Naluten/Personaggi/', 'Personaggi')?></p>
-		<p><?=$d->link('Tru/Naluten/I/', 'Volume I')?></p>
-		<p><?=$d->link('Tru/Naluten/X/', 'Volume II')?></p>
-		<p><?=$d->link('Tru/Naluten/XX/', 'Volume III')?></p>
-	</div>
-</div><div class="section">
-	<h2 id="arrowstr-lside" class="opened" onclick="javascript:cascade('str-lside')">
+	<p>
+		[<a href="<?=$location?>">Gods</a> |
+		<a href="<?=$location?>Bolo/">Bolo</a> /
+		<a href="<?=$location?>Luber/">Luber</a> |
+		<a href="<?=$location?>Dado/">Dado</a>] mode
+	</p><p>
+		<?=$d->link('News/', 'Ultime novità')?>
+	</p><p>
+		<?=$d->link('http://trunaluten.99k.org/', 'Tru Naluten')?> [su 99k.org]
+	</p><h2 id="arrowstr-lside" class="opened" onclick="javascript:cascade('str-lside')">
 		Storie
 	</h2><div id="longstr-lside">
-		<p><?=$d->link('Storie/','Tutte le storie')?></p>
 		<p><?=$d->link('Storie/2010/','Storie 2010')?></p>
 		<p><?=$d->link('Storie/2011/','Storie 2011')?></p>
+	</div>
+</div><div class="section">
+	<h2 id="arrowrec-lside" class="opened"
+			onclick="javascript:cascade('rec-lside')">
+		Recensioni
+	</h2><div id="longrec-lside">
 		<p><?=$d->link('Recensioni/','Recensioni')?></p>
+		<p><?=$d->link('FilmBrutti/','Film brutti')?></p>
 	</div>
 </div><div class="section">
 	<h2 id="arrownano-lside" class="opened" onclick="javascript:cascade('nano-lside')">

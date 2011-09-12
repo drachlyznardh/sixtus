@@ -9,9 +9,7 @@
 					<p>
 <?php
 	foreach(array_keys($cats) as $key) {
-		echo ('<p>'.$key.'</p><div class="outside"><ol>');
-		foreach ($cats[$key] as $v) echo '<li>'.$v.'</li>';
-		echo ('</ol></div>');
+		echo ('<p>['.$key.'] =&gt; [<span class="em">'.$cats[$key].'</span>]</p>');
 	}
 ?>
 					</p>

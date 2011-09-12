@@ -11,7 +11,10 @@
 		<title><?=$title[0]?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/raw.css" />
-		<?php if ($amode == 'Luber' || $amode == 'Bolo') { ?>
+		<?php if (isset($opt['dado'])) {?>
+		<link rel="stylesheet" type="text/css" href="style/dado.css" />
+		<?php } ?>
+		<?php if ($amode == 'luber' || $amode == 'bolo') { ?>
 		<link rel="stylesheet" type="text/css" href="style/notab.css" />
 		<?php } else { ?>
 		<script type="text/javascript" src="lib/tloader.js"></script>
