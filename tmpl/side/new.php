@@ -2,53 +2,37 @@
 	<h2>
 		Novità
 	</h2><p>
-		<span class="em">12/09</span> –
-		<?=$d->link('Recensioni/KamenRider/','Kamen Rider')?>
+		<span class="em">23/10</span> –
+		L'Ordine della Fenice (<?=$d->link('Recensioni/HarryPotter/', '3', 'V3')?>)
 	</p><p>
-		<span class="em">02/09</span> –
-		<?=$d->link('Storie/2011/LVIII/','Deus Ex Machina Offroad','II')?>
-	</p>
-</div><div class="section">
-	<h2 class="reverse">
-		Agosto 2011
-	</h2><p>
-		<span class="em">30/08</span> –
-		<?=$d->link('Recensioni/HarryPotter/','Il prigioniero di Azkaban','IV')?>
+		<span class="em">18/10</span> –
+		<?=$d->link('Storie/2011/LXVII/', 'Ancora ce la posso fare', 'INTRO')?>
 	</p><p>
-		<span class="em">29/08</span> –
-		<?=$d->link('Storie/2011/LX/','Filler')?>
-	</p><p class="cat-film">
-		<span class="em">21/08</span> –
-		<?=$d->link('Recensioni/HarryPotter/','La camera dei segreti','III')?>
-	</h2><p class="cat-film">
-		<span class="em">15/08</span> –
-		<?=$d->link('Recensioni/HarryPotter/','Harry Potter')?> &amp;
-		<?=$d->link('Recensioni/HarryPotter/','la pietra filosofale','II')?>
+		<span class="em">16/10</span> –
+		<?=$d->link('Recensioni/TransFormersPrime/','TransFormers: Prime','INTRO')?>
 	</p><p>
-		<span class="em">15/08</span> –
-		<?=$d->link('Storie/2011/LIX/','Violenza&amp;Soddisfazione')?>
-	</p><p class="cat-film">
-		<span class="em">10/08</span> –
-		<?=$d->link('Recensioni/NessunDove/','Nessun Dove')?>
-	</p><p class="cat-film">
-		<span class="em">06/08</span> –
-		<?=$d->link('Recensioni/IPuffi/','I Puffi')?>
-	</p><p class="cat-cosefighe">
-		<span class="em">05/08</span> –
-		<?=$d->link('Storie/2011/LII/','L&apos;ultimo','XXI')?>
-	</p><p class="cat-film">
-		<span class="em">05/08</span> –
-		<?=$d->link('Recensioni/AngelBeats/','Angel Beats!')?>
-	</p>
-</div><div class="section">
-	<h2 class="reverse">
-		Luglio 2010
-	</h2><p>
-		<span class="em">31/07</span> –
-		<?=$d->link('Storie/2011/LII/','La fine del tunnel','XX')?>
+		<span class="em">15/10</span> –
+		<?=$d->link('Recensioni/KamenRider/','Let&apos;go Kamen Riders','M2011')?>
 	</p><p>
-		<span class="em">31/07</span> –
-		<?=$d->link('FilmBrutti/BitchSlap','Bitch slap')?>
+		<span class="em">14/10</span> –
+		Il 13 ottobre [Bonus
+		(<?=$d->link('Storie/2011/LXV/','2','VI')?>,
+		<?=$d->link('Storie/2011/LXV/','3','VII')?>)]
+	</p><p>
+		<span class="em">13/10</span> –
+		<?=$d->link('Storie/2011/LXV/','Il 13 ottobre','INTRO')?>
+	</p><p>
+		<span class="em">12/10</span> –
+		L'altro <?=$d->link('Recensioni/HarryPotter/','Ordine della Fenice','V2')?>
+	</p><p>
+		<span class="em">12/10</span> – 
+		<?=$d->link('Recensioni/GundamAGE/','Gundam AGE','INTRO')?>
+	</p><p>
+		<span class="em">03/10</span> –
+		<?=$d->link('Storie/2011/LXIV/','La metafora','INTRO')?>
+	</p><p>
+		<span class="em">02/10</span> –
+		<?=$d->link('Extra/Record/','Record','INTRO')?>
 	</p>
 </div><div class="section">
 	<h2>

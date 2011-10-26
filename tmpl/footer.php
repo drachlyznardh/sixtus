@@ -1,11 +1,11 @@
 <div class="section">
 	<div class="inside"><p>
-		Il codice sorgente di questa pagina &egrave; valido secondo gli
+		Il codice sorgente di questa pagina è valido secondo gli
 		standard del <a href="http://www.w3.org">w3c</a>.
 	</p></div><div class="outside"><p style="text-align: right">
 		Se non
 		visualizzi bene i contenuti, la colpa &egrave; necessariamente
-		tua: procurati un <a href="http://www.mozilla.com">vero
+		tua: procurati un <a href="http://www.google.com/chrome">vero
 		browser</a>.
 	</p></div><div style="width: 31%; float: left;">
 		<div class="inside">
@@ -15,8 +15,8 @@
 		</div><p style="text-align: center">
 			You are a Pirate.
 		</p><div class="outside">
-			<p title="dice il nonno: &laquo;Fate i bravi, guidate piano&raquo;" style="text-align: right">
-				Dis 'l nono: &laquo;Fe' i bravi, ne' pian&raquo;
+			<p title="dice il nonno: «Fate i bravi, guidate piano»" style="text-align: right">
+				Dis 'l nono: «Fe' i bravi, ne' pian»
 			</p>
 		</div>
 	</div><div style="width: 31%; margin-left: 4%; margin-right: 3%; float: left;">
@@ -53,10 +53,10 @@
 			title="THE scripting language for the Web">Javascript</a>
 		e bestemmie.
 	</p></div><p style="text-align: center">
-		Le versione 0.7.3 di questa baracca è stata
-		scritta con VIm. Copyright &copy; 2007&ndash;2011 Ivan Simonini.
+		Le versione 0.7.5&beta;² di questa baracca è stata
+		scritta con VIm. Copyright © 2007–2011 Ivan Simonini.
 	</p><div class="outside"><p style="text-align: right">
-		Tutto questo &egrave; opera mia, pertanto ogni merito e colpa
+		Tutto questo è opera mia, pertanto ogni merito e colpa
 		sono miei.
 	</p></div>
 </div>

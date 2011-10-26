@@ -61,11 +61,11 @@
 	</ol></div>
 </div><div class="section">
 	<h2 id="arrowstr2011-rside-II"
-			class="opened"
+			class="closed"
 			onclick="javascript:cascade('str2011-rside-II')">
 		Estate 2011
 	</h2><div id="longstr2011-rside-II"
-			style="display: block">
+			style="display: none">
 		<ol start="48" style="padding-left: 5em">
 			<li class="cat-heart"><?=$d->link('Storie/2011/XLVIII/','Non ce n&apos;è abbastanza')?></li>
 			<li class="cat-heart"><?=$d->link('Storie/2011/XLIX/','Quel che non è abbastanza')?></li>
@@ -81,6 +81,22 @@
 			<li><?=$d->link('Storie/2011/LIX/','Violenza e soddisfazione')?></li>
 			<li><?=$d->link('Storie/2011/LX/','Filler')?></li>
 			<li><?=$d->link('Storie/2011/LXI/','Cattivo')?></li>
+			<li class="cat-heart"><?=$d->link('Storie/2011/LXII/','Normale')?></li>
+	</ol></div>
+</div><div class="section">
+	<h2 id="arrowstr2011-rside-III"
+			class="opened"
+			onclick="javascript:cascade('str2011-rside-III')">
+		Autunno 2011
+	</h2><div id="longstr2011-rside-III"
+			style="display: block">
+		<ol start="63" style="padding-left: 5em">
+			<li><?=$d->link('Storie/2011/LXIII/','Gli scagnozzi del Dr.Odio')?></li>
+			<li><?=$d->link('Storie/2011/LXIV/','La metafora','INTRO')?></li>
+	 		<li><?=$d->link('Storie/2011/LXV/','Il 13 ottobre','INTRO')?></li>
+		</ol><ol start="67" style="padding-left:5em">
+			<li><?=$d->link('Storie/2011/LXVII/',
+				'Ancora ce la posso fare', 'INTRO')?></li>
 	</ol></div>
 </div>
 <?php if (!$check) { ?>

@@ -51,7 +51,10 @@
 					<div class="section">
 						<h2>Negli episodi precedenti</h2>
 						<p>Questa serie continua dalla pagina precedente,
-							<?=$d->link($prev[1], $prev[0])?>
+							<?php
+								if (isset($prev[2])) echo ($d->link($prev[0], $prev[1], $prev[2]));
+								else echo ($d->link($prev[1], $prev[0]));
+							?>
 						</p>
 					</div>
 <? }
@@ -63,7 +66,10 @@
 						<div class="section">
 							<h2>Continua...</h2>
 							<p>Questa serie prosegue alla pagina successiva,
-								<?=$d->link($next[1], $next[0])?>
+								<?php
+									if (isset($next[2])) echo ($d->link($next[0], $next[1], $next[2]));
+									else echo($d->link($next[1], $next[0]));
+								?>
 							</p>
 						</div> <!-- Section -->
 <?php } ?>

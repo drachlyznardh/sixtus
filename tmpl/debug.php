@@ -53,4 +53,12 @@
 					Mode is <?=$amode?>.
 				</p>
 			</div>
+		</div><div class="section">
+			<p>
+				Ed ora, il nuovo debug!
+			</p>
+		</div><div class="small">
+			<div class="section">
+				<?=$finder->show()?>
+			</div>
 		</div>
