@@ -1,3 +1,3 @@
 <?php
-	require_once('2011/set.php');
+	require_once('2011/ott.php');
 ?>
