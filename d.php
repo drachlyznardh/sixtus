@@ -29,6 +29,7 @@
 
 	session_write_close();
 	require_once ('sources.php');
+	require_once ('lib/finder.php');
 
 	if ($servername == 'localhost') {
 		$base = $localbase;
@@ -36,9 +37,11 @@
 		$base = 'http://trunaluten.99k.org';
 	} else if ($servername == 'drachlyznardh.altervista.org') {
 		$base = 'http://drachlyznardh.altervista.org';
+	} else {
+		$base = $localbase;
 	}
 
-	$request = strtolower(substr($_SERVER['REQUEST_URI'], 1));
+	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 	if (preg_match ('/'.$localmatch.'\//', $request))
 		$request = preg_replace ('/'.$localmatch.'\/(.*)/', '$1', $request);
 	if ($localhome && $request == '') header ('Location: '.$base.$localhome);
@@ -80,6 +83,7 @@
 	}
 
 	$token = explode ('/', $request);
+
 	$voption = array(
 		'debug',
 		'complete',
@@ -91,8 +95,18 @@
 		'pdf');
 	$opt = array ();
 	$modes = array ('gods','luber','bolo');
+
+	$finder = new Finder ($sources, $voption);
+	echo ($finder->show());
+
 	$amode = 'gods';
 	foreach (array_keys($token) as $key) {
+
+		if ($token[$key] == '') {
+			unset($token[$key]);
+			continue;
+		}
+
 		foreach ($voption as $option)
 			if ($token[$key] == '') {
 				unset ($token[$key]);
@@ -109,6 +123,12 @@
 				break;
 			}
 	}
+	$search = $finder->find($token);
+	echo ('<p>Finalmente Giustizia è fatta: possiamo morire!</p>');
+	print_r ($search);
+
+	/*
+
 	$parsed = strtolower(implode('/', $token).'/');
 
 	$section = false;
@@ -149,6 +169,13 @@
 		$include = $srcdir.$file.'.php';
 		$rside = preg_replace ('/\//','.',$srcdir).'php';
 	}
+	*/
+
+	if (file_exists($search['destdir'] .'/'. $search['last'] .'.php')) {
+		$include = $search['destdir'] .'/'. $search['last'] .'.php';
+		$rside = preg_replace ('/\//', '.', $search['destdir']).'.php';
+	}
+
 	if (!$include) $include = 'error404.php';
 	if (!$rside) $rside = 'nav.php';
 
