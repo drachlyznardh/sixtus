@@ -16,11 +16,17 @@
 					<?=$d->link($self,'Come ottenere i LULZ','III')?>
 			</li></ol><h2 class="reverse">
 				Le serie che ho visto
-			</h2><ol start="4"><li id="li-iv">
-					<?=$d->link($self,'Kamen Rider W','IV')?>
-				</li><li id="li-v">
-					<?=$d->link($self,'Kamen Rider OOO','V')?>
-			</li></ol>
+			</h2><p id="li-w">
+					<?=$d->link($self,'Kamen Rider W','W')?>
+				</p><p id="li-ooo">
+					<?=$d->link($self,'Kamen Rider OOO','OOO')?>
+				</p><p id="li-fourze">
+					<?=$d->link($self,'Kamen Rider Fourze','FOURZE')?>
+			</p><h2>
+				I film che ho visto
+			</h2><p id="li-m2011">
+				<?=$d->link($self,'Let&apos;s go Kamen Riders','M2011')?>
+			</p>
 		</div>
 	</div><div class="widecontent">
 		<div class="tab" id="tab-i">
@@ -150,7 +156,7 @@
 		E comunque a me fa ridere!
 	</p>
 			</div>
-		</div><div class="tab" id="tab-iv">
+		</div><div class="tab" id="tab-w">
 			<div class="section">
 	<p>
 		Siccome non volevo andare troppo indietro – perché sono pigro e non ho
@@ -271,7 +277,7 @@
 		ma state attenti, poiché è riservata agli intenditori.
 	</p>
 			</div>
-		</div><div class="tab" id="tab-v">
+		</div><div class="tab" id="tab-ooo">
 			<div class="section">
 	<p>
 		E già che c'ero, sull'onda di questa serie, me ne sono guardata
@@ -399,6 +405,113 @@
 	</h2><p>
 		ma – ancora una volta – soltanto per intenditori. E adesso, avanti con
 		la prossima serie!
+	</p>
+			</div>
+		</div><div class="tab" id="tab-fourze">
+			<div class="section">
+	<p>
+		Ed ecco la nuova serie, che sta uscendo proprio ora.
+	</p><h2>
+		Kamen Rider Fourze
+	</h2><p>
+		la cui originale storpiatura è
+	</p><h2 class="reverse">
+		Kamen Raidā Fōze
+	</h2><p>
+		Intanto, è la storia di un ragazzo che si trasferisce in una nuova
+		scuola e giura che otterrà l'amicizia di tutti, ma proprio tutti.
+	</p>
+			</div>
+		</div><div class="tab" id="tab-m2011">
+			<div class="section">
+	<p>
+		Ma facciamoci scoppiare la testa!
+	</p><p>
+		Perché mi capita tra le mani una cosa che si chiama
+	</p><h2>
+		OOO, Den-O, all Riders:
+	</h2><h2 class="reverse">
+		Let's go Kamen Riders
+	</h2><p>
+		Un film magnifico, senza alcuna vergogna.
+	</p>
+</div><div class="section">
+	<p>
+		L'altra notizia interessante è che questo film, essendo abbastanza
+		introvabile, non è stato neanche sottotitolato. Quindi mi sono beccato
+		il film in lingua originale.
+	</p><p>
+		Considerato che tutto quello che so del <span
+		class="em">moonspeak</span> è basato sull'ascolto collaterale mentre
+		leggo i sottotitoli di qualcosa, è straordinario che sia riuscito a
+		capirci qualcosa.
+	</p><p>
+		Ma la pratica non mi è poi così nuova, io che mi sono visto anche come
+		<span class="em">Gurren Lagann: Lagann Hen</span> e quella porcheria di
+		<span class="em">A Wakening of the Trailblazer</span> in questo modo e
+		non mi sono perso niente d'importante.
+	</p>
+</div><div class="section">
+	<p>
+		Comunque.
+	</p><p>
+		Nel 2011, ci sono alcuni allegri compagni (Eiji &amp; Ankh, i
+		protagonisti di OOO) che prendono a botte alcuni mostri a caso, poi
+		perdono una monetina, così, per sbaglio.
+	</p><p>
+		Intanto succede però che di lì passi per puro accidente il Den-Liner, il
+		treno del tempo della serie Den-O. Così succede, per sbaglio, che quella
+		dannata monetina finisca nel 1971…
+	</p><p>
+		E proprio nel '71 c'era la Shocker, ossia gli originali cattivi, quelli
+		di Kamen Rider (First). E va tutto a puttane: per via della yadda del
+		tempo, dal '71 la Shocker riesce a conquistare il Giappone (o il mondo?)
+		e quando il treno torna nel 2011, tutti pigliano un sacco di botte.
+	</p>
+</div><div class="section">
+	<p>
+		In mezzo, capita un po' di classicissimo dramma giapponese: alcuni
+		poveri bambini (perché nessuno pensa a loro?) finiscono coinvolti nelle
+		beghe tra buoni e cattivi, ed uno di loro (in mezzo a crolli, esplosioni
+		e inevitabili sacrifici) finisce per rimanere nel '71.
+	</p><p>
+		Alla fine, tutti i buoni (che sarebbero Kamen Rider OOO e Den-O, per un
+		qualche motivo) finisco catturati e crocifissi in mezzo ad una piazza.
+	</p><p>
+		Fortunatamente, senza alcuna plausibilità, il tizio che fa da
+		macchinista (o da Dio?) del Den-Liner riesce (fuori schermo, tra
+		l'altro) a viaggiare nel tempo abbastanza da portare tutti (TUTTI) i
+		Rider nello stesso posto.
+	</p><p>
+		Compaiono tizi in costume, uno alla volta, per interminabili spassosi
+		minuti; ognuno con la sua entrata, con la folla esultante. E botte tra
+		centinaia di persone vestite di gomma.
+	</p>
+</div><div class="section">
+	<p>
+		Quando poi uno supercattivo e poi un megacattivo vengono battuti con i
+		peggio artifici, ecco che il resto dei generali viene inghiottito da un
+		terremoto (cosa nient'affatto rara nei film dell'Oriente, m'ha ricordato
+		tanti finali di Godzilla…) e poi spunta una montagna malvagia che blah
+		blah blah.
+	</p><p>
+		A quel punto, ecco spuntare, al fianco dei Rider, tutti (TUTTI) i Rider
+		spalla; che sono altrettanti, forse anche di più. E a quel punto, tutti
+		in moto, viaggiando su una nuvola verso il cattivo.
+	</p><p>
+		Questi tizi sono talmente fighi e senza pudore da schierarsi
+		effettivamente a forma di 40, in onore del quarantesimo anniversario
+		della saga. Cose del genere non si vedono da nessun'altra parte.
+	</p><p>
+		Il finale, poi, banalmente, presenta il bambino rimasto nel '71, adesso
+		adulto. Si chiude il dramma e tutti sono contenti. E ciascun Rider
+		sparisce esattamente com'è comparso: nel nulla.
+	</p><h2>
+		Fukken AWESOME!!!!1!!11!
+	</h2><p>
+		L'unico film con più gente mascherata è l'altrettanto introvabile <span
+		class="em">Gokaiger Goseiger Super Sentai 199 Hero Battle</span>, che
+		appena lo trovo… eh, leggerete.
 	</p>
 			</div>
 		</div>

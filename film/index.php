@@ -115,6 +115,12 @@
 			<?=$d->link('Recensioni/AC-Brotherhood/','Assassin&apos;s Creed Brotherhood')?>
 		</li><li>
 			<?=$d->link('Recensioni/KamenRider/','Kamen Rider W','IV')?>
+		</li><li>
+			<?=$d->link('Recensioni/KamenRider/',
+				'OOO, Den-O, all Riders: Let&apos; go Kamen Riders','M2011')?>
+		</li><li>
+			<?=$d->link('Recensioni/TransFormersPrime/',
+				'Transformers: Prime','INTRO')?>
 		</li></ul>
 	</p>
 			</div>
@@ -160,10 +166,12 @@
 			<?=$d->link('Recensioni/PaniPoniDash/','Pani Poni Dash')?>
 		</li><li>
 			<?=$d->link('Recensioni/HarryPotter/','Harry Potter')?>
-			e <?=$d->link('Recensioni/HarryPotter/','La pietra filosofale','II')?>
-			e <?=$d->link('Recensioni/HarryPotter/','La camera dei segreti','III')?>
+			e <?=$d->link('Recensioni/HarryPotter/','La pietra filosofale','I')?>
+			e <?=$d->link('Recensioni/HarryPotter/','La camera dei segreti','II')?>
 			e <?=$d->link('Recensioni/HarryPotter/','Il prigioniero di
-			Azkaban','IV')?>
+			Azkaban','III')?>
+			e <?=$d->link('Recensioni/HarryPotter/','Il calice di fuoco','IV')?>
+			e <?=$d->link('Recensioni/HarryPotter/','L&apos;ordine della Fenice','V')?>
 	</li></ul>
 			</div>
 		</div><div class="tab" id="tab-vii">
@@ -188,6 +196,8 @@
 			<?=$d->link('Recensioni/Thor/','Thor')?>
 		</li><li>
 			<?=$d->link('Recensioni/DarkOfTheMoon/','Dark Of The Moon')?>
+		</li><li>
+			<?=$d->link('Recensioni/GundamAGE/','Gundam AGE', 'INTRO')?>
 	</li></ul>
 			</div>
 		</div>
