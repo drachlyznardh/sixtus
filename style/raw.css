@@ -143,8 +143,7 @@ div.section h2.revwider:before
 
 div.section ul
 {
-	margin-left: 5%;
-	margin-right: 15%;
+	margin: 2px;
 }
 
 div.tab { display:none; }
@@ -156,10 +155,14 @@ div.section ol {
 	margin-left: 1em;
 }
 
-div.section ol li.selected
+div.section ol li.selected, p.selected, span.selected
 {
 	font-style: italic;
 	font-weight: bold;
+}
+
+li {
+	text-align: justify;
 }
 
 a
@@ -212,6 +215,15 @@ div.outside
 	margin: 2px -5px 2px 2px;
 }
 
+.spoiler {
+	color: #000000;
+	background-color: #000000;
+}
+
+.spoiler:hover {
+	color: #ffffff;
+}
+
 .cat-heart:after {
 	content:url('img/heart.png');
 }
@@ -222,4 +234,14 @@ div.outside
 
 .cat-film:after {
 	content:url('img/pizza.png');
+}
+
+p.foto {
+	text-align: center;
+	text-indent: 0;
+}
+
+p.foto img {
+	width: 90%;
+	border: #000000 1px solid;
 }

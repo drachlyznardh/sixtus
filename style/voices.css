@@ -111,6 +111,10 @@
 	letter-spacing: 1px;
 }
 
+.wrong {
+	text-decoration: line-through;
+}
+
 .latino {
 	font-family: Times new roman;
 	font-style: italic;
@@ -123,7 +127,7 @@
 	font-family: monospace;
 }
 
-.simadran {
+.simadran, .codd {
 	font: 10pt/13pt Arial;
 	font-style: italic;
 	color: #dddddd;
