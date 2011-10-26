@@ -1,5 +1,3 @@
-
 ReWriteEngine On
-ReWriteBase /faiv/
 
-RewriteRule ^.*$ d.php
+ReWriteRule ^.*$ d.php
