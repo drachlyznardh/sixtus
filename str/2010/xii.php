@@ -119,8 +119,9 @@
 		</p><p>
 			Quasi dimenticavo. Non servì.
 		</p>
-		</div><div class="section">
-		<h2>
+			</div>
+			<div class="section">
+		<h2 id="IV">
 			$aperegina
 		</h2><p>
 			Poi un dì che non fu bello, una ragazza conobbe me. Ad essa posso

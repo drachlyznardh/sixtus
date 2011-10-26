@@ -33,14 +33,14 @@
 			<h2 class="reverse">
 				Storie 2010
 			</h2><ol style="list-style-type: upper-roman">
-				<li><?=$d->link('Storie/I/', 'Apologia')?></li>
-				<li><?=$d->link('Storie/II/', 'Correre')?></li>
-				<li><?=$d->link('Storie/III/', 'Progetti')?></li>
-				<li class="cat-cosefighe"><?=$d->link('Storie/IV/', 'Impresa')?></li>
-				<li><?=$d->link('Storie/V/', 'Condizioni')?></li>
-				<li><?=$d->link('Storie/VI/', 'Un posto in cui stare')?></li>
-				<li><?=$d->link('Storie/VII/', 'Gundam')?></li>
-				<li><?=$d->link('Storie/VIII/', 'Sassi')?></li>
+				<li><?=$d->link('Storie/2010/I/', 'Apologia')?></li>
+				<li><?=$d->link('Storie/2010/II/', 'Correre')?></li>
+				<li><?=$d->link('Storie/2010/III/', 'Progetti')?></li>
+				<li class="cat-cosefighe"><?=$d->link('Storie/2010/IV/', 'Impresa')?></li>
+				<li><?=$d->link('Storie/2010/V/', 'Condizioni')?></li>
+				<li><?=$d->link('Storie/2010/VI/', 'Un posto in cui stare')?></li>
+				<li><?=$d->link('Storie/2010/VII/', 'Gundam')?></li>
+				<li><?=$d->link('Storie/2010/VIII/', 'Sassi')?></li>
 			</ol>
 		</div>
 	</div>
@@ -64,14 +64,14 @@
 			<h2 class="reverse">
 				La Saga di $rossa
 			</h2><ol start="9" style="list-style-type: upper-roman">
-				<li class="cat-heart"><?=$d->link('Storie/IX/', 'Attenzione')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/X/', 'Due Storie')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/XI/', 'Tre Storie')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/XII/', 'La musa')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/XIII/', 'Il modello definitivo')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/XIV/', 'L&apos;incontro')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/XV/', 'La spinta')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/XVI/', 'Il lunedì della verità')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/IX/', 'Attenzione')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/X/', 'Due Storie')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/XI/', 'Tre Storie')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/XII/', 'La musa')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/XIII/', 'Il modello definitivo')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/XIV/', 'L&apos;incontro')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/XV/', 'La spinta')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2010/XVI/', 'Il lunedì della verità')?></li>
 			</ol>
 		</div>
 	</div>
@@ -87,7 +87,7 @@
 			<h2 class="reverse"> 
 				Storie 2010
 			</h2><ol start="17" style="list-style-type:upper-roman">
-				<li><?=$d->link('Storie/XVII/', 'Il finale')?></li>
+				<li><?=$d->link('Storie/2010/XVII/', 'Il finale')?></li>
 			</ol>
 		</div>
 	</div>

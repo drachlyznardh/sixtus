@@ -138,6 +138,16 @@
 			</p><p>
 				Questo e qualche altra cosa…
 			</p>
+		</div><div class="section">
+			<p>
+				Infatti. Durante quest'estate, alla fine, sono riuscito a
+				passare <span class="em">Database</span>, ho quasi passato anche
+				<span class="em">Discreta1</span>.
+			</p><p>
+				Alla fine, modulo un esame perduto nel tempo per via
+				dell'omonimia, mi sono iscritto <span class="em">in attesa di
+				laurea</span>. Finalmente. Bastera?
+			</p>
 		</div>
 	</div><div class="widelist">
 		<div class="section">
@@ -158,6 +168,36 @@
 				<li><?=$d->link('Storie/2011/LIX/','Violenza&amp;Soddisfazione')?></li>
 				<li><?=$d->link('Storie/2011/LX/','Filler')?></li>
 				<li><?=$d->link('Storie/2011/LXI/','Cattivo')?></li>
+				<li class="cat-heart"><?=$d->link('Storie/2011/LXII/','Normale')?></li>
+			</ol>
+		</div>
+	</div>
+</div><div class="section">
+	<p>
+		Poi, senza che me lo aspettassi veramente, l'estate è finita e l'autunno
+		è arrivato.
+	</p>
+</div><div class="wider">
+	<div class="widecontent">
+		<div class="section">
+			<h2>
+				Autunno 2011
+			</h2><p>
+				Si comincia spaventando le ragazze… un nuovo fiore sulla via
+				della consegna… e poi?
+			</p>
+		</div>
+	</div><div class="widelist">
+		<div class="section">
+			<h2 class="reverse">
+				Autunno 2011
+			</h2><ol start="63" style="padding-left: 4em">
+				<li><?=$d->link('Storie/2011/LXIII/','Gli scagnozzi del Dr.Odio')?></li>
+				<li><?=$d->link('Storie/2011/LXIV/','La metafora','INTRO')?></li>
+				<li><?=$d->link('Storie/2011/LXV/','Il 13 ottobre','INTRO')?></li>
+			</ol><ol start="67" style="padding-left:4em">
+				<li><?=$d->link('Storie/2011/LXVII',
+					'Ancora ce la posso fare', 'INTRO')?></li>
 			</ol>
 		</div>
 	</div>
