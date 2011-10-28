@@ -30,21 +30,20 @@
 	session_write_close();
 	require_once ('sources.php');
 	require_once ('lib/finder.php');
+	require_once ('lib/dialog.php');
 
 	if ($servername == 'localhost') {
 		$base = $localbase;
-	} else if ($servername == 'trunaluten.99k.org') {
-		$base = 'http://trunaluten.99k.org';
-	} else if ($servername == 'drachlyznardh.altervista.org') {
-		$base = 'http://drachlyznardh.altervista.org';
+#	} else if ($servername == 'trunaluten.99k.org') {
+#		$base = 'http://trunaluten.99k.org';
+#	} else if ($servername == 'drachlyznardh.altervista.org') {
+#		$base = 'http://drachlyznardh.altervista.org';
 	} else if ($servername == 'gods.roundhousecode.com') {
 		$base = 'http://gods.roundhousecode.com';
 	}
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
-	#if (preg_match ('/'.$localmatch.'\//', $request))
-	#	$request = preg_replace ('/'.$localmatch.'\/(.*)/', '$1', $request);
-	if ($localhome && $request == '') header ('Location: '.$base.$localhome);
+	#if ($localhome && $request == '') header ('Location: '.$base.$localhome);
 
 	if ((preg_match('/style/', $request) || preg_match('/extra/',$request)) && file_exists ($request)) {
 		
@@ -131,59 +130,17 @@
 	if ($search['last'] != 'index')
 		$self .= strtoupper($search['last']).'/';
 
-	/*
+	foreach ($search['destdir'] as $destdir)
+		$searchpath .= $destdir .'/';
+	$includepath = $searchpath . $search['last'] .'.php';
 
-	$parsed = strtolower(implode('/', $token).'/');
-
-	$section = false;
-	$location = false;
-	$file = false;
-	$srcdir = array ();
-	$include = false;
-	$rside = false;
-
-	foreach (array_keys($cats) as $key) {
-		if (preg_match($key, $parsed)) {
-			$location = preg_replace('/\\\/', '',substr($key, 1, -1));
-			$section = ucwords(preg_replace('/\//',' ',$location));
-			$location = preg_replace('/ /','/',$section);
-			$file = strtolower(substr(preg_replace($key, '', $parsed), 0, -1));
-			$srcdir = $cats[$key];
-			break;
-		}
+	if (file_exists($includepath))
+		if ($searchpath) $rside = preg_replace ('/\//', '.', $searchpath .'php');
+		else $rside = 'nav.php';
+	else {
+		$includepath = 'error404.php';
+		$rside = 'nav.php';
 	}
-	if (!$file) $file = 'index';
-	if (!$section) $section = '/';
-	if (!$location) $location = 'Storie/';
-	if (isset($opt['download'])) {
-		$include = $srcdir.$file.'.pdf';
-		if (file_exists($include)) {
-			header('Content-Type: application/pdf');
-			header('Content-Disposition: attachment; filename='.$file.'.pdf');
-			if ($stream = fopen($include,'r')){
-				while(!feof($stream))
-					print(fread($stream,1024));
-				fclose($stream);
-			}
-			die();
-		}
-	}
-	
-	if (file_exists($srcdir.$file.'.php')) {
-		$include = $srcdir.$file.'.php';
-		$rside = preg_replace ('/\//','.',$srcdir).'php';
-	}
-	*/
-
-	if (file_exists($search['destdir'] .'/'. $search['last'] .'.php')) {
-		$include = $search['destdir'] .'/'. $search['last'] .'.php';
-		$rside = preg_replace ('/\//', '.', $search['destdir']).'.php';
-	}
-
-	if (!$include) $include = 'error404.php';
-	if (!$rside) $rside = 'nav.php';
-
-	require_once ('lib/dialog.php');
 
 	$d = new Dialog(isset($opt['bounce']), $location, $opt, $amode, $self);
 
@@ -206,7 +163,8 @@
 		die();
 	}
 
-	require_once ($include);
+	#require_once ($include);
+	require_once ($includepath);
 	if (isset($opt['book'])) require_once('tmpl/book.php');
 	else if (isset($opt['pdf'])) require_once('tmpl/pdf.php');
 	else require_once ('tmpl/pager.php');

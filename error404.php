@@ -9,7 +9,9 @@
 		<h2>
 			404 Not Found
 		</h2><p>
-			La pagina che stai cercando non esiste su questo server.
+			La tua richiesta ( <span
+			class="em"><?=$_SERVER['REQUEST_URI']?></span> ) non ha prodotto
+			alcun risultato.
 		</p><p>
 			Forse l'URL che hai inserito non è corretto, prova a correggerlo. Se sei
 			giunto qui seguendo un link interno, allora la colpa potrebbe essere
