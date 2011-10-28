@@ -5,30 +5,29 @@
 		</div><div class="wider">
 			<div class="widelist">
 				<div class="section">
-					<h2>Category</h2>
-					<p>
-<?php
-	foreach(array_keys($cats) as $key) {
-		echo ('<p>['.$key.'] =&gt; [<span class="em">'.$cats[$key].'</span>]</p>');
-	}
-?>
-					</p>
+					<h2>
+						Sources
+					</h2>
+					<?=$finder->show()?>
 				</div>
 			</div><div class="widecontent">
 				<div class="section">
 					<h2>Now debugging...</h2>
 					<p>Request: `<?=$request?>`</p>
-					<p>Parsed: `<?=$parsed?>`</p>
-					<p>File: `<?=$file?>`</p>
 					<p>Include: <?=$include?></p>
 					<p>RSide: `<?=$rside?>`</p>
 				</div><div class="section">
 					<h2>
-						Section
+						Search
 					</h2><p>
-						Section: <?=$section?>
+						<span class="em">Category</span>: <?php
+							foreach ($search['category'] as $category)
+								echo ($category .' / ');
+						?>
 					</p><p>
-						Location: <?=$location?>
+						<span class="em">Last</span> [<?=$search['last']?>]
+					</p><p>
+						<span class="em">Self</span> [<?=$self?>]
 					</p>
 				</div><div class="section">
 					<h2>
@@ -52,13 +51,5 @@
 				</h2><p>
 					Mode is <?=$amode?>.
 				</p>
-			</div>
-		</div><div class="section">
-			<p>
-				Ed ora, il nuovo debug!
-			</p>
-		</div><div class="small">
-			<div class="section">
-				<?=$finder->show()?>
 			</div>
 		</div>

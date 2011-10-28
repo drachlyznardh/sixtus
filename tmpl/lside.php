@@ -25,7 +25,7 @@
 		Altro
 	</h2><div id="longrec-lside">
 		<p><?=$d->link('Recensioni/','Recensioni')?></p>
-		<p><?=$d->link('FilmBrutti/','Film brutti')?></p>
+		<p><?=$d->link('Recensioni/Film/Brutti/','Film brutti')?></p>
 	</div>
 	<h2 class="reverse">
 		NaNoWriMo [<?=$d->link('NaNoWriMo/','Indice')?>]

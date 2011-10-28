@@ -53,7 +53,7 @@
 			title="THE scripting language for the Web">Javascript</a>
 		e bestemmie.
 	</p></div><p style="text-align: center">
-		Le versione 0.7.5&beta;² di questa baracca è stata
+		Le versione 0.7.5&beta;²+2&pi;° di questa baracca è stata
 		scritta con VIm. Copyright © 2007–2011 Ivan Simonini.
 	</p><div class="outside"><p style="text-align: right">
 		Tutto questo è opera mia, pertanto ogni merito e colpa

@@ -36,7 +36,12 @@
 				<div id="head">
 					<div class="section">
 						<h2 id="home">
-							<?=$d->link($location,$section)?>
+							<?php
+								foreach ($search['category'] as $category) {
+									$sum .= $category .'/';
+									echo ($d->link($sum, $category) .' / ');
+								}
+							?>
 						</h2><h1 id="title">
 							<?=$title[0]?>
 						</h1><h2 id="subtitle">
