@@ -23,8 +23,8 @@
 		}
 		
 		public function show () {
-			echo ('<div style="border:1px solid black;margin:2px;">');
-			echo ('<p style="margin:2px;">Source ['.  $this->name.'], ');
+			echo ('<div class="outside">');
+			echo ('<p>Source [<span class="em">'.  $this->name.'</span>], ');
 			echo (($this->destdir?$this->destdir:'EMPTY') .'</p>');
 			if ($this->sources) foreach ($this->sources as $source) $source->show();
 			echo ('</div>');
@@ -56,7 +56,7 @@
 			if (strtolower($this->name) == $token) {
 				
 				$result['category'][] = $this->name;
-				$result['destdir'] = $this->destdir;
+				$result['destdir'][] = $this->destdir;
 				unset($tokens[$keys[0]]);
 
 				#echo ('<p style="margin:2px">Category ['. $this->name .']</p>');
@@ -73,7 +73,7 @@
 				} else {
 					$result = $this->getLast ($result, $tokens);
 				}
-			} else $result = false;
+			} else $result = false;//$this->getLast ($result, $tokens);//false;
 
 			#echo ('</div>');
 			return $result;
@@ -97,7 +97,7 @@
 		}
 
 		public function show() {
-			echo ('<p>Sources</p>');
+			echo ('<h2>Sources</h2>');
 			foreach($this->sources as $source) $source->show();
 		}
 

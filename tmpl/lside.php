@@ -1,41 +1,45 @@
-					<div class="clearbox">
 <div class="section">
 	<p>
 		<?=$d->link('News/', 'Ultime novità')?>
-		[<?=$d->link('Extra/Guida/','Guida','Intro')?>]
-	</p><p>
-		[<a href="<?=$location?>">Gods</a> |
-		<a href="<?=$location?>Bolo/">Bolo</a> /
-		<a href="<?=$location?>Luber/">Luber</a> |
-		<a href="<?=$location?>Dado/">Dado</a>] mode
+	</p><h2 class="reverse">
+		Meta
+	</h2><p>
+		<?=$d->link('Extra/Autore/', 'Il GODS')?>
+		| <?=$d->link('Extra/Guida/', 'Chi? Cosa? Dove?', 'INTRO')?>
+	</p><h2>
+		Modi
+	</h2><p>
+		<a href="<?=$d->self?>">Gods</a>
+		| <a href="<?=$d->self?>Bolo/">Bolo</a>
+		/ <a href="<?=$d->self?>Luber/">Luber</a>
+		| <a href="<?=$d->self?>Dado/">Dado</a>
+		| <?=$d->link('Extra/Guida/', '?', 'MODI')?>
 	</p>
-</div><div class="section">
-	<p>
-		<?=$d->link('http://trunaluten.99k.org/', 'Tru Naluten')?> [su 99k.org]
-	</p><h2 id="arrowstr-lside" class="opened" onclick="javascript:cascade('str-lside')">
-		Storie
-	</h2><div id="longstr-lside">
-		<p><?=$d->link('Storie/2010/','Storie 2010')?></p>
-		<p><?=$d->link('Storie/2011/','Storie 2011')?></p>
-		<p><?=$d->link('Gaem/','La storia interattiva')?></p>
-	</div>
-</div><div class="section">
-	<h2 id="arrowrec-lside" class="opened"
-			onclick="javascript:cascade('rec-lside')">
-		Altro
-	</h2><div id="longrec-lside">
-		<p><?=$d->link('Recensioni/','Recensioni')?></p>
-		<p><?=$d->link('Recensioni/Film/Brutti/','Film brutti')?></p>
-	</div>
-	<h2 class="reverse">
-		NaNoWriMo [<?=$d->link('NaNoWriMo/','Indice')?>]
-	</h2><div class="inside">
-		<p><?=$d->link('NaNoWriMo/2010/','NaNoWriMo 2010')?></p>
-		<p><?=$d->link('NaNoWriMo/Corvino/Multicolore/','Corvino Multicolore')?></p>
-	</div>
-</div><div class="section">
-	<h2 id="arrowallegri-lside" class="opened" onclick="javascript:cascade('allegri-lside')">
-		<abbr title="Un po&apos;culattoni? No, no, solo allegri.">Allegri</abbr> compagni
+</div><br /><div class="section">
+	<h2>
+		Cose interessanti
+	</h2><p>
+		<?=$d->link('Storie/', 'Storie', 'INTRO')?>
+		[ <?=$d->link('Storie/2010/', '2010', 'INTRO')?>
+		| <?=$d->link('Storie/2011/', '2011', 'INTRO')?> ]
+	</p><p>
+		<?=$d->link('Storie/Gaem/', 'La storia interattiva', 'INTRO')?>
+	</p><p>
+		<?=$d->link('Tru/Naluten/', 'Tru Naluten', 'INTRO')?>
+		[ <?=$d->link('Tru/Naluten/I/', 'vol.1')?>
+		| <?=$d->link('Tru/Naluten/X/', 'vol.2')?>
+		| <?=$d->link('Tru/Naluten/XX/','vol.3')?> ]
+	</p><p>
+		<?=$d->link('Recensioni/', 'Recensioni', 'INTRO')?>
+		[ <?=$d->link('Recensioni/Classifica/', 'Classifica') ?> ]
+	</p><p>
+		<?=$d->link('NaNoWriMo/', 'NaNoWriMo', 'INTRO')?>
+		[ <?=$d->link('NaNoWriMo/2010/', '2010')?>
+		| <?=$d->link('NaNoWriMo/2011/', '2011')?> ]
+	</p>
+</div><br /><div class="section">
+	<h2> 
+		<span class="em" title="Un po&apos;culattoni? No, no, solo allegri.">Allegri</span> compagni
 	</h2><div id="longallegri-lside">
 		<p>
 			Le <a href="http://kiyuko.org/blog/">idee</a> del Bolo
@@ -44,11 +48,10 @@
 		</p><p>
 			Le <a href="http://mikezasch.wordpress.com/">lamentele</a> di Mitch
 		</p><p>
-			Le <span style="text-decoration:line-through">tristi</span>
+			Le <span class="wrong">tristi</span>
 			<a href="http://jazzinghen.wordpress.com/">videogiocate</a> di Jazzinghen
 		</p><p>
 			Le <a href="http://mecharete.blogspot.com/">cose fighe</a> di Luber
 		</p>
 	</div>
-						</div> <!-- Section -->
-					</div> <!-- Clear Box -->
+</div>

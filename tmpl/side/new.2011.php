@@ -7,5 +7,7 @@
 		<?=$d->link('News/2011/Ago/','Agosto 2011')?>
 	</p><p>
 		<?=$d->link('News/2011/Set/','Settembre 2011')?>
+	</p><p>
+		<?=$d->link('News/2011/Ott/', 'Ottobre')?>
 	</p>
 </div>
