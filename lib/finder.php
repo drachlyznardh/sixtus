@@ -26,7 +26,7 @@
 			echo ('<div style="border:1px solid black;margin:2px;">');
 			echo ('<p style="margin:2px;">Source ['.  $this->name.'], ');
 			echo (($this->destdir?$this->destdir:'EMPTY') .'</p>');
-			foreach ($this->sources as $source) $source->show();
+			if ($this->sources) foreach ($this->sources as $source) $source->show();
 			echo ('</div>');
 		}
 
