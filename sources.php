@@ -1,7 +1,6 @@
 <?php
-	$localbase = 'http://localhost/faiv';
+	$localbase = 'http://localhost';
 	$localhome = '/News/';
-	$localmatch = 'faiv';
 
 	$sources = array (
 		'Storie' => array (false,
@@ -13,6 +12,7 @@
 			'Film' => array ('review/film',
 				'Brutti' => 'review/film/brutti'),
 			'Libri' => 'review/book',
+			'Giochi' => 'review/game',
 			'Show' => 'review/show'),
 		'Extra' => array ('extra',
 			'Rampa' => 'extra/rampa'),
