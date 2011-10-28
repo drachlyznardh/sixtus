@@ -37,13 +37,13 @@
 		$base = 'http://trunaluten.99k.org';
 	} else if ($servername == 'drachlyznardh.altervista.org') {
 		$base = 'http://drachlyznardh.altervista.org';
-	} else {
-		$base = $localbase;
+	} else if ($servername == 'gods.roundhousecode.com') {
+		$base = 'http://gods.roundhousecode.com';
 	}
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
-	if (preg_match ('/'.$localmatch.'\//', $request))
-		$request = preg_replace ('/'.$localmatch.'\/(.*)/', '$1', $request);
+	#if (preg_match ('/'.$localmatch.'\//', $request))
+	#	$request = preg_replace ('/'.$localmatch.'\/(.*)/', '$1', $request);
 	if ($localhome && $request == '') header ('Location: '.$base.$localhome);
 
 	if ((preg_match('/style/', $request) || preg_match('/extra/',$request)) && file_exists ($request)) {
@@ -97,7 +97,7 @@
 	$modes = array ('gods','luber','bolo');
 
 	$finder = new Finder ($sources, $voption);
-	echo ($finder->show());
+	//echo ($finder->show());
 
 	$amode = 'gods';
 	foreach (array_keys($token) as $key) {
@@ -124,8 +124,12 @@
 			}
 	}
 	$search = $finder->find($token);
-	echo ('<p>Finalmente Giustizia è fatta: possiamo morire!</p>');
-	print_r ($search);
+	
+	foreach ($search['category'] as $category)
+		$self .= $category .'/';
+
+	if ($search['last'] != 'index')
+		$self .= strtoupper($search['last']).'/';
 
 	/*
 
@@ -181,7 +185,7 @@
 
 	require_once ('lib/dialog.php');
 
-	$d = new Dialog(isset($opt['bounce']), $location, $opt, $amode);
+	$d = new Dialog(isset($opt['bounce']), $location, $opt, $amode, $self);
 
 	if (isset ($opt['dynamic'])) {
 
