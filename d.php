@@ -34,16 +34,12 @@
 
 	if ($servername == 'localhost') {
 		$base = $localbase;
-#	} else if ($servername == 'trunaluten.99k.org') {
-#		$base = 'http://trunaluten.99k.org';
-#	} else if ($servername == 'drachlyznardh.altervista.org') {
-#		$base = 'http://drachlyznardh.altervista.org';
 	} else if ($servername == 'gods.roundhousecode.com') {
 		$base = 'http://gods.roundhousecode.com';
 	}
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
-	#if ($localhome && $request == '') header ('Location: '.$base.$localhome);
+	if ($localhome && $request == '') header ('Location: '.$base.$localhome);
 
 	if ((preg_match('/style/', $request) || preg_match('/extra/',$request)) && file_exists ($request)) {
 		
@@ -130,8 +126,7 @@
 	if ($search['last'] != 'index')
 		$self .= strtoupper($search['last']).'/';
 
-	foreach ($search['destdir'] as $destdir)
-		$searchpath .= $destdir .'/';
+	$searchpath = $search['destdir'] .'/';
 	$includepath = $searchpath . $search['last'] .'.php';
 
 	if (file_exists($includepath))
@@ -163,7 +158,6 @@
 		die();
 	}
 
-	#require_once ($include);
 	require_once ($includepath);
 	if (isset($opt['book'])) require_once('tmpl/book.php');
 	else if (isset($opt['pdf'])) require_once('tmpl/pdf.php');

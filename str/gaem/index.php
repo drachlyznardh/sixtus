@@ -1,7 +1,6 @@
 <?php
 	$title=array('La storia interattiva','Ma solo se volete');
 	function mkpage($d){
-		$self='Gaem/';
 		$final='Gaem/Finali/';
 ?>
 <div class="wider">
@@ -9,14 +8,14 @@
 		<div class="section">
 			<h2>
 				Gaem
-			</h2><ol><li id="li-i">
-					<?=$d->link($self,'Intro','I')?>
+			</h2><ol><li id="li-intro">
+					<?=$d->link($d->self,'Intro','INTRO')?>
 				</li><li id="li-start">
-					<?=$d->link($self,'Start','START')?>
+					<?=$d->link($d->self,'Start','START')?>
 			</li></ol>
 		</div>
 	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
+		<div class="tab" id="tab-intro">
 			<div class="section">
 	<p>
 		Si può fare.

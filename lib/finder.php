@@ -55,8 +55,8 @@
 
 			if (strtolower($this->name) == $token) {
 				
-				$result['category'][] = $this->name;
-				$result['destdir'][] = $this->destdir;
+				if ($this->name) $result['category'][] = $this->name;
+				if ($this->destdir) $result['destdir'] = $this->destdir;
 				unset($tokens[$keys[0]]);
 
 				#echo ('<p style="margin:2px">Category ['. $this->name .']</p>');

@@ -8,7 +8,7 @@
 			<h2>
 				Finali
 			</h2><p>
-				<?=$d->link('Gaem/Finali/','Questa è la fine', 'I')?>
+				<?=$d->link('Storie/Gaem/Finali/','Questa è la fine', 'I')?>
 			</p><ol><li id="li-f1">
 					A nessuno fregò
 				</li><li id="li-f2">

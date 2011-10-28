@@ -3,24 +3,24 @@
 	$localhome = '/News/';
 
 	$sources = array (
-		'Storie' => array ('str',
-			'Gaem' => 'gaem',
-			'2010' => '2010',
-			'2011' => '2011'),
+		'Storie' => array ('str/2011',
+			'Gaem' => 'str/gaem',
+			'2010' => 'str/2010',
+			'2011' => 'str/2011'),
 		'News' => array ('new',
-			'2011' => '2011'),
+			'2011' => 'new/2011'),
 		'Recensioni' => array ('review',
-			'Film' => array ('film',
-				'Brutti' => 'brutti'),
-			'Libri' => 'book',
-			'Giochi' => 'game',
-			'Show' => 'show'),
+			'Film' => array ('review/film',
+				'Brutti' => 'review/brutti'),
+			'Libri' => 'review/book',
+			'Giochi' => 'review/game',
+			'Show' => 'review/show'),
 		'Extra' => array ('extra',
-			'Rampa' => 'rampa'),
+			'Rampa' => 'extra/rampa'),
 		'NaNoWriMo' => array ('nano',
-			'Corvino' => array (false,
-				'MultiColore' => 'corvino'),
-			'2010' => '2010',
-			'2011' => '2011')
+			'Corvino' => array ('nano/corvino',
+				'MultiColore' => 'nano/corvino'),
+			'2010' => 'nano/2010',
+			'2011' => 'nano/2011')
 	);
 ?>
