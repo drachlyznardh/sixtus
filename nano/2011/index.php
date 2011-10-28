@@ -10,7 +10,7 @@
 		</p><p>
 			Chi avesse letto le <?=$d->link('Storie/', 'storie')?> avrà già
 			sentito parlare del dottor Odio e della <span class="magnet">ragazza
-			magnete</span>. Questa è la storia completa.
+			magnete</span>. Questa è (sarà) la storia completa.
 		</p>
 	</div><div class="section">
 		<p>
