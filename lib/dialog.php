@@ -4,6 +4,7 @@
 	
 		public $tab = "\n\t\t\t\t\t\t\t\t";
 		public $bounce = false;
+		public $self;
 		public $speakers = array (
 			'ci' => array ('Ci@Lyznardh&gt;$: ', ''),
 			'corona' => array ('-- ', ' --')
@@ -12,13 +13,14 @@
 		private $mode;
 		private $complete;
 		
-		public function __construct ($bounce, $base, $opt, $mode) {
+		public function __construct ($bounce, $base, $opt, $mode, $self) {
 		
 			$this->bounce = $bounce;
 			$this->base = $base.'Personaggi/';
 			$this->opt = implode ('/',$opt);
 			$this->mode = $mode;
 			$this->complete = isset($opt['complete']);
+			$this->self = $self;
 		}
 
 		public function isComplete() {

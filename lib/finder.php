@@ -32,7 +32,7 @@
 
 		public function getLast ($result, $tokens) {
 			
-			echo ('<p style="margin:2px">Count($tokens = '. (count($tokens)) .'), ');
+			#echo ('<p style="margin:2px">Count($tokens = '. (count($tokens)) .'), ');
 
 			if (count($tokens)) {
 				$keys = array_keys($tokens);
@@ -41,7 +41,7 @@
 				$result['last'] = 'index';
 			}
 
-			echo ($result['last'] .'</p>');
+			#echo ($result['last'] .'</p>');
 
 			return $result;
 		}
@@ -50,8 +50,8 @@
 			$keys = array_keys($tokens);
 			$token = $tokens[$keys[0]];
 
-			echo ('<div style="border:1px solid black;margin:2px">');	
-			echo ('<p style="margin:2px">'. $this->name .', '. $token .'</p>');
+			#echo ('<div style="border:1px solid black;margin:2px">');	
+			#echo ('<p style="margin:2px">'. $this->name .', '. $token .'</p>');
 
 			if (strtolower($this->name) == $token) {
 				
@@ -59,7 +59,7 @@
 				$result['destdir'] = $this->destdir;
 				unset($tokens[$keys[0]]);
 
-				echo ('<p style="margin:2px">Category ['. $this->name .']</p>');
+				#echo ('<p style="margin:2px">Category ['. $this->name .']</p>');
 				if ($this->sources) {
 					foreach ($this->sources as $source) {
 						$subresult = $source->find($tokens, $result);
@@ -75,7 +75,7 @@
 				}
 			} else $result = false;
 
-			echo ('</div>');
+			#echo ('</div>');
 			return $result;
 		}
 	}
@@ -102,7 +102,7 @@
 		}
 
 		public function find($tokens) {
-			echo ('<p>Ricerca</p>');
+			#echo ('<p>Ricerca</p>');
 			$this->tokens = $tokens;
 			$result = array('destdir' => false, 'category' => array());
 
@@ -111,11 +111,11 @@
 				if ($result) break;
 			}
 
-			echo ('<p>Result [ ');
-			foreach ($result['category'] as $category) echo ($category .' / ');
-			echo (' ]</p>');
-			echo ('<p>Destdir: '. $result['destdir'] .'</p>');
-			echo ('<p>Last Token: '. $result['last'] .'</p>');
+			#echo ('<p>Result [ ');
+			#foreach ($result['category'] as $category) echo ($category .' / ');
+			#echo (' ]</p>');
+			#echo ('<p>Destdir: '. $result['destdir'] .'</p>');
+			#echo ('<p>Last Token: '. $result['last'] .'</p>');
 
 			return $result;
 		}
