@@ -377,7 +377,7 @@
 		<a target="_blank" href="Extra/Rampa/Davanti.jpg"><img
 			src="Extra/Rampa/Davanti.mini.jpg"/></a>
 	</p><p>
-		Si notino ilr sorriso e la voglia di vivere, al pieno della forma fisica!
+		Si notino il sorriso e la voglia di vivere, al pieno della forma fisica!
 	</p>
 </div><div class="section">
 	<p>
