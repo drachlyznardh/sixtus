@@ -9,7 +9,7 @@
 		<p>
 			<span class="em">30/08/2011</span> – E siccome ancora la dovevo
 			scrivere e tra un po' finisco anche quello dopo, ecco la recensione
-			del <?=$d->link('Recensioni/HarryPotter/','terzo volume','IV')?> della serie fuffa.
+			del <?=$d->link('Recensioni/Libri/XII/','terzo volume','IV')?> della serie fuffa.
 		</p><p>
 			<span class="em">30/08/2011</span> – Ero là che me ne facevo un
 			pentolone (ancora sto cercando l'ispirazione per piegare lo stelo
@@ -25,29 +25,29 @@
 			<span class="em">21/08/2011</span> – Ah! Un po' che non scrivo,
 			vero? È perché me ne sono stato impegnato a scrivere il report per
 			sgaggio. Intanto, ho letto
-			<?=$d->link('Recensioni/HarryPotter/','questo','III')?>.
+			<?=$d->link('Recensioni/Libri/XII/','questo','III')?>.
 		</p><p>
 			<span class="em">15/08/2011</span> – Siccome piove che Thor la
 			manda, me ne sto a casa e scrivo. Ecco
 			<?=$d->link('Storie/2011/LIX','qualcosa')?> che doveva arrivare una
 			settimana fa ed una
-			<?=$d->link('Recensioni/HarryPotter/','lettura')?> appena
+			<?=$d->link('Recensioni/Libri/XII/','lettura')?> appena
 			cominciata.
 		</p><p>
 			<span class="em">10/08/2011</span> – Mentre ero lì che me ne facevo
 			un pentolone, proprio ieri, ho finito di leggere
-			<?=$d->link('Recensioni/NessunDove','Nessun Dove')?> di quel
+			<?=$d->link('Recensioni/Libri/XI/', 'Nessun Dove')?> di quel
 			mattacchione di Neil Gaiman. Non sono deluso.
 		</p><p>
 			<span class="em">06/08/2011</span> – Senza nessuna aspettativa,
 			senza nessuna vera speranza, mi sono guardato il film dei
-			<?=$d->link('Recensioni/IPuffi/','Puffi')?>, e me ne sono stupito.
+			<?=$d->link('Recensioni/Film/X/','Puffi')?>, e me ne sono stupito.
 		</p><p>
 			<span class="em">05/08/2011</span> – Mi sono messo a scrivere
 			l'ultimo tab del progetto. <?=$d->link('Storie/2011/LII/','Eccolo','XXI')?>.
 		</p><p>
 			<span class="em">05/08/2011</span> – Mi sono appena visto
-			<?=$d->link('Recensioni/AngelBeats','Angel Beats!')?>, un'allegra
+			<?=$d->link('Recensioni/Show/IX/','Angel Beats!')?>, un'allegra
 			serie dell'anno scorso che, purtroppo, non è affatto allegra.
 			Mentivo.
 		</p>

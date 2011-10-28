@@ -7,7 +7,7 @@
 	<div class="section">
 		<p>
 			<span class="em">31/07/2011</span> – Un'altra nuova sezione! Quella dedicata ai
-			<?=$d->link('FilmBrutti/','film brutti')?>. Perché io ne ho visti tanti
+			<?=$d->link('Recensioni/Film/Brutti/','film brutti')?>. Perché io ne ho visti tanti
 			e alcuni meritano di essere menzionati.
 		</p><p>
 			Ma non solo! <span class="em">29/07/2011</span> – La
@@ -34,7 +34,7 @@
 			rivelato essere insormontabile e nemmeno aggirabile.
 		</p><p>
 			<span class="em">25/07/2011, 23:30</span> –
-			<?=$d->link('Recensioni/CapitanAmerica','Capitan America')?> si è
+			<?=$d->link('Recensioni/Film/VIII/','Capitan America')?> si è
 			rivelato essere un buon film.
 		</p><p>
 			<span class="em">21/07/2011, 18:00</span> –
@@ -74,7 +74,7 @@
 			l'inizio di una lunga serie pralinata di cose fighe.
 		</p><p>
 			<span class="em">07/07/2011, 14:10</span> – una minuscola aggiunta
-			alla recensione di <?=$d->link('Recensioni/DarkOfTheMoon/',
+			alla recensione di <?=$d->link('Recensioni/Film/VII/',
 			'Transformers', 'XIX')?>, ora che ho visto il film con l'audio
 			originale.
 		</p><p>
@@ -103,7 +103,7 @@
 			'Dado/'">Provare</a> per credere.
 		</p><p>
 			<span class="em">03/07/2011, 17:30</span> –
-			<?=$d->link('Recensioni/DarkOfTheMoon/', 'Transformers: Dark Of The
+			<?=$d->link('Recensioni/Film/VII/', 'Transformers: Dark Of The
 			Moon')?>, l'ho appena visto. E sto ancora piangendo ;_;
 		</p><p>
 			<span class="em">04/07/2011, 15:19</span> – sto scrivendo la pagina

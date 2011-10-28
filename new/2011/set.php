@@ -3,12 +3,11 @@
 	$prev=array('Agosto 2011','News/2011/Ago/');
 	$next=array('Ottobre 2011','News/2011/Ott/');
 	function mkpage($d){
-		$self='News/2011/Set/';
 ?>
 <div class="small">
 	<div class="section">
 		<p id="30/14:05">
-			<span class="em"><?=$d->link($self,'30/09/2011, 14:05','30/14:05')?>
+			<span class="em"><?=$d->link($d->self,'30/09/2011, 14:05','30/14:05')?>
 			[<?=$d->link('Extra/Guida/','Mini','Mini')?>]</span>
 		</p><h2 class="reverse">
 			Codd s'è sbagliato?
@@ -42,7 +41,7 @@
 		</p></div>
 	</div><div class="section">
 		<p id="29/11:45">
-			<span class="em"><?=$d->link($self,'29/09/2011, 11:45','29/11:45')?></span>
+			<span class="em"><?=$d->link($d->self,'29/09/2011, 11:45','29/11:45')?></span>
 		</p><h2 class="reverse">
 			Notizie fresche fresche!
 		</h2><p>
@@ -76,7 +75,7 @@
 		</p>
 	</div><div class="section">
 		<p id="28/16:05">
-			<span class="em"><?=$d->link($self, '28/09/2011, 16:05', '28/16:05')?></span> –
+			<span class="em"><?=$d->link($d->self, '28/09/2011, 16:05', '28/16:05')?></span> –
 			Rieccomi, dopo una settimana. Ho riflettuto, ho fatto cose, ho
 			riflettuto, ho piegato, ho riflettuto e alla fine ho scritto. Se già
 			avete letto il <?=$d->link('Storie/2011/LXII/','resto')?>, potete
@@ -85,7 +84,7 @@
 		</p>
 	</div><div class="section">
 		<p id="21/16:45">
-			<span class="em"><?=$d->link($self, '21/09/2011, 16:45', '21/16:45')?></span> –
+			<span class="em"><?=$d->link($d->self, '21/09/2011, 16:45', '21/16:45')?></span> –
 			ogni tanto scrivere una storia non basta, ogni tanto ci sono altre
 			cose da dire, abbastanza da sbrodolare fuori dal piatto e andare a
 			riempire un'altra storia.
@@ -103,7 +102,7 @@
 		</p>
 	</div><div class="section">
 		<p id="19/23:59">
-			<span class="em"><?=$d->link($self, '19/09/2011, 23:59', '19/23:59')?></span> –
+			<span class="em"><?=$d->link($d->self, '19/09/2011, 23:59', '19/23:59')?></span> –
 			Anche se in realtà mento, perché
 			<?=$d->link('Storie/2011/LXI/','questa storia')?> viene pubblicata
 			un po' dopo, doveva essere finita ieri.
@@ -112,7 +111,7 @@
 		</p>
 	</div><div class="section">
 		<p id="13/22:35">
-			<span class="em"><?=$d->link($self, '13/09/2011, 22:35', '13/22:35')?></span> –
+			<span class="em"><?=$d->link($d->self, '13/09/2011, 22:35', '13/22:35')?></span> –
 			Ah! Il potere! Il POTERE!
 		</p><p>
 			Ci sono cose che danno alla testa. Io ne ottengo abbastanza spesso,
@@ -133,11 +132,11 @@
 		</p>
 	</div><div class="section">
 		<p id="13/13:15">
-			<span class="em"><?=$d->link($self,'13/09/2011,
+			<span class="em"><?=$d->link($d->self,'13/09/2011,
 			13:15','13/13:15')?></span> –
 			M'ero quasi dimenticato, ieri, d'aver effettivamente finito un altro
 			libro. Quindi, eccovi un'altra
-			<?=$d->link('Recensioni/HarryPotter/','palettata di yadda','V')?>.
+			<?=$d->link('Recensioni/Libri/XII/','palettata di yadda','V')?>.
 		</p><p>
 			Poi padderò un pochetto: sapete che ho modificato il motore dietro
 			il sito? Beh, come potreste saperlo? Comunque, l'ho fatto.
@@ -151,7 +150,7 @@
 		</p>
 	</div><div class="section">
 		<p id="12/23:00">
-			<span class="em"><?=$d->link($self,'12/09/2011,
+			<span class="em"><?=$d->link($d->self,'12/09/2011,
 			23:00','12/23:00')?></span> –
 			Dopo essermi rilassato un pochettino, dopo aver visionato un poco di
 			Kamen Rider Fourze (work in progress…) mi sono ricordato d'una cosa.
@@ -168,10 +167,10 @@
 	</div><div class="section">
 		<p id="12/14:25">
 			<span
-			class="em"><?=$d->link($self,'12/09/2011, 14:25','12/14:25')?></span> – E tra una
+			class="em"><?=$d->link($d->self,'12/09/2011, 14:25','12/14:25')?></span> – E tra una
 			cosa e l'altra, mentre preparavo esami terribili, mi sono dedicato
 			ad una cosa che ogni vero uomo dovrebbe fare: mi sono guardato
-			<?=$d->link('Recensioni/KamenRider/','Kamen Rider')?>. ROTFL.
+			<?=$d->link('Recensioni/Show/XIII/','Kamen Rider')?>. ROTFL.
 		</p>
 	</div><div class="section" id="2">
 		<p>
