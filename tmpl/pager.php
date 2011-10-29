@@ -35,18 +35,24 @@
 			<div id="container" class="scrollable">
 				<div id="head">
 					<div class="section">
-						<h2 id="home">
+						<div class="inside em"><p style="text-align:center">
+							<a href="http://gods.roundhousecode.com">Gods</a>
+							. <a href="http://roundhousecode.com">RoundhouseCode</a>
+							. <a href="http://roundhousecode.com">com</a>
+							/ 
 							<?php
 								foreach ($search['category'] as $category) {
 									$sum .= $category .'/';
 									echo ($d->link($sum, $category) .' / ');
 								}
+								echo ($d->link($d->self, strtoupper($search['last']), false));
 							?>
-						</h2><h1 id="title">
+						</p></div><h1 style="text-align:center">
 							<?=$title[0]?>
-						</h1><h2 id="subtitle">
-							<?=$title[1]?>
-						</h2>
+						</h1><div class="outside em"><p style="text-align: center">
+								<?=$title[1]?>	
+						</p></div>
+						<?php #if (isset($title[1])) echo ('<h2 class="reverse" id="subtitle">'. $title[1] .'</h2>'); ?>
 					</div>
 				</div><div id="content">
 

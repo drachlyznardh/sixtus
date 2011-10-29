@@ -5,12 +5,7 @@ body {
 	font: 8pt/10pt "Georgia", sans-serif;
 }
 
-div#head, div#foot
-{
-	width: 100%;
-	font: 7pt/9pt Georgia;
-	text-align: center;
-}
+div#head, div#foot { width: 100%; }
 
 div#container
 {
@@ -46,7 +41,8 @@ div#head h1
 {
 	font-family: Georgia;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 4em;
+	margin: 0.5em 0 0.3em 0;
 }
 
 div.small
