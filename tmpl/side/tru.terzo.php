@@ -7,9 +7,9 @@
 	</p><p>
 		<?=$d->link('Tru/Naluten/Personaggi','Personaggi')?>
 	</p><p>
-		<?=$d->link('Tru/Naluten/X/','Volume II')?>
+		<?=$d->link('Tru/Naluten/Vol.II/X/','Volume II')?>
 	</p><p>
-		<?=$d->link('Tru/Naluten/XX/','Volume III')?>
+		<?=$d->link('Tru/Naluten/Vol.III/XX/','Volume III')?>
 	</p>
 </div>
 <?php } ?>
@@ -18,7 +18,7 @@
 		Volume III
 	</h2><div id="longvolII-rside">
 		<ol start="20" style="list-style-type: upper-roman">
-			<li><?=$d->link('Tru/Naluten/XX/', 'Il lavoro di Simak'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.III/XX/', 'Il lavoro di Simak'); ?></li>
 		</ol>
 	</div>
 </div>

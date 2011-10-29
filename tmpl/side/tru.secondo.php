@@ -7,9 +7,9 @@
 	</p><p>
 		<?=$d->link('Tru/Naluten/Personaggi','Personaggi')?>
 	</p><p>
-		<?=$d->link('Tru/Naluten/I/','Volume I')?>
+		<?=$d->link('Tru/Naluten/Vol.I/I/','Volume I')?>
 	</p><p>
-		<?=$d->link('Tru/Naluten/XX/','Volume III')?>
+		<?=$d->link('Tru/Naluten/Vol.III/XX/','Volume III')?>
 	</p>
 </div>
 <?php } ?>
@@ -18,16 +18,16 @@
 		Volume II
 	</h2><div id="longvolII-rside">
 		<ol start="10" style="list-style-type: upper-roman">
-			<li><?=$d->link('Tru/Naluten/X/', 'La trovatella'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XI/', 'Abbandono &amp; recupero'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XII/', 'Conversazione'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XIII/', 'Dubbio'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XIV/', 'Proposta'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XV/', 'La fuga'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XVI/', 'La sua gente'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XVII/', 'Battaglia navale'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XVIII/', 'Duello'); ?></li>
-			<li><?=$d->link('Tru/Naluten/XIX/', 'Lezione')?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/X/', 'La trovatella'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XI/', 'Abbandono &amp; recupero'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XII/', 'Conversazione'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XIII/', 'Dubbio'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XIV/', 'Proposta'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XV/', 'La fuga'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XVI/', 'La sua gente'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XVII/', 'Battaglia navale'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XVIII/', 'Duello'); ?></li>
+			<li><?=$d->link('Tru/Naluten/Vol.II/XIX/', 'Lezione')?></li>
 		</ol>
 	</div>
 </div>
