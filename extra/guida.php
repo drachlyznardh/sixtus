@@ -1,31 +1,30 @@
 <?php
-	$title=array('Guida','Perché la gente arriva ma non sa dov&apos;è la roba');
+	$title=array('Guida',
+		'Perché la gente arriva ma non sa dov&apos;è la roba',
+		'intro');
 	function mkpage($d){
 ?>
 <div class="wider">
 	<div class="widelist">
 		<div class="section">
-			<p id="li-intro">
-				<?=$d->link($d->self,'Intro','Intro')?>
+			<p>
+				<?=$d->mktid($d->self, 'Intro', 'intro')?>
 			</p><h2 class="reverse">
 				Guida
-			</h2><p><span id="li-storie">
-					<?=$d->link($d->self,'Storie','Storie')?>
-				</span> [<span id="li-mini">
-					<?=$d->link($d->self,'Mini','MINI')?>
-			</span> ]</p><p><span id="li-recensioni">
-					<?=$d->link($d->self,'Recensioni','RECENSIONI')?>
-				</span> [<span id="li-brutti">
-					<?=$d->link($d->self,'Film brutti','BRUTTI')?>
-			</span> ]</p><p id="li-extra">
-				<?=$d->link($d->self,'Extra','EXTRA')?>
-			</p><p id="li-modi">
-				<?=$d->link($d->self, 'Modi', 'MODI')?>
+			</h2><p>
+					<?=$d->mktid($d->self, 'Storie', 'storie')?>
+					[ <?=$d->mktid($d->self, 'Mini', 'mini')?> ]
+			</p><p>
+					<?=$d->mktid($d->self, 'Recensioni', 'recensioni')?>
+					[ <?=$d->mktid($d->self, 'Film brutti', 'brutti')?> ]
+			</p><p>
+				<?=$d->mktid($d->self, 'Extra', 'extra')?>
+			</p><p>
+				<?=$d->mktid($d->self, 'Modi', 'modi')?>
 			</p>
 		</div>
 	</div><div class="widecontent">
-		<div class="tab" id="tab-intro">
-			<div class="section">
+		<?php if ($d->mktab('intro')) { ?><div class="section">
 	<p>
 		Questa è la paginetta che ti spiega le cose.
 	</p><p>
@@ -37,9 +36,9 @@
 		sappiate che non intendo preparare tutto in anticipo. Specialmente se mi
 		sta leggendo il <span class="bolo">Bolo</span>.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-storie">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('storie')) { ?>
+		<div class="section">
 	<p>
 		Le storie sono il vero cuore della baracca.
 	</p><p>
@@ -57,9 +56,9 @@
 	</p><p>
 		Perché scrivere è più comodo.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-recensioni">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('recensioni')) { ?>
+		<div class="section">
 	<h2>
 		Recensioni
 	</h2><p>
@@ -71,9 +70,9 @@
 		Da quel punto in poi ho deciso che forse sarebbe stato il caso di
 		riservare uno spazio dedicato a cose come quella. E poi ho cominciato.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-brutti">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('brutti')) { ?>
+		<div class="section">
 	<h2>
 		Film brutti
 	</h2><p>
@@ -83,9 +82,9 @@
 		L'arte dei film brutti è una cosa rara e raffinata. Pochi li sanno fare,
 		pochi li sanno apprezzare. E spesso non ho briga di scrivere…
 	</p>
-			</div>
-		</div><div class="tab" id="tab-mini">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('mini')) { ?>
+		<div class="section">
 	<p>
 		Le cosidette <span class="em">mini</span> sono le storielle troppo corte
 		per meritare una storia intera.
@@ -102,9 +101,9 @@
 		class="em">significative</span>, potrei anche metterle in una pagina o
 		settore dedicato.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-extra">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('extra')) { ?>
+		<div class="section">
 	<p>
 		Metasezione!!!
 	</p><h2>
@@ -123,9 +122,9 @@
 		fine, evolutasi fino allo stato di creatura senziente, è divenuta questa
 		pagina che state leggendo.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-modi">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('modi')) { ?>
+		<div class="section">
 	<p>
 		Ci sono modi e modi.
 	</p><h2>
@@ -163,8 +162,7 @@
 		qualche link in alto a sinistra. Se invece sapete scrivere, potete
 		infilare le parole chiave direttamente nell'URL.
 	</p>
-			</div>
-		</div>
+		</div><?php } ?>
 	</div>
 </div>
 <?php } ?>

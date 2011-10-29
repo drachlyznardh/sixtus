@@ -2,59 +2,44 @@
 
 	class Dialog {
 	
-		public $tab = "\n\t\t\t\t\t\t\t\t";
-		public $bounce = false;
 		public $self;
 		public $speakers = array (
 			'ci' => array ('Ci@Lyznardh&gt;$: ', ''),
 			'corona' => array ('-- ', ' --')
 		);
 		private $opt;
-		private $mode;
-		private $complete;
+		public $tab;
+		public $tabname;
 		
-		public function __construct ($bounce, $base, $opt, $mode, $self) {
+		public function __construct ($opt, $notab, $self, $tab, $tabname) {
 		
-			$this->bounce = $bounce;
-			$this->base = $base.'Personaggi/';
-			$this->opt = implode ('/',$opt);
-			$this->mode = $mode;
-			$this->complete = isset($opt['complete']);
+			$this->opt = $opt;
 			$this->self = $self;
-		}
-
-		public function isComplete() {
-			return $this->complete;
+			$this->notab = $notab;
+			$this->tab = $tab;
+			$this->tabname = $tabname;
 		}
 
 		public function link($request, $title, $sharp=false) {
 			$ref = $request;
+			if ($sharp) $ref = substr($ref, 0, -1).".$sharp/";
 			if ($this->opt) $ref .= $this->opt .'/';
-			if ($this->mode != 'gods') $ref .= $this->mode .'/';
-			if ($sharp) $ref .= '#'.$sharp;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
-		public function complete ($author, $humour, $speech) {
-		
-			if(!$author) $author = 'unknown';
+		public function frag($request, $title, $frag) {
+			$ref = substr($request, 0, -1).'.'.$frag.'/';
+			if ($this->opt) $ref .= $this->opt .'/';
+			return '<a href="'.$ref.'">'.$title.'</a>';
+		}
 
-			if (isset($this->speakers[$author])) {
-				$first = $this->speakers[$author][0];
-				$last = $this->speakers[$author][1];
-			} else {
-				$first = '';
-				$last = '';
-			}
+		public function mktid($request, $title, $tab) {
+			if ($this->tabname == $tab) return '<span class="em">'.$title.'</span>';
+			else return $this->link($request, $title, strtoupper($tab));
+		}
 
-			$class = $author;
-			if ($humour != '') $class = "$class $humour";
-			
-			if ($this->bounce)
-				echo "$this->tab<p><a class=\"author\"
-				href=\"$this->base#$author\">$author</a>: <span class=\"$class\">&laquo;$first$speech$last&raquo;</span></p>\n";
-			else
-				echo "$this->tab<p class=\"$class\">&laquo;$first$speech$last&raquo;</p>\n";
+		public function mktab($tab) {
+			return $this->notab || $this->tabname == $tab;
 		}
 
 		public function t ($meaning, $original) {
@@ -62,20 +47,6 @@
 			return '<span class="em" title="che significa: “'. $meaning .'”">'. $original .'</span>';
 		}
 
-		public function legend ($author) {
-			return '<a class="legend" href="'.$this->base.'#'.$author.'">'.$author.'</a>';
-		}
-		
-		public function shout ($author, $speech) {
-		
-			$this->complete ($author, 'forte', $speech);
-		}
-		
-		public function speak ($author, $speech) {
-		
-			$this->complete ($author, '', $speech);
-		}
-		
 		public function inline ($author, $speech) {
 		
 			if (isset($this->speakers[$author])) {

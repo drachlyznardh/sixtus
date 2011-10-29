@@ -93,6 +93,11 @@
 
 	$finder = new Finder ($sources, $voption);
 	//echo ($finder->show());
+	$self = false;
+	$page = false;
+	$pagename = false;
+	$tab = false;
+	$tabname = false;
 
 	$amode = 'gods';
 	foreach (array_keys($token) as $key) {
@@ -119,46 +124,50 @@
 			}
 	}
 	$search = $finder->find($token);
-	
+	$searchpath = $search['destdir'] .'/';
+
 	foreach ($search['category'] as $category)
 		$self .= $category .'/';
 
-	if ($search['last'] != 'index')
-		$self .= strtoupper($search['last']).'/';
+	$last = $search['last'];
+	if (preg_match('/\./', $last)) {
+		list($pagename, $tabname) = explode('.', $last);
+		$self .= strtoupper($pagename).'/';
+		$tab = $searchpath.$pagename.'.d/'.$tabname.'.php';
+		$page = $searchpath.$pagename.'.php';
+	} else {
+		if ($last != 'index') {
+			$pagename = $last;
+			$self .= strtoupper($last).'/';
+		}
+		$page = $searchpath.$last.'.php';
+	}
 
-	$searchpath = $search['destdir'] .'/';
-	$includepath = $searchpath . $search['last'] .'.php';
-
-	if (file_exists($includepath))
+	if (isset($opt['download'])) {
+		$pdfpath = $searchpath . $search['last'] .'.pdf';
+		if (file_exists($pdfpath)) {
+			header('Content-Type: application/pdf');
+			header('Content-Disposition: attachment; filename="'.$search['last'].'.pdf"');
+			readfile($pdfpath) or die('Cannot transmit PDF file');
+		}
+		die();
+	}
+	
+	if (file_exists($page))
 		if ($searchpath) $rside = preg_replace ('/\//', '.', $searchpath .'php');
 		else $rside = 'nav.php';
 	else {
-		$includepath = 'error404.php';
+		$page = 'error404.php';
 		$rside = 'nav.php';
 	}
 
-	$d = new Dialog(isset($opt['bounce']), $location, $opt, $amode, $self);
+	$doptions = implode ('/', $opt);
+	if ($amode != 'gods') $doptions .= $amode;
 
-	if (isset ($opt['dynamic'])) {
+	require_once ($page);
+	if ($tabname == '' && isset($title[2])) $tabname = $title[2];
+	$d = new Dialog($doptions, $amode != 'gods', $self, $tab, $tabname);
 
-		if (preg_match('/tmpl\/(.*)\//', $parsed)) {
-			$frag = substr($parsed, 0, -1);
-			if (file_exists($frag)) include ($frag);
-			else include ('frag404.php');
-			die();
-		}
-
-		list($folder, $file) = explode('/', $file);
-		$inner = $srcdir[0].$folder.'.d/'.$file.'.php';
-		$outer = $srcdir[0].$folder.'.php';
-
-		if (file_exists($inner)) require_once ($inner);
-		else if (file_exists($outer)) require_once ($outer);
-		else require_once ('frag404.php');
-		die();
-	}
-
-	require_once ($includepath);
 	if (isset($opt['book'])) require_once('tmpl/book.php');
 	else if (isset($opt['pdf'])) require_once('tmpl/pdf.php');
 	else require_once ('tmpl/pager.php');

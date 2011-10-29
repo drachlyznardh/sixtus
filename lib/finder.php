@@ -47,6 +47,9 @@
 		}
 
 		public function find ($tokens, $result) {
+
+			if (!$tokens) return false;
+
 			$keys = array_keys($tokens);
 			$token = $tokens[$keys[0]];
 
