@@ -1,3 +1,4 @@
 
 div.tab { display: block; }
-div.widelist, div.widecontent { width: 80%; padding-left: 10%; padding-right: 10%; }
+div.widelist { display: none; }
+div.widecontent { width: 80%; padding-left: 10%; padding-right: 10%; }

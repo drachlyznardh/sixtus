@@ -42,6 +42,8 @@ div#head h1
 	font-family: Georgia;
 	font-weight: bold;
 	font-size: 4em;
+
+	text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px;
 	margin: 0.5em 0 0.3em 0;
 }
 
@@ -98,6 +100,7 @@ div.section h2
 	border-right-color: #aaaaaa;
 	padding: 3px 2px 3px 15px;
 	margin: 2px 2px 2px -5px;
+	text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px;
 }
 
 div.section h2.reverse
