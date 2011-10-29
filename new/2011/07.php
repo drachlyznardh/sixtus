@@ -1,6 +1,6 @@
 <?
-	$title=array('Luglio 2011', 'Notizie sudate');
-	$next=array('Agosto 2011', 'News/2011/Ago/');
+	$title=array('Luglio', 'Notizie sudate');
+	$next=array('Agosto', 'News/2011/08/');
 	function mkpage($d){
 ?>
 <div class="small">

@@ -1,7 +1,7 @@
 <?
-	$title=array('Agosto 2011','Notizie al caldo');
-	$prev=array('Luglio 2011','News/2011/Lug/');
-	$next=array('Settembre 2011','News/2011/Set/');
+	$title=array('Agosto','Notizie al caldo');
+	$prev=array('Luglio','News/2011/07/');
+	$next=array('Settembre','News/2011/09/');
 	function mkpage($d){
 ?>
 <div class="small">

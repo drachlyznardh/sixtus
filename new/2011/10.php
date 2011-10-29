@@ -1,6 +1,6 @@
 <?
-	$title=array('Ottobre 2011','Fa ancora caldo…');
-	$prev=array('Settembre 2011','News/2011/Set/');
+	$title=array('Ottobre','Fa ancora caldo…');
+	$prev=array('Settembre','News/2011/09/');
 	function mkpage($d){
 ?>
 <div class="small">

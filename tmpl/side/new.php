@@ -34,5 +34,11 @@
 		<span class="em">03/10</span> –
 		<?=$d->link('Storie/2011/LXIV/','La metafora','INTRO')?>
 	</p>
+</div><br /><div class="section">
+	<h2>
+		Archivio
+	</h2><?php
+		$multinav = true;
+		require_once('new.2011.php');
+	?>
 </div>
-<?php require_once('new.2011.php'); ?>

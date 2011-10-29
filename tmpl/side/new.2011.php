@@ -1,13 +1,12 @@
-<div class="section">
-	<h2>
-		Notizie 2011
+<?php if (isset($multinav) && $multinav); else echo ('<div class="section">'); ?>
+	<h2 class="reverse">
+		2011
 	</h2><p>
-		<?=$d->link('News/2011/Lug/','Luglio 2011')?>
+		<?=$d->link('News/2011/07/','Luglio')?>
+		| <?=$d->link('News/2011/08/','Agosto')?>
+		| <?=$d->link('News/2011/09/','Settembre')?>
 	</p><p>
-		<?=$d->link('News/2011/Ago/','Agosto 2011')?>
-	</p><p>
-		<?=$d->link('News/2011/Set/','Settembre 2011')?>
-	</p><p>
-		<?=$d->link('News/2011/Ott/', 'Ottobre')?>
+		<?=$d->link('News/2011/10/', 'Ottobre')?>
+		| Novembre | Dicembre
 	</p>
-</div>
+<?php if (isset($multinav) && $multinav); else echo ('</div>'); ?>
