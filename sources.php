@@ -3,7 +3,7 @@
 	$localhome = '/News/';
 
 	$sources = array (
-		'Storie' => array ('str/2011',
+		'Storie' => array ('str',
 			'Gaem' => 'str/gaem',
 			'2010' => 'str/2010',
 			'2011' => 'str/2011'),
