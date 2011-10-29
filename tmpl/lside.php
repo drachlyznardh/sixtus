@@ -26,9 +26,9 @@
 		<?=$d->link('Storie/Gaem/', 'La storia interattiva', 'INTRO')?>
 	</p><p>
 		<?=$d->link('Tru/Naluten/', 'Tru Naluten', 'INTRO')?>
-		[ <?=$d->link('Tru/Naluten/I/', 'vol.1')?>
-		| <?=$d->link('Tru/Naluten/X/', 'vol.2')?>
-		| <?=$d->link('Tru/Naluten/XX/','vol.3')?> ]
+		[ <?=$d->link('Tru/Naluten/Vol.I/I/', 'vol.I')?>
+		| <?=$d->link('Tru/Naluten/Vol.II/X/', 'vol.II')?>
+		| <?=$d->link('Tru/Naluten/Vol.III/XX/','vol.III')?> ]
 	</p><p>
 		<?=$d->link('Recensioni/', 'Recensioni', 'INTRO')?>
 		[ <?=$d->link('Recensioni/Classifica/', 'Classifica') ?> ]

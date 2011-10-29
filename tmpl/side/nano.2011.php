@@ -5,3 +5,4 @@
 		Prossimamente…
 	</p>
 </div>
+<?php require_once ('tmpl/side/.disclaimer.php'); ?>

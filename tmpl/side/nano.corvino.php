@@ -40,22 +40,13 @@
 			</ol>
 		</div><h2 class="reverse">
 			Le Streghe
-		</h2><div class="inside">
+		</h2><!--div class="inside"-->
 			<p>Prossimamente...</p>
-		</div><h2 class="reverse">
+		<!--/div--><h2 class="reverse">
 			I Demoni
-		</h2><div class="inside">
-			<p>Prossimamente...</p>
-		</div>
+		</h2><!--div class="inside"-->
+			<p>Ancor meno prossimamente...</p>
+		<!--/div-->
 	</div>
-</div><div class="section">
-	<h2>
-		Attenzione!!!
-	</h2><p>
-		La maggior parte di queste storie è triste, triste un sacco,
-		triste a botta!
-	</p><p>
-		La lettura può indurre, nelle persone particolarmente sensibili,
-		casi di suicidio anche reiterati.
-	</p>
 </div>
+<?php require_once ('tmpl/side/.disclaimer.php'); ?>

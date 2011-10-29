@@ -1,25 +1,26 @@
 <?php
 	$title=array('Guida','Perché la gente arriva ma non sa dov&apos;è la roba');
 	function mkpage($d){
-		$self='Extra/Guida/';
 ?>
 <div class="wider">
 	<div class="widelist">
 		<div class="section">
 			<p id="li-intro">
-				<?=$d->link($self,'Intro','Intro')?>
+				<?=$d->link($d->self,'Intro','Intro')?>
 			</p><h2 class="reverse">
 				Guida
-			</h2><p id="li-storie">
-				<?=$d->link($self,'Storie','Storie')?>
-			</p><p id="li-recensioni">
-				<?=$d->link($self,'Recensioni','Recensioni')?>
-			</p><p id="li-filmbrutti">
-				<?=$d->link($self,'Film brutti','FilmBrutti')?>
-			</p><p id="li-mini">
-				<?=$d->link($self,'Mini','Mini')?>
-			</p><p id="li-extra">
-				<?=$d->link($self,'Extra','Extra')?>
+			</h2><p><span id="li-storie">
+					<?=$d->link($d->self,'Storie','Storie')?>
+				</span> [<span id="li-mini">
+					<?=$d->link($d->self,'Mini','MINI')?>
+			</span> ]</p><p><span id="li-recensioni">
+					<?=$d->link($d->self,'Recensioni','RECENSIONI')?>
+				</span> [<span id="li-brutti">
+					<?=$d->link($d->self,'Film brutti','BRUTTI')?>
+			</span> ]</p><p id="li-extra">
+				<?=$d->link($d->self,'Extra','EXTRA')?>
+			</p><p id="li-modi">
+				<?=$d->link($d->self, 'Modi', 'MODI')?>
 			</p>
 		</div>
 	</div><div class="widecontent">
@@ -71,7 +72,7 @@
 		riservare uno spazio dedicato a cose come quella. E poi ho cominciato.
 	</p>
 			</div>
-		</div><div class="tab" id="tab-filmbrutti">
+		</div><div class="tab" id="tab-brutti">
 			<div class="section">
 	<h2>
 		Film brutti
@@ -121,6 +122,46 @@
 		coperte di polvere e da quella polvere è germinata della muffa, che alla
 		fine, evolutasi fino allo stato di creatura senziente, è divenuta questa
 		pagina che state leggendo.
+	</p>
+			</div>
+		</div><div class="tab" id="tab-modi">
+			<div class="section">
+	<p>
+		Ci sono modi e modi.
+	</p><h2>
+		Modi
+	</h2><p>
+		O forse dovrei chiamarle “modalità”?
+	</p><p>
+		Oh beh, una volta c'era un solo stile CSS. Una volta dopo, ce ne furono
+		tre: quello blu, quello rosso e quello nero.
+	</p><p>
+		Gestire tutta quella roba diventò un gran lavoraccio, e con il tempo
+		tornai ad avere un singolo stile… quello che dovreste vedere
+		normalmente.
+	</p>
+</div><div class="section">
+	<p>
+		Ma la vita è piena di sorprese. Un bel dì mi venne in mente di dividere
+		le pagine in tab, e scoprii che non tutti i browser supportano l'evento
+		<span class="em">onHashChange</span>, in particolare non il browser
+		dell'amico Luber.
+	</p><p>
+		Questo triste fatto gli rese impossibile accedere ad una buona parte dei
+		contenuti… decisi allora di aggiungere il <span class="code">Luber
+		Mode</span>, che spalma tutti i tab uno in fila all'altro. E siccome
+		anche il <span class="bolo">buon Bolo</span> aveva lo stesso problema,
+		creai un alias a suo nome.
+	</p><p>
+		Infine, un bel dì mio fratello capitò sul sito e si lamentò di non
+		riuscire a distinguere una beata mazza di quel che vedeva. Per lui c'è
+		quindi il <span class="code">Dado mode</span>, dai colori più classici.
+	</p>
+</div><div class="section">
+	<p>
+		Potete passare dalla modalità standard (la mia) alle altre calcando
+		qualche link in alto a sinistra. Se invece sapete scrivere, potete
+		infilare le parole chiave direttamente nell'URL.
 	</p>
 			</div>
 		</div>

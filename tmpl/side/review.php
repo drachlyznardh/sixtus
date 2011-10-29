@@ -38,18 +38,20 @@
 		</li><li>
 			<?=$d->link('Recensioni/Film/Brutti/XVI/', 'Bitch Slap', '')?> – 2009
 	</li></ol>
-</div><div class="section">
+</div><br /><div class="section">
 	<h2>
 		Work in Progress
 	</h2><p>
-		Harry Potter &amp; il Principe Mezzosangue
+		Harry Potter &amp; il Principe Mezzosangue – pagg136/588
 	</p><p>
-		Pirate Sentai Gokaiger
+		Pirate Sentai Gokaiger – ep28/??
 	</p><p>
-		Kamen Rider Fourze
+		Kamen Rider Fourze – ep6/??
 	</p><p>
-		Doctor Who s01 (2005)
+		Doctor Who s01 (2005) – ep8/&gt;9000
 	</p><p>
-		Gundam AGE
+		Gundam AGE – ep3/??
+	</p><p>
+		Macross 7 – ep3/49
 	</p>
 </div>

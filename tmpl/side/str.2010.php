@@ -40,14 +40,4 @@
 		<li><?=$d->link('Storie/2010/XVII/', 'Il finale')?></li>
 	</ol>
 </div>
-<?php if (!isset($multinav)) { ?>
-<div class="section">
-	<h2>Attenzione!!!</h2>
-	<p>
-		La maggior parte di queste storie è triste, triste un sacco, triste a botta!
-	</p><p>
-		La lettura può indurre, nelle persone particolarmente sensibili,
-		casi di suicidio anche reiterati.
-	</p>
-</div>
-<?php } ?>
+<?php if (!isset($multinav)) require_once ('tmpl/side/.disclaimer.php'); ?>
