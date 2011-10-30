@@ -166,7 +166,11 @@
 
 	require_once ($page);
 	if ($tabname == '' && isset($title[2])) $tabname = $title[2];
-	$d = new Dialog($doptions, $amode != 'gods', $self, $tab, $tabname);
+	$d = new Dialog(
+		$doptions,
+		$amode != 'gods',
+		$self, $tab, $tabname,
+		substr($page, 0, -3).'d/');
 
 	if (isset($opt['book'])) require_once('tmpl/book.php');
 	else if (isset($opt['pdf'])) require_once('tmpl/pdf.php');

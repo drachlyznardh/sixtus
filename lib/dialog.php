@@ -10,14 +10,16 @@
 		private $opt;
 		public $tab;
 		public $tabname;
+		public $tabbase;
 		
-		public function __construct ($opt, $notab, $self, $tab, $tabname) {
+		public function __construct ($opt, $notab, $self, $tab, $tabname, $tabbase) {
 		
 			$this->opt = $opt;
 			$this->self = $self;
 			$this->notab = $notab;
 			$this->tab = $tab;
 			$this->tabname = $tabname;
+			$this->tabbase = $tabbase;
 		}
 
 		public function link($request, $title, $sharp=false) {
