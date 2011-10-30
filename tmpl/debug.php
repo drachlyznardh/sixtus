@@ -1,11 +1,10 @@
-<div class="section">
-	<p>
+<div class="section"> <p>
 		Debug! Debug infos everywhere!!!
 	</p>
 </div><div class="wider">
 	<div class="widelist">
 		<div class="section">
-			<?=$finder->show()?>
+			<?#=$finder->show()?>
 		</div>
 	</div><div class="widecontent">
 		<div class="section">
@@ -21,16 +20,15 @@
 						echo ($category .' / ');
 				?>
 			</p><p>
-				<span class="em">Destdir</span>: <?php
-					foreach ($search['destdir'] as $destdir)
-						echo ($destdir .' / ');
-				?>
+				<span class="em">Destdir</span>: <?=$search['destdir']?>
 			</p><p>
 				<span class="em">Last</span>: <?=$search['last']?>
 			</p><p>
 				<span class="em">Self</span>: <?=$self?>
 			</p><p>
-				<span class="em">IncludePath</span>: <?=$includepath?>
+				<span class="em">Page</span>: <?=$page?> (<?=$pagename?>)
+			</p><p>
+				<span class="em">Tab</span>: <?=$tab?> (<?=$tabname?>)
 			</p><p>
 				<span class="em">RSide</span>: <?=$rside?>
 			</p>

@@ -14,11 +14,11 @@
 		solitaria.
 	</p><div class="inside"><p>
 		E poi che cosa avrei potuto dirle?
-	</p></div><div class="outside">
-		<?=$d->speak('Corvino','Uhm, scusa ancora per averti piantata,
+	</p></div><div class="outside"><p>
+		<?=$d->inline('Corvino','Uhm, scusa ancora per averti piantata,
 		ieri... Senti un po&apos;, tu che ne sai della gente che rifiuta
 		le tue labbra e poi se ne torna a casa senza toccare per terra?')?>
-	</div><div class="inside"><p>
+	</p></div><div class="inside"><p>
 		Si, certo. Ottimo approccio.
 	</p><p>
 		&Egrave; altrettanto vero che non credevo di poter rovinare il
@@ -34,9 +34,9 @@
 	</p></div><p>
 		Alla fine mi decisi. Mi alzai dal letto dove stavo sdraiato,
 		tirai un bel
-	</p><div class="outside">
-		<?=$d->speak('Corvino','Evvaffanculo! Posso farlo e lo farò')?>
-	</div><p>
+	</p><div class="outside"><p>
+		<?=$d->inline('Corvino','Evvaffanculo! Posso farlo e lo farò')?>
+	</p></div><p>
 		ad alta voce, presi la mia roba e uscii di casa.
 	</p>
 </div><div class="section">
@@ -71,10 +71,4 @@
 	</p><p>
 		E notai che il lampione stava bene.
 	</p>
-<?php if (!$d->isComplete()) { ?>
-</div><div class="section">
-	<p>Continua alla
-		<a onclick="javascript:t.load('iii')">prossima sezione</a>.
-	</p>
-<?php } ?>
 </div>

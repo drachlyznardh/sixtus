@@ -40,10 +40,10 @@
 		Io rimasi fermo, contraccambiando i loro sguardi, finché ne
 		ebbero abbastanza e si sistemarono dall'altro lato, dandomi
 		entrambi la schiena.
-	</p><div class="inside">
-		<?=$d->speak('Corvino','Gatti bastardi e menefreghisti, sono
+	</p><div class="inside"><p>
+		<?=$d->inline('Corvino','Gatti bastardi e menefreghisti, sono
 		quanto c&apos;è da mangiare fate i coccolosi')?>
-	</div>
+	</p></div>
 </div><div class="section">
 	<p>
 		Non avendo nemmeno i gatti con cui giocherellare, quindi, me ne
@@ -176,11 +176,4 @@
 		da incontrare. Decisi che non mi sarei dato al volo per un
 		giorno ancora.
 	</p>
-<?php if(!$d->isComplete()) { ?>
-</div><div class="section">
-	<p>
-		Continua alla <a onclick="javascript:t.load('vi')">prossima
-		sezione</a>.
-	</p>
-<?php } ?>
 </div>

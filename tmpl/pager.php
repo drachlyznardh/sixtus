@@ -17,8 +17,6 @@
 
 			if ($amode == 'luber' || $amode == 'bolo')
 				echo ('<link rel="stylesheet" type="text/css" href="style/notab.css" />');
-			else
-				echo ('<script type="text/javascript" src="lib/tloader.js"></script>');
 		?>
 		<link rel="stylesheet" type="text/css" href="style/voices.css" />
 		<script type="text/javascript" src="lib/tricks.js"></script>
@@ -26,11 +24,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
 		
 	</head>
-	<body 
-		<?php if ($amode=='gods') { ?>onload="javascript:tcheck();
-			if(location.hash)t.show(location.hash.substr(1)); else t.show('i')"
-		<?php } ?>
-		onhashchange="javascript:t.show(location.hash.substr(1))">
+	<body> 
 
 		<div id="main">
 			<div id="container">
@@ -42,12 +36,14 @@
 							. <a href="http://roundhousecode.com">com</a>
 							/ 
 							<?php
+								$sum = false;
 								foreach ($search['category'] as $category) {
 									$sum .= $category .'/';
 									echo ($d->link($sum, $category) .' / ');
 								}
-								if ($search['last'] != 'index') 
-									echo ($d->link($d->self, strtoupper($search['last']), false));
+								echo $d->link($self, strtoupper($pagename), false);
+								if ($tabname)
+									echo (' . '.$d->frag($self, strtoupper($tabname), strtoupper($tabname)));
 							?>
 						</p></div><h1 style="text-align:center">
 							<?=$title[0]?>
@@ -59,19 +55,19 @@
 <?php
 	if (isset($opt['debug'])) require_once('tmpl/debug.php');
 	if (isset($prev)) {
-		echo ('<div class="section"><h2>Negli episodi precedenti</h2><p>Questa serie continua dalla pagina precedente,');
+		echo ('<div class="section"><h2>Negli episodi precedenti</h2><p>Questa serie continua dalla pagina precedente, ');
 		if (isset($prev[2])) echo ($d->link($prev[0], $prev[1], $prev[2]));
 		else echo ($d->link($prev[1], $prev[0]));
-		echo ('</p></div>');
+		echo ('.</p></div>');
 	}
 
 	mkpage($d);
 
 	if (isset($next)) {
-		echo ('<div class="section"><h2>Continua…</h2><p>Questa serie prosegue alla pagina successiva,');
+		echo ('<div class="section"><h2>Continua…</h2><p>Questa serie prosegue alla pagina successiva, ');
 		if (isset($next[2])) echo ($d->link($next[0], $next[1], $next[2]));
 		else echo($d->link($next[1], $next[0]));
-		echo('</p></div>');
+		echo('.</p></div>');
 	}
 ?>
 				</div> <!-- Content -->

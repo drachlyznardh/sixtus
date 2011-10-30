@@ -1,37 +1,35 @@
 <?php
-	$title=array('Il 13 ottobre','Oggi sono successe molte molte cose');
-	$prev=array('Storie/2011/LXIV/','La metafora','INTRO');
-	$next=array('Storie/2011/LXVII/','Ancora ce la posso fare','INTRO');
-	//$next=array('Storie/2011/LXVI/','I motivi sbagliati','INTRO');
+	$title=array('Il 13 ottobre', 'Oggi sono successe molte molte cose', 'intro');
+	$prev=array('Storie/2011/LXIV/', 'La metafora', 'INTRO');
+	$next=array('Storie/2011/LXVII/', 'Ancora ce la posso fare', 'INTRO');
 	function mkpage($d){
-		$self='Storie/2011/LXV/';
 ?>
 <div class="wider">
 	<div class="widelist">
 		<div class="section">
-			<p id="li-intro">
-				<?=$d->link($self,'Introduzione','INTRO')?>
+			<p>
+				<?=$d->mktid($d->self,'Introduzione','intro')?>
 			</p><h2 class="reverse">
 				Il 13 ottobre
-			</h2><ol><li id="li-i">
-					<?=$d->link($self,'La tesi con Sgaggio','I')?>
-				</li><li id="li-ii">
-					<?=$d->link($self,'Il mio primo fan','II')?>
-				</li><li id="li-iii">
-					<?=$d->link($self,'Un posto dove cantare','III')?>
-				</li><li id="li-iv">
-					<?=$d->link($self,'Bonus','IV')?>
-				</li><li id="li-v">
-					<?=$d->link($self,'Spoiler','V')?>
-				</li><li id="li-vi">
-					<?=$d->link($self,'Bonus (2)','VI')?>
-				</li><li id="li-vii">
-					<?=$d->link($self,'Bonus (3)','VII')?>
+			</h2><ol><li>
+					<?=$d->mktid($d->self, 'La tesi con Sgaggio', 'i')?>
+				</li><li>
+					<?=$d->mktid($d->self,'Il mio primo fan','ii')?>
+				</li><li>
+					<?=$d->mktid($d->self,'Un posto dove cantare','iii')?>
+				</li><li>
+					<?=$d->mktid($d->self,'Bonus','iv')?>
+				</li><li>
+					<?=$d->mktid($d->self,'Spoiler','v')?>
+				</li><li>
+					<?=$d->mktid($d->self,'Bonus (2)','vi')?>
+				</li><li>
+					<?=$d->mktid($d->self,'Bonus (3)','vii')?>
 			</li></ol>
 		</div>
 	</div><div class="widecontent">
-		<div class="tab" id="tab-intro">
-			<div class="section">
+		<?php if ($d->mktab('intro')) { ?>
+		<div class="section">
 	<p>
 		E insomma… oggi sono successe tante cose, davvero. Devo scriverci
 		qualcosa. Più o meno come ho fatto tanto tempo fa, con le
@@ -51,9 +49,9 @@
 	</p><p>
 		Ma sarò breve, che c'hos'sonno.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-i">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('i')) { ?>
+		<div class="section">
 	<p>
 		Dunque, quest'oggi, fissato esattamente una settimana fa, avevo
 		appuntamento con Sgaggio per discutere della tesi. A mezzogiorno.
@@ -130,9 +128,9 @@
 		test per vedere quale funziona meglio in quali condizioni… si potrebbe
 		cambiare il mondo, forse. 
 	</p>
-			</div>
-		</div><div class="tab" id="tab-ii">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('ii')) { ?>
+		<div class="section">
 	<p>
 		Dunque… me ne sto tornando al baretto per mangiare dopo aver discusso
 		con lo Sgaggio.
@@ -167,9 +165,9 @@
 	</p><p>
 		Un giorno scopriremo la verità. Forse.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-iii">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('iii')) { ?>
+		<div class="section">
 	<p>
 		E insomma… il mio vecchio coro mi sta un po' strettino… sarà l'età. È un
 		coro per giovani, ed io non son più giovane da qualche bell'annetto,
@@ -195,9 +193,9 @@
 	</p><p>
 		Ma almeno ho guadagnato un pacco di libri e CD alto così.
 	</p>
-			</div>
-		</div><div class="tab" id="tab-iv">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('iv')) { ?>
+		<div class="section">
 	<p>
 		Ma ecco una cosa interessante.
 	</p><p>
@@ -216,9 +214,9 @@
 	</p><p>
 		Ma presto…
 	</p>
-			</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('v')) { ?>
+		<div class="section">
 	<p>
 		Storia molto lunga in breve: ho scoperto per puro caso che la $Frangiona
 		(adesso le metto addirittura il maiuscolo?!?!?!) segue le lezioni in
@@ -251,9 +249,9 @@
 	</p><p>
 		Questo piano è così contorto da far paura! Può soltanto fallire…
 	</p>
-			</div>
-		</div><div class="tab" id="tab-vi">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('vi')) { ?>
+		<div class="section">
 	<p>
 		Dimenticavo…
 	</p><h2>
@@ -291,9 +289,9 @@
 			<img src="Extra/Alphas.png" style="width:90%;border: #000000 1px solid" />
 		</a>	
 	</p>
-			</div>
-		</div><div class="tab" id="tab-vii">
-			<div class="section">
+		</div>
+		<?php } if ($d->mktab('vii')) { ?>
+		<div class="section">
 	<p>
 		Dunque, mi sono dimenticato una cosa.
 	</p><p>
@@ -338,8 +336,7 @@
 		Inoltre, ho sbagliato il feed: non ho cambiato il titolo, quindi
 		aggiungo un pezzetto di storia, così posso cambiare il feed a ragione.
 	</p>
-			</div>
-		</div>
+		</div><?php } ?>
 	</div>
 </div>
 <?php } ?>

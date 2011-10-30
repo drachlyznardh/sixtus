@@ -5,35 +5,54 @@
 		Meta
 	</h2><p>
 		<?=$d->link('Extra/Autore/', 'Il GODS')?>
-		| <?=$d->link('Extra/Guida/', 'Chi? Cosa? Dove?', 'INTRO')?>
+		| <?=$d->link('Extra/Guida/', 'Chi? Cosa? Dove?', 0)?>
 	</p><h2>
 		Modi
 	</h2><p>
-		<a href="<?=$d->self?>">Gods</a>
-		| <a href="<?=$d->self?>Bolo/">Bolo</a>
-		/ <a href="<?=$d->self?>Luber/">Luber</a>
-		| <a href="<?=$d->self?>Dado/">Dado</a>
-		| <?=$d->link('Extra/Guida/', '?', 'MODI')?>
+		<?php
+			if ($amode == 'gods') echo ('<span class="em">Gods</span>');
+			else echo('<a href="'.$d->self.'">Gods</a>');
+			echo (' | ');
+			if ($amode == 'bolo') echo ('<span class="em">Bolo</span>');
+			else echo('<a href="'.$d->self.'Bolo/">Bolo</a>');
+			echo (' / ');
+			if ($amode == 'luber') echo ('<span class="em">Luber</span>');
+			else echo('<a href="'.$d->self.'Luber/">Luber</a>');
+			echo (' | ');
+			echo ($d->link('Extra/Guida', '?', 'TAB'));
+		?></p><p><?php
+			if (isset($opt['dado'])) {
+				echo ('<a href="'.$d->self.'">Raw</a>');
+				echo (' | ');
+				echo ('<span class="em">Dado</span>');
+			} else {
+				echo ('<span class="em">Raw</span>');
+				echo (' | ');
+				echo ('<a href="'.$d->self.'Dado/">Dado</a>');
+			}
+			echo (' | ');
+			echo ($d->link('Extra/Guida/', '?', 'STILE'));
+		?>
 	</p>
 </div><br /><div class="section">
 	<h2>
 		Cose interessanti
 	</h2><p>
-		<?=$d->link('Storie/', 'Storie', 'INTRO')?>
-		[ <?=$d->link('Storie/2010/', '2010', 'INTRO')?>
-		| <?=$d->link('Storie/2011/', '2011', 'INTRO')?> ]
+		<?=$d->link('Storie/', 'Storie')?>
+		[ <?=$d->link('Storie/2010/', '2010')?>
+		| <?=$d->link('Storie/2011/', '2011')?> ]
 	</p><p>
-		<?=$d->link('Storie/Gaem/', 'La storia interattiva', 'INTRO')?>
+		<?=$d->link('Storie/Gaem/', 'La storia interattiva')?>
 	</p><p>
-		<?=$d->link('Tru/Naluten/', 'Tru Naluten', 'INTRO')?>
+		<?=$d->link('Tru/Naluten/', 'Tru Naluten')?>
 		[ <?=$d->link('Tru/Naluten/Vol.I/I/', 'vol.I')?>
 		| <?=$d->link('Tru/Naluten/Vol.II/X/', 'vol.II')?>
 		| <?=$d->link('Tru/Naluten/Vol.III/XX/','vol.III')?> ]
 	</p><p>
-		<?=$d->link('Recensioni/', 'Recensioni', 'INTRO')?>
+		<?=$d->link('Recensioni/', 'Recensioni')?>
 		[ <?=$d->link('Recensioni/Classifica/', 'Classifica') ?> ]
 	</p><p>
-		<?=$d->link('NaNoWriMo/', 'NaNoWriMo', 'INTRO')?>
+		<?=$d->link('NaNoWriMo/', 'NaNoWriMo')?>
 		[ <?=$d->link('NaNoWriMo/2010/', '2010')?>
 		| <?=$d->link('NaNoWriMo/2011/', '2011')?> ]
 	</p>
