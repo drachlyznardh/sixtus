@@ -1,12 +1,19 @@
 <?
 	$title=array('Ottobre','Fa ancora caldo…');
-	$prev=array('Settembre','News/2011/09/');
-	function mkpage($d){
+	$prev=array('News/2011/09/', 'Settembre');
+	$next = array ('News/2011/11/', 'Novembre');
+	$pages[] = function ($d) {
+		if ($d->included) {
+			echo('<div class="section">');
+			echo('<h2>Notizie</h2>');
+			echo('<h2 class="reverse">Ottobre 2011</h2>');
+			echo('</div>');
+		}
 ?>
 <div class="small">
 	<div class="section">
 		<p id="27/16:35">
-			<span class="em"><?=$d->link($d->self, '27/10/2011, 16:35', '27/16:35')?>
+			<span class="em"><?=$d->link($d->self, '27/10/2011, 16:35', 0, '27/16:35')?>
 			[<?=$d->link('Extra/Guida/', 'Recensioni', 'RECENSIONI')?>]</span>
 		</p><h2 class="reverse">
 			Gundam AGE, dopo i primi episodi…
@@ -17,7 +24,7 @@
 		</p>
 	</div><div class="section">
 		<p id="23/22:25">
-			<span class="em"><?=$d->link($d->self, '23/10/2011, 22:25', '23/22:25')?>
+			<span class="em"><?=$d->link($d->self, '23/10/2011, 22:25', 0, '23/22:25')?>
 			[<?=$d->link('Extra/Guida/', 'Recensioni', 'RECENSIONI')?>]</span>
 		</p><h2 class="reverse">
 			Harry Potter &amp; l'Ordine della Fenice
@@ -46,7 +53,7 @@
 		</p>
 	</div><div class="section">
 		<p id="18/16:35">
-			<span class="em"><?=$d->link($d->self, '18/10/2011, 16:35', '18/16:35')?>
+			<span class="em"><?=$d->link($d->self, '18/10/2011, 16:35', 0, '18/16:35')?>
 			[<?=$d->link('Extra/Guida/', 'Storie', 'STORIE')?>]</span>
 		</p><h2 class="reverse">
 			LXVII – Ancora ce la posso fare
@@ -62,7 +69,7 @@
 		</p>
 	</div><div class="section">
 		<p id="16/23:45">
-			<span class="em"><?=$d->link($d->self, '16/10/2011, 23:45', '16/23:45')?>
+			<span class="em"><?=$d->link($d->self, '16/10/2011, 23:45', 0, '16/23:45')?>
 			[<?=$d->link('Extra/Guida/', 'Recensioni', 'RECENSIONI')?>]</span>
 		</p><h2 class="reverse">
 			TransFormers: Prime
@@ -75,7 +82,7 @@
 		</p>
 	</div><div class="section">
 		<p id="15/00:15">
-			<span class="em"><?=$d->link($d->self, '15/10/2011, 00:15', '15/00:15')?>
+			<span class="em"><?=$d->link($d->self, '15/10/2011, 00:15', 0, '15/00:15')?>
 			[<?=$d->link('Extra/Guida/', 'Recensioni', 'RECENSIONI')?>]</span>
 		</p><h2 class="reverse">
 			Let's go Kamen Riders
@@ -86,7 +93,7 @@
 		</p>
 	</div><div class="section">
 		<p id="14/15:30">
-			<span class="em"><?=$d->link($d->self, '14/10/2011, 15:30', '14/15:30')?>
+			<span class="em"><?=$d->link($d->self, '14/10/2011, 15:30', 0, '14/15:30')?>
 			[<?=$d->link('Extra/Guida/','Storie','STORIE')?>]</span>
 		</p><h2 class="reverse">
 			LXV – Il terzo bonus
@@ -97,7 +104,7 @@
 		</p>
 	</div><div class="section">
 		<p id="14/11:05">
-			<span class="em"><?=$d->link($d->self, '14/10/2011, 11:05','14/11:05')?>
+			<span class="em"><?=$d->link($d->self, '14/10/2011, 11:05',0, '14/11:05')?>
 			[<?=$d->link('Extra/Guida/','Storie','STORIE')?>] </span>
 		</p><h2 class="reverse">
 			LXV – Il secondo bonus
@@ -112,7 +119,7 @@
 		</p>
 	</div><div class="section">
 		<p id="13/23:59">
-			<span class="em"><?=$d->link($d->self,'13/10/2011, 23:59','13/23:59')?>
+			<span class="em"><?=$d->link($d->self,'13/10/2011, 23:59',0, '13/23:59')?>
 			[<?=$d->link('Extra/Guida/','Storie','STORIE')?>]</span>
 		</p><h2 class="reverse">
 			LXV – Il 13 ottobre
@@ -121,7 +128,7 @@
 		</p>
 	</div><div class="section">
 		<p id="12/14:45">
-			<span class="em"><?=$d->link($d->self, '12/10/2011, 14:45', '12/14:45')?>
+			<span class="em"><?=$d->link($d->self, '12/10/2011, 14:45', 0, '12/14:45')?>
 			[<?=$d->link('Extra/Guida','Recensioni','RECENSIONI')?>]</span>	
 		</p><h2 class="reverse">
 			Gundam AGE
@@ -137,7 +144,7 @@
 		</p>
 	</div><div class="section">
 		<p id="03/00:30">
-			<span class="em"><?=$d->link($d->self, '03/10/2011, 00:30','03/00:30')?>
+			<span class="em"><?=$d->link($d->self, '03/10/2011, 00:30',0, '03/00:30')?>
 			[<?=$d->link('Extra/Guida/','Storia','STORIE')?>]</span>
 		</p><h2 class="reverse">
 			LXIV – La metafora
@@ -160,7 +167,7 @@
 		</p></div>
 	</div><div class="section">
 		<p id="02/23:45">
-			<span class="em"><?=$d->link($d->self,'02/10/2011, 23:45','02/23:45')?>
+			<span class="em"><?=$d->link($d->self,'02/10/2011, 23:45',0, '02/23:45')?>
 			[<?=$d->link('Extra/Guida/','Extra','Extra')?>]</span>
 		</p><h2 class="reverse">
 			Record
@@ -170,7 +177,7 @@
 		</p>
 	</div><div class="section">
 		<p id="01/12:30">
-			<span class="em"><?=$d->link($d->self,'01/10/2011, 12:30','01/12:30')?>
+			<span class="em"><?=$d->link($d->self,'01/10/2011, 12:30',0, '01/12:30')?>
 			[<?=$d->link('Extra/Guida/','Recensione','Recensioni')?>]</span>
 		</p><h2 class="reverse">
 			Quasi m'arrendo…
@@ -181,4 +188,52 @@
 		</p>
 	</div>
 </div>
+<?php
+	};
+	$sides[] = function ($d) {
+?>
+	<div class="section">
+		<h2 class="reverse">
+			Ottobre 2011
+		</h2><p>
+			<span class="em">27/10</span> –
+			Gundam AGE [ <?=$d->link('Recensioni/Show/XIV/', 'ep2~3', 'II')?> ]
+		</p><p>
+			<span class="em">23/10</span> – 
+			L'Ordine della Fenice (<?=$d->link('Recensioni/Libri/XII/', '3',
+			'V3')?>)
+		</p><p>
+			<span class="em">18/10</span> –
+			<?=$d->link('Storie/2011/LXVII/', 'Ancora ce la posso fare')?>
+		</p><p>
+			<span class="em">16/10</span> –
+			<?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime')?>
+		</p><p>
+			<span class="em">15/10</span> –
+			<?=$d->link('Recensioni/Show/XIII/', 'Let&apos;s go Kamen Riders', 'M2011')?>
+		</p><p>
+			<span class="em">14/10</span>
+			Il 13 Ottobre (Bonus <?=$d->link('Storie/2011/LXV/','2','VI')?>
+			&amp; <?=$d->link('Storie/2011/LXV/','3','VII')?>)
+		</p><p>
+			<span class="em">13/10</span> – 
+			<?=$d->link('Storie/2011/LXV/','Il 13 Ottobre','INTRO')?>
+		</p><p>
+			<span class="em">12/10</span> – 
+			<?=$d->link('Recensioni/GundamAGE', 'Gundam AGE')?>
+		</p><p>
+			<span class="em">12/10</span> – 
+			L'Ordine della Fenice (<?=$d->link('Recensioni/HarryPotter/', '2',
+			'V2')?>)
+		</p><p>
+			<span class="em">03/10</span> –
+			<?=$d->link('Storie/2011/LXIV/', 'La Metafore')?>
+		</p><p>
+			<span class="em">02/10</span> –
+			<?=$d->link('Extra/Record/', 'Record')?>
+		</p><p>
+			<span class="em">01/10</span> –
+			<?=$d->link('Recensioni/Libri/XII/','L&apos;Ordine della Fenice', 'V')?>
+		</p>
+	</div>
 <?php } ?>

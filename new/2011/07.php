@@ -1,7 +1,13 @@
 <?
 	$title=array('Luglio', 'Notizie sudate');
-	$next=array('Agosto', 'News/2011/08/');
-	function mkpage($d){
+	$next=array('News/2011/08/', 'Agosto', 0);
+	$pages[] = function ($d){
+		if ($d->included) {
+			echo('<div class="section">');
+			echo('<h2>Notizie</h2>');
+			echo('<h2 class="reverse">Luglio 2011</h2>');
+			echo('</div>');
+		}
 ?>
 <div class="small">
 	<div class="section">
@@ -111,4 +117,87 @@
 		</p>
 	</div>
 </div>
+<?php
+	};
+	$sides[] = function ($d) {
+?>
+	<div class="section">
+		<h2 class="reverse">
+			Luglio 2011
+		</h2><p>
+			<span class="em">31/07</span> – 
+			<?=$d->link('Recensioni/Film/Brutti/','film brutti')?>
+		</p><p>
+			<span class="em">29/07</span> –
+			Sgaggio [<?=$d->link('Storie/2011/LII/','La fine del tunnel','XX')?>]
+		</p><p>
+			<span class="em">28/07</span> –
+			<?=$d->link('Storie/2011/LVIII/','Deus Ex Machina Evolved')?>
+		</p><p>
+			<span class="em">27/07</span> –
+			<?=$d->link('Storie/2011/LVI/','Correre di notte')?>
+		</p><p>
+			<span class="em">27/07</span> –
+			<?=$d->link('Storie/2011/LVII/','Il potere')?>
+		</p><p>
+			<span class="em">26/07</span> –
+			<?=$d->link('Storie/2011/LV/','Spezzato')?>
+		</p><p>
+			<span class="em">26/07</span> –
+			Sgaggio [<?=$d->link('Storie/2011/LII/','Lo scoglio','XIX')?>] 
+		</p><p>
+			<span class="em">25/07</span> –
+			<?=$d->link('Recensioni/Film/VIII/','Capitan America')?>
+		</p><p>
+			<span class="em">21/07</span> –
+			Sgaggio [<?=$d->link('Storie/2011/LII/','Ricerca','XV')?>]
+		</p><p>
+			<span class="em">20/07</span> –
+			Sgaggio [<?=$d->link('Storie/2011/LII/','Non va','XV')?>]
+		</p><p>
+			<span class="em">19/07</span> –
+			Sgaggio [<?=$d->link('Storie/2011/LII/','Cose fighe!!!','XIII')?>]
+		</p><p>
+			<span class="em">18/07</span> –
+			<?=$d->link('Storie/2011/LIV/','Niente')?>
+		</p><p>
+			<span class="em">16/07</span> – 
+			<?=$d->link('Storie/2011/LIII/', 'Quel che ho fatto')?>
+		</p><p>
+			<span class="em">14/07</span> – 
+			Sgaggio [<?=$d->link('Storie/2011/LII/', 'Avanti', 'VII')?>]
+		</p><p>
+			<span class="em">13/07</span> – 
+			Sgaggio [<?=$d->link('Storie/2011/LII/', 'Progressi', 'V')?>]
+		</p><p>
+			<span class="em">11/07</span> –
+			Sgaggio [<?=$d->link('Storie/2011/LII/', 'Rivelazioni', 'III')?>]
+		</p><p>
+			<span class="em">08/07</span> –
+			<?=$d->link('Storie/2011/LI/', 'Il Druido')?>
+		</p><p>
+			<span class="em">08/07</span> –
+			<?=$d->link('Storie/2011/LII/', 'Sgaggio Tiem')?>
+		</p><p>
+			<span class="em">07/07</span> –
+			Dark Of The Moon (<?=$d->link('Recensioni/Film/VII/', 'Voci', 'XIX')?>)
+		</p><p>
+			<span class="em">05/07</span> –
+			Quel che… [<?=$d->link('Storie/2011/L/','Altre novità', 'V')?>]
+		</p><p>
+			<span class="em">05/07</span> – 
+			Quel che… [<?=$d->link('Storie/2011/L/', 'Novità', 'III')?>]
+		</p><p>
+			<span class="em">05/07</span> –
+			<?=$d->link('Storie/2011/L/', 'Quel che dovrei fare')?>
+		</p><p>
+			<span class="em">04/07</span> – la modalità Dado.
+		</p><p>
+			<span class="em">03/07</span> –
+			<?=$d->link('Recensioni/Film/VII/', 'Dark Of The Moon')?>
+		</p><p>
+			<span class="em">04/07</span> –
+			prima notizia
+		</p>
+	</div>
 <?php } ?>

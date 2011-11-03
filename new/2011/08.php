@@ -1,8 +1,14 @@
 <?
 	$title=array('Agosto','Notizie al caldo');
-	$prev=array('Luglio','News/2011/07/');
-	$next=array('Settembre','News/2011/09/');
-	function mkpage($d){
+	$prev=array('News/2011/07/', 'Luglio', 0);
+	$next=array('News/2011/09/', 'Settembre', 0);
+	$pages[] = function ($d) {
+		if ($d->included) {
+			echo ('<div class="section">');
+			echo ('<h2>Notizie</h2>');
+			echo ('<h2 class="reverse">Agosto 2011</h2>');
+			echo ('</div>');
+		}
 ?>
 <div class="small">
 	<div class="section">
@@ -52,5 +58,43 @@
 			Mentivo.
 		</p>
 	</div>
+</div>
+<?php
+	};
+	$sides[] = function ($d) {
+?>
+<div class="section">
+	<h2 class="reverse">
+		Agosto 2011
+	</h2><p>
+		<span class="em">30/08</span> –
+		<?=$d->link('Recensioni/Libri/XII/', 'Il Prigioniero di Azkaban', 'III')?>
+	</p><p>
+		<span class="em">30/08</span> – Modi e stili
+	</p><p>
+		<span class="em">29/08</span> –
+		<?=$d->link('Storie/2011/LX/', 'Filler')?>
+	</p><p>
+		<span class="em">21/08</span> –
+		<?=$d->link('Recensioni/Libri/XII/','La Camera dei Segreti','II')?>.
+	</p><p>
+		<span class="em">15/08</span> –
+		<?=$d->link('Storie/2011/LIX', 'Violenza&amp;Soddisfazione')?>
+	</p><p>
+		<span class="em">15/08</span> –
+		<?=$d->link('Recensioni/Libri/XII/','Harry Potter &amp; …')?> 
+	</p><p>
+		<span class="em">10/08</span> – 
+		<?=$d->link('Recensioni/Libri/XI/', 'Nessun Dove')?>
+	</p><p>
+		<span class="em">06/08</span> –
+		<?=$d->link('Recensioni/Film/X/','I Puffi')?>
+	</p><p>
+		<span class="em">05/08</span> – 
+		Sgaggio [<?=$d->link('Storie/2011/LII/', 'E infine…', 'XXI')?>]
+	</p><p>
+		<span class="em">05/08</span> –
+		<?=$d->link('Recensioni/Show/IX/', 'Angel Beats!')?>
+	</p>
 </div>
 <?php } ?>
