@@ -1,8 +1,12 @@
 <?php
-	$title=array('Nessun dove','Neil Gaiman ridacchia, io rido con lui');
-	$prev=array('I Puffi', 'Recensioni/Film/X/');
-	$next=array('Harry Potter', 'Recensioni/Libri/XII/');
-	function mkpage ($d){
+	require_once ('index.php');
+	$pages = array ();
+
+	$title = array ('Nessun dove','Neil Gaiman ridacchia, io rido con lui');
+	$prev = array ( 'Recensioni/Film/X/', 'I Puffi');
+	$next = array ('Recensioni/Libri/XII/', 'Harry Potter');
+
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

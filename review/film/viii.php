@@ -1,8 +1,12 @@
 <?php
+	require_once('index.php');
+	$pages = array ();
+
 	$title=array('Capitan America', 'The First Avenger');
-	$prev=array('Dark of the Moon', 'Recensioni/Film/VII/');
-	$next=array('Angel Beats!', 'Recensioni/Show/IX/');
-	function mkpage($d){
+	$prev=array('Recensioni/Film/VII/', 'Dark of the Moon');
+	$next=array('Recensioni/Show/IX/', 'Angel Beats!');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -21,21 +25,19 @@
 			Sono contento. Il film non è incredibile, questo no, non è
 			eccezionale, ma poteva andare molto peggio.
 		</p>
-	</div>
-</div><div class="section">
-	<p>
-		Però funziona, e certamente funziona molto meglio di molti suoi
-		fratelli. Come spesso mi ritrovo a scrivere, questo film sa dove andare.
-		Sa che appartiene ad un universo più grande, sa che deve confrontarsi
-		con tante brutte cose del passato, sa fare dei collegamenti, ma sa anche
-		andare per la sua strada.
-	</p><p>
-		Non è un film che vuole far ridere, non è un film che vuole
-		impressionarvi con delle Baysplosioni. È un film che vuole raccontare la
-		storia di un eroe.
-	</p>
-</div><div class="small">
-	<div class="section">
+	</div><div class="section">
+		<p>
+			Però funziona, e certamente funziona molto meglio di molti suoi
+			fratelli. Come spesso mi ritrovo a scrivere, questo film sa dove andare.
+			Sa che appartiene ad un universo più grande, sa che deve confrontarsi
+			con tante brutte cose del passato, sa fare dei collegamenti, ma sa anche
+			andare per la sua strada.
+		</p><p>
+			Non è un film che vuole far ridere, non è un film che vuole
+			impressionarvi con delle Baysplosioni. È un film che vuole raccontare la
+			storia di un eroe.
+		</p>
+	</div><div class="section">
 		<p>
 			Fondamentalmente, la storia ci parla di un poveraccio che ci prova,
 			ci prova in continuazione. Vuole fare qualcosa di utile, cosa che in

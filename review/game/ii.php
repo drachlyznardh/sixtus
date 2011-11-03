@@ -1,9 +1,12 @@
 <?php
-	$title=array('Assassin&apos;s Creed
-		Brotherhood','Ubisooooooooooooooooooooooft!!!!');
-	$prev=array('Thor','Recensioni/Film/I/');
-	$next=array('Robocop','Recensioni/Film/III/');
-	function mkpage ($d) {
+	require_once ('index.php');
+	$pages = array ();
+
+	$title=array('Assassin&apos;s Creed Brotherhood', 'Ubisooooooooooooooooooooooft!!!!');
+	$prev=array('Recensioni/Film/I/', 'Thor');
+	$next=array('Recensioni/Film/III/', 'Robocop');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

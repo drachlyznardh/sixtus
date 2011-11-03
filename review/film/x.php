@@ -1,8 +1,12 @@
 <?php
-	$title=array('I puffi','La la lallalala la lallalà');
-	$prev=array('Angel Beats!', 'Recensioni/Show/IX/');
-	$next=array('Nessun Dove', 'Recensioni/Libri/XI/');
-	function mkpage($d){
+	require_once ('index.php');
+	$pages = array();
+
+	$title=array('I puffi', 'La la lallalala la lallalà');
+	$prev=array('Recensioni/Show/IX/', 'Angel Beats!');
+	$next=array('Recensioni/Libri/XI/', 'Nessun Dove');
+
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

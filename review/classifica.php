@@ -1,5 +1,5 @@
 <?php
-	$title=array('Classifica','Cose belle, cose brutte');
+	$title=array('Classifica', 'Cose belle, cose brutte');
 	function mkpage($d){
 ?>
 <div class="small">

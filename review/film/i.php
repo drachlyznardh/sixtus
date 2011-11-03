@@ -1,7 +1,11 @@
-<?
+<?php
+	require_once ('index.php');
+	$pages = array ();
+
 	$title=array('Thor','Amarognola delusione');
-	$next=array('AC-Brotherhood','Recensioni/Giochi/II/');
-	function mkpage($d) {
+	$next=array('Recensioni/Giochi/II/', 'AC-Brotherhood');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

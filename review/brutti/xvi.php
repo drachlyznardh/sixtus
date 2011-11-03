@@ -1,6 +1,7 @@
 <?php
 	$title=array('Bitch Slap','Più o meno “Le Iene”, però brutto');
 	$prev=array('Recensioni/Show/XV/', 'TransFormers: Prime', 'INTRO');
+	$next = array ('Recensioni/Film/XVII/', 'Rambo', 0);
 	function mkpage($d){
 ?>
 <div class="small">

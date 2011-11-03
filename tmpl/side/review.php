@@ -1,5 +1,12 @@
 <div class="section">
-	<h2>
+	<p>
+		<?=$d->link('Recensioni/Film', 'Film')?>
+		/ <?=$d->link('Recensioni/Film/Brutti', 'Film Brutti')?>
+	</p><p>
+		<?=$d->link('Recensioni/Giochi/', 'Giochi')?>
+		/ <?=$d->link('Recensioni/Show/', 'Show')?>
+		/ <?=$d->link('Recensioni/Libri/', 'Libri')?>
+	</p><h2>
 		Recensioni
 	</h2><ol><li>
 			<?=$d->link('Recensioni/Film/I/','Thor')?> - 2011
@@ -37,21 +44,7 @@
 				'TransFormers: Prime', 'INTRO')?> – 2010~2011
 		</li><li>
 			<?=$d->link('Recensioni/Film/Brutti/XVI/', 'Bitch Slap', '')?> – 2009
+		</li><li>
+			<?=$d->link('Recensioni/Film/XVII/', 'Rambo')?> – 1982~2008
 	</li></ol>
-</div><br /><div class="section">
-	<h2>
-		Work in Progress
-	</h2><p>
-		Harry Potter &amp; il Principe Mezzosangue – pagg136/588
-	</p><p>
-		Pirate Sentai Gokaiger – ep28/??
-	</p><p>
-		Kamen Rider Fourze – ep6/??
-	</p><p>
-		Doctor Who s01 (2005) – ep8/&gt;9000
-	</p><p>
-		Gundam AGE – ep3/??
-	</p><p>
-		Macross 7 – ep3/49
-	</p>
 </div>
