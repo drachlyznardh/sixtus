@@ -2,10 +2,10 @@
 	<h2>
 		Meta
 	</h2><p>
-		<?=$d->link('Extra/Autore/', 'Su chi scrive')?>
+		<?=$d->link('Extra/Guida/', 'Guida')?>
 	</p><p>
-		<?=$d->link('Extra/Guida/','Guida','Intro')?>
+		<?=$d->link('Extra/Record/', 'Record')?>
 	</p><p>
-		<?=$d->link('Extra/Record/','Record','Intro')?>
+		<?=$d->link('Extra/Scimmia/', 'La scimmia celeste')?>
 	</p>
 </div>

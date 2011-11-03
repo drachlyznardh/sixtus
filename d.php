@@ -34,6 +34,8 @@
 
 	if ($servername == 'gods.roundhousecode.com') {
 		$base = 'http://gods.roundhousecode.com';
+	} else if ($servername == 'tanngrisnir') {
+		$base = 'tanngrisnir';
 	} else {
 		$base = $localbase;
 	}
