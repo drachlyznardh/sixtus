@@ -2,24 +2,8 @@
 	$title=array('Personaggi', 'Chi sono e cosa fanno');
 	function mkpage ($d) {
 ?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<p>
-				<?=$d->mktid($d->self, 'Introduzione', 'intro')?>
-			</p><h2 class="reverse">
-				Personaggi
-			</h2><p>
-				<?=$d->mktid($d->self, 'Uman(oid)i', 'umanoidi')?>
-			</p><p>
-				<?=$d->mktid($d->self, 'Bestie', 'bestie')?>
-			</p><p>
-				<?=$d->mktid($d->self, 'Glossario', 'glossario')?>
-			</p>
-		</div>
-	</div><div class="widecontent">
-		<?php if ($d->mktab('intro')) { ?>
-			<div class="section">
+<div class="small">
+	<div class="section"><a id="Intro"></a>
 		<p>
 			Anche il mio neotitolato NaNoWriMo 2010, che ora ha nome “Corvino
 			Multicolore” si merita una sezione personaggi.
@@ -29,7 +13,6 @@
 			probabilmente non ve ne frega.
 		</p>
 	</div>
-	<?php } if ($d->mktab('umanoidi')) { ?>
 	<div class="section"><a id="Corvino"></a>
 		<h2>
 			Corvino
@@ -41,7 +24,7 @@
 			preoccuparsi delle sue inutili magagne, il ragazzo scopre mirabolanti
 			poteri basati sulla gamma dei colori dell'arcobaleno.
 		</p>
-	</div><div class="section">
+	</div><a id="Camelia"></a><div class="section">
 		<h2>
 			Camelia
 		</h2><p>
@@ -53,7 +36,6 @@
 			giovinezza alla gente e lo stesso vuol fare con Corvino.
 		</p>
 	</div>
-	<?php } if ($d->mktab('bestie')) { ?>
 	<div class="section"><a id="Battesimo"></a>
 		<h2>
 			Battesimo
@@ -79,7 +61,6 @@
 			affronta Corvino in un terribile scontro.
 		</p>
 	</div>
-	<?php } if ($d->mktab('glossario')) { ?>
 	<div class="section">
 		<h2 id="STREGHE">
 			Streghe	
@@ -104,7 +85,7 @@
 			potere che il ragazzo riesce a passare <?=$d->link($d->self, 'di qua',
 			'GLOSSARIO')?> senza lasciare traccia.
 		</p>
-	</div><div class="section">
+	</div><div class="section"><a id="DiQuaDiLà"></a>
 		<h2>
 			Di qua / Di là
 		</h2><p>
@@ -114,6 +95,34 @@
 		</p><p>
 			Quale lato sia il qua e quale il là dipende da chi parla.
 		</p>
-	</div><?php } ?>
+</div>
+<?php
+	};
+	$sides[] = function ($d) {
+?>
+<div class="section">
+	<p>
+		<?=$d->link('NaNoWriMo/2010/', 'Indice')?>
+	</p><h2>
+		NaNoWriMo 2010
+	</h2><p>
+			<?=$d->mktid($d->self, 'Corvino', 0, 'Corvino')?>
+		</p><p>
+			<?=$d->mktid($d->self, 'Camelia', 0, 'Camelia')?>
+	</p><div class="outside"><p>
+			<?=$d->mktid($d->self, 'Battesimo', 0, 'Battesimo')?>
+		</p><p>
+			<?=$d->mktid($d->self, 'Smeraldino', 0, 'Smeraldino')?>
+		</p><p>
+			<?=$d->mktid($d->self, 'Fisthanlaruani', 0, 'Fisthanlaruani')?>
+	</p></div><p>
+			<?=$d->mktid($d->self, 'Streghe', 0, 'Streghe')?>
+		</p><p>
+			<?=$d->mktid($d->self, 'Multicolore', 0, 'Multicolore')?>
+		</p><p>
+			<?=$d->mktid($d->self, 'Trasparente', 0, 'Trasparente')?>
+		</p><p>
+			<?=$d->mktid($d->self, 'Di qua / Di là', 0, 'DiQuaDiLà')?>
+	</p>
 </div>
 <?php } ?>

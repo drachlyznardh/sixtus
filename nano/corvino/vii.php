@@ -1,28 +1,25 @@
 <?php
 
-	$title=array('La dichiarazione', 'Corvino Multicolore &ndash; VII');
-	$prev=array('Capitolo VI', 'NaNoWriMo/Corvino/Multicolore/VI/');
-	$next=array('Capitolo VIII', 'NaNoWriMo/Corvino/Multicolore/VIII/');
-
-	function mkpage ($d) {
+	$title=array('La dichiarazione', 'Corvino Multicolore &ndash; VII', 'i');
+	$prev=array('NaNoWriMo/Corvino/Multicolore/VI/', 'Capitolo VI', 0);
+	$next=array('NaNoWriMo/Corvino/Multicolore/VIII/', 'Capitolo VIII', 0);
+	$sides[] = function ($d) {
 ?>
-<div id="longs" class="wider">
-	<div class="widelist">
-		<div class="section">
-			<h2 id="straights" class="reverse wider" onclick="javascript:reverse('s')">
-				La dichiarazione
-			</h2><ol>
-				<li id="li-i">
-					<a onclick="javascript:t.show('i')">A casa mia</a>
-				</li><li id="li-ii">
-					<a onclick="javascript:t.show('ii')">A casa sua</a>
-				</li>
-			</ol>
-		</div>
-	</div><div class="widecontent">
-	
-<div class="tab" id="tab-i">
-	<div class="section">
+<div class="section">
+	<h2>
+		La dichiarazione
+	</h2><ol><li>
+			<?=$d->mktid($d->self, 'A casa mia', 'i')?>
+		</li><li>
+			<?=$d->mktid($d->self, 'A casa sua', 'ii')?>
+	</li></ol>
+</div>
+<?php
+	};
+	$pages[] = function ($d) {
+?>
+<div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<div class="inside"><p>
 			Quel giorno ce ne andammo in gita.
 		</p><p>
@@ -136,10 +133,8 @@
 			<?=$d->speak('Camelia','Ti va di salire?')?>
 		</div><p>
 			E dissi di sì per l'ultima volta.
-		</p><p>Continua alla <a onclick="javascript:t.show('ii')">prossima sezione</a>.</p>
-	</div>
-</div><div class="tab" id="tab-ii">
-	<div class="section">
+		</p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<p>
 			Bella casa, cane simpatico. Un sacco di film che anch'io
 			avevo. E qualche bel quarto d'ora di discorsi inutili.
@@ -300,11 +295,6 @@
 			camera mia dal balcone. E me ne andai fresco fresco a
 			dormire.
 		</p>
-	</div>
+	</div><?php } ?>
 </div>
-
-</div><script type="text/javascript" src="lib/tloader.js"></script><script type="text/javascript">
-	var t = new TLoader();
-	t.show('i');
-</script>
 <?php } ?>

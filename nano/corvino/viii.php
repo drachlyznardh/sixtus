@@ -1,37 +1,37 @@
 <?php
-	$title=array('Il lampione','Corvino Multicolore &ndash; VIII');
-	$prev=array('Capitolo VII','NaNoWriMo/Corvino/Multicolore/VII/');
-	$next=array('Capitolo IX','NaNoWriMo/Corvino/Multicolore/IX/');
-	function mkpage ($d) {
+	$title=array('Il lampione','Corvino Multicolore &ndash; VIII', 'i');
+	$prev=array('NaNoWriMo/Corvino/Multicolore/VII/', 'Capitolo VII');
+	$next=array('NaNoWriMo/Corvino/Multicolore/IX/', 'Capitolo IX');
+	$sides[] = function ($d) {
 ?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<ol style="list-style-type:lower-roman">
-				<li>
-					<?=$d->mktid($d->self, 'Quella mattina', 'i')?>
-				</li><li>
-					<?=$d->mktid($d->self, 'A casa', 'ii')?>
-				</li><li>
-					<?=$d->mktid($d->self, 'Al parcheggio', 'iii')?>
-				</li><li>
-					<?=$d->mktid($d->self, 'Di corsa', 'iv')?>
-				</li><li>
-					<?=$d->mktid($d->self, 'A casa, di nuovo', 'v')?>
-				</li><li>
-					<?=$d->mktid($d->self, 'Al parco', 'vi')?>
-				</li>
-			</ol>
-		</div>
-	</div><div class="widecontent">
-		<?php
-			if ($d->mktab('i')) require_once ($d->tabbase.'i.php');
-			if ($d->mktab('ii')) require_once ($d->tabbase.'ii.php');
-			if ($d->mktab('iii')) require_once ($d->tabbase.'iii.php');
-			if ($d->mktab('iv')) require_once ($d->tabbase.'iv.php');
-			if ($d->mktab('v')) require_once ($d->tabbase.'v.php');
-			if ($d->mktab('vi')) require_once ($d->tabbase.'vi.php');
-		?>
-	</div>
+<div class="section">
+	<h2>
+		Il lampione
+	</h2><ol><li>
+			<?=$d->mktid('Quella mattina', 'i')?>
+		</li><li>
+			<?=$d->mktid('A casa', 'ii')?>
+		</li><li>
+			<?=$d->mktid('Al parcheggio', 'iii')?>
+		</li><li>
+			<?=$d->mktid('Di corsa', 'iv')?>
+		</li><li>
+			<?=$d->mktid('A casa, di nuovo', 'v')?>
+		</li><li>
+			<?=$d->mktid('Al parco', 'vi')?>
+	</li></ol>
 </div>
+<?php
+	};
+	$pages[] = function ($d) {
+?>
+<div class="small"><?php
+	if ($d->mktab('i')) require_once ($d->tab['dir'].'i.php');
+	if ($d->mktab('ii')) require_once ($d->tab['dir'].'ii.php');
+	if ($d->mktab('iii')) require_once ($d->tab['dir'].'iii.php');
+	if ($d->mktab('iv')) require_once ($d->tab['dir'].'iv.php');
+	if ($d->mktab('v')) require_once ($d->tab['dir'].'v.php');
+	if ($d->mktab('vi')) require_once ($d->tab['dir'].'vi.php');
+	if ($d->noTabIncluded()) require_once ('frag404.php');
+?></div>
 <?php } ?>

@@ -1,8 +1,7 @@
 <?php
-
 	$title=array('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
-
-	function mkpage ($d) {
+	$next = array ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore', 0);
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -40,80 +39,109 @@
 			sfizio. Se voleste scaricare il pdf completo, cliccate <a
 			href="NaNoWriMo/2010/NaNoWriMo2010/download/">questo</a>.
 		</p>
+	</div><div class="section">
+		<h2>
+			Parte I
+		</h2><h2 class="reverse">
+			La gioventù
+		</h2><p>
+			La prima parte del mio NaNoWriMo è certamente la più divertente,
+			o per lo meno è stata la più divertente da scrivere. Si tratta,
+			in breve, della lunga serie di lamentazioni di uno studente, che
+			non ama nulla nella sua vita ad eccezione d'una certa ragazza.
+		</p>
+	</div><div class="section">
+		<p>
+			Corvino è un tizio qualunque, studente alle superiori, stanco e annoiato
+			che cerca di tirare avanti, nello studio e nella vita, senza fare troppa
+			fatica.
+		</p><p>
+			Il ragazzo passa il suo tempo a lamentarsi delle cose che non gli vanno
+			a genio, che son la maggior parte.
+		</p><p>
+			Una sera il ragazzo conosce una ragazza e la sua vita cambia. Peggiora.
+			Tutta la sua attenzione viene quindi trascinata in oscuri ragionamenti
+			nel tentativo di razionalizzare gli strani eventi che riguardano i suoi
+			incontri con lei.
+		</p><p>
+			L'inesperienza di Corvino, oltre a procurargli numerosi fallimenti, si
+			rivela la sua salvezza.
+		</p>
+	</div><div class="section">
+		<h2>
+			Parte II
+		</h2><h2 class="reverse">
+			Il Potere
+		</h2><p>
+			La seconda parte è un lungo e grosso polpettone, fatto di prove ed
+			errori, che vedono le sofferenze del protagonista alla scoperta di
+			improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
+			ad imbattersi in individui pericolosi...
+		</p>
+	</div><div class="section">
+		<p>
+			Quella che pareva una delusione amorosa si rivela la via che permette a
+			Corvino di scoprire la magia.
+		</p><p>
+			Il ragazzo sviluppa naturalmente, ma non senza vari fallimenti, dei
+			poteri che però non sembra in grado di sfruttare per migliorare la sua
+			vita.
+		</p><p>
+			Messo in crisi dalla scomparsa dei genitori, Corvino finisce con il
+			perdersi.
+		</p><p>
+			Il confronto con un lupo e un corvo gli permetteranno poi di prendere
+			coscenza del nuovo sé.
+		</p>
+	</div><div class="section">
+		<h2>
+			Parte III
+		</h2><h2 class="reverse">
+			Le streghe
+		</h2><p>
+			Nella terza parte, la più assurda e frammentaria, il protagonista e i
+			suoi compagni danno inizio ad una sconsiderata lotta per la
+			sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
+			e altre cose impossibili.
+		</p>
+	</div><div class="section">
+		<p>
+			Corvino scopre un nuovo mondo sovrapposto al nostro e deve fare i conti
+			con le creature che lo abitano. Tra di essi, una vecchia conoscenza, la
+			riunione con la quale non è affatto piacevole.
+		</p><p>
+			Ben presto la presunta minaccia per la sua vita portano Corvino alla
+			ricerca di qualche aiuto.
+		</p><p>
+			Trovata infine la via meno improbabile per la salvezza, il ragazzo e i
+			suoi compagni scatenano una guerra che forse è troppo oltre le loro
+			forze.
+		</p>
 	</div>
-</div><div class="section">
-	<h2>
-		Parte I &ndash; La gioventù
-	</h2><p>
-		La prima parte del mio NaNoWriMo è certamente la più divertente,
-		o per lo meno è stata la più divertente da scrivere. Si tratta,
-		in breve, della lunga serie di lamentazioni di uno studente, che
-		non ama nulla nella sua vita ad eccezione d'una certa ragazza.
-	</p>
-</div><div class="wider">
-	<div class="widecontent">
-<div class="section">
-	<p>
-		Corvino è un tizio qualunque, studente alle superiori, stanco e annoiato
-		che cerca di tirare avanti, nello studio e nella vita, senza fare troppa
-		fatica.
-	</p><p>
-		Il ragazzo passa il suo tempo a lamentarsi delle cose che non gli vanno
-		a genio, che son la maggior parte.
-	</p><p>
-		Una sera il ragazzo conosce una ragazza e la sua vita cambia. Peggiora.
-		Tutta la sua attenzione viene quindi trascinata in oscuri ragionamenti
-		nel tentativo di razionalizzare gli strani eventi che riguardano i suoi
-		incontri con lei.
-	</p><p>
-		L'inesperienza di Corvino, oltre a procurargli numerosi fallimenti, si
-		rivela la sua salvezza.
-	</p>
 </div>
-	</div><div class="widelist">
+<?php
+	};
+	$sides[] = function ($d) {
+?>
 <div class="section">
-	<h2 class="reverse">
-		Parte I: La gioventù
+	<h2>
+		NaNoWriMo 2010
+	</h2><p>
+		<?=$d->link('NaNoWriMo/2010/Personaggi/', 'Personaggi')?>
+	</p><h2>
+		Parte I
+	</h2><h2 class="reverse">
+		La gioventù
 	</h2><ol style="list-style-type: decimal-leading-zero">
 		<li><?=$d->link('NaNoWriMo/2010/01/download/', 'Una sera, al parco')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/02/download/', 'Campeggio')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/03/download/', 'A contatto')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/04/download/', 'Nel bosco')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/05/download/', 'La dichiarazione')?></li>
-	</ol>
-		</div>
-	</div>
-</div><div class="section">
-	<h2>
-		Parte II: Il Potere
-	</h2><p>
-		La seconda parte è un lungo e grosso polpettone, fatto di prove ed
-		errori, che vedono le sofferenze del protagonista alla scoperta di
-		improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
-		ad imbattersi in individui pericolosi...
-	</p>
-</div><div class="wider">
-	<div class="widecontent">
-<div class="section">
-	<p>
-		Quella che pareva una delusione amorosa si rivela la via che permette a
-		Corvino di scoprire la magia.
-	</p><p>
-		Il ragazzo sviluppa naturalmente, ma non senza vari fallimenti, dei
-		poteri che però non sembra in grado di sfruttare per migliorare la sua
-		vita.
-	</p><p>
-		Messo in crisi dalla scomparsa dei genitori, Corvino finisce con il
-		perdersi.
-	</p><p>
-		Il confronto con un lupo e un corvo gli permetteranno poi di prendere
-		coscenza del nuovo sé.
-	</p>
-</div>
-	</div><div class="widelist">
-<div class="section">
-	<h2 class="reverse">
-		Parte II: Il Potere
+	</ol><h2>
+		Parte II
+	</h2><h2 class="reverse">
+		Il Potere
 	</h2><ol start="6" style="list-style-type: decimal-leading-zero">
 		<li><?=$d->link('NaNoWriMo/2010/06/download/', 'Il lampione')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/07/download/', 'La lettura')?></li>
@@ -125,38 +153,10 @@
 		<li><?=$d->link('NaNoWriMo/2010/13/download/', 'Il funerale')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/14/download/', 'La rivelazione')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/15/download/', 'Il mondo &lsquo;di là&rsquo;')?></li>
-	</ol>
-</div>
-	</div>
-</div><div class="section">
-	<h2>
-		Parte III: Le streghe
-	</h2><p>
-		Nella terza parte, la più assurda e frammentaria, il protagonista e i
-		suoi compagni danno inizio ad una sconsiderata lotta per la
-		sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
-		e altre cose impossibili.
-	</p>
-</div><div class="wider">
-	<div class="widecontent">
-<div class="section">
-	<p>
-		Corvino scopre un nuovo mondo sovrapposto al nostro e deve fare i conti
-		con le creature che lo abitano. Tra di essi, una vecchia conoscenza, la
-		riunione con la quale non è affatto piacevole.
-	</p><p>
-		Ben presto la presunta minaccia per la sua vita portano Corvino alla
-		ricerca di qualche aiuto.
-	</p><p>
-		Trovata infine la via meno improbabile per la salvezza, il ragazzo e i
-		suoi compagni scatenano una guerra che forse è troppo oltre le loro
-		forze.
-	</p>
-</div>
-	</div><div class="widelist">
-<div class="section">
-	<h2 class="reverse">
-		Parte III: Le streghe
+	</ol><h2>
+		Parte III
+	</h2><h2 class="reverse">
+		Le streghe
 	</h2><ol start="16" style="list-style-type: decimal-leading-zero">
 		<li><?=$d->link('NaNoWriMo/2010/16/download/', 'Il da farsi')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/17/download/', 'Le botte')?></li>
@@ -167,7 +167,5 @@
 		<li><?=$d->link('NaNoWriMo/2010/22/download/', 'Il drago')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/finale/download/', 'Epilogo')?></li>
 	</ol>
-</div>
-	</div>
 </div>
 <?php } ?>

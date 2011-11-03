@@ -1,7 +1,19 @@
 <?php
 	$title=array('Dottor Odio Gaiden',
 		'Mirabolanti avventure alla conquista del mondo');
-	function mkpage($d){
+	$prev = array ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore', 0);
+	$sides[] = function ($d) {
+?>
+<div class="section">
+	<h2>
+		Dottor Odio Gaiden
+	</h2><p>
+		<?=$d->link('NaNoWriMo/2011/I/', 'Parte I')?>
+	</p>
+</div>
+<?php
+	};
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">
