@@ -88,7 +88,7 @@
 				echo ('<br />');
 				foreach ($sides as $s) $s($d);
 				echo ('<br />');
-				require_once ('tmpl/side/'.$rside);
+				if (file_exists("tmpl/side/$rside")) require_once ('tmpl/side/'.$rside);
 			?></div> <!-- RightSide -->
 			<div id="leftside"><?php require_once ('tmpl/lside.php'); ?></div> <!-- LeftSide -->
 		</div> <!-- Main -->

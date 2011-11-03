@@ -2,7 +2,8 @@
 	<h3>
 		<?=$d->link('News/','Ultime Novità')?>
 	</h3><p class="reverse">
-		<?=$d->link('News/2011/', 'Archivio')?>
+		<?=$d->link('News/Archivio/', 'Archivio')?>
+		[ <?=$d->link('News/2011/', '2011')?> ]
 		/ <?=$d->link('Extra/Guida/', 'FAQ')?>
 	</p>
 </div><!--div class="section">

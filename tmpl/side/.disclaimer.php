@@ -1,4 +1,4 @@
-<br/ ><div class="section">
+<div class="section">
 	<h2>Attenzione!!!</h2>
 	<p>
 		La maggior parte di queste storie è triste, triste un sacco, triste a botta!
