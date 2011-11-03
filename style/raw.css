@@ -96,9 +96,14 @@ div.section h2.reverse {
 	margin: 2px -5px 2px 2px;
 }
 
+div.section h3.reverse {
+	text-align: right;
+	margin: 2px 4px 2px 0;
+}
+
 div.section ul {
-	padding-left: 0;
 	margin-left: 2em;
+	text-indent: 0;
 }
 
 div.section ol {
