@@ -86,15 +86,11 @@
 	class Finder {
 
 		private $sources;
-		private $options;
 		private $tokens;
 		private $category;
 
-		public function __construct ($sources, $options) {
-			$this->options = $options;
-
+		public function __construct ($sources) {
 			$this->category = array();
-
 			foreach (array_keys($sources) as $key)
 				$this->sources[$key] = new Source ($key, $sources[$key]);
 		}

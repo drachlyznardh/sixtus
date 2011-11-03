@@ -32,16 +32,16 @@
 	require_once ('lib/finder.php');
 	require_once ('lib/dialog.php');
 
-	if ($servername == 'localhost') {
-		$base = $localbase;
-	} else if ($servername == 'gods.roundhousecode.com') {
+	if ($servername == 'gods.roundhousecode.com') {
 		$base = 'http://gods.roundhousecode.com';
+	} else {
+		$base = $localbase;
 	}
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
-	if ($localhome && $request == '') header ('Location: '.$base.$localhome);
+	if (isset($localhome) && $request == '') header ('Location: '.$base.$localhome);
 
-	if ((preg_match('/style/', $request) || preg_match('/extra/',$request)) && file_exists ($request)) {
+	if ((preg_match('/style\/.+/', $request) || preg_match('/extra\/.+/',$request)) && file_exists ($request)) {
 		
 		if (preg_match('/\.css$/', $request)) {
 		
@@ -77,71 +77,78 @@
 		die ();
 	}
 
+	#$token = explode ('/.', $request);
 	$token = explode ('/', $request);
-
-	$voption = array(
-		'debug',
-		'complete',
-		'bounce',
-		'download',
-		'dynamic',
-		'dado',
-		'book',
-		'pdf');
-	$opt = array ();
-	$modes = array ('gods','luber','bolo');
-
-	$finder = new Finder ($sources, $voption);
-	//echo ($finder->show());
-	$self = false;
-	$page = false;
-	$pagename = false;
-	$tab = false;
-	$tabname = false;
-
-	$amode = 'gods';
+	$opt['mode'] = 'Gods';
+	$opt['style'] = 'Raw';
 	foreach (array_keys($token) as $key) {
-
-		if ($token[$key] == '') {
-			unset($token[$key]);
-			continue;
+	
+		switch ($token[$key]) {
+			case '':
+				#echo ('<p>Empty token!</p>');
+				unset($token[$key]);
+				break;
+			case 'gods':
+			case 'bolo':
+			case 'luber':
+				$opt['mode'] = ucwords($token[$key]);
+				#echo ('<p>Mode ['.$opt['mode'].']</p>');
+				unset($token[$key]);
+				break;
+			case 'dado':
+			case 'raw':
+				$opt['style'] = ucwords($token[$key]);
+				#echo ('<p>Style ['.$opt['style'].']</p>');
+				unset($token[$key]);
+				break;
+			case 'debug':
+				$opt['debug'] = 'debug';
+				#echo ('<p>Debug ['.$opt['debug'].']</p>');
+				unset($token[$key]);
+				break;
+			case 'download':
+				$opt['download'] = 'download';
+				#echo ('<p>Download ['.$opt['download'].']</p>');
+				unset($token[$key]);
+				break;
 		}
-
-		foreach ($voption as $option)
-			if ($token[$key] == '') {
-				unset ($token[$key]);
-				break;
-			} else if ($token[$key] == $option) {
-				$opt[$option] = $option;
-				unset ($token[$key]);
-				break;
-			} 
-		if (isset($token[$key])) foreach ($modes as $mode)
-			if ($token[$key] == $mode) {
-				$amode = $mode;
-				unset ($token[$key]);
-				break;
-			}
 	}
+
+	$token = implode ('/', $token);
+	#echo ('<p>Token: ');print_r($token);echo('</p>');
+	if (preg_match('/§/', $token)) list($token, $tab['name']) = preg_split ('/§/', $token);
+	else $tab['name'] = false;
+	#echo ('<p>Token: ');print_r($token);echo('</p>');
+	$token = preg_split ('/\//', $token);
+	#echo ('<p>Token: ');print_r($token);echo('</p>');
+
+	$finder = new Finder ($sources);
+	#echo ($finder->show());
+
 	$search = $finder->find($token);
 	$searchpath = $search['destdir'] .'/';
 
+	#echo ('<p>Token: ');print_r($token);echo('</p>');
+	#echo ('<p>Category: ');print_r($search['category']);echo('</p>');
+	#echo ('<p>Tab[name]: '.$tab['name'].'</p>');
+
+	$self = false;
 	foreach ($search['category'] as $category)
 		$self .= $category .'/';
 
 	$last = $search['last'];
-	if (preg_match('/\./', $last)) {
-		list($pagename, $tabname) = explode('.', $last);
-		$self .= strtoupper($pagename).'/';
-		$tab = $searchpath.$pagename.'.d/'.$tabname.'.php';
-		$page = $searchpath.$pagename.'.php';
-	} else {
-		if ($last != 'index') {
-			$pagename = $last;
-			$self .= strtoupper($last).'/';
-		}
-		$page = $searchpath.$last.'.php';
+	if ($last != 'index') {
+		$pagename = $last;
+		$self .= strtoupper($last).'/';
 	}
+
+	$page = $searchpath.$last.'.php';
+	$tab['dir'] = $searchpath.$last.'.d/';
+	$tab['req'] = substr($self, 0, -1).'§';
+
+	#echo ('<p>Page ['.$page.']</p>');
+	#echo ('<p>Self ['.$self.']</p>');
+	#echo ('<p>');print_r($tab);echo('</p>');
 
 	if (isset($opt['download'])) {
 		$pdfpath = $searchpath . $search['last'] .'.pdf';
@@ -149,10 +156,9 @@
 			header('Content-Type: application/pdf');
 			header('Content-Disposition: attachment; filename="'.$search['last'].'.pdf"');
 			readfile($pdfpath) or die('Cannot transmit PDF file');
-		}
-		die();
+		} else die('File ['. $pdfpath .'] does not exist.');
 	}
-	
+
 	if (file_exists($page))
 		if ($searchpath) $rside = preg_replace ('/\//', '.', $searchpath .'php');
 		else $rside = 'nav.php';
@@ -161,20 +167,13 @@
 		$rside = 'nav.php';
 	}
 
-	$doptions = implode ('/', $opt);
-	if ($amode != 'gods') $doptions .= $amode;
-
+	$pages = array (); # Array for page-creatin closures
+	$sides = array (); # Array for side-creatin closures
 	require_once ($page);
-	if ($tabname == '' && isset($title[2])) $tabname = $title[2];
-	$d = new Dialog(
-		$doptions,
-		$amode != 'gods',
-		$self, $tab, $tabname,
-		substr($page, 0, -3).'d/');
+	if ($tab['name'] == false && isset($title[2])) $tab['name'] = $title[2];
+	$d = new Dialog($opt, $self, $tab);
 
-	if (isset($opt['book'])) require_once('tmpl/book.php');
-	else if (isset($opt['pdf'])) require_once('tmpl/pdf.php');
-	else require_once ('tmpl/pager.php');
+	require_once ('tmpl/pager.php');
 	die ();
 
 ?>

@@ -8,40 +8,50 @@
 			'corona' => array ('-- ', ' --')
 		);
 		private $opt;
+		private $notab;
 		public $tab;
-		public $tabname;
-		public $tabbase;
+		public $mkpage;
+		public $included;
 		
-		public function __construct ($opt, $notab, $self, $tab, $tabname, $tabbase) {
-		
-			$this->opt = $opt;
+		public function __construct ($opt, $self, $tab) {
+	
+			if ($opt['style'] == 'Raw') unset($opt['style']);
+
+			$this->notab = false;
+			if ($opt['mode'] == 'Gods') unset($opt['mode']);
+			else $this->notab = true;
+
+			$this->opt = implode ('/', $opt);
 			$this->self = $self;
-			$this->notab = $notab;
 			$this->tab = $tab;
-			$this->tabname = $tabname;
-			$this->tabbase = $tabbase;
+			$this->mkpage = array();
+			$this->included = false;
 		}
 
-		public function link($request, $title, $sharp=false) {
-			$ref = $request;
-			if ($sharp) $ref = substr($ref, 0, -1).".$sharp/";
+		public function link($request, $title, $tab=false, $sharp=false) {
+			if ($tab && !$this->notab) $ref = substr($request, 0, -1).'§'.strtoupper($tab).'/';
+			else $ref= $request;
 			if ($this->opt) $ref .= $this->opt .'/';
+			if ($sharp) $ref .= '#'.$sharp;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
-		public function frag($request, $title, $frag) {
-			$ref = substr($request, 0, -1).'.'.$frag.'/';
-			if ($this->opt) $ref .= $this->opt .'/';
-			return '<a href="'.$ref.'">'.$title.'</a>';
-		}
+		public function mktid($title, $tab, $hash=false) {
+	
+			if ($this->notab) {
+				if ($hash) return $this->link($this->self, $title, false, $hash);
+				else return $this->link($this->self, $title, false, strtoupper($tab));
+			}
 
-		public function mktid($request, $title, $tab) {
-			if ($this->tabname == $tab) return '<span class="em">'.$title.'</span>';
-			else return $this->link($request, $title, strtoupper($tab));
+			if ($tab && $this->tab['name'] == $tab)
+				if ($hash) return '<span class="em">'.$this->link($this->self, $title, $tab, $hash).'</span>';
+				else return '<span class="em">'.$title.'</span>';
+			else return $this->link($this->self, $title, $tab, $hash);
 		}
 
 		public function mktab($tab) {
-			return $this->notab || $this->tabname == $tab;
+			echo ('<a id="'.strtoupper($tab).'"></a>');
+			return $this->notab || $this->tab['name'] == $tab;
 		}
 
 		public function t ($meaning, $original) {
@@ -49,17 +59,20 @@
 			return '<span class="em" title="che significa: “'. $meaning .'”">'. $original .'</span>';
 		}
 
-		public function inline ($author, $speech) {
+		public function inline ($speaker, $line) {
 		
-			if (isset($this->speakers[$author])) {
-				$first = $this->speakers[$author][0];
-				$last = $this->speakers[$author][1];
+			if (isset($this->speakers[$speaker])) {
+				$first = $this->speakers[$speaker][0];
+				$last = $this->speakers[$speaker][1];
 			} else {
 				$first = '';
 				$last = '';
 			}
-			return '«<span title="'.ucwords($author).'" class="'. $author .'">'. $first.$speech.$last .'</span>»';
+			return '«<span title="'.ucwords($speaker).'" class="'. $speaker .'">'. $first.$line.$last .'</span>»';
+		}
+		
+		public function speak ($speaker, $line) {
+			return '<p>'.$this->inline($speaker, $line).'</p>';
 		}
 	}
-
 ?>

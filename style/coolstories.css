@@ -1,11 +1,16 @@
-.magnet { color: #ff0088; }
-.mitch { color: #00ff00; }
-.dacav {background-color: #000000; color: #347235;}
-.jazz {color: #f87431;}
+.mitch { color: #00ff00; text-shadow: #ffffff 0 0 1px; }
+.dacav {color: #347235; text-shadow: #000000 1px 1px 1px, #ffffff -1px -1px 1px; }
+.jazz {color: #f87431; text-shadow: #657ff7 1px 1px 1px; }
 .char { font-style: italic; font-weight: bold;}
-.bolo {color: #123456;}
+.bolo {color: #123456; text-shadow: #234567 0 1px 1px, #012345 0 -1px 1px; }
 .war {color: #00ff88;}
 .sgaggio {
 	font-size: 130%;
 	text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px;
 }
+
+.odio {
+	color: #ff0000; text-shadow: #000000 1px 1px 3px, #ff8888 -1px -1px 2px;
+}
+.aug { color: #88ff88; }
+.magnet { color: #ff0088; }

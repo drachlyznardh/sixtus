@@ -4,7 +4,7 @@
 </div><div class="wider">
 	<div class="widelist">
 		<div class="section">
-			<?#=$finder->show()?>
+			<?=$finder->show()?>
 		</div>
 	</div><div class="widecontent">
 		<div class="section">
@@ -26,9 +26,9 @@
 			</p><p>
 				<span class="em">Self</span>: <?=$self?>
 			</p><p>
-				<span class="em">Page</span>: <?=$page?> (<?=$pagename?>)
+				<span class="em">Page</span>: <?=$page?>
 			</p><p>
-				<span class="em">Tab</span>: <?=$tab?> (<?=$tabname?>)
+				<span class="em">Tab</span>: <?=$tab['name']?>, (<?=$tab['dir']?>, <?=$tab['req']?>)
 			</p><p>
 				<span class="em">RSide</span>: <?=$rside?>
 			</p>
@@ -38,9 +38,7 @@
 			</h2><?php
 				foreach (array_keys($opt) as $key)
 					echo ('<p><span class="em">'. $key .'</span>: '. $opt[$key] .'</p>');
-			?><p>
-				(a)<span class="em">Mode</span>: <?=$amode?>
-			</p>
+			?>
 		</div>
 	</div>
 </div>
