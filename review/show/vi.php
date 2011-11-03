@@ -1,9 +1,12 @@
 <?php
-	$title=array('Transformers Super-God Masterforce',
-		'Toransufoma Choujin Massafosu');
-	$prev=array('BlassReiter', 'Recensioni/Show/V/');
-	$next=array('Dark of the Moon', 'Recensioni/Film/VII/');
-	function mkpage($d){
+	require_once ('index.php');
+	$pages = array ();
+
+	$title = array ('Transformers Super-God Masterforce', 'Toransufoma Choujin Massafosu');
+	$prev = array ('Recensioni/Show/V/', 'BlassReiter');
+	$next = array ('Recensioni/Film/VII/', 'Dark of the Moon');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

@@ -42,7 +42,7 @@
 	
 			if ($this->notab) {
 				if ($hash) return $this->link($this->self, $title, false, $hash);
-				else return $this->link($this->self, $title, false, strtoupper($tab));
+				else return $this->link($this->self, $title, false, ucwords($tab));
 			}
 
 			if ($tab && $this->tab['name'] == $tab)
@@ -52,7 +52,7 @@
 		}
 
 		public function mktab($tab) {
-			echo ('<a id="'.strtoupper($tab).'"></a>');
+			echo ('<a id="'.ucwords($tab).'"></a>');
 			if ($this->notab || $this->tab['name'] == $tab) {
 				$this->tabincluded = true;
 				return true;

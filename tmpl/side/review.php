@@ -1,9 +1,8 @@
 <div class="section">
-	<p>
-		<?=$d->link('Recensioni/Film', 'Film')?>
-		/ <?=$d->link('Recensioni/Film/Brutti', 'Film Brutti')?>
-	</p><p>
-		<?=$d->link('Recensioni/Giochi/', 'Giochi')?>
+	<p class="reverse">
+		<?=$d->link('Recensioni/Film/', 'Film')?>
+		/ <?=$d->link('Recensioni/Film/Brutti/', 'Film Brutti')?>
+		/ <?=$d->link('Recensioni/Giochi/', 'Giochi')?>
 		/ <?=$d->link('Recensioni/Show/', 'Show')?>
 		/ <?=$d->link('Recensioni/Libri/', 'Libri')?>
 	</p><h2>

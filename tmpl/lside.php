@@ -44,27 +44,31 @@
 	</p>
 </div><div class="section">
 	<div class="inside"><p><?php
+			$self = $d->self.$opt['style'].'/';
+
 			echo ($d->link('Extra/Guida/', 'Modi', 'META', 'Modi'));
 			echo (' [ ');
 			if ($opt['mode'] == 'Gods') echo ('<span class="em">Gods</span>');
-			else echo('<a href="'.$d->self.'">Gods</a>');
+			else echo('<a href="'.$self.'">Gods</a>');
 			echo (' | ');
 			if ($opt['mode'] == 'Bolo') echo ('<span class="em">Bolo</span>');
-			else echo('<a href="'.$d->self.'Bolo/">Bolo</a>');
+			else echo('<a href="'.$self.'Bolo/">Bolo</a>');
 			echo (' / ');
 			if ($opt['mode'] == 'Luber') echo ('<span class="em">Luber</span>');
-			else echo('<a href="'.$d->self.'Luber/">Luber</a>');
+			else echo('<a href="'.$self.'Luber/">Luber</a>');
 			echo (' ] ');
 	?></p></div><div class="outside"><p class="reverse"><?php
+			$self = $d->self.$opt['mode'].'/';
+
 			echo (' [ ');
 			if ($opt['style'] == 'Dado') {
-				echo ('<a href="'.$d->self.'">Raw</a>');
+				echo ('<a href="'.$self.'">Raw</a>');
 				echo (' | ');
 				echo ('<span class="em">Dado</span>');
 			} else {
 				echo ('<span class="em">Raw</span>');
 				echo (' | ');
-				echo ('<a href="'.$d->self.'Dado/">Dado</a>');
+				echo ('<a href="'.$self.'Dado/">Dado</a>');
 			}
 			echo (' ] ');
 			echo ($d->link('Extra/Guida/', 'Stili', 'META', 'Stili'));

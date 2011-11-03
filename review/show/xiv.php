@@ -1,23 +1,26 @@
 <?php
-	$title=array('Gundam AGE',
-		'La Bandai non ci prova neanche, stavolta', 'intro');
-	$prev=array('Recensioni/Show/XIII/', 'Kamen Rider', 0);
-	$next=array('Recensioni/Show/XV/', 'TransFormers: Prime', 0);
 	$sides[] = function ($d) {
 ?>
 <div class="section">
 	<p>
-		<?=$d->mktid($d->self, 'Introduzione', 'intro')?>
+		<?=$d->mktid('Introduzione', 'intro')?>
 	</p><h2>
 		Gundam AGE
 	</h2><ol><li id="li-i">
-			<?=$d->mktid($d->self, 'Il primo impatto', 'i')?>
+			<?=$d->mktid('Il primo impatto', 'i')?>
 		</li><li id="li-ii">
-			<?=$d->mktid($d->self, 'Il secondo impatto', 'ii')?>
+			<?=$d->mktid('Il secondo impatto', 'ii')?>
 	</li></ol>
 </div>
 <?php
 	};
+	require_once ('index.php');
+	$pages = array ();
+
+	$title=array('Gundam AGE', 'La Bandai non ci prova neanche, stavolta', 'intro');
+	$prev=array('Recensioni/Show/XIII/', 'Kamen Rider', 0);
+	$next=array('Recensioni/Show/XV/', 'TransFormers: Prime', 0);
+
 	$pages[] = function ($d) {
 ?>
 <div class="small">

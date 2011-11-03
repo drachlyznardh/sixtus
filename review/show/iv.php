@@ -1,8 +1,12 @@
 <?php
-	$title=array('Pani Poni Dash','Cosa sto guardando? Cosa?!?');
-	$prev=array('Robocop', 'Recensioni/Film/III/');
-	$next=array('BlassReiter', 'Recensioni/Show/V/');
-	function mkpage($d) {
+	require_once('index.php');
+	$pages = array ();
+
+	$title = array ('Pani Poni Dash', 'Cosa sto guardando? Cosa?!?');
+	$prev = array ('Recensioni/Film/III/', 'Robocop');
+	$next = array ('Recensioni/Show/V/', 'BlassReiter');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

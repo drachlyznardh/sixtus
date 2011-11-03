@@ -1,6 +1,10 @@
 <?php
+	require_once ('index.php');
+	$pages = array ();
+
 	$title=array('Super Sentai','Ci credereste? 35 anni!?');
-	function mkpage($d){
+	
+	$pages[] = function ($d) {
 ?>
 <div class="wider">
 	<div class="widecontent">

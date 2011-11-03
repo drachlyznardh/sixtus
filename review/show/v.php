@@ -1,9 +1,12 @@
 <?php
-	$title=array('Blassreiter',
-		'Un anime in Germania? Non solo, va anche peggio...');
-	$prev=array('Pani Poni Dash', 'Recensioni/Show/IV/');
-	$next=array('Masterforce', 'Recensioni/Show/VI/');
-	function mkpage($d) {
+	require_once ('index.php');
+	$pages = array ();
+
+	$title = array ('Blassreiter', 'Un anime in Germania? Non solo, va anche peggio...');
+	$prev = array ('Recensioni/Show/IV/', 'Pani Poni Dash');
+	$next = array ('Recensioni/Show/VI/', 'Masterforce');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

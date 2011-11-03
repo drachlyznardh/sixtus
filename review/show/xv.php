@@ -1,28 +1,30 @@
 <?php
-	$title=array('TransFormers: Prime',
-		'Quasi non riesco a credere', 'intro');
-	$prev=array('Recensioni/Show/XIV/', 'Gundam AGE', 0);
-	$next=array('Recensioni/Film/Brutti/XVI/', 'Bitch Slap', 0);
 	$sides[] = function ($d) {
 ?>
 <div class="section">
-	<p>
-		<?=$d->mktid($d->self, 'Intro', 'intro')?>
-		[ <?=$d->mktid($d->self, 'Ancora un po&apos;', 'intro', 'more')?>
-		| <?=$d->mktid($d->self, 'Cast', 'intro', 'cast')?>
-		]
+	<p class="reverse">
+		<?=$d->mktid('Intro', 'intro', 'Intro')?>
+		/ <?=$d->mktid('Ancora un po&apos;', 'intro', 'More')?>
+		/ <?=$d->mktid('Cast', 'intro', 'Cast')?>
 	</p><h2 class="reverse">
 		TransFormers: Prime
 	</h2><p>
-		<?=$d->mktid($d->self, 'Speciali', 'special')?>
+		<?=$d->mktid('Speciali', 'special')?>
 	</p><p>
-		<?=$d->mktid($d->self, 'Prima stagione', 's01')?>
+		<?=$d->mktid('Prima stagione', 's01')?>
 	</p><p>
 		Seconda stagione
 	</h2>
 </div>
 <?php
 	};
+	require_once ('index.php');
+	$pages = array ();
+
+	$title=array('TransFormers: Prime', 'Quasi non riesco a credere', 'intro');
+	$prev=array('Recensioni/Show/XIV/', 'Gundam AGE');
+	$next=array('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
+
 	$pages[] = function ($d) {
 ?>
 <div class="small">
@@ -61,7 +63,7 @@
 			attorno agli spazi pubblicitari, poi il film (quello del 1986, badate!),
 			i fumetti eccetera. Questo per molti anni.
 		</p>
-	</div><a id="more"></a><div class="section">
+	</div><a id="More"></a><div class="section">
 		<p>
 			Scusate, è una premessa lunga.
 		</p><h2>
@@ -102,7 +104,7 @@
 			permettere all'intera produzione di andare avanti, fino ad un totale di
 			52 episodi. Mentre scrivo, la prima stagione è terminata, con il 26°.
 		</p>
-	</div><a id="cast"></a><div class="section">
+	</div><a id="Cast"></a><div class="section">
 		<p>
 			Una menzione speciale al cast. Perché ci sono un sacco di
 			persone interessanti, nel cast di questa serie.

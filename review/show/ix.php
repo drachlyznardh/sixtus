@@ -1,8 +1,12 @@
 <?php
-	$title=array('Angel Beats', 'Non ho capito bene bene');
-	$prev=array('Capitan America', 'Recensioni/Film/VIII/');
-	$next=array('I Puffi', 'Recensioni/Film/X/');
-	function mkpage($d){
+	require_once ('index.php');
+	$pages = array ();
+
+	$title = array ('Angel Beats', 'Non ho capito bene bene');
+	$prev = array ('Recensioni/Film/VIII/', 'Capitan America');
+	$next = array ('Recensioni/Film/X/', 'I Puffi');
+	
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">

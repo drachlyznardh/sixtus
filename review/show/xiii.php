@@ -1,7 +1,4 @@
 <?php
-	$title=array('Kamen Rider', 'Henshin!', 'intro');
-	$prev=array('Recensioni/Libri/XII/', 'Harry Potter &amp; …');
-	$next=array('Recensioni/Show/XIV/', 'Gundam AGE');
 	$sides[] = function ($d) {
 ?>
 <div class="section">
@@ -13,22 +10,29 @@
 			<?=$d->mktid('Di cosa aver paura', 'intro', 'II')?>
 		</li><li>
 			<?=$d->mktid('Come ottenere i LULZ', 'intro', 'III')?>
-	</li></ol><h2 class="reverse">
+	</li></ol><br /><h3>
 		Le serie che ho visto
-	</h2><p>
-			<?=$d->mktid('Kamen Rider W', 'w')?> – 2009~2010
-		</p><p>
-			<?=$d->mktid('Kamen Rider OOO', 'ooo')?> – 2010~2011
-		</p><p>
-			<?=$d->mktid('Kamen Rider Fourze', 'fourze')?> – 2011~2012
-	</p><h2>
+	</h3><p class="reverse">
+		<?=$d->mktid('Kamen Rider W', 'w')?> – 2009~2010
+	</p><p class="reverse">
+		<?=$d->mktid('Kamen Rider OOO', 'ooo')?> – 2010~2011
+	</p><p class="reverse">
+		<?=$d->mktid('Kamen Rider Fourze', 'fourze')?> – 2011~2012
+	</p><h3>
 		I film che ho visto
-	</h2><p>
+	</h3><p class="reverse">
 		<?=$d->mktid('Let&apos;s go Kamen Riders', 'm2011')?> – 2011
 	</p>
 </div>
 <?php
 	};
+	require_once ('index.php');
+	$pages = array ();
+
+	$title = array ('Kamen Rider', 'Henshin!', 'intro');
+	$prev = array ('Recensioni/Libri/XII/', 'Harry Potter &amp; …');
+	$next = array ('Recensioni/Show/XIV/', 'Gundam AGE');
+
 	$pages[] = function ($d) {
 ?>
 <div class="small">
