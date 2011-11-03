@@ -8,9 +8,9 @@
 	</h2><h2 class="reverse">
 		La Corona dell'Odio
 	</h2><ol><li>
-			<?=$d->mktid($d->self, 'Capitolo 1', '1')?> – 1264 parole
+			<?=$d->mktid('Capitolo 1', '1')?> – 1264 parole
 		</li><li>
-			<?=$d->mktid($d->self, 'Capitolo 2', '2')?> – 395 parole
+			<?=$d->mktid('Capitolo 2', '2')?> – 395 parole
 	</li></ol>
 </div>
 <?php

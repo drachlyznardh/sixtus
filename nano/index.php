@@ -1,8 +1,19 @@
 <?php
-
 	$title=array('NaNoWriMo', 'Cosa, come, perché');
-
-	function mkpage ($d) {
+	$sides[] = function ($d) {
+?><div class="section">
+	<h2>
+		NaNoWriMo
+	</h2><p>
+		<?=$d->link('NaNoWriMo/2010/', '2010')?>
+	</p><p>
+		<?=$d->link('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore')?>
+	</p><p>
+		<?=$d->link('NaNoWriMo/2011/', '2011')?>
+	</p>
+</div><?php
+	};
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">
