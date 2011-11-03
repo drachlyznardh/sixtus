@@ -1,6 +1,12 @@
 <?php
+
+	require_once ('str/2010/index.php');
+	require_once ('str/2011/index.php');
+
 	$title = array('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
-	function mkpage ($d) {
+	if (isset($prev)) unset($prev);
+	if (isset($next)) unset($next);
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -29,8 +35,4 @@
 		</p>
 	</div>
 </div>
-<?php
-		require_once('str/synopsis/2010.php');
-		require_once('str/synopsis/2011.php');
-	}
-?>
+<?php } ?>

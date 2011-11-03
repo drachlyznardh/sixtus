@@ -1,7 +1,7 @@
 <?php
 	$title=array('La storia interattiva',
 		'Ma solo se volete');
-	function mkpage($d){
+	$pages[] = function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -16,4 +16,14 @@
 		</p>
 	</div>
 </div>
-<?php } ?>
+<?php };
+	$sides[] = function ($d) {
+?><div class="section">
+	<h2>
+		La storia interattiva
+	</h2><ol><li>
+		<?=$d->link('Storie/Gaem/I/', 'Primo')?>
+	</li></ol>
+</div><?php
+	}
+?>

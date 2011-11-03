@@ -1,7 +1,7 @@
 <?php
-	$title = array ('Cose complicate','Tante cose, tanto complicate');
-	$prev = array ('Storie XXII', 'Storie/2011/XXII/');
-	$next = array ('Storie XXIV', 'Storie/2011/XXIV/');
+	$title = array ('Cose complicate','Tante cose, tanto complicate', 'i');
+	$prev = array ('Storie/2011/XXII/', 'Tecniche avanzate', 0);
+	$next = array ('Storie/2011/XXIV/', 'Il futuro', 0);
 	function mkpage ($d) {
 ?>
 <div class="wider">
@@ -9,63 +9,31 @@
 		<div class="section">
 			<h2>
 				Prima parte
-			</h2><div class="outside">
-				<ol>
-					<li id="li-i">
-						<a onclick="javascript:t.show('i')">
-							La programmazione (I)
-						</a>
-					</li><li id="li-ii">
-						<a onclick="javascript:t.show('ii')">
-							La programmazione (II)
-						</a>
-					</li>
-				</ol>
-			</div><ol start="3">
-				<li id="li-iii">
-					<a onclick="javascript:t.show('iii')">
-						La vita fuori di qui
-					</a>
-				</li><li id="li-iv">
-					<a onclick="javascript:t.show('iv')">
-						Doooon!!!
-					</a>
-				</li>
-			</ol><div class="outside">
-				<ol start="5">
-					<li id="li-v">
-						<a onclick="javascript:t.show('v')">
-							Java è il male (I)
-						</a>
-					</li><li id="li-vi">
-						<a onclick="javascript:t.show('vi')">
-							Java è il male (II)
-						</a>
-					</li><li id="li-vii">
-						<a onclick="javascript:t.show('vii')">
-							Java è il male (III)
-						</a>
-					</li><li id="li-viii">
-						<a onclick="javascript:t.show('viii')">
-							Java è il male (IV)
-						</a>
-					</li>
-				</ol>
-			</div>
+			</h2><div class="outside"><ol><li>
+						<?=$d->mktid($d->self, 'La programmazione (I)', 'i')?>
+					</li><li>
+						<?=$d->mktid($d->self, 'La programmazione (II)', 'ii')?>
+			</li></ol></div><ol start="3"><li>
+						<?=$d->mktid($d->self, 'La vita fuori di qui', 'iii')?>
+					</li><li>
+						<?=$d->mktid($d->self, 'Doooon!!!', 'iv')?>
+			</li></ol><div class="outside"><ol start="5"><li>
+						<?=$d->mktid($d->self, 'Java è il male (I)', 'v')?>
+					</li><li>
+						<?=$d->mktid($d->self, 'Java è il male (II)', 'vi')?>
+					</li><li>
+						<?=$d->mktid($d->self, 'Java è il male (III)', 'vii')?>
+					</li><li>
+						<?=$d->mktid($d->self, 'Java è il male (IV)', 'viii')?>
+			</li></ol></div>
 		</div><div class="section">
 			<h2>
 				Seconda parte
-			</h2><ol start="9">
-				<li id="li-ix">
-					<a onclick="javascript:t.show('ix')">
-						Il sogno
-					</a>
-				</li><li id="li-x">
-					<a onclick="javascript:t.show('x');">
-						Il sogno dal sogno
-					</a>
-				</li>
-			</ol>
+			</h2><ol start="9"><li>
+					<?=$d->mktid($d->self, 'Il sogno', 'ix')?>
+				</li><li>
+					<?=$d->mktid($d->self, 'Il sogno dal sogno', 'x')?>
+			</li></ol>
 		</div><div class="section">
 			<form style="margin: 2px 2px 5px 2px; text-aling: center;">
 				<fieldset style="text-align: center">
@@ -78,13 +46,13 @@
 					<input style="width:47%"
 						type="reset"
 						title="Non mi piace"
-						value=";_;"
+						value="(;_;)"
 						onclick="javascript:alert('Ah si? Vaffanculo!');location.replace('http://boards.4chan.org/b/')" />
 				</fieldset>
 			</form>
 		</div>
 	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
+		<?php if ($d->mktab('i')) { ?>
 			<div class="section">
 	
 	<h2>
@@ -174,13 +142,9 @@
 	</p><p>
 		Ho fatto il male, certo, ma l'ho fatto bene. Per il bene del
 		male.
-	</p><div class="outside"><p>
-		Continua alla prossima sezione, <a
-		onclick="javascript:t.show('ii')">La Programmazione (II)</a>.
-	</p></div>
-
+	</p>
 			</div>
-		</div><div class="tab" id="tab-ii">
+		<?php } if ($d->mktab('ii')) { ?>
 			<div class="section">
 			
 	<h2>
@@ -203,13 +167,9 @@
 	<p>
 		Questo significa che mezzo database dev'essere buttato, mentre
 		un elenco di &quot;cose&quot; dev'essere generato dal nulla.
-	</p><div class="outside"><p>
-		Continua nella prossima sezione, <a
-		onclick="javascript:t.show('iii')">La vita fuori di qui</a>.
-	</p></div>
-
+	</p>
 			</div>
-		</div><div class="tab" id="tab-iii">
+		<?php } if ($d->mktab('iii')) { ?>
 			<div class="section">
 
 	<p>
@@ -234,13 +194,9 @@
 	</p><p>
 		Devo tornare a correre tutti i giorni, non c'è altro modo. Chi
 		viene con me?
-	</p><div class="outside"><p>
-		Continua alla prossima sezione, <a
-		onclick="javascript:t.show('iv')">Doooooon</a>.
-	</p></div>
-
+	</p>
 			</div>
-		</div><div class="tab" id="tab-iv">
+		<?php } if ($d->mktab('iv')) { ?>
 			<div class="section">
 			
 	<h2>
@@ -252,18 +208,18 @@
 		manga stupidi?
 	</p><p>
 		Essa è, per l'appunto
-	</p><div class="outside">
-		<?=$d->speak('GODS','Doooooooooon')?>
-	</div><p>
+	</p><div class="outside"><p>
+		<?=$d->inline('GODS','Doooooooooon')?>
+	</p></div><p>
 		ed è una cosa che spesso dico non appena qualcuno spara una
 		cazzatina. L'espressione assume connotato positivo o negativo a
 		seconda della situazione: può infatti indicare stupore di fronte
 		ad una buona cosa, ma anche di fronte all'epico fallimento.
 	</p><p>
 		Onomatopeicamente, quando dico
-	</p><div class="outside">
-		<?=$d->speak('GODS','Doooooon')?>
-	</div><p>
+	</p><div class="outside"><p>
+		<?=$d->inline('GODS','Doooooon')?>
+	</p></div><p>
 		mi volto verso una direzione a caso, con un largo movimento del
 		collo.
 	</p><p>
@@ -291,9 +247,9 @@
 		Quando ad un certo punto uno dei nostri spara una cazzata. Io
 		sposto vistosamente la testa, pianto gli occhi fisso davanti a
 		me e urlo
-	</p><div class="outside">
-		<?=$d->shout('GODS','Dooooooooooooooon')?>
-	</div><p>
+	</p><div class="outside"><p>
+		<?=$d->inline('gods forte','Dooooooooooooooon')?>
+	</p></div><p>
 		Ora, ricordate <a
 		href="http://www.youtube.com/watch?v=McAeQiLmEYU">questa</a>
 		scena dal film &lsquo;Superman returns&rsquo;?
@@ -304,14 +260,9 @@
 		prese il &laquo;Dooooooon&raquo; in faccia.
 	</p><p>
 		Poverine, poi sono scappate...
-	</p><div class="outside">
-		<p>
-			Continua alla <a onclick="javascript:t.show('v')">prossima</a> sezione.
-		</p>
-	</div>
-			
+	</p>			
 			</div>
-		</div><div class="tab" id="tab-v">
+		<?php } if ($d->mktab('v')) { ?>
 			<div class="section">
 	<h2 class="code">
 		public class java.util.Calendar
@@ -363,12 +314,9 @@
 		</p>
 	</div><p>
 		To', funziona.
-	</p><div class="outside">
-		<p>Continua nella <a onclick="javascript:t.show('vi')">prossima
-		sezione</a>.</p>
-	</div>
+	</p>
 			</div>
-		</div><div class="tab" id="tab-vi">
+		<?php } if ($d->mktab('vi')) { ?>
 			<div class="section">
 	<h2 class="code">
 		SQLException
@@ -400,12 +348,9 @@
 		class="code">ResultSet</span> sia valido, il suo metodo <span
 		class="code">boolean next()</span> non restituisce falso in caso
 		di fallimento, piuttosto esplode.
-	</p><div class="outside">
-		<p>Continua alla <a
-		onclick="javascript:t.show('vii')">prossima</a> sezione.</p>
-	</div>
+	</p>
 			</div>
-		</div><div class="tab" id="tab-vii">
+		<?php } if ($d->mktab('vii')) { ?>
 			<div class="section">
 	<h2 class="code">
 		ResultSet.size()
@@ -435,11 +380,9 @@
 	</p><p>
 		Ed ovviamente, sia muovermi che leggere l'ordinale sono
 		operazioni che possono fallire...
-	</p><div class="outside">
-		<p>Continua alla <a onclick="javascript:t.show('viii')">prossima</a> sezione.</p>
-	</div>
+	</p>
 			</div>
-		</div><div class="tab" id="tab-viii">
+		<?php } if ($d->mktab('viii')) { ?>
 			<div class="section">
 			
 	<p>
@@ -448,7 +391,7 @@
 		L'eredità tra oggetti, forse?
 	</p><p>
 		Già, peccato che il bel framework delle <span
-		class="code">Servlet/JSP/TomCat/GlassFish/JBoss</span> si
+		class="code">Servlet / JSP / TomCat / GlassFish / JBoss</span> si
 		dimentichino di questa cosa.
 	</p><p>
 		Percui è bene che tutte le Servlet siano servlet, ma non che
@@ -476,14 +419,10 @@
 		nonostante quel metodo appartenga alla classe madre, viene
 		chiamata con gli offset dei figli... Il sordido hack più orrendo
 		che abbia mai scritto ha ben nascosto questa chiamata...
-	</p><div class="outside">
-		<p>Continua alla <a onclick="javascript:t.show('ix')">prossima</a> sezione.</p>
-	</div>
-
+	</p>
 			</div>
-		</div><div class="tab" id="tab-ix">
+		<?php } if ($d->mktab('ix')) { ?>
 			<div class="section">
-			
 	<h2>
 		Il sogno
 	</h2><h2 class="reverse">
@@ -508,14 +447,10 @@
 		una partita di WH40K.
 	</p><p>
 		Mi sono svegliato.
-	</p><div class="outside">
-		<p>Continua nella <a onclick="javascript:t.show('x')">prossima</a> sezione.</p>
-	</div>
-
+	</p>
 			</div>
-		</div><div class="tab" id="tab-x">
+		<?php } if ($d->mktab('x')) { ?>
 			<div class="section">
-			
 	<h2>
 		I have a dream
 	</h2><h2 class="reverse">
@@ -617,14 +552,7 @@
 		E sinceramente odio quando succede, perché vorrei che fosse
 		l'abilità del giocatore a fare la differenza.
 	</p>
-
-			</div> 
-		</div>
+		</div><?php } ?>
 	</div>
-</div><script type="text/javascript" language="javascript" src="lib/tloader.js">
-</script><script type="text/javascript" language="javascript">
-	var t = new TLoader();
-	if (location.hash) t.show(location.hash.substr(1).toLowerCase());
-	else t.show('i');
-</script>
+</div>
 <?php } ?>

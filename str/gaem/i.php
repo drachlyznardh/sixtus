@@ -1,7 +1,16 @@
 <?php
 	$title=array('La storia interattiva',
 		'Ma solo se volete', 'start');
-	function mkpage($d){
+	$sides[] = function ($d) {
+?><div class="section">
+	<h2>
+		La storia interattiva
+	</h2><ol><li>
+		<?=$d->link('Storie/Gaem/', 'Primo')?>
+	</li></ol>
+</div><?php
+	};
+	$pages[] = function ($d) {
 		$final='Storie/Gaem/Finali/';
 ?>
 <div class="small">
@@ -18,7 +27,7 @@
 			Incappò un bel di il GODS in uno dei suoi cavalieri, il <span
 			class="em">Bolo</span>.
 		</p><div class="outside"><p>
-				Il Bolo parlò e disse«<span class="bolo">Maestà! Proprio voi
+				Il Bolo parlò e disse «<span class="bolo">Maestà! Proprio voi
 				cercavo</span>»
 			</p><p>
 				«<span class="gods">Messer Bolo!</span>» rispose il GODS «<span
