@@ -24,7 +24,7 @@
 	</p><h3>
 		<?=$d->mktid('Meta', 'meta')?>
 	</h3><p class="reverse">
-		<?=$d->mktid('Extra', 'meta', 'extra')?>
+		<?=$d->mktid('Extra', 'meta', 'Extra')?>
 		/ <?=$d->mktid('Modi', 'meta', 'Modi')?>
 		/ <?=$d->mktid('Stili', 'meta', 'Stili')?>
 		/ <?=$d->mktid('Voci', 'meta', 'Voci')?>
@@ -125,6 +125,9 @@
 				importante (tutti lo chiamano “signore”) è un acquisto
 				relativamete recente (in confronto al Dacav, ovviamente), è
 				estramamente rumoroso e blah.
+			</li><li>
+				il tre volte dottore <span class="war">War(rior)</span> alleggia
+				nei dintorni, perché lui fa cose. Ne sa un sacco.
 		</li></ul>
 	</div><div class="section">
 		<h2>
