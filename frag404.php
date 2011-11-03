@@ -2,6 +2,7 @@
 	<h2>
 		Frammento mancante
 	</h2><p>
-		Quel che cerchi (<?=$inner.'|'.$outer?>) non c'è. Scusa.
+		Non esiste alcun frammento <span
+		class="em"><?=strtoupper($d->tab['name'])?></span> per questa pagina, scusa.
 	</p>
 </div>

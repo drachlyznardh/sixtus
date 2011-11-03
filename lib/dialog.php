@@ -9,6 +9,7 @@
 		);
 		private $opt;
 		private $notab;
+		private $tabincluded;
 		public $tab;
 		public $mkpage;
 		public $included;
@@ -26,6 +27,7 @@
 			$this->tab = $tab;
 			$this->mkpage = array();
 			$this->included = false;
+			$this->tabincluded = false;
 		}
 
 		public function link($request, $title, $tab=false, $sharp=false) {
@@ -51,7 +53,11 @@
 
 		public function mktab($tab) {
 			echo ('<a id="'.strtoupper($tab).'"></a>');
-			return $this->notab || $this->tab['name'] == $tab;
+			if ($this->notab || $this->tab['name'] == $tab) {
+				$this->tabincluded = true;
+				return true;
+			}
+			return false;
 		}
 
 		public function t ($meaning, $original) {
@@ -73,6 +79,10 @@
 		
 		public function speak ($speaker, $line) {
 			return '<p>'.$this->inline($speaker, $line).'</p>';
+		}
+
+		public function noTabIncluded () {
+			return !$this->tabincluded;
 		}
 	}
 ?>
