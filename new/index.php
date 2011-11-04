@@ -1,6 +1,6 @@
 <?
-	$title = array('Novità','Le dieci notizie più recenti');
-	$pages[] = function ($d) {
+	$p->addtitle ('Novità', 'Le dieci notizie più recenti');
+	$p->addpage (function ($d) {
 ?><div class="small">
 	<div class="section">
 		<p id="27/16:35">
@@ -135,8 +135,8 @@
 		</p>
 	</div>
 </div><?php
-	};
-	$sides[] = function ($d) {
+	});
+	$p->addside(function ($d) {
 ?><div class="section">
 	<h2>
 		Novità
@@ -179,5 +179,5 @@
 		'V2')?>)
 	</p>
 </div><?php
-	}
+	});
 ?>

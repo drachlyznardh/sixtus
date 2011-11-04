@@ -1,9 +1,9 @@
 <?
-	$title=array('Agosto','Notizie al caldo');
-	$prev=array('News/2011/07/', 'Luglio', 0);
-	$next=array('News/2011/09/', 'Settembre', 0);
-	$pages[] = function ($d) {
-		if ($d->included) {
+	$p->addtitle ('Agosto', 'Notizie al caldo');
+	$p->addprev ('News/2011/07/', 'Luglio');
+	$p->addnext ('News/2011/09/', 'Settembre');
+	$p->addpage (function ($d) {
+		if ($d->manypages) {
 			echo ('<div class="section">');
 			echo ('<h2>Notizie</h2>');
 			echo ('<h2 class="reverse">Agosto 2011</h2>');
@@ -60,8 +60,8 @@
 	</div>
 </div>
 <?php
-	};
-	$sides[] = function ($d) {
+	});
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<h2 class="reverse">
@@ -97,4 +97,6 @@
 		<?=$d->link('Recensioni/Show/IX/', 'Angel Beats!')?>
 	</p>
 </div>
-<?php } ?>
+<?php
+	});
+?>

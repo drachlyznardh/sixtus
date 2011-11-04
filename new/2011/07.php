@@ -1,8 +1,8 @@
 <?
-	$title=array('Luglio', 'Notizie sudate');
-	$next=array('News/2011/08/', 'Agosto', 0);
-	$pages[] = function ($d){
-		if ($d->included) {
+	$p->addtitle ('Luglio', 'Notizie sudate');
+	$p->addnext ('News/2011/08/', 'Agosto');
+	$p->addpage (function ($d){
+		if ($d->manypages) {
 			echo('<div class="section">');
 			echo('<h2>Notizie</h2>');
 			echo('<h2 class="reverse">Luglio 2011</h2>');
@@ -118,8 +118,8 @@
 	</div>
 </div>
 <?php
-	};
-	$sides[] = function ($d) {
+	});
+	$p->addside (function ($d) {
 ?>
 	<div class="section">
 		<h2 class="reverse">
@@ -200,4 +200,6 @@
 			prima notizia
 		</p>
 	</div>
-<?php } ?>
+<?php
+	});
+?>

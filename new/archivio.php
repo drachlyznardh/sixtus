@@ -1,6 +1,6 @@
 <?php
-	$title = array ('Archivio', 'Dove tengo le notizie vecchie');
-	$sides[] = function ($d) {
+	$p->addtitle ('Archivio', 'Dove tengo le notizie vecchie');
+	$p->addside(function ($d) {
 ?><div class="section">
 	<h2>
 		Archivio
@@ -33,8 +33,8 @@
 		/ Dicembre
 	</p>
 </div><?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage(function ($d) {
 ?><div class="small">
 	<div class="section">
 		<h2>
@@ -47,5 +47,5 @@
 		</p>
 	</div>
 </div><?php
-	}
+	});
 ?>

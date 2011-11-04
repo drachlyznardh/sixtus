@@ -1,9 +1,9 @@
 <?
-	$title=array('Ottobre','Fa ancora caldo…');
-	$prev=array('News/2011/09/', 'Settembre');
-	$next = array ('News/2011/11/', 'Novembre');
-	$pages[] = function ($d) {
-		if ($d->included) {
+	$p->addtitle ('Ottobre', 'Fa ancora caldo…');
+	$p->addprev ('News/2011/09/', 'Settembre');
+	$p->addnext ('News/2011/11/', 'Novembre');
+	$p->addpage (function ($d) {
+		if ($d->manypages) {
 			echo('<div class="section">');
 			echo('<h2>Notizie</h2>');
 			echo('<h2 class="reverse">Ottobre 2011</h2>');
@@ -189,8 +189,8 @@
 	</div>
 </div>
 <?php
-	};
-	$sides[] = function ($d) {
+	});
+	$p->addside(function ($d) {
 ?>
 	<div class="section">
 		<h2 class="reverse">
@@ -236,4 +236,6 @@
 			<?=$d->link('Recensioni/Libri/XII/','L&apos;Ordine della Fenice', 'V')?>
 		</p>
 	</div>
-<?php } ?>
+<?php
+	});
+?>

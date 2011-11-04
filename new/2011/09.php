@@ -1,16 +1,15 @@
 <?
-	$title=array('Settembre', 'L&apos;inverno sta arrivando…');
-	$prev=array('News/2011/08/', 'Agosto', 0);
-	$next=array('News/2011/10/', 'Ottobre', 0);
-	$pages[] = function ($d) {
-		if ($d->included) {
+	$p->addtitle ('Settembre', 'L&apos;inverno sta arrivando…');
+	$p->addprev ('News/2011/08/', 'Agosto');
+	$p->addnext ('News/2011/10/', 'Ottobre');
+	$p->addpage(function ($d) {
+		if ($d->manypages) {
 			echo ('<div class="section">');
 			echo ('<h2>Notizie</h2>');
 			echo ('<h2 class="reverse">Settembre 2011</h2>');
 			echo ('</div>');
 		}
-?>
-<div class="small">
+?><div class="small">
 	<div class="section">
 		<p id="30/14:05">
 			<span class="em"><?=$d->link($d->self, '30/09/2011, 14:05', 0, '30/14:05')?>
@@ -228,40 +227,41 @@
 	</div>
 </div>
 <?php
-	};
-	$sides[] = function ($d) {
+	});
+	$p->addside (function ($d) {
 ?>
-	<div class="section">
-		<h2 class="reverse">
-			Settembre 2011
-		</h2><p>
-			<span class="em">29/09</span> –
-			<?=$d->link('Storie/Gaem/', 'La storia interattiva')?>
-		</p><p>
-			<span class="em">29/09</span> –
-			<?=$d->link('Storie/2011/LXIII/', 'Gli scagnozzi del Dr. Odio')?>
-		</p><p>
-			<span class="em">28/09</span> –
-			Normale (<?=$d->link('Storie/2011/LXII/','IV Parte', 'XII')?>)
-		</p><p>
-			<span class="em">21/09</span> –
-			<?=$d->link('Storie/2011/LXII/', 'Normale')?>
-		</p><p>
-			<span class="em">19/09</span> –
-			<?=$d->link('Storie/2011/LXI/', 'Cattivo')?>
-		</p><p>
-			<span class="em">13/09</span> –
-			<?=$d->link('Recensioni/Libri/XII/', 'Il Calice di Fuoco', 'IV')?>
-		</p><p>
-			<span class="em">12/09</span> –
-			<a target="_blank" href="Extra/LaMailSgaggia.jpg">SgaggioMail</a>
-			e <a href="Extra/fpga/download/">relazione</a>
-		</p><p>
-			<span class="em">12/09</span> –
-			<?=$d->link('Recensioni/Show/XIII/','Kamen Rider')?>
-		</p><p>
-			<span class="em">02/09</span> – 
-			DeuxEx [<?=$d->link('Storie/2011/LVIII/', 'Altra sessione', 0, 'II')?>]
-		</p>
-	</div>
-<?php } ?>
+<div class="section">
+	<h2 class="reverse">
+		Settembre 2011
+	</h2><p>
+		<span class="em">29/09</span> –
+		<?=$d->link('Storie/Gaem/', 'La storia interattiva')?>
+	</p><p>
+		<span class="em">29/09</span> –
+		<?=$d->link('Storie/2011/LXIII/', 'Gli scagnozzi del Dr. Odio')?>
+	</p><p>
+		<span class="em">28/09</span> –
+		Normale (<?=$d->link('Storie/2011/LXII/','IV Parte', 'XII')?>)
+	</p><p>
+		<span class="em">21/09</span> –
+		<?=$d->link('Storie/2011/LXII/', 'Normale')?>
+	</p><p>
+		<span class="em">19/09</span> –
+		<?=$d->link('Storie/2011/LXI/', 'Cattivo')?>
+	</p><p>
+		<span class="em">13/09</span> –
+		<?=$d->link('Recensioni/Libri/XII/', 'Il Calice di Fuoco', 'IV')?>
+	</p><p>
+		<span class="em">12/09</span> –
+		<a target="_blank" href="Extra/LaMailSgaggia.jpg">SgaggioMail</a>
+		e <a href="Extra/fpga/download/">relazione</a>
+	</p><p>
+		<span class="em">12/09</span> –
+		<?=$d->link('Recensioni/Show/XIII/','Kamen Rider')?>
+	</p><p>
+		<span class="em">02/09</span> – 
+		DeuxEx [<?=$d->link('Storie/2011/LVIII/', 'Altra sessione', 0, 'II')?>]
+	</p>
+</div><?php
+	});
+?>
