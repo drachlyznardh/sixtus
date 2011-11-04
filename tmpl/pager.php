@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="it">
 	<head>
-		<!-- All your --> <base href="<?=$base?>/" /> <!-- are belong to us -->
+		<!-- All your --> <base href="/" /> <!-- are belong to us -->
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />

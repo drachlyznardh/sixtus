@@ -31,17 +31,10 @@
 	require_once ('sources.php');
 	require_once ('lib/finder.php');
 	require_once ('lib/dialog.php');
-
-	if ($servername == 'gods.roundhousecode.com') {
-		$base = 'http://gods.roundhousecode.com';
-	} else if ($servername == 'tanngrisnir') {
-		$base = 'tanngrisnir';
-	} else {
-		$base = $localbase;
-	}
+	require_once ('lib/pager.php');
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
-	if (isset($localhome) && $request == '') header ('Location: '.$base.$localhome);
+	if (isset($localhome) && $request == '') header ("Location: $localhome");
 
 	if ((preg_match('/style\/.+/', $request) || preg_match('/extra\/.+/',$request)) && file_exists ($request)) {
 		
@@ -174,6 +167,7 @@
 	require_once ($page);
 	if ($tab['name'] == false && isset($title[2])) $tab['name'] = $title[2];
 	$d = new Dialog($opt, $self, $tab);
+	$p = new Pager();
 
 	require_once ('tmpl/pager.php');
 	die ();
