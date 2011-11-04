@@ -143,14 +143,14 @@
 	</p><h2 class="reverse">
 		Tru Naluten
 	</h2><h3>
-		eLyznardh
+		<?=$d->mktid('eLyznardh', 'lyznardh')?>
 	</h3><p class="reverse">
 		<?=$d->mktid('Simak', 'lyznardh', 'Simak')?>
 		/ <?=$d->mktid('Ci', 'lyznardh', 'Ci')?>
 		/ <?=$d->mktid('Lyz', 'lyznardh', 'Lyz')?>
 		/ <?=$d->mktid('eLyznardh', 'lyznardh', 'eLyznardh')?>
 	</p><h3>
-		Protagonisti
+		<?=$d->mktid('Protagonisti', 'protagonisti')?>
 	</h3><p class="reverse">
 		<?=$d->mktid('Jo', 'protagonisti', 'Jo')?>
 		/ <?=$d->mktid('Sacomne', 'protagonisti', 'Sacomne')?>
@@ -159,7 +159,7 @@
 		<?=$d->mktid('Corona', 'protagonisti', 'Corona')?>
 		/ <?=$d->mktid('Antico Simak', 'protagonisti', 'AnticoSimak')?>
 	</p><h3>
-		Antagonisti
+		<?=$d->mktid('Antagonisti', 'antagonisti')?>
 	</h3><p class="reverse">
 		<?=$d->mktid('Son Enkà', 'antagonisti', 'SonEnkà')?>
 		/ <?=$d->mktid('Vad Enkà', 'antagonisti', 'VanEnkà')?>

@@ -36,7 +36,7 @@
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 	if ($request == '' && isset($conf['home'])) header ("Location: $conf[home]");
 
-	if (file_exists($request)) {
+	if (is_file($request)) {
 		list($path, $ext) = preg_split ('/\./', $request, 2);
 		if (isset($conf['mimes'][$ext])) $mime = $conf['mimes'][$ext];
 		else die ("Extension [$ext] is not recognized.");
@@ -136,13 +136,11 @@
 		$rside = false;
 	}
 
-	$pages = array (); # Array for page-creatin closures
-	$sides = array (); # Array for side-creatin closures
-	require_once ($page);
 	if ($tab['name'] == false && isset($title[2])) $tab['name'] = $title[2];
 	$d = new Dialog($opt, $self, $tab);
-	$p = new Pager();
+	$p = new Pager(true, true, true);
 
+	require_once ($page);
 	require_once ('tmpl/pager.php');
 	die ();
 

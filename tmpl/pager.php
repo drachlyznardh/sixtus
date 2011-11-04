@@ -8,7 +8,7 @@
 		<meta name="keywords" content="<?php foreach (explode('/', $self) as $keyword) echo ' '.$keyword; ?>" />
 		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss.xml" />
 
-		<title><?=$title[0]?></title>
+		<title><?=$p->title()?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/common.css" />
 		<link rel="stylesheet" type="text/css" href="style/coolstories.css" />
@@ -41,37 +41,30 @@
 							?>
 							/
 						</p></div><h1 style="text-align:center">
-							<?=$title[0]?>
+							<?=$p->title()?>
 						</h1><div class="outside em"><p style="text-align: center">
-								<?=$title[1]?>	
+								<?=$p->subtitle()?>	
 						</p></div>
 					</div>
 				</div><div id="content">
 <?php
 	if (isset($opt['debug'])) require_once('tmpl/debug.php');
-	if (isset($prev)) {
+
+	$prev = $p->prev();
+	$next = $p->next();
+
+	if ($prev) {
 		echo ('<div class="section"><h2>Negli episodi precedenti</h2><p>Questa serie continua dalla pagina precedente, ');
-		if (isset($prev[3]))
-			echo ($d->link($prev[0], $prev[1], $prev[2], $prev[3]));
-		else if (isset($prev[2]))
-			echo ($d->link($prev[0], $prev[1], $prev[2]));
-		else
-			echo ($d->link($prev[0], $prev[1]));
+		echo ($d->link($prev[0], $prev[1], $prev[2], $prev[3]));
 		echo ('.</p></div>');
 	}
 
 	if (function_exists('mkpage')) mkpage($d);
-	if (count($pages) > 1) $d->included = true;
-	foreach ($pages as $p) $p($d);
+	$p->mkpages($d);
 
-	if (isset($next)) {
+	if ($next) {
 		echo ('<div class="section"><h2>Continua…</h2><p>Questa serie prosegue alla pagina successiva, ');
-		if (isset($next[3]))
-			echo ($d->link($next[0], $next[1], $next[2], $next[3]));
-		else if (isset($next[2]))
-			echo ($d->link($next[0], $next[1], $next[2]));
-		else
-			echo($d->link($next[0], $next[1]));
+		echo ($d->link($next[0], $next[1], $next[2], $next[3]));
 		echo('.</p></div>');
 	}
 ?>
@@ -81,7 +74,7 @@
 			<div id="rightside"><?php
 				require_once ('tmpl/related.php');
 				echo ('<br />');
-				foreach ($sides as $s) $s($d);
+				$p->mksides($d);
 				echo ('<br />');
 				if ($rside && file_exists($rside)) require_once ($rside);
 			?></div> <!-- RightSide -->
