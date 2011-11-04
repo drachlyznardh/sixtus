@@ -27,7 +27,8 @@
 	</p><h3>
 		<?=$d->link('Tru/Naluten/', 'Tru Naluten')?>
 	</h3><p class="reverse">
-		<?=$d->link('Tru/Naluten/Vol.I/I/', 'Vol.I')?>
+		<?=$d->link('Tru/Naluten/Personaggi/', 'Personaggi')?>
+		/ <?=$d->link('Tru/Naluten/Vol.I/I/', 'Vol.I')?>
 		/ <?=$d->link('Tru/Naluten/Vol.II/X/', 'Vol.II')?>
 		/ <?=$d->link('Tru/Naluten/Vol.III/XX/','Vol.III')?>
 	</p><h3>

@@ -1,12 +1,12 @@
 
-# Stile
+/* Stile */
 .forte { font-weight: bold; text-transform: uppercase; }
 .em { font-style: italic; font-weight: bold; }
 .wrong { text-decoration: line-through; }
 .latino { font-style: italic; text-transform: capitalize; }
 .code { font-family: monospace; }
 
-# Allegri compagni
+/* Allegri compagni */
 .mitch { color: #00ff00; text-shadow: #ffffff 0 0 1px; }
 .dacav {color: #347235; text-shadow: #000000 1px 1px 1px, #ffffff -1px -1px 1px; }
 .jazz {color: #f87431; text-shadow: #657ff7 1px 1px 1px; }
@@ -15,12 +15,13 @@
 .war {color: #00ff88;}
 .sgaggio { font-size: 130%; text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px; }
 
-# Dottor Odio Gaiden
-.odio { color: #ff0000; text-shadow: #000000 1px 1px 3px, #ff8888 -1px -1px 2px; }
+/* Dottor Odio Gaiden */
+.odio { color: #ff0000; text-shadow: #000000 1px 1px 3px, #000000 -1px -1px 3px; }*/
 .aug { color: #88ff88; }
 .magnet { color: #ff0088; }
+.odio { color: #ff0000; }
 
-# Corvino Multicolore, Tru Naluten
+/* Corvino Multicolore, Tru Naluten */
 .lyznardh { font: 17pt/20pt Georgia; color: #0000ff; }
 .simak,
 .Corvino,
