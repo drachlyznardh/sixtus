@@ -37,7 +37,8 @@
 	if ($request == '' && isset($conf['home'])) header ("Location: $conf[home]");
 
 	if (is_file($request)) {
-		list($path, $ext) = preg_split ('/\./', $request, 2);
+		$token = preg_split ('/\./', $request);
+		$ext = $token[count($token) - 1];
 		if (isset($conf['mimes'][$ext])) $mime = $conf['mimes'][$ext];
 		else die ("Extension [$ext] is not recognized.");
 
@@ -136,12 +137,11 @@
 		$rside = false;
 	}
 
-	if ($tab['name'] == false && isset($title[2])) $tab['name'] = $title[2];
-	$d = new Dialog($opt, $self, $tab);
 	$p = new Pager(true, true, true);
-
 	require_once ($page);
+
+	$tab['name'] or $tab['name'] = $p->defaulttab();
+	$d = new Dialog($opt, $self, $tab);
 	require_once ('tmpl/pager.php');
 	die ();
-
 ?>

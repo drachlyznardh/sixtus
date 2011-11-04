@@ -10,7 +10,7 @@
 		'gif' => 'image/gif',
 		'ico' => 'x-icon',
 
-		'rss.xml' => 'application/rss+xml',
+		'rss' => 'application/rss+xml',
 		'pdf' => 'application/pdf'
 	);
 

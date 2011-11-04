@@ -9,9 +9,9 @@
 		);
 		private $opt;
 		private $notab;
-		private $tabincluded;
+
 		public $tab;
-		public $mkpage;
+		public $manypages;
 		public $included;
 		
 		public function __construct ($opt, $self, $tab) {
@@ -25,9 +25,8 @@
 			$this->opt = implode ('/', $opt);
 			$this->self = $self;
 			$this->tab = $tab;
-			$this->mkpage = array();
+			$this->manypages = false;
 			$this->included = false;
-			$this->tabincluded = false;
 		}
 
 		public function link($request, $title, $tab=false, $sharp=false) {
@@ -54,7 +53,7 @@
 		public function mktab($tab) {
 			echo ('<a id="'.ucwords($tab).'"></a>');
 			if ($this->notab || $this->tab['name'] == $tab) {
-				$this->tabincluded = true;
+				$this->included = true;
 				return true;
 			}
 			return false;
@@ -79,10 +78,6 @@
 		
 		public function speak ($speaker, $line) {
 			return '<p>'.$this->inline($speaker, $line).'</p>';
-		}
-
-		public function noTabIncluded () {
-			return !$this->tabincluded;
 		}
 	}
 ?>
