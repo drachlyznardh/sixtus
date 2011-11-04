@@ -1,8 +1,7 @@
 <?php
-	$title=array('Dottor Odio Gaiden',
-		'Mirabolanti avventure alla conquista del mondo');
-	$prev = array ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore', 0);
-	$sides[] = function ($d) {
+	$p->addtitle ('Dottor Odio Gaiden', 'Mirabolanti avventure alla conquista del mondo');
+	$p->addprev ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore');
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<h2>
@@ -12,8 +11,8 @@
 	</p>
 </div>
 <?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -42,4 +41,4 @@
 		</p></div>
 	</div>
 </div>
-<?php } ?>
+<?php }); ?>

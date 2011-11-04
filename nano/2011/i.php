@@ -1,6 +1,6 @@
 <?php
-	$title = array ('Parte I', 'La corona dell&apos;Odio', '1');
-	$sides[] = function ($d) {
+	$p->addtitle ('Parte I', 'La corona dell&apos;Odio', '1');
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<h2>
@@ -14,8 +14,8 @@
 	</li></ol>
 </div>
 <?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('1')) { ?><div class="section"><a id="1"></a>
@@ -297,4 +297,4 @@
 		</p>
 	</div><?php } ?>
 </div>
-<?php } ?>
+<?php }); ?>

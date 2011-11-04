@@ -1,7 +1,7 @@
 <?php
-	$title=array('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
-	$next = array ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore', 0);
-	$pages[] = function ($d) {
+	$p->addtitle ('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
+	$p->addnext ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore');
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -120,8 +120,8 @@
 	</div>
 </div>
 <?php
-	};
-	$sides[] = function ($d) {
+	});
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<h2>
@@ -168,4 +168,4 @@
 		<li><?=$d->link('NaNoWriMo/2010/finale/download/', 'Epilogo')?></li>
 	</ol>
 </div>
-<?php } ?>
+<?php }); ?>

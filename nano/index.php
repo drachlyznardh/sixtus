@@ -1,6 +1,6 @@
 <?php
-	$title=array('NaNoWriMo', 'Cosa, come, perché');
-	$sides[] = function ($d) {
+	$p->addtitle ('NaNoWriMo', 'Cosa, come, perché');
+	$p->addside (function ($d) {
 ?><div class="section">
 	<h2>
 		NaNoWriMo
@@ -12,8 +12,8 @@
 		<?=$d->link('NaNoWriMo/2011/', '2011')?>
 	</p>
 </div><?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -70,4 +70,4 @@
 		</p>
 	</div>
 </div>
-<?php } ?>
+<?php }); ?>
