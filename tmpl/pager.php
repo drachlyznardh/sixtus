@@ -6,19 +6,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?php foreach (explode('/', $self) as $keyword) echo ' '.$keyword; ?>" />
-		<link rel="alternate" type="application/rss+xml" title="TruNaluten - News" href="rss.xml" />
+		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss.xml" />
 
 		<title><?=$title[0]?></title>
 		
-		<link rel="stylesheet" type="text/css" href="style/raw.css" />
-		<?php
-			if ($opt['style'] == 'Dado')
-				echo ('<link rel="stylesheet" type="text/css" href="style/dado.css" />');
-		?>
-		<link rel="stylesheet" type="text/css" href="style/voices.css" />
-		<script type="text/javascript" src="lib/tricks.js"></script>
-
-		<link rel="shortcut icon" type="image/x-icon" href="style/ico/raw.ico" />
+		<link rel="stylesheet" type="text/css" href="style/<?=$opt['style']?>.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="style/ico/<?=$opt['style']?>.ico" />
 	</head>
 	<body> 
 		<div id="main">
@@ -88,7 +81,7 @@
 				echo ('<br />');
 				foreach ($sides as $s) $s($d);
 				echo ('<br />');
-				if (file_exists("tmpl/side/$rside")) require_once ('tmpl/side/'.$rside);
+				if ($rside && file_exists($rside)) require_once ($rside);
 			?></div> <!-- RightSide -->
 			<div id="leftside"><?php require_once ('tmpl/lside.php'); ?></div> <!-- LeftSide -->
 		</div> <!-- Main -->

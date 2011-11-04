@@ -34,45 +34,18 @@
 	require_once ('lib/pager.php');
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
-	if (isset($localhome) && $request == '') header ("Location: $localhome");
+	if ($request == '' && isset($conf['home'])) header ("Location: $conf[home]");
 
-	if ((preg_match('/style\/.+/', $request) || preg_match('/extra\/.+/',$request)) && file_exists ($request)) {
-		
-		if (preg_match('/\.css$/', $request)) {
-		
-			header ('Content-Type: text/css');
-			require_once ($request);
-			die ();
-		}
+	if (file_exists($request)) {
+		list($path, $ext) = preg_split ('/\./', $request, 2);
+		if (isset($conf['mimes'][$ext])) $mime = $conf['mimes'][$ext];
+		else die ("Extension [$ext] is not recognized.");
 
-		if (preg_match('/\.gif$/', $request)) $mime = 'image/gif';
-		else if (preg_match('/\.png$/', $request)) $mime = 'image/png';
-		else if (preg_match('/\.jpg$/', $request)) $mime = 'image/jpeg';
-		else if (preg_match('/\.ico$/', $request)) $mime = 'image/x-icon';
-		else header ('Location: '. $base .'/Not/Found/');
-
-		header ('Content-Type: '. $mime);
-		$file = fopen ($request, 'r');
-		while (!feof($file)) print(fread($file, 1024*1024));
-		fclose($file);
-		die ();
-	
-	} else if (preg_match('/lib\/.*\.js/', $request) && file_exists($request)) {
-		header ('Content-Type: text/javascript');
-		$file = fopen ($request, 'r');
-		while (!feof($file)) print(fread($file, 1024*1024));
-		fclose($file);
-		die ();
-	} else if (preg_match('/rss\.xml/', $request)) {
-	
-		header ('Content-Type: application/rss+xml');
-		$file = fopen ('rss.xml', 'r');
-		while (!feof($file)) print(fread($file,1024*1024));
-		fclose ($file);
-		die ();
+		header ("Content-Type: $mime");
+		readfile ($request);
+		die();
 	}
 
-	#$token = explode ('/.', $request);
 	$token = explode ('/', $request);
 	$opt['mode'] = 'Gods';
 	$opt['style'] = 'Raw';
@@ -151,15 +124,16 @@
 			header('Content-Type: application/pdf');
 			header('Content-Disposition: attachment; filename="'.$search['last'].'.pdf"');
 			readfile($pdfpath) or die('Cannot transmit PDF file');
+			die ();
 		} else die('File ['. $pdfpath .'] does not exist.');
 	}
 
 	if (file_exists($page))
-		if ($searchpath) $rside = preg_replace ('/\//', '.', $searchpath .'php');
-		else $rside = 'nav.php';
+		if ($searchpath) $rside = 'tmpl/side/'. preg_replace ('/\//', '.', $searchpath) .'php';
+		else $rside = false;
 	else {
 		$page = 'error404.php';
-		$rside = 'nav.php';
+		$rside = false;
 	}
 
 	$pages = array (); # Array for page-creatin closures

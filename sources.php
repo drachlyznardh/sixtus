@@ -1,6 +1,18 @@
 <?php
-	$localbase = 'http://localhost';
-	$localhome = '/News/';
+	$conf['home'] = '/News/';
+	$conf['mimes'] = array (
+		'css' => 'text/css',
+		'js' => 'text/javascript',
+		'xml' => 'text/xml',
+
+		'jpg' => 'image/jpeg',
+		'png' => 'image/png',
+		'gif' => 'image/gif',
+		'ico' => 'x-icon',
+
+		'rss.xml' => 'application/rss+xml',
+		'pdf' => 'application/pdf'
+	);
 
 	$sources = array (
 		'Storie' => array ('str',
