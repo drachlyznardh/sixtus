@@ -10,6 +10,8 @@
 
 		<title><?=$title[0]?></title>
 		
+		<link rel="stylesheet" type="text/css" href="style/common.css" />
+		<link rel="stylesheet" type="text/css" href="style/coolstories.css" />
 		<link rel="stylesheet" type="text/css" href="style/<?=$opt['style']?>.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/<?=$opt['style']?>.ico" />
 	</head>
