@@ -40,6 +40,11 @@
 			if ($this->meta) $this->metas['prev'] = array ($request, $title, $tab, $hash);
 		}
 
+		/* ERASE ME */
+		public function addmetas ($key, $value) {
+			$this->metas[$key] = $value;
+		}
+
 		public function title () { return $this->metas['title'][0]; }
 
 		public function subtitle () { return $this->metas['title'][1]; }

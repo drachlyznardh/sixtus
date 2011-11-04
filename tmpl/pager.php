@@ -47,27 +47,12 @@
 						</p></div>
 					</div>
 				</div><div id="content">
-<?php
-	if (isset($opt['debug'])) require_once('tmpl/debug.php');
+					<?php
+						if (isset($opt['debug'])) require_once('tmpl/debug.php');
 
-	$prev = $p->prev();
-	$next = $p->next();
-
-	if ($prev) {
-		echo ('<div class="section"><h2>Negli episodi precedenti</h2><p>Questa serie continua dalla pagina precedente, ');
-		echo ($d->link($prev[0], $prev[1], $prev[2], $prev[3]));
-		echo ('.</p></div>');
-	}
-
-	if (function_exists('mkpage')) mkpage($d);
-	$p->mkpages($d);
-
-	if ($next) {
-		echo ('<div class="section"><h2>Continua…</h2><p>Questa serie prosegue alla pagina successiva, ');
-		echo ($d->link($next[0], $next[1], $next[2], $next[3]));
-		echo('.</p></div>');
-	}
-?>
+						if (function_exists('mkpage')) mkpage($d);
+						$p->mkpages($d);
+					?>
 				</div> <!-- Content -->
 				<div id="foot"><?php require_once ('tmpl/footer.php'); ?></div> <!-- Foot -->
 			</div> <!-- Container -->

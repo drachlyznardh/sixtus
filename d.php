@@ -140,6 +140,21 @@
 	$p = new Pager(true, true, true);
 	require_once ($page);
 
+	/* ERASE ME */
+	function arrayfill ($array) {
+		switch (count($array)) {
+			case 1: $array[1] = false;
+			case 2: $array[2] = false;
+			case 3: $array[3] = false;
+		}
+		return $array;
+	}
+
+	if (isset($title)) $p->addmetas('title', arrayfill($title));
+	if (isset($prev)) $p->addmetas('prev', arrayfill($prev));
+	if (isset($next)) $p->addmetas('next', arrayfill($next));
+	/* ERASE ME */
+
 	$tab['name'] or $tab['name'] = $p->defaulttab();
 	$d = new Dialog($opt, $self, $tab);
 	require_once ('tmpl/pager.php');

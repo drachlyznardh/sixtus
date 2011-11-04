@@ -58,6 +58,9 @@
 
 			if (strtolower($this->name) == $token) {
 				
+				if ($this->destdir == $result['destdir']) $result['canonical'] .= ' '.$this->name;
+				else $result['canonical'] = $this->name;
+
 				if ($this->name) $result['category'][] = $this->name;
 				if ($this->destdir) $result['destdir'] = $this->destdir;
 				unset($tokens[$keys[0]]);
@@ -108,7 +111,10 @@
 		public function find($tokens) {
 			#echo ('<p>Ricerca</p>');
 			$this->tokens = $tokens;
-			$result = array('destdir' => false, 'category' => array());
+			$result = array(
+				'destdir' => false,
+				'category' => array(),
+				'canonical' => false);
 
 			foreach ($this->sources as $source) {
 				$result = $source->find($tokens, $result);
