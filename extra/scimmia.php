@@ -1,8 +1,7 @@
 <?php
-	$title=array('La scimmia celeste',
-		'E il suo incredibile intelligente semplice stile', 'intro');
-	$prev = array ('Extra/Record/', 'Record');
-	$sides[] = function ($d) {
+	$p->addtitle ('La scimmia celeste', 'E il suo incredibile intelligente semplice stile', 'intro');
+	$p->addprev ('Extra/Record/', 'Record');
+	$p->addside (function ($d) {
 ?>
 		<div class="section">
 			<p>
@@ -36,8 +35,8 @@
 			</p>
 		</div>
 <?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
@@ -438,4 +437,4 @@
 		</p>
 	</div><?php } ?>
 </div>
-<?php } ?>
+<?php }); ?>

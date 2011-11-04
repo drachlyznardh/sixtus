@@ -1,9 +1,7 @@
 <?php
-	$title=array('Guida',
-		'Perché la gente arriva ma non sa dov&apos;è la roba',
-		'intro');
-	$next = array ('Extra/Record/', 'Record');
-	$sides[] = function ($d) {
+	$p->addtitle ('Guida', 'Perché la gente arriva ma non sa dov&apos;è la roba', 'intro');
+	$p->addnext ('Extra/Record/', 'Record');
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<p>
@@ -31,8 +29,8 @@
 	</p>
 </div>
 <?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
@@ -286,5 +284,6 @@
 			infilare le parole chiave direttamente nell'URL.
 		</p>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php
+	});
+?>

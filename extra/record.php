@@ -1,8 +1,8 @@
 <?php
-	$title = array ('Record', 'La pagina delle imprese', 'intro');
-	$prev = array ('Extra/Guida/', 'Guida');
-	$next = array ('Extra/Scimmia/', 'La Scimmia Celeste');
-	$sides [] = function ($d) {
+	$p->addtitle ('Record', 'La pagina delle imprese', 'intro');
+	$p->addprev ('Extra/Guida/', 'Guida');
+	$p->addnext ('Extra/Scimmia/', 'La Scimmia Celeste');
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<p id="li-intro">
@@ -16,8 +16,8 @@
 	</p>
 </div>
 <?php
-	};
-	$pages[] = function ($d) {
+	});
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
@@ -117,4 +117,6 @@
 		</p>
 	</div><?php } ?>
 </div>
-<?php } ?>
+<?php
+	});
+?>
