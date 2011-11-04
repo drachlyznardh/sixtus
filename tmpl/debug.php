@@ -1,7 +1,7 @@
-<div class="small">
+<div class="section">
+	<?=$finder->show()?>
+</div><div class="small">
 	<div class="section">
-		<?=$finder->show()?>
-	</div><div class="section">
 		<p>
 			Now debugging...
 		</p><h2>

@@ -98,7 +98,7 @@
 		public function show() {
 			echo ('<h2>Sources</h2>');
 			foreach($this->sources as $source) {
-				echo ('<div style="width:48%; padding-right:10px; float:left">');
+				echo ('<div style="width:32%; padding-right:10px; float:left">');
 				$source->show();
 				echo ('</div>');
 			}
