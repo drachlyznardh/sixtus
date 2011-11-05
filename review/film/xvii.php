@@ -1,9 +1,11 @@
 <?php
-	$p->addtitle ('Rambo', 'Una quadrilogia che cambia nel tempo', 'i');
-	$p->addprev ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
-	$p->addside (function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Rambo', 'Una quadrilogia che cambia nel tempo', 'i');
+		$this->addprev ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
+		$this->prepare ('review/film/index.php', false, false, true);
+	} if ($this->addside ()) {
+?><div class="section">
 	<h2>
 		Rambo
 	</h2><p>
@@ -15,11 +17,7 @@
 	</p><p>
 		(John) Rambo
 	</p>
-</div>
-<?php
-	});
-	$p->addpage (function ($d) {
-?><div class="small">
+</div><?php } if ($this->addpage ()) {?><div class="small">
 	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>
 			First Blood – 1982
@@ -297,8 +295,4 @@
 			Buono
 		</h2>
 	</div><?php } ?>
-</div><?php
-	});
-	$p->set(false, true, false);
-	require_once ('review/film/index.php');
-?>
+</div><?php } ?>

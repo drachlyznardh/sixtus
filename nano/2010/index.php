@@ -1,9 +1,10 @@
 <?php
-	$p->addtitle ('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
-	$p->addnext ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore');
-	$p->addpage (function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('NaNoWriMo 2010', '50,000 parole scritte in ventuno giorni');
+		$this->addnext ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>
 			NaNoWriMo
@@ -118,12 +119,7 @@
 			forze.
 		</p>
 	</div>
-</div>
-<?php
-	});
-	$p->addside (function ($d) {
-?>
-<div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<h2>
 		NaNoWriMo 2010
 	</h2><p>
@@ -167,5 +163,4 @@
 		<li><?=$d->link('NaNoWriMo/2010/22/download/', 'Il drago')?></li>
 		<li><?=$d->link('NaNoWriMo/2010/finale/download/', 'Epilogo')?></li>
 	</ol>
-</div>
-<?php }); ?>
+</div><?php } ?>
