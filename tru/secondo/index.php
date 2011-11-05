@@ -1,8 +1,10 @@
 <?php
-	$p->addtitle ('Volume II', 'Con Jo, la piccola fioraia innocente');
-	$p->addprev ('Tru/Naluten/Vol.I/', 'Volume I');
-	$p->addnext ('Tru/Naluten/Vol.III/', 'Volume III');
-	$p->addpage(function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Volume II', 'Con Jo, la piccola fioraia innocente');
+		$this->addprev ('Tru/Naluten/Vol.I/', 'Volume I');
+		$this->addnext ('Tru/Naluten/Vol.III/', 'Volume III');
+	} if ($this->addpage ()) {
 ?><div class="small">
 	<div class="section">
 		<h2>
@@ -14,8 +16,7 @@
 		</p>
 	</div>
 </div><?php 
-	});
-	$p->addside (function ($d) { 
+	} if ($this->addside ()) { 
 ?><div class="section">
 	<h2>
 		Volume II
@@ -32,5 +33,5 @@
 		<li><?=$d->link('Tru/Naluten/Vol.II/XIX/', 'Lezione')?></li>
 	</ol>
 </div><?php 
-	});
+	}
 ?>

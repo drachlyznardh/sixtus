@@ -1,8 +1,9 @@
 <?php
-	$p->addtitle ('Volume III', 'Qui cominciano i casini');
-	$p->addprev ('Tru/Naluten/Vol.II/', 'Volume II');
-
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Volume III', 'Qui cominciano i casini');
+		$this->addprev ('Tru/Naluten/Vol.II/', 'Volume II');
+	} if ($this->addpage ()) {
 ?><div class="small">
 	<div class="section">
 		<h2>
@@ -12,8 +13,7 @@
 		</p>
 	</div>
 </div><?php
-	});
-	$p->addside (function ($d) {
+	} if ($this->addside ()) {
 ?><div class="section">
 	<h2>
 		Volume III
@@ -21,5 +21,5 @@
 			<?=$d->link('Tru/Naluten/Vol.III/XX/', 'Il lavoro di Simak')?>
 	</li></ol>
 </div><?php
-	});
+	}
 ?>

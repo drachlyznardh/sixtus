@@ -48,22 +48,22 @@
 					</div>
 				</div><div id="content">
 					<?php
-						if (isset($opt['debug'])) require_once('tmpl/debug.php');
+						if (isset($opt['debug'])) require_once('sys/debug.php');
 
 						if (function_exists('mkpage')) mkpage($d);
 						$p->mkpages($d);
 					?>
 				</div> <!-- Content -->
-				<div id="foot"><?php require_once ('tmpl/footer.php'); ?></div> <!-- Foot -->
+				<div id="foot"><?php require_once ('sys/footer.php'); ?></div> <!-- Foot -->
 			</div> <!-- Container -->
 			<div id="rightside"><?php
-				require_once ('tmpl/related.php');
+				require_once ('sys/related.php');
 				echo ('<br />');
 				$p->mksides($d);
 				echo ('<br />');
 				if ($rside && file_exists($rside)) require_once ($rside);
 			?></div> <!-- RightSide -->
-			<div id="leftside"><?php require_once ('tmpl/lside.php'); ?></div> <!-- LeftSide -->
+			<div id="leftside"><?php require_once ('sys/lside.php'); ?></div> <!-- LeftSide -->
 		</div> <!-- Main -->
 	</body> <!-- Body -->
 </html>

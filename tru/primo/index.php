@@ -1,7 +1,9 @@
 <?php
-	$p->addtitle ('Volume I', 'Cose strane');
-	$p->addnext ('Tru/Naluten/Vol.II/', 'Volume II');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Volume I', 'Cose strane');
+		$this->addnext ('Tru/Naluten/Vol.II/', 'Volume II');
+	} if ($this->addpage ()) {
 ?><div class="small">
 	<div class="section">
 		<h2>
@@ -17,8 +19,7 @@
 		</p>
 	</div>
 </div><?php
-	});
-	$p->addside (function ($d) {
+	} if ($this->addside ()) {
 ?><div class="section">
 	<h2>
 		Volume I
@@ -34,5 +35,5 @@
 		<li><?=$d->link('Tru/Naluten/Vol.I/IX/', 'La fine del mondo')?></li>
 	</ol>
 </div><?php
-	});
+	};
 ?>

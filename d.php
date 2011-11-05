@@ -1,8 +1,5 @@
 <?php
 
-	phpinfo ();
-	die ();
-
 	/* Set up configuration */
 	$servername = $_SERVER['SERVER_NAME'];
 	
@@ -34,7 +31,9 @@
 	require_once ('sources.php');
 	require_once ('lib/finder.php');
 	require_once ('lib/dialog.php');
-	require_once ('lib/pager.php');
+
+	#require_once ('lib/pager.php');
+	require_once ('sys/pager.php');
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 	if ($request == '' && isset($conf['home'])) header ("Location: $conf[home]");
@@ -140,10 +139,16 @@
 		$rside = false;
 	}
 
-	$p = new Pager(true, true, true);
-	require_once ($page);
+	$d = new Dialog($opt, $self, $tab);
+	$p = new Pager($d);
 
-	/* ERASE ME */
+	$p->prepare ($page, true, true, true);
+	require_once ('sys/skeleton.php');
+	die ();
+
+	/* 
+	$tab['name'] or $tab['name'] = $p->defaulttab();
+
 	function arrayfill ($array) {
 		switch (count($array)) {
 			case 1: $array[1] = false;
@@ -159,7 +164,6 @@
 	/* ERASE ME */
 
 	$tab['name'] or $tab['name'] = $p->defaulttab();
-	$d = new Dialog($opt, $self, $tab);
-	require_once ('tmpl/pager.php');
+	require_once ('sys/skeleton.php');
 	die ();
 ?>
