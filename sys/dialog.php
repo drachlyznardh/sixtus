@@ -61,6 +61,8 @@
 			return false;
 		}
 
+		public function noTabIncluded () { return !$this->included; }
+
 		public function t ($meaning, $original) {
 		
 			return '<span class="em" title="che significa: “'. $meaning .'”">'. $original .'</span>';

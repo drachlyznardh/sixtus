@@ -1,5 +1,13 @@
 <?php
-	$pages[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Recensioni', 'Sincere, spesso brutte', 'intro');
+		$this->prepare ('review/film/index.php', false, true, false);
+		$this->prepare ('review/brutti/index.php', false, true, false);
+		$this->prepare ('review/game/index.php', false, true, false);
+		$this->prepare ('review/show/index.php', false, true, false);
+		$this->prepare ('review/book/index.php', false, true, false);
+	} if ($this->addpage ()) {
 ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
@@ -222,19 +230,7 @@
 			Macross 7 – ep3/49
 		</p>
 	</div><?php } ?>
-</div>
-<?php
-	};
-
-	require_once ('review/film/index.php');
-	require_once ('review/brutti/index.php');
-	require_once ('review/game/index.php');
-	require_once ('review/show/index.php');
-	require_once ('review/book/index.php');
-
-	$sides = array();
-	$sides[] = function ($d) {
-?><div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<p>
 		<?=$d->mktid('Perché le recensioni?', 'intro')?>
 	</p><p>
@@ -267,11 +263,4 @@
 		</li><li>
 			<?=$d->mktid('Magnificamente brutto', 'classifica', 'VIII')?>
 	</li></ol>
-</div>
-<?php
-	};
-
-	$title=array('Recensioni', 'Sincere, spesso brutte', 'intro');
-	unset($prev);
-	unset($next);
-?>
+</div><?php } ?>

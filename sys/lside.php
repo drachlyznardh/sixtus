@@ -45,7 +45,8 @@
 	</p>
 </div><div class="section">
 	<div class="inside"><p><?php
-			$self = $d->self.$opt['style'].'/';
+			if ($opt['style'] == 'Raw') $self = $d->self;
+			else $self = $d->self.$opt['style'].'/';
 
 			echo ($d->link('Extra/Guida/', 'Modi', 'META', 'Modi'));
 			echo (' [ ');
@@ -59,7 +60,8 @@
 			else echo('<a href="'.$self.'Luber/">Luber</a>');
 			echo (' ] ');
 	?></p></div><div class="outside"><p class="reverse"><?php
-			$self = $d->self.$opt['mode'].'/';
+			if ($opt['mode'] == 'Gods') $self = $d->self;
+			else $self = $d->self.$opt['mode'].'/';
 
 			echo (' [ ');
 			if ($opt['style'] == 'Dado') {

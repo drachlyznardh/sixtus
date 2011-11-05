@@ -1,8 +1,9 @@
 <?php
-	$title = array ('Show', 'Perché io vedo moltissima TV (attraverso il web)');
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Show', 'Perché io vedo moltissima TV (attraverso il web)');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<?php if ($d->mktab('') or $d->mktab('categorie')) { ?><div class="section">
 		<h2><a id="Show"></a><a id="Show"></a>
 			Show
@@ -15,12 +16,7 @@
 			vedermelo.
 		</p>
 	</div><?php } ?>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<h2 class="reverse">
 		Show
 	</h2><p>
@@ -38,5 +34,4 @@
 	</p><p>
 		XV. <?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime')?> – 2011
 	</p>
-</div>
-<?php } ?>
+</div><?php } ?>

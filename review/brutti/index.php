@@ -1,8 +1,9 @@
 <?php
-	$title = array ('Film brutti', 'Una ristretta selezione');
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Film brutti', 'Una ristretta selezione');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<?php if ($d->mktab('') or $d->mktab('categorie')) { ?><div class="section">
 		<h2><a id="Brutti"></a>
 			Film brutti
@@ -19,16 +20,10 @@
 			diventare apprezzabili. Altre invece sono solo brutte.	
 		</p>
 	</div><?php } ?>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
+</div><?php } if ( $this->addside ()) { ?><div class="section">
 	<h2 class="reverse">
 		Film brutti
 	</h2><p>
 			XVI. <?=$d->link('Recensioni/Film/Brutti/XVI/','Bitch Slap')?> – 2009
 	</p>
-</div>
-<?php } ?>
+</div><?php } ?>

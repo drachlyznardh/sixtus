@@ -1,6 +1,8 @@
 <?php
-	$p->addtitle ('NaNoWriMo', 'Cosa, come, perché');
-	$p->addside (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('NaNoWriMo', 'Cosa, come, perché');
+	} if ($this->addside ()) {
 ?><div class="section">
 	<h2>
 		NaNoWriMo
@@ -11,11 +13,7 @@
 	</p><p>
 		<?=$d->link('NaNoWriMo/2011/', '2011')?>
 	</p>
-</div><?php
-	});
-	$p->addpage (function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<div class="section">
 		<p>
 			Il NaNoWriMo è una cosa strana, difficile, da provare.
@@ -69,5 +67,4 @@
 			realizzazione.
 		</p>
 	</div>
-</div>
-<?php }); ?>
+</div><?php } ?>

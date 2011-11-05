@@ -1,14 +1,11 @@
 <?php
-
-	require_once ('str/2010/index.php');
-	require_once ('str/2011/index.php');
-
-	$title = array('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
-	if (isset($prev)) unset($prev);
-	if (isset($next)) unset($next);
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
+		$this->prepare ('str/2010/index.php', false, true, true);
+		$this->prepare ('str/2011/index.php', false, true, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Questa &egrave; la sezione pi&ugrave; idiota del sito.
@@ -34,5 +31,4 @@
 			qualche indizio.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

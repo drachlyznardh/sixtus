@@ -1,9 +1,10 @@
 <?php 
-	$title = array('Storie 2010', 'Le prime storie');
-	$next = array('Storie/2011/', 'Storie 2011', 0);
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Storie 2010', 'Le prime storie');
+		$this->addnext ('Storie/2011/', 'Storie 2011');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Ecco dunque lo sperimento.
@@ -46,12 +47,7 @@
 			Ma anche questa storia finì… e quell'anno fece la stessa cosa.
 		</p>
 	</div>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<h2>
 		Storie 2010
 	</h2><ol>
@@ -77,5 +73,4 @@
 	</ol></div><ol start="17">
 		<li><?=$d->link('Storie/2010/XVII/', 'Il finale')?></li>
 	</ol>
-</div>
-<?php } ?>
+</div><?php } ?>

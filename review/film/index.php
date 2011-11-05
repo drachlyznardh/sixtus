@@ -1,6 +1,8 @@
 <?php
-	$title = array ('Film', 'Quelli visti di recente');
-	$pages[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Film', 'Quelli visti di recente');
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('') or $d->mktab('categorie')) { ?><div class="section">
@@ -16,12 +18,7 @@
 			piace, mi sono messo a scriverne. Qui.
 		</p>
 	</div><?php } ?>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<h2 class="reverse">
 		Film
 	</h2><p>
@@ -38,5 +35,4 @@
 			XVII. <?=$d->link('Recensioni/Film/XVII/', 'Rambo')?> – 1982~2008
 		</p>
 	</p>
-</div>
-<?php } ?>
+</div><?php } ?>

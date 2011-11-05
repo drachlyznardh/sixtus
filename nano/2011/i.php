@@ -1,6 +1,8 @@
 <?php
-	$p->addtitle ('Parte I', 'La corona dell&apos;Odio', '1');
-	$p->addside (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Parte I', 'La corona dell&apos;Odio', '1');
+	} if ($this->addside ()) {
 ?>
 <div class="section">
 	<h2>
@@ -12,12 +14,7 @@
 		</li><li>
 			<?=$d->mktid('Capitolo 2', '2')?> – 395 parole
 	</li></ol>
-</div>
-<?php
-	});
-	$p->addpage (function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('1')) { ?><div class="section"><a id="1"></a>
 		<p>
 			Il mio lavoro come assistente e biografo è cominciato tre anni fa.
@@ -296,5 +293,4 @@
 			
 		</p>
 	</div><?php } ?>
-</div>
-<?php }); ?>
+</div><?php } ?>

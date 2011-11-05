@@ -1,20 +1,16 @@
 <?php
-	$p->addtitle ('Dottor Odio Gaiden', 'Mirabolanti avventure alla conquista del mondo');
-	$p->addprev ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore');
-	$p->addside (function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Dottor Odio Gaiden', 'Mirabolanti avventure alla conquista del mondo');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore');
+	} if ($this->addside ()) {
+?><div class="section">
 	<h2>
 		Dottor Odio Gaiden
 	</h2><p>
 		<?=$d->link('NaNoWriMo/2011/I/', 'Parte I')?>
 	</p>
-</div>
-<?php
-	});
-	$p->addpage (function ($d) {
-?>
-<div class="small">
+</div> <?php } if ($this->addpage ()) { ?><div class="small">
 	<div class="section">
 		<p>
 			Anche quest'anno mi cimento.
@@ -40,5 +36,4 @@
 				nemesi.
 		</p></div>
 	</div>
-</div>
-<?php }); ?>
+</div><?php } ?>

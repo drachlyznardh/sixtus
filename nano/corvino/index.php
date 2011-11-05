@@ -1,10 +1,11 @@
 <?php
-	$title=array('Corvino Multicolore', '50,000 parole scritte in ventuno giorni');
-	$prev = array ('NaNoWriMo/2010/', 'NaNoWriMo 2010', 0);
-	$next = array ('NaNoWriMo/2011/', 'NaNoWriMo 2011', 0);
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Corvino Multicolore', '50,000 parole scritte in ventuno giorni');
+		$this->addprev ('NaNoWriMo/2010/', 'NaNoWriMo 2010');
+		$this->addnext ('NaNoWriMo/2011/', 'NaNoWriMo 2011');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>
 			Corvino Multicolore
@@ -104,12 +105,7 @@
 			Corvino si sbagliava! Voi vi sbagliavate! Persino l'autore si sbagliava!
 		</p>
 	</div>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
+</div><?php } if ( $this->addside ()) { ?><div class="section">
 	<h2>
 		Corvino Multicolore
 	</h2><p>
@@ -149,5 +145,4 @@
 	</h2><p>
 		Prossimamente
 	</p>
-</div>
-<?php } ?>
+</div><?php } ?>

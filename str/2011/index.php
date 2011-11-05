@@ -1,10 +1,10 @@
 <?php
-	$title = array('Storie 2011',
-		'Forse meno tristi dell&apos;anno passato');
-	$prev = array ('Storie/2010/', 'Storie 2010', 0);
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Storie 2011', 'Forse meno tristi dell&apos;anno passato');
+		$this->addprev ('Storie/2010/', 'Storie 2010');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			E così venne il 2011...
@@ -88,77 +88,71 @@
 			della consegna… e poi?
 		</p>
 	</div>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-		<div class="section">
-			<h2>
-				Storie 2011
-			</h2><ol start="18">
-				<li><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
-				<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
-				<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
-				<li><?=$d->link('Storie/2011/XXI/','Programmazione 40.000')?></li>
-				<li><?=$d->link('Storie/2011/XXII/', 'Tecniche avanzate')?></li>
-				<li><?=$d->link('Storie/2011/XXIII/', 'Cose complicate')?></li>
-				<li><?=$d->link('Storie/2011/XXIV', 'Il futuro')?></li>
-				<li><?=$d->link('Storie/2011/XXV/', 'No')?></li>
-				<li><?=$d->link('Storie/2011/XXVI/', 'La sconfitta')?></li>
-				<li><?=$d->link('Storie/2011/XXVII/', 'LaTeX')?></li>
-			</ol><h2 class="reverse">
-				Il Magnetismo
-			</h2><div class="inside"><ol start="28" style="margin-left: 4.5em">
-				<li><?=$d->link('Storie/2011/XXVIII/','L&apos;odio')?></li>
-				<li><?=$d->link('Storie/2011/XXIX/','Il Magnete')?></li>
-				<li><?=$d->link('Storie/2011/XXX/','L&apos;interpretazione')?></li>
-			</ol></div><h2 class="reverse">
-				Primavera 2011
-			</h2><ol start="31" style="margin-left: 5em">
-				<li><?=$d->link('Storie/2011/XXXI/','Deus Ex Machina')?></li>
-				<li><?=$d->link('Storie/2011/XXXII/','Dottor Odio')?></li>
-				<li><?=$d->link('Storie/2011/XXXIII/','L&apos;inaspettata')?></li>
-				<li><?=$d->link('Storie/2011/XXXIV/','Considerazioni')?></li>
-				<li><?=$d->link('Storie/2011/XXXV/','Accuse')?></li>
-				<li><?=$d->link('Storie/2011/XXXVI/','Quel tizio')?></li>
-				<li><?=$d->link('Storie/2011/XXXVII/','PHP')?></li>
-				<li><?=$d->link('Storie/2011/XXXVIII/','Raccontare')?></li>
-				<li><?=$d->link('Storie/2011/XXXIX/','Forever Alone')?></li>
-				<li><?=$d->link('Storie/2011/XL/','Domanda&amp;Offerta')?></li>
-				<li><?=$d->link('Storie/2011/XLI/','Raccontare II')?></li>
-				<li><?=$d->link('Storie/2011/XLII/','La vecchiaia')?></li>
-				<li><?=$d->link('Storie/2011/XLIII/','Gli anni')?></li>
-				<li><?=$d->link('Storie/2011/XLIV/','Pillole')?></li>
-				<li><?=$d->link('Storie/2011/XLV/','Wireless')?></li>
-				<li><?=$d->link('Storie/2011/XLVI/','L&apos;uomo con due ombrelli')?></li>
-				<li><?=$d->link('Storie/2011/XLVII/','Impresa (II)')?></li>
-			</ol><h2 class="reverse">
-				Estate 2011
-			</h2><ol start="48" style="margin-left: 4em">
-				<li class="cat-heart"><?=$d->link('Storie/2011/XLVIII/','Non ce n&apos;è abbastanza')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/2011/XLIX/','Quel che non è abbastanza')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/2011/L/','Quel che dovrei fare')?></li>
-				<li><?=$d->link('Storie/2011/LI/', 'Il Druido')?></li>
-				<li><?=$d->link('Storie/2011/LII/', 'Sgaggio Tiem')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/2011/LIII/', 'Quel che ho fatto')?></li>
-				<li><?=$d->link('Storie/2011/LIV/','Niente')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/2011/LV/','Spezzato')?></li>
-				<li><?=$d->link('Storie/2011/LVI/','Correre di notte')?></li>
-				<li><?=$d->link('Storie/2011/LVII/','Il potere')?></li>
-				<li><?=$d->link('Storie/2011/LVIII/','Deus Ex Machina Evolved')?></li>
-				<li><?=$d->link('Storie/2011/LIX/','Violenza&amp;Soddisfazione')?></li>
-				<li><?=$d->link('Storie/2011/LX/','Filler')?></li>
-				<li><?=$d->link('Storie/2011/LXI/','Cattivo')?></li>
-				<li class="cat-heart"><?=$d->link('Storie/2011/LXII/','Normale')?></li>
-			</ol><h2 class="reverse">
-				Autunno 2011
-			</h2><ol start="63" style="margin-left: 4em">
-				<li><?=$d->link('Storie/2011/LXIII/','Gli scagnozzi del Dr.Odio')?></li>
-				<li><?=$d->link('Storie/2011/LXIV/','La metafora','INTRO')?></li>
-				<li><?=$d->link('Storie/2011/LXV/','Il 13 ottobre','INTRO')?></li>
-			</ol><ol start="67" style="margin-left:4em">
-				<li><?=$d->link('Storie/2011/LXVII/', 'Ancora ce la posso fare', 'INTRO')?></li>
-			</ol>
-		</div>
-<?php } ?>
+</div><?php } if ($this->addside ()) { ?><div class="section">
+	<h2>
+		Storie 2011
+	</h2><ol start="18">
+		<li><?=$d->link('Storie/2011/XVIII/', 'Liber Javae')?></li>
+		<li><?=$d->link('Storie/2011/XIX/', 'Permessi')?></li>
+		<li><?=$d->link('Storie/2011/XX/', 'Guida')?></li>
+		<li><?=$d->link('Storie/2011/XXI/','Programmazione 40.000')?></li>
+		<li><?=$d->link('Storie/2011/XXII/', 'Tecniche avanzate')?></li>
+		<li><?=$d->link('Storie/2011/XXIII/', 'Cose complicate')?></li>
+		<li><?=$d->link('Storie/2011/XXIV', 'Il futuro')?></li>
+		<li><?=$d->link('Storie/2011/XXV/', 'No')?></li>
+		<li><?=$d->link('Storie/2011/XXVI/', 'La sconfitta')?></li>
+		<li><?=$d->link('Storie/2011/XXVII/', 'LaTeX')?></li>
+	</ol><h2 class="reverse">
+		Il Magnetismo
+	</h2><div class="inside"><ol start="28" style="margin-left: 4.5em">
+		<li><?=$d->link('Storie/2011/XXVIII/','L&apos;odio')?></li>
+		<li><?=$d->link('Storie/2011/XXIX/','Il Magnete')?></li>
+		<li><?=$d->link('Storie/2011/XXX/','L&apos;interpretazione')?></li>
+	</ol></div><h2 class="reverse">
+		Primavera 2011
+	</h2><ol start="31" style="margin-left: 5em">
+		<li><?=$d->link('Storie/2011/XXXI/','Deus Ex Machina')?></li>
+		<li><?=$d->link('Storie/2011/XXXII/','Dottor Odio')?></li>
+		<li><?=$d->link('Storie/2011/XXXIII/','L&apos;inaspettata')?></li>
+		<li><?=$d->link('Storie/2011/XXXIV/','Considerazioni')?></li>
+		<li><?=$d->link('Storie/2011/XXXV/','Accuse')?></li>
+		<li><?=$d->link('Storie/2011/XXXVI/','Quel tizio')?></li>
+		<li><?=$d->link('Storie/2011/XXXVII/','PHP')?></li>
+		<li><?=$d->link('Storie/2011/XXXVIII/','Raccontare')?></li>
+		<li><?=$d->link('Storie/2011/XXXIX/','Forever Alone')?></li>
+		<li><?=$d->link('Storie/2011/XL/','Domanda&amp;Offerta')?></li>
+		<li><?=$d->link('Storie/2011/XLI/','Raccontare II')?></li>
+		<li><?=$d->link('Storie/2011/XLII/','La vecchiaia')?></li>
+		<li><?=$d->link('Storie/2011/XLIII/','Gli anni')?></li>
+		<li><?=$d->link('Storie/2011/XLIV/','Pillole')?></li>
+		<li><?=$d->link('Storie/2011/XLV/','Wireless')?></li>
+		<li><?=$d->link('Storie/2011/XLVI/','L&apos;uomo con due ombrelli')?></li>
+		<li><?=$d->link('Storie/2011/XLVII/','Impresa (II)')?></li>
+	</ol><h2 class="reverse">
+		Estate 2011
+	</h2><ol start="48" style="margin-left: 4em">
+		<li class="cat-heart"><?=$d->link('Storie/2011/XLVIII/','Non ce n&apos;è abbastanza')?></li>
+		<li class="cat-heart"><?=$d->link('Storie/2011/XLIX/','Quel che non è abbastanza')?></li>
+		<li class="cat-heart"><?=$d->link('Storie/2011/L/','Quel che dovrei fare')?></li>
+		<li><?=$d->link('Storie/2011/LI/', 'Il Druido')?></li>
+		<li><?=$d->link('Storie/2011/LII/', 'Sgaggio Tiem')?></li>
+		<li class="cat-heart"><?=$d->link('Storie/2011/LIII/', 'Quel che ho fatto')?></li>
+		<li><?=$d->link('Storie/2011/LIV/','Niente')?></li>
+		<li class="cat-heart"><?=$d->link('Storie/2011/LV/','Spezzato')?></li>
+		<li><?=$d->link('Storie/2011/LVI/','Correre di notte')?></li>
+		<li><?=$d->link('Storie/2011/LVII/','Il potere')?></li>
+		<li><?=$d->link('Storie/2011/LVIII/','Deus Ex Machina Evolved')?></li>
+		<li><?=$d->link('Storie/2011/LIX/','Violenza&amp;Soddisfazione')?></li>
+		<li><?=$d->link('Storie/2011/LX/','Filler')?></li>
+		<li><?=$d->link('Storie/2011/LXI/','Cattivo')?></li>
+		<li class="cat-heart"><?=$d->link('Storie/2011/LXII/','Normale')?></li>
+	</ol><h2 class="reverse">
+		Autunno 2011
+	</h2><ol start="63" style="margin-left: 4em">
+		<li><?=$d->link('Storie/2011/LXIII/','Gli scagnozzi del Dr.Odio')?></li>
+		<li><?=$d->link('Storie/2011/LXIV/','La metafora','INTRO')?></li>
+		<li><?=$d->link('Storie/2011/LXV/','Il 13 ottobre','INTRO')?></li>
+	</ol><ol start="67" style="margin-left:4em">
+		<li><?=$d->link('Storie/2011/LXVII/', 'Ancora ce la posso fare', 'INTRO')?></li>
+	</ol>
+</div><?php } ?>
