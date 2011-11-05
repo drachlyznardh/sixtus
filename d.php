@@ -1,5 +1,8 @@
 <?php
 
+	phpinfo ();
+	die ();
+
 	/* Set up configuration */
 	$servername = $_SERVER['SERVER_NAME'];
 	

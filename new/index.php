@@ -170,7 +170,7 @@
 		</p>
 	</div>
 </div><?php
-	};);
+	});
 	$p->addside(function ($d) {
 ?><div class="section">
 	<h2>
@@ -211,5 +211,5 @@
 		<?=$d->link('Storie/2011/LXV/','Il 13 Ottobre','INTRO')?>
 	</p>
 </div><?php
-	};);
+	});
 ?>
