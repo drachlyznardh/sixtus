@@ -1,44 +1,40 @@
 <?php
-	$p->addtitle ('La scimmia celeste', 'E il suo incredibile intelligente semplice stile', 'intro');
-	$p->addprev ('Extra/Record/', 'Record');
-	$p->addside (function ($d) {
-?>
-		<div class="section">
-			<p>
-				<?=$d->mktid('Celestial Monkey Style','intro')?>
-			</p><h2 class="reverse">
-				Prodigi
-			</h2><p>
-				<?=$d->mktid('Monkey Tail Distraction Strike', 'i')?>
-			</p><p>
-				<?=$d->mktid('Flowing Mirrof', 'ii')?>
-			</p><p class="reverse">
-				<?=$d->mktid('of Opposition Technique', 'ii')?>
-			</p><p>
-				<?=$d->mktid('Body of War Meditation', 'iii')?>
-			</p><p>
-				<?=$d->mktid('Withering Paw Strike', 'iv')?>
-			</p><p>
-				<?=$d->mktid('Celestial Monkey Form', 'v')?>
-			</p><p>
-				<?=$d->mktid('Walking in the Footsteps', 'vi')?>
-			</p><p class="reverse">
-				<?=$d->mktid('of Ten Thousands Things', 'vi')?>
-			</p><p>
-				<?=$d->mktid('Four Halo Golden Monkey Palm', 'vii')?>
-			</p><p>
-				<?=$d->mktid('Four Halo', 'viii')?>
-			</p><p class="reverse">
-				<?=$d->mktid('Golden Monkey Realignment', 'viii')?>
-			</p><p>
-				<?=$d->mktid('Celestial Godbody Understanding', 'ix')?>
-			</p>
-		</div>
-<?php
-	});
-	$p->addpage (function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('La scimmia celeste', 'E il suo incredibile intelligente semplice stile', 'intro');
+		$this->addprev ('Extra/Record/', 'Record');
+	} if ($this->addside ()) {
+?><div class="section">
+	<p>
+		<?=$d->mktid('Celestial Monkey Style','intro')?>
+	</p><h2 class="reverse">
+		Prodigi
+	</h2><p>
+		<?=$d->mktid('Monkey Tail Distraction Strike', 'i')?>
+	</p><p>
+		<?=$d->mktid('Flowing Mirrof', 'ii')?>
+	</p><p class="reverse">
+		<?=$d->mktid('of Opposition Technique', 'ii')?>
+	</p><p>
+		<?=$d->mktid('Body of War Meditation', 'iii')?>
+	</p><p>
+		<?=$d->mktid('Withering Paw Strike', 'iv')?>
+	</p><p>
+		<?=$d->mktid('Celestial Monkey Form', 'v')?>
+	</p><p>
+		<?=$d->mktid('Walking in the Footsteps', 'vi')?>
+	</p><p class="reverse">
+		<?=$d->mktid('of Ten Thousands Things', 'vi')?>
+	</p><p>
+		<?=$d->mktid('Four Halo Golden Monkey Palm', 'vii')?>
+	</p><p>
+		<?=$d->mktid('Four Halo', 'viii')?>
+	</p><p class="reverse">
+		<?=$d->mktid('Golden Monkey Realignment', 'viii')?>
+	</p><p>
+		<?=$d->mktid('Celestial Godbody Understanding', 'ix')?>
+	</p>
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<h2>
 			Celestial Monkey Style
@@ -436,5 +432,4 @@
 			Attributes below the listed minimums).
 		</p>
 	</div><?php } ?>
-</div>
-<?php }); ?>
+</div><?php } ?>

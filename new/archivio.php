@@ -1,6 +1,8 @@
 <?php
-	$p->addtitle ('Archivio', 'Dove tengo le notizie vecchie');
-	$p->addside(function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Archivio', 'Dove tengo le notizie vecchie');
+	} if ($this->addside ()) {
 ?><div class="section">
 	<h2>
 		Archivio
@@ -32,10 +34,7 @@
 		/ <?=$d->link('News/2011/11', 'Novembre')?>
 		/ Dicembre
 	</p>
-</div><?php
-	});
-	$p->addpage(function ($d) {
-?><div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<div class="section">
 		<h2>
 			Archivio
@@ -47,5 +46,5 @@
 		</p>
 	</div>
 </div><?php
-	});
+	}
 ?>

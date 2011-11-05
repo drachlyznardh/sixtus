@@ -110,7 +110,7 @@
 	}
 
 	if (file_exists($page))
-		if ($searchpath) $rside = 'tmpl/side/'. preg_replace ('/\//', '.', $searchpath) .'php';
+		if ($searchpath) $rside = 'sys/side/'. preg_replace ('/\//', '.', $searchpath) .'php';
 		else $rside = false;
 	else {
 		$page = 'error404.php';

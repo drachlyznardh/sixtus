@@ -1,8 +1,10 @@
 <?php
-	$p->addtitle ('Record', 'La pagina delle imprese', 'intro');
-	$p->addprev ('Extra/Guida/', 'Guida');
-	$p->addnext ('Extra/Scimmia/', 'La Scimmia Celeste');
-	$p->addside (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Record', 'La pagina delle imprese', 'intro');
+		$this->addprev ('Extra/Guida/', 'Guida');
+		$this->addnext ('Extra/Scimmia/', 'La Scimmia Celeste');
+	} if ($this->addside ()) {
 ?>
 <div class="section">
 	<p id="li-intro">
@@ -16,8 +18,7 @@
 	</p>
 </div>
 <?php
-	});
-	$p->addpage (function ($d) {
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
@@ -116,7 +117,4 @@
 			quella sera stessa, in realtà) potevo ancora camminare.
 		</p>
 	</div><?php } ?>
-</div>
-<?php
-	});
-?>
+</div><?php } ?>

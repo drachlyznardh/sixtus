@@ -1,9 +1,10 @@
 <?php
-	$p->addtitle ('Guida', 'Perché la gente arriva ma non sa dov&apos;è la roba', 'intro');
-	$p->addnext ('Extra/Record/', 'Record');
-	$p->addside (function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Guida', 'Perché la gente arriva ma non sa dov&apos;è la roba', 'intro');
+		$this->addnext ('Extra/Record/', 'Record');
+	} if ($this->addside ()) {
+?><div class="section">
 	<p>
 		<?=$d->mktid('Perché una guida?', 'intro')?>
 	</p><p>
@@ -28,11 +29,7 @@
 		/ <?=$d->mktid('Stili', 'meta', 'Stili')?>
 		/ <?=$d->mktid('Voci', 'meta', 'Voci')?>
 	</p>
-</div>
-<?php
-	});
-	$p->addpage (function ($d) {
-?>
+</div> <?php } if ($this->addpage ()) { ?>
 <div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
@@ -286,6 +283,4 @@
 			infilare le parole chiave direttamente nell'URL.
 		</p>
 	</div><?php } ?>
-</div><?php
-	});
-?>
+</div><?php } ?>
