@@ -1,9 +1,5 @@
 <?php
 	class Pager {
-		private $page;
-		private $side;
-		private $meta;
-
 		private $counter;
 		private $settings;
 
@@ -29,15 +25,17 @@
 		}
 
 		public function addtitle ($title, $subtitle, $default = false) {
-			if ($this->meta) $this->metas['title'] = array ($title, $subtitle, $default);
+			$this->metas['title'] = array ($title, $subtitle, $default);
+			if ($default && !$this->d->tab['name'])
+				$this->d->tab['name'] = $default;
 		}
 
 		public function addnext ($request, $title, $tab = false, $hash = false) {
-			if ($this->meta) $this->metas['next'] = array ($request, $title, $tab, $hash);
+			$this->metas['next'] = array ($request, $title, $tab, $hash);
 		}
 
 		public function addprev ($request, $title, $tab = false, $hash = false) {
-			if ($this->meta) $this->metas['prev'] = array ($request, $title, $tab, $hash);
+			$this->metas['prev'] = array ($request, $title, $tab, $hash);
 		}
 
 		/* ERASE ME */
@@ -107,9 +105,19 @@
 			$this->files[] = array ($file, $meta, $page, $side);
 
 			$this->push ($meta, $page, $side);
+			if ($meta) $this->loadmeta ($file);
+			$this->pop ();
+		}
+
+		public function load () {
+			foreach ($this->files as $file)
+				$this->doload ($file[0], $file[1], $file[2], $file[3]);
+		}
+
+		public function doload ($file, $meta, $page, $side) {
+			$this->push ($meta, $page, $side);
 			if ($page) $this->loadpage ($file);
 			if ($side) $this->loadside ($file);
-			if ($meta) $this->loadmeta ($file);
 			$this->pop ();
 		}
 

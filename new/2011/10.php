@@ -1,8 +1,10 @@
 <?
-	$p->addtitle ('Ottobre', 'Fa ancora caldo…');
-	$p->addprev ('News/2011/09/', 'Settembre');
-	$p->addnext ('News/2011/11/', 'Novembre');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Ottobre', 'Fa ancora caldo…');
+		$this->addprev ('News/2011/09/', 'Settembre');
+		$this->addnext ('News/2011/11/', 'Novembre');
+	} if ($this->addpage ()) {
 		if ($d->manypages) {
 			echo('<div class="section">');
 			echo('<h2>Notizie</h2>');
@@ -187,55 +189,47 @@
 			adesso, quando arrivarò alla fine mi sarò dimenticato dell'inizio.
 		</p>
 	</div>
-</div>
-<?php
-	});
-	$p->addside(function ($d) {
-?>
-	<div class="section">
-		<h2 class="reverse">
-			Ottobre 2011
-		</h2><p>
-			<span class="em">27/10</span> –
-			Gundam AGE [ <?=$d->link('Recensioni/Show/XIV/', 'ep2~3', 'II')?> ]
-		</p><p>
-			<span class="em">23/10</span> – 
-			L'Ordine della Fenice (<?=$d->link('Recensioni/Libri/XII/', '3',
-			'V3')?>)
-		</p><p>
-			<span class="em">18/10</span> –
-			<?=$d->link('Storie/2011/LXVII/', 'Ancora ce la posso fare')?>
-		</p><p>
-			<span class="em">16/10</span> –
-			<?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime')?>
-		</p><p>
-			<span class="em">15/10</span> –
-			<?=$d->link('Recensioni/Show/XIII/', 'Let&apos;s go Kamen Riders', 'M2011')?>
-		</p><p>
-			<span class="em">14/10</span>
-			Il 13 Ottobre (Bonus <?=$d->link('Storie/2011/LXV/','2','VI')?>
-			&amp; <?=$d->link('Storie/2011/LXV/','3','VII')?>)
-		</p><p>
-			<span class="em">13/10</span> – 
-			<?=$d->link('Storie/2011/LXV/','Il 13 Ottobre','INTRO')?>
-		</p><p>
-			<span class="em">12/10</span> – 
-			<?=$d->link('Recensioni/GundamAGE', 'Gundam AGE')?>
-		</p><p>
-			<span class="em">12/10</span> – 
-			L'Ordine della Fenice (<?=$d->link('Recensioni/HarryPotter/', '2',
-			'V2')?>)
-		</p><p>
-			<span class="em">03/10</span> –
-			<?=$d->link('Storie/2011/LXIV/', 'La Metafore')?>
-		</p><p>
-			<span class="em">02/10</span> –
-			<?=$d->link('Extra/Record/', 'Record')?>
-		</p><p>
-			<span class="em">01/10</span> –
-			<?=$d->link('Recensioni/Libri/XII/','L&apos;Ordine della Fenice', 'V')?>
-		</p>
-	</div>
-<?php
-	});
-?>
+</div><?php } if ($this->addside ()) { ?><div class="section">
+	<h2 class="reverse">
+		Ottobre 2011
+	</h2><p>
+		<span class="em">27/10</span> –
+		Gundam AGE [ <?=$d->link('Recensioni/Show/XIV/', 'ep2~3', 'II')?> ]
+	</p><p>
+		<span class="em">23/10</span> – 
+		L'Ordine della Fenice (<?=$d->link('Recensioni/Libri/XII/', '3',
+		'V3')?>)
+	</p><p>
+		<span class="em">18/10</span> –
+		<?=$d->link('Storie/2011/LXVII/', 'Ancora ce la posso fare')?>
+	</p><p>
+		<span class="em">16/10</span> –
+		<?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime')?>
+	</p><p>
+		<span class="em">15/10</span> –
+		<?=$d->link('Recensioni/Show/XIII/', 'Let&apos;s go Kamen Riders', 'M2011')?>
+	</p><p>
+		<span class="em">14/10</span>
+		Il 13 Ottobre (Bonus <?=$d->link('Storie/2011/LXV/','2','VI')?>
+		&amp; <?=$d->link('Storie/2011/LXV/','3','VII')?>)
+	</p><p>
+		<span class="em">13/10</span> – 
+		<?=$d->link('Storie/2011/LXV/','Il 13 Ottobre','INTRO')?>
+	</p><p>
+		<span class="em">12/10</span> – 
+		<?=$d->link('Recensioni/GundamAGE', 'Gundam AGE')?>
+	</p><p>
+		<span class="em">12/10</span> – 
+		L'Ordine della Fenice (<?=$d->link('Recensioni/HarryPotter/', '2',
+		'V2')?>)
+	</p><p>
+		<span class="em">03/10</span> –
+		<?=$d->link('Storie/2011/LXIV/', 'La Metafore')?>
+	</p><p>
+		<span class="em">02/10</span> –
+		<?=$d->link('Extra/Record/', 'Record')?>
+	</p><p>
+		<span class="em">01/10</span> –
+		<?=$d->link('Recensioni/Libri/XII/','L&apos;Ordine della Fenice', 'V')?>
+	</p>
+</div><?php } ?>

@@ -1,7 +1,9 @@
 <?php
-	$p->addtitle ('Novembre', 'Piove, ma fa ancora caldo');
-	$p->addprev ('News/2011/10/', 'Ottobre');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Novembre', 'Piove, ma fa ancora caldo');
+		$this->addprev ('News/2011/10/', 'Ottobre');
+	} if ($this->addpage ()) {
 ?><div class="small">
 	<div class="section">
 		<p>
@@ -56,8 +58,7 @@
 		</p>
 	</div>
 </div><?php
-	});
-	$p->addside (function ($d) {
+	} if ($this->addside ()) {
 ?><div class="section">
 	<h2 class="reverse">
 		Novembre 2011
@@ -70,5 +71,5 @@
 		<span class="em">03/11</span> – Rinnovo!
 	</p>
 </div><?php
-	});
+	}
 ?>

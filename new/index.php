@@ -1,6 +1,8 @@
 <?
-	$p->addtitle ('Novità', 'Le dieci notizie più recenti');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Novità', 'Le dieci notizie più recenti');
+	} if ($this->addpage ()) {
 ?><div class="small">
 	<div class="section">
 		<p>
@@ -170,8 +172,7 @@
 		</p>
 	</div>
 </div><?php
-	});
-	$p->addside(function ($d) {
+	} if ($this->addside ()) {
 ?><div class="section">
 	<h2>
 		Novità
@@ -211,5 +212,5 @@
 		<?=$d->link('Storie/2011/LXV/','Il 13 Ottobre','INTRO')?>
 	</p>
 </div><?php
-	});
+	}
 ?>

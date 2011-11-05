@@ -1,6 +1,8 @@
 <?php
-	$p->addtitle ('Personaggi', 'Per saper chi sono e dove vanno', 'spoiler');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Personaggi', 'Per saper chi sono e dove vanno', 'spoiler');
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<?php if ($d->mktab('spoiler')) { ?><div class="section">
@@ -135,8 +137,7 @@
 		</p>
 	</div><?php } ?>
 </div><?php
-	});
-	$p->addside (function ($d) {
+	} if ($this->addside ()) {
 ?><div class="section">
 	<p>
 		<?=$d->mktid('Spoiler', 'spoiler')?>
@@ -169,4 +170,6 @@
 	</p><p class="reverse">
 		<?=$d->mktid('Simàk Enkà', 'antagonisti', 'SimàkEnkà')?>
 	</p>
-</div><?php }); ?>
+</div><?php
+	};
+?>

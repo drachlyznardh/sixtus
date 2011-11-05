@@ -1,8 +1,10 @@
 <?
-	$p->addtitle ('Settembre', 'L&apos;inverno sta arrivando…');
-	$p->addprev ('News/2011/08/', 'Agosto');
-	$p->addnext ('News/2011/10/', 'Ottobre');
-	$p->addpage(function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Settembre', 'L&apos;inverno sta arrivando…');
+		$this->addprev ('News/2011/08/', 'Agosto');
+		$this->addnext ('News/2011/10/', 'Ottobre');
+	} if ($this->addpage()) {
 		if ($d->manypages) {
 			echo ('<div class="section">');
 			echo ('<h2>Notizie</h2>');
@@ -225,12 +227,7 @@
 			O forse…
 		</p>
 	</div>
-</div>
-<?php
-	});
-	$p->addside (function ($d) {
-?>
-<div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<h2 class="reverse">
 		Settembre 2011
 	</h2><p>
@@ -262,6 +259,4 @@
 		<span class="em">02/09</span> – 
 		DeuxEx [<?=$d->link('Storie/2011/LVIII/', 'Altra sessione', 0, 'II')?>]
 	</p>
-</div><?php
-	});
-?>
+</div><?php } ?>

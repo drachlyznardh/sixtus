@@ -1,16 +1,17 @@
 <?
-	$p->addtitle ('Agosto', 'Notizie al caldo');
-	$p->addprev ('News/2011/07/', 'Luglio');
-	$p->addnext ('News/2011/09/', 'Settembre');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta()) {
+		$this->addtitle ('Agosto', 'Notizie al caldo');
+		$this->addprev ('News/2011/07/', 'Luglio');
+		$this->addnext ('News/2011/09/', 'Settembre');
+	} if ($this->addpage ()) {
 		if ($d->manypages) {
 			echo ('<div class="section">');
 			echo ('<h2>Notizie</h2>');
 			echo ('<h2 class="reverse">Agosto 2011</h2>');
 			echo ('</div>');
 		}
-?>
-<div class="small">
+?><div class="small">
 	<div class="section">
 		<p>
 			<span class="em">30/08/2011</span> – E siccome ancora la dovevo
@@ -58,12 +59,7 @@
 			Mentivo.
 		</p>
 	</div>
-</div>
-<?php
-	});
-	$p->addside (function ($d) {
-?>
-<div class="section">
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<h2 class="reverse">
 		Agosto 2011
 	</h2><p>
@@ -96,7 +92,4 @@
 		<span class="em">05/08</span> –
 		<?=$d->link('Recensioni/Show/IX/', 'Angel Beats!')?>
 	</p>
-</div>
-<?php
-	});
-?>
+</div><?php } ?>
