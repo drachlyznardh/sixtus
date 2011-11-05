@@ -1,5 +1,7 @@
 <?php
-	$sides[] = function ($d) {
+	$p->addtitle ('Rambo', 'Una quadrilogia che cambia nel tempo', 'i');
+	$p->addprev ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
+	$p->addside (function ($d) {
 ?>
 <div class="section">
 	<h2>
@@ -15,14 +17,9 @@
 	</p>
 </div>
 <?php
-	};
-	require_once ('review/film/index.php');
-	$title = array ('Rambo', 'Una quadrilogia che cambia nel tempo', 'i');
-	$prev = array ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap', 0);
-	$pages = array();
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	});
+	$p->addpage (function ($d) {
+?><div class="small">
 	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>
 			First Blood – 1982
@@ -300,5 +297,8 @@
 			Buono
 		</h2>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php
+	});
+	$p->set(false, true, false);
+	require_once ('review/film/index.php');
+?>

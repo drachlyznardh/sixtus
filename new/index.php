@@ -3,6 +3,57 @@
 	$p->addpage (function ($d) {
 ?><div class="small">
 	<div class="section">
+		<p>
+			Una cosa bella!
+		</p><p id="05/00:35">
+			<span class="em"><?=$d->link($d->self, '05/11/2011 00:35', 0, '05/0035')?>
+			[<?=$d->link('Extra/GUIDA/', 'MiniStorie', 'CONTENUTI', 'MiniStorie')?>] </span>
+		</p><h2 class="cat-heart">
+			KitKat gratis!
+		</h2><p>
+			Questa è una cosa nuova e bella.
+		</p><div class="inside"><p>
+				Ero lì al baretto che mi facevo un caffé in compagnia (non
+				tanta, recentemente, ma qualcuno è ancora in zona…) e mentre
+				aspetto al bancone, mi guardo attorno.
+			</p><p>
+				Vedo alla mia sinistra una bimba alta così (beh, doveva essere
+				una matricola di qualcosa, ma – poverella – era alta un
+				barattolo e una banana) che regge un pacchetto di KitKat.
+			</p><p>
+				Il mio cervello va in pappa, tentando di capire, visto che il
+				bar non vende quella roba. Il mio ragionamento è, ovviamente, ad
+				alta voce; e la ragazza mia sente.
+		</p></div><p>
+			Ma ecco la cosa bella.
+		</p><div class="outside"><p>
+				«Oh, no: l'ho preso alle macchinette» mi spiega lei, e
+				gentilmente «Ne vuoi un pezzo?»
+		</p></div><p>
+			Awwwwww. Non solo non si è spaventata, come succede sempre, ma m'ha
+			pure offerto da mangiare. Quale rara circostanza.
+		</p><p>
+			Non spero di ritrovare questo angioletto una seconda volta, ma di
+			certo la salverò nella lista delle <span
+			class="code">@Ragazza-__SUFFIX__</span>, per sempre nel mio cuore.
+		</p>
+	</div><div class="section">
+		<p id="03/00:00">
+			<span class="em"><?=$d->link($d->self, '03/11/2011 00:00', 0, '03/00:00')?></span>
+		</p><h2>
+			Rinnovo! Spostamento! Restauro!
+		</h2><p>
+			Lyznardhum (questo sito) si sposta, cambia hosting, cambia
+			indirizzo, cambia veste, cambia implementazione… cambia tutto!
+		</p><p>
+			Tru Naluten torna in sede! Le recensioni sono state riordinate! È
+			cominciato il NaNoWriMo 2011! Le storie restano identiche!
+		</p><p>
+			Cominciamo con due recensioni nuove:
+			<?=$d->link('Recensioni/Film/XVII/', 'First Blood', 'i')?> e
+			<?=$d->link('Recensioni/Film/XVII/', 'First Blood Part II', 'ii')?>
+		</p>
+	</div><div class="section">
 		<p id="27/16:35">
 			<span class="em"><?=$d->link($d->self, '27/10/2011, 16:35', 0, '27/16:35')?>
 			[<?=$d->link('Extra/Guida/', 'Recensioni', 'RECENSIONI')?>]</span>
@@ -117,22 +168,6 @@
 		</h2><p>
 			<?=$d->link('Storie/2011/LXV/','Oggi','INTRO')?> sono successe molte cose. E domani?
 		</p>
-	</div><div class="section">
-		<p id="12/14:45">
-			<span class="em"><?=$d->link($d->self, '12/10/2011, 14:45', 0, '12/14:45')?>
-			[<?=$d->link('Extra/Guida','Recensioni','RECENSIONI')?>]</span>	
-		</p><h2 class="reverse">
-			Gundam AGE
-		</h2><p>
-			E mentre tento, da lungo tempo, di scrivere la prossima storia (cose
-			incredibiliose?!?!?!?!), arriva il triste giorno in cui mi passa tra
-			le mani il primo episodio della nuova serie di Gundam.
-		</p><p>
-			Fa cagare. Ma se volete, l'ho scritta un po'
-			<?=$d->link('Recensioni/GundamAGE','più lunga','INTRO')?>. Ma non
-			solo! Anche un altro pezzo dell'<?=$d->link('Recensioni/HarryPotter/',
-			'Ordine della Fenice','V2')?>. Il libro che non finirà mai…
-		</p>
 	</div>
 </div><?php
 	});
@@ -141,10 +176,14 @@
 	<h2>
 		Novità
 	</h2><h3>
-		<?=$d->link('News/2011/11', 'Novembre')?> 2011
-	</h3><p>
-		<span class="em">03/11</span> – 
-		Il sito è tutto nuovo!
+		<?=$d->link('News/2011/11/', 'Novembre')?> 2011
+	</h3><p class="cat-heart">
+		<span class="em">05/11</span> – KitKat Gratis!
+	</p><p>
+		<span class="em">03/11</span> – <?=$d->link('Recensioni/Film/XVII/', 'First Blood', 'i')?>
+		[ <?=$d->link('Recensioni/Film/XVII/', 'Part II', 'ii')?> ]
+	</p><p>
+		<span class="em">03/11</span> – Rinnovo!
 	</p><br /><h3>
 		<?=$d->link('News/2011/10/', 'Ottobre')?> 2011
 	</h3><p>
@@ -170,13 +209,6 @@
 	</p><p>
 		<span class="em">13/10</span> – 
 		<?=$d->link('Storie/2011/LXV/','Il 13 Ottobre','INTRO')?>
-	</p><p>
-		<span class="em">12/10</span> – 
-		<?=$d->link('Recensioni/GundamAGE', 'Gundam AGE')?>
-	</p><p>
-		<span class="em">12/10</span> – 
-		L'Ordine della Fenice (<?=$d->link('Recensioni/HarryPotter/', '2',
-		'V2')?>)
 	</p>
 </div><?php
 	});

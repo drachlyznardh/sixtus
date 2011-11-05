@@ -15,6 +15,7 @@
 		<?=$d->mktid('Contenuti', 'contenuti')?>
 	</h3><p class="reverse">
 		<?=$d->mktid('Storie', 'contenuti', 'Storie')?>
+		/ <?=$d->mktid('MiniStorie', 'contenuti', 'MiniStorie')?>
 		/ <?=$d->mktid('Recensioni', 'contenuti', 'Recensioni')?>
 	</p><p class="reverse">
 		<?=$d->mktid('Tru Naluten', 'contenuti', 'TruNaluten')?>
@@ -155,8 +156,9 @@
 			class="em">popolo dell'aula studio</span>, tenevamo le storie per
 			tradizione orale, come facevano gli antichi.
 		</p><div style="float:right;width:50%">
+			<a id="MiniStorie"></a>
 			<div class="section" style="margin-left:10px;margin-top:1px"><h2 class="reverse">
-				Le ministorie
+				Le MiniStorie
 			</h2><p style="padding-left:5px;">
 				Ci sono state anche delle storie troppo brevi per meritare una
 				pagina intera. Hanno cominciato a comparire nella pagina delle

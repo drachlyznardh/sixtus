@@ -1,27 +1,27 @@
 <?php
-	$title=array('Il lavoro di Simak', 'Quello che ha scelto di fare');
-	$prev=array('Tru/Naluten/Vol.II/XIX/', 'Volume II', 0);
+	$p->addtitle ('Il lavoro di Simak', 'Quello che ha scelto di fare', 'i');
+	$p->addprev ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
 	#$next=array('Tru/Naluten/Vol.III/XXI/', 'Capitolo XXI', 0);
-	function mkpage($d){
+	$p->addside (function ($d) {
 ?>
-<div class="wider">
-	<div class="widelist">
 		<div class="section">
 			<h2>
 				Tru Naluten XX
 			</h2><ol><li>
-					<?=$d->mktid($d->self, 'Parte I', 'i')?>
+					<?=$d->mktid('Parte I', 'i')?>
 				</li><li>
-					<?=$d->mktid($d->self, 'Parte II', 'ii')?>
+					<?=$d->mktid('Parte II', 'ii')?>
 				</li><li>
-					<?=$d->mktid($d->self, 'Parte III', 'iii')?>
+					<?=$d->mktid('Parte III', 'iii')?>
 				</li><li>
-					<?=$d->mktid($d->self, 'Parte IV', 'iv')?>
+					<?=$d->mktid('Parte IV', 'iv')?>
 			</li></ol>
 		</div>
-	</div><div class="widecontent">
-		<?php if ($d->mktab('i')) { ?>
-	<div class="section">
+<?php
+	});
+	$p->addpage (function ($d) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>
 			Tru Naluten III, XX
 		</h2><h2 class="reverse">
@@ -409,7 +409,10 @@
 				<?=$d->inline('simak','Vieni, Jo, seguimi. C&apos;è troppa umidità,
 			qui nella jungla, l&apos;umidità t&apos;increspa i capelli')?>
 		</p></div>
-		</div><?php } ?>
-	</div>
+	</div><?php } ?>
 </div>
-<?php } ?>
+<?php
+	});
+	$p->set (false, true, false);
+	require_once ('index.php');
+?>

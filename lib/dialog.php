@@ -30,8 +30,10 @@
 		}
 
 		public function link($request, $title, $tab=false, $sharp=false) {
-			if ($tab && !$this->notab) $ref = substr($request, 0, -1).'§'.strtoupper($tab).'/';
-			else $ref= $request;
+			if ($tab)
+				if ($this->notab) { $ref = $request; $sharp = strtoupper($tab); }
+				else $ref = substr($request, 0, -1).'§'.strtoupper($tab).'/';
+			else $ref = $request;
 			if ($this->opt) $ref .= $this->opt .'/';
 			if ($sharp) $ref .= '#'.$sharp;
 			return '<a href="'.$ref.'">'.$title.'</a>';

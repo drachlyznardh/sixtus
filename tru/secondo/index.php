@@ -1,7 +1,7 @@
 <?php
 	$p->addtitle ('Volume II', 'Con Jo, la piccola fioraia innocente');
 	$p->addprev ('Tru/Naluten/Vol.I/', 'Volume I');
-	$p->addnext ('Tru/Natelun/Vol.III/', 'Volume III');
+	$p->addnext ('Tru/Naluten/Vol.III/', 'Volume III');
 	$p->addpage(function ($d) {
 ?><div class="small">
 	<div class="section">

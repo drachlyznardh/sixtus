@@ -1,12 +1,9 @@
 <?php
-
-	$title=array('Duello', 'Finalmente un po&apos; di botte');
-	$prev=array('Capitolo XVII', 'Secondo/XVII/');
-	$next=array('Capitolo XIX', 'Secondo/XIX/');
-
-	function mkpage ($d) {
+	$p->addtitle ('Duello', 'Finalmente un po&apos; di botte');
+	$p->addprev ('Tru/Naluten/Vol.II/XVII/', 'Battaglia navale');
+	$p->addnext ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
+	$p->addpage (function ($d) {
 ?>
-
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
 	formato pi&ugrave; confortevole dal punto di vista scrittorio; comincio
@@ -14,8 +11,9 @@
 -->
 <div class="small">
 	<div class="section">
-		<h2>Tru Naluten XVIII &ndash; Duello</h2>
-		<p>
+		<h2>
+			Tru Naluten XVIII &ndash; Duello
+		</h2><p>
 			Tutt&apos;a un tratto, l&apos;acqua ha deciso di saltare per aria infradiciandoci
 			tutti senza riserve, senza preavviso e senza riscaldamento.
 		</p><p>
@@ -47,11 +45,11 @@
 			Uno di loro, evidentemente il capo, si avvicina. Cerca qualcuno tra di noi, lo
 			trova: sono io. Fa altri due passi in avanti, mi guarda, si inchina poggiando il
 			ginocchio sinistro sul ponte della nave.
-		</p>
-		<div class="outside">
-			<?php $d->speak ('ahli', 'Perdona il ritardo, Araldo'); ?>
-			<?php $d->speak ('ahli', 'Io sono Ah&apos;li dei Glah&apos;li. Mi manda Lui'); ?>
-		</div>
+		</p><div class="outside"><p>
+				<?=$d->speak ('ahli', 'Perdona il ritardo, Araldo')?>
+			</p><p>
+				<?=$d->speak ('ahli', 'Io sono Ah&apos;li dei Glah&apos;li. Mi manda Lui')?>
+		<p></div>
 	</div><div class="section">
 		<p>
 			Sono alti un paio di metri, superano in possanza chiunque altro, oggi. Hanno la
@@ -66,54 +64,60 @@
 			Entrambe le flotte, per lo stupore &ndash; ma anche per la stanchezza &ndash; sono
 			ferme e riprendono il fiato. Poi un grido rompe il silenzio.
 		</p>
-		<div class="outside">
-			<?php $d->speak ('rennington', 'Chi siete? Chi vi manda? Esigo una risposta!'); ?>
-		</div>
+		<div class="outside"><p>
+				<?=$d->speak ('rennington', 'Chi siete? Chi vi manda? Esigo una risposta!')?>
+		</p></div>
 		<p>
 			Torna il silenzio.
 		</p><p>
-			Le vene sul collo dell&apos;ammiraglio si gonfiano e il suo volto s&apos;arrossa.
-		</p>
-		<div class="outside">
-			<p>Urla ancora: <?php $d->inline ('rennington', 'Voglio il nome del responsabile!
-			Chi ha avuto l&apos;ardire di organizzare questa trappola diabolica?'); ?></p>
-			<p><?php $d->inline ('simak', 'Non si adiri, ammiraglio'); ?> dice una voce alla
-			sue spalle.</p>
-			<p>Quello si volta con gli occhi iniettati di sangue, voglioso di tagliar la gola
-			al suo interlocutore.</p>
-			<p>Si avvicina un piccoletto con la divisa sgualcita, a passi decisi, senza alcun
-			timore.</p>
-			<?php $d->speak ('rennington', 'Tu! Stevenson! Come osi comparire ora! Tu e i tuoi
-			consigli! Perch&eacute; t&apos;ho dato ascolto? Che sono &apos;ste bestie?
-			Parla!'); ?>
-			Il mozzo Stevenson, con calma, senza curarsi del suo ammiraglio, si rivolge invece
-			a me: <?php $d->speak ('simak', 'Visto, Jo? Alla fine hai chiamato. E hai fatto
-			bene: molta della tua gente &egrave; stata salvata. Accetterai le condizioni,
-			ora?'); ?>
-			<p><?php $d->inline ('rennington', 'Come osi? Bastardo, ti rivolgi al nemico, al
-			mio cospetto, ignorando le mie domande? Finirai sulla forca, per questo'); ?>
-			sentenzia l&apos;ammiraglio, rimasto un momento in disparte.</p>
-			<?php $d->speak ('simak', 'Perdona un momento, Jo'); ?> 
-		</div>
-		<p>
+			Le vene sul collo dell'ammiraglio si gonfiano e il suo volto s'arrossa.
+		</p><div class="outside"><p>
+				Urla ancora: <?=$d->inline ('rennington', 'Voglio il nome del
+				responsabile! Chi ha avuto l&apos;ardire di organizzare questa
+				trappola diabolica?'); ?>
+			</p><p>
+				<?=$d->inline ('simak', 'Non si adiri, ammiraglio')?> dice una
+				voce alla sue spalle.
+			</p><p>
+				Quello si volta con gli occhi iniettati di sangue, voglioso di
+				tagliar la gola al suo interlocutore.
+			</p><p>
+				Si avvicina un piccoletto con la divisa sgualcita, a passi
+				decisi, senza alcun timore.
+			</p>
+			<?=$d->speak ('rennington', 'Tu! Stevenson! Come osi comparire ora!
+			Tu e i tuoi consigli! Perch&eacute; t&apos;ho dato ascolto? Che sono
+			&apos;ste bestie? Parla!')?>
+			<p>
+				Il mozzo Stevenson, con calma, senza curarsi del suo ammiraglio,
+				si rivolge invece a me: <?=$d->speak ('simak', 'Visto, Jo? Alla
+				fine hai chiamato. E hai fatto bene: molta della tua gente
+				&egrave; stata salvata. Accetterai le condizioni, ora?')?>
+			</p><p>
+				<?=$d->inline ('rennington', 'Come osi? Bastardo, ti rivolgi al
+				nemico, al mio cospetto, ignorando le mie domande? Finirai sulla
+				forca, per questo')?> sentenzia l'ammiraglio, rimasto un momento
+				in disparte.
+			</p>
+			<?=$d->speak ('simak', 'Perdona un momento, Jo')?> 
+		</div><p>
 			Furente, l&apos;ammiraglio si divincola dalla stretta dei suoi aguzzini, estrae la
 			spada, scatta verso il mozzo per impalarlo. Ruotando sul posto, il mozzo gli
 			afferra il polso, blocca l&apos;arma e chiede:
-		</p>
-		<div class="outside">
-			<?php $d->speak ('simak', 'Che vuol fare, ammiraglio? Vuole la lotta? Farebbe
+		</p><div class="outside">
+			<?=$d->speak ('simak', 'Che vuol fare, ammiraglio? Vuole la lotta? Farebbe
 			meglio ad ammettere la sconfitta, a ritirare i suoi uomini &ndash; che avranno
 			salva la vita &ndash; e lasciare che questa gente viva libera secondi i propri
 			costumi, come uomini liberi'); ?>
-			Ancora stretto e bloccato, l&apos;ammiraglio inveisce: <?php $d->inline
+			Ancora stretto e bloccato, l&apos;ammiraglio inveisce: <?=$d->inline
 			('rennington', 'Pazzo! Queste parole sono degne solo di un eretico! Con tutto
 			quello che ho fatto per te! Ora che altro dirai? Che adori anche tu il loro dio?
 			Che adori Lui? Morirai qui e subito, per mia mano!'); ?>
 			<p>Stranamente compiaciuto di queste parole, il mozzo spinge l&apos;ammiraglio
-			un paio di passi indietro, assapora il momento e chiede: <?php $d->inline ('simak
+			un paio di passi indietro, assapora il momento e chiede: <?=$d->inline ('simak
 			forte', 'Marcus Ace Rennington, mi stai sfidando?'); ?></p>
-			<?php $d->speak ('rennington forte', 'Si, dannato!'); ?>
-			<?php $d->speak ('simak', 'Bene!'); ?>
+			<?=$d->speak ('rennington forte', 'Si, dannato!'); ?>
+			<?=$d->speak ('simak', 'Bene!'); ?>
 		</div>
 		<p>
 			Sul mozzo cade un fulmine.
@@ -127,10 +131,10 @@
 			e la testa come una campana, Rennington riesce a distinguere queste parole:
 		</p>
 		<div class="outside">
-			<?php $d->speak ('lyznardh', 'Scegli la tua arma, mortale'); ?>
-			<?php $d->speak ('rennington', 'Non ho che questa! Ma sar&agrave; sufficiente anche
+			<?=$d->speak ('lyznardh', 'Scegli la tua arma, mortale'); ?>
+			<?=$d->speak ('rennington', 'Non ho che questa! Ma sar&agrave; sufficiente anche
 			per te, mostro'); ?>
-			<?php $d->speak ('lyznardh', 'Sia!'); ?>
+			<?=$d->speak ('lyznardh', 'Sia!'); ?>
 		</div>
 		<p>
 			Tutti i presenti si tirano indietro, i nostri, i loro, i Glah&apos;li, tutti.
@@ -169,7 +173,7 @@
 			chiede:
 		</p>
 		<div class="outside">
-			<?php $d->speak ('lyznardh', 'Marcus Ace Rennington, temi tu la morte?'); ?>
+			<?=$d->speak ('lyznardh', 'Marcus Ace Rennington, temi tu la morte?'); ?>
 		</div>
 		<p>
 			Senza fiato per lo sforzo, l&apos;uomo rimane sorpreso e boccheggia. Credo
@@ -186,4 +190,8 @@
 		Tru Naluten XVII fine
 	-->
 
-<?php } ?>
+<?php
+	});
+	$p->set(false, true, false);
+	require_once ('index.php');
+?>

@@ -1,10 +1,8 @@
 <?php
-
-	$title=array('La lezione', 'Che zittisce. Tutti.');
-	$prev=array('Capitolo XVIII', 'Secondo/XVIII/');
-	$next=array('Volume III', 'Terzo/');
-
-	function mkpage ($d) {
+	$p->addtitle ('La lezione', 'Che zittisce. Tutti.');
+	$p->addprev ('Tru/Naluten/Vol.II/XVIII/', 'Duello');
+	$p->addnext ('Tru/Nalunte/Vol.III/XX/', 'Il lavoro di Simak');
+	$p->addpage (function ($d) {
 ?>
 <div class="small">
 	<div class="section">
@@ -65,11 +63,7 @@
 			Do l'ordine, liberiamo ogni marinaio in ostaggio e ce ne torniamo sotto
 			la superficie.
 		</p>
-	</div><div class="section">
-		<div class="inside"><p>...</p></div>
-		<p>...</p>
-		<div class="outside"><p>...</p></div>
-	</div><div class="section">
+	</div><br /><div class="section">
 		<p>
 			Non credo a quel che ho visto. Non voglio.
 		</p><p>
@@ -120,8 +114,7 @@
 			Alì giace a terra. Sanguina, ma non saprei dire quanto. Sta parlando con
 			il mozzo. Dallo sguardo che ha negli occhi, vedo che non gli resta
 			molto.
-		</p>
-		<div class="outside">
+		</p><div class="outside">
 			<?=$d->speak('ali','Maestro, perdona. Ti ho deluso')?>
 			<p><?=$d->inline('simak','É vero, Alì, ma non crucciarti')?> risponde
 			quello, senza batter ciglio <?=$d->inline('simak','Dimmi invece quello
@@ -136,11 +129,7 @@
 			credo bene che Aysha debba essere avvertita dalle sorti della battaglia.
 		</p><p>
 			E del fratello.
-	</p></div><div class="section">
-		<div class="inside"><p>...</p></div>
-		<p>...</p>
-		<div class="outside"><p>...</p></div>
-	</div><div class="section"><p>
+	</p></div><br /><div class="section"><p>
 			Certo è fenomenale quanto la comparsa del mostro multizampa abbia scosso
 			profondamente tutti i presenti. E forse anche la storia degli
 			uomini/pesce, ma in fondo anche quella passa in secondo piano.
@@ -276,11 +265,7 @@
 			Vedo stelle a milioni, molte di più di quante ne veda di notte. Ma sono
 			stanca e questo sistema non è poi così confortevole. Tela!
 		</p>
-	</div><div class="section">
-		<div class="inside"><p>...</p></div>
-		<p>...</p>
-		<div class="outside"><p>...</p></div>
-	</div><div class="section">
+	</div><br /><div class="section">
 		<p>
 			Quando mi risveglio, sto sdraidata su un'amaca di larghe foglie. C'è un
 			fuoco, l'aria è paurosamente umida e Simak sta attizzando le fiamme con
@@ -289,4 +274,10 @@
 			<?=$d->speak('simak','Oh, eccoti sveglia. Pronta? Tra poco arriva la
 			cena')?>
 		</div>
-<?php } ?>
+	</div>
+</div>
+<?php
+	});
+	$p->set(false, true, false);
+	require_once ('index.php');
+?>

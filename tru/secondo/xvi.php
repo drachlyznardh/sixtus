@@ -4,7 +4,7 @@
 	$prev=array('Capitolo XV', 'Secondo/XV/');
 	$next=array('Capitolo XVII', 'Secondo/XVII');
 
-	function mkpage ($d) {
+	$p->addpage (function ($d) {
 ?>
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
@@ -239,4 +239,8 @@
 		</div>
 	</div>
 </div>
-<?php } ?>
+<?php
+	});
+	$p->set(false, true, false);
+	require_once ('index.php');
+?>
