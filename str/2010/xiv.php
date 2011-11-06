@@ -1,13 +1,24 @@
 <?php
-
-	$title=array('L&apos;incontro', 'La cronaca di una settimana');
-	$prev=array('Storia XIII', 'Storie/XIII/');
-	$next=array('Storia XV', 'Storie/XV/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('L&apos;incontro', 'La cronaca di una settimana', 'i');
+		$this->addprev ('Storie/2010/XIII/', 'Il modello definitivo');
+		$this->addnext ('Storie/2010/XV/', 'La spinta');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		L'incontro
+	</h2><ol><li>
+			<?=$d->mktid('Definitivamente definitivo, a colori', 'i')?>
+		</li><li>
+			<?=$d->mktid('La scatola', 'ii')?>
+		</li><li>
+			<?=$d->mktid('L&apos;inseguimento', 'iii')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<p>
 			Il giorno della verità s'avvicina e potrebbe anche essere questo.
 		</p><p>
@@ -54,7 +65,9 @@
 			per visionare un filmaccio, `Mega Shark Vs Giant Octopus' che sconsiglio
 			a chicchessia, perché si tratta di un film pessimo, che tenta di essere
 			molto più di quanto non sia, e fallisce.
-		</p></div><div class="section"><p>
+		</p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+		<p>
 			Questa mattina, constatato che evidentemente non è possibile abbandonare
 			tre fiori sul tavolo della cucina per una notte senza che i gatti o i
 			fratelli (o forse i genitori) ci mettano mano abbattendo tutto, raccolgo
@@ -75,8 +88,12 @@
 		</p></div><div class="section"><p>
 			Ho affrontato le conseguenze della stupidità di quest'idea difendomi con
 			la sincerità, perché erano idee completamente spontanee.
-		</p></div><div class="section"><h2>
-			L'inseguimento</h2><h2 class="reverse">02 dicembre 2010
+		</p>
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
+		<h2>
+			L'inseguimento
+		</h2><h2 class="reverse">
+			02 dicembre 2010
 		</h2><p>
 			Non sto tanto bene.
 		</p><p>
@@ -159,6 +176,5 @@
 			nell'altro edificio, mi piazzo nell'atrio con un po' d'altra gente e
 			aspetto. E scrivo questo pezzo di storia. E preparo i fuori. E adesso?
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

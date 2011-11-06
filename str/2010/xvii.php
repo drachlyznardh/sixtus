@@ -1,17 +1,32 @@
 <?php 
-
-	$title=array('Il finale', 'Perché arriva alla fine');
-	$prev=array('Storia XVI', 'Storie/XVI/');
-	$next=array('Storia XVIII', 'Storie/XVIII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Il finale', 'Perché arriva alla fine', 'i');
+		$this->addprev ('Storie/2010/XVI/', 'Il lunedì della verità');
+		$this->addnext ('Storie/2011/XVIII/', 'Liber Javae');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2 class="reverse">
+		Storia XVII
+	</h2><h2>
+		Il finale
+	</h2><ol><li>
+			<?=$d->mktid('Della settimana della verità', 'i')?>
+		</li><li>
+			<?=$d->mktid('La sera del ballo', 'ii')?>
+		</li><li>
+			<?=$d->mktid('I parenti di Natale', 'iii')?>
+		</li><li>
+			<?=$d->mktid('I regali stupidi', 'iv')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>
-			E così la fine dell'anno s'avvicina...
+			E così la fine dell'anno s'avvicina…
 		</h2><p>
-			... ed io ho ancora parecchie cose da raccontare, prima di andare a
+			… ed io ho ancora parecchie cose da raccontare, prima di andare a
 			costruire la sezione per le storie dell'anno che viene. Dunque, scriverò
 			a botta così che possiate leggere a botta.
 		</p></div><div class="section"><h2>
@@ -22,10 +37,9 @@
 		</p><p>
 			Io che sono discretamente videogiocatore non ho modo di descrivere o di
 			dare spiegazioni se non tramite metafore, regia o simili, e farò così.
-		</p></div><div class="section">
-			<div class="inside"><p>...</p></div>
-			<div class="outside"><p>...</p></div>
-		</div><div class="section"><p>
+		</p>
+	</div><br /><div class="section">
+		<p>
 			Ci sono quattro ragazze attorno ad un tavolo, al centro
 			dell'inquadratura, viste lievemente dall'alto, da sopra la mia spalla.
 			Vengo ripreso di spalle, mentre faccio il saluto finale, poi mi volto
@@ -38,10 +52,9 @@
 			Ripresa angolata, si vede il tavolo con le quattro ragazze e oltre la
 			finestra ci sono io, che mi allontano fino a scomparire dietro l'angolo
 			di un edificio. Scompaio alla vista. Stacco.
-		</p></div><div class="section">
-			<div class="inside"><p>...</p></div>
-			<div class="outside"><p>...</p></div>
-		</div><div class="section"><p>
+		</p>
+	</div><br /><div class="section">
+		<p>
 			Tuttavia, a questo punto, per quanto foss'in grado di rimettermi il
 			capello, c'è sempre qualcosa che rimane. Perché non importa quanto una
 			cosa sia costosa, non importa quanto poco t'importi veramente, non
@@ -61,8 +74,8 @@
 			ma non posso evitare di avere speranze.
 		</p><p>
 			Perché ci sono cose ch'è possibile ottenere con le proprie forze, e cose
-			che invece si possono soltanto ricevere. La tanto agognata &ldquo;Fine
-			della Speranza&rdquo; è una delle cose che bisogna necessariamente
+			che invece si possono soltanto ricevere. La tanto agognata “Fine
+			della Speranza” è una delle cose che bisogna necessariamente
 			ricevere. Da lei, spesso.
 		</p><p>
 			E quel giovedì, messo lì dal Destino attraverso i nostri rappresentanti
@@ -79,7 +92,9 @@
 		</p><p>
 			Salto temporale di un paio di giorni, si arriva alla sera del ballo. E
 			lì si vede veramente chi siamo noi, e chi sono gli altri.
-		</p></div><div class="section"><h2>
+		</p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+		<h2>
 			La sera del ballo
 		</h2><p>
 			Alla sera galante si vede chiaramente l'immagine che uno vuol dare di
@@ -146,16 +161,17 @@
 			sento un piacevole rumore, un &lsquo;tlk&rsquo;.
 		</p><p>
 			E' quel magnifico suono che fa l'ultima speranza quando si spezza.
-		</p></div><div class="section">
-			<div class="inside"><p>...</p></div>
-			<div class="outside"><p>...</p></div>
-		</div><div class="section"><p>
+		</p>
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
+		<p>
 			Abbiamo passato il resto della serata a guardarci attorno, a sperare che
 			la canzone seguente fosse strettamente non peggiore dell'attuale, a
 			fissare la gente passare, ma soprattutto bevendo a scrocco.
 		</p><p>
 			Grazie, tizio qualunque.
-		</p></div><div class="section"><h2>
+		</p>
+	</div><div class="section">
+		<h2>
 			I parenti di Natale
 		</h2><p>
 			Perché se una cosa è dimenticarsi della ragazza un'altra cosa è
@@ -219,7 +235,9 @@
 			non vi vedo da molto tempo e non vi cerco, è perché probabilmente non mi
 			mancate affatto. Non è che vi odi. Beh, in verità si. Ma per altri
 			motivi.
-		</p></div><div class="section"><p>
+		</p>
+	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
+		<p>
 			E si va ancora avanti.
 		</p><h2>I regali stupidi</h2><p>
 			Io sono un tizio che ha la rara fortuna di avere dei fratelli piccoli
@@ -280,6 +298,5 @@
 			sono tornato ad essere il vero me. Quello che odia tutto e tutti senza
 			alcuna distinzione. Si, anche te.
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

@@ -54,6 +54,7 @@
 
 		public function mktab($tab) {
 			echo ('<a id="'.strtoupper($tab).'"></a>');
+			if ($this->notab) echo ('<br />');
 			if ($this->notab || $this->tab['name'] == $tab) {
 				$this->included = true;
 				return true;

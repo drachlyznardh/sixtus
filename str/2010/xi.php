@@ -1,24 +1,39 @@
 <?php
-
-	$title=array('Tre storie', 'Certamente non divertenti');
-	$prev=array('Storia X', 'Storie/X/');
-	$next=array('Storia XII', 'Storie/XII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Tre storie', 'Certamente non divertenti', 'i');
+		$this->addprev ('Storie/2010/X/', 'Due storie');
+		$this->addnext ('Storie/2010/XII/', 'La musa');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Tre storie
+	</h2><ol><li>
+			<?=$d->mktid('Bonus mentre penso…', 'i')?>
+		</li><li>
+			<?=$d->mktid('Una', 'ii')?>
+		</li><li>
+			<?=$d->mktid('L&apos;altra', 'iii')?>
+		</li><li>
+			<?=$d->mktid('Quella dimenticata', 'iv')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<p>
 			Oggi mi sono successe parecchie cose, scriverò molto.
 		</p><h2>
-			Le molte cose di oggi</h2><h2 class="reverse">23 novembre 2010
+			Le molte cose di oggi
+		</h2><h2 class="reverse">
+			23 novembre 2010
 		</h2><p>
 			La premessa di tutta la faccenda è che ieri mi è scaduto l'abbonamento
 			dell'autobus. Una premessa ancora precedente narra di come recentemente
-			- indipendentemente dall'orario - l'autobus che mi porta in università
+			– indipendentemente dall'orario – l'autobus che mi porta in università
 			sia pieno. Pieno come un uovo.
 		</p><p>
-			Addirittura, l'altro giorno l'autobus - lungamente atteso - giunse già
+			Addirittura, l'altro giorno l'autobus – lungamente atteso – giunse già
 			pieno alla mia fermata (solitamente si riempe nelle due fermate
 			successive). Tanto era pieno che le porte s'aprirono soltanto un poco.
 			La ragazza al mio fianco (nel senso che mi stava vicina, mica altro)
@@ -34,7 +49,7 @@
 			destinazione. Dopo ho dovuto ripetere la procedura di apertura forzata,
 			altrimenti saremmo ancora lì.
 		</p>
-		</div><div class="section">
+	</div><div class="section">
 		<p>
 			E siccome l'abbonamento è scaduto, la voglia di andare fino in stazione
 			e spendere $quasiUnGundam per rinnovarlo, me ne sono salito a piedi.
@@ -42,8 +57,10 @@
 			Salendo, la mia mente vagante ha raggiunto tre minimi locali.
 		</p><h2>
 			Sconosciuto
-		</h2><p>La prima non mi viene in mente, me ne sono dimenticato...</p>
-		</div><div class="section">
+		</h2><p>
+			La prima non mi viene in mente, me ne sono dimenticato…
+		<p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<h2>
 			L'attrazione per la montagna
 		</h2><p>
@@ -57,7 +74,7 @@
 			cercherei per prima la Paganella.
 		</p><p>
 			Ma in quanto triangolo con la punta in alto, ogni montagna dovrebbe
-			rappresentare l'uomo, non la donna... A quel punto ho pensato che in
+			rappresentare l'uomo, non la donna… A quel punto ho pensato che in
 			fondo a me non interessa la cima, sono più interessato al percorso che
 			porta alla cima.
 		</p><p>
@@ -73,7 +90,7 @@
 		</p><p>
 			E non è un bene.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab ('iii')) { ?><div class="section">
 		<h2>
 			Scudo e fucile
 		</h2><p>
@@ -89,9 +106,11 @@
 			Infine penso: metterò il fucile nello scudo, così da avere una mano
 			libera. In fondo, i Gundam possono farlo.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
 		<h2>
-			La tentazione</h2><h2 class="reverse">24 novembre 2010
+			La tentazione
+		</h2><h2 class="reverse">
+			24 novembre 2010
 		</h2><p>
 			La notte tra ieri e oggi, verso mezzanotte e mezza, mi sono ricordato
 			qual era la prima delle tre storie.
@@ -116,6 +135,5 @@
 		</p><p>
 			Sto installando il nuovo NetBeans, e mi sento sporco dentro.
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

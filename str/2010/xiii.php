@@ -1,13 +1,24 @@
 <?php 
-
-	$title=array('Il modello definitivo', 'Che mi costò >9000 ore di lavoro');
-	$prev=array('Storia XII', 'Storie/XII/');
-	$next=array('Storia XIV', 'Storie/XIV/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Il modello definitivo', 'Che mi costò &gt;9000 ore di lavoro', 'i');
+		$this->addprev ('Storie/2010/XII/', 'La musa');
+		$this->addnext ('Storie/2010/XIV/', 'L&apos;incontro');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Il modello definitivo
+	</h2><ol><li>
+			<?=$d->mktid('L&apos;altra sponda', 'i')?>
+		</li><li>
+			<?=$d->mktid('Gli ultimi sviluppi', 'ii')?>
+		</li><li>
+			<?=$d->mktid('I fiori sono a colori', 'iii')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>
 			L'altra sponda</h2><h2 class="reverse">giovedì 25 novembre 2010
 		</h2><p>
@@ -32,8 +43,12 @@
 			Parrebbe che sia una biotecnologa del primo anno.
 		</p><p>
 			Quindi è vero: tutte le ragazze carine sono biotecnologhe.
-		</p><h2>
-			Gli ultimi sviluppi</h2><h2 class="reverse">venerdì 26 novembre 2010
+		</p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+		<h2>
+			Gli ultimi sviluppi
+		</h2><h2 class="reverse">
+			venerdì 26 novembre 2010
 		</h2><p>
 			Stamattina pensavo di star per raggiungere il minimo locale
 			dell'umore. Così ho deciso di abbandonare tutto il resto e mi sono
@@ -47,9 +62,11 @@
 			interessanti da attirare alcuni ammiratori; tra di essi, le donne
 			delle pulizie, che mi porteranno della carta buona.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
 		<h2>
-			I fiori sono a colori</h2><h2 class="reverse">sabato 27 novembre 2010
+			I fiori sono a colori
+		</h2><h2 class="reverse">
+			sabato 27 novembre 2010
 		</h2><p>
 			Ho appena realizzato il prototipo finale. &Egrave; anche migliore
 			dell'ultimo modello di ieri.
@@ -75,6 +92,5 @@
 		</p><p>
 			Ma anche avendo il doppio fiore piegato, come lo consegnerò?
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

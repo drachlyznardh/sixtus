@@ -1,13 +1,24 @@
 <?php
-
-	$title=array('Il lunedì della verità', 'Ma in realtà, non credo');
-	$prev=array('Storia XV', 'Storie/XV/');
-	$next=array('Storia XVII', 'Storie/XVII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Il lunedì della verità', 'Ma in realtà, non credo', 'i');
+		$this->addprev ('Storie/2010/XV/', 'La spinta');
+		$this->addnext ('Storie/2010/XVII/', 'Il finale');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Il lunedì della verità
+	</h2><ol><li>
+			<?=$d->mktid('La domenica dell&apos;eleganza', 'i')?>
+		</li><li>
+			<?=$d->mktid('Il lunedì della verita', 'ii')?>
+		</li><li>
+			<?=$d->mktid('Il martedì della verita', 'iii')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<p>
 			E così, dopo il giovedì del fallimento, il venerdì inutile e un
 			finesettimana fors'anche più inutile, eccoci al lunedì.
@@ -21,30 +32,33 @@
 		</h2><p>
 			E mentre me ne sto nel mio candido lettino arriva mio padre e mi chiama:
 		</p><div class="outside">
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>Rispndo &laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio! Sistema tutta camera tua altrimenti... Altrimenti...
-			Beh, tu fallo&raquo;</p>
-		</div><p>
+			<?=$d->speak('em','Figlio')?>
+			<p>
+				Rispondo <?=$d->inline('gods', 'Padre!')?>
+			</p>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('em', 'Padre!')?>
+			<?=$d->speak('em', 'Figlio! Sistema tutta camera tua altrimentir… Altrimenti…  Beh, tu fallo')?>
+		</p></div><p>
 			E così mi toccò di sistemare tutta la camera: in particolare, si trattò
 			di sbomberare l'intera scrivania che occupa il buco sotto il mio letto
 			(letto a castello, non scrivania bassa bassa). Contenuto presente sulla
 			scrivania: &gt;9000 oggetti vecchi, unitili e per la maggior parte
 			appartenenti al fratello che ora vive in Spagna, onde per cui buttarli o
 			non buttarli? e varie altre cose poco funzionali.
-		</p></div><div class="section"><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Ma non solo! Perché ad una certa ora (erano le 11:00 del mattino) arriva
 			una telefonata, che andò così:
 		</p><div class="outside">
-			<p>&laquo;Nipote!&raquo;</p>
-			<p>&laquo;Nonna!&raquo;</p>
-			<p>&laquo;Nipote!&raquo;</p>
-			<p>&laquo;Nonna!&raquo;</p>
-			<p>&laquo;Nipote!&raquo;</p>
-			<p>&laquo;Nonna!&raquo;</p>
-			<p>&laquo;Nipote! Oggi a pranzo ti voglio elegante!&raquo;</p>
+			<?=$d->speak('em', 'Nipote!')?>
+			<?=$d->speak('gods', 'Nonna!')?>
+			<?=$d->speak('em', 'Nipote!')?>
+			<?=$d->speak('gods', 'Nonna!')?>
+			<?=$d->speak('em', 'Nipote!')?>
+			<?=$d->speak('gods', 'Nonna!')?>
+			<?=$d->speak('em', 'Nipote! Oggi a pranzo ti voglio elegante!')?>
 		</div><p>
 			Perché quel giorno era il compleanno della nonna.
 		</p><p>
@@ -66,10 +80,12 @@
 			buona oretta di yadda, giochiamo un'ora prima che io me ne debba andare.
 		</p><p>
 			In qualche modo, la serata termina ancora una volta con me costretto a
-			spiegare ai miei genitori gli eventi che compongono `The Dark Knight'.
+			spiegare ai miei genitori gli eventi che compongono ‘The Dark Knight’.
 			Film magnifico, ma difficilmente spiegabile a due genitori sonnolenti
 			che non conoscono l'argomento e non intendono impegnarsi.
-		</p></div><div class="section"><h2>
+		</p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+		<h2>
 			Il lunedì della verità
 		</h2><p>
 			Ma la parte importante è che, nonostante tutto, la mia digestione dei
@@ -83,7 +99,9 @@
 			cerca di rogne. Indipercui acciocché quindi, nessun nuovo particolare.
 		</p><p>
 			Se non libero, sono certamente molto meno prigioniero.
-		</p></div><div class="section"><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Ma veramente, la verità è un'altra. La verità è che non sono convinto.
 			Di un sacco di cose.
 		</p><h2>
@@ -97,17 +115,17 @@
 		</p><p>
 			Ecco dunque una scena del tipo:
 		</p><div class="outside">
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio! Eccoti delle scatole nelle quali provvederai a mettere
-			i fiori per i parenti&raquo;</p>
-			<p>&laquo;Padre! Queste scatole sono piccole!&raquo;</p>
-			<p>&laquo;Figlio! Quelle grandi eran finite, inventati
-			qualcosa...&raquo;</p>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Padre!')?>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Padre!')?>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Padre!')?>
+			<?=$d->speak('em', 'Figlio! Eccoti delle scatole nelle quali provvederai a mettere
+			i fiori per i parenti')?>
+			<?=$d->speak('gods', 'Padre! Queste scatole sono piccole!')?>
+			<?=$d->speak('em', 'Figlio! Quelle grandi eran finite, inventati
+			qualcosa...')?>
 		</div><p>
 			E fu così che le balle raggiunsero l'Australia passando per la Cina.
 			Come faccio io a ficcare tre fiori, posti quasi simmetricamente attorno
@@ -126,16 +144,16 @@
 			precedente, avrei forse potuto beccare $rossa nei suoi laboratori... ma
 			in quella giunse questa comunicazione:
 		</p><div class="outside">
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Madre!&raquo;</p>
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Madre!&raquo;</p>
-			<p>&laquo;Figlio! Oggi alle 16:10 devi prendere i tuoi fratellini
-			all'asilo...&raquo;</p>
-			<p>&laquo;Madre! Ma veramente devo trovare il coraggio di consegnare
-			questo mazzo di fiori di carta ad una certa...&raquo;</p>
-			<p>&laquo;Figlio! Hai qualche problema?&raquo;</p>
-			<p>&laquo;Madre! No, andrò...&raquo;</p>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Madre!')?>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Madre!')?>
+			<?=$d->speak('em', 'Figlio! Oggi alle 16:10 devi prendere i tuoi fratellini
+			all&apos;asilo...')?>
+			<?=$d->speak('gods', 'Madre! Ma veramente devo trovare il coraggio di consegnare
+			questo mazzo di fiori di carta ad una certa...')?>
+			<?=$d->speak('em', 'Figlio! Hai qualche problema?')?>
+			<?=$d->speak('gods', 'Madre! No, andrò...')?>
 		</div><p>
 			E fu così che, verso le 15:30, me ne andai a caccia. A vuoto, purtroppo.
 			Gli occhi non furono abbastanza buoni da scorgerla, oppure semplicemente
@@ -151,7 +169,9 @@
 			Ed è a quel punto che decido di piegare quel che ho piegato. E l'ho
 			fatto bene. Ma in questo modo mi ritrovo ad aver buttato un'altra
 			settimana...
-		</p></div><div class="section"><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Nel frattempo, per il bene o per il male, ogni volta che vedo qualcosa
 			di vagamente interessante mi viene in mente che, sinceramente, $rossa è
 			ben più interessante. Ogni volta che lei mi salta in mente, il cuore
@@ -175,14 +195,14 @@
 		</p><p>
 			Ma non è finita, perché è ancora venerdì! Arriva questa telefonata:
 		</p><div class="outside">
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio!&raquo;</p>
-			<p>&laquo;Padre!&raquo;</p>
-			<p>&laquo;Figlio! Che fai a gennaio? Puoi lavorare?&raquo;</p>
-			<p>&laquo;Padre! Eh? Boh! Si, forse...&raquo;</p>
-			<p>&laquo;Figlio! Bene, ti faccio chiamara da $moglieDiUnTizio&raquo;</p>
-			<p>&laquo;Padre! Se devo...&raquo;</p>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Padre!')?>
+			<?=$d->speak('em', 'Figlio!')?>
+			<?=$d->speak('gods', 'Padre!')?>
+			<?=$d->speak('em', 'Figlio! Che fai a gennaio? Puoi lavorare?')?>
+			<?=$d->speak('gods', 'Padre! Eh? Boh! Si, forse...')?>
+			<?=$d->speak('em', 'Figlio! Bene, ti faccio chiamara da $moglieDiUnTizio')?>
+			<?=$d->speak('gods', 'Padre! Se devo...')?>
 		</div><p>
 			E fu così che finii al telefono con $moglieDiUnTizio, che in sostanza mi
 			propose un lavoro in una litotipografia, per un paio di settimane,
@@ -209,12 +229,18 @@
 		</p><p>
 			Beh, veramente, si comincerebbe martedì prossimo... eh, 'sti cazzi...
 			Padre, dove m'hai mandato?
-		</p></div><div class="section"><p>
+		</p>
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
+		<p>
 			E così passa il weekend, con i colpi al cuore.
 		</p><p>
 			E così passa il lunedì, senza vederla e senza lavorare al Java, ch'è
 			orribile.
-		</p><h2>Il martedì della verità</h2><h2 class="reverse">molto tempo dopo</h2><p>
+		</p><h2>
+			Il martedì della verità
+		</h2><h2 class="reverse">
+			molto tempo dopo
+		</h2><p>
 			Oggi me ne sono salito in facoltà con tre chiari intenti: finire tutto
 			presto per andare a correre, lavorare al Java e consegnare una versione
 			funzionante, consegnare il fiore.
@@ -247,8 +273,8 @@
 			Nell'uscire, poi, tentai di controllare se lei e le sue amiche stessero
 			mangiando. Non riuscii a vedere.
 		</p></div><div class="section"><p>
-			Quindi, ce ne torniamo tutti in aulastudio. Scelgo di ascoltarmi `Iron
-			man` dei `Black Sabbath', che ci sta bene. Rimango solo con me stesso,
+			Quindi, ce ne torniamo tutti in aulastudio. Scelgo di ascoltarmi ‘Iron
+			man’ dei ‘Black Sabbath’, che ci sta bene. Rimango solo con me stesso,
 			con la musica nelle orecchie. Un uomo cui il destino ha finalmente messo
 			la ragazza in una situazione fattibile, ad una distanza superabile.
 			Prendo il fiore dallo zaino. Quanto a lungo deve aver atteso lì dentro.
@@ -279,16 +305,22 @@
 			Sono arrivato alla porta, mi sono fermato un attimo dietro il paravento,
 			che evita che l'aria fredda arrivi direttamente sulla schiena di chi
 			mangia.
-		</p></div><div class="section"><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Mi par di ricordare qualche faccia, di qualche passante, a dire
-			&quot;'ndo andrà questo coi fiori nella scatola?&quot;, ma ero così
-			tremendamente teso che ho dimenticato persino di respirare a fondo prima
-			di farmi avanti.
+		</p><div class="outside"><p>
+				<?=$d->inline('em', '&apos;ndo andrà questo coi fiori nella
+				scatola?')?>
+		</p></div><p>
+			ma ero così tremendamente teso che ho dimenticato persino di
+			respirare a fondo prima di farmi avanti.
 		</p><p>
-			Ricordo d'aver esordito con uno `Scusate', ma il resto è abbastanza
-			nebuloso. So d'aver visto un minuscolissimo delizioso e sublime attimo
-			di stupore nei suoi occhi (alla vista del fiore, non di me) e poi la sua
-			domanda, che ovviamente non mi aspettavo.
+			Ricordo d'aver esordito con uno <?=$d->inline('gods', 'Scusate')?>,
+			ma il resto è abbastanza nebuloso. So d'aver visto un minuscolissimo
+			delizioso e sublime attimo di stupore nei suoi occhi (alla vista del
+			fiore, non di me) e poi la sua domanda, che ovviamente non mi
+			aspettavo.
 		</p><p>
 			Perché tutti noi cerchiamo di arrivare preparati ad una cosa del genere,
 			fallendo. E potresti chiedere a tutti quelli che ci sanno fare, e
@@ -298,17 +330,24 @@
 			in frantumi, occasioni di salvarle la vita, cattivi di ogni forma e
 			dimensione da sconfiggere per ottenere un bacio all'ultima scena.
 		</p><p>
-			E a quel punto, lei mi fa &laquo;E noi che dovremmo fare?&raquo;.
+			E a quel punto, lei mi fa
+		</p><div class="outside">
+				<?=$d->speak('em', 'E noi che dovremmo fare?')?>
+		</div><p>
 			Dispiace che abbia detto noi, riferendosi immagino a tutte le presenti a
 			tavolo. E quindi, pensando a quello che ho detto nella storia
-			precedente, ho riflettuto un miginino ed ho risposto &laquo;Uh...
-			niente?&raquo;. Quindi ho ringraziato e me ne sono andato.
-		</p></div><div class="section"><p>
+			precedente, ho riflettuto un miginino ed ho risposto
+		</p><div class="outside"><p>
+				<?=$d->speak('gods', 'Uh… niente?')?>
+		</p></div><p>	
+			Quindi ho ringraziato e me ne sono andato.
+		</p>
+	</div><div class="section">
+		<p>
 			E appena messo il piede fuori dalla porta, mi sono sentito libero e ben
 			degno d'indossare il mio cappello.
 		</p><p>
 			Ancora non conosco il suo nome. Ma va bene così.
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

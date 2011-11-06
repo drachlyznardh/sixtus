@@ -1,19 +1,29 @@
 <?php
-
-	$title = array('Due storie', 'Entrambe tristi');
-	$prev = array('Storia IX', 'Storie/IX/');
-	$next = array('Storia XI', 'Storie/XI/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Due storie', 'Entrambe tristi', 'i');
+		$this->addprev ('Storie/2010/IX/', 'Attenzione');
+		$this->addnext ('Storie/2010/XI/', 'Tre storie');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Due storie
+	</h2><ol><li>
+			<?=$d->mktid('La prima', 'i')?>
+		</li><li>
+			<?=$d->mktid('La seconda', 'ii')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<p>
 			Due cose interessanti. No, non interessanti. Però due.
-		</p>
-		<h2>La tastiera muta, grazie ai MotörHead</h2>
-		<h2 class="reverse">17 novembre 2010</h2>
-		<p>
+		</p><h2>
+			La tastiera muta, grazie ai MotörHead
+		</h2><h2 class="reverse">
+			17 novembre 2010
+		</h2><p>
 			Mentre scrivo ascolto musica. Spesso quando uno ascolta canzoni
 			mentre scrive non ha gran voglia di ascoltare sempre la stessa
 			robe, e vorrebbe invece passare tra la propria galleria in modo
@@ -45,32 +55,37 @@
 			L'ho risolta reinserendo i comandi corretti dal primo terminale
 			virtuale. Disonore.
 		</p>
-	</div><div class="section">
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<p>
 			Questa invece è per autocommiserazione.
-		</p>
-		<h2>E questi sono problemi da donne</h2>
-		<p>
-			$reDelGossip, un caro amico quì a fianco, sta evidentemente
-			avendo problemi nel chattare con l'altro sesso.
+		</p><h2>
+			E questi sono problemi da donne
+		</h2><p>
+			$<span class="mitch">ReDelGossip</span>, un caro amico quì a fianco,
+			sta evidentemente avendo problemi nel chattare con l'altro sesso.
 		</p><p>
 			Il problema, che secondo il sottoscritto esiste soltanto nella
-			testa di lei (o di chi per lei, non ho ben capito). Il mio
-			amico, rispondendo alla domanda &laquo;Come stai?&raquo;
-			rispose, malauguratamente qualcosa del tipo &laquo;Bene&raquo;
-			anziché &laquo;Bene, grazie d'averlo chiesto&raquo;
-		</p><p>
+			testa di lei (o di chi per lei, non ho ben capito).
+		</p><div class="outside"><p>
+			Il mio amico, rispondendo alla domanda <?=$d->inline('em', 'Come
+			stai?')?> rispose, malauguratamente qualcosa del tipo <?=$d->inline
+			('mitch', 'Bene')?> anziché <?=$d->inline ('mitch', 'Bene, grazie
+			d&apos;averlo chiesto')?>
+		</p></div><p>
 			Se ci fossero ragazze a leggere questo post, chiederei loro di
 			scrivere in merito, ma so che non ce ne sono. ;_;
-		</p><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Tentando di consolare il poveretto, gli ho proposto di adottare
-			il mio metodo: io mi avvicino a lei e chiedo
-			&laquo;Scusa...&raquo; e lei &laquo;No&raquo;
-		</p><p>
+			il mio metodo:
+		</p><div class="outside"><p>
+			io mi avvicino a lei e chiedo <?=$d->inline('gods', 'Scusa…')?> e
+			lei <?=$d->inline('em', 'No')?>
+		</p></div><p>
 			Storia vera.
 		</p><p>
 			$rossa, finirà così anche con te?
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

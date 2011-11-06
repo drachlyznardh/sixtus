@@ -1,15 +1,33 @@
 <?php
-
-	$title = array('Attenzione', 'Attenzione, un disturbo della');
-	$prev = array('Storia VIII', 'Storie/VIII/');
-	$next = array('Storia X', 'Storie/X/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
-		<h2>Disturbo dell'attenzione</h2><h2 class="reverse">10 novembre 2010</h2>
-		<p>
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Attenzione', 'Attenzione, un disturbo della', 'i');
+		$this->addprev ('Storie/2010/VIII/', 'Sassi');
+		$this->addnext ('Storie/2010/X/', 'Due storie');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Attenzione
+	</h2><ol><li>
+			<?=$d->mktid('Disturbo dell&apos;attenzione', 'i')?> – 10/11
+		</li><li>
+			<?=$d->mktid('Il daltonismo', 'ii')?> – 11/11
+		</li><li>
+			<?=$d->mktid('Il malumore', 'iii')?> – 12/11
+		</li><li>
+			<?=$d->mktid('Lo sguardo', 'iv')?> – 16/11
+		</li><li>
+			<?=$d->mktid('La doppelganger', 'v')?> – 18/11
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
+		<h2>
+			Disturbo dell'attenzione
+		</h2><h2 class="reverse">
+			10 novembre 2010
+		</h2><p>
 			In tanti mi dicono che fare ragionamenti non lineari non sia poi
 			una cosa così grave, ma oggi mi sono preoccupato.
 		</p><p>
@@ -77,10 +95,14 @@
 		<p>
 			Ma non è finita quì.
 		</p><p>
-			&Egrave; andata anche peggio.
+			È andata anche peggio.
 		</p>
-		<h2>Il daltonismo</h2><h2 class="reverse">11 novembre 2010</h2>
-		<p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+		<h2>
+			Il daltonismo
+		</h2><h2 class="reverse">
+			11 novembre 2010
+		</h2><p>
 			Per puro purissimo caso oggi a pranzo me ne vado al bar. Come
 			tutti gli altri giorni. Con me ci sono due amici; ci mettiamo in
 			coda, paghiamo e poi ci dirigiamo scontrini alla mano al bancone
@@ -128,8 +150,12 @@
 		<p>
 			E va anche peggio.
 		</p>
-		<h2>Il malumore</h2><h2 class="reverse">12 novembre 2010</h2>
-		<p>
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
+		<h2>
+			Il malumore
+		</h2><h2 class="reverse">
+			12 novembre 2010
+		</h2><p>
 			Perché oggi speravo di rivederla al bar. Due giorni di fila,
 			perché non tre?
 		</p><p>
@@ -153,50 +179,57 @@
 		<p>
 			E va anche peggio.
 		</p>
-		<h2>Lo sguardo</h2><h2 class="reverse">16 novembre 2010</h2>
-		<p>
-			Oggi me ne sono andato a pranzo, riflettendo su come il
-	numero di clienti in fila al bar, più o meno a tutte le ore sia calato
-	molto.
+	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
+		<h2>
+			Lo sguardo
+		</h2><h2 class="reverse">
+			16 novembre 2010
+		</h2><p>
+			Oggi me ne sono andato a pranzo, riflettendo su come il numero di
+			clienti in fila al bar, più o meno a tutte le ore sia calato molto.
 		</p><p>
-			Avere meno persone in coda influisce sulla probabilità di
-	incontrare $rossa? Se ci sono meno persone tra cui scegliere, non dovrebbe
-	aumentare? &laquo;Ovviamente no&raquo; disse il fantasma di
-	$professoreCheStaccaLaCorrente.
+			Avere meno persone in coda influisce sulla probabilità di incontrare
+			$rossa? Se ci sono meno persone tra cui scegliere, non dovrebbe
+			aumentare? &laquo;Ovviamente no&raquo; disse il fantasma di
+			$professoreCheStaccaLaCorrente.
 		</p><p>
-			Ero abbastanza sconsolato, perché riflettendo l'avevo vista
-	mangiare al bar mercoledì e giovedì scorsi, non martedì. Disperai che
-	l'avrei vista, quindi.
+			Ero abbastanza sconsolato, perché riflettendo l'avevo vista mangiare
+			al bar mercoledì e giovedì scorsi, non martedì. Disperai che l'avrei
+			vista, quindi.
 		</p><p>
-			Quando poi, finito di mangiare, stavamo avendo il nostro
-	caffè, la vidi entrare. Stavolta si sedette di fronte a me, ma stavolta
-	aveva un'amica seduta di fronte, col risultato che io potei vedere soltanto
-	una schiena estranea.
+			Quando poi, finito di mangiare, stavamo avendo il nostro caffè, la
+			vidi entrare. Stavolta si sedette di fronte a me, ma stavolta aveva
+			un'amica seduta di fronte, col risultato che io potei vedere
+			soltanto una schiena estranea.
 		</p><p>
-			Avrei anche potuto dondolare per tentare di sorpassare
-	l'ostacolo, ma a che pro? Troppo spesso mi tocca sentire gente
-	($reDelGossip) che viene a dirmi &laquo;Coso, sai che $sconosciuta t'ha
-	visto gesticolare e s'è spaventata perché la guardavi male?&raquo;
+			Avrei anche potuto dondolare per tentare di sorpassare l'ostacolo,
+			ma a che pro? Troppo spesso mi tocca sentire gente (<span
+			class="mitch">$reDelGossip</span>)
+			che viene a dirmi
+		</p><div class="outside"><p>
+				<?=$d->inline('mitch', 'Coso, sai che $sconosciuta t&apos;ha
+				visto gesticolare e s&apos;è spaventata perché la guardavi
+				male?')?>
+		</p></div><p>
+			In ogni caso, stavolta controllai e vidi che in effetti ha gli
+			occhiali, che sono spessi (di montatura, almeno) e neri.
 		</p><p>
-			In ogni caso, stavolta controllai e vidi che in effetti ha
-	gli occhiali, che sono spessi (di montatura, almeno) e neri.
-		</p><p>
-			Ma il nostro pasto era finito e ce ne stavamo andando. Ed
-	io, che sono un uomo di speranza, le passai accanto prima e dietro una
-	colonna poi, disegnando la traiettoria che mi avrebbe permesso di capitare
-	nella sua linea visita. Oltrepassato il cono d'ombra, mi girai per guardarla
-	in faccia, sperano che almeno mi notasse.
+			Ma il nostro pasto era finito e ce ne stavamo andando. Ed io, che
+			sono un uomo di speranza, le passai accanto prima e dietro una
+			colonna poi, disegnando la traiettoria che mi avrebbe permesso di
+			capitare nella sua linea visita. Oltrepassato il cono d'ombra, mi
+			girai per guardarla in faccia, sperano che almeno mi notasse.
 		</p><p>
 			E invece.
 		</p><p>
-			Quando mi voltai, lei e la sua amica mi stavano entrambe
-	fissando. Ed io mi sentii come il piccolo Danny Torrance (quello di Shining)
-	sul suo bel triciclo di fronte alle gemelle. Temetti di veder colare il
-	sangue dalle pareti.
+			Quando mi voltai, lei e la sua amica mi stavano entrambe fissando.
+			Ed io mi sentii come il piccolo Danny Torrance (quello di Shining)
+			sul suo bel triciclo di fronte alle gemelle. Temetti di veder colare
+			il sangue dalle pareti.
 		</p><p>
-			Mi pare che il tempo della speranza, quello che crea
-	l'illusione migliore, sia quello di due passi. Quindi, con nonchalance, mi
-	voltai e proseguii sulla mia strada.
+			Mi pare che il tempo della speranza, quello che crea l'illusione
+			migliore, sia quello di due passi. Quindi, con nonchalance, mi
+			voltai e proseguii sulla mia strada.
 		</p><p>
 			Avevo i brividi. Ma almeno, mi stava guardando.
 		</p><p>
@@ -206,6 +239,7 @@
 		<p>
 			Non era un buon segno.
 		</p>
+	</div><?php } if ($d->mktab('v')) { ?><div class="section">
 		<h2>La doppelganger</h2><h2 class="reverse">18 novembre 2010</h2>
 		<p>
 			La leggenda sul colore di capelli impossibile da decifrare si
@@ -234,6 +268,5 @@
 		</p><p>
 			Oppure che sia un Transformer.
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

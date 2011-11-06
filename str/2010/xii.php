@@ -1,20 +1,43 @@
 <?php
-
-	$title=array('La musa', 'E quello che la musa fa');
-	$prev=array('Storia XI', 'Storie/XI/');
-	$next=array('Storia XIII', 'Storie/XIII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('La musa', 'E quello che la musa fa', 'intro');
+		$this->addprev ('Storie/2010/XI/', 'Tre storie');
+		$this->addnext ('Storie/2010/XIII/', 'Il modello definitivo');
+	} if ($this->addside ()) {
+?><div class="section">
+	<p>
+		<?=$d->mktid('Introduzione', 'intro')?>
+	</p><h2>
+		La musa
+	</h2><ol><li>
+			<?=$d->mktid('$Viaggatrice', 'i')?>
+		</li><li>
+			<?=$d->mktid('$Arrampicatrice', 'ii')?>
+		</li><li>
+			<?=$d->mktid('$Montanara', 'iii')?>
+		</li><li>
+			<?=$d->mktid('$ApeRegina', 'iv')?>
+		</li><li>
+			<?=$d->mktid('$Canadese', 'v')?>
+		</li><li>
+			<?=$d->mktid('$Rossa', 'vi')?>
+		</li><li>
+			<?=$d->mktid('$Frangiona', 'vii')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
 			Quella che segue è una storia vera e triste.
-		</p><h2>La musa</h2><p>
+		</p><h2>
+			La musa
+		</h2><p>
 			Io sono che non ci sa fare, e quando non ci sa fare adotta un
-			comportamento standard &ndash; nient'affatto motivato &ndash; per il
-			semplice fatto che altre volte, in passato e in situazioni simili fece
-			la stessa cosa.
+			comportamento standard – nient'affatto motivato – per il semplice
+			fatto che altre volte, in passato e in situazioni simili fece la
+			stessa cosa.
 		</p><p>
 			Da tempo immemore (beh, diciamo vent'anni) piego la carta. M'insegnò la
 			mamma: prepare il quadrato, parti con la base quadrata, segui le
@@ -30,7 +53,7 @@
 			Che non c'entra nulla con le moto.
 		</p><p>
 			Questo tale è universalmente noto (beh, no, non universalmente. Ma nel
-			suo ambiente lo è) per una piega, il `Kawasaki twist' che costituisce il
+			suo ambiente lo è) per una piega, il ‘Kawasaki twist’ che costituisce il
 			nucleo della simmetria centrale dei suoi modelli.
 		</p><p>
 			Per quanto ne so, Kawasaki ha realizzato tre modelli molto ben riusciti.
@@ -48,18 +71,18 @@
 			attivamente, in effetti.
 		</p><p>
 			In più, i fiori ispirano l'effetto cucciolo; quella cosa per cui tutti
-			si avvicinano, danno un'occhiata e dicono `Ahwooo'. Immagino che questa
+			si avvicinano, danno un'occhiata e dicono «Ahwooo». Immagino che questa
 			reazione sia alla base dell'errore, pensare di poter ottenere altro dopo
-			il `Ahwooo'.
+			il ‘Ahwooo’.
 		</p><p>
 			E siccome per puro caso ero venuto a sapere di come le rose blu non
 			esistessero in natura, scelsi quel colore.
 		</p><p>
 			Questa è la storia del mio fiore.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('i')) { ?><div class="section">
 		<h2>
-			$viaggatrice
+			$Viaggatrice
 		</h2><p>
 			Un giorno mi capitò di trovare una magnifica ragazza con due magnifici
 			occhi verdi. Anche se all'inizio notai soltanto gli occhi e mi bastò
@@ -87,9 +110,9 @@
 		</p><p>
 			Non servì.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<h2>
-			$arrampicatrice
+			$Arrampicatrice
 		</h2><p>
 			Poi un bel dì trovai una ragazza al corso di arrampicata. Decisi che
 			questa volta sarei riuscito a chiudere il fiore esagonale.
@@ -99,11 +122,11 @@
 		</p><p>
 			Non servì.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
 		<h2>
-			$montanara
+			$Montanara
 		</h2><p>
-			Poi un bel dì, vidi $montanara, ragazza che veniva da fuori, prendeva la
+			Poi un bel dì, vidi $Montanara, ragazza che veniva da fuori, prendeva la
 			corriera per tornare a casa e risultava sempre di corsa.
 		</p><p>
 			Praticando arti oscure riuscii a procurarmi il suo indirizzo mail.
@@ -119,16 +142,15 @@
 		</p><p>
 			Quasi dimenticavo. Non servì.
 		</p>
-			</div>
-			<div class="section">
+	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
 		<h2 id="IV">
-			$aperegina
+			$ApeRegina
 		</h2><p>
 			Poi un dì che non fu bello, una ragazza conobbe me. Ad essa posso
 			riconoscere soltanto il merito di averci provato così esplicitamente che
 			persino io me ne accorsi.
 		</p><p>
-			Purtroppo, $aperegina mi parve un po' troppo esigente. Temendo
+			Purtroppo, $ApeRegina mi parve un po' troppo esigente. Temendo
 			seriamente che mi sarei slogato le anche, e magari che lei mi staccasse
 			la testa al termine dell'accoppiamento, scappai a gambe levate. Storia
 			quasi vera.
@@ -138,9 +160,9 @@
 		</p><p>
 			Non servì.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('v')) { ?><div class="section">
 		<h2>
-			$canadese
+			$Canadese
 		</h2><p>
 			Poi un bel giorno conobbi una magnifica magnifica magnifica ragazza
 			canadese; bella, simpatica, videogiocatrice, tutto quello che si potesse
@@ -161,9 +183,9 @@
 			città ad avere ancora una PS3 in bundle con MGS4. Grazie,
 			$ragazzaDelGameStop.
 		</p>
-		</div><div class="section">
+	</div><?php } if ($d->mktab('vi')) { ?><div class="section">
 		<h2>
-			$rossa
+			$Rossa
 		</h2><p>
 			Questa dovreste conoscerla dalle storie precedenti.
 		</p><p>
@@ -177,14 +199,36 @@
 			Ed ho la sensasione che riuscirò anche a fare di meglio, stiracchiando
 			il modello tirerò fuori altri sei petali.
 		</p>
-		</div><div class="section">
+	</div><div class="section">
 		<p>
 			Perché piegare fiori è l'unica maniera in cui sono stato capace di
 			esprimermi fino ad ora. Ma i fiori che piego sono in qualche modo
 			maledetti e costituiscono l'ultima interazione tra me e la ricevente.
 		</p><p>
-			E il modello per $rossa è quasi pronto.
+			E il modello per la $Rossa è quasi pronto.
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } if ($d->mktab('vii')) { ?><div class="section">
+		<p>
+			Ma la vità andò avanti. Trovai la musa più strana
+		</p><h2>
+			$Frangiona
+		</h2><p>
+			M'ero sbagliato, fino ad oggi (e siamo a fine ottobre 2011, mentre
+			scrivo questo tab), pensando che l'ispirazione della musa venisse
+			soltanto accompagnata da qualche cosa in più… poi ho trovato una
+			musa per la quale non provavo niente.
+		</p><p>
+			Per questa bizzarria, l'intero procedimento fu più difficile da
+			portare a termine, credo.
+		</p><p>
+			Stavolta, il fiore è venuto più rotondo, più voluminoso, è tornato
+			ad avere soltanto dodici petali. Ma stavolta ho agginto lo stelo
+			verticale con le foglie, e una piccola coroncia a sei punte.
+		</p>
+	</div><div class="section">
+		<p>
+			Oltre a quello “consegnato” (se così posso dire) ne ho realizzato
+			uno per me. È completamente nero. Ed è magnifico.
+		</p>
+	</div><?php } ?>
+</div><?php } ?>
