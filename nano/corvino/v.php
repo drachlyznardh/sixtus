@@ -1,12 +1,12 @@
 <?php
-
-	$title=array('Di notte', 'Corvino Multicolore &ndash; V');
-	$prev=array('Capitolo IV', 'NaNoWriMo/Corvino/Multicolore/IV/');
-	$next=array('Capitolo VI', 'NaNoWriMo/Corvino/Multicolore/VI/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Di notte', 'Corvino Multicolore &ndash; V');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/IV/', 'Nel bosco');
+		$this->addnext ('NaNoWriMo/Corvino/Multicolore/VI/', 'Gli ultimi giorni');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Trattasi di un gioco notturno molto in voga a quei tempi.
@@ -393,5 +393,4 @@
 			Fino al giorno del Raja.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

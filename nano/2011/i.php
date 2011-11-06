@@ -1,7 +1,7 @@
 <?php
 	$d = $this->d;
 	if ($this->addmeta ()) {
-		$this->addtitle ('Parte I', 'La corona dell&apos;Odio', '1');
+		$this->addtitle ('La corona dell&apos;Odio', 'Dottor Odio Gaiden – Parte I', '1');
 	} if ($this->addside ()) {
 ?>
 <div class="section">

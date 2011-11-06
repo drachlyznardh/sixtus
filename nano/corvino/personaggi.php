@@ -2,6 +2,7 @@
 	$d = $this->d;
 	if ($this->addmeta ()) {
 		$this->addtitle ('Personaggi', 'Chi sono e cosa fanno', 'umanoidi');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
 	} if ($this->addpage ()) {
 ?><div class="small">
 	<?php if ($d->mktab('umanoidi')) { ?><div class="section">

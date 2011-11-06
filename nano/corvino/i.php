@@ -1,11 +1,11 @@
 <?php
-
-	$title=array('Una sera, al parco', 'Corvino Multicolore &ndash; I');
-	$next=array('Capitolo II', 'NaNoWriMo/Corvino/Multicolore/II/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Una sera, al parco', 'Corvino Multicolore &ndash; I');
+		$this->addnext ('NaNoWriMo/Corvino/MultiColore/II/', 'Campeggio');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>
 			Una sera, al parco
@@ -196,7 +196,9 @@
 		</p>
 	</div><div class="section">
 		<p>
-			Mi rimetto gli occhiali, controllo soddisfatto ogni direzione senza notare difetti, mando a cagare quelli che mi dicono dietro e poi mi avvio su per la stradina.
+			Mi rimetto gli occhiali, controllo soddisfatto ogni direzione senza
+			notare difetti, mando a cagare quelli che mi dicono dietro e poi mi
+			avvio su per la stradina.
 		</p><div class="inside">
 			<p>
 				Questo è il posto dove ho imparato ad andare in
@@ -358,5 +360,4 @@
 			pensai ad altro che a lei per i quattro anni seguenti.
 		</p>
 	</div>
-</div>
-<?}?>
+</div><?php } ?>

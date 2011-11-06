@@ -1,10 +1,11 @@
 <?php
-
-	$title=array('A contatto', 'Corvino Multicolore &ndash; III');
-	$prev=array('Capitolo II', 'NaNoWriMo/Corvino/Multicolore/II/');
-	$next=array('Capitolo IV', 'NaNoWriMo/Corvino/Multicolore/IV/');
-
-	function mkpage ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('A contatto', 'Corvino Multicolore &ndash; III');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/II/', 'Campeggio');
+		$this->addnext ('NaNoWriMo/Corvino/Multicolore/IV/', 'Nel bosco');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">

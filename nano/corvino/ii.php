@@ -1,12 +1,12 @@
 <?php
-
-	$title=array('Campeggio', 'Corvino Multicolore &ndash; II');
-	$prev=array('Capitolo I', 'NaNoWriMo/Corvino/Multicolore/I/');
-	$next=array('Capitolo III', 'NaNoWriMo/Corvino/Multicolore/III/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Campeggio', 'Corvino Multicolore &ndash; II');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/I/', 'Una sera, al parco');
+		$this->addnext ('NaNoWriMo/Corvino/Multicolore/III/', 'A contatto');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<div class="inside">
 			<p>
@@ -888,5 +888,4 @@
 			fiori dai colori sgargianti.
 		</p>
 	</div>
-</div>
-<?}?>
+</div><?php } ?>

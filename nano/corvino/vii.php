@@ -1,24 +1,20 @@
 <?php
-
-	$title=array('La dichiarazione', 'Corvino Multicolore &ndash; VII', 'i');
-	$prev=array('NaNoWriMo/Corvino/Multicolore/VI/', 'Capitolo VI', 0);
-	$next=array('NaNoWriMo/Corvino/Multicolore/VIII/', 'Capitolo VIII', 0);
-	$sides[] = function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('La dichiarazione', 'Corvino Multicolore &ndash; VII', 'i');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/VI/', 'Gli ultimi giorni');
+		$this->addnext ('NaNoWriMo/Corvino/Multicolore/VIII/', 'Il lampione');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
+	} if ($this->addside ()) {
+?><div class="section">
 	<h2>
 		La dichiarazione
 	</h2><ol><li>
-			<?=$d->mktid($d->self, 'A casa mia', 'i')?>
+			<?=$d->mktid('A casa mia', 'i')?>
 		</li><li>
-			<?=$d->mktid($d->self, 'A casa sua', 'ii')?>
+			<?=$d->mktid('A casa sua', 'ii')?>
 	</li></ol>
-</div>
-<?php
-	};
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('i')) { ?><div class="section">
 		<div class="inside"><p>
 			Quel giorno ce ne andammo in gita.

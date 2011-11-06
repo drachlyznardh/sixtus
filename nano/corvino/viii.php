@@ -2,8 +2,9 @@
 	$d = $this->d;
 	if ($this->addmeta ()) {
 		$this->addtitle ('Il lampione','Corvino Multicolore &ndash; VIII', 'i');
-		$this->addprev ('NaNoWriMo/Corvino/Multicolore/VII/', 'Capitolo VII');
-		$this->addnext ('NaNoWriMo/Corvino/Multicolore/IX/', 'Capitolo IX');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/VII/', 'La dichiarazione');
+		#$this->addnext ('NaNoWriMo/Corvino/Multicolore/IX/', 'Capitolo IX');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
 	} if ($this->addside ()) {
 ?><div class="section">
 	<h2>

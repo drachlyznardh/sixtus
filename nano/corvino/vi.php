@@ -1,12 +1,12 @@
 <?php
-
-	$title=array('Gli ultimi giorni', 'Corvino Multicolore &ndash; VI');
-	$prev=array('Capitolo V', 'NaNoWriMo/Corvino/Multicolore/V/');
-	$next=array('Capitolo VII', 'NaNoWriMo/Corvino/Multicolore/VII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Gli ultimi giorni', 'Corvino Multicolore &ndash; VI');
+		$this->addprev ('NaNoWriMo/Corvino/Multicolore/V/', 'Di notte');
+		$this->addnext ('NaNoWriMo/Corvino/Multicolore/VII/', 'La dichiarazione');
+		$this->prepare ('nano/corvino/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>
 			Gli ultimi giorni
@@ -462,5 +462,4 @@
 			E' stato il 23 novembre 2005.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>
