@@ -1,9 +1,11 @@
 <?php
-	$title=array('Camminavo', 'Ma dove non sapevo');
-	$next=array('Tru/Naluten/Vol.I/II/', 'Sacomne', false);
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Camminavo', 'Ma dove non sapevo');
+		$this->addnext ('Tru/Naluten/Vol.I/II/', 'Sacomne');
+		$this->prepare ('tru/primo/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Il primo capitolo di Tru Naluten &egrave; su Internet!
@@ -219,6 +221,4 @@
 			credo fosse un coniglio selvatico…
 		</p>
 	</div>
-</div>
-
-<?php } ?>
+</div><?php } ?>

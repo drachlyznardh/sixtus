@@ -1,8 +1,12 @@
 <?php
-	$p->addtitle ('La lezione', 'Che zittisce. Tutti.');
-	$p->addprev ('Tru/Naluten/Vol.II/XVIII/', 'Duello');
-	$p->addnext ('Tru/Nalunte/Vol.III/XX/', 'Il lavoro di Simak');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('La lezione', 'Che zittisce. Tutti.');
+		$this->addprev ('Tru/Naluten/Vol.II/XVIII/', 'Duello');
+		$this->addnext ('Tru/Nalunte/Vol.III/XX/', 'Il lavoro di Simak');
+		$this->prepare ('tru/secondo/index.php', false, false, true);
+		$this->prepare ('tru/terzo/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">
@@ -275,9 +279,4 @@
 			cena')?>
 		</div>
 	</div>
-</div>
-<?php
-	});
-	$p->set(false, true, false);
-	require_once ('index.php');
-?>
+</div><?php } ?>

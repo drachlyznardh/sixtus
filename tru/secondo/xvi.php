@@ -1,10 +1,11 @@
 <?php
-
-	$title=array('La sua gente', 'E i loro buffi copricapi');
-	$prev=array('Capitolo XV', 'Secondo/XV/');
-	$next=array('Capitolo XVII', 'Secondo/XVII');
-
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('La sua gente', 'E i loro buffi copricapi');
+		$this->addprev ('Tru/Naluten/Vol.II/XV/', 'La fuga');
+		$this->addnext ('Tru/Naluten/Vol.II/XVII/', 'Battaglia navale');
+		$this->prepare ('tru/secondo/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
@@ -81,18 +82,18 @@
 		</p>
 	</div><div class="section">
 		<div class="outside">
-			<?php $d->speak ('ali', 'Tra un&apos;ora saremo a casa, Araldo'); ?>
+			<?=$d->speak ('ali', 'Tra un&apos;ora saremo a casa, Araldo'); ?>
 			<p>
 				Ancora quello strano nome. Perch&eacute; mantiene questa
 				deferenza? Chiedo:
 			</p>
-			<?php $d->speak ('jo', 'Perch&eacute; mi chiami a quel modo? Io sono Jo, nient&apos;altro'); ?>
+			<?=$d->speak ('jo', 'Perch&eacute; mi chiami a quel modo? Io sono Jo, nient&apos;altro'); ?>
 			<p>
 				Sorride, i suoi occhi stanno fissando una bambina
 				con una corona di carta mentre afferma di essere una
 				principessa:
 			</p>
-			<?php $d->speak ('ali', 'Tu ancora non sai, ma domani vedrai. Domani &egrave; il giorno'); ?>
+			<?=$d->speak ('ali', 'Tu ancora non sai, ma domani vedrai. Domani &egrave; il giorno'); ?>
 			<p>
 				Poi tace, ascolta il canto delle onde.
 			</p>
@@ -218,7 +219,7 @@
 		</p>
 	</div><div class="section">
 		<div class="outside">
-			<?php $d->speak ('ali', 'Questa &egrave; mia sorella, Aysha'); ?>
+			<?=$d->speak ('ali', 'Questa &egrave; mia sorella, Aysha'); ?>
 		</div>
 	</div><div class="section">
 		<p>
@@ -238,9 +239,4 @@
 			</p>
 		</div>
 	</div>
-</div>
-<?php
-	});
-	$p->set(false, true, false);
-	require_once ('index.php');
-?>
+</div><?php } ?>

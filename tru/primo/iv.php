@@ -1,12 +1,12 @@
 <?php
-
-	$title=array('Le altre voci', 'Meglio soli che male accompagnati');
-	$prev=array('Capitolo III', 'Primo/III/');
-	$next=array('Capitolo V', 'Primo/V/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Le altre voci', 'Meglio soli che male accompagnati');
+		$this->addprev ('Tru/Naluten/Vol.I/III/', 'Il mio nome');
+		$this->addnext ('Tru/Naluten/Vol.I/V/', 'La mia faccia');
+		$this->prepare ('tru/primo/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>Tru Naluten I, IV &ndash; Le altre voci</h2>
 		<p>Cos&igrave;, io sono Simak.</p>
@@ -147,5 +147,4 @@
 		</div>
 		<p>Yo! C&apos;ho una faccia che fa spavento! Che razza di bestia sono?</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

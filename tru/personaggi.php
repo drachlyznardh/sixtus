@@ -2,6 +2,7 @@
 	$d = $this->d;
 	if ($this->addmeta()) {
 		$this->addtitle ('Personaggi', 'Per saper chi sono e dove vanno', 'spoiler');
+		$this->prepare ('tru/index.php', false, false, true);
 	} if ($this->addpage ()) {
 ?>
 <div class="small">

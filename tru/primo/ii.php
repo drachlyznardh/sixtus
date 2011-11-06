@@ -1,8 +1,11 @@
 <?php
-	$title=array('Sacomne', 'È nome');
-	$prev=array('Tru/Naluten/Vol.I/I/', 'Capitolo I', '');
-	$next=array('Tru/Naluten/Vol.I/III/', 'Capitolo III', false);
-	function mkpage ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Sacomne', 'È nome');
+		$this->addprev ('Tru/Naluten/Vol.I/I/', 'Camminavo…');
+		$this->addnext ('Tru/Naluten/Vol.I/III/', 'Il mio nome');
+		$this->prepare ('tru/primo/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">
@@ -153,5 +156,4 @@
 			<?=$d->speak ('lyznardh', 'Scusi, lei! Buongiorno! Avrebbe mica del caff&eacute;?'); ?>
 		</div>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

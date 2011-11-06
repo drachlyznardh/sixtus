@@ -1,12 +1,12 @@
 <?php
-
-	$title=array('La Porta', 'Non s&apos;apre per conto suo');
-	$prev=array('Tru/Naluten/Vol.I/VII/','La meta', 0);
-	$next=array('Tru/Naluten/Vol.I/IX/', 'La fine del mondo', 0);
-
-	function mkpage ($d) {
-?>	
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('La Porta', 'Non s&apos;apre per conto suo');
+		$this->addprev ('Tru/Naluten/Vol.I/VII/','La meta');
+		$this->addnext ('Tru/Naluten/Vol.I/IX/', 'La fine del mondo');
+		$this->prepare ('tru/primo/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2 class="reverse">
 			Tru Naluten – Vol.I, VIII

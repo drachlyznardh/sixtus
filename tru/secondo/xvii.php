@@ -1,10 +1,12 @@
 <?php
-	$p->addtitle ('Battaglia navale', 'Si combatte sul mare');
-	$p->addprev ('Tru/Naluten/Vol.II/XVI/', 'La sua gente');
-	$p->addnext ('Tru/Naluten/Vol.II/XVIII/', 'Battaglia navale');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Battaglia navale', 'Si combatte sul mare');
+		$this->addprev ('Tru/Naluten/Vol.II/XVI/', 'La sua gente');
+		$this->addnext ('Tru/Naluten/Vol.II/XVIII/', 'Battaglia navale');
+		$this->prepare ('tru/secondo/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
-
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
 	formato pi&ugrave; confortevole dal punto di vista scrittorio; comincio
@@ -242,9 +244,4 @@
 <!--
 	Tru Naluten XVII fine
 -->
-
-<?php
-	});
-	$p->set(false, true, false);
-	require_once('index.php');
-?>
+<?php } ?>

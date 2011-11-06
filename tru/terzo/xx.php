@@ -1,26 +1,25 @@
 <?php
-	$p->addtitle ('Il lavoro di Simak', 'Quello che ha scelto di fare', 'i');
-	$p->addprev ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
-	#$next=array('Tru/Naluten/Vol.III/XXI/', 'Capitolo XXI', 0);
-	$p->addside (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Il lavoro di Simak', 'Quello che ha scelto di fare', 'i');
+		$this->addprev ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
+		$this->prepare ('tru/secondo/index.php', false, false, true);
+		$this->prepare ('tru/terzo/index.php', false, false, true);
+	} if ($this->addside ()) {
 ?>
-		<div class="section">
-			<h2>
-				Tru Naluten XX
-			</h2><ol><li>
-					<?=$d->mktid('Parte I', 'i')?>
-				</li><li>
-					<?=$d->mktid('Parte II', 'ii')?>
-				</li><li>
-					<?=$d->mktid('Parte III', 'iii')?>
-				</li><li>
-					<?=$d->mktid('Parte IV', 'iv')?>
-			</li></ol>
-		</div>
-<?php
-	});
-	$p->addpage (function ($d) {
-?><div class="small">
+<div class="section">
+	<h2>
+		Tru Naluten XX
+	</h2><ol><li>
+			<?=$d->mktid('Parte I', 'i')?>
+		</li><li>
+			<?=$d->mktid('Parte II', 'ii')?>
+		</li><li>
+			<?=$d->mktid('Parte III', 'iii')?>
+		</li><li>
+			<?=$d->mktid('Parte IV', 'iv')?>
+	</li></ol>
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>
 			Tru Naluten III, XX
@@ -410,9 +409,4 @@
 			qui nella jungla, l&apos;umidità t&apos;increspa i capelli')?>
 		</p></div>
 	</div><?php } ?>
-</div>
-<?php
-	});
-	$p->set (false, true, false);
-	require_once ('index.php');
-?>
+</div><?php } ?>

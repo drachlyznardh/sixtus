@@ -1,8 +1,11 @@
 <?php 
-	$title=array('Il mio nome', '&Egrave; solo mio');
-	$prev=array('Tru/Naluten/Vol.I/II/', 'Sacomne', false);
-	$next=array('Tru/Naluten/Vol.I/IV/', 'Le altre voci', false);
-	function mkpage ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Il mio nome', '&Egrave; solo mio');
+		$this->addprev ('Tru/Naluten/Vol.I/II/', 'Sacomne');
+		$this->addnext ('Tru/Naluten/Vol.I/IV/', 'Le altre voci');
+		$this->prepare ('tru/primo/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">
@@ -127,5 +130,4 @@
 			<?=$d->speak('sacomne', 'Tu sei simak, mio amato')?>
 		</div>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

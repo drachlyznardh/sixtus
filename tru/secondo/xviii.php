@@ -1,8 +1,11 @@
 <?php
-	$p->addtitle ('Duello', 'Finalmente un po&apos; di botte');
-	$p->addprev ('Tru/Naluten/Vol.II/XVII/', 'Battaglia navale');
-	$p->addnext ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
-	$p->addpage (function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Duello', 'Finalmente un po&apos; di botte');
+		$this->addprev ('Tru/Naluten/Vol.II/XVII/', 'Battaglia navale');
+		$this->addnext ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
+		$this->prepare ('tru/secondo/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
@@ -189,9 +192,4 @@
 	<!--
 		Tru Naluten XVII fine
 	-->
-
-<?php
-	});
-	$p->set(false, true, false);
-	require_once ('index.php');
-?>
+<?php } ?>

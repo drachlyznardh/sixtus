@@ -1,12 +1,12 @@
 <?php
-
-	$title=array('L&apos;altro me', 'Non sono veramente io');
-	$prev=array('Capitolo V', 'Primo/V/');
-	$next=array('Capitolo VII', 'Primo/VII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('L&apos;altro me', 'Non sono veramente io');
+		$this->addprev ('Tru/Naluten/Vol.I/V/', 'La mia faccia');
+		$this->addnext ('Tru/Naluten/Vol.I/VII/', 'La meta');
+		$this->prepare ('tru/primo/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>
 			Tru Naluten I,VI &ndash; L'altro me
