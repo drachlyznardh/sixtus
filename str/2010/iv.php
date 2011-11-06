@@ -1,12 +1,11 @@
 <?php 
-	
-	$title = array('Impresa', 'La strada breve passa per la jungla');
-	$prev = array('Storia III', 'Storie/III/');
-	$next = array('Storia V', 'Storie/V/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Impresa', 'La strada breve passa per la jungla');
+		$this->addprev ('Storie/2010/III/', 'Progetti');
+		$this->addnext ('Storie/2010/V/', 'Condizioni');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 
 		<h2>Impresa</h2>
@@ -25,7 +24,7 @@
 		<p>
 			Tanto per risparmiare un po&apos; di strada, mi dico:
 		</p><div class="outside">
-			<?php $d->speak ('simak', 'Perch&eacute; non ce ne scendiamo direttamente da qui? Conosco una scorciatoia...'); ?>
+			<?=$d->speak ('simak', 'Perch&eacute; non ce ne scendiamo direttamente da qui? Conosco una scorciatoia...'); ?>
 		</div>
 		<p>
 			Ora, che io ricordassi veramente quella scorciatoia non
@@ -49,7 +48,7 @@
 			dobbiamo andare a destra, ovviamente.
 		</p>
 		<div class="outside">
-			<?php $d->speak ('simak', 'Venga, buon Dacav: tagliamo di l&agrave;'); ?>
+			<?=$d->speak ('simak', 'Venga, buon Dacav: tagliamo di l&agrave;'); ?>
 		</div>
 		<p>
 			Perch&eacute; la vigna finisce, io cerco ben bene una
@@ -78,15 +77,15 @@
 			E gi&ugrave;, altri 15 metri. Finiamo dentro un torrentello.
 		</p>
 		<div class="outside">
-			<?php $d->speak ('simak', 'E qu&igrave; dovrebbe starci un ponticello che ci porta dall&apos;altra parte'); ?>
+			<?=$d->speak ('simak', 'E qu&igrave; dovrebbe starci un ponticello che ci porta dall&apos;altra parte'); ?>
 		</div>
 		<p>
 			Ma non c&apos;&egrave;.
 		</p>
 	</div><div class="section">
 		<div class="outside">
-			<?php $d->speak ('dacav', 'Coso, perch&eacute; non passiamo su quel palo, ci teniamo all&apos;albero, e passiamo sull&apos;altra sponda?'); ?>
-			<?php $d->speak ('simak', 'Oh cazzo s&igrave;'); ?>
+			<?=$d->speak ('dacav', 'Coso, perch&eacute; non passiamo su quel palo, ci teniamo all&apos;albero, e passiamo sull&apos;altra sponda?'); ?>
+			<?=$d->speak ('simak', 'Oh cazzo s&igrave;'); ?>
 		</div>
 		<p>
 			E passiamo sopra al palo, sospeso sul torrente sorretto da
@@ -121,13 +120,13 @@
 		</p>
 		<div class="outside">
 			<p>&laquo;Scusa, da dove vieni?&raquo;</p>
-			<?php $d->speak ('simak', 'Dal bosco. Sono appena uscito'); ?>
+			<?=$d->speak ('simak', 'Dal bosco. Sono appena uscito'); ?>
 			<p>&laquo;E come sei entrato&raquo;</p>
-			<?php $d->speak ('simak', 'Dal bosco. C&apos;era il bosco: l&apos;ho attraversato'); ?>
+			<?=$d->speak ('simak', 'Dal bosco. C&apos;era il bosco: l&apos;ho attraversato'); ?>
 			<p>&laquo;E che ci fai con quello?&raquo;</p>
-			<?php $d->speak ('simak', 'SPAM? Lo trasporto. Ce l&apos;ho in braccio...'); ?>
+			<?=$d->speak ('simak', 'SPAM? Lo trasporto. Ce l&apos;ho in braccio...'); ?>
 			<p>&laquo;Guarda, &egrave; propriet&agrave; privata. C&apos;&egrave; un cancello, ma &egrave; chiuso. Dovresti tornare da dove sei venuto&raquo;</p>
-			<?php $d->speak ('simak', 'Ah, vabbeh... Saluti'); ?>
+			<?=$d->speak ('simak', 'Ah, vabbeh... Saluti'); ?>
 		</div>
 		<p>
 			E me ritorno nel bosco, guarda te &apos;sto tizio... Le mie
@@ -139,9 +138,9 @@
 			cellofono.
 		</p>
 		<div class="outside">
-			<?php $d->speak ('simak', 'Pronto?'); ?>
-			<?php $d->speak ('dacav', 'Coso, dove sei? L&apos;hai passato il trattore?'); ?>
-			<?php $d->speak ('simak', 'QUALE trattore?'); ?>
+			<?=$d->speak ('simak', 'Pronto?'); ?>
+			<?=$d->speak ('dacav', 'Coso, dove sei? L&apos;hai passato il trattore?'); ?>
+			<?=$d->speak ('simak', 'QUALE trattore?'); ?>
 		</div>
 		<p>
 			Due telefonate dopo, seguendo empiricamente le indicazioni,
@@ -174,5 +173,4 @@
 			normalmente. Forse.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

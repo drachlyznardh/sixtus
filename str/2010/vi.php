@@ -1,13 +1,26 @@
 <?php
-
-	$title = array('Un posto in cui stare', 'No fun allowed');
-	$prev = array('Storia V', 'Storie/V/');
-	$next = array('Storia VII', 'Storie/VII/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Un posto in cui stare', 'No fun allowed', 'i');
+		$this->addprev ('Storie/2010/V/', 'Condizioni');
+		$this->addnext ('Storie/2010/VII/', 'Gundam');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Un posto in cui stare
+	</h2><ol><li>
+			<?=$d->mktid('Il posto in cui stare', 'i')?>
+		</li><li>
+			<?=$d->mktid('Com&apos;è andata, e perché', 'ii')?>
+		</li><li>
+			<?=$d->mktid('La confessione', 'iii')?>
+		</li><li>
+			<?=$d->mktid('Il finale', 'iv')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
 		<h2>Il posto in cui stare</h2>
 		<p>
 			Oggi mi sono preso una mattinata libera da lezioni, impegni o
@@ -81,6 +94,7 @@
 			tempi stringevano. &Egrave; passata quasi un'intera settimana
 			da allora...
 		</p>
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<h2>Come &egrave; andata e perch&eacute;</h2>
 		<p>
 			Il matrimonio c'&egrave; stato, e anche se non posso dire che
@@ -125,48 +139,58 @@
 		</p><p>
 			Tristezza.
 		</p>
-	</div><div class="section">
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
 		<p>
 			Non mi resta che dire qualcosa sulla cerimonia... ma posso
 			arrivarci con calma. Prima c'è stata
-		</p>
-		<h2>La confessione</h2>
-		<p>
+		</p><h2>
+			La confessione
+		</h2><p>
 			Eh già: $pretaccio (nomignolo affettuoso con cui mi riferisco
 			all'attuale parroco, ovviamente celebrante il matrimonio e
 			odioso vecchiaccio) aspetta due giorni prima della cerimonia per
-			avvertirci che: &laquo;A coscienza, ma uno dovrebbe essere
-			confessato quando si sposa. Anche i testimoni&raquo;
-		</p><p>
-			E qui sono contento, perché ha detto &quot;A coscienza&quot;,
-			cosa che di fatto mi è piaciuta. Ovviamente,
-			$testimoneDellaSposa, personaggio femminile già apparso in
-			queste storie, chiamiamola $R = @ragazza[0] (ricordate <a
-			href="Storie/III/">questa storia</a>?), scoppia perché deve
-			assolutamente trovare un buco in cui tutti noi si possa
-			confessarsi assieme.
-		</p><p>
+			avvertirci che
+		</p><div class="outside"><p>
+				<?=$d->inline('em', 'A coscienza, ma uno dovrebbe essere
+				confessato quando si sposa. Anche i testimoni')?>
+		</p></div><p>
+			E qui sono contento, perché ha detto “a coscienza”, cosa che di
+			fatto mi è piaciuta. Ovviamente, $testimoneDellaSposa, personaggio
+			femminile già apparso in queste storie, chiamiamola $R = @ragazza[0]
+			(ricordate <?=$d->link('Storie/2010/III/', 'questa storia')?>),
+			scoppia perché deve assolutamente trovare un buco in cui tutti noi
+			si possa confessarsi assieme.
+		</p>
+	</div><div class="section">
+		<p>
 			E come andò a finire? Ovviamente, osceno giro di telefonate
 			(almeno quattro) composte in modo non esaustivo da
-			&laquo;Venerdì sei libero?&raquo;, &laquo;Sabato alle
-			15:00?&raquo; e &laquo;Sento &L per la disponibilità, poi
-			$prete e invio conferma&raquo;. Vorrei poi sottolineare che la
-			conferma non è giunta se non all'ora dell'incontro.
+		</p><div class="outside"><p>
+				«Venerdì sei libero?»
+			</p><p>
+				«Sabato alle 15:00?»
+			</p><p>
+				«Sento $L per la disponibilità, poi $prete e invio conferma»
+		</p></div><p>
+				Vorrei poi sottolineare che la conferma non è giunta se non
+				all'ora dell'incontro.
 		</p><p>
 			Che ho fatto, dunque? Quello che faccio quando devo prendere una
-			grossa decisione. Sono andato a parlare con i miei sassi (ne
-			parlerò in futuro, forse <a href="Storie/VII/">quì</a>). Ed è
-			stato utile, perché sono riuscito a mettere a fuoco quello che
-			avrei dovuto fare.
+			grossa decisione. Sono andato a parlare con i miei sassi (ne parlerò
+			in futuro, forse <?=$d->link('Storie/2010/VIII/', 'qui')?>). Ed è
+			stato utile, perché sono riuscito a mettere a fuoco quello che avrei
+			dovuto fare.
 		</p><p>
 			Mi è comparsa chiaramente davanti agli occhi una bella cosa, che
 			poi m'ha spinto a fare quello che ho fatto; ma è una buona cosa,
 			e non ne voglio parlare quì, perché io quì mi lamento.
-		</p><p>
+		</p>
+	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
+		<p>
 			Quindi passo alle cose veramente pesanti: chi viene ai
 			matrimoni? Ovviamente, un numero schifoso di gente mai vista,
 			parenti su parenti da ogni angolo del pianeta, gente che non
-			vedi da >9000 anni e ti chiedi perché, poi ti ricordi del motivo
+			vedi da &gt;9000 anni e ti chiedi perché, poi ti ricordi del motivo
 			ma ormai è tardi, son già qui, sorridi, saluta, etc etc etc...
 		</p><p>
 			E come ci siede ai matrimoni? Credevo si stesse in compagnia,
@@ -197,6 +221,5 @@
 			comincia a crollare. Ognuno raccatta la sua roba, mentre i
 			camerieri cominciano a ripulire il posto.
 		</p>
-	</div>
-</div>
-<?php } ?>
+	</div><?php } ?>
+</div><?php } ?>

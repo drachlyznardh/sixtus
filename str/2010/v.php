@@ -1,37 +1,57 @@
 <?php
-
-	$title = array('Condizioni che cambiano', 'Vecchie cose che tornano');
-	$prev = array('Storia IV', 'Storie/IV/');
-	$next = array('Storia VI', 'Storie/VI/');
-
-	function mkpage ($s) {
-?>
-<div class="small">
-	<div class="section">
-		<h2>Condizioni che cambiano</h2>
-		<p>
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Condizioni che cambiano', 'Vecchie cose che tornano', 'i');
+		$this->addprev ('Storie/2010/IV/', 'Impresa');
+		$this->addnext ('Storie/2010/VI/', 'Un posto in cui stare');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		Condizioni che cambiano
+	</h2><ol><li>
+			<?=$d->mktid('Condizioni che cambiano', 'i')?>
+		</li><li>
+			<?=$d->mktid('Deludere le buone speranza', 'ii')?>
+		</li><li>
+			<?=$d->mktid('Bonus', 'iii')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('i')) { ?><div class="section">
+		<h2>
+			Condizioni che cambiano
+		</h2><p>
 			Nella programmazione come nella vita è oscenamente facile
 			sottovalutare l'effetto al variare di una condizione.
 		</p><p>
 			Recentemente, infatti, mi son rimesso a lavorare in C++ (seriamente,
-			questa volta, dove con &quot;seriamente&quot; intendo con la volontà
+			questa volta, dove con “seriamente” intendo con la volontà
 			di imparare a gestire l'accrocchio, ossia osservare con occhi e
 			toccare con mano le interiora di questo mostro). Una delle buone
 			cose he un programmatore vuole fare è riutilizzare il codice e
 			scrivere poche cose. Vado allora ad osservare i Template del C++, i
 			quali m'aspetterei permettano di utilizzare funzionalità generali,
 			senza dover riscrivere il codice pur potendo cambiare i tipi.
-		</p><p>
+		</p>
+	</div><div class="section">
+		<p>
 			E invece no.
-		</p><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Perché non è così che funzionano: il compilatore cerca la classe del
 			template ogniqualvolta deve compilarne un'istanza (badaben: non
 			utilizzare, non riadattare, non specificare, bensì compilare). E
 			dove la cerca? Oh, non la cerca affatto: se gliela metto negli
 			header del sorgente, la trova, altrimenti si gratta la testa e mi
-			dice: &laquo;LOL NOT FOUND&raquo;. Bravo compilatore del cazzo,
-			perché non ti tieni a mente i template, visto che fan parte del tuo
-			linguaggio? Perché costringi me a mettermi del codice negli header?
+			dice
+		</p><div class="outside"><p>
+				«LOL NOT FOUND»
+		</p></div><p>
+			Bravo compilatore del cazzo, perché non ti tieni a mente i template,
+			visto che fan parte del tuo linguaggio? Perché costringi me a
+			mettermi del codice negli header?
 		</p><p>
 			Oh, aspettate: non mi costringe. C'è infatti un losco truccone:
 			posso specificare, a compile-time per la classe template, quali tipi
@@ -51,13 +71,13 @@
 		</p><p>
 			No grazie, Stroustrup.
 		</p>
-	</div><div class="section">
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<p>
 			Però non ho ancora finito, perché oggi - pur non avendo molto tempo
 			- devo ancora lamentarmi di parecchia roba... avanti, dunque.
-		</p>
-		<h2>Deludere le buone speranze</h2>
-		<p>
+		</p><h2>
+			Deludere le buone speranze
+		</h2><p>
 			Io sarò anche stronzo, ma ci sono alcune cose che vado a fare
 			nonostante tutto perché credo che far finta che alcune cose mi
 			vadano bene sia sbagliato.
@@ -80,10 +100,11 @@
 			qualche sabato e qualche domenica per partire, gare, seminari. E
 			sostanzialmente, è dovuto al fatto che quando mi lascio convincere a
 			partecipare, lo faccio per il motivo sbagliato, lo stesso da circa
-			vent'anni: &laquo;Dai, Ivan, vai, che ci sono i tuoi amici... Dai,
-			Ivan, vai che ti diverti... Dai, Ivan, vai che conosci gente nuova
-			&raquo;
-		</p><p>
+			vent'anni
+		</p><div class="outside"><p>
+				«Dai, Ivan, vai, che ci sono i tuoi amici… Dai, Ivan, vai che
+				ti diverti… Dai, Ivan, vai che conosci gente nuova»
+		</p></div><p>
 			Ora, io sarò anche stronzo (l'ho già detto e lo ripeto), ma sono
 			fermamente convinto che un uomo libero (uno non obbligato da forza
 			maggiore) debba praticare lo sport per lo stesso motivo per qui va
@@ -100,36 +121,41 @@
 			in settimana, se ne vanno al parco e praticano il taiji senza
 			pretese, all'aperto, in compagnia. E io mi sono anche appassionato a
 			questa roba.
-		</p><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Poi finisce l'estate, si torna in palestra, e si ritorna ad avere un
 			vero istruttore. Nulla da dire al mio istruttore, ch'é uno dei due
 			amici sopracitati. Nell'entrare, mi tornano tanti ricordi. E ogni
 			cosa che vedo mi riporta alla mente qualcosa di fastidioso. Mo'
-			comincio...
-		</p><ul>
-			<li>La palestra, luogo chiuso che sa di gomma, di sudore e di pareti
-			alte alte alte... la prima cosa che penso, è che quando vado a
-			correre o prendo la bicicletta, vedo il panorama. Qui vedo le
-			pareti.</li>
-			<li>Questo corso è un corso serio, pieno di gente. So che questa è
-			la prima lezione, quindi un sacco di gente viene, prova e se ne va.
-			Ma io provo un profondo fastidio ad avere la gente intorno. E' per
-			questo che me ne vado a correre solo, di notte.</li>
-			<li>L'assicurazione implica la consegna di un certificato medico
-			agonistico: qualcuno, che deve pagare in caso di danni o infortuni,
-			vuole che io vada a pagare qualcun altro - un medico - perché mi
-			sottoponga a test sotto sforzo al fine di certificare
-			all'assicurazione che se per caso mi si spezza una gamba mentre sono
-			in palestra, prima stavo bene. Questa è una stronzata, ed è il
-			principale motivo per cui ho abbandonato altre squadre. Ed io ho
-			smesso di sentire la frase: &laquo;Non puoi salire sulla scala,
-			perché se cadi e ti fai male allora noi andiamo in rogne&raquo;</li>
-			<li>Come dicevo prima, c'è un istruttore. Uno vero, uno che ha
-			studiato per molti anni, ma soprattutto uno che non è mio amico, che
-			si comporta come istruttore. Che fa una cosa molto buona e giusta:
-			spiega perché e come farà le cose.</li>
-		</ul>
-		<p>
+			comincio…
+		</p><ul><li>
+				La palestra, luogo chiuso che sa di gomma, di sudore e di pareti
+				alte alte alte… la prima cosa che penso, è che quando vado a
+				correre o prendo la bicicletta, vedo il panorama. Qui vedo le
+				pareti.
+			</li><li>
+				Questo corso è un corso serio, pieno di gente. So che questa è
+				la prima lezione, quindi un sacco di gente viene, prova e se ne
+				va.  Ma io provo un profondo fastidio ad avere la gente intorno.
+				E' per questo che me ne vado a correre solo, di notte.
+			</li><li>
+				L'assicurazione implica la consegna di un certificato medico
+				agonistico: qualcuno, che deve pagare in caso di danni o
+				infortuni, vuole che io vada a pagare qualcun altro – un medico
+				– perché mi sottoponga a test sotto sforzo al fine di
+				certificare all'assicurazione che se per caso mi si spezza una
+				gamba mentre sono in palestra, prima stavo bene. Questa è una
+				stronzata, ed è il principale motivo per cui ho abbandonato
+				altre squadre. Ed io ho smesso di sentire la frase “<span
+				class="em">Non puoi salire sulla scala, perché se cadi e ti fai
+				male allora noi andiamo in rogne</span>”.
+			</li><li>
+				Come dicevo prima, c'è un istruttore. Uno vero, uno che ha
+				studiato per molti anni, ma soprattutto uno che non è mio amico,
+				che si comporta come istruttore. Che fa una cosa molto buona e
+				giusta: spiega perché e come farà le cose.
+		</li></ul><p>
 			Ho impiegato quattro giorni per afferrare il senso delle sue parole
 			e il vero motivo per cui mi sono sentito fuori posto.
 		</p><p>
@@ -157,23 +183,30 @@
 			è fastidioso, preferisco non esserci.
 		</p><p>
 			Quindi, per i pochi che leggeranno questa storiella e vi si
-			riconosceranno: &laquo;Scusate, ragazzi, ma questo fa la differenza.
-			L'anno prossimo, se ancora farete attività al parco, tornerò
-			volentieri. Ma questa attività non è per tutti, e certo non è per
-			me, perché dovrei sforzarmi di rilassarmi senza poter fare le cose
-			che faccio da rilassato. Quindi, gente, statemi bene. La Morte.&raquo;
-		</p>
-	</div><div class="section">
+			riconosceranno
+		</p><div class="outside"><p>
+				<?=$d->inline('gods', 'Scusate, ragazzi, ma questo fa la
+				differenza.  L&apos;anno prossimo, se ancora farete attività al
+				parco, tornerò volentieri. Ma questa attività non è per tutti, e
+				certo non è per me, perché dovrei sforzarmi di rilassarmi senza
+				poter fare le cose che faccio da rilassato. Quindi, gente,
+				statemi bene. La Morte')?>
+		</p></div>
+	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
 		<p>
-			E infine, due cose accadutemi ieri: uscito fresco fresco dalla
-			doccia, stavo sfrecciando in bicicleatta verso la mia destinazione,
-			capelli al vento perché si asciughino e velocità considerevole
-			perché sono io. M'accade di veder passare, s'un incrocio a T, un
-			ottimo paio di gambe su una bici non tanto bella.
+			E infine, due cose accadutemi ieri
+		</p><h2>
+			Bonus (1)
+		</h2><p>
+			Uscito fresco fresco dalla doccia, stavo sfrecciando in bicicleatta
+			verso la mia destinazione, capelli al vento perché si asciughino e
+			velocità considerevole perché sono io. M'accade di veder passare,
+			s'un incrocio a T, un ottimo paio di gambe su una bici non tanto
+			bella.
 		</p><p>
 			Guarda caso, questo paio di gambe sembra seguire la mia stessa
 			strada, con un discreto vantaggio perché, dopo il suo passaggio,
-			sono seguite >9000 auto che passavano proprio lì proprio allora,
+			sono seguite &gt;9000 auto che passavano proprio lì proprio allora,
 			cosicché rischio di perdere di vista il mio obbiettivo. Ma poi,
 			grazie alla considerevole differenza nelle nostre velocità,
 			raggiungo la bicicletta e la ragazza che si sta sopra, mi accorgo di
@@ -205,16 +238,23 @@
 			averla spaventata mica poco, ed il prossimo tratto di ciclabile era
 			pure scarsamente illuminato. Codardamente, ho proseguito lungo la
 			mia strada. Poveretta. Pedalava anche bene.
-		</p><p>
+		</p>
+	</div><div class="section">
+		<p>
 			Poi, mentre mi lancio in una serie di turbe mentali (quelle appenda
 			descritte, ma più confuse) vedo spuntare davanti a me, lungo la
-			ciclabile, un gruppo di almeno sette bimbiminchia. La strada, come
-			ho detto, non è ben illuminata. &Egrave; buia, in pratica. Tra il
-			gruppo, che ovviamente occupa tutta la strada, e l'albero che
+			ciclabile, un gruppo di almeno sette bimbiminchia.
+		</p><h2>
+			Bonus (2)
+		</h2><p>
+			La strada, come ho detto, non è ben illuminata. È buia, in pratica.
+			Tra il gruppo, che ovviamente occupa tutta la strada, e l'albero che
 			avrei incontrato al momento, c'era lo spazio per un manubrio e uno
-			sputo. Ho pensato: &laquo;Se posso spaventare le ragazze andando in
-			bici, posso anche passare di lì senza farmi notare&raquo;.
-		</p><p>
+			sputo. Ho pensato
+		</p><div class="outside"><p>
+				<?=$d->inline('gods', 'Se posso spaventare le ragazze andando in
+				bici, posso anche passare di lì senza farmi notare')?>
+		</p></div><p>
 			E lo faccio.
 		</p><p>
 			Oh, dimenticavo: ovviamente, la mia bici non ha la luce. Ce l'ha, ma
@@ -224,8 +264,11 @@
 			Mi allineo perfettamente tra la ragazza più a sinistra e l'albero,
 			passo senza un soffio e senza rallentare. Poi, alle mie spalle, dopo
 			alcuni metri, i bimbiminchia realizzano cos'era quello spostamento
-			d'aria. Ero Batman.
+			d'aria.
 		</p>
-	</div>
-</div>
-<?php } ?>	
+	</div><br /><div class="section">
+		<p>
+			Ero Batman.
+		</p>
+	</div><?php } ?>
+</div><?php } ?>	

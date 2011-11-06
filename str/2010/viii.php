@@ -1,12 +1,21 @@
 <?php
-
-	$title = array('Sassi', 'E pensieri sui sassi');
-	$prev = array('Storia VII', 'Storie/VII/');
-	$next = array('Storia IX', 'Storie/IX/');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('I sassi', 'E pensieri sui sassi');
+		$this->addprev ('Storie/2010/VII/', 'Gundam');
+		$this->addnext ('Storie/2010/IX/', 'Attenzione');
+	} if ($this->addside ()) {
+?><div class="section">
+	<h2>
+		I Sassi
+	</h2><ol><li>
+			<?=$d->mktid('I sassi', false, 'Sassi')?>
+		</li><li>
+			<?=$d->mktid('Il ruolo dei sassi', false, 'Ruolo')?>
+	</li></ol>
+</div><?php
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Oggi non ho niente da fare, e neanche ho la voglia necessaria
@@ -19,9 +28,9 @@
 			dati e non ho voglia di impegnarmi seriamente in altre cose...
 		</p><p>
 			Poi sto anche ascoltando della musica triste appena riscoperta.
-		</p>
-		<h2>I sassi</h2>
-		<p>
+		</p><a id="Sassi"></a><h2>
+			I sassi
+		</h2><p>
 			Fin da piccolo, ho amato la pista ciclabile della mia città. La
 			pista ciclabile è un lungo (parecchio lungo) nastro asfaltato
 			che passa lungo l'Adige e va avanti (e va anche indietro) per
@@ -41,9 +50,9 @@
 			Volendo tenermi al passo coi tempi, non appena la ciclabile
 			tornò trafficabile, andai a vedere che ci fosse di nuovo. E
 			c'erano i sassi.
-		</p>
-		<h2>Il ruolo dei sassi</h2>
-		<p>
+		</p><a id="Ruolo"></a><h2>
+			Il ruolo dei sassi
+		</h2><p>
 			Niente di particolare, finora.
 		</p><p>
 			Uno dei sassi era ed è tuttora tagliato, completamente liscio,
@@ -73,5 +82,4 @@
 			<a href="http://maps.google.com/?ie=UTF8&ll=45.999078,11.122174&spn=0.000861,0.002642&t=h&z=19">qui</a>.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

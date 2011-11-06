@@ -90,7 +90,7 @@
 			concept ed EVITARE DI ROVINARLO.
 		</p><p>
 			Questa magnifica idea si è tradotta, qualche bel mesucchio fa (verso la
-			fine del Novembre 2011) in uno speciale di cinque episodi, mandati in
+			fine del Novembre 2010) in uno speciale di cinque episodi, mandati in
 			onda sul canale della Hasbro, The Hub.
 		</p><p>
 			E questi cinque episodi speciali si sono rivelati tanto buoni da
