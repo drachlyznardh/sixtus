@@ -1,10 +1,11 @@
 <?php
-	$title=array('Personaggi', 'Chi sono e cosa fanno');
-	function mkpage ($d) {
-?>
-<div class="small">
-	<div class="section"><a id="Corvino"></a>
-		<h2>
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Personaggi', 'Chi sono e cosa fanno', 'umanoidi');
+	} if ($this->addpage ()) {
+?><div class="small">
+	<?php if ($d->mktab('umanoidi')) { ?><div class="section">
+		<a id="Corvino"></a><h2>
 			Corvino
 		</h2><p>
 			Il debole, lamentoso, inutile e pigro protagonista comincia come
@@ -25,9 +26,8 @@
 			strega vecchia di parecchi secoli, se ne va in giro rubando la
 			giovinezza alla gente e lo stesso vuol fare con Corvino.
 		</p>
-	</div>
-	<div class="section"><a id="Battesimo"></a>
-		<h2>
+	</div><?php } if ($d->mktab ('bestie')) { ?><div class="section">
+		<a id="Battesimo"></a><h2>
 			Battesimo
 		</h2><p>
 			Il lupo che per primo attenta alla vita di Corvino. Si rivela essere
@@ -50,8 +50,7 @@
 			Dopo aver servito la più potente guerriera strega ancora in vita,
 			affronta Corvino in un terribile scontro.
 		</p>
-	</div>
-	<div class="section">
+	</div><?php } if ($d->mktab ('glossario')) { ?><div class="section">
 		<h2 id="STREGHE">
 			Streghe	
 		</h2><a id="Strega"></a><a id="Streghe"></a><p>
@@ -85,34 +84,31 @@
 		</p><p>
 			Quale lato sia il qua e quale il là dipende da chi parla.
 		</p>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
+	</div><?php } ?>
+</div><?php } if ($this->addside ()) { ?><div class="section">
 	<p>
-		<?=$d->link('NaNoWriMo/Corvino/Multicolore/', 'Indice')?>
+		<?=$d->link('NaNoWriMo/Corvino/MultiColore/', 'Indice')?>
 	</p><h2>
 		Corvino Multicolore
-	</h2><p>
-			<?=$d->mktid($d->self, 'Corvino', 0, 'Corvino')?>
-		</p><p>
-			<?=$d->mktid($d->self, 'Camelia', 0, 'Camelia')?>
-	</p><div class="outside"><p>
-			<?=$d->mktid($d->self, 'Battesimo', 0, 'Battesimo')?>
-		</p><p>
-			<?=$d->mktid($d->self, 'Smeraldino', 0, 'Smeraldino')?>
-		</p><p>
-			<?=$d->mktid($d->self, 'Fisthanlaruani', 0, 'Fisthanlaruani')?>
-	</p></div><p>
-			<?=$d->mktid($d->self, 'Streghe', 0, 'Streghe')?>
-		</p><p>
-			<?=$d->mktid($d->self, 'Multicolore', 0, 'Multicolore')?>
-		</p><p>
-			<?=$d->mktid($d->self, 'Trasparente', 0, 'Trasparente')?>
-		</p><p>
-			<?=$d->mktid($d->self, 'Di qua / Di là', 0, 'DiQuaDiLà')?>
+	</h2><h3>
+		<?=$d->mktid('Uman(oid)i', 'umanoidi')?>
+	</h3><p class="reverse">
+		<?=$d->mktid('Corvino', 'umanoidi', 'Corvino')?>
+		/ <?=$d->mktid('Camelia', 'umanoidi', 'Camelia')?>
+	</p><h3>
+		<?=$d->mktid('Bestie', 'bestie')?>
+	</h3><p class="reverse">
+		<?=$d->mktid('Battesimo', 'bestie', 'Battesimo')?>
+		/ <?=$d->mktid('Smeraldino', 'bestie', 'Smeraldino')?>
+	</p><p class="reverse">
+		<?=$d->mktid('Fisthanlaruani', 'bestie', 'Fisthanlaruani')?>
+	</p><h3>
+		<?=$d->mktid('Glossario', 'glossario')?>
+	</h3><p class="reverse">
+		<?=$d->mktid('Streghe', 'glossario', 'Streghe')?>
+		/ <?=$d->mktid('Multicolore', 'glossario', 'Multicolore')?>
+	</p><p class="reverse">
+		<?=$d->mktid('Trasparente', 'glossario', 'Trasparente')?>
+		/ <?=$d->mktid('Di qua / Di là', 'glossario', 'DiQuaDiLà')?>
 	</p>
-</div>
-<?php } ?>
+</div><?php } ?>

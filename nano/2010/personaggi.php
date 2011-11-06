@@ -1,7 +1,7 @@
 <?php
 	$d = $this->d;
 	if ($this->addmeta ()) {
-		$this->addtitle ('Personaggi', 'Chi sono e cosa fanno');
+		$this->addtitle ('Personaggi', 'Chi sono e cosa fanno', 'umanoidi');
 	} if ($this->addpage ()) {
 ?><div class="small">
 	<?php if ($d->mktab('umanoidi')) { ?><div class="section">
@@ -50,7 +50,7 @@
 			Dopo aver servito la più potente guerriera strega ancora in vita,
 			affronta Corvino in un terribile scontro.
 		</p>
-	</div><?php } if ($d->mktab ('Glossario')) { ?><div class="section">
+	</div><?php } if ($d->mktab ('glossario')) { ?><div class="section">
 		<h2 id="STREGHE">
 			Streghe	
 		</h2><a id="Strega"></a><a id="Streghe"></a><p>
@@ -94,7 +94,7 @@
 		<?=$d->mktid('Uman(oid)i', 'umanoidi')?>
 	</h3><p class="reverse">
 		<?=$d->mktid('Corvino', 'umanoidi', 'Corvino')?>
-		/<?=$d->mktid('Camelia', 'umanoidi', 'Camelia')?>
+		/ <?=$d->mktid('Camelia', 'umanoidi', 'Camelia')?>
 	</p><h3>
 		<?=$d->mktid('Bestie', 'bestie')?>
 	</h3><p class="reverse">
