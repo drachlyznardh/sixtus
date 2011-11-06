@@ -1,13 +1,11 @@
 <?php
-	require_once ('index.php');
-	$pages = array ();
-
-	$title=array('Thor','Amarognola delusione');
-	$next=array('Recensioni/Giochi/II/', 'AC-Brotherhood');
-	
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Thor','Amarognola delusione');
+		$this->addnext ('Recensioni/Giochi/II/', 'AC-Brotherhood');
+		$this->prepare ('review/film/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Ebbene, vi beccate anche le mie recensioni, adesso!
@@ -215,5 +213,4 @@
 			Questo film fallisce.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

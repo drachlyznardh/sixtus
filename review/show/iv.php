@@ -1,14 +1,12 @@
 <?php
-	require_once('index.php');
-	$pages = array ();
-
-	$title = array ('Pani Poni Dash', 'Cosa sto guardando? Cosa?!?');
-	$prev = array ('Recensioni/Film/III/', 'Robocop');
-	$next = array ('Recensioni/Show/V/', 'BlassReiter');
-	
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Pani Poni Dash', 'Cosa sto guardando? Cosa?!?');
+		$this->addprev ('Recensioni/Film/III/', 'Robocop');
+		$this->addnext ('Recensioni/Show/V/', 'BlassReiter');
+		$this->prepare ('review/show/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Una cosa che spesso capita è l'apparizione di un <span
@@ -145,5 +143,4 @@
 			godere. Provate se osate.
 		</p>
 	</div>
-</div>
-<?php } ?> 
+</div><?php } ?> 

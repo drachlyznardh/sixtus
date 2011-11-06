@@ -1,12 +1,11 @@
 <?php
-	require_once ('index.php');
-	$pages = array ();
-
-	$title = array ('Transformers Super-God Masterforce', 'Toransufoma Choujin Massafosu');
-	$prev = array ('Recensioni/Show/V/', 'BlassReiter');
-	$next = array ('Recensioni/Film/VII/', 'Dark of the Moon');
-	
-	$pages[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Transformers Super-God Masterforce', 'Toransufoma Choujin Massafosu');
+		$this->addprev ('Recensioni/Show/V/', 'BlassReiter');
+		$this->addnext ('Recensioni/Film/VII/', 'Dark of the Moon');
+		$this->prepare ('review/show/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">
@@ -198,5 +197,4 @@
 			vivrete un sacco più felici.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

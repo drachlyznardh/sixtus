@@ -1,14 +1,12 @@
 <?php
-	require_once ('index.php');
-	$pages = array();
-
-	$title = array ('Bitch Slap','Più o meno “Le Iene”, però brutto');
-	$prev = array ('Recensioni/Show/XV/', 'TransFormers: Prime');
-	$next = array ('Recensioni/Film/XVII/', 'Rambo');
-	
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Bitch Slap','Più o meno “Le Iene”, però brutto');
+		$this->addprev ('Recensioni/Show/XV/', 'TransFormers: Prime');
+		$this->addnext ('Recensioni/Film/XVII/', 'Rambo');
+		$this->prepare ('review/brutti/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Cominciò con War, che un bel giorno (era un giovedì, mi pare) disse
@@ -67,5 +65,4 @@
 			forte), Baywatch. Non l'ho vista arrivare.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

@@ -1,12 +1,11 @@
 <?php
-	require_once('index.php');
-	$pages = array ();
-
-	$title=array('Capitan America', 'The First Avenger');
-	$prev=array('Recensioni/Film/VII/', 'Dark of the Moon');
-	$next=array('Recensioni/Show/IX/', 'Angel Beats!');
-	
-	$pages[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Capitan America', 'The First Avenger');
+		$this->addprev ('Recensioni/Film/VII/', 'Dark of the Moon');
+		$this->addnext ('Recensioni/Show/IX/', 'Angel Beats!');
+		$this->prepare('review/film/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">
@@ -111,5 +110,4 @@
 			qualcosa dentro. Vedremo. Il prossimo anno.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

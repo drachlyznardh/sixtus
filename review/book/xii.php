@@ -1,5 +1,11 @@
 <?php
-	$sides[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Harry Potter', 'E il lettore non impressionabile', 'intro');
+		$this->addprev ('Recensioni/Libri/XI/', 'Nessun Dove');
+		$this->addnext ('Recensioni/Show/XIII/','Kamen Rider');
+		$this->prepare ('review/book/index.php', false, false, true);
+	} if ($this->addside ()) {
 ?>
 <div class="section">
 	<p>
@@ -19,19 +25,7 @@
 			/ <?=$d->mktid('della', 'v', 'V2')?>
 			/ <?=$d->mktid('Fenice', 'v', 'V3')?>
 	</li></ol>
-</div>
-<?php
-	};
-	require_once ('index.php');
-	$pages = array();
-
-	$title=array('Harry Potter', 'E il lettore non impressionabile', 'intro');
-	$prev=array('Recensioni/Libri/XI/', 'Nessun Dove', 0);
-	$next=array('Recensioni/Show/XIII/','Kamen Rider',  0);
-
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
 			E venne il giorno… quacosa come, beh, molti anni fa ero in campeggio…
@@ -887,5 +881,4 @@
 			penultimo) volume.
 		</p>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php } ?>

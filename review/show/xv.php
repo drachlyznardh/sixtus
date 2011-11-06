@@ -1,7 +1,12 @@
 <?php
-	$sides[] = function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('TransFormers: Prime', 'Quasi non riesco a credere', 'intro');
+		$this->addprev ('Recensioni/Show/XIV/', 'Gundam AGE');
+		$this->addnext ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
+		$this->prepare ('review/show/index.php', false, false, true);
+	} if ($this->addside ()) {
+?><div class="section">
 	<p class="reverse">
 		<?=$d->mktid('Intro', 'intro', 'Intro')?>
 		/ <?=$d->mktid('Ancora un po&apos;', 'intro', 'More')?>
@@ -15,19 +20,7 @@
 	</p><p>
 		Seconda stagione
 	</h2>
-</div>
-<?php
-	};
-	require_once ('index.php');
-	$pages = array ();
-
-	$title=array('TransFormers: Prime', 'Quasi non riesco a credere', 'intro');
-	$prev=array('Recensioni/Show/XIV/', 'Gundam AGE');
-	$next=array('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
-
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
 			È bene precisare alcue cose, prima che lo sbrodolio di pareri su

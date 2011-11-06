@@ -1,7 +1,12 @@
 <?php
-	$sides[] = function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Gundam AGE', 'La Bandai non ci prova neanche, stavolta', 'intro');
+		$this->addprev ('Recensioni/Show/XIII/', 'Kamen Rider');
+		$this->addnext ('Recensioni/Show/XV/', 'TransFormers: Prime');
+		$this->prepare ('review/show/index.php', false, false, true);
+	} if ($this->addside ()) {
+?><div class="section">
 	<p>
 		<?=$d->mktid('Introduzione', 'intro')?>
 	</p><h2>
@@ -11,19 +16,7 @@
 		</li><li id="li-ii">
 			<?=$d->mktid('Il secondo impatto', 'ii')?>
 	</li></ol>
-</div>
-<?php
-	};
-	require_once ('index.php');
-	$pages = array ();
-
-	$title=array('Gundam AGE', 'La Bandai non ci prova neanche, stavolta', 'intro');
-	$prev=array('Recensioni/Show/XIII/', 'Kamen Rider', 0);
-	$next=array('Recensioni/Show/XV/', 'TransFormers: Prime', 0);
-
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
 			Dunque, eccoci.
@@ -60,9 +53,7 @@
 		</p><p>
 			In ogni caso, ho visto il primo episodio…
 		</p>
-	</div>
-	<?php } if ($d->mktab('i')) { ?>
-	<div class="section">
+	</div><?php } if ($d->mktab('i')) { ?><div class="section">
 		<p>
 			Allora, il primo episodio…
 		</p><h2>
@@ -161,9 +152,7 @@
 			Sento tanta ma tanta di quella fuffa in arrivo… potrei quasi scommetere
 			che, alla fine, l'intera astronave si trasformi in un Mobile Suit.
 		</p>
-	</div>
-	<?php } if ($d->mktab('ii')) { ?>
-	<div class="section">
+	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
 		<p>
 			Eh… ho cercato di trattenermi, di non recensire troppo…
 		</p><p>
@@ -323,5 +312,4 @@
 			Oppure potrebbe restare quello ch'è adesso. Una merda.
 		</p>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php } ?>

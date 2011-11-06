@@ -1,5 +1,11 @@
 <?php
-	$sides[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Robocop 1, 2 &amp; 3', 'Rivisti con occhi non di bambino', 'intro');
+		$this->addprev ('Recensioni/Giochi/II/', 'AC Brotherhood');
+		$this->addnext ('Recensioni/Show/IV/', 'Pani Poni Dash');
+		$this->prepare ('review/film/index.php', false, false, true);
+	} if ($this->addside ()) {
 ?>
 <div class="section">
 	<h2>
@@ -27,20 +33,7 @@
 	</p><br /><p>
 		<?=$d->mktid('Il Verdetto', 'voto')?>
 	</p>
-</div>
-<?php
-	};
-	require_once ('index.php');
-	$pages = array ();
-
-	$title = array('Robocop 1, 2 &amp; 3',
-		'Rivisti con occhi non di bambino', 'intro');
-	$prev = array('Recensioni/Giochi/II/', 'AC Brotherhood');
-	$next = array('Recensioni/Show/IV/', 'Pani Poni Dash');
-
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
 			Ah, gli anni della giovinezza... no, gli anni dell'infanzia. Quegli
@@ -549,5 +542,4 @@
 			Solo per appassionati e per chi ha il gusto del brutto.
 		</p>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php } ?>

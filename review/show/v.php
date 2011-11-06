@@ -1,14 +1,12 @@
 <?php
-	require_once ('index.php');
-	$pages = array ();
-
-	$title = array ('Blassreiter', 'Un anime in Germania? Non solo, va anche peggio...');
-	$prev = array ('Recensioni/Show/IV/', 'Pani Poni Dash');
-	$next = array ('Recensioni/Show/VI/', 'Masterforce');
-	
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Blassreiter', 'Un anime in Germania? Non solo, va anche peggio...');
+		$this->addprev ('Recensioni/Show/IV/', 'Pani Poni Dash');
+		$this->addnext ('Recensioni/Show/VI/', 'Masterforce');
+		$this->prepare ('review/show/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Poi un giorno, uno (che sono io) decide di dare una seconda
@@ -240,5 +238,4 @@
 			cercavo.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

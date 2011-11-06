@@ -1,12 +1,11 @@
 <?php
-	require_once ('index.php');
-	$pages = array();
-
-	$title=array('I puffi', 'La la lallalala la lallalà');
-	$prev=array('Recensioni/Show/IX/', 'Angel Beats!');
-	$next=array('Recensioni/Libri/XI/', 'Nessun Dove');
-
-	$pages[] = function ($d) {
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('I puffi', 'La la lallalala la lallalà');
+		$this->addprev ('Recensioni/Show/IX/', 'Angel Beats!');
+		$this->addnext ('Recensioni/Libri/XI/', 'Nessun Dove');
+		$this->prepare ('review/film/index.php', false, false, true);
+	} if ($this->addpage ()) {
 ?>
 <div class="small">
 	<div class="section">
@@ -67,5 +66,4 @@
 			ovviamente, con dei fratellini piccini.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

@@ -1,7 +1,12 @@
 <?php
-	$sides[] = function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Kamen Rider', 'Henshin!', 'intro');
+		$this->addprev ('Recensioni/Libri/XII/', 'Harry Potter &amp; …');
+		$this->addnext ('Recensioni/Show/XIV/', 'Gundam AGE');
+		require_once ('index.php');
+	} if ($this->addside ()) {
+?><div class="section">
 	<h2>
 		Kamen Rider
 	</h2><ol><li>
@@ -23,19 +28,7 @@
 	</h3><p class="reverse">
 		<?=$d->mktid('Let&apos;s go Kamen Riders', 'm2011')?> – 2011
 	</p>
-</div>
-<?php
-	};
-	require_once ('index.php');
-	$pages = array ();
-
-	$title = array ('Kamen Rider', 'Henshin!', 'intro');
-	$prev = array ('Recensioni/Libri/XII/', 'Harry Potter &amp; …');
-	$next = array ('Recensioni/Show/XIV/', 'Gundam AGE');
-
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section"><a id="I"></a>
 		<p>
 			Uno dovrebbe perché Kamen Rider è una cosa grande e grossa, che dura da
@@ -508,5 +501,4 @@
 			appena lo trovo… eh, leggerete.
 		</p>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php } ?>

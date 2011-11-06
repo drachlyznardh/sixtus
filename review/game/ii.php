@@ -1,14 +1,12 @@
 <?php
-	require_once ('index.php');
-	$pages = array ();
-
-	$title=array('Assassin&apos;s Creed Brotherhood', 'Ubisooooooooooooooooooooooft!!!!');
-	$prev=array('Recensioni/Film/I/', 'Thor');
-	$next=array('Recensioni/Film/III/', 'Robocop');
-	
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Assassin&apos;s Creed Brotherhood', 'Ubisooooooooooooooooooooooft!!!!');
+		$this->addprev ('Recensioni/Film/I/', 'Thor');
+		$this->addnext ('Recensioni/Film/III/', 'Robocop');
+		$this->prepare ('review/game/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Eh... Assassin's Creed al suo terzo e - mi par di capire -
@@ -184,5 +182,4 @@
 			di volte, nei titoli di coda...
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>

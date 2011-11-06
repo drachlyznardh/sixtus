@@ -1,11 +1,12 @@
 <?php
-	$title=array('Dark Of The Moon',
-		'Le parole non possono descrivere la delusione', 'intro');
-	$prev=array('Recensioni/Show/VI/', 'Masterforce', 0);
-	$next=array('Recensioni/Film/VIII/', 'Capitan America', 0);
-	$sides[] = function ($d) {
-?>
-<div class="section">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Dark Of The Moon', 'Le parole non possono descrivere la delusione', 'intro');
+		$this->addprev ('Recensioni/Show/VI/', 'Masterforce');
+		$this->addnext ('Recensioni/Film/VIII/', 'Capitan America');
+		$this->prepare ('review/film/index.php', false, false, true);
+	} if ($this->addside ()) {
+?><div class="section">
 	<h2>
 		Dark Of The Moon
 	</h2><h3>
@@ -41,14 +42,7 @@
 	 	/ <?=$d->mktid('Verdetto', 'ii', 'II/IX')?>
 		/ <?=$d->mktid('Sulle voci originali', 'ii', 'II/X')?>
 	</p>
-</div>
-<?php
-	};
-	require_once('index.php');
-	$pages = array ();
-	$pages[] = function ($d) {
-?>
-<div class="small">
+</div><?php } if ($this->addpage ()) { ?><div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
 		<p>
 			Salve, sono il Gods e qualche cosa la so.
@@ -956,5 +950,4 @@
 			«Time to find out» prima di staccargli la testa con l'ascia.
 		</p>
 	</div><?php } ?>
-</div>
-<?php } ?>
+</div><?php } ?>

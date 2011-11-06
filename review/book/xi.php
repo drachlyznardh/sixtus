@@ -1,14 +1,12 @@
 <?php
-	require_once ('index.php');
-	$pages = array ();
-
-	$title = array ('Nessun dove','Neil Gaiman ridacchia, io rido con lui');
-	$prev = array ( 'Recensioni/Film/X/', 'I Puffi');
-	$next = array ('Recensioni/Libri/XII/', 'Harry Potter');
-
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Nessun dove','Neil Gaiman ridacchia, io rido con lui');
+		$this->addprev ( 'Recensioni/Film/X/', 'I Puffi');
+		$this->addnext ('Recensioni/Libri/XII/', 'Harry Potter');
+		$this->prepare ('review/book/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Questa la metto giù breve che non ho briga di scrivere tanto.

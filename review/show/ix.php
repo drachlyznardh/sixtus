@@ -1,14 +1,12 @@
 <?php
-	require_once ('index.php');
-	$pages = array ();
-
-	$title = array ('Angel Beats', 'Non ho capito bene bene');
-	$prev = array ('Recensioni/Film/VIII/', 'Capitan America');
-	$next = array ('Recensioni/Film/X/', 'I Puffi');
-	
-	$pages[] = function ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('Angel Beats', 'Non ho capito bene bene');
+		$this->addprev ('Recensioni/Film/VIII/', 'Capitan America');
+		$this->addnext ('Recensioni/Film/X/', 'I Puffi');
+		$this->prepare ('review/show/index.php', false, false, true);
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<p>
 			Quanto può essere grande una scuola superiore? Beh, tanto.
@@ -107,5 +105,4 @@
 			tutto.
 		</p>
 	</div>
-</div>
-<?php } ?>
+</div><?php } ?>
