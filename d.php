@@ -1,4 +1,5 @@
 <?php
+
 	$servername = $_SERVER['SERVER_NAME'];
 	
 	$admin['name'] = 'simak';
@@ -29,6 +30,8 @@
 	require_once ('sys/finder.php');
 	require_once ('sys/dialog.php');
 	require_once ('sys/pager.php');
+
+	require_once ('sys/parser.php');
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 	if ($request == '' && isset($conf['home'])) header ("Location: $conf[home]");
@@ -86,6 +89,10 @@
 	$searchpath = $search['destdir'] .'/';
 
 	$self = false;
+
+	$search or die ('No Search Result');
+	$search['category'] or die ('No Categories');
+
 	foreach ($search['category'] as $category)
 		$self .= $category .'/';
 
@@ -118,11 +125,15 @@
 	}
 
 	$d = new Dialog($opt, $self, $tab);
-	$p = new Pager($d);
+	$p = new Parser($d);
+	$p->load ($page);
+	$p->parse ();
+	#$p = new Pager($d);
 
-	$p->prepare ($page, true, true, true);
-	$tab['name'] or $tab['name'] = $p->defaulttab();
-	$p->load ();
+	#$p->prepare ($page, true, true, true);
+	#$tab['name'] or $tab['name'] = $p->defaulttab();
+	#$p->load ();
 	require_once ('sys/skeleton.php');
+
 	die ();
 ?>

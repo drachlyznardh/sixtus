@@ -8,7 +8,7 @@
 		<meta name="keywords" content="<?php foreach (explode('/', $self) as $keyword) echo ' '.$keyword; ?>" />
 		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss.xml" />
 
-		<title><?=$p->title()?></title>
+		<title><?=$p->gettitle()?></title>
 		
 		<link rel="stylesheet" type="text/css" href="style/common.css" />
 		<link rel="stylesheet" type="text/css" href="style/coolstories.css" />
@@ -41,17 +41,15 @@
 							?>
 							/
 						</p></div><h1 style="text-align:center">
-							<?=$p->title()?>
+							<?=$p->getTitle()?>
 						</h1><div class="outside em"><p style="text-align: center">
-								<?=$p->subtitle()?>	
+								<?=$p->getSubtitle()?>	
 						</p></div>
 					</div>
 				</div><div id="content">
 					<?php
 						if (isset($opt['debug'])) require_once('sys/debug.php');
-
-						if (function_exists('mkpage')) mkpage($d);
-						$p->mkpages($d);
+						echo ($p->getPage ());
 					?>
 				</div> <!-- Content -->
 				<div id="foot"><?php require_once ('sys/footer.php'); ?></div> <!-- Foot -->
@@ -59,9 +57,11 @@
 			<div id="rightside"><?php
 				require_once ('sys/related.php');
 				echo ('<br />');
-				$p->mksides($d);
-				echo ('<br />');
-				if ($rside && file_exists($rside)) require_once ($rside);
+				echo ($p->getSide ());
+				if ($rside && file_exists($rside)) {
+					echo ('<br />');
+					require_once ($rside);
+				}
 			?></div> <!-- RightSide -->
 			<div id="leftside"><?php require_once ('sys/lside.php'); ?></div> <!-- LeftSide -->
 		</div> <!-- Main -->

@@ -77,18 +77,24 @@
 			$this->push(false, true, false);
 			ob_start();
 			require($file);
-			$this->pages[] = ob_get_contents();
+			$result = ob_get_contents();
 			ob_end_clean();
 			$this->pop();
+
+			$this->pages[] = $result;
+			return $result;
 		}
 
 		public function loadside ($file) {
 			$this->push(false, false, true);
 			ob_start();
 			require($file);
-			$this->sides[] = ob_get_contents();
+			$result = ob_get_contents();
 			ob_end_clean();
 			$this->pop();
+
+			$this->sides[] = $result;
+			return $result;
 		}
 
 		private function push ($meta, $page, $side) {

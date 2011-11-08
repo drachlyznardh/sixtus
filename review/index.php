@@ -203,9 +203,9 @@
 			l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
 			cose in ordine (in attesa che crescano).
 		</p>
-	</div><?php } if ($d->mktab('progressi')) { ?><div class="section">
+	</div><?php } if ($d->mktab('incorso')) { ?><div class="section">
 		<h2>
-			Progressi
+			In corso d'opera…
 		</h2><p>
 			Nel caso siate veramente impazienti, o nel caso vogliate
 			anticipazioni, o se proprio volete farvi i cazzi miei, questo è
@@ -217,7 +217,7 @@
 		</p>
 	</div><div class="section">
 		<p>
-			Harry Potter &amp; il Principe Mezzosangue – pagg230/588
+			Harry Potter &amp; il Principe Mezzosangue – pagg284/588
 		</p><p>
 			Pirate Sentai Gokaiger – ep28/??
 		</p><p>
@@ -229,13 +229,64 @@
 		</p><p>
 			Macross 7 – ep3/49
 		</p>
+	</div><?php } if ($d->mktab('cronologico')) { ?><div class="section doublecol">
+		<h2>
+			Indice cronologico
+		</h2><ol><li>
+			<?=$d->link('Recensioni/Film/I/','Thor')?> – 2011
+		</li><li>
+			<?=$d->link('Recensioni/Giochi/II/','AC Brotherhood')?> – 2010
+		</li><li>
+			<?=$d->link('Recensioni/Film/III/','Robocop')?> – 1987~1993
+		</li><li>
+			<?=$d->link('Recensioni/Show/IV/','Pani Poni Dash')?> – 2005
+		</li><li>
+			<?=$d->link('Recensioni/Show/V/','BlassReiter')?> – 2008
+		</li><li>
+			<?=$d->link('Recensioni/Show/VI/','Masterforce')?> – 1988
+		</li><li>
+			<?=$d->link('Recensioni/Film/VII/','Dark Of The Moon')?> – 2011
+		</li><li>
+			<?=$d->link('Recensioni/Film/VIII/','Capitan America')?> – 2011
+		</li><li>
+			<?=$d->link('Recensioni/Show/IX/','Angel Beats!')?> – 2010
+		</li><li>
+			<?=$d->link('Recensioni/Film/X/','I Puffi')?> – 2011
+		</li><li>
+			<?=$d->link('Recensioni/Libri/XI/','Nessun Dove')?> – 1996
+		</li><li>
+			<?=$d->link('Recensioni/Libri/XII/','Harry Potter','INTRO')?> – 1997~2007
+		</li><li>
+			<?=$d->link('Recensioni/Show/XIII/','Kamen Rider')?> – 1971~2011
+		</li><li>
+			<?=$d->link('Recensioni/Show/XIV/','Gundam AGE','INTRO')?> – 2011
+		</li><li>
+			<?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime', 'INTRO')?> – 2010~2011
+		</li><li>
+			<?=$d->link('Recensioni/Film/Brutti/XVI/', 'Bitch Slap', '')?> – 2009
+		</li><li>
+			<?=$d->link('Recensioni/Film/XVII/', 'Rambo')?> – 1982~2008
+	</li></ol><h2>
+		Per categoria
+	</h2><h3>
+		Film
+	</h3><ol><li>
+		La morte
+	</li></ol><h3>
+		Film brutti
+	</h3><ol><li></li></ol><ol><li></li></ol><h3>
+		Blah
+	</h3><?=$this->loadside('review/book/index.php')?>
+
 	</div><?php } ?>
 </div><?php } if ($this->addside ()) { ?><div class="section">
 	<p>
 		<?=$d->mktid('Perché le recensioni?', 'intro')?>
 	</p><p>
-		<?=$d->mktid('Progressi', 'progressi')?>
-	</p><br /><h3>
+		<?=$d->mktid('In corso &apos;opera…', 'incorso')?>
+	</p><h2>
+		Recensioni
+	</h2><h3>
 		<?=$d->mktid('Categorie', 'categorie')?>
 	</h3><p class="reverse">
 		<?=$d->mktid('Film', 'categorie', 'Film')?>
@@ -262,5 +313,11 @@
 			<?=$d->mktid('Brutto da ridere', 'classifica', 'VII')?>
 		</li><li>
 			<?=$d->mktid('Magnificamente brutto', 'classifica', 'VIII')?>
-	</li></ol>
+	</li></ol><h3>
+		Indice
+	</h3><p>
+		<?=$d->mktid('Cronologico', 'cronologico')?>
+	</p><p>
+		<?=$d->mktid('Per categoria', 'indice')?>
+	</p>
 </div><?php } ?>

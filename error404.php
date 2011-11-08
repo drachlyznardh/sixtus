@@ -1,10 +1,9 @@
 <?php
-
-	$title=array('404 Not Found','There is no such file here');
-
-	function mkpage ($d) {
-?>
-<div class="small">
+	$d = $this->d;
+	if ($this->addmeta ()) {
+		$this->addtitle ('404 Not Found','There is no such file here');
+	} if ($this->addpage ()) {
+?><div class="small">
 	<div class="section">
 		<h2>
 			404 Not Found
@@ -25,6 +24,4 @@
 			href="http://4chan.org/b/">andartene</a>.
 		</p>
 	</div>
-</div>
-
-<?php } ?>
+</div><?php } ?>

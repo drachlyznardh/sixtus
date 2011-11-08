@@ -1,6 +1,6 @@
 <!-- Related --><div class="section">
 <?php
-	$prev = $p->prev();
+	$prev = $p->getPrev();
 	if ($prev) {
 		echo ('<div class="inside"><p>');
 		echo ($d->link($prev[0], $prev[1], $prev[2], $prev[3]));
@@ -14,7 +14,7 @@
 		</span> /
 	</p>
 <?php
-	$next = $p->next();
+	$next = $p->getNext();
 	if ($next) {
 		echo('<div class="outside"><p class="reverse">');
 		echo ('<span class="em">Successivo</span> / ');
