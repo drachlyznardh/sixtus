@@ -24,20 +24,29 @@
 					else
 						$this->content .= $this->closep();
 					break;
+				case 'reverse':
+					$this->content .= $this->closeP().'<p class="reverse">';
+					$this->isText = true; break;
 				case 'br':
 					$this->content .= $this->closeP().'<br />'; break;
+				case 'pre':
+					$this->content .= $content; break;
 				case 'title':
 					$this->content .= $this->closeP().'<h2>'.$content.'</h2>'; break;
 				case 'titler':
 					$this->content .= $this->closeP().'<h2 class="reverse">'.$content.'</h2>'; break;
+				case 'stitle':
+					$this->content .= $this->closeP().'<h3>'.$this->mktid($content).'</h3>'; break;
 				case 'mklink':
-					$this->content .= $this->mklink ($content); break;
+					$this->content .= $this->openP().$this->mklink ($content); break;
 				case 'mktid':
-					$this->content .= $this->mktid ($content); break;
+					$this->content .= $this->openP().$this->mktid ($content); break;
 				case 'speak':
-					$this->content .= $this->closeP().$this->mkspeak($content); break;
+					$this->content .= $this->closeP().'<p>'.$this->mkinline($content).'</p>'; break;
 				case 'inline':
 					$this->content .= $this->openP().$this->mkinline($content); break;
+				case 'foto':
+					$this->content .= $this->closeP().$this->mkfoto($content); break;
 					
 				case 'begin':
 					switch (strtolower($content)) {
@@ -103,15 +112,6 @@
 			}
 		}
 
-		private function mkspeak ($content) {
-			$args = split ('#', $content);
-			switch (count($args)) {
-				case 2: return $this->d->speak($args[0], $args[1]);
-				case 3: return $this->d->speak($args[0], $args[1], $args[2]);
-				default: print_r ($args); die ('Y U NO SPEAK?');
-			}
-		}
-
 		private function mkinline ($content) {
 			$args = split ('#', $content);
 			switch (count($args)) {
@@ -119,6 +119,16 @@
 				case 3: return $this->d->inline($args[0], $args[1], $args[2]);
 				default: print_r ($args); die ('Y U NO INLINE?');
 			}
+		}
+					
+		private function mkfoto ($content) {
+			$args = split ('#', $content);
+			$ref = $args[0];
+			if (count($args) > 1) $src = $args[1];
+			else $src = $args[0];
+			$this->content .= '<p class="foto"><a target="_blank" href="'.$ref.'">';
+			$this->content .= '<img src="'.$src.'" />';
+			$this->content .= '</a>';
 		}
 	}
 
@@ -269,7 +279,7 @@
 					$this->section = new Section($this->d);
 					break;
 				default:
-					$this->section->parseLine ($cmd, $content);
+					$this->section->parseLine ($lineno, $cmd, $content);
 			}
 		}
 
@@ -292,6 +302,7 @@
 					if (strcasecmp($content, 'Side')) die ('(2) Should not stop ['.$content.'] @'.$lineno);
 					$this->side[] = array ('sec' => $this->section);
 					$this->section = new Section ($this->d);
+					$this->setStatus(0);
 					break;
 				case 'sbr':
 					$this->side[] = array ('sec' => $this->section);
