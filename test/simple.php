@@ -1,7 +1,7 @@
-Title#Test 
-Subtitle#This is a test page
+Title#Simple 
+Subtitle#This is a simple page
 Start#Content
-Title#This is a test
+Title#This is a simple page
 La morte viene
 
 Silenziosa come un alce
@@ -14,8 +14,8 @@ anche questo, <a href="http://example.com">Così</a>.
 Stop#Content
 
 Start#Side
-Title#Test / Side
-TitleR#Reverse title
+Title#Simple / Side
+TitleR#Simple reverse title
 Blah
 <ol><li>
 		Mktid#Blah#Uno#i

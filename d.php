@@ -30,7 +30,6 @@
 	require_once ('sys/finder.php');
 	require_once ('sys/dialog.php');
 	require_once ('sys/pager.php');
-
 	require_once ('sys/parser.php');
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));
@@ -125,14 +124,10 @@
 	}
 
 	$d = new Dialog($opt, $self, $tab);
-	$p = new Parser($d);
-	$p->load ($page);
-	$p->parse ();
-	#$p = new Pager($d);
 
-	#$p->prepare ($page, true, true, true);
-	#$tab['name'] or $tab['name'] = $p->defaulttab();
-	#$p->load ();
+	$p = new Parser($d);
+	$p->parse ($page);
+	$tab['name'] or $tab['name'] = $p->getDefaultTab();
 	require_once ('sys/skeleton.php');
 
 	die ();

@@ -62,6 +62,8 @@
 			return false;
 		}
 
+		public function allTab() { return $this->notab; }
+
 		public function noTabIncluded () { return !$this->included; }
 
 		public function t ($meaning, $original) {
@@ -69,8 +71,16 @@
 			return '<span class="em" title="che significa: “'. $meaning .'”">'. $original .'</span>';
 		}
 
-		public function inline ($speaker, $line) {
-		
+		public function inline ($speaker, $first, $second=false) {
+
+			if ($second) {
+				$tone = $first;
+				$line = $second;
+			} else {
+				$tone = false;
+				$line = $first;
+			}
+
 			if (isset($this->speakers[$speaker])) {
 				$first = $this->speakers[$speaker][0];
 				$last = $this->speakers[$speaker][1];
@@ -78,11 +88,16 @@
 				$first = '';
 				$last = '';
 			}
-			return '«<span title="'.ucwords($speaker).'" class="'. $speaker .'">'. $first.$line.$last .'</span>»';
+
+			$title = ucwords ($speaker);
+			$class = $speaker;
+			if ($tone) $class .= " $tone";
+
+			return '«<span title="'.$title.'" class="'.$class.'">'. $first.$line.$last .'</span>»';
 		}
 		
-		public function speak ($speaker, $line) {
-			return '<p>'.$this->inline($speaker, $line).'</p>';
+		public function speak ($speaker, $first, $second=false) {
+			return '<p>'.$this->inline($speaker, $first, $second).'</p>';
 		}
 	}
 ?>

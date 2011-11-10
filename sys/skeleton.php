@@ -46,10 +46,11 @@
 								<?=$p->getSubtitle()?>	
 						</p></div>
 					</div>
-				</div><div id="content">
+				</div><div id="content" class="small">
 					<?php
 						if (isset($opt['debug'])) require_once('sys/debug.php');
-						echo ($p->getPage ());
+						if ($d->allTab()) echo ($p->getPage('all'));
+						else echo ($p->getPage ($tab['name']));
 					?>
 				</div> <!-- Content -->
 				<div id="foot"><?php require_once ('sys/footer.php'); ?></div> <!-- Foot -->

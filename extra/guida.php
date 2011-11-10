@@ -1,12 +1,9 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Guida', 'Perché la gente arriva ma non sa dov&apos;è la roba', 'intro');
-		$this->addnext ('Extra/Record/', 'Record');
-	} if ($this->addside ()) {
-?><div class="section">
-	<p>
-		<?=$d->mktid('Perché una guida?', 'intro')?>
+Title#Guida
+Subtitle#Perché la gente arriva ma non sa dov'è la roba
+Next#Extra/Record/#Record
+
+Start#Side
+mktid#Perché una guida?#intro
 	</p><p>
 		L'<?=$d->mktid('Autore', 'gods')?>
 		e i suoi <?=$d->mktid('Allegri compagni', 'compagni')?>
@@ -29,6 +26,9 @@
 		/ <?=$d->mktid('Stili', 'meta', 'Stili')?>
 		/ <?=$d->mktid('Voci', 'meta', 'Voci')?>
 	</p>
+Stop#Side
+Start#Page
+
 </div> <?php } if ($this->addpage ()) { ?>
 <div class="small">
 	<?php if ($d->mktab('intro')) { ?><div class="section">
@@ -284,3 +284,4 @@
 		</p>
 	</div><?php } ?>
 </div><?php } ?>
+Stop#Page
