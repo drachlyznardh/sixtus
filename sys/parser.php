@@ -24,9 +24,19 @@
 					else
 						$this->content .= $this->closep();
 					break;
+				case 'p':
+					$this->content .= $this->openP();
+					if (strpos($content, '#')) {
+						list($rcmd, $rcontent) = split ('#', $content, 2);
+						$this->parseLine ($lineno, $rcmd, $rcontent);
+					} else $this->content .= $content;
+					break;
 				case 'reverse':
 					$this->content .= $this->closeP().'<p class="reverse">';
 					$this->isText = true; break;
+				case 'id':
+					$this->content .= $this->closeP().'<a id="'.ucwords($content).'"></a>';
+					break;
 				case 'br':
 					$this->content .= $this->closeP().'<br />'; break;
 				case 'pre':
@@ -36,11 +46,18 @@
 				case 'titler':
 					$this->content .= $this->closeP().'<h2 class="reverse">'.$content.'</h2>'; break;
 				case 'stitle':
-					$this->content .= $this->closeP().'<h3>'.$this->mktid($content).'</h3>'; break;
+					$this->content .= $this->closeP().'<h3>';
+					if (strpos($content, '#')) {
+						list($rcmd, $rcontent) = split('#', $content, 2);
+						$this->parseLine($lineno, $rcmd, $rcontent);
+					} else $this->content .= $content;
+					$this->content .= '</h3>'; break;
+				case 'link':
 				case 'mklink':
-					$this->content .= $this->openP().$this->mklink ($content); break;
+					$this->content .= $this->mklink ($content); break;
+				case 'tid':
 				case 'mktid':
-					$this->content .= $this->openP().$this->mktid ($content); break;
+					$this->content .= $this->mktid ($content); break;
 				case 'speak':
 					$this->content .= $this->closeP().'<p>'.$this->mkinline($content).'</p>'; break;
 				case 'inline':
@@ -68,6 +85,9 @@
 							$this->isPre = false; break;
 						default: die ('Section: Unknown environment ['.$content.'] END @'.$lineno);
 					}
+					break;
+				case 'exec':
+					$this->content .= eval($content);
 					break;
 
 				default: die ('Section: Unknown command ['.$cmd.'] @'.$lineno);
@@ -155,14 +175,17 @@
 			$this->d = $d;
 			$this->status = 0;
 			$this->parser = array ();
-			$this->meta = array ();
+			$this->meta = array ('title' => false,
+				'subtitle' => false,
+				'prev' => false,
+				'next' => false);
 
 			$this->page = array();
 			$this->side = array();
 
 			$this->tabs = array();
 			$this->tab = array();
-			$this->tabname = 'default';
+			$this->tabname = false;
 			$this->section = new Section ($this->d);
 		}
 
@@ -255,6 +278,7 @@
 							$this->tab[] = array ('sec' => $this->section);
 							$this->section = new Section ($this->d);
 							$this->tabs[$this->tabname] = $this->tab;
+							if (!isset($this->meta['default'])) $this->meta['default'] = $this->tabname;
 							$this->tabname = false;
 							$this->tab = array ();
 							$this->setStatus (0); break;
@@ -328,8 +352,8 @@
 		public function getSubtitle () { return $this->meta['subtitle']; }
 		public function getDefaultTab () { return $this->meta['default']; }
 
-		public function getNext () { return array ('Test', 'Test', false, false); }
-		public function getPrev () { return array ('Test', 'Test', false, false); }
+		public function getNext () { return $this->meta['next']; }
+		public function getPrev () { return $this->meta['prev']; }
 
 		public function getPage ($tab) {
 			$page = false;

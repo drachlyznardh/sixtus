@@ -30,12 +30,13 @@
 		}
 
 		public function link($request, $title, $tab=false, $sharp=false) {
+			if (!$request) $request = $this->self;
 			if ($tab)
 				if ($this->notab) { $ref = $request; $sharp = strtoupper($tab); }
 				else $ref = substr($request, 0, -1).'§'.strtoupper($tab).'/';
 			else $ref = $request;
 			if ($this->opt) $ref .= $this->opt .'/';
-			if ($sharp) $ref .= '#'.$sharp;
+			if ($sharp) $ref .= '#'.ucwords($sharp);
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 

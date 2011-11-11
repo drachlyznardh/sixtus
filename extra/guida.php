@@ -3,13 +3,14 @@ Subtitle#Perché la gente arriva ma non sa dov'è la roba
 Next#Extra/Record/#Record
 
 Start#Side
-	mktid#Perché una guida?#intro
 
-	mktid#L'Autore#gods
+	p#mktid#Perché una guida?#intro
+
+	p#mktid#L'Autore#gods
 	e i suoi
 	mktid#Allegri compagni#compagni
 	Title#Guida
-	STitle#Contenuti#contenuti
+	STitle#tid#Contenuti#contenuti
 	reverse#
 	mktid#Storie#contenuti#Storie
 	/
@@ -21,7 +22,7 @@ Start#Side
 	mktid#Tru Naluten#contenuti#TruNaluten
 	/
 	mktid#NaNoWriMo#contenuti#NaNoWriMo
-	stitle#Meta#meta
+	stitle#tid#Meta#meta
 	reverse#
 	mktid#Extra#meta#Extra
 	/
