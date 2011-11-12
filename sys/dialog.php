@@ -17,6 +17,7 @@
 		public function __construct ($opt, $self, $tab) {
 	
 			if ($opt['style'] == 'Raw') unset($opt['style']);
+			if ($opt['display'] == 'Standard') unset($opt['display']);
 
 			$this->notab = false;
 			if ($opt['mode'] == 'Gods') unset($opt['mode']);
@@ -29,7 +30,7 @@
 			$this->included = false;
 		}
 
-		public function link($request, $title, $tab=false, $sharp=false) {
+		public function link($request, $title, $tab=false, $sharp=false, $extra=false) {
 			if (!$request) $request = $this->self;
 			if ($tab)
 				if ($this->notab) { $ref = $request; $sharp = strtoupper($tab); }
@@ -37,20 +38,21 @@
 			else $ref = $request;
 			if ($this->opt) $ref .= $this->opt .'/';
 			if ($sharp) $ref .= '#'.ucwords($sharp);
+			if ($extra) return '<a href="'.$ref.'">'.$title.'</a>'.$extra;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
-		public function mktid($title, $tab, $hash=false) {
+		public function mktid($title, $tab, $hash=false, $extra=false) {
 	
 			if ($this->notab) {
-				if ($hash) return $this->link($this->self, $title, false, $hash);
-				else return $this->link($this->self, $title, false, strtoupper($tab));
+				if ($hash) return $this->link($this->self, $title, false, $hash, $extra);
+				else return $this->link($this->self, $title, false, strtoupper($tab), $extra);
 			}
 
 			if ($tab && $this->tab['name'] == $tab)
-				if ($hash) return '<span class="em">'.$this->link($this->self, $title, $tab, $hash).'</span>';
+				if ($hash) return '<span class="em">'.$this->link($this->self, $title, $tab, $hash, $extra).'</span>';
 				else return '<span class="em">'.$title.'</span>';
-			else return $this->link($this->self, $title, $tab, $hash);
+			else return $this->link($this->self, $title, $tab, $hash, $extra);
 		}
 
 		public function mktab($tab) {

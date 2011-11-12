@@ -57,11 +57,11 @@
 					$this->content .= $this->mklink ($content); break;
 				case 'tid':
 				case 'mktid':
-					$this->content .= $this->mktid ($content); break;
+					$this->content .= $this->mktid ($lineno, $content); break;
 				case 'speak':
-					$this->content .= $this->closeP().'<p>'.$this->mkinline($content).'</p>'; break;
+					$this->content .= $this->closeP().'<p>'.$this->mkinline($lineno, $content).'</p>'; break;
 				case 'inline':
-					$this->content .= $this->openP().$this->mkinline($content); break;
+					$this->content .= $this->openP().$this->mkinline($lineno, $content); break;
 				case 'foto':
 					$this->content .= $this->closeP().$this->mkfoto($content); break;
 					
@@ -112,32 +112,34 @@
 			else return false;
 		}
 
-		private function mktid ($content) {
+		private function mktid ($lineno, $content) {
 			$args = split ('#', $content);
 			switch (count($args)) {
 				case 2: return $this->d->mktid($args[0], $args[1]);
 				case 3: return $this->d->mktid($args[0], $args[1], $args[2]);
 				case 4: return $this->d->mktid($args[0], $args[1], $args[3], $args[3]);
-				default: print_r ($args); die ('Y U NO MKTID?');
+				case 5: return $this->d->mktid($args[0], $args[1], $args[3], $args[3], $args[4]);
+				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
 			}
 		}
 
-		public function mklink ($content) {
+		public function mklink ($lineno, $content) {
 			$args = split ('#', $content);
 			switch (count($args)) {
 				case 2: return $this->d->link($args[0], $args[1]);
 				case 3: return $this->d->link($args[0], $args[1], $args[2]);
 				case 4: return $this->d->link($args[0], $args[1], $args[2], $args[3]);
-				default: print_r ($args); die ('Y U NO LINK?');
+				case 5: return $this->d->link($args[0], $args[1], $args[2], $args[3], $args[4]);
+				default: print_r ($args); die ('Y U NO LINK? @'.$lineno);
 			}
 		}
 
-		private function mkinline ($content) {
+		private function mkinline ($lineno, $content) {
 			$args = split ('#', $content);
 			switch (count($args)) {
 				case 2: return $this->d->inline($args[0], $args[1]);
 				case 3: return $this->d->inline($args[0], $args[1], $args[2]);
-				default: print_r ($args); die ('Y U NO INLINE?');
+				default: print_r ($args); die ('Y U NO INLINE? @'.$lineno);
 			}
 		}
 					
@@ -298,6 +300,7 @@
 					$this->section = new Section($this->d);
 					$this->tab[] = array ('br' => false);
 					break;
+				case 'sec':
 				case 'change':
 					$this->tab[] = array ('sec' => $this->section);
 					$this->section = new Section($this->d);

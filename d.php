@@ -47,12 +47,18 @@
 	}
 
 	$token = explode ('/', $request);
+	$opt['display'] = 'Standard';
 	$opt['mode'] = 'Gods';
 	$opt['style'] = 'Raw';
 	foreach (array_keys($token) as $key) {
 	
 		switch ($token[$key]) {
 			case '':
+				unset($token[$key]);
+				break;
+			case 'standard':
+			case 'undecorated':
+				$opt['display'] = ucwords($token[$key]);
 				unset($token[$key]);
 				break;
 			case 'gods':
@@ -128,7 +134,13 @@
 	$p = new Parser($d);
 	$p->parse ($page);
 	$tab['name'] or $tab['name'] = $p->getDefaultTab();
-	require_once ('sys/skeleton.php');
+	
+	switch ($opt['display']) {
+		case 'Undecorated':
+			require_once ('sys/display/undecorated.php');
+			break;
+		default: require_once ('sys/skeleton.php');
+	}
 
 	die ();
 ?>
