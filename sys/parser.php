@@ -54,7 +54,7 @@
 					$this->content .= '</h3>'; break;
 				case 'link':
 				case 'mklink':
-					$this->content .= $this->mklink ($content); break;
+					$this->content .= $this->mklink ($lineno, $content); break;
 				case 'tid':
 				case 'mktid':
 					$this->content .= $this->mktid ($lineno, $content); break;
@@ -227,9 +227,9 @@
 				case 'subtitle':
 					$this->meta['subtitle'] = $content; break;
 				case 'prev':
-					$this->meta['prev'] = $this->section->mklink($content); break;
+					$this->meta['prev'] = $this->section->mklink($lineno, $content); break;
 				case 'next':
-					$this->meta['next'] = $this->section->mklink($content); break;
+					$this->meta['next'] = $this->section->mklink($lineno, $content); break;
 				case 'start':
 					switch (strtolower($content)) {
 						case 'content':
