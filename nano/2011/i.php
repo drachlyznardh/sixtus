@@ -4,13 +4,17 @@ Subtitle#Dottor Odio Gaiden – Parte I
 Start#Side
 	Title#Parte I
 	Titler#La Corona dell'Odio
-	p#mktid#Capitolo 1#1## – 1264 parole
+	p#tid#Sessione 1#1## – 1264 parole
 
-	p#mktid#Capitolo 2#2## – 395 parole
+	p#tid#Sessione 2#2## – 395 parole
 
-	p#mktid#Capitolo 3#3## – 2157 parole
+	p#tid#Sessione 3#3## – 2157 parole
 
-	p#mktid#Capitolo 4#4## – parole
+	p#tid#Sessione 4#4## – 458 parole
+
+	p#tid#Sessione 5#5## – 438 parole
+	
+	p#tid#Sessione 6#6## – parole
 Stop#Side
 Start#Page
 Tab#1
@@ -629,4 +633,84 @@ tab#4
 	ma soprattutto che il suo esperimento, grazie a “recenti sviluppi” non
 	meglio specificati, si sarebbe tenuto quella sera stessa, nel suo
 	scantinato.
+
+	La parola “scantinato” non era troppo invitante. Ma si rivelò imprecisa e
+	meno peggio di quel che temevo. Sotto, seguiva la lista delle istruzioni per
+	raggiungere questo posto.
+
+	Per quanto in fretta mi mossi, impiegai tre quarti d'ora buoni per
+	raggingere quel laboratorio. Era situato molto a Nord, tra Gardolo e Lavis,
+	in zona industriale, perso in mezzo a molti altri capannoni, tra una
+	fabbrica e un magazzino, sorgeva un comune e anonimo blocco di cemento.
+
+	Scesi dal mio autobus, m'incamminai al buio e al freddo, temendo di essere
+	finito oltre i confini della civiltà, camminando sul ciglio della strada,
+	seguendo le indicazioni che avevo ricevuto. Dopo qualche interminabile
+	minuti a spasso per alcune viuzzole male illuminate, passando per vari
+	incocri l'uno uguale all'altro, sbucai infine alle coordinate specificate.
+
+	C'era un cartello che informava i passanti che il magazzino era proprietà
+	della facoltà di scienze.
+
+	Passai oltre il cancello, spinsi una vecchia porta di metallo ed entrai in
+	un unico grande locale, che prendeva l'intera costruizione. In mezzo a
+	quello spazio, colmo di scaffali, scatoloni e quello che mi parve un
+	colossale ammasso di roba vecchia e dismessa, era stato ricavato uno slargo
+	disordinato e informe.
+
+	Là, sotto una forma luce, stavano il Dottore ed altre due persone.
+tab#5
+	Tra le tre, la sagoma del Dottore era la più riconoscibile. Non soltanto era
+	più basso di quasi una testa rispetto agli altri due, ma traballava a destra
+	e a sinistra, controllando attrezzature, buttando un occhio all'orologio,
+	collegando cavi, parlottando costantemente.
+
+	Gli altri due mi parvero ospiti. Sinceramente, mi parvero due persone
+	normali, due signori ben vestiti, che ancora indossavano delle pesanti
+	giacche invernali. Non erano in tuta, come il Dottore.
+
+	Devo anche confessare che l'idea d'avere la compagnia di due – concedetemi
+	il termine – persone non sospette mi creava due sentimenti contrastanti. Da
+	una parte, la loro presenza era confortevole, mi ci sarei potuto associare
+	facilmente, e mi ci sarei sentito molto più a mio agio che se fossi stato
+	solo con il Dottore. Ma dall'altra parte, c'era da dire che quell'uomo era
+	evidentemente riuscito a convincere non soltanto me, ma anche altre due
+	persone, ad assistere a questo suo “esperimento”. Questa seconda sensazione
+	era piuttosto scomoda, mi parve quasi vergonosa, anzi: mi sentii come preso
+	in trappola. Una trappola piuttosto astuta, poiché funzionava, ma comunque
+	una trappola.
+
+	Mentre ragionavo su questi pensieri, lo sguardo dondolante del Dottore passò
+	anche per la porta, lui mi vide e, sbracciandosi e illuminandosi d'un gran
+	sorriso, mi chiamò urlando e m'invitò ad avvicinarmi.
+
+	Non senza timori, avanzai fino a qualche passo dai due sconosciuti. Parevano
+	persi e imbarazzati come lo ero io. Il Dottore passò loro in mezzo,
+	spintando senza particolare attenzione, come stesse camminando nel bosco. In
+	quattro passi mi fu davanti, mi stritolò la mano con forza, mi invitò ancora
+	una volta ad avvicinarmi e si voltò.
+
+	Vedendolo tornare, i due sconosciuti fecero ciascuno un passo indietro e lo
+	fecero passare. Il Dottore non s'era preso la briga di presentarmi queste
+	due persone, quindi feci da me. Mentre lui era tornato ad armeggiare con le
+	sue attrezzature, m'avvicinai e mi presentai come dottor Münch, psicologo.
+	Con la stessa attitudine, i due risposero alla mia stretta di mano come
+	dottor Grigo, geologo, e dottor Michelotti, economista.
+
+	begin#outside
+	inline#aug#Uno psicologo, un geologo e un economista entrano in un capannone…
+	cominciai
+	inline#aug#Ora, perdonate il mio scettiscimo, ma sapete mica perché siamo qui?
+	end#outside
+
+	Seguì una storia breve ma interessante. Entrambi i miei colleghi erano nella
+	mia medesima situazione, tutti e tre eravamo là “in prova”, dopo essere
+	stati raccattati con qualche strana promessa di collaborazione futura.
+	
+	Per la verità, il geologo pareva sapere qualche cosa in più, ma – parole sue
+	– “non voleva rovinarci la sorpresa”.
+
+	Io e l'economista, allora, ci trovammo naufraghi sulla stessa barca, con il
+	geologo al fianco del Dottore, che nel frattempo c'avvisò d'aver terminato i
+	preparativi.
 Stop#Page

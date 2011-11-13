@@ -3,6 +3,7 @@ Subtitle#Mirabolanti avventure alla conquista del mondo
 prev#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore
 
 Start#Side
+	p#link#NaNoWriMo/2011/Personaggi/#Personaggi
 	Title#Dottor Odio Gaiden
 	p#link#NaNoWriMo/2011/I/#Parte I
 Stop#Side

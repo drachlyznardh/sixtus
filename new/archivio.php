@@ -1,50 +1,40 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Archivio', 'Dove tengo le notizie vecchie');
-	} if ($this->addside ()) {
-?><div class="section">
-	<h2>
-		Archivio
-	</h2><h2 class="reverse">
-		Per anni
-	</h2><p>
-		2012
-		/ <?=$d->link('News/2011/', '2011')?>
-	</p><br /><h2 class="reverse">
-		Per mesi
-	</h2><h3>
-		2012
-	</h3><p class="reverse">
+title#Archivio#Dove tengo le notizie vecchie
+start#side
+	title#Archivio
+	titler#Per anni
+	p#2012
+	/
+	link#News/2011/#2011
+	br#
+	titler#Per mesi
+	stitle#2012
+	reverse#
 		Gennaio / Febbraio / Marzo
-	</p><p class="reverse">
+	reverse#
 		Aprile / Maggio / Giugno
-	</p><p class="reverse">
+	reverse#
 		Luglio / Agosto / Settembre
-	</p><p class="reverse">
+	reverse#
 		Ottobre / Novembre / Dicembre
-	</p><br /><h3>
-		<?=$d->link('News/2011/', '2011')?>
-	</h3><p class="reverse">
-		<?=$d->link('News/2011/07', 'Luglio')?>
-		/ <?=$d->link('News/2011/08/', 'Agosto')?>
-		/ <?=$d->link('News/2011/09/', 'Settembre')?>
-	</p><p class="reverse">
-		<?=$d->link('News/2011/10/', 'Ottobre')?>
-		/ <?=$d->link('News/2011/11', 'Novembre')?>
+	br#
+	stitle#link#News/2011/#2011
+	reverse#
+		link#News/2011/07#Luglio
+		/
+		link#News/2011/08/#Agosto
+		/
+		link#News/2011/09/#Settembre
+	reverse#
+		link#News/2011/10/#Ottobre
+		/
+		link#News/2011/11#Novembre
 		/ Dicembre
 	</p>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<div class="section">
-		<h2>
-			Archivio
-		</h2><p>
-			Questo è il luogo dove le notizie vengono archiviate.
-		</p><p>
-			Tutte le notizie, registrate qui a partire dall'ormai lontano 3
-			luglio 2011, sono ricercabili per anno o per mese.
-		</p>
-	</div>
-</div><?php
-	}
-?>
+stop#side
+start#page
+	title#Archivio
+	Questo è il luogo dove le notizie vengono archiviate.
+
+	Tutte le notizie, registrate qui a partire dall'ormai lontano 3
+	luglio 2011, sono ricercabili per anno o per mese.
+stop#page

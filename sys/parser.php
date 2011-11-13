@@ -179,6 +179,7 @@
 			$this->parser = array ();
 			$this->meta = array ('title' => false,
 				'subtitle' => false,
+				'default' => false,
 				'prev' => false,
 				'next' => false);
 
@@ -223,7 +224,12 @@
 			switch ($cmd) {
 				case '': break;
 				case 'title':
-					$this->meta['title'] = $content; break;
+					if (strpos($content, '#')) {
+						list($title, $subtitle) = split ('#', $content);
+						$this->meta['title'] = $title;
+						$this->meta['subtitle'] = $subtitle;
+					} else $this->meta['title'] = $content;
+					break;
 				case 'subtitle':
 					$this->meta['subtitle'] = $content; break;
 				case 'prev':
@@ -257,12 +263,14 @@
 					$this->tab[] = array ($keyword => $parser);
 					break;
 				case 'tab':
-					$this->tab[] = array ('sec' => $this->section);
-					$this->section = new Section ($this->d);
-					$this->tabs[$this->tabname] = $this->tab;
-					$this->tab = array ();
-					$this->tabname = $content;
-					if (!isset($this->meta['default'])) $this->meta['default'] = $content;
+					if ($this->meta['default']) $this->meta['default'] = $content;
+					if (count($this->section) or count($this->tab)) {
+						$this->tab[] = array ('sec' => $this->section);
+						$this->section = new Section ($this->d);
+						$this->tabs[$this->tabname] = $this->tab;
+						$this->tab = array ();
+						$this->tabname = $content;
+					}
 					break;
 				case 'start':
 					if (strpos($content, '#')) {
@@ -381,8 +389,8 @@
 					case 'sec' : $result .= $part['sec']->getContent(); break;
 					case 'br'  : $result .= '<br />'; break;
 					case 'side': $result .= $part['side']->getSide(); break;
-					case 'page': $result .= $part['page']->getPage(); break;
-					case 'both': $result .= $part['both']->getSide().$part['both']->getPage(); break;
+					case 'page': $result .= $part['page']->getPage($this->meta['default']); break;
+					case 'both': $result .= $part['both']->getSide().$part['both']->getPage($this->meta['default']); break;
 					default: die ('showTab: unknown content type ['.$keys[0].']');
 				}
 			}
@@ -397,8 +405,8 @@
 					case 'sec': $side .= $obj['sec']->getContent(); break;
 					case 'br': $side .= '<br />'; break;
 					case 'side': $side .= $obj['side']->getSide(); break;
-					case 'page': $side .= $obj['page']->getPage(); break;
-					case 'both': $side .= $obj['both']->getSide().$obj['both']->getPage(); break;
+					case 'page': $side .= $obj['page']->getPage($this->meta['default']); break;
+					case 'both': $side .= $obj['both']->getSide().$obj['both']->getPage($this->meta['default']); break;
 					default: die ('GetSide: unknown content type ['.$keys[0].']');
 				}
 			}
