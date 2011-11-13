@@ -51,7 +51,7 @@
 
 			if ($tab && $this->tab['name'] == $tab)
 				if ($hash) return '<span class="em">'.$this->link($this->self, $title, $tab, $hash, $extra).'</span>';
-				else return '<span class="em">'.$title.'</span>';
+				else return '<span class="em">'.$title.$extra.'</span>';
 			else return $this->link($this->self, $title, $tab, $hash, $extra);
 		}
 
@@ -68,6 +68,10 @@
 		public function allTab() { return $this->notab; }
 
 		public function noTabIncluded () { return !$this->included; }
+
+		public function setTab ($tab) {
+			if (!($this->tab['name'])) $this->tab['name'] = $tab;
+		}
 
 		public function t ($meaning, $original) {
 		

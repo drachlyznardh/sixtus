@@ -1,21 +1,5 @@
-Title#La corona dell'Odio
-Subtitle#Dottor Odio Gaiden – Parte I
+Title#La corona dell'Odio#Dottor Odio Gaiden – Parte I
 
-Start#Side
-	Title#Parte I
-	Titler#La Corona dell'Odio
-	p#tid#Sessione 1#1## – 1264 parole
-
-	p#tid#Sessione 2#2## – 395 parole
-
-	p#tid#Sessione 3#3## – 2157 parole
-
-	p#tid#Sessione 4#4## – 458 parole
-
-	p#tid#Sessione 5#5## – 438 parole
-	
-	p#tid#Sessione 6#6## – parole
-Stop#Side
 Start#Page
 Tab#1
 	Il mio lavoro come assistente e biografo è cominciato tre anni fa.
@@ -713,4 +697,411 @@ tab#5
 	Io e l'economista, allora, ci trovammo naufraghi sulla stessa barca, con il
 	geologo al fianco del Dottore, che nel frattempo c'avvisò d'aver terminato i
 	preparativi.
+
+tab#6
+	Il Dottore stava in piedi tra uno scaffale di metallo, una scrivania con un
+	portatile acceso e una sedie girevole sulla quale era appoggiato uno
+	scolapasta.
+
+	Controllai meglio, dopo aver fatto qualche passo avanti, completamente
+	scettico. Era davvero uno scolapasta.
+
+	Mi voltai verso gli altri due, indicando sia lo scolapasta che la mia
+	perplessità, con entrambe le mani.
+
+	begin#outside
+	inline#odio#Posso comprendere i suoi dubbi, dottor Münch
+	intervenne il Dottore
+	inline#odio#ma abbia fede. Questo è soltanto un prototipo – il secondo in assoluto, per la precisione – e come il suo collega, dottor Michelloti, potrà facilmente spiegarle, è stato messo assieme senza fondi
+
+	inline#odio#Non mi aspetto che nessuno di voi comprenda pienamente il funzionamento di quest'apparecchiatura, ma ho in mente un esperimento che sarà lampante anche per voi. Senza offesa
+	proseguì, continuando ad armeggiare.
+	end#outside
+
+	Quando allontò la sedia dalla scrivania e dalla scaffale, m'accorsi che
+	allo scolapasta era collegato con un grosso cavo di gomma, un cavo
+	elettrico, che andava a finire dentro una di quelle scatolotte grigie da
+	elettricista. Allo scatolotto erano attaccati molti altri cavetti.
+
+	begin#outside
+	inline#odio#Ora, se volete stare indietro
+	disse il Dottore, spingendoci gentilmente
+	inline#odio#sto per collegare il generatore
+	end#outside
+
+	Si infilò lo scolapasta sulla testa. Era ridicolo. Ma gli altri due erano
+	confusi quanto me, e nessuno di noi si mosse. Il Dottore finì di fissare una
+	cinghia di gomma che gli assicurava lo scolapasta alla testa, passando sotto
+	il mento. Poi, mosse un interruttore, o qualcosa di simile.
+
+	Uno degli aggeggi collegati allo scatolotto, a qualche metro dalla buffa
+	figura aveva un ago, che ebbe un timido tremolio, ma poi tornò a posto.
+
+	A quel punto, il Dottore ringhiò. Ringhiò come un cane, urlando con tutta la
+	sua forza e facendo sobbalzare me e i miei due colleghi.
+
+	begin#outside
+	inline#odio#Ah!
+	esultò il Dottore
+	inline#odio#Funziona! Avete visto?
+	end#outside
+
+	Ma sia io che il dottor Michelotti eravamo ancora fin troppo sorpresi da
+	quel grido immotivato per notare qualunque altra cosa. Il geologo, Grigo,
+	invece, annuì.
+
+	Entrambi il Dottore e Grigo si voltarono verso di noi. M'accorsi solo a
+	quel punto d'essermi attaccato alla giacca di Michellotti, che fu l'ultimo
+	a rendersi conto della cosa. Entrambi imbarazzati, c'allontanammo l'un
+	l'altro in fretta, battendo le giacche e domandando scusa.
+
+	begin#outside
+	inline#odio#Uhm, non avete visto
+	ricominciò il Dottore
+	inline#odio#Scusate, avrei dovuto avvertire del grido, immagino
+
+	inline#odio#Colpa mia. Ma ora, se siete pronti
+	continuò
+	inline#odio#proverò una seconda volta
+	end#outside
+
+	Questa volta m'aspettavo l'urlo e non ebbi problemi. Il Dottore ringhiò
+	ancora una volta, un po' più roco e un po' meno intenso di prima, ma capii
+	che stava cercando di tenere l'urlo più a lungo. E stavolta notai
+	chiaramente che la lampadina collegata allo scatolotto grigio era accesa.
+
+	Il Dottore continuò ad urlare per parecchi secondi, poi finì il fiato e si
+	accasciò sulla sedia, tossendo. La luce della lampadina si affievolì e poi
+	si spense.
+
+	begin#outside
+	Tra un colpo di tosse e l'altro, il Dottore tornò a parlare
+	inline#odio#Prego, prego, andate pure a controllare
+
+	inline#odio#È anche per momenti come questo che mi sono messo a cercare collaboratori
+	disse poi
+	inline#odio#Per avere gente che possa controllare i risultati. Ditemi, funziona ancora il portatile?
+	end#outside
+
+	Io e gli altri due ci avvicinammo timidamente: Grigo si avvicinò al Dottore,
+	per controllare come stesse, Michelotti andò allo scatolotto grigio ed io,
+	quindi, mi avvicinai al computer.
+
+	sec#
+	Ci vidi sopra un'unica finestra, che riportava una cascata di numeri.
+	Nell'imbarazzo della scelta, ripetei al Dottore quelle cifre ch'erano
+	stampate più grandi, immaginando che fossero importanti.
+
+	Cosa rappresentassero esattamente non lo capii, ma il tono con cui il
+	Dottore mi rispose, prima di alzarsi e venendo a controllare di persona, un
+	minuto più tardi, mi fece capire che s'aspettava dei risultati migliori.
+
+	Intanto, anche Grigo e Michelotti s'erano avvicinati al portatile.
+	L'economista, notai, stava seguendo con gli occhi un cavo che collegava lo
+	scatolotto grigio al computer. Mi sembrò dubbioso.
+
+	begin#outside
+	inline#odio#Se può rassicurarla, dottor Michelotti
+	spiegò il Dottore
+	inline#odio#quel cavo serve soltanto per lo scambio di dati, e non è studiato per portare abbastanza tensione da alimenta quella lampadina
+	end#outside
+	Il Dottore doveva aver centrato il punto, perché Michelotti assunse
+	un'espressione quasi di scusa.
+
+	Ci fu un momento di quiete. Potevo quasi sentire i nostri pensieri ronzare,
+	perché, come potevo leggere sulle facce degli altri due, nessuno di noi
+	aveva capito cosa fosse successo esattamente.
+
+	Fu il Dottore, senza che nessuno parlasse, a rispondere alle nostre domande.
+
+	begin#outside
+	inline#odio#Questo che tengo in testa è un generatore, raccoglie le vibrazioni e ne genera la corrente che ha alimentato la lampadina
+	spiegò
+	inline#odio#e come avete visto, è discretamente potente. Inoltre
+	disse, alzandosi e riportandosi dove stava prima
+	inline#odio#dovrebbe reagire anche a stimolazioni più leggere. Osservate
+	end#outside
+
+	Stavolta non urlò. Si limitò a fissare la lampadina. Sono certo d'aver
+	rivisto, in quel momento, quello stesso lampo di follia che gli avevo visto
+	negli occhi al nostro secondo incontro, nel suo ufficio a Povo. La lampadina
+	esplose.
+
+	begin#outside
+	Il Dottore sembrava aver previsto quell'evento
+	inline#odio#Ah! Dunque è così, Giuliano! Vedi? Avevo ragione!
+	disse, rivolgendosi direttamente al geologo
+	inline#odio#Reagisce agli intenti, non agli sforzi! Magnifico!
+	end#outside
+
+	Diede allora un'occhiata all'orologio e ricominciò ad armeggiare con la
+	cinghia sotto la gola, mentre io e Michelotti ci guardavamo con aria persa,
+	cercando con gli occhi di ottenere una risposta dal dottor Grigo. Ma quello
+	era intendo a prendere appunti.
+
+	Alla fine, il Dottore tornò tra noi, aspettò che Grigo terminasse di
+	scrivere e si preparò a salutarci
+
+	begin#outside
+	inline#odio#Beh, signori, spero che quanto v'ho appena mostrato vi convinca a restare. Ma non in senso letterale, perché è il momento che io vi mandi via
+	disse, indicando l'uscita con la mano
+	inline#odio#Non posso ancora lasciarvi in questo locale senza sorveglianza. Senza offesa. Ma non appartiene a me, tecnicamente. Quindi…
+
+	inline#odio#Scusate ancora
+	continuò
+	inline#odio#Ma devo presentarmi al lavoro tra pochi minuti. Confido comunque
+	disse, cercando la conferma negli occhi del dottor Grigo
+	inline#odio#che il mio collega e amico Giuliano Grigo possa spiegare molte cose interessanti in mia vece, sempre che ne abbia il tempo, e che voi siate d'accordo
+
+	Chiuse a chiave la porta metallica e poi il cancello
+
+	inline#odio#Lascierò che risolviate questa questione tra di voi. Sappiate, infine, che aspetto notizie da tutti e tre, e magari conferme della vostra partecipazione. Ora, con permesso…
+	e se ne andò
+	end#outside
+
+	Il Dottore si incamminò, con il suo passo sorprendentemente rapido, lungo
+	una stradina male illuminata e sparì rapidamente alla nostra vista.
+
+	sbr#
+	Restammo per un po' a guardarci attorno, ma alla fine il freddo ebbe il
+	sopravvento e chiesi agli altri due quali intenzioni avessero.
+
+	Michellotti, in particolare, si disse piuttosto interessato a sentire la
+	storia che il Dottore supponeva che Grigo potesse raccontanare a lui e a me.
+	Non avendo impegni particolari, né tantomeno una precisa idea di come
+	tornare in città, votai anch'io per una discussione assieme.
+
+	Il geologo fu più che contento di riaccompagnarci in città, avendo lui
+	un'automobile di proprietà, al contrario di noi altri due.
+
+	Arrivati in città, trovato un parcheggio, trovato un bar ancora aperto, ci
+	ritrovammo tutti e tre seduti attorno ad un tavolino piccolo e rotondo.
+
+	La temperuta, là nel bar, era parecchio più confortevole che quella del
+	capannone. O forse era la birra, non sono sicuro. In ogni caso, poco
+	importava, perché tutto il mio interesse era votato a sentire il resto della
+	storia.
+
+	Senza farsi pregare, Grigo cominciò a raccontare.
+
+	begin#inside
+	Grigo, per quanto avessi avuto l'impressione che fosse perso quanto noi,
+	almeno all'inizio, la sapeva molto più lunga di quanto io immaginassi. Era
+	coinvolto nella faccenda da molto più tempo.
+
+	Era stato compagno di liceo del Dottore, anni prima, ma non erano mai stati
+	grandi amici e non si erano tenuti in contatto dopo la maturità. Sapeva,
+	Grigo, che il Dottore frequentava fisica a Povo, ma poco altro.
+
+	Lui, invece, s'era messo a studiare geologia a Torino, ed era poi tornato in
+	patria. Era finito, poi, alla facoltà d'ingegneria di Mesiano per completare
+	gli studi e durante quel periodo s'era interessato alle attività del Museo
+	di Scienze Naturali, che disponeva di un largo dipartimento geologico.
+
+	Senza scendere troppo nei dettagli, passando per vari colloqui, telefonate e
+	tramacci, trovò un impiego che manteneva anche allora.
+
+	Da allora, disse, erano passati quasi tre anni non particolarmente
+	rilevanti. Poi, un giorno, per puro caso, gli capitò quella che lui definì
+	“<span class="em">la scoperta</span>”.
+	
+	Il Dottore passò a trovarlo. Beh, per la verità, il Dottore finì al museo,
+	incontrò Grigo lungo un corridoio e i due si misero a chiaccherare. A quanto
+	pare, il Dottore era finito nella sede del museo in cerca di un professore
+	che collaborava a stretto contatto con il museo, e aveva il brutto vizio di
+	non farsi trovare né in ufficio né nell'altro.
+
+	Nell'impossibilità di trovare questo professore, il Dottore s'era messo a
+	sbuffare girovagando per le sale. Grigo, quindi, gli offrì un giretto per la
+	sezione geologica, dove avrebbe potuto raccontare alcune storia
+	interessanti.
+
+	A quanto pare, e a quel punto vidi chiaramente lo stupore disegnarsi sul
+	volto di Grigo mentre raccontava, mentre lui e il Dottore passavano da una
+	bacheca all'altra, qualcosa si ruppe.
+
+	Alla ricerca del danno e della sua causa, Grigo individuò una pietra il cui
+	supporto aveva ceduto.
+	end#inside
+tab#7
+	Questa che segue fu la parte più assurda e incredibile del racconto del
+	dottor Grigo, e lui stesso ci pregò in più occasioni di fidarci, si fece più
+	guardingo e abbassò il tono della voce.
+
+	begin#inside
+	Ricominciò a raccontare partendo dal supporto che reggeva la pietra. Pareva
+	rotto per l'usura, ma essendo sotto chiave, il geologo non potè
+	immediatamente raccogliere né la pietra né il supporto. Indeciso se
+	tralasciare la cosa e tornarvi in un secondo momento, per proseguire il giro
+	assieme al suo ospite, oppure se abbandonare la sala e andare a chiamare un
+	custode, Grigo se ne rimase lì, incerto.
+
+	Incuriosito dal silenzio, allora, anche il Dottore si avvicinò per dare
+	un'occhiata. In quel momento, entrambi sentirono vibrare un telefono
+	cellulare. Che fosse stato quello il rumore di prima? Che la pietra e il
+	supporto fossero già caduti? Il rumore sordo della vibrazione del telefono
+	continuava senza pause. A quel punto, sia Grigo che il Dottore si misero
+	alla ricerca di questo telefono.
+
+	Non appena i due si misero a cercare, il telefono smise di vibrare e con
+	esso terminò anche la vibrazione. Il Dottore cerco invano sotto qualche
+	tavolo, quindi tornò verso Grigo, che cercava dall'altro lato della stanza.
+
+	Fu a quel punto che il telefono ricominciò a vibrare. Per la sorpresa,
+	l'umore del dottor Grigo migliorò lievemente, mentre quello del Dottore
+	peggiorò. Il telefono continuò a vibrare. I due uomini si rimisero a
+	cercare. Questa volta, il telefono vibrò più a lungo, ma smise non appena
+	il Dottore si allontanò.
+
+	Quanto poteva essere casuale, questo? Poteva essere uno scherzo. Qualcuno
+	stava chiamando un telefono per tenerlo occupato, pensava Grigo. Ma come
+	poteva qualcuno far vibrare un telefono senza venire individuato? Era forse
+	nascosto nella stanza? Lui e il Dottore non l'avrebbero gia dovuto
+	individuare?
+
+	Ma questi dubbi furono accantonati quando, ancora una volta, il Dottore si
+	riavvicinò a Grigo per controllare la pietra, e la vibrazione riprese, e
+	riprese con forza. Il dottor Grigo, che a quel punto aveva ormai rinunciato
+	ed era accanto alla teca di vetro incriminata avvertì – e a quel punto stava
+	raccontando con molta enfasi – la vibrazione molto vicina al pavimento.
+	L'avvertì distintamente, come il telefono fosse dentro la teca, accanto alla
+	pietra.
+
+	Grigo si spazientì e decise di aprire la teca. Per quello gli sarebbe
+	servita una chiave, quindi chiese al Dottore di chiamargli un custode. Il
+	Dottore acconsentì, se ne uscì dalla stanza e la vibrazione si spense,
+	ancora una volta.
+	end#inside
+
+	A quel punto, Grigo smise di raccontare. Io ero abbastanza scettivo, e
+	Michelotti al mio fianco lo era ben di più: stavamo ad ascoltare questa
+	storia del telefono che Grigo raccontava come fosse la scoperta di Atlantide
+	da parecchi minuti ormai… il geologo notò le nostre facce e chiese,
+	spazientito, se valesse la pena proseguire la conversazione.
+
+	Affermò che la faccenda era strana, assurda da sentire quanto da raccontare,
+	ma era vera, vera quanto il lampo che aveva scoppiato la lampadina davanti
+	ai nostri occhi, non più di mezz'ora prima.
+
+	Non avevo bisogno di scavare nella memoria per rivedere la luce abbagliante
+	della lampadina, prima che andasse in pezzi. Lo stesso valeva per
+	Michelotti, che pur manteneva un'espressione meno convinta della mia. Ma
+	chiedemmo a Grigo di continuare. E lui riprese
+
+	begin#inside
+		Grigo aveva poco tempo per prendere una decisione, e a sua detta agì
+		d'istinto: corse dietro al Dottore, impedendogli di chiamare il custode
+		o chiunque altro.
+
+		Lo prese in disparte e gli confidò il sospetto. Disse che ebbe dal
+		Dottore la stessa immediata reazione che aveva ricevuto da noi un
+		momento prima; ma insistette abbastanza da convincere il Dottore a
+		tornare nei pressi della teca.
+
+		Non appena il Dottore rimise piede nella stanza, entrambi sentirono
+		chiaramente il telefono vibrare. Grigò pregò il Dottore di fare qualche
+		passo indiero, e la vibrazione cessò. Qualche passo avanti e la
+		vibrazione tornò a sentirsi.
+
+		A quel punto, Grigo fu abbastanza convinto della sua tesi, prese il
+		Dottore e lo portò davanti alla teca. Entrambi sentirono qualcosa
+		spezzarsi.
+
+		La pietra, quella che era caduta qualche minuto prima, ora era a pezzi.
+		Era esplosa. Nel mezzo dei frammenti, chiaramente visibile, c'era un
+		grano estremamente scuro che ancora vibrava, anche se molto leggermente.
+	end#inside
+
+	Grigo fece un'altra pausa. Divenne improvvisamente molto nervoso. Era
+	combattuto se proseguire oppure no. Preso un lungo e profondo respiro, ci
+	disse che avrebbe saltato una porzione della storia, perché non era compito
+	suo riferirla, ma sarebbe stato lo stesso Dottore a colmare quella lacuna,
+	al momento opportuno.
+
+	begin#inside
+		Grigo e il Dottore non si sentirono per un po', dopo quell'avvenimento.
+		
+		Fatto sta che, dopo un paio di settimane, il Dottore si ripresentò al
+		museo, in cerca di Grigo. I due organizzarono un'uscita amichevole, o
+		così Grigo pensò.
+
+		Scoprì poi quella sera che il Dottore era entrato in contatto con
+		qualcuno, qualcuno di cui Grigo si rifiutò di dare alcuna descrizione,
+		qualcuno che lo stesso Dottore, la sera dell'incontro, chiamava soltanto
+		“il consulente”.
+
+		Questo tale, in modi e tempi sconosciuti, era entrato in contatto con il
+		Dottore, in merito alla pietra, che era in qualche modo nelle sua mani.
+
+		Grigò non fu molto dettagliato in proposito, ma in breve raccontò che
+		questo “consulente” consegnò la pietra al Dottore, e poi lo stesso
+		Dottore contattò Grigo per domandare il suo aiuto.
+
+		Da allora erano passati quattro mesi, ma quella sera era la prima volta
+		che Grigo era stato invitato nel capannone.
+	end#inside
+
+	A quel punto, il racconto era finito, ma Grigo aveva ancora di che parlare.
+	Sapeva infatti più di quel che ci aveva detto, ma si rifiutò di aggiungere
+	altro. Quel che era disposto a fare era condividere con noi una congettura
+	che a suo parere poteva spiegare gli avvenimenti ai quali tutti e tre
+	avevamo assistito quella sera, e quello che ne sarebbe potuto scaturire.
+
+	sec#
+	Ci ricordò per prima cosa che il Dottore era, ai tempi, dottorando in
+	fisica, e qualcosa di generatori ne sapeva. Poi parlò della pietra vibrante.
+	Poi accennò anche a qualche “condizione particolare” alla quale il Dottore
+	sarebbe stato soggetto. In pratica, disse che le affermazioni del Dottore
+	sulla sua rivoluzionaria scoperta avrebbero potuto realizzarsi in tempi
+	ragionevoli. E che le prospettive economiche erano rosee.
+
+	Non a caso, disse Grigo, il Dottore si era procurato un economista. Soltanto
+	il mio scopo non era ancora chiaro. Ma io m'ero fatto la mia idea.
+
+	L'idea era inquietante, ma anche intrigante. Sembrava quasi finta. Uno
+	scienziato si imbatte in qualcosa di estremamente raro e improbabile, e ne
+	realizza una nuova tecnologia. Coinvolge immediatamente l'unico testimone,
+	poi cerca due persone che possano aiutarlo, uno specialista che possa
+	aiutarlo ad amministrare un patrimonio e poi me, uno specialista che possa
+	aiutarlo a comprendere le intenzioni delle persone.
+
+	begin#outside
+	inline#aug#È serio. Vuole davvero commercializzare l'idea
+	dissi infine, a voce alta
+	inline#aug#Ed ha anche una certa fretta, nonché molto coraggio. Metterà tutto se stesso in questa impresa. È una grande opportunità
+	end#outside
+
+	Un po' mi sento in colpa, a ripensare a quelle parole. Stavo giocando. Fu
+	piuttosto crudele, da parte mia. Ma ero davvero interessato alle loro
+	reazioni, volevo veramente vedere se il Dottore potesse realizzare la sua
+	idea. Ed avevo capito che non sarebbe stato affatto facile, se quei due non
+	avessero collaborato.
+
+	Era troppo tardi per me, ovviamente, l'intera faccenda era troppo
+	affascinante ed avrei dato qualunque cosa per restarci dentro. Ma quei due
+	potevano ancora sfuggirci, andarsene, forse anche (improbabile, ma comunque
+	da non trascurare) rivelare preziose informazioni all'esterno.
+
+	Decisi, per il bene di quella che sarebbe stata la nostra azienda, di
+	utilizzare le mia capacità per prendere quei due uomini al guinzaglio.
+	L'occasione era troppo ghiotta.
+
 Stop#Page
+Start#Side
+	Title#Parte I
+	Titler#La Corona dell'Odio
+	p#tid#Sessione 1#1## – 1264 parole
+
+	p#tid#Sessione 2#2## – 395 parole
+
+	p#tid#Sessione 3#3## – 2157 parole
+
+	p#tid#Sessione 4#4## – 458 parole
+
+	p#tid#Sessione 5#5## – 438 parole
+	
+	p#tid#Sessione 6#6## – 1510 parole
+	
+	p#tid#Sessione 7#7## – 1264 parole
+Stop#Side
+

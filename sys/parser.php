@@ -117,8 +117,8 @@
 			switch (count($args)) {
 				case 2: return $this->d->mktid($args[0], $args[1]);
 				case 3: return $this->d->mktid($args[0], $args[1], $args[2]);
-				case 4: return $this->d->mktid($args[0], $args[1], $args[3], $args[3]);
-				case 5: return $this->d->mktid($args[0], $args[1], $args[3], $args[3], $args[4]);
+				case 4: return $this->d->mktid($args[0], $args[1], $args[2], $args[3]);
+				case 5: return $this->d->mktid($args[0], $args[1], $args[2], $args[3], $args[4]);
 				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
 			}
 		}
@@ -263,7 +263,10 @@
 					$this->tab[] = array ($keyword => $parser);
 					break;
 				case 'tab':
-					if ($this->meta['default']) $this->meta['default'] = $content;
+					if (!$this->meta['default']) {
+						$this->meta['default'] = $content;
+						$this->d->setTab($content);
+					}
 					if (count($this->section) or count($this->tab)) {
 						$this->tab[] = array ('sec' => $this->section);
 						$this->section = new Section ($this->d);
