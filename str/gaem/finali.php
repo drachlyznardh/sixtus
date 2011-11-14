@@ -1,10 +1,6 @@
- <?php
-	$title=array('La storia interattiva', 'I finali');
-	function mkpage($d){
-?>
-<div class="small">
-	<?php if ($d->mktab('f1')) { ?>
-	<div class="section">
+title#La storia interattiva#I finali
+start#page
+tab#f1
 		<p>
 			Eh, peccato. Pare che al lettore non freghi un cazzo.
 		</p>
@@ -21,15 +17,8 @@
 			Il resto è <a
 			href="http://www.youtube.com/results?search_query=giorgio+e+piero">questo</a>.
 			FINE.
-		</p>
-	</div>
-	<?php } if ($d->mktab('f2')) { ?>
-	<div class="section">
-		<p>
+tab#f2
 			Una volta radunate quindici puttane, tutto andò a posto.
 		</p><p>
 			Tutti vissero felici e contenti, tranne qualcuno che morì. FINE.
-		</p>
-	</div><?php } ?>
-</div>
-<?php } ?>
+stop#page

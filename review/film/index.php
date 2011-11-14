@@ -1,11 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Film', 'Quelli visti di recente');
-	} if ($this->addpage ()) {
-?>
-<div class="small">
-	<?php if ($d->mktab('') or $d->mktab('categorie')) { ?><div class="section">
+title#Film#Quelli visti di recente
+
+start#page
+#<?php if ($d->mktab('') or $d->mktab('categorie')) { ?><div class="section">
+
 		<h2><a id="Film"></a>
 			Film
 		</h2><p>
@@ -17,22 +14,19 @@
 			E siccome spiegare il perché e il percome un film mi piace o non mi
 			piace, mi sono messo a scriverne. Qui.
 		</p>
-	</div><?php } ?>
-</div><?php } if ($this->addside ()) { ?><div class="section">
-	<h2 class="reverse">
-		Film
-	</h2><p>
-			I. <?=$d->link('Recensioni/Film/I/', 'Thor')?> – 2011
-		</p><p>
-			III. <?=$d->link('Recensioni/Film/III/', 'Robocop')?> – 1987~1993
-		</p><p>
-			VII. <?=$d->link('Recensioni/Film/VII/', 'Dark of the Moon')?> – 2011
-		</p><p>
-			VIII. <?=$d->link('Recensioni/Film/VIII/', 'Capitan America')?> – 2011
-		</p><p>
-			X. <?=$d->link('Recensioni/Film/X/','I Puffi')?> – 2011
-		</p><p>
-			XVII. <?=$d->link('Recensioni/Film/XVII/', 'Rambo')?> – 1982~2008
-		</p>
-	</p>
-</div><?php } ?>
+stop#page
+start#side
+	titler#Film
+	
+	p#link#Recensioni/Film/I/#Thor### – 2011
+
+	p#link#Recensioni/Film/III/#Robocop### – 1987~1993
+
+	p#link#Recensioni/Film/VII/#Dark of the Moon### – 2011
+
+	p#link#Recensioni/Film/VIII/#Capitan America### – 2011
+
+	p#link#Recensioni/Film/X/#I Puffi### – 2011
+
+	p#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
+stop#side

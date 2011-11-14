@@ -1,4 +1,5 @@
 title#La storia interattiva#Ma solo se volete
+#Commento!
 start#page
 	Un bel giorno, iniziai una frase… poi il <span class="bolo">Bolo</span>
 	m'interruppe.
@@ -6,9 +7,18 @@ start#page
 	Non ricordo bene per quale ragione, non ricordo bene come… cominciai a
 	scrivere questa storia.
 
+begin end
+
 	È ancora corta, comincia soltanto, ma fa ridere.
 stop#page
 start#side
 	title#La storia interattiva
 	p#link#Storie/Gaem/I/#Primo
+	li@style@lol#link#lbha#sdbs#ecbs#h
 stop#side
+p
+link
+li
+class style
+ls mortexnds fg
+

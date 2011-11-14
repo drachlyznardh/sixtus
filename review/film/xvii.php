@@ -1,24 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Rambo', 'Una quadrilogia che cambia nel tempo', 'i');
-		$this->addprev ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
-		$this->prepare ('review/film/index.php', false, false, true);
-	} if ($this->addside ()) {
-?><div class="section">
-	<h2>
-		Rambo
-	</h2><p>
-		<?=$d->mktid('First Blood', 'i')?> – 1982
-	</p><p>
-		<?=$d->mktid('First Blood part II', 'ii')?> – 1985
-	</p><p>
-		Rambo III
-	</p><p>
-		(John) Rambo
-	</p>
-</div><?php } if ($this->addpage ()) {?><div class="small">
-	<?php if ($d->mktab('i')) { ?><div class="section">
+title#Rambo#Una quadrilogia che cambia nel tempo
+prev#Recensioni/Film/Brutti/XVI/#Bitch Slap
+	
+start#page
+tab#i
 		<h2>
 			First Blood – 1982
 		</h2><p>
@@ -157,7 +141,7 @@
 		</h2><h2 class="reverse">
 			Buono
 		</h2>
-	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+tab#ii
 		<h2 class="reverse">
 			Rambo
 		</h2><h2>
@@ -294,5 +278,15 @@
 		</h2><h2 class="reverse">
 			Buono
 		</h2>
-	</div><?php } ?>
-</div><?php } ?>
+stop#page
+start#side
+	title#Rambo
+	p#tid#First Blood#i## – 1982
+	
+	p#tid#First Blood part II#ii## – 1985
+
+	Rambo III
+
+	(John) Rambo
+stop#side
+

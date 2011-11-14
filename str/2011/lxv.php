@@ -1,39 +1,12 @@
-<?php
-	$title=array('Il 13 ottobre', 'Oggi sono successe molte molte cose', 'intro');
-	$prev=array('Storie/2011/LXIV/', 'La metafora', 'INTRO');
-	$next=array('Storie/2011/LXVII/', 'Ancora ce la posso fare', 'INTRO');
-	function mkpage($d){
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<p>
-				<?=$d->mktid($d->self,'Introduzione','intro')?>
-			</p><h2 class="reverse">
-				Il 13 ottobre
-			</h2><ol><li>
-					<?=$d->mktid($d->self, 'La tesi con Sgaggio', 'i')?>
-				</li><li>
-					<?=$d->mktid($d->self,'Il mio primo fan','ii')?>
-				</li><li>
-					<?=$d->mktid($d->self,'Un posto dove cantare','iii')?>
-				</li><li>
-					<?=$d->mktid($d->self,'Bonus','iv')?>
-				</li><li>
-					<?=$d->mktid($d->self,'Spoiler','v')?>
-				</li><li>
-					<?=$d->mktid($d->self,'Bonus (2)','vi')?>
-				</li><li>
-					<?=$d->mktid($d->self,'Bonus (3)','vii')?>
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<?php if ($d->mktab('intro')) { ?>
-		<div class="section">
+title#Il 13 ottobre#Oggi sono successe molte molte cose
+prev#Storie/2011/LXIV/#La metafora
+next#Storie/2011/LXVII/#Ancora ce la posso fare
+start#page
+tab#intro
 	<p>
 		E insomma… oggi sono successe tante cose, davvero. Devo scriverci
 		qualcosa. Più o meno come ho fatto tanto tempo fa, con le
-		<?=$d->link('Storie/2010/XI/','tre storie','I')?>…
+		link#Storie/2010/XI/#tre storie#I##…
 	</p><p>
 		E sappiate che la cosa più importante di oggi non finirà in questa
 		storia, bensì nella prossima. 
@@ -49,9 +22,7 @@
 	</p><p>
 		Ma sarò breve, che c'hos'sonno.
 	</p>
-		</div>
-		<?php } if ($d->mktab('i')) { ?>
-		<div class="section">
+tab#i
 	<p>
 		Dunque, quest'oggi, fissato esattamente una settimana fa, avevo
 		appuntamento con Sgaggio per discutere della tesi. A mezzogiorno.
@@ -128,9 +99,7 @@
 		test per vedere quale funziona meglio in quali condizioni… si potrebbe
 		cambiare il mondo, forse. 
 	</p>
-		</div>
-		<?php } if ($d->mktab('ii')) { ?>
-		<div class="section">
+tab#ii
 	<p>
 		Dunque… me ne sto tornando al baretto per mangiare dopo aver discusso
 		con lo Sgaggio.
@@ -165,9 +134,7 @@
 	</p><p>
 		Un giorno scopriremo la verità. Forse.
 	</p>
-		</div>
-		<?php } if ($d->mktab('iii')) { ?>
-		<div class="section">
+tab#iii
 	<p>
 		E insomma… il mio vecchio coro mi sta un po' strettino… sarà l'età. È un
 		coro per giovani, ed io non son più giovane da qualche bell'annetto,
@@ -193,16 +160,15 @@
 	</p><p>
 		Ma almeno ho guadagnato un pacco di libri e CD alto così.
 	</p>
-		</div>
-		<?php } if ($d->mktab('iv')) { ?>
-		<div class="section">
+tab#iv
 	<p>
 		Ma ecco una cosa interessante.
 	</p><p>
 		Me ne torno al baretto per un bel caffettino quando improvvisamente
 		spunta la Mara. Ve la ricordate? Quella col
-		<?=$d->link('Storie/2011/XXVIII/','dado tondo','V')?>! Quella che mi
-		doveva <?=$d->link('Storie/2011/XLVI/','due caffè','VI')?>.
+		link#Storie/2011/XXVIII/#dado tondo#V##!
+		Quella che mi doveva
+		link#Storie/2011/XLVI/#due caffè#VI##.
 	</p><p>
 		Beh, indovinate un po'? Si ricordava persino di quei due caffè… oh
 		gioia! Oh giubilo! Ma…
@@ -214,9 +180,7 @@
 	</p><p>
 		Ma presto…
 	</p>
-		</div>
-		<?php } if ($d->mktab('v')) { ?>
-		<div class="section">
+tab#v
 	<p>
 		Storia molto lunga in breve: ho scoperto per puro caso che la $Frangiona
 		(adesso le metto addirittura il maiuscolo?!?!?!) segue le lezioni in
@@ -249,9 +213,7 @@
 	</p><p>
 		Questo piano è così contorto da far paura! Può soltanto fallire…
 	</p>
-		</div>
-		<?php } if ($d->mktab('vi')) { ?>
-		<div class="section">
+tab#vi
 	<p>
 		Dimenticavo…
 	</p><h2>
@@ -284,14 +246,9 @@
 	</p><p>
 		Purtroppo, War non ha dato il consenso per fare una foto che celebri
 		l'evento. Quindi, eccovi una shoopata infame.
-	</p><p style="text-align:center;text-indent:0">
-		<a target="_blank" href="Extra/Alphas.png">
-			<img src="Extra/Alphas.png" style="width:90%;border: #000000 1px solid" />
-		</a>	
-	</p>
-		</div>
-		<?php } if ($d->mktab('vii')) { ?>
-		<div class="section">
+	
+	foto#Extra/Alphas.png
+tab#vii
 	<p>
 		Dunque, mi sono dimenticato una cosa.
 	</p><p>
@@ -335,8 +292,22 @@
 	<p>
 		Inoltre, ho sbagliato il feed: non ho cambiato il titolo, quindi
 		aggiungo un pezzetto di storia, così posso cambiare il feed a ragione.
-	</p>
-		</div><?php } ?>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side
+	p#tid#Introduzione#intro
+	titler#Il 13 ottobre
+	p#tid#La tesi con Sgaggio#i
+
+	p#tid#Il mio primo fan#ii
+	
+	p#tid#Un posto dove cantare#iii
+	
+	p#tid#Bonus#iv
+	
+	p#tid#Spoiler#v
+	
+	p#tid#Bonus (2)#vi
+	
+	p#tid#Bonus (3)#vii
+stop#side
+

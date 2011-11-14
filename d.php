@@ -125,8 +125,13 @@
 		if ($searchpath) $rside = 'sys/side/'. preg_replace ('/\//', '.', $searchpath) .'php';
 		else $rside = false;
 	else {
-		$page = 'error404.php';
-		$rside = false;
+		$page = $searchpath.$last.'.lyz';
+		if (is_file($page))
+			$rside = 'sys/side/'. preg_replace ('/\//', '.', $searchpath) .'php';
+		else {
+			$page = 'error404.php';
+			$rside = false;
+		}
 	}
 
 	$d = new Dialog($opt, $self, $tab);

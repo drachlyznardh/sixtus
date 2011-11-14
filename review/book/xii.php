@@ -1,32 +1,27 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Harry Potter', 'E il lettore non impressionabile', 'intro');
-		$this->addprev ('Recensioni/Libri/XI/', 'Nessun Dove');
-		$this->addnext ('Recensioni/Show/XIII/','Kamen Rider');
-		$this->prepare ('review/book/index.php', false, false, true);
-	} if ($this->addside ()) {
-?>
-<div class="section">
-	<p>
-		<?=$d->mktid('Intro', 'intro')?>
-	</p><h2>
-		Harry Potter e…
-	</h2><ol><li>
-			<?=$d->mktid('La pietra filosofale', 'i')?>
-		</li><li>
-			<?=$d->mktid('La camera dei segreti', 'ii')?>
-		</li><li>
-			<?=$d->mktid('Il prigioniero di Azkaban', 'iii')?>
-		</li><li>
-			<?=$d->mktid('Il calice di fuoco', 'iv')?>
-		</li><li>
-			<?=$d->mktid('L&apos;ordine', 'v', 'V1')?>
-			/ <?=$d->mktid('della', 'v', 'V2')?>
-			/ <?=$d->mktid('Fenice', 'v', 'V3')?>
-	</li></ol>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<?php if ($d->mktab('intro')) { ?><div class="section">
+title#Harry Potter#E il lettore non impressionabile
+prev#Recensioni/Libri/XI/#Nessun Dove
+next#Recensioni/Show/XIII/#Kamen Rider
+start#side
+	p#tid#Intro#intro
+	title#Harry Potter e…
+	pre#<ol><li>
+	tid#La pietra filosofale#i
+	pre#</li><li>
+	tid#La camera dei segreti#ii
+	pre#</li><li>
+	tid#Il prigioniero di Azkaban#iii
+	pre#</li><li>
+	tid#Il calice di fuoco#iv
+	pre#</li><li>
+	tid#L&apos;ordine#v#V1
+	pre#/
+	tid#della#v#V2
+	pre#/
+	tid#Fenice#v#V3
+	pre#</li></ol>
+stop#side
+start#page
+tab#intro
 		<p>
 			E venne il giorno… quacosa come, beh, molti anni fa ero in campeggio…
 			era il 2001, e per vari motivi finimmo tutti al cinema a vedere il
@@ -56,7 +51,7 @@
 		</p><p>
 			LOL libri gratis, n'approfitto.
 		</p>
-	</div><?php } if ($d->mktab('i')) { ?><div class="section">
+tab#i
 		<p>
 			Vado a cominciare dall'inizio.
 		</p><h2>
@@ -154,7 +149,7 @@
 		</p><h2 class="reverse">
 			Meh. / Mah
 		</h2>
-	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+tab#ii
 		<p>
 			Ed eccomi appena uscito dal secondo volume. Mh.
 		</p><h2>
@@ -246,7 +241,7 @@
 		</p><h2 class="reverse">
 			Meh. / Mah
 		</h2>
-	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
+tab#iii
 		<p>
 			E sono arrivato a 'sto terzo volume. Ancora molta fuffa. Poi le cose
 			succedono anche, ma soltanto dopo trecento pagine di fuffa.
@@ -316,7 +311,7 @@
 		</h2><p>
 			Ma forse no. Troppa fuffa. E il prossimo libro è alto il doppio.
 		</p>
-	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
+tab#iv
 		<p>
 			Ed eccoci al quarto, enorme volume.
 		</p><h2>
@@ -486,7 +481,7 @@
 		</h2><h2>
 			from [<span class="code">outer</span>] space
 		</h2>
-	</div><?php } if ($d->mktab('v')) { ?><div class="section"><a id="V1"></a>
+tab#v
 		<p>
 			Partiamo con alcune premesse, che son dovute.
 		</p><p>
@@ -880,5 +875,4 @@
 			Ed ora, sotto con le 588 pagine del prossimo (e – grazie agli Dei –
 			penultimo) volume.
 		</p>
-	</div><?php } ?>
-</div><?php } ?>
+stop#page

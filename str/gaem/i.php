@@ -1,22 +1,6 @@
-<?php
-	$title=array('La storia interattiva',
-		'Ma solo se volete', 'start');
-	$sides[] = function ($d) {
-?><div class="section">
-	<h2>
-		La storia interattiva
-	</h2><ol><li>
-		<?=$d->link('Storie/Gaem/', 'Primo')?>
-	</li></ol>
-</div><?php
-	};
-	$pages[] = function ($d) {
-		$final='Storie/Gaem/Finali/';
-?>
-<div class="small">
-	<?php if ($d->mktab('start')) { ?>
-	<div class="section">
-		<p>
+title#La storia interattiva#Ma solo se volete
+start#page
+tab#start
 			C'era una volta il <span class="em">GODS</span>, che se ne andava a
 			spasso, bel bello, per il suo regno. Perché lui poteva.
 		</p><p>
@@ -44,14 +28,14 @@
 			Scelta
 		</h2><p>
 			È arrivato il momento di scegliere. Scegli.
-		</p><ul><li>
-				<?=$d->link($final, 'Non mi frega un cazzo di questa storia', 'F1')?>
-			</li><li>
-				<?=$d->link($d->self, 'Oh no! Il pentolone?!?', 'S1')?>
-		</li></ul>
-	</div>
-	<?php } if ($d->mktab('s1')) { ?>
-	<div class="section">
+		</p>
+		
+		pre#<ul><li>
+		link#Storie/Gaem/Finali/#Non mi frega un cazzo di questa storia#F1
+		pre#</li><li>
+		link##Oh no! Il pentolone?!?#S1
+		pre#</li></ul>
+tab#s1
 		<div class="outside"><p>
 				«<span class="gods">Oh no! Il pentolone!</span>» esclamò il GODS.
 			</p><p>
@@ -84,16 +68,13 @@
 			puttane ci sarebbero volute?
 		</p>
 	</div><div class="section">
-		<h2>
-			Scelta
-		</h2><ul><li>
-				<?=$d->link($final, 'Non sono… 15?', 'F2')?>
-			</li><li>
-				<?=$d->link($d->self, 'Almeno il doppio', 'S2')?>
-		</li></ul>
-	</div>
-	<?php } if ($d->mktab('s2')) { ?>
-	<div class="section">
+		title#Scelta
+		pre#<ul><li>
+		link#Storie/Gaem/Finali/#Non sono… 15?#F2
+		pre#</li><li>
+		link##Almeno il doppio#S2
+		pre#</li></ul>
+tab#s2
 		<div class="outside"><p>
 				«<span class="gods">Impossibile!</span>» pianse il GODS, non
 				sapendo che fare «<span class="gods">Dove troveremo tutte queste
@@ -130,7 +111,8 @@
 			trovarsi sempre nell'altro.
 		</p><p>
 			<span class="em forte">Continua…</span>
-		</p>
-	</div><?php } ?>
-</div>
-<?php } ?>
+stop#page
+start#side
+	title#La storia interattiva
+	p#link#Storie/Gaem/#Primo
+stop#side

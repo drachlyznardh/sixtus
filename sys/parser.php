@@ -15,7 +15,38 @@
 			$this->content = false;
 		}
 
+		private function parseOption ($lineno, $first, $second) {
+		
+			$optname = false;
+			$optarg = false;
+			$cmd = false;
+
+			$args = split('@', $first);
+			switch (count($args)) {
+				case 3: $optarg = $args[2];
+				case 2: $optname = $args[1];
+				case 1: $cmd = $args[0];
+					break;
+				default: print_r ($args); die ('WHY U NO ParseOption? @'.$lineno);
+			}
+
+			list ($rcmd, $rcontent) = split ('#', $second, 2);
+
+			switch ($cmd) {
+				case 'p':
+				case 'li':
+					$this->content .= "<$cmd $optname=\"$optarg\">";
+					$this->parseLine($lineno, $rcmd, $rcontent);
+					$this->content .= "</$cmd>";
+					break;
+				default: die ('WHY U NO ParseOption? ['.$cmd.'] @'.$lineno);
+			}
+		}
+
 		public function parseLine ($lineno, $cmd, $content) {
+
+			if (strpos($cmd, '@'))
+				return $this->parseOption ($lineno, $cmd, $content);
 
 			switch ($cmd) {
 				case '':
@@ -30,6 +61,14 @@
 						list($rcmd, $rcontent) = split ('#', $content, 2);
 						$this->parseLine ($lineno, $rcmd, $rcontent);
 					} else $this->content .= $content;
+					break;
+				case 'li':
+					$this->content .= $this->openP().'<li>';
+					if (strpos($content, '#')) {
+						list($rcmd, $rcontent) = split ('#', $content, 2);
+						$this->parseLine ($lineno, $rcmd, $rcontent);
+					} else $this->content .= $content;
+					$this->content .= '</li>';
 					break;
 				case 'reverse':
 					$this->content .= $this->closeP().'<p class="reverse">';

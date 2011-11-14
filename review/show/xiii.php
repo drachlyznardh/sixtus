@@ -1,36 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Kamen Rider', 'Henshin!', 'intro');
-		$this->addprev ('Recensioni/Libri/XII/', 'Harry Potter &amp; …');
-		$this->addnext ('Recensioni/Show/XIV/', 'Gundam AGE');
-		require_once ('index.php');
-	} if ($this->addside ()) {
-?><div class="section">
-	<h2>
-		Kamen Rider
-	</h2><ol><li>
-			<?=$d->mktid('Perché uno dovrebbe', 'intro', 'I')?>
-		</li><li>
-			<?=$d->mktid('Di cosa aver paura', 'intro', 'II')?>
-		</li><li>
-			<?=$d->mktid('Come ottenere i LULZ', 'intro', 'III')?>
-	</li></ol><br /><h3>
-		Le serie che ho visto
-	</h3><p class="reverse">
-		<?=$d->mktid('Kamen Rider W', 'w')?> – 2009~2010
-	</p><p class="reverse">
-		<?=$d->mktid('Kamen Rider OOO', 'ooo')?> – 2010~2011
-	</p><p class="reverse">
-		<?=$d->mktid('Kamen Rider Fourze', 'fourze')?> – 2011~2012
-	</p><h3>
-		I film che ho visto
-	</h3><p class="reverse">
-		<?=$d->mktid('Let&apos;s go Kamen Riders', 'm2011')?> – 2011
-	</p>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<?php if ($d->mktab('intro')) { ?><div class="section"><a id="I"></a>
-		<p>
+title#Kamen Rider#Henshin!
+prev#Recensioni/Libri/XII/#Harry Potter &amp; …
+next#Recensioni/Show/XIV/#Gundam AGE
+start#page
+tab#intro
 			Uno dovrebbe perché Kamen Rider è una cosa grande e grossa, che dura da
 			un sacco di tempo e attraversa un paio di generazioni.
 		</p><p>
@@ -150,7 +122,7 @@
 		</p><p>
 			E comunque a me fa ridere!
 		</p>
-	</div><?php } if ($d->mktab('w')) { ?><div class="section">
+tab#w
 		<p>
 			Siccome non volevo andare troppo indietro – perché sono pigro e non ho
 			briga di andare a cercare le puntate sui nastri del cinema – mi sono
@@ -269,7 +241,7 @@
 		</h2><p>
 			ma state attenti, poiché è riservata agli intenditori.
 		</p>
-	</div><?php } if ($d->mktab('ooo')) { ?><div class="section">
+tab#ooo
 		<p>
 			E già che c'ero, sull'onda di questa serie, me ne sono guardata
 			un'altra, l'immediatamente successiva
@@ -397,7 +369,7 @@
 			ma – ancora una volta – soltanto per intenditori. E adesso, avanti con
 			la prossima serie!
 		</p>
-	</div><?php } if ($d->mktab('fourze')) { ?><div class="section">
+tab#fourze
 		<p>
 			Ed ecco la nuova serie, che sta uscendo proprio ora.
 		</p><h2>
@@ -410,7 +382,7 @@
 			Intanto, è la storia di un ragazzo che si trasferisce in una nuova
 			scuola e giura che otterrà l'amicizia di tutti, ma proprio tutti.
 		</p>
-	</div><?php } if ($d->mktab('m2011')) { ?><div class="section">
+tab#m2011
 		<p>
 			Ma facciamoci scoppiare la testa!
 		</p><p>
@@ -500,5 +472,24 @@
 			class="em">Gokaiger Goseiger Super Sentai 199 Hero Battle</span>, che
 			appena lo trovo… eh, leggerete.
 		</p>
-	</div><?php } ?>
-</div><?php } ?>
+stop#page
+start#side
+	title#Kamen Rider
+	reverse#
+	tid#Perché uno dovrebbe#intro#I
+	/
+	tid#Di cosa aver paura#intro#II
+	/
+	tid#Come ottenere i LULZ#intro#III
+	stitle#Le serie che ho visto
+	reverse#
+	tid#Kamen Rider W#w## – 2009~2010
+	reverse#
+	tid#Kamen Rider OOO#ooo## – 2010~2011
+	reverse#
+	tid#Kamen Rider Fourze#fourze## – 2011~2012
+	stitle#I film che ho visto
+	reverse#
+	tid#Let's go Kamen Riders#m2011## – 2011
+stop#side
+

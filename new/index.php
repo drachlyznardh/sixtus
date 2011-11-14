@@ -85,7 +85,7 @@ Start#Page
 	end#inside
 	Ma bando alle ciance!!! Dopo spaventosi e disumani sforzi, eccomi
 	finalmente emergere dalle ultime pagine del
-	link#Recensioni/HarryPotter/#libraccione#V3.
+	link#Recensioni/Libri/XII/#libraccione#V3##.
 	Non ricordo d'aver mai fatto altrettanta fatica ad arrivare in fondo a
 	qualcosa.
 
@@ -122,7 +122,7 @@ Start#Page
 	</span>
 	titler#TransFormers: Prime
 	Che posso dire? La
-	link#Recensioni/TransFormersPrime/#prima stagione#INTRO
+	link#Recensioni/Show/XV/#prima stagione#INTRO
 	è finita e già muoio per vedere la prossima! Ma non temere, War, non è che
 	stiano cominciando a piacermi le cose; anzi, vedrai: tra qualche giorno,
 	uscirà Gundam Unicorn 4, e allora tornerò a piangere.
@@ -136,7 +136,7 @@ Start#Page
 	</span>
 	titler#Let's go Kamen Riders
 	Il mio streamer di fiducia m'ha procurato anche
-	link#Recensioni/KamenRider/#questo gioiellino.#M2011
+	link#Recensioni/Show/XIII/#questo gioiellino.#M2011
 	È una cosa magnifica.
 
 	change#

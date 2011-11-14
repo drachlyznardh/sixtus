@@ -1,28 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('TransFormers: Prime', 'Quasi non riesco a credere', 'intro');
-		$this->addprev ('Recensioni/Show/XIV/', 'Gundam AGE');
-		$this->addnext ('Recensioni/Film/Brutti/XVI/', 'Bitch Slap');
-		$this->prepare ('review/show/index.php', false, false, true);
-	} if ($this->addside ()) {
-?><div class="section">
-	<p class="reverse">
-		<?=$d->mktid('Intro', 'intro', 'Intro')?>
-		/ <?=$d->mktid('Ancora un po&apos;', 'intro', 'More')?>
-		/ <?=$d->mktid('Cast', 'intro', 'Cast')?>
-	</p><h2 class="reverse">
-		TransFormers: Prime
-	</h2><p>
-		<?=$d->mktid('Speciali', 'special')?>
-	</p><p>
-		<?=$d->mktid('Prima stagione', 's01')?>
-	</p><p>
-		Seconda stagione
-	</h2>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<?php if ($d->mktab('intro')) { ?><div class="section">
-		<p>
+title#TransFormers: Prime#Quasi non riesco a credere
+prev#Recensioni/Show/XIV/#Gundam AGE
+next#Recensioni/Film/Brutti/XVI/#Bitch Slap
+start#page
+tab#intro
 			È bene precisare alcue cose, prima che lo sbrodolio di pareri su
 			questa serie vi sommerga. Oh beh, succederà comunque.
 		</p><h2>
@@ -118,7 +98,7 @@
 		</p><p>
 			Sono magnifici. Non aggiungo altro, non finirei più di scrivere.
 		</p>
-	</div><?php } if ($d->mktab('special')) { ?><div class="section">
+tab#special
 		<h2>
 			I 5 speciali su TheHub
 		</h2><p>
@@ -166,7 +146,7 @@
 		</p><p>
 			Lui, Soundwave, un esercito di Droni. E la Nemesis.
 		</p>
-	</div><?php } if ($d->mktab('s01')) { ?><div class="section">
+tab#s01
 		<p>
 			Tristemente, partiamo un po' maluccio.
 		</p><h2>
@@ -238,6 +218,19 @@
 			scende a patti con la propria codardia e sceglie la libertà)! Avversari
 			umani (questa proprio non l'avevo vista arrivare)!
 		</p>
-	</div><?php } ?>
-</div>
-<?php } ?>
+stop#page
+start#side
+	reverse#
+	tid#Intro#intro#Intro
+	/
+	tid#Ancora un po'#intro#More
+	/
+	tid#Cast#intro#Cast
+	titler#TransFormers: Prime
+	p#tid#Speciali#special
+
+	p#tid#Prima stagione#s01
+
+	Seconda stagione
+stop#side
+

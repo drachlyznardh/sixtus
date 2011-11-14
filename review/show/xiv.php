@@ -1,23 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Gundam AGE', 'La Bandai non ci prova neanche, stavolta', 'intro');
-		$this->addprev ('Recensioni/Show/XIII/', 'Kamen Rider');
-		$this->addnext ('Recensioni/Show/XV/', 'TransFormers: Prime');
-		$this->prepare ('review/show/index.php', false, false, true);
-	} if ($this->addside ()) {
-?><div class="section">
-	<p>
-		<?=$d->mktid('Introduzione', 'intro')?>
-	</p><h2>
-		Gundam AGE
-	</h2><ol><li id="li-i">
-			<?=$d->mktid('Il primo impatto', 'i')?>
-		</li><li id="li-ii">
-			<?=$d->mktid('Il secondo impatto', 'ii')?>
-	</li></ol>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<?php if ($d->mktab('intro')) { ?><div class="section">
+title#Gundam AGE#La Bandai non ci prova neanche, stavolta
+prev#Recensioni/Show/XIII/#Kamen Rider
+next#Recensioni/Show/XV/#TransFormers: Prime
+start#page
+tab#intro
 		<p>
 			Dunque, eccoci.
 		</p><p>
@@ -32,8 +17,9 @@
 			termine, considerato che siamo in tanti e parecchi di noi hanno
 			famiglie e figli) chiede nuove serie con una certa regolarità.
 		</p><p>
-			Se ricordate <?=$d->link('Storie/2011/XXXVIII/', 'questa',
-			'II')?> storia, saprete che le serie sono estremamente numerose,
+			Se ricordate
+			link#Storie/2011/XXXVIII/#questa#II
+			storia, saprete che le serie sono estremamente numerose,
 			ormai. Abbastanza da creare aspettative. Visto che tutto quello
 			che c'è di nuovo nello UC è il saltuario Gundam Unicorn, visto
 			che SEED è dispiaciuto ad un sacco di gente, visto che 00 è
@@ -53,7 +39,7 @@
 		</p><p>
 			In ogni caso, ho visto il primo episodio…
 		</p>
-	</div><?php } if ($d->mktab('i')) { ?><div class="section">
+tab#i
 		<p>
 			Allora, il primo episodio…
 		</p><h2>
@@ -152,7 +138,7 @@
 			Sento tanta ma tanta di quella fuffa in arrivo… potrei quasi scommetere
 			che, alla fine, l'intera astronave si trasformi in un Mobile Suit.
 		</p>
-	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+tab#ii
 		<p>
 			Eh… ho cercato di trattenermi, di non recensire troppo…
 		</p><p>
@@ -311,5 +297,11 @@
 		</p><p>
 			Oppure potrebbe restare quello ch'è adesso. Una merda.
 		</p>
-	</div><?php } ?>
-</div><?php } ?>
+stop#page
+start#side
+	p#tid#Introduzione#intro
+	title#Gundam AGE
+	p#tid#Il primo impatto#i
+
+	p#tid#Il secondo impatto#ii
+stop#side

@@ -1,11 +1,7 @@
-<?php
-	$title=array('Ancora ce la posso fare', 'La rampa: 1925m x2', 'intro');
-	$prev=array('Storie/2011/LXV/', 'Il 13 ottobre', 0);
-	$pages[] = function ($d) {
-?>
-<div class="small">
-	<?php if ($d->mktab('intro')) { ?><div class="section">
-		<p>
+title#Ancora ce la posso fare#La rampa: 1925m x2
+prev#Storie/2011/LXV/#Il 13 ottobre
+start#page
+tab#intro
 			Non sono poi così vecchio, a quanto pare.
 		</p><p>
 			O forse, visti i postumi, lo sono.
@@ -66,7 +62,7 @@
 						14:40 ~ 15:00 / 20'
 				</td></tr>
 		</tbody></table>
-	</div><?php } if ($d->mktab('i')) { ?><div class="section">
+tab#i
 		<p>
 			Presa la mia biciclettina, pedalo e pedalo verso Nord lungo la
 			ciclabile, sorpasso Lavis, arrivo al ponticello che svolta per Zambana
@@ -100,7 +96,7 @@
 			Intanto, io procedo un po' di qua, un po' di là, attraverso sentieri non
 			ben distinti.
 		</p>
-	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
+tab#ii
 		<p>
 			Ad un certo punto, infatti, mi ritrovo ad un bivio. Vedo sentieri ben
 			segnati in entrambe le direzioni.
@@ -133,7 +129,7 @@
 			giocato (o giocherà) a <span class="code">{Demon's|Dark} Souls</span> sa
 			cosa intendo.
 		</p>
-	</div><?php } if ($d->mktab('iii')) { ?><div class="section">
+tab#iii
 		<p>
 			Seguendo l'indicazione veritiera di quel cartello, arrivo infine a
 			questa casetta, sperduta nel mezzo del nulla.
@@ -162,7 +158,7 @@
 		</p><p>
 			Beh, da lì in poi si sale, su dritti dritti.
 		</p>
-	</div><?php } if ($d->mktab('iv')) { ?><div class="section">
+tab#iv
 		<p>
 			Si sale lungo una strada, poi un sentiero, poi una pista, si arriva fino
 			a Meriz. O almeno, così credo si chiami il posto.
@@ -189,7 +185,7 @@
 		</p><p>
 			E piantano i piloni per un nuovo impianto di risalita.
 		</p>
-	</div><?php } if ($d->mktab('v')) { ?><div class="section">
+tab#v
 		<p>
 			Poi, d'un tratto, l'ispirazione.
 		</p><p>
@@ -222,7 +218,7 @@
 		</p><p>
 			E quella che vedete è l'espressione della stanchezza.
 		</p>
-	</div><?php } if ($d->mktab('vi')) { ?><div class="section">
+tab#vi
 		<p>
 			Arrivo infine a Malga Fai.
 		</p><p class="foto">
@@ -249,7 +245,7 @@
 			<a target="_blank" href="Extra/Rampa/ScavatoSopra.jpg"><img
 				src="Extra/Rampa/ScavatoSopra.mini.jpg"/></a>
 		</p>
-	</div><?php } if ($d->mktab('vii')) { ?><div class="section">
+tab#vii
 		<p>
 			Ed ora, una parte soltanto per Jazz.
 		</p><p>
@@ -270,7 +266,7 @@
 		</p><p>
 			Sono comunque soltanto un paio di metri.
 		</p>
-	</div><?php } if ($d->mktab('viii')) { ?><div class="section">
+tab#viii
 		<p>
 			Oltre quel tratto, eccone immediatamente un altro.
 		</p><p class="foto">
@@ -284,7 +280,7 @@
 		</p><p>
 			E poi, a piccoli passettini, sono arrivato in cima.
 		</p>
-	</div><?php } if ($d->mktab('ix')) { ?><div class="section">
+tab#ix
 		<p>
 			Una volta in cima, recuperato un po' di fiato, ho scattato un po' di
 			foto luminose.
@@ -314,7 +310,7 @@
 			<a target="_blank" href="Extra/Rampa/Casa.jpg"><img
 				src="Extra/Rampa/Casa.mini.jpg"/></a>
 		</p>
-	</div><?php } if ($d->mktab('x')) { ?><div class="section">
+tab#x
 		<p>
 			E infine, questo sono io.
 		</p><p class="foto">
@@ -339,37 +335,29 @@
 			Come potete vedere, mi sono mangiato un panino al prosciutto, con un po'
 			d'acqua di Zambana.
 		</p>
-	</div><?php } ?>
-</div>
-<?php
-	};
-	$sides[] = function ($d) {
-?>
-<div class="section">
-	<p>
-		<?=$d->mktid('Introduzione', 'intro')?>
-	</p><h2>
-		L'impresa
-	</h2><ol><li>
-			<?=$d->mktid('Comincia la salita', 'i')?>
-		</li><li>
-			<?=$d->mktid('Il bivio', 'ii')?>
-		</li><li>
-			<?=$d->mktid('Verso Fai', 'iii')?>
-		</li><li>
-			<?=$d->mktid('Verso la cima', 'iv')?>
-		</li><li>
-			<?=$d->mktid('In barba alla legge', 'v')?>
-		</li><li>
-			<?=$d->mktid('Verso la cima', 'vi')?>
-		</li><li>
-			<?=$d->mktid('Il salto', 'vii')?>
-		</li><li>
-			<?=$d->mktid('E ancora un po&apos;', 'viii')?>
-		</li><li>
-			<?=$d->mktid('Panorami', 'ix')?>
-		</li><li>
-			<?=$d->mktid('Protagonista', 'x')?>
-	</li></ol>
-</div>
-<?php } ?>
+stop#page
+start#side
+	p#tid#Introduzione#intro
+	title#L'impresa
+	pre#<ol><li>
+	tid#Comincia la salita#i
+	pre#</li><li>
+	tid#Il bivio#ii
+	pre#</li><li>
+	tid#Verso Fai#iii
+	pre#</li><li>
+	tid#Verso la cima#iv
+	pre#</li><li>
+	tid#In barba alla legge#v
+	pre#</li><li>
+	tid#Verso la cima#vi
+	pre#</li><li>
+	tid#Il salto#vii
+	pre#</li><li>
+	tid#E ancora un po'#viii
+	pre#</li><li>
+	tid#Panorami#ix
+	pre#</li><li>
+	tid#Protagonista#x
+	pre#</li></ol>
+stop#side
