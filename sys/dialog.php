@@ -38,7 +38,7 @@
 			else $ref = $request;
 			if ($this->opt) $ref .= $this->opt .'/';
 			if ($sharp) $ref .= '#'.ucwords($sharp);
-			if ($extra) return '<a href="'.$ref.'">'.$title.'</a>'.$extra;
+			if ($extra) return '<a href="'.$ref.'">'.$title.'</a> '.$extra;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 

@@ -1,4 +1,4 @@
-<div class="section">
+start#page
 	<h2>
 		Quella mattina
 	</h2><p>
@@ -109,4 +109,4 @@
 		ma molto in fretta. Non molto in fretta (ero già prima
 		il più veloce ad andarsene) ma comunque non lento.
 	</p>
-</div>
+stop#page

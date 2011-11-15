@@ -56,7 +56,7 @@
 						$this->content .= $this->closep();
 					break;
 				case 'p':
-					$this->content .= $this->openP();
+					$this->content .= $this->closeP().$this->openP();
 					if (strpos($content, '#')) {
 						list($rcmd, $rcontent) = split ('#', $content, 2);
 						$this->parseLine ($lineno, $rcmd, $rcontent);
@@ -147,8 +147,12 @@
 		}
 
 		public function getContent () {
-			if ($this->content) return '<div class="section">'.$this->content.'</div>';
-			else return false;
+			if ($this->content) {
+				$result = '<!-- Section[ --><div class="section">';
+				$result .= $this->content;
+				$result .= '</div> <!-- ] /Section -->'."\n";
+				return $result;
+			} else return false;
 		}
 
 		private function mktid ($lineno, $content) {
@@ -350,6 +354,10 @@
 					$this->section = new Section($this->d);
 					$this->tab[] = array ('br' => false);
 					break;
+				case 'struct':
+					$this->tab[] = array ('sec' => $this->section);
+					$this->section = new Section($this->d);
+					$this->tab[] = array ('struct' => $content);
 				case 'sec':
 				case 'change':
 					$this->tab[] = array ('sec' => $this->section);
@@ -366,8 +374,6 @@
 				case 'include':
 					list($keyword, $file) = $this->getIncludeKeyword($content);
 					$parser = $this->getParser($file);
-					#$parser = new Parser($this->d);
-					#$parser->parse($file);
 					$this->side[] = array ('sec' => $this->section);
 					$this->section = new Section ($this->d);
 					$this->side[] = array ($keyword => $parser);
@@ -408,9 +414,17 @@
 		public function getNext () { return $this->meta['next']; }
 		public function getPrev () { return $this->meta['prev']; }
 
-		public function getPage ($tab) {
+		public function getPage ($tab=false) {
+
+			$backup = '<div class="section"><p>There is no tab ['.$tab.']</p></div>';
 			$page = false;
-			if (isset($this->tabs[$tab])) return $this->showTab($tab, $this->tabs[$tab]);
+
+			if (!$tab) {
+				$key = $this->meta['default'];
+				if (isset($this->tabs[$key])) return $this->showTab($key, $this->tabs[$key]);
+				else return $backup;
+			}
+
 			if (strcmp($tab, 'all') == 0) {
 				foreach (array_keys($this->tabs) as $key) {
 					$page .= "\n".'<!-- Tab#'.$key.'/Start -->'."\n";
@@ -419,7 +433,9 @@
 				}
 				return $page;
 			}
-			return '<div class="section"><h2>Tab not found</h2><p>There&apos;s no tab called ['.$tab.']</p></div>';
+
+			if (isset($this->tabs[$tab])) return $this->showTab($tab, $this->tabs[$tab]);
+			else return $backup;
 		}
 
 		private function showTab ($name, $content) {
@@ -431,8 +447,9 @@
 					case 'sec' : $result .= $part['sec']->getContent(); break;
 					case 'br'  : $result .= '<br />'; break;
 					case 'side': $result .= $part['side']->getSide(); break;
-					case 'page': $result .= $part['page']->getPage($this->meta['default']); break;
-					case 'both': $result .= $part['both']->getSide().$part['both']->getPage($this->meta['default']); break;
+					case 'page': $result .= $part['page']->getPage(); break;
+					case 'both': $result .= $part['both']->getSide().$part['both']->getPage(); break;
+					case 'struct': $result .= $part['struct']; break;
 					default: die ('showTab: unknown content type ['.$keys[0].']');
 				}
 			}
@@ -447,8 +464,8 @@
 					case 'sec': $side .= $obj['sec']->getContent(); break;
 					case 'br': $side .= '<br />'; break;
 					case 'side': $side .= $obj['side']->getSide(); break;
-					case 'page': $side .= $obj['page']->getPage($this->meta['default']); break;
-					case 'both': $side .= $obj['both']->getSide().$obj['both']->getPage($this->meta['default']); break;
+					case 'page': $side .= $obj['page']->getPage(); break;
+					case 'both': $side .= $obj['both']->getSide().$obj['both']->getPage(); break;
 					default: die ('GetSide: unknown content type ['.$keys[0].']');
 				}
 			}
@@ -456,8 +473,8 @@
 		}
 
 		private function getParser ($file) {
+
 			if (!isset($this->parser[$file])) {
-				is_file($file) or die ('Include: '.$file.' is not a file!');
 				$parser = new Parser($this->d);
 				$this->parser[$file] = $parser;
 				$parser->parse($file);
@@ -468,15 +485,27 @@
 		private function getIncludeKeyword ($content) {
 			if (strpos($content, '#')) {
 				list ($file, $keyword) = split ('#', $content);
-				return array ($keyword, $file);
-			} else return array('both', $content);
+			} else {
+				$file = $content;
+				$keyword = 'both';
+			}
+
+			if (is_file ($file)) $include = $file;
+			else if (is_file ("$file.lyz")) $include = "$file.lyz";
+			else if (is_file ("$file.php")) $include = "$file.php";
+			else die ('Cannot include ['.$file.']!!!');
+
+			return array ($keyword, $include);
 		}
 
 		public function show () {
 			echo ('<h2>Page / Tabs ('.count($this->tabs).')</h2>');
 			foreach ($this->tabs as $tab) {
 				echo ('<p>');
-				foreach ($tab as $obj) echo $obj.', ';
+				foreach ($tab as $obj) {
+					$keys = array_keys($obj);
+					echo $keys[0].', ';
+				}
 				echo ('</p>');
 			}
 			echo ('<h2>Side / Section ('.count($this->side).')</h2>');

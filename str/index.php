@@ -1,34 +1,29 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Storie', 'Cose stupide, divertenti ma tristi, spesso vere');
-		$this->prepare ('str/2010/index.php', false, true, true);
-		$this->prepare ('str/2011/index.php', false, true, true);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
-		<p>
-			Questa &egrave; la sezione pi&ugrave; idiota del sito.
-		</p><p>
-			Qui compaiono scritti che sono parti spontanei della mia mente,
-			fondamentalmente sproloqui nei quali mi lamento di quello che mi
-			succede... A volte fanno ridere.
-		</p>
-	</div><div class="section">
-		<h2>
-			Disclaimer
-		</h2><p>
-			Tutte le storie qu&igrave; riportate saranno anche delle
-			cazzatine, ma sono tutte rigorosamente ispirate ad eventi reali.
-			Se vi sentite chiamati in causa e v'offendete, cazzi vostri.
-		</p><p>
-			Se siete dei bambini innocenti, leggete e divertitevi ma vedete
-			di non imitarmi che magari vi fate del male.
-		</p><p>
-			Sappiate inoltre che la maggior parte di questi racconti viene
-			scritta di getto, senza mai guardare indietro. Se siete il Bolo
-			o se trovate qualche erroraccio, contattatemi indicando almeno
-			qualche indizio.
-		</p>
-	</div>
-</div><?php } ?>
+title#Storie#Cose stupide, divertenti ma tristi, spesso vere
+start#page
+	Questa è la sezione più idiota del sito.
+
+	Qui compaiono scritti che sono parti spontanei della mia mente,
+	fondamentalmente sproloqui nei quali mi lamento di quello che mi succede...
+	A volte fanno ridere.
+
+	sec#
+	title#Disclaimer
+	Tutte le storie qui riportate saranno anche delle cazzatine, ma sono tutte
+	rigorosamente ispirate ad eventi reali.  Se vi sentite chiamati in causa e
+	v'offendete, cazzi vostri.
+
+	Se siete dei bambini innocenti, leggete e divertitevi ma vedete di non
+	imitarmi che magari vi fate del male.
+
+	Sappiate inoltre che la maggior parte di questi racconti viene scritta di
+	getto, senza mai guardare indietro. Se siete il Bolo o se trovate qualche
+	erroraccio, contattatemi indicando almeno qualche indizio.
+
+	include#str/2010/index.php#page
+	include#str/2011/index.php#page
+stop#page
+
+start#side
+	include#str/2010/index.php#side
+	include#str/2011/index.php#side
+stop#side

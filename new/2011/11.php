@@ -56,6 +56,15 @@ start#page
 stop#page
 start#side
 	title#Novembre 2011
+	<strong>15/11</strong> –
+	link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
+
+	<strong>15/11</strong> –
+	link#Recensioni/Film/XIX/#Ed Wood
+
+	<strong>15/11</strong> –
+	link#Recensioni/Film/Brutti/XVIII/#Black Sheep
+
 	<span class="em">05/11</span>
 	– <span class="cat-heart">KitKat Gratis!</span>
 

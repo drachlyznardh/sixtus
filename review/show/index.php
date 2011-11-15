@@ -1,37 +1,29 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Show', 'Perché io vedo moltissima TV (attraverso il web)');
-	} if ($this->addpage ()) {
-?><div class="small">
-	<?php if ($d->mktab('') or $d->mktab('categorie')) { ?><div class="section">
-		<h2><a id="Show"></a><a id="Show"></a>
-			Show
-		</h2><p>
-			Ora che abbiamo l'internet, procurarsi roba molto nuova o molto
-			vecchia è diventato estremamente più semplice di una volta.
-		</p><p>
-			È questo il principale motivo per cui esiste questa sezione, perché
-			ora sono in grado di andare a cercare quel che voglio vedere e
-			vedermelo.
-		</p>
-	</div><?php } ?>
-</div><?php } if ($this->addside ()) { ?><div class="section">
-	<h2 class="reverse">
-		Show
-	</h2><p>
-		IV. <?=$d->link('Recensioni/Show/IV/', 'Pani Poni Dash')?> – 2005
-	</p><p>
-		V. <?=$d->link('Recensioni/Show/V/', 'BlassReiter')?> – 2008
-	</p><p>
-		VI. <?=$d->link('Recensioni/Show/VI/', 'Masterforce')?> – 1988
-	</p><p>
-		IX. <?=$d->link('Recensioni/Show/IX/', 'Angel Beats!')?> – 2010
-	</p><p>
-		XIII. <?=$d->link('Recensioni/Show/XIII/', 'Kamen Rider')?> – 1971~2011
-	</p><p>
-		XIV. <?=$d->link('Recensioni/Show/XIV/', 'Gundam AGE')?> – 2011
-	</p><p>
-		XV. <?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime')?> – 2011
-	</p>
-</div><?php } ?>
+title#Show#Perché io vedo moltissima TV (attraverso il web)
+prev#Recensioni/Giochi/#Giochi
+next#Recensioni/Libri/#Libri
+start#page
+	id#show
+	title#Show
+	Ora che abbiamo l'internet, procurarsi roba molto nuova o molto
+	vecchia è diventato estremamente più semplice di una volta.
+	
+	È questo il principale motivo per cui esiste questa sezione, perché
+	ora sono in grado di andare a cercare quel che voglio vedere e
+	vedermelo.
+stop#page
+start#side
+	titler#Show
+	p#link#Recensioni/Show/IV/#Pani Poni Dash### – 2005
+
+	p#link#Recensioni/Show/V/#BlassReiter### – 2008
+
+	p#link#Recensioni/Show/VI/#Masterforce### – 1988
+
+	p#link#Recensioni/Show/IX/#Angel Beats!### – 2010
+
+	p#link#Recensioni/Show/XIII/#Kamen Rider### – 1971~2011
+
+	p#link#Recensioni/Show/XIV/#Gundam AGE### – 2011
+
+	p#link#Recensioni/Show/XV/#TransFormers: Prime### – 2011
+stop#side

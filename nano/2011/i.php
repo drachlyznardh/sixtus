@@ -1086,6 +1086,9 @@ tab#7
 	utilizzare le mia capacità per prendere quei due uomini al guinzaglio.
 	L'occasione era troppo ghiotta.
 
+tab#viii
+	#Fermamente deciso a scoprire fin dove il Dottore sarebbe potuto arrivare,
+	#portai avanti il discorso ancora un po', poi decisi di and
 Stop#Page
 Start#Side
 	Title#Parte I
@@ -1103,5 +1106,7 @@ Start#Side
 	p#tid#Sessione 6#6## – 1510 parole
 	
 	p#tid#Sessione 7#7## – 1264 parole
+
+	p#tid#Sessione 8#8## – parole
 Stop#Side
 

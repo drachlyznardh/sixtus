@@ -1,12 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Corvino Multicolore', '50,000 parole scritte in ventuno giorni');
-		$this->addprev ('NaNoWriMo/2010/', 'NaNoWriMo 2010');
-		$this->addnext ('NaNoWriMo/2011/', 'NaNoWriMo 2011');
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
+title#Corvino Multicolore#50,000 parole scritte in ventuno giorni
+prev#NaNoWriMo/2010/#NaNoWriMo 2010
+next#NaNoWriMo/2011/#NaNoWriMo 2011
+
+start#page
 		<h2>
 			Corvino Multicolore
 		</h2><p>
@@ -103,46 +99,29 @@
 			</li>
 		</ul><p>
 			Corvino si sbagliava! Voi vi sbagliavate! Persino l'autore si sbagliava!
-		</p>
-	</div>
-</div><?php } if ( $this->addside ()) { ?><div class="section">
-	<h2>
-		Corvino Multicolore
-	</h2><p>
-		<?=$d->link('NaNoWriMo/Corvino/Multicolore/Personaggi/', 'Personaggi')?>
-	</p><p>
-		<?=$d->link('NaNoWriMo/Corvino/Multicolore/Extra/', 'Extra')?>
-	</p><h2 class="reverse">
-		Parte I – La gioventù
-	</h2><ol style="list-style-type: decimal-leading-zero">
-		<li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/I/', 'Una sera, al parco')?>
-		</li><li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/II/', 'Campeggio')?>
-		</li><li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/III/', 'A contatto')?>
-		</li><li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/IV/', 'Nel bosco')?>
-		</li><li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/V/', 'Di notte')?>
-		</li><li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/VI/', 'Gli ultimi giorni')?>
-		</li><li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/VII/', 'La dichiarazione')?>
-		</li>
-	</ol><h2 class="reverse">
-		Parte II – Il Potere
-	</h2><ol start="8" style="list-style-type: decimal-leading-zero">
-		<li>
-			<?=$d->link('NaNoWriMo/Corvino/Multicolore/VIII/','Il lampione')?>
-		</li>
-	</ol><h2 class="reverse">
-		Parte VI – I Demoni
-	</h2><p>
-		Prossimamente...
-	</p><h2 class="reverse">
-		Parte III – Le streghe
-	</h2><p>
-		Prossimamente
-	</p>
-</div><?php } ?>
+stop#page
+start#side
+	title#Corvino Multicolore
+	reverse#
+	link#NaNoWriMo/Corvino/Multicolore/Personaggi/#Personaggi
+	/
+	link#NaNoWriMo/Corvino/Multicolore/Extra/#Extra
+	titler#Parte I – La gioventù
+	pre#<ol style="list-style-type: decimal-leading-zero">
+		li#link#NaNoWriMo/Corvino/Multicolore/I/#Una sera, al parco
+		li#link#NaNoWriMo/Corvino/Multicolore/II/#Campeggio
+		li#link#NaNoWriMo/Corvino/Multicolore/III/#A contatto
+		li#link#NaNoWriMo/Corvino/Multicolore/IV/#Nel bosco
+		li#link#NaNoWriMo/Corvino/Multicolore/V/#Di notte
+		li#link#NaNoWriMo/Corvino/Multicolore/VI/#Gli ultimi giorni
+		li#link#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
+	pre#</ol>
+	titler#Parte II – Il Potere
+	pre#<ol start="8" style="list-style-type: decimal-leading-zero">
+		li#link#NaNoWriMo/Corvino/Multicolore/VIII/#Il lampione
+	pre#</ol>
+	titler#Parte VI – I Demoni
+	Prossimamente…
+	titler#Parte III – Le streghe
+	Ancor meno prossimamente…
+stop#side

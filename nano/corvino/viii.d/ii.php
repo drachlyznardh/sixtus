@@ -1,4 +1,4 @@
-<div class="section">
+start#page
 	<h2>
 		A casa
 	</h2><p>
@@ -71,4 +71,4 @@
 	</p><p>
 		E notai che il lampione stava bene.
 	</p>
-</div>
+stop#page

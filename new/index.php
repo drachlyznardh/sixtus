@@ -2,13 +2,31 @@ Title#Novità
 Subtitle#Le dieci notizie più recenti
 
 Start#Page
+	id#15/17:45
+	<em>
+	link##15/11/2011 17:45##15/17:45
+	</em> / <strong>
+	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
+	</strong>
+	title#Recensioni! Recensioni a milioni!
+	In questo periodo di transizione non ho smesso di vedere cose che meritino
+	di essere recensite… a cominciare dal
+	link#Recensioni/Film/Brutti/XVIII/#filmaccio
+	che m'ha consigliato <em>Corrado</em>, a seguire un buon
+	link#Recensioni/Film/XIX/#film
+	consigliato dal <span class="bolo">Bolo</span> e infine l'agognato
+	link#Recensioni/Libri/XII/#sesto volume#VI
+	dell'agognata serie… In ogni caso, sono ancora in transizione e non tutte le
+	pagine sono visibili… abbiate pazienza.
+
+	sec#
 	id#05/00:35
 	Una cosa bella!
 
 	<span class="em">
-	link##05/11/2011 00:35##05/0035
+	link##05/11/2011 00:35##05/00:35
 	/
-	link#Extra/GUIDA/#MiniStorie#CONTENUTI#MiniStorie')
+	link#Extra/GUIDA/#MiniStorie#CONTENUTI#MiniStorie
 	</span>
 
 	pre#<h2 class="cat-heart">KitKat gratis!</h2>
@@ -126,61 +144,20 @@ Start#Page
 	è finita e già muoio per vedere la prossima! Ma non temere, War, non è che
 	stiano cominciando a piacermi le cose; anzi, vedrai: tra qualche giorno,
 	uscirà Gundam Unicorn 4, e allora tornerò a piangere.
-
-	change#
-	id#15/00:15
-	<span class="em">
-	link##15/10/2011, 00:15##15/00:15
-	/
-	link#Extra/Guida/#Recensioni#contenuti#recensioni
-	</span>
-	titler#Let's go Kamen Riders
-	Il mio streamer di fiducia m'ha procurato anche
-	link#Recensioni/Show/XIII/#questo gioiellino.#M2011
-	È una cosa magnifica.
-
-	change#
-	id#14/15:30
-	<span class="em">
-	link##14/10/2011, 15:30##14/15:30
-	/
-	link#Extra/Guida/#Storie#contenuti#storie
-	</span>
-	titler#LXV – Il terzo bonus
-	In effetti, m'ero scordato un'altra
-	link#Storie/2011/LXV/#cosa;#VII
-	la scrivo adesso, così ho l'opportunità di modificare il feed RSS una
-	seconda volta.
-
-	change#
-	id#14/11:05
-	<span class="em">
-	link##14/10/2011, 11:05##14/11:05
-	/
-	link#Extra/Guida/#Storie#contenuti#storie
-	</span>
-	titler#LXV – Il secondo bonus
-	Siccome mi sono dimenticato una cosuccia, e siccome ora ho anche la
-	foto adatta, ecco una
-	link#Storie/2011/LXV/#pessima shoopatina#VI
-	da 7' che ho fatto al volo, per ottenere dei LULZ.
-
-	Festeggiamo inoltre la mia ritrovata voglia (?) di aggiornare il
-	feed RSS. Speriamo funzioni.
-
-	change#
-	id#13/23:59
-	<span class="em">
-	link##13/10/2011, 23:59##13/23:59
-	/
-	link#Extra/Guida/#Storie#contenuti#storie
-	titler#LXV – Il 13 ottobre
-	p#link#Storie/2011/LXV/#Oggi#INTRO
-	sono successe molte cose. E domani?
 Stop#Page
 Start#Side
 	Title#Novità
 	STitle#link#News/2011/11/#Novembre 2011
+
+	<strong>15/11</strong> –
+	link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
+
+	<strong>15/11</strong> –
+	link#Recensioni/Film/XIX/#Ed Wood
+
+	<strong>15/11</strong> –
+	link#Recensioni/Film/Brutti/XVIII/#Black Sheep
+
 	pre#<p class="cat-heart">
 	pre#<span class="em">05/11</span> – KitKat Gratis!
 
@@ -206,17 +183,4 @@ Start#Side
 
 	<span class="em">16/10</span> –
 	link#Recensioni/Show/XV/#TransFormers: Prime
-
-	<span class="em">15/10</span> –
-	link#Recensioni/Show/XIII/#Let's go Kamen Riders#M2011
-
-	<span class="em">14/10</span> –
-	Il 13 Ottobre /
-	link#Storie/2011/LXV/#2#VI
-	/
-	link#Storie/2011/LXV/#3#VII
-
-	<span class="em">13/10</span> – 
-	link#Storie/2011/LXV/#Il 13 Ottobre#INTRO
-
 Stop#Side

@@ -1,25 +1,6 @@
 title#Harry Potter#E il lettore non impressionabile
 prev#Recensioni/Libri/XI/#Nessun Dove
 next#Recensioni/Show/XIII/#Kamen Rider
-start#side
-	p#tid#Intro#intro
-	title#Harry Potter e…
-	pre#<ol><li>
-	tid#La pietra filosofale#i
-	pre#</li><li>
-	tid#La camera dei segreti#ii
-	pre#</li><li>
-	tid#Il prigioniero di Azkaban#iii
-	pre#</li><li>
-	tid#Il calice di fuoco#iv
-	pre#</li><li>
-	tid#L&apos;ordine#v#V1
-	pre#/
-	tid#della#v#V2
-	pre#/
-	tid#Fenice#v#V3
-	pre#</li></ol>
-stop#side
 start#page
 tab#intro
 		<p>
@@ -875,4 +856,207 @@ tab#v
 			Ed ora, sotto con le 588 pagine del prossimo (e – grazie agli Dei –
 			penultimo) volume.
 		</p>
+tab#vi
+	Annaspando, aspettando la fine, il sesto volume…
+	title#Il principe mezzosangue
+	Questo mattone è il peggio finora, credo. Beh, no, forse no. Non è vuoto
+	come il precedente, non è inutile come il quarto… poco ci manca…
+
+	Comunque.
+
+	sec#
+	Succede che Harry non deve più passare <span class="wrong">novecento
+	anni</span> l'estate presso gli zii, ma soltanto qualche giorno. Tutti a
+	casa Weasly. E cominciano le cose inutili: tutti chiaccherano e nessuno dice
+	cose interessanti… Bill e Fleur stanno per sposarsi (stanno tra un anno, eh,
+	mica adesso… vabbeh), Ginny sta con quel tizio, Ron non sta con nessuno,
+	Hermione chissene… me ne frego anch'io.
+
+	Poi arriva Silente, che ci ricorda che Piton è completamente affidabile.
+
+	begin#outside
+		speak#gods#Scusi?!?! Tutto quel capitolo iniziale in cui Piton scende a patti con i cattivi a cosa serve? Dovrebbe depistarmi?
+		speak#em#Gods! Cosa dici! Rovinerai la suspence!
+	end#outside
+	Vabbeh…
+
+	sec#
+	Tutti sono delle puttane.
+
+	Harry passa tutto il suo tempo a sospettare di Malfoy. Malfoy passa tutto il
+	suo tempo a fare la <em>fuffa oscura</em>. Gli altri allegri compagni fanno
+	altra fuffa, meno oscura. Facciamo una capatina al negozio di scherzi dei
+	gemelli, introduciamo il nuovo Ministro (ch'è inutile quanto il primo),
+	questa e numerose altre cose inutili.
+
+	Tutti se ne vanno a spasso, c'è il Quidditch, c'è il professor Tricheco
+	raccattato per nessun motivo se non permettere a Piton di insegnare Difesa
+	contro le Arti Oscure (Ah! È SOSPETTISSIMO!) e blah.
+
+	Succedono cose inutili. Yadda yadda, Harry trova il libro che apparteneva al
+	Principe. Ci legge dei consigli, diventa bravo in pozioni. Nel frattempo
+	fuffa.
+
+	Silente decide ch'è arrivato il momento di spiegare delle cose. Eccoci
+	presentata, a pezzetti, la storia di Voldemort da giovane. Blah: era piccolo
+	e stronzo, è diventato grande e stronzo.
+
+	Mezzo libro dopo, scopriamo che Voldemort è immortale per via di sei
+	McGuffin magici che contengono ciascuno un pezzo di anima, ma alcuni (anello
+	e diario) sono già stati distrutti. Silenta va in giro a recupare gli altri.
+	Forse.
+
+	Intanto, sospetti su Malfoy ogni quattro pagine, palettate romantiche e
+	litigi tra amici. Poi Aragog (il ragnaccio di due o tre o 9000 libri fa)
+	muore, che dispiacere. Yadda. Intanto, Ron si mette assieme ad una certa
+	puttana solo per far ingelosire Hermione, Ginny sta con un tizio ancora
+	diverso, ma poi si mollano e…
+	
+	begin#outside
+		speak#gods#blah blah blah, abbiamo capito, possiamo andare avanti?
+		speak#em#Ma come? Non ti interessano forse tutte queste turbe adolescenziali? Non ti immedesimi?
+		speak#gods#No, veramente no. Sono tutti un branco di puttane
+		speak#em#Non è vero!
+		speak#gods#Si ch'è vero!
+		speak#em#Nient'affatto. E per dimostrartelo…
+	end#outside
+
+	Alla fine dell'ennesima inutile partita di Quiddich, senza che Harry abbia
+	fatto nulla, la squadra vince, tutti festeggiano, Harry bacia Ginny e la
+	puttana decide ch'è arrivato il momento di coronare il suo sogno di vero
+	amore, perché erano tipo cinque anni che sognava di stare assieme al
+	protagonista della serie, ma mentre lui decideva lei poteva slinguazzare
+	cani e porci. Bah.
+
+	'Ndiamo avanti.
+
+	sec#
+	Dunque, Malfoy sta facendo cose oscure. Sta tramando. Cosa? Boh, non lo sa
+	nessuno. Silente continua a fidarsi di Piton, perché Piton è affidabile,
+	sapete? Avete capito? Non c'è niente da temere da Piton! Lui è completamente
+	in buona fede! Capito! Eh? Capito?
+
+	sec#
+	Nelle ultime cento pagine, poi, tutto va in fuffa, ma proprio tutto.
+
+	È arrivato, a quanto pare, il momento che le cose precipitino. Quindi
+	Silente scopre l'ubicazione di uno dei McGuffin, e vuole che Harry lo
+	accompagni.
+
+	I due se ne vanno su una scogliera, nuotano fino alla caverna, aprono la
+	porta, trovano la barchetta, attraversano il lago, trovano il calderone.
+	Ora, c'è da dire che Harry non combina un cazzo, fa tutto Silente.
+
+	Davanti al pentolone del destino, scopriamo che la pozione è
+	strafottutamente potente e non si può far altro che svuotarlo bevendo tutto.
+	Bah. Che gran piano. E quindi Silente si mette li a tracannare un gallone di
+	schifezza solo per poter <span class="wrong">avere una scusa per
+	morire</span> ricordare che lui non è importante, lo è Harry. Strano, a me
+	pareva proprio il contrario.
+
+	La yadda, ecco il medaglione, ecco i morti viventi, ecco la buula. To',
+	guarda un po', basta accendere una lampadina e gli zombie scappano. Ah, no,
+	non sono zombie. Vabbeh. Blah. 'Ndiamo al castello, va', che è tardi.
+	
+	Ed ecco! Brivido! Terrore! Raccapriccio! Il <strong>marchio nero</strong>.
+	Buuuuuuuuuuula. Qualcuno è morto? Qualcuno sta per morire? È soltanto una
+	trappola? Non c'è tempo per pensare, la trama deve andare avanti di corsa
+	perché ha perso troppo tempo e il libro sta per finire!
+
+	sec#
+	Allora!
+
+	reverse#
+	Compare Malfoy!
+
+	Silente blocca Harry con la magia!
+	
+	Harry è bloccato!
+	
+	Harry assisterà all'intera scena senza poter intervenire!
+
+	reverse#
+	Malfoy spara delle stronzate!
+
+	Silente accusa il colpo!
+	
+	Risponde con delle altre stronzate!
+
+	reverse#
+	È superefficace! Malfoy è confuso!
+
+	reverse#
+	Malfoy chiama aiuto!
+
+	reverse#
+	Arrivano quattro altri Mangiamorte
+
+	Silente usa: gentilezza!
+
+	reverse#
+	I Mangiamorte perdono un turno
+
+	Silente è vecchio: perde un turno
+
+	reverse#
+	Arriva Piton!
+
+	reverse#
+	Piton usa: Anatema che uccide
+
+	Oh no! Silente è fuori combattimento!
+
+	Puah puah puah
+
+	sec#
+	OMGTWFBBQ!!!!1111!!1!!1!!111111!!!eleveelevenn!!1 Fine del libro!?!?!?!?!
+	
+	E invece no! Ci sono altre sessanta pagine! I Mangiamorte, Malfoy e Piton
+	scappano via di corsa! Ah! Corrono troppo forte! Nessuno può fermarli! Oh
+	noes!
+
+	sbr#
+	Beh, il resto torna placido e inutile come prima. Silente viene sepolto in
+	riva al lago di Hogwarts, tutti i personaggi comparsi finora fanno una
+	capatina, la fenice canta e poi se ne va.
+
+	Intanto, cazzi dappertutto? No! Nient'affatto! Bill è stato morso da un
+	tremendissimo cattivissimo cazzutissimo lupo mannaro! Macchissenefrega! La
+	sua ragazza lo ama! Anche sua madre (che odiava lei) adesso l'ha capito!
+	Viva l'amore!
+
+	Hey, Tonks! Tu, che sei inutile come il resto dell'Ordine della Fenice!
+	Vieni un attimo qui… dicci, perché sei rimasta triste per tutto il libro?
+	Come dici? È perché provi dei sentimenti per qualcuno? Qualcuno in questa
+	stanza? Sarà forse lui? O magari lui?
+
+	begin#outside
+	speak#gods#O magari non frega uno stracazzo a nessuno?
+	end#outside
+
+	title#Harry Potter e il Principe Mezzosangue
+	titler#Maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah
+	Viva l'amore! Viva l'amore! Viva! Viva! L'amoooooooor!
+
+	E nel prossimo libro, Harry & Ron & Hermione alla caccia degli altri
+	McGuffin. Non vedo l'ora…
 stop#page
+start#side
+	p#tid#Intro#intro
+	title#Harry Potter e…
+	pre#<ol>
+		li#tid#La pietra filosofale#i
+		li#tid#La camera dei segreti#ii
+		li#tid#Il prigioniero di Azkaban#iii
+		li#tid#Il calice di fuoco#iv
+		pre#<li>
+			tid#L&apos;ordine#v#V1
+			pre#/
+			tid#della#v#V2
+			pre#/
+			tid#Fenice#v#V3
+		pre#</li>
+		li#tid#Il principe mezzosangue#vi
+	pre#</ol>
+stop#side
+

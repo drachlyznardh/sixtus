@@ -1,0 +1,166 @@
+title#Impresa#La strada breve passa per la jungla
+prev#Storie/2010/III/#Progetti
+next#Storie/2010/V/#Condizioni
+start#page
+	title#Impresa
+	E così capita che arrivino le sei di sera... Quel giorno era
+	un gioved&igrave;, giorno in cui io e il mio compare $Dacav
+	si saremmo cimentati in una lezione di Tai-Chi.
+
+	Il luogo designato per la lezione &egrave; un bel parco in
+	collina. Collina che si trova al di sotto di noi, essendo
+	noi gi&agrave; in collina per conto nostro, ma la nostra
+	&egrave; molto pi&ugrave; collina rispetto al parco, quindi
+	scendiamo.
+	
+	sec#
+	Tanto per risparmiare un po&apos; di strada, mi dico:
+	begin#outside
+		speak#gods#Perché non ce ne scendiamo direttamente da qui? Conosco una scorciatoia…
+	end#outside
+	Ora, che io ricordassi veramente quella scorciatoia non
+	&egrave; propriamente falso, poich&eacute;, oltre diec'anni
+	fa, ho realmente percorso quella strada, nel senso contrario,
+	salendo dal parco fin dove siamo qui noi ora.
+
+	Che sar&agrave; mai fare il contrario, no? E invece...
+	capita infatti che, oltre alla memoria fallace, abbiano
+	anche &quot;restaurato&quot; la zona, assia vecchia e
+	malandata invero, spostando strade e stradine, costruendo
+	muri e parcheggi. Poi, in realt&agrave;, la strada giusta
+	&egrave; rimasta tale e quale. Quella che abbiamo preso,
+	invece, era completamente nuova.
+
+	sec#
+	E cos&igrave; ci avventuriamo gi&ugrave; per una strada
+	bianca... cammina cammina, giungiamo ad una vigna. E qui
+	vedo che la strada svolta, alla lunga, a sinistra. E noi
+	dobbiamo andare a destra, ovviamente.
+	begin#outside
+		speak#gods#Venga, buon Dacav: tagliamo di là
+	end#outside
+	Perch&eacute; la vigna finisce, io cerco ben bene una
+	stradina che vada dove vogliamo noi, ma non c&apos;&eacute;.
+	Quindi taglia, scendiamo per 15 metri di sgrebeno irto di
+	simpatiche piantine con simpatiche spine. E i miei pantaloni
+	arrivano appena al ginocchio. E comincio a sanguinare. 
+
+	E ancora non vi ho detto com'eravamo conciati: io porto
+	sulla schiena lo zaino con il portatile, gli appunti, il
+	libro, il mio nuovissimo camelbag e accessori vari, per
+	una decina di chili di peso; il mio collega Dacav gira con
+	lo stesso equipaggiamento, alloggiato per&ograve; in una
+	borsa che disgraziatamente non ha tracolla. Inoltre, egli
+	porta un libro in una busta di carta, io porto &ndash; per
+	puro purissimo caso &ndash; il robot NXT da me creato, lo
+	SPAM.
+
+	Mentre ci ripigliamo dallo sforzo, faccio un giretto e
+	scopro che &ndash; ovviamente &ndash; due metri pi&ugrave;
+	in l&agrave; c&apos;era il sentiero. Che per&ograve; arriva
+	da noi e non prosegue... Seguendo l&apos;istinto e
+	l&apos;orientamento, ci avviciniamo al prossimo tratto di
+	bosco.
+
+	E gi&ugrave;, altri 15 metri. Finiamo dentro un torrentello.
+	begin#outside
+		speak#gods#E qui dovrebbe starci un ponticello che ci porta dall'altra parte
+	end#outside
+	Ma non c'è.
+	
+	sec#
+	begin#outside
+		speak#dacav#Coso, perch&eacute; non passiamo su quel palo, ci teniamo all&apos;albero, e passiamo sull&apos;altra sponda?
+		speak#simak#Oh cazzo sì!
+	end#outside
+	E passiamo sopra al palo, sospeso sul torrente sorretto da
+	rete metallica vecchia quanto la (II) guerra (mondiale), e
+	passati sulla sponda opposta vediamo che le condizioni sono
+	identiche a prima. Seguire il torrente lo escludiamo,
+	decidiamo di salire.
+
+	Su e su per la montagna, man mano, vedo affiorare il sole,
+	in lontananza: dev&apos;esserci uno spiazzo l&agrave; sopra.
+
+	In quella, compare un cane. Boh.
+
+	Siamo su un sentiero, a quanto pare. Purtroppo va in
+	direzione Sud-Est, non Nord-Est come vorremmo noi.
+
+	M&apos;inerpico quindi su e su per la parete, lanciando lo
+	SPAM per salvarmi la vita, ma riesco ad attaccarmi ad un
+	ramo, e distruggendo un formicaio passo in cima. Il buon
+	Dacav, contrito per le povere formiche a cui ho
+	inavvertitamente rovinato la giornata, decide prendere
+	un&apos;altra strada, assieme al cane.
+
+	Un po&apos; incerto sul dividerci, visto che ormai non posso
+	pi&ugrave; scendere, decido di proseguire da solo. Salgo, mi
+	inerpico, developpo e smandruppando alcuni arbusti arrivo al
+	prato.
+
+	&Egrave; chiaramente il cortile di casa di qualcuno. Compare
+	quello che dev&apos;essere il padrone di casa, con il
+	figlioletto in braccio. Mentre bevo e mi riposo, chiede:
+	begin#outside
+		speak#em#Scusa, da dove vieni?
+		
+		speak#gods#Dal bosco. Sono appena uscito
+		
+		speak#em#E come sei entrato?
+
+		speak#gods#Dal bosco. C&apos;era il bosco: l&apos;ho attraversato
+		
+		speak#em#E che ci fai con quello?
+		
+		speak#gods#SPAM? Lo trasporto. Ce l&apos;ho in braccio…
+		
+		speak#em#Guarda, &egrave; propriet&agrave; privata. C&apos;&egrave; un cancello, ma &egrave; chiuso. Dovresti tornare da dove sei venuto
+		
+		speak#gods#Ah, vabbeh… Saluti
+	end#outside
+	E me ritorno nel bosco, guarda te &apos;sto tizio... Le mie
+	risposte sincere e veritiere, tuttavia, sembrano averlo
+	shockato. Mentre scendo, lui e altra gente mi guardano
+	spauriti, pensando chissacch&eacute;
+
+	Poi, tornato sul sentiero, cerco il Dacav. Squilla il
+	cellofono.
+	begin#outside
+		speak#simak#Pronto?
+		speak#dacav#Coso, dove sei? L&apos;hai passato il trattore?
+		speak#simak#QUALE trattore?
+	end#outside
+	Due telefonate dopo, seguendo empiricamente le indicazioni,
+	dopo essere sopravvissuto all&apos;attacco di una pianta con
+	delle spine lunghe cos&igrave;, trovo il trattore, lo
+	scavalco, passo il cortile, salgo le scale, passo la piscina,
+	dietro l'albero trovo il Dacav.
+
+	E poi via, procediamo verso la nostra meta, seguendo la
+	nostra rotta. In mezzo, scendiamo per una scala mimetizzata
+	nell'erba, scavalchiamo un cancellone arrugginito e ci
+	ritroviamo finalmente in strada.
+
+	Ed era la strada sbagliata.
+
+	Vedo la ferrovia, la seguo, troviamo case, cartelli che
+	indicano vie sconosciute, ma infine, proseguendo nella
+	giusta direzione, arriviamo ad un luogo noto. E solo allora
+	capiamo di aver mancato il nostro obiettivo di buon mezzo
+	chilometro.
+
+	Evidentemente, l&apos;ultima volta ero molto ma molto
+	pi&ugrave; basso, ed ho preso male le misure.
+
+	In ogni caso, dopo una breve pausa per toglierci le spine di
+	dosso, ripulirci un pelo e dissetarci, con soltanto un
+	quarto d&apos;ora di ritardo sulla tabella di marcia, siamo
+	giunti all&apos;appuntamento originale. Ed ora che
+	conosciamo la strada giusta, marted&igrave; potremo scendere
+	normalmente. Forse.
+stop#page
+start#side
+	title#Impresa
+	titler#Storia IV
+stop#side

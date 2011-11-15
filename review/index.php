@@ -1,18 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Recensioni', 'Sincere, spesso brutte', 'intro');
-		$this->prepare ('review/film/index.php', false, true, false);
-		$this->prepare ('review/brutti/index.php', false, true, false);
-		$this->prepare ('review/game/index.php', false, true, false);
-		$this->prepare ('review/show/index.php', false, true, false);
-		$this->prepare ('review/book/index.php', false, true, false);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<?php if ($d->mktab('intro')) { ?><div class="section">
-		<p>
+title#Recensioni#Sincere, spesso brutte
+start#page
+tab#intro
 			Non ne posso più, devo assolutamente sfogarmi.
-		</p><p>
+		
 			Ma prima qualche parola per spiegare questa sezione.
 		</p>
 	</div><div class="section">
@@ -30,10 +20,10 @@
 			un'introduzione, no? Non necessariamente. Mettiamola così: era
 			scrittura virale, come quelle pubblicità che non si capiscono
 			affatto, ma dicono soltanto un nome...
-		</p><p>
+		
 			Non che una pagina intitolata ‘Recensioni’ fosse 'sto gran
 			mistero...
-		</p><p>
+		
 			Comunque sia, ecco le mie
 		</p><h2>
 			Recensioni
@@ -48,18 +38,18 @@
 			Come ci dimostrano amici come l'AVGN, quel tizio con gli occhiali e
 			MovieBob, l'industria del cinema produce immense quantità di
 			schifezza.
-		</p><p>
+		
 			Ma non è solo colpa loro, e infatti non mi limiterò a recensire
 			film, qui. Se ci sono cose di cui posso definirmi appassionato, ci
 			sono anche i videogiochi, i Gundam, i Transformers e i fumetti.
-		</p><p>
+		
 			Con il tempo, spalerò merda un po' su tutto.
 		</p>
 	</div><div class="section">
 		<p>
 			Ora che anche questa sezione comincia a riempirsi, è giunto il momento
 			di spendere qualche altra parola…
-		</p><p>
+		
 			All'inizio, infatti, questa non era una sezione ma soltanto una raccolta
 			di cosucce. Lamentele, per la maggior parte. Ma con il tempo… o forse
 			no.
@@ -67,257 +57,236 @@
 	</div><div class="section">
 		<p>
 			Insomma, è vero che l'ho cominciata lamentandomi di
-			<?=$d->link('Recensioni/Film/I/','Thor')?>, ma poi ho recensito anche
+			link#Recensioni/Film/I/#Thor##,
+			ma poi ho recensito anche
 			altre cose. Ed ho ancora smesso di creare un nuovo voto per ogni
 			recensione.
-		</p><p>
+		
 			Di fatto, ora che ho sei diversi livelli di valutazione mi sento
 			abbastanza comodo. Un voto da 0 a 5 non è forse una buona cosa? Che
 			direbbero gli analisti e gli statistici?
-		</p><p>
+		
 			E comunque, sappiate che d'ora in poi m'impegno ad essere un po' più
 			imparziale, un po' più seriamente critico. Le cose veramente orribili le
-			metterò nella <?=$d->link('Recensioni/Film/Brutti/','sezione apposita')?>.
-		</p>
-	</div><?php } if ($d->mktab('classifica')) { ?><div class="section"><a id="I"></a>
-		<h2>
-			Fucking awesome!!!
-		</h2><p>
-			Questi sono decisamente da vedere/provare/comprare.
-		</p><ul><li>
-				<?=$d->link('Recensioni/Giochi/II/', 'Assassin&apos;s Creed Brotherhood')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/XIII/', 'Kamen Rider W', 'W')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/XIII/', 'OOO, Den-O, all Riders: Let&apos; go Kamen Riders','M2011')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/XV/', 'Transformers: Prime','INTRO')?>
-			</li></ul>
-		</p>
-	</div><div class="section"><a id="II"></a>
-		<h2>
-			Buono
-		</h2><p>
-			Che ci crediate o meno, questi mi sono piaciuti. Non sono
-			magnificissimi, non sono eccelsi, ma sono buoni.
-		</p><ul><li>
-				<?=$d->link('Recensioni/Film/VIII/','Capitan America')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/IX/','Angel Beats!')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/XIII/','Kamen Rider OOO', 'OOO')?>
-			</li><li>
-				<?=$d->link('Recensioni/Film/XVII/', 'First Blood', 'I')?>
-				e <?=$d->link('Recensioni/Film/XVII/', 'Rambo: First Blood part II', 'II')?>
-		</li></ul>
-	</div><div class="section"><a id="III"></a>
-		<h2>
-			Si lascia guardare
-		</h2><p>
-			Questi si lasciano guardare. Con le dovute precauzioni.
-		</p><ul><li>
-				<?=$d->link('Recensioni/Show/VI/','Masterforce')?>
-			</li><li>
-				<?=$d->link('Recensioni/Film/X/','I Puffi')?>
-			</li><li>
-				<?=$d->link('Recensioni/Libri/XI/','Nessun Dove')?>
-		</li></ul>
-	</div><div class="section"><a id="IV"></a>
-		<h2>
-			Meh. / Mah
-		</h2><p>
-			Questi non sono per tutti, sono per chi ha gusti particolari o lo
-			stomaco di ferro.
-		</p><ul><li>
-				<?=$d->link('Recensioni/Film/III/', 'Robocop')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/IV/', 'Pani Poni Dash')?>
-			</li><li>
-				<?=$d->link('Recensioni/Libri/XII/','Harry Potter')?>
-				e <?=$d->link('Recensioni/Libri/XII/','La pietra filosofale','I')?>
-				e <?=$d->link('Recensioni/Libri/XII/','La camera dei segreti','II')?>
-				e <?=$d->link('Recensioni/Libri/XII/','Il prigioniero di Azkaban','III')?>
-				e <?=$d->link('Recensioni/Libri/XII/','Il calice di fuoco','IV')?>
-				e <?=$d->link('Recensioni/Libri/XII/','L&apos;ordine della Fenice','V')?>
-		</li></ul>
-	</div><div class="section"><a id="V"></a>
-		<h2>
-			L'ha fatto Micheal Bay?
-		</h2><p>
-			Questi hanno il grosso difetto di mettere l'azione davanti alla storia.
-			O semplicemente si dimenticano che le esplosioni non fanno un buon film
-			/ buon anime / buona visione.
-		</p><ul><li>
-			<?=$d->link('Recensioni/Show/V/', 'Blassreiter');?>
-		</li></ul>
-	</div><div class="section"><a id="VI"></a>
-		<h2>
-			No
-		</h2><p>
-			Questi no.
-		<p><ul><li>
-				<?=$d->link('Recensioni/Film/I/', 'Thor')?>
-			</li><li>
-				<?=$d->link('Recensioni/Film/VII/', 'Dark Of The Moon')?>
-			</li><li>
-				<?=$d->link('Recensioni/Show/XIV/', 'Gundam AGE')?>
-			</li><li>
-				D–Wars
-			</li><li>
-				Mega shark Vs Giant Octopus
-			</li><li>
-				<?=$d->link('Recensioni/Film/Brutti/XVI/', 'Bitch Slap')?>
-		</li></ul>
-	</div><div class="section"><a id="VII"></a>
-		<h2>
-			Brutto da ridere
-		</h2><p>
-			Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
-			loro, non con loro.
-		</p><ul><li>
-				Robot
-			</li><li>
-				Alien Vs Ninja
-		</li></ul>
-	</div><div class="section"><a id="VIII"></a>
-		<h2>
-			Magnificamente brutto
-		</h2><p>
-			Insomma, l'ho detto e lo ripeto, alcuni film sono così brutti da fare il
-			giro e diventare più che godibili.
-		</p><p>
-			Ne parlerò di più quando avrò tempo e briga. Intanto, andate a vedervi
-			un po' di 'sta roba:
-		</p><ul><li>
-				Machete
-			</li><li>
-				Planet Terror
-			</li><li>
-				Sharktopus
-			</li><li>
-				The Rocky Horror Picture Show
-		</li></ul>
-	</div><?php } if ($d->mktab('categorie')) { ?><div class="section">
-		<p>
-			E siccome le recensioni cominciano ad essere tante, ho diviso
-			l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
-			cose in ordine (in attesa che crescano).
-		</p>
-	</div><?php } if ($d->mktab('incorso')) { ?><div class="section">
-		<h2>
-			In corso d'opera…
-		</h2><p>
-			Nel caso siate veramente impazienti, o nel caso vogliate
-			anticipazioni, o se proprio volete farvi i cazzi miei, questo è
-			l'elenco delle cose che sto facendo adesso.
-		</p><p>
-			Questo elenco è abbastanza empirico: non tutto quello che recensisco
-			finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
-			recensito con certezza.
-		</p>
-	</div><div class="section">
-		<p>
-			Harry Potter &amp; il Principe Mezzosangue – pagg284/588
-		</p><p>
-			Pirate Sentai Gokaiger – ep28/??
-		</p><p>
-			Kamen Rider Fourze – ep6/??
-		</p><p>
-			Doctor Who s01 (2005) – ep8/&gt;9000
-		</p><p>
-			Gundam AGE – ep3/??
-		</p><p>
-			Macross 7 – ep3/49
-		</p>
-	</div><?php } if ($d->mktab('cronologico')) { ?><div class="section doublecol">
-		<h2>
-			Indice cronologico
-		</h2><ol><li>
-			<?=$d->link('Recensioni/Film/I/','Thor')?> – 2011
-		</li><li>
-			<?=$d->link('Recensioni/Giochi/II/','AC Brotherhood')?> – 2010
-		</li><li>
-			<?=$d->link('Recensioni/Film/III/','Robocop')?> – 1987~1993
-		</li><li>
-			<?=$d->link('Recensioni/Show/IV/','Pani Poni Dash')?> – 2005
-		</li><li>
-			<?=$d->link('Recensioni/Show/V/','BlassReiter')?> – 2008
-		</li><li>
-			<?=$d->link('Recensioni/Show/VI/','Masterforce')?> – 1988
-		</li><li>
-			<?=$d->link('Recensioni/Film/VII/','Dark Of The Moon')?> – 2011
-		</li><li>
-			<?=$d->link('Recensioni/Film/VIII/','Capitan America')?> – 2011
-		</li><li>
-			<?=$d->link('Recensioni/Show/IX/','Angel Beats!')?> – 2010
-		</li><li>
-			<?=$d->link('Recensioni/Film/X/','I Puffi')?> – 2011
-		</li><li>
-			<?=$d->link('Recensioni/Libri/XI/','Nessun Dove')?> – 1996
-		</li><li>
-			<?=$d->link('Recensioni/Libri/XII/','Harry Potter','INTRO')?> – 1997~2007
-		</li><li>
-			<?=$d->link('Recensioni/Show/XIII/','Kamen Rider')?> – 1971~2011
-		</li><li>
-			<?=$d->link('Recensioni/Show/XIV/','Gundam AGE','INTRO')?> – 2011
-		</li><li>
-			<?=$d->link('Recensioni/Show/XV/', 'TransFormers: Prime', 'INTRO')?> – 2010~2011
-		</li><li>
-			<?=$d->link('Recensioni/Film/Brutti/XVI/', 'Bitch Slap', '')?> – 2009
-		</li><li>
-			<?=$d->link('Recensioni/Film/XVII/', 'Rambo')?> – 1982~2008
-	</li></ol><h2>
-		Per categoria
-	</h2><h3>
-		Film
-	</h3><ol><li>
-		La morte
-	</li></ol><h3>
-		Film brutti
-	</h3><ol><li></li></ol><ol><li></li></ol><h3>
-		Blah
-	</h3><?=$this->loadside('review/book/index.php')?>
+			metterò nella
+			link#Recensioni/Film/Brutti/#sezione apposita.
 
-	</div><?php } ?>
-</div><?php } if ($this->addside ()) { ?><div class="section">
-	<p>
-		<?=$d->mktid('Perché le recensioni?', 'intro')?>
-	</p><p>
-		<?=$d->mktid('In corso &apos;opera…', 'incorso')?>
-	</p><h2>
-		Recensioni
-	</h2><h3>
-		<?=$d->mktid('Categorie', 'categorie')?>
-	</h3><p class="reverse">
-		<?=$d->mktid('Film', 'categorie', 'Film')?>
-		/ <?=$d->mktid('Film Brutti', 'categorie', 'Brutti')?>
-	</p><p class="reverse">
-		<?=$d->mktid('Giochi', 'categorie', 'Giochi')?>
-		/ <?=$d->mktid('Show', 'categorie', 'Show')?>
-		/ <?=$d->mktid('Libri', 'categorie', 'Libri')?>
-	</p><h3>
-		<?=$d->mktid('Classifica', 'classifica')?>
-	</h3><ol><li>
-			<?=$d->mktid('Fucking awesome!!!', 'classifica', 'I')?>
-		</li><li>
-			<?=$d->mktid('Buono', 'classifica', 'II')?>
-		</li><li>
-			<?=$d->mktid('Si lascia guardare', 'classifica', 'III')?>
-		</li><li>
-			<?=$d->mktid('Meh. / Mah', 'classifica', 'IV')?>
-		</li><li>
-			<?=$d->mktid('L&apos;ha fatto Micheal Bay?', 'classifica', 'V')?>
-		</li><li>
-			<?=$d->mktid('No', 'classifica', 'VI')?>
-		</li><li>
-			<?=$d->mktid('Brutto da ridere', 'classifica', 'VII')?>
-		</li><li>
-			<?=$d->mktid('Magnificamente brutto', 'classifica', 'VIII')?>
-	</li></ol><h3>
-		Indice
-	</h3><p>
-		<?=$d->mktid('Cronologico', 'cronologico')?>
-	</p><p>
-		<?=$d->mktid('Per categoria', 'indice')?>
-	</p>
-</div><?php } ?>
+tab#classifica
+	id#awesome
+	title#Fucking awesome!!!
+	Questi sono decisamente da vedere/provare/comprare.
+	pre#<ul>
+		li#link#Recensioni/Giochi/II/#Assassin&apos;s Creed Brotherhood
+		li#link#Recensioni/Show/XIII/#Kamen Rider W#W
+		li#link#Recensioni/Show/XIII/#OOO, Den-O, all Riders: Let's go Kamen Riders#M2011
+		li#link#Recensioni/Show/XV/#Transformers: Prime#INTRO
+	pre#</ul>
+	
+	sec#
+	id#buoni
+	title#Buono
+	Che ci crediate o meno, questi mi sono piaciuti. Non sono
+	magnificissimi, non sono eccelsi, ma sono buoni.
+	pre#<ul>
+		li#link#Recensioni/Film/VIII/#Capitan America
+		li#link#Recensioni/Show/IX/#Angel Beats!
+		li#link#Recensioni/Show/XIII/#Kamen Rider OOO#OOO
+		pre#<li>
+		link#Recensioni/Film/XVII/#First Blood#I
+		pre#e
+		link#Recensioni/Film/XVII/#Rambo: First Blood part II#II
+		pre#</li>
+		li#link#Recensoni/Film/XIX/#Ed Wood
+	pre#</ul>
+
+	sec#
+	id#lasciano
+	title#Si lascia guardare
+	Questi si lasciano guardare. Con le dovute precauzioni.
+	pre#<ul>
+		li#link#Recensioni/Show/VI/#Masterforce
+		li#link#Recensioni/Film/X/#I Puffi
+		li#link#Recensioni/Libri/XI/#Nessun Dove
+	pre#</ul>
+
+	sec#
+	id#meh
+	title#Meh. / Mah
+	Questi non sono per tutti, sono per chi ha gusti particolari o lo
+	stomaco di ferro.
+	pre#<ul>
+		li#link#Recensioni/Film/III/#Robocop
+		li#link#Recensioni/Show/IV/#Pani Poni Dash
+		pre#<li>
+			link#Recensioni/Libri/XII/#Harry Potter
+			pre#e
+			link#Recensioni/Libri/XII/#La pietra filosofale#I
+			pre#e
+			link#Recensioni/Libri/XII/#La camera dei segreti#II
+			pre#e
+			link#Recensioni/Libri/XII/#Il prigioniero di Azkaban#III
+			pre#e
+			link#Recensioni/Libri/XII/#Il calice di fuoco#IV
+			pre#e
+			link#Recensioni/Libri/XII/#L&apos;ordine della Fenice#V
+			pre#e
+			link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
+		pre#</li>
+	pre#</ul>
+
+	sec#
+	id#bay
+	title#L'ha fatto Micheal Bay?
+	Questi hanno il grosso difetto di mettere l'azione davanti alla storia.
+	O semplicemente si dimenticano che le esplosioni non fanno un buon film
+	/ buon anime / buona visione.
+	pre#<ul>
+	li#link#Recensioni/Show/V/#Blassreiter
+	pre#</ul>
+
+	sec#
+	id#no
+	title#No
+	Questi no.
+	pre#<ul>
+		li#link#Recensioni/Film/I/#Thor
+		li#link#Recensioni/Film/VII/#Dark Of The Moon
+		li#link#Recensioni/Show/XIV/#Gundam AGE
+		li#D–Wars
+		li#Mega shark Vs Giant Octopus
+		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
+	pre#</ul>
+
+	sec#
+	id#ridere
+	title#Brutto da ridere
+	Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
+	loro, non con loro.
+	pre#<ul>
+		li#Robot
+		li#Alien Vs Ninja
+		li#Black Sheep
+		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
+	pre#</ul>
+
+	sec#
+	id#magnifici
+	title#Magnificamente brutto
+	Insomma, l'ho detto e lo ripeto, alcuni film sono così brutti da fare il
+	giro e diventare più che godibili.
+
+	Ne parlerò di più quando avrò tempo e briga. Intanto, andate a vedervi
+	un po' di 'sta roba:
+	pre#<ul>
+		li#Machete
+		li#Planet Terror
+		li#Sharktopus
+		li#The Rocky Horror Picture Show
+	pre#</ul>
+tab#categorie
+	E siccome le recensioni cominciano ad essere tante, ho diviso
+	l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
+	cose in ordine (in attesa che crescano).
+	include#review/film/index#page
+	include#review/brutti/index#page
+	include#review/game/index#page
+	include#review/show/index#page
+	include#review/book/index#page
+tab#incorso
+	title#In corso d'opera…
+	Nel caso siate veramente impazienti, o nel caso vogliate
+	anticipazioni, o se proprio volete farvi i cazzi miei, questo è
+	l'elenco delle cose che sto facendo adesso.
+
+	Questo elenco è abbastanza empirico: non tutto quello che recensisco
+	finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
+	recensito con certezza.
+
+	sec#
+	Harry Potter &amp; il Principe Mezzosangue – pagg284/588
+
+	Pirate Sentai Gokaiger – ep28/??
+
+	Kamen Rider Fourze – ep6/??
+
+	Doctor Who s01 (2005) – ep8/&gt;9000
+
+	Gundam AGE – ep3/??
+
+	Macross 7 – ep3/49
+tab#indice
+	id#cronologico
+	title#Indice cronologico
+	pre#<ol>
+		li#link#Recensioni/Film/I/#Thor### – 2011
+		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
+		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
+		li#link#Recensioni/Show/IV/#Pani Poni Dash### – 2005
+		li#link#Recensioni/Show/V/#BlassReiter### – 2008
+		li#link#Recensioni/Show/VI/#Masterforce### – 1988
+		li#link#Recensioni/Film/VII/#Dark Of The Moon### – 2011
+		li#link#Recensioni/Film/VIII/#Capitan America### – 2011
+		li#link#Recensioni/Show/IX/#Angel Beats!### – 2010
+		li#link#Recensioni/Film/X/#I Puffi### – 2011
+		li#link#Recensioni/Libri/XI/#Nessun Dove### – 1996
+		li#link#Recensioni/Libri/XII/#Harry Potter### – 1997~2007
+		li#link#Recensioni/Show/XIII/#Kamen Rider### – 1971~2011
+		li#link#Recensioni/Show/XIV/#Gundam AGE### – 2011
+		li#link#Recensioni/Show/XV/#TransFormers: Prime### – 2010~2011
+		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
+		li#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
+		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
+		li#link#Recensioni/Film/XIX/#Ed Wood###– 1994
+	pre#</ol>
+
+	sbr#
+	id#categoria
+	title#Per categoria
+
+	struct#<div style="width:50%;float:left">
+	include#review/film/index#side
+	struct#</div><div style="width:50%;float:left">
+	include#review/brutti/index#side
+	struct#</div><div style="width:50%;float:left">
+	include#review/game/index#side
+	struct#</div><div style="width:50%;float:left">
+	include#review/show/index#side
+	struct#</div><div style="width:50%;float:left">
+	include#review/book/index#side
+	struct#</div><div style="clear:both"></div>
+stop#page
+start#side
+	reverse#
+	tid#Perché le recensioni?#intro
+	/	
+	tid#In corso d'opera…#incorso
+	title#Recensioni
+	stitle#tid#Categorie#categorie
+	reverse#
+	tid#Film#categorie#Film
+	/
+	tid#Film Brutti#categorie#Brutti
+	reverse#
+		tid#Giochi#categorie#Giochi
+		/
+		tid#Show#categorie#Show
+		/
+		tid#Libri#categorie#Libri
+	stitle#tid#Classifica#classifica
+	pre#<ol>
+		li#tid#Fucking awesome!!!#classifica#awesome
+		li#tid#Buono#classifica#buoni
+		li#tid#Si lascia guardare#classifica#lasciano
+		li#tid#Meh. / Mah#classifica#meh
+		li#tid#L&apos;ha fatto Micheal Bay?#classifica#bay
+		li#tid#No#classifica#no
+		li#tid#Brutto da ridere#classifica#ridere
+		li#tid#Magnificamente brutto#classifica#magnifici
+	pre#</ol>
+	br#
+	stitle#Indice
+	reverse#
+		tid#Cronologico#indice#cronologico
+		/
+		tid#Per categoria#indice#categoria
+stop#side
