@@ -1,13 +1,7 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Di notte', 'Corvino Multicolore &ndash; V');
-		$this->addprev ('NaNoWriMo/Corvino/Multicolore/IV/', 'Nel bosco');
-		$this->addnext ('NaNoWriMo/Corvino/Multicolore/VI/', 'Gli ultimi giorni');
-		$this->prepare ('nano/corvino/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
+title#Di notte#Corvino Multicolore &ndash; V
+prev#NaNoWriMo/Corvino/Multicolore/IV/#Nel bosco
+next#NaNoWriMo/Corvino/Multicolore/VI/#Gli ultimi giorni
+start#page
 		<p>
 			Trattasi di un gioco notturno molto in voga a quei tempi.
 		</p><div class="inside"><p>
@@ -139,10 +133,7 @@
 			(fisicamente ma anche mentalmente), per i suoi pessimi
 			gusti musicali
 		</p><div class="outside"><p>
-			<?=$d->speak('Fastidio','li hai mai ascoltati i
-			&lsquo;Witnesses of Bofamoht&apos;s Slaves&apos;
-			Love&rsquo;? No? Ma come! Sono fantastici! Ti presto un
-			loro disco!')?>
+			speak#Fastidio#li hai mai ascoltati i &lsquo;Witnesses of Bofamoht&apos;s Slaves&apos; Love&rsquo;? No? Ma come! Sono fantastici! Ti presto un loro disco!
 		</p></div><p>
 			per il senso dell'umorismo bacato ma soprattutto per la
 			sua inadeguatezza (alla fatica, alla vita, a tutto) e
@@ -276,14 +267,11 @@
 			Ma non solo l'ultimo della fila,
 		</p><div class="outside"><p>
 			c'è chi mi chiama indietro e dice
-			<?=$d->inline('Camelia', 'Forse c&apos;è una ricompensa
-			anche per te, campione')?>
+			inline#Camelia#Forse c&apos;è una ricompensa anche per te, campione
 		</p></div><p>
 			Mi volto, è Camelia.
 		</p><div class="outside">
-			<?=$d->speak('Camelia','Non è da tutti portarsi dietro
-			un peso morto come quello e riuscire a tenere il ritmo
-			dei primi: sono impressionata.')?>
+			speak#Camelia#Non è da tutti portarsi dietro un peso morto come quello e riuscire a tenere il ritmo dei primi: sono impressionata.
 		</div><p>
 			Poi si avvicina.
 		</p><p>
@@ -305,7 +293,7 @@
 			Io arrivo appena a sgranare gli occhi e a dire un
 			impercettibile e soffocato
 		</p><div class="outside">
-			<?=$d->speak('Corvino','Ah')?>
+			speak#Corvino#Ah
 		</div><p>
 			che sarebbe un suono senza senso, quel che mi esce
 			spontaneo dopo che m'è caduta la mascella.
@@ -314,11 +302,7 @@
 			chiaramente cosa sta per succedere mentre succede e
 			penso
 		</p><div class="inside">
-			<?=$d->speak('Corvino','Sta per baciarti sta per
-			baciarti sta per baciarti non fare niente di stupido è
-			il primo non fare niente di stupido niente di stupido
-			sta per baciarti lasciale l&apos;iniziativa ma ricambia
-			immediatamente niente di stupido niente di stupido')?>
+			speak#Corvino#Sta per baciarti sta per baciarti sta per baciarti non fare niente di stupido è il primo non fare niente di stupido niente di stupido sta per baciarti lasciale l&apos;iniziativa ma ricambia immediatamente niente di stupido niente di stupido
 		</div><p>
 			e per un qualche effetto di distorsione temporale ho il
 			tempo di chiudere gli occhi, perché questa cosa non può
@@ -335,7 +319,7 @@
 		</p><p>
 			Realizzai quanto la voce che disse
 		</p><div class="inside">
-			<?=$d->speak('Corvino','non fare nulla di stupido')?>
+			speak#Corvino#non fare nulla di stupido
 		</div><p>
 			fosse già in ritardo, perché già avevo detto qualcosa;
 			dicendolo, avevo soffiato; e meno di un'ora prima avevo
@@ -391,6 +375,4 @@
 	</div><div class="section">
 		<p>
 			Fino al giorno del Raja.
-		</p>
-	</div>
-</div><?php } ?>
+stop#page

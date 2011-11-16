@@ -1,14 +1,7 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('A contatto', 'Corvino Multicolore &ndash; III');
-		$this->addprev ('NaNoWriMo/Corvino/Multicolore/II/', 'Campeggio');
-		$this->addnext ('NaNoWriMo/Corvino/Multicolore/IV/', 'Nel bosco');
-		$this->prepare ('nano/corvino/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?>
-<div class="small">
-	<div class="section">
+title#A contatto#Corvino Multicolore &ndash; III
+prev#NaNoWriMo/Corvino/Multicolore/II/#Campeggio
+next#NaNoWriMo/Corvino/Multicolore/IV/#Nel bosco
+start#page
 		<div class="inside">
 			<p>
 				Ma non fu tutto rose e fiori. Fiori sì, ma nulla
@@ -127,15 +120,11 @@
 			Ma quel che è peggio è che, probabilmente, in quel
 			momento pensai
 		</p><div class="inside">
-			<?=$d->speak('corvino','Bene bene, niente di nuovo sul
-			fronte orizzontale, ergo non avrò nulla da spiegare')?>
+			speak#corvino#Bene bene, niente di nuovo sul fronte orizzontale, ergo non avrò nulla da spiegare
 		</div><p>
 			E tutt'oggi sono quì a chiedermi se la mia vita sarebbe
 			stata diversa se solo in quel momento un'erezione avesse
 			reso noto almeno a lei quello che stava succedendo.
 		</p><p>
 			Ma evidentemente, il destino aveva altri piani.
-		</p>
-	</div>
-</div>
-<?php } ?>
+stop#page

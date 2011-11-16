@@ -1,13 +1,7 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Nel bosco', 'Corvino Multicolore &ndash; IV');
-		$this->addprev ('NaNoWriMo/Corvino/Multicolore/III/', 'A contatto');
-		$this->addnext ('NaNoWriMo/Corvino/Multicolore/V/', 'Di notte');
-		$this->prepare ('nano/corvino/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
+title#Nel bosco#Corvino Multicolore &ndash; IV
+prev#NaNoWriMo/Corvino/Multicolore/III/#A contatto
+next#NaNoWriMo/Corvino/Multicolore/V/#Di notte
+start#page
 		<div class="outside">
 			<p>
 				E andò anche peggio di così, in realtà.
@@ -85,7 +79,8 @@
 			Ma quella non è libertà: libertà è allentare la cintura
 			in un punto scelto a caso: decidi
 		</p></div><div class="outside"><p>
-			<?=$d->inline('Corvino','Vado a farla lì')?>, ci vai e la fai.
+			inline#Corvino#Vado a farla lì
+			ci vai e la fai.
 		</p></div><div class="inside"><p>
 			Ma il destino aveva cose ben diverse in mente. Ben diverse.
 		</p><p>
@@ -314,7 +309,4 @@
 			all'età adulta, il torneo per il titolo di cavaliere.
 		</p><p>
 			La prova s'intitolò &quot;Il licantropo&quot;.
-		</p>
-	</div>
-</div>
-<?php } ?>
+			stop#page

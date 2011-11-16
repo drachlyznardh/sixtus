@@ -1,21 +1,8 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('La dichiarazione', 'Corvino Multicolore &ndash; VII', 'i');
-		$this->addprev ('NaNoWriMo/Corvino/Multicolore/VI/', 'Gli ultimi giorni');
-		$this->addnext ('NaNoWriMo/Corvino/Multicolore/VIII/', 'Il lampione');
-		$this->prepare ('nano/corvino/index.php', false, false, true);
-	} if ($this->addside ()) {
-?><div class="section">
-	<h2>
-		La dichiarazione
-	</h2><ol><li>
-			<?=$d->mktid('A casa mia', 'i')?>
-		</li><li>
-			<?=$d->mktid('A casa sua', 'ii')?>
-	</li></ol>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<?php if ($d->mktab('i')) { ?><div class="section">
+title#La dichiarazione#Corvino Multicolore &ndash; VII
+prev#NaNoWriMo/Corvino/Multicolore/VI/#Gli ultimi giorni
+next#NaNoWriMo/Corvino/Multicolore/VIII/#Il lampione
+start#page
+tab#i
 		<div class="inside"><p>
 			Quel giorno ce ne andammo in gita.
 		</p><p>
@@ -126,27 +113,25 @@
 			Poi arrivammo alla porta, ed ero già stremato dalla
 			stanchezza, quando lei pronunciò le fatidiche parole:
 		</p><div class="outside">
-			<?=$d->speak('Camelia','Ti va di salire?')?>
+			speak#Camelia#Ti va di salire?
 		</div><p>
 			E dissi di sì per l'ultima volta.
-		</p>
-	</div><?php } if ($d->mktab('ii')) { ?><div class="section">
-		<p>
+tab#ii
 			Bella casa, cane simpatico. Un sacco di film che anch'io
 			avevo. E qualche bel quarto d'ora di discorsi inutili.
 			Poi mi decisi... più o meno.
 		</p><div class="outside"><p>
-			<?=$d->inline('Corvino','Camelia')?> sospirai
-			<?=$d->inline('Corvino','c&apos;è una cosa che devo
-			dirti')?>
+			inline#Corvino#Camelia sospirai
+			inline#Corvino#c&apos;è una cosa che devo
+			dirti
 		</p></div><p>
 			E poi impiegai lunghi, interminabili minuti. L'anima del
 			mio ragionamento, su consiglio di quegli amici ai quali
 			avevo chiesto consiglio, quei Matta, Sgrebeno e Condo,
 			era sostanzialmente
 		</p><div class="inside">
-			<?=$d->speak('Corvino','Chi ama meno tiene il controllo, e
-			piuttosto che subire preferisco rinunciare')?>
+			speak#Corvino#Chi ama meno tiene il controllo, e
+			piuttosto che subire preferisco rinunciare
 		</div><div class="inside"><p>
 			Una sorta di abbandono della zavorra per continuare a
 			vivere, considerando il fatto che ormai m'ero
@@ -159,9 +144,9 @@
 			Poi &ndash; finalmente &ndash; riuscii a sputare fuori
 			le parole
 		</p><div class="outside"><p>
-			<?=$d->inline('Corvino', 'Camelia')?> sospirai
-			<?=$d->inline('Corvino', 'io... mi sono... innamorato di
-			te. Dal primo momento')?>
+			inline#Corvino#Camelia sospirai
+			inline#Corvino#io... mi sono... innamorato di
+			te. Dal primo momento
 		</p></div><div class="inside"><p>
 			Eh. Classico e smielato, ma almeno era vero.
 		</p></div>
@@ -173,8 +158,8 @@
 		</p><p>
 			La prima, immediatamente, fu
 		</p><div class="outside">
-			<?=$d->speak('Camelia','Sei il quinto che me lo dice,
-			questa settimana')?>
+			speak#Camelia#Sei il quinto che me lo dice,
+			questa settimana
 		</div><div class="inside"><p>
 			Mica male.
 		</p></div><p>
@@ -184,7 +169,7 @@
 		</p></div><p>
 			La guardai negli occhi, sconsolato e dissi incerto
 		</p><div class="outside">
-			<?=$d->speak('Corvino','Eh... Complimenti?')?>
+			speak#Corvino#Eh... Complimenti?
 		</div><p>
 			dondolando la testa. Lei, spontaneamente, rise.
 		</p>
@@ -193,15 +178,15 @@
 			Poi però &ndash; senza che io avessi detto altro &ndash;
 			lei si lanciò in una lunga apologia che cominciò con
 		</p><div class="outside">
-			<?=$d->speak('Camelia','Sai, adesso ho un ragazzo...')?>
+			speak#Camelia#Sai, adesso ho un ragazzo...
 		</div><p>
 			ma contenne anche cose &ndash; assolutamente non
 			richieste &ndash; come
 		</p><div class="outside">
-			<?=$d->speak('Camelia','... forse non sai che, quando ero
+			speak#Camelia#... forse non sai che, quando ero
 			ancora in città, sono stata sia con Condo che con Matta,
 			ma non con Sgrebeno che comunque con me c&apos;ha
-			provato e non poco')?>
+			provato e non poco
 		</p></div><p>
 			Mi parve stanca. O almeno credo. Forse quello stanco ero
 			io.
@@ -253,8 +238,8 @@
 			concluse con le ultime parole che mi sarei immaginato di
 			poter sentire da lei
 		</p><div class="outside">
-			<?=$d->speak('Camelia','Che diresti, se ti chiedessi se
-			ti va di baciarmi?')?>
+			speak#Camelia#Che diresti, se ti chiedessi se
+			ti va di baciarmi?
 		</div><div class="inside"><p>
 			Ero decisamente impreparato per quelle parole.
 		</p></div>
@@ -269,7 +254,7 @@
 		</p></div><p>
 			Senza nemmeno pensare, risposi con un candido
 		<div class="outside">
-			<?=$d->speak('Corvino','No')?>
+			speak#Corvino#No
 		</div><p>
 			e me ne andai.
 		</p>
@@ -290,7 +275,11 @@
 			piedi perché stavo galleggiando per aria. Entrai in
 			camera mia dal balcone. E me ne andai fresco fresco a
 			dormire.
-		</p>
-	</div><?php } ?>
-</div>
-<?php } ?>
+stop#page
+start#side
+	title#La dichiarazione
+	pre#<ol>
+		li#tid#A casa mia#i
+		li#tid#A casa sua#ii
+	pre#</ol>
+stop#side

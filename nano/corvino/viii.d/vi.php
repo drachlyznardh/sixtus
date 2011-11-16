@@ -1,4 +1,4 @@
-<div class="section">
+start#page
 	<h2>
 		Al parco
 	</h2><p>
@@ -132,4 +132,4 @@ effetti non mi doleva più, da nessuna parte. Stavo benone. Magnifico.
 Così potei salire le scale con tutta calma, entrare in casa, togliermi le
 scarpe, appendere la giacca e andarmene a dormire tutto tranquillo.
 	</p>
-</div>	
+stop#page

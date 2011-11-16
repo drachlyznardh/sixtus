@@ -1,4 +1,4 @@
-<div class="section">
+start#page
 	<h2>
 		Di corsa
 	</h2><p>
@@ -190,4 +190,4 @@
 		nonostante tutto insuperabile &ndash; fui a casa, mi buttai
 		nella doccia e ne uscii fresco come una rosa.
 	</p>
-</div>
+stop#page
