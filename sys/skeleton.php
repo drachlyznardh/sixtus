@@ -49,8 +49,8 @@
 				</div><div id="content" class="small">
 					<?php
 						if (isset($opt['debug'])) require_once('sys/debug.php');
-						if ($d->allTab()) echo ($p->getPage('all'));
-						else echo ($p->getPage ($tab['name']));
+						if ($d->allTab()) echo ($p->getPage('all', false));
+						else echo ($p->getPage ($tab['name'], false));
 					?>
 				</div> <!-- Content -->
 				<div id="foot"><?php require_once ('sys/footer.php'); ?></div> <!-- Foot -->
@@ -58,7 +58,7 @@
 			<div id="rightside"><?php
 				require_once ('sys/related.php');
 				echo ('<br />');
-				echo ($p->getSide ());
+				echo ($p->getSide (false));
 				if ($rside && file_exists($rside)) {
 					echo ('<br />');
 					require_once ($rside);

@@ -1,238 +1,36 @@
 <?php
-	class Section {
-	
-		private $d;
-
-		private $isText;
-		private $isPre;
-		private $content;
-
-		public function __construct ($d) {
-			$this->d = $d;
-
-			$this->isText = false;
-			$this->isPre = false;
-			$this->content = false;
-		}
-
-		private function parseOption ($lineno, $first, $second) {
 		
-			$optname = false;
-			$optarg = false;
-			$cmd = false;
-
-			$args = split('@', $first);
-			switch (count($args)) {
-				case 3: $optarg = $args[2];
-				case 2: $optname = $args[1];
-				case 1: $cmd = $args[0];
-					break;
-				default: print_r ($args); die ('WHY U NO ParseOption? @'.$lineno);
-			}
-
-			list ($rcmd, $rcontent) = split ('#', $second, 2);
-
-			switch ($cmd) {
-				case 'p':
-				case 'li':
-					$this->content .= "<$cmd $optname=\"$optarg\">";
-					$this->parseLine($lineno, $rcmd, $rcontent);
-					$this->content .= "</$cmd>";
-					break;
-				default: die ('WHY U NO ParseOption? ['.$cmd.'] @'.$lineno);
-			}
-		}
-
-		public function parseLine ($lineno, $cmd, $content) {
-
-			if (strpos($cmd, '@'))
-				return $this->parseOption ($lineno, $cmd, $content);
-
-			switch ($cmd) {
-				case '':
-					if ($content)
-						$this->content .= $this->openp().$content;
-					else
-						$this->content .= $this->closep();
-					break;
-				case 'p':
-					$this->content .= $this->closeP().$this->openP();
-					if (strpos($content, '#')) {
-						list($rcmd, $rcontent) = split ('#', $content, 2);
-						$this->parseLine ($lineno, $rcmd, $rcontent);
-					} else $this->content .= $content;
-					break;
-				case 'li':
-					$this->content .= $this->openP().'<li>';
-					if (strpos($content, '#')) {
-						list($rcmd, $rcontent) = split ('#', $content, 2);
-						$this->parseLine ($lineno, $rcmd, $rcontent);
-					} else $this->content .= $content;
-					$this->content .= '</li>';
-					break;
-				case 'reverse':
-					$this->content .= $this->closeP().'<p class="reverse">';
-					$this->isText = true; break;
-				case 'id':
-					$this->content .= $this->closeP().'<a id="'.ucwords($content).'"></a>';
-					break;
-				case 'br':
-					$this->content .= $this->closeP().'<br />'; break;
-				case 'pre':
-					$this->content .= $content; break;
-				case 'title':
-					$this->content .= $this->closeP().'<h2>'.$content.'</h2>'; break;
-				case 'titler':
-					$this->content .= $this->closeP().'<h2 class="reverse">'.$content.'</h2>'; break;
-				case 'stitle':
-					$this->content .= $this->closeP().'<h3>';
-					if (strpos($content, '#')) {
-						list($rcmd, $rcontent) = split('#', $content, 2);
-						$this->parseLine($lineno, $rcmd, $rcontent);
-					} else $this->content .= $content;
-					$this->content .= '</h3>'; break;
-				case 'link':
-				case 'mklink':
-					$this->content .= $this->mklink ($lineno, $content); break;
-				case 'tid':
-				case 'mktid':
-					$this->content .= $this->mktid ($lineno, $content); break;
-				case 'speak':
-					$this->content .= $this->closeP().'<p>'.$this->mkinline($lineno, $content).'</p>'; break;
-				case 'inline':
-					$this->content .= $this->openP().$this->mkinline($lineno, $content); break;
-				case 'foto':
-					$this->content .= $this->closeP().$this->mkfoto($content); break;
-					
-				case 'begin':
-					switch (strtolower($content)) {
-						case 'inside':
-						case 'outside':
-							$this->content .= $this->closeP().'<div class="'.$content.'">'; break;
-						case 'pre':
-							$this->isPre = true;
-							$this->content .= $this->closeP(); break;
-						default: die ('Section: Unknown environment ['.$content.'] BEGIN @'.$lineno);
-					}
-					break;
-				case 'end':
-					switch (strtolower($content)) {
-						case 'inside':
-						case 'outside':
-							$this->content .= $this->closeP().'</div>'; break;
-						case 'pre':
-							$this->isPre = false; break;
-						default: die ('Section: Unknown environment ['.$content.'] END @'.$lineno);
-					}
-					break;
-				case 'exec':
-					$this->content .= eval($content);
-					break;
-
-				default: die ('Section: Unknown command ['.$cmd.'] @'.$lineno);
-			}
-			$this->content .= "\n";
-		}
-
-		private function openP() {
-			if ($this->isText) return '';
-			$this->isText = true;
-			return '<p>';
-		}
-
-		private function closeP() {
-			if (!$this->isText) return '';
-			$this->isText = false;
-			return '</p>'."\n";
-		}
-
-		public function getContent () {
-			if ($this->content) {
-				$result = '<!-- Section[ --><div class="section">';
-				$result .= $this->content;
-				$result .= '</div> <!-- ] /Section -->'."\n";
-				return $result;
-			} else return false;
-		}
-
-		private function mktid ($lineno, $content) {
-			$args = split ('#', $content);
-			switch (count($args)) {
-				case 2: return $this->d->mktid($args[0], $args[1]);
-				case 3: return $this->d->mktid($args[0], $args[1], $args[2]);
-				case 4: return $this->d->mktid($args[0], $args[1], $args[2], $args[3]);
-				case 5: return $this->d->mktid($args[0], $args[1], $args[2], $args[3], $args[4]);
-				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
-			}
-		}
-
-		public function mklink ($lineno, $content) {
-			$args = split ('#', $content);
-			switch (count($args)) {
-				case 2: return $this->d->link($args[0], $args[1]);
-				case 3: return $this->d->link($args[0], $args[1], $args[2]);
-				case 4: return $this->d->link($args[0], $args[1], $args[2], $args[3]);
-				case 5: return $this->d->link($args[0], $args[1], $args[2], $args[3], $args[4]);
-				default: print_r ($args); die ('Y U NO LINK? @'.$lineno);
-			}
-		}
-
-		private function mkinline ($lineno, $content) {
-			$args = split ('#', $content);
-			switch (count($args)) {
-				case 2: return $this->d->inline($args[0], $args[1]);
-				case 3: return $this->d->inline($args[0], $args[1], $args[2]);
-				default: print_r ($args); die ('Y U NO INLINE? @'.$lineno);
-			}
-		}
-					
-		private function mkfoto ($content) {
-			$args = split ('#', $content);
-			$ref = $args[0];
-			if (count($args) > 1) $src = $args[1];
-			else $src = $args[0];
-			$this->content .= '<p class="foto"><a target="_blank" href="'.$ref.'">';
-			$this->content .= '<img src="'.$src.'" />';
-			$this->content .= '</a>';
-		}
-	}
+	define('LYZ_META', 0);
+	define('LYZ_PAGE', 1);
+	define('LYZ_SIDE', 2);
 
 	class Parser {
-		
+
 		private $d;
 		private $rows;
-		private $status;
+		private $environment;
 		private $parser;
-
-		private $title;
-		private $subtitle;
-		private $prev;
-		private $next;
 
 		private $page;
 		private $side;
 		
-		private $tabs;
 		private $tab;
-		private $section;
 
 		public function __construct ($d) {
 			$this->d = $d;
 			$this->status = 0;
+			$this->environment = LYZ_META;
 			$this->parser = array ();
-			$this->meta = array ('title' => false,
+			$this->meta = array (
+				'title' => false,
 				'subtitle' => false,
 				'default' => false,
 				'prev' => false,
 				'next' => false);
 
 			$this->page = array();
-			$this->side = array();
-
-			$this->tabs = array();
-			$this->tab = array();
-			$this->tabname = false;
-			$this->section = new Section ($this->d);
+			$this->side = new Tab ($this->d, false);
+			$this->tab = new Tab ($this->d, false);
 		}
 
 		public function parse ($file) {
@@ -248,21 +46,67 @@
 			if ($pos === 0) return;
 			if ($pos === false) {
 				$cmd = false;
+				$opt = false;
 				$content = $line;
 			} else {
 				list ($cmd, $content) = split ('#', $line, 2);
 				$cmd = strtolower($cmd);
+
+				if (strpos($cmd, '@')) {
+					list ($cmd, $opt) = split ('@', $cmd, 2);
+					$opt = split('@', $opt);
+				} else $opt = false;
 			}
-			
-			switch ($this->status) {
-				case 0: $this->parseMeta ($lineno, $cmd, $content); break;
-				case 1: $this->parsePage ($lineno, $cmd, $content); break;
-				case 2: $this->parseSide ($lineno, $cmd, $content); break;
-				default: die ('Unknown status ['.$this->status.']');
+
+			switch ($cmd) {
+				case 'start':
+					$env = strtolower($content);
+					switch ($env) {
+						case 'page':
+							$this->switchEnvironment(LYZ_PAGE); break;
+						case 'side':
+							$this->switchEnvironment(LYZ_SIDE); break;
+						default: die ('Cannot START#'.$env.' @line'.$lineno);
+					}
+					return;
+				case 'stop':
+					$env = strtolower($content);
+					switch($env) {
+						case 'page':
+						case 'side':
+							$this->switchEnvironment(LYZ_META); break;
+						default: die ('Cannot STOP#'.$env.' @line'.$lineno);
+					}
+					return;
+				case 'tab':
+					$this->tab->close();
+					if ($this->environment == LYZ_PAGE) {
+						if (!$this->tab->isEmpty()) $this->page[] = $this->tab;
+						$this->tab = new Tab ($this->d, $content);
+					} else die ('Cannot TAB#'.$content.' @line'.$lineno);
+					return;
+				case 'include':
+					list($part, $file) = $this->getIncludeKeyword($content);
+					$parser = $this->getParser($file);
+					if ($opt && strcmp($opt[0], 'as') == 0) $as = $opt[1];
+					else $as = false;
+					$this->tab->addInclude($parser, $part, $as);
+					return;
+			}
+
+			switch ($this->environment) {
+				case LYZ_META:
+					$this->parseMeta ($lineno, $cmd, $opt, $content);
+					break;
+				case LYZ_PAGE:
+				case LYZ_SIDE:
+					$this->tab->parseLine ($lineno, $cmd, $opt, $content);
+					break;
+				default: die('parse('.$cmd.', '.$opt.'), '.$content.' @line'.$lineno);
 			}
 		}
 
-		private function parseMeta ($lineno, $cmd, $content) {
+		private function parseMeta ($lineno, $cmd, $opt, $content) {
 		
 			switch ($cmd) {
 				case '': break;
@@ -276,135 +120,45 @@
 				case 'subtitle':
 					$this->meta['subtitle'] = $content; break;
 				case 'prev':
-					$this->meta['prev'] = $this->section->mklink($lineno, $content); break;
-				case 'next':
-					$this->meta['next'] = $this->section->mklink($lineno, $content); break;
-				case 'start':
-					switch (strtolower($content)) {
-						case 'content':
-						case 'page':
-							$this->setStatus (1); break;
-						case 'side':
-							$this->setStatus (2); break;
-						default: die ('(0) Unknown environment ['.$content.'] @line '.$lineno);
+					$args = split('#', $content);
+					switch (count($args)) {
+						case 5: $link = $this->d->link($args[0], $args[1], $args[2], $args[3], $args[4]); break;
+						case 4: $link = $this->d->link($args[0], $args[1], $args[2], $args[3]); break;
+						case 3: $link = $this->d->link($args[0], $args[1], $args[2]); break;
+						case 2: $link = $this->d->link($args[0], $args[1]); break;
+						default: print_r($args); die ('Prev, WHY U NO LINK? @line'.$lineno);
 					}
+					$this->meta['prev'] = $link;
+					break;
+				case 'next':
+					$args = split('#', $content);
+					switch (count($args)) {
+						case 5: $link = $this->d->link($args[0], $args[1], $args[2], $args[3], $args[4]); break;
+						case 4: $link = $this->d->link($args[0], $args[1], $args[2], $args[3]); break;
+						case 3: $link = $this->d->link($args[0], $args[1], $args[2]); break;
+						case 2: $link = $this->d->link($args[0], $args[1]); break;
+						default: print_r($args); die ('Next, WHY U NO LINK? @line'.$lineno);
+					}
+					$this->meta['next'] = $link;
 					break;
 				default: die ('parseMeta: Unknown command ['.$cmd.'] @line '.$lineno);
 			}
 		}
 
-		private function parsePage ($lineno, $cmd, $content) {
+		private function switchEnvironment ($new, $tabname=false) {
 
-			switch ($cmd) {
-				case 'include':
-					list($keyword, $file) = $this->getIncludeKeyword($content);
-					$parser = $this->getParser($file);
-					$parser = new Parser($this->d);
-					$parser->parse($file);
-					$this->tab[] = array ('sec' => $this->section);
-					$this->section = new Section ($this->d);
-					$this->tab[] = array ($keyword => $parser);
+			$this->tab->close();
+			if (!$this->tab->isEmpty()) switch ($this->environment) {
+				case LYZ_PAGE:
+					$this->page[] = $this->tab;
+					$this->tab = new Tab($this->d, $tabname);
 					break;
-				case 'tab':
-					if (!$this->meta['default']) {
-						$this->meta['default'] = $content;
-						$this->d->setTab($content);
-					}
-					if (count($this->section) or count($this->tab)) {
-						$this->tab[] = array ('sec' => $this->section);
-						$this->section = new Section ($this->d);
-						$this->tabs[$this->tabname] = $this->tab;
-						$this->tab = array ();
-						$this->tabname = $content;
-					}
+				case LYZ_SIDE:
+					$this->side = $this->tab;
+					$this->tab = new Tab($this->d, false);
 					break;
-				case 'start':
-					if (strpos($content, '#')) {
-						list($keyword,  $id) = split ('#', $content);
-						if (strcmp($keyword, 'tab') == 0) {
-							if ($this->tabid) die ('(1) Cannot reopen tab!');
-							$this->tabid = $id;
-						} else die ('(1) Keyword ['.$keyword.'] is not tab');
-					} else die ('(1) Starting ['.$content.']');
-					break;
-				case 'stop':
-					switch (strtolower($content)) {
-						case 'content':
-						case 'page':
-							$this->tab[] = array ('sec' => $this->section);
-							$this->section = new Section ($this->d);
-							$this->tabs[$this->tabname] = $this->tab;
-							if (!isset($this->meta['default'])) $this->meta['default'] = $this->tabname;
-							$this->tabname = false;
-							$this->tab = array ();
-							$this->setStatus (0); break;
-						case 'tab':
-							$this->tab[] = array ('sec' => $this->section);
-							$this->section = new Section ($this->d);
-							$this->tabs[$this->tabid] = $this->tab;
-							$this->tabid = false;
-							$this->tab = array (); break;
-						case 'side':
-							die ('(1) Not inside [SIDE]'); break;
-						default: die ('(1) Stopping ['.$content.']');
-					}
-					break;
-				case 'sbr':
-					$this->tab[] = array ('sec' => $this->section);
-					$this->section = new Section($this->d);
-					$this->tab[] = array ('br' => false);
-					break;
-				case 'struct':
-					$this->tab[] = array ('sec' => $this->section);
-					$this->section = new Section($this->d);
-					$this->tab[] = array ('struct' => $content);
-				case 'sec':
-				case 'change':
-					$this->tab[] = array ('sec' => $this->section);
-					$this->section = new Section($this->d);
-					break;
-				default:
-					$this->section->parseLine ($lineno, $cmd, $content);
 			}
-		}
-
-		private function parseSide ($lineno, $cmd, $content) {
-
-			switch ($cmd) {
-				case 'include':
-					list($keyword, $file) = $this->getIncludeKeyword($content);
-					$parser = $this->getParser($file);
-					$this->side[] = array ('sec' => $this->section);
-					$this->section = new Section ($this->d);
-					$this->side[] = array ($keyword => $parser);
-					break;
-				case 'start':
-					die ('(2) Should not start anything! ['.$content.'] @'.$lineno);
-					break;
-				case 'stop':
-					if (strcasecmp($content, 'Side')) die ('(2) Should not stop ['.$content.'] @'.$lineno);
-					$this->side[] = array ('sec' => $this->section);
-					$this->section = new Section ($this->d);
-					$this->setStatus(0);
-					break;
-				case 'sbr':
-					$this->side[] = array ('sec' => $this->section);
-					$this->section = new Section($this->d);
-					$this->side[] = array ('br' => false);
-					break;
-				case 'change':
-					$this->side[] = array ('sec' => $this->section);
-					$this->section = new Section($this->d);
-					break;
-				default:
-					$this->section->parseLine ($lineno, $cmd, $content);
-			}
-		}
-
-		private function setStatus ($status) {
-			$this->isNotText = true;
-			$this->isPre = false;
-			$this->status = $status;
+			$this->environment = $new;
 		}
 
 		public function getTitle () { return $this->meta['title']; }
@@ -414,63 +168,27 @@
 		public function getNext () { return $this->meta['next']; }
 		public function getPrev () { return $this->meta['prev']; }
 
-		public function getPage ($tab=false) {
+		public function getPage ($name, $as) {
 
-			$backup = '<div class="section"><p>There is no tab ['.$tab.']</p></div>';
 			$page = false;
 
-			if (!$tab) {
-				$key = $this->meta['default'];
-				if (isset($this->tabs[$key])) return $this->showTab($key, $this->tabs[$key]);
-				else return $backup;
-			}
+			if (!$name) return $this->page[0]->getContent($as);
 
-			if (strcmp($tab, 'all') == 0) {
-				foreach (array_keys($this->tabs) as $key) {
-					$page .= "\n".'<!-- Tab#'.$key.'/Start -->'."\n";
-					$page .= $this->showTab($key, $this->tabs[$key]);
-					$page .= "\n".'<!-- Tab#'.$key.'/Stop -->'."\n";
-				}
+			if (strcmp($name, 'all') == 0) {
+				foreach ($this->page as $tab)
+					$page .= $tab->getContent($as);
 				return $page;
 			}
 
-			if (isset($this->tabs[$tab])) return $this->showTab($tab, $this->tabs[$tab]);
-			else return $backup;
+			foreach ($this->page as $tab)
+				if (strcmp($tab->getName(), $name) == 0)
+					return $tab->getContent($as);
+
+			return '<div class="section"><p>There is no tab ['.$name.']</p></div>';
 		}
 
-		private function showTab ($name, $content) {
-			
-			$result = '<a id="'.strtoupper($name).'"></a>';
-			foreach ($content as $part){
-				$keys = array_keys ($part);
-				switch ($keys[0]) {
-					case 'sec' : $result .= $part['sec']->getContent(); break;
-					case 'br'  : $result .= '<br />'; break;
-					case 'side': $result .= $part['side']->getSide(); break;
-					case 'page': $result .= $part['page']->getPage(); break;
-					case 'both': $result .= $part['both']->getSide().$part['both']->getPage(); break;
-					case 'struct': $result .= $part['struct']; break;
-					default: $result .= $part[$keys[0]]->getPage($keys[0]);
-						//die ('showTab: unknown content type ['.$keys[0].']');
-				}
-			}
-			return $result;
-		}
-
-		public function getSide () {
-			$side = false;
-			foreach ($this->side as $obj) {
-				$keys = array_keys ($obj);
-				switch ($keys[0]) {
-					case 'sec': $side .= $obj['sec']->getContent(); break;
-					case 'br': $side .= '<br />'; break;
-					case 'side': $side .= $obj['side']->getSide(); break;
-					case 'page': $side .= $obj['page']->getPage(); break;
-					case 'both': $side .= $obj['both']->getSide().$obj['both']->getPage(); break;
-					default: die ('GetSide: unknown content type ['.$keys[0].']');
-				}
-			}
-			return $side;
+		public function getSide ($as) {
+			return $this->side->getContent($as);
 		}
 
 		private function getParser ($file) {
@@ -500,17 +218,13 @@
 		}
 
 		public function show () {
-			echo ('<h2>Page / Tabs ('.count($this->tabs).')</h2>');
-			foreach ($this->tabs as $tab) {
-				echo ('<p>');
-				foreach ($tab as $obj) {
-					$keys = array_keys($obj);
-					echo $keys[0].', ';
-				}
-				echo ('</p>');
-			}
-			echo ('<h2>Side / Section ('.count($this->side).')</h2>');
-			foreach ($this->side as $side) echo $side;
+
+			echo ('<h2>Page / Tabs ('.count($this->page).')</h2>');
+			foreach ($this->page as $tab) $tab->show();
+
+			echo ('<h2>Side</h2>');
+			$this->side->show();
+
 			echo ('<h2>Include ('.count($this->parser).')</h2>');
 			foreach ($this->parser as $parser) {
 				echo ('<div style="width:50%;float:left"><div class="section">');

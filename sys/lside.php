@@ -6,16 +6,7 @@
 		[ <?=$d->link('News/2011/', '2011')?> ]
 		/ <?=$d->link('Extra/Guida/', 'FAQ')?>
 	</p>
-</div><!--div class="section">
-	<p>
-		<?=$d->link('News/', 'Ultime novità')?>
-	</p><h2 class="reverse">
-		Meta
-	</h2><p>
-		Domande? Dubbi? Ecco la 
-		<?=$d->link('Extra/Guida/', 'Guida')?>
-	</p>
-</div--><br /><div class="section">
+</div><br /><div class="section">
 	<h2 class="reverse">
 		Cose interessanti
 	</h2><h3>
@@ -35,7 +26,7 @@
 		<?=$d->link('Recensioni/', 'Recensioni')?>
 	</h3><p class="reverse">
 		<?=$d->link('Recensioni/', 'Classifica', 'CLASSIFICA') ?>
-		/ <?=$d->link('Recensioni/', 'Progressi', 'PROGRESSI') ?>
+		/ <?=$d->link('Recensioni/', 'Progressi', 'INCORSO') ?>
 	</p><h3>
 		<?=$d->link('NaNoWriMo/', 'NaNoWriMo')?>
 	</h3><p class="reverse">
