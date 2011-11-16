@@ -50,10 +50,16 @@ div.section {
 	margin: 5px;
 }
 
-div.doublecol {
+.doublecol {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	column-count: 2;
+}
+
+.triplecol {
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
 }
 
 div.section:first-child { margin-top: 0px; }
@@ -81,11 +87,11 @@ h3 {
 	margin: 2px 0px 2px 4px;
 }
 
-h2 /*h3*/ {
+/*h2 h3 {
 	column-span: all;
 	-moz-column-span: all;
 	-webkit-column-span: all;
-}
+}*/
 
 div.section p.reverse { text-align: right; }
 

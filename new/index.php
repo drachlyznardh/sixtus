@@ -57,7 +57,7 @@ Start#Page
 	salverò nella lista delle <span class="code">@Ragazza-__SUFFIX__</span>, per
 	sempre nel mio cuore.
 
-	change#
+	sec#
 	id#03/00:00
 	<span class="em">
 	link##03/11/2011 00:00##03/00:00
@@ -74,7 +74,7 @@ Start#Page
 	e
 	link#Recensioni/Film/XVII/#First Blood Part II#ii
 
-	change#
+	sec#
 	id#27/16:35
 	<span class="em">
 	link##27/10/2011, 16:35##27/16:35
@@ -86,7 +86,7 @@ Start#Page
 	link#Recensioni/Show/XIV/#scritto#II
 	ugualmente, perché non conoscere l'argomento non l'ha mai fermato.
 
-	change#
+	sec#
 	id#23/22:25
 	<span class="em">
 	link##23/10/2011, 22:25##23/22:25
@@ -114,7 +114,7 @@ Start#Page
 	end#outside
 	(Avevamo scommesso dei caffé, due caffé. E io li voglio. Suuuuuuuuubito!)
 
-	change#
+	sec#
 	id#18/16:35
 	<span class="em">
 	link##18/10/2011, 16:35##18/16:35
@@ -131,7 +131,7 @@ Start#Page
 	giorni dopo, si fanno sentire… chi m'ha visto può certificare quanto
 	lentamente io faccia le scale, ora.
 
-	change#
+	sec#
 	id#16/23:45
 	<span class="em">
 	link##16/10/2011, 23:45##16/23:45

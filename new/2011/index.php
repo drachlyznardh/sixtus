@@ -16,7 +16,6 @@ start#side
 	include#new/2011/09.php#side
 	include#new/2011/08.php#side
 	include#new/2011/07.php#side
-
 stop#side
 start#page
 	In ordine crolonogico inverso, le notizie del 2011.
