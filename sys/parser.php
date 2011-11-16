@@ -450,7 +450,8 @@
 					case 'page': $result .= $part['page']->getPage(); break;
 					case 'both': $result .= $part['both']->getSide().$part['both']->getPage(); break;
 					case 'struct': $result .= $part['struct']; break;
-					default: die ('showTab: unknown content type ['.$keys[0].']');
+					default: $result .= $part[$keys[0]]->getPage($keys[0]);
+						//die ('showTab: unknown content type ['.$keys[0].']');
 				}
 			}
 			return $result;

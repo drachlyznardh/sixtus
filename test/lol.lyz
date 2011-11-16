@@ -1,13 +1,17 @@
 title#Lol#Lolololololol
 
 start#page
-title#This is Lol
-titler#Lolololololol
+	title#This is Lol
+	titler#Lolololololol
 
-Lolololololololololololol
+	Lolololololololololololol
+
+	Now include just one tab [culo] from test/lolol
+	include#test/lolol#culo
+	And done.
 stop#page
 
 start#side
-title#Lol
-loloololololololo
+	title#Lol
+	loloololololololo
 stop#side
