@@ -48,7 +48,7 @@ Tab#intro
 	mklink#Storie/2010/XX/#storia,
 	una volta, che tentava di fare la stessa cosa… beh, quella storia non se la
 	ricorda nessuno, e ad ogni modo ormai è antiquata.
-	change#
+	sec#
 	Ora, qualche parola sulla struttura del sito: potete vedere la prima
 	colonna, a sinistra. Quella non cambia quasi mai, è passata per
 	alcune piccole modifiche in passato ma senza mai modificare il suo
@@ -87,7 +87,7 @@ tab#compagni
 	nelle storie, ma non mi sono mai preso la briga di spiegare chi
 	fossero. Ecco un bell'elenco. 
 
-	change#
+	sec#
 	title#Quelli dell'Aula Studio
 	Fin da quando ci siamo spostati nel nuovo edificio, la nostra
 	compagnia è nota per prendere possesso dei tavoli, far gran casino e
@@ -125,7 +125,7 @@ pre#<ul><li>
 		nei dintorni, perché lui fa cose. Ne sa un sacco.
 
 pre#</li></ul>
-	change#
+	sec#
 	title#Altri allegri compagni
 	Non tutti i miei amici studiano in questa facoltà, non ci spendono
 	la vita, ma fanno anche altre cose.
@@ -188,7 +188,7 @@ pre#<div style="float:none;clear:both"></div>
 	L'arte dei film brutti è una cosa rara e raffinata. Pochi li sanno fare,
 	pochi li sanno apprezzare. E spesso non ho briga di scrivere…
 
-	change#
+	sec#
 
 	Ma non solo film!
 
@@ -222,7 +222,7 @@ tab#meta
 	Metasezione!!!
 	title#Meta [ Extra ]
 	Questa sezione è appunto dedicata a questa sezione.
-	change#
+	sec#
 	All'inizio (in realtà, fino a poco tempo fa, qualcosa come alcune
 	settimane…) utilizzavo la sezione ‘extra’ soltanto come luogo in cui
 	mettere tutte le immagini che compaiono sul sito; al tempo, erano tre.
@@ -231,7 +231,7 @@ tab#meta
 	coperte di polvere e da quella polvere è germinata della muffa, che alla
 	fine, evolutasi fino allo stato di creatura senziente, è divenuta questa
 	pagina che state leggendo.
-	change#
+	sec#
 	pre#<a id="Modi"></a>
 	Ci sono modi e modi.
 	title#Meta [ Modi ]
@@ -244,7 +244,7 @@ tab#meta
 	tornai ad avere un singolo stile… quello che dovreste vedere
 	normalmente.
 
-	change#
+	sec#
 
 	Ma la vita è piena di sorprese. Un bel dì mi venne in mente di dividere
 	le pagine in tab, e scoprii che non tutti i browser supportano l'evento
@@ -257,14 +257,14 @@ tab#meta
 	anche il <span class="bolo">buon Bolo</span> aveva lo stesso problema,
 	creai un alias a suo nome.
 
-	change#
+	sec#
 	pre#<a id="Stili"></a>
 	title#Meta [ Stili ]
 	Infine, un bel dì mio fratello capitò sul sito e si lamentò di non
 	riuscire a distinguere una beata mazza di quel che vedeva. Per lui c'è
 	quindi il <span class="code">Dado mode</span>, dai colori più classici.
 
-	change#
+	sec#
 
 	Potete passare dalla modalità standard (la mia) alle altre calcando
 	qualche link in alto a sinistra. Se invece sapete scrivere, potete

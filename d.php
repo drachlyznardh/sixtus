@@ -30,6 +30,9 @@
 	require_once ('sys/finder.php');
 	require_once ('sys/dialog.php');
 	require_once ('sys/pager.php');
+
+	require_once ('sys/section.php');
+	require_once ('sys/tab.php');
 	require_once ('sys/parser.php');
 
 	$request = urldecode(strtolower(substr($_SERVER['REQUEST_URI'], 1)));

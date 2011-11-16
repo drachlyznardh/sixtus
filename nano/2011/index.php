@@ -15,8 +15,7 @@ Start#Page
 	avrà già sentito parlare del dottor Odio e della <span
 	class="magnet">ragazza magnete</span>. Questa è (sarà) la storia completa.
 
-change#
-
+	sec#
 	Per adesso, dovete accontentarvi di questo indizio:
 	begin#outside
 		Il dottor Odio non ha pace: settimanalmente, il suo malvagio

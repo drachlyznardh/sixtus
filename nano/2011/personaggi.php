@@ -11,7 +11,7 @@ start#side
 	/
 	tid#Giuliano#nostri#giuliano
 	/
-	tid#XXX#nostri#blah
+	tid#Ettore#nostri#ettore
 stop#side
 
 start#page
@@ -39,7 +39,7 @@ tab#nostri
 	sec#
 	id#ettore
 	title#Ettore Michelotti
-	Ragioniere prima ed economista poi, Blah è il contabile del Dottore.
+	Ragioniere prima ed economista poi, Ettore è il contabile del Dottore.
 
 	sbr#
 	title#Erinni
