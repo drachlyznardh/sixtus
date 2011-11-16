@@ -14,7 +14,7 @@ start#page
 	letto (recentemente) mentre camminavo.
 stop#page
 start#side
-	titler#Libri
+	stitle#Libri
 	p#link#Recensioni/Libri/XI/#Nessun Dove#I## – 1996
 
 	p#link#Recensioni/Libri/XII/#Harry Potter &amp; …#I## – 1997~2007

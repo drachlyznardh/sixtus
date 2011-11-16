@@ -1040,6 +1040,47 @@ tab#vi
 
 	E nel prossimo libro, Harry & Ron & Hermione alla caccia degli altri
 	McGuffin. Non vedo l'ora…
+
+tab#vii
+	È insopportabile!
+	title#I doni della morte
+	'Sto libro è già insopportabile! Sono soltanto a pagina 40 e già mi tocca
+	mettermi a scrivere, perché 'ste porcherie non devono passare impunite!
+
+	sec#
+	titler#Capitolo 1
+	Voldemort, Piton e i loro allegri compagni sono tutti attorno al tavolo. Si
+	sono imbucati a casa di Lucius Malfoy, e Voldemort pretende pure che tutti
+	siano contenti (BTW, Malfoy senior è stato liberato da Azkaban nonostante
+	fosse inutile… continua ad essere inutile).
+
+	Conversazione su come il Ministero sospetti l'Ordine, l'Ordine sospetti il
+	Ministero, $tizio abbia maledetto $altroTizio eccetera… intanto Voldemort fa
+	lo stronzo, fa le battutine di merda e se la gode ad essere malvagio.
+
+	Per un qualche motivo, Malfoy junior è al tavolo con tutti gli altri. E
+	guarda caso non fa un cazzo, è inutile come un culo senza la riga.
+
+	Alla fine, Voldemort uccide una tizia inutile a caso e si volta sulla
+	poltrona girevole accarezzando il <span class="wrong">gatto</span> serpente.
+
+	sec#
+	titler#Capitolo 2
+	Silente è morto. I giornali tessono le lodi, i giornali spalano merda. Serve
+	un capitolo intero.
+
+	sec#
+	titler#Capitolo 3
+	Harry deve togliersi dai coglioni, perché <span class="wrong">a
+	mezzanotte</span> al suo diciassettesimo complenno <span class="wrong">si
+	trasformerà in zucca</span> la protezione del sangue materno svanirà e
+	allora <em>Buuuuuuuula</em>.
+
+	Arrivano due tizi di scorta, e poi parte un “finale Disney™ anticipato” che
+	non c'entra un cazzo (<a target="_blank"
+	href="http://www.youtube.com/results?search_query=elio+e+le+storie+tese+abitudinario">ma
+	che piace ai giovani?</a>), eh, già, perché anche se sembrano stronzi e sono
+	sembrati stronzi per tutta la vita in realtà no.
 stop#page
 start#side
 	p#tid#Intro#intro
@@ -1057,6 +1098,7 @@ start#side
 			tid#Fenice#v#V3
 		pre#</li>
 		li#tid#Il principe mezzosangue#vi
+		li#tid#I doni della morte#vii
 	pre#</ol>
 stop#side
 

@@ -9,6 +9,6 @@ start#page
 	pochettino. Qualche parere anche in questo campo.
 stop#page
 start#side
-	titler#Giochi
+	stitle#Giochi
 	p#link#Recensioni/Giochi/II/#Assassin's Creed Brotherhood### – 2010
 stop#side

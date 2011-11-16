@@ -1,5 +1,6 @@
 title#Rambo#Una quadrilogia che cambia nel tempo
 prev#Recensioni/Film/Brutti/XVI/#Bitch Slap
+next#Recensioni/Film/Brutti/XVIII/#Black Sheep
 	
 start#page
 tab#i

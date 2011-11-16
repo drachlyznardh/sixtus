@@ -217,7 +217,7 @@ tab#incorso
 tab#indice
 	id#cronologico
 	title#Indice cronologico
-	pre#<ol>
+	pre#<ol class="triplecol" style="margin-left:1em">
 		li#link#Recensioni/Film/I/#Thor### – 2011
 		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
 		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
@@ -242,18 +242,13 @@ tab#indice
 	sbr#
 	id#categoria
 	title#Per categoria
-
-	struct#<div style="width:50%;float:left">
-	include#review/film/index#side
-	struct#</div><div style="width:50%;float:left">
-	include#review/brutti/index#side
-	struct#</div><div style="width:50%;float:left">
-	include#review/game/index#side
-	struct#</div><div style="width:50%;float:left">
-	include#review/show/index#side
-	struct#</div><div style="width:50%;float:left">
-	include#review/book/index#side
-	struct#</div><div style="clear:both"></div>
+	pre#<div class="doublecol">
+	include@as@content#review/film/index#side
+	include@as@content#review/brutti/index#side
+	include@as@content#review/game/index#side
+	include@as@content#review/show/index#side
+	include@as@content#review/book/index#side
+	pre#</div>
 stop#page
 start#side
 	reverse#
@@ -284,7 +279,7 @@ start#side
 		li#tid#Magnificamente brutto#classifica#magnifici
 	pre#</ol>
 	br#
-	stitle#Indice
+	stitle#tid#Indice#indice
 	reverse#
 		tid#Cronologico#indice#cronologico
 		/

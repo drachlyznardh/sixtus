@@ -17,7 +17,7 @@ start#page
 	apprezzabili. Altre invece sono solo brutte.
 stop#page
 start#side
-	titler#Film brutti
+	stitle#Film brutti
 	p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap###– 2009
 	p#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
 stop#side

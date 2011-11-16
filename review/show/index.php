@@ -12,7 +12,7 @@ start#page
 	vedermelo.
 stop#page
 start#side
-	titler#Show
+	stitle#Show
 	p#link#Recensioni/Show/IV/#Pani Poni Dash### – 2005
 
 	p#link#Recensioni/Show/V/#BlassReiter### – 2008

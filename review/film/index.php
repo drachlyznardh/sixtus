@@ -13,7 +13,7 @@ start#page
 	piace, mi sono messo a scriverne. Qui.
 stop#page
 start#side
-	titler#Film
+	stitle#Film
 	
 	p#link#Recensioni/Film/I/#Thor### – 2011
 
