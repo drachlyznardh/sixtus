@@ -1,4 +1,5 @@
-Title#La corona dell'Odio#Dottor Odio Gaiden – Parte I
+Title#Quattro dottori#Dottor Odio Gaiden – Parte I
+Next#NaNoWriMo/2011/II/#La Corona dell'Odio
 
 Start#Page
 Tab#1
@@ -1086,13 +1087,48 @@ tab#7
 	utilizzare le mia capacità per prendere quei due uomini al guinzaglio.
 	L'occasione era troppo ghiotta.
 
-tab#viii
-	#Fermamente deciso a scoprire fin dove il Dottore sarebbe potuto arrivare,
-	#portai avanti il discorso ancora un po', poi decisi di and
+tab#8
+	Poco dopo, la conversione si esaurì ed ognuno prese la sua strada.
+
+	Me ne tornai al mio triste appartamento camminando. Nel frattempo, pensavo
+	al futuro, e alle opportunità che questo poteva portare. Il Dottore avrebbe
+	veramente realizzato qualcosa di utile, da quello scolapasta? Avrebbe
+	veramente potuto farci dei soldi?
+
+	sbr#
+	La mattina dopo, contattai il Dottore per telefono, e fissai un incontro per
+	il primo momento libero; quello stesso pomeriggio mi recai nuovamente nel
+	suo ufficio per discutere dell'esperimento del giorno prima.
+
+	Spiegai chiaramente i miei dubbi:
+	pre#<ol>
+		li#l'economista era un pericolo, non avrebbe retto i grandi cambiamenti
+		che sarebbero arrivati, e sebbene la sua presenza fosse necessaria
+		all'inizio, sarebbe stato necessario liberarsene molto presto;
+		li#il geologo non era altrettanto traballante, ma era comunque da tenere
+		sott'occhio, perché non ero certo che la sua storia personale con il
+		Dottore sarebbe bastata a tenerlo in riga
+	pre#</ol>
+
+	Il Dottore, in un tentativo che giudicai abbastanza maldestro di mettermi
+	alla prova, mi domandò quali fossero questi “pericoli” di cui parlavo. Gli
+	risposi che il passaggio sul mercato nel settore privato dell'energia era
+	una manovra rischiosa, essendo quello un campo nel quale noi due non avevamo
+	alcuna competenza.
+
+	La collaborazione forzata con l'unico esperto nel campo ch'eravamo riusciti
+	a recuperare era rischiosa, perché la scelta del Dottore per catturare
+	l'attenzione di questo tale era stata coinvolgerlo nel progetto. Reputando
+	estremamente probabile un suo ripensamento nel prossimo futuro, avremmo
+	fatto bene a tenere pronta una soluzione per eliminarlo.
+
+	Al ché il Dottore mi confidò di essere in perfetto accordo. Al tempo, non
+	indagai oltre. Firmai il contratto che avevo già visionato la settimana
+	precedente senza alcun ripensamento.
 Stop#Page
 Start#Side
 	Title#Parte I
-	Titler#La Corona dell'Odio
+	Titler#Quattro dottori
 	p#tid#Sessione 1#1## – 1264 parole
 
 	p#tid#Sessione 2#2## – 395 parole
@@ -1107,6 +1143,8 @@ Start#Side
 	
 	p#tid#Sessione 7#7## – 1264 parole
 
-	p#tid#Sessione 8#8## – parole
+	p#tid#Sessione 8#8## – 270 parole
+
+	title#7756 parole
 Stop#Side
 
