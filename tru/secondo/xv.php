@@ -1,20 +1,14 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('La fuga', 'Via via via via!!!');
-		$this->addprev ('Tru/Naluten/Vol.II/XIV/', 'Proposta');
-		$this->addnext ('Tru/Naluten/Vol.II/XVI/', 'La sua gente');
-		$this->prepare ('tru/secondo/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
+title#La fuga#Via via via via!!!
+prev#Tru/Naluten/Vol.II/XIV/#Proposta
+next#Tru/Naluten/Vol.II/XVI/#La sua gente
+start#page
 		<h2>Tru Naluten XV &ndash; La fuga</h2>
 		<div class="inside">
-			<?=$d->speak('jo', 'Dannato Simak e le sue manie di persecuzione! M&apos;ha davvero chiuso in una cella!')?>
-			<?=$d->speak('jo', 'Beh, &egrave; deciso: non lo chiamer&ograve; affatto!')?>
+			speak#jo#Dannato Simak e le sue manie di persecuzione! M&apos;ha davvero chiuso in una cella!
+			speak#jo#Beh, &egrave; deciso: non lo chiamer&ograve; affatto!
 		</div>
 		<div class="outside">
-			<?=$d->speak ('simadran', 'Ebbene s&igrave;, Simak s&apos;&egrave; spazientito ed ha spedito la povera Jo in qualche punto del tempo e dello spazio, ma non un punto a caso. Non crederete mica che quel Simak mandi le persone a spasso per l&apos;universo senza uno scopo, vero? Beh, forse... Per ora dir&ograve; che se non altro prepara adeguatamente le situazioni in cui infilare le suddette persone: nel presente caso, ad esempio, quella vecchia volpe dal mutevole aspetto e dalle oscure amicizie ha inscenato un classico! Ecco infatti un secondino apprestarsi ad aprire la cella di Jo...'); ?>
+			speak#simadran#Ebbene s&igrave;, Simak s&apos;&egrave; spazientito ed ha spedito la povera Jo in qualche punto del tempo e dello spazio, ma non un punto a caso. Non crederete mica che quel Simak mandi le persone a spasso per l&apos;universo senza uno scopo, vero? Beh, forse… Per ora dir&ograve; che se non altro prepara adeguatamente le situazioni in cui infilare le suddette persone: nel presente caso, ad esempio, quella vecchia volpe dal mutevole aspetto e dalle oscure amicizie ha inscenato un classico! Ecco infatti un secondino apprestarsi ad aprire la cella di Jo...
 		</div>
 	</div><div class="section">
 		<p>
@@ -61,28 +55,10 @@
 		</p>
 	</div><div class="section">
 		<div class="outside">
-			<?=$d->speak('simadran', 'E per quanto due ore siano un breve
-				termine per consumare un buon pasto e dare il proprio addio
-				alla vita, non crediate che non si possa essere anche
-				pi&ugrave; sfortunati: &egrave; questo infatti il fato che
-				attende quel povero carceriere.');?>
-			<?=$d->speak('simadran', 'Nato il 31 luglio di vent&apos;anni fa,
-				Patrice Virf detto Pat non fu un bambino particolarmente
-				sveglio. Arruolatosi tredicenne sotto Morrice, si
-				dimostr&ograve; pi&ugrave; volte inadatto al mare, fu assegnato
-				alle truppe di terra presso la caserma di Teburg. Dopo quattro
-				di servizio di pattugliamento, in seguito ad un infortunio
-				durante una sommossa, fu destinato al carcere centrale di
-				Breburg'); ?>
-			<?=$d->speak('simadran', 'Stamane s&apos;&egrave; svegliato di
-				malumore, dopo una pessima colazione s&apos;&egrave; avviato
-				zoppicando verso le segrete, per portare il rancio
-				all&apos;unica ospite di questo giorno. Infastidito dalle scale
-				che portano al piano inferiore, che gli procurano dolore per
-				via della gamba zoppa, ha accompagnato ciascuno scalino con una
-				bestemmia.');?>
-			<?=$d->speak('simadran', 'Ora s&apos;appresta a tornare in guardina,
-				per passare un&apos;altra giornata d&apos;ozioso servizio...');?>
+			speak#simadran#E per quanto due ore siano un breve termine per consumare un buon pasto e dare il proprio addio alla vita, non crediate che non si possa essere anche pi&ugrave; sfortunati: &egrave; questo infatti il fato che attende quel povero carceriere
+			speak#simadran#Nato il 31 luglio di vent&apos;anni fa, Patrice Virf detto Pat non fu un bambino particolarmente sveglio. Arruolatosi tredicenne sotto Morrice, si dimostr&ograve; pi&ugrave; volte inadatto al mare, fu assegnato alle truppe di terra presso la caserma di Teburg. Dopo quattro di servizio di pattugliamento, in seguito ad un infortunio durante una sommossa, fu destinato al carcere centrale di Breburg
+			speak#simadran#Stamane s&apos;&egrave; svegliato di malumore, dopo una pessima colazione s&apos;&egrave; avviato zoppicando verso le segrete, per portare il rancio all&apos;unica ospite di questo giorno. Infastidito dalle scale che portano al piano inferiore, che gli procurano dolore per via della gamba zoppa, ha accompagnato ciascuno scalino con una bestemmia.
+			speak#simadran#Ora s&apos;appresta a tornare in guardina, per passare un&apos;altra giornata d&apos;ozioso servizio…
 		</div>
 		<p>
 			Il povero Pat si siede dolorante sullo sgabello in guardiola, si
@@ -111,11 +87,8 @@
 			un pezzo di formaggio stagionato.
 		</p>
 		<div class="inside">
-			<?=$d->speak('jo','Mangiarne o non mangiarne, che fare?');?>
-			<?=$d->speak('jo','Che senso avrebbe poi, mangiare qualcosa adesso?
-				Se &egrave; bene attendere tre ore dopo i pasti prima di
-				entrare in acqua, quale sar&agrave; l&apos;attesa indicata
-				prima di salire al patibolo?');?>
+			speak#jo#Mangiarne o non mangiarne, che fare?
+			speak#jo#Che senso avrebbe poi, mangiare qualcosa adesso? Se &egrave; bene attendere tre ore dopo i pasti prima di entrare in acqua, quale sar&agrave; l&apos;attesa indicata prima di salire al patibolo?
 		</div>
 		<p>
 			Pur presa dallo sconforto, Jo non dimentic&ograve; il vero motivo
@@ -123,13 +96,7 @@
 			ci&ograve; era dovuto:
 		</p>
 		<div class="inside">
-			<?=$d->speak('jo','Dannato, tu... coso nudo e unto senza palle,
-				sputo colato dalle fauci di eLy... di quell&apos;altro abominio
-				con troppe gambe e troppi occhi! Dannato tu e la tua stirpe,
-				sempre che ce ne sia una alla quale appartieni! Mi metti al
-				patibolo sperando di piegarmi? Oh, ben vedrai che ti
-				combiner&ograve;! Giuro qui e ora che da queste labbra
-				usciranno soltanto maledizioni, fino a che avr&ograve; fiato!');?>
+			speak#jo#Dannato, tu… coso nudo e unto senza palle, sputo colato dalle fauci di eLy… di quell&apos;altro abominio con troppe gambe e troppi occhi! Dannato tu e la tua stirpe, sempre che ce ne sia una alla quale appartieni! Mi metti al patibolo sperando di piegarmi? Oh, ben vedrai che ti combiner&ograve;! Giuro qui e ora che da queste labbra usciranno soltanto maledizioni, fino a che avr&ograve; fiato!
 		</div>
 		<p>
 			E cos&igrave; dicendo, alzava le mani chiuse al soffitto e alla
@@ -155,9 +122,9 @@
 			Jo pens&ograve;:
 		</p>
 		<div class="outside">
-			<p><?=$d->inline('jo', 'Questo tale dev&apos;essere uscito dalle
-			Mille e una notte!');?> &ndash; ma disse invece &ndash; <?=$d->inline
-			('jo', $d->t ('Chi sei? Cosa vuoi?', 'Hi hei? Hoha huoi?'));?>
+			p#inline#jo#Questo tale dev&apos;essere uscito dalle Mille e una notte!
+			&ndash; ma disse invece &ndash;
+			inline#jo#<em title="Chi sei? Cosa vuoi?">Hi hei? Hoha huoi?</em>
 			</p>
 		</div>
 		<p>
@@ -166,9 +133,7 @@
 			sguardo si illumin&ograve;, s&apos;inchin&ograve; fino a terra e disse:
 		</p>
 		<div class="outside">
-			<?=$d->speak('al&igrave;','Come l&apos;oracolo ha predetto, ecco la
-				prigioniera con la bocca piena, ed ecco la macchia di brodo
-				come la vidi in sogno! Salute, mia signora!')?>
+			speak#al&igrave;#Come l&apos;oracolo ha predetto, ecco la prigioniera con la bocca piena, ed ecco la macchia di brodo come la vidi in sogno! Salute, mia signora!
 		</div>
 		<p>
 			La &quot;sua signora&quot; non cap&igrave; e stette, non sapendo
@@ -181,10 +146,7 @@
 			infrangere lievemente il protocollo e prese nuovamente la parola:
 		</p>
 		<div class="outside">
-			<?=$d->speak('al&igrave;', 'Mia Signora, lasciate che questo vostro
-				servo si presenti: sono Al&igrave;. Sono qui per liberarvi e
-				portarvi al sicuro. Ora vi prego di seguirmi, abbiamo poco
-				tempo prima che le guardie trovino i cadaveri...')?>
+			speak#al&igrave;#Mia Signora, lasciate che questo vostro servo si presenti: sono Al&igrave;. Sono qui per liberarvi e portarvi al sicuro. Ora vi prego di seguirmi, abbiamo poco tempo prima che le guardie trovino i cadaveri…
 		</div>
 		<p>
 			Alla parola &quot;cadaveri&quot;, finalmente, Jo si riebbe,
@@ -193,41 +155,19 @@
 			ultimo pasto, poi ripet&eacute;:
 		</p>
 		<div class="outside">
-			<?=$d->speak('jo', 'Cadaveri')?>
-			<?=$d->speak('al&igrave;', 'Si, esatto: non &egrave; stato semplice
-				penetrare queste prigioni; ho dovuto mietere alcune vite per
-				arrivare a questa cella. E ne dovr&ograve; togliere ancora, se
-				non ci sbrighiamo ad andarcene')?>
-			<?=$d->speak('jo', 'Aspetta: io non posso fidarmi. Come mi hai
-				trovata? Come sai chi sono?')?>
-			<?=$d->speak('al&igrave;', 'Tu che hai la veggenza gia conosci le
-				risposte a queste domande: io sono stato avvertito in sogno.
-				Forse Lui comunica con te in altri modi?')?>
-			<?=$d->speak('jo', 'La &quot;veggenza&quot;, dici?')?>
-			<?=$d->speak('al&igrave;', 'Il mio sogno non mente: tu sei Jo,
-				sacerdotessa e profetessa, araldo di eLyznardh')?>
-			<?=$d->speak('jo', 'Oh, lui...')?>
-			<?=$d->speak('al&igrave;', 'Naturalmente. Ora, prego, seguimi. Tu
-				hai i tuoi ordini e io ho i miei: devo portarti al sicuro,
-				fuori da cui, lontano da Bregurg, lontano dai cannoni e dalle
-				truppe di Rennington. Adesso')?>
+			speak#jo#Cadaveri
+			speak#al&igrave;#Si, esatto: non &egrave; stato semplice penetrare queste prigioni; ho dovuto mietere alcune vite per arrivare a questa cella. E ne dovr&ograve; togliere ancora, se non ci sbrighiamo ad andarcene
+			speak#jo#Aspetta: io non posso fidarmi. Come mi hai trovata? Come sai chi sono?
+			speak#al&igrave;#Tu che hai la veggenza gia conosci le risposte a queste domande: io sono stato avvertito in sogno.  Forse Lui comunica con te in altri modi?
+			speak#jo#La &quot;veggenza&quot;, dici?
+			speak#al&igrave;#Il mio sogno non mente: tu sei Jo, sacerdotessa e profetessa, araldo di eLyznardh
+			speak#jo#Oh, lui…
+			speak#al&igrave;#Naturalmente. Ora, prego, seguimi. Tu hai i tuoi ordini e io ho i miei: devo portarti al sicuro, fuori da cui, lontano da Bregurg, lontano dai cannoni e dalle truppe di Rennington. Adesso
 		</div>
 	</div><div class="section">
 		<div class="outside">
-			<?=$d->speak('simadran', 'Lasciamo per un attimo la prigioniera e il
-				suo liberatore per concentrarci invece sulle numerose guardie
-				&ndash; quelle vive &ndash; ancora presenti nelle prigioni. Si,
-				perch&egrave; accanto alla guardiola, fuori dalla porta,
-				attraverso il cortile, sotto il porticato e oltre le mura,
-				oltre alla ridente citt&agrave; portuale di Bregurg, al suo
-				mercato, ai pescatori sulle loro imbarcazioni, sono
-				sparpagliati, in varie pattuglie, le 207 guardie attualmente in
-				servizio sotto il comando dell&apos;Ammiraglio Rennington, che
-				tra gli altri pu&ograve; vantare anche il titolo di reggente
-				della citt&agrave;.')?>
-			<?=$d->speak('simadran', 'Di quei 207 effettivi, almeno trenta
-				gironzolano attualmente tra le prigioni e il porto, proprio
-				sulla strada che Al&igrave; intende prendere.')?>
+			speak#simadran#Lasciamo per un attimo la prigioniera e il suo liberatore per concentrarci invece sulle numerose guardie &ndash; quelle vive &ndash; ancora presenti nelle prigioni. Si, perch&egrave; accanto alla guardiola, fuori dalla porta, attraverso il cortile, sotto il porticato e oltre le mura, oltre alla ridente citt&agrave; portuale di Bregurg, al suo mercato, ai pescatori sulle loro imbarcazioni, sono sparpagliati, in varie pattuglie, le 207 guardie attualmente in servizio sotto il comando dell&apos;Ammiraglio Rennington, che tra gli altri pu&ograve; vantare anche il titolo di reggente della citt&agrave;.
+			speak#simadran#Di quei 207 effettivi, almeno trenta gironzolano attualmente tra le prigioni e il porto, proprio sulla strada che Al&igrave; intende prendere.
 		</div>
 		<p>
 			Detto questo, ripensando agli insegnamenti di eLyznardh: &laquo;
@@ -260,15 +200,9 @@
 			voce calma spieg&ograve;:
 		</p>
 		<div class="outside">
-			<?=$d->speak('al&igrave;', 'Ora ce ne andiamo per quel grosso
-				portone, laggi&ugrave;, dall&apos;altro lato del cortile. Pensi
-				di farcela?')?>
-			<?=$d->speak('jo', 'Devo solo arrivare fin l&agrave;?')?>
-			<?=$d->speak('al&igrave;', 'Corri, io ti coprir&ograve;. Appena
-				fuori troverai un tizio che porta una brocca d&apos;acqua:
-				seguilo, dove entrer&agrave; d&igrave; al padrone di casa:
-				&quot;Dove preparer&ograve; da mangiare?&quot;. Aspettami nella
-				stanza che ti indicheranno. Ora corri e non ti voltare')?>
+			speak#al&igrave;#Ora ce ne andiamo per quel grosso portone, laggi&ugrave;, dall&apos;altro lato del cortile. Pensi di farcela?
+			speak#jo#Devo solo arrivare fin l&agrave;?
+			speak#al&igrave;#Corri, io ti coprir&ograve;. Appena fuori troverai un tizio che porta una brocca d&apos;acqua: seguilo, dove entrer&agrave; d&igrave; al padrone di casa: &quot;Dove preparer&ograve; da mangiare?&quot;. Aspettami nella stanza che ti indicheranno. Ora corri e non ti voltare
 		</div>
 		<p>
 			Al segnale dell&apos;uomo con il turbante, Jo scatt&ograve; in
@@ -313,7 +247,7 @@
 			schiar&igrave; la voce con un leggero colpo di tosse:
 		</p>
 		<div class="outside">
-			<?=$d->speak('jo', 'Mi perdoni, dove preparer&ograve; da mangiare?')?>
+			speak#jo#Mi perdoni, dove preparer&ograve; da mangiare?
 		</div>
 		<p>
 			Gli occhi del fumatore si illuminarono, egli si alz&ograve;, si
@@ -333,8 +267,6 @@
 			ordin&ograve;:
 		</p>
 		<div class="outside">
-			<?=$d->speak('al&igrave;', 'Animo, gente! Abbiamo una citt&agrave;
-				da liberare!')?>
+			speak#al&igrave;#Animo, gente! Abbiamo una citt&agrave; da liberare!
 		</div>
-	</div>
-</div><?php } ?>
+		stop#page

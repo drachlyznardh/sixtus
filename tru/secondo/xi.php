@@ -1,13 +1,7 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Abbandono&amp;Recupero', 'Per alimentare il dubbio');
-		$this->addprev ('Tru/Naluten/Vol.I/X/', 'La trovatella');
-		$this->addnext ('Tru/Naluten/Vol.II/XII/', 'Conversazione');
-		$this->prepare ('tru/secondo/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
+title#Abbandono&amp;Recupero#Per alimentare il dubbio
+prev#Tru/Naluten/Vol.I/X/#La trovatella
+next#Tru/Naluten/Vol.II/XII/#Conversazione
+start#page
 		<h2>Tru Naluten XI &ndash; Abbandono &amp; Recupero</h2>
 		<p>Oggi &egrave; il mio 25&deg; compleanno, mio chiamo Jo e sono una fioraia.</p>
 		<p>I fiori sono la mia passione: fin da piccola &ndash; racconta mio padre &ndash; passavo il mio tempo giocando coi fiori. Non &egrave; solo un gioco: alcuni di loro mi chiamano, mi chiedono d&apos;essere raccoliti e di essere regalati. So che sembra assurdo, per questo non lo racconto in giro; ma mi capitava spesso &ndash; quand&apos;ero piccola &ndash; di sentire una voce gentile invocarmi da lontano; e quando capitava io m&apos;incamminavo seguendo la voce. Lentamente, il richiamo mi guidava lungo un sentiero che sale in collina dietro il mio paese; lass&ugrave;, poco oltre la linea oltrepassata la quale non si vede pi&ugrave; il villaggio, si trova un vasto prato coperto di fiori magnifici. E quando arrivavo l&agrave;, uno dei fiori di quel prato stava l&igrave; ad agitarsi, chiedendomi di coglierlo. E dopo averlo colto, il fiore stesso mi chiedeva di tornare in paese per essere regalato a qualcuno.</p>
@@ -24,13 +18,13 @@
 	</div><div class="section">
 		<p>Allora mi avvicino per verificare. Dopo un passo nella sua direzione, la rosa mi parla e dice:</p>
 		<div class="outside">
-			<?=$d->speak ('lyznardh', 'Ciao Jo. Questo &egrave; il giorno: coglimi'); ?>
+			speak#lyznardh#Ciao Jo. Questo &egrave; il giorno: coglimi
 		</div>
 		<p>Questa non &egrave; la voce di un fiore, &egrave; troppo profonda, e non &egrave; affatto gentile. Non che i fiori chiedessero per favore, ma il loro tono &egrave; sempre stato pi&ugrave; affabile, non certo imperante.</p>
 		<p>Quando prendo la rosa, il suo stelo, rigido fino ad un attimo fa, si scioglie e si fa molle come un legaccio. A questo punto, mi aspetterei che il fiore parli di nuovo, indicandomi di tornare al villaggio. Ma la voce si fa attendere. Infine, dice:</p>
 		<div class="outside">
-			<?=$d->speak ('lyznardh', 'No, Jo, questo &egrave; il tuo fiore'); ?>
-			<?=$d->speak ('lyznardh', 'Va&apos; a salutare tuo padre'); ?>
+			speak#lyznardh#No, Jo, questo &egrave; il tuo fiore
+			speak#lyznardh#Va&apos; a salutare tuo padre
 		</div>
 		<p>Questo &egrave; un evento raro, mi dico. Nessun fiore s&apos;era mai offerto a me come dono, &egrave; la prima volta. Mi lego i capelli con lo stelo della rosa blu, poi m&apos;incammino verso casa. Dopo aver oltrepassato la collina, il sentiero &egrave; ben visibile da casa mia.</p>
 	</div><div class="section">
@@ -43,8 +37,8 @@
 			<p>&laquo;Un giorno, un uomo buss&ograve; alla mia porta&raquo;</p>
 			<p>&laquo;Era un uomo che portava con s&eacute; una bambina. La bambina era vestita poveramente, e portava i capelli raccolti, tenuti assieme da un fermaglio, una rosa blu; l'uomo era completamente ammantato, una cappa nera con un cappuccio calato sugli occhi, di un&apos;oscurit&agrave; innaturale, quasi non vi fosse nulla sotto. E non aveva un volto; per&ograve; mi fissava. Non vidi i suoi occhi, n&eacute; udii la sua voce; poggiata una mano sulla spalla della bambina, la spinse verso di me e si allontan&ograve;. Io rimaso l&igrave;, interdetto; e cos&igrave; fece anche la bimba. Poi, senza che avessi il tempo di chiedere, quello si gir&ograve; e disse:</p>
 		</div><div class="outside">
-			<?=$d->speak ('lyznardh', 'Ecco tua figlia'); ?>
-			<?=$d->speak ('lyznardh', 'Apparterr&agrave; a te, fino al giorno in cui la reclamer&ograve;, a ventuno dei tuoi anni da oggi'); ?>
+			speak#lyznardh#Ecco tua figlia
+			speak#lyznardh#Apparterr&agrave; a te, fino al giorno in cui la reclamer&ograve;, a ventuno dei tuoi anni da oggi
 		</div><div class="dream">
 			<p>&laquo;Parl&ograve; con un tono che non lasciava spazio di replica. Ancor&apos;oggi, quando ripenso all&apos;accaduto, posso solo pensare d&apos; aver agito come in sogno, perch&egrave; semplicemente non potevo oppormi. Dunque, presi con me la bambina e la allevai come mia&raquo;</p>
 		</div> <!-- Racconto del Padre / Fine -->
@@ -65,8 +59,6 @@
 			completamente coperto dal mantello. Non ha un volto, ma sento il
 			peso del suo sguardo su di me. Saluta:
 		</p><div class="outside">
-			<?=$d->speak ('lyznardh', 'Ciao Jo'); ?>
+			speak#lyznardh#Ciao Jo
 		</div>
-	</div>
-</div>
-<?php } ?>
+stop#page

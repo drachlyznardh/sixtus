@@ -1,26 +1,7 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Il lavoro di Simak', 'Quello che ha scelto di fare', 'i');
-		$this->addprev ('Tru/Naluten/Vol.II/XIX/', 'La lezione');
-		$this->prepare ('tru/secondo/index.php', false, false, true);
-		$this->prepare ('tru/terzo/index.php', false, false, true);
-	} if ($this->addside ()) {
-?>
-<div class="section">
-	<h2>
-		Tru Naluten XX
-	</h2><ol><li>
-			<?=$d->mktid('Parte I', 'i')?>
-		</li><li>
-			<?=$d->mktid('Parte II', 'ii')?>
-		</li><li>
-			<?=$d->mktid('Parte III', 'iii')?>
-		</li><li>
-			<?=$d->mktid('Parte IV', 'iv')?>
-	</li></ol>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<?php if ($d->mktab('i')) { ?><div class="section">
+title#Il lavoro di Simak#Quello che ha scelto di fare
+prev#Tru/Naluten/Vol.II/XIX/#La lezione
+start#page
+tab#i
 		<h2>
 			Tru Naluten III, XX
 		</h2><h2 class="reverse">
@@ -38,7 +19,7 @@
 			Però noto che il fuoco non sta cuocendo alcunché. Va a
 			vuoto, mentre Simak rigira i ciocchi un bastone...
 		</p><div class="outside"><p>
-			<?=$d->inline('jo','Ehi, Simak. Me la spieghi, la faccenda?')?>
+			inline#jo#Ehi, Simak. Me la spieghi, la faccenda?
 		</p></div><p>
 			Ma lui smanetta con il fuoco una volta ancora, poi fa un
 			cenno, indica qualcosa alle mie spalle...
@@ -123,11 +104,7 @@
 		</p><p>
 			Dev'essere anche abbastanza vicino, perché comincio a
 			sentire il terreno vibrare.
-		</p>
-	</div>
-	<?php } if ($d->mktab('ii')) { ?>
-	<div class="section">
-		<p>
+tab#ii
 			Qualcosa s'avvicina...
 		</p><p>
 			Simak lascia cadere il suo bastoncino, abbandona il fuoco e si
@@ -135,8 +112,7 @@
 		</p><p>
 			Si para tra me e la vegetazione, mi scosta con un braccio.
 		</p><div class="outside"><p>
-			<?=$d->inline('simak','Ci sarà un po&apos; di trambusto, Jo. Non
-			spaventarti')?>
+			inline#simak#Ci sarà un po&apos; di trambusto, Jo. Non spaventarti
 		</p></div><p>
 			Detto questo, mi spinge indietro, verso il fuoco.
 		</p>
@@ -159,7 +135,7 @@
 			cadere quella specie di lancia che tiene in mano. I passi sono
 			ormai prossimi.
 		</p><div class="outside"><p>
-			<?=$d->inline('simak','Prendi, S&apos;Mak, la tua arma')?>
+			inline#simak#Prendi, S&apos;Mak, la tua arma
 		</p></div><p>
 			In quel momento, gli alberi tremano, si torcono e dal varco che
 			si apre tra di essi emerge una figura. Una figura enorme.
@@ -208,23 +184,20 @@
 		</p>
 	</div><div class="section">
 		<div class="outside"><p>
-				<?=$d->inline('smak','Arriva')?>
+				inline#smak#Arriva
 			</p><p>
-				<?=$d->inline('jo','Chi? Cosa?')?>
+				inline#jo#Chi? Cosa?
 			</p><p>
-				<?=$d->inline('smak','Horgoth')?>
+				inline#smak#Horgoth
 		</p></div><p>
 			Un ruggito terribile mi riempie le orecchie. Tento di coprirle
 			con le mani, chiudo gli occhi per il dolore. Ho come
 			l'impressione di venir schiacciata da questo rumore così
 			sorverchiante, ma poi qualcos'altro arriva e lo sovrasta.
 		</p><div class="outside"><p>
-				<?=$d->inline('lyznardh forte','Sitz!!!')?>
+				inline#lyznardh forte#Sitz!!!
 		</p></div>
-	</div>
-	<?php } if ($d->mktab('iii')) { ?>
-	<div class="section">
-		<p>
+tab#iii
 			Quando riapro gli occhi, vedo S'Mak al mio fianco. Si tiene la
 			testa come sto facendo io.
 		</p><p>
@@ -256,7 +229,7 @@
 			in là, riesco a scorgere la lunghezza della creatura, che
 			potrebbe coprire un'ottantina di metri.
 		</p><div class="outside"><p>
-				<?=$d->inline('jo','L&apos;hai fatto tu, questo, vero? Eh, Simak?')?>
+				inline#jo#L&apos;hai fatto tu, questo, vero? Eh, Simak?
 		</p></div><p>
 			Non mi risponde. Ovviamente.
 		</p>
@@ -278,65 +251,42 @@
 			Quando arrivo da Simak, lui si alza. Ovviamente. M'ha fatto
 			salire per niente.
 		</p><div class="outside"><p>
-				<?=$d->inline('simak','S&apos;Mak, so che sei sveglio. Sbrigati,
-			per favore')?>
+				inline#simak#S&apos;Mak, so che sei sveglio. Sbrigati, per favore
 		</p></div><p>
 			Da sotto, sento il disappunto del gigante coperto di fango.
 		</p><div class="outside"><p>
-				<?=$d->inline('simak','Su. Non vorrai mentire, quando racconterai
-			ai tuoi figli di come fermasti il drago. È per il bene tuo e
-			della tua gente')?>
+				inline#simak#Su. Non vorrai mentire, quando racconterai ai tuoi figli di come fermasti il drago. È per il bene tuo e della tua gente
 		</p></div><p>
 			Sporgendomi dalla collina di carne dove sto, vedo che in effetti
 			S'Mak s'è alzato in piedi. Avanza lentamente, dubbioso, verso il
 			drago sdraiato e verso di noi. Regge il suo macete in una mano,
 			nell'altra porta la lancia che Simak gli ha consegnato.
 		</p><div class="outside">
-			<p><?=$d->inline('simak','Sai, Jo')?> mi narra Simak
-			<?=$d->inline('simak','ho dubitato della tua chiamata. Ho temuto
-			di dover intervenire per conto mio. Un po&apos; come adesso')?></p>
+			p#inline#simak#Sai, Jo
+			mi narra Simak
+			inline#simak#ho dubitato della tua chiamata. Ho temuto di dover intervenire per conto mio. Un po&apos; come adesso
 		</div><p>
 			Intanto, S'Mak giunge a portata del capoccione di questa bestia.
 			Esita. Esita e non sa decidersi. Credo che ci sia ben altro
 			dietro questa condanna a morte.
 		</p><div class="outside"><p>
-				<?=$d->inline('jo','Simak, dimmi un po&apos;, perché vuoi
-				trasformare questo tizio nel tuo boia?')?>
+				inline#jo#Simak, dimmi un po&apos;, perché vuoi trasformare questo tizio nel tuo boia?
 			</p><p>
-				<?=$d->inline('simak','Se tu sapessi, Jo. Questo ragazzo è
-				giovane, forte, ma non ha aspirazioni. Io gli ho dato uno scopo.
-				Il padre del padre di suo padre ebbe quattro figlie')?>
+				inline#simak#Se tu sapessi, Jo. Questo ragazzo è giovane, forte, ma non ha aspirazioni. Io gli ho dato uno scopo.  Il padre del padre di suo padre ebbe quattro figlie
 			</p><p>
-				<?=$d->inline('simak','Una morì in giovane età, le altre tre
-				andarono in spose ai migliori guerrieri della comunità. Quando
-				il loro genitore morì, i tre loro mariti entrarono in conflitto
-				per la successione')?>
+				inline#simak#Una morì in giovane età, le altre tre andarono in spose ai migliori guerrieri della comunità. Quando il loro genitore morì, i tre loro mariti entrarono in conflitto per la successione
 			</p><p>
-				<?=$d->inline('simak','Due si sfidarono. Lo sconfitto venne
-				ucciso. Il vincitore invece venne acclamato come nuovo re. Il
-				terzo, per evitare di spargere altro sangue, prese la sua gente
-				e andò in esilio')?>
+				inline#simak#Due si sfidarono. Lo sconfitto venne ucciso. Il vincitore invece venne acclamato come nuovo re. Il terzo, per evitare di spargere altro sangue, prese la sua gente e andò in esilio
 			</p><p>
-				<?=$d->inline('simak','Da allora, il popoli di S&apos;Mak è
-				diviso in due tribù. Entrambe vivono sotto la minaccia di
-				Horgoth, che ora giace sotto i nostri sederi')?>
+				inline#simak#Da allora, il popoli di S&apos;Mak è diviso in due tribù. Entrambe vivono sotto la minaccia di Horgoth, che ora giace sotto i nostri sederi
 			</p><p>
-				<?=$d->inline('simak','S&apos;Mak è anche promesso sposo di
-				Argala, che appartiene all&apos;altra tribù. Per amor suo, ha
-				chiesto e ottenuto da entrambi i capi la possibilità di
-				sposarla, a patto di sconfiggere la bestia')?>
+				inline#simak#S&apos;Mak è anche promesso sposo di Argala, che appartiene all&apos;altra tribù. Per amor suo, ha chiesto e ottenuto da entrambi i capi la possibilità di sposarla, a patto di sconfiggere la bestia
 			</p><p>
-				<?=$d->inline('simak','Trovandomi in un certo senso nella stessa
-				situazione, ho deciso d&apos;intervenire per aiutarlo. In più,
-				quest&apos;impresa gli permetterà di riunire le due tribù')?>
+				inline#simak#Trovandomi in un certo senso nella stessa situazione, ho deciso d&apos;intervenire per aiutarlo. In più, quest&apos;impresa gli permetterà di riunire le due tribù
 		</p></div><p>
 			Sento uno scossone. S'Mak ha piantato la lancia tra gli occhi
 			del mostro.
-		</p>
-	</div>
-	<?php } if ($d->mktab('iv')) { ?>
-	<div class="section">
-		<p>
+tab#iv
 			Simak allarga le braccia e mi fa segno con le mani di
 			avvicinarmi. Lo deve fare un paio di volte, perché a me non va.
 			Neache un po'.
@@ -360,13 +310,9 @@
 			Poi si dimentica di me, andandosene incontro al gigante sporco,
 			che ancora stringe la lancia conficcata tra gli occhi del drago.
 		</p><div class="outside"><p>
-				<?=$d->inline('simak','Sei stato bravo, S&apos;Mak. Ora puoi
-				tornare alla tua gente, sposare la fanciulla che ami e riunire
-				le due tribù. Quando ti chiederanno della lancia, dirai loro che
-				questo è un artiglio di eLyznardh')?>
+				inline#simak#Sei stato bravo, S&apos;Mak. Ora puoi tornare alla tua gente, sposare la fanciulla che ami e riunire le due tribù. Quando ti chiederanno della lancia, dirai loro che questo è un artiglio di eLyznardh
 			</p><p>
-				<?=$d->inline('simak','Esso apparterrà a te, fino al
-				giorno in cui lo passerai al più degno dei tuoi figli')?>
+				inline#simak#Esso apparterrà a te, fino al giorno in cui lo passerai al più degno dei tuoi figli
 		</p></div><p>
 			E poi tace.
 		</p><p>
@@ -398,15 +344,22 @@
 		</p><p>
 			Ho appena il tempo di voltarmi che Simak mi fa:
 		</p><div class="outside"><p>
-				<?=$d->inline('simak','Non crucciarti per Horgoth. Ha violato i
-			patti, è stato punito secondo la sua legge')?>
+				inline#simak#Non crucciarti per Horgoth. Ha violato i patti, è stato punito secondo la sua legge
 		</p></div><p>
 			Lo fisso un po' persa... non afferro bene il concetto. I draghi
 			hanno una legge? Lui l'ha infranta? Simak l'ha punito per
 			questo?
 		</p><div class="outside"><p>
-				<?=$d->inline('simak','Vieni, Jo, seguimi. C&apos;è troppa umidità,
-			qui nella jungla, l&apos;umidità t&apos;increspa i capelli')?>
+				inline#simak#Vieni, Jo, seguimi. C&apos;è troppa umidità, qui nella jungla, l&apos;umidità t&apos;increspa i capelli
 		</p></div>
-	</div><?php } ?>
-</div><?php } ?>
+stop#page
+start#side
+	title#Tru Naluten XX
+	pre#<ol>
+		li#tid#Parte I#i
+		li#tid#Parte II#ii
+		li#tid#Parte III#iii
+		li#tid#Parte IV#iv
+	pre#</ol>
+stop#side
+

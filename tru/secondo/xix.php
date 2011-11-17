@@ -1,21 +1,15 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('La lezione', 'Che zittisce. Tutti.');
-		$this->addprev ('Tru/Naluten/Vol.II/XVIII/', 'Duello');
-		$this->addnext ('Tru/Nalunte/Vol.III/XX/', 'Il lavoro di Simak');
-		$this->prepare ('tru/secondo/index.php', false, false, true);
-		$this->prepare ('tru/terzo/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?>
-<div class="small">
-	<div class="section">
+title#La lezione#Che zittisce. Tutti.
+prev#Tru/Naluten/Vol.II/XVIII/#Duello
+next#Tru/Naluten/Vol.III/XX/#Il lavoro di Simak
+start#page
 		<h2>Tru Naluten II, XIX &ndash; La Lezione</h2>
 		<div class="outside">
-			<p><?=$d->inline('lyznardh', 'Qualcun&apos;altro?')?> chiede il Lyznardh,
-			guardandosi attorno, poi prosegue <?=$d->inline('lyznardh', 'Così vinci
-			una battaglia, Jo. Così ho vinto le mie. E le mie sono molte')?></p>
-			<p><?=$d->inline('jo', 'Vedo, Lyznardh')?> risponde l'Araldo.</p>
+			inline#lyznardh#Qualcun&apos;altro?
+			chiede il Lyznardh, guardandosi attorno, poi prosegue
+			inline#lyznardh#Così vinci una battaglia, Jo. Così ho vinto le mie. E le mie sono molte
+			
+			inline#jo#Vedo, Lyznardh
+			risponde l'Araldo
 		</div>
 	</div><div class="section">
 		<p>
@@ -79,25 +73,23 @@
 			E gli ho pure dato ascolto. Perchè?
 		</p>
 		<div class="outside">
-			<p><?=$d->inline('simak','Sai, Jo, non ti ho scelta a caso.
-			')?> dice il mozzo <?=$d->inline('simak', 'All&apos;inizio, forse,
-			potrebbe sembrare, ma non è così')?></p>
-			<?=$d->speak('jo','Chi sei tu? Che vuoi?')?>
-			<p><?=$d->inline('simak','Eh...')?> esista <?=$d->inline('simak','Con
-			tutti i tuoi anni, ancora rimani acerba, Jo cara')?></p>
+			p#inline#simak#Sai, Jo, non ti ho scelta a caso.
+			dice il mozzo
+			inline#simak#All&apos;inizio, forse, potrebbe sembrare, ma non è così
+			speak#jo#Chi sei tu? Che vuoi?
+			inline#simak#Eh...
+			esista
+			inline#simak#Con tutti i tuoi anni, ancora rimani acerba, Jo cara
 		</div><p>
 			Non lo capisco.
 		</p><div class="outside">
-			<p><?=$d->inline('simak','Ma il tempo non è certo un problema')?>
-			afferma il mozzo <?=$d->inline('simak', 'E in fondo, ho ottenuto quello
-			che volevo: hai fatto il mio nome, Jo. E non solo: Rennington è bello
-			che morto e questo potrebbe smuovere la gente di questa cittadina')?></p>
-			<p>Mi fissa per un attimo, poi s'avvicina, mi mette un braccio sopra le
-			spalle e mi fa</p>
-			<?=$d->speak('simak','Dunque, ecco quel che rimane da fare. Ora, io
-			provvederò personalmente a risolvere alcune altre faccende in sospeso,
-			mentre tu dovresti cortesemente farti riportare al villaggio e convocare
-			Aysha. Firmerà la pace. Quando avrai finito, verrò a prenderti.')?>
+			p#inline#simak#Ma il tempo non è certo un problema
+			afferma il mozzo
+			inline#simak#E in fondo, ho ottenuto quello che volevo: hai fatto il mio nome, Jo. E non solo: Rennington è bello che morto e questo potrebbe smuovere la gente di questa cittadina
+			
+			Mi fissa per un attimo, poi s'avvicina, mi mette un braccio sopra le
+			spalle e mi fa
+			inline#simak#Dunque, ecco quel che rimane da fare. Ora, io provvederò personalmente a risolvere alcune altre faccende in sospeso, mentre tu dovresti cortesemente farti riportare al villaggio e convocare Aysha. Firmerà la pace. Quando avrai finito, verrò a prenderti.
 		</div>
 		<p>
 			Detto questo, prende e se ne va.
@@ -119,14 +111,13 @@
 			il mozzo. Dallo sguardo che ha negli occhi, vedo che non gli resta
 			molto.
 		</p><div class="outside">
-			<?=$d->speak('ali','Maestro, perdona. Ti ho deluso')?>
-			<p><?=$d->inline('simak','É vero, Alì, ma non crucciarti')?> risponde
-			quello, senza batter ciglio <?=$d->inline('simak','Dimmi invece quello
-			c&apos;hai compreso')?></p>
-			<?=$d->speak('ali','Ho sperato troppo, Maestro. Ho sperato e non ho
-			agito. Come riparerò, Maestro?')?>
-			<?=$d->speak('simak','Non puoi, quì. Ora va, Togan ti attende tra le sue
-			schiere. Egli farà di te uno dei miei migliori')?>
+			speak#ali#Maestro, perdona. Ti ho deluso
+			inline#simak#É vero, Alì, ma non crucciarti risponde
+			quello, senza batter ciglio
+			inline#simak#Dimmi invece quello
+			c&apos;hai compreso
+			speak#ali#Ho sperato troppo, Maestro. Ho sperato e non ho agito. Come riparerò, Maestro?
+			speak#simak#Non puoi, quì. Ora va, Togan ti attende tra le sue schiere. Egli farà di te uno dei miei migliori
 		</div><p>
 			Non capisco il senso di queste parole. Non conosco Togan, non conosco le
 			´sue schiere', né i ´suoi migliori'. E neanche vorrei scoprirlo. Ma
@@ -163,8 +154,8 @@
 		</p><p>
 			Aysha è già al corrente. Ne sono certa.
 		</p><div class="outside">
-			<p><?=$d->inline('','Araldo, gentile da parte tua venirmi incontro.
-			Egli già mi ha narrato tutto. Vieni, siedi con me')?> dice una voce.
+			p#inline#em#Araldo, gentile da parte tua venirmi incontro.
+			Egli già mi ha narrato tutto. Vieni, siedi con me dice una voce.
 			Ricordo che uno dei feticci è in grado di parlare.</p>
 		</div><p>
 			Per un qualche motivo, forse per la stanchezza, forse perché in fondo
@@ -196,12 +187,12 @@
 			stessa piazza sul mare, quella che ho attraversato di corsa, fuggendo
 			dalla prigione con Alì, solo poche ore prima.
 		</p><div class="outside">
-			<p><?=$d->inline('jo','Che succederà, adesso?')?> chiedo alla fanciulla
-			che m'accompagna.</p>
-			<p><?=$d->inline('','Egli ha detto che sarà la pace tra il nostro popolo
-			e questa gente, ed anche tra noi e i Glah&apos;li')?> risponde lei,
-			attraverso la sua creatura <?=$d->inline('','E che starà a tre di noi
-			sovrintendere affinché la pace duri. Preparati, lui è quì per te')?></p>
+			p#inline#jo#Che succederà, adesso?
+			chiedo alla fanciulla che m'accompagna.
+
+			inline#em#Egli ha detto che sarà la pace tra il nostro popolo e questa gente, ed anche tra noi e i Glah&apos;li
+			risponde lei, attraverso la sua creatura
+			inline#em#E che starà a tre di noi sovrintendere affinché la pace duri. Preparati, lui è quì per te
 		</div><p>
 			E noto in effetti un ragazzo ad attenderci in piazza. Non è il mozzo. É
 			Simak. Quello sgorbio ch'era uscito, tutto nudo e tutto unto, dalla
@@ -216,10 +207,10 @@
 		</p><p>
 			Sempre tenendomi per mano, quello comincia a parlare alla folla:
 		</p><div class="outside">
-			<?=$d->speak('simak forte','Gente, questo è un giorno grande! Questo mio
+			speak#simak forte#Gente, questo è un giorno grande! Questo mio
 			Araldo vi porta la mia sacerdotessa dalla costa, perché sovrintenda a
 			questi luoghi, assieme a questo soldato dell&apos;entroterra e a questo
-			cacciatore del mare. Affinché la vostra pace duri')?>
+			cacciatore del mare. Affinché la vostra pace duri
 		</div><p>
 			Noto, in effetti, altre due figure, dietro Simak. Sono un Glah'li,
 			chiaramente agghindato per la caccia, con balestra, arpione, coltelli,
@@ -241,15 +232,15 @@
 			verso i palazzi che circondano la piazza, per allontanarmi dal centro
 			dell'attenzione.
 		</p><div class="outside">
-			<p><?=$d->inline('simak','Sai')?> mi dice senza voltarsi
-			<?=$d->inline('simak','è stata una lunga attesa. Anche conoscendo il
-			futuro, non è stato facile aspettare che tu mi chiamassi...')?></p>
+			p#inline#simak#Sai
+			mi dice senza voltarsi
+			inline#simak#è stata una lunga attesa. Anche conoscendo il futuro, non è stato facile aspettare che tu mi chiamassi...
 		</div><p>
 			Ma che vuole questo? Che c'ha nella testa?
 		</p><div class="outside">
-			<p><?=$d->inline('simak','Vieni con me, Jo, andiamo')?> dice senza lasciarmi
-			la mano <?=$d->inline('lyznardh','É il momento che tu sappia chi io
-			sia')?></p>
+			p#inline#simak#Vieni con me, Jo, andiamo
+			dice senza lasciarmi la mano
+			inline#lyznardh#É il momento che tu sappia chi io sia
 		</div><p>
 			E così dicendo riprende il suo vecchio, normale, aspetto. Quello di
 			enorme mostro a sei zampe e sei occhi, con le ali scheletriche sulle
@@ -258,9 +249,7 @@
 			addosso, con quelle schifose quattro tettine che tiene sotto quel suo
 			tozzo addome.
 		</p><div class="outside">
-			<?=$d->speak('lyznardh','La tela serve per mantenere un ambiente
-			confortevole, per temperatura, pressione, atmosfera. Ricordati di
-			chiudere i tuoi orifizi sensibili')?>
+			speak#lyznardh#La tela serve per mantenere un ambiente confortevole, per temperatura, pressione, atmosfera. Ricordati di chiudere i tuoi orifizi sensibili
 		</div><p>
 			Poi spicchiamo il volo, attraverso la tela vedo appena il panorama.
 			Scorgo la città mentre ce ne allontaniamo, vedo il cielo scurirsi,
@@ -275,8 +264,6 @@
 			fuoco, l'aria è paurosamente umida e Simak sta attizzando le fiamme con
 			un bastoncino, mentre sta seduto su un tronco abbattuto.
 		</p><div class="outside">
-			<?=$d->speak('simak','Oh, eccoti sveglia. Pronta? Tra poco arriva la
-			cena')?>
+			speak#simak#Oh, eccoti sveglia. Pronta? Tra poco arriva la cena
 		</div>
-	</div>
-</div><?php } ?>
+		stop#page

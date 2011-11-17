@@ -148,7 +148,3 @@ div.section p.foto img {
 	border: #000000 1px solid;
 }
 
-div.section, div.section h2, div.inside, div.outside {
-	-webkit-box-shadow: 0px 0px 5px #aaaaaa;
-	box-shadow: 5px 5px 5px #ffffff;
-}

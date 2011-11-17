@@ -1,19 +1,12 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('La sua gente', 'E i loro buffi copricapi');
-		$this->addprev ('Tru/Naluten/Vol.II/XV/', 'La fuga');
-		$this->addnext ('Tru/Naluten/Vol.II/XVII/', 'Battaglia navale');
-		$this->prepare ('tru/secondo/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?>
+title#La sua gente#E i loro buffi copricapi
+prev#Tru/Naluten/Vol.II/XV/#La fuga
+next#Tru/Naluten/Vol.II/XVII/#Battaglia navale
+start#page
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
 	formato pi&ugrave; confortevole dal punto di vista scrittorio; comincio
 	dalla prima colonna, con meno tabbi e pi&ugrave; a capo.
 -->
-<div class="small">
-	<div class="section">
 		<h2>Tru Naluten XVI &ndash; La sua gente</h2>
 		<p>
 	Siamo su una barca, io e Al&igrave;.
@@ -82,18 +75,18 @@
 		</p>
 	</div><div class="section">
 		<div class="outside">
-			<?=$d->speak ('ali', 'Tra un&apos;ora saremo a casa, Araldo'); ?>
+			speak#ali#Tra un&apos;ora saremo a casa, Araldo
 			<p>
 				Ancora quello strano nome. Perch&eacute; mantiene questa
 				deferenza? Chiedo:
 			</p>
-			<?=$d->speak ('jo', 'Perch&eacute; mi chiami a quel modo? Io sono Jo, nient&apos;altro'); ?>
+			speak#jo#Perch&eacute; mi chiami a quel modo? Io sono Jo, nient&apos;altro
 			<p>
 				Sorride, i suoi occhi stanno fissando una bambina
 				con una corona di carta mentre afferma di essere una
 				principessa:
 			</p>
-			<?=$d->speak ('ali', 'Tu ancora non sai, ma domani vedrai. Domani &egrave; il giorno'); ?>
+			speak#ali#Tu ancora non sai, ma domani vedrai. Domani &egrave; il giorno
 			<p>
 				Poi tace, ascolta il canto delle onde.
 			</p>
@@ -192,9 +185,11 @@
 	&laquo;Non temere&raquo; dice una voce, e da dietro un paravento emerge la
 	figura che poco fa teneva il timone: anch'egli indossa lo stesso mantello,
 	ma chiaramente non sta appeso. Guardo Al&igrave; e cerco il suo sguardo per
-	ottenere una spiegazione, lui sorride: <?$d->inline ('ali', 'Sono feticci,
-	pupazzi controllati a distanza. Mi sono di grande aiuto nelle azioni in
-	solitaria, in citt&agrave;. Nessuno corre rischi'); ?>. Comincio a disegnare
+	ottenere una spiegazione, lui sorride:
+	begin#outside
+		inline#ali#Sono feticci, pupazzi controllati a distanza. Mi sono di grande aiuto nelle azioni in solitaria, in citt&agrave;. Nessuno corre rischi
+	end#outside
+	Comincio a disegnare
 	nella mente l&apos;immagine del mastro burattinaio che si cela dietro il
 	paravento, temendo di trovarmi un qualche altro omaccione barbuto con un
 	turbante e un nome inpronunciabile, quando odo una piccola e dolce vocina
@@ -217,11 +212,9 @@
 	spalle. Mano sinitra sulla spalla destra, mano destra sulla spalla sinistra,
 	in un atteggiamento che sta a met&agrave; tra la meditazione e la preghiera.
 		</p>
-	</div><div class="section">
-		<div class="outside">
-			<?=$d->speak ('ali', 'Questa &egrave; mia sorella, Aysha'); ?>
-		</div>
-	</div><div class="section">
+	<div class="outside">
+		speak#ali#Questa &egrave; mia sorella, Aysha
+	</div>
 		<p>
 	Lei mi rivolge un sorriso, che quasi mi travolge per la sua innocenza. Vedo
 	che la posizione che tiene non &egrave; affatto una scelta: le sue palpebre
@@ -238,5 +231,4 @@
 				consiglio di guerra&raquo;
 			</p>
 		</div>
-	</div>
-</div><?php } ?>
+		stop#page

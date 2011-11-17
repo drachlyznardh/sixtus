@@ -1,19 +1,12 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Battaglia navale', 'Si combatte sul mare');
-		$this->addprev ('Tru/Naluten/Vol.II/XVI/', 'La sua gente');
-		$this->addnext ('Tru/Naluten/Vol.II/XVIII/', 'Battaglia navale');
-		$this->prepare ('tru/secondo/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?>
+title#Battaglia navale#Si combatte sul mare
+prev#Tru/Naluten/Vol.II/XVI/#La sua gente
+next#Tru/Naluten/Vol.II/XVIII/#Battaglia navale
+start#page
 <!--
 	Nuova gestione dei capitoli di Tru Naluten: adesso passo ad un
 	formato pi&ugrave; confortevole dal punto di vista scrittorio; comincio
 	dalla prima colonna, con meno tabbi e pi&ugrave; a capo.
 -->
-<div class="small">
-	<div class="section">
 		<h2>Tru Naluten XVII &ndash; Battaglia Navale</h2>
 		<p>
 			Credevo sinceramente che non avrei potuto dormire, in una notte del genere.
@@ -24,16 +17,16 @@
 		</p>
 	</div><div class="section">
 		<div class="inside">
-			<?=$d->speak ('lyznardh', 'Chiamami'); ?>
-			<?=$d->speak ('jo', 'No'); ?>
-			<?=$d->speak ('lyznardh', 'Chiamami'); ?>
-			<?=$d->speak ('jo', 'No'); ?>
-			<?=$d->speak ('lyznardh', 'Non per te. Ma per altri'); ?>
-			<?=$d->speak ('jo', 'No'); ?>
-			<?=$d->speak ('lyznardh', 'Chiamami'); ?>
-			<?=$d->speak ('jo', 'No'); ?>
-			<?=$d->speak ('lyznardh', 'Domani a mezzogiorno, farai il mio nome'); ?>
-			<?=$d->speak ('jo', 'No'); ?>
+			speak#lyznardh#Chiamami
+			speak#jo#No
+			speak#lyznardh#Chiamami
+			speak#jo#No
+			speak#lyznardh#Non per te. Ma per altri
+			speak#jo#No
+			speak#lyznardh#Chiamami
+			speak#jo#No
+			speak#lyznardh#Domani a mezzogiorno, farai il mio nome
+			speak#jo#No
 		</div>
 	</div><div class="section">
 		<p>
@@ -63,7 +56,7 @@
 			soccorritori, Al&igrave; che, trafelato, sputa ordini a destra e a manca.
 		</p>
 		<div class="outside">
-			<?=$d->speak ('ali', 'Non temere. Lui verr&agrave;'); ?>
+			speak#ali#Non temere. Lui verr&agrave;
 		</div>
 	</div><div class="section">
 		<p>
@@ -77,8 +70,8 @@
 			e mi riprende con s&eacute;... chiudo gli occhi.		
 		</p>
 		<div class="inside">
-			<?=$d->speak ('jo', 'So che sei qui!'); ?>
-			<?=$d->speak ('simak', '...'); ?>
+			speak#jo#So che sei qui!
+			speak#simak#...
 			<p>
 				Poi vedo quello ch&apos;&egrave; successo stamattina.
 			</p><p>
@@ -156,7 +149,7 @@
 				propizia, che l&apos;araldo &egrave; d&apos;accordo, che l&apos;ammiraglio
 				&egrave; del tutto ignaro e che il mare &egrave; calmo.
 			</p>
-			<?=$d->speak ('ali', 'Lui verr&agrave;'); ?>
+			speak#ali#Lui verr&agrave;
 			<p>
 				Abbiamo seicentotrentanove soldati, tre navi, molto coraggio.
 			</p><p>
@@ -165,7 +158,7 @@
 				la forza, catturare l&apos;ammiraglio in persona, negoziare nuovo accordi
 				commerciali, tasse, libert&agrave; di circolazione e altre varie cose.
 			</p>
-			<?=$d->speak ('ali', 'Lui verr&agrave;'); ?>
+			speak#ali#Lui verr&agrave;
 			<p>
 				La nostra &quot;flotta&quot; parte, verso il promontorio. In
 				verit&agrave; le nostre tre galee sono ben pi&igrave; rapide e manovrabili
@@ -189,12 +182,12 @@
 				svizzero. Non affondano, per&ograve;. Le abbiamo fatte bene, o forse i
 				pivelli sulla Eagle Wings e sulla Sun Storm hanno una pessima mira. 
 			</p>
-			<?=$d->speak ('ali', 'Lui verr&agrave;'); ?>
+			speak#ali#Lui verr&agrave;
 			<p>
 				Non abbiamo n&eacute; modo n&eacute; motivo per combattere ora. Una barchetta
 				s&apos;avvicina a quella su cui sto anch&apos;io.
 			</p>
-			<?=$d->speak ('ali', 'Lui verr&agrave;'); ?>
+			speak#ali#Lui verr&agrave;
 		</div>
 		<p>
 			Mi sveglio.
@@ -221,7 +214,7 @@
 			sussurra:
 		</p>
 		<div class="outside">
-			<?=$d->speak ('ali', 'Non temere. Lui verr&agrave;'); ?>
+			speak#ali#Non temere. Lui verr&agrave;
 		</div>
 		<p>
 			Mentre alcuni ricaricano, altri si fanno avanti. Vedo la morte negli occhi, ancora
@@ -229,19 +222,14 @@
 			sento dire:
 		</p>
 		<div class="outside">
-			<?=$d->speak ('lyznardh', 'Chiamami'); ?>
+			speak#lyznardh#Chiamami
 		</div>
 		<p>
 			Ho paura. Una sola lacrima mi riga la guancia. Non voglio morire qui. Sette canne
 			di fucile mi puntano. Sento freddo. Lo chiamo.
 		</p>
 		<div class="outside">
-			<?=$d->speak ('jo', 'Lyznardh! Ti prego, vieni!'); ?>
+			speak#jo#Lyznardh! Ti prego, vieni!
 		</div>
 		<p>Il mare esplode.</p>
-	</div>
-</div>
-<!--
-	Tru Naluten XVII fine
--->
-<?php } ?>
+stop#page

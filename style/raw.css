@@ -28,6 +28,7 @@ div.outside {
 }
 
 div.section, div.section h2, div.inside, div.outside {
-	-webkit-box-shadow: 0px 0px 5px #aaaaaa;
-	box-shadow: 5px 5px 5px #aaaaaa;
+	-webkit-box-shadow: 2px 2px 2px #aaaaaa;
+	-moz-box-shadow: 2px 2px 2px #aaaaaa;
+	box-shadow: 2px 2px 2px #aaaaaa;
 }

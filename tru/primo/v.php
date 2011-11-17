@@ -1,13 +1,7 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('La mia faccia', 'É parecchio brutta');
-		$this->addprev ('Tru/Naluten/Vol.I/IV/', 'Le altre voci');
-		$this->addnext ('Tru/Naluten/Vol.I/VI/', 'L&apos;altro me');
-		$this->prepare ('tru/primo/index.php', false, false, true);
-	} if ($this->addpage ()) {
-?><div class="small">
-	<div class="section">
+title#La mia faccia#É parecchio brutta
+prev#Tru/Naluten/Vol.I/IV/#Le altre voci
+next#Tru/Naluten/Vol.I/VI/#L&apos;altro me
+start#page
 		<h2>Nei capitoli precedenti...</h2>
 		<p>Simak colleziona conoscenze bizzarre: Sacomne compare ancora di tanto in tanto in aiuto, ma scompare immediatamente dopo. Inoltre, ha fatto la sua comparsa anche una voce rossa, la Coscenza di Simak, la cui affidabilit&agrave; non &egrave; ancora stata messa alla prova. Ma ora, Simak sta per (ri)scoprire il proprio aspetto...</p>
 	</div><div class="section">
@@ -31,7 +25,7 @@
 		<p>Mh...</p>
 		<p>... mh...</p>
 		<div class="outside">
-			<?=$d->speak ('lyznardh', 'Tu? Tu, nell&apos;acqua... tu sei me?'); ?>
+			speak#lyznardh#Tu? Tu, nell&apos;acqua... tu sei me?
 		</div>
 		<p>Ph... tace.</p>
 		<p>Certo, come potesse davvero rispondermi. Credo sia arrivato il momento di accettare questo fatto: ho un&apos;aspetto assolutamente inusuale e, certamente, non sono bello.</p>
@@ -65,12 +59,9 @@
 		<p>Non mi fido, vogli dare un&apos;altra occhiata... mi sporgo nuovamente verso l&apos;acqua, ci guardo dentro. Fisso quell&apos;immagine aliena e le chiedo cosa voglia da me, ma lei rimane muta.</p>
 		<p>Non mi sembra di conoscere nessun animale che mi assomigli... oltretutto non so nemmeno che tipo di animale sono... Ho la lingua biforcuta, la corona da cobra sul collo, sono coperto di squame bluastre, apro la bocca come un serpente. Per&ograve; ho anche molte altre cose: innanzitutto ho otto arti e l&apos;addome posto oltre le zampe, e queste cose sono tipiche degli aracnidi. Poi ho le vibrisse, che sono tipiche dei felini. E ho anche le antenne, che sono tipiche degli artropodi. Per quanto ne so, con queste informazioni &egrave; impossibile collocarmi in un regno animale... Cosa posso fare adesso? Di solito, quando ho un problema del genere, chiedo consiglio a Ci.</p>
 		<div class="inside">
-			<?=$d->speak ('simak', 'Ci, senti un po&apos;... Che animale sono?'); ?>
-			<?=$d->speak ('ci', 'Per rispondere alla domanda, posso dirti che &ndash; dal punto di vista prettamente tassonomico &ndash; rientri nelle seguenti categorie: <span class="latino">animalia, eumetazoa bilateria, deuterostomia, chordata, reptilia, diapsida, squamata</span>; ma anche <span class="latino">{protostomia ecdysozoa, arthropoda, chelicerata, arachnida, aranea}</span>; ed ancora <span class="latino">{hexapoda, insecta, pterygota, lepidoptera}</span>; pure <span class="latino">{vertebrata, gnathostomata, ittiopsidi, chondrichthyes, elasmobrachii}</span>; ed infine <span class="latino">{mammalia, eutheria, laurasiatheria, ferae, carnivora, feliformia, felidae}</span>'); ?>
-			<?=$d->speak ('simak', 'Mh... woooooow'); ?>
+			speak#simak#Ci, senti un po&apos;... Che animale sono?
+			speak#ci#Per rispondere alla domanda, posso dirti che &ndash; dal punto di vista prettamente tassonomico &ndash; rientri nelle seguenti categorie: <span class="latino">animalia, eumetazoa bilateria, deuterostomia, chordata, reptilia, diapsida, squamata</span>; ma anche <span class="latino">{protostomia ecdysozoa, arthropoda, chelicerata, arachnida, aranea}</span>; ed ancora <span class="latino">{hexapoda, insecta, pterygota, lepidoptera}</span>; pure <span class="latino">{vertebrata, gnathostomata, ittiopsidi, chondrichthyes, elasmobrachii}</span>; ed infine <span class="latino">{mammalia, eutheria, laurasiatheria, ferae, carnivora, feliformia, felidae}</span>
+			speak#simak#Mh... woooooow
 		</div>
 		<p>&Egrave; davvero l&apos;unica cosa che riesco a dire, in questo momento.</p>
-	</div>
-</div>
-
-<?php } ?>
+stop#page
