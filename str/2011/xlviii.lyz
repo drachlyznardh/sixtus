@@ -1,17 +1,17 @@
 <?php
-	$title=array('Non ce n&apos;è abbastanza','Io almeno non ne ho');
-	$prev=array('Storia XLVII','Storie/2011/XLVII/');
-	$next=array('Storia XLIX','Storie/2011/XLIX/');
-	function mkpage ($d) {
+	$title=array#Non ce n&apos;è abbastanza#Io almeno non ne ho
+	$prev=array#Storia XLVII#Storie/2011/XLVII/
+	$next=array#Storia XLIX#Storie/2011/XLIX/
+start#page
 ?>
 <div class="small">
 	<div class="section">
 	<p>
 		E insomma… non scrivevo da un po', sperando che arrivasse qualcosa da
 		scrivere. È arrivato.
-	</p><p>
+	
 		N'è arrivata una carretta, in effetti.
-	</p><p>
+	
 		Chi m'ha visto negli ultimi giorni può vedere quanto io sia
 		ulteriormente scazzato, quanto sia svuotato e quanto poco piacere riesca
 		a trarre da qualunque cosa.
@@ -20,7 +20,7 @@
 	<p>
 		Insomma, non è che non succedano cose buone, anzi… succedono anche cose
 		brutte, semplicemente la differenza non mi turba più di tanto…
-	</p><p>
+	
 		Or provo a buttar giù un elenco
 	</p>
 </div></div><div style="width:50%;float:left"><div class="section">
@@ -28,20 +28,20 @@
 			Cose buone
 		</h2><p>
 			È uscito, dopo ~13 anni d'attesa, Duke Nukem Forever.
-		</p><p>
+		
 			Corro molto più di una volta.
-		</p><p>
+		
 			Faccio esercizio tutti i giorni.
-		</p><p>
+		
 			Codd m'appare abbastanza spesso, il codice scorre potente in me.
-		</p><p>
+		
 			Ho finito qualche altra serie animata, mi son fatto qualche risata
 			con Transformers RID
-		</p><p>
+		
 			Ho finito il libraccio che doveva asciugarsi.
-		</p><p>
+		
 			Scrivo di notte.
-		</p><p>
+		
 			Mangio come un cavallo, a tutte le ore, e resto magro.
 		</p>
 </div></div><div style="width:50%;float:right"><div class="section">
@@ -49,27 +49,27 @@
 			Cose brutte
 		</h2><p>
 			Duke Nukem Forever fa un po' cagare… che t'aspettavi?
-		</p><p>
+		
 			Non ho tempo per correre.
-		</p><p>
+		
 			Sudo da far schifo.
-		</p><p>
+		
 			Scrivere il codice raramente rappresenta una sfida e non mi soddisfa
 			più.
-		</p><p>
+		
 			Jazz continua a passarmi Japan Made La Fuffa &trade; 1080p HD, 800MB
 			la puntata.
-		</p><p>
+		
 			Sono arrivato in fondo al libro.
-		</p><p>
+		
 			Poi non mi sveglio.
-		</p><p>
+		
 			Ho comunque una fame della puttana, grosso modo sempre.
 		</p>
 </div></div><div class="small"><div class="section">
 	<p>
 		Che ve ne pare? Potrei andare avanti, ma devo scrivere cose importanti.
-	</p><p>
+	
 		Quest'oggi ero immensamente scazzato…
 	</p>
 </div><div class="section">
@@ -98,7 +98,7 @@
 		magnificamente. Non prendo neanche errori, tutto compila al primo colpo.
 		Qualche dimenticanza, qualche parentesi sbilanciata, qualche typo, il
 		resto è perfetto, tutti i test succedono.
-	</p><p>
+	
 		Eppure non riesco a provare la minima gioia per questi progressi che sto
 		facendo.
 	</p><div class="outside"><p>
@@ -129,55 +129,55 @@
 		tempo, me ne torno a casa e scopro che mio fratello ha messo l'amicizia
 		davanti alla famiglia (che direbbe Don Corleone?) e stasera non se ne fa
 		niente.
-	</p><p>
+	
 		E allora io mando tutti a cagare e decido che me ne andrò a correre di
 		notte, LIKE A BOSS. Prendo la mia roba e parto.
-	</p><p>
+	
 		Di notte la temperatura è straordinariamente più accettabile, la
 		visibilità è comunque sufficiente, c'è pochissimissimo traffico, nessuno
 		spacca le palle… insomma, nessuno svantaggio.
-	</p><p>
+	
 		E quindi me ne vado, <span class="em">FOREVER ALONE</span>, lungo la mia
 		strada. E mentre corro, ecco che mi compare Codd:
 	</p><div class="inside">
-		<?=$d->speak('codd','&apos;sup Gods')?>
-		<?=$d->speak('gods','&apos;sup Edgar F')?>
-		<?=$d->speak('codd','Che fai?')?>
-		<?=$d->speak('gods','Corro, Edgar F')?>
-		<?=$d->speak('codd','Perché non vai a scrivere un altro capitolo di Tru
-		Naluten?')?>
-		<?=$d->speak('gods','Perché tanto so come va a finire… il prossimo passo
+		<?=$d->speak#codd#&apos;sup Gods
+		<?=$d->speak#gods#&apos;sup Edgar F
+		<?=$d->speak#codd#Che fai?
+		<?=$d->speak#gods#Corro, Edgar F
+		<?=$d->speak#codd#Perché non vai a scrivere un altro capitolo di Tru
+		Naluten?
+		<?=$d->speak#gods#Perché tanto so come va a finire… il prossimo passo
 		è l&apos;enorme spiegone prima del flashback lungo come l&apos;anno
-		della fame')?>
-		<?=$d->speak('codd','Davverp?')?>
-		<?=$d->speak('gods','Si, si, mo&apos; ti racconto…')?>
+		della fame
+		<?=$d->speak#codd#Davverp?
+		<?=$d->speak#gods#Si, si, mo&apos; ti racconto…
 	</div><div class="outside">
 		<p>[segue il capitolo XXI di Tru Naluten… prossimamente]</p>
 	</div><div class="inside">
-		<?=$d->speak('codd','Però… figo')?>
-		<?=$d->speak('gods','Eh, grazie. &apos;scolta un po&apos;… che vuoi?')?>
-		<?=$d->speak('codd','L&apos;hai finito il fiore, no?')?>
-		<?=$d->speak('gods','Si, è abbastanza definitivo, nuovo fiore, nuovo
-		calice')?>
-		<?=$d->speak('codd','Non credi che sarebbe il caso di consegnarlo?')?>
-		<?=$d->speak('gods','Non è un po&apos; prestino? Sai, vorrei evitare che
-		la consegna fosse la sola occasione d&apos;interagire')?>
-		<?=$d->speak('codd','Non finirai mica come tutte le altre sere, a far la
+		<?=$d->speak#codd#Però… figo
+		<?=$d->speak#gods#Eh, grazie. &apos;scolta un po&apos;… che vuoi?
+		<?=$d->speak#codd#L&apos;hai finito il fiore, no?
+		<?=$d->speak#gods#Si, è abbastanza definitivo, nuovo fiore, nuovo
+		calice
+		<?=$d->speak#codd#Non credi che sarebbe il caso di consegnarlo?
+		<?=$d->speak#gods#Non è un po&apos; prestino? Sai, vorrei evitare che
+		la consegna fosse la sola occasione d&apos;interagire
+		<?=$d->speak#codd#Non finirai mica come tutte le altre sere, a far la
 		mammoletta, a passarle davanti senza dire niente, senza neanche
 		guardarla, a tornartene a casa da solo, come al solito? Che tanto lei ti
-		vede e chissà che si mette a pensare!')?>
-		<?=$d->speak('gods','Codd, vaffanculo!')?>
+		vede e chissà che si mette a pensare!
+		<?=$d->speak#gods#Codd, vaffanculo!
 	</div><p>
 		Codd non ha ancora imparato che certe cose le deve lasciar fare a me.
 	</p>
 </div><div class="section">
 	<p>
 		Ma io che sono un coglione sotto sotto gli do ascolto.
-	</p><p>
+	
 		Perché non andare? Perché non passare almeno davanti? Tanto, corso ho
 		corso, fresco sono fresco, il tempo regge, la strada la conosco… cosa
 		vuoi che vada storto?
-	</p><p>
+	
 		Tre cose. Due sono ben rappresentate da <a
 		href="http://www.youtube.com/results?search_query=lonely+island+creep">questo</a>
 		e <a
@@ -203,7 +203,7 @@
 		qualunque cosa serva per fare quei quindici metri, attraversare la
 		strada, entrare in gelateria e fare ciao con la manina, beh, io non ne
 		ho. Non ce n'è abbastanza.
-	</p><p>
+	
 		Così me ne torno a casa e scrivo quello che (non) è successo. E adesso
 		ho fame, mi mangio qualcosa.
 	</p>

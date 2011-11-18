@@ -38,7 +38,7 @@
 			else $ref = $request;
 			if ($this->opt) $ref .= $this->opt .'/';
 			if ($sharp) $ref .= '#'.ucwords($sharp);
-			if ($extra) return '<a href="'.$ref.'">'.$title.'</a> '.$extra;
+			if ($extra) return '<a href="'.$ref.'">'.$title.'</a>'.$extra;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
@@ -51,7 +51,7 @@
 
 			if ($tab && $this->tab['name'] == $tab)
 				if ($hash) return '<span class="em">'.$this->link($this->self, $title, $tab, $hash, $extra).'</span>';
-				else return '<span class="em">'.$title.'</span> '.$extra;
+				else return '<span class="em">'.$title.'</span>'.$extra;
 			else return $this->link($this->self, $title, $tab, $hash, $extra);
 		}
 

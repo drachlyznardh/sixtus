@@ -30,16 +30,16 @@
 				case 'sbr':
 					$this->content[] = array ('sec', $this->section);
 					$this->content[] = array ('br', false);
-					$this->section = new Section ($this->d);
+					$this->section = new Section ($this->d, $opt);
 					break;
 				case 'sec':
 					$this->content[] = array ('sec', $this->section);
-					$this->section = new Section ($this->d);
+					$this->section = new Section ($this->d, $opt);
 					break;
 				case 'struct':
 					$this->content[] = array ('sec', $this->section);
 					$this->content[] = array ('struct', $content);
-					$this->section = new Section ($this->d);
+					$this->section = new Section ($this->d, $opt);
 					break;
 				default:
 					$this->section->parseLine ($lineno, $cmd, $opt, $content);

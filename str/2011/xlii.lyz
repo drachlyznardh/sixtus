@@ -1,8 +1,8 @@
 <?php
-	$title=array('La vecchiaia','Ossia gli anni percepiti');
-	$prev=array('Storia XLI','Storie/2011/XLI/');
-	$next=array('Storie XLIII','Storie/2011/XLIII/');
-	function mkpage($d) {
+	$title=array#La vecchiaia#Ossia gli anni percepiti
+	$prev=array#Storia XLI#Storie/2011/XLI/
+	$next=array#Storie XLIII#Storie/2011/XLIII/
+start#page
 ?>
 <div class="wider">
 	<div class="widelist">
@@ -10,17 +10,17 @@
 			<h2>
 				La vecchiaia
 			</h2><ol><li id="li-i">
-					<a onclick="javascript:t.show('i')">L'età percepita</a>
+					<a onclick="javascript:t.show#i')">L'età percepita</a>
 				</li><li id="li-ii">
-					<a onclick="javascript:t.show('ii')">Gli effetti dell'età</a>
+					<a onclick="javascript:t.show#ii')">Gli effetti dell'età</a>
 				</li><li id="li-iii">
-					<a onclick="javascript:t.show('iii')">La nostalgia</a>
+					<a onclick="javascript:t.show#iii')">La nostalgia</a>
 				</li><li id="li-iv">
-					<a onclick="javascript:t.show('iv')">La briga</a>
+					<a onclick="javascript:t.show#iv')">La briga</a>
 				</li><li id="li-v">
-					<a onclick="javascript:t.show('v')">L'insofferenza</a>
+					<a onclick="javascript:t.show#v')">L'insofferenza</a>
 				</li><li id="li-vi">
-					<a onclick="javascript:t.show('vi')">La corsa lenta</a>
+					<a onclick="javascript:t.show#vi')">La corsa lenta</a>
 			</li></ol>
 		</div>
 	</div><div class="widecontent">
@@ -28,10 +28,10 @@
 <div class="section">
 	<p>
 		Io sono vecchio.
-	</p><p>
+	
 		Posso dirlo (da molto tempo, tra l'altro) perché la vecchiaia non è
 		affatto una questione d'età, bensì uno stato dell'anima.
-	</p><p>
+	
 		Alcuni di noi, come il <span class="dacav">giovane Dacav</span> per
 		esempio, nascono già vecchi. Alcuni altri, come il sottoscritto, lo
 		diventano con il tempo, ma con meno tempo di quanto t'aspetteresti.
@@ -46,14 +46,14 @@
 	<p>
 		Dunque, l'età percepita può avere terribili risultati. In particolare,
 		nei momenti di avvicinamento e allontanamento dal sonno.
-	</p><p>
+	
 		La mia vita ha visto il proprio arco di attività quotidiana spostarsi
 		gradualmente dall'intervallo 0700-2200 (orari in notazione militare,
 		ovviamente) all'intervallo 0930-0100. Se questo significa un'estensione
 		del periodo d'attività, bene; ma lo spostamento mi porta ad avere una
 		buona parte d'attività concentrata in orari in cui il resto della gente
 		(e della famiglia) dorme.
-	</p><p>
+	
 		Ed ecco che la mia già sottile vita sociale si riduce ad uno spazio di
 		Dirac, esteso ma piattissimo.
 	</p><h2>
@@ -71,7 +71,7 @@
 		devo quindi, ogni mattina al mio risveglio ed occasionalmente anche dopo
 		pranzo, una certa procedura di riattivazione delle funzionalità corporee
 		che mi prende quasi un minuto.
-	</p><p>
+	
 		Altro effetto interessante è la quantità di tempo necessaria per uscire
 		dallo stato di sonnolenza, al risveglio.
 	</p>
@@ -82,7 +82,7 @@
 		riacquisto delle mie facoltà mentali senza bere il caffè... tristemente,
 		tre ore dopo era ora di pranzo, ed ancora nella mia testa rimbombava il
 		mal di testa.
-	</p><p>
+	
 		Oltre a questo, noto un certo mantenimento del livello di fatica che non
 		riesco proprio a spiegarmi.
 	</p>
@@ -91,7 +91,7 @@
 		Anche nelle giornate in cui non compio alcun tipo di sforzo (fisico o
 		mentale) il mio livello di spossatessa verso le 1800 è lo stesso, ossia
 		tale da indurmi a tornare a casa per morire.
-	</p><p>
+	
 		Il fatto che una volta tornato a casa io possa prendere e andare a
 		correre è spesso puramente casuale.
 	</p>
@@ -102,7 +102,7 @@
 		La nostalgia è un'altra cosa che compare con il tempo. È quella
 		sensazione che il “salto dello squalo” sia già passato, e che d'ora in
 		poi le cose non saranno più come una volta.
-	</p><p>
+	
 		In altre parole, è quell'amarognolo che senti in bocca quando realizzi
 		non soltanto che quello che ti piace è passato da un sacco di tempo, ma
 		anche che soltanto qualcosa di piuttosto datato possa essere all'altezza
@@ -113,9 +113,9 @@
 		Vi ricordate la prima stagione dei Mighty MorphinPower Rangers? Vi
 		ricordate la prima stagione di Pokémon? Vi ricordate Aladdin? Vi
 		ricordate il primo The Matrix?
-	</p><p>
+	
 		Tutte cose del passato. Di un passato ch'è ormai passato da un pezzo.
-	</p><p>
+	
 		Tutte le cose buone sono nel passato: tutto il buon rock, quasi tutto il
 		buon metal, quasi tutti i buoni film...
 	</p>
@@ -124,7 +124,7 @@
 <div class="section">
 	<p>
 		Poi c'è appunto l'assenza di briga.
-	</p><p>
+	
 		E non ho voglia di scrivere altro.
 	</p>
 </div>
@@ -134,7 +134,7 @@
 		Se aggiungiamo l'insofferenza alla calura che invade l'aula studio in
 		momenti come questi, le cose che mi rimangono accessibili (senza i
 		maroni m'esplodano) sono davvero poche.
-	</p><p>
+	
 		Una è DoDonPachi, l'altra è la scrittura. Ma per scrivere bisogna aver
 		qualcosa da dire, quindi probabilmente me n'andrò a giocare a
 		DoDonPachi.
@@ -146,13 +146,13 @@
 </div><div class="section">
 	<p>
 		Rieccomi.
-	</p><p>
+	
 		E quando pare che andarsene a casa sia l'unica cosa buona da fare,
 		immediatamente mi rendo conto di come a casa non abbia alcunché di utile
 		da fare, proprio come qui.
-	</p><p>
+	
 		Di fatto, correre è l'unica cosa che mi va di fare.
-	</p><p>
+	
 		Anche questo è un sintomo della vecchiaia.
 	</p>
 </div>
@@ -162,9 +162,9 @@
 		Quel che uno vede quando va a correre, infatti, è l'età media degli
 		altri ‘concorrenti’. Per la maggior parte, questi altri corridori (ma
 		i ciclisti non fanno eccezione) hanno un'età significativa.
-	</p><p>
+	
 		Questo mi rende abbastanza triste.
-	</p><p>
+	
 		Perché io, al pari loro, non corro per sport ma per tenermi in forma.
 		Seppur corro più in fretta della maggior parte delle persone che trovo,
 		il dubbio mi viene. Questo mio bisogno di correre non sarà un sintomo di
@@ -177,7 +177,7 @@
 		Io corro piano per due scopi: l'uno è arrivare lontano (e conservare
 		forze sufficienti per tornare a casa, cosa che non sempre mi riesce
 		bene) e l'altra è guardare le ragazze.
-	</p><p>
+	
 		Il problema è che le ragazze non ci sono. Molte delle persone che
 		passano sono uomini; molte delle persone che passano hanno più di
 		cinquant'anni; molte delle ragazze sono troppo giovani. 
@@ -194,11 +194,11 @@
 </div><div class="section">
 	<p>
 		Alla fine, voglio mettere un po' di speranza nella storia... ci provo!
-	</p><p>
+	
 		Allora, gente, chi vuol venire a correre? Ce ne andiamo tutti sulla
 		pista ciclabile, via e via e magari vediamo anche qualcosa
 		d'interessante.
-	</p><p>
+	
 		Mi dicono infatti che dialogare correndo favorisce tutto il favoribile e
 		migliora tutto il migliorabile.
 	</p>
@@ -209,6 +209,6 @@
 </script><script type="text/javascript" language="javascript">
 	var t = new TLoader();
 	if (location.hash) t.show(location.hash.substr(1).toLowerCase());
-	else t.show('i');
+	else t.show#i
 </script>
 <?php } ?>

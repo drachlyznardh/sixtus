@@ -1,8 +1,8 @@
 <?php
-	$title=array('Pillole','Ossia tante piccole storielline');
-	$prev=array('Storia XLIII','Storie/2011/XLIII/');
-	$next=array('Storia XLV','Storie/2011/XLV/');
-	function mkpage ($d) {
+	$title=array#Pillole#Ossia tante piccole storielline
+	$prev=array#Storia XLIII#Storie/2011/XLIII/
+	$next=array#Storia XLV#Storie/2011/XLV/
+start#page
 ?>
 <div class="wider">
 	<div class="widelist">
@@ -10,19 +10,19 @@
 			<h2>
 				Pillole
 			</h2><ol><li id="li-i">
-					<a onclick="javascript:t.show('i')">Regali/Festeggiamenti</a>
+					<a onclick="javascript:t.show#i')">Regali/Festeggiamenti</a>
 				</li><li id="li-ii">
-					<a onclick="javascript:t.show('ii')">Vecchiaia/Giovinezza</a>
+					<a onclick="javascript:t.show#ii')">Vecchiaia/Giovinezza</a>
 				</li><li id="li-iii">
-					<a onclick="javascript:t.show('iii')">La comunione</a>
+					<a onclick="javascript:t.show#iii')">La comunione</a>
 			</li></ol><h2>
 				Supposte
 			</h2><ol start="4"><li id="li-iv">
-					<a onclick="javascript:t.show('iv')">Ciclismo e protezioni</a>
+					<a onclick="javascript:t.show#iv')">Ciclismo e protezioni</a>
 				</li><li id="li-v">
-					<a onclick="javascript:t.show('v')">L'eleganza</a>
+					<a onclick="javascript:t.show#v')">L'eleganza</a>
 				</li><li id="li-vi">
-					<a onclick="javascript:t.show('vi')">Un nuovo stelo</a>
+					<a onclick="javascript:t.show#vi')">Un nuovo stelo</a>
 			</li></ol>
 		</div>
 	</div><div class="widecontent">
@@ -31,7 +31,7 @@
 	<p>
 		Oggi e questo weekend sono state giornate pienotte. Narrerò alcuni degli
 		accadimenti salienti di queste ore passate.
-	</p><p>
+	
 		Cominciamo con i festeggiamenti e i regali.
 	</p><h2>
 		I regali
@@ -40,10 +40,10 @@
 		regali: ho ricevuto un buono per un CD (non compro un CD da... non
 		compro CD), il primo - tristissimo - romanzo scritto da un tizio (il
 		cantante di una qualche band) e un casco.
-	</p><p>
+	
 		Un casco per ciclisti. Di quelli che dovrebbero proteggerti il
 		capoccione quando scendi molto in fretta.
-	</p><p>
+	
 		Non fatemi parlare di quanto io consideri inutile portare il casco in
 		bicicletta. Che non finisco più...
 	</p><h2>
@@ -71,14 +71,14 @@
 		invece sono vecchi, e lo son da sempre, come il <span class="dacav">buon
 		Dacav</span>. Pur detto “il giovane” senza alcun motivo, il Dacav è
 		vecchio.
-	</p><p>
+	
 		Ma anche peggio: è antico, è ancestrale.
-	</p><p>
+	
 		Siamo arrivati a chiederci se veramente i suoi genitori siano i suoi
 		genitori, oppure se siano semplicemente suoi compagni di quando andava
 		all'asilo; ma c'è andato veramente, all'asilo? Non è troppo vecchio per
 		andarci?
-	</p><p>
+	
 		L'avevano inventate, le scuole? Probabilmente no, quando Dio disse «Sia
 		la luce» il Dacav venne illuminato e cominciò a commentare l'operato del
 		buon Dio... che dopo sette giorni n'ebbe stracci i coglioni e non si
@@ -97,11 +97,11 @@
 		Ho un fratello di dieci anni che questa domenica s'è comunicato. Ma la
 		comunione si porta dietro un sacco di cose. Parenti, per la maggior
 		parte.
-	</p><p>
+	
 		Parenti che evidentemente non vedo abbastanza spesso. E pranzi che non
 		durano mai abbastanza, evidentemente. E vestiti eleganti che non metto
 		se non nelle occasioni.
-	</p><p>
+	
 		Ma il punto è che, come dev'essere, mio fratello è stato coperto di
 		regali; uno di questi fu un paio di scarpe con le rotelle.
 	</p>
@@ -118,13 +118,13 @@
 <div class="section">
 	<p>
 		Salve, mi chiamo Ivan e sono stronzo.
-	</p><p>
+	
 		Sono abbastanza stronzo da pensare che la parola ‘incidente’ sia usato
 		in modo sbagliato dalla maggior parte delle persone. Sono abbastanza
 		stronzo da credere che le persone che finiscono per farsi male nello
 		sport o sulla strada vadano punite molto più spesso di quanto vadano
 		tutelate.
-	</p><p>
+	
 		Sono altresì abbastanza stronzo da prendermela con chi legifera sperando
 		(o, Dio non voglia, credendoci veramente) che le protezioni siano il
 		miglior modo di evitare gli incidenti. E sono abbastanza stronzo da
@@ -136,7 +136,7 @@
 		Io non sono né masochista, né lesionista. Non mi piace farmi del male,
 		non vado in giro a farne ad altri e preferirei che la gente tenesse
 		tutti i propri organi/membri attaccati e ben funzionanti al loro posto.
-	</p><p>
+	
 		Detto questo, ecco il mio pensiero.
 	</p><h2>
 		Le protezioni
@@ -148,14 +148,14 @@
 		Secondo il codice della strada, io ciclista non dovrei andarmene sulla
 		strada senza casco, senza protezioni, senza le bande segnaletiche, senza
 		le luci anteriori e posteriori e chissà quanta altra roba.
-	</p><p>
+	
 		Perché?
 	</p>
 </div><div class="section">
 	<p>
 		Un po' per garantire dannegiati e danneggiatori quando entrano in gioco
 		i tribunali e le assicurazioni, un po' per prevenzione.
-	</p><p>
+	
 		Tuttavia, io non ce l'ho con le protezione di per sé. Ce l'ho invece con
 	</p><ul><li><p>
 			chi le protezioni le produce
@@ -169,7 +169,7 @@
 		pagare questi test, e vado a pagare una bella etichetta che mi dice che
 		il mio casco, i miei guanti e quant'altro sono stati testati da qualche
 		espertone.
-	</p><p>
+	
 		Ora, considerando quanto si potrebbe risparmiare evitando tutta questa
 		fuffa, non si potrebbe lasciare che la gente rischiasse?
 	</p>
@@ -179,9 +179,9 @@
 		alcune migliaia di chilometri in bicicletta, con una minima percentuale
 		di essi con le protezioni addosso. Ed ho anche avuto la mia fetta
 		d'incidenti e di rischi.
-	</p><p>
+	
 		E sono ancora qui.
-	</p><p>
+	
 		Non osate dire che questo non conta. Perché non è per ‘culo’ che non
 		sono morto, è perché so cosa faccio.
 	</p>
@@ -190,12 +190,12 @@
 		Perché se un tizio scende da una montagna ai 90 all'ora e finisce giù
 		per una scarpata, la colpa è sua, non di chi non ha piantato un
 		guardrail su quella curva.
-	</p><p>
+	
 		Vorrei tanto poter andare davanti ad un giudice e firmare una
 		liberatoria con la quale assumermi la responsabilità di danni a me
 		stesso e ad altri, che mi lasci andare in bicicletta come e dove mi
 		pare.
-	</p><p>
+	
 		Perché preferirei - se potessi - morire gratis con la testa rotta
 		avendone la colpa, piuttosto che dover pagare una multa per essere
 		andato in giro di notte senza luci. Cosa che faccio.
@@ -205,7 +205,7 @@
 			<div class="section">
 	<p>
 		Ve l'ho già detto che non ho una ragazza?
-	</p><p>
+	
 		Ve l'ho già detto quanto spesso capita che i parenti spuntino fuori a
 		chiedermene il motivo?
 	</p><h2>
@@ -220,12 +220,12 @@
 		e accettabile, è diventato un fenomeno di costume per cui ogni
 		conoscente non solo mi chiede il motivo e le spaventose implicazioni
 		della scelta di vita, ma mi dice che sto molto meglio così.
-	</p><p>
+	
 		La stessa cosa capita quando indosso il mio completo: sono molto più
 		elegante con quello che con altre cose. Non è forse ovvio? Beh, ora
 		mettete assieme i miei nuovi capelli corti con il mio non così nuovo
 		completo: risultato, alcuni parenti impazziscono.
-	</p><p>
+	
 		E così mi ritrovo a sentire frasi che dicono più o meno
 	</p><div class="outside"><p>
 			«Così vestito stai benissimo, magari trovi la ragazza»
@@ -237,11 +237,11 @@
 		Perché dire una frase del genere? Perché pensare che un vestito dovrebbe
 		migliorare la mia immagine, visto che la faccia rimane la stessa, e su
 		quella faccia l'espressione è incazzata e immutabile.
-	</p><p>
+	
 		E infine, per tutto ciò che è sacro, cosa posso dire io di una
 		persona che crede che io possa prendere con me una ragazza che mi
 		sceglie per il vestito?
-	</p><p>
+	
 		Cos'è? Cos'è che fa uscire quelle parole dalla bocca? Io non lo so.
 	</p>
 			</div>
@@ -252,13 +252,13 @@
 		dei precedenti; e se anche avrò detto il contrario in qualche storia
 		dell'anno scorso, potevo fare di meglio: adesso infatti l'aggeggio regge
 		la bellezza di sei fiori sei.
-	</p><p>
+	
 		Sei è un buon numero, non sarà il sette della perfezione, ma quello è
 		fuori discussione: volevo usare soltanto esagoni e l'ho fatto.
-	</p><p>
+	
 		Volevo mettere tutti i fiori a raggera, tutti sullo stesso livello e
 		l'ho fatto.
-	</p><p>
+	
 		Volevo evitare di dover usare il calice spuntato, e tornare a quello che
 		le tre punte estese, che tra l'altro tiene meglio il fiore centrato e
 		l'ho fatto.
@@ -269,23 +269,23 @@
 		stelo: è stretto sulla presa, è morbido nell'angolo tra un fiore e
 		l'altro, quindi anche se piegato in cartoncino si mantiene abbastanza
 		elastico da lasciare a tutti i calici lo spazio sufficiente.
-	</p><p>
+	
 		La sua parte inferiore, poiché lo stelo è di per sé completamente
 		occupato a tenere i calici in posizione, e non può fare anche da
 		sostegno, è piuttosto diverso.
-	</p><p>
+	
 		Il secondo pezzo serve soltanto da piede per tenere l'intero blocco
 		lontano dal tavolo; ma per riuscire ad ottenerlo mi ci sono voluti
 		almeno sei tentativi diversi. La carta perde moltissima forza quando
 		viene attraversata da pieghe: tutte le pieghe di costruzione, anche
 		mantenendole al minimo, rovinano la struttura, che finisce con il
 		collassare sotto il peso della composizione.
-	</p><p>
+	
 		Alla fine, come spesso capita, ho trovato la soluzione migliore tornando
 		alla più semplice. Molte meno pieghe, molta più stabilità. Magari non
 		sarà bello come altre versioni, in compenso però fa quello che deve
 		fare.
-	</p><p>
+	
 		Tecnicamente, anche il fiore è diverso. Non sono sicuro che sia
 		migliore, ma senz'altro è cambiato: adesso ha meno petali, ma quelli
 		esterni sono più grandi e marcati.
@@ -294,18 +294,18 @@
 	<p>
 		E così mi ritrovo con lo stelo pronto, con una certa soddisfazione per
 		aver fatto un altro passo avanti.
-	</p><p>
+	
 		Ma poi?
 	</p>
 </div><div class="section">
 	<p>
 		Anche una volta finito - e stavolta probabilmente farò i fiori in due
 		tonalità di arancione - che me ne farò?
-	</p><p>
+	
 		Lo appoggerò sul mensolone dei Gundam, lasciando che prenda polvere per
 		i prossimi 9000 anni? Lo darò al primo che incontro? Potrei metterlo al
 		bar, ma temo che sia abbastanza.
-	</p><p>
+	
 		Il problema è che non l'ho fatto per nessuno in particolare... o forse
 		l'ho fatto, ma non so per chi.
 	</p>
@@ -322,6 +322,6 @@
 </script><script type="text/javascript" language="javascript">
 	var t = new TLoader ();
 	if (location.hash) t.show(location.hash.substr(1).toLowerCase());
-	else t.show('i');
+	else t.show#i
 </script>
 <?php } ?>

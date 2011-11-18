@@ -6,9 +6,11 @@
 		private $isText;
 		private $isPre;
 		private $content;
+		private $opt;
 
-		public function __construct ($d) {
+		public function __construct ($d, $opt) {
 			$this->d = $d;
+			$this->opt = $opt;
 
 			$this->isText = false;
 			$this->isPre = false;
@@ -171,7 +173,11 @@
 				if ($as && strcmp($as, 'content') == 0) return $this->content;
 
 				$result = false;
-				$result .= '<!-- Section[as('.$as.') --><div class="section">';
+				$result .= '<!-- Section[as('.$as.') --><div class="section"';
+			//	if ($this->opt) {
+			//		for ($i; $i < count ($this->opt); $i++) die ('SECTION!!!');
+			//	} 
+				$result .= '>';
 				$result .= $this->content;
 				$result .= '</div> <!-- ] /Section -->'."\n";
 				return $result;
