@@ -106,5 +106,15 @@
 		public function speak ($speaker, $first, $second=false) {
 			return '<p>'.$this->inline($speaker, $first, $second).'</p>';
 		}
+
+		public function collapseOptions ($opt) {
+			$result = false;
+
+			for ($i = 1; $i < count($opt); $i += 2) {
+				$result .= ' '.$opt[$i].'="'.$opt[$i+1].'"';
+			}
+
+			return $result;
+		}
 	}
 ?>

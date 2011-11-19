@@ -7,14 +7,19 @@
 		private $isPre;
 		private $content;
 		private $opt;
+		
+		private $stack;
+		private $counter;
 
-		public function __construct ($d, $opt) {
+		public function __construct ($d) {
 			$this->d = $d;
-			$this->opt = $opt;
 
 			$this->isText = false;
 			$this->isPre = false;
 			$this->content = false;
+
+			$this->stack = array (false);
+			$this->counter = 0;
 		}
 
 		public function isEmpty () {
@@ -22,138 +27,198 @@
 			return true;
 		}
 
-		private function parseOption ($lineno, $first, $second) {
-		
-			$optname = false;
-			$optarg = false;
-			$cmd = false;
-
-			$args = split('@', $first);
-			switch (count($args)) {
-				case 3: $optarg = $args[2];
-				case 2: $optname = $args[1];
-				case 1: $cmd = $args[0];
-					break;
-				default: echo ('['.count($args).']'); print_r ($args); die ('WHY U NO ParseOption? @'.$lineno);
-			}
-			
-			if (strpos($second, '#')) list ($rcmd, $rcontent) = split ('#', $second, 2);
-			else list ($rcmd, $rcontent) = array ('pre', $second);
-
-			switch ($cmd) {
-				case 'p':
-				case 'li':
-					$this->content .= "<$cmd $optname=\"$optarg\">";
-					$this->parseLine($lineno, $rcmd, $rcontent);
-					$this->content .= "</$cmd>";
-					break;
-				case 'stitle':
-					$this->content .= "<h3 $optname=\"$optarg\">";
-					$this->parseLine($lineno, $rcmd, $rcontent);
-					$this->content .= "</h3>";
-					break;
-				default: die ('WHY U NO ParseOption? ['.$cmd.'] @'.$lineno);
-			}
+		private function recursive ($lineno, $content) {
+			if (strpos($content, '#')) {
+				list($rcmd, $rcontent) = split ('#', $content, 2);
+				if (strpos($rcmd, '@')) {
+					$opt = split ('@', $content);
+					$this->parseLine ($lineno, $opt[0], $opt, $rcontent);
+				} else $this->parseLine ($lineno, $rcmd, false, $rcontent);
+			} else $this->mkLine($content);
 		}
 
 		public function parseLine ($lineno, $cmd, $opt, $content) {
 
 			switch ($cmd) {
 				case '':
-					if ($content)
-						$this->content .= $this->openp().$content;
-					else
-						$this->content .= $this->closep();
+					if ($content) {
+						$this->mkText();
+						$this->mkLine($content);
+					} else $this->unmkText();
 					break;
 				case 'p':
-					$this->content .= $this->closeP().$this->openP();
-					if (strpos($content, '#')) {
-						list($rcmd, $rcontent) = split ('#', $content, 2);
-						$this->parseLine ($lineno, $rcmd, $opt, $rcontent);
-					} else $this->content .= $content;
+					$this->mkText();
+					$this->recursive($lineno, $content);
 					break;
 				case 'li':
-					$this->content .= $this->openP().'<li>';
-					if (strpos($content, '#')) {
-						list($rcmd, $rcontent) = split ('#', $content, 2);
-						$this->parseLine ($lineno, $rcmd, $opt, $rcontent);
-					} else $this->content .= $content;
-					$this->content .= '</li>';
+					$this->mkText($opt);
+					$this->recursive($lineno, $content);
+					$this->unmkText();
 					break;
 				case 'reverse':
-					$this->content .= $this->closeP().'<p class="reverse">';
-					$this->isText = true; break;
+					$this->mkText(' class="reverse"');
+					$this->isText = true;
+					if ($content) $this->recursive ($lineno, $content);
+					break;
 				case 'id':
-					$this->content .= $this->closeP().'<a id="'.ucwords($content).'"></a>';
+					$this->unmkText();
+					$this->mkLine('<a id="'.ucwords($content).'"></a>');
 					break;
 				case 'br':
-					$this->content .= $this->closeP().'<br />'; break;
+					$this->unmkText();$this->mkline('<br />'); break;
 				case 'pre':
 					$this->content .= $content; break;
 				case 'title':
-					$this->content .= $this->closeP().'<h2>'.$content.'</h2>'; break;
+					$this->unmkText();
+					$this->mkLine("<h2>$content</h2>");
+					break;
 				case 'titler':
-					$this->content .= $this->closeP().'<h2 class="reverse">'.$content.'</h2>'; break;
+					$this->unmkText();$this->mkline("<h2 class=\"reverse\">$content</h2>"); break;
 				case 'stitle':
-					$this->content .= $this->closeP().'<h3>';
-					if (strpos($content, '#')) {
-						list($rcmd, $rcontent) = split('#', $content, 2);
-						$this->parseLine($lineno, $rcmd, $opt, $rcontent);
-					} else $this->content .= $content;
+					$this->unmkText();
+					$this->content .= '<h3>';
+					$this->recursive($lineno, $content);
 					$this->content .= '</h3>'; break;
 				case 'link':
 				case 'mklink':
-					$this->content .= $this->mklink ($lineno, $content); break;
+					$this->content .= $this->mklink ($lineno, $content)."\n"; break;
 				case 'tid':
 				case 'mktid':
 					$this->content .= $this->mktid ($lineno, $content); break;
 				case 'speak':
-					$this->content .= $this->closeP().'<p>'.$this->mkinline($lineno, $content).'</p>'; break;
+					$this->unmkText();$this->mkLine('<p>'.$this->mkinline($lineno, $content).'</p>'); break;
 				case 'inline':
-					$this->content .= $this->openP().$this->mkinline($lineno, $content); break;
+					$this->mkText();$this->mkLine($this->mkinline($lineno, $content)); break;
 				case 'foto':
-					$this->content .= $this->closeP().$this->mkfoto($content); break;
+					$this->unmkText();$this->mkLine($this->mkfoto($content)); break;
 					
 				case 'begin':
-					switch (strtolower($content)) {
-						case 'inside':
-						case 'outside':
-							$this->content .= $this->closeP().'<div class="'.$content.'">'; break;
-						case 'pre':
-							$this->isPre = true;
-							$this->content .= $this->closeP(); break;
-						default: die ('Section: Unknown environment ['.$content.'] BEGIN @'.$lineno);
-					}
-					break;
+					$this->mkBegin($lineno, $cmd, $opt, $content);break;
 				case 'end':
-					switch (strtolower($content)) {
-						case 'inside':
-						case 'outside':
-							$this->content .= $this->closeP().'</div>'; break;
-						case 'pre':
-							$this->isPre = false; break;
-						default: die ('Section: Unknown environment ['.$content.'] END @'.$lineno);
-					}
-					break;
+					$this->mkEnd($lineno, $cmd, $opt, $content); break;
 				case 'exec':
 					$this->content .= eval($content);
 					break;
 
 				default: die ('Section: Unknown command ['.$cmd.'] @'.$lineno);
 			}
-			$this->content .= "\n";
 		}
 
-		private function openP() {
-			if ($this->isText) return '';
+		private function pushEnv ($env) { $this->stack[++$this->counter] = $env; }
+
+		private function popEnv () { $this->counter--; }
+
+		private function currentEnv () { return $this->stack[$this->counter]; }
+
+		private function mkText ($opt=false) {
+			if (!$this->isText) switch ($this->currentEnv()) {
+				case 'ol':
+				case 'ul':
+					if ($opt) $this->content .= "<li $opt>\n";
+					else $this->content .= "<li>\n"; break;	
+				case '':
+				case 'inside':
+				case 'outside':
+					if ($opt) $this->content .= "<p $opt>";
+					else $this->content .= "<p>\n"; break;
+			}
 			$this->isText = true;
-			return '<p>';
 		}
 
-		private function closeP() {
-			if (!$this->isText) return '';
+		private function unmkText () {
+			if ($this->isText) switch ($this->currentEnv()) {
+				case 'ol':
+				case 'ul':
+					$this->content .= "\n</li>"; break;
+				case '':
+				case 'inside':
+				case 'outside':
+					$this->content .= "\n</p>"; break;
+			}
 			$this->isText = false;
-			return '</p>'."\n";
+		}
+
+		private function mkline ($line) { $this->content .= $line."\n"; }
+
+		private function mkBegin ($lineno, $cmd, $opt, $content) {
+			list($env, $tag) = $this->mkOpenTag($lineno, $content);
+			switch ($env) {
+				case 'ol':
+				case 'ul':
+				case 'inside':
+				case 'outside':
+					$this->unmkText(); $this->mkline($tag); break;
+				case 'pre':
+					$this->isPre = true;
+					$this->content .= $this->closeP(); break;
+				default: die ('Section->mkBegin: Unknown environment ['.$env.'] BEGIN @'.$lineno);
+			}
+			$this->pushEnv($env);
+		}
+
+		private function mkEnd ($lineno, $cmd, $opt, $content) {
+			list($env, $tag) = $this->mkCloseTag($lineno, $content);
+			switch ($env) {
+				case 'ol':
+				case 'ul':
+				case 'inside':
+				case 'outside':
+					$current = $this->currentEnv();
+					if (strcmp($env, $current) == 0) {
+						$this->unmkText();
+						$this->mkline($tag);
+					} else die ("Cannot close $env before $current");
+					break;
+				default: die ("Section->mkEnd: Unknown environment [$env] @$lineno");
+			}
+			$this->popEnv();	
+		}
+
+		private function mkOpenTag ($lineno, $token) {
+			if (strpos($token, '@')) {
+				$args = split ('@', $token);
+				$env = $args[0];
+				$opt = $args;
+			} else {
+				$env = $token;
+				$opt = false;
+			}
+			
+			switch ($env) {
+				case 'inside':
+				case 'outside':
+					$result =  array ($env, '<div class="'.$env.'">');
+					break;
+				case 'ol':
+				case 'ul':
+					$opts = false;
+					if ($opt) switch (count ($opt)) {
+						case 5: $opts .= ' '.$opt[3].'="'.$opt[4].'"';
+						case 3: $opts .= ' '.$opt[1].'="'.$opt[2].'"';
+						case 1: 
+							$result = array ($env, '<'.$env.' '.$opts.'>');
+							break;
+						default: die ('Section->mkOpenTag: cannot handle '.count($opt). ' options @'.$lineno);
+					} else $result = array ($token, "<$token>");
+					break;
+				default:
+					die ('Section->mkOpenTag: unknown environment ['.$env.'] @'.$lineno);
+			}
+
+			//$this->setEnvironment($env);
+			return $result;
+		}
+
+		private function mkCloseTag ($lineno, $token) {
+			switch ($token) {
+				case 'ol':
+				case 'ul':
+					return array ($token, "</$token>");
+				case '':
+				case 'inside':
+				case 'outside':
+					return array ($token, '</div>');
+			}
 		}
 
 		public function addInclude ($parser, $part, $as) {
@@ -174,9 +239,6 @@
 
 				$result = false;
 				$result .= '<!-- Section[as('.$as.') --><div class="section"';
-			//	if ($this->opt) {
-			//		for ($i; $i < count ($this->opt); $i++) die ('SECTION!!!');
-			//	} 
 				$result .= '>';
 				$result .= $this->content;
 				$result .= '</div> <!-- ] /Section -->'."\n";

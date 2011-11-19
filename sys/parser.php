@@ -53,8 +53,9 @@
 				$cmd = strtolower($cmd);
 
 				if (strpos($cmd, '@')) {
-					list ($cmd, $opt) = split ('@', $cmd, 2);
-					$opt = split('@', $opt);
+					$opt = split ('@', $cmd);
+					$cmd = $opt[0];
+					$opt = $this->d->collapseOptions ($opt);
 				} else $opt = false;
 			}
 
