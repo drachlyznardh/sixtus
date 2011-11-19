@@ -84,7 +84,7 @@
 					$this->content .= $this->mklink ($lineno, $content)."\n"; break;
 				case 'tid':
 				case 'mktid':
-					$this->content .= $this->mktid ($lineno, $content); break;
+					$this->content .= $this->mktid ($lineno, $content)."\n"; break;
 				case 'speak':
 					$this->unmkText();$this->mkLine('<p>'.$this->mkinline($lineno, $content).'</p>'); break;
 				case 'inline':
@@ -167,7 +167,7 @@
 					if (strcmp($env, $current) == 0) {
 						$this->unmkText();
 						$this->mkline($tag);
-					} else die ("Cannot close $env before $current");
+					} else die ("Cannot close $env before $current @$lineno");
 					break;
 				default: die ("Section->mkEnd: Unknown environment [$env] @$lineno");
 			}

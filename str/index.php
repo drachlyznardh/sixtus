@@ -19,11 +19,11 @@ start#page
 	getto, senza mai guardare indietro. Se siete il Bolo o se trovate qualche
 	erroraccio, contattatemi indicando almeno qualche indizio.
 
-	include#str/2010/index.php#page
-	include#str/2011/index.php#page
+	include#str/2010/index#page
+	include#str/2011/index#page
 stop#page
 
 start#side
-	include#str/2010/index.php#side
-	include#str/2011/index.php#side
+	include#str/2010/index#side
+	include#str/2011/index#side
 stop#side

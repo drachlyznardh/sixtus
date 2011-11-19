@@ -278,8 +278,8 @@ tab#ii
 stop#page
 start#side
 	title#La dichiarazione
-	pre#<ol>
+	begin#ol
 		li#tid#A casa mia#i
 		li#tid#A casa sua#ii
-	pre#</ol>
+	end#ol
 stop#side

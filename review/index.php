@@ -236,7 +236,7 @@ tab#indice
 		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
 		li#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
 		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
-		li#link#Recensioni/Film/XIX/#Ed Wood###– 1994
+		li#link#Recensioni/Film/XIX/#Ed Wood### – 1994
 	pre#</ol>
 
 	sbr#
@@ -268,7 +268,7 @@ start#side
 		/
 		tid#Libri#categorie#Libri
 	stitle#tid#Classifica#classifica
-	pre#<ol>
+	begin#ol
 		li#tid#Fucking awesome!!!#classifica#awesome
 		li#tid#Buono#classifica#buoni
 		li#tid#Si lascia guardare#classifica#lasciano
@@ -277,11 +277,10 @@ start#side
 		li#tid#No#classifica#no
 		li#tid#Brutto da ridere#classifica#ridere
 		li#tid#Magnificamente brutto#classifica#magnifici
-	pre#</ol>
+	end#ol
 	br#
 	stitle#tid#Indice#indice
 	reverse#
-		tid#Cronologico#indice#cronologico
-		/
-		tid#Per categoria#indice#categoria
+		tid#Cronologico#indice#cronologico# /
+		tid#Per categoria#indice#categoria#
 stop#side

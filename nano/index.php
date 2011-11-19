@@ -1,21 +1,5 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('NaNoWriMo', 'Cosa, come, perché');
-	} if ($this->addside ()) {
-?><div class="section">
-	<h2>
-		NaNoWriMo
-	</h2><p>
-		<?=$d->link('NaNoWriMo/2010/', '2010')?>
-	</p><p>
-		<?=$d->link('NaNoWriMo/Corvino/Multicolore/', 'Corvino Multicolore')?>
-	</p><p>
-		<?=$d->link('NaNoWriMo/2011/', '2011')?>
-	</p>
-</div><?php } if ($this->addpage ()) { ?><div class="small">
-	<div class="section">
-		<p>
+title#NaNoWriMo#Cosa, come, perché
+start#page
 			Il NaNoWriMo è una cosa strana, difficile, da provare.
 		</p>
 	</div><div class="section">
@@ -65,6 +49,12 @@
 			causa (ora che conosco i risvolti della storia). Non
 			offro alcuna garanzia sul risultato, né sui tempi di
 			realizzazione.
-		</p>
-	</div>
-</div><?php } ?>
+stop#page
+start#side
+	title#NaNoWriMo
+	p#link#NaNoWriMo/2010/#2010
+
+	p#link#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore
+
+	p#link#NaNoWriMo/2011/#2011
+stop#page

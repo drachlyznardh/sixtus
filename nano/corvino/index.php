@@ -107,7 +107,7 @@ start#side
 	/
 	link#NaNoWriMo/Corvino/Multicolore/Extra/#Extra
 	titler#Parte I – La gioventù
-	pre#<ol style="list-style-type: decimal-leading-zero">
+	begin#ol@style@list-style-type: decimal-leading-zero
 		li#link#NaNoWriMo/Corvino/Multicolore/I/#Una sera, al parco
 		li#link#NaNoWriMo/Corvino/Multicolore/II/#Campeggio
 		li#link#NaNoWriMo/Corvino/Multicolore/III/#A contatto
@@ -115,11 +115,11 @@ start#side
 		li#link#NaNoWriMo/Corvino/Multicolore/V/#Di notte
 		li#link#NaNoWriMo/Corvino/Multicolore/VI/#Gli ultimi giorni
 		li#link#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
-	pre#</ol>
+	end#ol
 	titler#Parte II – Il Potere
-	pre#<ol start="8" style="list-style-type: decimal-leading-zero">
+	begin#ol@start@8@style@list-style-type: decimal-leading-zero
 		li#link#NaNoWriMo/Corvino/Multicolore/VIII/#Il lampione
-	pre#</ol>
+	end#ol
 	titler#Parte VI – I Demoni
 	Prossimamente…
 	titler#Parte III – Le streghe

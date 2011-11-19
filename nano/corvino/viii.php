@@ -3,14 +3,14 @@ prev#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
 
 start#side
 	title#Il lampione
-	pre#<ol>
+	begin#ol
 		li#tid#Quella mattina#i
 		li#tid#A casa#ii
 		li#tid#Al parcheggio#iii
 		li#tid#Di corsa#iv
 		li#tid#A casa, di nuovo#v
 		li#tid#Al parco#vi
-	pre#</ol>
+	end#ol
 stop#side
 start#page
 	tab#i

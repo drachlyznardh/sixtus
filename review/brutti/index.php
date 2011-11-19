@@ -18,6 +18,7 @@ start#page
 stop#page
 start#side
 	stitle#Film brutti
-	p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap###– 2009
-	p#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
+	p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
+
+	p#link#Recensioni/Film/Brutti/XVIII/#Black Sheep### – 2006
 stop#side

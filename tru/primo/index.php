@@ -12,7 +12,7 @@ start#page
 stop#page
 start#side
 	title#Volume I
-	pre#<ol style="list-style-type: upper-roman">
+	begin#ol@style@list-style-type: upper-roman
 		li#link#Tru/Naluten/Vol.I/I/#Camminavo
 		li#link#Tru/Naluten/Vol.I/II/#Sacomne
 		li#link#Tru/Naluten/Vol.I/III/#Il mio nome
@@ -22,5 +22,5 @@ start#side
 		li#link#Tru/Naluten/Vol.I/VII/#La meta
 		li#link#Tru/Naluten/Vol.I/VIII/#La Porta
 		li#link#Tru/Naluten/Vol.I/IX/#La fine del mondo
-	pre#</ol>
+	end#ol
 stop#side

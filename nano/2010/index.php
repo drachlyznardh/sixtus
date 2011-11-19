@@ -116,16 +116,16 @@ start#side
 	p#link#NaNoWriMo/2010/Personaggi/#Personaggi
 	title#Parte I
 	titler#La gioventù
-	pre#<ol style="list-style-type: decimal-leading-zero">
+	begin#ol@style@list-style-type: decimal-leading-zero
 		li#link#NaNoWriMo/2010/01/download/#Una sera, al parco
 		li#link#NaNoWriMo/2010/02/download/#Campeggio
 		li#link#NaNoWriMo/2010/03/download/#A contatto
 		li#link#NaNoWriMo/2010/04/download/#Nel bosco
 		li#link#NaNoWriMo/2010/05/download/#La dichiarazione
-	pre#</ol>
+	end#ol
 	title#Parte II
 	titler#Il Potere
-	pre#<ol start="6" style="list-style-type: decimal-leading-zero">
+	begin#ol@start@6@style@list-style-type: decimal-leading-zero
 		li#link#NaNoWriMo/2010/06/download/#Il lampione
 		li#link#NaNoWriMo/2010/07/download/#La lettura
 		li#link#NaNoWriMo/2010/08/download/#La corsa
@@ -136,10 +136,10 @@ start#side
 		li#link#NaNoWriMo/2010/13/download/#Il funerale
 		li#link#NaNoWriMo/2010/14/download/#La rivelazione
 		li#link#NaNoWriMo/2010/15/download/#Il mondo &lsquo;di là&rsquo;
-	pre#</ol>
+	end#ol
 	title#Parte III
 	titler#Le streghe
-	pre#<ol start="16" style="list-style-type: decimal-leading-zero">
+	begin#ol@start@16@style@list-style-type: decimal-leading-zero
 		li#link#NaNoWriMo/2010/16/download/#Il da farsi
 		li#link#NaNoWriMo/2010/17/download/#Le botte
 		li#link#NaNoWriMo/2010/18/download/#La sua storia
@@ -148,5 +148,5 @@ start#side
 		li#link#NaNoWriMo/2010/21/download/#L&apos;oracolo
 		li#link#NaNoWriMo/2010/22/download/#Il drago
 		li#link#NaNoWriMo/2010/finale/download/#Epilogo
-	pre#</ol>
+	end#ol
 stop#side

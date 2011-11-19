@@ -60,16 +60,16 @@ start#page
 	adulti o i bimbi piccini, ma soprattutto uno di quelli
 	che non hanno mai avuto una ragazza, non ne hanno una e
 	non intendono farsela per due motivi:
-	pre#<ul><li>
+	begin#ul
 		avere una ragazza costa tempo e soldi (o almeno
 		così mi dicevano, ai tempi, quelli che avevano o
 		millantavano d'avere una ragazza)
-	pre#</li><li>
+
 		le ragazze sono femmine: non hanno niente
 		d'interessante, non capiscono nulla di sport, di
 		videogiochi, né di nient'altro che conti
 		veramente
-	pre#</li></ul>
+	end#ul
 	
 	Già, a quei tempi mi sfuggivano alcune cose.
 	
@@ -360,7 +360,7 @@ start#page
 	Passai circa una settimana chiedendomi come sarebbe stato.
 	begin#inside
 		Come sarà?
-	end#outside
+	end#inside
 	pare una domanda semplice, ma riflettete effettivamente
 	un attimo e ditemi come sarà. Come sarà che? La domanda
 	era chiaramente incompleta, ma non me ne resi conto
@@ -419,7 +419,7 @@ start#page
 	ad imparare la teoria e il gergo.
 	begin#inside
 		grazie, Internet!
-	end#outside
+	end#inside
 	ma ero chiaramente alle prime armi e non avevo ben chiari i confini di… non
 	avevo chiaro un cazzo.
 
@@ -626,7 +626,7 @@ start#page
 	
 		E giù porchi e madonne, sia io che l'altro martire, che il prete è
 		ancora lontano e non può sentirci (poteva sentirci).
-	end#outside
+	end#inside
 	Nel tempo che io e quel povero tizio, Condo, impieghiamo per compiere la
 	nostra via crucis, tutti gli altri pellegrini all'alpe sono giunti alla
 	baita.
@@ -637,7 +637,7 @@ start#page
 		dopo che tutti gli altri stronzi prima di noi ne hanno preso un
 		bicchiere. Vi si possano distendere le budella, dannati stronzi senza il
 		generatore sulla schiena!
-	end#outside
+	end#inside
 	A noi rimane come unica consolazione una succosa, conviviale e fraterna,
 	comunitaria quanto insapore fetta d'anguria.
 	begin#inside
@@ -654,7 +654,7 @@ start#page
 		Fanculo voi, le vostre angurie e quella borsa di merda, che neanche
 		aveva le cinghie regolabile ch'erano troppo lunghe per le mie braccia:
 		vaffanculo e che vi germoglino i semi nella pancia.
-	end#outside
+	end#inside
 	Ma come ho detto prima, non c'era solo questo nella mia vita.
 
 	C'erano anche cose buone, ben nascoste tra le rotture di palle, ma c'erano.

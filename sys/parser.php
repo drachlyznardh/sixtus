@@ -89,7 +89,7 @@
 				case 'include':
 					list($part, $file) = $this->getIncludeKeyword($content);
 					$parser = $this->getParser($file);
-					if ($opt && strcmp($opt[0], 'as') == 0) $as = $opt[1];
+					if ($opt && strcmp($opt, ' as="content"') == 0) $as = 'content';
 					else $as = false;
 					$this->tab->addInclude($parser, $part, $as);
 					return;

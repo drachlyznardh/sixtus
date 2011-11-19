@@ -9,7 +9,7 @@ start#page
 stop#page
 start#side
 	title#Volume II
-	pre#<ol start="10">
+	begin#ol@start@10
 		li#link#Tru/Naluten/Vol.II/X/#La trovatella
 		li#link#Tru/Naluten/Vol.II/XI/#Abbandono &amp; recupero
 		li#link#Tru/Naluten/Vol.II/XII/#Conversazione
@@ -20,5 +20,5 @@ start#side
 		li#link#Tru/Naluten/Vol.II/XVII/#Battaglia navale
 		li#link#Tru/Naluten/Vol.II/XVIII/#Duello
 		li#link#Tru/Naluten/Vol.II/XIX/#Lezione
-	pre#</ol>
+	end#ol
 stop#side
