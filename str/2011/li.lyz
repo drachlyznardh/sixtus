@@ -1,12 +1,7 @@
-<?php
-	$title=array#Il druido#Birra, idromiele &amp; follia
-	$prev=array#Quel che dovrei fare#Storie/2011/L/
-	$next=array#Sgaggio Tiem#Storie/2011/LII/
+title#Il druido#Birra, idromiele &amp; follia
+prev#Storie/2011/L/#Quel che dovrei fare
+next#Storie/2011/LII/#Sgaggio Tiem
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Questa la scrivo senza i tab perché pur essendo epica non è molto
 			lunga.
 		
@@ -67,7 +62,4 @@ start#page
 		
 			E ce ne siamo tornati a casa tutti sbilenchi… Torniamo lì fra una
 			settimana, se v'interessa: partecipate numerosi!
-		</p>
-	</div>
-</div>
-<?php  } ?>
+			stop#page

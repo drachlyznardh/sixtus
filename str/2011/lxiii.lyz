@@ -1,12 +1,7 @@
-<?php
-	$title=array#Gli scagnozzi del Dr.Odio#Danzate, miei schiavi!
-	$prev=array#Normale#Storie/2011/LXII/
-	$next=array#La metafora#Storie/2011/LXIV/#INTRO
+title#Gli scagnozzi del Dr.Odio#Danzate, miei schiavi!
+prev#Storie/2011/LXII/#Normale
+next#Storie/2011/LXIV/#La metafora
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Oggi me ne andavo un attimino a spasso ed ho sentito uno senso
 			d'incompletezza.
 		
@@ -83,9 +78,8 @@ start#page
 			raggiungibile.
 		
 			Ecco quindi il terzo, attesissimo volume.
-		</p>
-	</div><br/><div class="section">
-		<p id="II">
+	sec#
+	id#ii
 			Dal <span class="em">GODS</span>, già Premio Guttember, già disco di
 			platino, già stalker &amp; scienziato &amp; scrittore &amp;
 			millantante sociologo autodidatta, già tre volte ritiratosi dalla
@@ -110,9 +104,7 @@ start#page
 		</li></ul><p>
 			nonché produttore e sceneggiatore del premiatissimo “<span
 			class="em">La Fuffa 3D – una storia vera</span>” e tutt'ora latitante
-		</p>
-	</div>
-</div><div class="section">
+		sbr#
 	<h2>
 		Mission Impossibru.JPG XIX – Flower of Destiny
 	</h2><h2 class="reverse">
@@ -124,10 +116,8 @@ start#page
 	</h2><p>
 		ma soprattutto per i motivi sbagliati. O travisati. O contorti. O
 		perversi. Ch'è un'altra cosa da cattivi.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+	
+	sec#
 			Seduto nel suo oscuro antro il <span class="wrong">Dr.</span>Odio
 			medita.
 		
@@ -194,7 +184,4 @@ start#page
 			Un cuore tale non è degno del <span class="wrong">Dr.</span>Odio.
 		
 			Ma se non funziona… con cosa lo sostituisco?
-		</p>
-	</div>
-</div>
-<?php } ?>
+stop#page

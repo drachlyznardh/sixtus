@@ -1,36 +1,26 @@
-<?php
-	$title=array#Quel che ho fatto#Uhm. Sottotitolo inutile
-	$prev=array#Sgaggio Tiem#Storie/2011/LII/
-	$next=array#Niente#Storie/2011/LIV/
+title#Quel che ho fatto#Uhm. Sottotitolo inutile
+prev#Storie/2011/LII/#Sgaggio Tiem
+next#Storie/2011/LIV/#Niente
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Questa è una storia in ritardo. L'ho scritta circa una settimana fa,
 			quand'era fresca fresca, poi l'ho messa da parte in attesa he
 			arrivasse il momento adatto per reimpastarla e farne quello che
 			state per leggere.
 		
 			Potrebbe uscirmi un po' melensa…
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Salve, sono il <span class="gods">Gods</span> e me la prendo un po'
 		quando il finale di una storia non è all'altezza delle aspettative.
-		Legge <?=$d->link#Recensioni/DarkOfTheMoon/#qui, se avete dei
-		dubbi. Ma non è questa la cosa importante, lo è invece il fatto che –
-		come ho raccontato <?=$d->link#L#qui – sono riuscito a fare una
-		certa cosa.
+		Leggete
+		link#Recensioni/DarkOfTheMoon/#qui##,
+		se avete dei dubbi. Ma non è questa la cosa importante, lo è invece il fatto che – come ho raccontato
+		link#L#qui
+		– sono riuscito a fare una certa cosa.
 	
 		Ho compiuto un passo in quella che soltanto poi ho scoperto essere una
 		sequenza. Perché in effetti non credevo che le cose potessero andare
 		così bene, e non credevo che si sarebbe stato un dopo.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Avendo “lasciato un segno”, mi sono trovato nella quasi sconosciuta
 			condizione di dover affrontare un secondo approccio.
 		
@@ -54,10 +44,8 @@ start#page
 			La cosa peggiore era l'idea del peso dell'attesa che avrei dovuto
 			sopportare prima che lei mi rispondesse. Perché sarei andato per
 			porre una domanda, o almeno quello era il piano.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+
+		sbr#
 		Perché, come ebbi modo di ricordarmi soltanto parecchio tempo dopo, per
 		ricevere una risposta basta spesso porre una domanda.
 	
@@ -66,10 +54,7 @@ start#page
 		(quello buono), non so se fosse dovuto al carico emotivo (quello
 		nervoso) o se fosse soltanto stanchezza, ma io non potevo porre quella
 		domanda.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Balle.
 		
 			Ho dimenticato una cosa importante: ci sono tempi e modi per porre
@@ -87,10 +72,8 @@ start#page
 			essere riconosciuto dallo spettatore, poi bisogna richiamare
 			l'attenzione del destinatario della prossima battuta, arrivare alla
 			distanza corretta e soltanto poi dare la propria battuta.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+
+		sbr#
 		Io non sarò un gran ché ma se chiedete in giro potranno dirvi che
 		qualche entrata l'ho fatta. E se non volete credermi, crediate almeno
 		che non sono uno che si vergogna di rompere il ghiaccio con gli
@@ -101,10 +84,7 @@ start#page
 	
 		Ma riesco a fare queste cose soltanto quando non mi importa del
 		risultato. La stragrande maggioranza delle volte, quindi.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Perché a me piace giocare quando posso vincere. E per vincere una
 			discussione di un certo tipo, una che può creare certi imbarazzi,
 			basta non avere secondi fini.
@@ -179,20 +159,14 @@ start#page
 			Sapevo che prima di uscire avrei dovuto cambiarmi, e mettermi le
 			mutande di Batman, ma non le ho trovate. Credo che me le abbiano
 			buttate.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Diciamo quindi che mi sono ritrovato alle due e mezza di notte, come un
 		gatto in braghe di tela…
 	
 		Ed ho capito che mi ci sarebbe voluto qualcosa di più per riuscire in
 		quello che avevo in mente di fare, e qualcos'altro in più ancora per
 		superare quel sabato sera.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Ho quindi passato una domenica tormentata dal dubbio. Tanto di quel
 			dubbio che sono riuscito ad andare piano in bicicletta (che non è
 			una cosa che faccio spesso, credetemi).
@@ -264,10 +238,7 @@ start#page
 		
 			E così fu fatta. L'entrata in scena, per quanto la ragione fosse
 			diversa, era stata fatta.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		A quel punto, faccia a faccia, avemmo la nostra resa dei conti. Sebbene
 		ci fosse una saracinesca abbassata a dividerci, lei ebbe la cortesia di
 		venirmi incontro.
@@ -279,15 +250,13 @@ start#page
 	
 		Perché, in quel momento, c'eravano soltanto io e lei, vicini, e poteva
 		andare bene anche così.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Ma non è così che vanno a finire le cose quando ci sono io. Perché
 			io avevo i miei propositi e lei aveva i suoi dubbi.
 		
 			E quindi mi sono sciolto, mettendoci la teatralità di
-			<?=$d->link#Storie/2011/XXXVI/#quel tizio. Il mio discorso,
+			link#Storie/2011/XXXVI/#quel tizio##.
+			Il mio discorso,
 			per quanto meno sconclusionato di quel che poteva sembrare (almeno,
 			nella mia testa. Insomma, io l'ho capito…) non sortì il
 			benchemminimo effetto.
@@ -339,10 +308,7 @@ start#page
 			Rimango un minuto a cercare qualcosa da dire prima di andarmene. Non
 			lo trovo. Saluto e me ne vado, prova vivente che probabilmente lei
 			ha ragione.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Perché io so per certo che averla vista due minuti non m'ha lasciato
 		pensare ad altro che a lei per delle settimane. Ma so anche che non mi
 		ci è voluto più un minuto per lasciarmela alle spalle.
@@ -355,5 +321,4 @@ start#page
 	</p><p style="text-align:center">
 		Perché smette di essere importante?
 	</p>
-</div>
-<?php } ?>
+stop#page

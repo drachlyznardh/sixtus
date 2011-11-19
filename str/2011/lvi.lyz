@@ -1,32 +1,21 @@
-<?php
-	$title=array#Correre di notte#Fa paura
-	$prev=array#Spezzato#Storie/2011/LV/
-	$next=array#Il potere#Storie/2011/LVII/
+title#Correre di notte#Fa paura
+prev#Storie/2011/LV/#Spezzato
+next#Storie/2011/LVII/#Il potere
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Dunque, come avrete letto
-			<?=$d->link#Storie/2011/LV/#precedentemente, me ne sono
-			andato a correre di notte.
+			link#Storie/2011/LV/#precedentemente##,
+			me ne sono andato a correre di notte.
 		
 			Ne avevo bisogno.
 		
 			Perché correre aiuta a pensare. Correre di notte aiuta a stare
 			freschi. E correre al buio fa paura, così vado più in fretta e
 			impiego meno tempo.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Ero un po' abbattuto, ieri. Quando sono abbattuto, me ne vado ai sassi a
 		pensare. Ma stavolta ho pensato lungo la strada e lì mi sono fermato
 		giusto un attimino.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Di notte, al buio, si corre benissimo. L'aria è fresca, lungo
 			l'Adige c'è una bell'arietta, non incontri nessuno lungo la strada.
 		
@@ -39,19 +28,13 @@ start#page
 		
 			Ho visto lucciole, merli, un tizio con il cane, lucertole, un paio
 			di coniglietti, due ciclisti.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Ma tolti quei pochi incontri, eravamo soltanto io e la mia pagliuzza. La
 		tengo in bocca quando corro, così devo tenere la bocca chiusa e respiro
 		con il naso.
 	
 		Si dovrebbe correre meglio, in teoria. Respirazione corretta. Aerazione…
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Quello aiuta. Quello e l'arietta nella schiena. Quello e il vento
 			che fischia nelle orecchie. Quello e la sensazione di non poter
 			vedere quello che arriva. Posto che qualcosa arrivi.
@@ -69,15 +52,9 @@ start#page
 		
 			E puoi metterti a considerare delle cose. Puoi ricordare cose di
 			scarsa importanza. Ma anche cose importanti
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Proverò a scriverne.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Solo.
 		
 			Serenamente solo.
@@ -97,15 +74,15 @@ start#page
 		</p>
 	</div><div class="section">
 		<p>
-			&#160;
+			br#
 		
 			Forse ce l'ho.
 		
-			&#160;
+			br#
 		</p><p style="text-align:right">
 			Funziona più o meno così…
 		
-			&#160;
+			br#
 		</p>
 	</div><div class="section">
 		<div class="inside"><p>
@@ -129,19 +106,17 @@ start#page
 			
 				Prendo fiato, come si fa prima di una puntura.
 		</p></div><p>
-			&#160;
+			br#
 		</p><div class="outside"><p>
 				Non succede niente.
 			
 				Lei mi guarda, passa oltre. Il cuore batte, come un orologio.
 		</p></div><p>
-			&#160;
+			br#
 		</p><div class="inside"><p>
 				Il mio primo pensiero è	«<span class="gods">Non fa male,
 				dev'essere rotto</span>»
 			</p><p style="text-align:right">
 				Soltanto dopo ricordo che invece è così che funziona.
 		</p></div>
-	</div>
-</div>
-<?php } ?>
+stop#page

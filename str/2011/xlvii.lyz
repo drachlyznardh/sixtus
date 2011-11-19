@@ -1,47 +1,8 @@
-<?php
-	$title=array#Impresa (II)#Presi la mia bici un giorno…
-	$prev=array#Storia XLVI#Storie/2011/XLVI/
-	$next=array#Storia XLVIII#Storie/2011/XLVIII/
+title#Impresa (II)#Presi la mia bici un giorno…
+prev#Storie/2011/XLVI/#L'uomo con due ombrelli
+next#Storie/2011/XLVIII/#Non ce n'è abbastanza
 start#page
-		$self='Storie/2011/XLVII/';
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<ol><li id="li-i">
-					<?=$d->link($self,'Partenza – Trento#I
-			</li></ol><h2>
-				Tappe
-			</h2><ol start="2"><li id="li-ii">
-					<?=$d->link($self,'Trento – Civezzano#II
-				</li><li id="li-iii">
-					<?=$d->link($self,'Civezzano – S.Colomba#III
-				</li><li id="li-iv">
-					<?=$d->link($self,'S.Colomba – Fontanella#IV
-				</li><li id="li-v">
-					<?=$d->link($self,'Fontanella – Lases#V
-				</li><li id="li-vi">
-					<?=$d->link($self,'Lases – Segonzano#VI
-				</li><li id="li-vii">
-					<?=$d->link($self,'Segonzano – Cembra#VII
-				</li><li id="li-viii">
-					<?=$d->link($self,'Cembra – Trento#VIII
-			</li></ol><h2>
-				Considerazioni
-			</h2><ol start="9"><li id="li-ix">
-					<?=$d->link($self,'L&apos;acqua di valle#IX
-				</li><li id="li-x">
-					<?=$d->link($self,'Tutti tamarri#X
-				</li><li id="li-xi">
-					<?=$d->link($self,'Le zone di produzione#XI
-				</li><li id="li-xii">
-					<?=$d->link($self,'Quelli che non si allenano#XII
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
-			<div class="section">
-	<p>
+tab#i
 		Un bel dì – era domenica scorsa, 5 giugno – presi la mia biciclettina
 		con l'intento di farmi un giretto.
 	
@@ -59,15 +20,11 @@ start#page
 </div><div class="section">
 	<p>
 		Approfittando dell'occasione per testare il mio
-		<?=$d->link#Storie/2011/XLIV/#nuovo casco#IV
+		link#Storie/2011/XLIV/#nuovo casco#IV
 		mi sono messo in tenuta leggera (completo da corsa, ventina da ciclista,
 		borraccia, casco e marsupio), mi son cargato la bicicletta in spalla
 		(era in cantina) e uscito dalla cantina son montato su…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ii">
-			<div class="section">
-	<p>
+tab#ii
 		Cloppete cloppete, m'avvio verso Cognola… m'arrampico su per via
 		Valsugana, arrivo in paese, passo sotto la tangenziale, mi inerpico fino
 		alla rotonda, su e su e su fino al tornantone per Villamontagna…
@@ -93,11 +50,7 @@ start#page
 		al grande incrocio che porta a Pergine. Da lì, un po' indeciso, rifletto
 		se prendere la stradella di sinistra, che passa per Bosco, oppure quella
 		a destra, che passa per Torchio…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iii">
-			<div class="section">
-	<p>
+tab#iii
 		Decido di prendere la strada classica (visto che quella per Bosco l'ho
 		fatta soltanto a scendere, soltanto una volta) e me ne vado a destra,
 		stradone per mezzo chilometro fino al bivio, dentro il paese e poi
@@ -147,11 +100,7 @@ start#page
 		d'avventura sia grande, decido di vedere che c'è dall'altra parte.
 	
 		Scendo dunque verso Albiano.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iv">
-			<div class="section">
-	<p>
+tab#iv
 		Attorno al lago di S.Colomba non c'è niente.
 	
 		Quasi non mi fermo, continua sull'unica strada e comincio a scendere.
@@ -185,11 +134,7 @@ start#page
 		E mentre pregusto la freschezza, svuoto la borraccia e la riempio. Poi
 		alzo gli occhi e vedo un bel cartello del comune: l'acqua non è
 		potabile. Cazzo.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
-	<p>
+tab#v
 		Svuota di nuovo, avventurati in paese per cercare un'altra fontanella.
 	
 		Vicino alla chiesa non vedo fontane. In piazza (o forse era solo un
@@ -226,11 +171,7 @@ start#page
 		proseguire verso Lases, segnalato di lì ad un chilometro soltanto.
 	
 		Ed era pure un chilometro in discesa.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vi">
-			<div class="section">
-	<p>
+tab#vi
 		Giungo dunque a Lases, altro paesello che conterà sette abitanti. E non
 		c'è nessuno. NESSUNO.
 	
@@ -249,11 +190,7 @@ start#page
 	
 		Alla fine, ancora senz'acqua, finisco sotto Segonzano, al parcheggio
 		delle Piramidi.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vii">
-			<div class="section">
-	<p>
+tab#vii
 		Constatato che l'ingresso per vedere dei sassi, che seppur belli son
 		comunque sassi, costa 3€, ho deciso che se li potevan tenere e mi son
 		dedicato invece alla cartina lì accanto.
@@ -271,11 +208,7 @@ start#page
 	
 		E poi via, a visitare il paesello. Bellino, il posto; per un attimo m'è
 		quasi sembrato d'essere a Riva del Garda…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-viii">
-			<div class="section">
-	<p>
+tab#viii
 		Ricordando i dettagli della cartina osservata poco prima, e controllando
 		i numerosi cartelli per strada, scopro d'essere ancora ad oltre venti
 		chilometri da casa…
@@ -293,11 +226,7 @@ start#page
 		familiare pista ciclabile.
 	
 		E da lì me ne torno a casa.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ix">
-			<div class="section">
-	<p>
+tab#ix
 		Ora, io mi chiedo.
 	
 		Sinceramente, immagino che l'acqua d'Albiano non sia poi imbevibile. Me
@@ -308,11 +237,7 @@ start#page
 		messo nella stessa situazione? Tutte le fontanelle?
 	
 		Metti caso che un ciclista a caso passi di là… 
-	</p>
-			</div>
-		</div><div class="tab" id="tab-x">
-			<div class="section">
-	<p>
+tab#x
 		Sarà stata magari soltanto un'impressione, ma la stragrande maggioranza
 		delle automobili che m'han passato via erano tamarre.
 	
@@ -322,11 +247,7 @@ start#page
 		degl'uccellini e lo scrosciar di ruscelletti.
 	
 		E invece…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xi">
-			<div class="section">
-	<p>
+tab#xi
 		Capisco che quando uno produce qualcosa di tipico, vorrebbe veder
 		riconosciuta la propria tipicità.
 	
@@ -343,11 +264,7 @@ start#page
 	
 		Ci sono forse più zone tipiche? Sono annidate? Ci sono più livelli di
 		‘zona’? Che sono, zone gerarchiche, man mano più tipiche?
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xii">
-			<div class="section">
-	<p>
+tab#xii
 		Questa ve la metto qui in attesa che arrivi la storia completa: la
 		scriverò stasera, o forse domani. Attendete.
 	</p>
@@ -386,11 +303,29 @@ start#page
 		«Ah, andrei anch'io se avessi il fisico…»
 	</p></div><p>
 		sono sgradevoli, sono invece apprezzate quelle per
-	</p><div class="outside"<p>
+	</p><div class="outside"><p>
 		«Anch'io ai miei tempi…»
 	</p></div>
-			</div>
-		</div>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side
+	begin#ol
+		li#tid#Partenza – Trento#i
+	end#ol
+	title#Tappe
+	begin#ol@start@2
+		li#tid#Trento – Civezzano#ii
+		li#tid#Civezzano – S.Colomba#iii
+		li#tid#S.Colomba – Fontanella#iv
+		li#tid#Fontanella – Lases#v
+		li#tid#Lases – Segonzano#vi
+		li#tid#Segonzano – Cembra#vii
+		li#tid#Cembra – Trento#viii
+	end#ol
+	title#Considerazioni
+	begin#ol@start@9
+		li#tid#L&apos;acqua di valle#ix
+		li#tid#Tutti tamarri#x
+		li#tid#Le zone di produzione#xi
+		li#tid#Quelli che non si allenano#xii
+	end#ol
+stop#side

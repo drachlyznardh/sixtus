@@ -1,12 +1,7 @@
-<?php
-	$title=array#Cattivo#O soltanto malvagio?
-	$prev=array#Violenza e soddisfazione#Storie/2011/LX/
-	$next=array#Normale#Storie/2011/LXII/
+title#Cattivo#O soltanto malvagio?
+prev#Storie/2011/LX/#Violenza e soddisfazione
+next#Storie/2011/LXII/#Normale
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Questa storia è stata tenuta in cantiere per circa due settimane.
 		
 			E siccome oggi è una – attenzione! – giornata allegra, mi metto a
@@ -48,21 +43,16 @@ start#page
 	</div><div class="section">
 		<p>
 			E potrei anche fermarmi qui.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="II">
-		&#160;
+		sbr#
+		id#ii
+		br#
 	
 		Ma la storia non è ancora abbastanza lunga. E se non scrivo abbastanza,
 		poi gli ascolti calano e il valore degli spazi pubblicitari crolla, e mi
 		toccherebbe smettere di bruciare l'oro puro nella mia fornace, quindi.
 	
-		&#160;
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		br#
+		sec#
 			E dunque, per il nostro fedelissimo pubblico, la storia continua!
 		</p><div class="outside"><p>
 				«Stamattina pioveva abbastanza convinto, ma era già il 19.
@@ -162,10 +152,7 @@ start#page
 			comparsa della gente, e me ne sono andato a casa. 
 		
 			Ma ora, per collegarsi al titolo della storia, ecco la conclusione.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Odio questa gente che mi guarda soltanto perché sono vestito in un modo
 		che loro non si aspettano.
 	
@@ -174,14 +161,12 @@ start#page
 	
 		Odio quel tizio lì, che passava per caso accanto al mio tavolo, a
 		pranzo. Il <span class="em">buon <span class="mitch">Mitch</span></span>
-		me l'ha indicato come <span class="em"><?=$d->link#Storie/2011/XXXII/',
-		'Richards</span>, ed io gli ho immediatamente voluto tutto il male
+		me l'ha indicato come <span class="em">
+		link#Storie/2011/XXXII/#Richards
+		</span>, ed io gli ho immediatamente voluto tutto il male
 		del mondo. Abbastanza male da sollevare l'umore del povero Mitch (si sta
 		inscheletrendo, nell'aspetta d'una risposta da quel suo professore…).
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Nello stesso modo odio tutti quelli che pedalano male, quelli che
 			camminano sulla pista ciclabile e quelli che pedalano per strada
 			quando la ciclabile è ad un metro.
@@ -200,7 +185,4 @@ start#page
 		
 			E intendo restare così, almeno fino al giorno in cui la vita vera
 			non prevederà un sistema di punteggi integrato.
-		</p>
-	</div>
-</div>
-<?php } ?>
+stop#page

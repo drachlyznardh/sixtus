@@ -1,76 +1,8 @@
-<?php
-	$title=array#Sgaggio Tiem',
-		'Perché certe cose devono essere raccontate
-	$prev=array#Il Druido#Storie/2011/LI/
-	$next=array#Quel che ho fatto#Storie/2011/LIII/
+title#Sgaggio Tiem#Perché certe cose devono essere raccontate
+prev#Storie/2011/LI/#Il Druido
+next#Storie/2011/LIII/#Quel che ho fatto
 start#page
-		$self = 'Storie/2011/LII/';
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<h2>
-				Sgaaaaaaaaaaaaaggio!
-			</h2><ol><li id="li-i">
-					<?=$d->link($self,'Recupero#I — 08/07/2011 11:00
-				</li><li id="li-ii">
-					<?=$d->link($self,'Installazione#II – 08/07/2011 14:30
-				</li><li id="li-iii">
-					<?=$d->link($self,'La mappa di bit#III – 11/07/2011 14:55
-				</li><li id="li-iv">
-					<?=$d->link($self,'La prima iterazione#IV – 11/07/2011 16:30
-				</li><li id="li-v">
-					<?=$d->link($self,'La resurrezione#V – 12/07/2011 XX:XX
-				</li><li id="li-vi">
-					<?=$d->link($self,'Trasferimento#VI – 13/07/2011 12:30
-				</li><li id="li-vii">
-					<?=$d->link($self,'Spegnimento#VII – 13/07/2011 18:30
-				</li><li id="li-viii">
-					<?=$d->link($self,'Il kernel#VIII – 14/07/2011 18:00
-				</li><li id="li-ix">
-					<?=$d->link($self,'Boot image#IX – 14/07/2011 18:30
-				</li><li id="li-x">
-					<?=$d->link($self,'Seriale#X – 15/07/2011 12:50
-				</li><li id="li-xi">
-					<?=$d->link($self,'La seconda iterazione#XI
-					– 15/07/2011 17:00
-				</li><li id="li-xii">
-					<?=$d->link($self,'Packing services#XII
-					– 18/07/2011 12
-				</li><li id="li-xiii">
-					<?=$d->link($self,'Aggiornamenti#XIII
-					– 19/07/2011 12:30
-				</li><li id="li-xiv">
-					<?=$d->link($self,'La terza iterazione#XIV
-					– 19/07/2011 17:00
-				</li><li id="li-xv">
-					<?=$d->link($self,'L&apos;Apache#XV
-					– 20/07/2011 11:00
-				</li><li id="li-xvi">
-					<?=$d->link($self,'La formattazione#XVI
-					– 20/07/2011 17:30
-				</li><li id="li-xvii">
-					<?=$d->link($self,'Ricerca#XVII
-					– 21/07/2011
-				</li><li id="li-xviii">
-					<?=$d->link($self,'Crossing#XVIII
-					– 22/07/2011
-				</li><li id="li-xix">
-					<?=$d->link($self,'Lo scoglio#XIX
-					– 26/07/2011
-				</li><li id="li-xx">
-					<?=$d->link($self,'La luce in fondo al tunnel#XX
-					– 29/07/2011
-				</li><li id="li-xxi">
-					<?=$d->link($self,'E infine…#XXI
-					– 30/07~05/08
-				</li>
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
-			<div class="section">
-	<p>
+tab#i
 		E insomma… venne il giorno. Ce ne andammo, io e il <span
 		class="jazz">signor Jazzinghen</span>, da Macii per ricevere
 		l'investitura.
@@ -111,11 +43,7 @@ start#page
 		questi due nonnetti sono ISE e EDK, rispettivamente il “compilatore” che
 		scrive si occupa di creare le connessioni del processore e il
 		“development kit” per poterci programmare sopra.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ii">
-			<div class="section">
-	<p>
+tab#ii
 		Partiamo con l'installazione. Per prima cosa, ISE, lui e il suo bel CD
 		vecchio di almeno quattro anni… inserisco l'aggeggio, monto il CD,
 		«salve sono il SETUP»…
@@ -149,11 +77,7 @@ start#page
 	
 		Ora dobbiamo andare a procurarci l'adattatore parallela/USB per sperare
 		di poter realizzare un ponte.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iii">
-			<div class="section">
-	<p>
+tab#iii
 		E insomma, passò il fine settimana, carico di emozioni sia per me sia
 		per Jazz…
 	
@@ -310,11 +234,7 @@ start#page
 		Invece no, EDK mi chiede «<span class="code">Lo sai che ogni chippino
 		piccino che vado a disegnare ha bisogno di essere correttamente
 		licenziato, vero? Controlla $questo e $quello…</span>»
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iv">
-			<div class="section">
-	<p>
+tab#iv
 		Dopo una certa delusione, qualche minuto di distrazione e una buona
 		merenda (ho preso l'abitudine di prendermi al bar un secondo panino, da
 		mangiare più tardi…) mi sono rimesso al lavoro.
@@ -351,11 +271,7 @@ start#page
 		E con questo, dichiaro finita la seconda giornata di lavori.
 		Oltrettutto, tirar fuori questo baraccone dalla scatole e poi rimetterlo
 		a posto porta via tanto di quel tempo… Saluti.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
-	<p>
+tab#v
 		Tornatomene a casuccia, vado a rimestare nei meandri della mia stanza
 		per riesumare il vecchio portatile. Il vecchio IvanPrime, un vetusto
 		ASUS dotato tra le altre cose di porta parallela.
@@ -402,7 +318,7 @@ start#page
 	<p>
 		Una scritta dice
 	</p><div class="outside"><p>
-		«<span class="code forte" style="color: #ff0000">Unable to open Xilinx
+		«<span class="code forte" style="color: red">Unable to open Xilinx
 		data file for Vendor/Device Module “spartan3adspsdi”</span>»
 	</p></div><p>
 		Se ve lo steste chiedendo, questo “Spartan 3a” è un altro FPGA, una
@@ -437,11 +353,7 @@ start#page
 		d'andarsene tutti a casa. La l'ultimo colpo di coda era in agguato: al
 		momento dell'arresto, il dannato XP annuncia con tutta calma d'avere 76
 		(<span class="em">settantasei</span>) aggiornamenti da installare.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vi">
-			<div class="section">
-	<p>
+tab#vi
 		Uhm. Stamattina, avendo noi il portatile funzionante (beh, quasi) e
 		l'immagine pronta, abbiam provato a trasferire l'immagine sulla scheda.
 		E qui arriva una sorpresa!
@@ -505,11 +417,7 @@ start#page
 		un tantinello grossi, eh, qualcosa come 400MB di yadda.
 	
 		Siamo quasi pronti per mettere questa roba a compilare.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vii">
-			<div class="section">
-	<p>
+tab#vii
 		Quasi. Perché Jazz stava ancora <span class="code">git clone</span>ando
 		quando io mi sono messo a rimettere il baraccone nella scatola. Stacco
 		questo, stacco quello, metto via, arrotolo cavi…
@@ -532,11 +440,7 @@ start#page
 	
 		E così fu che tutto venne spento con violenza e noi ce ne potemmo
 		andare a festeggiare le lauree di Mitch &amp; Ranger.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-viii">
-			<div class="section">
-	<p>
+tab#viii
 		Arrivati stamattina, ci troviamo Jazz alle prese con il genio ed io con
 		niente d'importante. Per prima cosa sono andato a restituire quella
 		tastiera ch'avevamo preso in prestito due giorni fa…
@@ -603,20 +507,12 @@ start#page
 		pomeriggio.
 	
 		Infine, alle sei, eccoci finalmente con un'immagine bootabile.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ix">
-			<div class="section">
-	<p>
+tab#ix
 		E adesso dobbiamo schiaffare l'immagine del kernel sul processore.
 		Sempre che il processore esista ancora: le lucine infatti assumono
 		configurazioni completamente diverse all'accensione e dopo la creazione
 		del MicroBlaze… forse è la batteria del BIOS.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-x">
-			<div class="section">
-	<p>
+tab#x
 		E insomma… stamattina c'abbiam riprovato: butta su l'immagine del
 		processore, mandagli l'immagine del kernel, aspetta mezz'ora… niente.
 	
@@ -634,11 +530,7 @@ start#page
 		processore, o il disegno di quell'immagine… non lo sappiamo.
 	
 		Alle 15:00 ce ne andiamo da Macii a discutere della cosa.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xi">
-			<div class="section">
-	<p>
+tab#xi
 		E dopo due ore presso l'ufficio dell'illuminazione, siam di ritorno con
 		un sacco di notizie interessanti.
 	
@@ -693,11 +585,7 @@ start#page
 		Esiste, casomai, una sordida procedura di bootup da memoria flash, da
 		utilizzare esclusivamente quando l'intera baracca è pronta per la
 		produzione.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xii">
-			<div class="section">
-	<p>
+tab#xii
 		Comincia una nuova settimana, e subito mi metto al lavoro tentando, come
 		prima cosa, di mettere il processore sulla scheda. Ricordate che tutto
 		viene fatto <span class="em">on the fly</span>, giusto?
@@ -771,11 +659,7 @@ start#page
 	<p>
 		E non vi ho ancora detto che Ranger c'ha prestato il suo lettore di
 		schede. Poi vi racconto…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xiii">
-			<div class="section">
-	<p>
+tab#xiii
 		E mentre questa s'avvia ad essere la storia più lunga di sempre, ecco
 		degli aggiornamenti prima di pranzo.
 	</p>
@@ -809,11 +693,7 @@ start#page
 	</li></ul><p>
 		Siamo un po' abbattuti, io e Jazz. Dobbiamo sentire Macii per vedere che
 		si può fare…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xiv">
-			<div class="section">
-	<p>
+tab#xiv
 		Quando gli abbiamo spiegato la yadda, ha risposto con un «M'aspettavo
 		che andasse così…» e intendeva dire che il progetto esplorativo prevede
 		ovviamente dell'esplorazione.
@@ -852,11 +732,7 @@ start#page
 		installeremo una Gentoo della morte…
 	
 		BRB compiling…
-	</p>
-			</div>	
-		</div><div class="tab" id="tab-xv">
-			<div class="section">
-	<p>
+tab#xv
 		Oggi sono salito presto. Ho preparato l'argagno, mi sono fregato un cavo
 		di rete da Simgi e mi sono messo a controllare il funzionamento di
 		Apache.
@@ -890,11 +766,7 @@ start#page
  user.</pre><p>
 		Non che intenda farlo, ovviamente. Ma pensa un po' gli sviluppatori che
 		han messo una MACRO apposita.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xvi">
-			<div class="section">
-	<p>
+tab#xvi
 		Jazz è effettivamente andato a comprare un'altra CompactFlash. Questa è
 		da 4GB. Io me la piglio, attacco l'adattatore e comincio a smadonnare.
 	
@@ -938,11 +810,7 @@ start#page
 		all'ottavo blocco anziché al primo, l'FPGA non funziona.
 	
 		Fanculo.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xvii">
-			<div class="section">
-	<p>
+tab#xvii
 		Oggi ci siamo messi a cercare. A cercare un modo per compilare un kernel
 		per questa roba. Visto che abbiamo il permesso di usare questo PPC405,
 		vorremmo procurarci un kernel da farci girare.
@@ -958,20 +826,12 @@ start#page
 	
 		Se nemmeno questa via dovesse funzionare, siamo disposti a calar le
 		braghe e tentare l'approccio con questo antico MontaVista…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xviii">
-			<div class="section">
-	<p>
+tab#xviii
 		Tutto il giorno. Tutto il fottuto giorno a tentare di crosscompilare un
 		fottuto kernel per PowerPC405.
 	
 		Non sa da fare. <span class="code">IMPOSSIBRU.dts.so.h.bsb.xps</span>
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xix">
-			<div class="section">
-	<p>
+tab#xix
 		Non funziona niente.
 	
 		Tre kernel diversi, decine e decine di tentativi di compilazioni, varie
@@ -993,11 +853,7 @@ start#page
 	
 		Abbiamo anche caricato un rootfs apposta, che non riesce a partire e non
 		funziona nemmeno se montato e <span class="code">chroot</span>ato.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xx">
-			<div class="section">
-	<p>
+tab#xx
 		Abbiamo scavallato. Sento di poterlo dire.
 	</p>
 </div><div class="section">
@@ -1051,9 +907,7 @@ start#page
 		ambiente di crosscompilazione. Perché il compilatore è potente, ma
 		dipende dalla glibc, la quale deve essere compilata… la famosa
 		dipendenza circolare.
-	
-		&#160;
-	
+		br#	
 		Ascoltate <a
 		href="http://www.youtube.com/results?search_query=two+steps+from+hell+heart+of+courage">questa</a>, adesso.
 	</p>
@@ -1082,9 +936,7 @@ start#page
 		href="http://www.youtube.com/results?search_query=jojo+oraoraoraoraora">questa</a>
 		o forse <a
 		href="http://www.youtube.com/results?search_query=dio+brando+mudamudamudamuda">quest'altra</a>.
-	
-		&#160;
-	
+		br#
 		Mentre io compilo Apache2, Jazz cerca soluzioni alternative. E qui,
 		permettetemi una parentesi. <span class="forte">Ho compilato il fottuto
 		Apache httpd per PPC405 generic. Voi non l'avete fatto. Io si. L'ho
@@ -1133,14 +985,10 @@ start#page
 		È così che si sente Link alzando al cielo la Triforza.
 	
 		È così che si sente Hotrod aprendo la Matrice.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-xxi">
-			<div class="section">
-	<p>
+tab#xxi
 		E questo è l'ultimo tab. Perché la storia è lunga, il progetto è fatto
 		ed ho già barato un po' (si veda
-		<?=$d->link#Storie/2011/LV/#questo','II pezzo fuori posto).
+		link#Storie/2011/LV/#questo#II pezzo fuori posto##).
 	
 		E insomma… ho compilato tutte le librerie del mondo, c'ho messo sopra un
 		server SSH, un server HTTP, cosa fare di più?
@@ -1233,9 +1081,30 @@ start#page
 </div><div class="section">
 	<p>
 		E questo è quanto. Questa storia, ora ch'è finita, misura 7485 parole.
-	</p>
-			</div>
-		</div>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side
+	title#Sgaaaaaaaaaaaaaggio!
+	begin#ol
+		li#tid#Recupero#i## — 08/07/2011 11:00
+		li#tid#Installazione#ii## – 08/07/2011 14:30
+		li#tid#La mappa di bit#iii## – 11/07/2011 14:55
+		li#tid#La prima iterazione#iv## – 11/07/2011 16:30
+		li#tid#La resurrezione#v## – 12/07/2011 XX:XX
+		li#tid#Trasferimento#vi## – 13/07/2011 12:30
+		li#tid#Spegnimento#vii## – 13/07/2011 18:30
+		li#tid#Il kernel#viii## – 14/07/2011 18:00
+		li#tid#Boot image#ix## – 14/07/2011 18:30
+		li#tid#Seriale#x## – 15/07/2011 12:50
+		li#tid#La seconda iterazione#xi## – 15/07/2011 17:00
+		li#tid#Packing services#xii## – 18/07/2011 12
+		li#tid#Aggiornamenti#xiii## – 19/07/2011 12:30
+		li#tid#La terza iterazione#xiv## – 19/07/2011 17:00
+		li#tid#L&apos;Apache#xv## – 20/07/2011 11:00
+		li#tid#La formattazione#xvi## – 20/07/2011 17:30
+		li#tid#Ricerca#xvii## – 21/07/2011
+		li#tid#Crossing#xviii## – 22/07/2011
+		li#tid#Lo scoglio#xix## – 26/07/2011
+		li#tid#La luce in fondo al tunnel#xx## – 29/07/2011
+		li#tid#E infine…#xxi## – 30/07~05/08
+	end#ol
+stop#side

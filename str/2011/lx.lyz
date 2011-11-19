@@ -1,12 +1,7 @@
-<?php
-	$title=array#Filler#Perché non sta succedendo niente d&apos;interessante
-	$prev=array#Violenza e soddisfazione#Storie/2011/LIX/
-	$next=array#Cattivo#Storie/2011/LXI/
+title#Filler#Perché non sta succedendo niente d&apos;interessante
+prev#Storie/2011/LIX/#Violenza e soddisfazione
+next#Storie/2011/LXI/#Cattivo
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			E mentre le vacanze (degli altri) finiscono, mentre il fresco
 			s'avvicina, mentre le lezioni stanno per ricominciare e gli esami
 			per finire (?), non succede niente d'interessante.
@@ -207,10 +202,7 @@ start#page
 		<p>
 			E infine, proprio mentre ero lì che pensavo a quella parola di sei
 			lettere, che piace ad un sacco di gente e che contiene le lettere
-			‘G’, ‘N’, ‘A’ (quella parola è <span style="color:#000000;
-			background-color: #000000"
-			onmouseover="javascript:this.style.color='#ffffff'"
-			onmouseout="javascript:this.style.color='#000000'">GUNDAM</span>),
+			‘G’, ‘N’, ‘A’ (quella parola è <span class="spoiler">GUNDAM</span>),
 			mi sono distratto un attimo e m'è mancato un colpo.
 		
 			Come accade di solito.
@@ -229,7 +221,4 @@ start#page
 	</div><div class="section">
 		<p>
 			Mi pare decisamente troppo presto.
-		</p>
-	</div>
-</div>
-<?php }?>
+			stop#page

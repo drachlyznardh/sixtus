@@ -1,13 +1,7 @@
-<?php
-	$title=array#Violenza e soddisfazione',
-		'Tanta violenza, tanta soddisfazione
-	$prev=array#Deus Ex Machina Evolved#Storie/2011/LVIII/
-	$next=array#Filler#Storie/2011/LX/
+title#Violenza e soddisfazione#Tanta violenza, tanta soddisfazione
+prev#Storie/2011/LVIII/#Deus Ex Machina Evolved
+next#Storie/2011/LX/#Filler
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Tengo questa storia in serbo da un po'… fa parte di quel filone
 			triste e melenso nel quale mi crogiolo.
 		
@@ -44,7 +38,7 @@ start#page
 		
 			Avete presente?
 		
-			&#160;
+			br#
 		
 			Beh, non assomiglia a quel che sento io.
 		</p>
@@ -91,7 +85,4 @@ start#page
 	</div><div class="section">
 		<p>
 			Forse sistemerò questi pensieri. Un giorno. Forse.
-		</p>
-	</div>
-</div>
-<?php } ?>
+stop#page

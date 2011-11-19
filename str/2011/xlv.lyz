@@ -1,13 +1,8 @@
-<?php
-	$title=array#Wireless#Le cose che servono e le cose che vogliono
-	$prev=array#Storia XLIV#Storie/2011/XLIV/
-	$next=array#Storia XLVI#Storie/2011/XLVI/
+title#Wireless#Le cose che servono e le cose che vogliono
+prev#Storie/2011/XLIV/#Pillole
+next#Storie/2011/XLVI/#L'uomo con due ombrelli
 start#page
-		$self = 'Storie/2011/XLV/';
-?>
-<div class="small">
-	<div class="section">
-		<p>
+tab#intro
 			Salve, sono il Gods ed alle volte potete trovarmi alle prese con
 			cose difficili: ad esempio, driblando altre cose di cui vado a
 			narrarvi, son riuscito a (ri)finire Vanquish nella modalità
@@ -23,17 +18,21 @@ start#page
 			bassa, o comunque minore di quella che ottengo sull'InterWeb o
 			giochicchiando.
 		
-			Ordunque, nell'ordine, parlerò del <?=$d->link($self,'mio
-			router#II, della <?=$d->link($self, 'biciclettata','III')?> e
-			della <?=$d->link($self,'corsa#IV, ancora una volta.
+			Ordunque, nell'ordine, parlerò del
+			link##mio router#i##,
+			della
+			link##biciclettata#ii
+			e della
+			link##corsa#iii##,
+			ancora una volta.
 		</p><div class="outside"><p>
-			Ed un contenuto <?=$d->link($self,'bonus#V, aggiunto il giorno dopo.
+			Ed un contenuto
+			link##bonus#iv,
+			aggiunto il giorno dopo.
 		</p></div><p>
 			Procedo.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="II">
+
+tab#i
 		Grazie al <span class="jazz">signor Jazzinghen</span>, eccomi in possesso
 		d'un router nuovo nuovo.
 	</p><h2>
@@ -45,10 +44,7 @@ start#page
 		benefici se ne possano trarre, ecco che nessuna buona azione rimane
 		impunita. La storia è lunga e irta di pigne. Pigne da infilare proprio
 		lì.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+	sec#
 			Dunque, immaginatemi tornare a casa dopo l'ennesima deludente
 			giornata di vita vera e crollare sul divano.
 		
@@ -200,10 +196,7 @@ start#page
 			Ora immaginate di fare tutto questo, constantemente interroto da un
 			qualche familiare che deve assolutamente navigare il web per fare
 			questa o quella cosa inutile.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="III">
+tab#ii
 		Poi, la domenica, sentendomi ancora dir dietro perché alle 6:57 di
 		mattina «l'internet non funziona... come mai?» e a rispondere che «la
 		notte il router è spento, come tutto il resto, e che prima delle 9 di
@@ -215,10 +208,7 @@ start#page
 		Manifestazione di cui ho scoperto l'esistenza grazie ad un cartello
 		appesa sulla pista ciclabile; il tutto per beneficenza, e son ben
 		contento di spendere qualcosina.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+	sec#
 			Ma sarei stato più contento se la cosa fosse stata una vera pedalata
 			e non una processione, composta per lo più di gente pigra e/o
 			stanca e di bimbiminchia.
@@ -266,20 +256,14 @@ start#page
 		
 			Ma non credo che il prossimo anno ci tornerò: me ne andrò da qualche
 			parte dove la fatica valga la soddisfazione.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="IV">
+tab#iii
 		Vi ho detto o non vi ho detto che hanno aperto un nuovo ponte
 		sull'Adige? Che la ciclabile ci passa sopra?
 	</p><h2>
 		La corsa e la gente che corre
 	</h2><p>
 		Mi par di non avervelo detto.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Eh... la corsa. Par che sia l'unica cosa a tenermi in vita,
 			recentemente.
 		
@@ -393,19 +377,14 @@ start#page
 				correre ho la faccia da mastino incacchiato. Non è una bella
 				cosa da vedere.</p>
 		</li></ul>
-	</div>
-</div><div class="section">
-	<p id="V">
+tab#iv
 		Ieri non ho avuto tempo/modo di scrivere tutto tutto, quindi lo aggiungo
 		adesso.
 	</p><h2>
 		I fiori, la futilità, le delusioni previste
 	</h2><p>
 		Se siete già tristi, o se volete diventarlo, continuate a leggere.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Dunque, vi ho parlato del mio nuovo bouquet di fiori? Forse sì,
 			forse no, non ho voglia di andare a controllare...
 		
@@ -459,7 +438,14 @@ start#page
 			E le altre... beh, delle altre preferisco non parlare. C'era chi
 			camminava e basta, c'era chi a metà percorso si fermava per tornare
 			indietro, ce n'è stata persino una che s'è fermata a telefonare ;_;
-		</p>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side	
+	title#Wireless
+	p#tid#Introduzione#intro
+	begin#ol
+		li#tid#mio router#i
+		li#tid#biciclettata#ii
+		li#tid#corsa#iii
+		li#tid#bonus#iv
+	end#ol
+stop#side

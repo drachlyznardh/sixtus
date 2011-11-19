@@ -1,41 +1,13 @@
-<?php
-	$title=array#Pillole#Ossia tante piccole storielline
-	$prev=array#Storia XLIII#Storie/2011/XLIII/
-	$next=array#Storia XLV#Storie/2011/XLV/
+title#Pillole#Ossia tante piccole storielline
+prev#Storie/2011/XLIII/#Gli anni
+next#Storie/2011/XLV/#Wireless
 start#page
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<h2>
-				Pillole
-			</h2><ol><li id="li-i">
-					<a onclick="javascript:t.show#i')">Regali/Festeggiamenti</a>
-				</li><li id="li-ii">
-					<a onclick="javascript:t.show#ii')">Vecchiaia/Giovinezza</a>
-				</li><li id="li-iii">
-					<a onclick="javascript:t.show#iii')">La comunione</a>
-			</li></ol><h2>
-				Supposte
-			</h2><ol start="4"><li id="li-iv">
-					<a onclick="javascript:t.show#iv')">Ciclismo e protezioni</a>
-				</li><li id="li-v">
-					<a onclick="javascript:t.show#v')">L'eleganza</a>
-				</li><li id="li-vi">
-					<a onclick="javascript:t.show#vi')">Un nuovo stelo</a>
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
-<div class="section">
-	<p>
+tab#i
 		Oggi e questo weekend sono state giornate pienotte. Narrerò alcuni degli
 		accadimenti salienti di queste ore passate.
 	
 		Cominciamo con i festeggiamenti e i regali.
-	</p><h2>
-		I regali
-	</h2><p>
+		title#I regali
 		Dunque, al compleanno seguono (dopo quantitativi di ore casuali) alcuni
 		regali: ho ricevuto un buono per un CD (non compro un CD da... non
 		compro CD), il primo - tristissimo - romanzo scritto da un tizio (il
@@ -46,27 +18,20 @@ start#page
 	
 		Non fatemi parlare di quanto io consideri inutile portare il casco in
 		bicicletta. Che non finisco più...
-	</p><h2>
-		I festeggiamenti
-	</h2><p>
+		title#I festeggiamenti
 		Vista la mancanza di disponibilità (o assenza) di alcuni componenti, ho
 		festeggiato in due diverse occasioni, giovedì e sabato. L'unico
 		risultato che mi vien da riportare è che dovrò evitare di bere così
 		tanto nel prossimo futuro; questo perché:
-	</p><ul><li><p>
+		begin#ul
 			la birra costa più della benzina
-		</p></li><li><p>
+			
 			troppa birra mi impedisce di capire l'episodio di Pani Poni Dash che
 			mi guardo la sera prima di dormire
-	</p></li></ul><p>
+		end#ul
 		Almeno posso dire d'aver ben mangiato&amp;bevuto, e son felice.
-	</p>
-</div>
-		</div><div class="tab" id="tab-ii">
-<div class="section">
-	<h2>
-		La vecchiaia, la giovinezza
-	</h2><p>
+tab#ii
+		title#La vecchiaia, la giovinezza
 		Alcuni, come il sottoscritto, invecchiano prima del tempo; alcuni altri
 		invece sono vecchi, e lo son da sempre, come il <span class="dacav">buon
 		Dacav</span>. Pur detto “il giovane” senza alcun motivo, il Dacav è
@@ -83,17 +48,10 @@ start#page
 		la luce» il Dacav venne illuminato e cominciò a commentare l'operato del
 		buon Dio... che dopo sette giorni n'ebbe stracci i coglioni e non si
 		fece più vivo per un po'...
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Ma c'è anche chi, invece, è sempre giovane. Yang, ad esempio.
-	</p>
-</div>
-		</div><div class="tab" id="tab-iii">
-<div class="section">
-	<h2>
-		La comunione
-	</h2><p>
+tab#iii
+		title#La comunione
 		Ho un fratello di dieci anni che questa domenica s'è comunicato. Ma la
 		comunione si porta dietro un sacco di cose. Parenti, per la maggior
 		parte.
@@ -104,19 +62,13 @@ start#page
 	
 		Ma il punto è che, come dev'essere, mio fratello è stato coperto di
 		regali; uno di questi fu un paio di scarpe con le rotelle.
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Ora, mio fratello non è un grande atleta, non è un gran ciclista, non ha
 		una straordinaria nozione di se stesso in uno spazio tridimensionale;
 		dargli un paio di scarpe con le rotelle (che in pratica sono un pattino
 		monoruota, che si attiva quando alzi la punta del piede: la ruota è
 		sotto il tallone) lui finisce per terra.
-	</p>
-</div>
-		</div><div class="tab" id="tab-iv">
-<div class="section">
-	<p>
+tab#iv
 		Salve, mi chiamo Ivan e sono stronzo.
 	
 		Sono abbastanza stronzo da pensare che la parola ‘incidente’ sia usato
@@ -130,9 +82,7 @@ start#page
 		miglior modo di evitare gli incidenti. E sono abbastanza stronzo da
 		prendermela con quelli che insistono nel dire «queste sono cose che non
 		devono succedere»
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Io non sono né masochista, né lesionista. Non mi piace farmi del male,
 		non vado in giro a farne ad altri e preferirei che la gente tenesse
 		tutti i propri organi/membri attaccati e ben funzionanti al loro posto.
@@ -150,18 +100,16 @@ start#page
 		le luci anteriori e posteriori e chissà quanta altra roba.
 	
 		Perché?
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Un po' per garantire dannegiati e danneggiatori quando entrano in gioco
 		i tribunali e le assicurazioni, un po' per prevenzione.
 	
 		Tuttavia, io non ce l'ho con le protezione di per sé. Ce l'ho invece con
-	</p><ul><li><p>
+		begin#ul
 			chi le protezioni le produce
-		</p></li><li><p>
+		
 			chi le rende obbligatorie
-	</p></li></ul><p>
+		end#ul
 		Ed ho dei buoni motivi. Essendo le protezioni obbligatorie, posso essere
 		multato se non le indosso, e son soldi che se ne vanno; altresì, non
 		soltanto sono obbligatorie, ma devono essere omologate, per garantire
@@ -172,9 +120,7 @@ start#page
 	
 		Ora, considerando quanto si potrebbe risparmiare evitando tutta questa
 		fuffa, non si potrebbe lasciare che la gente rischiasse?
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Salve, mi chiamo Ivan e sono ciclista da molto tempo. Ho alle mie spalle
 		alcune migliaia di chilometri in bicicletta, con una minima percentuale
 		di essi con le protezioni addosso. Ed ho anche avuto la mia fetta
@@ -184,9 +130,7 @@ start#page
 	
 		Non osate dire che questo non conta. Perché non è per ‘culo’ che non
 		sono morto, è perché so cosa faccio.
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Perché se un tizio scende da una montagna ai 90 all'ora e finisce giù
 		per una scarpata, la colpa è sua, non di chi non ha piantato un
 		guardrail su quella curva.
@@ -199,23 +143,15 @@ start#page
 		Perché preferirei - se potessi - morire gratis con la testa rotta
 		avendone la colpa, piuttosto che dover pagare una multa per essere
 		andato in giro di notte senza luci. Cosa che faccio.
-	</p>
-</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
-	<p>
+tab#v
 		Ve l'ho già detto che non ho una ragazza?
 	
 		Ve l'ho già detto quanto spesso capita che i parenti spuntino fuori a
 		chiedermene il motivo?
-	</p><h2>
-		L'eleganza
-	</h2><p>
+		title#L'eleganza
 		Vi ho già detto che mi sono tagliato i capelli? Vi ho già detto che sono
 		stato testimone di nozze e per questo sono in possesso di un completo?
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Insomma, il mio nuovo taglio di capelli, anziché essere una cosa normale
 		e accettabile, è diventato un fenomeno di costume per cui ogni
 		conoscente non solo mi chiede il motivo e le spaventose implicazioni
@@ -243,11 +179,7 @@ start#page
 		sceglie per il vestito?
 	
 		Cos'è? Cos'è che fa uscire quelle parole dalla bocca? Io non lo so.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vi">
-			<div class="section">
-	<p>
+tab#vi
 		Eh... me ne sono uscito con un nuovo stelo, spaventosamente più stabile
 		dei precedenti; e se anche avrò detto il contrario in qualche storia
 		dell'anno scorso, potevo fare di meglio: adesso infatti l'aggeggio regge
@@ -314,14 +246,20 @@ start#page
 		Se qualcuno crede di esserne degno, venga pure a chiedere. Lo finirò fra
 		un paio di giorni. Forse gli darò i fiori, forse lo nominerò di diritto
 		re di tutta l'Inghilterra.
-	</p>
-			</div>
-		</div>
-	</div>
-</div><script type="text/javascript" language="javascript" src="lib/tloader.js">
-</script><script type="text/javascript" language="javascript">
-	var t = new TLoader ();
-	if (location.hash) t.show(location.hash.substr(1).toLowerCase());
-	else t.show#i
-</script>
-<?php } ?>
+stop#page
+start#side
+	title#Pillole
+	begin#ol
+		li#tid#Regali/Festeggiamenti#i
+		li#tid#Vecchiaia/Giovinezza#ii
+		li#tid#La comunione#iii
+	end#ol
+	title#Supposte
+	begin#ol@start@4
+		p#tid#Ciclismo e protezioni#iv
+
+		p#tid#L'eleganza#v
+		
+		p#tid#Un nuovo stelo#vi
+	end#ol
+stop#side

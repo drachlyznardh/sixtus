@@ -1,12 +1,7 @@
-<?php
-	$title=array#Quel che dovrei fare#Ma non faccio. No. Non lo faccio.
-	$prev=array#Storia XLIX#Storie/2011/XLIX/
-	$next=array#LI – Il druido#Storie/2011/LI/
+title#Quel che dovrei fare#Ma non faccio. No. Non lo faccio.
+prev#Storie/2011/XLIX/#Quel che non è abbastanza
+next#Storie/2011/LI/#Il druido
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Uhm.
 		
 			Ci sono cose che tutti facciamo. Meravigliosamente inutili attività
@@ -31,10 +26,7 @@ start#page
 			Perché alcune cose mi vengono naturali, altre invece no. E quando ho
 			tempo mi esercito in quelle che non mi riescono. Saziarmi, ad
 			esempio.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		E insomma… stamattina, come tristemente faccio nelle ultime mattine,
 		tento di inventarmi una conversazione.
 	
@@ -56,10 +48,8 @@ start#page
 		disgraziatamente scoperto che 'sta cazzo di Debian installata un paio
 		d'anni fa non ne vuol sapere di far convivere le sue cose, il server X e
 		la mia scheda NVIDIA.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p id="II">
+	sec#
+			id#ii
 			Evvaffanculo!
 		
 			Due anni passati con questo peso sul groppone. Ogni fottuto
@@ -226,20 +216,15 @@ start#page
 		
 			Ma senza Wine, come posso giocare a <span class="em">Warning
 			Forever</span>?
-		</p>
-	</div>
-</div><div class="section">
-	<p id="III">
+		sbr#
+		id#iii
 		Ma non solo…  c'è effettivamente un proseguo, ossia il risultato del
 		lavoro di oggi.
 	<p><p>
 		Sebbene io mi sia dedicato ad altre cose per la maggior parte del tempo,
 		quella storiella del metapacchetto fake mi s'è imbucata in un orecchio e
 		quindi, dopo molta altra fuffa, ho tentato…
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+	sec#
 			Ricordate dov'ero?
 		
 			Ero alla ricerca di alternative valide. Cerca cerca, chiedi in giro,
@@ -294,9 +279,8 @@ start#page
 		
 			A quel punto, ecco un pacchetto completamente fasullo che dichiara
 			impunemente la libreria che non c'è.
-		</p><pre>  ########
+		</p><pre>
   libhax/DEBIAN/control
-  ########
   Package: libhax
   Version: 5.99
   Section: main
@@ -320,24 +304,15 @@ start#page
 			che l'installazione dei driver NVIDIA non è stata toccata.
 		
 			Quanto durera?
-		</p>
-	</div>
-</div><div class="section">
-	<p>
-		&#160;
-	
-		&#160;
-	
-		&#160;
-	
-		&#160;
-	
-		&#160;
-	
+		sbr#
+		br#	
+		br#	
+		br#	
+		br#	
+		br#	
 		[…]
-	</p>
-</div><div class="section">
-	<p id="IV">
+		sec#
+		id#iv
 		Ma ovviamente non è questo il motivo per cui scrivo la cinquantesima
 		storia.
 	
@@ -347,12 +322,8 @@ start#page
 		Il problema è, credo, che questo discorso non possa funzionare in alcun
 		modo. Per la sua stessa struttura. Non può funzionare perché sono io a
 		doverlo pronunciare. E io sono qui per il motivo sbagliato.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<h2>
-			Versione #1
-		</h2><p>
+		sbr#
+			title#Versione ♯1
 			Il Gods s'avvicina alla gelateria, butta dentro un occhio, trova la
 			gelataia da sola, non c'è nessun altro.
 		
@@ -367,11 +338,8 @@ start#page
 			gelataia, ma è già troppo tardi.
 		
 			Il Gods è scappato.
-		</p>
-	</div><div class="section">
-		<h2 class="reverse">
-			Versione #2
-		</h2><p>
+			sec#
+			titler#Versione ♯2
 			Il Gods s'avvicina spavaldo alla gelateria, controlla la situazione,
 			aspetta di poter restare solo con la gelataia, aspetta, aspetta, poi
 			entra, si presenta e attacca bottone.
@@ -406,9 +374,9 @@ start#page
 			Basara, e la sua speciale V7, chitarrone elettrico modificato
 			personalmente.
 		</p><div class="outside"><p>
-				«<span class="gods">Ve l'avevo
-				<?=$d->link#Storie/2011/XXXII/#promesso', 'II,
-				no?</span>» esclama il Dottore, ora spalleggiato da
+				«<span class="gods">Ve l'avevo promesso, no? Nella storia
+				link#Storie/2011/XXXII/#XXXII#II##.
+				</span>» esclama il Dottore, ora spalleggiato da
 				un'olografica fortezza superdimensionale trasformabile «<span
 				class="gods">Nessuno si salverà!</span>»
 			
@@ -418,7 +386,7 @@ start#page
 		</p>
 	</div><div class="section">
 		<h2>
-			Versione #3 – quella vera
+			Versione ♯3 – quella vera
 		</h2><p>
 			Questo discorso è sincero.
 		
@@ -439,66 +407,41 @@ start#page
 		
 			È il momento che questa farsa finisca. Entro.
 		</p><div class="outside">
-			<?=$d->speak#gods#Ciao, scusa il disturbo
-			<?=$d->speak#gods#Tu non ti ricordi, vero? … Immaginavo
-			<?=$d->speak#gods#Ti prendo cinque minuti, poi sparisco
-			<?=$d->speak#gods#Io sono qui per il motivo sbagliato. Venerdì
-			scorso… no, il venerdì di due settimane fa, ero qui con alcuni amici
-			a prendere un gelato e t&apos;ho vista
-			<?=$d->speak#gods#E sono rimasto colpito
+			speak#gods#Ciao, scusa il disturbo
+			speak#gods#Tu non ti ricordi, vero? … Immaginavo
+			speak#gods#Ti prendo cinque minuti, poi sparisco
+			speak#gods#Io sono qui per il motivo sbagliato. Venerdì scorso… no, il venerdì di due settimane fa, ero qui con alcuni amici a prendere un gelato e t&apos;ho vista
+			speak#gods#E sono rimasto colpito
 		</div><div class="inside">
-			<?=$d->speak#gods#All&apos;inizio ho pensato che fosse perché
-			m&apos;hai ricordato una persona che conosco; una ragazza che odio.
-			Pensavo fosse quello, ma si son sbagliato. Perché stavo pensando a
-			te, non a lei. Anche perché contro di te non ho niente
+			speak#gods#All&apos;inizio ho pensato che fosse perché m&apos;hai ricordato una persona che conosco; una ragazza che odio.  Pensavo fosse quello, ma si son sbagliato. Perché stavo pensando a te, non a lei. Anche perché contro di te non ho niente
 		</div><div class="outside">
-			<?=$d->speak#gods#Comunque, mi sono fissato con te. Mi
-			capita.
-			<?=$d->speak#gods#A volte sono Transformers, a volte sono Gundam,
-			a volte sono ragazze. I Transformers li posso trovare abbastanza
-			facilmente, i Gundam invece mi tocca ordinarli dal Giappone e ci
-			vuole una vita… ma quelli li posso comprare; le ragazze, invece… per
-			loro piego fiori
-			<?=$d->speak#gods#Questo è il tuo. L&apos;ho realizzato apposta.
-			L&apos;ho creato pensando a te, in queste settimane.
-			<?=$d->speak#gods#È il migliore che ho mai fatto. È sempre così
+			speak#gods#Comunque, mi sono fissato con te. Mi capita.
+			speak#gods#A volte sono Transformers, a volte sono Gundam, a volte sono ragazze. I Transformers li posso trovare abbastanza facilmente, i Gundam invece mi tocca ordinarli dal Giappone e ci vuole una vita… ma quelli li posso comprare; le ragazze, invece… per loro piego fiori
+			speak#gods#Questo è il tuo. L&apos;ho realizzato apposta.  L&apos;ho creato pensando a te, in queste settimane.
+			speak#gods#È il migliore che ho mai fatto. È sempre così
 		</div><div class="outside">
-			<?=$d->speak#gods#Non ho mai capito come dovrebbe funzionare, so
-			soltanto che mi viene naturale farne uno per queste occasioni;
-			crearne uno nuovo. In qualche modo, rappresenta tutte le speranze
-			che ho. Perché sento che vale la pena di conoscerti e scorpire chi
-			sei, e non posso lasciarti andare senza fare almeno un tentativo
-			<?=$d->speak#gods#Ma non è per questo che sono veramente qui; è
-			perché so che ho torto, e perché so che tra un po&apos; mi
-			passerà
-			<?=$d->speak#gods#Perché chi tu sia io non lo so, e non riesco a
-			convincermi che averti vista una volta possa farmi credere di
-			volerti stare accanto
-			<?=$d->speak#gods#E non so perché mi stai a sentire. Non trovo
-			i motivi; non li vedo
+			speak#gods#Non ho mai capito come dovrebbe funzionare, so soltanto che mi viene naturale farne uno per queste occasioni; crearne uno nuovo. In qualche modo, rappresenta tutte le speranze che ho. Perché sento che vale la pena di conoscerti e scorpire chi sei, e non posso lasciarti andare senza fare almeno un tentativo
+			speak#gods#Ma non è per questo che sono veramente qui; è perché so che ho torto, e perché so che tra un po&apos; mi passerà
+			speak#gods#Perché chi tu sia io non lo so, e non riesco a convincermi che averti vista una volta possa farmi credere di volerti stare accanto
+			speak#gods#E non so perché mi stai a sentire. Non trovo i motivi; non li vedo
 		</div><div class="outside">
-			<?=$d->speak#gods#Quindi, se tu volessi accettare il fiore…
-			Grazie
-			<p class="gods" style="text-align: right">«Scusa»</p>
+			speak#gods#Quindi, se tu volessi accettare il fiore… Grazie
+			reverse#inline#gods#Scusa
 		</div><p>
 			Poi me ne vado.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="V">
+
+		sbr#
+		id#v
 		C'è una cosa che non vi ho detto. Prima, mentre scrivevo il
-		<?=$d->link#Storie/2011/L/#primo aggiornamento','III, m'è apparso
-		Codd.
+		link#Storie/2011/L/#primo aggiornamento#III##, 
+		 m'è apparso Codd.
 	
 		M'è apparso e non ha detto niente. Se n'è rimasto lì, in silenzio, a
 		fissarmi… 'Sto stronzo.
 	
 		Ho capito che avrei dovuto scrivere un secondo aggiornamento a questa
 		storia. E c'era una sola cosa che poteva finirci.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			La farò corta, perché è tardi e ho fame…
 		</p>
 	</div><div class="section">
@@ -574,18 +517,13 @@ start#page
 		
 			Ma poi ho cambiato idea. Meglio, ho saputo che quella non era la
 			cosa che avrei dovuto fare.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="VI">
+		sbr#
+		id#vi
 		Quindi mi sono diretto a casa, abbastanza spedito, ho recuperato il
 		fiore e già che c'ero mi sono preso la bicicletta.
 	
 		E sono tornato lì.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Prendere l'arietta in faccia grazie alla bicicletta non m'ha aiutato
 			un gran ché.
 		
@@ -662,7 +600,4 @@ start#page
 		
 			Se ripenso a quel sorriso e chiudo gli occhi, sento il metallo. E
 			questo è certamente un buon segno.
-		</p>
-	</div>
-</div>
-<?php } ?>
+			stop#page

@@ -67,7 +67,7 @@ start#page
 stop#page
 start#side
 	title#Storie 2011
-	pre#<ol start="18">
+	begin#ol@start@18
 		li#link#Storie/2011/XVIII/#Liber Javae
 		li#link#Storie/2011/XIX/#Permessi
 		li#link#Storie/2011/XX/#Guida
@@ -78,17 +78,17 @@ start#side
 		li#link#Storie/2011/XXV/#No
 		li#link#Storie/2011/XXVI/#La sconfitta
 		li#link#Storie/2011/XXVII/#LaTeX
-	pre#</ol>
+	end#ol
 	titler#Il Magnetismo
 	begin#inside
-		pre#<ol start="28" style="margin-left: 4.5em">
+		begin#ol@start@28@style@margin-left: 4.5em
 			li#link#Storie/2011/XXVIII/#L&apos;odio
 			li#link#Storie/2011/XXIX/#Il Magnete
 			li#link#Storie/2011/XXX/#L&apos;interpretazione
-		pre#</ol>
+		end#ol
 	end#inside
 	titler#Primavera 2011
-	pre#<ol start="31" style="margin-left: 5em">
+	begin#ol@start@31@style@margin-left: 5em
 		li#link#Storie/2011/XXXI/#Deus Ex Machina
 		li#link#Storie/2011/XXXII/#Dottor Odio
 		li#link#Storie/2011/XXXIII/#L&apos;inaspettata
@@ -106,9 +106,9 @@ start#side
 		li#link#Storie/2011/XLV/#Wireless
 		li#link#Storie/2011/XLVI/#L&apos;uomo con due ombrelli
 		li#link#Storie/2011/XLVII/#Impresa (II)
-	pre#</ol>
+	end#ol
 	titler#Estate 2011
-	pre#<ol start="48" style="margin-left: 4em">
+	begin#ol@start@48@style@margin-left: 4em
 		li@class@cat-heart"#link#Storie/2011/XLVIII/#Non ce n&apos;è abbastanza
 		li@class@cat-heart"#link#Storie/2011/XLIX/#Quel che non è abbastanza
 		li@class@cat-heart"#link#Storie/2011/L/#Quel che dovrei fare
@@ -124,13 +124,14 @@ start#side
 		li#link#Storie/2011/LX/#Filler
 		li#link#Storie/2011/LXI/#Cattivo
 		li@class@cat-heart"#link#Storie/2011/LXII/#Normale
-	pre#</ol>
+	end#ol
 	titler#Autunno 2011
-	pre#<ol start="63" style="margin-left: 4em">
+	begin#ol@start@63@style@margin-left: 4em
 		li#link#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
 		li#link#Storie/2011/LXIV/#La metafora
 		li#link#Storie/2011/LXV/#Il 13 ottobre
-	pre#</ol><ol start="67" style="margin-left:4em">
+	end#ol
+	begin#ol@start@67@style@margin-left:4em
 		li#link#Storie/2011/LXVII/#Ancora ce la posso fare
-	pre#</ol>
+	end#ol
 stop#side

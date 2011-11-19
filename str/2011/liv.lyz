@@ -1,32 +1,8 @@
-<?php
-	$title=array#Niente#&#160;
-	$prev=array#Quel che ho fatto#Storie/2011/LIII/
-	$next=array#Spezzato#Storie/2011/LV/
+title#Niente#…
+prev#Storie/2011/LIII/#Quel che ho fatto
+next#Storie/2011/LV/#Spezzato
 start#page
-		$self='Storie/2011/LIV/';
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<h2>
-				Niente
-			</h2><ol><li id="li-i">
-					<?=$d->link($self,'Mh.#I
-				</li><li id="li-ii">
-					<?=$d->link($self,'Mph.#II
-				</li><li id="li-iii">
-					<?=$d->link($self,'Mhum#III
-				</li><li id="li-iv">
-					<?=$d->link($self,'Mhfp#IV
-				</li><li id="li-v">
-					<?=$d->link($self,'Ngn#V
-				</li><li id="li-vi">
-					<?=$d->link($self,'Il destino era in agguato#VI
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
-			<div class="section">
+tab#i
 	<h2>
 		18/07/2011 – 22:30
 	</h2><p>
@@ -48,11 +24,7 @@ start#page
 		Armor</span>, tremendo e losco boss di <span class="em">Warning
 		Forever</span>. L'avete provato? <a
 		href="http://www18.big.or.jp/~hikoza/Prod/index_e.html">Andateci</a>.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ii">
-			<div class="section">
-	<p>
+tab#ii
 		Oggi è una giornata senza emozione.
 	
 		Non fa molto caldo: non m'importa.
@@ -100,19 +72,15 @@ start#page
 		scrivere la storia, lei m'ha chiesto perché e non le ho saputo
 		rispondere. Finirò dopo, immagino… forse.
 	
-		&#160;
+		br#
 	</p><h2>
 		18/07/2011 – 23:30
 	</h2><p>
-		&#160;
+		br#
 	
 		Ed eccomi qui di nuovo. Vi sono mancato? A me voi non siete mancati
 		neanche un po'.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iii">
-			<div class="section">
-	<p>
+tab#iii
 		E insomma, eccomi ancora qui. Non posso mica andarmene: questa storia è
 		ancora troppo corta per essere pubblicata. Ho una certa reputazione, da
 		mantenere, non posso mica mollarla qui com'è.
@@ -121,17 +89,9 @@ start#page
 	
 		Anzi, andate avanti al prossimo tab, non state qui ad aspettarmi. Io
 		arriverò.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iv">
-			<div class="section">
-	<p>
+tab#iv
 		Il quarto tab è brutto, meglio passare direttamente al quinto.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
-	<p>
+tab#v
 		Uhm.
 	
 		Sono appena tornato. Mi sono visto una puntata di Supernatural. Bah. È
@@ -157,7 +117,9 @@ start#page
 		beh, la bici non è più in grado di reggere roba del genere.
 	
 		Non è abbastanza forte, evidentemente. Ma la colpa non è soltanto sua.
-		Ricordate la storia <?=$d->link#Storie/2011/XLVII/#XLVII? Quel
+		Ricordate la storia
+		link#Storie/2011/XLVII/#XLVII##?
+		Quel
 		giorno, alla tappa al campo da calcietto, ho incotranto un bimbetto alto
 		così.
 	
@@ -194,8 +156,9 @@ start#page
 </div><div class="section">
 	<p>
 		Beh, alla fine sono riuscito comunque a passare le duecento righe di
-		storia. Quella del <?=$d->link#Storie/2011/LI/#Druido era più
-		corta.
+		storia. Quella del
+		link#Storie/2011/LI/#Druido
+		era più corta.
 	</p>
 </div><div class="section">
 	<p>
@@ -210,10 +173,7 @@ start#page
 		So che l'avete pensato, stronzi!">crema speciale del Gods</span>. 84gr
 		di mascarpone, un uovo, zucchero a piacere, farina a piacere, un filo
 		d'olio. Da degustare con un cucchiaione, meglio se leggermente fredda…
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vi">
-			<div class="section">
+tab#vi
 	<h2>
 		19/07/2011 – 8:30
 	</h2><p>
@@ -271,18 +231,25 @@ start#page
 	
 		E qui si concretizzano le mie peggiori paure.
 	
-		&#160;
+		br#
 	</p>
 </div><div class="section">
 	<p>
 		In pratica, è un regalo di laurea in anticipo.
 	
-		&#160;
+		br#
 	</p><div class="outside"><p>
 			«Da buone bici da corsa derivano grandi responsabilità»
 	</p></div>
-			</div>
-		</div>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side
+	title#Niente
+	begin#ol
+		li#tid#Mh.#i
+		li#tid#Mph.#ii
+		li#tid#Mhum#iii
+		li#tid#Mhfp#iv
+		li#tid#Ngn#v
+		li#tid#Il destino era in agguato#vi
+	end#ol
+stop#side

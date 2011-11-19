@@ -1,12 +1,7 @@
-<?php
-	$title=array#Il potere#Un cappello, un libro, una pagliuzza
-	$prev=array#Correre di notte#Storie/2011/LVI/
-	$next=array#Deus Ex Machina Evolved#Storie/2011/LVIII/
+title#Il potere#Un cappello, un libro, una pagliuzza
+prev#Storie/2011/LVI/#Correre di notte
+next#Storie/2011/LVIII/#Deus Ex Machina Evolved
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Salve, sono il Gods e incuto timore nella gente.
 		
 			Per due motivi.
@@ -76,7 +71,4 @@ start#page
 		
 			Così, oggi mi tengo il cappello. Me lo tengo tutto il giorno e me ne
 			sbatto le palle.
-		</p>
-	</div>
-</div>
-<?php } ?>
+			stop#page

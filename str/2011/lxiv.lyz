@@ -1,27 +1,8 @@
-<?php
-	$title=array#La metafora# Che poi è l&apos;unico modo che ho per spiegarmi
-	$prev=array#Gli scagnozzi del Dr.Odio#Storie/2011/LXIII/
-	$next=array#Storie/2011/LXV/#Il 13 ottobre','INTRO
+title#La metafora# Che poi è l&apos;unico modo che ho per spiegarmi
+prev#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
+next#Storie/2011/LXV/#Il 13 ottobre
 start#page
-		$self='Storie/2011/LXIV/';
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<p id="li-intro">
-				<?=$d->link($self,'Perché le faccio?#INTRO
-			</p><h2 class="reverse">
-				Esempi di metafore
-			</h2><p id="li-merda">
-				<?=$d->link($self,'Va tutto in merda#MERDA
-			</p><p id="li-df">
-				<?=$d->link($self,'I fiori / Dwarf Fortress#DF	
-			</p>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-intro">
-			<div class="section">
-	<p>
+tab#intro
 		Le metafore sono cose buone e giuste. Ma
 	</p><h2>
 		Perché le faccio?
@@ -48,11 +29,7 @@ start#page
 		soluzione al vero problema.
 	
 		Ed ecco un esempio. E potrei anche aggiungerne altri, in futuro.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-merda">
-			<div class="section">
-	<p>
+tab#merda
 		Eravamo, come sempre, al baretto.
 	
 		Alcuni allegri compari discuto di questo e di quello, quando ad un certo
@@ -66,11 +43,7 @@ start#page
 		giorni. Si chiama <span class="em">digestione</span></span>»
 	
 		Parole sagge, ma non mie: mi sono state ispirate dall'alto.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-df">
-			<div class="section">
-	<p>
+tab#df
 		Come il caro <a href="http://mecharete.blogspot.com">Von Kreusental</a> può
 		sicuramente raccontare meglio di me, Dwarf Fortress è facilmente
 		descrivibile come uno dei giochi più difficili e complessi della storia
@@ -100,9 +73,10 @@ start#page
 	
 		È infatti straordinariamente vero come la consegna dell'artefatto metta
 		automaticamente fine alla follia.
-	</p>
-			</div>
-		</div>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side
+	li#tid#Perché le faccio?#intro
+	titler#Esempi di metafore
+	li#tid#Va tutto in merda#merda
+	li#tid#I fiori / Dwarf Fortress#df
+stop#side

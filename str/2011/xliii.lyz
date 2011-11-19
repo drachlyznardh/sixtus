@@ -1,12 +1,7 @@
-<?php
-	$title=array#Gli anni#Tanti, troppi, pochi
-	$prev=array#Storia XLII#Storie/2011/XLII/
-	$next=array#Storia XLIV#Storie/2011/XLIV/
+title#Gli anni#Tanti, troppi, pochi
+prev#Storie/2011/XLII/#La vecchiaia
+next#Storie/2011/XLIV/#Pillole
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Insomma... mentre scrivo, compio venticinque anni. Come la soluzione
 			del problema della vasca.
 		
@@ -211,29 +206,15 @@ start#page
 		
 			E se non vi regalo qualcosa da un po', sappiate che non è perché non
 			tengo a voi; è che non me ne frega abbastanza.
-		
-		
-		</p>
-	</div>
-</div><div class="section">
-	<p>
-		&#160;
-	
+		sbr#
+		br#
 		To', una storia bonus...
-	
-		&#160;
-	</p>
-</div><div class="section" style="text-align:center">
-	<h2>
-		Storia Bonus
-	</h2><h1 style="font-family:Georia;font-weight:bold;font-size:30px; ">
-		La pietra miliare
-	</h1><h2>
-		Per la tristezza
-	</h2>
-</div><div class="small">
-	<div class="section">
-		<p>
+		br#
+		sec#
+		title#Storia Bonus
+		titler#La pietra miliare
+		title#Per la tristezza
+		sbr#
 			Perché un po' ho mentito.
 		
 			In fondo sono un figlio del mio tempo e della mia terra, oltre che
@@ -352,7 +333,4 @@ start#page
 			credo ci tornerò mai più) Pani Poni Dash.
 		
 			Buonanotte, tanti auguri a me, tanti auguri a me...
-		</p>
-	</div>
-</div>
-<?php } ?>
+			stop#page

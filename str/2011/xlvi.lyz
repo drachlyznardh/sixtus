@@ -1,47 +1,8 @@
-<?php
-	$title=array(
-		'L&apos;uomo con due ombrelli',
-		'Tante piccole grandi storiellucce
-	$prev=array#Storia XLV#Storie/2011/XLV/
-	$next=array#Storia XLVII#Storie/2011/XLVII/
+title#L&apos;uomo con due ombrelli#Tante piccole grandi storiellucce
+prev#Storie/2011/XLV/#Wireless
+next#Storie/2011/XLVII/#Impresa II
 start#page
-		$self = 'Storie/2011/XLVI/';
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<h2>
-				Blah.
-			</h2><ol><li id="li-i">
-					<a onclick="javascript:t.show#i')">
-						Le infermierine e il parroco
-					</a>
-				</li><li id="li-ii">
-					<a onclick="javascript:t.show#ii')">
-						Il nonno, lo struzzo e le botte
-					</a>
-				</li><li id="li-iii">
-					<a onclick="javascript:t.show#iii')">
-						Le località montane e come arrivarci
-					</a>
-				</li><li id="li-iv">
-					<a onclick="javascript:t.show#iv')">
-						L'acqua nelle scarpe, l'acqua nello zaino
-					</a>
-				</li><li id="li-v">
-					<a onclick="javascript:t.show#v')">
-						L'uomo con due ombrelli
-					</a>
-				</li><li id="li-vi">
-					<a onclick="javascript:t.show#vi')">
-						Quello che un uomo vuol sentirsi dire
-					</a>
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
-			<div class="section">
-	<p>
+tab#i
 		Questo titolo per caso vi fa pensare cose strane? Bene, è quello lo
 		scopo.
 	
@@ -71,7 +32,8 @@ start#page
 		Per vari motivi, nessuno vien a partecipare alla visione se non io e
 		$capocoro. Forse qualcuno conosce $capocoro perché, per varie storie di
 		vita vissuta, lei coincide con
-		<?=$d->link#Storie/2010/III/#@ragazza[0]. Cose terribili.
+		link#Storie/2010/III/#@ragazza[0]###.
+		Cose terribili.
 	</p>
 </div><div class="section">
 	<p>
@@ -113,11 +75,7 @@ start#page
 		vestito da quinta infermierina, che si struscia contro il povero
 		soldatino. E con quella visione negli occhi, non ricordo neanche com'è
 		finito lo spettacolo.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ii">
-			<div class="section">
-	<p>
+tab#ii
 		E come sono solito fare, me ne vado a dormire.
 	
 		Spesso il mio cervello è abbastanza gentile da farmi gli scherzoni (come
@@ -147,11 +105,7 @@ start#page
 	
 		Vi assicuro che non è affatto facile, nemmeno in sogno: gli struzzi sono
 		belli alti e pesanti, oltre che cattivi.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iii">
-			<div class="section">
-	<p>
+tab#iii
 		E insomma, son diec'anni che il Domenico se n'è andato.
 	
 		E per ricordarlo torniamo nel posto che preferiva. Ma non è mica facile.
@@ -235,11 +189,7 @@ start#page
 		l'imbocco di Val S.Nicolò: da lì sarebbero stati ancora 60.000 pertiche
 		di dislivello, su una stradina larga 1.2 scarponi, piena di curve
 		cieche. Ascoltando i Vangelis a pallettone.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iv">
-			<div class="section">
-	<p>
+tab#iv
 		Poi, venerdì scorso venne la pioggia.
 	
 		Ed io, che già l'avevo presa sulla schiena, come il <span
@@ -248,8 +198,8 @@ start#page
 		Venne la pioggia, si fermò fino ad ora tarda, ed io e il <span
 		class="jazz">signor Jazzinghen</span> ci dicemmo:
 	</p><div class="outside">
-			<?=$d->speak#jazz#Sarà meglio aspettare che piova meno?>
-			<?=$d->speak#gods#Di fatto, non può piovere per sempre?>
+			speak#jazz#Sarà meglio aspettare che piova meno
+			speak#gods#Di fatto, non può piovere per sempre
 	</div><p>
 		E così i due sprovveduti attesero.
 	</p>
@@ -285,11 +235,7 @@ start#page
 		E con lo zaino anche il portatile, anche i fiori di carta, anche gli
 		appunti. Anche il libro della tristezza, che mi son messo a leggere
 		soltanto per far prendere aria alle pagine.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
-	<p>
+tab#v
 		Ma è grazie a quell'ombrello che oggi son potuto salire <span
 		class="em">like a boss</span>.
 	
@@ -334,11 +280,7 @@ start#page
 		LIKE A BOSS
 	</h2><p>
 		Non immaginate quanto la gente possa stupirsi per così poco.
-	</p>
-				</div>
-			</div><div class="tab" id="tab-vi">
-				<div class="section">
-	<p>
+tab#vi
 		Poi, ogni tanto, capitano delle cose belle.
 	
 		Ogni tanto, quando non te lo aspetti, senti una di quelle frasi che
@@ -362,11 +304,11 @@ start#page
 		guardare qualche altro terribile episodio di <span
 		class="em">Transformers Super-God Masterforce</span> quando ad un certo
 		punto spunta la Mara, che forse ricorderete essere
-		<?=$d->link#Storie/2011/XXVIII/#la ragazza con il
-		dado sferico#V.
+		link#Storie/2011/XXVIII/#la ragazza con il dado sferico#V##.
 	</p>
-</div><div class="section" style="color:#48ff48">
-	<p>
+</div><div class="section">
+	pre#<div style="color:darkgreen">
+
 		&gt; Giunge la fanciulla alle nostre spalle dopo essere tornata in aula.
 	
 		&gt; Basso il suo umore
@@ -389,18 +331,19 @@ start#page
 		&gt; sentimmi pronunziare le celesti parole
 	</p><div class="outside"><p>
 			&gt; «Ti devo due caffé»
-	</p></div><p style="text-align:center;text-indent:0"><a target="_blank" href="Extra/Alpha.png">
-		<img src="Extra/Alpha.png"
-				style="width:90%;border:1px solid black"/>
-	</a>
+	</p></div>
+	foto#Extra/Alpha.png
 		&gt; Anche se poteva andare meglio…
-	</p>
-		</div>
-	</div>
-</div><script type="text/javascript" language="javascript" src="lib/tloader.js">
-</script><script type="text/javascript" language="javascript">
-	var t = new TLoader();
-	if (location.hash) t.show(location.hash.substr(1).toLowerCase());
-	else t.show#i
-</script>
-<?php } ?>
+	pre#</div>
+stop#page
+start#side
+	title#Blah.
+	begin#ol
+		li#tid#Le infermierine e il parroco#i
+		li#tid#Il nonno, lo struzzo e le botte#ii
+		li#tid#Le località montane e come arrivarci#iii
+		li#tid#L'acqua nelle scarpe, l'acqua nello zaino#iv
+		li#tid#L'uomo con due ombrelli#v
+		li#tid#Quello che un uomo vuol sentirsi dire#vi
+	end#ol
+stop#side

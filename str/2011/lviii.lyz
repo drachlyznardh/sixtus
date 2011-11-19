@@ -1,34 +1,20 @@
-<?php
-	$title=array#Deus Ex Machina Evolved',
-		'The Movie - The Game - The Illustrated Book - The Animated Series - The
-		Chronicle - The RPG - The live experience – II, il Ritorno della
-		Vendetta dell&apos;Apprendista Re Stregone Jedi &amp; i suoi fantastici
-		amici
-	$prev=array#Il potere#Storie/2011/LVII/
-	$next=array#Violenza e soddisfazione#Storie/2011/LIX/
+title#Deus Ex Machina Evolved#The Movie - The Game - The Illustrated Book - The Animated Series - The Chronicle - The RPG - The live experience – II, il Ritorno della Vendetta dell&apos;Apprendista Re Stregone Jedi &amp; i suoi fantastici amici
+prev#Storie/2011/LVII/#Il potere
+next#Storie/2011/LIX/#Violenza e soddisfazione
 start#page
-?>
-<div class="small">
-	<div class="section">
-		<p>
 			Non era finita. Ovviamente.
 		
 			Perché ora, molto tempo dopo la
-			<?=$d->link#Storie/2011/XXXI/#precedente sessione, la
+			link#Storie/2011/XXXI/#precedente
+			sessione, la
 			compagnia è riunita e il Master è pronto. E questa ve la scrivo in
 			diretta.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+		sbr#
 		Ce ne siamo andati a mangiare cinese, e adesso, che sono le 22:15,
 		cominciamo il riassunto.
 	
 		Merda… 
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Eravamo là nel deserto, con Titus l'ammazzatore di guardie. Siamo
 			stati abbandonati, ma in compenso il mio drago Fisthanlarunai torna
 			volando. La compagnia è riunita.
@@ -59,17 +45,12 @@ start#page
 			Poi due giorni di pace… poi arriva una nave volante, con sopra
 			Simbad il capitano. Riconosce il mio medaglione, ci raccatta e ci da
 			uno strappo.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
+
+			sbr#
 		Poi, a spasso… dopo un tot, ecco un tizio fighissimo spuntare dal nulla.
 		Il tizio, eterosessuale nella sua magica luccicanza, trascina con se due
 		dragoni.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Si presenta come <span class="em">Oplites</span>, il BBEG.
 		</p><div class="outside"><p>
 				«Sono qui per fermarvi» dice.
@@ -104,10 +85,8 @@ start#page
 			uno lì e uno là.
 		
 			E tant'è.
-		</p>
-	</div>
-</div><div class="section">
-	<p id="II">
+			sbr#
+			id#ii
 		Ma aspettate! C'è dell'altro.
 	
 		Perché dopo questa sessione ce n'è stata un'altra, forse peggiore!
@@ -121,10 +100,7 @@ start#page
 		For Freedom, for the King, for the Lulz
 	</h2><p>
 		Cose fighe? No.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
+		sec#
 			Eravamo appena usciti dal deserto.
 		
 			Avevamo appena avuto – nella visione del destino – le indicazioni su
@@ -249,7 +225,4 @@ start#page
 			perché qualcuno l'ha avvertito.
 		
 			Fine. Bah.
-		</p>
-	</div>
-</div>
-<?php } ?>
+			stop#page

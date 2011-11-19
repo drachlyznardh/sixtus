@@ -20,7 +20,7 @@ start#page
 
 	Programmazione -&gt; Computer.
 	begin#outside
-		inline#em#Ah, ho un problema con il mio COMPIUTER, mi
+		p#inline#em#Ah, ho un problema con il mio COMPIUTER, mi
 		aiuteresti?
 		o anche
 		inline#em#Non va internet, cosa faccio?

@@ -1,5 +1,4 @@
-Title#Dottor Odio Gaiden
-Subtitle#Mirabolanti avventure alla conquista del mondo
+title#Dottor Odio Gaiden#Mirabolanti avventure alla conquista del mondo
 prev#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore
 
 Start#Side

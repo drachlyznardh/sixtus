@@ -1,65 +1,8 @@
-<?php
-	$title=array#Normale#O almeno abbastanza normale da non spaventare
-	$prev=array#Cattivo#Storie/2011/LXI/
-	$next=array#Gli scagnozzi del Dr.Odio#Storie/2011/LXIII/
+title#Normale#O almeno abbastanza normale da non spaventare
+prev#Storie/2011/LXI/#Cattivo
+next#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
 start#page
-		$self='Storie/2011/LXII/';
-?>
-<div class="wider">
-	<div class="widelist">
-		<div class="section">
-			<h2>
-				Prima parte
-			</h2><h2 class="reverse">
-				21/09/2011
-			</h2><ol><li id="li-i">
-					<?=$d->link($self,'Io#I
-				</li><li id="li-ii">
-					<?=$d->link($self,'Normale#II
-				</li><li id="li-iii">
-					<?=$d->link($self,'Il punto#III
-			</li></ol>
-		</div><div class="section">
-			<h2>
-				Seconda parte
-			</h2><h2 class="reverse">
-				26/09/2011
-			</h2><ol start="4"><li id="li-iv">
-					<?=$d->link($self,'C&apos;ho pensato…#IV
-				</li><li id="li-v">
-					<?=$d->link($self,'I timori#V
-				</li><li id="li-vi">
-					<?=$d->link($self,'L&apos;intento#VI
-			</li></ol>
-		</div><div class="section">
-			<h2>
-				Terza parte
-			</h2><h2 class="reverse">
-				27/09/2011
-			</h2><ol start="7"><li id="li-vii">
-					<?=$d->link($self,'Il problema comune#VII
-				</li><li id="li-viii">
-					<?=$d->link($self,'La ricerca della soluzione#VIII
-				</li><li id="li-ix">
-					<?=$d->link($self,'L&apos;aiuto#IX
-				</li><li id="li-x">
-					<?=$d->link($self,'La reazione#X
-				</li><li id="li-xi">
-					<?=$d->link($self,'L&apos;esperimento#XI
-			</li></ol>
-		</div><div class="section">
-			<h2>
-				Quarta parte
-			</h2><h2 class="reverse">
-				28/09/2011
-			</h2><ol start="12"><li id="li-xii">
-					<?=$d->link($self,'Un&apos;ultima cosa#XII
-			</li></ol>
-		</div>
-	</div><div class="widecontent">
-		<div class="tab" id="tab-i">
-			<div class="section">
-	<p>
+tab#i
 		Salve, sono il <abbr title="Grande Operatore Didattico Simonini"
 		class="gods">GODS</abbr> e sono stronzo.
 	
@@ -96,11 +39,7 @@ start#page
 		Scrivere questa storia non con il cuore in mano (mi servono entrambe
 		le mani, con una sola scrivo molto più lentamente, vedete?), bensì
 		con il cuore. Ma comunque attraverso le mani.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ii">
-			<div class="section">
-	<p>
+tab#ii
 		E così venne il giorno in cui il GODS ebbe bisogno di sembrare
 	</p><h2>
 		Normale
@@ -168,7 +107,8 @@ start#page
 </div><div class="section">
 	<p>
 		Due storie fa avevo scritto della
-		<?=$d->link#Storie/2011/LX/#fuffa, ricordate? Avevo parlato,
+		link#Storie/2011/LX/#fuffa##,
+		ricordate? Avevo parlato,
 		in particolare, del succoso <span class="em">Gundam Unicorn FA
 		Destroy Mode 1/100 MG Ver.Ka</span>. La buona notizia è che il
 		prossimo 3 Ottobre ci sarà una qualche fiera/evento e la Bandai ha
@@ -203,11 +143,7 @@ start#page
 		personaggio giappico – è creare dramma. A secchi.
 	
 		Ma ancora una volta, non è questo il punto.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-iii">
-			<div class="section">
-	<p>
+tab#iii
 		E la domanda è
 	</p><h2>
 		Quanti di voi continueranno
@@ -240,7 +176,8 @@ start#page
 </div><div class="section">
 	<p>
 		Un sacco (ormai) di tempo fa, ho scritto una
-		<?=$d->link#Storie/2010/XII/#storia. Dentro, sempre che la
+		link#Storie/2010/XII/#storia##.
+		Dentro, sempre che la
 		memoria non mi tradisca, c'è l'elenco completo delle ispiratrici di
 		fiori.
 	
@@ -323,10 +260,7 @@ start#page
 		che questa storia possa finire adesso?
 	 
 		<span title="Continua…">つづく・・・</span>
-	 </p>
-			</div>
-		</div><div class="tab" id="tab-iv">
-			<div class="section">
+tab#iv
 	<p>
 		È passato un intero weekend in mezzo.
 	
@@ -405,11 +339,7 @@ start#page
 			Distrarre vicendevolmente?»
 	</p></div><p>
 		Credo possano.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-v">
-			<div class="section">
-	<p>
+tab#v
 		Credo d'aver paura.
 	
 		Ho paura che le cose si rompano.
@@ -460,11 +390,7 @@ start#page
 		Perché gli sconosciuti possono non vedersi, ma due che si conoscono o
 		s'incontrano o s'ignorano. Le cose devono cambiare, non restano le
 		stesse, tra i due; migliorano o peggiorano.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vi">
-			<div class="section">
-	<p>
+tab#vi
 		Io voglio incontrare una ragazza. So che le cose tra noi cambieranno,
 		e temo che sarà per il peggio.
 	
@@ -495,11 +421,7 @@ start#page
 		questione di orgoglio. Di vendetta.
 	
 		E se per caso vi steste chiedendo il perché, è ovvio. Io posso.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-vii">
-			<div class="section">
-	<p>
+tab#vii
 		Come ho potuto testare attivamente su un soggetto semiumano (un
 		volontario <span class="spoiler">esemplare di Dacav</span>), pare che il
 		problema ancora non sia chiaro.
@@ -535,11 +457,7 @@ start#page
 		Il buon Dacav, ch'è giovane e ingenuo (?), mi consiglia semplicemente di
 		fermare la ragazza in questione, domandare gentilmente e leggere la
 		maglietta. Sappiamo che questo non può funzionare.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-viii">
-			<div class="section">
-	<p>
+tab#viii
 		Poi, finalmente, mi stufo e me ne vado alla fontanella.
 	
 		Capitano delle cose, quando vado alla fontanella. Spesso trovo Codd.
@@ -559,11 +477,7 @@ start#page
 	</p></div><p>
 		Prima che io possa fermarlo e chiedergli che centri questo con il
 		mio vero problema, lui se n'è già andato.
-	</p>
-			</div>
-		</div><div class="tab" id="tab-ix">
-			<div class="section">
-				<p>
+tab#ix
 					Ho chiesto aiuto.
 				
 					È comparso War, che ha avuto il buon cuore d'ascoltare la
@@ -640,10 +554,7 @@ start#page
 						«La resa, ossia la rinuncia alla consegna, è da
 						considerarsi una soluzione deprecabile»
 				</p></div>
-			</div>
-		</div><div class="tab" id="tab-x">
-			<div class="section">
-				<p>
+tab#x
 					Ovviamente, l'intera procedura comporta dei costi. Ed alcuni
 					rischi.
 				
@@ -669,11 +580,7 @@ start#page
 					credo che questa condizione sia abbastanza significativa;
 					e certamente non m'interessa premunirmi contro il suo
 					verificarsi.
-				</p>
-			</div>
-		</div><div class="tab" id="tab-xi">
-			<div class="section">
-				<p>
+tab#xi
 					Generalizzando ed espandendo il bacino d'utenza del
 					problema, ieri – che non avevo un cazzo da fare perché
 					&lt;blah yadda fuffa etc&gt; – mi sono messo a spiegare per
@@ -804,11 +711,7 @@ start#page
 				
 					<span class="em">E tutto questo è stato fatto per la <span
 					class="forte">scienza</span>, non è magnifico?</span>
-				</p>
-			</div>
-		</div><div class="tab" id="tab-xii">
-			<div class="section">
-	<p>
+tab#xii
 		E infine, un'ultima cosa.
 	
 		A quanto pare, oltre alla consegna del fiore senza spiccicare parola,
@@ -840,8 +743,37 @@ start#page
 		tutta la facoltà? E se la $frangiona ne trovasse uno?
 		Funzionerebbe?</span>»
 	</p></div>
-			</div>
-		</div>
-	</div>
-</div>
-<?php } ?>
+stop#page
+start#side
+	title#Prima parte
+	titler#21/09/2011
+	begin#ol
+		li#tid#Io#i
+		li#tid#Normale#ii
+		li#tid#Il punto#iii
+	end#ol
+	sec#
+	title#Seconda parte
+	titler#26/09/2011
+	begin#ol@start@4
+		li#tid#C&apos;ho pensato…#iv
+		li#tid#I timori#v
+		li#tid#L&apos;intento#vi
+	end#ol
+	sec#
+	title#Terza parte
+	titler#27/09/2011
+	begin#ol@start@7
+		li#tid#Il problema comune#vii
+		li#tid#La ricerca della soluzione#viii
+		li#tid#L&apos;aiuto#ix
+		li#tid#La reazione#x
+		li#tid#L&apos;esperimento#xi
+	end#ol
+	sec#
+	title#Quarta parte
+	titler#28/09/2011
+	begin#ol@start@12
+		li#tid#Un&apos;ultima cosa#xii
+	end#ol
+stop#side

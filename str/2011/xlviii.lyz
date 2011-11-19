@@ -1,12 +1,7 @@
-<?php
-	$title=array#Non ce n&apos;è abbastanza#Io almeno non ne ho
-	$prev=array#Storia XLVII#Storie/2011/XLVII/
-	$next=array#Storia XLIX#Storie/2011/XLIX/
+title#Non ce n&apos;è abbastanza#Io almeno non ne ho
+prev#Storie/2011/XLVII/#Impresa II
+next#Storie/2011/XLIX/#Quel che non è abbastanza
 start#page
-?>
-<div class="small">
-	<div class="section">
-	<p>
 		E insomma… non scrivevo da un po', sperando che arrivasse qualcosa da
 		scrivere. È arrivato.
 	
@@ -15,18 +10,14 @@ start#page
 		Chi m'ha visto negli ultimi giorni può vedere quanto io sia
 		ulteriormente scazzato, quanto sia svuotato e quanto poco piacere riesca
 		a trarre da qualunque cosa.
-	</p>
-</div><div class="section">
-	<p>
+		sec#
 		Insomma, non è che non succedano cose buone, anzi… succedono anche cose
 		brutte, semplicemente la differenza non mi turba più di tanto…
 	
 		Or provo a buttar giù un elenco
-	</p>
-</div></div><div style="width:50%;float:left"><div class="section">
-		<h2>
-			Cose buone
-		</h2><p>
+		br#
+		pre#<div style="width:50%;float:left">
+			stitle#Cose buone
 			È uscito, dopo ~13 anni d'attesa, Duke Nukem Forever.
 		
 			Corro molto più di una volta.
@@ -43,11 +34,8 @@ start#page
 			Scrivo di notte.
 		
 			Mangio come un cavallo, a tutte le ore, e resto magro.
-		</p>
-</div></div><div style="width:50%;float:right"><div class="section">
-		<h2>
-			Cose brutte
-		</h2><p>
+		pre#</div><div style="width:50%;float:right">
+			stitle#Cose brutte
 			Duke Nukem Forever fa un po' cagare… che t'aspettavi?
 		
 			Non ho tempo per correre.
@@ -65,9 +53,9 @@ start#page
 			Poi non mi sveglio.
 		
 			Ho comunque una fame della puttana, grosso modo sempre.
-		</p>
-</div></div><div class="small"><div class="section">
-	<p>
+
+		pre#</div><div style="float:none;clear:both"></div>
+		br#
 		Che ve ne pare? Potrei andare avanti, ma devo scrivere cose importanti.
 	
 		Quest'oggi ero immensamente scazzato…
@@ -140,33 +128,33 @@ start#page
 		E quindi me ne vado, <span class="em">FOREVER ALONE</span>, lungo la mia
 		strada. E mentre corro, ecco che mi compare Codd:
 	</p><div class="inside">
-		<?=$d->speak#codd#&apos;sup Gods
-		<?=$d->speak#gods#&apos;sup Edgar F
-		<?=$d->speak#codd#Che fai?
-		<?=$d->speak#gods#Corro, Edgar F
-		<?=$d->speak#codd#Perché non vai a scrivere un altro capitolo di Tru
+		speak#codd#&apos;sup Gods
+		speak#gods#&apos;sup Edgar F
+		speak#codd#Che fai?
+		speak#gods#Corro, Edgar F
+		speak#codd#Perché non vai a scrivere un altro capitolo di Tru
 		Naluten?
-		<?=$d->speak#gods#Perché tanto so come va a finire… il prossimo passo
+		speak#gods#Perché tanto so come va a finire… il prossimo passo
 		è l&apos;enorme spiegone prima del flashback lungo come l&apos;anno
 		della fame
-		<?=$d->speak#codd#Davverp?
-		<?=$d->speak#gods#Si, si, mo&apos; ti racconto…
+		speak#codd#Davverp?
+		speak#gods#Si, si, mo&apos; ti racconto…
 	</div><div class="outside">
 		<p>[segue il capitolo XXI di Tru Naluten… prossimamente]</p>
 	</div><div class="inside">
-		<?=$d->speak#codd#Però… figo
-		<?=$d->speak#gods#Eh, grazie. &apos;scolta un po&apos;… che vuoi?
-		<?=$d->speak#codd#L&apos;hai finito il fiore, no?
-		<?=$d->speak#gods#Si, è abbastanza definitivo, nuovo fiore, nuovo
+		speak#codd#Però… figo
+		speak#gods#Eh, grazie. &apos;scolta un po&apos;… che vuoi?
+		speak#codd#L&apos;hai finito il fiore, no?
+		speak#gods#Si, è abbastanza definitivo, nuovo fiore, nuovo
 		calice
-		<?=$d->speak#codd#Non credi che sarebbe il caso di consegnarlo?
-		<?=$d->speak#gods#Non è un po&apos; prestino? Sai, vorrei evitare che
+		speak#codd#Non credi che sarebbe il caso di consegnarlo?
+		speak#gods#Non è un po&apos; prestino? Sai, vorrei evitare che
 		la consegna fosse la sola occasione d&apos;interagire
-		<?=$d->speak#codd#Non finirai mica come tutte le altre sere, a far la
+		speak#codd#Non finirai mica come tutte le altre sere, a far la
 		mammoletta, a passarle davanti senza dire niente, senza neanche
 		guardarla, a tornartene a casa da solo, come al solito? Che tanto lei ti
 		vede e chissà che si mette a pensare!
-		<?=$d->speak#gods#Codd, vaffanculo!
+		speak#gods#Codd, vaffanculo!
 	</div><p>
 		Codd non ha ancora imparato che certe cose le deve lasciar fare a me.
 	</p>
@@ -206,7 +194,4 @@ start#page
 	
 		Così me ne torno a casa e scrivo quello che (non) è successo. E adesso
 		ho fame, mi mangio qualcosa.
-	</p>
-	</div>
-</div>
-<?php } ?>
+stop#page
