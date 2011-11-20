@@ -16,14 +16,14 @@ div.section h2 {
 
 div.section h3 { border-color: #444444; }
 
-div.inside, div.outside {
+.inside, .outside {
 	background-color: #444444;
 }
 
 div.section,
 div.section h2,
-div.inside,
-div.outside {
+.inside,
+.outside {
 	border-color: #eeeeee;
 }
 
@@ -31,4 +31,9 @@ div.section, div.section h2, div.inside, div.outside {
 	-webkit-box-shadow: 2px 2px 2px #aaaaaa;
 	-moz-box-shadow: 2px 2px 2px #aaaaaa;
 	box-shadow: 2px 2px 2px #aaaaaa;
+}
+
+em, strong, code {
+	color: #333333;
+	text-shadow: 0 0 1px #000000;
 }

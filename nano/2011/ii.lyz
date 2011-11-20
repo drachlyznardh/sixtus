@@ -286,13 +286,11 @@ stop#page
 start#side
 	title#Parte II
 	titler#La Corona dell'Odio
-	pre#<ol>
-		li#tid#Sessione 1#1##– 230 parole
-
-		li#tid#Sessione 2#2##– 762 parole
-
-		li#tid#Sessione 3#3##– 372 parole
-
-		li#tid#Sessione 4#4##– 788 parole
-	pre#</ol>
+	begin#ol
+		li#tid#Sessione 1#1## – 230 parole
+		li#tid#Sessione 2#2## – 762 parole
+		li#tid#Sessione 3#3## – 372 parole
+		li#tid#Sessione 4#4## – 788 parole
+		li#tid#Sessione 5#5## – parole
+	end#ol
 stop#side

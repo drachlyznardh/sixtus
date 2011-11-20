@@ -2,6 +2,45 @@ Title#Novità
 Subtitle#Le dieci notizie più recenti
 
 Start#Page
+
+	id#20
+	<em>
+	link##20/11/2011 ##20/
+	</em> / (<strong>
+	link#Extra/GUIDA/#Mini#contenuti#mini
+	</strong> ) <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Momenti
+	Questa è la storia di oggi. La metto anche tra le mini perché ho bisogno di
+	fare una lunga introduzione, non abbastanza lunga per essere una storia
+	intera: quella viene dopo.
+
+	Questa storia parte giovedì 17 e finisce oggi, dopo tre sere filate a casa,
+	prima per mancanza di briga, poi per babysitting (seminutile perché i miei
+	son rimasti a casa ma comunque…) e nuovamente per mezzo babysitting. Poi,
+	stamattina, le solite simpatiche pulizie domenicali.
+
+	Ma non solo, nel frattempo il mio babbo ha fatto la furbata (è anche vero
+	che non so quanto la cosa dipenda da lui) di farsi sostituire il telefono
+	del lavoro, da un comodo Nokia E51 semplice semplice ad uno stradannato
+	iPhone4. M'ha chiesto un favore… passare i suoi 693 (seicentonovantatre!)
+	contatti da uno all'altro… partì come una gravidanza, finì come un parto.
+
+	Ma sto prendendo troppo spazio… leggete il 
+	link#Storie/2011/LXVIII/#resto###.
+
+	sec#
+	id#19/19:05
+	<em>
+	link##19/11/2011 19:05##19/19:05
+	</em>
+	title#Trasloco completato
+	Bene. Credo d'aver finito. Tutte le pagine sono leggibili. Il <a
+	href="gods.roundhousecode.com/feed.rss">nuovo feed</a> verrà pubblicato a
+	breve. Adesso vado a scrivere il redirect per i vecchi siti.
+
+	sec#
 	id#15/17:45
 	<em>
 	link##15/11/2011 17:45##15/17:45
@@ -114,40 +153,15 @@ Start#Page
 	end#outside
 	(Avevamo scommesso dei caffé, due caffé. E io li voglio. Suuuuuuuuubito!)
 
-	sec#
-	id#18/16:35
-	<span class="em">
-	link##18/10/2011, 16:35##18/16:35
-	/
-	link#Extra/Guida/#Storie#STORIE
-	</span>
-	titler#LXVII – Ancora ce la posso fare
-	Dunque, a quanto pare ci posso riuscire. Mi sono messo in testa che
-	l'avrei fatto e l'ho fatto. Mi sono armato di scarpe e bicicletta e
-	me ne sono andato in
-	link#Storie/2011/LXVII/#Paganella.#INTRO
-
-	Ma non temete, non sono affatto superiore a voi. I postumi, due
-	giorni dopo, si fanno sentire… chi m'ha visto può certificare quanto
-	lentamente io faccia le scale, ora.
-
-	sec#
-	id#16/23:45
-	<span class="em">
-	link##16/10/2011, 23:45##16/23:45
-	/
-	link#Extra/Guida/#Recensioni#contenuti#Recensioni
-	</span>
-	titler#TransFormers: Prime
-	Che posso dire? La
-	link#Recensioni/Show/XV/#prima stagione#INTRO
-	è finita e già muoio per vedere la prossima! Ma non temere, War, non è che
-	stiano cominciando a piacermi le cose; anzi, vedrai: tra qualche giorno,
-	uscirà Gundam Unicorn 4, e allora tornerò a piangere.
 Stop#Page
 Start#Side
 	Title#Novità
 	STitle#link#News/2011/11/#Novembre 2011
+
+	<strong>20/11</strong> –
+	link#Storie/2011/LXVIII/#Momenti
+
+	<strong>19/11</strong> – Trasloco!
 
 	<strong>15/11</strong> –
 	link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
@@ -177,10 +191,4 @@ Start#Side
 	<span class="em">23/10</span> – 
 	L'Ordine della Fenice /
 	link#Recensioni/Libri/XII/#3#V3
-
-	<span class="em">18/10</span> –
-	link#Storie/2011/LXVII/#Ancora ce la posso fare
-
-	<span class="em">16/10</span> –
-	link#Recensioni/Show/XV/#TransFormers: Prime
 Stop#Side

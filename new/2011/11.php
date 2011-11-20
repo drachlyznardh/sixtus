@@ -3,6 +3,17 @@ subtitle#Piove, ma fa ancora caldo
 prev#News/2011/10/#Ottobre
 
 start#page
+	
+	id#19/19:05
+	<em>
+	link##19/11/2011 19:05##19/19:05
+	</em>
+	title#Trasloco completato
+	Bene. Credo d'aver finito. Tutte le pagine sono leggibili. Il <a
+	href="gods.roundhousecode.com/feed.rss">nuovo feed</a> verrà pubblicato a
+	breve. Adesso vado a scrivere il redirect per i vecchi siti.
+
+	sec#
 	Una cosa bella!
 	id#05/00:35
 	<span class="em">
@@ -56,6 +67,8 @@ start#page
 stop#page
 start#side
 	title#Novembre 2011
+	<strong>19/11</strong> – Trasloco!
+
 	<strong>15/11</strong> –
 	link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
 

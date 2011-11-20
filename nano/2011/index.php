@@ -4,7 +4,7 @@ prev#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore
 Start#Side
 	p#link#NaNoWriMo/2011/Personaggi/#Personaggi
 	Title#Dottor Odio Gaiden
-	p#link#NaNoWriMo/2011/I/#Quattro dottori###– 7756 parole
+	p#link#NaNoWriMo/2011/I/#Quattro dottori### – 7756 parole
 
 	p#link#NaNoWriMo/2011/II/#La corona dell'Odio
 Stop#Side

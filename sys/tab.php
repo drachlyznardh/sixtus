@@ -60,6 +60,7 @@
 
 			if (!$this->content) return false;
 			$result = false;
+			$result .= '<a id="'.strtoupper($this->name).'"></a>';
 			foreach ($this->content as $frag) {
 				switch ($frag[0]) {
 					case 'sec':

@@ -120,14 +120,15 @@ div.section ol {
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-div.inside, div.outside {
+.inside,
+.outside {
 	background-color: #555555;
 	border-style: outset;
 	border-width: 2px;
 }
 
-div.inside { margin: 2px 2px 2px -5px; }
-div.outside { margin: 2px -5px 2px 2px; }
+.inside { margin: 2px 2px 2px -5px; }
+.outside { margin: 2px -5px 2px 2px; }
 
 .spoiler {
 	color: #000000;
@@ -148,3 +149,6 @@ div.section p.foto img {
 	border: #000000 1px solid;
 }
 
+em { font-style:italic; }
+strong { font-weight:bold; }
+code { font-family: monospace }

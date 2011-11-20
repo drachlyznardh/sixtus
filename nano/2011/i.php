@@ -557,7 +557,7 @@ tab#3
 	inline#odio#Eh, si… quella sarà la seconda fase del piano
 	disse piano
 	inline#odio#Conto di terminare questo mio inutile dottorato entro la fine del trimestre
-	end#inside
+	end#outside
 	begin#inside
 	Sembrò profondamente irritato da questo, e diede segno di non voler più
 	toccare l'argomento.
