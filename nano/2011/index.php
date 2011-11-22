@@ -6,7 +6,9 @@ Start#Side
 	Title#Dottor Odio Gaiden
 	p#link#NaNoWriMo/2011/I/#Quattro dottori### – 7756 parole
 
-	p#link#NaNoWriMo/2011/II/#La corona dell'Odio
+	p#link#NaNoWriMo/2011/II/#La corona dell'Odio### – 2152 parole
+
+	p#link#NaNoWriMo/2011/III/#La rivelazione### – 1400 parole
 Stop#Side
 Start#Page
 	Anche quest'anno mi cimento.
