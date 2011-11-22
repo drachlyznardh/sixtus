@@ -6,7 +6,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?php foreach (explode('/', $self) as $keyword) echo ' '.$keyword; ?>" />
-		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss.xml" />
+		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss" />
 
 		<title><?=$p->gettitle()?></title>
 		
