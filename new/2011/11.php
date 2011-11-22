@@ -3,7 +3,35 @@ subtitle#Piove, ma fa ancora caldo
 prev#News/2011/10/#Ottobre
 
 start#page
-	
+
+	id#20
+	<em>
+	link##20/11/2011 ##20/
+	</em> / (<strong>
+	link#Extra/GUIDA/#Mini#contenuti#mini
+	</strong> ) <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Storia LXVIII – Momenti
+	Questa è la storia di oggi. La metto anche tra le mini perché ho bisogno di
+	fare una lunga introduzione, non abbastanza lunga per essere una storia
+	intera: quella viene dopo.
+
+	Questa storia parte giovedì 17 e finisce oggi, dopo tre sere filate a casa,
+	prima per mancanza di briga, poi per babysitting (seminutile perché i miei
+	son rimasti a casa ma comunque…) e nuovamente per mezzo babysitting. Poi,
+	stamattina, le solite simpatiche pulizie domenicali.
+
+	Ma non solo, nel frattempo il mio babbo ha fatto la furbata (è anche vero
+	che non so quanto la cosa dipenda da lui) di farsi sostituire il telefono
+	del lavoro, da un comodo Nokia E51 semplice semplice ad uno stradannato
+	iPhone4. M'ha chiesto un favore… passare i suoi 693 (seicentonovantatre!)
+	contatti da uno all'altro… partì come una gravidanza, finì come un parto.
+
+	Ma sto prendendo troppo spazio… leggete il 
+	link#Storie/2011/LXVIII/#resto###.
+
+	sec#
 	id#19/19:05
 	<em>
 	link##19/11/2011 19:05##19/19:05
@@ -67,6 +95,9 @@ start#page
 stop#page
 start#side
 	title#Novembre 2011
+	<strong>20/11</strong> –
+	link#Storie/2011/LXVIII/#Momenti
+
 	<strong>19/11</strong> – Trasloco!
 
 	<strong>15/11</strong> –
