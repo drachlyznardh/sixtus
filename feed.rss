@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<atom:link rel="self" href="http://drachlyznardh.altervista.org/rss.xml" type="application/rss+xml" />
-		<title>drachlyznardh.altervista.org</title>
-		<link>http://drachlyznardh.altervista.org/</link>
+		<atom:link rel="self" href="http://gods.roundhousecode.com/feed.rss" type="application/rss+xml" />
+		<title>gods.roundhousecode.com</title>
+		<link>http://gods.roundhousecode.com/</link>
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
-			<title>Recensioni – Harry Potter &amp; l'Ordine della Fenice</title>
-			<description>Altra impresa. Arrivare in fondo a 'sto mattone… oh, è
-			stata dura.</description>
-			<pubDate>Sun, 23 Oct 2011 22:25:00 +0100</pubDate>
-			<link>http://drachlyznardh.altervista.org/Recensioni/HarryPotter/#V3</link>
-			<guid>http://drachlyznardh.altervista.org/News/2011/Ott/#23/22:25</guid>
+			<title>Storia LXVIII  – Momenti</title>
+			<description>Qualche pensiero mentre andavo a spasso. Poi mi sono
+			perso.</description>
+			<pubDate>Tue, 22 Nov 2011 13:35:00 +0100</pubDate>
+			<link>http://gods.roundhousecode.com/Storie/2011/LXVII/</link>
+			<guid>http://gods.roundhousecode.com/News/2011/11/#20</guid>
 		</item>
 	</channel>
 </rss>

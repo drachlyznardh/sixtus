@@ -11,7 +11,7 @@ Start#Page
 	</strong> ) <strong>
 	link#Extra/GUIDA/#Storie#contenuti#storie
 	</strong>
-	title#Momenti
+	title#Storia LXVIII – Momenti
 	Questa è la storia di oggi. La metto anche tra le mini perché ho bisogno di
 	fare una lunga introduzione, non abbastanza lunga per essere una storia
 	intera: quella viene dopo.
