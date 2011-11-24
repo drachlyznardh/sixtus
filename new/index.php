@@ -180,7 +180,7 @@ Start#Side
 	e
 	link#Recensioni/Show/XXI/#199 Hero Grand Battle
 	e anche un po' di
-	link#Recensioni/Show/XIV/#Gundam AGE
+	link#Recensioni/Show/XIV/#Gundam AGE#iii
 
 	<strong>20/11</strong> –
 	link#Storie/2011/LXVIII/#Momenti
