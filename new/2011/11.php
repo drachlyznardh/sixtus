@@ -4,6 +4,23 @@ prev#News/2011/10/#Ottobre
 
 start#page
 
+	id#23/18:45
+	<em>
+	link##23/11/2011 – 18:45##23/18:45
+	</em> / <strong>
+	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
+	</strong>
+	title#Altre recensioni!
+	E siccome non ho briga di fare altro, eccomi a recensire un
+	link#Recensioni/Film/Brutti/XX/#film bruttarello
+	(anche se meno di quel che temevo) e uno
+	link#Recensioni/Show/XXI/#oscenamente magnifico###.
+	Ma fate attenzione ad entrambi, perché sono <em>IO</em> che li sto
+	giudicando. Ed ho buone notizie anche per un altro
+	link#Recensioni/Show/XIV/#show#iii##,
+	che ci crediate o no.
+
+	sec#
 	id#20
 	<em>
 	link##20/11/2011 ##20/
@@ -95,6 +112,13 @@ start#page
 stop#page
 start#side
 	title#Novembre 2011
+	<strong>23/11</strong> –
+	link#Recensioni/Film/Brutti/XX/#Plan 9
+	e
+	link#Recensioni/Show/XXI/#199 Hero Grand Battle
+	e anche un po' di
+	link#Recensioni/Show/XIV/#Gundam AGE
+
 	<strong>20/11</strong> –
 	link#Storie/2011/LXVIII/#Momenti
 
