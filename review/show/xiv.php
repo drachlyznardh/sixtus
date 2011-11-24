@@ -297,6 +297,75 @@ tab#ii
 		</p><p>
 			Oppure potrebbe restare quello ch'è adesso. Una merda.
 		</p>
+tab#iii
+	Come dice Luber, i primi tre episodi di una serie dovrebbe sempre essere
+	visti, per farsi un'idea di quel che succederà… ma a volte non basta.
+	title#L'impressione sbagliata
+	È successo con <em>Gurren Lagann</em>, è successo con <em>Gunbuster</em>…
+	quelle serie che partono davvero piano, ma poi…
+
+	Come avevo profetizzato nell'ultimo tab, questa serie s'appresta a
+	divergere. Credo abbia già raggiunto il punto in cui smette di prendersi sul
+	serio, ma procediamo con ordine. Negli ultimi episodi:
+	begin#ul
+		il bimbominchia <em>Furitto</em> si mette a litigare con il <span
+		class="wrong">frocio</span> sborone <em>Wolf</em>, un ex pilota
+		diventato militare perché nessuno pilota come lui. Questi tizio arriva,
+		sboroneggia un po', ci prova subito con la ragazza (no, non quella del
+		bimbominchia. Non è pedofilo… forse) e poi decide che il Gundam (che è
+		figo) appartiene a lui (perché lui è figo)
+
+		succede allora che Wolf e Furitto si devono litigare il Gundam. Vanno
+		fuori nello spazio e cominciano a sparacchiarsi con le pistole a
+		vernice. Gigantesche pistole a vernice spaziali!
+
+		mentre litigano, arrivano i cattivi: hanno una cazzutissima corazzata,
+		grossa molte volte l'astronave-minchia che i tizi hanno rubato; quindi
+		scappano di balla…
+
+		arriva su una grossa colonia, e ci trovano una marea di cose. Per prima,
+		terribili ricordi che i due bambini (il minchio e la minchia, ma non il
+		terzo bambino stupido: quello non se lo caga nessuno…) non vogliono
+		raccontarci
+
+		ma trovano anche un cazzo di bambino-demone cattivissimo (scommetto che
+		anche lui è un fottuto terminator venuto dal futuro) che fa finta di
+		farsi tirare sotto da una macchina (si, il bimbominchia guida la
+		macchina!), poi si fa medicare, gioca un pochettino, poi ruba il Gundam
+		sotto il naso di tutti e va a farsi una passeggiata spaziale. Quando i
+		cattivi saltano fuori, il bimbo-demone li corca di botte senza sforzo.
+		Una volta tornato, saltano fuori dei tizi con i mantelli e i cappucci,
+		che fanno parte di una <em>terribile confraternita di illuminati</em> che
+		trama di blah blah blah <strong>&lt;SUSPENCE&gt;</strong>!
+
+		poi l'allegra compagnia scova una bambina e il suo padre adottivo, il
+		<em>Palestrato</em>; questi due e gli altri due e un sacco di altra
+		gente finisce coinvolta nella guerra civile (o gli strascichi della
+		guerra, che prosegue da qualcosa come due secoli…) tra il <em>BLUE
+		team</em> e lo <em>YELLOW team</em>, che si voglio un male viscerale
+		perchè <strong>&lt;TRAMA&gt;</strong>!
+
+		per salvare la bambina, il palestrato estra il suo mobile suit: un
+		enorme aggeggio giallo, da cantiere, con l'elmetto a calotta, il piccone
+		e il badile. Ma non solo! È un <strong>badile termico</strong>!!!
+
+		il tizio non ce la fa, il Gundam arriva per salvarlo, finisce nelle
+		pesta, viene coinvolto nella guerra, poi arriva il cattivo, il Gundam
+		gli spara, quello ferma il laser con il taglio della mano e manda gli
+		schizzi da tutte le parti. Il Gundam viene arrestato con l'accusa dei
+		danni collaterali…
+
+		intanto, il capitano della nave (il ladro) se ne va dal Padrino della
+		colonia, promettendo informazioni militari sensibili in cambio di un
+		<strong>flotta da guerra</strong>, con la quale intende <strong>portare
+		battaglia alla corazzata dei cattivi</strong>, senza il consenso
+		dell'esercito
+	end#ul
+
+	In questa serie, nessuno scende a compromessi! Nessuno sente ragioni! Sono
+	tutti stupidi! Nella preview del settimo episodio, ho davvero visto il
+	Gundam prodursi in un “HATERS GONNA HATE” a razzo. Mai una serie di Gundam
+	ha avuto le balle in mano così tanto, nemmeno in G Gundam.
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -304,4 +373,6 @@ start#side
 	p#tid#Il primo impatto#i
 
 	p#tid#Il secondo impatto#ii
+
+	p#tid#Episodi 4~6#iii
 stop#side

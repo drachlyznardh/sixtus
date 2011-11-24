@@ -72,117 +72,7 @@ tab#intro
 			link#Recensioni/Film/Brutti/#sezione apposita.
 
 tab#classifica
-	id#awesome
-	title#Fucking awesome!!!
-	Questi sono decisamente da vedere/provare/comprare.
-	pre#<ul>
-		li#link#Recensioni/Giochi/II/#Assassin&apos;s Creed Brotherhood
-		li#link#Recensioni/Show/XIII/#Kamen Rider W#W
-		li#link#Recensioni/Show/XIII/#OOO, Den-O, all Riders: Let's go Kamen Riders#M2011
-		li#link#Recensioni/Show/XV/#Transformers: Prime#INTRO
-	pre#</ul>
-	
-	sec#
-	id#buoni
-	title#Buono
-	Che ci crediate o meno, questi mi sono piaciuti. Non sono
-	magnificissimi, non sono eccelsi, ma sono buoni.
-	pre#<ul>
-		li#link#Recensioni/Film/VIII/#Capitan America
-		li#link#Recensioni/Show/IX/#Angel Beats!
-		li#link#Recensioni/Show/XIII/#Kamen Rider OOO#OOO
-		pre#<li>
-		link#Recensioni/Film/XVII/#First Blood#I
-		pre#e
-		link#Recensioni/Film/XVII/#Rambo: First Blood part II#II
-		pre#</li>
-		li#link#Recensoni/Film/XIX/#Ed Wood
-	pre#</ul>
-
-	sec#
-	id#lasciano
-	title#Si lascia guardare
-	Questi si lasciano guardare. Con le dovute precauzioni.
-	pre#<ul>
-		li#link#Recensioni/Show/VI/#Masterforce
-		li#link#Recensioni/Film/X/#I Puffi
-		li#link#Recensioni/Libri/XI/#Nessun Dove
-	pre#</ul>
-
-	sec#
-	id#meh
-	title#Meh. / Mah
-	Questi non sono per tutti, sono per chi ha gusti particolari o lo
-	stomaco di ferro.
-	pre#<ul>
-		li#link#Recensioni/Film/III/#Robocop
-		li#link#Recensioni/Show/IV/#Pani Poni Dash
-		pre#<li>
-			link#Recensioni/Libri/XII/#Harry Potter
-			pre#e
-			link#Recensioni/Libri/XII/#La pietra filosofale#I
-			pre#e
-			link#Recensioni/Libri/XII/#La camera dei segreti#II
-			pre#e
-			link#Recensioni/Libri/XII/#Il prigioniero di Azkaban#III
-			pre#e
-			link#Recensioni/Libri/XII/#Il calice di fuoco#IV
-			pre#e
-			link#Recensioni/Libri/XII/#L&apos;ordine della Fenice#V
-			pre#e
-			link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
-		pre#</li>
-	pre#</ul>
-
-	sec#
-	id#bay
-	title#L'ha fatto Micheal Bay?
-	Questi hanno il grosso difetto di mettere l'azione davanti alla storia.
-	O semplicemente si dimenticano che le esplosioni non fanno un buon film
-	/ buon anime / buona visione.
-	pre#<ul>
-	li#link#Recensioni/Show/V/#Blassreiter
-	pre#</ul>
-
-	sec#
-	id#no
-	title#No
-	Questi no.
-	pre#<ul>
-		li#link#Recensioni/Film/I/#Thor
-		li#link#Recensioni/Film/VII/#Dark Of The Moon
-		li#link#Recensioni/Show/XIV/#Gundam AGE
-		li#D–Wars
-		li#Mega shark Vs Giant Octopus
-		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
-	pre#</ul>
-
-	sec#
-	id#ridere
-	title#Brutto da ridere
-	Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
-	loro, non con loro.
-	pre#<ul>
-		li#Robot
-		li#Alien Vs Ninja
-		li#Black Sheep
-		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
-	pre#</ul>
-
-	sec#
-	id#magnifici
-	title#Magnificamente brutto
-	Insomma, l'ho detto e lo ripeto, alcuni film sono così brutti da fare il
-	giro e diventare più che godibili.
-
-	Ne parlerò di più quando avrò tempo e briga. Intanto, andate a vedervi
-	un po' di 'sta roba:
-	pre#<ul>
-		li#Machete
-		li#Planet Terror
-		li#Sharktopus
-		li#The Rocky Horror Picture Show
-	pre#</ul>
+	include#review/classifica#page
 tab#categorie
 	E siccome le recensioni cominciano ad essere tante, ho diviso
 	l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
@@ -217,7 +107,7 @@ tab#incorso
 tab#indice
 	id#cronologico
 	title#Indice cronologico
-	pre#<ol class="triplecol" style="margin-left:1em">
+	begin#ol@class@triplecol@style@margin-left:1em
 		li#link#Recensioni/Film/I/#Thor### – 2011
 		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
 		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
@@ -237,7 +127,11 @@ tab#indice
 		li#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
 		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
 		li#link#Recensioni/Film/XIX/#Ed Wood### – 1994
-	pre#</ol>
+		
+		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
+
+		p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
+	end#ol
 
 	sbr#
 	id#categoria
@@ -258,10 +152,10 @@ start#side
 	title#Recensioni
 	stitle#tid#Categorie#categorie
 	reverse#
-	tid#Film#categorie#Film
-	/
-	tid#Film Brutti#categorie#Brutti
-	reverse#
+		tid#Film#categorie#Film
+		/
+		tid#Film Brutti#categorie#Brutti
+		/
 		tid#Giochi#categorie#Giochi
 		/
 		tid#Show#categorie#Show

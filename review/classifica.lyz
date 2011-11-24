@@ -1,0 +1,116 @@
+start#page
+tab#classifica
+	id#awesome
+	title#Fucking awesome!!!
+	Questi sono decisamente da vedere/provare/comprare.
+	begin#ul
+		li#link#Recensioni/Giochi/II/#Assassin&apos;s Creed Brotherhood
+		li#link#Recensioni/Show/XIII/#Kamen Rider W#W
+		li#link#Recensioni/Show/XIII/#OOO, Den-O, all Riders: Let's go Kamen Riders#M2011
+		li#link#Recensioni/Show/XV/#Transformers: Prime
+		li#link#Recensioni/Show/XXI/#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle#M2011
+	end#ul
+	
+	sec#
+	id#buoni
+	title#Buono
+	Che ci crediate o meno, questi mi sono piaciuti. Non sono
+	magnificissimi, non sono eccelsi, ma sono buoni.
+	begin#ul
+		li#link#Recensioni/Film/VIII/#Capitan America
+		li#link#Recensioni/Show/IX/#Angel Beats!
+		li#link#Recensioni/Show/XIII/#Kamen Rider OOO#OOO
+		
+		p#link#Recensioni/Film/XVII/#First Blood#I
+		e
+		link#Recensioni/Film/XVII/#Rambo: First Blood part II#II
+		
+		p#link#Recensoni/Film/XIX/#Ed Wood
+	end#ul
+
+	sec#
+	id#lasciano
+	title#Si lascia guardare
+	Questi si lasciano guardare. Con le dovute precauzioni.
+	begin#ul
+		li#link#Recensioni/Show/VI/#Masterforce
+		li#link#Recensioni/Film/X/#I Puffi
+		li#link#Recensioni/Libri/XI/#Nessun Dove
+	end#ul
+
+	sec#
+	id#meh
+	title#Meh. / Mah
+	Questi non sono per tutti, sono per chi ha gusti particolari o lo
+	stomaco di ferro.
+	begin#ul
+		li#link#Recensioni/Film/III/#Robocop
+		li#link#Recensioni/Show/IV/#Pani Poni Dash
+		
+		p#link#Recensioni/Libri/XII/#Harry Potter
+			e
+			link#Recensioni/Libri/XII/#La pietra filosofale#I
+			e
+			link#Recensioni/Libri/XII/#La camera dei segreti#II
+			e
+			link#Recensioni/Libri/XII/#Il prigioniero di Azkaban#III
+			e
+			link#Recensioni/Libri/XII/#Il calice di fuoco#IV
+			e
+			link#Recensioni/Libri/XII/#L&apos;ordine della Fenice#V
+			e
+			link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
+	end#ul
+
+	sec#
+	id#bay
+	title#L'ha fatto Micheal Bay?
+	Questi hanno il grosso difetto di mettere l'azione davanti alla storia.
+	O semplicemente si dimenticano che le esplosioni non fanno un buon film
+	/ buon anime / buona visione.
+	begin#ul
+	li#link#Recensioni/Show/V/#Blassreiter
+	end#ul
+
+	sec#
+	id#no
+	title#No
+	Questi no.
+	begin#ul
+		li#link#Recensioni/Film/I/#Thor
+		li#link#Recensioni/Film/VII/#Dark Of The Moon
+		li#link#Recensioni/Show/XIV/#Gundam AGE
+		li#D–Wars
+		li#Mega shark Vs Giant Octopus
+		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
+	end#ul
+
+	sec#
+	id#ridere
+	title#Brutto da ridere
+	Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
+	loro, non con loro.
+	begin#ul
+		li#Robot
+		li#Alien Vs Ninja
+		li#Black Sheep
+		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
+
+		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
+	end#ul
+
+	sec#
+	id#magnifici
+	title#Magnificamente brutto
+	Insomma, l'ho detto e lo ripeto, alcuni film sono così brutti da fare il
+	giro e diventare più che godibili.
+
+	Ne parlerò di più quando avrò tempo e briga. Intanto, andate a vedervi
+	un po' di 'sta roba:
+	begin#ul
+		li#Machete
+		li#Planet Terror
+		li#Sharktopus
+		li#The Rocky Horror Picture Show
+	end#ul
+stop#page

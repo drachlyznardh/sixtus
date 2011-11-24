@@ -26,4 +26,6 @@ start#side
 	p#link#Recensioni/Show/XIV/#Gundam AGE### – 2011
 
 	p#link#Recensioni/Show/XV/#TransFormers: Prime### – 2011
+
+	p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
 stop#side

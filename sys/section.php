@@ -56,6 +56,7 @@
 					$this->unmkText();
 					break;
 				case 'reverse':
+					$this->unmkText();
 					$this->mkText(' class="reverse"');
 					$this->isText = true;
 					if ($content) $this->recursive ($lineno, $content);
@@ -81,9 +82,11 @@
 					$this->content .= '</h3>'; break;
 				case 'link':
 				case 'mklink':
+					$this->mkText();
 					$this->content .= $this->mklink ($lineno, $content)."\n"; break;
 				case 'tid':
 				case 'mktid':
+					$this->mkText();
 					$this->content .= $this->mktid ($lineno, $content)."\n"; break;
 				case 'speak':
 					$this->unmkText();$this->mkLine('<p>'.$this->mkinline($lineno, $content).'</p>'); break;

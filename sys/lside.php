@@ -25,7 +25,8 @@
 	</p><h3>
 		<?=$d->link('Recensioni/', 'Recensioni')?>
 	</h3><p class="reverse">
-		<?=$d->link('Recensioni/', 'Classifica', 'CLASSIFICA') ?>
+		<?=$d->link('Recensioni/', 'Indice', 'INDICE') ?>
+		/ <?=$d->link('Recensioni/', 'Classifica', 'CLASSIFICA') ?>
 		/ <?=$d->link('Recensioni/', 'Progressi', 'INCORSO') ?>
 	</p><h3>
 		<?=$d->link('NaNoWriMo/', 'NaNoWriMo')?>

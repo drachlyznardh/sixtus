@@ -21,4 +21,6 @@ start#side
 	p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
 
 	p#link#Recensioni/Film/Brutti/XVIII/#Black Sheep### – 2006
+
+	p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
 stop#side
