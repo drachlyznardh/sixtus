@@ -3,6 +3,22 @@ Subtitle#Le dieci notizie più recenti
 
 Start#Page
 
+	id#28
+	<em>
+	link##28/11/2011##28
+	</em> / <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Storia LXIX – Le ragazze-__SUFFIX__
+	Ci sono molte ragazze, qui in facoltà:
+	link#Storie/2011/LXIX/#eccovi
+	quelle che (ri)conosco. Ma non solo!
+	titler#SPOILER!!!
+	Stanno per arrivare un sacco di altre recensioni: ultimamente mi sono visto
+	<em>Cars 2</em>, <em>Shrek Forever After</em>, gli ultimi due Rambo e la
+	prima stagione di <em>Dollhouse</em>.
+
+	sec#
 	id#23/18:45
 	<em>
 	link##23/11/2011 – 18:45##23/18:45
@@ -174,6 +190,9 @@ Stop#Page
 Start#Side
 	Title#Novità
 	STitle#link#News/2011/11/#Novembre 2011
+
+	<strong>28/11</strong> –
+	link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
 
 	<strong>23/11</strong> –
 	link#Recensioni/Film/Brutti/XX/#Plan 9
