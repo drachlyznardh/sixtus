@@ -1081,24 +1081,78 @@ tab#vii
 	href="http://www.youtube.com/results?search_query=elio+e+le+storie+tese+abitudinario">ma
 	che piace ai giovani?</a>), eh, già, perché anche se sembrano stronzi e sono
 	sembrati stronzi per tutta la vita in realtà no.
+
+	sec#
+	titler#Capitoli 4~10
+	E insomma… tolti gli zii dai coglioni, ecco che possiamo andare via anche
+	noi. Ma non senza un piano! Il piano è semplice, visto che nessuno sa cosa
+	vogliamo fare o quando, facciamo altre sei copie di Harry e scappiano in
+	sette direzioni diverse, poi fra un pochino ci troviamo tutti nel posto che
+	nessuno si aspetterebbe (casa Weasly, come sempre).
+
+	Fatte le copie, ognuno monta su scope/Thestrali/moto volanti/catapulte e
+	tutti si va, via, liberi. Fatto un passo, ecco che siamo circondati. WAT. La
+	yadda, pew pew pew, incredibili fuffe che funzionano solo al cinema e poi
+	salta fuori Voldemort!
+
+	Ah! Voldemort vola senza una scopa! Dev'essere malvagissimo! Ah! Buula!
+	Buula! Pew! E finalmente, colpito da una terribiliosa maledizione mortale,
+	Harry muore. Ah, finalmente.
+
+	Oh no, aspetta, non è andata così… Voldemort (che il libro continua ad
+	indicarmi come il più potente mago oscuro della storia, e adesso che Silente
+	è morto, anche il più potente mago vivente) non riesce ad uccidere Harry, ed
+	è così stronzo da non poter lasciare che sia qualcun altro a farlo. Bah.
+
+	Allora passano altre decine di pagine, tutti si ritrovano. In breve, Moody è
+	morto (era vecchio e stronzo e non aveva ancora combinato niente di utile,
+	tutte le sue cose erano off-screen e per lui non verso lacrime) e uno dei
+	due gemelli ha perso un orecchio.
+
+	Macchissenefregaaaaaaa! Perché adesso cominciano le cose fighe, giusto!?!
+
+	E invece… ecco che bisogna organizzare il matrimonio. MFW. La storia del
+	matrimonio va avanti per sempre. L'unica cosa interessante (si fa per dire)
+	è la comparsata del Ministro, che millanta di star eseguendo le ultime
+	volontà di Silente: consegna lo Spegnino, un libro e un boccino. La spada
+	sbrilluccicosa però se la tiene.
+
+	Poi, improvvisamente, si passa al ricevimento e lì Harry incontra un
+	vecchietto e una nonnina. In quella, arriva un fattorino:
+	begin#outside
+		speak#em#Il signor Potter, Harry James?
+		speak##Sono io
+		speak#em#Eccole una tonnellata di insinuazioni sul passato di Silente.  Firmi qui, prego
+	end#outside
+	BRagaxejhnrbzfdbnmtxkjmbdnabjkgxbdkibmndkh. Un fiume di cose losche e
+	sospette, una cascata, un pentolone, un fiotto, un geiser! Cose abbastanza
+	inutili, che però impallano il testone di Harry per tutto il resto della
+	yadda.
+
+	Finalmente, Kingsley manda un messaggio: il Ministero è caduto, è la guerra
+	civile, cazzi per tutti! Tutti scappano, anche i nostri tre baldi eroi. Che
+	si perdono, fanno un po' di fuffa e poi finiscono a casa Black. E li
+	ricomincia la yadda: il vecchio Kreacher racconta la yadda di Regulus, il
+	fratello di Sirius ch'era stronzo ma forse no. La storia del pentolone con
+	la pozione che può essere soltanto bevuta. Bleahrgh.
 stop#page
 start#side
 	p#tid#Intro#intro
 	title#Harry Potter e…
-	pre#<ol>
+	begin#ol
 		li#tid#La pietra filosofale#i
 		li#tid#La camera dei segreti#ii
 		li#tid#Il prigioniero di Azkaban#iii
 		li#tid#Il calice di fuoco#iv
-		pre#<li>
-			tid#L&apos;ordine#v#V1
-			pre#/
-			tid#della#v#V2
-			pre#/
-			tid#Fenice#v#V3
-		pre#</li>
+		
+		tid#L&apos;ordine#v#V1
+		pre#/
+		tid#della#v#V2
+		pre#/
+		tid#Fenice#v#V3
+	
 		li#tid#Il principe mezzosangue#vi
 		li#tid#I doni della morte#vii
-	pre#</ol>
+	end#ol
 stop#side
 

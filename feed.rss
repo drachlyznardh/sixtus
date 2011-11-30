@@ -7,6 +7,11 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Recensioni a fiumi!</title>
+			<description>Un altro mazzo di cose c'ho visto.</description>
+			<pubDate>Wed, 30 Nov 2011 14:47:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2011/11/#29</guid>
+		<item>
 			<title>Storia LXIX – Le ragazze-__SUFFIX__</title>
 			<description>Persone che vedo qui attorno. Also, SPOILERs.</description>
 			<pubDate>Mon, 28 Nov 2011 13:46 +0100</pubDate>
@@ -19,13 +24,6 @@
 			<pubDate>Thu, 24 Nov 2011 11:55:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2011/11/#23/18:45</guid>
 		</item>
-		<item>
-			<title>Storia LXVIII  – Momenti</title>
-			<description>Qualche pensiero mentre andavo a spasso. Poi mi sono
-			perso.</description>
-			<pubDate>Tue, 22 Nov 2011 13:35:00 +0100</pubDate>
-			<link>http://gods.roundhousecode.com/Storie/2011/LXVII/</link>
-			<guid>http://gods.roundhousecode.com/News/2011/11/#20</guid>
 		</item>
 	</channel>
 </rss>
