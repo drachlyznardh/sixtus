@@ -46,22 +46,26 @@ start#page
 
 	sbr#
 		A me piace leggere.
-	</p><div class="outside"><p style="text-align: right">
+		begin#outside
+		p@style@text-align:right#
 		Ma di lettura non si campa.
-	</p></div><p>
+		end#outside
 		A me piace costruire modellini.
-	</p><div class="outside"><p style="text-align: right">
+		begin#outside
+		p@style@text-align: right#
 		Ma di modellini non si campa, a meno di essere estremamente
 		bravi. Ed io non lo sono.
-	</p></div><p>
+		end#outside
 		A me piace scrivere.
-	</p><div class="outside"><p style="text-align: right">
+		begin#outside
+		p@style@text-align: right#
 		Per fare soldi con la scrittura bisogna essere bravi, originali
 		ed aver letto un sacco. Oppure essere una ragazzina giovane e
 		ingenua a cui piacciono i vampiri froci.
-	</p></div><p>
+		end#outside
 		A me piace andare in bici, andare in montagna.
-	</p><div class="outside"><p style="text-align: right">
+		begin#outside
+		p@style@text-align: right#
 		Per campare ad andare in bici bisogna essere parecchio più
 		veloci di me. Per campare andando in montagna, non so, bisogna
 		essere Messner.

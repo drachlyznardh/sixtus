@@ -82,10 +82,11 @@ start#page
 		<p>
 			La morale, cari bambini, è questa: non strafate quando andate a
 			correre la prima volta dopo troppi giorni di pausa.
-		</p><div class="inside"><p>
+		begin#inside
 			Quel tizio era veramente veloce: ha continuato la progressione per
 			mezzo chilometro, dacché l'ho lasciato andare.
-		</p></div><div class="outside"><p>
+		end#inside
+		begin#outside
 			Ho comunque sfiorato il mio record personale: non sono affatto da
 			buttare.
 		end#outside

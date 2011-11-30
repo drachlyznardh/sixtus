@@ -47,7 +47,7 @@
 					} else $this->unmkText();
 					break;
 				case 'p':
-					$this->mkText();
+					$this->mkText($opt);
 					$this->recursive($lineno, $content);
 					break;
 				case 'li':

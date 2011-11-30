@@ -65,7 +65,7 @@ start#page
 	Parte dunque questa rassegnata conversazione interiore.
 	begin#inside
 		inline#gods#Dunque, eccone un'altra. Dannate emozioni, hanno vinto ancora! Dovrò tornare a piegare carte.  Vediamo di sfruttare l'occasione, facciamo qualcosa di bello e poi lasciamola andare prima di stare male
-end#outside
+	end#inside
 	Perché io sarò anche stato singolo per una vita intera, ma almeno ho
 	imparato ad accantonare storie come questa sempre più in fretta.
 </p>
@@ -115,7 +115,7 @@ end#outside
 	troppo ho effettivamente detto
 	begin#inside
 		inline#gods#Un giorno mi vendicherò
-end#outside
+	end#inside
 	e l'ho invitata fuori una sera. Le ho raccontato
 	link#Storie/2010/VIII/#la storia dei sassi e poi ho
 	lasciato che lei facesse il resto. E adesso, di certo, non si

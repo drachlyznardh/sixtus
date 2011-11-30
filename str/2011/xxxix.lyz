@@ -385,24 +385,24 @@ start#side
 	p#tid#Prefazione#i
 	titler#La buona solitudine
 	begin#inside
-		pre#<ol start="2">
+		begin#ol@start@2
 			li#tid#La bicicletta#ii
 			li#tid#La montagna#iii
 			li#tid#Il modellismo#iv
 			li#tid#L'origami#v
-		pre#
-	end#outside
+		end#ol
+	end#inside
 	titler#La solitudine meno buona
 	begin#inside
-		pre#<ol start="6">
+		begin#ol@start@6
 			li#tid#Quelli come noi#vi
 			li#tid#C'è o manca?#vii
 			li#tid#Quel che ho di troppo#viii
 			li#tid#Quel che non ho affatto#ix
 			li#tid#Quel che mi merito#x
-		pre#</ol>
+		end#ol
 	end#inside
-	pre#<ol start="11">
+	begin#ol@start@11
 		li#tid#Postfazione#xi
-	pre#</ol>
+	end#ol
 stop#side

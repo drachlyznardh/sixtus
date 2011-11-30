@@ -142,15 +142,15 @@ tab#vi
 stop#page
 start#side
 	title#Offerte
-	pre#<ol>
+	begin#ol
 		li#tid#Fin da sempre!#i
 		li#tid#Questo layout#ii
 		li#tid#Le barre di scorrimento#iii
-	pre#</ol>
+	end#ol
 	title#Domande
-	pre#<ol start="4">
+	begin#ol@start@4
 		li#tid#Il cliente ha sempre ragione#iv
 		li#tid#A spada tratta#v
 		li#tid#Le alternative#vi
-	pre#</ol>
+	end#ol
 stop#side
