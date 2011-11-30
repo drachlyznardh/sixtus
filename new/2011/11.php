@@ -3,7 +3,24 @@ subtitle#Piove, ma fa ancora caldo
 prev#News/2011/10/#Ottobre
 
 start#page
+	id#29
+	<em>
+	link##29/11/2010##29
+	</em> / <strong>
+	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
+	</strong>
+	title#Altro fiume di recensioni
+	Evidentemente, guardo troppa roba. Comunque, eccovi gli ultimi due Rambo (il
+	link#Recensioni/Film/XVII/#terzo#iii
+	e il
+	link#Recensioni/Film/XVII/#quarto#iv##),
+	gli aggiornamenti sugli ultimi episodi di
+	link#Recensioni/Show/XIV/#Gundam AGE#iv
+	e infine quello che il <em class="bolo">Bolo</em> attendeva da sempre, il
+	mio parere su
+	link#Recensioni/Show/XXII/#Dollhouse###.
 
+	sec#
 	id#28
 	<em>
 	link##28/11/2011##28
@@ -128,6 +145,13 @@ start#page
 stop#page
 start#side
 	title#Novembre 2011
+	<strong>29/11</strong> –
+	link#Recensioni/Film/XVII/#Rambo III#iii##,
+	link#Recensioni/Film/XVII/#John Rambo#iv##,
+	link#Recensioni/Show/XXII/#Dollhouse
+	e soprattutto super-fanta
+	link#Recensioni/Show/XIV/#Gundam AGE#iv##!!!
+
 	<strong>28/11</strong> –
 	link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
 

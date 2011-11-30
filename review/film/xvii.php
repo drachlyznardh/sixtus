@@ -279,6 +279,102 @@ tab#ii
 		</h2><h2 class="reverse">
 			Buono
 		</h2>
+tab#iii
+	title#Rambo III
+	Beh. Non mi divertivo in questo modo (in modo, non in quantità) da un sacco
+	di tempo.
+
+	Voglio dire:
+	begin#ul
+		QUANTE volte può esplodere qualcosa? In questo film, ho visto molte cose
+		esplodere due volte. Lo stesso elicottero esplode due volte, in due
+		inquadrature diverse. Due esplosioni complete;
+
+		quanto finti possono essere gli accenti? Di più;
+	end#ul
+
+	Poi c'è il messaggio. Da piccolo (quando vidi questo film la prima volta)
+	non credevo che i film contenessero qualcosa. Credevo che raccontassero una
+	storia e basta, non credevo che avessero uno scopo ulteriore.
+
+	Ma ce l'hanno. E anche Rambo III ne ha uno: è un messaggio pacifico (!).
+
+	sec#
+	Già. È quasi imbarazzante. Ma in fondo il film è del 1988. Racconto un po'
+	la trama:
+	begin#outside
+		Rambo vive tranquillamente, il colonnello Trautman viene a recuperarlo,
+		ma lui rifiuta. Allora il colonnello se ne va alla guerra da solo, viene
+		catturato. Scopertolo, Rambo vola a salvare <span class="wrong">la
+		principessa</span> il colonello e nel frattempo uccide tutti.
+		
+		Fine.
+	end#outside
+	I cattivi, (anche) questa volta, sono russi. C'è un gran generale russo che
+	opera ai limiti della legge, senza notificare al proprio comando, che
+	spadroneggia su una certa zona dell'Afghanistan. E agli Afghani non piace.
+	Rambo arriva, impiega sette minuti a farsi accettare e poi parte a far la
+	rivoluzione.
+
+	Assieme a lui, un poveraccio (con dei magnifici baffi) che gli fa da guida e
+	un bambino. Il coefficiente di dramma, quando il bambino viene inquadrata,
+	sale vertiginosamente.
+
+	Ma la parte migliore è il dialogo tra il colonnello e il cattivo. Il
+	colonello americano, straveterano del Vietnam e di chissà che altro, spiega
+	al colonnello russo che invadere le nazioni degli altri non è bello, che gli
+	Afghani sono un popolo fiero e non è possibile conquistarli con la forza, e
+	yadda e controyadda. L'intero film, alla fine, è dedicato alle popolazioni
+	che resistono alle conquiste dall'esterno.
+
+	Non so se ridere o piangere. Ma considerato che ci sono un uomo impiccato
+	che esplode, un carro armato che sperona un elicottero e una carica a
+	cavallo, riderò.
+
+	title#Rambo III
+	titler#Si lascia guardare
+tab#iv
+	title#John Rambo
+	E poi, vent'anni dopo, questo.
+
+	Posso dire, visto di fresco, che questo è – tra i quattro – il più violento,
+	il più crudo, il più inutile. Forse non l'ho capito bene, ma di sicuro è
+	anomalo.
+
+	Intanto, c'è una qualche rivoluzione in qualche nazione fittizia. C'è un
+	qualche stronzone che ammazza la gente perché… mah, non ho capito, so ch'è
+	stronzo. Mentre questo tizio spadroneggia, il vecchio Rambo se ne va a
+	caccia di serpenti, guida la barca, batte il ferro… fa cose, insomma.
+
+	Poi saltano fuori <em>@AttivistiReligiosi</em>, che vogliono portare cerotti
+	e Bibbie a questi poveracci. Voglio che Rambo li porti lì con la barca.
+	Rambo li avverte che moriranno tutti e li manda via. Poi cambia idea, li
+	carica sulla barca e ce li porta.
+
+	Tempo sette secondi, i cattivi saltano fuori, ripuliscono il villaggio e
+	rapiscono 'sti sfigati. E allora Rambo? Lui se ne strafotte, come è giusto.
+	Ma salta fuori un altro tizio, uno con la cravatta, che chiede a Rambo di
+	<span class="wrong">salvare tutti</span> guidare i mercenari al villaggio.
+	
+	Eh già, Rambo non è solo, stavolta. Non capisco perché. Non ha senso, ma
+	assieme a Rambo ci sono questi tizi. Beh, no. Ci sono questi tizi, e poi c'è
+	Rambo. Rambo fa da solo, ma questi tizi girano lì attorno.
+
+	Non è che ci sia molto alto da aggiungere: alla fine, tutti i cattivi
+	vengono ammazzati nelle maniere più creative. Uhm, no, non è vero. Muoiono
+	tutti sparati, soltanto il BBEG viene sventrato.
+
+	Alla fine, un po' di mercenari sono morti, solo due attivisti sono
+	sopravvissuti, degli indigeni chissenefrega… boh… il film si conclude con
+	una lunghissima ripresa di Rambo, vestito come all'inizio (nel 1982) con la
+	borsa in spalla. Se ne torna in Arizona, al ranch di famiglia.
+
+	Non ho capito.
+	title#John Rambo
+	titler#Si lascia guardare
+	Considerato che il sangue è completamente digitale, gli effetti non sono poi
+	un granché… ma questo film non riesce né a deludermi, né a piacermi. Passa
+	via.
 stop#page
 start#side
 	title#Rambo
@@ -286,8 +382,8 @@ start#side
 	
 	p#tid#First Blood part II#ii## – 1985
 
-	Rambo III
+	p#tid#Rambo III#iii## – 1988
 
-	(John) Rambo
+	p#tid#(John) Rambo#iv## – 2008
 stop#side
 

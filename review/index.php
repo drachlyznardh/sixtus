@@ -131,6 +131,8 @@ tab#indice
 		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
 
 		p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
+
+		p#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 	end#ol
 
 	sbr#

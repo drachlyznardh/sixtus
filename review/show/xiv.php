@@ -366,6 +366,36 @@ tab#iii
 	tutti stupidi! Nella preview del settimo episodio, ho davvero visto il
 	Gundam prodursi in un “HATERS GONNA HATE” a razzo. Mai una serie di Gundam
 	ha avuto le balle in mano così tanto, nemmeno in G Gundam.
+
+tab#iv
+	Questo show ha definitivamente passato il limite dell'idiozia!
+
+	Dopo aver battuto (fatto scappare) il cattivo grossissimo, il Gundam viene
+	circondato dai soldati del BLUE Team, che lo catturano e lo portano a casa
+	del Don (quello delle corazzate).
+
+	La bimbaminchia e il professore dedicono di salvare Furitto, ed altri 9000
+	bambini si associano, e tutti cominciano a piangere sul cancello. Il
+	<em>&lt;DRAMMA!&gt;</em> è tale che il Gundam interviene per impedire alle
+	due fazioni di picchiarsi, quand'ecco che il cattivo grossissimo ritorna.
+
+	Nemmeno il Gundam è in grado di tenergli testa, quand'ecco che la trama
+	salva tutto. Due volte.
+
+	Per prima cosa, il dichiarato <em>Deus-Ex-Machina-device</em> (quel famoso
+	<code>AGE system</code>) ha appena prodotto una nuova arma: sono le
+	<em>braccia da Puggile</em>, con i pugni nelle mani!
+
+	Tale è la potenza di 'sto coso che non solo il cattivo va giù, ma perfino la
+	rivalità tra le due fazioni crolla, e l'amicizia spaziale trinfa!
+
+	Ma c'è anche la seconda cosa: Woolf, il frocio con le orecchie, se n'era
+	andato dal <em>$Mercante</em> per ordinare un suo Gundam. Adesso se ne
+	arriva con un vecchio scrauso modello standard, il nuovo
+	<code>G-Exes</code>, ma siccome questo aggeggio è a forma di Gundam, allora
+	è figo! E vale quindici vecchi modelli assieme!
+	
+	Bim! Bum! Bam! Gundam Punch! Gundam Kick! Spallate laser!
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -375,4 +405,6 @@ start#side
 	p#tid#Il secondo impatto#ii
 
 	p#tid#Episodi 4~6#iii
+
+	p#tid#Episodi 7~9#iv
 stop#side

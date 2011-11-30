@@ -36,6 +36,12 @@ tab#classifica
 		li#link#Recensioni/Show/VI/#Masterforce
 		li#link#Recensioni/Film/X/#I Puffi
 		li#link#Recensioni/Libri/XI/#Nessun Dove
+		
+		p#link#Recensioni/Film/XVII/#Rambo III#iii
+		e
+		link#Recensioni/Film/XVII/#John Rambo#iv
+
+		p#link#Recensioni/Show/XXII/#Dollhouse
 	end#ul
 
 	sec#

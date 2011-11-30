@@ -28,4 +28,6 @@ start#side
 	p#link#Recensioni/Show/XV/#TransFormers: Prime### – 2011
 
 	p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
+
+	p#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 stop#side

@@ -3,6 +3,24 @@ Subtitle#Le dieci notizie più recenti
 
 Start#Page
 
+	id#29
+	<em>
+	link##29/11/2010##29
+	</em> / <strong>
+	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
+	</strong>
+	title#Altro fiume di recensioni
+	Evidentemente, guardo troppa roba. Comunque, eccovi gli ultimi due Rambo (il
+	link#Recensioni/Film/XVII/#terzo#iii
+	e il
+	link#Recensioni/Film/XVII/#quarto#iv##),
+	gli aggiornamenti sugli ultimi episodi di
+	link#Recensioni/Show/XIV/#Gundam AGE#iv
+	e infine quello che il <em class="bolo">Bolo</em> attendeva da sempre, il
+	mio parere su
+	link#Recensioni/Show/XXII/#Dollhouse###.
+
+	sec#
 	id#28
 	<em>
 	link##28/11/2011##28
@@ -145,51 +163,17 @@ Start#Page
 	link#Recensioni/Film/XVII/#First Blood#i
 	e
 	link#Recensioni/Film/XVII/#First Blood Part II#ii
-
-	sec#
-	id#27/16:35
-	<span class="em">
-	link##27/10/2011, 16:35##27/16:35
-	/
-	link#Extra/Guida/#Recensioni#contenuti#Recensioni
-	</span>
-	Titler#Gundam AGE, dopo i primi episodi…
-	Uhm… Mh… Rh… il GODS non sa cosa pensare, ma l'ha
-	link#Recensioni/Show/XIV/#scritto#II
-	ugualmente, perché non conoscere l'argomento non l'ha mai fermato.
-
-	sec#
-	id#23/22:25
-	<span class="em">
-	link##23/10/2011, 22:25##23/22:25
-	/
-	link#Extra/Guida/#Recensioni#contenuti#Recensioni
-	</span>
-	titler#Harry Potter &amp; l'Ordine della Fenice
-	Prima di tutto, una notizia doverosa.
-	begin#inside
-		<span class="em">Gekirio2</span>, il mio amatissimo e lodatissimo
-		streamer di fiducia, è stato beccato. Un colossale asteroide con scritto
-		<span class="code">CopyRight™</span> è piombato dal cielo… non uploaderà
-		più nulla… e tutti i vecchi video sono stati oscurati.
-	end#inside
-	Ma bando alle ciance!!! Dopo spaventosi e disumani sforzi, eccomi
-	finalmente emergere dalle ultime pagine del
-	link#Recensioni/Libri/XII/#libraccione#V3##.
-	Non ricordo d'aver mai fatto altrettanta fatica ad arrivare in fondo a
-	qualcosa.
-
-	E poi, ecco un messaggio per War &amp; il Dacav:
-	begin#outside
-		«<span class="gods">Paaaaaaaaagare! Pa! Ga! Re! Pagare!
-		Papagagarere!</span>»
-	end#outside
-	(Avevamo scommesso dei caffé, due caffé. E io li voglio. Suuuuuuuuubito!)
-
 Stop#Page
 Start#Side
 	Title#Novità
 	STitle#link#News/2011/11/#Novembre 2011
+
+	<strong>29/11</strong> –
+	link#Recensioni/Film/XVII/#Rambo III#iii##,
+	link#Recensioni/Film/XVII/#John Rambo#iv##,
+	link#Recensioni/Show/XXII/#Dollhouse
+	e soprattutto super-fanta
+	link#Recensioni/Show/XIV/#Gundam AGE#iv##!!!
 
 	<strong>28/11</strong> –
 	link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
@@ -223,15 +207,4 @@ Start#Side
 	/
 	mklink#Recensioni/Film/XVII/#Part II#ii
 
-	<span class="em">03/11</span> – Rinnovo!
-	br#
-	STitle#link#News/2011/10/#Ottobre 2011
-
-	<span class="em">27/10</span> –
-	Gundam AGE /
-	link#Recensioni/Show/XIV/#ep2~3#II
-
-	<span class="em">23/10</span> – 
-	L'Ordine della Fenice /
-	link#Recensioni/Libri/XII/#3#V3
 Stop#Side
