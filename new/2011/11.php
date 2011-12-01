@@ -1,6 +1,7 @@
 title#Novembre
 subtitle#Piove, ma fa ancora caldo
 prev#News/2011/10/#Ottobre
+next#News/2011/12/#Dicembre
 
 start#page
 	id#29

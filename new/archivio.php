@@ -19,16 +19,13 @@ start#side
 	br#
 	stitle#link#News/2011/#2011
 	reverse#
-		link#News/2011/07#Luglio
-		/
-		link#News/2011/08/#Agosto
-		/
+		link#News/2011/07#Luglio### /
+		link#News/2011/08/#Agosto### /
 		link#News/2011/09/#Settembre
 	reverse#
-		link#News/2011/10/#Ottobre
-		/
-		link#News/2011/11#Novembre
-		/ Dicembre
+		link#News/2011/10/#Ottobre### /
+		link#News/2011/11#Novembre### /
+		link#News/2011/12#Dicembre
 	</p>
 stop#side
 start#page

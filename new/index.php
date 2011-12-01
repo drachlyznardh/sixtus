@@ -2,7 +2,18 @@ Title#Novità
 Subtitle#Le dieci notizie più recenti
 
 Start#Page
+	id#1
+	<em>
+	link##1/12/2010##1
+	</em> / <strong>
+	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
+	</strong>
+	title#Il finale di Dollhouse
+	Sono arrivato in 
+	link#Recensioni/Show/XXII/#fondo#s02##,
+	non so che pensare. La mia testa esplode.
 
+	sec#
 	id#29
 	<em>
 	link##29/11/2010##29
@@ -146,26 +157,16 @@ Start#Page
 	Non spero di ritrovare questo angioletto una seconda volta, ma di certo la
 	salverò nella lista delle <span class="code">@Ragazza-__SUFFIX__</span>, per
 	sempre nel mio cuore.
-
-	sec#
-	id#03/00:00
-	<span class="em">
-	link##03/11/2011 00:00##03/00:00
-	</span>
-	title#Rinnovo! Spostamento! Restauro!
-	Lyznardhum (questo sito) si sposta, cambia hosting, cambia
-	indirizzo, cambia veste, cambia implementazione… cambia tutto!
-
-	Tru Naluten torna in sede! Le recensioni sono state riordinate! È
-	cominciato il NaNoWriMo 2011! Le storie restano identiche!
-
-	Cominciamo con due recensioni nuove:
-	link#Recensioni/Film/XVII/#First Blood#i
-	e
-	link#Recensioni/Film/XVII/#First Blood Part II#ii
 Stop#Page
 Start#Side
 	Title#Novità
+	stitle#link#News/2011/12/#Dicembre 2011
+
+	<strong>01/12</strong> – La
+	link#Recensioni/Show/XXII/#seconda stagione#s02
+	di Dollhouse
+	br#
+
 	STitle#link#News/2011/11/#Novembre 2011
 
 	<strong>29/11</strong> –
@@ -201,10 +202,5 @@ Start#Side
 
 	pre#<p class="cat-heart">
 	pre#<span class="em">05/11</span> – KitKat Gratis!
-
-	<span class="em">03/11</span> – 
-	mklink#Recensioni/Film/XVII/#First Blood#i
-	/
-	mklink#Recensioni/Film/XVII/#Part II#ii
 
 Stop#Side
