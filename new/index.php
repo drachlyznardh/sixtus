@@ -2,6 +2,18 @@ Title#Novità
 Subtitle#Le dieci notizie più recenti
 
 Start#Page
+	id#2
+	<em>
+	link##2/12/2011##2
+	</em> / <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Storia LXX – Spontaneità
+	Faccio cose buone, mio padre mi ringrazia. Dovrei essere più contento, ma
+	non ci riesco. Provate a capire
+	link#Storie/2011/LXX/#perché###.
+
+	sec#
 	id#1
 	<em>
 	link##1/12/2010##1
@@ -119,48 +131,13 @@ Start#Page
 	link#Recensioni/Libri/XII/#sesto volume#VI
 	dell'agognata serie… In ogni caso, sono ancora in transizione e non tutte le
 	pagine sono visibili… abbiate pazienza.
-
-	sec#
-	id#05/00:35
-	Una cosa bella!
-
-	<span class="em">
-	link##05/11/2011 00:35##05/00:35
-	/
-	link#Extra/GUIDA/#MiniStorie#CONTENUTI#MiniStorie
-	</span>
-
-	pre#<h2 class="cat-heart">KitKat gratis!</h2>
-
-	Questa è una cosa nuova e bella.
-	begin#inside
-		Ero lì al baretto che mi facevo un caffé in compagnia (non tanta,
-		recentemente, ma qualcuno è ancora in zona…) e mentre aspetto al
-		bancone, mi guardo attorno.
-
-		Vedo alla mia sinistra una bimba alta così (beh, doveva essere una
-		matricola di qualcosa, ma – poverella – era alta un barattolo e una
-		banana) che regge un pacchetto di KitKat.
-
-		Il mio cervello va in pappa, tentando di capire, visto che il
-		bar non vende quella roba. Il mio ragionamento è, ovviamente, ad
-		alta voce; e la ragazza mia sente.
-	end#inside
-	Ma ecco la cosa bella.
-	begin#outside
-		«Oh, no: l'ho preso alle macchinette» mi spiega lei, e gentilmente «Ne
-		vuoi un pezzo?»
-	end#outside
-	Awwwwww. Non solo non si è spaventata, come succede sempre, ma m'ha pure
-	offerto da mangiare. Quale rara circostanza.
-
-	Non spero di ritrovare questo angioletto una seconda volta, ma di certo la
-	salverò nella lista delle <span class="code">@Ragazza-__SUFFIX__</span>, per
-	sempre nel mio cuore.
 Stop#Page
 Start#Side
 	Title#Novità
 	stitle#link#News/2011/12/#Dicembre 2011
+
+	<strong>02/12</strong> –
+	link#Storie/2011/LXX/#Spontaneità
 
 	<strong>01/12</strong> – La
 	link#Recensioni/Show/XXII/#seconda stagione#s02

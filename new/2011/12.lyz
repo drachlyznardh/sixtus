@@ -3,9 +3,21 @@ subtitle#Freschetto. Di notte.
 prev#News/2011/11/#Novembre
 
 start#page
+	id#2
+	<em>
+	link##2/12/2011##2
+	</em> / <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Storia LXX – Spontaneità
+	Faccio cose buone, mio padre mi ringrazia. Dovrei essere più contento, ma
+	non ci riesco. Provate a capire
+	link#Storie/2011/LXX/#perché###.
+
+	sec#
 	id#1
 	<em>
-	link##1/12/2010##1
+	link##1/12/2011##1
 	</em> / <strong>
 	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
 	</strong>
@@ -16,6 +28,9 @@ start#page
 stop#page
 start#side
 	title#Dicembre 2011
+	<strong>02/12</strong> –
+	link#Storie/2011/LXX/#Spontaneità
+
 	<strong>01/12</strong> – La
 	link#Recensioni/Show/XXII/#seconda stagione#s02
 	di Dollhouse

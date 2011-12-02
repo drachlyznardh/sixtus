@@ -75,8 +75,8 @@
 		Le <a href="http://kiyuko.org/blog/">idee</a> del <span
 		class="bolo">Bolo</span>
 	</p><p>
-		Le <a href="http://simgidacav.wordpress.com/">seghe</a> del <span
-		class="dacav">Dacav</span>
+		Le <a href="http://simgidacav.wordpress.com/">seghe</a> di <span
+		class="dacav">Simgi Dacav</span>
 	</p><p>
 		Le <a href="http://mikezasch.wordpress.com/">lamentele</a> di <span
 		class="mitch">Mitch</span>
