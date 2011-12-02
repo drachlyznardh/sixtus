@@ -7,23 +7,22 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Storia LXIX – Spontaneità</title>
+			<description>Questa non si capirà.</description>
+			<pubDate>Fri, 02 Dec 2011 16:35:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2011/12/#2</guid>
+		</item>
+		<item>
+			<title>Il finale di Dollhouse!</title>
+			<description>Ho guardato questa serie troppo in fretta?</description>
+			<pubDate>Fri, 02 Dec 2011 16:35:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2011/12/#1</guid>
+		</item>
+		<item>
 			<title>Recensioni a fiumi!</title>
 			<description>Un altro mazzo di cose c'ho visto.</description>
 			<pubDate>Wed, 30 Nov 2011 14:47:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2011/11/#29</guid>
-		<item>
-			<title>Storia LXIX – Le ragazze-__SUFFIX__</title>
-			<description>Persone che vedo qui attorno. Also, SPOILERs.</description>
-			<pubDate>Mon, 28 Nov 2011 13:46 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2011/11/#28</guid>
-		</item>
-		<item>
-			<title>Altre recensioni!</title>
-			<description>Il GODS guarda un sacco di roba, se ne dimentica e poi
-			recensisce tutto d'un botto!</description>
-			<pubDate>Thu, 24 Nov 2011 11:55:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2011/11/#23/18:45</guid>
-		</item>
 		</item>
 	</channel>
 </rss>
