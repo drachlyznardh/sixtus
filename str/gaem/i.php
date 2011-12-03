@@ -1,118 +1,104 @@
 title#La storia interattiva#Ma solo se volete
 start#page
 tab#start
-			C'era una volta il <span class="em">GODS</span>, che se ne andava a
-			spasso, bel bello, per il suo regno. Perché lui poteva.
-		</p><p>
-			Perché il regno era suo.
-		</p>
-	</div><div class="section">
-		<p>
-			Incappò un bel di il GODS in uno dei suoi cavalieri, il <span
-			class="em">Bolo</span>.
-		</p><div class="outside"><p>
-				Il Bolo parlò e disse «<span class="bolo">Maestà! Proprio voi
-				cercavo</span>»
-			</p><p>
-				«<span class="gods">Messer Bolo!</span>» rispose il GODS «<span
-				class="gods">Qual buon vento?</span>»
-			</p><p>
-				«<span class="bolo">Un'impresa, sire! Un'impresa!</span> annunciò il
-				cavaliere «<span class="bolo">Il popolo necessita di storie</span>»
-				ma poi, rannuvolandosi in volto «<span class="bolo">Ma devo anche
-				annunciarvi una notizia terribile: si tratta del pentolone delle
-				storie. È vuoto, mio signore!</span>»
-		</p></div>
-	</div><div class="section">
-		<h2>
-			Scelta
-		</h2><p>
-			È arrivato il momento di scegliere. Scegli.
-		</p>
+	C'era una volta il <em>GODS</em>, che se ne andava a spasso, bel bello, per
+	il suo regno. Perché lui poteva.
 		
-		pre#<ul><li>
-		link#Storie/Gaem/Finali/#Non mi frega un cazzo di questa storia#F1
-		pre#</li><li>
-		link##Oh no! Il pentolone?!?#S1
-		pre#</li></ul>
+	Perché il regno era suo.
+	sec#
+	Incappò un bel di il GODS in uno dei suoi cavalieri, il <em>Bolo</em>.
+	begin#outside
+		Il Bolo parlò e disse
+		inline#bolo#Maestà! Proprio voi cercavo
+			
+		inline#gods#Messer Bolo!
+		rispose il GODS
+		inline#gods#Qual buon vento?
+			
+		inline#bolo#Un'impresa, sire! Un'impresa!
+		annunciò il cavaliere
+		inline#bolo#Il popolo necessita di storie
+		ma poi, rannuvolandosi in volto
+		inline#bolo#Ma devo anche annunciarvi una notizia terribile: si tratta del pentolone delle storie. È vuoto, mio signore!
+	end#outside
+	sec#
+	title#Scelta
+	È arrivato il momento di scegliere. Scegli.
+		
+	begin#ul
+		li#link#Storie/Gaem/Finali/#Non mi frega un cazzo di questa storia#F1
+		li#link##Oh no! Il pentolone?!?#S1
+	end#ul
 tab#s1
-		<div class="outside"><p>
-				«<span class="gods">Oh no! Il pentolone!</span>» esclamò il GODS.
-			</p><p>
-				Puntando il dito, ordinò «<span class="gods">Presto! Alla
-				pentol-caverna!</span>»
-		</p></div><p>
-			Tarananananananananana!
-		</p>
-	</div><div class="section">
-		<p>
-			La <span class="em">Pentol-caverna</span> era un luogo remoto e
-			incantato, dimora nel misterioso fabbro nano <span
-			class="em">Dacav</span>, dall'orrido aspetto.
-		</p><p>
-			Sbuffando dalle enormi froge, il nano si rivolse al GODS, che bussava
-			alla sua porta.
-		</p><div class="outside"><p>
-				«<span class="dacav">Sire! Sire! Terribile!
-				Terribilissimo!</span>» piagnucolava il fabbro «<span
-				class="dacav">Il pentolone s'è esaurito! Non era mai successo,
-				in 30000000000000000000&pi;²³anni!</span>»
-			</p><p>
-				«<span class="dacav">Me lo ricordo, io c'ero</span>» aggiunse il
-				nano, ch'era più vecchio delle fondamenta della Terra.
-		</p></div><p>
-			Atterrito, il GODS visionò il contenuto del Pentolone. Era vuoto.
-		</p><p>
-			Senza le storie estratte dal pentolone, il regno sarebbe andato a
-			puttane! Come fare? Se tutto il regno fosse andato a puttane, quante
-			puttane ci sarebbero volute?
-		</p>
-	</div><div class="section">
-		title#Scelta
-		pre#<ul><li>
-		link#Storie/Gaem/Finali/#Non sono… 15?#F2
-		pre#</li><li>
-		link##Almeno il doppio#S2
-		pre#</li></ul>
+	begin#outside
+		inline#gods#Oh no! Il pentolone!
+		esclamò il GODS.
+			
+		Puntando il dito, ordinò
+		inline#gods#Presto! Alla pentol-caverna!
+	end#outside
+	Tarananananananananana!
+	sec#
+	La <em>Pentol-caverna</em> era un luogo remoto e incantato, dimora nel
+	misterioso fabbro nano <em>Dacav</em>, dall'orrido aspetto.
+		
+	Sbuffando dalle enormi froge, il nano si rivolse al GODS, che bussava alla
+	sua porta.
+	begin#outside
+		inline#dacav#Sire! Sire! Terribile! Terribilissimo!
+		piagnucolava il fabbro
+		inline#dacav#Il pentolone s'è esaurito! Non era mai successo, in 30000000000000000000&pi;²³anni!
+			
+		inline#dacav#Me lo ricordo, io c'ero
+		aggiunse il nano, ch'era più vecchio delle fondamenta della Terra.
+	end#outside
+	Atterrito, il GODS visionò il contenuto del Pentolone. Era vuoto.
+		
+	Senza le storie estratte dal pentolone, il regno sarebbe andato a puttane!
+	Come fare? Se tutto il regno fosse andato a puttane, quante puttane ci
+	sarebbero volute?
+	sec#
+	title#Scelta
+	begin#ul
+		li#link#Storie/Gaem/Finali/#Non sono… 15?#F2
+		li#link##Almeno il doppio#S2
+	end#ul
 tab#s2
-		<div class="outside"><p>
-				«<span class="gods">Impossibile!</span>» pianse il GODS, non
-				sapendo che fare «<span class="gods">Dove troveremo tutte queste
-				puttane?</span>»
-		</p></div><p>
-			Alla ricerca disperata d'una soluzione.
-		</p><div class="outside"><p>
-				«<span class="war">Non disperate, mio signore!</span>» esclamò
-				allora <span class="em">War</span>, il mago di corte.
-				«<span class="war">Basterà riempire il Pentolone con nuove
-				storie!</span>» millantò.
-		</p></div><p>
-			Ed ecco che immediatamente il mago si mise al lavoro su un <span
-			class="code">algoritmo intelligente [proattivo &amp; basculante]
-			neutrinico ad induzione protonica brandeggiabile di classe 7</span> per
-			rivelare la concentrazione di particelle di storia
-			nell'aria.
-		</p><p>
-			Così armati, i nostri eroi partirono alla ricerca di storie!
-		</p>
-	</div><div class="section">
-		<p>
-			Quella sera, all'ombra d'un castagno matto, udirono in lontananza una
-			voce.
-		</p><div class="outside"><p>
-				«<span class="mitch">Amici! Amici!</span>» esclamò la voce «<span
-				class="mitch">Eccomi! Seppur in ritardo, vi raggiungo!</span>»
-		</p></div><p>
-			Era <span class="em">Mitch</span> l'erborista, di ritorno dalla sua
-			personale impresa, la ricerca della ricerca.
-		</p><p>
-			Si narrava infatti di un introvabile maestro erborista, sommo maestro,
-			che aveva due laboratori, uno in collina e uno in pianura. E pareva
-			trovarsi sempre nell'altro.
-		</p><p>
-			<span class="em forte">Continua…</span>
+	begin#outside
+		inline#gods#Impossibile!
+		pianse il GODS, non sapendo che fare
+		inline#gods#Dove troveremo tutte queste puttane?
+	end#outside
+	Alla ricerca disperata d'una soluzione.
+	begin#outside
+		inline#war#Non disperate, mio signore!
+		esclamò allora <em>War</em>, il mago di corte
+		inline#war#Basterà riempire il Pentolone con nuove storie!
+		millantò.
+	end#outside
+	Ed ecco che immediatamente il mago si mise al lavoro su un <code>algoritmo
+	intelligente [proattivo &amp; basculante] neutrinico ad induzione protonica
+	brandeggiabile di classe 7</code> per rivelare la concentrazione di
+	particelle di storia nell'aria.
+		
+	Così armati, i nostri eroi partirono alla ricerca di storie!
+	sec#
+	Quella sera, all'ombra d'un castagno matto, udirono in lontananza una voce.
+	begin#outside
+		inline#mitch#Amici! Amici!
+		esclamò la voce
+		inline#mitch#Eccomi! Seppur in ritardo, vi raggiungo!
+	end#outside
+	Era <em>Mitch</em> l'erborista, di ritorno dalla sua personale impresa, la
+	ricerca della ricerca.
+		
+	Si narrava infatti di un introvabile maestro erborista, sommo maestro, che
+	aveva due laboratori, uno in collina e uno in pianura. E pareva trovarsi
+	sempre nell'altro.
+		
+	<strong>Continua…</strong>
 stop#page
 start#side
 	title#La storia interattiva
-	p#link#Storie/Gaem/#Primo
+	p#link#Storie/Gaem/I/#Primo
 stop#side

@@ -34,6 +34,5 @@ div.section, div.section h2, div.inside, div.outside {
 }
 
 em, strong, code {
-	color: #333333;
 	text-shadow: 0 0 1px #000000;
 }

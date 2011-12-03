@@ -1,75 +1,55 @@
 title#Recensioni#Sincere, spesso brutte
 start#page
 tab#intro
-			Non ne posso più, devo assolutamente sfogarmi.
+	Non ne posso più, devo assolutamente sfogarmi.
 		
-			Ma prima qualche parola per spiegare questa sezione.
-		</p>
-	</div><div class="section">
-		<p>
-			Non a caso, quell'arguto professore ch'è War arrivò un giorno e mi
-			disse:
-		</p><div class="outside"><p>
-				«Gods, è normale che non ci sia scritto niente, qui?»
-		</p></div><p>
-			Ed io risposì ch'era tutto come previsto.
-		</p>
-	</div><div class="section">
-		<p>
-			Insomma, non è che una sezione appena nata meriti subito
-			un'introduzione, no? Non necessariamente. Mettiamola così: era
-			scrittura virale, come quelle pubblicità che non si capiscono
-			affatto, ma dicono soltanto un nome...
+	Ma prima qualche parola per spiegare questa sezione.
+	sec#
+	Non a caso, quell'arguto professore ch'è War arrivò un giorno e mi disse
+	inline#war#Gods, è normale che non ci sia scritto niente, qui?
+	ed io risposì ch'era tutto come previsto.
+	sec#
+	Insomma, non è che una sezione appena nata meriti subito un'introduzione,
+	no? Non necessariamente. Mettiamola così: era scrittura virale, come quelle
+	pubblicità che non si capiscono affatto, ma dicono soltanto un nome…
 		
-			Non che una pagina intitolata ‘Recensioni’ fosse 'sto gran
-			mistero...
+	Non che una pagina intitolata ‘Recensioni’ fosse 'sto gran mistero…
 		
-			Comunque sia, ecco le mie
-		</p><h2>
-			Recensioni
-		</h2><p>
-			Perché come ho dimostrato <a href="Storie/2011/XXXVIII/">qui</a>, le
-			storie non sono adatte a recensire... Ecco dunque uno spazio
-			dedicato.
-		</p>
-	</div><div class="section">
-		<p>
-			Dedicato quasi esclusivamente a recensioni negative, ovviamente.
-			Come ci dimostrano amici come l'AVGN, quel tizio con gli occhiali e
-			MovieBob, l'industria del cinema produce immense quantità di
-			schifezza.
+	Comunque sia, ecco le mie
+	title#Recensioni
+	Perché come ho dimostrato
+	link#Storie/2011/XXXVIII/#qui###,
+	le storie non sono adatte a recensire… Ecco dunque uno spazio dedicato.
+	sec#
+	Dedicato quasi esclusivamente a recensioni negative, ovviamente. Come ci
+	dimostrano amici come l'AVGN, quel tizio con gli occhiali e MovieBob,
+	l'industria del cinema produce immense quantità di schifezza.
 		
-			Ma non è solo colpa loro, e infatti non mi limiterò a recensire
-			film, qui. Se ci sono cose di cui posso definirmi appassionato, ci
-			sono anche i videogiochi, i Gundam, i Transformers e i fumetti.
+	Ma non è solo colpa loro, e infatti non mi limiterò a recensire film, qui.
+	Se ci sono cose di cui posso definirmi appassionato, ci sono anche i
+	videogiochi, i Gundam, i Transformers e i fumetti.
 		
-			Con il tempo, spalerò merda un po' su tutto.
-		</p>
-	</div><div class="section">
-		<p>
-			Ora che anche questa sezione comincia a riempirsi, è giunto il momento
-			di spendere qualche altra parola…
+	Con il tempo, spalerò merda un po' su tutto.
+	sec#
+	Ora che anche questa sezione comincia a riempirsi, è giunto il momento di
+	spendere qualche altra parola…
 		
-			All'inizio, infatti, questa non era una sezione ma soltanto una raccolta
-			di cosucce. Lamentele, per la maggior parte. Ma con il tempo… o forse
-			no.
-		</p>
-	</div><div class="section">
-		<p>
-			Insomma, è vero che l'ho cominciata lamentandomi di
-			link#Recensioni/Film/I/#Thor##,
-			ma poi ho recensito anche
-			altre cose. Ed ho ancora smesso di creare un nuovo voto per ogni
-			recensione.
+	All'inizio, infatti, questa non era una sezione ma soltanto una raccolta di
+	cosucce. Lamentele, per la maggior parte. Ma con il tempo… o forse no.
+	sec#
+	Insomma, è vero che l'ho cominciata lamentandomi di
+	link#Recensioni/Film/I/#Thor###,
+	ma poi ho recensito anche altre cose. Ed ho ancora smesso di creare un nuovo
+	voto per ogni recensione.
 		
-			Di fatto, ora che ho sei diversi livelli di valutazione mi sento
-			abbastanza comodo. Un voto da 0 a 5 non è forse una buona cosa? Che
-			direbbero gli analisti e gli statistici?
+	Di fatto, ora che ho sei diversi livelli di valutazione mi sento abbastanza
+	comodo. Un voto da 0 a 5 non è forse una buona cosa? Che direbbero gli
+	analisti e gli statistici?
 		
-			E comunque, sappiate che d'ora in poi m'impegno ad essere un po' più
-			imparziale, un po' più seriamente critico. Le cose veramente orribili le
-			metterò nella
-			link#Recensioni/Film/Brutti/#sezione apposita.
+	E comunque, sappiate che d'ora in poi m'impegno ad essere un po' più
+	imparziale, un po' più seriamente critico. Le cose veramente orribili le
+	metterò nella
+	link#Recensioni/Film/Brutti/#sezione apposita###.
 
 tab#classifica
 	include#review/classifica#page
@@ -91,23 +71,16 @@ tab#incorso
 	Questo elenco è abbastanza empirico: non tutto quello che recensisco
 	finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
 	recensito con certezza.
-
-	sec#
-	Harry Potter &amp; il Principe Mezzosangue – pagg284/588
-
-	Pirate Sentai Gokaiger – ep28/??
-
-	Kamen Rider Fourze – ep6/??
-
-	Doctor Who s01 (2005) – ep8/&gt;9000
-
-	Gundam AGE – ep3/??
-
-	Macross 7 – ep3/49
+	begin#ul@class@doublecol
+		li#Pirate Sentai Gokaiger – ep30/??
+		li#Kamen Rider Fourze – ep6/??
+		li#Gundam AGE – ep8/??
+		li#Macross 7 – ep3/49
+	end#ul
 tab#indice
 	id#cronologico
 	title#Indice cronologico
-	begin#ol@class@triplecol@style@margin-left:1em
+	begin#ol@class@doublecol@style@margin-left:1em
 		li#link#Recensioni/Film/I/#Thor### – 2011
 		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
 		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
@@ -127,23 +100,20 @@ tab#indice
 		li#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
 		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
 		li#link#Recensioni/Film/XIX/#Ed Wood### – 1994
-		
-		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
-
-		p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
-
-		p#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
+		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
+		li#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
+		li#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 	end#ol
 
 	sbr#
 	id#categoria
 	title#Per categoria
 	pre#<div class="doublecol">
-	include@as@content#review/film/index#side
-	include@as@content#review/brutti/index#side
-	include@as@content#review/game/index#side
-	include@as@content#review/show/index#side
-	include@as@content#review/book/index#side
+		include@as@content#review/film/index#side
+		include@as@content#review/brutti/index#side
+		include@as@content#review/game/index#side
+		include@as@content#review/show/index#side
+		include@as@content#review/book/index#side
 	pre#</div>
 stop#page
 start#side

@@ -1,51 +1,50 @@
-Title#Guida
-Subtitle#Perché la gente arriva ma non sa dov'è la roba
-Next#Extra/Record/#Record
+title#Guida#Perché la gente arriva ma non sa dov'è la roba
+next#Extra/Record/#Record
 
-Start#Side
+start#side
 
-	p#mktid#Perché una guida?#intro
+	p#tid#Perché una guida?#intro
 
-	p#mktid#L'Autore#gods
+	p#tid#L'Autore#gods
 	e i suoi
-	mktid#Allegri compagni#compagni
-	Title#Guida
-	STitle#tid#Contenuti#contenuti
+	tid#Allegri compagni#compagni
+	title#Guida
+	stitle#tid#Contenuti#contenuti
 	reverse#
-	mktid#Storie#contenuti#Storie
+	tid#Storie#contenuti#Storie
 	/
-	mktid#MiniStorie#contenuti#MiniStorie
+	tid#MiniStorie#contenuti#MiniStorie
 	/
-	mktid#Recensioni#contenuti#Recensioni
+	tid#Recensioni#contenuti#Recensioni
 
 	reverse#
-	mktid#Tru Naluten#contenuti#TruNaluten
+	tid#Tru Naluten#contenuti#TruNaluten
 	/
-	mktid#NaNoWriMo#contenuti#NaNoWriMo
+	tid#NaNoWriMo#contenuti#NaNoWriMo
 	stitle#tid#Meta#meta
 	reverse#
-	mktid#Extra#meta#Extra
+	tid#Extra#meta#Extra
 	/
-	mktid#Modi#meta#Modi
+	tid#Modi#meta#Modi
 	/
-	mktid#Stili#meta#Stili
+	tid#Stili#meta#Stili
 	/
-	mktid#Voci#meta#Voci
-Stop#Side
+	tid#Voci#meta#Voci
+stop#side
 
-Start#Page
-Tab#intro
+start#page
+tab#intro
 	Questa è la paginetta che ti spiega le cose.
 	title#Perché la Guida?
 	Mi sono reso conto che costruire un sito, programmarne il comportomanto e
-	aggiungere qualche nuova <span class="code">feature</span> ogni tanto è una
+	aggiungere qualche nuova <code>feature</code> ogni tanto è una
 	cosa, mentre condividire con gli altri è un'altra.
 
 	Ci sono molte cose che semplicemente voi non potete sapere, a meno che io
 	non ve lo dica. Ecco perché c'è una guida.
 
 	C'è stata una 
-	mklink#Storie/2010/XX/#storia,
+	link#Storie/2010/XX/#storia###,
 	una volta, che tentava di fare la stessa cosa… beh, quella storia non se la
 	ricorda nessuno, e ad ogni modo ormai è antiquata.
 	sec#
@@ -64,9 +63,7 @@ Tab#intro
 	della stessa serie, quelli per passare da una sezione all'altra, e
 	altre cose utili. Provate ad usarla, scoprirete il resto della
 	guida.
-
 tab#gods
-
 	Ed ecco la pagina in cui parlo di me.
 
 	Il GODS sono io, sono il leggendario autore di Tru Naluten, sono
@@ -78,22 +75,18 @@ tab#gods
 	foto#Extra/Rampa/Davanti.jpg#Extra/Rampa/Davanti.mini.jpg
 	Ma non temete: anche se nella foto ero parecchio stanco, e anche se
 	non so chi siete, sappiate che vi guarderei male in ogni caso.
-
 tab#compagni
-
 	Grazie a qualche dio, non sono da solo, nelle mie avventure.
 
-	Gli <span class="em">Allegri compagni</span> vengono spesso nominati
+	Gli <em>Allegri compagni</em> vengono spesso nominati
 	nelle storie, ma non mi sono mai preso la briga di spiegare chi
 	fossero. Ecco un bell'elenco. 
-
 	sec#
 	title#Quelli dell'Aula Studio
 	Fin da quando ci siamo spostati nel nuovo edificio, la nostra
 	compagnia è nota per prendere possesso dei tavoli, far gran casino e
 	dominare sia la vita vera che l'internet.
-
-pre#<ul><li>
+	begin#ul
 		il <span class="bolo">buon Bolo</span> è la persona che conosco
 		da più tempo, entro queste mura; abbiamo cominciato insieme,
 		abbiamo collaborato per gli esami per lungo tempe etc etc etc…
@@ -101,45 +94,40 @@ pre#<ul><li>
 		terribili poteri di	<span class="code">Grammar Nazi</span> per
 		spottare errori nelle mia pagine.
 
-	pre#</li><li>
 		il <span class="dacav">giovane Simgi Dacav</span>, vecchio più
 		di tutti noi messi assieme, è un troll potente e meticoloso, ne
 		ha viste di tutti i colori e possiede incredibili poteri. Non
 		mangiando brioche e girando spesso con la cremina per le mani, è
 		noto all'esterno come <span class="em">Mr. Benessere</span>.
 
-	pre#</li><li>
 		<span class="mitch">Mitch</span>, il <span class="em">re del
 		gossip</span> conosce tutto e tutti, ha una lunga esperienza
 		nell'aiutare i nabbi e una grande pazienza. Attualmente, s'è
 		trovato un vero mestiere.
 
-	pre#</li><li>
 		il <span class="jazz">signor Jazzinghen</span>, ch'è molto
 		importante (tutti lo chiamano “signore”) è un acquisto
 		relativamete recente (in confronto al Dacav, ovviamente), è
 		estramamente rumoroso e blah.
 		
-	pre#</li><li>
 		il tre volte dottore <span class="war">War(rior)</span> alleggia
 		nei dintorni, perché lui fa cose. Ne sa un sacco.
-
-pre#</li></ul>
+	end#ul
 	sec#
 	title#Altri allegri compagni
 	Non tutti i miei amici studiano in questa facoltà, non ci spendono
 	la vita, ma fanno anche altre cose.
-<ul><li>
+	begin#ul
 		<span class="em">Luber</span>, ad esempio, ha un lavoro vero e
 		una vita vera. Fa cose, recensisce anime terribili e gioca con
 		me ad Exalted.
-	</li><li>
+
 		<span class="em">Dave</span> ossia <span class="em">Il
 		Troll</span> invece è una creatura a parte. Narra la leggenda
 		che fosse qui in facoltà da tempo immemore, ma poi – per motivi
 		ignoti ai mortali – sparì ritirandosi a vita eremitica. Torna
 		ogni tanto, attraverso visioni oppure in forma astrale.
-</li></ul>
+	end#ul
 tab#contenuti
 	pre#<a id="Storie"></a>
 	Le storie sono il vero cuore della baracca.
@@ -149,15 +137,15 @@ tab#contenuti
 	class="em">popolo dell'aula studio</span>, tenevamo le storie per
 	tradizione orale, come facevano gli antichi.
 
-pre#<div style="float:right;width:50%">
-	pre#<a id="MiniStorie"></a>
-	pre#<div class="section" style="margin-left:10px;margin-top:1px">
-		titler#Le MiniStorie
-		Ci sono state anche delle storie troppo brevi per meritare una
-		pagina intera. Hanno cominciato a comparire nella pagina delle
-		news nel settembre 2011.
+	pre#<div style="float:right;width:50%">
+		pre#<a id="MiniStorie"></a>
+		pre#<div class="section" style="margin-left:10px;margin-top:1px">
+			titler#Le MiniStorie
+			Ci sono state anche delle storie troppo brevi per meritare una
+			pagina intera. Hanno cominciato a comparire nella pagina delle
+			news nel settembre 2011.
+		pre#</div>
 	pre#</div>
-pre#</div>
 
 	Da allora, ho sbrodolato una crescente e sorprendente quantità di
 	storie. A volte sono semplicemente stupide, a volte invece raccontano
@@ -169,15 +157,14 @@ pre#</div>
 	storie viene scritto di getto, non viene revisionato da nessuno… in
 	più, tutti i contenuti sono spesso inaffidabili, contengono falsità
 	e opinioni assolutamente personali.
-pre#<div style="float:none;clear:both"></div>
-
+	pre#<div style="float:none;clear:both"></div>
 	sbr#
-	pre#<a id="Recensioni"></a>
+	id#recensioni
 	title#Recensioni
 	Perché, se all'inizio raccontavo soltanto delle cose, un giorno ho
 	finito per scrivere una storia immensamente lunga che in pratica
 	recensiva (nel mio personale e peculiare stile) un certo
-	mklink#Storie/2011/XXXVIII/#anime.
+	link#Storie/2011/XXXVIII/#anime###.
 
 	Da quel punto in poi ho deciso che forse sarebbe stato il caso di
 	riservare uno spazio dedicato a cose come quella. E poi ho cominciato.
@@ -187,18 +174,14 @@ pre#<div style="float:none;clear:both"></div>
 
 	L'arte dei film brutti è una cosa rara e raffinata. Pochi li sanno fare,
 	pochi li sanno apprezzare. E spesso non ho briga di scrivere…
-
 	sec#
-
 	Ma non solo film!
 
 	Mi sono messo a recensire tutto quel che mi passa per le mani:
 	videogiochi, libri, serie tv. In effetti, gli show sono quel che va per
 	la maggiore, perché ne guardo tanti.
-
 	sbr#
-	
-	pre#<a id="TruNaluten"></a>
+	id#TruNaluten
 	Le pagine più antiche presenti sul sito, tecnicamente.
 	title#Tru Naluten
 	Questo racconto è l'originale motivo per cui il sito esiste. Si
@@ -208,15 +191,12 @@ pre#<div style="float:none;clear:both"></div>
 
 	I capitoli escono con una sporadicità spaventevole, ma non
 	temete, so esattamente dove andrà la storia.
-
 	sbr#
-
-	pre#<a id="NaNoWriMo"></a>
+	id#NaNoWriMo
 	title#NaNoWriMo
 	Il NaNoWriMo, avvenimento al quale partecipo dal 2010, è una cosa
 	interessante, ma anche lunga. E quindi si merita la sua sezione
 	dedicata.
-
 tab#meta
 	pre#<a id="Extra"></a>
 	Metasezione!!!
@@ -232,7 +212,7 @@ tab#meta
 	fine, evolutasi fino allo stato di creatura senziente, è divenuta questa
 	pagina che state leggendo.
 	sec#
-	pre#<a id="Modi"></a>
+	id#modi
 	Ci sono modi e modi.
 	title#Meta [ Modi ]
 	O forse dovrei chiamarle “modalità”?
@@ -243,9 +223,7 @@ tab#meta
 	Gestire tutta quella roba diventò un gran lavoraccio, e con il tempo
 	tornai ad avere un singolo stile… quello che dovreste vedere
 	normalmente.
-
 	sec#
-
 	Ma la vita è piena di sorprese. Un bel dì mi venne in mente di dividere
 	le pagine in tab, e scoprii che non tutti i browser supportano l'evento
 	<span class="em">onHashChange</span>, in particolare non il browser
@@ -256,16 +234,13 @@ tab#meta
 	Mode</span>, che spalma tutti i tab uno in fila all'altro. E siccome
 	anche il <span class="bolo">buon Bolo</span> aveva lo stesso problema,
 	creai un alias a suo nome.
-
 	sec#
-	pre#<a id="Stili"></a>
+	id#stili
 	title#Meta [ Stili ]
 	Infine, un bel dì mio fratello capitò sul sito e si lamentò di non
 	riuscire a distinguere una beata mazza di quel che vedeva. Per lui c'è
 	quindi il <span class="code">Dado mode</span>, dai colori più classici.
-
 	sec#
-
 	Potete passare dalla modalità standard (la mia) alle altre calcando
 	qualche link in alto a sinistra. Se invece sapete scrivere, potete
 	infilare le parole chiave direttamente nell'URL.

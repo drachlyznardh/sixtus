@@ -9,10 +9,14 @@
 		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss" />
 
 		<title><?=$p->gettitle()?></title>
-		
+	
 		<link rel="stylesheet" type="text/css" href="style/common.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (min-device-width:481px), projection" href="style/screen.css" />
+		<link rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width:480px)" href="style/mobile.css"/>
 		<link rel="stylesheet" type="text/css" href="style/coolstories.css" />
 		<link rel="stylesheet" type="text/css" href="style/<?=$opt['style']?>.css" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="initial-scale=1.0"/>
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/<?=$opt['style']?>.ico" />
 	</head>
 	<body> 
