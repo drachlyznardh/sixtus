@@ -1,9 +1,19 @@
-title#Dicembre
-subtitle#Freschetto. Di notte.
+title#Dicembre#Freschetto. Di notte.
 prev#News/2011/11/#Novembre
+alltab#
 
 start#page
-	id#2
+tab#7
+	<em>
+	link##7/12/2011##7
+	</em> / <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Storia LXXI – Libertà
+	Ci sono cose che non dico, cose che non riesco a spiegare. Ogni tanto me ne
+	frego e me ne vado a spasso.
+	link#Storie/2011/LXXI/#Da solo###.
+tab#2
 	<em>
 	link##2/12/2011##2
 	</em> / <strong>
@@ -13,9 +23,7 @@ start#page
 	Faccio cose buone, mio padre mi ringrazia. Dovrei essere più contento, ma
 	non ci riesco. Provate a capire
 	link#Storie/2011/LXX/#perché###.
-
-	sec#
-	id#1
+tab#1
 	<em>
 	link##1/12/2011##1
 	</em> / <strong>
@@ -28,10 +36,10 @@ start#page
 stop#page
 start#side
 	title#Dicembre 2011
-	<strong>02/12</strong> –
+	<em>02/12</em> –
 	link#Storie/2011/LXX/#Spontaneità
 
-	<strong>01/12</strong> – La
+	<em>01/12</em> – La
 	link#Recensioni/Show/XXII/#seconda stagione#s02
 	di Dollhouse
 stop#side

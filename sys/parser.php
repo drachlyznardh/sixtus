@@ -15,6 +15,7 @@
 		private $side;
 		
 		private $tab;
+		private $override;
 
 		public function __construct ($d) {
 			$this->d = $d;
@@ -31,6 +32,7 @@
 			$this->page = array();
 			$this->side = new Tab ($this->d, false);
 			$this->tab = new Tab ($this->d, false);
+			$this->override = false;
 		}
 
 		public function parse ($file) {
@@ -92,6 +94,9 @@
 					if ($opt && strcmp($opt, ' as="content"') == 0) $as = 'content';
 					else $as = false;
 					$this->tab->addInclude($parser, $part, $as);
+					return;
+				case 'alltab':
+					$this->override = true;
 					return;
 			}
 
@@ -173,19 +178,27 @@
 
 			$page = false;
 
-			if (!$name) return $this->page[0]->getContent($as);
-
-			if (strcmp($name, 'all') == 0) {
+			if ($this->override || strcmp($name, 'all') == 0) {
 				foreach ($this->page as $tab)
 					$page .= $tab->getContent($as);
 				return $page;
 			}
+
+			if (!$name) return $this->page[0]->getContent($as);
 
 			foreach ($this->page as $tab)
 				if (strcmp($tab->getName(), $name) == 0)
 					return $tab->getContent($as);
 
 			return '<div class="section"><p>There is no tab ['.$name.']</p></div>';
+		}
+
+		public function getTab ($name, $as) {
+			foreach ($this->page as $tab)
+				if (strcmp($tab->getName(), $name) == 0)
+					return $tab->getContent ($as);
+
+			return '<div class="section"><p>There is no [<em>'.$name.'</em>] tab</p></div>>';
 		}
 
 		public function getSide ($as) {

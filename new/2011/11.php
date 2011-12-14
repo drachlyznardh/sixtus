@@ -1,10 +1,10 @@
-title#Novembre
-subtitle#Piove, ma fa ancora caldo
+title#Novembre#Piove, ma fa ancora caldo
 prev#News/2011/10/#Ottobre
 next#News/2011/12/#Dicembre
+alltab#
 
 start#page
-	id#29
+tab#29
 	<em>
 	link##29/11/2010##29
 	</em> / <strong>
@@ -20,9 +20,7 @@ start#page
 	e infine quello che il <em class="bolo">Bolo</em> attendeva da sempre, il
 	mio parere su
 	link#Recensioni/Show/XXII/#Dollhouse###.
-
-	sec#
-	id#28
+tab#28
 	<em>
 	link##28/11/2011##28
 	</em> / <strong>
@@ -36,9 +34,7 @@ start#page
 	Stanno per arrivare un sacco di altre recensioni: ultimamente mi sono visto
 	<em>Cars 2</em>, <em>Shrek Forever After</em>, gli ultimi due Rambo e la
 	prima stagione di <em>Dollhouse</em>.
-
-	sec#
-	id#23/18:45
+tab#23/18:45
 	<em>
 	link##23/11/2011 – 18:45##23/18:45
 	</em> / <strong>
@@ -53,9 +49,7 @@ start#page
 	giudicando. Ed ho buone notizie anche per un altro
 	link#Recensioni/Show/XIV/#show#iii##,
 	che ci crediate o no.
-
-	sec#
-	id#20
+tab#20
 	<em>
 	link##20/11/2011 ##20/
 	</em> / (<strong>
@@ -81,9 +75,7 @@ start#page
 
 	Ma sto prendendo troppo spazio… leggete il 
 	link#Storie/2011/LXVIII/#resto###.
-
-	sec#
-	id#19/19:05
+tab#19/19:05
 	<em>
 	link##19/11/2011 19:05##19/19:05
 	</em>
@@ -91,12 +83,11 @@ start#page
 	Bene. Credo d'aver finito. Tutte le pagine sono leggibili. Il <a
 	href="gods.roundhousecode.com/feed.rss">nuovo feed</a> verrà pubblicato a
 	breve. Adesso vado a scrivere il redirect per i vecchi siti.
-
-	sec#
+tab#05/00:35
 	Una cosa bella!
-	id#05/00:35
+
 	<span class="em">
-	link##05/11/2011 00:35##05/0035
+	link##05/11/2011 00:35##05/00:35
 	/
 	link#Extra/GUIDA/#MiniStorie#contenuti#MiniStorie
 	</span>
@@ -126,9 +117,7 @@ start#page
 	Non spero di ritrovare questo angioletto una seconda volta, ma di certo la
 	salverò nella lista delle <span class="code">@Ragazza-__SUFFIX__</span>, per
 	sempre nel mio cuore.
-
-	sec#
-	id#03/00:00
+tab#03/00:00
 	<span class="em">
 	link##03/11/2011 00:00##03/00:00
 	</span>
@@ -146,44 +135,38 @@ start#page
 stop#page
 start#side
 	title#Novembre 2011
-	<strong>29/11</strong> –
+	<em>29/11</em> –
 	link#Recensioni/Film/XVII/#Rambo III#iii##,
 	link#Recensioni/Film/XVII/#John Rambo#iv##,
 	link#Recensioni/Show/XXII/#Dollhouse
 	e soprattutto super-fanta
 	link#Recensioni/Show/XIV/#Gundam AGE#iv##!!!
 
-	<strong>28/11</strong> –
+	<em>28/11</em> –
 	link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
 
-	<strong>23/11</strong> –
+	<em>23/11</em> –
 	link#Recensioni/Film/Brutti/XX/#Plan 9
 	e
 	link#Recensioni/Show/XXI/#199 Hero Grand Battle
 	e anche un po' di
 	link#Recensioni/Show/XIV/#Gundam AGE#iii
 
-	<strong>20/11</strong> –
+	<em>20/11</em> –
 	link#Storie/2011/LXVIII/#Momenti
 
-	<strong>19/11</strong> – Trasloco!
+	<em>19/11</em> – Trasloco!
 
-	<strong>15/11</strong> –
-	link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
-
-	<strong>15/11</strong> –
-	link#Recensioni/Film/XIX/#Ed Wood
-
-	<strong>15/11</strong> –
+	<em>15/11</em> – Recensioni!
+	link#Recensioni/Libri/XII/#Il principe mezzosangue#vi##,
+	link#Recensioni/Film/XIX/#Ed Wood### & 
 	link#Recensioni/Film/Brutti/XVIII/#Black Sheep
 
-	<span class="em">05/11</span>
+	<em>05/11</em>
 	– <span class="cat-heart">KitKat Gratis!</span>
 
-	<span class="em">03/11</span> –
+	<em>03/11</em> – Rinnovo!
 	link#Recensioni/Film/XVII/#First Blood#i
-	/
-	link#Recensioni/Film/XVII/#Part II#ii
-
-	<span class="em">03/11</span> – Rinnovo!
+	(&
+	link#Recensioni/Film/XVII/#Part II#ii##)
 stop#side

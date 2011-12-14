@@ -41,6 +41,9 @@
 					$this->content[] = array ('struct', $content);
 					$this->section = new Section ($this->d, $opt);
 					break;
+				case 'block':
+					$this->content[] = array ('sec', $this->section);
+					$this->section = new Section ($this->d, $opt);
 				default:
 					$this->section->parseLine ($lineno, $cmd, $opt, $content);
 			}
@@ -81,7 +84,10 @@
 					case 'both':
 						$result .= 'INCLUDING['.$frag[0].']';
 						break;
-					default: die ('Cannot getContent of ['.$frag[0].']');
+					default:
+						$result .= $frag[1]->getTab($frag[0], $as);
+						break;
+						die ('Tab: Cannot getContent of ['.$frag[0].']');
 				}
 			}
 
