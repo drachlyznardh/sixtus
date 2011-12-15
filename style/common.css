@@ -22,6 +22,26 @@ div.section {
 	column-count: 3;
 }
 
+.mini-left, .mini-right {
+	width: 35%;
+	border-width: 2px;
+	border-style: outset;
+}
+
+.mini-left {
+	width: 35%;
+	float: left;
+	margin: 0 15px 0 -5px;
+	border-right: 0;
+}
+
+.mini-right {
+	width: 35%;
+	float: right;
+	margin: 0 -5px 0 15px;
+	border-left: 0;
+}
+
 div.section:first-child { margin-top: 0px; }
 
 div.section p, div.section ul, div.section ol {

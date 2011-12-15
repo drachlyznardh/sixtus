@@ -72,10 +72,11 @@ tab#incorso
 	finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
 	recensito con certezza.
 	begin#ul@class@doublecol
-		li#Pirate Sentai Gokaiger – ep30/??
+		li#Pirate Sentai Gokaiger – ep42/??
 		li#Kamen Rider Fourze – ep6/??
-		li#Gundam AGE – ep8/??
+		li#Gundam AGE – ep10/??
 		li#Macross 7 – ep3/49
+		li#My Little Pony: Friendship is Magic – ep15/26
 	end#ul
 tab#indice
 	id#cronologico

@@ -132,20 +132,18 @@ tab#contenuti
 	pre#<a id="Storie"></a>
 	Le storie sono il vero cuore della baracca.
 	title#Storie
-	Si cominciò un po' di tempo fa, mi par che fosse attorno al settembre
-	2010. Prima di quello, io e i miei allegri compagni, il <span
-	class="em">popolo dell'aula studio</span>, tenevamo le storie per
-	tradizione orale, come facevano gli antichi.
+	Si cominciò un po' di tempo fa, mi par che fosse attorno al settembre 2010.
+	Prima di quello, io e i miei allegri compagni, il <span class="em">popolo
+	dell'aula studio</span>, tenevamo le storie per tradizione orale, come
+	facevano gli antichi.
 
-	pre#<div style="float:right;width:50%">
-		pre#<a id="MiniStorie"></a>
-		pre#<div class="section" style="margin-left:10px;margin-top:1px">
-			titler#Le MiniStorie
-			Ci sono state anche delle storie troppo brevi per meritare una
-			pagina intera. Hanno cominciato a comparire nella pagina delle
-			news nel settembre 2011.
-		pre#</div>
-	pre#</div>
+	begin#mini@right
+	id#MiniStorie
+		stitle#Le MiniStorie
+		Ci sono state anche delle storie troppo brevi per meritare una pagina
+		intera. Hanno cominciato a comparire nella pagina delle news nel
+		settembre 2011.
+	end#mini
 
 	Da allora, ho sbrodolato una crescente e sorprendente quantità di
 	storie. A volte sono semplicemente stupide, a volte invece raccontano

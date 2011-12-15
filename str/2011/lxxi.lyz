@@ -452,7 +452,7 @@ start#page
 	Mi rendo conto che pochi potrebbero seguirmi, là dove vado. E mi rendo anche
 	conto che nessuno farebbe alcune delle cose che ho fatto, per arrivare dove
 	sono arrivato.
-	pre#<div style="width:30%;padding:0 15px 0 0;float:left">
+	begin#mini@left
 	stitle#Andare da soli è triste
 	Tecnicamente, è anche pericoloso.
 	
@@ -466,14 +466,14 @@ start#page
 	m'aspetta, lei non è qui con me. 
 
 	Intanto, piego.
-	pre#</div>
+	end#mini
 
 	È norma, nelle mie uscite, sbagliare sentieri, risalire pendii sconosciuti,
 	tagliare per il bosco, saltare i fossi, fare rarissime pause, leggere mentre
 	si cammina, inciampare, arrampicarsi sugli alberi, prendere strade non
 	indicate, attraversare fitto sottobosco, cantare, sudare, raccontare la
 	fuffa, camminare nella nebbia o al buio.
-	pre#<div style="width:30%;padding:0 0 0 15px;float:right">
+	begin#mini@right
 	stitle#Dannate offerte natalizie
 	Quei simpaticoni di <em>Hobby Link Japan</em>, assieme a quegli altri
 	simpaticoni di <em>EMS</em> si sono messi d'accordo con il <em>mago
@@ -486,7 +486,7 @@ start#page
 	me lo scontano pure del 40%! Ed io devo tenere lo sguardo ben fisso sulla
 	<em>Scimmia Celeste</em> interiore per placare il desiderio. Also, lo
 	link#Extra/Scimmia/#stile###.
-	pre#</div>
+	end#mini
 	br#
 	E il passo che tengo è difficilmente sostenibile da altri.
 

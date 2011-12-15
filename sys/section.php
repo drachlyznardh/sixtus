@@ -120,6 +120,7 @@
 					if ($opt) $this->content .= "<li $opt>\n";
 					else $this->content .= "<li>\n"; break;	
 				case '':
+				case 'mini':
 				case 'inside':
 				case 'outside':
 					if ($opt) $this->content .= "<p $opt>";
@@ -146,6 +147,9 @@
 		private function mkBegin ($lineno, $cmd, $opt, $content) {
 			list($env, $tag) = $this->mkOpenTag($lineno, $content);
 			switch ($env) {
+				case 'mini':
+					$this->unmkText(); $this->mkline($tag); break;
+					break;
 				case 'ol':
 				case 'ul':
 				case 'inside':
@@ -162,6 +166,7 @@
 		private function mkEnd ($lineno, $cmd, $opt, $content) {
 			list($env, $tag) = $this->mkCloseTag($lineno, $content);
 			switch ($env) {
+				case 'mini':
 				case 'ol':
 				case 'ul':
 				case 'inside':
@@ -188,6 +193,9 @@
 			}
 			
 			switch ($env) {
+				case 'mini':
+					$result = array ($env, '<div class="mini-'.$opt[1].'">');
+					break;
 				case 'inside':
 				case 'outside':
 					$result =  array ($env, '<div class="'.$env.'">');
@@ -218,6 +226,7 @@
 				case 'ul':
 					return array ($token, "</$token>");
 				case '':
+				case 'mini':
 				case 'inside':
 				case 'outside':
 					return array ($token, '</div>');

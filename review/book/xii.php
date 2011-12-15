@@ -1135,6 +1135,32 @@ tab#vii
 	ricomincia la yadda: il vecchio Kreacher racconta la yadda di Regulus, il
 	fratello di Sirius ch'era stronzo ma forse no. La storia del pentolone con
 	la pozione che può essere soltanto bevuta. Bleahrgh.
+	titler#Capitoli 11~blah
+	Queste yadde proseguono finché il trio finisce per origliare alcune persone
+	e alcuni goblin, scena che serve a spiegare che la spada di Griffondoro non
+	è quella vera (alla faccia di Piton, risate per tutti. Ma non per me),
+	mentre quella vera sta nascosta chissà dove.
+
+	A quel punto, siccome è stronzo e s'è scassato le balle che la <em>drama
+	queen</em> fosse Harry, Ron sfodera tutta la sua spocchia e pianta tutti.
+	Harry ed Hermione restano da soli, se la chiaccherano un po' e poi decidono
+	ch'è l'ora di andare a trovare la <em>Strega Bacheca</em>. 'Sta vecchiaccia
+	vive accanto alle tombe dei Silente e dei Potter, quindi ecco dell'altro
+	&lt;DRAMMA!&gt; gratuito, finché i due poracci arrivano a casa della nonna.
+
+	Purtroppo, la nonna è morta, è posseduta dal serpentaccio di Voldermort e
+	blah blah blah combattimento. Alla fine, Voldemort non arriva in tempo
+	(stava prendendo il te? Si stava soffiando il naso? Impossibile!) e si
+	lascia sfuggire i due pisquani. Ma almeno, una cosa l'ha fatta: la bacchetta
+	di Harry si è rotta, ed ora lui soffre di ansia da prestazione perché non ha
+	confidenza ad usare gli altri bastoncini.
+
+	Ma a quel punto, cessato il pericolo immediato (smettiamo di preoccuparci,
+	tanto abbiam capito che Voldemort non può comparire più di tre volte in un
+	libro, comparirà alla fine!) ecco un'altra cariolata di yadda, Silente e la
+	sua gioventù.
+
+Yaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadda.
 stop#page
 start#side
 	p#tid#Intro#intro
