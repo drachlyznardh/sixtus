@@ -81,7 +81,8 @@ tab#incorso
 tab#indice
 	id#cronologico
 	title#Indice cronologico
-	begin#ol@class@doublecol@style@margin-left:1em
+	pre#<div class="doublecol">
+	begin#ol
 		li#link#Recensioni/Film/I/#Thor### – 2011
 		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
 		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
@@ -104,7 +105,9 @@ tab#indice
 		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
 		li#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
 		li#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
+		li#link#Recensioni/Film/XXIII/#Zombieland### – 2009
 	end#ol
+	pre#</div>
 
 	sbr#
 	id#categoria

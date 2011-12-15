@@ -1,0 +1,67 @@
+title#L'ultimo progetto#O almeno spero
+prev#Storie/2011/LXXI/#Libertà
+start#page
+tab#i
+	Dopo molte brutte cose ch'è meglio non ricordare, ecco che mi ritrovo con il
+	testo del progetto.
+	title#La traccia
+	Tra le cose brutte, scelgo il meno peggio. Scelgo abbastanza in fretta,
+	perché non ho voglia di avere dubbi. Ma <em>Murphy</em> è sempre in agguato,
+	ed ecco che il testo della consegna diventa più enigmatico ad ogni lettura…
+
+	Ora, quello che mi si chiede è di implementare un classico
+	<code>chardevice</code> da far girare, tramite <code>qemu</code>, su una
+	distribuzione <code>debian</code>. Comodo, no? Devo costruire un
+	<code>/dev/cache</code> che faccia da cache. Ma non solo, è anche più
+	semplice di così: ha dimensione fissa, prende soltanto blocchi di
+	<code>1024byte</code>, deve implementare le solite tre <em>policy</em> di
+	scelta dei blocchi… pare una cagata, vero?
+	sec#
+	E invece… Esattamente, come dovrebbe funzionare? Altre parti della consegna
+	specificano che:
+	begin#ul
+		se acceduto in scrittura, il dispositivo memorizza blocchi di dimensione
+		fissa, scegliendo quelli da sovrascrivere come specificato
+
+		se acceduto in lettura, sbrodola l'intero contenuto
+	end#ul
+	Quindi, esattamente, in che modo è una cache? Io ci metto della roba, finché
+	ce ne sta, e quando non ce ne sta più, qualcosa comincia a sparire. Allora,
+	come uso i blocchi? Come calcolo qual è quello usato più di frequente? O
+	quello usate più di recente? Cosa significa “<em>usato</em>”?
+
+	Se li leggessi, potrei capire. Ma non posso leggerli, questa è una memoria
+	il cui unico accesso ammesso è totale, in pratica per vedere se funziona.
+	Non è una <code>cache</code>, 'sta roba, è solo un buco. Un buco che perde,
+	tra l'altro!
+
+	E non ho ancora specificato la cosa più grossa: la traccia COMINCIA con un
+	elemento <em>bonus</em>: è infatti possibile, per ottenere una valutazione
+	migliore, implementare <strong>due livelli di cache</strong>. Cosa mai
+	vorrebbe dire? Se non è nemmeno possibile far funzionare veramente il primo
+	livello, come dovrei mettercene due? E poi, dove lo metto? Va fatto a
+	granularità superiore oppure inferiore? Sopra i blocchi oppure sotto?
+	sbr#
+	Vorrei davvero conoscere lo spacciatore di questi tizi, perché voglio
+	credere che non sia tutta colpa loro. Non credo che le tracce di un progetto
+	possano essere fatte così male.
+
+	Questo, ovviamente, a meno che questi tizi non abbiano in mente lo stesso
+	piano malvagio che ho in mente io, ossia creare i presupposti perché questo
+	mostro sia effettivamente una <code>cache</code>, etichettando i blocchi
+	(tramite il <em>merdaviglioso</em> programmino di supporto, che deve
+	effettuare i test di funzionamento) in modo che le scritture possano far
+	finta di essere modifiche di un blocco sperabilmente già presente.
+
+	Come ultimo punto, ovviamente, mi viene richiesto di spiegare chiaramente
+	ogni scelta implementativa in un piccolo report. Aspettatevi quindi un'altra
+	succosa e divertente relazione, un po' come quella per il
+	link#News/2011/09/#progetto Sgaggio##12/23:00#.
+	Barerò e tramaccerò come un drago.
+stop#page
+start#side
+	title#L'ultimo progetto
+	begin#ol
+		tid#La traccia#i
+	end#ol
+stop#side

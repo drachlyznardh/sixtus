@@ -28,4 +28,6 @@ start#side
 	p#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
 
 	p#link#Recensioni/Film/XIX/#Ed Wood### – 1994
+
+	p#link#Recensioni/Film/XXIII/#Zombieland### – 2009
 stop#side

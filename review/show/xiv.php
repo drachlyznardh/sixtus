@@ -338,6 +338,7 @@ tab#iv
 
 	Bim! Bum! Bam! Gundam Punch! Gundam Kick! Spallate laser!
 	sec#
+	titler#La figanza continua!
 	Proseguiamo! Ora che la guerra tra il <em>BLUE Team</em> e il <em>PURPLE
 	Team</em> (i colori li do a caso), l'equipaggio della DIVA può andarsene a
 	fare altre cose. Furitto e Woolf (più una manica di altri cazzani) vanno a
@@ -384,6 +385,33 @@ tab#iv
 	momento di portar la guerra direttamente in faccia agli <em>UE</em>. Come?
 	Con le navi da guerra del neonato <em>BROWN&CYAN Team</em>, che prima
 	stavano nascoste dentro un cilindro. Alla guerra! Alla guerra!
+	sec#
+	Ed ecco, all'episodio successivo, il Gundam si cambia d'abito al volo, in
+	mezzo alla battaglia (perché ben sappiamo che la scena della trasformazione
+	non può essere interrotta dal nemico) e passa da <em>puggggile</em> al
+	nuovo, rapidissimo <em>Gundam Smilzo</em>, ma forse anche <em>Gundam
+	Goemon</em>: grazie al suo cazzo di pugnale laser spaziale, Furitto sembra
+	in grado di superare e tagliare tutto quel che c'è rimasto sul campo.
+	Persino lo <em>Zedas</em> non riesce a tenergli più testa, ma non è che
+	<code>suck</code>i proprio: nonostante il Gundam riesca a tagliarlo a pezzi
+	prima, e a farlo esplodere subito dopo, lui cosa fa? Muore? Nient'affatto!
+
+	Perde soltanto una gamba e un braccio. Perché nemmeno le esplosioni fermano
+	lo <em>Zedas</em>!!! Intanto, alla base, il <span class="wrong">Cobra
+	Commander</span> tizio con la maschera si mette a chiaccherare con il
+	<em>BimboDemone</em>, che non sembra divertirsi quando prende le botte.
+	Ovviamente, perdere non è nei piani di questi tizi malvagi malvagissimi, e
+	il bambino lo sa… o forse, gli manca la <em>MammaDemone</em>? Non riesco a
+	capirlo, la &lt;TRAMA!&gt; è troppo fitta per la mia testolina.
+
+	Al termine dell'episodio, 'sto bimbo-comandante me' miei coglioni (siccome
+	gli hanno rotto il robottone figo) <strong>RITIRA L'INTERA FLOTTA</strong>,
+	compresa la corazzata grande come la fame e i &gt;9000 altri
+	robottini-minchia a sua disposizione. È INEVITABILE! Perché i cattivi non
+	vogliono proprio vincere, in questa serie.
+	
+	E intanto, secondo l'<code>internet</code>, mancano soltanto tre episodi al
+	salto temporale che porterà la serie in avanti di un'intera generazione.
 stop#page
 start#side
 	p#tid#Introduzione#intro

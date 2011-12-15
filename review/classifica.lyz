@@ -1,7 +1,8 @@
 start#page
 tab#classifica
+	pre#<div class="doublecol">
 	id#awesome
-	title#Fucking awesome!!!
+	stitle#Fucking awesome!!!
 	Questi sono decisamente da vedere/provare/comprare.
 	begin#ul
 		li#link#Recensioni/Giochi/II/#Assassin&apos;s Creed Brotherhood
@@ -10,10 +11,9 @@ tab#classifica
 		li#link#Recensioni/Show/XV/#Transformers: Prime
 		li#link#Recensioni/Show/XXI/#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle#M2011
 	end#ul
-	
-	sec#
+	br#
 	id#buoni
-	title#Buono
+	stitle#Buono
 	Che ci crediate o meno, questi mi sono piaciuti. Non sono
 	magnificissimi, non sono eccelsi, ma sono buoni.
 	begin#ul
@@ -27,10 +27,9 @@ tab#classifica
 		
 		p#link#Recensoni/Film/XIX/#Ed Wood
 	end#ul
-
-	sec#
+	br#
 	id#lasciano
-	title#Si lascia guardare
+	stitle#Si lascia guardare
 	Questi si lasciano guardare. Con le dovute precauzioni.
 	begin#ul
 		li#link#Recensioni/Show/VI/#Masterforce
@@ -43,10 +42,9 @@ tab#classifica
 
 		p#link#Recensioni/Show/XXII/#Dollhouse
 	end#ul
-
-	sec#
+	br#
 	id#meh
-	title#Meh. / Mah
+	stitle#Meh. / Mah
 	Questi non sono per tutti, sono per chi ha gusti particolari o lo
 	stomaco di ferro.
 	begin#ul
@@ -67,47 +65,41 @@ tab#classifica
 			e
 			link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
 	end#ul
-
-	sec#
+	br#
 	id#bay
-	title#L'ha fatto Micheal Bay?
+	stitle#L'ha fatto Micheal Bay?
 	Questi hanno il grosso difetto di mettere l'azione davanti alla storia.
 	O semplicemente si dimenticano che le esplosioni non fanno un buon film
 	/ buon anime / buona visione.
 	begin#ul
 	li#link#Recensioni/Show/V/#Blassreiter
 	end#ul
-
-	sec#
+	br#
 	id#no
-	title#No
+	stitle#No
 	Questi no.
 	begin#ul
 		li#link#Recensioni/Film/I/#Thor
 		li#link#Recensioni/Film/VII/#Dark Of The Moon
-		li#link#Recensioni/Show/XIV/#Gundam AGE
+		li#link#Recensioni/Show/XIV/#Gundam AGE#i## all'inizio
 		li#D–Wars
 		li#Mega shark Vs Giant Octopus
 		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
 	end#ul
-
-	sec#
+	br#
 	id#ridere
-	title#Brutto da ridere
+	stitle#Brutto da ridere
 	Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
 	loro, non con loro.
 	begin#ul
 		li#Robot
 		li#Alien Vs Ninja
-		li#Black Sheep
 		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
-
-		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
+		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
 	end#ul
-
-	sec#
+	br#
 	id#magnifici
-	title#Magnificamente brutto
+	stitle#Magnificamente brutto
 	Insomma, l'ho detto e lo ripeto, alcuni film sono così brutti da fare il
 	giro e diventare più che godibili.
 
@@ -117,6 +109,9 @@ tab#classifica
 		li#Machete
 		li#Planet Terror
 		li#Sharktopus
+		li#link#Recensioni/Film/XXIII/#Zombieland
 		li#The Rocky Horror Picture Show
+		li#link#Recensioni/Show/XIV/#Gundam AGE#ii## dopo un po'
 	end#ul
+	pre#</div>
 stop#page
