@@ -3,7 +3,8 @@ prev#News/2011/09/#Settembre
 next#News/2011/11/#Novembre
 
 start#side
-	title#Ottobre 2011
+	stitle#link#News/2011/10/#Ottobre### 2011
+
 	<span class="em">27/10</span> –
 	Gundam AGE /
 	link#Recensioni/Show/XIV/#ep2~3#II

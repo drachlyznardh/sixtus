@@ -134,7 +134,8 @@ tab#03/00:00
 	link#Recensioni/Film/XVII/#First Blood Part II#ii##.
 stop#page
 start#side
-	title#Novembre 2011
+	stitle#link#News/2011/11/#Novembre### 2011
+
 	<em>29/11</em> –
 	link#Recensioni/Film/XVII/#Rambo III#iii##,
 	link#Recensioni/Film/XVII/#John Rambo#iv##,

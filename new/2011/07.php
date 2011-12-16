@@ -2,7 +2,7 @@ title#Luglio#Notizie sudate
 next#News/2011/08/#Agosto
 
 start#side
-		titler#Luglio 2011
+		stitle#link#News/2011/07/#Luglio### 2011
 	
 		<span class="em">31/07</span> – 
 		link#Recensioni/Film/Brutti/#film brutti

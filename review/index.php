@@ -62,26 +62,10 @@ tab#categorie
 	include#review/game/index#page
 	include#review/show/index#page
 	include#review/book/index#page
-tab#incorso
-	title#In corso d'opera…
-	Nel caso siate veramente impazienti, o nel caso vogliate
-	anticipazioni, o se proprio volete farvi i cazzi miei, questo è
-	l'elenco delle cose che sto facendo adesso.
-
-	Questo elenco è abbastanza empirico: non tutto quello che recensisco
-	finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
-	recensito con certezza.
-	begin#ul@class@doublecol
-		li#Pirate Sentai Gokaiger – ep42/??
-		li#Kamen Rider Fourze – ep6/??
-		li#Gundam AGE – ep10/??
-		li#Macross 7 – ep3/49
-		li#My Little Pony: Friendship is Magic – ep15/26
-	end#ul
 tab#indice
 	id#cronologico
 	title#Indice cronologico
-	pre#<div class="doublecol">
+	begin#double
 	begin#ol
 		li#link#Recensioni/Film/I/#Thor### – 2011
 		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
@@ -107,24 +91,39 @@ tab#indice
 		li#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 		li#link#Recensioni/Film/XXIII/#Zombieland### – 2009
 	end#ol
-	pre#</div>
-
-	sbr#
+	end#double
+	sec#
 	id#categoria
 	title#Per categoria
-	pre#<div class="doublecol">
+	begin#double
 		include@as@content#review/film/index#side
 		include@as@content#review/brutti/index#side
 		include@as@content#review/game/index#side
 		include@as@content#review/show/index#side
 		include@as@content#review/book/index#side
-	pre#</div>
+	end#double
+	sec#
+	id#incorso
+	title#In corso d'opera…
+	Nel caso siate veramente impazienti, o nel caso vogliate
+	anticipazioni, o se proprio volete farvi i cazzi miei, questo è
+	l'elenco delle cose che sto facendo adesso.
+
+	Questo elenco è abbastanza empirico: non tutto quello che recensisco
+	finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
+	recensito con certezza.
+	begin#double
+	begin#ul
+		li#Pirate Sentai Gokaiger – ep42/??
+		li#Kamen Rider Fourze – ep6/??
+		li#Gundam AGE – ep10/??
+		li#Macross 7 – ep3/49
+		li#My Little Pony: Friendship is Magic – ep15/26
+	end#ul
+	end#double
 stop#page
 start#side
-	reverse#
 	tid#Perché le recensioni?#intro
-	/	
-	tid#In corso d'opera…#incorso
 	title#Recensioni
 	stitle#tid#Categorie#categorie
 	reverse#
@@ -152,5 +151,6 @@ start#side
 	stitle#tid#Indice#indice
 	reverse#
 		tid#Cronologico#indice#cronologico# /
-		tid#Per categoria#indice#categoria#
+		tid#Per categoria#indice#categoria# /
+		tid#In corso#indice#incorso
 stop#side

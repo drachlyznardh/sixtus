@@ -85,6 +85,7 @@
 					$this->tab->close();
 					if ($this->environment == LYZ_PAGE) {
 						if (!$this->tab->isEmpty()) $this->page[] = $this->tab;
+						if (!$this->d->tab['name']) $this->d->tab['name'] = $content;
 						$this->tab = new Tab ($this->d, $content);
 					} else die ('Cannot TAB#'.$content.' @line'.$lineno);
 					return;

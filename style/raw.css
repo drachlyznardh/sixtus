@@ -28,12 +28,6 @@ div.section h2,
 	border-color: #eeeeee;
 }
 
-div.section, div.section h2, div.inside, div.outside, .mini-right {
-	-webkit-box-shadow: 2px 2px 2px #aaaaaa;
-	-moz-box-shadow: 2px 2px 2px #aaaaaa;
-	box-shadow: 2px 2px 2px #aaaaaa;
-}
-
 em, strong, code {
 	text-shadow: 0 0 1px #000000;
 }

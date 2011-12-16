@@ -3,7 +3,8 @@ prev#News/2011/07/#Luglio
 next#News/2011/09/#Settembre
 
 start#side
-titler#Agosto 2011
+	stitle#link#News/2011/08/#Agosto### 2011
+
 	<span class="em">30/08</span> –
 	link#Recensioni/Libri/XII/#Il Prigioniero di Azkaban#III
 	

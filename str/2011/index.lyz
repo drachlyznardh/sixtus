@@ -11,43 +11,36 @@ start#page
 	grande consolazione, grande fuga), senza un nuovo Gundam,
 	prossimamente con un fratello in più, con una lunga fila di
 	esami da dare e nessuna voglia di lavorare.
-
-	sec#
+	begin#mini@left
+		stitle#Il Magnetismo
+		Era tempo che mi mettessi a scrivere questa sezione, immagino…  Le mie
+		idee non sono affatto chiaro, si vedano appunto le storie di questo
+		arco; per adesso mi sento di dire che le cose non vanno come prima e
+		probabilmente qualcos'altro cambiarà prima che la storia finisca. Boh.
+	end#mini
+	
 	Ma poi cominciano a comparire delle persone, il cui effetto - almeno
 	per quanto mi riguarda, non è affatto trascurabile.
-	titler#Il Magnetismo
-	Era tempo che mi mettessi a scrivere questa sezione, immagino...
-	Le mie idee non sono affatto chiaro, si vedano appunto le storie
-	di questo arco; per adesso mi sento di dire che le cose non
-	vanno come prima e probabilmente qualcos'altro cambiarà prima
-	che la storia finisca. Boh.
 
-	sec#
 	E dopo un po' di tempo durante il quale non accadde nulla di nulla...
-
-	sec#
-	titler#Primavera 2011
+	stitle#Primavera 2011
 	Ora che ho quasi battuto la <span class="magnet">Ragazza
 	Magnete</span> la mia vita può andare avanti. Cosa farò adesso?
-
-	sec#
+	
 	Beh, dirò che molte cose hanno semplicemente smesso di capitare:
 	la <span class="magnet">Ragazza Magnete</span> non compare quasi
 	più, $rossa e le sue amiche-radar non frequentano più il bar...
 	devo forse passare a fonti d'odio alterntative?
 
-	sec#
 	E poi la primavera passò, venne il caldo e cominciò l'estate.
 
-	sec#
-	titler#Estate 2011
+	stitle#Estate 2011
 	Periodo, questo, caratterizzato dal mio incontro con la
 	gelataia, ma soprattutto dal tremendo progetto di Architetture
 	avanzate, degno della storia più lunga di sempre.
 
 	Questo e qualche altra cosa…
 
-	sec#
 	Infatti. Durante quest'estate, alla fine, sono riuscito a
 	passare <span class="em">Database</span>, ho quasi passato anche
 	<span class="em">Discreta1</span>.
@@ -56,12 +49,9 @@ start#page
 	dell'omonimia, mi sono iscritto <span class="em">in attesa di
 	laurea</span>. Finalmente. Bastera?
 
-	sec#
 	Poi, senza che me lo aspettassi veramente, l'estate è finita e l'autunno
 	è arrivato.
-
-	sec#
-	titler#Autunno 2011
+	stitle#Autunno 2011
 	Si comincia spaventando le ragazze… un nuovo fiore sulla via
 	della consegna… e poi?
 stop#page

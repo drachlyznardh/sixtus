@@ -3,7 +3,8 @@ prev#News/2011/08/#Agosto
 next#News/2011/10/#Ottobre
 
 start#side
-	titler#Settembre 2011
+	stitle#link#News/2011/09/#Settembre### 2011
+
 	<span class="em">29/09</span> –
 	link#Storie/Gaem/#La storia interattiva
 

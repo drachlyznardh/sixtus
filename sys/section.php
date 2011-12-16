@@ -148,8 +148,7 @@
 			list($env, $tag) = $this->mkOpenTag($lineno, $content);
 			switch ($env) {
 				case 'mini':
-					$this->unmkText(); $this->mkline($tag); break;
-					break;
+				case 'double':
 				case 'ol':
 				case 'ul':
 				case 'inside':
@@ -167,6 +166,7 @@
 			list($env, $tag) = $this->mkCloseTag($lineno, $content);
 			switch ($env) {
 				case 'mini':
+				case 'double':
 				case 'ol':
 				case 'ul':
 				case 'inside':
@@ -195,6 +195,9 @@
 			switch ($env) {
 				case 'mini':
 					$result = array ($env, '<div class="mini-'.$opt[1].'">');
+					break;
+				case 'double':
+					$result = array ($env, '<div class="doublecol">');
 					break;
 				case 'inside':
 				case 'outside':
@@ -227,6 +230,7 @@
 					return array ($token, "</$token>");
 				case '':
 				case 'mini':
+				case 'double':
 				case 'inside':
 				case 'outside':
 					return array ($token, '</div>');
@@ -246,6 +250,7 @@
 		}
 
 		public function getContent ($as) {
+			$this->unmkText();
 			if ($this->content) {
 				if ($as && strcmp($as, 'content') == 0) return $this->content;
 

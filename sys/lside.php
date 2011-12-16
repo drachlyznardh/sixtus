@@ -27,7 +27,6 @@
 	</h3><p class="reverse">
 		<?=$d->link('Recensioni/', 'Indice', 'INDICE') ?>
 		/ <?=$d->link('Recensioni/', 'Classifica', 'CLASSIFICA') ?>
-		/ <?=$d->link('Recensioni/', 'Progressi', 'INCORSO') ?>
 	</p><h3>
 		<?=$d->link('NaNoWriMo/', 'NaNoWriMo')?>
 	</h3><p class="reverse">
