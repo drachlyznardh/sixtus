@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Storia!</title>
+			<description>I miei momenti.</description>
+			<pubDate>Tue, 20 Dic 2011 17:35:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2011/12/#20</guid>
+		</item>
+		<item>
 			<title>Un sacco di cagatine</title>
 			<description>Avevo voglia di scrivere, ho scritto.</description>
 			<pubDate>Fri, 16 Dec 2011 00:00:00 +0100</pubDate>
@@ -17,12 +23,6 @@
 			<description>Non ho briga di scrivere una storia intera.</description>
 			<pubDate>Thu, 15 Dec 2011 16:35:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2011/12/#15</guid>
-		</item>
-		<item>
-			<title>Storia!</title>
-			<description>Le avventure fuori porta del GODS.</description>
-			<pubDate>Wed, 14 Dic 2011 18:05:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2011/12/#14</guid>
 		</item>
 	</channel>
 </rss>

@@ -31,20 +31,20 @@ div.section {
 .mini-left {
 	width: 35%;
 	float: left;
-	margin: 0 15px 0 -5px;
+	margin: 0 5px 0 -5px;
 	border-right: 0;
 }
 
 .mini-right {
 	width: 35%;
 	float: right;
-	margin: 0 -5px 0 15px;
+	margin: 0 -5px 0 5px;
 	border-left: 0;
 }
 
 div.section:first-child { margin-top: 0px; }
 
-div.section p, div.section ul, div.section ol {
+p, ul, ol {
 	text-align: justify;
 	text-indent: 1em;
 	padding: 0px 2px 0px 2px;
@@ -67,20 +67,20 @@ h3 {
 	margin: 2px 0px 2px 4px;
 }
 
-div.section p.reverse { text-align: right; }
+p.reverse { text-align: right; }
 
-div.section h2.reverse {	
+h2.reverse {	
 	text-align: right;
 	padding: 3px 15px 3px 2px;
 	margin: 2px -5px 2px 2px;
 }
 
-div.section h3.reverse {
+h3.reverse {
 	text-align: right;
 	margin: 2px 4px 2px 0;
 }
 
-div.section ul {
+ul {
 	margin-left: 2em;
 	text-indent: 0;
 }
@@ -113,13 +113,15 @@ a:hover { text-decoration: underline; }
 
 .cat-heart:after { content:url('img/heart.png'); }
 
-div.section p.foto {
+p.foto {
 	text-align: center;
 	text-indent: 0;
+	margin: 0;
+	padding: 2px;
 }
 
-div.section p.foto img {
-	width: 90%;
+p.foto img {
+	width: 100%;
 	border: #000000 1px solid;
 }
 

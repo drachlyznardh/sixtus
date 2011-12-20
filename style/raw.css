@@ -31,3 +31,8 @@ div.section h2,
 em, strong, code {
 	text-shadow: 0 0 1px #000000;
 }
+
+.green {
+	color: darkgreen;
+	text-shadow: 0 0 2px green;	
+}

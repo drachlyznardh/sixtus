@@ -3,6 +3,15 @@ prev#News/2011/11/#Novembre
 alltab#
 
 start#page
+tab#20
+	<em>
+	link##20/12/2011##20
+	</em> / <strong>
+	link#Extra/GUIDA/#Storie#contenuti#storie
+	</strong>
+	title#Il Momento GODS
+	Mi capita
+	link#Storie/2011/LXXIII/#spesso###.
 tab#16
 	<em>
 	link##16/12/2011##16
@@ -95,15 +104,13 @@ tab#15
 	e se ne va (quindi non posso sfidarlo) ma non sarebbe neppure all'altezza
 	della sfida.
 
-	pre#<div style="color: green; text-shadow: 0 0 3px white">
-	&gt;Mi giro, prendo la via per uscire.
+	>Mi giro, prendo la via per uscire.
 
-	&gt;Apro la porta.
+	>Apro la porta.
 
-	&gt;Mi butto a terra.
+	>Mi butto a terra.
 
-	&gt;Tutti camminano il dinosauro.
-	pre#</div>
+	>Tutti camminano il dinosauro.
 tab#14
 	<em>
 	link##14/12/2011##14
@@ -138,6 +145,9 @@ tab#1
 stop#page
 start#side
 	stitle#link#News/2011/12/#Dicembre### 2011
+
+	<em>20/12</em> –
+	link#Storie/2011/LXXIII/#Il Momento GODS
 
 	<em>16/12</em> –
 	link#Storie/2011/LXXII/#L'ultimo progetto###,

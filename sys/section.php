@@ -42,8 +42,12 @@
 			switch ($cmd) {
 				case '':
 					if ($content) {
-						$this->mkText();
-						$this->mkLine($content);
+							$this->mkText();
+						if (preg_match('/^\\>.*$/', $content)) {
+							$this->mkLine('<span class="green">'.$content.'</span>');
+						} else {
+							$this->mkLine($content);
+						}
 					} else $this->unmkText();
 					break;
 				case 'p':
@@ -67,6 +71,18 @@
 					break;
 				case 'br':
 					$this->unmkText();$this->mkline('<br />'); break;
+				case 'clear':
+					$this->unmkText();
+					switch ($content) {
+						case 'both':
+						case 'left':
+						case 'right':
+							$this->mkline('<div style="clear:'.$content.'"></div>');
+							break;
+						default:
+							die ('Secton->Cannot clear ['.$content.']');
+					}
+					break;
 				case 'pre':
 					$this->content .= $content; break;
 				case 'title':
@@ -135,6 +151,7 @@
 				case 'ul':
 					$this->content .= "\n</li>"; break;
 				case '':
+				case 'mini':
 				case 'inside':
 				case 'outside':
 					$this->content .= "\n</p>"; break;
