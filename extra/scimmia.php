@@ -226,7 +226,7 @@ tab#vi
 			opponent’s new combat techniques and uses this Charm again.
 tab#vii
 	title#Four halo golden monkey palm
-	<span class="em">Cost: 3m, 1wp;
+	<span class="em">Cost</span>: 3m, 1wp;
 	<span class="em">Mins</span>: Martial Arts 5, Essence 3;
 	<span class="em">Type</span>: Supplemental
 	<span class="em">Keywords</span>: Combo-OK, Obvious
