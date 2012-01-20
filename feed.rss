@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Una recensione piccina</title>
+			<description>Piccola perché sono pigro e il film non è poi un
+			granché.</description>
+			<pubDate>Fri, 20 Jan 2012 15:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/01/#20</guid>
+		</item>
+		<item>
 			<title>Dopo la pausa</title>
 			<description>Niente di particolare, ma sappiate che non son morto.<description>
 			<pubDate>Thu, 12 Jan 2012 23:55:00 +0100</pubDate>
@@ -17,12 +24,6 @@
 			<description>I miei momenti.</description>
 			<pubDate>Tue, 20 Dic 2011 17:35:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2011/12/#20</guid>
-		</item>
-		<item>
-			<title>Un sacco di cagatine</title>
-			<description>Avevo voglia di scrivere, ho scritto.</description>
-			<pubDate>Fri, 16 Dec 2011 00:00:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2011/12/#16</guid>
 		</item>
 	</channel>
 </rss>

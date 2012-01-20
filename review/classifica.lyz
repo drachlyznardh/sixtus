@@ -40,7 +40,8 @@ tab#classifica
 		e
 		link#Recensioni/Film/XVII/#John Rambo#iv
 
-		p#link#Recensioni/Show/XXII/#Dollhouse
+		li#link#Recensioni/Show/XXII/#Dollhouse
+		li#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
 	end#ul
 	br#
 	id#meh
