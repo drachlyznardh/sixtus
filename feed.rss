@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Gundam AGE prosegue.</title>
+			<description>Prosegue, ma peggiora</description>
+			<pubDate>Web, 25 Jan 2012 14:00:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/01/#25</guid>
+		</item>
+		<item>
 			<title>Una recensione piccina</title>
 			<description>Piccola perché sono pigro e il film non è poi un
 			granché.</description>
@@ -18,12 +24,6 @@
 			<description>Niente di particolare, ma sappiate che non son morto.<description>
 			<pubDate>Thu, 12 Jan 2012 23:55:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/01/#11</guid>
-		</item>
-		<item>
-			<title>Storia!</title>
-			<description>I miei momenti.</description>
-			<pubDate>Tue, 20 Dic 2011 17:35:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2011/12/#20</guid>
 		</item>
 	</channel>
 </rss>

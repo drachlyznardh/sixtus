@@ -404,7 +404,7 @@ tab#iv
 	il bambino lo sa… o forse, gli manca la <em>MammaDemone</em>? Non riesco a
 	capirlo, la &lt;TRAMA!&gt; è troppo fitta per la mia testolina.
 
-	Al termine dell'episodio, 'sto bimbo-comandante me' miei coglioni (siccome
+	Al termine dell'episodio, 'sto bimbo-comandante de' miei coglioni (siccome
 	gli hanno rotto il robottone figo) <strong>RITIRA L'INTERA FLOTTA</strong>,
 	compresa la corazzata grande come la fame e i &gt;9000 altri
 	robottini-minchia a sua disposizione. È INEVITABILE! Perché i cattivi non
@@ -412,6 +412,75 @@ tab#iv
 	
 	E intanto, secondo l'<code>internet</code>, mancano soltanto tre episodi al
 	salto temporale che porterà la serie in avanti di un'intera generazione.
+tab#v
+	title#Episodi 10~15
+	E insomma… sono arrivato alla fine di questo arco. Cosa dire di questi
+	ultimi cinque episodi? La <strong>FUFFA</strong>.
+
+	La “flotta” dei “BUONI” prende e se ne va in un certo posto. In quel certo
+	posto, Furitto sbatte per sbaglio contro Yurin (la ragazza che salvò nel
+	primo o secondo episodio) e scopre che lei non è mai stata in pericolo,
+	ch'era stata salvata dal <em>conte</em> etc etc etc… intanto, Capitan
+	Barbetta e i suoi allegri compagni tramacciano accordi con il conte per
+	questo e quel motivo… poi scoppiano altri casini: passava di lì il
+	<em>Governo</em>, che vuole catturare e processare Capitan Barbetta per
+	tradimento et similia.
+
+	Ma non quando noi abbiamo il Gundam, vero? Botte, qualche robottone spaccato
+	dopo tutti sono di nuovo sulla nave, verso la libertà, il futuro e la
+	prossima battaglia. Ma non solo, perché anche il Governo ha le sue navi.
+	Passano tremendissimi e tesissimi minuti di strategie militari imprevedibili
+	(“Ah! Ci stavano aspettando! Come potevano sapere che saremmo usciti proprio
+	dalla porta?!? Il loro comandante dev'essere un genio tattico!”) saltano
+	fuori i CATTIVI.
+
+	A quel punto, ecco rispuntare l'AMICIZIA SPAZIALE! La Diva, i ribelli del
+	Blue&Yellow Team e il Governo contro 'sti cazzo di alieni. E tutti prendono
+	le botte. E avanti così…
+	sec#
+	Passati altri inutili momenti, arriviamo finalmente davanti alla
+	cazzutissima fortezza dei cattivi (ch'è un sasso. Un enorme sasso spaziale,
+	senza niente di particolare), ma basta qualche BOOM perché i cattivi
+	perdano. Intanto, ecco saltare fuori dal nulla il <em>BimboDemone</em>, il
+	più stronzo e sadico della serie, che guarda caso è stato capace – con il
+	solo sorriso malvagio – di rapire Yurin. Ma non solo! È abbastanza sadico da
+	metterla in tuta spaziale, cazzarla a bordo di un nuovo robottone (rosa) e
+	di usarla come scudo, con il solo scopo di far incazzare Furitto abbastanza
+	da morire. Boh; poteva andare a vivere su uno scoglio ed evitare tutta 'sta
+	yadda, e invece…
+
+	Vabbeh, succede che Yurin muore perché si mette in mezzo per sbaglio,
+	&lt;<strong>DRAMMA!</strong>&gt; e &lt;<strong>VENDETTA!</strong>&gt; finché
+	tutti i cattivi vengono spaccati di botte. Poi, l'invasione della fortezza.
+	In sette.
+
+	Due <em>magliette rosse</em> muoiono (ovviamente) mentre tutti gli altri
+	trovano la stanza di controllo del reattore. Il cattivo (tizio comparso un
+	attivo fa dentro il robottone-boss) salta fuori con la
+	&lt;<strong>RIVELAZIONE SCONVOLGENTE</strong>&gt;: gli UE non sono alieni,
+	sono soltanto uomini marziani. Sono arrivati su Marte 150 prima, solo che su
+	Marte c'era solo sassi; questi l'ha fatti incazzare paurosamente, ed ora
+	questi rivogliono la Terra, e se la vogliono riprendere a botte uccidendo
+	tutti.
+
+	Ed ecco, infine, l'ultimo momento drammatico: 'sto tizio viene
+	<code>oneshot</code>tato dal Barbetta, proprio mentre il suo dolce innocente
+	figlioletto entra nella stanza. E poi, come in “Kill Bill”, il Barbetta si
+	presenta al bambino, cosicché questi possa vendicarsi una volta cresciuto.
+	sec#
+	Segue infine un montaggio d'immagini statiche con il commento fuoricampo: il
+	Barbetta viene arrestato per tradimento e messo in prigione per &gt;9000
+	anni. Tutti gli altri, invece, se ne vanno liberi, perché lui s'è preso
+	tutta ma tutta la responsabilità. Passano quindici anni.
+
+	Ma i cattivi sono sempre in agguato. BRIVIDO! TERRORE! RACCAPRICCIO!
+	title#Gundam AGE – e10~15
+	titler#Mah. Meh. Mmmmmmmah.
+	'Sta roba, da dov'è uscita? Stavano andando bene… cos'è successo? Siamo
+	passati dall'amicizia spaziale, ad una battaglia impossibile, e poi invece
+	siamo ricaduti in tutti i possibili cliché.
+	
+	E io avevo persino delle speranze ;_;
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -423,4 +492,6 @@ start#side
 	p#tid#Episodi 4~6#iii
 
 	p#tid#Episodi 7~9#iv
+
+	p#tid#Episodi 10~15#v
 stop#side
