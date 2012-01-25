@@ -1135,6 +1135,7 @@ tab#vii
 	ricomincia la yadda: il vecchio Kreacher racconta la yadda di Regulus, il
 	fratello di Sirius ch'era stronzo ma forse no. La storia del pentolone con
 	la pozione che può essere soltanto bevuta. Bleahrgh.
+	sec#
 	titler#Capitoli 11~blah
 	Queste yadde proseguono finché il trio finisce per origliare alcune persone
 	e alcuni goblin, scena che serve a spiegare che la spada di Griffondoro non
@@ -1160,7 +1161,23 @@ tab#vii
 	libro, comparirà alla fine!) ecco un'altra cariolata di yadda, Silente e la
 	sua gioventù.
 
-Yaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadda.
+	Yaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadda.
+	sec#
+	titler#Tutti gli altri capitoli
+	E insomma… sappiate che c'ho provato, d'accordo? Ho davvero provato a stare
+	al passo, a scrivere durante la lettura… ma da un certo punto in avanti, è
+	stato impossibile. M'hanno ceduto gli occhi, le ginocchie e le balle.
+
+	C'è semplicemente troppa yadda: in questo libro, anche più degli altri,
+	tutto quel che viene raccontato è fondamentalmente inutile, le cose
+	interessanti sono una decina e le cose migliori (la nonna di Neville calcia
+	i culi e si da alla macchia) passano offscreen.
+	
+	Ora vedrò di raccattere un po' di roba dalla memoria e scriverla senza
+	versare altre lacrime.
+	begin#ul
+		
+	end#ul
 stop#page
 start#side
 	p#tid#Intro#intro
