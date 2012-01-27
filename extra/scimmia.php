@@ -1,5 +1,6 @@
 title#La scimmia celeste#E il suo incredibile intelligente semplice stile
 prev#Extra/Record/#Record
+next#Extra/SO1/#Sistemi Operativi 1
 start#page
 tab#intro
 	title#Celestial Monkey Style
