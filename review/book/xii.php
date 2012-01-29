@@ -1176,8 +1176,189 @@ tab#vii
 	Ora vedrò di raccattere un po' di roba dalla memoria e scriverla senza
 	versare altre lacrime.
 	begin#ul
+		tutto l'ambaradan è, ovviamente, uccidere Voldemort… oh, no, ho
+		pronunciato il suo nome! Adesso verranno a farmi il culo perché questi
+		tizi (il governo, i MangiaMorte, i SucaXXXXX) <strong>HANNO IL POTERE DI
+		METTERE UN'ALLARME SU UNA PAROLA</strong>. Questa è una delle
+		<code>power</code>ate più grosse della storia del mondo! Perché nessuno
+		l'ha mai usata prima? Perché non funziona meglio? Ora, per favore,
+		seguite il ragionamento: il governo può mettere l'allarme su una parola,
+		ed teleportarci immediatamente i suoi scagnozzi. Perché non scegliere
+		una parola sensata, allora? Ora, quante persone (al mondo) si chiamano
+		Hermione? SRSLY? Perché non usare quel nome, e farla finita subito?
+
+		il libraccio scritto dalla giornalista corrotta/stronza/traviata è su
+		tutti gli scaffali; c'è scritta un sacco di yadda, ma tra la yadda ci
+		sono tutti i particolari che parlano di Silente, del suo allegro
+		compagno, di suo fratello, nonché della madre e della sorella. La
+		sorella era matta e senza poteri, ma poi un giorno è esplosa. Portandosi
+		via mezza casa. E Silente, che fino al giorno prima voleva andare a fare
+		il rivoluzionario con l'unico altro genio del mondo, ha cambiato idea,
+		ha mandato tutti a cagare e non ha più parlato di questa roba… bah;
+
+		c'era un disegnino strano su un certo vestito, su una certa tomba, su un
+		certo libro: dev'essere importante, andiamo a scoprire che si tratta
+		d'indizi per trovare la bacchetta invincibile. Ma no, non esiste. Ma sì,
+		esiste. Ma si. Ma no. Ma si. Ah, ecco, ce l'aveva Silente, in tasca.
+		Senz'averla mai usata. E Voldemort gliel'ha fottuta dalla tomba LOL.
+
+		ma non solo! Ci sono effettivamente dei progessi in corso… del tipo,
+		gente che va in posti, gente che fa cose… andiamo, ad esempio, a parlare
+		con il vecchio pazzo. “Vecchio pazzo, dov'è la su' figliola, nota per
+		fare casini e minacciare il governo?” “Grazie per averlo chiesto, è
+		giusto dietro l'angolo…” “Possiamo vederla?” “No!” E non ci fu niente di
+		sospetto per almeno una pagina e un quarto…
+
+		ecco ora un nuovo obiettivo! Cerchiamo la spada… si, ma dove? Eh, non lo
+		sa nessuno… oh beh, andremo un po' di qua, un po' di là… Oh, to', guarda
+		caso, ecco una polla di ghiaccio con dentro una spada: “Dev'essere il
+		destino! Ci entrerò nudo, per dimostrare al ghiaccio quanto sono uomo!”
+
+		che culo, proprio in quel momento Ron (ch'era stato esonerato dalla
+		scena per trecento pagina) torna al volo, giusto per fare il suo ritorno
+		trionfale…
 		
+		“Onnnnnnoes! La spada era l'unica arma per distruggere gli strafottuti
+		<em><span class="wrong">filatteri</span> Horcruseseses</em>! Come
+		faremo, adesso?” Ora, scusate un attimo. Ma io ben rimenbro il secondo
+		volume, quello con lo strafottuto basilisco. Possiamo <em>pensare</em>, per
+		favore?
+
+		E dopo circa quattrocento pagine, tutti finisco catturati (per la terza
+		volta? La quarta? Ho perso il conto…), le bacchette rubate, tutti nella
+		merda… Non sentite forse, arrivare il momento buono per un sacrificio
+		eroico? Non vi ricordate che gli elfi possono teleportare sé stessi ed
+		altri? Quale momento buono per salvare ogni culo importante, no?
+
+		Si, ma come impedire che un'uscita del genere non rovini tutti i futuri
+		sviluppi? Beh, ovviamente… dev'essere <em>una tantum</em>, un momento
+		irripetibile. L'elfo muore. Chi? L'elfo. Chi? Quello che rompe i
+		coglioni, almeno una volta a libro, da un sacco di tempo, vi ricordate?
+
+		“Hey, tu, goblin pronto a tradire, non è che ci accompagneresti nella
+		<em>MISSION: IMPOSSIBLE</em>?” “Certo, certo, volentieri” e finiscono
+		tutti bruciati, liberano il drago e poi la yadda…
+
+		Beh, mi pare che ora si possa soltanto tornare a scuola. Il libro è
+		quasi finito… andiamo, ma prima sbattiamo contro il perduto fratello di
+		Silente, che pur essendo figo almeno la metà del fratello, se n'è
+		rimasto con le mani in mano negli ultimi sessant'anni. Proseguiamo
+		soltanto per scoprire che mentre non eravamo presissimi a seguire le
+		avventure dei tre pisquani, tutti quelli della scuola hanno <a
+		href="http://tvtropes.org/pmwiki/pmwiki.php/Main/TookALevelInBadass">preso
+		un livello in figaggine</a> e adesso calciano i culi. Neanche il tempo
+		di dire “spinterogeno” che tutti s'infervorano e parte una rivolta;
+		tempo un quarto d'ora, arrivano &gt;9000 castigamatti del governo, e
+		apriti cielo…
+
+		quel che segue è un gran casino, gente che muore da ogni parte. Ma a
+		noi non frega, noi vogliamo vedere la <em>Regina del Dramma</em>
+		all'opera, vero? Harry scappicchia, striscia, va a caccia di Malfoy
+		(figlio). Segue uno scontro impossibile, in cui i due inutili leccapiedi
+		di Malfoy (ancora il figlio) decidono che sono abbastanza stupidi per
+		uccidere tutti con l'<em>incantesimo delle indomabili fiamme demoniache
+		consumatrici di anime</em>. L'unico effetto del mortale effetto speciale
+		è l'accidentale distruzione dell'artefatto indistruttibile.
+		<strong>MACCHECCAZZO?</strong> o_O
+
+		si prosegue con il momento che, nell'intera saga, m'ha fatto sperare.
+		Giuro. Succede questo: Voldemort è troppo figo per scendere in campo,
+		perch'è il <em>BOSS FINALE</em>, quindi tocca <span class="wrong">alle
+		checche</span> <em>agli eroi</em> andarlo a prendere. “Allora, Harry,
+		Voldemort è ancora immortale, ha la bacchetta invincibile… ma
+		soprattutto, ha gli occhi rossi e fa taaaaaaanta paura. Che facciamo,
+		gli infiliamo una scopa maledetta su per il <a
+		href="http://it.wikipedia.org/wiki/La_Smorfia">16</a>?” “No, non sia
+		mai! È una cosa poco da maghi! Dobbiamo batterci a duello!” Al termine
+		della contrattazione: <a
+		href="http://knowyourmeme.com/memes/okay-guy">OKAY.JPG</a>… Ma non solo!
+		Voldemort è abbastanza stronzo e cazzuto (e fuorviato) da annunciare in
+		tutta sciallezza che Piton deve morire. Davanti a Piton. E a quel punto,
+		<em>Piton si gira! Scatta! Maledice! Spara! Ammazza il serpende! Disarma
+		Voldemort! Lo rovescia con un calcio! Lo blocca a terra! Gli punta la
+		bacchetta in mezza gli occhi e dice “Il mio naso è molto più lungo del
+		tuo, stronzone” e l'ammazza. Fine.</em>
+
+		E invece no. Piton muore come una puttanella, ma non prima di cedere ad
+		Harry i suoi ultimi ricordi. E che rivelano questi misteriosi ricordi?
+		Beh, alcune cose interessanti. Effettivamente, il piccolo Severus era un
+		bambino stronzetto (ma non troppo) che s'è portato nel cuore, per
+		qualcosa come vent'anni, un sincero amore per Lily. Ma siccome lui era
+		studiato e non sborone come James Potter, è rimasto… come dire… <a
+		href="http://www.urbandictionary.com/define.php?term=blue%20balls">come
+		Mario quando Peach sta in un altro castello</a>… ma non è tutto, viene
+		rivelato che il realtà, Silente era <em>Bruce Wayne / Batman</em>,
+		mentre lo stesso Piton è evidentemente <em>Jason Todd / il secondo Robin
+		(quello che muore)</em>, ergo immagino che Harry debba diventare
+		<em>Dick Grayson / il primo Robin / Nightwing (il Robin figo)</em>… ma
+		in realtà…
+
+		in realtà, Silente è morto con &gt;9000 segreti. Piton muore con 8999
+		segreti rivelati solo ad Harry, dopo aver doppiogiocato per l'intera
+		guerra. Harry <span class="wrong">si rivede e decide di mettere
+		assieme un piano sensato per contrastare Voldemort</span> se ne sbatte e
+		infila la testa nella bocca del lupo;
+
+		in mezzo a tutti i MangiaMorte rimasti, durante la tregua gentilmente
+		concessa dal cattivone, Harry si smaschera (onnipresente mantello) e si
+		fa ammazzare. LOL. Il suo corpo viene portato in trionfo…
+
+		Solo che non è morto, perché è <strong>PROTETTO DAL VERO AMORE</strong>
+		e anche <strong>POSSESSORE D'UN FRAMMENTO D'ANIMA DI VOLDEMORT</strong>,
+		per cui <strong>OGNI TENTATIVO, DA PARTE DI VOLDEMORT, DI UCCIDERE HARRY
+		CON UNA MALEDIZIONE, PUÒ SOLTANTO RIVOLGERGLISI CONTRO</strong>.
+		Ma prima d'allora ho sentito una <a
+		href="http://tvtropes.org/pmwiki/pmwiki.php/Main/PlotArmor">plot
+		armor</a> così spessa. Quindi Harry non è morto, la guerra non è persa e
+		le speranze sono ancora vive;
+
+		in quella, mentre Voldemort bofonchia la sua vittoria e promette
+		l'amnistia, Neville tira fuori le palle e stacca la testa del serpente.
+		Dove essere piuttosto facile, evidentemente… un colpo, e via…
+
+		ed ora che Voldemort non è più immortale, basterà che si uccida da solo,
+		giusto? Beh, ecco il <span class="wrong">sacrificio eroico</span>
+		<em>momento del cazzo</em> in cui Voldemort commette suicidio. Dopo
+		quello, passano 19 anni. Tutti felici e contenti. Fine
 	end#ul
+	Bella merda.
+	sbr#
+	No, SRSLY, bella merda.
+	title#Harry Potter &amp; e i Doni della Morte
+	titler#Meh. / Mah
+	sbr#
+	Ma non è mai, proprio mai, venuto in mente a Voldemort che ci sono altri
+	modi per uccidere? Tipo il fuoco? Non poteva prendera Harry, in uno dei
+	&gt;9000 momenti adatti, prendere la fottuta bacchetta e dargli fuoco? Non
+	poteva, che ne so, Voldemort vola, no? Non poteva prendere Harry e farlo
+	cadere? Non poteva tirargli un sasso? Non poteva farlo mangiare dal
+	serpente? Non poteva alitargli in faccia e ucciderlo? Ma soprattutto, non
+	poteva <strong>CONTROLLARE DI PERSONA, INVECE CHE MANDARE LA GRAN PUTTANA
+	(LA SIGNORA MALFOY) A TASTARE LA GOLA DELL'AVVERSARIO MORTALE SFUGGITO ALLA
+	MORTE IN PIÙ OCCASIONI NEGLI ULTIMI SEDICI ANNI?</strong> Dai cazzo.
+
+	E infine, il finale. Forse ha nessuno frega che uno dei gemelli siamo morto?
+	A nessuno frega di tutti gli altri tizi e genitori di tizi? Ed io, dopo
+	&gt;9000 pagine di fuffa, &gt;9000 personaggi con &gt;9000 famiglie, mi
+	aspettavo non dico un buon finale, ma almeno un accenno.
+
+	E invece… Harry &amp; Ginny hanno dei bambini, Ron &amp; Hermione hanno dei
+	bambini, Malfoy ha dei bambini, Neville insegna. E il resto? Tipo, tutti gli
+	altri? Dove cazz'è finita Luna? Dov'è finito Hagrid? Dove i professori?
+	Piton è morto da eroe o da stronzo? Kingsley è Ministro, e il resto? La
+	figlia di Corvonero e il Barone Insanguinato hanno avuto la degna
+	conclusione del loro vero amore? Aberforth è andato a piangere sulla tomba
+	di Siente? Che cazzo di nome è Aberforth? La nonna di Neville sta bene?
+	Tutti i ragni, sono stati ammazzati? La Gringott c'è ancora? C'è pace con i
+	goblin? C'è pace con gli elfi? C'è pace con i centauri? Quello stronzone di
+	Pierce non è diventato funzionario? Cho Chang piange ancora sulla tomba di
+	Wood? Ma soprattutto, per tutto ciò ch'è sacro in questo mondo e nel
+	precedente, <strong>CHI CAZZO HA VINTO LA COPPA DI QUIDDITCH? CHI HA VINTO
+	LA COPPA DELLE CASE?</strong>
+
+	E insomma… che posso dirvi?
+	title#Harry Potter &amp; 'sto cazzo
+	titler#V'è piaciuto? VI SIETE SBAGLIATI
 stop#page
 start#side
 	p#tid#Intro#intro
@@ -1188,10 +1369,8 @@ start#side
 		li#tid#Il prigioniero di Azkaban#iii
 		li#tid#Il calice di fuoco#iv
 		
-		tid#L&apos;ordine#v#V1
-		pre#/
-		tid#della#v#V2
-		pre#/
+		tid#L&apos;ordine#v#V1## /
+		tid#della#v#V2## /
 		tid#Fenice#v#V3
 	
 		li#tid#Il principe mezzosangue#vi

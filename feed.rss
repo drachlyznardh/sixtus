@@ -7,8 +7,14 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Una recensione meno piccina</title>
+			<description>Dopo lunghi mesi di calvario, ho finito.</description>
+			<pubDate>Fri, 20 Jan 2012 15:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/01/#29</guid>
+		</item>
+		<item>
 			<title>Di nuovo sull'ultimo progetto</title>
-			<description>Perché sono successe altre cose…<description>
+			<description>Perché sono successe altre cose…</description>
 			<pubDate>Fri, 27 Jan 2012 17:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/01/#27</guid>
 		</item>
@@ -17,13 +23,6 @@
 			<description>Prosegue, ma peggiora</description>
 			<pubDate>Web, 25 Jan 2012 14:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/01/#25</guid>
-		</item>
-		<item>
-			<title>Una recensione piccina</title>
-			<description>Piccola perché sono pigro e il film non è poi un
-			granché.</description>
-			<pubDate>Fri, 20 Jan 2012 15:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/01/#20</guid>
 		</item>
 	</channel>
 </rss>
