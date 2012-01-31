@@ -91,6 +91,7 @@ tab#indice
 		li#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 		li#link#Recensioni/Film/XXIII/#Zombieland### – 2009
 		li#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens### – 2011
+		li#link#Recensioni/Film/XXV/#Chuck### – 2007~2012
 	end#ol
 	end#double
 	sec#
