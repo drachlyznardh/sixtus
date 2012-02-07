@@ -15,6 +15,7 @@
 	</h3><p class="reverse">
 		<?=$d->link('Storie/2010/', '2010')?>
 		/ <?=$d->link('Storie/2011/', '2011')?>
+		/ <?=$d->link('Storie/2012/', '2012')?>
 		/ <?=$d->link('Storie/Gaem/', 'La storia interattiva')?>
 	</p><h3>
 		<?=$d->link('Tru/Naluten/', 'Tru Naluten')?>

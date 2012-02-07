@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>La prima canzone</title>
+			<description>Ho fatto parecchia fatica a scrivere questa storia. E
+			non è servito a granché</description>
+			<pubDate>Tue, 07 Feb 2012 22:15:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/02/#07</guid>
+		</item>
+		<item>
 			<title>Ancora recensioni</title>
 			<description>Purtroppo, non trovo materiale per una storia</description>
 			<pubDate>Tue, 31 Jan 2012 11:30:00 +0100</pubDate>
@@ -17,12 +24,6 @@
 			<description>Dopo lunghi mesi di calvario, ho finito.</description>
 			<pubDate>Fri, 20 Jan 2012 15:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/01/#29</guid>
-		</item>
-		<item>
-			<title>Di nuovo sull'ultimo progetto</title>
-			<description>Perché sono successe altre cose…</description>
-			<pubDate>Fri, 27 Jan 2012 17:00:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/01/#27</guid>
 		</item>
 	</channel>
 </rss>
