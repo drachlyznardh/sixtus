@@ -472,6 +472,43 @@ tab#m2011
 			class="em">Gokaiger Goseiger Super Sentai 199 Hero Battle</span>, che
 			appena lo trovo… eh, leggerete.
 		</p>
+tab#mooo
+	title#Kamen Rider OOO Wonderful The Movie
+	titler#The Shogun and the 21 Core Medals
+	Ed ecco, sempre grazie agli <em>Over-Time</em>, un altro film. Questa volta
+	si tratta dell'evento di metà anno, assieme al film dei Gokaiger (La Nave
+	Fantasma, che ancora non ho visto), anche se Kamen Rider Fourze fa la sua
+	comparsata.
+
+	Il film, che in pratica capita in mezzo alla serie senza interrompere nulla,
+	vede il ritorno della grandissima alchimista che 800 aveva permesso al Re di
+	creare le Core Medal e di diventare OOO. Ovviamente, quest'alchimista aveva
+	un piano malvagio per la conquista del mondo (tramite dei malvagissimi
+	intrugli) ed 800 anni dopo, risuscitata grazie al Presidente (che stava per
+	caso in Germania a scavare un buco per terra…) torna ad eseguire più o meno
+	lo stesso piano.
+
+	Il piano prevede lo scambio di alcune parti della città con il relativo
+	posto di 800 anni prima, attraverso l'uso intensivo di medaglie e di un
+	apposito marchingegno. Yadda yadda, Eiji più gli altri semi-inutili
+	personaggi finiscono in un certo villaggio, e lì sbattono contro lo Shogun.
+	Poi, per un qualche motivo, lo Shogun tira fuori un set di tre Core Medal
+	mai viste prima.
+
+	Tolta la stessa alchimista, che fa anche da boss finale, nel film c'è
+	soltanto un nuovo mostro, brutto come il resto dei mostri che di solito
+	capitano. Trullallero trullallà, Eiji usa la combo verde (GataKiriBa) per
+	moltiplicarsi e poi (l'amicizia è tale che persino i Greeed prestano le loro
+	medaglie) mettere assieme otto combo diverse. Boom boom boom boom BOOM!
+
+	Amicizia in ogni angolo, il bambino e la mamma si salvano, tutti sono
+	contenti, tutti stanno bene. Ma ecco, durante i titoli, parte una canzone
+	terribile, la <em>Kamen Rider Samba</em>, una cosa inascoltabile persino per
+	me (son dovuto fuggire).
+	br#
+	Ma canzone a parte, LOL.
+	titler#Buono
+	È soltanto un episodio molto lungo.
 stop#page
 start#side
 	title#Kamen Rider
@@ -491,5 +528,7 @@ start#side
 	stitle#I film che ho visto
 	reverse#
 	tid#Let's go Kamen Riders#m2011## – 2011
+	reverse#
+	tid#OOO wonderful#mooo## – 2011
 stop#side
 

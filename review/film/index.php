@@ -32,4 +32,6 @@ start#side
 	p#link#Recensioni/Film/XXIII/#Zombieland### – 2009
 
 	p#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens### – 2011
+
+	p#link#Recensioni/Film/XXVI/#Meet Joe Black### – 1998
 stop#side

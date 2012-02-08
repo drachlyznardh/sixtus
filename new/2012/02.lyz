@@ -3,6 +3,37 @@ prev#News/2012/01/#Gennaio 2012
 #next#News/2012/02/#Febbraio 2012
 alltab#
 start#page
+tab#08
+	<em>
+	link##08/02/2012##08
+	</em> / <strong>
+	link#Extra/#Recensioni#contenuti#recensioni
+	</strong>
+	title#Alcune cose
+	Ho fatto alcune cose, oggi. Ho rotto qualcosa d'importante. Sono stato
+	svegliato da una telefonata: non ci sarebbe stato bisogno di torta, stasera.
+	Ma ho pensato che ignorare questo divieto non avrebbe prodotto altri danni.
+	Ho fatto la torta:
+	begin#inside
+		begin#ul
+			due uova e 250ml di zucchero in una terrina
+
+			100gr di burro (sciolto) e 200ml di farina
+			
+			un pizzico di sale, una busta di vaniglia e tre cucchiai di cacao
+
+			in forno a 175°C per 20'
+		end#ul
+	end#inside
+	Poi mi sono messo lì, mi sono guardato un
+	link#Recensioni/Film/XXVI/#buon film###.
+	E anche uno
+	link#Recensioni/Show/XIII/#meno buono#mooo##.
+
+	Dimenticavo, inoltre, una canzone: <a
+	href="http://www.youtube.com/results?search_query=somewhere+over+the+rainbow+israel+kamakawiwo'ole">Over
+	the rainbow</a>, in particolare la versione di <em>Israel
+	Kamakawiwo'ole</em>.
 tab#07
 	<em>
 	link##07/02/2012##07
@@ -16,6 +47,12 @@ tab#07
 stop#page
 start#side
 	stitle#link#News/2012/02/#Febbraio### 2012
+
+	<em>08/02</em> –
+	la torta,
+	link#Recensioni/Film/XXVI/#Meet Joe Black
+	e
+	link#Recensioni/Show/XIII/#Kamen Rider 000 Wonderful the Movie: the Shogun and the 21 Core Medals
 
 	<em>07/02</em> –
 	link#Storie/2012/LXXIV/#La prima canzone
