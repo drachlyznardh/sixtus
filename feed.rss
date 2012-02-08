@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Due recensioni</title>
+			<description>Brutto giorno, ma buone visioni.</description>
+			<pubDate>Wed, 08 Feb 2012 23:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/02/#08</guid>
+		</item>
+		<item>
 			<title>La prima canzone</title>
 			<description>Ho fatto parecchia fatica a scrivere questa storia. E
 			non è servito a granché</description>
@@ -18,12 +24,6 @@
 			<description>Purtroppo, non trovo materiale per una storia</description>
 			<pubDate>Tue, 31 Jan 2012 11:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/01/#31</guid>
-		</item>
-		<item>
-			<title>Una recensione meno piccina</title>
-			<description>Dopo lunghi mesi di calvario, ho finito.</description>
-			<pubDate>Fri, 20 Jan 2012 15:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/01/#29</guid>
 		</item>
 	</channel>
 </rss>
