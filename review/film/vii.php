@@ -1,7 +1,6 @@
 title#Dark Of The Moon#Le parole non possono descrivere la delusione
 prev#Recensioni/Show/VI/#Masterforce
 next#Recensioni/Film/VIII/#Capitan America
-
 start#page
 tab#intro
 	Salve, sono il Gods e qualche cosa la so.
@@ -23,27 +22,19 @@ tab#intro
 	volta davanti agli occhi, io accetto questa sfida, indosso la mia maglia
 	di fan che ne ha viste tante (e che tanti soldi ha lasciato alla Hasbro
 	e alla Takara) e sparo a zero su tutto e tutti.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ne lascio una versione breve per chi non ha palle per leggere il resto,
 	mentre mi cimento nella versione estesa perché le porcate sono tanto
 	numerose da richiedere una gerarchia.
-</p>
-</div><div class="section"><a id="II"></a>
-<h2>
-	Transformers: Dark of the Moon
-</h2><h2 class="reverse">
-	Versione breve
-</h2><p>
+	id#ii
+	title#Transformers: Dark of the Moon
+	titler#Versione breve
 	Questo film rappresenta un insulto a chi si aspetta trama e coerenza da
 	una pellicola.
 
 	Questo film è riuscito a deludermi, a farmi inorridire, a negare i
 	motivi della sua stessa esistenza.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Molti degli amici che m'hanno seguito hanno definito il film <span
 	class="em">ignorante</span>. Di fatto non trovo parola migliore.
 	Purtroppo, io e loro assegnamo accezioni completamente diverse alla
@@ -61,7 +52,6 @@ tab#intro
 	Quindi, se siete venuti soltanto per vedervi le esplosioni del cazzo,
 	più un po' di gnocca, beh, ch'azzo devo dirvi? Fanculo, siete nel posto
 	giusto.
-
 tab#i
 	Insomma, non che io mi fossi preparato. Mi sono preparato e parecchio.
 	Mi sono andato a leggere i pareri un po' dapperttutto, mi sono pure
@@ -69,36 +59,38 @@ tab#i
 	film. Ma non è bastato. NON È BASTATO.
 
 	E adesso, prima di procedere, mando via alcuni di voi.
-</p>
-</div><div class="section">
-<div class="inside"><p>
-	Stai pensando che me la stia prendendo troppo? Stai pensando che in
-	fondo questo è soltanto un film? Stai pensando ch'è soltanto “basato”
-	sui Transformers?
-</p></div><div class="outside"><p>
-	Beh, vaffanculo. C'è il nome, hanno pagato i diritti, hanno speso dei
-	soldi per poter affermare che il collegamento esiste. Poi se ne sono
-	battuti il cazzo e hanno fatto altra roba.
-</p></div>
-</div><div class="section">
-<div class="inside"><p>
+	sec#
+	begin#inside
+		Stai pensando che me la stia prendendo troppo? Stai pensando che in
+		fondo questo è soltanto un film? Stai pensando ch'è soltanto “basato”
+		sui Transformers?
+	end#inside
+	begin#outside
+		Beh, vaffanculo. C'è il nome, hanno pagato i diritti, hanno speso dei
+		soldi per poter affermare che il collegamento esiste. Poi se ne sono
+		battuti il cazzo e hanno fatto altra roba.
+	end#outside
+	sec#
+	begin#inside
 		Stai pensando che, in fondo, i primi due film han fatto cagare,
 		quindi non dovrei prendermela perché il terzo segue più o meno la
 		stessa strada?
-</p></div><div class="outside"><p>
+	end#inside
+	begin#outside
 		Beh, vaffanculo.
 	
 		L'aver fatto male in passato non giustifica affatto il male
 		presente. E qui non si parla nemmeno di seguire un trend, ma
 		prendere qualcosa cominciato male, progesuito peggio e finirlo in
 		modo pessimo.
-</p></div>
-</div><div class="section">
-<div class="inside"><p>
+	end#outside
+	sec#
+	begin#inside
 		Stai pensando che in fondo tutta la trilogia è una modernizzazione
 		di un concetto un po' vecchio, che deve necessariamente essere
 		cambiato per tenere il passo con i tempi?
-</p></div><div class="outside"><p>
+	end#inside
+	begin#outside
 		Beh, ancora una volta vaffanculo!
 	
 		Perché se domani mi mettessi a pubblicare una “Bibbia 2k11” e
@@ -107,58 +99,51 @@ tab#i
 	
 		Ed è esattamente la stessa cosa, solo che importa a molta meno
 		gente e non è vecchia di duemila anni.
-</p></div>
-</div><div class="section">
-<div class="inside"><p>
+	end#outside
+	sec#
+	begin#inside
 		Stai per caso pensando che in fondo questo è quello che la gente
 		vuole vedere, che paga per questo e quindi è giusto che la
 		produzione ci guadagni un fantaputtanaio di soldi?
-</p></div><div class="outside"><p>
+	end#inside
+	begin#outside
 		Beh, vaffanculo! Perché questa non solo sarebbe una giustificazione
 		all'idiocrazia, ma se la pensassimo tutti così saremmo ancora a
 		bruciare streghe sul rogo, a far combattere i gladiatori e a dar i
 		cristiani in pasto ai leoni…
-</p></div><p>
+	end#outside
 	Ed ora, per quanto riguarda il film…
-</p>
-</div><div class="section"><a id="I/II"></a>
-<p>
+	id#i/ii
 	Questo non è un film per bambini. Lo affermo perché, un po' come i due
 	precedenti, anche questo terzo episodio è abbondantemente annaffiato di
 	tette, culi, abiti succinti e/o aderenti etc etc etc…
 
 	Se fosse un film per bambini (quelli ai quali vendere i giocattoli) non
 	sarebbe così.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Quindi niente bambini. Beh, che non siano loro l'obiettivo primario
 	dello sceneggiatore, del regista, della produzione. Forse.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Quindi, io spettatore non bambino, cosa mi aspetterò da un film del
 	genere? Cosa mai mi aspetterò da “Transformers”?
 
 	Vediamo un po'… facciamola meglio.
-</p><ul><li>
+	begin#ul
 		se fossi bambino, se avessi visto la (una delle molte) serie
 		televisiva, cosa vorrei? Probabilmente nulla di più di un episodio
 		molto lungo…
-	</li><li>
+	
 		se fossi cresciutello, se avessi dei ricordi d'infanzia,
 		probabilmente mi aspetterei comunque un episodio molto lungo, mi
 		aspetterei personaggi conosciuti più alcuni altri nuovi introdotti
 		brevemente, un nuovo cattivo e magari, dopo qualche pezzo di trama
 		scontata, un finale, una morale, un messaggio…
-	</li><li>
+	
 		se fossi l'ignorante bifolco medio, mi aspetterei probabilmente una
 		trama da film porno e un sacco di botte fra robottoni
-</li></ul><p>
+	end#ul
 	E invece…
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Purtroppo, elementi da ogni punto della lista vengono selezionati. I
 	peggiori, ovviamente.
 
@@ -166,13 +151,14 @@ tab#i
 	mattone (la bellezza di 156 bei minuti) in cui i titolari personaggi
 	(sia buoni che cattivi) sono tutt'al più ombre sullo sfondo. Gli alieni
 	di metallo vengono cacciati e relegati fuori dal film.
-</p><div class="outside"><p>
+	begin#outside
 		«C'è scritto “Transformers” sulla locandina? Chissenefrega, noi ci
 		concentriamo principalmente sul ragazzo, sulla gnocca e sui
 		soldatini»
-	<p><p style="text-align:right">
-		Micheal Bay – regista
-</p></div><p>
+
+		reverse#
+		<em>Micheal Bay – regista</em>
+	end#outside
 	È scandaloso quanto il film creda che a noi interessi veramente il
 	rapporto tra Sam e la sua nuova ragazza. È altrettanto scandaloso quando
 	il regista continui a sottolineare quanto i soldati dell'esercito
@@ -180,9 +166,8 @@ tab#i
 	componente umana occupi la stragrande maggioranza della trama. È
 	infinitamente scandaloso che i personaggi comici abbiano la
 	partecipazione e gli effetti che hanno.
-</p>
-</div><div class="section"><a id="I/III"></a>
-<p>
+	sec#
+	id#i/iii
 	Io me ne arrivo al cinema temendo la fuffa e che ti vedo? Il film
 	comincia una splendida ragazza, che indossa soltanto una camicia (che
 	lascia piuttosto scoperto il lato B) che salta addosso al tizio.
@@ -197,9 +182,7 @@ tab#i
 	si sono conosciuti un giorno per caso.
 
 	Gente, che cazzo.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Seriamente.
 
 	Se cominci col rispondere alla domanda, almeno fallo decentemente. Tutti
@@ -221,9 +204,7 @@ tab#i
 	Poi, anche peggio. L'abbordaggio della nuova gnocca.
 
 	Seriamente.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Immaginate lo sfifato (perché il tizio non è certo “bello”) uscirsene
 	dallo studio Ovale (quello del presidente USA) con una medaglia al
 	collo. Lui vede lei, ch'è lì <span
@@ -233,9 +214,7 @@ tab#i
 	mantiene.
 
 	Come cazzo si fa?
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Perché avere gli alieni nel film è plausibile. Perché se il tizio riesce
 	a salvare la ragazza degli alieni malvagi in un paio d'occasioni, se
 	s'accompagna agli alieni buoni e cazzuti, e magari dimostra d'avere le
@@ -243,14 +222,11 @@ tab#i
 
 	Ma da lì a perdere questa e trovarne una altrettanto gnocca, così, senza
 	fatica, quella è davvero fantascienza.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Oh, quasi dimenticavo. Ovviamente, questo loro “Vero Amore” sarà la
 	chiave di volta dell'intero ambaradan.
-</p>
-</div><div class="section"><a id="I/IV"></a>
-<p>
+	sec#
+	id#i/iv
 	Ovviamente, il film passa quasi immediatamente a presentare la
 	supercazzola di turno, l'uncino che fa partire la “trama”. L'intero
 	programma spaziale umano è stato in risposta ad un naufragio, perché più
@@ -259,9 +235,7 @@ tab#i
 
 	A bordo della nave c'è molto probabilmente qualcosa di terribile, il
 	McGuffin di questo film.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	A questo punto, due cosucce in fila: i buoni vanno ad indagare, fan la
 	fuffa, salta fuori lo spaccacoglioni.
 
@@ -300,9 +274,7 @@ tab#i
 	avuto la matrice. Ma la matrice era sempre rimasta sulla Terra, perché
 	non è così che funziona nella continuity del film, ma pare che il film
 	stesso se ne sia dimenticato.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ma parlavano dello spaccacoglioni. Perché in ogni Transformers c'è stato
 	uno spaccacoglioni, un insopportabilmente pomposo uomo del governo che
 	pensa d'aver ragione, che porta ordini dall'alto, che fa il buono e il
@@ -313,9 +285,8 @@ tab#i
 	andare a spasso, Sam non è autorizzato a fare un cazzo etc etc etc…
 
 	Il suo ruolo rimane un mistero per un bel pezzo…
-</p>
-</div><div class="section"><a id="I/V"></a>
-<p>
+	sec#
+	id#i/v
 	Nel frattempo, i cattivi si mettono in moto. Dopo che gli unici
 	personaggi interessanti (sono Turturro, Malkovich e quell'altro… Dutch!)
 	han fatto qualcosa (parlare coi russi, andare di qua, andare di là) ed
@@ -338,25 +309,23 @@ tab#i
 	in termini di tempo? Di risorse? Di rischi? Cazzo, perché non aprire il
 	portale dalla Luna, là dove lo stradannato esercito USA non può
 	arrivare? No, facciamo le cose dove possono rompercele.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	E qui, le mie speranze affondano. Se prima avevo avuto delle riserve
 	(buone) e m'ero fatto qualche risatina, ho smesso da lì in avanti.
 
 	Anche perché il complotto (!) prevede le seguenti cose:
-</p><ul><li>
+	begin#ul
 		gli Autobot devono andarsene, il governo USA deve ritirare il loro
 		permesso di soggiorno
-	</li><li>
+
 		in nome di Megatron, le risorse necessarie saranno portate su
 		Cybertron e all'umanità non sarà torto un capello (ORLY?)
-	</li><li>
+
 		nessuna minaccia reale; i Decepticon non dicono nient'altro, non
 		minacciano di distruggere tutto. Ma evidentemente, nessuno si
 		ricorda che l'ultima volta che 20 Decepticon han tentato di andar
 		contro qualche soltaditino, sono stati presi a cannonate in faccia…
-</li></ul><p>
+	end#ul
 	Comunque sia, la spaccacoglioni firma un foglio e i buoni devono
 	andarsene. «Ma come faranno, che non hanno un'astronave?» chiedono gli
 	idioti. Non è un problema, ce l'hanno.
@@ -371,15 +340,12 @@ tab#i
 
 	E se ne vanno. E i cattivi, dopo una risatina, li abbattono e li
 	ammazzano tutti. Fine del film.
-</p>
-</div><div class="section"><a id="I/VI"></a>
-<p>
+	sec#
+	id#i/vi
 	Eh, magari. Ma il film ci delude ancora per quasi un'ora.
 
 	Parte infatti il combattimento.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ahi ahi, voleranno un sacco di botte. E invece. Un tizio, lo stronzone
 	ossia il collaborazionista umano che lavora per i cattivi, ha rapito la
 	ragazza. Il tizio la rivuole, chiama il negrone (ve lo ricordate il
@@ -398,9 +364,7 @@ tab#i
 	Nel frattempo, poi, Sentinel Prime se ne sta in cima ad un palazzo, e
 	aspetta senza far nulla. Shockwave, intanto, chissà dov'è; forse se n'è
 	andato in film più interessante…
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Poi arriva la scena assurda. Sam, il negrone e un sacco di altri
 	soldatini arrivano in città per spaccare i culi, poi (e soltanto poi)
 	cominciano a chiedersi il motivo. Allora Sam ricorda a tutti che stanno
@@ -412,9 +376,7 @@ tab#i
 	poi non li vedi più.
 
 	Poi, il delirio.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Per nessun motivo a me comprensibile, assistiamo ad oltre mezz'ora di
 	guerriglia urbana in cui una squadra dell'esercito (ossia, Lennox, Sam,
 	la ragazza e la compagnia degli inutili) attraversa la città con auto,
@@ -428,9 +390,8 @@ tab#i
 	non sarebbe figo se andassero direttamente lì, vero?
 
 	Poi arriva il finale…
-</p>
-</div><div class="section"><a id="I/VII"></a>
-<p>
+	sec#
+	id#i/vii
 	Eh, il finale.
 
 	Comincia così: gli Autobot sono prigionieri. &gt;9000 Decepticon che
@@ -460,9 +421,7 @@ tab#i
 
 	Il potentissimo Shockwave ne prende quel tanto che basta da ricevere il
 	colpo di grazia da Optimus, che passava giusto giusto di lì…
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Poi accade l'impossibile. Mentre Optimus e Sentinel si menano per vedere
 	chi ha ragione, la gnocca s'arrampica fin sotto il faccione di Megatron.
 
@@ -480,7 +439,6 @@ tab#i
 	Hey, gente, non pensate che questo possa essere il momento giusto per
 	cacciarci il bacio e magari metterci un anello? Eh? Bella trovata, no?
 	Originale, no? Fine del film.
-
 tab#ii
 	Pochi lo sanno, probabilmente nessuno dei possibili interessati l'ha
 	letto dai titoli, io lo sapevo. Leonard Nimoy ha offerto la sua voce, a
@@ -492,9 +450,7 @@ tab#ii
 	Ora, su come il vecchio Nimoy abbia interpretato il traditore mi
 	pronuncerò dopo aver sofferto il film in lingua originale. Intanto,
 	però, quel che ho sentito.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Io posso capire che abbia una certa età (c'ha ottant'anni, l'omino) e
 	che la voglia di lavorare ce l'abbia ancora, e se vengono a chiederti di
 	rifare un ruolo per Transformers magari lo farei anch'io.
@@ -507,9 +463,7 @@ tab#ii
 	saluto con la manina, la presa alla Mr.Spock, e alcune frasi. Una in
 	particolare. La frase pronunciata in punto di morte. Una frase
 	importante.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Le ultime parole di Spock sono qualcosa di piuttosto importante. Sono
 	storiche, evocano un significato e ricordi per molte persone. In
 	particolar modo pronunciate con quella voce.
@@ -525,13 +479,10 @@ tab#ii
 	Mr. Spock le pronuciò nel sacrificare la propria vita, Sentinel Prime
 	usa quelle stesse parole per giustificare un sacrificio planetario nel
 	tentativo di resuscitare un pianeta morto.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Questo è sbagliato.
-</p>
-</div><div class="section"><a id="II/II"></a>
-<p>
+	sec#
+	id#ii/ii
 	Prima non mi ci sono soffermato. Ma questa trama, come anche ma peggio
 	dei capitoli precedenti, è piena di buchi. È traforata, è sbrindellata,
 	è lacera.
@@ -545,9 +496,7 @@ tab#ii
 	Ed è esattamente così: la trama di questo film, soprattutto nell'ultima
 	ora non racconta nulla, serve soltanto a dirci dove si svolgerà la
 	prossima ingiustificata scena d'azione.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Trascurando le scene completamente inutili, che abbondano comunque
 	(genitori di Sam, vi sto fissando), non mancano le parti ingiustificate.
 
@@ -558,9 +507,7 @@ tab#ii
 	volante a fare il culo al mostro tentacolare.
 
 	Perché non è arrivato prima? Cos'altro stava facendo?
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Megatron.
 
 	Megatron (ancora una volta doppiato da Hugo Weaving, non dall'ultimo
@@ -579,9 +526,7 @@ tab#ii
 	e poi si lascia squartare in un colpo solo. Che cazzo.
 
 	Non c'ha neanche provato.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Il ponte spaziale. Nel film precedente, Jetfire poteva usarlo a piacere,
 	per trasportare se stesso e (molta) altra gente in qualunque punto dello
 	spazio (di fatto, si chiede se quello sia il pianeta giusto!). Stavolta,
@@ -594,9 +539,7 @@ tab#ii
 	prenderlo a botte (no, veramente, per riattivarlo bisogna prenderlo a
 	botte) ma mentr'è incagnato, il pianeta Cybertron rimane un po' di qua,
 	un po' di la. Mica esplode. Esplode solo alla fine.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	I soldati. L'invasione di Chicago.
 
 	Se mezz'ora prima il film ci dice che i Decepticon hanno in pungo la
@@ -615,9 +558,8 @@ tab#ii
 
 	E questo tralasciando il fatto che per ben due volte questi tizi si
 	lanciano con il paracadute.
-</p>
-</div><div class="section"><a id="II/III"></a>
-<p>
+	sec#
+	id#ii/iii
 	Sapete a che serve la spaccacoglioni? Fa due sole cose.
 
 	Passa metà del film a spaccare i coglioni a Sam e a Simmons
@@ -629,9 +571,8 @@ tab#ii
 	Ed è l'ex di Simmons. To', pensa un po', altra sottotrama romantica che
 	non ha il minimo peso e non frega a nessuno. Grazie, Bay, ne avevo
 	proprio bisogno.
-</p>
-</div><div class="section"><a id="II/IV"></a>
-<p>
+	sec#
+	id#ii/iv
 	Sapevate che i Decepticon avevano sempre avuto alleati umani? Beh, io
 	no… veramente, non lo sapeva nessuno.
 
@@ -639,18 +580,15 @@ tab#ii
 	dei Transformers. Poi Megatron, un film fa, ha deciso di mandare tutto a
 	puttane. E quindi questi tizi devono morire, ma solo ad un certo punto
 	del film, quando bisogna ricordare chi sono i cattivi.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	E quindi Laserbeak, ch'era sempre stato una spia, improvvisamente
 	diventa il più assassino tra tutti i Decepticon, e se ne va in giro
 	impunito ad uccidere gente a mazzi. Senza alcun motivo apparente.
 
 	Almeno lui fa quello che tutti gli altri sembrano dimenticarsi di poter
 	fare: lui si trasforma. Eh già, lui lo fa.
-</p>
-</div><div class="section"><a id="II/V"></a>
-<p>
+	sec#
+	id#ii/v
 	Vi ricordate di quando gli Autobot erano buoni e il loro leader Optimus
 	Prime era l'essere più retto e giusto della galassia?
 
@@ -664,9 +602,7 @@ tab#ii
 	Beh, a quanto pare lui se n'è dimenticato. O forse s'è semplicemente
 	incazzato, dopo essere stato preso a pesci in faccia dal governo USA per
 	quasi cinque anni.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Seppur pronunciando le parole «giustizia» e «libertà» un paio di volte,
 	Optimus sembra in preda ad una certa (giusta?) furia, gli girano i
 	coglioni e comincia ad infilare la rettitudine dentro i suoi avversari,
@@ -697,26 +633,21 @@ tab#ii
 	condivisibili, che fa? Lo interrompe, interrompe il suo povero e anziano
 	maestro, lo interrompe sulle sue ultime parole, lo fredda con un colpo
 	alla nuca senza appello. E lo fa con il cannone a fusione di Megatron.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Queste non sono cose fatte per la giustizia.
 
 	Queste non sono azioni degne del leader di quelli che «hanno ragione».
 
 	È fin troppo americano.
-</p>
-</div><div class="section"><a id="II/VI"></a>
-<p>
+	sec#
+	id#ii/vi
 	Ora, tutti quelli che son passati davanti ad un negozio di giocattoli
 	possono senza sforzo immaginare come non tutti i personaggi della serie
 	di giocattoli compaia nel film: sono semplicemente troppi.
 
 	E non è mai stato un problema. Non tutti i giocattoli compaiono nelle
 	rispettive serie.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Posso capire che una certa (spaventosa) quantità di Decepticon vengano
 	uccisi nei modi e nelle occasioni più disparate, ma gli Autobot?
 
@@ -734,9 +665,8 @@ tab#ii
 
 	E soprattutto, perché nessuno nota come i Decepticon vengano riclicati
 	in continuazione?
-</p>
-</div><div class="section"><a id="II/VII"></a>
-<p>
+	sec#
+	id#ii/viii
 	John Turturro.
 
 	Quello stesso John Turturro che interpreta l'agente speciale Simmons
@@ -749,9 +679,7 @@ tab#ii
 
 	Poi, purtroppo, viene lasciato indietro perché i “veri eroi” del film
 	sono altri.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	John Malkovich.
 
 	Cazzo, John Malkovich. Non uno a caso. Anch'esso ottimo nelle sue poche
@@ -759,9 +687,7 @@ tab#ii
 	minuti di follia pura assieme a Bumblebee.
 
 	Perché l'hanno lasciato fuori dal resto?
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Alan Tudyk.
 
 	Chi? Forse ve lo ricordate come quello che interpretava Wash, in
@@ -770,18 +696,15 @@ tab#ii
 	Altro fenomeno. Il suo personaggio è una delle poche cose azzeccate in
 	questo filmaccio. E ce l'hanno lasciato per dieci minuti, poi via per
 	sempre.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ora io vi dico, se 'sti stronzi di regista e sceneggiatori avessero
 	avuto un po' di vergogna, avrebbero potuto capire quanto i tre che ho
 	appena citato valessero fondamentalmente tutto il film.
 
 	Se questi tre personaggi avessero avuto lo spazio che meritavano avrei
 	potuto assistere a qualcosa di magnifico. Ma no.
-</p>
-</div><div class="section"><a id="II/VIII"></a>
-<p>
+	sec#
+	id#ii/viii
 	E poi la fine. Perché questo film qui è decisamente l'ultimo. Lo stesso
 	Bay l'aveva annunciato parecchio tempo fa.
 
@@ -789,9 +712,7 @@ tab#ii
 	gigantesca e multimiliardaria pila di sterco è un bene.
 
 	Ma non è bene. Perché finisce di merda.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	In due modi diversi.
 
 	In pratica tutti tutti tutti i cattivi sono stati uccisi. Se non altro,
@@ -808,31 +729,37 @@ tab#ii
 	gratuitamente di quanto sia entrato) e Ironhide. Lui effettivamente
 	l'hanno arrugginito a morte, alle spalle, senza onore. Brutta cosa.
 	Optimus ha perso un braccio, ma chissenefrega.
-</p><div class="outside"><p>
+	begin#outside
 		«Combatto Sentinel Prime»
-	</p><p style="text-align: right">
+
+		reverse#
 		LIKE A BOSS
 	
 		«Perdo un braccio»
-	</p><p style="text-align: right">
+		
+		reverse#
 		LIKE A BOSS
 	
 		«Arriva Megatron»
-	</p><p style="text-align: right">
+
+		reverse#
 		LIKE A BOSS
 	
 		«Gli strappo la testa»
-	</p><p style="text-align: right">
+
+		reverse#
 		LIKE A BOSS
 	
 		«Ammazzo anche quell'altro»
-	</p><p style="text-align: right">
+
+		reverse#
 		LIKE A BOSS
 	
 		«Vinco la guerra»
-	</p><p style="text-align: right">
+
+		reverse#
 		LIKE A BOSS
-</p></div><p>
+	end#outside
 	E poi, dopo due ore emmezza di esplosioni, cagate, yadda fuori luogo a
 	fiumi, tutti si dimenticano di chiudere la storia.
 
@@ -845,20 +772,14 @@ tab#ii
 	Sprecarsi almeno per metterci cinque minuti di finale? Neanche quello?
 
 	No. Niente «Io sono Optimus Prime, e…», niente di niente.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	E questa conclusione così troncata, così inutile è probabilmente la cose
 	più indegna che il film poteva fare.
-</p>
-</div><div class="section"><a id="II/IX"></a>
-<p>
+	sec#
+	id#ii/ix
 	Quindi, no.
-</p><h2>
-	Transformers: Dark Of The Moon
-</h2><h2 class="reverse">
-	No.
-</h2><p>
+	title#Transformers: Dark Of The Moon
+	titler#No.
 	Questo film è stata la più grossa delusione cinematografica. Questo film
 	m'ha deluso al livello di Spider-Man 3. Questo film è stato innaffiato
 	di soldi, gli è stato dato del potenziale. Ma tutto questo non è andato
@@ -871,9 +792,7 @@ tab#ii
 	effetti e dalla gnocca.
 
 	Requiescat in pace.
-</p>
-</div><div class="section"><a id="II/X"></a>
-<p>
+	id#ii/x
 	E infine, una piccola aggiunta. Mi sono visto il film (beh,
 	non tutto, le parti interessanti…) in lingua originale.
 
@@ -881,9 +800,7 @@ tab#ii
 	erano mosce anche prima.
 
 	Ecco quelle che meritano una nota.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Dino ha una sola battuta, nel film, ed è «On the ground,
 	<span class="em">per favore</span>. And stay there». Perché
 	sia italiano nessuno lo sa.
