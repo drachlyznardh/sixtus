@@ -16,7 +16,9 @@
 		}
 
 		public function size () {
-			return count($this->content);
+			#echo "Tabsize is [".count($this->content)."]\n";
+			if ($this->content) return count($this->content);
+			else return 0;
 		}
 
 		public function getName () {

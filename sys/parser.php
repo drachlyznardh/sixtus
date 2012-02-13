@@ -82,11 +82,15 @@
 					}
 					return;
 				case 'tab':
-					if (!$this->override && $this->tab->size()) {
-						$this->tab->parseLine(-1, 'sec', false, false);
-						$this->tab->parseLine(-1, 'tid', false, 'Continua#'.$content.'##…');
-					}
 					$this->tab->close();
+					$tabsize = $this->tab->size();
+					#echo ("Tab:Tabsize is [$tabsize], !override [".(!$this->override)."]\n");
+					if (!$this->override && $tabsize) {
+						$this->tab->parseLine(-1, 'sec', false, false);
+						#$this->tab->parseLine(-1, 'tid', false, 'Continua ['.$tabsize.']#'.$content.'##…');
+						$this->tab->parseLine(-1, 'tid', false, 'Continua#'.$content.'##…');
+						$this->tab->close();
+					}
 					if ($this->environment == LYZ_PAGE) {
 						if ($this->tab->size()) $this->page[] = $this->tab;
 						if (!$this->d->tab['name']) $this->d->tab['name'] = $content;

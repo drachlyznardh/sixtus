@@ -71,8 +71,8 @@ tab#ii
 stop#page
 start#side
 	title#Due storie
-	pre#<ol>
-			li#tid#La prima#i
-			li#tid#La seconda#ii
-	pre#</ol>
+	begin#ol
+		li#tid#La prima#i
+		li#tid#La seconda#ii
+	end#ol
 stop#side
