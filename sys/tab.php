@@ -15,9 +15,8 @@
 			$this->section = new Section ($this->d);
 		}
 
-		public function isEmpty () {
-			if ($this->content) return count($this->content) == 0;
-			return true;
+		public function size () {
+			return count($this->content);
 		}
 
 		public function getName () {

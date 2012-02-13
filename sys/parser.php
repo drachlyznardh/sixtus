@@ -82,9 +82,13 @@
 					}
 					return;
 				case 'tab':
+					if (!$this->override && $this->tab->size()) {
+						$this->tab->parseLine(-1, 'sec', false, false);
+						$this->tab->parseLine(-1, 'tid', false, 'Continua#'.$content.'##…');
+					}
 					$this->tab->close();
 					if ($this->environment == LYZ_PAGE) {
-						if (!$this->tab->isEmpty()) $this->page[] = $this->tab;
+						if ($this->tab->size()) $this->page[] = $this->tab;
 						if (!$this->d->tab['name']) $this->d->tab['name'] = $content;
 						$this->tab = new Tab ($this->d, $content);
 					} else die ('Cannot TAB#'.$content.' @line'.$lineno);
@@ -155,7 +159,7 @@
 		private function switchEnvironment ($new, $tabname=false) {
 
 			$this->tab->close();
-			if (!$this->tab->isEmpty()) switch ($this->environment) {
+			if ($this->tab->size()) switch ($this->environment) {
 				case LYZ_PAGE:
 					$this->page[] = $this->tab;
 					$this->tab = new Tab($this->d, $tabname);
