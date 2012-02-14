@@ -3,6 +3,16 @@ prev#News/2012/01/#Gennaio 2012
 #next#News/2012/02/#Febbraio 2012
 alltab#
 start#page
+tab#14
+	<em>
+	link##14/02/2012##14
+	</em> / <strong>
+	link#Extra/#Storie#contenuti#storie
+	</strong>
+	title#Quell'altra storia (e non solo)
+	Ieri non ho finito di scrivere. Ho finito
+	link#Storie/2012/LXXV/#oggi#iii##.
+	Ci sono un po' di cose in più.
 tab#13
 	<em>
 	link##13/02/2012##13
@@ -56,6 +66,9 @@ tab#07
 stop#page
 start#side
 	stitle#link#News/2012/02/#Febbraio### 2012
+
+	<em>14/02</em> –
+	link#Storie/2012/LXXV/#Quell'altra storia#iii
 
 	<em>13/02</em> –
 	link#Storie/2012/LXXV/#Quella storia
