@@ -92,6 +92,8 @@ tab#indice
 		li#link#Recensioni/Film/XXIII/#Zombieland### – 2009
 		li#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens### – 2011
 		li#link#Recensioni/Show/XXV/#Chuck### – 2007~2012
+		li#link#Recensioni/Film/XXVI/#Meet Joe Black### – 1998
+		li#link#Recensioni/Film/XXVII/#Il discorso del re### – 2010
 	end#ol
 	end#double
 	sec#

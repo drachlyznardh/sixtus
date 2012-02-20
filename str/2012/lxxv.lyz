@@ -1,6 +1,6 @@
 title#Quella storia#Che non esiste
 prev#Storie/2012/LXXIV/#La prima canzone
-#next#Storie/2012/LXXVI/#
+next#Storie/2012/LXXVI/#Niente di particolare
 start#page
 tab#i
 	title#Quella storia
@@ -164,6 +164,25 @@ tab#vi
 	vogliono delle rose.
 
 	Comprerò la carta scendendo…
+tab#vii
+	L'ultima cosa.
+	
+	Presa la carta, piegate due rose, piegati due steli, piegata una rosa,
+	piegato uno stelo, piegata la quarta rosa, buonanotte, passato il gatto,
+	buongiorno, sparito un fiore, piegata la quinta rosa, piegato il quarto
+	stelo.
+
+	begin#outside
+		Ero a prove, piegavo, un tizio passa e domanda
+		inline#em#Già sai a quale ragazza la darai?
+		
+		Rispondo che tutta la yadda è cominciata per caso, perché al baretto me
+		l'hanno chieste, poi alla mensa le han viste e l'han volute anche lì.
+
+		Nessuno ha creduto che fosse vero.
+	end#outside
+
+	E insomma. Credetemi quando vi dico che piegare stanca. Perché sono stanco.
 stop#page
 start#side
 	tid#Per il Bolo#i
@@ -179,4 +198,7 @@ start#side
 	
 	Extra II –
 	tid#Le altre quattro rose#vi
+
+	Extra III –
+	tid#L'ultimo#vii
 start#side
