@@ -7,6 +7,15 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>To', guarda, il GODS s'è dimenticato il feed.</title>
+			<description>Come sempre, ma peggio. Stavolta, ho finito una storia
+			e una recensione e me ne sono dimenticato per tre interi giorni. E
+			intanto, siccome ho altre cose da fare, (ri)annuncio questa roba. E
+			il resto arriverà quando ne avrò briga.</description>
+			<pubDate>Mon, 20 Feb 2012 15:05:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/02/#20</guid>
+		</item>
+		<item>
 			<title>Quella storia</title>
 			<description>E anche quell'altra, la storia della prima storia (non
 			quella, la prima) e anche qualcos'altro.</description>
@@ -18,13 +27,6 @@
 			<description>Brutto giorno, ma buone visioni.</description>
 			<pubDate>Wed, 08 Feb 2012 23:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/02/#08</guid>
-		</item>
-		<item>
-			<title>La prima canzone</title>
-			<description>Ho fatto parecchia fatica a scrivere questa storia. E
-			non è servito a granché</description>
-			<pubDate>Tue, 07 Feb 2012 22:15:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/02/#07</guid>
 		</item>
 	</channel>
 </rss>
