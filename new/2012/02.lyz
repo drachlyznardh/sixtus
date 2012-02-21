@@ -3,6 +3,17 @@ prev#News/2012/01/#Gennaio 2012
 #next#News/2012/02/#Febbraio 2012
 alltab#
 start#page
+tab#21
+	<em>
+	link##21/02/2012##21
+	</em> / <strong>
+	link#Extra/#Storie#contenuti#storie
+	</strong>
+	title#Niente di particolare
+	Una storia di qualche giorno fa, una storia di sabato e una storia di oggi.
+	Tutte nella
+	link#Storie/2012/LXXVI/#stessa
+	storia.
 tab#17
 	<em>
 	link##17/02/2012##17
@@ -87,6 +98,9 @@ tab#07
 stop#page
 start#side
 	stitle#link#News/2012/02/#Febbraio### 2012
+
+	<em>21/02</em> –
+	link#Storie/2012/LXXVI/#Niente di particolare
 
 	<em>17/02</em> –
 	link#Storie/2012/LXXV/#Quegli ultimi quattro fiori#vii

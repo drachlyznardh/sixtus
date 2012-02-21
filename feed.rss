@@ -7,6 +7,14 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Niente di particolare</title>
+			<description>Doveva essere una sbrodolata piena di filosofia, di
+			scelte di vita, di illuminazione; ma poi ho cambiato idea e mi sono
+			messo a raccontare altre cose…</description>
+			<pubDate>Tue, 21 Feb 2012 17:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/02/#21</guid>
+		</item>
+		<item>
 			<title>To', guarda, il GODS s'è dimenticato il feed.</title>
 			<description>Come sempre, ma peggio. Stavolta, ho finito una storia
 			e una recensione e me ne sono dimenticato per tre interi giorni. E
@@ -21,12 +29,6 @@
 			quella, la prima) e anche qualcos'altro.</description>
 			<pubDate>Tue, 14 Feb 2012 16:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/02/#14</guid>
-		</item>
-		<item>
-			<title>Due recensioni</title>
-			<description>Brutto giorno, ma buone visioni.</description>
-			<pubDate>Wed, 08 Feb 2012 23:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/02/#08</guid>
 		</item>
 	</channel>
 </rss>
