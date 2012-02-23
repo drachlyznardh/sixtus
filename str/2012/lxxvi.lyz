@@ -178,6 +178,83 @@ tab#iii
 	br#
 	reverse#
 	Dovrò correre tanto.
+tab#iv
+	Fatte le mie corse, parve di non trovare alcun vero motivo contro questa
+	possibilità; neanche veri motivi pro, in realtà. Ma comunque niente di
+	concreto per non provare. E allora ho provato.
+	title#Il primo giorno di preparativi
+	Sveglia presto (per opportuni valori di presto) e via verso il CIAL, luogo
+	misterioso presso il quale si ottengono certificati di lingue. Cloppete
+	cloppete, trovo al CIAL una coda di quaranta persone; notando che di
+	mercoledì le segreterie (così come il presidio) tengono aperto anche un paio
+	d'ore il pomeriggio, decido di salire in facoltà e fare delle cose nel
+	mentre, per poi tornare al CIAL in un secondo momento.
+
+	Salgo in facoltà. Tra la corsa del giorno prima, l'atteso ammontare di briga
+	necessaria per affrontare la giornata e l'età (non più trascurabile, a
+	quanto pare) sono arrivato in facoltà stanco morto. Faccio cose, prendo
+	caffé, chiedo in giro, contatto <em>Sgaggio</em> in proposito e poi tento
+	più e più volte di acchiappare il <em>Buddy</em>, che sta facendo lezione;
+	ma lo manco, lo inseguo nel suo ufficio e per caso lo incrocio sulle scale,
+	domando al volo e c'accordiamo per un incontro nel pomeriggio.
+
+	Vado a pranzo, a quel punto. Mangio mangio mangio, prendo il caffé e me ne
+	scendo nuovamente in città. Arrivo al CIAL e trovo esattamente la stessa
+	coda della mattina. Al grido di IMPOSSIBRU.JPG, mi metto ad aspettare…
+	scopro che quasi tutti sono lì per iscriversi ai corsi d'inglese (fuffa
+	fuffa fuffaffero) o per pagare suddetti corsi; grazie a questo fatto, la
+	coda scorre piuttosto in fretta. Nel giro di cinque minuti, eccomi al
+	bancone:
+	begin#outside
+		speak#gods#Salve, sono il GODS
+		speak#em#Salve, sono il CIAL
+		speak#gods#Scopro che m'occorre una certificazione d'inglese alta alta altissima (TOEFL oppure IELTS) entro il 10 d'aprile, e sono qui per scoprire come si fa
+		speak#em#Non lo si fa
+		speak#Gods#Wat
+		speak#em#Eh, non lo si fa
+		speak#gods#Ma non siete voi il CIAL, quello che fa queste cose?
+		speak#em#In teoria, ma facciamo soltanto corsi fuffa per le certificazioni fuffa. E se tu vuoi una certificazione figa, te la vai a cercare da tizi più fighi di noi
+	end#outside
+	Almeno ho fatto in fretta e sono potuto tornare in facoltà. Deliziosa
+	giornata di sole, in verità; ma il resto… arrivo, trovo un buco e m'infilo
+	tra le sedie davanti al presidio, il mio turno arriva in un attimo e almeno
+	lì ottengo una notizia non disutile. Sapete che deve fare uno per pagare le
+	tasse e risultare iscritto? Deve solo pagare le tasse, il resto “verrà
+	creato in seguito”. Buuuuuuuula.
+
+	Corro dal <em>Buddy</em>, e non lo trovo. Allora ricontrollo dopo un po', e
+	non lo trovo. Allora aspetto ancora un pochettino e non lo trovo. Allora
+	muoio, gli scrivo e me ne vado a casa. Fu sera, fu mattina.
+	sec#
+	title#Il secondo giorno di preparativi
+	Arrivo di corsa (puff puff, l'età che avanza si fa sentire) e mi sbrodolo in
+	ufficio dal <em>Buddy</em>. Gli domando come fanno 30 crediti di
+	specializzazione del terzo semestre a bastare per tutto. Lui mi racconta una
+	carrettata di yadda.
+
+	Scopro che la parte d'economia e gestione e management e marketing non è
+	affatto trascurabile, tanto che il cosiddetto <em>minor</em> ha tutta una
+	tesina di suo. Questo comporterebbe il non diventare una scimmia
+	<code>embedd</code>ara, bensì una scimmia <code>embedd</code>ara con il
+	colletto.
+
+	Poi il <em>Buddy</em> pronuncia l'emblematica frase
+	begin#outside
+		speak#em#Non è l'unica alternativa. Potresti anche andare a Sant'Anna
+	end#outside
+	reverse#
+	><code>Implying</code> che io possa tenere la media richiesta ;_;
+	br#
+	Ma per il resto, mi consiglia di andare a prendere un professore con il
+	quale abbia un buon voto. Lacrime solcano il mio viso nel sentire “buon
+	voto”, ma dopo esserci sciolto per terra mi rimetto assieme. Vado a piazzare
+	una tagliola all'uscita di <em>Algoritmi</em> perché accalappi il
+	<em>Montrezzord</em> all'uscita. Tolti i soliti tizi che domando di spostare
+	gli orari del <code>laboratoire</code>
+	begin#outside
+		speak#em#Per questo dovrete mettervi d'accordo con <span class="war">War</span> LOL
+	end#outside
+	io domando e lui risponde. Sembrerebbe fatta. Ma intanto, sono stanco morto.
 stop#page
 start#side
 	Nessuno mi sta scrivendo per quella storia del banner ;_; Questo spazio
@@ -191,4 +268,6 @@ start#side
 	tid#Il giro della Maranza#ii
 	
 	tid#Quell'incontro sull'EIT ICT Labs#iii
+
+	tid#Preparativi#iv
 stop#side

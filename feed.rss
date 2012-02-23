@@ -8,6 +8,12 @@
 		<language>it</language>
 		<item>
 			<title>Niente di particolare</title>
+			<description>Aggiornamenti di ieri e oggi</description>
+			<pubDate>Thu, 23 Feb 2012 18:15:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/02/#23</guid>
+		</item>
+		<item>
+			<title>Niente di particolare</title>
 			<description>Doveva essere una sbrodolata piena di filosofia, di
 			scelte di vita, di illuminazione; ma poi ho cambiato idea e mi sono
 			messo a raccontare altre cose…</description>
@@ -22,13 +28,6 @@
 			il resto arriverà quando ne avrò briga.</description>
 			<pubDate>Mon, 20 Feb 2012 15:05:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/02/#20</guid>
-		</item>
-		<item>
-			<title>Quella storia</title>
-			<description>E anche quell'altra, la storia della prima storia (non
-			quella, la prima) e anche qualcos'altro.</description>
-			<pubDate>Tue, 14 Feb 2012 16:00:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/02/#14</guid>
 		</item>
 	</channel>
 </rss>
