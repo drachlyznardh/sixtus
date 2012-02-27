@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Proseguono i preparativi.</title>
+			<description>In realtà no, sono stati terminati. Ma ci sono altre
+			cose.</description>
+			<pubDate>Mon, 27 Feb 2012 23:55:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/02/#27</guid>
+		</item>
+		<item>
 			<title>Niente di particolare</title>
 			<description>Aggiornamenti di ieri e oggi</description>
 			<pubDate>Thu, 23 Feb 2012 18:15:00 +0100</pubDate>
@@ -20,15 +27,6 @@
 			<pubDate>Tue, 21 Feb 2012 17:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/02/#21</guid>
 		</item>
-		<item>
-			<title>To', guarda, il GODS s'è dimenticato il feed.</title>
-			<description>Come sempre, ma peggio. Stavolta, ho finito una storia
-			e una recensione e me ne sono dimenticato per tre interi giorni. E
-			intanto, siccome ho altre cose da fare, (ri)annuncio questa roba. E
-			il resto arriverà quando ne avrò briga.</description>
-			<pubDate>Mon, 20 Feb 2012 15:05:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/02/#20</guid>
-		</item>
-	</channel>
+		</channel>
 </rss>
 

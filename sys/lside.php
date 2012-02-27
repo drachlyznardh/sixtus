@@ -5,7 +5,7 @@
 		<?=$d->link('News/Archivio/', 'Archivio')?>
 		[ <?=$d->link('News/2011/', '2011')?> /
 		<?=$d->link('News/2012/', '2012')?> ]
-		/ <?=$d->link('Extra/Guida/', 'FAQ')?>
+		/ <?=$d->link('Extra/', 'FAQ | Domande | Extra')?>
 	</p>
 </div><br /><div class="section">
 	<h2 class="reverse">
