@@ -1,8 +1,10 @@
 title#Super Sentai#In Giappone li sanno fare meglio che in America
 prev#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
 next#Recensioni/Show/XXII/#Dollhouse
-
 start#page
+tab#intro
+	Ah, <em>Sūpa Sentai</em>!!! Una cosa davvero buona. Per i pochi a cui piace.
+	Ma non siamo poi così pochi.
 tab#m2011
 	titler#Gokaiger Goseiger
 	title#Super Sentai 199 Hero Grand Battle
@@ -59,7 +61,14 @@ tab#m2011
 	titler#Best Fukken Movie Evar!!1!1!!!one!!one!!!eleven!!!1!
 stop#page
 start#side
-	title#Super Sentai
+	tid#Mai sentito?#intro
+	title#35 anni di Super Sentai
+	stitle#Film
+	tid#199 Hero Grand Battle#m2011
 
-	p#tid#199 Hero Grand Battle#m2011
+	[Gokaiger]
+	tid#Flying Ghost Ship#flyingghostship
+	br#
+	stitle#Serie
+	tid#Kaizoku Sentai Gokaiger#gokaiger## – 2011~2012
 stop#side

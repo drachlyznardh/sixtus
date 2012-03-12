@@ -4,7 +4,7 @@ start#side
 	p#link#News/2012/01/#Gennaio
 	sec#
 	title#Notizie
-	include@as@content#new/2012/01#side
+	include#new/2012/01#side@as@content
 stop#side
 start#page
 	In ordine crologico inverso, le notizie del 2012.

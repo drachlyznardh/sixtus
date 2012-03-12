@@ -50,9 +50,6 @@ tab#intro
 	imparziale, un po' più seriamente critico. Le cose veramente orribili le
 	metterò nella
 	link#Recensioni/Film/Brutti/#sezione apposita###.
-
-tab#classifica
-	include#review/classifica#page
 tab#categorie
 	E siccome le recensioni cominciano ad essere tante, ho diviso
 	l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
@@ -62,6 +59,9 @@ tab#categorie
 	include#review/game/index#page
 	include#review/show/index#page
 	include#review/book/index#page
+tab#classifica
+	title#Classifica
+	include#review/classifica#page@as@content
 tab#indice
 	id#cronologico
 	title#Indice cronologico
@@ -94,37 +94,45 @@ tab#indice
 		li#link#Recensioni/Show/XXV/#Chuck### – 2007~2012
 		li#link#Recensioni/Film/XXVI/#Meet Joe Black### – 1998
 		li#link#Recensioni/Film/XXVII/#Il discorso del re### – 2010
+		li#link#Recensioni/Show/XXVIII/#Macross### – 1982~2011
 	end#ol
 	end#double
 	sec#
 	id#categoria
 	title#Per categoria
 	begin#double
-		include@as@content#review/film/index#side
-		include@as@content#review/brutti/index#side
-		include@as@content#review/game/index#side
-		include@as@content#review/show/index#side
-		include@as@content#review/book/index#side
+		include#review/film/index#side@as@content
+		include#review/brutti/index#side@as@content
+		include#review/game/index#side@as@content
+		include#review/show/index#side@as@content
+		include#review/book/index#side@as@content
 	end#double
 	sec#
 	id#incorso
 	title#In corso d'opera…
-	Nel caso siate veramente impazienti, o nel caso vogliate
-	anticipazioni, o se proprio volete farvi i cazzi miei, questo è
-	l'elenco delle cose che sto facendo adesso.
-
-	Questo elenco è abbastanza empirico: non tutto quello che recensisco
-	finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
+	Nel caso siate veramente impazienti, o nel caso vogliate anticipazioni, o se
+	proprio volete farvi i cazzi miei, questo è l'elenco delle cose che sto
+	facendo adesso. Questo elenco è abbastanza empirico: non tutto quello che
+	recensisco finisce nell'elenco; non tutto quello che c'è nell'elenco verrà
 	recensito con certezza.
 	begin#double
 	begin#ul
-		li#Pirate Sentai Gokaiger – ep42/??
-		li#Kamen Rider Fourze – ep6/??
-		li#Gundam AGE – ep10/??
-		li#Macross 7 – ep3/49
-		li#My Little Pony: Friendship is Magic – ep15/26
+		li#Spec-Ops Cell Sentai Gobuster – <code>ep1/~51?</code>
+		li#Kamen Rider Fourze – <code>ep16/~51?</code>
+		li#Gundam AGE – <code>ep19/??</code>
+		li#My Little Pony: Friendship is Magic – <code>s02e19</code>
+		li#After War Gundam X – <code>ep02/39</code>
+		li#Castle – <code>s03e16</code>
+		li#Transformers: Prime – <code>s02e01</code>
+		li#How I met your mother – <code>s07e17</code>
 	end#ul
 	end#double
+	Ma d'altro canto, tecnicamente sono ad un buon punto anche con qualche altro
+	titolo.
+	begin#ul
+		li#Dynasty Warrior Gundam 3 (PS3) – <code>49%</code>
+		li#Demon's Souls (PS3) – <code>60%</code>
+	end#ul
 stop#page
 start#side
 	tid#Perché le recensioni?#intro

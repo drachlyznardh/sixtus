@@ -14,7 +14,7 @@ start#page
 	include#new/2012/01#29
 stop#page
 start#side
-	include@as@content#new/2012/02#side
+	include#new/2012/02#side@as@content
 	sbr#
-	include@as@content#new/2012/01#side
+	include#new/2012/01#side@as@content
 stop#side

@@ -1,37 +1,5 @@
 title#Guida#Perché la gente arriva ma non sa dov'è la roba
 next#Extra/Record/#Record
-
-start#side
-
-	p#tid#Perché una guida?#intro
-
-	p#tid#L'Autore#gods
-	e i suoi
-	tid#Allegri compagni#compagni
-	title#Guida
-	stitle#tid#Contenuti#contenuti
-	reverse#
-	tid#Storie#contenuti#Storie
-	/
-	tid#MiniStorie#contenuti#MiniStorie
-	/
-	tid#Recensioni#contenuti#Recensioni
-
-	reverse#
-	tid#Tru Naluten#contenuti#TruNaluten
-	/
-	tid#NaNoWriMo#contenuti#NaNoWriMo
-	stitle#tid#Meta#meta
-	reverse#
-	tid#Extra#meta#Extra
-	/
-	tid#Modi#meta#Modi
-	/
-	tid#Stili#meta#Stili
-	/
-	tid#Voci#meta#Voci
-stop#side
-
 start#page
 tab#intro
 	Questa è la paginetta che ti spiega le cose.
@@ -242,4 +210,33 @@ tab#meta
 	Potete passare dalla modalità standard (la mia) alle altre calcando
 	qualche link in alto a sinistra. Se invece sapete scrivere, potete
 	infilare le parole chiave direttamente nell'URL.
-Stop#Page
+stop#page
+start#side
+	tid#Perché una guida?#intro
+
+	p#tid#L'Autore#gods
+	e i suoi
+	tid#Allegri compagni#compagni
+	title#Guida
+	stitle#tid#Contenuti#contenuti
+	reverse#
+	tid#Storie#contenuti#Storie
+	/
+	tid#MiniStorie#contenuti#MiniStorie
+	/
+	tid#Recensioni#contenuti#Recensioni
+
+	reverse#
+	tid#Tru Naluten#contenuti#TruNaluten
+	/
+	tid#NaNoWriMo#contenuti#NaNoWriMo
+	stitle#tid#Meta#meta
+	reverse#
+	tid#Extra#meta#Extra
+	/
+	tid#Modi#meta#Modi
+	/
+	tid#Stili#meta#Stili
+	/
+	tid#Voci#meta#Voci
+stop#side

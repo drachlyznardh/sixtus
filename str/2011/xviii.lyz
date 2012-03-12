@@ -45,14 +45,14 @@ start#page
 		
 			Ecco un frammento di quello che sono stato in grado di fare.
 		</p><div class="outside"><pre>
-pre#	public abstract class SimpleMachine&lt;
-pre#		L extends SimplePeer,
-pre#		N extends StateSignal,
-pre#		K1 extends Enum&lt;K1&gt;,
-pre#		K2 extends Enum&lt;K2&gt;
-pre#		B extends SimpleMap&lt;L, N, K1, K2&gt;&gt;,
-pre#	extends StateMachine&lt;L, B, N, K1, K2&gt;
-pre#	implements Bindable&lt;B&gt;
+	public abstract class SimpleMachine&lt;
+		L extends SimplePeer,
+		N extends StateSignal,
+		K1 extends Enum&lt;K1&gt;,
+		K2 extends Enum&lt;K2&gt;
+		B extends SimpleMap&lt;L, N, K1, K2&gt;&gt;,
+	extends StateMachine&lt;L, B, N, K1, K2&gt;
+	implements Bindable&lt;B&gt;&gt;
 		</pre></div><p>
 			E posso giurarvi che quel codice era perfettamente compilante e
 			funzionante.

@@ -1,5 +1,4 @@
 start#page
-tab#classifica
 	pre#<div class="doublecol">
 	id#awesome
 	stitle#Fucking awesome!!!
@@ -11,6 +10,7 @@ tab#classifica
 		li#link#Recensioni/Show/XV/#Transformers: Prime
 		li#link#Recensioni/Show/XXI/#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle#M2011
 		li#link#Recensioni/Film/XXVI/#Meet Joe Black
+		li#link#Recensioni/Show/XXI/#Kaizoku Sentai Gokaiger#gokaiger
 	end#ul
 	br#
 	id#buoni
@@ -26,11 +26,10 @@ tab#classifica
 		e
 		link#Recensioni/Film/XVII/#Rambo: First Blood part II#II
 		
-		p#link#Recensoni/Film/XIX/#Ed Wood
-
-		p#link#Recensioni/Show/XXV/#Chuck
-
-		p#link#Recensioni/Film/XXVII/#Il discorso del re
+		li#link#Recensoni/Film/XIX/#Ed Wood
+		li#link#Recensioni/Show/XXV/#Chuck
+		li#link#Recensioni/Film/XXVII/#Il discorso del re
+		li#link#Recensioni/Show/XXVIII/#Macross 7#macross7
 	end#ul
 	br#
 	id#lasciano
@@ -70,6 +69,8 @@ tab#classifica
 			link#Recensioni/Libri/XII/#L&apos;ordine della Fenice#V
 			e
 			link#Recensioni/Libri/XII/#Il principe mezzosangue#VI
+			e anche
+			link#Recensioni/Libri/XII/#I doni della Morte#vii
 	end#ul
 	br#
 	id#bay

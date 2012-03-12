@@ -10,7 +10,6 @@ tab#i
 	come giorno della resa dei conti.
 
 	E invece…
-
 	sec#
 	title#La domenica dell'eleganza
 	E mentre me ne sto nel mio candido lettino arriva mio padre e mi chiama:
@@ -29,7 +28,6 @@ tab#i
 	scrivania: &gt;9000 oggetti vecchi, unitili e per la maggior parte
 	appartenenti al fratello che ora vive in Spagna, onde per cui buttarli o
 	non buttarli? e varie altre cose poco funzionali.
-
 	sec#
 	Ma non solo! Perché ad una certa ora (erano le 11:00 del mattino) arriva
 	una telefonata, che andò così:
@@ -65,7 +63,6 @@ tab#i
 	spiegare ai miei genitori gli eventi che compongono ‘The Dark Knight’.
 	Film magnifico, ma difficilmente spiegabile a due genitori sonnolenti
 	che non conoscono l'argomento e non intendono impegnarsi.
-
 tab#ii
 	title#Il lunedì della verità
 	Ma la parte importante è che, nonostante tutto, la mia digestione dei
@@ -79,7 +76,6 @@ tab#ii
 	cerca di rogne. Indipercui acciocché quindi, nessun nuovo particolare.
 
 	Se non libero, sono certamente molto meno prigioniero.
-
 	sec#
 	Ma veramente, la verità è un'altra. La verità è che non sono convinto.
 	Di un sacco di cose.
@@ -114,7 +110,6 @@ tab#ii
 	meno spazio. Applicata poi retroattivamente la patch (versione
 	0.7.3betaII, quasi come il Robinson R2…) ho ottenuto $belNumero di
 	mazzi pronti per il trasporto.
-
 	sec#
 	Ma non prima di giovedì. Giovedì, come quello della settimana
 	precedente, avrei forse potuto beccare $rossa nei suoi laboratori… ma
@@ -143,7 +138,6 @@ tab#ii
 	Ed è a quel punto che decido di piegare quel che ho piegato. E l'ho
 	fatto bene. Ma in questo modo mi ritrovo ad aver buttato un'altra
 	settimana…
-
 	sec#
 	Nel frattempo, per il bene o per il male, ogni volta che vedo qualcosa
 	di vagamente interessante mi viene in mente che, sinceramente, $rossa è
@@ -202,7 +196,6 @@ tab#ii
 
 	Beh, veramente, si comincerebbe martedì prossimo… eh, 'sti cazzi…
 	Padre, dove m'hai mandato?
-
 tab#iii
 	E così passa il weekend, con i colpi al cuore.
 
@@ -228,7 +221,6 @@ tab#iii
 	la cerco al bar, quando entro. Non c'è. Mangio in compagnia, almeno.
 
 	Ma dopo pranzo, arriva il fulmine a ciel sereno.
-
 	sec#
 	Accanto alla porta del bar stanno i bidoni, ben separati. Nel gettare il
 	piatto, la busta della maionese, i tovaglioli, passo vicino alla porta.
@@ -242,7 +234,6 @@ tab#iii
 
 	Nell'uscire, poi, tentai di controllare se lei e le sue amiche stessero
 	mangiando. Non riuscii a vedere.
-
 	sec#
 	Quindi, ce ne torniamo tutti in aulastudio. Scelgo di ascoltarmi ‘Iron
 	man’ dei ‘Black Sabbath’, che ci sta bene. Rimango solo con me stesso,
@@ -276,7 +267,6 @@ tab#iii
 	Sono arrivato alla porta, mi sono fermato un attimo dietro il paravento,
 	che evita che l'aria fredda arrivi direttamente sulla schiena di chi
 	mangia.
-
 	sec#
 	Mi par di ricordare qualche faccia, di qualche passante, a dire
 	begin#outside
@@ -312,9 +302,8 @@ tab#iii
 	precedente, ho riflettuto un miginino ed ho risposto
 	begin#outside
 		speak#gods#Uh… niente?
-	end#outside	
+	end#outside
 	Quindi ho ringraziato e me ne sono andato.
-
 	sec#
 	E appena messo il piede fuori dalla porta, mi sono sentito libero e ben
 	degno d'indossare il mio cappello.
@@ -322,9 +311,10 @@ tab#iii
 	Ancora non conosco il suo nome. Ma va bene così.
 stop#page
 start#side
-title#Il lunedì della verità
-pre#<ol>
-li#tid#La domenica dell'eleganza#i
-li#tid#Il lunedì della verita#ii
-li#tid#Il martedì della verita#iii
+	title#Il lunedì della verità
+	begin#ol
+		li#tid#La domenica dell'eleganza#i
+		li#tid#Il lunedì della verita#ii
+		li#tid#Il martedì della verita#iii
+	end#ol
 stop#side
