@@ -99,13 +99,9 @@
 		}
 
 		public function show() {
-			echo ('<h2>Sources</h2>');
-			foreach($this->sources as $source) {
-				echo ('<div style="width:32%; padding-right:10px; float:left">');
-				$source->show();
-				echo ('</div>');
-			}
-			echo ('<div style="width:100%;float:none;clear:both"></div>');
+			echo ('<h2>Sources</h2><div class="doublecol">');
+			foreach($this->sources as $source) $source->show();
+			echo ('</div>');
 		}
 
 		public function find($tokens) {

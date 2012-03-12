@@ -27,96 +27,99 @@
 			return true;
 		}
 
-		private function recursive ($lineno, $content) {
-			if (strpos($content, '#')) {
-				list($rcmd, $rcontent) = split ('#', $content, 2);
-				if (strpos($rcmd, '@')) {
-					$opt = split ('@', $content);
-					$this->parseLine ($lineno, $opt[0], $opt, $rcontent);
-				} else $this->parseLine ($lineno, $rcmd, false, $rcontent);
-			} else $this->mkLine($content);
+		private function recursive ($lineno, $args) {
+				
+			if (count($args) > 2) {
+				array_shift($args);
+				$this->parseLine ($lineno, $args[0], $args);
+			} else $this->parseLine ($lineno, false, $args);
 		}
 
-		public function parseLine ($lineno, $cmd, $opt, $content) {
+		public function parseLine ($lineno, $cmd, $args) {
+
+			if (strpos($cmd, '@')) {
+				$frag = split ('@', $cmd);
+				$cmd = $frag[0];
+				array_shift($frag);
+			}
 
 			switch ($cmd) {
 				case '':
-					if ($content) {
-							$this->mkText();
-						if (preg_match('/^\\>.*$/', $content)) {
-							$this->mkLine('<span class="green">'.$content.'</span>');
+					if ($args[1]) {
+						$this->mkText();
+						if (preg_match('/^\\>.*$/', $args[1])) {
+							$this->mkLine('<span class="green">'.$args[1].'</span>');
 						} else {
-							$this->mkLine($content);
+							$this->mkLine($args[1]);
 						}
 					} else $this->unmkText();
 					break;
 				case 'p':
-					$this->mkText($opt);
-					$this->recursive($lineno, $content);
-					break;
 				case 'li':
-					$this->mkText($opt);
-					$this->recursive($lineno, $content);
 					$this->unmkText();
+					$this->mkText();
+					$this->recursive($lineno, $args);
+					#$this->unmkText();
 					break;
 				case 'reverse':
 					$this->unmkText();
 					$this->mkText(' class="reverse"');
 					$this->isText = true;
-					if ($content) $this->recursive ($lineno, $content);
+					if ($args[1]) $this->recursive ($lineno, $args[1]);
 					break;
 				case 'id':
 					$this->unmkText();
-					$this->mkLine('<a id="'.ucwords($content).'"></a>');
+					$this->mkLine('<a id="'.ucwords($args[1]).'"></a>');
 					break;
 				case 'br':
 					$this->unmkText();$this->mkline('<br />'); break;
 				case 'clear':
 					$this->unmkText();
-					switch ($content) {
+					switch ($args[1]) {
 						case 'both':
 						case 'left':
 						case 'right':
-							$this->mkline('<div style="clear:'.$content.'"></div>');
+							$this->mkline('<div style="clear:'.$args[1].'"></div>');
 							break;
 						default:
-							die ('Secton->Cannot clear ['.$content.']');
+							die ('Secton->Cannot clear ['.$args[1].']');
 					}
 					break;
 				case 'pre':
-					$this->content .= $content; break;
+					$this->content .= $args[1]; break;
 				case 'title':
 					$this->unmkText();
-					$this->mkLine("<h2>$content</h2>");
+					$this->mkLine("<h2>$args[1]</h2>");
 					break;
 				case 'titler':
-					$this->unmkText();$this->mkline("<h2 class=\"reverse\">$content</h2>"); break;
+					$this->unmkText();$this->mkline("<h2 class=\"reverse\">$args[1]</h2>"); break;
 				case 'stitle':
 					$this->unmkText();
 					$this->content .= '<h3>';
-					$this->recursive($lineno, $content);
-					$this->content .= '</h3>'; break;
+					$this->recursive($lineno, $args);
+					$this->content .= '</h3>';
+					$this->unmkText(); break;
 				case 'link':
 				case 'mklink':
 					$this->mkText();
-					$this->content .= $this->mklink ($lineno, $content)."\n"; break;
+					$this->content .= $this->mklink ($lineno, $args)."\n"; break;
 				case 'tid':
 				case 'mktid':
 					$this->mkText();
-					$this->content .= $this->mktid ($lineno, $content)."\n"; break;
+					$this->content .= $this->mktid ($lineno, $args)."\n"; break;
 				case 'speak':
-					$this->unmkText();$this->mkLine('<p>'.$this->mkinline($lineno, $content).'</p>'); break;
+					$this->unmkText();$this->mkLine('<p>'.$this->mkinline($lineno, $args).'</p>'); break;
 				case 'inline':
-					$this->mkText();$this->mkLine($this->mkinline($lineno, $content)); break;
+					$this->mkText();$this->mkLine($this->mkinline($lineno, $args)); break;
 				case 'foto':
-					$this->unmkText();$this->mkLine($this->mkfoto($content)); break;
+					$this->unmkText();$this->mkLine($this->mkfoto($args[1])); break;
 					
 				case 'begin':
-					$this->mkBegin($lineno, $cmd, $opt, $content);break;
+					$this->mkBegin($lineno, $cmd, $args); break;
 				case 'end':
-					$this->mkEnd($lineno, $cmd, $opt, $content); break;
+					$this->mkEnd($lineno, $cmd, $args); break;
 				case 'exec':
-					$this->content .= eval($content);
+					$this->content .= eval($args[1]);
 					break;
 
 				default: die ('Section: Unknown command ['.$cmd.'] @'.$lineno);
@@ -154,6 +157,7 @@
 				case 'mini':
 				case 'inside':
 				case 'outside':
+				default:
 					$this->content .= "\n</p>"; break;
 			}
 			$this->isText = false;
@@ -161,8 +165,8 @@
 
 		private function mkline ($line) { $this->content .= $line."\n"; }
 
-		private function mkBegin ($lineno, $cmd, $opt, $content) {
-			list($env, $tag) = $this->mkOpenTag($lineno, $content);
+		private function mkBegin ($lineno, $cmd, $args) {
+			list($env, $tag) = $this->mkOpenTag($lineno, $args[1]);
 			switch ($env) {
 				case 'mini':
 				case 'double':
@@ -171,16 +175,13 @@
 				case 'inside':
 				case 'outside':
 					$this->unmkText(); $this->mkline($tag); break;
-				case 'pre':
-					$this->isPre = true;
-					$this->content .= $this->closeP(); break;
 				default: die ('Section->mkBegin: Unknown environment ['.$env.'] BEGIN @'.$lineno);
 			}
 			$this->pushEnv($env);
 		}
 
-		private function mkEnd ($lineno, $cmd, $opt, $content) {
-			list($env, $tag) = $this->mkCloseTag($lineno, $content);
+		private function mkEnd ($lineno, $cmd, $args) {
+			list($env, $tag) = $this->mkCloseTag($lineno, $args[1]);
 			switch ($env) {
 				case 'mini':
 				case 'double':
@@ -199,19 +200,16 @@
 			$this->popEnv();	
 		}
 
-		private function mkOpenTag ($lineno, $token) {
-			if (strpos($token, '@')) {
-				$args = split ('@', $token);
-				$env = $args[0];
-				$opt = $args;
-			} else {
-				$env = $token;
-				$opt = false;
-			}
+		private function mkOpenTag ($lineno, $composite) {
 			
+			if (strpos($composite, '@')) {
+				$frag = split ('@', $composite);
+				$env = $frag[0];
+			} else $env = $composite;
+
 			switch ($env) {
 				case 'mini':
-					$result = array ($env, '<div class="mini-'.$opt[1].'">');
+					$result = array ($env, '<div class="mini-'.$frag[1].'">');
 					break;
 				case 'double':
 					$result = array ($env, '<div class="doublecol">');
@@ -223,90 +221,94 @@
 				case 'ol':
 				case 'ul':
 					$opts = false;
-					if ($opt) switch (count ($opt)) {
-						case 5: $opts .= ' '.$opt[3].'="'.$opt[4].'"';
-						case 3: $opts .= ' '.$opt[1].'="'.$opt[2].'"';
+					if (isset($frag)) switch (count ($frag)) {
+						case 5: $opts .= ' '.$frag[3].'="'.$frag[4].'"';
+						case 3: $opts .= ' '.$frag[1].'="'.$frag[2].'"';
 						case 1: 
 							$result = array ($env, '<'.$env.' '.$opts.'>');
 							break;
-						default: die ('Section->mkOpenTag: cannot handle '.count($opt). ' options @'.$lineno);
-					} else $result = array ($token, "<$token>");
+						default: die ('Section->mkOpenTag: cannot handle '.count($frag). ' options @'.$lineno);
+					} else $result = array ($composite, "<$composite>");
 					break;
 				default:
 					die ('Section->mkOpenTag: unknown environment ['.$env.'] @'.$lineno);
 			}
 
-			//$this->setEnvironment($env);
 			return $result;
 		}
 
-		private function mkCloseTag ($lineno, $token) {
-			switch ($token) {
+		private function mkCloseTag ($lineno, $args) {
+			switch ($args) {
 				case 'ol':
 				case 'ul':
-					return array ($token, "</$token>");
+					return array ($args, "</$args>");
 				case '':
 				case 'mini':
 				case 'double':
 				case 'inside':
 				case 'outside':
-					return array ($token, '</div>');
+				default:
+					return array ($args, '</div>');
 			}
 		}
 
-		public function addInclude ($parser, $part, $as) {
+		public function addInclude ($parser, $part, $asContent) {
+
+			$this->content .= "\n\t\t<!-- Including [$part] as [$asContent] -->";
+
 			switch ($part) {
 				case 'page':
-					$this->content .= $parser->getPage(false, $as);
+					$this->content .= $parser->getAllTabs($asContent);
 					break;
 				case 'side':
-					$this->content .= $parser->getSide($as);
+					$this->content .= $parser->getSide($asContent);
 					break;
-				default: $this->content .= $parser->getPage($part, $as);
+				default: $this->content .= $parser->getTab($part, $asContent);
 			}
 		}
 
-		public function getContent ($as) {
+		public function getContent ($asContent) {
 			$this->unmkText();
 			if ($this->content) {
-				if ($as && strcmp($as, 'content') == 0) return $this->content;
 
-				$result = false;
-				$result .= '<!-- Section[as('.$as.') --><div class="section"';
-				$result .= '>';
-				$result .= $this->content;
-				$result .= '</div> <!-- ] /Section -->'."\n";
+				$result = "\n\t".'<!-- Section as ('.$asContent.') with ('.strlen($this->content).') chars -->';
+				
+				if ($asContent) {
+					$result .= $this->content;
+				} else {
+					$result .= '<div class="section">';
+					$result .= $this->content;
+					$result .= '</div>'."\n";
+				}
+
 				return $result;
-			} else return false;
+			} else return "\n\t<!-- Empty Section -->";
 		}
 
-		private function mktid ($lineno, $content) {
-			$args = split ('#', $content);
+		private function mktid ($lineno, $args) {
 			switch (count($args)) {
-				case 2: return $this->d->mktid($args[0], $args[1]);
-				case 3: return $this->d->mktid($args[0], $args[1], $args[2]);
-				case 4: return $this->d->mktid($args[0], $args[1], $args[2], $args[3]);
-				case 5: return $this->d->mktid($args[0], $args[1], $args[2], $args[3], $args[4]);
+				case 3: return $this->d->mktid($args[1], $args[2]);
+				case 4: return $this->d->mktid($args[1], $args[2], $args[3]);
+				case 5: return $this->d->mktid($args[1], $args[2], $args[3], $args[4]);
+				case 6: return $this->d->mktid($args[1], $args[2], $args[3], $args[4], $args[5]);
 				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
 			}
 		}
 
-		public function mklink ($lineno, $content) {
-			$args = split ('#', $content);
+		public function mklink ($lineno, $args) {
 			switch (count($args)) {
-				case 2: return $this->d->link($args[0], $args[1]);
-				case 3: return $this->d->link($args[0], $args[1], $args[2]);
-				case 4: return $this->d->link($args[0], $args[1], $args[2], $args[3]);
-				case 5: return $this->d->link($args[0], $args[1], $args[2], $args[3], $args[4]);
+				case 3: return $this->d->link($args[1], $args[2]);
+				case 4: return $this->d->link($args[1], $args[2], $args[3]);
+				case 5: return $this->d->link($args[1], $args[2], $args[3], $args[4]);
+				case 6: return $this->d->link($args[1], $args[2], $args[3], $args[4], $args[5]);
 				default: print_r ($args); die ('Y U NO LINK? @'.$lineno);
 			}
 		}
 
-		private function mkinline ($lineno, $content) {
-			$args = split ('#', $content);
+		private function mkinline ($lineno, $args) {
 			switch (count($args)) {
-				case 2: return $this->d->inline($args[0], $args[1]);
-				case 3: return $this->d->inline($args[0], $args[1], $args[2]);
+				case 3: return $this->d->inline($args[1], $args[2]);
+				case 4: return $this->d->inline($args[1], $args[2], $args[3]);
 				default: print_r ($args); die ('Y U NO INLINE? @'.$lineno);
 			}
 		}

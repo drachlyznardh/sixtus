@@ -6,70 +6,73 @@
 
 		private $content;
 		private $section;
+		private $current;
 
 		public function __construct ($d, $name) {
 			$this->d = $d;
 			$this->name = $name;
 
-			$this->content = false;
-			$this->section = new Section ($this->d);
+			$this->content = array();
+			$this->current = 0;
+			$this->content[$this->current] = new Section($this->d);
 		}
 
 		public function size () {
-			#echo "Tabsize is [".count($this->content)."]\n";
 			if ($this->content) return count($this->content);
 			else return 0;
 		}
 
-		public function getName () {
-			return $this->name;
-		}
+		public function getName () { return $this->name; }
 
-		public function parseLine ($lineno, $cmd, $opt, $content) {
+		public function setName ($name) { $this->name = $name; }
+
+		public function parseLine ($lineno, $cmd, $content) {
 
 			switch ($cmd) {
 				case 'sbr':
-					$this->content[] = array ('sec', $this->section);
-					$this->content[] = array ('br', false);
-					$this->section = new Section ($this->d, $opt);
+					$this->content[++$this->current] = array ('br', false);
+					$this->content[++$this->current] = new Section ($this->d);
 					break;
 				case 'sec':
-					$this->content[] = array ('sec', $this->section);
-					$this->section = new Section ($this->d, $opt);
+				case 'block':
+					$this->content[++$this->current] = new Section ($this->d);
 					break;
 				case 'struct':
-					$this->content[] = array ('sec', $this->section);
-					$this->content[] = array ('struct', $content);
-					$this->section = new Section ($this->d, $opt);
+					$this->content[++$this->current] = new Section ($this->d);
 					break;
-				case 'block':
-					$this->content[] = array ('sec', $this->section);
-					$this->section = new Section ($this->d, $opt);
 				default:
-					$this->section->parseLine ($lineno, $cmd, $opt, $content);
+					$this->content[$this->current]->parseLine ($lineno, $cmd, $content);
 			}
 			return;
 		}
 
-		public function addInclude ($parser, $part, $as) {
-			if (strcmp($as, 'content') == 0)
-				$this->section->addInclude($parser, $part, $as);
+		public function addInclude ($parser, $part, $asContent) {
+			if ($asContent)
+				$this->content[$this->current]->addInclude($parser, $part, $asContent);
 			else {
-				$this->close();
-				$this->content[] = array ($part, $parser, $as);
+				$this->content[++$this->current] = array ($part, $parser, $asContent);
+				$this->content[++$this->current] = new Section ($this->d);
 			}
 		}
 
 		public function getContent ($as) {
 
 			if (!$this->content) return false;
-			$result = false;
-			$result .= '<a id="'.strtoupper($this->name).'"></a>';
+
+			if ($this->name) {
+				$result = "\n<!-- Tab[$this->name] as [$as] -->";
+				$result .= '<a id="tab.'.strtoupper($this->name).'"></a>';
+			} else $result = "\n<!-- DefaultTab as [$as] -->";
 			foreach ($this->content as $frag) {
-				switch ($frag[0]) {
-					case 'sec':
-						$result .= $frag[1]->getContent($as);
-						break;
+				if (is_object ($frag)) {
+					$classname = get_class($frag);
+					switch ($classname) {
+						case 'Section':
+							$result .= $frag->getContent($as);
+							break;
+						default: die ('Tab->getContent: '.$classname.' is an unknown class…');
+					}
+				} else switch ($frag[0]) {
 					case 'br':
 						$result .= '<br />';
 						break;
@@ -77,43 +80,36 @@
 						$result .= $frag[1];
 						break;
 					case 'page':
-						$result .= $frag[1]->getPage(false, $frag[2]);
+						$result .= "\n<!-- Including Page, [$frag[2]] as [$as] -->";
+						$result .= $frag[1]->getAllTabs($as);
 						break;
 					case 'side':
+						$result .= "\n<!-- Including Side from [$frag[2]] as [$as] -->";
 						$result .= $frag[1]->getSide($frag[2]);
 						break;
-					case 'both':
-						$result .= 'INCLUDING['.$frag[0].']';
-						break;
 					default:
+						$result .= "\n<!-- Including [$frag[0]] from [$frag[2]] as [$as] -->";
 						$result .= $frag[1]->getTab($frag[0], $as);
 						break;
 						die ('Tab: Cannot getContent of ['.$frag[0].']');
 				}
 			}
 
+			if ($this->name) {
+				$result .= '<a id="tab.'.$this->name.'.bottom"></a>';
+				$result .= '<!-- /Tab['.$this->name.'] -->'."\n";
+			} else $result .= "<!-- /DefaultTab -->\n";
 			return $result;
-
-			if ($this->content) {
-				$result = '<!-- Tab[ --><div class="section">';
-				$result .= $this->content;
-				$result .= '</div> <!-- ] /Tab -->'."\n";
-				return $result;
-			} else return false;
 		}
 
 		public function show () {
-			echo ('<p>['.$this->name.']: ');
-			if ($this->content) foreach ($this->content as $frag) echo ($frag[0].', ');
+			echo ('Tab['.$this->name.']: ');
+			if ($this->content)
+				foreach ($this->content as $frag)
+					if (is_object($frag)) echo (get_class($frag).', ');
+					else echo ($frag[0].', ');
 			else echo ('[EMPTY]');
-			echo ('</p>');
-		}
-
-		public function close () {
-			if (!$this->section->isEmpty()) {
-				$this->content[] = array ('sec', $this->section);
-				$this->section = new Section ($this->d);
-			}
+			echo ('');
 		}
 	}
 ?>
