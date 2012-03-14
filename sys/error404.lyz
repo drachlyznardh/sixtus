@@ -1,12 +1,7 @@
-Title#404 Not Found
-SubTitle#There is no such file here
-
-Start#Page
-
-	Title#404 Not Found
-	La tua richiesta [<span class="em">
-	exec#return $_SERVER['REQUEST_URI'];
-	</span>] non ha prodotto alcun risultato
+title#404 Not Found#There is no such file here
+start#page
+	title#404 Not Found
+	La richiesta [<code> @SELF@ </code>] non ha prodotto alcun risultato.
 
 	Forse l'URL che hai inserito non è corretto, prova a correggerlo. Se sei
 	giunto qui seguendo un link interno, allora la colpa potrebbe essere mia:
@@ -18,6 +13,8 @@ Start#Page
 
 	Se sei finito qui intenzionalmente, benvenuto. Ora puoi anche <a
 	href="http://4chan.org/b/">andartene</a>.
-
-Stop#Page
-
+stop#page
+start#side
+	title#Error 404
+	titler#File Not Found
+stop#side

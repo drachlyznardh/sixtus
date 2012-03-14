@@ -1,0 +1,82 @@
+start#page
+	stitle#link#News/#Ultime### Novità
+	reverse#
+	link#News/Archivio/#Archivio###	[
+	link#News/2011/#2011###	/
+	link#News/2012/#2012###	]
+	link#Extra/#FAQ | Domande | Extra
+	sbr#
+	titler#Cose interessanti
+	stitle#link#Storie/#Storie
+	reverse#
+		[
+		link#Storie/2010/#2010### /
+		link#Storie/2011/#2011### /
+		link#Storie/2012/#2012### ]
+		link#Storie/Gaem/#La storia interattiva
+	stitle#link#Tru/Naluten/#Tru Naluten
+	reverse#
+		link#Tru/Naluten/Personaggi/#Personaggi### [
+		link#Tru/Naluten/Vol.I/#Vol.I### /
+		link#Tru/Naluten/Vol.II/#Vol.II### /
+		link#Tru/Naluten/Vol.III/#Vol.III### ]
+	stitle#link#Recensioni/#Recensioni
+	reverse#
+		link#Recensioni/#Indice#INDICE## /
+		link#Recensioni/#Classifica#CLASSIFICA
+	stitle#link#NaNoWriMo/#NaNoWriMo
+	reverse#
+		link#NaNoWriMo/2010/#2010### /
+		link#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore### /
+		link#NaNoWriMo/2011/#2011
+	sec#
+	begin#inside
+		link#Extra/Guida/#Modi#META#Modi
+		[
+		if#mode@is@Gods
+			<em>Gods</em>
+		else#
+			<a href="@SELF@@STYLE@/">Gods</a>
+		endif#
+		| 
+		if#mode@is@Bolo
+			<em>Bolo</em>
+		else#
+			<a href="@SELF@@STYLE@/Bolo/">Bolo</a>
+		endif#
+		/
+		if#mode@is@Luber
+			<em>Luber</em>
+		else#
+			<a href="@SELF@@STYLE@/Luber/">Luber</a>
+		endif#
+		]
+	end#inside
+	begin#outside
+	reverse#
+		[
+		if#style@is@Dado
+			<a href="@SELF@@MODE@/">Raw</a> | <em>Dado</em>
+		else#
+			<em>Raw</em> | <a href="@SELF@@MODE@/Dado/">Dado</a>
+		endif#
+		]
+		link#Extra/Guida/#Stili#META#Stili
+	end#outside
+	sbr#
+	title#<span class="em" title="Un po&apos;culattoni? No, no, solo allegri.">Allegri</span> compagni
+	Le <a href="http://kiyuko.org/blog/">idee</a> del <span
+	class="bolo">Bolo</span>
+
+	Le <a href="http://simgidacav.wordpress.com/">seghe</a> di <span
+	class="dacav">Simgi Dacav</span>.
+
+	Le <a href="http://mikezasch.wordpress.com/">lamentele</a> di <span
+	class="mitch">Mitch</span>
+
+	Le <a href="http://jazzinghen.wordpress.com/">opinioni</a> di <span
+	class="jazz">Jazzinghen</span>
+
+	Le <a href="http://mecharete.blogspot.com/">cose fighe</a> di <span
+	class="em">Luber</span>
+stop#page

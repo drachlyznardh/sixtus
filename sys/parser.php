@@ -14,9 +14,15 @@
 		private $page;
 		private $side;
 		
+		private $choices;
+		private $branch;
+		private $choiceCounter;
+
 		private $currentTab;
 		private $isTheFirstTab;
 		private $tabCond;
+
+		private $sourceFile;
 
 		public function __construct ($d) {
 			$this->d = $d;
@@ -34,11 +40,17 @@
 			$this->side = new Tab ($this->d, false);
 			$this->tabCond = false;
 			$this->isTheFirstTab = true;
+
+			$this->choiceCounter = 0;
+			$this->choices = array (0);
 		}
 
 		public function allTabs () { return $this->tabCond; }
 
 		public function parse ($file) {
+
+			$this->sourceFile = $file;
+
 			$this->rows = file ($file, FILE_IGNORE_NEW_LINES);
 			$lineno = 0;
 			foreach ($this->rows as $line) $this->parseline (++$lineno, ($line));
@@ -47,12 +59,61 @@
 		private function parseline ($lineno, $line) {
 
 			$pos = strpos($line, '#');
-			
 			if ($pos === 0) return; // #This is a comment
+
+			if (preg_match('/@SELF@/', $line))
+				$line = preg_replace('/@SELF@/',
+				ucwords($this->d->currentSelf()), $line);
+			if (preg_match('/@STYLE@/', $line))
+				$line = preg_replace('/@STYLE@/',
+				ucwords($this->d->currentStyle()), $line);
+			if (preg_match('/@MODE@/', $line))
+				$line = preg_replace('/@MODE@/',
+				ucwords($this->d->currentMode()), $line);
+
 			if ($pos === false) {
 				$frag = array(false, $line);
 			} else $frag = split ('#', $line);
 			$frag[0] = strtolower(trim($frag[0]));
+
+			switch ($frag[0]) {
+
+				case 'if':
+					if (strpos($frag[1], '@')) {
+						$token = split ('@', strtolower($frag[1]));
+						switch ($token[0]) {
+							case 'mode':
+								$result = strcmp($token[2], $this->d->currentMode()) == 0;
+								break;
+							case 'style';
+								$result = strcmp($token[2], $this->d->currentStyle()) == 0;
+								break;
+							default: die ('Parser->if@: WTF is '.$token[0].' @'.$lineno);
+						}
+					} else switch (strtolower($frag[1])) {
+						case 'true': $result = true; break;
+						case 'false': $result = false; break;
+						default: die ('Parser->if: WFT is '.$frag[1].' @'.$lineno);
+					}
+					$this->pushChoice($result?2:0);
+					#echo ("if ($frag[1]: ".($result?'t':'f').")\n");
+					$this->setBranch(true);
+					return;
+				case 'else':
+					$this->setBranch(false);
+					return;
+				case 'endif':
+					$this->popChoice();
+					return;
+			}
+		
+			$c = $this->currentChoice();
+			#echo ('CurrentChoice['.($c?$c:'0')."]\n");
+			switch ($this->currentChoice()) {
+				case 1:
+				case 2:
+					return;
+			}
 
 			switch ($frag[0]) {
 				case 'start':
@@ -80,11 +141,8 @@
 						$this->isTheFirstTab = false;
 					} else {
 						$tabs = count($this->page) - 1;
-						if (!$this->tabCond) {
-							$this->page[$tabs]->parseLine(-1, 'sec', false);
-							$this->page[$tabs]->parseLine(-1, 'tid',
-							array('tid', 'Continua', $frag[1], false, '…'));
-						}
+						if (!$this->tabCond && !$this->d->allTab())
+							$this->page[$tabs]->addContinue($frag[1]);
 						$this->page[] = new Tab ($this->d, $frag[1]);
 						$this->currentTab = $this->page[$tabs+1];
 					}
@@ -112,9 +170,11 @@
 					if (is_file ($filename)) $include = $filename;
 					else if (is_file ("$filename.lyz")) $include = "$filename.lyz";
 					else if (is_file ("$filename.php")) $include = "$filename.php";
+					else if (strlen ($filename) == 0) $parser = $this;
 					else die ('Cannot find ['.$filename.']!!!');
-					$parser = $this->getParser($include);
-					#echo ("<!-- Parser->parseLine($frag[1], $frag[2]) $include, Part[$partToInclude], As[$asContent] -->\n");
+					if (isset($include)) $parser = $this->getParser($include);
+					else $include = 'SELF!';
+					echo ("<!-- Parser->parseLine($frag[1], $frag[2]) $include, Part[$partToInclude], As[$asContent] -->\n");
 					$this->currentTab->addInclude($parser, $partToInclude, $asContent);
 					return;
 				case 'tabs':
@@ -156,7 +216,7 @@
 					}
 					break;
 				case 'subtitle':
-					$this->meta['subtitle'] = $content; break;
+					$this->meta['subtitle'] = $frag[1]; break;
 				case 'prev':
 					switch (count($frag)) {
 						case 6: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], $frag[5]); break;
@@ -218,7 +278,7 @@
 						return $tab->getContent ($as);
 			} else return $this->page[0]->getContent($as);
 
-			return '<div class="section"><p>There is no [<em>'.$name.'</em>] tab</p></div>>';
+			return '<div class="section"><p>There is no [<em>'.$name.'</em>] tab</p></div>';
 		}
 
 		public function getSide ($as) {
@@ -273,5 +333,23 @@
 			echo ('<div style="clear:both">');
 			echo ('</div>');
 		}
+
+		private function pushChoice ($result) { $this->choices[++$this->choiceCounter] = $result; }
+
+		private function popChoice () { $this->choiceCounter--; }
+
+		private function currentChoice () { return $this->choices[$this->choiceCounter]; }
+
+		private function setBranch ($result) {
+			$c = $this->choiceCounter;
+			$v = $this->choices[$c];
+			#echo ('Parser->setBranch: ['.($c?$c:'0').']['.($v?$v:'0'));
+			#if ($result) $v++; else $v--;
+			$this->choices[$c] = $result ? $v + 1 : $v - 1;
+			#echo (' -> '.($v?$v:'0')."]\n");
+			return;
+		}
+
+		private function currentBranch () { return $this->choices[$this->choiceCounter] % 2; }
 	}
 ?>

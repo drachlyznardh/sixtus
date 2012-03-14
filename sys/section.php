@@ -45,36 +45,40 @@
 
 			switch ($cmd) {
 				case '':
-					if ($args[1]) {
-						$this->mkText();
-						if (preg_match('/^\\>.*$/', $args[1])) {
-							$this->mkLine('<span class="green">'.$args[1].'</span>');
+					$text = trim($args[1]);
+					if ($text) {
+						$this->mkText($lineno);
+						if (preg_match('/^\\>.*$/', $text)) {
+							$this->mkLine('<span class="green">'.$text.'</span>');
 						} else {
-							$this->mkLine($args[1]);
+							$this->mkLine("\t\t\t\t$text");
 						}
-					} else $this->unmkText();
+					} else {
+						$this->unmkText($lineno);
+					}
 					break;
 				case 'p':
 				case 'li':
-					$this->unmkText();
-					$this->mkText();
+					$this->unmkText($lineno);
+					$this->mkText($lineno);
 					$this->recursive($lineno, $args);
-					#$this->unmkText();
 					break;
 				case 'reverse':
-					$this->unmkText();
-					$this->mkText(' class="reverse"');
+					$this->unmkText($lineno);
+					$this->mkText($lineno, ' class="reverse"');
 					$this->isText = true;
 					if ($args[1]) $this->recursive ($lineno, $args[1]);
 					break;
 				case 'id':
-					$this->unmkText();
-					$this->mkLine('<a id="'.ucwords($args[1]).'"></a>');
+					$this->unmkText($lineno);
+					$this->mkLine("\t\t\t".'<a id="'.ucwords($args[1]).'"></a>');
 					break;
 				case 'br':
-					$this->unmkText();$this->mkline('<br />'); break;
+					$this->unmkText($lineno);
+					$this->mkline("\t\t\t<br />");
+					break;
 				case 'clear':
-					$this->unmkText();
+					$this->unmkText($lineno);
 					switch ($args[1]) {
 						case 'both':
 						case 'left':
@@ -86,40 +90,52 @@
 					}
 					break;
 				case 'pre':
-					$this->content .= $args[1]; break;
+					$this->content .= $args[1];
+					break;
 				case 'title':
-					$this->unmkText();
-					$this->mkLine("<h2>$args[1]</h2>");
+					$this->unmkText($lineno);
+					$this->mkLine("\t\t\t<h2>$args[1]</h2>");
 					break;
 				case 'titler':
-					$this->unmkText();$this->mkline("<h2 class=\"reverse\">$args[1]</h2>"); break;
+					$this->unmkText($lineno);
+					$this->mkline("\t\t\t<h2 class=\"reverse\">$args[1]</h2>");
+					break;
 				case 'stitle':
-					$this->unmkText();
-					$this->content .= '<h3>';
-					$this->recursive($lineno, $args);
-					$this->content .= '</h3>';
-					$this->unmkText(); break;
+					$this->unmkText($lineno);
+					$this->content .= "\t\t\t<h3>";
+					if (count($args) > 2) $this->recursive($lineno, $args);
+					else $this->content .= $args[1];
+					$this->content .= "</h3>\n";
+					$this->isText = false;
+					break;
 				case 'link':
 				case 'mklink':
-					$this->mkText();
-					$this->content .= $this->mklink ($lineno, $args)."\n"; break;
+					$this->mkText($lineno);
+					$this->mkLine("\t\t\t\t".$this->mklink ($lineno, $args));
+					break;
 				case 'tid':
 				case 'mktid':
-					$this->mkText();
-					$this->content .= $this->mktid ($lineno, $args)."\n"; break;
+					$this->mkText($lineno);
+					$this->mkLine("\t\t\t\t".$this->mktid ($lineno, $args));
+					break;
 				case 'speak':
-					$this->unmkText();$this->mkLine('<p>'.$this->mkinline($lineno, $args).'</p>'); break;
+					$this->unmkText($lineno);
+					$this->mkLine("\t\t\t\t<p>".$this->mkinline($lineno, $args).'</p>');
+					break;
 				case 'inline':
-					$this->mkText();$this->mkLine($this->mkinline($lineno, $args)); break;
+					$this->mkText($lineno);
+					$this->mkLine("\t\t\t\t".$this->mkinline($lineno, $args));
+					break;
 				case 'foto':
-					$this->unmkText();$this->mkLine($this->mkfoto($args[1])); break;
-					
+				case 'img':
+					$this->unmkText($lineno);
+					$this->mkLine("\t\t\t".$this->mkfoto($args));
+					break;
 				case 'begin':
-					$this->mkBegin($lineno, $cmd, $args); break;
+					$this->mkBegin($lineno, $cmd, $args);
+					break;
 				case 'end':
-					$this->mkEnd($lineno, $cmd, $args); break;
-				case 'exec':
-					$this->content .= eval($args[1]);
+					$this->mkEnd($lineno, $cmd, $args);
 					break;
 
 				default: die ('Section: Unknown command ['.$cmd.'] @'.$lineno);
@@ -132,49 +148,65 @@
 
 		private function currentEnv () { return $this->stack[$this->counter]; }
 
-		private function mkText ($opt=false) {
-			if (!$this->isText) switch ($this->currentEnv()) {
+		private function mkText ($lineno, $opt=false) {
+			
+			if ($this->isText) return;
+			
+			switch ($this->currentEnv()) {
 				case 'ol':
 				case 'ul':
-					if ($opt) $this->content .= "<li $opt>\n";
-					else $this->content .= "<li>\n"; break;	
+					if ($opt) $this->content .= "\t\t\t<li $opt>\n";
+					else $this->content .= "\t\t\t<li>\n";
+					break;	
 				case '':
+				case 'double':
+				case 'triple':
 				case 'mini':
 				case 'inside':
 				case 'outside':
-					if ($opt) $this->content .= "<p $opt>";
-					else $this->content .= "<p>\n"; break;
+					if ($opt) $this->content .= "\t\t\t<p $opt>\n";
+					else $this->content .= "\t\t\t<p>\n";
+					break;
+				default:
+					die ('Section->mkText: unknown env ['.$this->currentEnv().'] @'.$lineno);
 			}
 			$this->isText = true;
 		}
 
-		private function unmkText () {
-			if ($this->isText) switch ($this->currentEnv()) {
-				case 'ol':
-				case 'ul':
-					$this->content .= "\n</li>"; break;
-				case '':
-				case 'mini':
-				case 'inside':
-				case 'outside':
-				default:
-					$this->content .= "\n</p>"; break;
+		private function unmkText ($lineno) {
+			if ($this->isText) {
+				switch ($this->currentEnv()) {
+					case 'ol':
+					case 'ul':
+						$result = "\t\t\t</li>"; break;
+					case '':
+					case 'double':
+					case 'triple':
+					case 'mini':
+					case 'inside':
+					case 'outside':
+						$result = "\t\t\t</p>"; break;
+					default:
+						die ('Section->unmkText: unknown env ['.$this->currentEnv().'] @'.$lineno);
+				}
+				$this->mkline($result);
 			}
 			$this->isText = false;
 		}
 
-		private function mkline ($line) { $this->content .= $line."\n"; }
+		private function mkline ($line) { $this->content .= "$line\n"; }
 
 		private function mkBegin ($lineno, $cmd, $args) {
 			list($env, $tag) = $this->mkOpenTag($lineno, $args[1]);
 			switch ($env) {
 				case 'mini':
 				case 'double':
+				case 'triple':
 				case 'ol':
 				case 'ul':
 				case 'inside':
 				case 'outside':
-					$this->unmkText(); $this->mkline($tag); break;
+					$this->unmkText($lineno); $this->mkline($tag); break;
 				default: die ('Section->mkBegin: Unknown environment ['.$env.'] BEGIN @'.$lineno);
 			}
 			$this->pushEnv($env);
@@ -185,13 +217,14 @@
 			switch ($env) {
 				case 'mini':
 				case 'double':
+				case 'triple':
 				case 'ol':
 				case 'ul':
 				case 'inside':
 				case 'outside':
 					$current = $this->currentEnv();
 					if (strcmp($env, $current) == 0) {
-						$this->unmkText();
+						$this->unmkText($lineno);
 						$this->mkline($tag);
 					} else die ("Cannot close $env before $current @$lineno");
 					break;
@@ -209,14 +242,17 @@
 
 			switch ($env) {
 				case 'mini':
-					$result = array ($env, '<div class="mini-'.$frag[1].'">');
+					$result = array ($env, "\t\t<div class=\"mini-$frag[1]\">");
 					break;
 				case 'double':
-					$result = array ($env, '<div class="doublecol">');
+					$result = array ($env, "\t\t<div class=\"doublecol\">");
+					break;
+				case 'triple':
+					$result = array ($env, "\t\t<div class=\"triplecol\">");
 					break;
 				case 'inside':
 				case 'outside':
-					$result =  array ($env, '<div class="'.$env.'">');
+					$result = array ($env, "\t\t<div class=\"$env\">");
 					break;
 				case 'ol':
 				case 'ul':
@@ -225,10 +261,10 @@
 						case 5: $opts .= ' '.$frag[3].'="'.$frag[4].'"';
 						case 3: $opts .= ' '.$frag[1].'="'.$frag[2].'"';
 						case 1: 
-							$result = array ($env, '<'.$env.' '.$opts.'>');
+							$result = array ($env, "\t\t<$env $opts>");
 							break;
 						default: die ('Section->mkOpenTag: cannot handle '.count($frag). ' options @'.$lineno);
-					} else $result = array ($composite, "<$composite>");
+					} else $result = array ($composite, "\t\t<$composite>");
 					break;
 				default:
 					die ('Section->mkOpenTag: unknown environment ['.$env.'] @'.$lineno);
@@ -241,14 +277,14 @@
 			switch ($args) {
 				case 'ol':
 				case 'ul':
-					return array ($args, "</$args>");
+					return array ($args, "\t\t</$args>");
 				case '':
 				case 'mini':
 				case 'double':
+				case 'triple':
 				case 'inside':
 				case 'outside':
-				default:
-					return array ($args, '</div>');
+					return array ($args, "\t\t</div>");
 			}
 		}
 
@@ -268,17 +304,17 @@
 		}
 
 		public function getContent ($asContent) {
-			$this->unmkText();
+			$this->unmkText('section->getContent');
 			if ($this->content) {
 
-				$result = "\n\t".'<!-- Section as ('.$asContent.') with ('.strlen($this->content).') chars -->';
+				$result = "\t".'<!-- Section as ('.$asContent.') with ('.strlen($this->content).') chars -->';
 				
 				if ($asContent) {
 					$result .= $this->content;
 				} else {
-					$result .= '<div class="section">';
+					$result .= "\n\t\t<div class=\"section\">\n";
 					$result .= $this->content;
-					$result .= '</div>'."\n";
+					$result .= "\t\t</div>\n";
 				}
 
 				return $result;
@@ -313,14 +349,19 @@
 			}
 		}
 					
-		private function mkfoto ($content) {
-			$args = split ('#', $content);
-			$ref = $args[0];
-			if (count($args) > 1) $src = $args[1];
-			else $src = $args[0];
-			$this->content .= '<p class="foto"><a target="_blank" href="'.$ref.'">';
-			$this->content .= '<img src="'.$src.'" />';
-			$this->content .= '</a>';
+		private function mkfoto ($frag) {
+
+			if (count($frag) > 2) {
+				$src = $frag[1];
+				$ref = $frag[2];
+			} else {
+				$src = $ref = $frag[1];
+			}
+
+			$result = '<p class="foto"><a target="_blank" href="'.$ref.'">';
+			$result .= '<img src="'.$src.'" />';
+			$result .= '</a></p>';
+			return $result;
 		}
 	}
 ?>

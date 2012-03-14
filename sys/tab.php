@@ -7,6 +7,7 @@
 		private $content;
 		private $section;
 		private $current;
+		private $continue;
 
 		public function __construct ($d, $name) {
 			$this->d = $d;
@@ -74,7 +75,7 @@
 					}
 				} else switch ($frag[0]) {
 					case 'br':
-						$result .= '<br />';
+						$result .= "\t<br />\n";
 						break;
 					case 'struct':
 						$result .= $frag[1];
@@ -95,12 +96,21 @@
 				}
 			}
 
+			if ($this->continue && !$as) {
+				$frag = array('tid', 'Continua', $this->continue, false, '…');
+				$newsec = new Section ($this->d);
+				$newsec->parseLine(-1, $frag[0], $frag);
+				$result .= $newsec->getContent(false);
+			}
+
 			if ($this->name) {
 				$result .= '<a id="tab.'.$this->name.'.bottom"></a>';
 				$result .= '<!-- /Tab['.$this->name.'] -->'."\n";
 			} else $result .= "<!-- /DefaultTab -->\n";
 			return $result;
 		}
+
+		public function addContinue ($continue) { $this->continue = $continue; }
 
 		public function show () {
 			echo ('Tab['.$this->name.']: ');

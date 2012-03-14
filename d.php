@@ -132,7 +132,7 @@
 		if (is_file($page))
 			$rside = 'sys/side/'. preg_replace ('/\//', '.', $searchpath) .'php';
 		else {
-			$page = 'error404.php';
+			$page = 'sys/error404.lyz';
 			$rside = false;
 		}
 	}

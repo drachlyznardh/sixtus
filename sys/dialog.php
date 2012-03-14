@@ -16,6 +16,9 @@
 		
 		public function __construct ($opt, $self, $tab) {
 	
+			$this->style = strtolower($opt['style']);
+			$this->mode = strtolower($opt['mode']);
+
 			if ($opt['style'] == 'Raw') unset($opt['style']);
 			if ($opt['display'] == 'Standard') unset($opt['display']);
 
@@ -116,5 +119,11 @@
 
 			return $result;
 		}
+
+		public function currentStyle () { return $this->style; }
+
+		public function currentMode () { return $this->mode; }
+
+		public function currentSelf () { return $this->self; }
 	}
 ?>

@@ -73,7 +73,15 @@
 					require_once ($rside);
 				}
 			?></div> <!-- RightSide -->
-			<div id="leftside"><?php require_once ('sys/lside.php'); ?></div> <!-- LeftSide -->
+			<div id="leftside">
+				<?php
+					#require_once ('sys/lside.php');
+					$lsideParser = new Parser ($d);
+					$lsideParser->parse('sys/lside.lyz');
+					echo ($lsideParser->getAllTabs(false));
+					#echo (new Parser ($this->d, 'sys/lside.lyz')->parseAndPrintAll());
+				?>
+			</div> <!-- LeftSide -->
 		</div> <!-- Main -->
 	</body> <!-- Body -->
 </html>
