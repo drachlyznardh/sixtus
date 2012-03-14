@@ -1,6 +1,5 @@
 start#page
-	pre#<div class="doublecol">
-	id#awesome
+tab#awesome
 	stitle#Fucking awesome!!!
 	Questi sono decisamente da vedere/provare/comprare.
 	begin#ul
@@ -12,8 +11,7 @@ start#page
 		li#link#Recensioni/Film/XXVI/#Meet Joe Black
 		li#link#Recensioni/Show/XXI/#Kaizoku Sentai Gokaiger#gokaiger
 	end#ul
-	br#
-	id#buoni
+tab#buoni
 	stitle#Buono
 	Che ci crediate o meno, questi mi sono piaciuti. Non sono
 	magnificissimi, non sono eccelsi, ma sono buoni.
@@ -31,8 +29,7 @@ start#page
 		li#link#Recensioni/Film/XXVII/#Il discorso del re
 		li#link#Recensioni/Show/XXVIII/#Macross 7#macross7
 	end#ul
-	br#
-	id#lasciano
+tab#lasciano
 	stitle#Si lascia guardare
 	Questi si lasciano guardare. Con le dovute precauzioni.
 	begin#ul
@@ -47,8 +44,7 @@ start#page
 		li#link#Recensioni/Show/XXII/#Dollhouse
 		li#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
 	end#ul
-	br#
-	id#meh
+tab#meh
 	stitle#Meh. / Mah
 	Questi non sono per tutti, sono per chi ha gusti particolari o lo
 	stomaco di ferro.
@@ -72,8 +68,7 @@ start#page
 			e anche
 			link#Recensioni/Libri/XII/#I doni della Morte#vii
 	end#ul
-	br#
-	id#bay
+tab#bay
 	stitle#L'ha fatto Micheal Bay?
 	Questi hanno il grosso difetto di mettere l'azione davanti alla storia.
 	O semplicemente si dimenticano che le esplosioni non fanno un buon film
@@ -81,8 +76,7 @@ start#page
 	begin#ul
 	li#link#Recensioni/Show/V/#Blassreiter
 	end#ul
-	br#
-	id#no
+tab#no
 	stitle#No
 	Questi no.
 	begin#ul
@@ -93,8 +87,7 @@ start#page
 		li#Mega shark Vs Giant Octopus
 		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
 	end#ul
-	br#
-	id#ridere
+tab#ridere
 	stitle#Brutto da ridere
 	Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
 	loro, non con loro.
@@ -104,8 +97,7 @@ start#page
 		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
 		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
 	end#ul
-	br#
-	id#magnifici
+tab#magnifici
 	stitle#Magnificamente brutto
 	Insomma, l'ho detto e lo ripeto, alcuni film sono così brutti da fare il
 	giro e diventare più che godibili.
@@ -120,5 +112,4 @@ start#page
 		li#The Rocky Horror Picture Show
 		li#link#Recensioni/Show/XIV/#Gundam AGE#ii## dopo un po'
 	end#ul
-	pre#</div>
 stop#page

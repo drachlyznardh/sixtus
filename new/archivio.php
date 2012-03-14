@@ -1,4 +1,6 @@
 title#Archivio#Dove tengo le notizie vecchie
+prev#News/#Ultime novità
+next#News/2011/#2011
 start#side
 	title#Archivio
 	titler#Per anni
@@ -9,8 +11,9 @@ start#side
 	titler#Per mesi
 	stitle#link#News/2012/#2012
 	reverse#
-		link#News/2012/#Gennaio
-		/ Febbraio / Marzo
+		link#News/2012/01/#Gennaio### /
+		link#News/2012/02/#Febbraio### /
+		link#News/2012/03/#Marzo
 	reverse#
 		Aprile / Maggio / Giugno
 	reverse#

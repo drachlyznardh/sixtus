@@ -1,6 +1,6 @@
 title#Record#La pagina delle imprese
 prev#Extra/#Guida
-next#Exrta/Scimmia/#La Scimmia Celeste
+next#Extra/Scimmia/#La Scimmia Celeste
 start#page
 tab#intro
 	Un bel giorno (ieri) mi sono messo qui a pensare a tutte le mie imprese

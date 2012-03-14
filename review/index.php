@@ -1,4 +1,6 @@
 title#Recensioni#Sincere, spesso brutte
+prev#Tru/Naluten/#Tru Naluten
+next#NaNoWriMo/#NaNoWriMo
 start#page
 tab#intro
 	Non ne posso più, devo assolutamente sfogarmi.
@@ -61,7 +63,23 @@ tab#categorie
 	include#review/book/index#page
 tab#classifica
 	title#Classifica
-	include#review/classifica#page@as@content
+	begin#double
+		include#review/classifica#awesome@as@content
+		br#
+		include#review/classifica#buoni@as@content
+		br#
+		include#review/classifica#lasciano@as@content
+		br#
+		include#review/classifica#meh@as@content
+		br#
+		include#review/classifica#bay@as@content
+		br#
+		include#review/classifica#no@as@content
+		br#
+		include#review/classifica#ridere@as@content
+		br#
+		include#review/classifica#magnifici@as@content
+	end#double
 tab#indice
 	id#cronologico
 	title#Indice cronologico

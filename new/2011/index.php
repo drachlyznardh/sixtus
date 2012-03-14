@@ -1,4 +1,6 @@
 title#Notizie 2011#Tutte
+prev#News/Archivio/#Archivio
+next#News/2012/#2012
 start#side
 	title#2011
 	p#link#News/2011/07/#Luglio### /

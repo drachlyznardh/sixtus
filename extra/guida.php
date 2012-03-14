@@ -1,4 +1,5 @@
 title#Guida#Perché la gente arriva ma non sa dov'è la roba
+prev#NaNoWriMo/#NaNoWriMo
 next#Extra/Record/#Record
 start#page
 tab#intro
@@ -239,4 +240,14 @@ start#side
 	tid#Stili#meta#Stili
 	/
 	tid#Voci#meta#Voci
+	sbr#
+	title#Gli (altri) Extra
+	La pagina dei
+	link#Extra/Record/#Record
+	/ I prodigi della
+	link#Extra/Scimmia/#scimmia celeste
+	/ Appunti di
+	link#Extra/S01/#Sistemi Operativi 1
+	/ L'elenco delle
+	link#Extra/Immagini/#Immagini
 stop#side
