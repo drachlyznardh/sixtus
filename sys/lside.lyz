@@ -22,8 +22,9 @@ start#page
 		link#Tru/Naluten/Vol.III/#Vol.III### ]
 	stitle#link#Recensioni/#Recensioni
 	reverse#
-		link#Recensioni/#Indice#INDICE## /
-		link#Recensioni/#Classifica#CLASSIFICA
+		link#Recensioni/#Categorie#CATEGORIE## /
+		link#Recensioni/#Classifica#CLASSIFICA## /
+		link#Recensioni/#Indice#INDICE
 	stitle#link#NaNoWriMo/#NaNoWriMo
 	reverse#
 		link#NaNoWriMo/2010/#2010### /

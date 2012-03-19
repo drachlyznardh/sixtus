@@ -56,11 +56,23 @@ tab#categorie
 	E siccome le recensioni cominciano ad essere tante, ho diviso
 	l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
 	cose in ordine (in attesa che crescano).
-	include#review/film/index#page
-	include#review/brutti/index#page
-	include#review/game/index#page
-	include#review/show/index#page
-	include#review/book/index#page
+	begin#mini@right
+		stitle#link#Recensioni/Brutti/#Film brutti
+		include#review/brutti/index#page@as@content
+	end#mini
+	br#
+	stitle#link#Recensioni/Film/#Film
+	include#review/film/index#page@as@content
+	br#
+	stitle#link#Recensioni/Show/#Show
+	include#review/show/index#page@as@content
+	br#
+	begin#mini@right
+		stitle#link#Recensioni/Giochi/#Giochi
+		include#review/game/index#page@as@content
+	end#mini
+	stitle#link#Recensioni/Libri/#Libri
+	include#review/book/index#page@as@content
 tab#classifica
 	title#Classifica
 	begin#double
@@ -84,46 +96,26 @@ tab#indice
 	id#cronologico
 	title#Indice cronologico
 	begin#double
-	begin#ol
-		li#link#Recensioni/Film/I/#Thor### – 2011
-		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
-		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
-		li#link#Recensioni/Show/IV/#Pani Poni Dash### – 2005
-		li#link#Recensioni/Show/V/#BlassReiter### – 2008
-		li#link#Recensioni/Show/VI/#Masterforce### – 1988
-		li#link#Recensioni/Film/VII/#Dark Of The Moon### – 2011
-		li#link#Recensioni/Film/VIII/#Capitan America### – 2011
-		li#link#Recensioni/Show/IX/#Angel Beats!### – 2010
-		li#link#Recensioni/Film/X/#I Puffi### – 2011
-		li#link#Recensioni/Libri/XI/#Nessun Dove### – 1996
-		li#link#Recensioni/Libri/XII/#Harry Potter### – 1997~2007
-		li#link#Recensioni/Show/XIII/#Kamen Rider### – 1971~2011
-		li#link#Recensioni/Show/XIV/#Gundam AGE### – 2011
-		li#link#Recensioni/Show/XV/#TransFormers: Prime### – 2010~2011
-		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
-		li#link#Recensioni/Film/XVII/#Rambo### – 1982~2008
-		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep###– 2006
-		li#link#Recensioni/Film/XIX/#Ed Wood### – 1994
-		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
-		li#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
-		li#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
-		li#link#Recensioni/Film/XXIII/#Zombieland### – 2009
-		li#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens### – 2011
-		li#link#Recensioni/Show/XXV/#Chuck### – 2007~2012
-		li#link#Recensioni/Film/XXVI/#Meet Joe Black### – 1998
-		li#link#Recensioni/Film/XXVII/#Il discorso del re### – 2010
-		li#link#Recensioni/Show/XXVIII/#Macross### – 1982~2011
-	end#ol
+		include#review/catalogo#cron@as@content
 	end#double
 	sec#
 	id#categoria
 	title#Per categoria
 	begin#double
-		include#review/film/index#side@as@content
-		include#review/brutti/index#side@as@content
-		include#review/game/index#side@as@content
-		include#review/show/index#side@as@content
-		include#review/book/index#side@as@content
+		stitle#Film
+		include#review/catalogo#film@as@content
+		br#
+		stitle#Film brutti
+		include#review/catalogo#brutti@as@content
+		br#
+		stitle#Giochi
+		include#review/catalogo#game@as@content
+		br#
+		stitle#Show
+		include#review/catalogo#show@as@content
+		br#
+		stitle#Libri
+		include#review/catalogo#libri@as@content
 	end#double
 	sec#
 	id#incorso
@@ -166,6 +158,7 @@ start#side
 		tid#Show#categorie#Show
 		/
 		tid#Libri#categorie#Libri
+	br#
 	stitle#tid#Classifica#classifica
 	begin#ol
 		li#tid#Fucking awesome!!!#classifica#awesome

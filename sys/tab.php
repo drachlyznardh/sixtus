@@ -61,9 +61,9 @@
 			if (!$this->content) return false;
 
 			if ($this->name) {
-				$result = "\n<!-- Tab[$this->name] as [$as] -->";
-				$result .= '<a id="tab.'.strtoupper($this->name).'"></a>';
-			} else $result = "\n<!-- DefaultTab as [$as] -->";
+				$result = "\n\t<!-- Tab[$this->name] as [$as] -->";
+				$result .= "\n\t".'<a id="tab.'.strtoupper($this->name).'"></a>'."\n";
+			} else $result = "\n\t<!-- DefaultTab as [$as] -->\n";
 			foreach ($this->content as $frag) {
 				if (is_object ($frag)) {
 					$classname = get_class($frag);
@@ -81,15 +81,15 @@
 						$result .= $frag[1];
 						break;
 					case 'page':
-						$result .= "\n<!-- Including Page, [$frag[2]] as [$as] -->";
+						$result .= "\t<!-- Including Page, [$frag[2]] as [$as] -->";
 						$result .= $frag[1]->getAllTabs($as);
 						break;
 					case 'side':
-						$result .= "\n<!-- Including Side from [$frag[2]] as [$as] -->";
+						$result .= "\t<!-- Including Side from [$frag[2]] as [$as] -->";
 						$result .= $frag[1]->getSide($frag[2]);
 						break;
 					default:
-						$result .= "\n<!-- Including [$frag[0]] from [$frag[2]] as [$as] -->";
+						$result .= "\t<!-- Including [$frag[0]] from [$frag[2]] as [$as] -->";
 						$result .= $frag[1]->getTab($frag[0], $as);
 						break;
 						die ('Tab: Cannot getContent of ['.$frag[0].']');
@@ -104,9 +104,9 @@
 			}
 
 			if ($this->name) {
-				$result .= '<a id="tab.'.$this->name.'.bottom"></a>';
-				$result .= '<!-- /Tab['.$this->name.'] -->'."\n";
-			} else $result .= "<!-- /DefaultTab -->\n";
+				$result .= "\n\t".'<a id="tab.'.$this->name.'.bottom"></a>';
+				$result .= "\n\t".'<!-- /Tab['.$this->name.'] -->'."\n";
+			} else $result .= "\n\t<!-- /DefaultTab -->\n";
 			return $result;
 		}
 

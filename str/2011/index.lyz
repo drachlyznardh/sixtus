@@ -78,7 +78,7 @@ start#side
 			li#link#Storie/2011/XXX/#L&apos;interpretazione
 		end#ol
 	end#inside
-	titler#Primavera 2011
+	stitle#Primavera 2011
 	begin#ol@start@31@style@margin-left: 5em
 		li#link#Storie/2011/XXXI/#Deus Ex Machina
 		li#link#Storie/2011/XXXII/#Dottor Odio
@@ -98,7 +98,7 @@ start#side
 		li#link#Storie/2011/XLVI/#L&apos;uomo con due ombrelli
 		li#link#Storie/2011/XLVII/#Impresa (II)
 	end#ol
-	titler#Estate 2011
+	stitle#Estate 2011
 	begin#ol@start@48@style@margin-left: 4em
 		li@class@cat-heart"#link#Storie/2011/XLVIII/#Non ce n&apos;è abbastanza
 		li@class@cat-heart"#link#Storie/2011/XLIX/#Quel che non è abbastanza
@@ -116,7 +116,7 @@ start#side
 		li#link#Storie/2011/LXI/#Cattivo
 		li@class@cat-heart"#link#Storie/2011/LXII/#Normale
 	end#ol
-	titler#Autunno 2011
+	stitle#Autunno 2011
 	begin#ol@start@63@style@margin-left: 4em
 		li#link#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
 		li#link#Storie/2011/LXIV/#La metafora

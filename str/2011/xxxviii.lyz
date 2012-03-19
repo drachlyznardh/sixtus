@@ -9,13 +9,10 @@ tab#intro
 	scrivere correttamente e decentemente è una cosa difficile
 	end#outside
 	Lo è per due motivi distinti:
-	
-	pre#<ul><li>
-	pre#la storia deve essere interessante
-	pre#</li><li>
-	pre#la storia deve avere senso
-	pre#</li></ul>
-
+	begin#ul
+		li#la storia deve essere interessante
+		li#la storia deve avere senso
+	end#ul
 	Fallire in uno di questi obiettivi significa perdere molti lettori.
 	sec#
 	Una delle cose che si capiscono quando si scrive (molto) è il meccanismo
@@ -62,15 +59,16 @@ tab#intro
 	title#che vorrebbe ma non vede
 	Insomma...
 	sec#
-	Come la maggior parte delle volte, tutto comincia per colpa del
-	<span class="dacav">Dacav</span>. Ovviamente.
+	Come la maggior parte delle volte, tutto comincia per colpa del <span
+	class="dacav">Dacav</span>. Ovviamente.
 
 	L'uomo se ne sbuca fuori un bel dì e mi dice
 	begin#outside
-		«<span class="dacav">Forse è il caso che mi guardi un po' di Gundam</span>»
+		speak#dacav#Forse è il caso che mi guardi un po' di Gundam
 	
-		«<span class="gods">Figlio!</span> – rispondo gonfio d'orgoglio
-		- <span class="gods">ho lungamente atteso questo giorno. Seguimi</span>»
+		inline#gods#Figlio!
+		– rispondo gonfio d'orgoglio –
+		inline#gods#ho lungamente atteso questo giorno. Seguimi
 	end#outside
 	E prometto che gli avrei passato qualcosa.
 
@@ -78,76 +76,70 @@ tab#intro
 	id#altre
 	Ma a quel punto eccomi battermi sulla spalla il dubbio. Che serie dovrei
 	passargli? Diamo un'occhiatina alla mia collezione…
-	</p><ul class="triplecol"><li>
-			<span class="em">UC – Universal Century</span><ul><li>
-					0079 – originale
-				</li><li>
-					0080 – War in the pocket
-				</li><li>
-					MsIgloo – I &amp; II
-				</li><li>
-					0083 – Stardust memory
-				</li><li>
-					ZGundam
-				</li><li>
-					ZZGundam
-				</li><li>
-					Char's Counterattack
-				</li><li>
-					Gundam Victory
-			</li></ul>
-		</li><li>
-			&forall; Gundam
-		</li><li>
-			Gundam G
-		</li><li>
-			Gundam Wing
-		</li><li>
-			<span class="em">CE – Cosmic Era</span><ul><li>
-					Gundam SEED
-				</li><li>
-					Gundam SEED Destiny
-				</li><li>
-					CE73 – Stargazer
-				</li></ul>
-		</li><li>
-			<span class="em">AD – Anno Domini</span><ul><li>
-				Gundam 00
-			</li><li>
-				Gundam 00 R2
-			</li><li>
-				A Wakening of the Trailblazer
-			</li></ul>
-	</li></ul><p>
-		É tanta roba tra cui scegliere... Come fare? Considerando poi che
-		il <span class="dacav">buon Dacav</span> non sa divertirsi e non
-		apprezza i robottoni e non apprezza nulla e non ha mai visto una
-		serie in vita sua, che gli faccio vedere?
-	
-		Adesso, per favore, spostate il vostro bel cursose sui titoli delle
-		serie in mio possesso e leggetevi cosa ne penso. Ma state attenti.
-	</p>
-</div><div class="section">
-	<p>
-		Se avete letto tutto, sapete che 00 è una merda, che G invece è una
-		gran figata e che alla fine ho scelto SEED.
-	
-		E mo' vi spiego anche perché.
+	begin#triple
+	begin#ul
+		<em>UC – Universal Century</em>
+		begin#ul
+			li#0079 – originale
+			li#0080 – War in the pocket
+			li#MsIgloo – I &amp; II
+			li#0083 – Stardust memory
+			li#ZGundam
+			li#ZZGundam
+			li#Char's Counterattack
+			li#Gundam Victory
+		end#ul
+		li#&forall; Gundam
+		li#Gundam G
+		li#Gundam Wing
 
-	sec@class@doublecol#
+		<em>CE – Cosmic Era</em>
+		begin#ul
+			li#Gundam SEED
+			li#Gundam SEED Destiny
+			li#CE73 – Stargazer
+		end#ul
+
+		<em>AD – Anno Domini</em>
+		begin#ul
+			li#Gundam 00
+			li#Gundam 00 R2
+			li#A Wakening of the Trailblazer
+		end#ul
+	end#ul
+	end#triple
+	É tanta roba tra cui scegliere… Come fare? Considerando poi che il <span
+	class="dacav">buon Dacav</span> non sa divertirsi e non apprezza i robottoni
+	e non apprezza nulla e non ha mai visto una serie in vita sua, che gli
+	faccio vedere?
+
+	Adesso, per favore, spostate il vostro bel cursose sui titoli delle serie in
+	mio possesso e leggetevi cosa ne penso. Ma state attenti.
+	sec#
+	Se avete letto tutto, sapete che 00 è una merda, che G invece è una gran
+	figata e che alla fine ho scelto SEED.
+
+	E mo' vi spiego anche perché.
+
+	sec#
 	title#Universal Century
-	pre#<div class="doublecol">
+	begin#double
 	id#syn0079
 	stitle#Mobile Suit Gundam 0079
-	Uhm, quel che diede inizio a tutto. Serie piuttosto avanti per i tempi, ma comunque difficile da approcciare.
+
+	Uhm, quel che diede inizio a tutto. Serie piuttosto avanti per i tempi, ma
+	comunque difficile da approcciare.
 	
-	È triste, piena di gente che muore e di gente che si chiede come mai la gente muoia.
+	È triste, piena di gente che muore e di gente che si chiede come mai la
+	gente muoia.
 
 	id#syn0080
 	stitle#0080 War In The Pocket
+
 	Serie piuttosto corta, piuttosto triste.
 
-	Di come due persone posso innamorarsi, sperare di vivere assieme felici e contenti, salvo poi uccidersi per questioni di lavoro. Storia vera.
+	Di come due persone posso innamorarsi, sperare di vivere assieme felici e
+	contenti, salvo poi uccidersi per questioni di lavoro. Storia vera.
 
 	id#synIgloo
 	stitle#MS Igloo I &amp; II
@@ -173,7 +165,8 @@ tab#intro
 	stitle#Char's Counterattack
 	Vero finale.
 	
-	Si torna finalmente alla complessa rivalità tra Amuro e Kasval. Nessuno capisce niente. Tutti hanno torto.
+	Si torna finalmente alla complessa rivalità tra Amuro e Kasval. Nessuno
+	capisce niente. Tutti hanno torto.
 	
 	Molta altra gente che muore. In b4 Tomino aveva previsto tutto, in b4 la ‘T’
 	è la sua firma, in b4 non sono morti, in b4 il vero finale è “Beltorchika's
@@ -182,10 +175,10 @@ tab#intro
 	stitle#Mobile Suit Gundam Victory
 	Seriucola che non ho ancora finito di vedere.
 	
-	Sempre la stessa roba: ragazzino trova Gundam, ragazzino si rivela asso impareggiabile, ragazzino conosce l'orrore della guerra, ragazzino acquista maturità... gente che muore, gente che muore, gente che muore.
-	
-	pre#</div>
-
+	Sempre la stessa roba: ragazzino trova Gundam, ragazzino si rivela asso
+	impareggiabile, ragazzino conosce l'orrore della guerra, ragazzino acquista
+	maturità... gente che muore, gente che muore, gente che muore.
+	end#double
 	sbr#
 	id#syn&forall;
 	title#&forall; Gundam

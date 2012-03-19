@@ -290,7 +290,7 @@
 
 		public function addInclude ($parser, $part, $asContent) {
 
-			$this->content .= "\n\t\t<!-- Including [$part] as [$asContent] -->";
+			$this->content .= "\t<!-- Including [$part] as [$asContent] -->";
 
 			switch ($part) {
 				case 'page':
@@ -307,7 +307,7 @@
 			$this->unmkText('section->getContent');
 			if ($this->content) {
 
-				$result = "\t".'<!-- Section as ('.$asContent.') with ('.strlen($this->content).') chars -->';
+				$result = "\t\t".'<!-- Section as ('.$asContent.') with ('.strlen($this->content).') chars -->'."\n";
 				
 				if ($asContent) {
 					$result .= $this->content;

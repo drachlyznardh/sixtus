@@ -174,13 +174,13 @@
 					else die ('Cannot find ['.$filename.']!!!');
 					if (isset($include)) $parser = $this->getParser($include);
 					else $include = 'SELF!';
-					echo ("<!-- Parser->parseLine($frag[1], $frag[2]) $include, Part[$partToInclude], As[$asContent] -->\n");
+					#echo ("<!-- Parser->parseLine($frag[1], $frag[2]) $include, Part[$partToInclude], As[$asContent] -->\n");
 					$this->currentTab->addInclude($parser, $partToInclude, $asContent);
 					return;
 				case 'tabs':
 					$frag[1] = strtolower($frag[1]);
 					switch ($frag[1]) {
-						case 'allwaysall':
+						case 'alwaysall':
 							$this->tabCond = true;
 							break;
 					}

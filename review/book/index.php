@@ -1,8 +1,6 @@
 title#Libri#Letti a spasso
 prev#Recensioni/Show/#Show
 start#page
-	id#libri
-	titler#Libri
 	Ora, io non leggo moltissimo; non ho mai letto molto nella mia vita. Ma poi
 	ho realizzato due cose:
 	begin#ul
@@ -12,10 +10,12 @@ start#page
 
 	Ho così cominciato a leggere durante i miei spostamenti. Ecco quel che ho
 	letto (recentemente) mentre camminavo.
+	br#
+#begin#double
+		include#review/catalogo#libri@as@content
+#end#double
 stop#page
 start#side
 	stitle#Libri
-	p#link#Recensioni/Libri/XI/#Nessun Dove### – 1996
-
-	p#link#Recensioni/Libri/XII/#Harry Potter &amp; …### – 1997~2007
+	include#review/catalogo#libri@as@content
 stop#side

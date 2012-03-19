@@ -1,4 +1,5 @@
 title#Storie#Cose stupide, divertenti ma tristi, spesso vere
+next#Tru/Naluten/#Tru Naluten
 start#page
 	Questa è la sezione più idiota del sito.
 
