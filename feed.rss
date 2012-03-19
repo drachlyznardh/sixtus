@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Niente di particolare</title>
+			<description>Cose, restauri e una foto. In ritardo.</description>
+			<pubDate>Mon, 19 Mar 2012 15:00:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/03/#12</guid>
+		</item>
+		<item>
 			<title>Proseguono i preparativi.</title>
 			<description>In realtà no, sono stati terminati. Ma ci sono altre
 			cose.</description>
@@ -18,14 +24,6 @@
 			<description>Aggiornamenti di ieri e oggi</description>
 			<pubDate>Thu, 23 Feb 2012 18:15:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/02/#23</guid>
-		</item>
-		<item>
-			<title>Niente di particolare</title>
-			<description>Doveva essere una sbrodolata piena di filosofia, di
-			scelte di vita, di illuminazione; ma poi ho cambiato idea e mi sono
-			messo a raccontare altre cose…</description>
-			<pubDate>Tue, 21 Feb 2012 17:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/02/#21</guid>
 		</item>
 		</channel>
 </rss>
