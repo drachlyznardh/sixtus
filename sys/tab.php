@@ -35,10 +35,6 @@
 					$this->content[++$this->current] = new Section ($this->d);
 					break;
 				case 'sec':
-				case 'block':
-					$this->content[++$this->current] = new Section ($this->d);
-					break;
-				case 'struct':
 					$this->content[++$this->current] = new Section ($this->d);
 					break;
 				default:

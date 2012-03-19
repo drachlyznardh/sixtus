@@ -53,11 +53,6 @@
 				</div><div id="content" class="small">
 					<?php
 						if (isset($opt['debug'])) require_once('sys/debug.php');
-						#if ($d->allTab()) echo ($p->getPage('all', false));
-						#else echo ($p->getPage ($tab['name'], false));
-
-						#echo ('<!-- $d->allTab ['.$d->allTab().'], $p->allTabs ['.$p->allTabs().'] -->');
-
 						if ($d->allTab() || $p->allTabs()) echo ($p->getAllTabs(false));
 						else echo ($p->getTab ($tab['name'], false));
 					?>
@@ -75,11 +70,9 @@
 			?></div> <!-- RightSide -->
 			<div id="leftside">
 				<?php
-					#require_once ('sys/lside.php');
 					$lsideParser = new Parser ($d);
 					$lsideParser->parse('sys/lside.lyz');
 					echo ($lsideParser->getAllTabs(false));
-					#echo (new Parser ($this->d, 'sys/lside.lyz')->parseAndPrintAll());
 				?>
 			</div> <!-- LeftSide -->
 		</div> <!-- Main -->
