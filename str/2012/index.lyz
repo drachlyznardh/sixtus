@@ -10,6 +10,6 @@ start#side
 		li#link#Storie/2012/LXXIV/#La prima canzone
 		li#link#Storie/2012/LXXV/#Quella storia
 		li#link#Storie/2012/LXXVI/#Niente di particolare
-		#li#link#Storie/2012/LXXVII/#La storia migliore
+#		li#link#Storie/2012/LXXVII/#La storia migliore
 	end#ol
 stop#side

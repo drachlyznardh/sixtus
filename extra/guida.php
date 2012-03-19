@@ -247,7 +247,7 @@ start#side
 	/ I prodigi della
 	link#Extra/Scimmia/#scimmia celeste
 	/ Appunti di
-	link#Extra/S01/#Sistemi Operativi 1
+	link#Extra/SO1/#Sistemi Operativi 1
 	/ L'elenco delle
 	link#Extra/Immagini/#Immagini
 stop#side

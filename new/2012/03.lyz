@@ -4,6 +4,17 @@ prev#News/2012/02/#Febbraio 2012
 tabs#alwaysall
 alltab#
 start#page
+tab#19
+	<em>
+	link##19/03/2012##19
+	</em> / <strong>
+	Bonus? Mini? Boh!
+	</strong>
+	title#La lista delle immagini
+	È una di quelle cose che si mettono nelle <code>tesi</code> per riempire
+	pagine di cose; e siccome sono stanco (son passato a <em>Verona</em>, ieri)
+	non ho briga di fare altro; voi fate i bravi, intanto. E leggetevi
+	link#Extra/Immagini/#'st'elenco###.
 #tab#13
 #	<em>
 #	link##13/04/2012##13
@@ -82,6 +93,10 @@ tab#02
 stop#page
 start#side
 	stitle#link#News/2012/03/#Marzo### 2012
+
+	<em>19/03</em> – La
+	link#Extra/Immagini/#lista
+	delle immagini
 
 #	<em>13/03</em> – 
 #	link#Storie/2012/LXXVII/#La miglior storia finora
