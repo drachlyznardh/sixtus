@@ -61,8 +61,8 @@ tab#principi
 	E per chi ancora non avesse capito, ecco la lista di
 	title#Personaggi e interpreti
 	begin#ul
-		li#la principessa sono io;
-		li#il principe, invece, si chiama <em>Katia</em>.
+		li#la principessa sono <span class="gods">io</span>;
+		li#il principe, invece, si chiama <span class="sacomne">Katia</span>.
 	end#ul
 	E sono abbastanza convinto di non essere
 	stato tanto contento dacché vivo.
@@ -73,6 +73,15 @@ tab#extra
 	mia, casa sua…
 stop#page
 start#side
+	stitle#Attenzione!!!
+
+	Ho scritto questa in un momento di particolare contentezza, quindi potrebbe
+	anche essere più esagerata del solito. Non fidatevi di tutto quel che dico,
+	perché potrebbe essere (e probabilmente è) non dico falso, ma neanche troppo
+	vero.
+	
+	Fate conto che sia “basato su una storia vera”… Ispirato… Millantato…
+	sec#
 	title#Storia LXXVII
 	titler#La storia migliore
 	tid#Principi#principi

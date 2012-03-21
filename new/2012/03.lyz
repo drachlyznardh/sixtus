@@ -4,9 +4,9 @@ prev#News/2012/02/#Febbraio 2012
 tabs#alwaysall
 alltab#
 start#page
-tab#20
+tab#21
 	<em>
-	link##20/03/2012##20
+	link##21/03/2012##21
 	</em> / <strong>
 	link#Extra/#MiniStorie#contenuti#MINISTORIE
 	e
@@ -110,8 +110,8 @@ stop#page
 start#side
 	stitle#link#News/2012/03/#Marzo### 2012
 
-	<em>20/03</em> – [<code>Mini</code>]
-	link##In corso di maturazione###,
+	<em>21/03</em> – [<code>Mini</code>]
+	link##In corso di maturazione##21#,
 	ma anche [<code>Storia LXXVII</code>]
 	link#Storie/2012/LXXVII/#Principi#principi
 
