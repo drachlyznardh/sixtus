@@ -34,7 +34,7 @@
 				Roses are <span style="font-family:monospace; color:#ff0000" title="red">#FF0000</span>
 		</p></div><p style="text-align: center">
 			Violets are <span style="font-family:monospace; color:#0000ff" title="blue">#0000FF</span>
-		</p><div class="outside"><p title="All my base are belong to &lt;?=$you?&gt;" style="text-align: right">
+		</p><div class="outside"><p title="All my base are belong to &lt;?=$Katia?&gt;" style="text-align: right">
 				4ll my b4s3 r b3long 2 U
 		</p></div>
 	</div>

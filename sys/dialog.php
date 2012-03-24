@@ -72,9 +72,7 @@
 
 		public function noTabIncluded () { return !$this->included; }
 
-		public function setTab ($tab) {
-			if (!($this->tab['name'])) $this->tab['name'] = $tab;
-		}
+		public function setTab ($tab) { $this->tab['name'] = $tab; }
 
 		public function t ($meaning, $original) {
 		

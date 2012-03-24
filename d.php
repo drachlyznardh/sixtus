@@ -142,6 +142,8 @@
 	$p = new Parser($d);
 	$p->parse ($page);
 	$tab['name'] or $tab['name'] = $p->getDefaultTab();
+	$d->setTab($tab['name']);
+	$p->prepare();
 	
 	switch ($opt['display']) {
 		case 'Undecorated':

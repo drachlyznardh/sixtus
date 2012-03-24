@@ -11,12 +11,15 @@
 		private $stack;
 		private $counter;
 
+		private $prepared;
+		private $isPrepared;
+
 		public function __construct ($d) {
 			$this->d = $d;
 
 			$this->isText = false;
 			$this->isPre = false;
-			$this->content = false;
+			$this->content = array();
 
 			$this->stack = array (false);
 			$this->counter = 0;
@@ -90,7 +93,8 @@
 					}
 					break;
 				case 'pre':
-					$this->content .= $args[1];
+					$this->mkLine($args[1]);
+					#$this->content .= $args[1];
 					break;
 				case 'title':
 					$this->unmkText($lineno);
@@ -102,10 +106,11 @@
 					break;
 				case 'stitle':
 					$this->unmkText($lineno);
-					$this->content .= "\t\t\t<h3>";
-					if (count($args) > 2) $this->recursive($lineno, $args);
-					else $this->content .= $args[1];
-					$this->content .= "</h3>\n";
+					if (count($args) > 2) {
+						$this->mkLine("\t\t\t<h3>");
+						$this->recursive($lineno, $args);
+						$this->mkLine("\t\t\t</h3>");
+					} else $this->mkline("\t\t\t<h3>$args[1]</h3>"); 
 					$this->isText = false;
 					break;
 				case 'link':
@@ -116,7 +121,8 @@
 				case 'tid':
 				case 'mktid':
 					$this->mkText($lineno);
-					$this->mkLine("\t\t\t\t".$this->mktid ($lineno, $args));
+					#$this->mkLine("\t\t\t\t".$this->mktid ($lineno, $args));
+					$this->content[] = array('tid', $lineno, $args);
 					break;
 				case 'speak':
 					$this->unmkText($lineno);
@@ -155,8 +161,10 @@
 			switch ($this->currentEnv()) {
 				case 'ol':
 				case 'ul':
-					if ($opt) $this->content .= "\t\t\t<li $opt>\n";
-					else $this->content .= "\t\t\t<li>\n";
+					#if ($opt) $this->content .= "\t\t\t<li $opt>\n";
+					#else $this->content .= "\t\t\t<li>\n";
+					if ($opt) $this->mkLine ("\t\t\t<li $opt>");
+					else $this->mkLine ("\t\t\t<li>");
 					break;	
 				case '':
 				case 'double':
@@ -164,8 +172,10 @@
 				case 'mini':
 				case 'inside':
 				case 'outside':
-					if ($opt) $this->content .= "\t\t\t<p $opt>\n";
-					else $this->content .= "\t\t\t<p>\n";
+					#if ($opt) $this->content .= "\t\t\t<p $opt>\n";
+					#else $this->content .= "\t\t\t<p>\n";
+					if ($opt) $this->mkLine ("\t\t\t<p $opt>");
+					else $this->mkLine ("\t\t\t<p>");
 					break;
 				default:
 					die ('Section->mkText: unknown env ['.$this->currentEnv().'] @'.$lineno);
@@ -194,7 +204,7 @@
 			$this->isText = false;
 		}
 
-		private function mkline ($line) { $this->content .= "$line\n"; }
+		private function mkline ($line) { $this->content[] = $line; }
 
 		private function mkBegin ($lineno, $cmd, $args) {
 			list($env, $tag) = $this->mkOpenTag($lineno, $args[1]);
@@ -290,16 +300,37 @@
 
 		public function addInclude ($parser, $part, $asContent) {
 
-			$this->content .= "\t<!-- Including [$part] as [$asContent] -->";
+			$this->mkLine ("\t<!-- Including [$part] as [$asContent] -->");
+			$this->content[] = array ('include', $parser, $part, $asContent);
+			return;
+		}
 
-			switch ($part) {
-				case 'page':
-					$this->content .= $parser->getAllTabs($asContent);
-					break;
-				case 'side':
-					$this->content .= $parser->getSide($asContent);
-					break;
-				default: $this->content .= $parser->getTab($part, $asContent);
+		public function prepare () {
+		
+			if ($this->isPrepared) return;
+			$this->isPrepared = true;
+
+			foreach ($this->content as $line) {
+				if (is_array($line)) switch ($line[0]) {
+					case 'tid':
+						$this->prepared .= $this->mktid($line[1], $line[2]);
+						break;
+					case 'include':
+						$line[1]->prepare();
+						switch ($line[2]) {
+							case 'side':
+								$this->prepared .= $line[1]->getSide($line[3]);
+								break;
+							case 'page':
+								$this->prepared .= $line[1]->getAllTabs($line[3]);
+								break;
+							default:
+								$this->prepared .= $line[1]->getTab($line[2], $line[3]);
+						}
+						break;
+					default:
+						die ('WTF happened!?!? '.$line[0].' @'.$lineno);
+				} else $this->prepared .= $line."\n";
 			}
 		}
 
@@ -307,13 +338,13 @@
 			$this->unmkText('section->getContent');
 			if ($this->content) {
 
-				$result = "\t\t".'<!-- Section as ('.$asContent.') with ('.strlen($this->content).') chars -->'."\n";
+				$result = "\t\t".'<!-- Section as ('.($asContent?'Content':'Section').') -->'."\n";
 				
 				if ($asContent) {
-					$result .= $this->content;
+					$result .= $this->prepared;
 				} else {
 					$result .= "\n\t\t<div class=\"section\">\n";
-					$result .= $this->content;
+					$result .= $this->prepared;
 					$result .= "\t\t</div>\n";
 				}
 

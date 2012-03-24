@@ -9,6 +9,8 @@
 		private $current;
 		private $continue;
 
+		private $isPrepared;
+
 		public function __construct ($d, $name) {
 			$this->d = $d;
 			$this->name = $name;
@@ -49,6 +51,32 @@
 			else {
 				$this->content[++$this->current] = array ($part, $parser, $asContent);
 				$this->content[++$this->current] = new Section ($this->d);
+			}
+		}
+
+		public function prepare () {
+
+			if ($this->isPrepared) return;
+			$this->isPrepared = true;
+
+			foreach ($this->content as $fragment) {
+				if (is_object($fragment)) {
+					$classname = get_class($fragment);
+					switch ($classname) {
+						case 'Section':
+						case 'Tab':
+							$fragment->prepare();
+							break;
+						default: die ('Tab->prepare: '.$classname.' is an unknown class…');
+					}
+				} else switch ($fragment[0]) {
+					case 'br': break;
+					case 'page':
+					case 'side':
+					default:
+						$fragment[1]->prepare();
+						break;
+				}
 			}
 		}
 
@@ -96,6 +124,7 @@
 				$frag = array('tid', 'Continua', $this->continue, false, '…');
 				$newsec = new Section ($this->d);
 				$newsec->parseLine(-1, $frag[0], $frag);
+				$newsec->prepare();
 				$result .= $newsec->getContent(false);
 			}
 

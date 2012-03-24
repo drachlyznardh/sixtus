@@ -32,7 +32,6 @@
 			$this->meta = array (
 				'title' => false,
 				'subtitle' => false,
-				'default' => false,
 				'prev' => false,
 				'next' => false);
 
@@ -259,10 +258,15 @@
 
 		public function getTitle () { return $this->meta['title']; }
 		public function getSubtitle () { return $this->meta['subtitle']; }
-		public function getDefaultTab () { return $this->meta['default']; }
+		public function getDefaultTab () { return $this->page[0]->getName(); }
 
 		public function getNext () { return $this->meta['next']; }
 		public function getPrev () { return $this->meta['prev']; }
+
+		public function prepare () {
+			foreach ($this->page as $tab) $tab->prepare();
+			$this->side->prepare();
+		}
 
 		public function getAllTabs ($as) {
 			$result = false;

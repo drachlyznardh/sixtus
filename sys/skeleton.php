@@ -72,6 +72,7 @@
 				<?php
 					$lsideParser = new Parser ($d);
 					$lsideParser->parse('sys/lside.lyz');
+					$lsideParser->prepare();
 					echo ($lsideParser->getAllTabs(false));
 				?>
 			</div> <!-- LeftSide -->

@@ -21,8 +21,8 @@
 				<div id="content" class="small">
 					<?php
 						if (isset($opt['debug'])) require_once('sys/debug.php');
-						if ($d->allTab()) echo ($p->getPage('all'));
-						else echo ($p->getPage ($tab['name']));
+						if ($d->allTab()||$p->allTabs()) echo ($p->getAllTabs(false));
+						else echo ($p->getTab ($tab['name'], false));
 					?>
 				</div> <!-- Content -->
 			</div> <!-- Container -->
