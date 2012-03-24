@@ -32,7 +32,7 @@ start#page
 		link#NaNoWriMo/2011/#2011
 	sec#
 	begin#inside
-		link#Extra/Guida/#Modi#META#Modi
+		p#link#Extra/Guida/#Modi#META#Modi
 		[
 		if#mode@is@Gods
 			<em>Gods</em>

@@ -2,13 +2,186 @@ title#Legend#Un gioco timido
 prev#Extra/Immagini/#Immagini
 #next#Extra/#
 start#page
+tab#tutti
+	Scritto dai tizi della <a href="http://ruleofcool.com">Rule Of Cool</a>,
+	questo sistema di gioco permette di fare cose fighe, di mantenere il
+	bilanciamento senza troppi sforzi, di giocare leggeri, di fare cose fighe.
+	begin#mini@right
+		stitle#Regolamento
+		E siccome il regolamento è disponibile gratuitamente ed è leggero
+		leggero, ecco che ve lo <a
+		href="https://s3.amazonaws.com/det_1/Legend.pdf">linko</a>. Non è lungo,
+		è semplice, è pieno di cose fighe.
+	end#mini
+	br#
 	title#Legend
-	Il <em>Critito</em> si basa sul 20 naturale (o anche sul 19 o sul 18, vedi
+	Si tratta di un sistema <code>d20</code>, leggero e senza sbattimenti, in
+	cui tutti possono menare. Qualunque personaggio, per quanto strano, può
+	essere messo insieme con tre (o magari quattro o cinque) <em>track</em>, che
+	sono in qualche maniera associate alle <em>classi</em>, ma in maniera molto
+	meno limitante.
+
+	Le caratteristiche rimangono le stesse, mentre il numero di abilità e
+	talenti disponibili è stato ridimensionato considerevolmente. I danni sono
+	generalmente più alti, così come lo sono gli <em>HP</em>, che non vanno più
+	tirati (ed evitiamo così che singoli tiri di merda rovinino un personaggio).
+	br#
+	id#Combattimento
+	titler#Combattimento
+	Il <em>Critico</em> si basa sul 20 naturale (o anche sul 19 o sul 18, vedi
 	le armi e la yadda) ma non va confermato, ed aggiunge il livello del
 	personaggio ai danni.
 
 	Sui tiri, basta eguagliare la DC o la CA.
+tab#voi
+	Buula.
+tab#me
+	id#Cosmologia
+	title#Cosmologia
+	L'intero mondo di gioco è un piatto coperto dal mare. Quello che i PG
+	credono essere il mondo è soltanto un grande arcipelago su questo disco.
+	Sopra e sotto il disco, sul medesimo asse, ruotano altri due dischi, uno
+	infernale/elementale (sotto) e uno celeste/divino (sopra). Attorno a questa
+	tripla ruota girano le dimore erranti degli dei più importanti.
+	
+	Le razze senzienti sono umani, nani, elfi (alti, senza distinzioni, grazie),
+	halfling. Niente gnomi, niente drow, niente cazzi, dappertutto. Più
+	informazioni nella sezione sulle civiltà.
+	sbr#
+	id#Sommi
+	titler#Sommi
+	begin#mini@left
+	stitle#Moraganor
+		La gerarchia divina parte da Moraganor, creatore e ordinatore
+		dell'intero creato. Egli vive in un colossale castello orbitante, una
+		luna oscura, popolata di sue immagini. Egli non è che una sagoma scura,
+		composta di solo buio; così anche sono le sue immagine, che egli prepara
+		per l'avvento. Con “avvento” si intende il suo prossimo ritorno al
+		mondo, perché esso venga consumato e gli serva da nutrimento
+		(sperabilmente per creare un nuovo mondo, ma chi ne ha la certezza?).
+	end#mini
+	Subito sotto vengono Aureo Chanus, Vicus Thorius e Ecna Mecna.
+	br#
+	stitle#Aureo Chanus
+	Aureo Chanus è un immenso dio-macchina, il cui aspetto è un'intera luna.
+	Egli vive in un perenne stato di sonno (o forse no?). I suoi servi sono
+	esseri senza mente, composti d'ingranaggi e fanatici dell'ordine. Aureo è
+	completamente sottomesso a Moraganor, in quanto servitore dell'ordine
+	cosmico.
+	br#
+	stitle#Vicus Thorius
+	Vicus Thorius è un mago/guerriero cosmico, d'immensi poteri e conoscenze.
+	Egli combina attacco e difesa, combatte con armi e scudi, con mantelli e
+	incantesimi, secondo tutte le arti e tutti gli stili. Thoris non ha servi né
+	seguaci, combatte solo. Egli è un convinto oppositore di Moraganor, ma ben
+	comprende di non essere all'altezza; serenamente rassegnato alla sconfitta,
+	Thoris attende l'avvento e la sua morte.
+	br#
+	stitle#Ecna Mecna
+	Ecna Mecna è la nonna voodoo cosmica. Ella è immensamente anziana,
+	immensamente colta e conoscitrice di ogni via, di ogni destino e di ogni
+	sotterfugio. Si circonda di ombre, di animali striscianti e di anime infide.
+	Tuttavia, tiene immancabilmente fede ai patti ed ha un'infinita memoria.
+	Mecna non si schiera né per né contro Moraganor.
+	sbr#
+	id#Minori
+	titler#Minori
+	begin#mini@left
+		I due più potenti circoli divini sono la Piramide Rovesciata e il
+		Tribunale Celeste. I due gruppi sono opposti ma raremente in guerra, in
+		quanto si limitano ad amministrare i rispettivi domini. Essi, come tutte
+		le divinità minori, sono all'oscuro dell'avvento.
+	end#mini
+	Sotto queste quattro grandi presenze stanno alcuni gruppi e alcuni altri
+	singoli.
+	br#
+	id#Chadan
+	stitle#Chadan
+	Il <em>Tribunale Celeste</em> è invece un'assembla composta di circa un
+	centinaio di divinità celesti, pigre e litigiose; esso è presieduto da
+	rappresentante eletto, che rimane in carica un secolo. Quest'assemble si
+	occupa anche delle più piccole inezie, senza mai riunirsi più d'una singola
+	volta al giorno. L'accumulo di incartamenti non è d'alcun valore per
+	l'assemblea, che accumula costantemente ritardo sin dalla fondazione; le
+	divinità immortali non si curano molto del tempo.
+	br#
+	id#Subakan
+	stitle#Subakan
+	La <em>Piramide Rovesciata</em> è composta di nove Cerchi. Il primo Cerchio
+	è un'assemblea con nove membri, il secondo Cerchio ne ha otto. L'ottavo
+	cerchio ha a due, mentre il nono cerchio ha un solo seggio che, per
+	tradizione, viene lasciato vacante. Ogni cerchio ha eguale importanza nel
+	prendere decisioni.
+	
+	Membro più influente della Piramide è Daemus, divinità oscura e infida che
+	partecipa contemporaneamente, sotto mentite spoglie, ad ogni cerchio oltre
+	il quarto.
+	br#
+	id#Totemici
+	stitle#Totemici
+	Molte isole del grande mare sono popolate e presiedute da popolazioni di
+	divinità totemiche, come i Ragni, gli Sciacalli, i Cobra. Inutile dire che
+	queste isole sono fondamentalmente disabitate.
+
+	La maggior parte delle isole è abitata da popolazioni selvaggie e deboli,
+	quali li Gnoll, i Koboldi, gli Orchi. Le sole isole del grande arcipelago
+	sono abitate da divinità civili, disinteressate agli ordini e formalmente
+	non benvolute dagli altri dei.
+	sbr#
+	titler#Il Grande Cerchio
+	Di tutto il cosmo, la parte più grande e densamente popolata è il <em>Grande
+	Cerchio</em>, coperto dall'oceano e puntellato di isolette.
+	br#
+	id#Isole
+	stitle#Le Isole
+	Il bordo del Grande Cerchio è piuttosto regolare, vi si trovano grandi isole
+	con una certa frequenza. Gran parte di queste isole è sovrintesa da una
+	potente divinità totemica che si interessa unicamente del proprio dominio,
+	una piccola parte è abbandonata e lasciata selvatica.
+	br#
+	id#Impero
+	stitle#L'Impero
+	Al centro del Grande Cerchio sorge il <em>Grande Arcipelago</em>, composto
+	di sette (!) isole civilizzate. Sull'isola centrale, che fa da cardine per
+	l'intero piano, sorge la <em>città imperiale</em>. Vi regna
+	<code>Tzal Coatl Sfin Quet Asur Pal Ban</code>, antico e potente drago, che
+	la leggenda vuole sia il fondatore stesso delle isole.
 stop#page
 start#side
 	title#Legend
+	titler#Rule of Cool
+	br#
+	begin#half@right
+		Una piccola introduzione. Cose fuffa, nessun pericolo.
+	end#half
+	stitle#tid#Per tutti#tutti
+	begin#ul
+		li#tid#Combattimento#tutti#Combattimento
+	end#ul
+	clear#both
+	br#
+	begin#half@left
+		Quello che ho pensato e che potrebbe interessarvi, ma possibilmente
+		anche cose spaventose
+	end#half
+	stitle#tid#Per voi#voi
+	Ancora niente :-P
+	clear#both
+	br#
+	begin#half@right
+		Quello che invece serve a me. Non leggete qui a meno che non vi
+		interessi <code>spoiler</code>arvi la campagna. Scrivo quì perché mi
+		altrimenti mi dimentico le cose.
+	end#half
+	stitle#tid#Per me#me
+	p#tid#Cosmologia#me#Cosmologia
+	[
+	tid#Sommi#me#Sommi
+	/
+	tid#Minori#me#Minori
+	]
+	p#tid#Isole#me#Isole
+	/
+	tid#Impero#me#Impero
+	clear#both
 stop#side

@@ -115,13 +115,10 @@
 					break;
 				case 'link':
 				case 'mklink':
-					$this->mkText($lineno);
 					$this->mkLine("\t\t\t\t".$this->mklink ($lineno, $args));
 					break;
 				case 'tid':
 				case 'mktid':
-					$this->mkText($lineno);
-					#$this->mkLine("\t\t\t\t".$this->mktid ($lineno, $args));
 					$this->content[] = array('tid', $lineno, $args);
 					break;
 				case 'speak':
@@ -170,6 +167,7 @@
 				case 'double':
 				case 'triple':
 				case 'mini':
+				case 'half':
 				case 'inside':
 				case 'outside':
 					#if ($opt) $this->content .= "\t\t\t<p $opt>\n";
@@ -193,6 +191,7 @@
 					case 'double':
 					case 'triple':
 					case 'mini':
+					case 'half':
 					case 'inside':
 					case 'outside':
 						$result = "\t\t\t</p>"; break;
@@ -210,6 +209,7 @@
 			list($env, $tag) = $this->mkOpenTag($lineno, $args[1]);
 			switch ($env) {
 				case 'mini':
+				case 'half':
 				case 'double':
 				case 'triple':
 				case 'ol':
@@ -226,6 +226,7 @@
 			list($env, $tag) = $this->mkCloseTag($lineno, $args[1]);
 			switch ($env) {
 				case 'mini':
+				case 'half':
 				case 'double':
 				case 'triple':
 				case 'ol':
@@ -253,6 +254,9 @@
 			switch ($env) {
 				case 'mini':
 					$result = array ($env, "\t\t<div class=\"mini-$frag[1]\">");
+					break;
+				case 'half':
+					$result = array ($env, "\t\t<div class=\"half-$frag[1]\">");
 					break;
 				case 'double':
 					$result = array ($env, "\t\t<div class=\"doublecol\">");
@@ -290,6 +294,7 @@
 					return array ($args, "\t\t</$args>");
 				case '':
 				case 'mini':
+				case 'half':
 				case 'double':
 				case 'triple':
 				case 'inside':

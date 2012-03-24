@@ -28,17 +28,34 @@ div.section {
 	border-style: outset;
 }
 
+.half-left, .half-right {
+	width: 55%;
+	border-width: 2px;
+	margin: 5px;
+	border-style: outset;
+}
+
 .mini-left {
-	width: 35%;
 	float: left;
 	margin: 0 5px 0 -5px;
 	border-right: 0;
 }
 
 .mini-right {
-	width: 35%;
 	float: right;
 	margin: 0 -5px 0 5px;
+	border-left: 0;
+}
+
+.half-left {
+	float: left;
+	margin-left: -5px;
+	border-right: 0;
+}
+
+.half-right {
+	float: right;
+	margin-right: -5px;
 	border-left: 0;
 }
 

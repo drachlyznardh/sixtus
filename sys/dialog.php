@@ -53,8 +53,8 @@
 			}
 
 			if ($tab && $this->tab['name'] == $tab)
-				if ($hash) return '<span class="em">'.$this->link($this->self, $title, $tab, $hash, $extra).'</span>';
-				else return '<span class="em">'.$title.'</span>'.$extra;
+				if ($hash) return $this->link($this->self, $title, $tab, $hash, $extra);
+				else return '<em>'.$title.'</em>'.$extra;
 			else return $this->link($this->self, $title, $tab, $hash, $extra);
 		}
 
@@ -76,7 +76,7 @@
 
 		public function t ($meaning, $original) {
 		
-			return '<span class="em" title="che significa: “'. $meaning .'”">'. $original .'</span>';
+			return '<em title="che significa: “'. $meaning .'”">'. $original .'</em>';
 		}
 
 		public function inline ($speaker, $first, $second=false) {

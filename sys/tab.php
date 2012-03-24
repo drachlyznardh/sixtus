@@ -121,7 +121,7 @@
 			}
 
 			if ($this->continue && !$as) {
-				$frag = array('tid', 'Continua', $this->continue, false, '…');
+				$frag = array('p', 'tid', 'Continua', $this->continue, false, '…');
 				$newsec = new Section ($this->d);
 				$newsec->parseLine(-1, $frag[0], $frag);
 				$newsec->prepare();
