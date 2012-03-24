@@ -67,10 +67,10 @@ tab#compagni
 		di tutti noi messi assieme, è un troll potente e meticoloso, ne
 		ha viste di tutti i colori e possiede incredibili poteri. Non
 		mangiando brioche e girando spesso con la cremina per le mani, è
-		noto all'esterno come <span class="em">Mr. Benessere</span>.
+		noto all'esterno come <em>Mr. Benessere</em>.
 
-		<span class="mitch">Mitch</span>, il <span class="em">re del
-		gossip</span> conosce tutto e tutti, ha una lunga esperienza
+		<span class="mitch">Mitch</span>, il <em>re del
+		gossip</em> conosce tutto e tutti, ha una lunga esperienza
 		nell'aiutare i nabbi e una grande pazienza. Attualmente, s'è
 		trovato un vero mestiere.
 
@@ -87,15 +87,19 @@ tab#compagni
 	Non tutti i miei amici studiano in questa facoltà, non ci spendono
 	la vita, ma fanno anche altre cose.
 	begin#ul
-		<span class="em">Luber</span>, ad esempio, ha un lavoro vero e
+		<em>Luber</em>, ad esempio, ha un lavoro vero e
 		una vita vera. Fa cose, recensisce anime terribili e gioca con
 		me ad Exalted.
 
-		<span class="em">Dave</span> ossia <span class="em">Il
-		Troll</span> invece è una creatura a parte. Narra la leggenda
+		<em>Dave</em> ossia <em>Il
+		Troll</em> invece è una creatura a parte. Narra la leggenda
 		che fosse qui in facoltà da tempo immemore, ma poi – per motivi
 		ignoti ai mortali – sparì ritirandosi a vita eremitica. Torna
 		ogni tanto, attraverso visioni oppure in forma astrale.
+
+		<em>Arber</em> è l'uomo che conosce tutti; anche più di Mitch. Gira in
+		facoltà da tempo immemore ed ogniqualvolta ci si becca per un caffè, lui
+		incontra qualcuno e si perde via…
 	end#ul
 tab#contenuti
 	pre#<a id="Storie"></a>
@@ -250,4 +254,6 @@ start#side
 	link#Extra/SO1/#Sistemi Operativi 1
 	/ L'elenco delle
 	link#Extra/Immagini/#Immagini
+	/ Gli appunti sul regolamento di
+	link#Extra/Legend/#Legend
 stop#side

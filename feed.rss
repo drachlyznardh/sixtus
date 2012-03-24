@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Reazioni, software e Legend</title>
+			<description>Un pezzo di storia e della fuffa.</description>
+			<pubDate>Sat, 24 Mar 2012 17:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/03/#24</guid>
+		</item>
+		<item>
 			<title>La lista delle immagini</title>
 			<description>Sembra proprio che io non abbia briga di fare nulla di
 			utile, ecco quindi della yadda e la lista delle immagini.</description>
@@ -18,13 +24,6 @@
 			<description>Cose, restauri e una foto. In ritardo.</description>
 			<pubDate>Mon, 19 Mar 2012 15:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/03/#12</guid>
-		</item>
-		<item>
-			<title>In corso di maturazione</title>
-			<description>Una cosa bella, una non bella. Ma quella bella è
-			abbastanza grande da coprire quell'altra.</description>
-			<pubDate>Wed, 21 Mar 2012 16:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/03/#21</guid>
 		</item>
 		</channel>
 </rss>

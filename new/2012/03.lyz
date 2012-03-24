@@ -2,8 +2,56 @@ title#Marzo#Cose, cose, cose
 prev#News/2012/02/#Febbraio 2012
 #next#News/2012/02/#Febbraio 2012
 tabs#alwaysall
-alltab#
 start#page
+tab#24
+	<em>
+	link##24/03/2012##24
+	</em> / <strong>
+	link#Extra/#MiniStorie#contenuti#MINISTORIE
+	e
+	link#Extra/#Storie#contenuti#STORIE
+	</strong>
+	title#Reazioni, Software e Legend
+	Mi sono messo a scrivere delle
+	link#Storie/2012/LXXVII/#reazioni#REAZIONI
+	di alcune persone, più qualche altra cosuccia. Speravo la lista venisse più
+	lunga e anche più divertente, ma mi sono sbagliato.
+	br#
+	Poi ho anche apportato qualche altro invisibile cambiamento al
+	<code>software</code> che da vita al sito. Cose fighe. Prima (se ricordate o
+	se l'avete notato; e so che <span class="bolo">il Bolo</span> l'ha notato di
+	sicuro) c'era un problema con l'evidenziazione (nella
+	<code>mini-navigazione</code> laterale destra) del nome del <code>tab</code>
+	correntemente attivo, qualora esso fosse il primo della pagina. Per
+	risolvere il problema ho spezzato il <code>parsing</code> del codice
+	sorgente in due parti distinte, così i metadati possono essere raccolti in
+	una fase e usati in quella dopo (e tecnicamente, posso anche dichiarare le
+	cose in un ordine casuale) e questo, in sostanza, mi allunga
+	l'<a
+	href="http://www.urbandictionary.com/define.php?term=e-penis">e-penis</a> e
+	nient'altro. Come sempre.
+	begin#mini@right
+		stitle#Legend
+		Se aveste briga di leggere, sto collezionando idee e appunti nella
+		sezione <code>Extra</code>, come spesso faccio.
+		reverse#
+		Leggete
+		link#Extra/Legend/#qui###. Non temete, nessuno <strong
+		class="spoiler">SPOLIER</strong> presente (sono troppo pigro).
+	end#mini
+	br#
+	Intanto, visto che il mio giovedì non è più occupato dal coro, sto pensando
+	di riempirlo con un'altra campagna (sarebbe la terza in contemporanea).
+	Stavolta, senza alcuna paura e senza alcun freno, mi sto leggendo il
+	regolamento di <code>Legend</code>, un gioco realizzato dalla <em>Rule of
+	Cool RPGs</em>. SOLO COSE FIGHE.
+
+	Oltretutto, questo rappresenta l'opportunità di tornare a fare il <code>Game
+	Master</code> dopo una pausa relativamente lunga. Sarò finalmente in grado
+	di far giocare quella campagna soverchiantemente epica che sogno da anni
+	ormai? Quella che io e il <em>Fabio</em> avremmo dovuto masterare assieme.
+	Esploderanno delle cose, l'universo stesso scricchiolerà, e noi ci faremo
+	delle grassissime risate.
 tab#21
 	<em>
 	link##21/03/2012##21
@@ -109,6 +157,11 @@ tab#02
 stop#page
 start#side
 	stitle#link#News/2012/03/#Marzo### 2012
+
+	<em>24/03</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXVII/#reazioni#REAZIONI
+	alla <em>Storia Migliore</em>, ma anche [<code>Extra</code>] appunti di
+	link#Extra/Legend/#Legend
 
 	<em>21/03</em> – [<code>Mini</code>]
 	link##In corso di maturazione##21#,

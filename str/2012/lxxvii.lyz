@@ -66,11 +66,62 @@ tab#principi
 	end#ul
 	E sono abbastanza convinto di non essere
 	stato tanto contento dacché vivo.
-tab#extra
-	Di fatto, c'è moltissimo che devo raccontare. Lo farò…
+tab#reazioni
+	Un passo significativamente importante, dopo essermi reso conto
+	dell'accaduto (mi ci sono voluti un paio di giorni, eh), è stato quello di
+	comunicare la notizia ad un certo numero di persone.
 
-	La prima sera, il dosso di Sant'Agata, la stazione, il termosifone, casa
-	mia, casa sua…
+	Mi dilungherò, ora, in una lista di reazioni che ho raccolto.
+	br#
+	begin#double
+	begin#ul
+		a <span class="jazz">Jazzinghen</span> l'ho comunicato per chat; lui ha
+		risposto con un <em>“Gh. Huh. Ok”</em>. Poteva andare peggio;
+
+		ad altri allegri compagni (<span class="war">War</span>, <span
+		class="dacav">Simgi</span> e forse anche <em>Arber</em>) l'abbiamo
+		annunciato a pranzo, in mensa; stupore, felicitazioni e pacche sulle
+		spalle;
+
+		da <em>Giulio</em>, che l'ha saputo di <code>strabauz</code> mentre era
+		all'estero, ho ricevuto un <em>“cinque virtuale”</em> che ho ricambiato
+		fisicamente qualche giorno dopo;
+
+		da <em>mio padre</em> ho ricevuto un sorriso muto; <em>mia madre</em>
+		m'ha abbracciato con un <em>“Finalmente”</em>;
+
+		a mio fratello (che stava scappando fuori a cena, come al solito)
+		anticipai un “non sarò solo…”, lui domandò <em>“l'è 'n'om o 'na
+		dona?”</em>;
+	end#ul
+	end#double
+	br#
+	Ed ecco. Queste mi paiono le più significative, altre forse me ne verranno
+	in mente.
+tab#considerazioni
+	Ed ora, a distanza di qualche settimana, qualche considerazione.
+	br#
+	stitle#Adesso sono felice
+	Sono felice. C'è persino gente che lo nota, mi sono effettivamente sentito
+	dire
+	begin#outside
+		speak#em#Hai lo sguardo d'un uomo innamorato
+	end#outside
+	ed è una cosa magnifica. Posso quasi sorridere.
+	br#
+	Ma ecco, c'è un ‘ma’…
+	stitle#Perdo un sacco di tempo
+	Una delle cose che m'è capitato di sentire, quand'ero solo, era
+	begin#outside
+		speak#em#almeno hai tutto il tempo per te
+	end#outside
+	ed era abbastanza vero. Adesso scopro che, anche soltanto per accompagnare
+	Katia in stazione e tornare a casa, mi va via quasi un'ora; non sono affatto
+	dispiaciuto di farlo, naturalmente. Ma è una cosa nuova, che noto.
+	
+	E il problema è che non corro più, adesso; ad andare e tornare dalla
+	stazione, così come a salire e scendere da Povo mi tengo in forma, ma
+	correre è un'altra cosa.
 stop#page
 start#side
 	stitle#Attenzione!!!
@@ -80,11 +131,14 @@ start#side
 	perché potrebbe essere (e probabilmente è) non dico falso, ma neanche troppo
 	vero.
 	
-	Fate conto che sia “basato su una storia vera”… Ispirato… Millantato…
+	Fate conto che sia “<strong>basato su una storia vera</strong>”… Ispirato…
+	Millantato…
 	sec#
 	title#Storia LXXVII
 	titler#La storia migliore
 	tid#Principi#principi
-
-	tid#Extra#extra
+	/
+	tid#Reazioni#reazioni
+	/
+	tid#Considerazioni#considerazioni
 stop#side
