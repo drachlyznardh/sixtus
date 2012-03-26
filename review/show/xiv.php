@@ -32,7 +32,7 @@ tab#intro
 	vista in Gundam00? Beh, forse non così brutti…
 		
 	In ogni caso, ho visto il primo episodio…
-tab#i
+tab#e01
 	Allora, il primo episodio…
 	title#Gundam AGE
 	titler#Il primo episodio
@@ -111,7 +111,7 @@ tab#i
 
 	Sento tanta ma tanta di quella fuffa in arrivo… potrei quasi scommetere che,
 	alla fine, l'intera astronave si trasformi in un Mobile Suit.
-tab#ii
+tab#e02
 	Eh… ho cercato di trattenermi, di non recensire troppo…
 		
 	Ma questa roba è troppo grossa per non scriverne.
@@ -238,7 +238,7 @@ tab#ii
 	Show</em>, come GaoGaiGar o Tengen Toppa Gurren Lagann.
 
 	Oppure potrebbe restare quello ch'è adesso. Una merda.
-tab#iii
+tab#e04
 	Come dice Luber, i primi tre episodi di una serie dovrebbe sempre essere
 	visti, per farsi un'idea di quel che succederà… ma a volte non basta.
 	title#L'impressione sbagliata
@@ -308,7 +308,7 @@ tab#iii
 	Gundam prodursi in un “HATERS GONNA HATE” a razzo. Mai una serie di Gundam
 	ha avuto le balle in mano così tanto, nemmeno in G Gundam.
 
-tab#iv
+tab#e07
 	Questo show ha definitivamente passato il limite dell'idiozia!
 
 	Dopo aver battuto (fatto scappare) il cattivo grossissimo, il Gundam viene
@@ -412,7 +412,7 @@ tab#iv
 	
 	E intanto, secondo l'<code>internet</code>, mancano soltanto tre episodi al
 	salto temporale che porterà la serie in avanti di un'intera generazione.
-tab#v
+tab#e10
 	title#Episodi 10~15
 	E insomma… sono arrivato alla fine di questo arco. Cosa dire di questi
 	ultimi cinque episodi? La <strong>FUFFA</strong>.
@@ -481,17 +481,108 @@ tab#v
 	siamo ricaduti in tutti i possibili cliché.
 	
 	E io avevo persino delle speranze ;_;
+tab#e16
+	title#Episodi 16~23
+	titler#Il secondo arco – AGE 2?
+	Ebbene sì. Passano vent'anni, così, da un episodio all'altro. Scusate se non
+	ho il coraggio di recensirli tutti assieme, ma per arrivare qui ho dovuto
+	raccogliere le braccia, ch'eran cadute molto lontano e molto in basso.
+
+	Dunque… Vent'anni dopo, <em>Furitto</em> è diventato lo stracazzutissimo
+	comandante di tutta la baracca, s'è sposato la bionda <em>Yuri</em>, vive
+	con il nonnetto e due suoi figliuoli, <em>Asemu</em> il maschio e
+	<em>Come-si-chiama-cosa</em> la femmina. Come avesse importanza. E siccome
+	non interessa né a noi né alla serie stessa, non ci dicono altro.
+
+	Il bimbominchia (attuale) sta per diplomarsi; ma non subito, prima c'è
+	bisogno di mettere del <strong>&lt;DRAMMA!&gt;</strong> scolastico, perché
+	<em>blah blah le ragazze</em> e perché <em>blah blah mio padre è un
+	militare</em> e anche perché <em>blah blah voglio arruolarmi e vedere il
+	mondo / la galassia</em> etc etc etc… Fatto sta che un attimo prima del
+	diploma c'è una gara scolastica di robottoni scolastici (è il futuro, se lo
+	possono permettere!).
+
+	Per questa gara, il bimbominchia e i suoi due pisquani vengono
+	improvvisamente affiancati da (imprevedibile sorpresa!) un cazzo di studente
+	straniero appena trasferito. Questo tizio, che non è per nulla sospetto,
+	diventa amico amicissimo di Asemu; si chiama <em>Zeheart</em>, che si dice
+	<code>Zehatto</code>.
+	br#
+	Vi risparmio la yadda: c'è una certa ragazza, ci sono i cattivi, Zehatto è
+	una spia. Asemu si deve invadere la città dai soliti cattivi (in vent'anni
+	non hanno neanche cambiato il colore dei loro robottoni) e sbatte, per puro
+	caso e con l'aiuto del nonnetto, contro il Gundam, che Furitto teneva
+	nascosto nel granaio (eh?!). <em>Boom, Booooom, BOOOOOOOOM</em> e i cattivi
+	esplodono, ed è tutto un “<em>Ah, il Gundam della leggenda!</em>” e “<em>Non
+	posso crederci! Il potere del Gundam</em>”.
+
+	Qualche episodio del cakkio dopo, Asemu e i suoi allegri compagni devono
+	diplomarsi. Zehatto salta fuori, sputtana la sua copertura nel giro di un
+	minuto e diventa cattivo. <strong>&lt;DRAMMA!&gt;</strong> in ogni
+	direzione, amicizia ferita, tradimento e tutti che si sentono delle puttane.
+	br#
+	Ma andiamo avanti, per <em>Tomino</em>. Vent'anni dopo, la <code>Diva</code>
+	è ancora la nave da usare. Uguale a prima, senza una sola modifica. In
+	vent'anni. Boh.
+
+	E partono; a bordo, ci sono il vecchio <code>Dique</code> (il bimbo botolo,
+	che adesso è sposato con una tizia, ha una figlia e fa il meccanico) e –
+	guarda caso – anche il vecchio volpone, <code>Woolf</code>, che c'avrà
+	cinquantacinque anni ed è ancora il tizio più sborone della flotta. In ogni
+	caso, Asemu non conosce queste persone, così la trama può allungarsi
+	ulteriormente.
+
+	Dall'altra parte, intanto, a Zehatto viene assegnato il comando di &gt;9000
+	soldati; ma non solo, gli rifilano una maschera (!) ed anche un nuovo
+	modello <strong>ROSSO</strong> che va (lo dicono davvero) <strong>&lt;3
+	volte più in fretta&gt;</strong>. Ed ecco poteri <span
+	class="wrong">newtype</span> <em>X-Rounder</em> in ogni duello. La fuffa.
+	Poi torna (anche lui invecchiato) il <code>Bimbodemone</code>. Nel loro
+	primo duello, <code>AGE2</code> contro <code>Zeydra</code> (eh, già,
+	tuuuuuuuuuutti i modelli sono cambiati, così la Bandai ne può vendere
+	altri), Asemu viene <code>pwned</code>ato ma Zehatto lo lascia andare. Il
+	<strong>&lt;DRAAAAAAAAAAMMA!!!&gt;</strong> è insopportabile, e la serie è
+	riuscita, in qualche modo, a diventare più infantile nonostante il tempo sia
+	passato.
+
+	Poi si passa direttamente alla stragrande magari-ci-piacerebbe-fosse-epica
+	battaglia finale di questo arco narrativo. Botte, botte, botte, cose che
+	esplodono e milioni di soldatini e altrettanti robottini sacrificati sullo
+	sfondo. <code>Asemu & Woolf</code> da un parte, <code>Zehatto &
+	Desil-il-cresciuto-bimbodemone</code> dall'altra.
+
+	Poi, finalmente, una cosa bella! All'apice (vabbeh, apice è una parola
+	grossa; facciamo “ad un certo punto”) della battaglia sia Asuno che Woolf
+	cominciano a prendere secche secche nei denti, e visto che sono cazzi per
+	tutto, Furitto abbandona la poltrona del centro di comando ed esce fuori con
+	il suo vecchio <code>Gundam AGE1</code> e comincia a castigare tutti. Ma non
+	proprio, in realtà.
+
+	La battaglia finisce subito, i cattivi scappano. Dall'altra parte
+	dell'universo, poi, il vecchio <em>Capitan Barbetta</em> viene rilasciato.
+	Ma di fatto, la storia prosegue, come se niente fosse: persa una battaglia,
+	se ne farà un'altra. Stavolta, i cattivi si nascondono su una colonia
+	terrestre; ecco un'altra occasione per combattere sull'erba, quindi. E
+	sapete che cosa genera un combattimento all'interno di una colonia? Altro
+	<strong>&lt;DRAMMA!!!&gt;</strong>, ovviamente. Asemu s'incazza e spacca il
+	culo ai cattivi… ma era tutto un piano! Di chi? Boh! Ma qualcuno era.
+
+	E non è ancora finita!
 stop#page
 start#side
 	p#tid#Introduzione#intro
 	title#Gundam AGE
-	p#tid#Il primo impatto#i
-
-	p#tid#Il secondo impatto#ii
-
-	p#tid#Episodi 4~6#iii
-
-	p#tid#Episodi 7~9#iv
-
-	p#tid#Episodi 10~15#v
+	p#tid#Il primo impatto#e01
+	e
+	tid#Il secondo impatto#e02
+	br#
+	stitle#L'arco di Furitto
+	p#tid#Episodi 4~6#e04
+	/
+	tid#Episodi 7~9#e07
+	/
+	tid#Episodi 10~15#e10
+	
+	stitle#L'arco di Asemu
+	p#tid#Episodi 16~23#e16
 stop#side

@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Al Vinitaly!</title>
+			<description>Lunedì passato a degustare cose buone con mio padre,
+			più un altro po' di Gundam AGE che male non fa (o forse sì?)<description>
+			<pubDate>Mon, 16 Mar 2012 23:55:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/03/#26</guid>
+		</item>
+		<item>
 			<title>Reazioni, software e Legend</title>
 			<description>Un pezzo di storia e della fuffa.</description>
 			<pubDate>Sat, 24 Mar 2012 17:30:00 +0100</pubDate>
@@ -18,12 +25,6 @@
 			utile, ecco quindi della yadda e la lista delle immagini.</description>
 			<pubDate>Mon, 19 Mar 2012 16:31:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/03/#19</guid>
-		</item>
-		<item>
-			<title>Niente di particolare</title>
-			<description>Cose, restauri e una foto. In ritardo.</description>
-			<pubDate>Mon, 19 Mar 2012 15:00:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/03/#12</guid>
 		</item>
 		</channel>
 </rss>
