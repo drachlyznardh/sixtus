@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Il pesce invece…</title>
+			<description>Ecco una storia vera, che anche provando non sarei
+			riuscito ad inventarmi da solo.</description>
+			<pubDate>Fri, 30 Mar 2012 12:15:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/03/#30</guid>
+		</item>
+		<item>
 			<title>Al Vinitaly!</title>
 			<description>Lunedì passato a degustare cose buone con mio padre,
 			più un altro po' di Gundam AGE che male non fa (o forse sì?)<description>
@@ -18,13 +25,6 @@
 			<description>Un pezzo di storia e della fuffa.</description>
 			<pubDate>Sat, 24 Mar 2012 17:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/03/#24</guid>
-		</item>
-		<item>
-			<title>La lista delle immagini</title>
-			<description>Sembra proprio che io non abbia briga di fare nulla di
-			utile, ecco quindi della yadda e la lista delle immagini.</description>
-			<pubDate>Mon, 19 Mar 2012 16:31:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/03/#19</guid>
 		</item>
 		</channel>
 </rss>

@@ -26,13 +26,230 @@ tab#tutti
 	generalmente più alti, così come lo sono gli <em>HP</em>, che non vanno più
 	tirati (ed evitiamo così che singoli tiri di merda rovinino un personaggio).
 	br#
+	id#Creature
+	title#Creature
+	Adesso mi segno un po' di <em>yadda</em> regolamentare per la generezione
+	della creature.
+	br#
+	stitle#Caratteristiche
+	Siccome questo è un <code>d20</code>, le creature hanno le solite sei
+	caratteristiche principali (forza, destrezza, costituzione, intelligenza,
+	saggezza, carisma), ciascuna delle quali fornisce un modificatore pari alla
+	metà (sempre per difetto) dei punti dopo il 10 (<code>pg11</code>).
+	
+	In base alla sua <code>classe</code>, la creatura ottiene un <code>Bonus
+	d'Attacco Base</code>, dei <code>Tiri Salvezza</code> e due caratteristiche
+	chiave, una associata all'attacco (<code>KOM – Key Offense Modifier</code>)
+	e una alla difesa (<code>KDM – Key Defense Modifier</code>).
+	
+	Esistono poi una serie di caratteristiche che derivano dalle prime. La
+	<code>Classe Armatura</code> si calcola come (10 + BAB + KDM + <code>altra
+	yadda</code>), il <code>Grado d'Attacco</code> si calcola invece come (d20 +
+	BAB + KOM + <code>altra yadda</code>). Altre cose importanti sono la
+	<code>Consapevolezza</code>, che si calcola come (10 + livello + Sag +
+	<code>altra yadda</code>). I <code>Tiri Salvezza</code> si calcolano come
+	(d20 + bonus di classe) più il miglior modificatore tra due caratteristiche,
+	scelto tra <code>[For|Cos]</code> per la <code>Tempra</code>, tra
+	<code>[Des|Int]</code> per i <code>Riflessi</code> e tra
+	<code>[Sag|Car]</code> per la <code>Volontà</code>.
+	br#
+	stitle#Creazione dei Personaggi
+	Per mettere assieme un personaggio (e per mia fortuna, salvo poche ma poche
+	eccezioni, tutte le creature sono personaggi – sì, anche i mostri) si parte
+	dalle due scelte fondamentali: <code>razza</code> e <code>classe</code> (più
+	il <code>livello</code>, tecnicamente, ma quello è più per me che per voi,
+	LOL). Ogni classe assegna al personaggio un certo numero di abilità; in tutte
+	le abilità che sceglie, il personaggio è considerato addestrato (e riceve un
+	bonus pari al suo livello). Il personaggio deve anche scegliere due talenti;
+	uno scelto dalla lista dei talenti bonus di razza, più un talento libero.
+
+	Restano da assegnare le caratteristiche; i valori a disposizione sono
+	<code>[16|14|14|12|10|10]</code>, da distribuire a piacere. Infine, il
+	personaggio deve scegliere un oggetto magico <code>[minore]</code>, oltre ad
+	un certo (ragionevole) numero di oggetti <code>[comuni]</code>.
+	br#
+	id#Progressione
+	begin#mini@left
+		stitle#Bonus alle Caratteristiche
+		Delle sei caratteristiche base, quattro aumentano con i livelli. La
+		scelta di queste quattro caratteristiche (in ordine) è statica, e
+		andrebbe operata al secondo livello: una volta scelte, la progressione è
+		fissata.
+	end#mini
+	begin#mini@right
+		stitle#Oggetti magici
+		C'è anche una progressione fissa per gli oggetti magici: in realtà, la
+		tabella indica gli slot disponibili per il personaggio, ossia il numero
+		di oggetti magici con i quali il personaggio si può
+		<code>attune</code>are.
+		
+		Tolto il fatto che – in quanto Master – sono fortemente incoraggiato a
+		fornirvi l'impresa per recuperare l'oggetto, non è che vi compaia in
+		tasca.
+	end#mini
+	br#
+	stitle#Progessione
+	Salire di livello comporta un certo numero di modifiche al personaggio. In
+	base alla classe, aumentano il BAB, i bonus ai TS, gli HP; i bonus alle
+	abilità scelte (quelle in cui il personaggio è addestrato) salgono di un
+	punto per livello.
+
+	In base alla tabella a (<code>pg21</code>), il personaggio ottiene anche
+	talenti, incrementi di caratteristica e oggetti magici.
+	br#
+	Meccaniche a parte, il regolamento si aspetta che i personaggi salgano di
+	livello con regolarità, almeno una volta per <code>Impresa</code>; cosa
+	questo voglia dire e che io riesca a farlo, poi è tutto da vedere. Poiché le
+	regole non prevedono una granularità più fine, tutti i personaggi dovrebbero
+	mantenere lo stesso livello, quindi nessuno s'aspetti bonus
+	d'interpretazione o cose del genere (tristezza per alcuni, sollievo per
+	altri). Ci sarebbe, se proprio voleste, la tabella dei <code>Punti
+	Esperienza per Livello</code>, ma preferirei lasciarla fuori (sempre a
+	<code>pg21</code>).
+	br#
 	id#Combattimento
 	titler#Combattimento
-	Il <em>Critico</em> si basa sul 20 naturale (o anche sul 19 o sul 18, vedi
-	le armi e la yadda) ma non va confermato, ed aggiunge il livello del
-	personaggio ai danni.
+	Come vi aspettate, il combattimento si svolge diviso in <code>Round</code>
+	da <code>6"</code>, all'interno del quale ogni creatura ha il suo turno,
+	ordinato in base all'iniziativa, che si tira come (d20 + Des + <code>altra
+	yadda</code>, spareggio per bonus, poi per Des, poi per tiro); ogni creatura
+	può ovviamente decidere di ritardare la sua azione, scendendo di iniziativa,
+	se vuole; se una fronte del combattimento non si rende conto dell'altro,
+	allora c'è il round di sorpresa.
+	br#
+	stitle#Azioni
+	Per turno, ogni creatura ha a disposizione un'<code>Azione Standard</code>,
+	un'<code>Azione di Movimento</code>, un'<code>Azione
+	[Rapida|Immediata]</code> e fino a 5 <code>Azioni Gratuite</code>.
+	begin#ul
+		l'azione <code>Standard</code> può essere un attacco (tutti gli attacchi
+		disponibili per il BAB, più gli attacchi bonus per la
+		<code>Flurry</code> o per effetti di velocità) o altra roba. Il
+		<em>Critico</em> si basa sul 20 naturale ma non va confermato (se
+		colpisce, è critico e basta), ed aggiunge danni bonus pari al livello
+		del personaggio. Sui tiri, basta eguagliare la DC o la CA, non serve
+		superarla (ossia, sui pareggi vince l'attacco);
 
-	Sui tiri, basta eguagliare la DC o la CA.
+		l'azione di <code>Movimento</code> permette al personaggio di muoversi
+		della sua velocità; questa azione non può essere spezzata, ma può essere
+		<em>parte di</em> un'altra azione: in questo caso, la distanza percorsa
+		viene dimezzata;
+
+		l'azione <code>Rapida</code> è qualunque cosa il personaggio possa fare
+		in fretta; l'azione <code>Immediata</code> è più o meno la stessa cosa,
+		ma il termine viene usato per indicare qualcosa che il personaggio
+		compie fuori dal proprio turno;
+
+		l'azione <code>Gratuita</code> è qualcosa di molto semplice e molto
+		rapido, da fare in contemporanea con il resto del turno;
+	end#ul
+	Normalmente, gli attacchi e i lanci di incantesimi sono azioni standard,
+	tutto quel che non è attacco è un'azione di movimento. La maggior parte
+	delle azioni che non siano attacchi, poi, tendono a provocare attacchi di
+	opportunità.
+	br#
+	stitle#Distanze
+	Data una griglia (di quadrati o di esagoni) ogni personaggio (di taglia
+	<code>[Piccola|Media]</code>) occupa una cella lunga/larga
+	<code>1.5m</code>. Per tenere le cose semplici, le distanze sono cinque:
+	begin#ul
+		la distanza in <code>Mischia</code> è di <code>5ft</code>, ma aumenta di
+		<code>5ft</code> ogni <code>5lv</code>; per gli attacchi in mischia (e
+		gli effetti a contatto?);
+
+		il raggio <code>Vicino</code> è di <code>25ft</code>, più
+		<code>5ft</code> ogni <code>2lv</code>; per pistole, balestre e raggi
+		magici;
+
+		il raggio <code>Medio</code> è di <code>100ft</code>, più
+		<code>10ft</code> per <code>lv</code>; per archi, armi da fuoco;
+
+		il raggio <code>Lungo</code> è di <code>400ft</code>, più
+		<code>40ft</code> per <code>lv</code>; per attacchi che vanno lontano;
+
+		il raggio <code>Estremo</code> è di <code>1000ft</code>, più
+		<code>100ft</code> per <code>lv</code>; per l'artiglieria;
+	end#ul
+	br#
+	stitle#Durate
+	C'è anche un comodo sistema di durate, così non dobbiamo sbatterci a
+	calcolare quanti minuti / quante ore dura un incantesimo.
+	begin#ul
+		il <code>Turno</code> è una quantità di tempo di <code>6"</code> durante
+		la quale un personaggio agisce; solitamente, nessuno agisce al di fuori
+		del proprio turno;
+
+		il <code>Round</code> è una quantità di tempo di <code>6"</code>, con la
+		quale si misurano i combattimenti; quando un effetto dura più d'un
+		singolo round, smette di avere effetto al turno corrispondente al suo
+		inizio, in ordine di iniziativa;
+
+		l'<code>Incontro</code> è il tempo che passa dalla comparsa di una certa
+		minaccia, fino alla sconfitta / fuga;
+
+		la <code>Scena</code> è difficile da definire, ma in pratica è tutto
+		quel che capita tra un riposo esteso e l'altro; più o meno una giornata,
+		in pratica, ma non necessariamente dalla mattina alla sera; una scena
+		termina quando ci si rilassa per un certo periodo
+
+		l'<code>Impresa</code> è un ambito temporale, che copre tutto il tempo
+		dedicato a perseguire un certo obiettivo, un certo arco, una certa
+		avventura; mettere in pausa una certa avventura per imbarcarsi in
+		un'altra mette in pausa anche il tempo e i relativi bonus;
+	end#ul
+	br#
+	stitle#Movimenti tattici e Manovre
+	Prima del resto: il <code>Terreno Accidentato</code> dimezza il movimento,
+	il <code>Passo</code> (da <code>5ft</code>, una singola cella) vale come
+	movimento ma non provoca attacco d'opportunità, le creature che
+	<code>Volano</code> si considerano essere troppo in alto per chi sta a
+	terra, sempre; le creature volanti possono menarsi tra di loro, ma devono
+	scendere per attaccare chi sta a terra.
+
+	Inoltre, <em>una sola volta per round</em>, una creatura può effettuare un
+	attacco d'opportunità contro una creatura, entro portata di
+	<code>Mischia</code>, quando questa lo provoca.
+	
+	Ed ecco ora un bell'elenco delle manovre che non sono esattamente attacchi
+	né movimenti, ma entrambi o nessuna delle precedenti:
+	begin#ul
+		la <code>Spinta</code> è un'attacco (azione <code>Standard</code> che
+		provoca attacchi d'opportunità) sposta un avversario di
+		<code>5ft</code>, a meno che questo non passi un
+		<code>TS[Temp|Rif]</code> contro (10 + mezzo livello + For); in
+		aggiunta, l'attaccante può sacrificare il suo <code>Movimento</code> per
+		spingere di altri <code>5ft</code>;
+
+		la <code>Carica</code> è un singolo (uno solo!) attacco (azione
+		<code>Standard</code> non <em>non</em> provoca) al termine di una corsa
+		(almeno <code>10ft</code> in linea retta); tutti gli attacchi portati
+		durante quel round prendono <code>+2</code> a colpire, ma la CA prende
+		una penalità di <code>-2</code> per l'intero round;
+
+		l'<code>Attacco Poderoso</code> è un'azione gratuita che permette, per
+		un intero round, di dare <code>-1</code> a colpire in cambio di
+		<code>+2</code> ai danni (penalità fino al proprio BAB) a tutti gli
+		attacchi in mischia;
+
+		la <code>Mira Letale</code> è un'azione gratuita che permette, per un
+		intero round, di dare <code>-1</code> a colpire in cambio di
+		<code>+1</code> ai danni (penalità fino al proprio BAB) a tutti gli
+		attacchi a distanza;
+
+		si può <code>Combattere sulla Difensiva</code> come azione gratuita per
+		ottenere <code>+2</code> alla CA per un round; non in carica,
+		ovviamente;
+
+		si può effettuare una <code>Raffica</code> come azione standard, dando
+		un <code>-2</code> a tutti gli attacchi, per guadagnarne uno in più (con
+		il bonus migliore);
+
+		disarmare
+
+		correre
+
+		buttare a terra
+	end#ul
 tab#voi
 	Questa è la sezione per <code>voi</code>, che siete giocatori. Siccome mi
 	sono messo d'impegno e mi sono fatto venire in mente un tocco d'ambiente per
@@ -211,10 +428,12 @@ start#side
 	titler#Rule of Cool
 	br#
 	begin#half@right
-		Una piccola introduzione. Cose fuffa, nessun pericolo.
+		Una piccola introduzione. Cose fuffa, nessun pericolo. In pratica, è un
+		riassunto del manuale.
 	end#half
 	stitle#tid#Per tutti#tutti
 	begin#ul
+		li#tid#Creature#TUTTI#Creature
 		li#tid#Combattimento#tutti#Combattimento
 	end#ul
 	clear#both

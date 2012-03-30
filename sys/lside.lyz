@@ -67,17 +67,35 @@ start#page
 	sbr#
 	title#<span class="em" title="Un po&apos;culattoni? No, no, solo allegri.">Allegri</span> compagni
 	Le <a href="http://kiyuko.org/blog/">idee</a> del <span
-	class="bolo">Bolo</span>
+	class="bolo">Bolo</span>, le <a
+	href="http://simgidacav.wordpress.com/">seghe</a> di <span
+	class="dacav">Simgi Dacav</span>, le <a
+	href="http://mikezasch.wordpress.com/">lamentele</a> di <span
+	class="mitch">Mitch</span>, le <a
+	href="http://jazzinghen.wordpress.com/">opinioni</a> di <span
+	class="jazz">Jazzinghen</span> e le <a
+	href="http://mecharete.blogspot.com/">cose fighe</a> di <em>Luber</em>.
 
-	Le <a href="http://simgidacav.wordpress.com/">seghe</a> di <span
-	class="dacav">Simgi Dacav</span>.
+	Ma non solo! Consulto anche
+	begin#ul
+		[ <a href="http://dalong.net">Dalong</a> | <a
+		href="http://gunjap.net">GunJap</a> | <a
+		href="http://gundamguy.blogspot.com">GundamGuy</a> | <a
+		href="http://tfw2005.com">Transformers World 2005</a> | <a
+		href="http://gundam.tk">GundamReviews</a> ] per i modellini
 
-	Le <a href="http://mikezasch.wordpress.com/">lamentele</a> di <span
-	class="mitch">Mitch</span>
+		[ <a href="http:kotaku.com">Kotaku</a> | <a
+		href="http://io9.com">io9</a> | <a
+		href="http://gametrailers.com">GameTrailers</a> | <a
+		href="http://escapistmagazine.com">the Escapist</a> ] per film, scienza
+		e cose fighe
 
-	Le <a href="http://jazzinghen.wordpress.com/">opinioni</a> di <span
-	class="jazz">Jazzinghen</span>
-
-	Le <a href="http://mecharete.blogspot.com/">cose fighe</a> di <span
-	class="em">Luber</span>
+		[ <a href="http://xkcd.com">xkcd</a> | <a
+		href="http://lfgcomic.com">LFG</a> | <a href="http://vgcats.com">VG
+		Cats</a> | <a
+		href="http://explosm.net/comics/new">Cyanide&amp;Happiness</a> | <a
+		href="http://penny-arcade.com/comic/">Penny Arcade</a> | <a
+		href="http://oglaf.com">Oglaf</a> | le storie della <a
+		href="http://soft-land.org/storie/index">Sala Macchine</a>] per ridere
+	end#ul
 stop#page
