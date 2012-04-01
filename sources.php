@@ -40,6 +40,7 @@
 			'Naluten' => array ('tru',
 				'Vol.I' => 'tru/primo',
 				'Vol.II' => 'tru/secondo',
-				'Vol.III' => 'tru/terzo'))
+				'Vol.III' => 'tru/terzo')),
+		'Legend' => 'legend'
 	);
 ?>

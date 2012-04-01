@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Sono giovane?!?</title>
+			<description>Una storiellinina.</description>
+			<pubDate>Sun, 01 Apr 2012 22:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/04/#01</guid>
+		</item>
+		<item>
 			<title>Il pesce invece…</title>
 			<description>Ecco una storia vera, che anche provando non sarei
 			riuscito ad inventarmi da solo.</description>
@@ -19,12 +25,6 @@
 			più un altro po' di Gundam AGE che male non fa (o forse sì?)<description>
 			<pubDate>Mon, 16 Mar 2012 23:55:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/03/#26</guid>
-		</item>
-		<item>
-			<title>Reazioni, software e Legend</title>
-			<description>Un pezzo di storia e della fuffa.</description>
-			<pubDate>Sat, 24 Mar 2012 17:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/03/#24</guid>
 		</item>
 		</channel>
 </rss>

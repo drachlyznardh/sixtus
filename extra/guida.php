@@ -1,5 +1,5 @@
 title#Guida#Perché la gente arriva ma non sa dov'è la roba
-prev#NaNoWriMo/#NaNoWriMo
+prev#Legend/#Legend
 next#Extra/Record/#Record
 start#page
 tab#intro
@@ -254,6 +254,4 @@ start#side
 	link#Extra/SO1/#Sistemi Operativi 1
 	/ L'elenco delle
 	link#Extra/Immagini/#Immagini
-	/ Gli appunti sul regolamento di
-	link#Extra/Legend/#Legend
 stop#side

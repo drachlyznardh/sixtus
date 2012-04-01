@@ -1,6 +1,6 @@
 title#NaNoWriMo#Cosa, come, perché
 prev#Recensioni/#Recensioni
-next#Extra/#Extra
+next#Legend/#Legend
 start#page
 	Il NaNoWriMo è una cosa strana, difficile, da provare.
 	sec#
