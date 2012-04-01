@@ -314,7 +314,7 @@
 		
 			if ($this->isPrepared) return;
 			$this->isPrepared = true;
-
+			$this->unmkText('Section->prepare');
 			foreach ($this->content as $line) {
 				if (is_array($line)) switch ($line[0]) {
 					case 'tid':
@@ -362,7 +362,6 @@
 				case 3: return $this->d->mktid($args[1], $args[2]);
 				case 4: return $this->d->mktid($args[1], $args[2], $args[3]);
 				case 5: return $this->d->mktid($args[1], $args[2], $args[3], $args[4]);
-				case 6: return $this->d->mktid($args[1], $args[2], $args[3], $args[4], $args[5]);
 				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
 			}
 		}
