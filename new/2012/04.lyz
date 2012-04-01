@@ -1,0 +1,47 @@
+title#Aprile#Il caldo è gia tornato!
+prev#News/2012/03/#Marzo### 2012
+#next#News/2012/05/#Maggio### 2012
+tabs#alwaysall
+start#page
+tab#01
+	<em>
+	link##01/04/2012##01
+	</em> / <strong>
+	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
+	</strong>
+	title#Sono giovane?!?
+	begin#mini@right
+	stitle#La corsa / Il percorso
+	Sono tornato al mio percorso estivo – in bici fino al parco di <em>Cristo
+	Re</em>, poi di corsa fino alle <em>Foci dell'Avisio</em> – correndo nella
+	boscaglia e riportando, nel farlo, una ferita di guerra
+	end#mini
+	Ieri, <code>sabato 31 marzo 2012</code>, c'è stata la festa di compleanno
+	del mio fratellino <em>Matteo</em>, che per motivi che non sto a spiegarvi
+	compie gli anni il <code>25 febbraio</code>. È una storia lunga.
+
+	Ma intanto, la festa c'era. Io, ch'ero andato a correre mi sono presentato
+	alla festa con spaventoso ritardo, ma trovando ancora tutti. Mio fratello,
+	il suo compagno di festa <em>Andre</em> (quello che in effetti compie gli
+	anni, <code>doppia festa</code>) ed una marea di altri bimbi; con questi,
+	una certa marea di genitori. Fra un pasticcino e un pugno di popcorn, tra
+	una chiaccherata e l'altra, tra un saluto e una presentazione, ecco che
+	salta fuori che sono figlio di mio padre.
+	begin#outside
+		inline#em#Ah, davvero? E quanti anni hai?
+		chiede la mamma di qualcuno.
+		
+		inline#gods#26 tra qualche settimana
+		rispondo
+
+		E quella
+		inline#em#Caspita! Te ne avrei dati 18
+	end#outside
+	<code>Cool story bro</code>. Ed ecco, mi sento giovane.
+stop#page
+start#side
+	stitle#link#News/2012/04/#Aprile### 2012
+
+	<em>01/04</em> – [<code>MiniStoria</code>]
+	link##Sono giovane?!?#01
+stop#side

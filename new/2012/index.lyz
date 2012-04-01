@@ -5,9 +5,12 @@ start#side
 	reverse#
 	link#News/2012/01/#Gennaio### /
 	link#News/2012/02/#Febbraio### /
-	link#News/2012/03/#Marzo
+	link#News/2012/03/#Marzo### /
+	link#News/2012/04/#Aprile
 	sec#
 	title#Notizie
+	include#new/2012/04#side@as@content
+	br#
 	include#new/2012/03#side@as@content
 	br#
 	include#new/2012/02#side@as@content
@@ -19,6 +22,10 @@ start#page
 	link##alla meno recente##fondo
 	]
 	sec#
+	titler#Aprile 2012
+	br#
+	include#new/2012/04#page@as@content
+	sbr#
 	titler#Marzo 2012
 	br#
 	include#new/2012/03#page@as@content

@@ -1,6 +1,6 @@
 title#Marzo#Cose, cose, cose
-prev#News/2012/02/#Febbraio 2012
-#next#News/2012/02/#Febbraio 2012
+prev#News/2012/02/#Febbraio### 2012
+next#News/2012/04/#Aprile### 2012
 tabs#alwaysall
 start#page
 tab#30
@@ -81,7 +81,7 @@ tab#24
 		sezione <code>Extra</code>, come spesso faccio.
 		reverse#
 		Leggete
-		link#Extra/Legend/#qui###. Non temete, nessuno <strong
+		link#Legend/#qui###. Non temete, nessuno <strong
 		class="spoiler">SPOLIER</strong> presente (sono troppo pigro).
 	end#mini
 	br#
@@ -209,7 +209,7 @@ start#side
 	<em>24/03</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXVII/#reazioni#REAZIONI
 	alla <em>Storia Migliore</em>, ma anche [<code>Extra</code>] appunti di
-	link#Extra/Legend/#Legend
+	link#Legend/#Legend
 
 	<em>21/03</em> – [<code>Mini</code>]
 	link##In corso di maturazione##21#,
