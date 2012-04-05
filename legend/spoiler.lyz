@@ -112,6 +112,69 @@ tab#cosmologia
 	l'intero piano, sorge la <em>città imperiale</em>. Vi regna
 	<code>Tzal Coatl Sfin Quet Asur Pal Ban</code>, antico e potente drago, che
 	la leggenda vuole sia il fondatore stesso delle isole.
+tab#regole
+	title#Regole Extra
+	Questa è la sezione che racchiude una certa parte delle regole. Non c'è
+	niente che sia espressamente proibito ai giocatori, ma poiché si tratta di
+	regole aggiuntive per la sola utilità di chi regge il gioco, le metto qui.
+	br#
+	id#Scagnozzi
+	stitle#Scagnozzi
+	Esistono, per ogni <em>cattivo</em> degno di nota, decine e decine di
+	<em>scagnozzi</em> inutili. È previsto che gli scagnozzi siano incapaci, che
+	possano al più rallentare i protagonisti, pertanto è oppurtuno che abbiano
+	un set di regole per la generazione diversa da quella dei personaggi. Il
+	team c'ha già pensato.
+
+	Gli <em>scagnozzi</em> hanno una propria tabella nel loro
+	<code>Mooks.pdf</code>, e si dividono in cinque categorie predefinite:
+	quelli che <em>menano</em>, quelli che <em>sparano</em>, quelli un
+	<em>peletto addestrati</em>, quelli <em>fighi</em> e i <em>miniboss</em>.
+	Ciascuna di queste categorie applica una piccola modifica alla tabella
+	presente.
+	id#Operativi
+	stitle#Operativi
+	Lievemente più in basso dei <em>Miniboss</em>, questo archetipo è una
+	semplice alternativa per costruire in fretta un avversario non impossibile,
+	ma nemmeno trascurabile. Come indicato sul manuale
+	<code>Operatives.pdf</code>, questi tizi hanno una singola
+	<code>Caratteristica Chiave</code>, per l'attacco e per la difesa;
+	guadagnano due talenti, una singola track, e infine due capacità, una
+	offensiva e una difensiva, prese rispettivamente dai due elenchi presenti.
+	id#Mucchi
+	stitle#Mucchi
+	Per semplificare notevolmente l'uso di gruppi di nemici, il manuale
+	<code>Myriads.pdf</code> introduce l'archetipo del mucchio, che si può
+	applicare sopra tutto. Tecnicamente, il mucchio è una singola creatura (con
+	un singolo profilo) che possiede più corpi, ciascuno dei quali occupa un
+	quadretto (adiacente).
+
+	Per tenere le cose semplici, ciascun colpo che infligge danni al mucchio
+	uccide (o comunque manda fuori combattimento) un singolo corpo; eliminare
+	tutti i corpi del mucchio lo distrugge o lo disperde. Fintanto che questo
+	non accade, il mucchio guardagna (o recupera) un corpo all'inizio di ogni
+	suo turno.
+
+	Tecnicamente, una miriade dovrebbe partire con un numero di corpi compreso
+	tra <code>[7..12]</code>, dato da (7 + ¼ lv). I danni del mucchio si
+	risolvono in fretta: ogni creatura a contatto con il mucchio subisce (1d6 +
+	lv) danni, senza tiro per colpire; dall'ottavo livello in su, i danni
+	salgono a (2d4 + 2*lv).
+	br#
+	id#Trappole
+	stitle#Trappole
+	Non tutte le minacce sono tizi che ti riempiono di botte. Come trappole, in
+	Legend, si considerano sia le zone pericolose, come i buchi, i vulcani, le
+	fosse (anche questa hanno il loro <code>EL</code>).
+
+	Le trappole occupano un certo numero di quadretti; quando qualcuno ci entra,
+	la trappola scatta (e si ricarica dopo un certo numero di round,
+	generalmente). Questo si può evitare notando la trappola: contro la
+	<code>Consapevolezza</code> di un personaggio, oppure con uno specifico
+	tentativo di <code>Perception, Engineering o Larceny</code>. Una volta
+	scoperta una trappola, è possibile disattivarla oppure distruggerla, agendo
+	su uno qualsiasi dei suoi quadretti. Il resto sul manuale
+	<code>Traps.pdf</code>.
 stop#page
 start#side
 	Quello che invece serve a me. Non leggete qui a meno che non vi interessi
@@ -131,5 +194,13 @@ start#side
 	begin#ul
 		li#tid#Isole#me#Isole
 		li#tid#Impero#me#Impero
+	end#ul
+	br#
+	stitle#tid#Regole extra#regole
+	begin#ul
+		li#tid#Scagnozzi#regole#Scagnozzi# / 
+		tid#Operativi#regole#Operativi# / 
+		tid#Mucchi#regole#Mucchi
+		li#tid#Trappole#regole#Trappole
 	end#ul
 stop#side

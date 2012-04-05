@@ -63,11 +63,68 @@ tab#background
 	dio, meno poraccio di voi, potrebbe anche decidere di rilevarla: a quel
 	punto, per quanto non ne siate sicurissimi, potreste anche dissolvervi e
 	smettere di esistere.
+tab#party
+	titler#Il Party
+	Per quanto potuto capire (ieri sera, <code>03 aprile 2012</code>) abbiamo
+	più o meno messo assieme i personaggi. Adesso vedo di scrivere giù qualcosa.
+	br#
+	stitle#La dea drago sbagliata
+	D'accordo con me, Jazzinghen interpreta un drago. Un drago puro, di quelli
+	di una volta, che in pratica sembra una persona normale (non fosse per la
+	coda e gli artigli a scomparsa).
+
+	Nata moltissimo tempo fa, questa dea s'è dedicata alla scienza quando ancora
+	i suoi consanguinei facevan la fuffa. La sua predisposizione a seguire il
+	metodo scientifico e altri regolamenti (per tener su le case e i ponti, ad
+	esempio) l'hanno portata, con il tempo, a metter su una tirannia e un'impero
+	del male.
+
+	Questo, ovviamente, pur mantenendo la propria purezza. Dall'altra parte, più
+	o meno ogni altro drago nel mondo s'è lasciato andare all'avidità, alla
+	pigrizia, alla gigantezza e simili. Con il tempo, la forma del Wyrm è
+	diventata la più comune tra i draghi, tanto che la gente ha smesso di
+	credere in Jazz. Dopo molti anni, eccolo qui, in miseria.
+
+	Ella continua, tuttora, a raccogliere le regole che incontra, richiamandole
+	agli altri e seguendole anche fuori contesto.
+	br#
+	stitle#Il Grande Bastardo
+	War interpreta il dio degli orfani, dei senzatetto, dei disperati. I suoi
+	poteri non mi sono ben chiari, ma egli è piuttosto magico, ben in grado di
+	arrangiarsi e di tramacciare.
+
+	Non credo sia mai neanche stato un grande dio, in passato, e pertanto non è
+	decaduto come gli altri; è forse rimasto lo stesso.
+	br#
+	stitle#Quello delle Ombre Proiettate
+	E ditemi, ci sono forse ombre non proiettate? Comunque, Mitch interpreta un
+	ladro letale che lancia cose attraverso le ombre. In assenza d'un piano
+	migliore, credo che molto tempo fa avesse avuto un buon compagno altrettanto
+	ladro che l'ha tradito e corcato di botte, lasciandolo senza gloria e
+	credenti.
+	br#
+	stitle#La dea della violenza domestica
+	Katia invece ha scelto la dea del focolare, ma non quella classica nonnina
+	che fa le cose buone, bensì quella della matrona che se non finisci la
+	minestra le prendi.
+
+	Temo che, ad un certo punto, il suo eccessivo zelo e l'avvento di nuove
+	tecniche di cucina dal lontano oriente (o forse il microonde), l'abbiano
+	lasciata senza molti fedeli.
+	br#
+	stitle#Il marrano afro-americano-mante inafferrabile
+	Simgi, che non aveva niente da fare, s'è messo a spulciare tutto il
+	regolamento in cerca di cose fighe. Armato di schioppo e stiletto, s'aggira
+	per il vicinato, sfidando la gente a caso e maledicendola con i suoi
+	temibili poteri mortiferi.
+
+	O almeno, questo è quello che mi par d'aver capito. Il ché potrebbe essere
+	anche molto lontano dalla verità.
 stop#page
 start#side
 	title#Legend
 	titler#Le cronache
 	br#
 	p#tid#Per cominciare#background
-	clear#both
+	p#tid#Il Party#party
 stop#side
