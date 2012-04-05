@@ -1,0 +1,31 @@
+start#page
+tab#i
+	begin#ol@style@list-style-type: upper-roman
+		li#link#Tru/Naluten/Vol.I/I/#Camminavo
+		li#link#Tru/Naluten/Vol.I/II/#Sacomne
+		li#link#Tru/Naluten/Vol.I/III/#Il mio nome
+		li#link#Tru/Naluten/Vol.I/IV/#Le altre voci
+		li#link#Tru/Naluten/Vol.I/V/#La mia faccia
+		li#link#Tru/Naluten/Vol.I/VI/#L&apos;altro me
+		li#link#Tru/Naluten/Vol.I/VII/#La meta
+		li#link#Tru/Naluten/Vol.I/VIII/#La Porta
+		li#link#Tru/Naluten/Vol.I/IX/#La fine del mondo
+	end#ol
+tab#ii
+	begin#ol@start@10
+		li#link#Tru/Naluten/Vol.II/X/#La trovatella
+		li#link#Tru/Naluten/Vol.II/XI/#Abbandono &amp; recupero
+		li#link#Tru/Naluten/Vol.II/XII/#Conversazione
+		li#link#Tru/Naluten/Vol.II/XIII/#Dubbio
+		li#link#Tru/Naluten/Vol.II/XIV/#Proposta
+		li#link#Tru/Naluten/Vol.II/XV/#La fuga
+		li#link#Tru/Naluten/Vol.II/XVI/#La sua gente
+		li#link#Tru/Naluten/Vol.II/XVII/#Battaglia navale
+		li#link#Tru/Naluten/Vol.II/XVIII/#Duello
+		li#link#Tru/Naluten/Vol.II/XIX/#Lezione
+	end#ol
+tab#iii
+	begin#ol@start@20
+		li#link#Tru/Naluten/Vol.III/XX/#Il lavoro di Simak
+	end#ol
+stop#page
