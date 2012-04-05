@@ -14,17 +14,19 @@ start#page
 		link#Storie/2011/#2011### /
 		link#Storie/2012/#2012### ]
 		link#Storie/Gaem/#La storia interattiva
+	stitle#link#Recensioni/#Recensioni
+	reverse#
+		link#Recensioni/#Categorie#CATEGORIE## /
+		link#Recensioni/#Classifica#CLASSIFICA## /
+		link#Recensioni/#Indice#INDICE
+	br#
+	titler#Cose meno interessanti
 	stitle#link#Tru/Naluten/#Tru Naluten
 	reverse#
 		link#Tru/Naluten/Personaggi/#Personaggi### [
 		link#Tru/Naluten/Vol.I/#Vol.I### /
 		link#Tru/Naluten/Vol.II/#Vol.II### /
 		link#Tru/Naluten/Vol.III/#Vol.III### ]
-	stitle#link#Recensioni/#Recensioni
-	reverse#
-		link#Recensioni/#Categorie#CATEGORIE## /
-		link#Recensioni/#Classifica#CLASSIFICA## /
-		link#Recensioni/#Indice#INDICE
 	stitle#link#NaNoWriMo/#NaNoWriMo
 	reverse#
 		link#NaNoWriMo/2010/#2010### /
