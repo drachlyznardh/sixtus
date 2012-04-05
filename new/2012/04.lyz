@@ -3,6 +3,88 @@ prev#News/2012/03/#Marzo### 2012
 #next#News/2012/05/#Maggio### 2012
 tabs#alwaysall
 start#page
+tab#05
+	<em>
+	link##05/04/2012##05
+	</em> / <strong>
+	Men che
+	link#Extra/#MiniStorie#CONTENUTI#MiniStorie
+	ma anche
+	link#Extra/#Extra#CONTENUTI#Extra
+	</strong>
+	title#Quei dannati scalini in cima alla Busa
+	E insomma… sarà che questo è sentimentalemente il miglior periodo della mia
+	vita, sarà anche che intellettualmente è il peggiore (<em>hurr durr</em>, mi
+	pare che il mio cervello sia stato fermo, nelle ultime settimane…) ma almeno
+	fisicamente non sto malaccio.
+	begin#mini@right
+		Non è a casa che <em class="jazz">Jazzinghen</em> m'ha descritto come
+		personaggio dotato di <code>Costituzione</code> bassissima, ma vari
+		talenti come <code>Correre</code> e <code>Tempra d'Acciaio</code>,
+		perché posso fare cose incredibili. Ma solo due o tre: sulle altre
+		faccio cagare.
+	end#mini
+	Non sto malaccio nel senso che posso essere
+	<em>prestante</em>, quand'è necessario; contrariamente a quello che la gente
+	s'aspetta, sapendo che corro e scalo e pedalo e cammino, non sono affatto
+	elastico e la mattina, al risveglio, scricchiolo per alcuni minuti.
+	br#
+	Comunque. In una qualche misura, per la prima volta questa primavera, mi
+	sono più o meno rimesso a correre. Sono andato fino ai <em>Sassi</em> due
+	settimane fa, poi sono tornato a correre sopra <em>Cristo Re</em> e l'altro
+	ieri ho fatto la solita tratta fino a <em>Mattarello</em>, ma stavolta
+	tirando lo sprintone sui <code>1000m</code>, al ritorno, per vedere se corro
+	ancora come quand'ero giovane (era la seconda superiore?!?). Al contempo,
+	siccome mi sveglio tardi e voglio arrivare in facoltà in fretta, ho anche
+	ripreso a salire a Povo in bicicletta. Due giorni fa, sono riuscito a
+	compiere un
+	link#Extra/Record/#record#busa##.
+	clear#right
+tab#02
+	<em>
+	link##02/04/2012##02
+	</em> / <strong>
+	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
+	</strong>
+	title#Le palme
+	begin#mini@left
+		stitle#Cambio del Parroco
+		Non credo d'averne parlato nelle <code>Storie</code>, quindi
+		probabilmente in pochi lo sanno. La parrocchia di <em>San Giuseppe</em>
+		dove io canto ha cambiato parroco.
+
+		Quello di prima aveva delle idee un <em>tantinino</em> vecchia maniera,
+		ed aveva l'abitudine di presiedere tutto. <strong>TUTTO</strong>. Quello
+		nuovo, invece, è molto più moderno; lascia molta più libertà ai gruppi
+		come il nostro coro.
+		
+		Già noi c'occupavamo delle letture, continuiamo a farlo.
+	end#mini
+	Ieri, con tutta la calma del mondo, dopo aver fuffato per l'intero giorno
+	(son rimasto a casa ad insegnare a <em>Matteo</em> come essere
+	<em>Batman</em>, giocando ad <code>Arkham Asylum</code>) me ne sono andato a
+	messa, a cantare, come (quasi) tutte le domeniche.
+
+	Ma questa non è esattamente una domenica normale, è infatti la <em>Domenica
+	della Palme</em>, quella dell'ingresso di Gesù in Gerusalemme, sul puledro,
+	trullallero lallà, rami d'ulivo e cosucce.
+
+	Tradizionalmente, al vangelo si legge a tre voci: la <code>guida</code> che
+	narra, la <em>turba</em> che fa le voci di tutti e il <code>Cristo</code>.
+	Visto che nessuno nel coro vanta una somiglianza maggiore del sottoscritto,
+	ecco che m'è capitato d'interpretare il ruolo.
+	br#
+	Ma non solo! Siccom'era il compleanno d'una corista e un altro tizio (quello
+	dei 9 fiori) s'è effettivamente diplomato (o simili), il coro ha
+	festeggiato. In origine, furono ordinate <code>4 pizze maxi</code>, ma fu
+	subito chiaro che non sarebbero bastate; io e il <em>Fabio</em>, nel
+	ritirare quelle pronte, ne abbiamo subito ordinata una quinta. Ma viste le
+	nostre pancine morigerate, è presto venuto il momento di ordinare la sesta.
+	Per farmi riconoscere, ho esordito la telefonata con un
+	inline#gods#Salve, sono quello delle cinque maxi…
+	scatenando l'ilarità generale in sala; ma almeno, la ragazza delle pizze ha
+	capito subito.
+	clear#both
 tab#01
 	<em>
 	link##01/04/2012##01
@@ -41,6 +123,9 @@ tab#01
 stop#page
 start#side
 	stitle#link#News/2012/04/#Aprile### 2012
+
+	<em>02/04</em> – [<code>MiniStoria</code>]
+	link##Le palme#02
 
 	<em>01/04</em> – [<code>MiniStoria</code>]
 	link##Sono giovane?!?#01
