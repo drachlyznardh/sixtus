@@ -37,13 +37,13 @@ div.section {
 
 .mini-left {
 	float: left;
-	margin: 0 5px 0 -5px;
+	margin: 2px 10px 2px -5px;
 	border-right: 0;
 }
 
 .mini-right {
 	float: right;
-	margin: 0 -5px 0 5px;
+	margin: 2px -5px 2px 10px;
 	border-left: 0;
 }
 
