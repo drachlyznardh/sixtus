@@ -114,33 +114,46 @@ tab#iii
 	contorno del cambio di vegetazione, sbucai sul percorso pedonale che porta
 	da Piedicastello a Sardagna. Ed ora so dove portano quei tre metri di
 	strada.
+tab#busa
+	title#La busa
+	Avete presente quel pezzetto di strada, <em>erta erta come il monte del
+	Purgatorio</em>, che porta da <code>via Grazioli</code> su e su fino a
+	<code>Mesiano</code>? Ecco, quella è la strada che innumerevoli studenti
+	percorrono ogni mattina per salire a lezione, meno innumerevoli passano
+	soltanto per poi salire fino a Povo; verso sera, poi, c'è qualche coraggioso
+	corridore che sale di corsa fino alla fontanella.
+
+	Su quella rampa, negli anni, ho misurato le mie capacità di scalata. Ma a
+	differenza di molta gente, io ci vado in bicicletta. Da via Grazioli fino al
+	ponte, dal ponte al curvone piatto, dal curvone alla prima curva, dalla
+	curva alla fontanella, poi dalla fontanella, sui ciottoli, fin su agli
+	scalini. E l'altra ieri, <code>martedì 03 aprile 2012</code>, per la prima
+	volta, sono riuscito a superare quei dannati scalini senza scendere dalla
+	bicicletta. Mai prima d'ora, in dieci anni, c'ero riuscito. E mai,
+	probabilmente, ci riuscirò di nuovo. Ma l'ho fatto.
 stop#page
 start#side
-	tid#Intro#intro
+	p#tid#Intro#intro
 	titler#Record
-	tid#Precedenti#i
-	
+	p#tid#Precedenti#i
 	reverse#
-	[Storia]
+	[<code>Storia</code>]
 	link#Storie/2010/IV/#Impresa (I)
-
 	reverse#
-	[Storia]
+	[<code>Storia</code>]
 	link#Storie/2011/XLVII/#Impresa (II)
-
-	tid#Fino a Lavis#ii
-
+	p#tid#Fino a Lavis#ii
 	reverse#
-	[Storia]
+	[<code>Storia</code>]
 	link#Storie/2011/LXVII/#Ancora ce la posso fare
-
 	reverse#
-	[Storia]
+	[<code>Storia</code>]
 	link#Storie/2011/LXXI/#Libertà
-
-	tid#Quel sentiero che non esiste#iii
-
+	p#tid#Quel sentiero che non esiste#iii
 	reverse#
-	[Storia]
+	[<code>Storia</code>]
 	link#Storie/2012/LXXVI/#Il giro della Maranza#ii
+	
+	Quei dannati scalini in cima a
+	tid#la busa#busa
 stop#side

@@ -1,5 +1,5 @@
 title#NaNoWriMo#Cosa, come, perché
-prev#Recensioni/#Recensioni
+prev#Tru/Naluten/#Tru Naluten
 next#Legend/#Legend
 start#page
 	Il NaNoWriMo è una cosa strana, difficile, da provare.

@@ -102,14 +102,13 @@ tab#compagni
 		incontra qualcuno e si perde via…
 	end#ul
 tab#contenuti
-	pre#<a id="Storie"></a>
+	id#Storie
 	Le storie sono il vero cuore della baracca.
 	title#Storie
 	Si cominciò un po' di tempo fa, mi par che fosse attorno al settembre 2010.
 	Prima di quello, io e i miei allegri compagni, il <span class="em">popolo
 	dell'aula studio</span>, tenevamo le storie per tradizione orale, come
 	facevano gli antichi.
-
 	begin#mini@right
 	id#MiniStorie
 		stitle#Le MiniStorie
@@ -117,7 +116,6 @@ tab#contenuti
 		intera. Hanno cominciato a comparire nella pagina delle news nel
 		settembre 2011.
 	end#mini
-
 	Da allora, ho sbrodolato una crescente e sorprendente quantità di
 	storie. A volte sono semplicemente stupide, a volte invece raccontano
 	pezzi di vita vissuta, a volte invece sono lo sfogo per le emozioni che
@@ -128,10 +126,8 @@ tab#contenuti
 	storie viene scritto di getto, non viene revisionato da nessuno… in
 	più, tutti i contenuti sono spesso inaffidabili, contengono falsità
 	e opinioni assolutamente personali.
-	pre#<div style="float:none;clear:both"></div>
-	sbr#
 	id#recensioni
-	title#Recensioni
+	titler#Recensioni
 	Perché, se all'inizio raccontavo soltanto delle cose, un giorno ho
 	finito per scrivere una storia immensamente lunga che in pratica
 	recensiva (nel mio personale e peculiare stile) un certo
@@ -141,33 +137,54 @@ tab#contenuti
 	riservare uno spazio dedicato a cose come quella. E poi ho cominciato.
 
 	Ho cominciato a recensire film, quindi. Ce ne sono parecchi. Per la
-	magggior parte brutti. È per questo che ho creato una categoria apposta.
-
-	L'arte dei film brutti è una cosa rara e raffinata. Pochi li sanno fare,
+	magggior parte brutti. È per questo che ho creato una categoria apposta:
+	l'arte dei film brutti è una cosa rara e raffinata. Pochi li sanno fare,
 	pochi li sanno apprezzare. E spesso non ho briga di scrivere…
+	
+	<strong>Ma non solo film!</strong> Mi sono messo a recensire tutto quel che
+	mi passa per le mani: videogiochi, libri, serie tv. In effetti, gli show
+	sono quel che va per la maggiore, perché ne guardo tanti.
 	sec#
-	Ma non solo film!
-
-	Mi sono messo a recensire tutto quel che mi passa per le mani:
-	videogiochi, libri, serie tv. In effetti, gli show sono quel che va per
-	la maggiore, perché ne guardo tanti.
-	sbr#
 	id#TruNaluten
-	Le pagine più antiche presenti sul sito, tecnicamente.
+	begin#mini@right
+		id#Extra
+		titler#Extra
+		<code>Ricorsione!?!</code> In effetti, c'è una sezione Extra, che
+		contiene le cose che non so dove mettere. Non c'è tanta roba, in
+		effetti; se ci fosse, avrebbe la sua sezione dedicata, ma non c'è.
+		Quindi tutto finisce nel mucchio.
+		
+		Forse (e dico <strong>forse</strong>) comparirà una funzione di
+		ricerca…
+	end#mini
+	Le pagine più antiche presenti sul sito, tecnicamente. In realtà, sono il
+	motivo per cui il sito esiste. Ma con il tempo sono state soppiantate dalle
+	<code>Storie</code>.
 	title#Tru Naluten
-	Questo racconto è l'originale motivo per cui il sito esiste. Si
-	tratta di una lunga e grossa storia fantasy, per la maggior
-	parte ancora non scritta: mi porto dietro il progetto da una
-	decina d'anni, ormai…
+	Questo racconto è l'originale motivo per cui il sito esiste. Si tratta di
+	una lunga e grossa storia fantasy, per la maggior parte ancora non scritta:
+	mi porto dietro il progetto da una decina d'anni, ormai…
 
-	I capitoli escono con una sporadicità spaventevole, ma non
-	temete, so esattamente dove andrà la storia.
-	sbr#
+	I capitoli escono con una sporadicità spaventevole, ma non temete, so
+	esattamente dove andrà la storia. <strong>GIURO</strong> che lo so!!!
 	id#NaNoWriMo
-	title#NaNoWriMo
+	begin#mini@left
+	id#Legend
+	title#Legend RPG
+	Sezione aggiunta dopo parecchio tempo, verso <code>Marzo 2012</code>,
+	dedicata ad un certo sistema di <em>Gioco di Ruolo</em> e alla campagna da
+	me <code>master</code>ata con esso.
+	
+	Sperando che niente d'importante esploda.
+	end#mini
+	br#
+	titler#NaNoWriMo
 	Il NaNoWriMo, avvenimento al quale partecipo dal 2010, è una cosa
-	interessante, ma anche lunga. E quindi si merita la sua sezione
-	dedicata.
+	interessante, ma anche lunga. E quindi si merita la sua sezione dedicata. E
+	dopo quello, ci sono stati altri anni e altra fuffa…
+	
+	Tristemente, l'intera cosa è piuttosto inconcludente.
+	clear#both
 tab#meta
 	pre#<a id="Extra"></a>
 	Metasezione!!!
@@ -217,24 +234,21 @@ tab#meta
 	infilare le parole chiave direttamente nell'URL.
 stop#page
 start#side
-	tid#Perché una guida?#intro
-
+	p#tid#Perché una guida?#intro
 	p#tid#L'Autore#gods
 	e i suoi
 	tid#Allegri compagni#compagni
 	title#Guida
 	stitle#tid#Contenuti#contenuti
 	reverse#
-	tid#Storie#contenuti#Storie
-	/
-	tid#MiniStorie#contenuti#MiniStorie
-	/
+	tid#Storie#contenuti#Storie# e 
+	tid#MiniStorie#contenuti#MiniStorie# / 
 	tid#Recensioni#contenuti#Recensioni
-
 	reverse#
-	tid#Tru Naluten#contenuti#TruNaluten
-	/
-	tid#NaNoWriMo#contenuti#NaNoWriMo
+	tid#Tru Naluten#contenuti#TruNaluten# / 
+	tid#NaNoWriMo#contenuti#NaNoWriMo# / 
+	tid#Legend#contenuti#Legend# RPG / 
+	tid#Extra#contenuti#Extra
 	stitle#tid#Meta#meta
 	reverse#
 	tid#Extra#meta#Extra

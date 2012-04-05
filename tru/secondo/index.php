@@ -9,16 +9,5 @@ start#page
 stop#page
 start#side
 	title#Volume II
-	begin#ol@start@10
-		li#link#Tru/Naluten/Vol.II/X/#La trovatella
-		li#link#Tru/Naluten/Vol.II/XI/#Abbandono &amp; recupero
-		li#link#Tru/Naluten/Vol.II/XII/#Conversazione
-		li#link#Tru/Naluten/Vol.II/XIII/#Dubbio
-		li#link#Tru/Naluten/Vol.II/XIV/#Proposta
-		li#link#Tru/Naluten/Vol.II/XV/#La fuga
-		li#link#Tru/Naluten/Vol.II/XVI/#La sua gente
-		li#link#Tru/Naluten/Vol.II/XVII/#Battaglia navale
-		li#link#Tru/Naluten/Vol.II/XVIII/#Duello
-		li#link#Tru/Naluten/Vol.II/XIX/#Lezione
-	end#ol
+	include#tru/catalogo#ii@as@content
 stop#side

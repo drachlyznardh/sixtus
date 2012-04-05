@@ -6,7 +6,5 @@ start#page
 stop#page
 start#side
 	title#Volume III
-	begin#ol@start@20
-		li#link#Tru/Naluten/Vol.III/XX/#Il lavoro di Simak
-	end#ol
+	include#tru/catalogo#iii@as@content
 stop#side

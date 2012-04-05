@@ -12,15 +12,5 @@ start#page
 stop#page
 start#side
 	title#Volume I
-	begin#ol@style@list-style-type: upper-roman
-		li#link#Tru/Naluten/Vol.I/I/#Camminavo
-		li#link#Tru/Naluten/Vol.I/II/#Sacomne
-		li#link#Tru/Naluten/Vol.I/III/#Il mio nome
-		li#link#Tru/Naluten/Vol.I/IV/#Le altre voci
-		li#link#Tru/Naluten/Vol.I/V/#La mia faccia
-		li#link#Tru/Naluten/Vol.I/VI/#L&apos;altro me
-		li#link#Tru/Naluten/Vol.I/VII/#La meta
-		li#link#Tru/Naluten/Vol.I/VIII/#La Porta
-		li#link#Tru/Naluten/Vol.I/IX/#La fine del mondo
-	end#ol
+	include#tru/catalogo#i@as@content
 stop#side

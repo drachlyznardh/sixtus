@@ -1,6 +1,6 @@
 title#Tru Naluten#Per saper dov'andare
-prev#Storie/#Storie
-next#Recensioni/#Recensioni
+prev#Recensioni/#Recensioni
+next#NaNoWriMo/#NaNoWriMo
 start#page
 	Questa è la pagina giusta per chi vuole informazioni su Tru
 	Naluten.
@@ -15,16 +15,15 @@ start#page
 	include#tru/terzo/index#page@as@content
 stop#page
 start#side
-	title#Tru Naluten
 	p#link#Tru/Naluten/Personaggi/#Personaggi
-	stitle#Volumi
-	reverse#
-	link#Tru/Naluten/Vol.I/#Vol.I
-	/
-	link#Tru/Naluten/Vol.II/#Vol.II
-	/
-	link#Tru/Naluten/Vol.III/#Vol.III
-	include#tru/primo/index#side
-	include#tru/secondo/index#side
-	include#tru/terzo/index#side
+	title#Tru Naluten
+	br#
+	stitle#link#Tru/Naluten/Vol.I/#Volume I
+	include#tru/catalogo#i@as@content
+	br#
+	stitle#link#Tru/Naluten/Vol.II/#Volume II
+	include#tru/catalogo#ii@as@content
+	br#
+	stitle#link#Tru/Naluten/Vol.III/#Volume III
+	include#tru/catalogo#iii@as@content
 stop#side

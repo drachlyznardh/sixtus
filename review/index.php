@@ -1,6 +1,6 @@
 title#Recensioni#Sincere, spesso brutte
-prev#Tru/Naluten/#Tru Naluten
-next#NaNoWriMo/#NaNoWriMo
+prev#Storie/#Storie
+next#Tru/Naluten/#Tru Naluten
 start#page
 tab#intro
 	Non ne posso più, devo assolutamente sfogarmi.
