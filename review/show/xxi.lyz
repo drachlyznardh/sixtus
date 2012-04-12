@@ -5,7 +5,7 @@ start#page
 tab#intro
 	Ah, <em>Sūpa Sentai</em>!!! Una cosa davvero buona. Per i pochi a cui piace.
 	Ma non siamo poi così pochi.
-tab#m2011
+tab#199herograndbattle
 	titler#Gokaiger Goseiger
 	title#Super Sentai 199 Hero Grand Battle
 	Ebbene si, sono riuscito a procurarmi questo film. Grazie agli <a
@@ -59,16 +59,86 @@ tab#m2011
 
 	title#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle
 	titler#Best Fukken Movie Evar!!1!1!!!one!!one!!!eleven!!!1!
+tab#akibaranger
+	title#Hikonin Sentai Akibaranger
+	che poi si dice quasi uguale,
+	titler#Hikonin Sentai… Akibarenja
+	Questa serie è strana, persino per esser parte dei <em>Super Sentai</em>.
+	Che poi non è neanche vero. Perché gli <em>Akibaranger</em> sono finti.
+	State molto attenti: questa serie non è per bambini; non che normalmente i
+	<em>Super Sentai</em> lo siano, ma questa non è nemmeno indicata. Di fatto,
+	è sconsigliata ai piccini.
+	br#
+	Il tizio, <em>Akagi Nobuo</em>, vuole combattere per la giustizia, si esalta
+	per tutto, è grandemente appassionato di Super Sentai, ma è anche e
+	soprattutto un 29enne giapponese patetico. E lo sa. Si sente diviso tra le
+	belle ragazze (o almeno una in particolare), i costosissimi modellini e
+	<em>Aoi-tan</em>, che sarebbe la protagonista di una serie animata,
+	prossimamente film al cinema, cuscino da abbracciare e altre cose.
+
+	Presto, questo tizio sbatte contro uno scippo (classicissima ingiustizia
+	giapponese da primo episodio) e pur fallendo viene raccattato dalla
+	professoressa <em>Dottore</em> (si chiama così)
+	inline#em#Ti piacerebbe mica diventare un Akibaranger, e combattere per costruire un futuro pacifico per l'umanità?
+	Gli Akibaranger dovrebbero essere i protettori mascherati del quartire di
+	<em>Akihabara</em>, e questa è l'unica cosa che sanno.
+
+	inline#em#E posso fare il Ranger rosso?
+	è la prima reazione del tizio. Poi, rivolto all'altra ragazza presente,
+	<em>Aoyaki Mitsuki</em>, capisce al volo
+	inline#em#Tu devi essere il Ranger blu
+	poi raccattano anche <em>Moegi Yumeria</em>, la Ranger gialla, la
+	ragazza-gatto che da fuori i volantini.
+	br#
+	speak#em#Ma non possiamo essere un gruppo di tre Ranger, avendo il Blu e il Giallo femmine! Non è mai successo prima!
+	
+	Comunque, questi tizi hanno una <em>“base”</em> al <em>Sentai Bar</em>, un
+	posto pieno di antichi e ricercatissimi gadget delle vecchie serie. In
+	questo posto, i Ranger prendono i loro poteri. Vi ricordate di
+	<em>Aoi-tan</em>? È esattamente il personaggio del cartone che permette a
+	'sti tizi di trasformarsi.
+
+	Per quanto questa parte funzioni, gli Akibaranger non hanno alcun avversario
+	contro cui combattere, non hanno nemmeno una serie ufficiale, e quindi non
+	sono veri <em>Super Sentai</em>. Questo li rende abbastanza tristi.
+	br#
+	Per ovviare alla cosa, i tre se ne vanno in giro per il quartiere, in cerca
+	di un possibile cattivo. Trovano, per puro caso, alcuni cattivi, i
+	<em>Guerriglieri del Market</em>, che sono (almeno per adesso) la direttrice
+	e il mostro con il nome impossibile. Più i soliti pippini sacrificabili, che
+	più o meno si chiamano <em>Pippini Sacrificabili</em> per davvero.
+
+	Ed ovviamente, gli Akibaranger possono spaccare i pippini ma non il mostro.
+	Al grido di
+	inline#em#Hey, non potete usare la mossa finale così presto, codardi!
+	il mostro si fa beffe di loro finché la direttrice non decide di andarsene,
+	perché i cattivi grossi se ne vanno sempre. A quel punto, il Rosso si alza
+	esultante, perché quando il cattivo grosso se ne va il cattivo meno grosso
+	comincia a prenderle. E di fatto le prende.
+
+	inline#em#Fermi tutti! Adesso dobbiamo stare pronti, perché torna e stavolta diventa gigante!
+	dice il Rosso, ma poi gli telefonano dalla base
+	inline#em#Veramente, noi non ce l'abbiamo mica il robottone gigante
+	e tutti si mettono a tremare di paura. Ma! Il mostro non diventa gigante, e
+	non torna neppure. I tre stanno lì ad aspettare finché non cala il sole. E
+	poi la puntata finisce.
+	title#Hokinin Sentai Akibaranger
+	titler#Wowowowowowow magnifico
 stop#page
 start#side
-	tid#Mai sentito?#intro
+	p#tid#Mai sentiti nominare?#intro
 	title#35 anni di Super Sentai
 	stitle#Film
-	tid#199 Hero Grand Battle#m2011
+	[<code>Gokaiger</code>] & [<code>Goseiger</code>] & [<code>tutti</code>]
+	tid#199 Hero Grand Battle#199herograndbattle## – 2011
 
-	[Gokaiger]
-	tid#Flying Ghost Ship#flyingghostship
+	[<code>Gokaiger</code>]
+	tid#Flying Ghost Ship#flyingghostship## – 2011
 	br#
 	stitle#Serie
+	<code>XXXV</code>
 	tid#Kaizoku Sentai Gokaiger#gokaiger## – 2011~2012
+	p#<code>XXXVI</code>
+	tid#Tokumei Sentai Go-Busters#gobusters## – 2012~2013
+	p#tid#Hikonin Sentai Akibaranger#akibaranger## – 2012~2013
 stop#side

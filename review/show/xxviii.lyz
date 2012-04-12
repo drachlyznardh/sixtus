@@ -1,6 +1,6 @@
 title#Macross#Leggete la mia recensione!
 prev#Recensioni/Film/XXVII/#Il discorso del re
-#next#Recensioni//XXIX/#
+next#Recensioni/Film/XXIX/#Il gatto con gli stivali
 start#page
 tab#intro
 	Un bel di, il GODS si mise a guardare Macross.
@@ -117,7 +117,7 @@ tab#macross7
 	film.
 stop#page
 start#side
-	tid#Per chi non sa cos'è#intro
+	p#tid#Per chi non sa cos'è#intro
 	title#Macross
-	tid#Macross 7#macross7## – 1994
+	p#tid#Macross 7#macross7## – 1994
 stop#side

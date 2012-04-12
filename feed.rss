@@ -7,24 +7,22 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Un buon giorno per morire</title>
+			<description>Breve. Vera</description>
+			<pubDate>Thu, 12 Apr 2012 18:00:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/04/#12</guid>
+		</item>
+		<item>
+			<title>Dopo Pasqua</title>
+			<description>Cose, cose, cose…<description>
+			<pubDate>Thu, 12 Apr 2012 18:00:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/04/#11</guid>
+		</item>
+		<item>
 			<title>Sono giovane?!?</title>
 			<description>Una storiellinina.</description>
 			<pubDate>Sun, 01 Apr 2012 22:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/04/#01</guid>
-		</item>
-		<item>
-			<title>Il pesce invece…</title>
-			<description>Ecco una storia vera, che anche provando non sarei
-			riuscito ad inventarmi da solo.</description>
-			<pubDate>Fri, 30 Mar 2012 12:15:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/03/#30</guid>
-		</item>
-		<item>
-			<title>Al Vinitaly!</title>
-			<description>Lunedì passato a degustare cose buone con mio padre,
-			più un altro po' di Gundam AGE che male non fa (o forse sì?)<description>
-			<pubDate>Mon, 16 Mar 2012 23:55:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/03/#26</guid>
 		</item>
 		</channel>
 </rss>

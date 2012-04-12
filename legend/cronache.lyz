@@ -8,26 +8,27 @@ tab#background
 	cominciare (oltre che quello per finire, ma è un'altra storia…), ve la
 	scrivo; metti caso che poi si riesca a fare i personaggi.
 	br#
-	Ecco quindi quella che posso definire l'
-	title#Introduzione
-	ossia il pezzo di storia che potete sapere senza <strong
-	class="spoiler">SPOILER!!!</strong> che rovinino l'esperienza. Intanto,
-	introduco l'idea sulla quale mi sono basato: molti anni fa, quando ancora
-	ero giovane (!) masteravo una campagna abbastanza fuffa che ha fatto
-	divertire me e i miei (allora) allegri compagni per parecchi anni (giocavamo
-	con larga saltuarietà); una volta terminata (abbandonata, per meglio dire)
-	quella campagna, siamo rimasti fermi per un po'… poi è cominciata la
-	<code>Deus Ex</code> (ve la ricordate?
-	link#Storie/2011/XXXI/#Leggete###
-	e piangete – o ridete, se ci riuscite) e dopo quella, nel nostro comune
-	delirio, ce ne siamo usciti con un'idea folle.
+	begin#mini@left
+		Ecco quindi quella che posso definire l'
+		stitle#Introduzione
+		ossia il pezzo di storia che potete sapere senza <strong
+		class="spoiler">SPOILER!!!</strong> che rovinino l'esperienza. Intanto,
+		introduco l'idea sulla quale mi sono basato: molti anni fa, quando
+		ancora ero giovane (!) masteravo una campagna abbastanza fuffa che ha
+		fatto divertire me e i miei (allora) allegri compagni per parecchi anni
+		(giocavamo con larga saltuarietà); una volta terminata (abbandonata, per
+		meglio dire) quella campagna, siamo rimasti fermi per un po'… poi è
+		cominciata la <code>Deus Ex</code> (ve la ricordate?
+		link#Storie/2011/XXXI/#Leggete###
+		e piangete – o ridete, se ci riuscite) e dopo quella, nel nostro comune
+		delirio, ce ne siamo usciti con un'idea folle.
 
-	<strong>Perché non scrivere una campagna <code>più-che-epica</code> e
-	<code>master</code>arla in due?</strong>
+		<strong>Perché non scrivere una campagna <code>più-che-epica</code> e
+		<code>master</code>arla in due?</strong>
 
-	E a quel punto, abbiamo progettato questa ambientazione. Ora, finalmente, la
-	posso giocare. Sarà la fine del mondo?
-	sec#
+		E a quel punto, abbiamo progettato questa ambientazione. Ora,
+		finalmente, la posso giocare. Sarà la fine del mondo?
+	end#mini
 	Ed ora, alcune cose utili.
 	Immaginate, se potete, una grande isola al centro del mondo; un'isola
 	grande. Al centro dell'isola sorge un'alto monte, ai cui piedi s'allarga
@@ -63,7 +64,8 @@ tab#background
 	dio, meno poraccio di voi, potrebbe anche decidere di rilevarla: a quel
 	punto, per quanto non ne siate sicurissimi, potreste anche dissolvervi e
 	smettere di esistere.
-tab#party
+	sec#
+	Ed ora, per chi non lo sa, lasciate che vi presenti.
 	titler#Il Party
 	Per quanto potuto capire (ieri sera, <code>03 aprile 2012</code>) abbiamo
 	più o meno messo assieme i personaggi. Adesso vedo di scrivere giù qualcosa.
@@ -120,11 +122,60 @@ tab#party
 
 	O almeno, questo è quello che mi par d'aver capito. Il ché potrebbe essere
 	anche molto lontano dalla verità.
+tab#s01
+	Ed ecco, <code>martedì 10 aprile 2012</code> abbiamo dato inizio alla
+	campagna. Per cominciare, ho mezzo improvvisato e mezzo ricordato la storia
+	del mondo.
+	begin#inside
+		Girando e girando, il <em>Grande Cerchio</em> è sempre stato pieno
+		d'isole. Prima piene di <em>draghi</em>, poi piene di figli di draghi
+		(alla lunga, gli <em>dèi</em>) e poi yadda yadda i <em>mortali</em>. Ed
+		ognuno faceva le sue cose.
+
+		Finché un giorno, il gran drago <em>Pal Ban</em> decise ch'era giunto il
+		momento di ripulire il mondo intero: presi i suoi e molti dèi al suo
+		seguito, sbrodolò una crociata mondiale che spazzò via tutto quel che
+		c'era. Dopo, su suo ordine, fu fondato l'impero che c'è ancora oggi.
+
+		Da allora, son passati <code>20.000</code> anni, molti dèi e molti
+		draghi si sono rilassati e i mortali vivono in pace.
+	end#inside
+	Per la verità, tutto va bene. Ma sembra che la realtà stessa cominci a
+	scricchiolare, e sembra che il Grande Cerchio (che verte sulla Città
+	Imperiale) stia rallentando.
+
+	In un minuscolo quartiere della <em>Città Imperiale</em> quattro dèi si sono
+	associati, percependo come, con il passare dei millenni, il loro poteri si
+	stia assottigliando; in realtà, è praticamente esaurito, per via della
+	mancanza di fedeli. Essi sono <em>Grimelda</em>, madre del focolare e della
+	violenza domestica; <em>Yu</em> il tramacciatore dell'ombra; <em>Mess'
+	qualcosa blah</em>, draghessa e dea delle regole storte, <em>Monsieur
+	Camouflage de Tramacces Ah-ah</em>, signore delle scorciatoie moralmente
+	discutibili. Il <em>Grande Bastardo</em> s'è poi aggiunto, come accattone;
+	alla sua presenza è dovuto il nome del culto, il
+	<code>Pentapippesimo</code>.
+	br#
+	title#Il Pentapippesimo
+	La sola chiesa del culto è condivisa da tutti e cinque gli dèi, che tirano a
+	campare con un unico anziano sacerdote ed un chierichetto. Tutti e cinque
+	percepiscono come l'assenza di credenti li stia portando ormai sull'orlo
+	della non-esistenza.
+	
+	Ma ora che la campagna è iniziata, hanno l'iniziativa. La loro mossa
+	principale mossa è suscitare un profeta: <em>Gennaro</em> il ciabattino, che
+	prima faceva il pentolaio, passava giusto di lì. Ed eccolo novello
+	sacerdote.
+
+	Come prima opera pastorale, eccolo benedire la più antica e sacra reliquia
+	di <em>de Tramacces</em>, un enorme fallo ligneo noto come il
+	<code>Pannocchione</code>. Il prossimo obiettivo della compagnia sembra
+	quello di organizzare un festival, nella speranza di attirare un seguito da
+	ungere. Anche a forza.
 stop#page
 start#side
-	title#Legend
-	titler#Le cronache
-	br#
 	p#tid#Per cominciare#background
 	p#tid#Il Party#party
+	title#Legend
+	titler#Le cronache
+	p#tid#Il Pentapippesimo#s01
 stop#side

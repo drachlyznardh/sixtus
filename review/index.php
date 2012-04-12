@@ -145,7 +145,7 @@ tab#indice
 	end#ul
 stop#page
 start#side
-	tid#Perché le recensioni?#intro
+	p#tid#Perché le recensioni?#intro
 	title#Recensioni
 	stitle#tid#Categorie#categorie
 	reverse#
@@ -173,7 +173,7 @@ start#side
 	br#
 	stitle#tid#Indice#indice
 	reverse#
-		tid#Cronologico#indice#cronologico# /
-		tid#Per categoria#indice#categoria# /
+		tid#Cronologico#indice#cronologico# / 
+		tid#Per categoria#indice#categoria# / 
 		tid#In corso#indice#incorso
 stop#side
