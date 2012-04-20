@@ -65,6 +65,7 @@ tab#background
 	punto, per quanto non ne siate sicurissimi, potreste anche dissolvervi e
 	smettere di esistere.
 	sec#
+	id#Party
 	Ed ora, per chi non lo sa, lasciate che vi presenti.
 	titler#Il Party
 	Per quanto potuto capire (ieri sera, <code>03 aprile 2012</code>) abbiamo
@@ -148,7 +149,7 @@ tab#s01
 	associati, percependo come, con il passare dei millenni, il loro poteri si
 	stia assottigliando; in realtà, è praticamente esaurito, per via della
 	mancanza di fedeli. Essi sono <em>Grimelda</em>, madre del focolare e della
-	violenza domestica; <em>Yu</em> il tramacciatore dell'ombra; <em>Mess'
+	violenza domestica; <em>Kyu</em> il tramacciatore dell'ombra; <em>Mess'
 	qualcosa blah</em>, draghessa e dea delle regole storte, <em>Monsieur
 	Camouflage de Tramacces Ah-ah</em>, signore delle scorciatoie moralmente
 	discutibili. Il <em>Grande Bastardo</em> s'è poi aggiunto, come accattone;
@@ -171,11 +172,79 @@ tab#s01
 	<code>Pannocchione</code>. Il prossimo obiettivo della compagnia sembra
 	quello di organizzare un festival, nella speranza di attirare un seguito da
 	ungere. Anche a forza.
+	begin#mini@left
+		La scusa ufficiale
+		inline#gods#L'ho fatto perché mancava il Dacav
+		rimarrà valida finché troverò di meglio.
+
+		In pratica, sto lasciando che tutta la campagna vada in fuffa ancor
+		prima d'iniziare.
+	end#mini
+	id#s02
+	br#
+	stitle@right#<code>[s02]</code> Fuffa, furti e recuperi
+	Poi, <code>giovedì 12 aprile 2012</code>, c'è stata una seconda sessione.
+	Andò così: il <em>grande evento (!)</em> che deve dare inizio alla campagna
+	è stato trattenuto (dal master) per lasciar spazio al <code>Festival per il
+	ritorno in auge del Pentapippesimo</code>, che disgraziatamente non solo non
+	è ancora partito, ma s'è anche trasformato nel <code>Festival per il cambio
+	del nome (e altre cose)</code>.
+
+	Mentre il <em>GB</em> e <em>Mess</em> si son dati da fare per procurarsi del
+	cibo e delle vecchie biciclette, <em>Kyu</em> e <em
+	class="wrong">Gremilda…</em> <em class="wrong">Gramilde…</em>
+	<em>Grimelda</em> vanno a rubare in casa delle vecchine. No, veramente,
+	vanno in casa d'una vecchina, le chiedono delle foto dei nipoti e poi le
+	fregano il cibo da sotto il naso.
+
+	Con questi modi <em>divini</em>, i quattro convincono e costringono (povero
+	il <em>Piccolo Giovannino</em>) della gente a partecipare. Il più gasato è
+	il novello <em>Don Gennaro</em>, che s'è già fatto conoscere in giro;
+	d'altro canto, il vecchio <em>Hssah</em> sta davvero tirando gli ultimi.
+
+	Ho deciso che alla prossima sessione mi caricherò dei miei poteri e delle
+	mie responsabilità e farò cominciare 'sta storia. Che lo vogliano oppure no.
+	O forse sì. Cioè no.
+	id#s03
+	br#
+	stitle#<code>[s03]</code> Il festival del Cambio di Nome <code>[19 aprile]</code>
+	Parte il festival: <em>Giovannino</em> procura la nonna <em>Yvonne</em> e la
+	madre <em>Giovanna</em>; la nonnina <em>Matilde</em> vien da sola (niente
+	nipoti); il panettiere ora si chiama <em>Galeone Giangisberti</em>. Ora
+	estremamente devoto, si offre di fornire al tempio dei <em>bretzel</em> per
+	ogni celebrazione. Le cose vanno abbastanza bene, ma non egregiamente: la
+	parrocchia conta ora ben <code>[7 devoti]</code>. Il <em>Pannocchione</em>
+	cresce.
+
+	Gli altri due sono, ovviamente, <em>Don Gennaro</em> e <em>G.I.Joenathan il
+	vecchio</em>, subdolamente plagiato da <em>de Tramasse</em> con i
+	<code>cazzi biscottati</code>. Grazie alle quotidiane celebrazioni (ci sono
+	cinque giorni sacri) tutto il party si sente meglio.
+	br#
+	Una bella mattina, <em>Hssah</em> muore. Muore di vecchiaia, felice e
+	contento. Per il funerale, <em>GB</em> raduna ben <code>11 persone</code>,
+	<em>Monsieur Camouflage</em> scrive il discorso, <em>Mess</em> prepara il
+	razzo, <em>Kyu</em> la pira, <em>Grimelda</em> imbastisce il solito povero
+	rinfresco. Tutti i discorsi sono carichi di <strong>&lt;dramma&gt;</strong>,
+	tanto che altri sette fedeli si aggiungono al seguito: ora sono
+	<code>14</code>.
+	br#
+	La mattina dopo, il <code>crono-frullo-zillo-tippa-rollatore</code> smette
+	di non funzionare. <em>Mess</em> chiede immediatamente aiuto al <em>Grande
+	Bastardo</em>. Anche il <code>giro-sfavillo-trometro</code> malfunziona in
+	modo anomalo.
 stop#page
 start#side
 	p#tid#Per cominciare#background
-	p#tid#Il Party#party
+	[
+	tid#Il Party#background#Party
+	]
 	title#Legend
 	titler#Le cronache
 	p#tid#Il Pentapippesimo#s01
+	[
+	tid#II#s01#s02
+	/
+	tid#III#s01#s03
+	]
 stop#side
