@@ -1,0 +1,105 @@
+title#Diario del Capitano#Per giungere là dove molti altri uomini sono giunti prima
+prev#Extra/Immagini/#Lista delle Immagini
+#next#Extra/##
+start#page
+tab#m0.1
+	title#Data Astrale [<code>M0.1</code>] <em>16/04</em> 2012
+	Recuperato il <code>CDROM</code> contenente tutto quel che <em>dovrebbe</em>
+	servire per il installare il <code>cross-compilatore</code>, l'equipaggio ha
+	dato inizio al carico degli artefatti recuparati, mettendoli al sicuro nella
+	directory <code>[/opt/thesis/loot/]</code>.
+
+	Al contempo, io e il mio <em>secondo in comando</em> – il fedele
+	<code>Tanngrisnir</code>, il cui alimentatore sta tirando gli ultimi –
+	abbiamo dato inizio all'installazione di alcuni pacchetti ausiliari, in
+	particolare il misterioso <code>[alien]</code>, interprete responsabile
+	(almeno in teoria) di passare dall'ignoto formato <code>.rpm</code> di
+	<em>RedHat</em> (pianeta membro della Federazione) al più familiare
+	<code>.deb</code>; accade, tuttavia, che il suo utilizzo non dia i risultati
+	sperati.
+	br#
+	Come spesso io stesso ho operato in passato, questo <em>Alien</em>
+	<strong>millanta</strong>. La semplice chiamata
+	begin#outside
+		alien --to-deb mtwk-lnx-powerpc-gcc-3.4.3-glibc-2.3.3-0.28-1-i686.rpm
+	end#outside
+	non produca l'equivalente pacchetto per <code>apt</code>. Non produce
+	alcunché, in effetti. Potrebbe essere colpa del <em>Perl</em>?
+
+	Mi sono recato personalmente in sala macchine per verificare lo stato
+	dell'installazione. Pare che tutto sia in ordine, nel bene o nel male: tutti
+	i pacchetti sono correttamenti installati e paiono funzionare…
+	<code>perl</code>, <code>dpkg</code>, <code>gcc</code>, <code>make</code>,
+	<code>lintian</code>, persino <code>rpm</code>.
+
+	Il mio prossimo tentativo è quello di utilizzare <code>fakeroot</code>, un
+	comando in grado di garantire <em>fittizi privilegi d'amministratore</em> in
+	un ambiente controllato. Non vedo alcuna differenza.
+
+	Con le opportune opzioni <code>-v -g</code>, scopro quel che <em>alien</em>
+	sta (o non sta?) facendo. Scopro che (o almeno <strong>spero</strong> d'aver
+	scoperto) non c'è alcun problema con <em>alien</em>, bensì con quei burloni
+	di <em>debhelper</em> che dovrebbero fabbricarmi il <code>.deb</code>; cosa
+	che non accade.
+	
+	Scopro che nessu <code>db_blahblah*</code> fa quello che dovrebbe fare.
+	Perché? Boh!
+	br#
+	Per puro caso, in questo settore si trovano un <em class="war">raley point
+	quanto-gravitonico</em> ed anche un <em class="dacav">antico oracolo</em>
+	dello spazio esterno: entrambi si sono offerti di aiutarmi, il primo con un
+	ambiente di traduzione funzionante che misteriosamente produce il
+	<code>.deb</code> che mi serve; l'altro con un intero pianeta in affitto (a
+	prezzi vantaggiosi) che potrebbe permettermi non solo di fare e di
+	compilare, ma anche di allevare una mandria <em>yak</em>, come ho sempre
+	desiderato.
+
+	Non so di chi fidarmi.
+tab#m1.1
+	title#Data Astrale [<code>M1.1</code>] <em>17/04</em> 2012
+	E insomma… devo concludere che <em>alien</em> <strong>non funziona</strong>.
+	Non sono in grado di isolare il problema, non riesco a tracciarlo, non c'è
+	niente di evidentemente rotto sul mio sistema (che funziona perfettamente) e
+	non ci sono problemi d'installazione o di pacchetti o di alcunché.
+
+	Ma <strong>non funziona</strong>: sarà colpa di <em>Ridley Scott</em>,
+	immagino. C'è un bottone che deve fare la cosa mi serve e non la fa. Mi dice
+	d'averlo fatto, ma mente. Tutti i singoli componenti della procedura
+	sembrano a posto, ma assieme non fanno quel che devono fare. Non c'è niente
+	di rotto, come lo aggiusto? Non lo si può fare; farò altro.
+	br#
+	Dopo aver lungamente consultato l'<em>Internet</em>, mi trovo costretto ad
+	accettare il fatto che <strong>sono l'unico al mondo ad avere questo
+	problema</strong>. Non c'è altra soluzione fattibile se non quella di
+	affrontare il problema a basso livello, come facevamo
+	link#Storie/2011/LII/#una volta###.
+	begin#outside
+		speak#gods#Signora Uhura, mi colleghi con tutti i ponti
+		speak#em#Subito, Capitano. È in linea, signore
+		speak#gods#Qui è il Capitano. Annuncio ufficialmente che il tentativo di recuperare la tecnologia aliena è fallito
+		speak#gods#Questa nave procederà nella missione secondo i dettami di <em>Kegel&amp;Custer</em>, alla vecchia maniera
+		speak#gods#Le vostre <strong>ossa, tendini e metallo</strong> faranno la differenza; mi aspetto il meglio da tutti voi
+	end#outside
+	E dopo questo ottimo discorso, mi sono messo lì con il mio secondo.
+	br#
+	title#Data Astrale [<code>M1.2</code>] <em>17/04</em> 2012
+	Costringendo <em>alien</em> a creare delle cose, o meglio
+	<strong>vietandogli</strong> di cancellarle dopo aver finito (finito
+	<em>cosa</em> poi?…) e poi – sentite schioccare il mio vecchio <em>guanto di
+	gomma</em> per [<code>ispezioni</code>] – mi sono estratto gli eseguibili
+	binari e me li sono messi da parte. Proprio come facevamo <em>io&<em
+	class="jazz">Jazz</em></em> una volta.
+
+	Non sono affatto fiero di questo. Volevo installare un pacchetto del cazzo,
+	per farlo bastava un unico comando, e invece mi tocca far <code>alien -g
+	mtwk-lnx-powerpc-cazzocazzo-versione-blah.blah-yadda</code>, copiare e
+	spostare la roba in giro, buttare via cose, tenerne altre. Ed è solo il
+	secondo giorno.
+
+	>That FEEL when.
+stop#page
+start#side
+	title#Diario del Capitano
+	p#tid#M0.1#m0.1## – Primo Impatto
+	p#tid#M1.1#m1.1## – Tutta colpa di Ridley Scott.
+stop#side

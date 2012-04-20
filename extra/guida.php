@@ -268,4 +268,6 @@ start#side
 	link#Extra/SO1/#Sistemi Operativi 1
 	/ L'elenco delle
 	link#Extra/Immagini/#Immagini
+	/ Il
+	link#Extra/Diario/#diario### del capitano
 stop#side
