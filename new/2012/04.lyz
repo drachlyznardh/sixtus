@@ -3,6 +3,62 @@ prev#News/2012/03/#Marzo### 2012
 #next#News/2012/05/#Maggio### 2012
 tabs#alwaysall
 start#page
+tab#19
+	<em>
+	link##19/04/2012##19
+	</em> / Ancora una volta una <strong>
+	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
+	</strong>
+	title#Quella del mio alimentatore
+	Questa è la (mini)storia, in varie parti, di come persi un alimentatore e ne
+	guadagnai un altro.
+	stitle#In principio <code>[??/04/20XX]</code>
+	Un bel dì, qualche settimana fa ormai, torno dal baretto (o forse dal
+	pranzo) e trovo il PC spento. Mi chiedo come mai, lo riaccendo e vedo che
+	non succede nulla; controllo bene, vedo che la batteria è a terra e la
+	lucina blu della connessione alla corrente è spenta. <code>Gigiolo</code> un
+	poco il cavo, la luce torna, la batteria si carica, accendo il PC.
+
+	La stessa faccenda si ripete in un paio d'occasioni. Con il passare del
+	tempo, presto sempre maggior attenzione al cavo dell'alimentatore. Negli
+	ultimi due giorni, le prestazioni del cavo precipitano.
+	stitle@right#Ieri l'altro [<code>17/04</code>]
+	Dopo aver <code>spippolato</code> per alcuni minuti, finalmente trovo la
+	singola posizione che lascia passare corrente dentro il cavo; la giornata
+	passa.
+
+	Alla sera, tentando di connettere nuovamente il PC per vedermi un po' di
+	<em>Kamen Rider</em>, tento per molte volte di riottenere quella
+	configurazione beata e illuminante. Ahimé, ho fallito.
+
+	Fortuna (cioè saggezza) volle che fossi passato al <em>MediaWorld</em> a
+	cercarmi un sostituto: un simpatico alimentatore (semi)universale della
+	<em>Trust</em>, che funziona a molti diversi <code>voltaggi</code> e con
+	numerosi <code>pippoli</code> connettori.
+	stitle#Ieri [<code>18/04</code>]
+	La mattina mi sono procurato 'sto alimentatore. Arrivo, sventro la scatola,
+	strappo un adesivo del cazzo ch'era grande come il Texas e poi regolo il
+	voltaggio (perché il selettore era opportunamente nascosto sotto l'adesivo
+	continentale) e cerco il <code>pippolo</code> identico al mio.
+
+	E via, ecco la corrente fluire nel PC e nella batteria,
+	inline#em#Oh gioia, oh giubilo, oh gaudio
+	ma immediatamente m'accordo che anche l'attacco del PC dondolicchia oltre i
+	limiti di tollerabilità, e la lucina va e viene. Cazzo.
+
+	Tornato a casa, avviso il resto della famiglia che il momento di dire addio
+	al mio <code>Tanngrisnir</code> si avvicina.
+	stitle@right#Stamane [<code>19/04</code>]
+	Visto e considerato che devo fare delle cose, e il portatile mi occorre,
+	decido di tentare una via finora non presa in considerazione. Decido
+	(preparate le orecchie al doppio senso) di provare con un
+	<code>pippolo</code> più grande, che sia in grado di soddisfare il portatile
+	in maniera più continua. D'altronde, l'alimentatore è universale e dispone
+	di <code>8</code> connettori diversi: ecco che usandone uno appena più
+	grande il problema è risolto.
+	reverse#
+	E banalmente,
+	inline#gods#È <em>sempre</em> una questione di dimensioni
 tab#12
 	<em>
 	link##12/04/2012##12
@@ -193,6 +249,9 @@ tab#01
 stop#page
 start#side
 	stitle#link#News/2012/04/#Aprile### 2012
+
+	<em>19/04</em> – la <code>[MiniStoria]</code>
+	link#News/2012/04/#alimentatore#19##dell'#
 
 	<em>12/04</em> – [<code>MiniStoria</code>]
 	link#News/2012/04/#Un buon giorno per morire##12
