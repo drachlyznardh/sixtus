@@ -98,7 +98,10 @@
 					break;
 				case 'title':
 					$this->unmkText($lineno);
-					$this->mkLine("\t\t\t<h2>$args[1]</h2>");
+					if (isset($frag) && strcmp($frag[0], 'right') == 0)
+						$header = 'h2 class="reverse"';
+					else $header = 'h2';
+					$this->mkLine("\t\t\t<$header>$args[1]</h2>");
 					break;
 				case 'titler':
 					$this->unmkText($lineno);
@@ -106,11 +109,14 @@
 					break;
 				case 'stitle':
 					$this->unmkText($lineno);
+					if (isset($frag) && strcmp($frag[0], 'right') == 0)
+						$header = 'h3 class="reverse"';
+					else $header = 'h3';
 					if (count($args) > 2) {
-						$this->mkLine("\t\t\t<h3>");
+						$this->mkLine("\t\t\t<$header>");
 						$this->recursive($lineno, $args);
 						$this->mkLine("\t\t\t</h3>");
-					} else $this->mkline("\t\t\t<h3>$args[1]</h3>"); 
+					} else $this->mkline("\t\t\t<$header>$args[1]</h3>"); 
 					$this->isText = false;
 					break;
 				case 'link':
@@ -371,7 +377,8 @@
 				case 3: return $this->d->link($args[1], $args[2]);
 				case 4: return $this->d->link($args[1], $args[2], $args[3]);
 				case 5: return $this->d->link($args[1], $args[2], $args[3], $args[4]);
-				case 6: return $this->d->link($args[1], $args[2], $args[3], $args[4], $args[5]);
+				case 6: return $this->d->link($args[1], $args[2], $args[3], $args[4], null, $args[5]);
+				case 7: return $this->d->link($args[1], $args[2], $args[3], $args[4], $args[5], $args[6]);
 				default: print_r ($args); die ('Y U NO LINK? @'.$lineno);
 			}
 		}

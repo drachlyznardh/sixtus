@@ -33,7 +33,7 @@
 			$this->included = false;
 		}
 
-		public function link($request, $title, $tab=false, $sharp=false, $extra=false) {
+		public function link($request, $title, $tab=false, $sharp=false, $left=false, $right=false) {
 			if (!$request) $request = $this->self;
 			if ($tab)
 				if ($this->notab) { $ref = $request; $sharp = strtoupper($tab); }
@@ -41,7 +41,10 @@
 			else $ref = $request;
 			if ($this->opt) $ref .= $this->opt .'/';
 			if ($sharp) $ref .= '#'.ucwords($sharp);
-			if ($extra) return '<a href="'.$ref.'">'.$title.'</a>'.$extra;
+			$result = '<a href="'.$ref.'">'.$title.'</a>';
+			if ($left) $result = "$left$result";
+			if ($right) $result = "$result$right";
+			return $result;
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
