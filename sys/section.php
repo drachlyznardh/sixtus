@@ -129,11 +129,15 @@
 					break;
 				case 'speak':
 					$this->unmkText($lineno);
-					$this->mkLine("\t\t\t\t<p>".$this->mkinline($lineno, $args).'</p>');
+					if (isset($frag)) $call = $this->mkinline($lineno, $frag[0], $args);
+					else $call = $this->mkinline($lineno, null, $args);
+					$this->mkLine("\t\t\t\t<p>".$call.'</p>');
 					break;
 				case 'inline':
 					$this->mkText($lineno);
-					$this->mkLine("\t\t\t\t".$this->mkinline($lineno, $args));
+					if (isset($frag)) $call = $this->mkinline($lineno, $frag[0], $args);
+					else $call = $this->mkinline($lineno, null, $args);
+					$this->mkLine("\t\t\t\t".$call);
 					break;
 				case 'foto':
 				case 'img':
@@ -367,7 +371,8 @@
 			switch (count($args)) {
 				case 3: return $this->d->mktid($args[1], $args[2]);
 				case 4: return $this->d->mktid($args[1], $args[2], $args[3]);
-				case 5: return $this->d->mktid($args[1], $args[2], $args[3], $args[4]);
+				case 5: return $this->d->mktid($args[1], $args[2], $args[3], null, $args[4]);
+				case 6: return $this->d->mktid($args[1], $args[2], $args[3], $args[4], $args[5]);
 				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
 			}
 		}
@@ -383,9 +388,10 @@
 			}
 		}
 
-		private function mkinline ($lineno, $args) {
+		private function mkinline ($lineno, $tone, $args) {
+			if ($tone) return $this->d->inline($args[1], $tone, $args[2]);
 			switch (count($args)) {
-				case 3: return $this->d->inline($args[1], $args[2]);
+				case 3: return $this->d->inline($args[1], null, $args[2]);
 				case 4: return $this->d->inline($args[1], $args[2], $args[3]);
 				default: print_r ($args); die ('Y U NO INLINE? @'.$lineno);
 			}

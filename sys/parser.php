@@ -33,7 +33,8 @@
 				'title' => false,
 				'subtitle' => false,
 				'prev' => false,
-				'next' => false);
+				'next' => false,
+				'related' => false);
 
 			$this->page = array();
 			$this->side = new Tab ($this->d, false);
@@ -236,6 +237,17 @@
 					}
 					$this->meta['next'] = $link;
 					break;
+				case 'related':
+					switch (count($frag)) {
+						case 7: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], $frag[5], $frag[6]); break;
+						case 6: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], null, $frag[5]); break;
+						case 5: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4]); break;
+						case 4: $link = $this->d->link($frag[1], $frag[2], $frag[3]); break;
+						case 3: $link = $this->d->link($frag[1], $frag[2]); break;
+						default: print_r($frag); die ('Realated, WHY U NO LINK?  @line '.$lineno);
+					}
+					$this->meta['related'][] = $link;
+					break;
 				default: die ('parseMeta: Unknown command ['.$cmd.'] @line '.$lineno);
 			}
 		}
@@ -262,6 +274,7 @@
 
 		public function getNext () { return $this->meta['next']; }
 		public function getPrev () { return $this->meta['prev']; }
+		public function getRelated () { return $this->meta['related']; }
 
 		public function prepare () {
 			foreach ($this->page as $tab) $tab->prepare();

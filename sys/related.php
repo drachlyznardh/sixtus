@@ -21,5 +21,13 @@
 		echo ($next);#$d->link($next[0], $next[1], $next[2], $next[3]));
 		echo (' /</p></div>');
 	}
+	$related = $p->getRelated();
+	if ($related) {
+		echo ('<h3>Vedi anche</h3><p class="reverse">');
+		echo $related[0];
+		array_shift ($related);
+		foreach ($related as $rel) echo (' | '.$rel);
+		echo ('</p>');
+	}
 ?>
 </div><!-- /Related -->

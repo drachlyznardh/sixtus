@@ -16,5 +16,5 @@ start#page
 stop#page
 start#side
 	title#Error 404
-	titler#File Not Found
+	title@right#File Not Found
 stop#side

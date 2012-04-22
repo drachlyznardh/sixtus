@@ -48,17 +48,17 @@
 			return '<a href="'.$ref.'">'.$title.'</a>';
 		}
 
-		public function mktid($title, $tab, $hash=false, $extra=false) {
+		public function mktid($title, $tab, $hash=false, $left=false, $right=false) {
 	
 			if ($this->notab) {
-				if ($hash) return $this->link($this->self, $title, false, $hash, $extra);
-				else return $this->link($this->self, $title, false, strtoupper($tab), $extra);
+				if ($hash) return $this->link($this->self, $title, false, $hash, $left, $right);
+				else return $this->link($this->self, $title, false, strtoupper($tab), $left, $right);
 			}
 
 			if ($tab && $this->tab['name'] == $tab)
-				if ($hash) return $this->link($this->self, $title, $tab, $hash, $extra);
-				else return '<em>'.$title.'</em>'.$extra;
-			else return $this->link($this->self, $title, $tab, $hash, $extra);
+				if ($hash) return $this->link($this->self, $title, $tab, $hash, $left, $right);
+				else return $left.'<em>'.$title.'</em>'.$right;
+			else return $this->link($this->self, $title, $tab, $hash, $left, $right);
 		}
 
 		public function mktab($tab) {
@@ -82,15 +82,7 @@
 			return '<em title="che significa: “'. $meaning .'”">'. $original .'</em>';
 		}
 
-		public function inline ($speaker, $first, $second=false) {
-
-			if ($second) {
-				$tone = $first;
-				$line = $second;
-			} else {
-				$tone = false;
-				$line = $first;
-			}
+		public function inline ($speaker, $tone, $line) {
 
 			if (isset($this->speakers[$speaker])) {
 				$first = $this->speakers[$speaker][0];
@@ -101,8 +93,8 @@
 			}
 
 			$title = ucwords ($speaker);
-			$class = $speaker;
-			if ($tone) $class .= " $tone";
+			if ($tone) $class = "$tone $speaker";
+			else $class = $speaker;
 
 			return '«<span title="'.$title.'" class="'.$class.'">'. $first.$line.$last .'</span>»';
 		}
