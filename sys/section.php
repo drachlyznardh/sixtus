@@ -70,7 +70,7 @@
 					$this->unmkText($lineno);
 					$this->mkText($lineno, ' class="reverse"');
 					$this->isText = true;
-					if ($args[1]) $this->recursive ($lineno, $args[1]);
+					if ($args[1]) $this->recursive ($lineno, $args);
 					break;
 				case 'id':
 					$this->unmkText($lineno);
