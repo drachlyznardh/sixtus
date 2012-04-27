@@ -3,6 +3,23 @@ prev#News/2012/03/#Marzo### 2012
 #next#News/2012/05/#Maggio### 2012
 tabs#alwaysall
 start#page
+tab#26
+	<em>
+	link##26/04/2012##26
+	</em> / <strong>
+	link#Extra/#Recensione#CONTENUTI#Recensioni#Una # e
+	link#Extra/#Storia#CONTENUTI#Storie#una #
+	</strong>
+	title#Ieri, l'altro ieri e anche prima
+	In questi ultimi giorni mi sono dedicato alla lettura, al mal di stomaco e
+	al gioco, oltre che allo studio con il <em>magico scatolone</em>. Dopo aver
+	“<em>finito</em>”
+	link#Recensioni/Giochi/XXX/#Arkham City###,
+	mi sono preso un giorno per andare a trovare la mia ragazza a Verona. Che
+	giornata
+	link#Storie/2012/LXXIX/#piena###.
+	E infine, siccom'era giovedì, abbiamo
+	link#Legend/Cronache/#giocato#s04##.
 tab#19
 	<em>
 	link##19/04/2012##19
@@ -249,6 +266,13 @@ tab#01
 stop#page
 start#side
 	stitle#link#News/2012/04/#Aprile### 2012
+
+	<em>26/04</em> – la <code>[Recensione]</code> di
+	link#Recensioni/Giochi/XXX/#Arkham City
+	e la <code>[Storia]</code> del
+	link#Storie/2012/LXXIX/#viaggio a Verona###,
+	poi
+	link#Legend/Cronache/#Legend#s04
 
 	<em>19/04</em> – la <code>[MiniStoria]</code>
 	link#News/2012/04/#alimentatore#19##dell'#
