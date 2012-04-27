@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Ieri, l'altro ieri e anche prima<title>
+			<description>Storia, recensione, cronaca.</description>
+			<pubDate>Fri, 26 Apr 2012 18:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/04/#26</guid>
+		</item>
+		<item>
 			<title>Un buon giorno per morire</title>
 			<description>Breve. Vera</description>
 			<pubDate>Thu, 12 Apr 2012 18:00:00 +0100</pubDate>
@@ -17,12 +23,6 @@
 			<description>Cose, cose, cose…<description>
 			<pubDate>Thu, 12 Apr 2012 18:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/04/#11</guid>
-		</item>
-		<item>
-			<title>Sono giovane?!?</title>
-			<description>Una storiellinina.</description>
-			<pubDate>Sun, 01 Apr 2012 22:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/04/#01</guid>
 		</item>
 		</channel>
 </rss>
