@@ -1,6 +1,8 @@
 title#Diario del Capitano#Per giungere là dove molti altri uomini sono giunti prima
 prev#Extra/Immagini/#Lista delle Immagini
 #next#Extra/##
+related#Storie/2011/LII/#Sgaggio Tiem
+related#Extra/FPGA/Download/#Relazione###La # di Sgaggio
 start#page
 tab#m0.1
 	title#Data Astrale [<code>M0.1</code>] <em>16/04</em> 2012
@@ -97,9 +99,85 @@ tab#m1.1
 	secondo giorno.
 
 	>That FEEL when.
+tab#m2.1
+	title#Data Astrale [<code>M2.1</code>] <em>20/04</em> 2012
+	Dopo aver estratto il <code>cross-compilatore</code> ed averlo messo nella
+	sua gabbietta, nutrendolo con un <em>secchio di teste di pesce</em> ogni
+	settimana, pare che funzioni: compila l'<code>helloworld.c</code> per
+	l'architettura giusta. Al primo colpo.
+
+	Ora, resterebbe da fare tutto il resto. Controllo il settaggio di
+	<em>minicom</em>, attacco la scheda alla corrente, accendo e vedo che
+	succede. Dovrebbe rispondermi un qualche <em>Linux</em> con sopra null'altro
+	che <em>BusyBox</em>, ma questo non succede.
+
+	Faccio <em>dooddaddoo</em> per un po', poi chiedo aiuto. Compaiono <em
+	class="jazz">Jazz</em> e <em class="dacav">Simgi</em>, che mi confidano che,
+	per prima cosa, è il caso di <em>regolare <code>minicom</code> per la
+	corretta velocità</em> e per seconda cose, <em>accendere la scheda</em>.
+	Scopro infatti che questo piccolo aggeggio non prende corrente e basta, ma
+	va effettivamente acceso.
+	
+	Ammetto che
+	inline#gods#Non ci sarei mai arrivato, da solo, temo
+	ma questa è un'altra storia.
+	br#
+	In ogni caso, con l'aggeggio in funzione, come verifico che il mio novello
+	<code>test</code> sia stato compilato correttamente? Tento di attaccare la
+	rete <code>LAN</code>. Ma dove? La scheda dispone di sei porte
+	<code>Ethernet</code>: ne provo una, e <code>ping</code>o al volo.
+	Immediatamente, trasmetto l'eseguibile di prova con <code>netcat</code>, che
+	però si rifiuta. La connessione non gli piace.
+
+	Immagino che dovrò <em>sedurre</em> sia <code>nc</code> sia la scheda, in un
+	complesso triangolo che mi permetterà di farli felici entrambi.
+	reverse#
+	inline@forte#gods#È l'unico modo!
+tab#m3.1
+	title#Data Astrale [<code>M3.1</code>] <em>22/04</em> 2012
+	Ed eccomi! Attraverso vari tentativi (<em>a casaccio</em>, secondo il
+	<em>metodo scientifico</em>) sono stato in grado di individuare la corretta
+	porta <code>Ethernet</code>, ossia quella che risponde a <code>eth0</code>.
+	Il manualetto tecnico mi dice che le sei prese, dall'alto verso il basso, da
+	sinistra a destra, sono enumerate <code>Enet0~5</code>; l'ultimo è un
+	<code>Marvell PHY eTSEC2 RGMII/SGMII</code>, gli altri cinque sono dei
+	semplici <code>eTSEC1 RGMII</code>. Qualunque cosa voglia dire.
+
+	Ora, quelle che reagisce (<em>dmesg</em> mi dice qualcosa) è quello diverso
+	dagli altri (<em>diverso</em> nel senso di <em>speciale</em>), ed io con
+	questa connessione tento di comunicare. Il <code>ping</code> va, ma
+	<code>nc</code> ancora no. In entrambe le direzioni, con contenuti o anche
+	senza, su ogni combinazione di porte, le connessioni mi vengono rifiutate.
+
+	Non riesco neanche ad aprire una connessione. Mi sento un cane.
+	br#
+	Trullallà. Visto che sono un giocatore abbastanza esperto e mi ricordo
+	quelll che dice il <em>Credo dell'Assassino</em>,
+	begin#outside
+		inline#em#Niente è reale, tutto è lecito
+	end#outside
+	mi sono messo a <em>sfrugnare</em>. Un po' come si faceva una volta, per far
+	funzionare <code>make</code>, provo con i parametri: in più, in meno, in
+	ordine sparso.
+
+	Ottengo la trasmissione di qualcosa soltanto con
+	begin#inside
+		<code>nc &lt;IP address&gt; &lt;port&gt;</code> sulla scheda
+		reverse#
+		invece <code>nc -l -p &lt;port&gt;</code> sul portatile
+	end#inside
+	in tutti gli altri casi la connessione continua ad venirmi rifiutata. Credo
+	sia colpa di entrambe le versioni, una di qua e una di là. Boh. Ma ora mi
+	sento <em>un pochino</em> meno cane.
+
+	Ora devo capire come mai la persistenza della scheda non coincide con la
+	millanta volatilità del <em>filesystem</em> che dovrebbe stare solo in
+	<code>RAM</code>. Boh.
 stop#page
 start#side
 	title#Diario del Capitano
 	p#tid#M0.1#m0.1## – Primo Impatto
 	p#tid#M1.1#m1.1## – Tutta colpa di Ridley Scott.
+	p#tid#M2.1#m2.1## – Igor! Abbassa la leva!
+	p#tid#M3.1#m3.1## – La via della seduzione
 stop#side
