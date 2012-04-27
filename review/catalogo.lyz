@@ -30,6 +30,7 @@ tab#cron
 		li#link#Recensioni/Film/XXVII/#Il discorso del re### – 2010
 		li#link#Recensioni/Show/XXVIII/#Macross### – 1982~2011
 		li#link#Recensioni/Film/XXIX/#Il gatto con gli stivali### – 2011
+		li#link#Recensioni/Giochi/XXX/#Batman: Arkham City### – 2011
 	end#ol
 tab#film
 	begin#ul
@@ -55,6 +56,7 @@ tab#brutti
 tab#game
 	begin#ul
 		p#link#Recensioni/Giochi/II/#Assassin's Creed Brotherhood### – 2010
+		p#link#Recensioni/Giochi/XXX/#Batman: Arkham City### – 2011
 	end#ul
 tab#show
 	begin#ul
