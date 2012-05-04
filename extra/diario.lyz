@@ -173,6 +173,32 @@ tab#m3.1
 	Ora devo capire come mai la persistenza della scheda non coincide con la
 	millanta volatilità del <em>filesystem</em> che dovrebbe stare solo in
 	<code>RAM</code>. Boh.
+tab#m4.1
+	title#Data Astrale [<code>M4.1</code>] <em>04/05</em> 2012
+	Ora, ammetto che lavorare a questa cosa di stia stancando più di ogni altra
+	cosa. Nella vita intera. Comunque.
+
+	Sono riuscito ad installare sia <code>bootp</code> sia <code>tftpd</code>,
+	per trasferire i binari alla scheda via rete. Sono riuscito a parlare con il
+	menu di <em>uboot</em> tramite porta seriale. Sono riuscito anche ad
+	estrarre l'immagine del <code>rootfs</code>, a montarla, metterci dentro
+	delle cose, rimpacchettarla e adesso provo a mandarla.
+	begin#outside
+		Dato l'originale <code>rootfs.ext2.gz.uboot</code>, bisogna tagliargli
+		la testa (i primi <code>64bit</code> di header) con <code>dd
+		if=rootfs.ext2.gz.uboot of=rootfs.ext2.gz bs=64 skip=1</code> per
+		ottenere un semplice archivio, da estrarre con <code>gunzip</code> o
+		simili.
+
+		Poi lo si deve montare con <code>mount -t ext2 -o loop,rw rootfs.ext2
+		/path/to/mountpoint</code>, infilarci tutta la fuffa che vi va (per ora,
+		il mio <em>heloworld</em> e nient'altro) e poi rimetterlo assieme, pronto
+		per il traserimento. Prima si prepara l'archivio con <code>find
+		/path/to/mountpoint | cpio -o -H newc | gzip --best >
+		rootfs.hw.gz</code> e poi lo si trasforma nell'immagine con
+		<code>mkimage -A ppc -O linux -T ramdisk -C gzip -a 0 -e 0 -n HelloWorld
+		-d rootfs.hw.gz rootfs.hw.uboot</code> e il resto è nebbia.
+	end#outside
 stop#page
 start#side
 	title#Diario del Capitano
@@ -180,4 +206,5 @@ start#side
 	p#tid#M1.1#m1.1## – Tutta colpa di Ridley Scott.
 	p#tid#M2.1#m2.1## – Igor! Abbassa la leva!
 	p#tid#M3.1#m3.1## – La via della seduzione
+	p#tid#M4.1#m4.1## – Rootfs et similia
 stop#side
