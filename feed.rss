@@ -8,12 +8,12 @@
 		<language>it</language>
 		<item>
 			<title>Il segretario di seggio</title>
-			<description>Per il referendum<description>
+			<description>Per il referendum</description>
 			<pubDate>Mon, 30 Apr 2012 10:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/04/#30</guid>
 		</item>
 		<item>
-			<title>Ieri, l'altro ieri e anche prima<title>
+			<title>Ieri, l'altro ieri e anche prima</title>
 			<description>Storia, recensione, cronaca.</description>
 			<pubDate>Fri, 26 Apr 2012 18:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/04/#26</guid>
@@ -24,6 +24,6 @@
 			<pubDate>Thu, 12 Apr 2012 18:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/04/#12</guid>
 		</item>
-		</channel>
+	</channel>
 </rss>
 
