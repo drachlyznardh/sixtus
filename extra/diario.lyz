@@ -199,6 +199,44 @@ tab#m4.1
 		<code>mkimage -A ppc -O linux -T ramdisk -C gzip -a 0 -e 0 -n HelloWorld
 		-d rootfs.hw.gz rootfs.hw.uboot</code> e il resto è nebbia.
 	end#outside
+tab#m5.1
+	title#Data astrale [<code>M5.1</code>] <em>07/05</em> 2012
+	Dunque. Mettere assieme l'immagine non è stato sufficiente, ovviamente.
+	Bisogna poterla passare alla scheda. Facile, in teoria.
+
+	In teoria… basterebbe preparare i due server, <code>bootp</code> e
+	<code>tftpd</code> e lasciare che la scheda faccia da sola. E invece.
+
+	Non so come, non so perché, ma. La scheda non è recettiva come vorrei, non è
+	nemmeno recettiva come ci si potrebbe aspettare: l'ambiente di
+	<code>uboot</code>, per quanto bellino e buonino e tutto, funziona soltanto
+	tramite “variabili d'ambiente” che possono contenere valori così come
+	comandi. Tutto è basato su queste coppie chiave/valore, nel bene e nel male:
+	moltissimi comandi integrati si basano su valori contenuti i queste
+	variabili (l'<code>help</code> non lo sa, ma il manuale sì) che sono
+	<code>&gt;9000</code>. L'ambiente è sporchissimo, pieno di questa cagate,
+	alcune da usare, alcune da evitare, alcune dannose.
+
+	Tutto quel che può fallire, lo fa silenziosamente. Porchi e madonne. Ma alla
+	fine, <em>gigiolando</em> con le configurazioni di tutto, son riuscito a far
+	passare un file. Ora devo convincere la scheda a <em>metterselo nel posto
+	giusto</em> e poi partire da lì. Che ci vorrà mai?
+tab#m6.1
+	title#Data Astrata [<code>M6.1</code>] <em>08/05</em> 2012
+	Non va. Niente di quello che faccio funziona. Tutto quello che riesco a
+	passare alla scheda, lei me lo scazza. Niente di quel che passo viene
+	accettato o fatto funzionare in alcun modo.
+tab#m7.1
+	title#…
+	Insomma, è un problema di locazioni. Kernel sul <code>0x300000</code> e
+	immagine sul <code>0x500000</code> funziona: da un errore diverso dal
+	normale. Poi il <code>device tree</code> lo metto su <code>0x7f0000</code> e
+	<code>bootm</code>mo il tutto.
+
+	In più, ho smesso di creare l'immagine con la proceduara all'inizio. Adesso
+	monto il filesystem in lettura/scrittura, ci scrivo la roba, smonto (forse
+	neanche serve), <code>gzip</code>po il filesystem modificato, ne creo
+	l'immagine e poi la trasferisco sulla scheda. E pensa un po', funziona.
 stop#page
 start#side
 	title#Diario del Capitano
@@ -207,4 +245,6 @@ start#side
 	p#tid#M2.1#m2.1## – Igor! Abbassa la leva!
 	p#tid#M3.1#m3.1## – La via della seduzione
 	p#tid#M4.1#m4.1## – Rootfs et similia
+	p#tid#M5.1#m5.1## – bootpd e tftpd
+	p#tid#M6.1#m6.1## – Niente funziona
 stop#side
