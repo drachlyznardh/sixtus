@@ -94,7 +94,6 @@
 					break;
 				case 'pre':
 					$this->mkLine($args[1]);
-					#$this->content .= $args[1];
 					break;
 				case 'title':
 					$this->unmkText($lineno);
@@ -131,13 +130,22 @@
 					$this->unmkText($lineno);
 					if (isset($frag)) $call = $this->mkinline($lineno, $frag[0], $args);
 					else $call = $this->mkinline($lineno, null, $args);
-					$this->mkLine("\t\t\t\t<p>".$call.'</p>');
+					$this->mkLine("\t\t\t\t<p>$call</p>");
 					break;
 				case 'inline':
 					$this->mkText($lineno);
 					if (isset($frag)) $call = $this->mkinline($lineno, $frag[0], $args);
 					else $call = $this->mkinline($lineno, null, $args);
-					$this->mkLine("\t\t\t\t".$call);
+					$this->mkLine("\t\t\t\t$call");
+					break;
+				case 'intra':
+					$this->mkText($lineno);
+					switch (count($frag)) {
+						case 1: $call = $this->mkintra($lineno, $frag[0], null, $args[1]); break;
+						case 2: $call = $this->mkintra($lineno, $frag[0], $frag[1], $args[1]); break;
+						default: die ('LOL');
+					}
+					$this->mkLine("\t\t\t\t$call");
 					break;
 				case 'foto':
 				case 'img':
@@ -168,8 +176,6 @@
 			switch ($this->currentEnv()) {
 				case 'ol':
 				case 'ul':
-					#if ($opt) $this->content .= "\t\t\t<li $opt>\n";
-					#else $this->content .= "\t\t\t<li>\n";
 					if ($opt) $this->mkLine ("\t\t\t<li $opt>");
 					else $this->mkLine ("\t\t\t<li>");
 					break;	
@@ -180,8 +186,6 @@
 				case 'half':
 				case 'inside':
 				case 'outside':
-					#if ($opt) $this->content .= "\t\t\t<p $opt>\n";
-					#else $this->content .= "\t\t\t<p>\n";
 					if ($opt) $this->mkLine ("\t\t\t<p $opt>");
 					else $this->mkLine ("\t\t\t<p>");
 					break;
@@ -262,22 +266,13 @@
 			} else $env = $composite;
 
 			switch ($env) {
-				case 'mini':
-					$result = array ($env, "\t\t<div class=\"mini-$frag[1]\">");
-					break;
-				case 'half':
-					$result = array ($env, "\t\t<div class=\"half-$frag[1]\">");
-					break;
-				case 'double':
-					$result = array ($env, "\t\t<div class=\"doublecol\">");
-					break;
-				case 'triple':
-					$result = array ($env, "\t\t<div class=\"triplecol\">");
-					break;
+				case 'mini': $result = array ($env, "\t\t<div class=\"mini-$frag[1]\">"); break;
+				case 'half': $result = array ($env, "\t\t<div class=\"half-$frag[1]\">"); break;
+				case 'double': $result = array ($env, "\t\t<div class=\"doublecol\">"); break;
+				case 'triple': $result = array ($env, "\t\t<div class=\"triplecol\">"); break;
 				case 'inside':
 				case 'outside':
-					$result = array ($env, "\t\t<div class=\"$env\">");
-					break;
+					$result = array ($env, "\t\t<div class=\"$env\">"); break;
 				case 'ol':
 				case 'ul':
 					$opts = false;
@@ -290,8 +285,7 @@
 						default: die ('Section->mkOpenTag: cannot handle '.count($frag). ' options @'.$lineno);
 					} else $result = array ($composite, "\t\t<$composite>");
 					break;
-				default:
-					die ('Section->mkOpenTag: unknown environment ['.$env.'] @'.$lineno);
+				default: die ('Section->mkOpenTag: unknown environment ['.$env.'] @'.$lineno);
 			}
 
 			return $result;
@@ -327,24 +321,16 @@
 			$this->unmkText('Section->prepare');
 			foreach ($this->content as $line) {
 				if (is_array($line)) switch ($line[0]) {
-					case 'tid':
-						$this->prepared .= $this->mktid($line[1], $line[2]);
-						break;
+					case 'tid': $this->prepared .= $this->mktid($line[1], $line[2]); break;
 					case 'include':
 						$line[1]->prepare();
 						switch ($line[2]) {
-							case 'side':
-								$this->prepared .= $line[1]->getSide($line[3]);
-								break;
-							case 'page':
-								$this->prepared .= $line[1]->getAllTabs($line[3]);
-								break;
-							default:
-								$this->prepared .= $line[1]->getTab($line[2], $line[3]);
+							case 'side': $this->prepared .= $line[1]->getSide($line[3]); break;
+							case 'page': $this->prepared .= $line[1]->getAllTabs($line[3]); break;
+							default: $this->prepared .= $line[1]->getTab($line[2], $line[3]);
 						}
 						break;
-					default:
-						die ('WTF happened!?!? '.$line[0].' @'.$lineno);
+					default: die ('WTF happened!?!? '.$line[0].' @'.$lineno);
 				} else $this->prepared .= $line."\n";
 			}
 		}
@@ -368,16 +354,37 @@
 		}
 
 		private function mktid ($lineno, $args) {
+			
+			if (strpos($args[1], '@')) {
+				$title = split ('@', $args[1]);
+				switch (count($args)) {
+					case 3: return $this->d->newtid($title, $args[2], null);
+					case 4: return $this->d->newtid($title, $args[2], $args[3]);
+					default: print_r ($args); die ('Y U NO (new)TID @'.$lineno);
+				}
+			}
+
 			switch (count($args)) {
 				case 3: return $this->d->mktid($args[1], $args[2]);
 				case 4: return $this->d->mktid($args[1], $args[2], $args[3]);
 				case 5: return $this->d->mktid($args[1], $args[2], $args[3], null, $args[4]);
 				case 6: return $this->d->mktid($args[1], $args[2], $args[3], $args[4], $args[5]);
-				default: print_r ($args); die ('Y U NO MKTID? @'.$lineno);
+				default: print_r ($args); die ('Y U NO TID? @'.$lineno);
 			}
 		}
 
 		public function mklink ($lineno, $args) {
+
+			if (strpos($args[2], '@')) {
+				$title = split ('@', $args[2]);
+				switch (count($args)) {
+					case 3: return $this->d->newlink($args[1], $title, null, null);
+					case 4: return $this->d->newlink($args[1], $title, $args[3], null);
+					case 5: return $this->d->newlink($args[1], $title, $args[3], $args[4]);
+					default: print_r ($args); die ('Y U NO (new)LINK @'.$lineno);
+				}
+			}
+
 			switch (count($args)) {
 				case 3: return $this->d->link($args[1], $args[2]);
 				case 4: return $this->d->link($args[1], $args[2], $args[3]);
@@ -396,7 +403,20 @@
 				default: print_r ($args); die ('Y U NO INLINE? @'.$lineno);
 			}
 		}
-					
+
+		private function mkintra ($lineno, $author, $tone, $line) {
+			$frag = split ('@', $line);
+			$content = $this->d->intra ($author, $tone, $frag[0]);
+			array_shift($frag);
+			while (count($frag)) {
+				$content .= ' – '.$frag[0].' – ';
+				$content .= $this->d->intra ($author, $tone, $frag[1]);
+				array_shift($frag);
+				array_shift($frag);
+			}
+			return "« $content »";
+		}
+
 		private function mkfoto ($frag) {
 
 			if (count($frag) > 2) {
