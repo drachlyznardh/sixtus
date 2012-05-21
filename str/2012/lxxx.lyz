@@ -109,7 +109,7 @@ start#page
 	storia. Ora però mi faccio un sonnellino.
 stop#page
 start#side
-	title#Storia LXXX
+	title#Storia [<code>LXXX</code>]
 	title@right#Il segretario di seggio
 	<code>True story</code>
 stop#side

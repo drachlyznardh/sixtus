@@ -10,6 +10,9 @@ tab#awesome
 		li#link#Recensioni/Show/XXI/#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle#M2011
 		li#link#Recensioni/Film/XXVI/#Meet Joe Black
 		li#link#Recensioni/Show/XXI/#Kaizoku Sentai Gokaiger#gokaiger
+		li#link#Recensioni/Giochi/XXX/#Batman: Arkham [ Asylum | City ]
+		li#link#Recensioni/Film/XXXII/#I Vendicatori
+		li#link#Recensioni/Giochi/XXXIII/#[ Demon's | Dark ] Souls
 	end#ul
 tab#buoni
 	stitle#Buono
@@ -28,6 +31,8 @@ tab#buoni
 		li#link#Recensioni/Show/XXV/#Chuck
 		li#link#Recensioni/Film/XXVII/#Il discorso del re
 		li#link#Recensioni/Show/XXVIII/#Macross 7#macross7
+		li#link#Recensioni/Libri/XXXI/#La Compagnia dei Celestini
+		li#link#Recensioni/Show/XXXIV/#After War @Gundam X@#X
 	end#ul
 tab#lasciano
 	stitle#Si lascia guardare

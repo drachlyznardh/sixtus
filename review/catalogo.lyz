@@ -31,6 +31,10 @@ tab#cron
 		li#link#Recensioni/Show/XXVIII/#Macross### – 1982~2011
 		li#link#Recensioni/Film/XXIX/#Il gatto con gli stivali### – 2011
 		li#link#Recensioni/Giochi/XXX/#Batman: Arkham City### – 2011
+		li#link#Recensioni/Libri/XXXI/#La compagnia dei Celestini### – 1992
+		li#link#Recensioni/Film/XXXII/#I Vendicatori### – 2012
+		li#link#Recensioni/Giochi/XXXIII/#[Demon's|Dark] @Souls@ – 2009~2011
+		li#link#Recensioni/Show/XXXIV/#Tutto il resto di @Gundam@ – 1979~
 	end#ol
 tab#film
 	begin#ul
@@ -46,6 +50,7 @@ tab#film
 		p#link#Recensioni/Film/XXVI/#Meet Joe Black### – 1998
 		p#link#Recensioni/Film/XXVII/#Il discorso del re### – 2010
 		p#link#Recensioni/Film/XXIX/#Il gatto con gli stivali### – 2011
+		li#link#Recensioni/Film/XXXII/#I Vendicatori### – 2012
 	end#ul
 tab#brutti
 	begin#ul
@@ -57,6 +62,7 @@ tab#game
 	begin#ul
 		p#link#Recensioni/Giochi/II/#Assassin's Creed Brotherhood### – 2010
 		p#link#Recensioni/Giochi/XXX/#Batman: Arkham City### – 2011
+		li#link#Recensioni/Giochi/XXXIII/#[Demon's|Dark] @Souls@ – 2009~2011
 	end#ul
 tab#show
 	begin#ul
@@ -75,5 +81,6 @@ tab#libri
 	begin#ul
 		p#link#Recensioni/Libri/XI/#Nessun Dove### – 1996
 		p#link#Recensioni/Libri/XII/#Harry Potter &amp; …### – 1997~2007
+		li#link#Recensioni/Libri/XXXI/#La compagnia dei Celestini### – 1992
 	end#ul
 stop#page

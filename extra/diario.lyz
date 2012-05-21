@@ -222,12 +222,12 @@ tab#m5.1
 	passare un file. Ora devo convincere la scheda a <em>metterselo nel posto
 	giusto</em> e poi partire da lì. Che ci vorrà mai?
 tab#m6.1
-	title#Data Astrata [<code>M6.1</code>] <em>08/05</em> 2012
+	title#Data Astrale [<code>M6.1</code>] <em>08/05</em> 2012
 	Non va. Niente di quello che faccio funziona. Tutto quello che riesco a
 	passare alla scheda, lei me lo scazza. Niente di quel che passo viene
 	accettato o fatto funzionare in alcun modo.
 tab#m7.1
-	title#…
+	title#Data Astrale [<code>M7.1</code>] <em>10/05</em> 2012
 	Insomma, è un problema di locazioni. Kernel sul <code>0x300000</code> e
 	immagine sul <code>0x500000</code> funziona: da un errore diverso dal
 	normale. Poi il <code>device tree</code> lo metto su <code>0x7f0000</code> e
@@ -237,6 +237,101 @@ tab#m7.1
 	monto il filesystem in lettura/scrittura, ci scrivo la roba, smonto (forse
 	neanche serve), <code>gzip</code>po il filesystem modificato, ne creo
 	l'immagine e poi la trasferisco sulla scheda. E pensa un po', funziona.
+tab#m8.1
+	title#Data Astrale [<code>M8.1</code>] <em>11/05</em> 2012
+	Sono stanchissimo, per motivi esterni (la <em>vita vera</em>…) e non mi sono
+	impegnato tanto. Ma c'è una cosa semplice (?) e rapida (?) che posso fare:
+	lo <code>script</code>ino del Destino per l'avvio automatico.
+
+	E l'ho fatto! Funziona.
+	br#
+	<code>setenv bootcmd "setenv loadaddr 100000; dhcp; autoscr 100000"</code>
+	br#
+	<code>
+		p#tftp 0x300000 uimage
+		p#tftp 0x500000 helloworld.img
+		p#tftp 0x7f0000 mpc8313erdb.dtb
+		p#bootm 0x300000 0x500000 0x7f0000
+	</code>
+tab#m9.1
+	title#Data Astrale [<code>M9.1</code>] <em>17/05</em> 2012
+	Da ieri ancora mi cola il naso… è un po' che non scrivo, ma faccio cose.
+	Ora, tutto quel che ho fatto funziona; quel che manca, no. Succede che, per
+	quanto io mi sforzi, <code>ptpd</code> necessita di cose che non ci sono, e
+	per quanto il driver della <code>Vitesse VSC7385</code> risulti installato,
+	l'hub di rete non risponde.
+
+	Torno all'opera sulle cose che sento di poter controllare (perché se
+	<code>ifconfig</code> mi riconosce le connessioni sulle porte ma le porte
+	non funzionano, io non che cazzo farci…) e verifico che il <code>ptpd</code>
+	parte e subito mi richiede <code>pgrep</code>. Come fare?
+
+	intra@gods#Beh@mi dico@ricompilerò <code>BusyBox</code> perché integri anche
+	<code>pgrep</code> con tutto il resto
+	e mi metto all'opera. Con la versione più recente, <code>1.20.0</code>, che
+	però sembra dare parecchi problemi: un certo modulo <code>ionice</code> si
+	pianta; lo tolgo (serve soltanto per schedulare i processi) e vedo che altri
+	moduli danno errore… uhm… proverò a tornare un po' indietro.
+
+	intra@gods#Ehy, Freescale@chiedo@che versione monti?
+	e scopro che c'è l'antichissima <code>1.1.3</code>, del 2007. Proviamo altre
+	versioni… nuove, vecchie, meno vecchie… uhm… No. Nessuna compila. Dev'essere
+	colpa del mio compilatore merda.
+
+	Allora provo con <code>BuildRoot</code>, un tool che “dovrebbe fare tutto”.
+	Intanto, mi tocca installare <code>bison</code> e <code>flex</code>. E
+	funziona? Al primo colpo? Ah, mi son di compilare il kernel… dunque…
+	versione <code>3.2.6</code>? Vabbene…
+tab#m10.1
+	title#Data Astrale [<code>M10.1</code>] <em>18/05</em> 2012
+	Progressi? Vediamo un po'… intanto, il nuovo kernel è piuttosto ciccione
+	(<code>2.6MB</code>) mentre il ramdisk è snello (<code>600KB</code>) ed ho
+	dovuto cambiare lo script di inizializzazione (adesso carica su
+	<code>0x300000 0x600000 0x7f0000</code>). Perché? Non lo so.
+
+	Ho scelto poche opzioni: ramdisk, output principale sulla seriale
+	<code>ttyS0</code> e la configurazione base del kernel per la scheda
+	(<code>arch/ppc/83xx/mpc8313_rdb_defconfig</code>). E poi yadda…
+	<code>¾h</code> per scaricare i sorgenti e compilare… molta yadda, ma tutto
+	termina correttamente. 
+
+	Butto la roba sulla scheda e <code>boot</code>to. Ma non funziona: il kernel
+	si pianta immediatamente, appena scompattato.
+	sec#
+	id#m10.2
+	title#Data Astrale [<code>M10.2</code>] <em>18/05</em> 2012
+	Boh. Non funziona: ho tentato varie combinazioni sugli indirizzi
+	dell'upload, alcune si piantano direttamente, alcune si piantano dopo lo
+	scompattamento del kernel.
+
+	Ho temuto che fosse un errore nella configurazione dell'output, ho provato a
+	cambiare porta seriale, a mettere mano direttamente alla configurazione sul
+	ramdisk… non funziona.
+
+	Proseguo allora con un kernel più vecchio (il <code>2.6.36</code>, com'hanno
+	fatto <em>Marco&amp;Mirko</em>) sperando che le cose cambino.
+	sec#
+	id#m10.3
+	title#Data Astrale [<code>M10.3</code>] <em>18/05</em> 2012
+	E non cambiano. Ma sono disperato e provo di tutto. Ora, forse il kernel
+	nuovo non va con questo ramdisk… magari quello vecchio…
+
+	Contro ogni aspettativa, cambiando un po' di offset per farci star tutto,
+	ecco che parte. La <code>SgaggioBoard</code> vive! Posso anche montare
+	localmente il filesystem e installarci la roba.
+
+	Ma poi non funziona. Quel che installo io, che non è un link a BusyBox, non
+	funziona. La <code>bash</code> mi dice di non trovare il file… boh. Sono
+	così vicino… ma ancora 'sto stronzo non si decide a funzionare.
+
+	Grazie al pacchetto <code>procps</code> ho anche il dannato
+	<code>pgrep</code>, ma ora come ora non posso eseguire niente. Né il
+	<code>ptpd</code> né tantomeno il mio <code>helloworld</code>… Come se non
+	fossero lì.
+
+	Se almeno capissi come la <code>toolchain</code> di questo mostro funziona,
+	magari potrei ricompilare il <code>ptpd</code> con quel <code>gcc</code>, ma
+	non lo trovo mica…
 stop#page
 start#side
 	title#Diario del Capitano
@@ -247,4 +342,11 @@ start#side
 	p#tid#M4.1#m4.1## – Rootfs et similia
 	p#tid#M5.1#m5.1## – bootpd e tftpd
 	p#tid#M6.1#m6.1## – Niente funziona
+	p#tid#M7.1#m7.1## – Tutto funziona
+	p#tid#M8.1#m8.1## – Lo script d'avvio
+	p#tid#M9.1 – @Manca pgrep@#m9.1
+
+	p#tid#M10 – @Allora, buildroot@, #m10.1
+	tid#che @funzionicchia@, #m10.2
+	tid#ma @poi@…#m10.3
 stop#side

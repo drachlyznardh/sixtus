@@ -33,6 +33,6 @@ em, strong, code {
 }
 
 .green {
-	color: darkgreen;
-	text-shadow: 0 0 2px green;	
+	color: green;
+	text-shadow: 0 0 1px darkgreen;	
 }

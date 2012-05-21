@@ -1,4 +1,4 @@
-title#Archivio#Dove tengo le notizie vecchie
+itle#Archivio#Dove tengo le notizie vecchie
 prev#News/#Ultime novità
 next#News/2011/#2011
 start#side
@@ -15,7 +15,8 @@ start#side
 		link#News/2012/02/#Febbraio### /
 		link#News/2012/03/#Marzo
 	reverse#
-		link#News/2012/04/#Aprile### / Maggio / Giugno
+		link#News/2012/04/#Aprile### /
+		link#News/2012/05/#Maggio### / Giugno
 	reverse#
 		Luglio / Agosto / Settembre
 	reverse#
