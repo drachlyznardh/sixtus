@@ -19,6 +19,7 @@
 		<meta name="viewport" content="initial-scale=1.0"/>
 		<link rel="shortcut icon" type="image/x-icon" href="style/ico/<?=$opt['style']?>.ico" />
 
+		<?php if (strcmp($_SERVER['SERVER_NAME'], 'tanngrisnir') != 0) { ?>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-31352460-1']);
@@ -30,6 +31,7 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
+		<?php } ?>
 	</head>
 	<body> 
 		<div id="main">

@@ -354,9 +354,11 @@
 		}
 
 		private function mktid ($lineno, $args) {
+		
 			
-			if (strpos($args[1], '@')) {
-				$title = split ('@', $args[1]);
+
+			if (strpos($args[1], '@') !== false) {
+				$title = explode ('@', $args[1]);
 				switch (count($args)) {
 					case 3: return $this->d->newtid($title, $args[2], null);
 					case 4: return $this->d->newtid($title, $args[2], $args[3]);

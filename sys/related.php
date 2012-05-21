@@ -23,11 +23,21 @@
 	}
 	$related = $p->getRelated();
 	if ($related) {
-		echo ('<h3>Vedi anche</h3><p class="reverse">');
+		$first = false;
+		echo ('<h3>Vedi anche</h3><ul><li>');
+		if ($related[0] === false) array_shift ($related);
 		echo $related[0];
 		array_shift ($related);
-		foreach ($related as $rel) echo (' | '.$rel);
-		echo ('</p>');
+		foreach ($related as $rel) {
+			if ($rel === false) {
+				echo ('</li><li>');
+				$first = true;
+			} else if ($first) {
+				echo ($rel);
+				$first = false;
+			} else echo (' | '.$rel);
+		}
+		echo ('</li></ul>');
 	}
 ?>
 </div><!-- /Related -->

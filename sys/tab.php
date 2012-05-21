@@ -7,6 +7,8 @@
 		private $content;
 		private $section;
 		private $current;
+
+		private $follow;
 		private $continue;
 
 		private $isPrepared;
@@ -88,6 +90,15 @@
 				$result = "\n\t<!-- Tab[$this->name] as [$as] -->";
 				$result .= "\n\t".'<a id="'.strtoupper($this->name).'"></a>'."\n";
 			} else $result = "\n\t<!-- DefaultTab as [$as] -->\n";
+
+			if ($this->follow && !$as) {
+				$frag = array('p', 'tid', 'Segue dal tab @precedente@…', $this->follow, false);
+				$newsec = new Section ($this->d);
+				$newsec->parseLine(-1, $frag[0], $frag);
+				$newsec->prepare();
+				$result .= $newsec->getContent(false);
+			}
+
 			foreach ($this->content as $frag) {
 				if (is_object ($frag)) {
 					$classname = get_class($frag);
@@ -121,7 +132,7 @@
 			}
 
 			if ($this->continue && !$as) {
-				$frag = array('p', 'tid', 'Continua', $this->continue, false, '…');
+				$frag = array('p', 'tid', 'Continua nel @prossimo@ tab…', $this->continue);
 				$newsec = new Section ($this->d);
 				$newsec->parseLine(-1, $frag[0], $frag);
 				$newsec->prepare();
@@ -135,6 +146,7 @@
 			return $result;
 		}
 
+		public function addFollow ($follow) { $this->follow = $follow; }
 		public function addContinue ($continue) { $this->continue = $continue; }
 
 		public function show () {

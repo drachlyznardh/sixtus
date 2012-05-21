@@ -33,6 +33,18 @@
 			$this->included = false;
 		}
 
+		public function getLinkFromParams ($args, $lineno) {
+			$pos = strpos ($args[2], '@');
+			if ($pos === false) $title = array($args[2]);
+			else $title = explode ('@', $args[2]);
+
+			switch (count($args)) {
+				case 3: return $this->newlink($args[1], $title, null, null);
+				case 4: return $this->newlink($args[1], $title, $args[3], null);
+				case 5: return $this->newlink($args[1], $title, $args[3], $args[4]);
+			}
+		}
+
 		public function link($request, $title, $tab=false, $sharp=false, $left=false, $right=false) {
 			if (!$request) $request = $this->self;
 			if ($tab)

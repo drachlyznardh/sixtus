@@ -145,6 +145,7 @@
 							$this->page[$tabs]->addContinue($frag[1]);
 						$this->page[] = new Tab ($this->d, $frag[1]);
 						$this->currentTab = $this->page[$tabs+1];
+						$this->currentTab->addFollow($this->page[$tabs]->getName());
 					}
 					return;
 				case 'include':
@@ -205,7 +206,12 @@
 		}
 
 		private function parseMeta ($lineno, $cmd, $frag) {
-		
+
+			if (strpos($cmd, '@') !== false) {
+				$cmdfrag = explode ('@', $cmd);
+				$cmd = $cmdfrag[0];
+			}
+
 			switch ($cmd) {
 				case '': break;
 				case 'title':
@@ -238,6 +244,11 @@
 					$this->meta['next'] = $link;
 					break;
 				case 'related':
+					$result = $this->d->getLinkFromParams ($frag, $lineno);
+					if (isset($cmdfrag) && strcmp ($cmdfrag[1], 'li') == 0)
+						$this->meta['related'][] = false;
+					$this->meta['related'][] = $this->d->getLinkFromParams ($frag, $lineno);
+					break;
 					switch (count($frag)) {
 						case 7: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], $frag[5], $frag[6]); break;
 						case 6: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], null, $frag[5]); break;
