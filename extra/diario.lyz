@@ -2,10 +2,10 @@ title#Diario del Capitano#Per giungere là dove molti altri uomini sono giunti p
 prev#Extra/Immagini/#Lista delle Immagini
 #next#Extra/##
 related#Storie/2011/LII/#Sgaggio Tiem
-related#Extra/FPGA/Download/#Relazione###La # di Sgaggio
+related#Extra/FPGA/Download/#La @Relazione@ per Sgaggio
 start#page
-tab#m0.1
-	title#Data Astrale [<code>M0.1</code>] <em>16/04</em> 2012
+tab#m00
+	title#Data Astrale [<code>M00</code>] <em>16/04</em> 2012
 	Recuperato il <code>CDROM</code> contenente tutto quel che <em>dovrebbe</em>
 	servire per il installare il <code>cross-compilatore</code>, l'equipaggio ha
 	dato inizio al carico degli artefatti recuparati, mettendoli al sicuro nella
@@ -23,7 +23,8 @@ tab#m0.1
 	Come spesso io stesso ho operato in passato, questo <em>Alien</em>
 	<strong>millanta</strong>. La semplice chiamata
 	begin#outside
-		alien --to-deb mtwk-lnx-powerpc-gcc-3.4.3-glibc-2.3.3-0.28-1-i686.rpm
+		<code>alien --to-deb
+		mtwk-lnx-powerpc-gcc-3.4.3-glibc-2.3.3-0.28-1-i686.rpm</code>
 	end#outside
 	non produca l'equivalente pacchetto per <code>apt</code>. Non produce
 	alcunché, in effetti. Potrebbe essere colpa del <em>Perl</em>?
@@ -57,8 +58,8 @@ tab#m0.1
 	desiderato.
 
 	Non so di chi fidarmi.
-tab#m1.1
-	title#Data Astrale [<code>M1.1</code>] <em>17/04</em> 2012
+tab#m01
+	title#Data Astrale [<code>M01a</code>] <em>17/04</em> 2012
 	E insomma… devo concludere che <em>alien</em> <strong>non funziona</strong>.
 	Non sono in grado di isolare il problema, non riesco a tracciarlo, non c'è
 	niente di evidentemente rotto sul mio sistema (che funziona perfettamente) e
@@ -83,8 +84,8 @@ tab#m1.1
 		speak#gods#Le vostre <strong>ossa, tendini e metallo</strong> faranno la differenza; mi aspetto il meglio da tutti voi
 	end#outside
 	E dopo questo ottimo discorso, mi sono messo lì con il mio secondo.
-	br#
-	title#Data Astrale [<code>M1.2</code>] <em>17/04</em> 2012
+	sec#
+	title#Data Astrale [<code>M01b</code>] <em>17/04</em> 2012
 	Costringendo <em>alien</em> a creare delle cose, o meglio
 	<strong>vietandogli</strong> di cancellarle dopo aver finito (finito
 	<em>cosa</em> poi?…) e poi – sentite schioccare il mio vecchio <em>guanto di
@@ -99,8 +100,8 @@ tab#m1.1
 	secondo giorno.
 
 	>That FEEL when.
-tab#m2.1
-	title#Data Astrale [<code>M2.1</code>] <em>20/04</em> 2012
+tab#m02
+	title#Data Astrale [<code>M02</code>] <em>20/04</em> 2012
 	Dopo aver estratto il <code>cross-compilatore</code> ed averlo messo nella
 	sua gabbietta, nutrendolo con un <em>secchio di teste di pesce</em> ogni
 	settimana, pare che funzioni: compila l'<code>helloworld.c</code> per
@@ -133,8 +134,8 @@ tab#m2.1
 	complesso triangolo che mi permetterà di farli felici entrambi.
 	reverse#
 	inline@forte#gods#È l'unico modo!
-tab#m3.1
-	title#Data Astrale [<code>M3.1</code>] <em>22/04</em> 2012
+tab#m03
+	title#Data Astrale [<code>M03</code>] <em>22/04</em> 2012
 	Ed eccomi! Attraverso vari tentativi (<em>a casaccio</em>, secondo il
 	<em>metodo scientifico</em>) sono stato in grado di individuare la corretta
 	porta <code>Ethernet</code>, ossia quella che risponde a <code>eth0</code>.
@@ -163,9 +164,11 @@ tab#m3.1
 	Ottengo la trasmissione di qualcosa soltanto con
 	begin#inside
 		<code>nc &lt;IP address&gt; &lt;port&gt;</code> sulla scheda
-		reverse#
-		invece <code>nc -l -p &lt;port&gt;</code> sul portatile
 	end#inside
+	begin#outside
+		reverse#
+		<code>nc -l -p &lt;port&gt;</code> sul portatile
+	end#outside
 	in tutti gli altri casi la connessione continua ad venirmi rifiutata. Credo
 	sia colpa di entrambe le versioni, una di qua e una di là. Boh. Ma ora mi
 	sento <em>un pochino</em> meno cane.
@@ -173,8 +176,8 @@ tab#m3.1
 	Ora devo capire come mai la persistenza della scheda non coincide con la
 	millanta volatilità del <em>filesystem</em> che dovrebbe stare solo in
 	<code>RAM</code>. Boh.
-tab#m4.1
-	title#Data Astrale [<code>M4.1</code>] <em>04/05</em> 2012
+tab#m04
+	title#Data Astrale [<code>M04</code>] <em>04/05</em> 2012
 	Ora, ammetto che lavorare a questa cosa di stia stancando più di ogni altra
 	cosa. Nella vita intera. Comunque.
 
@@ -199,8 +202,8 @@ tab#m4.1
 		<code>mkimage -A ppc -O linux -T ramdisk -C gzip -a 0 -e 0 -n HelloWorld
 		-d rootfs.hw.gz rootfs.hw.uboot</code> e il resto è nebbia.
 	end#outside
-tab#m5.1
-	title#Data astrale [<code>M5.1</code>] <em>07/05</em> 2012
+tab#m05
+	title#Data astrale [<code>M05</code>] <em>07/05</em> 2012
 	Dunque. Mettere assieme l'immagine non è stato sufficiente, ovviamente.
 	Bisogna poterla passare alla scheda. Facile, in teoria.
 
@@ -221,13 +224,13 @@ tab#m5.1
 	fine, <em>gigiolando</em> con le configurazioni di tutto, son riuscito a far
 	passare un file. Ora devo convincere la scheda a <em>metterselo nel posto
 	giusto</em> e poi partire da lì. Che ci vorrà mai?
-tab#m6.1
-	title#Data Astrale [<code>M6.1</code>] <em>08/05</em> 2012
+tab#m06
+	title#Data Astrale [<code>M06</code>] <em>08/05</em> 2012
 	Non va. Niente di quello che faccio funziona. Tutto quello che riesco a
 	passare alla scheda, lei me lo scazza. Niente di quel che passo viene
 	accettato o fatto funzionare in alcun modo.
-tab#m7.1
-	title#Data Astrale [<code>M7.1</code>] <em>10/05</em> 2012
+tab#m07
+	title#Data Astrale [<code>M07</code>] <em>10/05</em> 2012
 	Insomma, è un problema di locazioni. Kernel sul <code>0x300000</code> e
 	immagine sul <code>0x500000</code> funziona: da un errore diverso dal
 	normale. Poi il <code>device tree</code> lo metto su <code>0x7f0000</code> e
@@ -237,24 +240,29 @@ tab#m7.1
 	monto il filesystem in lettura/scrittura, ci scrivo la roba, smonto (forse
 	neanche serve), <code>gzip</code>po il filesystem modificato, ne creo
 	l'immagine e poi la trasferisco sulla scheda. E pensa un po', funziona.
-tab#m8.1
-	title#Data Astrale [<code>M8.1</code>] <em>11/05</em> 2012
+tab#m08
+	title#Data Astrale [<code>M08</code>] <em>11/05</em> 2012
 	Sono stanchissimo, per motivi esterni (la <em>vita vera</em>…) e non mi sono
 	impegnato tanto. Ma c'è una cosa semplice (?) e rapida (?) che posso fare:
 	lo <code>script</code>ino del Destino per l'avvio automatico.
 
 	E l'ho fatto! Funziona.
 	br#
-	<code>setenv bootcmd "setenv loadaddr 100000; dhcp; autoscr 100000"</code>
-	br#
-	<code>
+	La variabile <em>bootcmd</em> dell'ambiente di <em>uboot</em> diventa
+	begin#inside
+		<code>setenv bootcmd "setenv loadaddr 100000; dhcp; autoscr 100000"</code>
+	end#inside
+	mentre il file che viene effettivamente trasferito contiene
+	begin#outside
+		<code>
 		p#tftp 0x300000 uimage
 		p#tftp 0x500000 helloworld.img
 		p#tftp 0x7f0000 mpc8313erdb.dtb
 		p#bootm 0x300000 0x500000 0x7f0000
-	</code>
-tab#m9.1
-	title#Data Astrale [<code>M9.1</code>] <em>17/05</em> 2012
+		</code>
+	end#outside
+tab#m09
+	title#Data Astrale [<code>M09</code>] <em>17/05</em> 2012
 	Da ieri ancora mi cola il naso… è un po' che non scrivo, ma faccio cose.
 	Ora, tutto quel che ho fatto funziona; quel che manca, no. Succede che, per
 	quanto io mi sforzi, <code>ptpd</code> necessita di cose che non ci sono, e
@@ -278,12 +286,14 @@ tab#m9.1
 	versioni… nuove, vecchie, meno vecchie… uhm… No. Nessuna compila. Dev'essere
 	colpa del mio compilatore merda.
 
-	Allora provo con <code>BuildRoot</code>, un tool che “dovrebbe fare tutto”.
+	Allora provo con <code>BuildRoot</code>, un tool che <em>“dovrebbe fare
+	tutto”</em>. <strong>“DOVREBBE”</strong>.
+
 	Intanto, mi tocca installare <code>bison</code> e <code>flex</code>. E
 	funziona? Al primo colpo? Ah, mi son di compilare il kernel… dunque…
 	versione <code>3.2.6</code>? Vabbene…
-tab#m10.1
-	title#Data Astrale [<code>M10.1</code>] <em>18/05</em> 2012
+tab#m10
+	title#Data Astrale [<code>M10a</code>] <em>18/05</em> 2012
 	Progressi? Vediamo un po'… intanto, il nuovo kernel è piuttosto ciccione
 	(<code>2.6MB</code>) mentre il ramdisk è snello (<code>600KB</code>) ed ho
 	dovuto cambiare lo script di inizializzazione (adesso carica su
@@ -299,7 +309,7 @@ tab#m10.1
 	si pianta immediatamente, appena scompattato.
 	sec#
 	id#m10.2
-	title#Data Astrale [<code>M10.2</code>] <em>18/05</em> 2012
+	title#Data Astrale [<code>M10b</code>] <em>18/05</em> 2012
 	Boh. Non funziona: ho tentato varie combinazioni sugli indirizzi
 	dell'upload, alcune si piantano direttamente, alcune si piantano dopo lo
 	scompattamento del kernel.
@@ -312,7 +322,7 @@ tab#m10.1
 	fatto <em>Marco&amp;Mirko</em>) sperando che le cose cambino.
 	sec#
 	id#m10.3
-	title#Data Astrale [<code>M10.3</code>] <em>18/05</em> 2012
+	title#Data Astrale [<code>M10c</code>] <em>18/05</em> 2012
 	E non cambiano. Ma sono disperato e provo di tutto. Ora, forse il kernel
 	nuovo non va con questo ramdisk… magari quello vecchio…
 
@@ -332,21 +342,133 @@ tab#m10.1
 	Se almeno capissi come la <code>toolchain</code> di questo mostro funziona,
 	magari potrei ricompilare il <code>ptpd</code> con quel <code>gcc</code>, ma
 	non lo trovo mica…
+tab#m11
+	title#Data Astrale [<code>M11</code>] <em>21/05</em> 2012
+	Succede che niente di quel che tento funziona: se anche provo a compilare
+	<code>helloworld/ptpd</code> staticamente, è il sistema sotto a non essere
+	coerente: non tutto, infatti, è un link simbolico a <code>busybox</code>.
+	Alcune cose (i comandi del pacchetto <code>procps</code>, ad esempio) sono
+	eseguibili ELF giustamente e correttamente compilati. Hanno un unico
+	problema, però: continuano, nonostante tutti i miei sforzi, ad essere
+	compilati dinamicamente; quindi, vanno a cercare librerie che non esistono
+	(e che non ci devono essere) e falliscono in una maniera strana.
+
+	E <em>non dovrebbe</em> essere così difficile farli funzionare, visto che si
+	tratta di strafottute <code>applet</code> di busybox, fatte apposta per
+	essere compilate staticamente assieme al resto. Ma dopo un giorno di
+	smanacciamento, di configurazioni via via più stiracchiate e assurde, di
+	compilazioni e di aggiustamenti, <em>nada</em>.
+	br#
+	Sono infine tornato a tentare (grazie a qualche progresso con lo script di
+	avvio dovrei riuscire ad <code>upload</code>are parecchi <code>mega</code>
+	di dati. Dati funzionanti) di far partire l'intero <em>ambaradan</em>
+	kernel+rootfs, sperando che. Forse, nascendo tutto assieme, potrebbe essere
+	un sistema coerente.
+
+	Se anche questo non dovesse bastare, allora metterò le mani nel sorgente di
+	<code>ptpd</code> e ci infilerò l'<code>hax</code>.
+tab#m12
+	title#Data Astrale [<code>M12a</code>] <em>22/05</em> 2012
+	Come mai mi aspetto che le cose funzionino? Non lo so… forse sono stato
+	educato male.
+
+	Mi sono arreso. Ho messo le mani nei sorgenti di <em>ptpd</em> e vaffanculo.
+
+	<code>CC=/opt/thesis/cross/bin/powerpc-linux-gcc CFLAGS=-fPIC
+	LDFLAGS=-static make</code> m'ha permesso di produrre un eseguibile
+	funzionante. Credete che questo basti?
+	sec#
+	title#Data Astrale [<code>M12b</code>] <em>22/05</em> 2012
+	No. Ovviamente.
+	
+	Si tratta, ora di trovare un sostituto ad un certo frammento di codice che
+	manda tutto a puttane. Cos'è?
+	begin#outside
+		<code>pgrep -x %name | wc -l</code>
+	end#outside
+	Una cazzata. Che però è quasi insormontabile: ci sono delle orribili
+	differenze (di versione, di comandi e di opzioni per questi comandi) tra il
+	mio sistema e quello di destinazione. Senza contare che quello stronzo di
+	<code>ps</code> – unico comando vagamente compatibile – non riesce ad
+	ignorare se stesso. Ma non sempre: ho verificato <em>empiricamente</em> come
+	l'output di <code>ps | grep %name | wc -l</code> si estremamente instabile
+	(<code>±1</code>) mentre una cosa come <code>ps | awk '{print $5}' | grep
+	-c %name</code> invece sembra più stabile.
+
+	Ma non basta: mi tocca togliere manualmente il risultato fasullo nel caso ci
+	sia. E come faccio a sapere se c'è veramente? Spero.
+
+	Adesso scrivo a Sgaggio. Le cinque dannate della <em>Vitesse</em> ancora non
+	vanno.
+	br#
+	Tecnicamente, sono sul vecchio kernel originale, sul vecchio filesystem
+	originale, ho soltanto aggiunto il ptpd tramacciato. Non sono contento. Non
+	sono affatto contento.
+tab#m13
+	title#Data Astrale [<code>M13a</code>] <em>23/05</em> 2012
+	Dunque. Ora sono qui con due diverse versioni del <em>ptpd</em>, una in
+	locale sul mio <em>Tanngrisnir</em>, una in remoto sulla scheda. Quella
+	locale è relativamente intoccata, quell'altra è tramacciata.
+
+	Funziona. 
+	sec#
+	title#Data Astrale [<code>M13b</code>] <em>23/05</em> 2012
+	Mi sono messo a sistemare le altre porte di rete. Mi sono messo lì, ho
+	ricontrollato il mio fido <em>Blah on MPC8313ERDB release.pdf</em> per
+	verificarne i numeri, poi <em>yadda&amp;contro-yadda</em> e infine, nella
+	disperazione di quelle povere lucette spente, ho ricontrollato anche
+	l'ambiente di uboot.
+
+	Facendoci casi, ho notato i due comandi <em>run_vscld</em> e
+	<em>update_vscfw</em>. Controllando bene il contenuto di questi due
+	pisquani, ho scoperto la stessa procedura, esattamente quello
+	<em>Marco&amp;Mirko</em>. E mi son detto
+	inline#gods#Cosa potrebbe mai andare storto? Se ci riprovo… per la quinta volta…
+	e pensate un po'… beh, <strong>ha funzionato</strong>.
+
+	I led di tutte le porte si sono accese, l'interfaccia
+	<code>TSEC0/eTSEC1/eth0</code> ha cominciato a rispondere ai
+	<code>ping</code> e yadda. Sono commosso, non me l'aspettavo proprio. Sembra
+	che avesse a che fare con l'indirizzo <code>0xfe7fe000</code>, una locazione
+	specifica della ROM nella quale, evidentemente, il
+	<code>vsc7385_load.bin</code> si aspetta di trovare il firmware. Come e
+	perché non è dato sapere. Non a me, almeno.
+	br#
+	Prima che lo chiediate: sì, ho riavviato per verificare che non si trattasse
+	di un colossalmente improbabile&amp;fortunato stato quantico dei dintorni.
+	Funziona veramente. Ora, ovviamente, dovrò dormire con la scheda
+	sottobraccio, per evitare che qualcuno ci metta mano e rovini la nostra
+	felicità.
+	sec#
+	title#Data Astrale [<code>M13c</code>] <em>23/05</em> 2012
+	Mi sono messo a controllare la configurazione del sistema sulla scheda.
+	Tutti i servizi partono da <code>/etc/rc.d/rcS</code>, uno script della
+	morte che si cuccia i paramentri dall'<code>rc.conf</code> (tra i quali gli
+	indirizzi di rete, ai quali ho messo mano…) e una lista di script da
+	chiamare, tutti aventi base in <code>/etc/init.d/</code>.
+
+	Non dovrebbe essere troppo difficile imitare <code>update-rc.d</code>,
+	infilare i dovuti comandi nei posti giusti e far partire il mio
+	<em>ptpd</em> all'avvio in modo automatico. Non dovrebbe. Ecco, l'ho detto.
 stop#page
 start#side
 	title#Diario del Capitano
-	p#tid#M0.1#m0.1## – Primo Impatto
-	p#tid#M1.1#m1.1## – Tutta colpa di Ridley Scott.
-	p#tid#M2.1#m2.1## – Igor! Abbassa la leva!
-	p#tid#M3.1#m3.1## – La via della seduzione
-	p#tid#M4.1#m4.1## – Rootfs et similia
-	p#tid#M5.1#m5.1## – bootpd e tftpd
-	p#tid#M6.1#m6.1## – Niente funziona
-	p#tid#M7.1#m7.1## – Tutto funziona
-	p#tid#M8.1#m8.1## – Lo script d'avvio
-	p#tid#M9.1 – @Manca pgrep@#m9.1
-
-	p#tid#M10 – @Allora, buildroot@, #m10.1
-	tid#che @funzionicchia@, #m10.2
-	tid#ma @poi@…#m10.3
+	br#
+	stitle@right#Aprile 2012
+	p#tid#<code>M00</code> – Il @primo@ impatto#m00
+	p#tid#<code>M01</code> – È tutta colpa di @Ridley Scott@#m01
+	p#tid#<code>M02</code> – @Igor@! Abbassa la leva!#m02
+	p#tid#<code>M03</code> – La via della @seduzione@#m03
+	br#
+	stitle@right#Maggio 2012
+	p#tid#<code>M04</code> – @Rootfs@ et similia#m04
+	p#tid#<code>M05</code> – @bootpd e tftpd@#m05
+	p#tid#<code>M06</code> – @Niente@ funziona#m06
+	p#tid#<code>M07</code> – @Tutto@ funziona#m07
+	p#tid#<code>M08</code> – Lo @script@ d'avvio#m08
+	p#tid#<code>M09</code> – @Manca pgrep@#m09
+	p#tid#<code>M10</code> – Allora, forse con @buildroot@… #m10
+	p#tid#<code>M11</code> – @Da phail@#m11
+	p#tid#<code>M12</code> – @H4x0r@#m12
+	p#tid#<code>M13</code> – @Dr. H4x@ mette tutto a posto#m13
 stop#side
