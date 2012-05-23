@@ -145,7 +145,8 @@
 							$this->page[$tabs]->addContinue($frag[1]);
 						$this->page[] = new Tab ($this->d, $frag[1]);
 						$this->currentTab = $this->page[$tabs+1];
-						$this->currentTab->addFollow($this->page[$tabs]->getName());
+						if (!$this->tabCond && !$this->d->allTab())
+							$this->currentTab->addFollow($this->page[$tabs]->getName());
 					}
 					return;
 				case 'include':
