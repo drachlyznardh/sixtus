@@ -3,6 +3,28 @@ prev#News/2012/04/#Aprile### 2012
 #next#News/2012/06/#Giugno### 2012
 tabs#alwaysall
 start#page
+tab#24
+	<em>
+	link##24/05/2012##24
+	</em> / <strong>
+	link#Extra/#Una @recensione@,#CONTENUTI#Recensioni
+	una fuffa e un annuncio
+	</strong>
+	title#La mattina del 24 maggio
+	“il Piave mormorava…” mentre io mi trascino in facoltà un po' come ogni
+	giorno, ma diversamente da ogni giorno oggi mi sono trascinano nell'ufficio
+	di <em>Sgaggio</em> per vedere cosa fare. Venerdì prossimo (non domani)
+	io&amp;lui soli saremo tutto il pomeriggio a lume di candela nel
+	<em>laboratoire</em> noto come <code>Aula 5</code> per verificare che il mio
+	<em>ptpd</em> faccia quel che deve fare. Significa che ho un'intera
+	settimana per fare la mia fuffa e sistemare le cose brutte.
+
+	E intanto, beccatevi quel filmone ch'è il
+	link#Recensioni/Show/XIII/#Movie War Mega Max#MEGAMAX
+	che mi sono visto l'altro ieri. Poi vi annuncio che domani pomeriggio andrò
+	ad aiutare la <em>Roberta</em> per documentare il progetto del mio vecchio
+	<em>Coccodrillo robot</em>, che costrii con un kit <em>LEGO Mindstorm</em>
+	qualche anno fa… Ne trarrò una storia.
 tab#23
 	<em>
 	link##23/05/2012##23
@@ -59,6 +81,14 @@ tab#21
 stop#page
 start#side
 	stitle#link#News/2012/05/#Maggio### 2012
+
+	<em>24/05</em> – [<code>Recensione</code>]
+	link#Recensioni/Show/XIII/#Movie War Mega Max#MEGAMAX
+
+	<em>23/05</em> – [<code>Extra</code>]
+	link#Extra/Diario/#Il @diario@ del capitano
+	e [<code>Recensione</code>]
+	link#Recensioni/Show/XIV/#Il @30° episodio@ di Gundam AGE#e30
 
 	<em>21/05</em> – [<code>Recensioni</code>]
 	link#Recensioni/Giochi/II/#Assassins's Creed @Revelations@,#REVELATIONS#
