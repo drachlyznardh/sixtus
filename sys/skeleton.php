@@ -33,7 +33,7 @@
 		</script>
 		<?php } ?>
 	</head>
-	<body> 
+	<body>
 		<div id="main">
 			<div id="container">
 				<div id="head">

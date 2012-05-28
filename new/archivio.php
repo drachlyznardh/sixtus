@@ -1,4 +1,4 @@
-itle#Archivio#Dove tengo le notizie vecchie
+title#Archivio#Dove tengo le notizie vecchie
 prev#News/#Ultime novità
 next#News/2011/#2011
 start#side

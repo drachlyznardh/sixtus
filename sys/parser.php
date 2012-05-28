@@ -53,7 +53,7 @@
 
 			$this->rows = file ($file, FILE_IGNORE_NEW_LINES);
 			$lineno = 0;
-			foreach ($this->rows as $line) $this->parseline (++$lineno, ($line));
+			foreach ($this->rows as $line) $this->parseline (++$lineno, rtrim($line));
 		}
 
 		private function parseline ($lineno, $line) {
@@ -123,7 +123,7 @@
 							$this->switchEnvironment(LYZ_PAGE); break;
 						case 'side':
 							$this->switchEnvironment(LYZ_SIDE); break;
-						default: die ('Cannot START#'.$env.' @line'.$lineno);
+						default: die ('Cannot [START#'.$env.'] @'.$this->sourceFile.':'.$lineno);
 					}
 					return;
 				case 'stop':
@@ -132,7 +132,7 @@
 						case 'page':
 						case 'side':
 							$this->switchEnvironment(LYZ_META); break;
-						default: die ('Cannot STOP#'.$env.' @line'.$lineno);
+						default: die ('Cannot [STOP#'.$env.'] @'.$this->sourceFile.':'.$lineno);
 					}
 					return;
 				case 'tab':
