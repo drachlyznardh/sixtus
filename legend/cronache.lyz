@@ -886,7 +886,9 @@ tab#s07
 	esibisce le sue doti acrobatiche sparecchiando e lavando i piatti. Tiro di
 	Diplomazia: 23. Cazzo sì! Casualmente ho una guida della città imperiale, con un
 	pieghevole sul quartiere del Pentapippesimo.
-	stop#page
+tab#s08
+	include#legend/cronache.8#page
+stop#page
 stop#page
 start#side
 	p#tid#Per cominciare#background
@@ -895,19 +897,10 @@ start#side
 	]
 	title#Legend
 	titler#Le cronache
-	p#tid#Il Pentapippesimo#s01
-	[
-	tid#II#s01#s02
-	/
-	tid#III#s01#s03
-	]
-	br#
-	reverse#
-	tid#Il drago Pal Ban#s04
-	/
-	tid#Apocalisse#s05
-	/
-	tid#La nuvola ninja#s06
-	br#
-	p#tid#Il castello ninja#s07
+	p#tid#<code>S01~03</code> – @Il Pentapippesimo@#s01
+	p#tid#<code>S04</code> – @Il drago Pal Ban@#s04
+	p#tid#<code>S05</code> – @Apocalisse@#s05
+	p#tid#<code>S06</code> – @La nuvola ninja@#s06
+	p#tid#<code>S07</code> – @Il castello ninja@#s07
+	p#tid#<code>S08</code> – @Il maestro del castello@#s08
 stop#side
