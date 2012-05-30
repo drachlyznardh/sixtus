@@ -1,8 +1,56 @@
 title#Maggio 2012#Caaaaaaaaaaaaldo. E umido
-prev#News/2012/04/#Aprile### 2012
+prev#News/2012/04/#Aprile@ 2012
 #next#News/2012/06/#Giugno### 2012
 tabs#alwaysall
 start#page
+tab#30
+	p#link##<em>@30/05/2012@</em>##30
+	/
+	link#Extra/#<strong>@Recensione@</strong>#CONTENUTI#Recensioni
+	title#A me le guardie!
+	Mi sono letto il primo volume di questa serie di <em>Terry Pratchett</em>.
+	Mica male… forse non ho capito tutto, forse non ho riso ad ogni occasione
+	prevista, ma niente male.
+	link#Recensioni/Libri/XXXV/#Leggetene@.
+tab#29
+	<em>
+	link##29/05/2012##29
+	</em> / <strong>
+	link#Extra/#Ministoria#CONTENUTI#Ministorie
+	</strong>
+	title#'Sto cazzo di <code>PHP</code>
+	Il <code>PHP</code> fa cagare. Lo dicono tutti. Ma ieri sono capitato
+	davanti ad un caso così malo che… una cosa impossibile.
+
+	Questo sito gira grazie ad un <code>[CMS – Content Managing System]</code>
+	<code>[FDT – Fai da te]</code> (come quello del buon <a
+	href="http://soft-land.org/">DB</a>) che fa tutto quello che io voglio. E
+	invece. Lo <em>stronzone</em> è scritto in <code>PHP</code> perché lo si fa
+	in fretta, non è impossibile da gestire e/o metterci mano e poi l'ho fatto
+	io e quindi gli voglio bene come <em class="wrong">un figlio</em>
+	Frankenstein voleva bene alla sua <em>creatura</em>. Poco, quindi. Ma io non
+	ho un castello, né un villaggio pieno di balordi con le torce e i forconi…
+	br#
+	Comunque. Ieri il <em class="dacav">Dacav</em> mi passa il log della
+	sessione di <em>Legend</em> ed io me lo spupazzo e lo pubblico. Poi arriva
+	<em class="war">War</em> e mi dice che il file non funziona.
+	<code>IMPOSSIBRU.JPG</code> da parte mia, controllo e vedo che la mia pagina
+	funziona perfettamente. Ma è quella <em>locale</em>, sul mio
+	<em>Tanngrisnir</em>, su cui faccio i test; quella <em>online</em> invece la
+	questione è ben diversa… errore alla prima riga <code>Cannot [start♯page ]
+	@legend/cronache.8.lyz</code>
+
+	Dopo un paio di controlli, vado a scoprire che uno <code>switch
+	statement</code> fallisce nel riconoscere la stringa <code>"page"</code>. Il
+	ché è impossibile… vengo a scoprire, dal sorgente della pagina dell'errore,
+	che la stringa è in realtà <code>"page\n"</code>. Ora, sapete chi produce
+	quella riga? La chiamata <code>file($file, FILE_IGNORE_NEW_LINES)</code>.
+
+	Indovinate un po', quella <em>flag</em> fatta apposta per evitare che le
+	righe abbiano lo strafottuto a-capo in fondo… e invece. Ovviamente, poi,
+	questo problema si verifica <strong>esclusivamente</strong> sul server di
+	produzione (ch'è un <code>5.2</code> contro il mio <code>5.3</code>),
+	<strong>esclusivamente</strong> su quella riga di quel file. 'Fanculo.
 tab#24
 	<em>
 	link##24/05/2012##24
@@ -81,6 +129,12 @@ tab#21
 stop#page
 start#side
 	stitle#link#News/2012/05/#Maggio### 2012
+
+	<em>30/05</em> – [<code>Recensione</code>]
+	link#Recensioni/Libri/XXXV/#A me le guardie!
+
+	<em>29/05</em> – [<code>Ministoria</code>]
+	link#News/2012/05/#'Sto cazzo di <code>PHP</code>##29
 
 	<em>24/05</em> – [<code>Recensione</code>]
 	link#Recensioni/Show/XIII/#Movie War Mega Max#MEGAMAX

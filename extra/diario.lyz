@@ -450,6 +450,44 @@ tab#m13
 	Non dovrebbe essere troppo difficile imitare <code>update-rc.d</code>,
 	infilare i dovuti comandi nei posti giusti e far partire il mio
 	<em>ptpd</em> all'avvio in modo automatico. Non dovrebbe. Ecco, l'ho detto.
+tab#m14
+	title#Data Astrale [<code>M14</code>] <em>28/05</em> 2012
+	Mi sono messo a sistemare cosucce… ho scoperto che il messaggio che compare
+	prima del login è il contenuto di un certo <code>/etc/issue{.net}</code> che
+	viene semplicemente sbrodolato su <em>stdou</em> prima del login. L'ho
+	cambiato.
+	br#
+	Poi sono andato a cercare il modo di settare la <em>password</em> senza
+	dover passare per il comando <code>passwd</code>, visto che non posso
+	eseguirlo (e mantenerne gli effetti, anche se…); ho quindi cercato e
+	smanacciato finché ho scoperto il file <code>/etc/passwd/</code> che
+	contiene una lunga serie di cosucce interessanti, che sarebbero una file di
+	<em>entry</em> ognuna dedicata ad un certo utente con una certa
+	<em>password</em>, con certi <em>permessi</em>, su un certo <em>path</em>. E
+	basta inserire un opportuno <em>hash</em> per ottenere quello che volevo
+	ottenere.
+	br#
+	Poi mi sono dedicato all'ultimo problema: ogni volta che il <em>link
+	fisico</em> viene attivato/disattivato sull'interfaccia <code>eth1</code>,
+	ossia la <code>TSEC1/eTSEC2</code> ossia la solita porta di rete, salta
+	fuori un bel messaggio
+	begin#outside
+		reverse#<code>PHY: link w4kbntc3hjg5hgjwn5tg6htxjqsh5kgj is UP
+		1000/FULL</code>
+	end#outside
+	che se capitasse soltanto sull'opportuno <code>/var/log/klog</code> allora
+	andrebbe bene, perché lo vedrei solo con <code>dmesg</code>; ma questo
+	stronzo mi salta fuori (anche) direttamente <em>stdout</em> prima (o
+	durante, in realtà) il login. E a me questo <em>giggiola i giggioli</em>. Ho
+	chiesto al demone <code>klogd</code> (scusate, avrei dovuto dire
+	<em>dæmone</em>…) come metterlo a tacere… lui (il manuale <em>online</em>)
+	m'ha detto di usare le opzioni <code>-s -n</code>. Le ho infilate nella
+	variabile d'ambiente <code>$KLOGD_OPTIONS</code>, che viene utilizzata dallo
+	script <code>/etc/rc.d/init.d/syslog</code> in un qualche momento
+	dell'avvio… succede però che nessuna di queste opzioni sortisce l'effetto
+	desiderato. Immagino che chiunque stampi questo messaggio lo sbrodoli su
+	<em>stdout</em> personalmente&amp;direttamente&amp;volontariamente. Quindi –
+	<em>fanculo i Gem Boy e i loro seguaci</em> – mi rassegno.
 stop#page
 start#side
 	title#Diario del Capitano
@@ -471,4 +509,5 @@ start#side
 	p#tid#<code>M11</code> – @Da phail@#m11
 	p#tid#<code>M12</code> – @H4x0r@#m12
 	p#tid#<code>M13</code> – @Dr. H4x@ mette tutto a posto#m13
+	p#tid#<code>M14</code> – @La quiete@ prima della tempesta#m14
 stop#side

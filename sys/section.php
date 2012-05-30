@@ -354,8 +354,6 @@
 		}
 
 		private function mktid ($lineno, $args) {
-		
-			
 
 			if (strpos($args[1], '@') !== false) {
 				$title = explode ('@', $args[1]);

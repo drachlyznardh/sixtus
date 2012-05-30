@@ -96,7 +96,6 @@
 						default: die ('Parser->if: WFT is '.$frag[1].' @'.$lineno);
 					}
 					$this->pushChoice($result?2:0);
-					#echo ("if ($frag[1]: ".($result?'t':'f').")\n");
 					$this->setBranch(true);
 					return;
 				case 'else':
@@ -108,7 +107,6 @@
 			}
 		
 			$c = $this->currentChoice();
-			#echo ('CurrentChoice['.($c?$c:'0')."]\n");
 			switch ($this->currentChoice()) {
 				case 1:
 				case 2:
@@ -176,7 +174,6 @@
 					else die ('Cannot find ['.$filename.']!!!');
 					if (isset($include)) $parser = $this->getParser($include);
 					else $include = 'SELF!';
-					#echo ("<!-- Parser->parseLine($frag[1], $frag[2]) $include, Part[$partToInclude], As[$asContent] -->\n");
 					$this->currentTab->addInclude($parser, $partToInclude, $asContent);
 					return;
 				case 'tabs':
@@ -372,10 +369,7 @@
 		private function setBranch ($result) {
 			$c = $this->choiceCounter;
 			$v = $this->choices[$c];
-			#echo ('Parser->setBranch: ['.($c?$c:'0').']['.($v?$v:'0'));
-			#if ($result) $v++; else $v--;
 			$this->choices[$c] = $result ? $v + 1 : $v - 1;
-			#echo (' -> '.($v?$v:'0')."]\n");
 			return;
 		}
 
