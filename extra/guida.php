@@ -241,13 +241,18 @@ start#side
 	title#Guida
 	stitle#tid#Contenuti#contenuti
 	reverse#
-	tid#Storie#contenuti#Storie# e 
-	tid#MiniStorie#contenuti#MiniStorie# / 
+	tid#Storie#contenuti#Storie
+	e 
+	tid#MiniStorie#contenuti#MiniStorie
+	/ 
 	tid#Recensioni#contenuti#Recensioni
 	reverse#
-	tid#Tru Naluten#contenuti#TruNaluten# / 
-	tid#NaNoWriMo#contenuti#NaNoWriMo# / 
-	tid#Legend#contenuti#Legend# RPG / 
+	tid#Tru Naluten#contenuti#TruNaluten
+	/ 
+	tid#NaNoWriMo#contenuti#NaNoWriMo
+	/
+	tid#Legend@ RPG#contenuti#Legend
+	/
 	tid#Extra#contenuti#Extra
 	stitle#tid#Meta#meta
 	reverse#
@@ -260,14 +265,15 @@ start#side
 	tid#Voci#meta#Voci
 	sbr#
 	title#Gli (altri) Extra
-	La pagina dei
-	link#Extra/Record/#Record
-	/ I prodigi della
-	link#Extra/Scimmia/#scimmia celeste
-	/ Appunti di
-	link#Extra/SO1/#Sistemi Operativi 1
-	/ L'elenco delle
-	link#Extra/Immagini/#Immagini
-	/ Il
-	link#Extra/Diario/#diario### del capitano
+	p#link#Extra/Record/#La pagina dei @Record@
+	/
+	link#Extra/Scimmia/#I prodigi della @scimmia celeste@
+	/
+	link#Extra/SO1/#Appunti di @Sistemi Operativi 1@
+	/
+	link#Extra/Immagini/#L'elenco delle @Immagini@
+	/
+	link#Extra/Diario/#il @diario@ del capitano
+	/
+	link#Extra/MLCAD/#MLCad&amp;LPub
 stop#side

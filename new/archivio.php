@@ -16,7 +16,8 @@ start#side
 		link#News/2012/03/#Marzo
 	reverse#
 		link#News/2012/04/#Aprile### /
-		link#News/2012/05/#Maggio### / Giugno
+		link#News/2012/05/#Maggio### /
+		link#News/2012/06/#Giugno
 	reverse#
 		Luglio / Agosto / Settembre
 	reverse#
