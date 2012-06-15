@@ -36,7 +36,7 @@ tab#cron
 		li#link#Recensioni/Giochi/XXXIII/#[Demon's|Dark] @Souls@ – 2009~2011
 		li#link#Recensioni/Show/XXXIV/#Tutto il resto di @Gundam@ – 1979~
 		li#link#Recensioni/Libri/XXXV/#A me le guardie!@ – 1989
-		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender@ – 1977
+		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender@ – 1985
 	end#ol
 tab#film
 	begin#ul
@@ -84,6 +84,6 @@ tab#libri
 		p#link#Recensioni/Libri/XI/#Nessun Dove### – 1996
 		p#link#Recensioni/Libri/XII/#Harry Potter &amp; …### – 1997~2007
 		li#link#Recensioni/Libri/XXXI/#La compagnia dei Celestini### – 1992
-		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender@ – 1977
+		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender@ – 1985
 	end#ul
 stop#page

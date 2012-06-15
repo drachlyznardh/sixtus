@@ -4,7 +4,7 @@ prev#Recensioni/Libri/XXXV/#A me le guardie!
 start#page
 tab#intro
 	Sono un critico. La gente (<em class="war">War</em>) mi passa i libri in
-	anteprima (beh, dai… il libro è del 1977…) solo per avere la mia recensione
+	anteprima (beh, dai… il libro è del 1985…) solo per avere la mia recensione
 	(e farci delle risate sopra, possibilmente…).
 
 	Prendo il libro in mano, una mattina. Il tempo di prendere un caffè, ed ecco
@@ -12,9 +12,10 @@ tab#intro
 	intra@gods#WAT.
 	per ben sei volte.
 	begin#outside
-		p#intra@gods#Ma questo libro è in italiano! WAT. Credevo sarebbe stato in inglese
+		p#intra@gods#Ma questo libro è in italiano! WAT. Credevo sarebbe stato
+		in inglese;
 		p#intra@gods#Dice “un capolavoro intramontabile”… ma non è uscito l'anno
-		scorso… uhm, no, è del 1977… WAT.
+		scorso… uhm, no, è del 1985… WAT;
 		p#Leggo la <em>quarta di copertina</em>: la storia riguarda un <em>super–bimbo
 		super–minchia</em> [<code>spaziale</code>] che essendo “genio tra i
 		geni” viene addestrato dal governo per combattere gli alieni, qualora
@@ -22,8 +23,10 @@ tab#intro
 		AGE – Another story”?
 		p#<em>Ringraziamenti</em>: “parti di questo libro sono presenti nel Gioco di
 		Ender”. Un libro nel libro? Un sottoinsieme improprio del libro? WAT.
+		Tutto è dovuto al fatto che l'autore ha pubblicato un racconto (nel
+		1977) e un libro dalla stesso titolo;
 		p#<em>Dedica</em>: “[…] come i bambini possano essere molto giovani e
-		molto vecchi”. WAT.
+		molto vecchi”. WAT;
 		p#All'inizio del <em>primo capitolo</em>: 1 Terzo. WAT.
 	end#outside
 	E non ho ancora letto nulla del contenuto. Ci vediamo tra <code>377</code>
