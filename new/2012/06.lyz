@@ -3,6 +3,26 @@ prev#News/2012/05/#Maggio@ 2012
 #next#News/2012/07/#Luglio@ 2012
 tabs#alwaysall
 start#page
+tab#15
+	p#link##<em>@15/06/2012@</em>##15
+	/
+	link#Extra/#<strong>@Recensione@</strong>#CONTENUTI#Recensioni
+	title#Il gioco di Ender
+	Questa sarà interessante. Mentre arrivo oltre la metà di <em>Uomini
+	d'Arme</em> (secondo volume delle <em>Guardie di Ankh-Morpork</em>) accadono
+	due cose:
+	begin#ul
+		p#Katia finisce di leggere <em>A me le guardie!</em>
+		p#War mi vuol sottoporre ad un test
+	end#ul
+	Ed ecco, io posso cavallerescamente cedere il libro che leggo alla mia
+	morosa e guadagnarne subito un altro, che a detta di War potrebbe essere
+	inline#war#Harry Potter, nello spazio
+	ma forse anche
+	inline#war#cugino di Gundam
+	e sembra che la coppia <em>me&amp;questo libro</em> potrebbe generare una
+	un'ottima <em>unt</em> spassosa
+	link#Recensioni/Libri/XXXVI/#recensione@. Quindi.
 tab#14
 	p#link##<em>@14/06/2012@</em>##14
 	/ <strong>My Face When</strong>
@@ -54,6 +74,11 @@ stop#page
 start#side
 	stitle#link#News/2012/06/#Giungo@ 2012
 	
+	<em>15/06</em> – [<code>(Pre)Recensione</code>]
+	link#Recensioni/Libri/XXXVI/#Il gioco di Ender
+	
+	<em>14/06</em> – [<code>MFW</code>] La frase del giorno
+
 	<em>12/06</em> – [<code>Storia</code>]
 	link#Storie/2012/LXXXII/#Lo gnomo
 
