@@ -3,6 +3,9 @@ prev#Recensioni/Show/XXXIV/#Il resto di @Gundam@
 next#Recensioni/Libri/XXXVI/#Il gioco di Ender
 start#page
 tab#i
+	Siccome questo libro è il “primo di una saga”, esso parte con una lunga
+	introduzione – circa <code>180 pagine</code>, oltre metà libro – che mi
+	spiega un sacco di cosucce.
 	begin#mini@left
 		Rimango tristemente senza cose da leggere… chiedo aiuto a <em
 		class="war">War</em>, ancora una volta… parte quindi la mia avventura
@@ -12,17 +15,15 @@ tab#i
 		Mi pare, infatti, che si diverta a fare quello che fa; anche se non
 		sempre condivido.
 	end#mini
-	Siccome questo libro è il “primo di una saga”, esso parte con una lunga
-	introduzione – circa <code>180 pagine</code>, oltre metà libro – che mi
-	spiega un sacco di cosucce.
-
 	Questa storia si svolge ad <em>Ankh-Morpork</em>, la più grande città del
 	<em>Mondodisco</em> e tremendo postaccio nel quale vivere. 'Sta città non è
 	soltanto sterminata, ma così fondamentalmente e profondamente marcia da… da…
-	neanche mi viene il paragone. In questo posto ci sono un governante e il suo
-	consigliere, uno spropositato numero di gilde criminali legalizzate, gli
-	uomini della Guardia Notturna (che sono in tre).
-
+	neanche mi viene il paragone.
+	
+	In questo posto ci sono un governante e il suo consigliere, uno spropositato
+	numero di gilde criminali legalizzate, gli uomini della Guardia Notturna
+	(che sono in tre).
+	br#
 	In questo posto arriva <em>Carota</em>, il nano alto <code>2 metri</code>,
 	mandato in città dai suoi genitori (adottivi) per imparare a vivere come gli
 	uomini; finisce arruolato nella Guardia sotto il capitano <em>Vimes</em>, un
@@ -42,6 +43,7 @@ tab#i
 	il drago, sempre grazie al libro, e vivere felice per il resto dei suoi
 	giorni. E funziona: il drago compare, incenerisce cose, poi svanisce e un
 	tizio diventa re. La gente prende bene l'intera faccenda; le Guardie meno.
+
 	L'intera faccenda puzza troppo, o forse non puzza abbastanza.
 
 	Succede poi che il drago trovi autonomamente la strada per entrare in questo
@@ -55,9 +57,37 @@ tab#i
 	title@right#Buono
 	m'è piaciuto. Proseguo con gli altri volumi della serie…
 	clear#left
+tab#ii
+	title#Uomini d'arme
+	Succede che finita la prima avventura un po' di cose son cambiate.
+	Innanzitutto, il capitano Vimes sta per sposarsi (con Lady Sybil) e quindi
+	anche per ritirarsi; lord Vetinari ha decretato che le minoranze fossero
+	incluse nella Guardia, pertanto ora ci sono un nano, un troll e una donna:
+	sono Cuddy, Detritus (che faceva il buttafuori) e Angua. Carota è stato
+	fatto caporale; Nobby e Colon sono rimasti.
+
+	Intanto, però, dall'altra parte del mondo, un assassino scopre delle tracce
+	riguardanti la regalità di Ankh-Morpork, e si mette all'opera perché l'erede
+	salga al trono; cominciano a cadere delle teste.
+
+	Gente che muore, che vuoi che sia, ad Ankh-Morpork? Ma il capitano sente
+	puzza di complottone… prima viene ucciso un mastro nano, poi un giullare…
+	c'è anche un incidente alla gilda degli assassini… un vecchio geniale
+	inventore tenuto prigioniero nei sotterranei del palazzo, un cane telepate
+	e un licantropo…
+
+	Insomma, alla fine la faccenda si risolve, il matrimonio s'ha da fare, le
+	beghe tra nani e troll vengono sedate senza che la città venga distrutta, si
+	scopre che persino Vetinari ha un'anima, tutti finiscono più o meno felici.
+	sec#
+	Anche questo libro è un buon libro. Prosegue.
+	title#Uomini d'arme
+	title@right#Buono
 stop#page
 start#side
+	title#Le guardie
 	p#tid#A me le guardie!@ – 1989#i
-	p#Uomini d'arme – 1993
-	p#E poi altri 6 titoli fino al 2011…
+	p#tid#Uomini d'arme@ – 1993#ii
+	p#Piedi d'argilla – 1996
+	reverse#E poi altri 5 titoli fino al 2011…
 stop#side

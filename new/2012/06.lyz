@@ -1,8 +1,19 @@
 title#Giugno 2012#Sempre caldo. E umido
 prev#News/2012/05/#Maggio@ 2012
-#next#News/2012/07/#Luglio@ 2012
+next#News/2012/07/#Luglio@ 2012
 tabs#alwaysall
 start#page
+tab#21
+	p#link##<em>@21/06/2012@</em>##21
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#Quanto poco mi passa…
+	Dunque, sarà il caldo, sarà il periodo, sarà l'età… sono molto stanco e poco
+	motivato. Intanto, ho scritto la
+	link#Extra/HowToBuildRoot/Download/#relazione
+	per Sgaggio… poi, siccome m'è arrivata una nuora creatura, ho aggiunto un
+	pezzo ad una
+	link#Storie/2012/LXXXI/#vecchia storia@.##III
 tab#15
 	p#link##<em>@15/06/2012@</em>##15
 	/
@@ -73,6 +84,9 @@ tab#10
 stop#page
 start#side
 	stitle#link#News/2012/06/#Giungo@ 2012
+	
+	<em>21/06</em> – [<code>Storia</code>]
+	link#Storie/2012/LXXXI/#Le @nuove creature@ di casa GODS##bonus
 	
 	<em>15/06</em> – [<code>(Pre)Recensione</code>]
 	link#Recensioni/Libri/XXXVI/#Il gioco di Ender

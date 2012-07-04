@@ -890,6 +890,8 @@ tab#s08
 	include#legend/cronache.8#page
 tab#s09
 	include#legend/cronache.9#page
+tab#s10
+	include#legend/cronache.10#page
 stop#page
 stop#page
 start#side
@@ -906,4 +908,5 @@ start#side
 	p#tid#<code>S07</code> – @Il castello ninja@#s07
 	p#tid#<code>S08</code> – @Il maestro del castello@#s08
 	p#tid#<code>S09</code> – @Il castello@#s09
+	p#tid#<code>S10</code> – @Il supervisore@#s10
 stop#side

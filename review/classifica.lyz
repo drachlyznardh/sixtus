@@ -13,6 +13,7 @@ tab#awesome
 		li#link#Recensioni/Giochi/XXX/#Batman: Arkham [ Asylum | City ]
 		li#link#Recensioni/Film/XXXII/#I Vendicatori
 		li#link#Recensioni/Giochi/XXXIII/#[ Demon's | Dark ] Souls
+		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender
 	end#ul
 tab#buoni
 	stitle#Buono
@@ -34,6 +35,8 @@ tab#buoni
 		li#link#Recensioni/Libri/XXXI/#La Compagnia dei Celestini
 		li#link#Recensioni/Show/XXXIV/#After War @Gundam X@#X
 		li#link#Recensioni/Libri/XXXV/#A me le guardie!#I
+		e
+		link#Recensioni/Libri/XXXV/#Uomini d'arme#II
 	end#ul
 tab#lasciano
 	stitle#Si lascia guardare
@@ -92,6 +95,9 @@ tab#no
 		li#D–Wars
 		li#Mega shark Vs Giant Octopus
 		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
+		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider
+		e anche
+		link#Recensioni/Film/Brutti/XXXVII/#Spirit of Vengeance
 	end#ul
 tab#ridere
 	stitle#Brutto da ridere

@@ -6,7 +6,7 @@ start#page
 
 	Sono stato via per un po'. Intanto, vi racconto di quella volta con la
 	macchina di <em class="jazz">Jazz</em>.
-	id#jazzmobile
+	id#I
 	title#La Jazzmobile
 	La <em>Jazzmobile</em> è la macchina che ci porta in giro, in particolare il
 	giovedì quando andiamo presso <em>Villa Dacav&amp;Mitch</em> per giocare a
@@ -66,7 +66,7 @@ start#page
 	sec#
 	Ma forse un'altra volta. Intanto, visto che ne sono appena state aggiunte,
 	scriverò delle
-	id#creature
+	id#II
 	title#Creature di casa GODS
 	Casa mia è popolata di una serie di creature: mio padre, mia madre, io, un
 	fratello grande, un fratello piccolo, una sorelline e da varie bestie.
@@ -120,10 +120,28 @@ start#page
 	con l'acqua, i sassi, le alghe e un certo numero di girini. Temo che si a)
 	cuociano al sole e b) saltino fuori verso il futuro, verso Ed, verso il
 	basso o verso Cid. In ogni caso, non credo dureranno molto.
+	sec#
+	id#III
+	title#Le nuove creature di casa GODS
+	[Quanta poca briga di scrivere io abbia lo dimostra il fatto che questo
+	testo non è comp…]
+
+	Comunque, succede che mio padre fa cinquant'anni. Con una magnifica festa a
+	sorpresa, tra l'altro, un sacco di facce amiche. Ma per ciò che riguarda
+	questa storia, succede che mia madre arriva con il “regalo”, una scatoletta
+	miagolante per mio padre.
+
+	Dentro c'è <em>Poldo</em>, un gattino di tre mesi, rosso tigrato, con un
+	collare con sonaglino al collo. Quest'ultima creaturina ha già tentato di
+	mangiarmi, corre tutto il giorno e salta su tutto quel che ch'è.
+
+	Mangia con la stessa voracità del gatto stronzo, fugge con la grazia del
+	gatto codardo e insiste come soltanto un cucciolo è in grado di fare. Ah!
 stop#page
 start#side
 	title#Storia LXXXI
 	title@right#Non sono morto
-	p#tid#La Jazzmobile##jazzmobile
-	p#tid#Le creature@ di casa GODS##creature
+	p#tid#La @Jazzmobile@##I
+	p#tid#Le @creature@ di casa GODS##II
+	p#tid#Le @nuove@ creature di casa GODS##III
 stop#side

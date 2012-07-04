@@ -9,6 +9,12 @@ start#side
 	link#News/2012/04/#Aprile
 	sec#
 	title#Notizie
+	include#new/2012/07#side@as@content
+	br#
+	include#new/2012/06#side@as@content
+	br#
+	include#new/2012/05#side@as@content
+	br#
 	include#new/2012/04#side@as@content
 	br#
 	include#new/2012/03#side@as@content
@@ -22,6 +28,18 @@ start#page
 	link##alla meno recente##fondo
 	]
 	sec#
+	titler#Agosto 2012
+	br#
+	include#new/2012/07#page@as@content
+	sbr#
+	titler#Giugno 2012
+	br#
+	include#new/2012/06#page@as@content
+	sbr#
+	titler#Maggio 2012
+	br#
+	include#new/2012/05#page@as@content
+	sbr#
 	titler#Aprile 2012
 	br#
 	include#new/2012/04#page@as@content
