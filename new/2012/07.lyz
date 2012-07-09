@@ -3,6 +3,20 @@ prev#News/2012/06/#Giugno@ 2012
 #next#News/2012/08/#Agosto@ 2012
 tabs#alwaysall
 start#page
+tab#09
+	p#link##<em>@09/07/2012@</em>##09
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#La notte rosa
+	Il mio umore è strano. Sono triste, stanco e scazzato, ma non in superficie,
+	bensì un po' sotto… non so che voglia dire. Comunque, sono stato a trovare
+	il <em>Bolo</em> e molte cose meritano una
+	link#Storie/2012/LXXXIII/#storia@.
+
+	In più, per chi fosse interessato, <em>Carlo</em> mi porta al cinema,
+	stasera, per il famigerato <em>The Amazing Spiderman</em>. S'è vero quel che
+	man detto, sarà tanto pessimo da meritare una recensione paragonabile a
+	quella di <em>Transformers 3</em>. BRACE FOR IMPACT.
 tab#04
 	p#link##<em>@04/07/2012@</em>##04
 	/
@@ -23,6 +37,9 @@ stop#page
 start#side
 	stitle#link#News/2012/07/#Luglio@ 2012
 	
+	<em>09/07</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXXIII/#La notte rosa
+
 	<em>04/07</em> – [<code>Recensioni</code>]
 	link#Recensioni/Libri/XXXV/#Uomini d'arme@,#II 
 	link#Recensioni/Libri/XXXVI/#il gioco di Ender@,

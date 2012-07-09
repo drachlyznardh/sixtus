@@ -1,19 +1,15 @@
 start#page
 	stitle#link#News/#Ultime### Novità
-	reverse#
-	link#News/Archivio/#Archivio###	[
-	link#News/2011/#2011###	/
-	link#News/2012/#2012###	]
-	link#Extra/#FAQ | Domande | Extra
+	reverse#link#News/Archivio/#Archivio
+	/
+	link#Extra/#About
 	sbr#
 	titler#Cose interessanti
 	stitle#link#Storie/#Storie
 	reverse#
-		[
-		link#Storie/2010/#2010### /
-		link#Storie/2011/#2011### /
-		link#Storie/2012/#2012### ]
-		link#Storie/Gaem/#La storia interattiva
+		link#Storie/2010/#[ @2010@ 
+		link#Storie/2011/#~@11@ 
+		link#Storie/2012/#~@12@ ]
 	stitle#link#Recensioni/#Recensioni
 	reverse#
 		link#Recensioni/#Categorie#CATEGORIE## /
@@ -59,9 +55,11 @@ start#page
 			<a href="@SELF@@STYLE@/Luber/">Luber</a>
 		endif#
 		]
+		link#Extra/Guida/#?#META#Modi
 	end#inside
 	begin#outside
 	reverse#
+		link#Extra/Guida/#?#META#Stili
 		[
 		if#style@is@Dado
 			<a href="@SELF@@MODE@/">Raw</a> | <em>Dado</em>
@@ -82,27 +80,27 @@ start#page
 	href="http://jazzinghen.wordpress.com/">opinioni</a> di <span
 	class="jazz">Jazzinghen</span> e le <em>nuove</em> <a
 	href="http://vonkreusental.wordpress.com/">cose fighe</a> del <em>Barone</em>.
-
-	Ma non solo! Consulto anche
-	begin#ul
-		[ <a href="http://dalong.net">Dalong</a> | <a
-		href="http://gunjap.net">GunJap</a> | <a
-		href="http://gundamguy.blogspot.com">GundamGuy</a> | <a
-		href="http://tfw2005.com">Transformers World 2005</a> | <a
-		href="http://gundam.tk">GundamReviews</a> ] per i modellini
-
-		[ <a href="http://kotaku.com">Kotaku</a> | <a
-		href="http://io9.com">io9</a> | <a
-		href="http://gametrailers.com">GameTrailers</a> | <a
-		href="http://escapistmagazine.com">the Escapist</a> ] per film, scienza
-		e cose fighe
-
-		[ <a href="http://xkcd.com">xkcd</a> | <a
-		href="http://lfgcomic.com">LFG</a> | <a href="http://vgcats.com">VG
-		Cats</a> | <a
-		href="http://explosm.net/comics/new">Cyanide&amp;Happiness</a> | <a
-		href="http://penny-arcade.com/comic/">Penny Arcade</a> | <a
-		href="http://oglaf.com">Oglaf</a> | le storie della <a
-		href="http://soft-land.org/storie/index">Sala Macchine</a> ] per ridere
-	end#ul
+#
+#	Ma non solo! Consulto anche
+#	begin#ul
+#		[ <a href="http://dalong.net">Dalong</a> | <a
+#		href="http://gunjap.net">GunJap</a> | <a
+#		href="http://gundamguy.blogspot.com">GundamGuy</a> | <a
+#		href="http://tfw2005.com">Transformers World 2005</a> | <a
+#		href="http://gundam.tk">GundamReviews</a> ] per i modellini
+#
+#		[ <a href="http://kotaku.com">Kotaku</a> | <a
+#		href="http://io9.com">io9</a> | <a
+#		href="http://gametrailers.com">GameTrailers</a> | <a
+#		href="http://escapistmagazine.com">the Escapist</a> ] per film, scienza
+#		e cose fighe
+#
+#		[ <a href="http://xkcd.com">xkcd</a> | <a
+#		href="http://lfgcomic.com">LFG</a> | <a href="http://vgcats.com">VG
+#		Cats</a> | <a
+#		href="http://explosm.net/comics/new">Cyanide&amp;Happiness</a> | <a
+#		href="http://penny-arcade.com/comic/">Penny Arcade</a> | <a
+#		href="http://oglaf.com">Oglaf</a> | le storie della <a
+#		href="http://soft-land.org/storie/index">Sala Macchine</a> ] per ridere
+#	end#ul
 stop#page
