@@ -1,0 +1,193 @@
+title#Lab of Doom#Il tempo passato nell'<em>Aula 5</em>
+prev#Extra/MLCAD/#MLCAD &amp; LPub
+next#Extra/LABOFDOOM/#Lab of Doom
+related#Extra/Diario/#Il @diario@ del Capitano
+start#page
+tab#l00
+	title#Data Astrale [<code>L00</code>] <em>11/07</em> 2012
+	Sono capitato in laboratorio, oggi. Proprio sotto il <em>servoclock</em>,
+	sopra una certa presa di rete chiamata <code>vlan1 mcii</code> e su una
+	sedia comodissima.
+
+	Ma la brutta notizia è che niente sembra funzionare, oggi. La connessione
+	con la <code>MPC8313ERDB</code> c'è, ma il resto no:
+	begin#ul
+		li#<code>ptpd2</code> sulla scheda non risponde più…
+		li#il <code>masterclock</code> continua ad avere problemi con la famosa
+		<code>tsu_usb_socketd</code>…
+		li#il <code>servoclock</code> e lo switch non rispondono più, né via ssh
+		né via web…
+		li#la rete <code>192.186.122.0</code> pare non avere un server per
+		<code>dhcp</code>… mi ci posso collegare a cazzo, però…
+	end#ul
+	sec#
+	title#Data Astrale [<code>L00a</code>]
+	Dunque, cominciamo con la tecnicaglia… ogni istanza di <code>ptpd2</code>
+	che lancio sulla scheda, con qualunque ragionevole combinazione di opzioni,
+	adesso si pianta sul controllo del file di lock
+	<code>/var/run/kernel_clock</code> e non sembra farcela…
+	reverse#<code>&lt;h4x m0d3 activate&gt;</code>
+	br#
+	L'amico <code>grep</code> mi indica la <code>riga 273</code> del solito file
+	<code>dep/startup.c</code> dei sorgenti di <code>ptpd-2.2.0</code>.
+	Purtroppo, la funzione <code>deamon_already_running</code> mi sembra in
+	ordine, il file di log c'è e contiene soltanto il <code>pid</code>, ma non
+	posso controllarlo effettivamente (perché ho una sola shell e perché
+	<code>ps</code> non funziona più… e nemmeno <code>top</code>).
+
+	Mi sorge un sospetto… ora cerco di ripristinare un'installazione vecchiotta.
+	sec#
+	title#Data Astrale [<code>L00b</code>]
+	Intanto, scopro che <code>ptpd</code> adesso ha un bel <code>.deb</code> che
+	posso <code>apt-get install</code>are ed essere felice. O forse no?
+
+	Ecco una <strong>cosa bella</strong>. Attaccando il portatile direttamente
+	allo switch (ho sniffato l'indirizzo <code>192.168.122.7</code> sperando che
+	non ci fosse nessuno…), ottengo traffico PTP da qualcuno, che immagino sia
+	il <em>servoclock</em>. Ora devo convincere la scheda a fare altrettanto.
+
+	Anche perché si direbbe che il laboratorio e l'esterno siano piuttosto
+	slegati l'uno dall'altro: non c'è contatto tra loro.
+tab#l01
+	title#Data Astrale [<code>L01</code>] <em>12/07</em> 2012
+	Qual è la cosa che si deve controllare <strong>per prima</strong> quando una
+	connessione di rete non funziona?
+	reverse#Lo stracazzo di <strong>cavo</strong>. Lo strafottuto cavo.
+	br#
+	La soluzione più probabile è sempre la più semplice. M'è venuto in mente –
+	ovviamente – a casa, mentre ero in bagno (se ricordate quel <a
+	href="http://www.youtube.com/results?search_query=scrubs+roof+toilet">cesso</a>
+	in <em>Scrubs</em>). Ho pensato
+	intra@gods#Quel cavo libero@ho pensato@perché non è già attaccato a qualcosa?@ e poi@Quanti cavi escono dallo switch?
+	Beh, stamattina ho controllato questo come prima cosa: c'è soltanto un cavo,
+	tra lo switch e il <em>servoclock</em>. Basta. L'altro cavo (quello che ieri
+	pendeva dalla <em>porta Ethernet rossa del Destino</em> l'ho trovato
+	arrotolato sulla scrivania accanto alla mia. Ora, già, non è la mia, oggi
+	c'è sopra un altro tizio… non è un problema, è abbastanza lungo (il cavo) e
+	posso lavorare comunque.
+
+	Magari aspetterò che se ne vada, e poi spruzzerò del repellente… o forse
+	urinerò sulla sedia affinché nessuno ci si sieda più… ma non vorrei
+	scatenare una guerra per il controllo del territorio.
+	sec#
+	title#Data Astrale [<code>L01a</code>]
+	begin#mini@right
+		stitle@right#Ye Old Freescale, first
+		PowerPC generic, 5 jobs, linux <code>2.6.36</code>, uClibc
+		<code>0.9.31</code>, binutils <code>2.20</code>, gcc <code>4.3</code>,
+		large files, ipv6, rpc, wchar
+
+		All with corresponding configs.
+	end#mini
+	Mi sono rimesso a smanacciare con <em>Buildroot</em>, quello di
+	<code>/opt/veryclean</code>, versione <code>2012.05</code>. Metto assieme la
+	solita configurazione, lasciando come unica incognita quel famoso
+	<code>tickless system</code>… compila, il kernel parte, nessuna libreria
+	dinamica sembra funzionare… boh.
+	begin#mini@left
+		stitle@left#Ye Old Freescale, second
+		PowerPC generic, 5 jobs, ccache, linux <code>2.6.36</code>, uClibc
+		<code>0.9.31</code>, binutils <code>2.20</code>, gcc <code>4.3</code>,
+		large files, ipv6, rpc, wchar
+
+		All with corresponding configs.
+	end#mini
+	Un bel <code>ldconfig</code> (su consiglio del <em>Dacav</em>) mi risponde
+	«No such <code>/usr/X11R6/lib</code>» <code>o_O</code> e se provo ad
+	eseguire <code>/lib/libuClibc.so.1</code> ottengo un bel <em>Fatal: Illegal
+	Instruction</em> nonostante l'architettura indicata sia giusta… boh.
+
+	Ci riprovo. Non credo possa cambiare niente. Ma stavolta <code>make
+	clean</code> per sicurezza…  <em>dooddaaddoo</em> e funziona. Boh.
+	sec#
+	title#Data astrale [<code>L01b</code>]
+	Dunque. Cambiata la password (<em class='spoiler'>root</em>, ovviamente) e
+	installato <em>ptpd</em> (<code>2.2.0</code>, compilato di fresco) tutto
+	funziona.
+
+	Cioè.
+
+	Se attacco la scheda, mi arriva il traffico PTP. Ma l'ora è sbagliata: segna
+	le <code>22:24 2010-02-05</code> contro le <code>15:17 2012-07-12</code> che
+	sono veramente… questo mi mette un bel dubbio. Ma in realtà è quel che
+	sospettavo: l'unico segnale che arriva parte dal <em>servoclock</em>.
+
+	In più, per quanto io non sia esperto del campo (<em>quale</em> campo, poi?)
+	non mi pare che i numeri che mi vengono sparati in faccia siano buoni… non
+	mi pare che migliorino, neanche.
+	sec#
+	title#Data astrale [<code>L01c</code>]
+	Dunque, pare che l'unica altra cosa da verificare (per oggi, che poi muoio
+	di sonno) sarebbe la responsività della <em>Vitess</em>: se attaccassi il
+	portatile ad una delle altre porte, quanto male riceverei i pacchetti PTP di
+	rimando?
+
+	Grazie all'occhialuto collega <em>Moro</em> — che sta qui al mio fianco –
+	rubo un cavo di rete tra quelli “disponibili”, m'attacco alla rete
+	<code>192.168.122.0</code> con un altro indirizzo a caso (<code>ping</code>
+	per controllare che non fosse attivo e nient'altro). <em>Et voila</em>, ecco
+	che anche il portatile riceve traffico PTP, si abbassa automaticamente allo
+	stato di <code>PTP_SLAVE</code> (come previsto, nonostante io parta sempre
+	come master).
+
+	Sempre sulla <em>Vitesse</em>, ovviamente. Qualunque porta. Ma non dalla
+	porta normale: ogni demone funziona per una porta sola. E non ci possono
+	essere due demoni sulla stessa macchina.
+tab#l02
+	title#Data Astrale [<code>L02</code>] <em>13/07</em> 2012
+	Scrisse Sgaggio: il report va benone (<code>&lt;occhi che
+	brillano&gt;</code>) e potrebbe anche diventare l'orale di SgaggioTiem, per
+	registrare l'esame. Quello, ma anche la reale possibilità di attaccare altre
+	macchine alla rete (WOWOWOWOWOWOWOWOWOWOW).
+
+	Poi…
+	br#
+	title@right#L'alba del terzo giorno
+
+	Fieramente deciso a raccogliere informazioni dal Presidio e dal Cisca, mi
+	reco in entrambi gli uffici. Succede che:
+	begin#ul
+		li#non posso registrare SgaggioTiem perché i miei crediti sono esauriti,
+		quindi dovrò farmi dare una matricola apposta, registrare il voto come
+		“crediti extra” e poi includerli nella mia magistrale una volta
+		iscritto;
+		li#non posso esattamente prendere IP a cazzo (come in precedenza) dalla
+		rete <code>192.168.122.0</code>, ma scopro che c'è un modulo di
+		richiesta ufficiale che Sgaggio deve firmare;
+		li#l'<em>Omino del Cisca</em> mi dice che non c'è alcun filtro di nessun
+		tipo su nessun router, e che quindi il fatto che il <em>Master</em> non
+		mandi nulla è colpa sua o mia, non del Cisca…
+	end#ul
+	Tutto sommato, dovrei essere contento.
+	sec#
+	title#Data Astrale [<code>L02a</code>]
+	Dunque, m'è venuto un dubbio… se la rete Cisca non filtra alcunché, allora
+	il traffico non arriva, oppure… se fosse che il <em>ServoClock</em>
+	prendesse il sopravvento sul <em>MasterClock</em>? L'unico modo per
+	controllare questa cosa è staccare il <em>Servo</em> dalla rete e vedere che
+	succede…
+
+	Attacco il mio PC, senza tirar fuori la scheda – che ci vogliono 1000 anni –
+	e controllo… uhm… strano, l'ora che mi arriva sembra giusta, molto più
+	giusta dell'ora che arrivava ieri… è effettivamente l'ora di oggi, fuori di
+	due ore perché noi siamo a <code>Greenwich</code> e c'è l'ora legale. Credo.
+	Quindi… l'ora è giusta? Il <em>Servo</em> s'è attaccato al <em>Master</em> e
+	s'è regolato? Wow.
+	sec#
+	title#Data Astrale [<code>L02b</code>]
+	Dunque, visto che Sgaggio non è in ufficio, mi metto a far le fuffe.
+	<strong>Esperimenti!!!</strong>
+
+	Se attacco il portatile alla seconda presa della vlan (la porta etichettata
+	<code>A3-036</code>) il demone passa automaticamente in
+	<code>PTP_SLAVE</code> e prende l'ora corretta (esattamente quella, senza
+	offset). Se cambio porta (<code>A3-035</code>) non cambia nulla.
+
+	Quindi, in pratica, funziona.
+stop#page
+start#side
+	title#Lab of Doom
+	p#tid#L00 – @Primo giorno@#l00
+	p#tid#L01 – @Secondo giorno@#l01
+	p#tid#L02 – @Notiziuole@#l02
+stop#side

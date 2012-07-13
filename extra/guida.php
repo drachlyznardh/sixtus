@@ -276,4 +276,8 @@ start#side
 	link#Extra/Diario/#il @diario@ del capitano
 	/
 	link#Extra/MLCAD/#MLCad&amp;LPub
+	/
+	link#Extra/BUX/#XLST, FOP e BUX
+	/
+	link#Extra/LABOFDOOM/#Lab Of Doom
 stop#side

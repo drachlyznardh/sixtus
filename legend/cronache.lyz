@@ -892,6 +892,24 @@ tab#s09
 	include#legend/cronache.9#page
 tab#s10
 	include#legend/cronache.10#page
+tab#s11
+	Questa è breve, perché non l'abbiamo scritta durante. Ci siam messi sul
+	balcone del <em>Dacav</em> per mangiare al fresco, ci siam rimasti per
+	giocare. In breve:
+	begin#outside
+		Il supervisore è esploso e non n'è rimasto niente (di utile), c'è però
+		la nuvola di Jack, William &amp; Averell Dalton. Con essa, il party
+		tenta il viaggio nell'iperspazio; il sistema penta-coordinata non è
+		gestibile, ne risultano destinazioni improbabili (il <em>Triassico</em>
+		di Pongo, tutti scimmie, in fondo al mar, <em>JJ Abrams</em> presenta,
+		<em>Marvel Knigths</em>…).
+
+		Con una telefonata di William, il party si procura una tupla di
+		coordinate note (una destinazione a caso, in pratica) e finisce presso
+		un centro di raccolta di… qualcosa.
+	end#outside
+	La sessione è terminata, quasi troncata, per eccesso di sonno nella testa
+	del Master, fatto che ha causato l'interruzione del flusso di idee.
 stop#page
 stop#page
 start#side
@@ -909,4 +927,5 @@ start#side
 	p#tid#<code>S08</code> – @Il maestro del castello@#s08
 	p#tid#<code>S09</code> – @Il castello@#s09
 	p#tid#<code>S10</code> – @Il supervisore@#s10
+	p#tid#<code>S11</code> – @Il viaggio@#s11
 stop#side
