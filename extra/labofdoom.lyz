@@ -184,10 +184,52 @@ tab#l02
 	offset). Se cambio porta (<code>A3-035</code>) non cambia nulla.
 
 	Quindi, in pratica, funziona.
+tab#l03
+	title#Data Astrale [<code>L03</code>] <em>16/07</em> 2012
+	Dunque. Scrisse Sgaggio, durante il weekend. Succedono delle belle cose:
+	begin#ul
+		il primo capitolo della tesi deve contenere la solita fuffa… potrei
+		anche pensare di cominciarlo…
+		
+		il report (assieme all'impegno per realizzarlo) è sufficiente per
+		otterene un <code>30</code> all'esame; se tutto va come previsto,
+		comincerò la magistrale con un esame già fatto;
+
+		ho ottenuto due scatole nuove: l'altra <em>Freescale</em> e un
+		<code>Digital Instrument GPS-MXS</code> (con tanto di antennone,
+		volendo) con cui posso trastullarmi;
+	end#ul
+	Non senza inconvenienti, ovviamente.
+	sec#
+	title#Data Astrale [<code>L03a</code>]
+	Questo enorme baraccone GPS fa un sacco di cose, ha un'interfaccia web
+	inutilmente figa, ma almeno sono riuscito a regolarlo come
+	<code>PTP_SLAVE</code> e vivere contento. Non posso ancora attaccarlo alla
+	rete, ovviamente, per via del <em>CISCA</em>: tal <em>Remo</em> vuol che io
+	gli porti i moduli <em>Sgaggio</em>firmati per darmi gli indirizzi che
+	voglio.
+
+	Quindi lo lascio lì, magari spento.
+	sec#
+	title#Data Astrale [<code>L03b</code>]
+	C'è poi l'<em>altra</em> <code>MPC8313ERDB</code>, gemella della mia
+	<em>Sgaggioboard</em>. Tra l'altro, questa scheda non ha più il suo
+	alimentatore originale, ch'è esploso… al suo posto, <em>Sgaggio</em> m'ha
+	dato quello della <code>VirtexII Pro</code>. <strong>QUELLA</strong>.
+
+	Purtroppo, si direbbe che questa simpaticone non abbia nemmeno il caro
+	vecchio <code>firmware</code> per la <em>Vitesse</em> – quel famoso
+	<code>svc2bin</code> – o forse il problema è soltanto il loader. In ogni
+	caso, ci sono due simpatici cavi per l'alimentazioni, così posso riportare a
+	casa il mio.
+	sec#
+	E tutto il resto si farà domani, perché sono stanco e nel <em>Lab Of
+	Doom</em> fa piuttosto caldo. Arrivederci.
 stop#page
 start#side
 	title#Lab of Doom
 	p#tid#L00 – @Primo giorno@#l00
 	p#tid#L01 – @Secondo giorno@#l01
 	p#tid#L02 – @Notiziuole@#l02
+	p#tid#L03 – @Tanti giocattoli@#l03
 stop#side
