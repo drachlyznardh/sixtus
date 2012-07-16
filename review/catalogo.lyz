@@ -35,8 +35,11 @@ tab#cron
 		li#link#Recensioni/Film/XXXII/#I Vendicatori### – 2012
 		li#link#Recensioni/Giochi/XXXIII/#[Demon's|Dark] @Souls@ – 2009~2011
 		li#link#Recensioni/Show/XXXIV/#Tutto il resto di @Gundam@ – 1979~
-		li#link#Recensioni/Libri/XXXV/#A me le guardie!@ – 1989
+		li#link#Recensioni/Libri/XXXV/#Le @guardie@ di Ankh-Morpork – 1989
 		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender@ – 1985
+		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider@ – 2011
+		li#link#Recensioni/Film/Brutti/XXXVIII/#Spider-man@ – 2000~2012
+		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky@ – 2000~2012
 	end#ol
 tab#film
 	begin#ul
@@ -59,6 +62,9 @@ tab#brutti
 		p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
 		p#link#Recensioni/Film/Brutti/XVIII/#Black Sheep### – 2006
 		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space### – 1959
+		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider@ – 2011
+		li#link#Recensioni/Film/Brutti/XXXVIII/#Spider-man@ – 2000~2012
+		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky@ – 2000~2012
 	end#ul
 tab#game
 	begin#ul

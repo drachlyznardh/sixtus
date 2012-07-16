@@ -37,6 +37,8 @@ tab#buoni
 		li#link#Recensioni/Libri/XXXV/#A me le guardie!#I
 		e
 		link#Recensioni/Libri/XXXV/#Uomini d'arme#II
+		e
+		link#Recensioni/Libri/XXXV/#Piedi d'argilla#III
 	end#ul
 tab#lasciano
 	stitle#Si lascia guardare
@@ -98,6 +100,7 @@ tab#no
 		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider
 		e anche
 		link#Recensioni/Film/Brutti/XXXVII/#Spirit of Vengeance
+		li#link#Recensioni/Film/Brutti/XXXVIII/#The Amazing Spider-man#Amazing
 	end#ul
 tab#ridere
 	stitle#Brutto da ridere
@@ -108,6 +111,7 @@ tab#ridere
 		li#Alien Vs Ninja
 		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
 		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
+		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky
 	end#ul
 tab#magnifici
 	stitle#Magnificamente brutto
