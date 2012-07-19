@@ -8,7 +8,7 @@
 		<meta name="keywords" content="<?php foreach (explode('/', $self) as $keyword) echo ' '.$keyword; ?>" />
 		<link rel="alternate" type="application/rss+xml" title="gods.roundhousecode.com/News" href="feed.rss" />
 
-		<title><?=$p->gettitle()?></title>
+		<title><?=$p->getShortTitle()?></title>
 	
 		<link rel="stylesheet" type="text/css" href="style/common.css" />
 		<link rel="stylesheet" type="text/css" media="screen and (min-device-width:481px), projection" href="style/screen.css" />

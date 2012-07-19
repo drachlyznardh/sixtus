@@ -219,6 +219,8 @@
 							break;
 					}
 					break;
+				case 'short':
+					$this->meta['short'] = $frag[1]; break;
 				case 'subtitle':
 					$this->meta['subtitle'] = $frag[1]; break;
 				case 'prev':
@@ -278,6 +280,10 @@
 		}
 
 		public function getTitle () { return $this->meta['title']; }
+		public function getShortTitle () {
+			if (isset($this->meta['short'])) return $this->meta['short'];
+			return $this->meta['title'];
+		}
 		public function getSubtitle () { return $this->meta['subtitle']; }
 		public function getDefaultTab () { return $this->page[0]->getName(); }
 

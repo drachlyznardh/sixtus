@@ -910,6 +910,8 @@ tab#s11
 	end#outside
 	La sessione è terminata, quasi troncata, per eccesso di sonno nella testa
 	del Master, fatto che ha causato l'interruzione del flusso di idee.
+tab#s12
+	include#legend/cronache.12.lyz#page
 stop#page
 stop#page
 start#side
@@ -928,4 +930,5 @@ start#side
 	p#tid#<code>S09</code> – @Il castello@#s09
 	p#tid#<code>S10</code> – @Il supervisore@#s10
 	p#tid#<code>S11</code> – @Il viaggio@#s11
+	p#tid#<code>S12</code> – @L'accampamento@#s12
 stop#side

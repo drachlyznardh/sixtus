@@ -1,4 +1,6 @@
-title#Lab of Doom#Il tempo passato nell'<em>Aula 5</em>
+title#[Cross-dimensional] Lab of Doom
+short#Lab Of Doom
+subtitle#Il mio tempo passato nell'<em>Aula 5</em> a fare il male
 prev#Extra/MLCAD/#MLCAD &amp; LPub
 next#Extra/LABOFDOOM/#Lab of Doom
 related#Extra/Diario/#Il @diario@ del Capitano
@@ -225,6 +227,159 @@ tab#l03
 	sec#
 	E tutto il resto si farà domani, perché sono stanco e nel <em>Lab Of
 	Doom</em> fa piuttosto caldo. Arrivederci.
+tab#l04
+	title#Data Astrale [<code>L04</code>] <em>17/07</em> 2012
+	Mentivo. Il firmware <em>Vitesse</em> <code>vsc2bin</code> funziona, e anche
+	il suo <em>loader</em>: vedo le lucine. Quel che mancava è una
+	configurazione adatta nel mio <code>/etc/bootptab</code>, ch'è settato per
+	rispondere soltanto al <code>MAC address</code> della prima scheda.
+
+	Ho sistemato il file, aggiunto le configurazioni per l'altra scheda (basta
+	contrallare che l'indirizzo sia scritto bene, in esadecimale e contiguo,
+	senza spazi né due punti) e tutto si sistema. Al quel punto, connessione via
+	<code>SSH</code> con il caro amico <em>Dropbear</em>.
+	sec#
+	title#Data Astrale [<code>L04a</code>]
+	<em>Porchi &amp; Madonne</em> per tutto il giorno, oggi. Non vi dico le
+	bestemmie. L'intera giornata a capire come settare le chiavi
+	<code>RSA</code> autorizzate per <code>SSH</code>, a generarne di nuove, a
+	separare quelle pubbliche da quelle private, a riavviare demoni… tutto per
+	potermi loggare sulla scheda che tengo ad un metro.
+
+	Alla fine, l'amara scoperta: era la <em>password</em>. Non che l'avessi
+	sbagliata, badate bene; non sono così scemo. Ma qualcun'altro sì,
+	evidentemente. La password (<em>root</em>, ovviamente) è stata settata a
+	manina nel file <code>/etc/passwd</code> tramite un hash. Che funziona,
+	visto che posso loggarmici sopra; ma non via SSH.
+	
+	Ora, ecco cosa ho imparato oggi: le password del cacchio si mettono in
+	<code>/etc/passwd</code>, le password buone invece le si fabbrica con
+	<code>mkpasswd</code> (si veda il primo volume del manuale) e le si mette in
+	<code>/etc/shadow</code>. Io l'ho fatto e funziona.
+	sec#
+	title#Data Astrale [<code>L04b</code>]
+	begin#mini@right
+	p#<code>auto lo eth0</code>
+	p#<code>iface lo inet loopback</code>
+	br#
+	p#<code>iface eth0 inet static</code>
+	p#<code>	address 192.168.122.7</code>
+	p#<code>	netmask 255.255.255.0</code>
+	p#<code>	network 192.168.122.0</code>
+	p#<code>	broadcast 192.168.122.255</code>
+	p#<code>	gateway 192.168.122.1</code>
+	end#mini
+	Ed ecco come sistemare nuovamente la rete: su questo nuovo sistema (quello
+	di <em>Buildroot</em> <code>2012.05</code>) sono installati
+	<code>ifup</code> e <code>ifdown</code>; questi due script vengono
+	controllati da una famiglia di file, <code>/etc/network/interfaces</code> e
+	numerosi altri.
+
+	Eccone il contenuto.
+	
+	In questa maniera posso affidare all'interfaccia <code>eth0</code> un
+	indirizzo statico (assieme a tutti gli altri parametri) e fare in modo che
+	queste istruzioni siano eseguite in <code>auto</code>matico ad ogni
+	esecuzione di <code>ifup</code> (quindi, anche all'avvio).
+	
+	Posso dirmi soddisfatto? Non del tutto, forse, poteva andare meglio. Ma
+	poteva anche andare <strong>molto</strong> peggio, quindi… Ma almeno adesso
+	sono in grado di fabbricare una configurazione con password, rete
+	funzionante preassegnata, ssh acceso e ptpd.
+
+	Tra l'altro, tutto questo non dovrebbe neanche necessitare né
+	<em>Minicom</em> né connessione seriale, perché tutto funziona via rete.
+	Almeno credo.
+tab#l05
+	title#Data Astrale [<code>L05</code>] <em>18/07</em> 2012
+	Oggi mi sono messo a fabbricare le due immagini. Mi sono spostato, per non
+	confondere le cose, in un'altra cartella: ora la root per <code>tftp</code>
+	è <code>/opt/boot/</code>, che contiene due configurazioni gemelle con un
+	po' di roba in comune. Il mio fido <code>/etc/bootptab</code> è stato
+	sistemato per riconoscere esclusivamente le porte <code>eth1</code> delle
+	due schede (quelle secondarie, in pratica, e non quelle di produzione, così
+	ho anche gli indirizzi comodamente separati).
+
+	Mi sono messo a creare le chiavi per <code>dropbear</code> e a trasferirle,
+	per averle sull'immagine alla partenza (anche perché se le cambio, SSH
+	s'incazza e mi dice che <em>Mellory</em> è in agguato!)
+tab#l06
+	title#Data Astrale [<code>L06</code>] <em>19/07</em>
+	E oggi… uhm… cose buone e cose meno buone… forse. Insomma…
+
+	Ho completa le due immagini <code>rootfs.img</code> per le due
+	<em>Freescale</em>, infilandoci <em>hostname</em>, <em>chiavi RSA</em> per
+	<em>dropbear</em>, configurazione di rete per la porta (<code>eth0</code>
+	che non viene accesa tramite parametro del kernel (<code>eth1</code>, che
+	tiene il valore preso tramite <code>dhcp</code> da <em>uboot</em>).
+
+	Funziona: mi basta regolare il mio IP su quello del server (<em>bootpd</em>)
+	e poi accendere la scheda collegata; dopo tre secondi di
+	<code>bootdelay</code> quella raccoglie l'indirizzo e lo script di avvio, lo
+	esegue caricando il <em>kernel</em>, il <em>device-tree</em> e il
+	<em>filesystem</em> tutto in una botta, poi l'avvia e mi aspetta via ssh.
+	sec#
+	title#Data Astrale [<code>L06a</code>]
+	Poi viene il momento di attaccare anche il <code>GPS-MXS</code> alla rete,
+	che per ora è ancora locale (nel senso che gli indirizzi sono giusti sulla
+	<code>192.168.122.0</code>, ma non ci sono fisicamente attaccato, tutte le
+	porte sono mie) con il mio PC e le due <em>Freescale</em>.
+
+	Questo stronzone non risponde molto bene ai miei ordini: primo, è
+	contattabile soltanto dalla sua cazzo d'interfaccina web del cazzo (l'ho già
+	detto “cazzo”?) che prende <code>&gt;9000"</code> per caricare, poi chiede
+	l'autenticazione è tutto un <code>flash</code> per cui il focus va a
+	puttane. Comunque.
+	br#
+	Per fargli capire quale sorgente voglio usare (PTP, GPS, E1 o EXT – non
+	chiedetemi che sono le ultime due…) posso indicare le mie preferenze,
+	assegnando delle priorità a ciascuna; il GPS ha quella massima, ma siccome
+	l'antenna non c'è bisognerebbe toglierla. Oltretutto, questo tizio non deve
+	<code>PTP_MASTER</code>are la mia rete, ma sedersi nel suo angolino e fare
+	lo schiavetto senza rompere tanto i coglioni.
+
+	Ma per verificare che faccia cose buone, che altro dovrei fare se non
+	lasciarlo fare il master? Non so, quindi provo. Dunque… uhm…
+	intra@gods#GPS-MXS?
+	intra@em#Sì, padrone?
+	intra@gods#Fa' il master
+	intra@em#Sì
+	
+	Lallà lallallero…
+
+	intra@gods#GPS-MXS?
+	intra@em#Sì, padrone?
+	intra@gods#Stai facendo il master, vero? Qui non m'arriva 'na ceppa…
+	intra@em#… Veramente, Maestà…
+
+	Scopro che questo aggeggio è un po' come <em>Windows95</em>: ogni modifica
+	del <em>menga</em> diventa effettiva solo dopo il riavvio…
+	
+	Ma niente di quel che faccio sembra produrre risultati apprezzabili… che sia
+	master o che sia slave, traffico non ne vedo, dati lui non me ne da (a parte
+	una serie di notifiche del tipo “Mi sono acceso”)… boh, immagino che non sia
+	fatto per sbrodolare statistiche PTP e basta.
+	sec#
+	title#Data Astrale [<code>L06b</code>]
+	Mi metto lì, allora, a controllare i due dæmoni sulle <em>Freescale</em>
+	gemelle… dunque, indovinate un po': sono sincrone tra di loro… ma qualche
+	buona fuori con il portatile… ore, ore intere… uhm… <code>date</code> mi
+	dice che l'ora non è UTC, ma MDT… <em>Mountain Daylight Time</em>, usato da
+	qualche parte negli <em>USA</em>… poi vado a verificare e scopro che la
+	<em>Freescale</em> ha sede a <em>Austin, Texas</em>… ok.
+
+	Ancora una volta, le <code>TZ</code> sono il male.
+	sec#
+	title#Data astrale [<code>L06c</code>]
+	Ultima cosa. Continuo a dire che le due <code>MPC8313ERDB</code> sono
+	gemelle, ma mentivo. Ho deciso di provare a lanciare tutti i dæmoni in
+	modalità <code>-W</code>, ossia <em>PTP_MASTER con NTDP incluso</em>, tanto
+	per vedere come se la cavano: e succede che la <code>Second</code> (quella a
+	destra) s'inchina al mio PC, mentre la <code>First</code> no: il conflitto
+	si risolve a suo favore.
+
+	Ho anche provato varie combinazioni di avvio, ed è sempre uguale. La scheda
+	a sinistra ha un orologio migliore del mio, quella a sinistra no… Boh.
 stop#page
 start#side
 	title#Lab of Doom
@@ -232,4 +387,7 @@ start#side
 	p#tid#L01 – @Secondo giorno@#l01
 	p#tid#L02 – @Notiziuole@#l02
 	p#tid#L03 – @Tanti giocattoli@#l03
+	p#tid#L04 – @Pre-cablaggio@#l04
+	p#tid#L05 – [@Still@] Pre-cablaggio#l05
+	p#tid#L06 – @Dubbi@#l06
 stop#side
