@@ -307,8 +307,8 @@
 			if ($name) {
 				foreach ($this->page as $tab)
 					if (strcmp($tab->getName(), $name) == 0)
-						return $tab->getContent ($as);
-			} else return $this->page[0]->getContent($as);
+						return '<div>'.$tab->getContent ($as).'</div>';
+			} else return '<div>'.$this->page[0]->getContent($as).'</div>';
 
 			return '<div class="section"><p>There is no [<em>'.$name.'</em>] tab</p></div>';
 		}

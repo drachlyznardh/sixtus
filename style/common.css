@@ -2,6 +2,7 @@
 body {
 	margin: 0;
 	font: 8pt/10pt "Georgia", serif;
+	color: #000000;
 }
 
 div.section {
@@ -80,7 +81,7 @@ h3 {
 	border-bottom-width: 2px;
 	text-align: justify;
 	text-indent: 1em;
-	padding: 0px 2px 0px 2px;
+	padding: 5px 2px 0px 2px;
 	margin: 2px 4px 2px 4px;
 }
 

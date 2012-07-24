@@ -1,4 +1,4 @@
-title#[Cross-dimensional] Lab of Doom
+title#[<em>Cross-dimensional</em>] Lab of Doom
 short#Lab Of Doom
 subtitle#Il mio tempo passato nell'<em>Aula 5</em> a fare il male
 prev#Extra/MLCAD/#MLCAD &amp; LPub
@@ -380,6 +380,92 @@ tab#l06
 
 	Ho anche provato varie combinazioni di avvio, ed è sempre uguale. La scheda
 	a sinistra ha un orologio migliore del mio, quella a sinistra no… Boh.
+tab#l07
+	title#Data Astrale [<code>L07</code>] <em>24/07</em>
+	Ieri Sgaggio m'ha rifilato l'<em>altro aggeggio</em>, che sarebbe un
+	<em>Digital Instrument</em> <code>ETS-DP-V01</code>, un dispositivo
+	generatore d'onda stabile, <code>PTP aware</code> che dimostra – ai miei
+	occhi, almeno – qualche problemino.
+
+	Intanto, questo affare (come il suo compare) non ha un interrutore: si
+	attacca la corrente e basta, e se proprio s'ha da riavviare 1) la si stacca
+	oppure 2) si fa il <code>reboot</code> tramite la
+	<em>sgaggio-figa-web-interface</em>. L'alimentazione di entrambi i cosi è
+	doppia &amp; parallela &amp; ridondata per motivi industriali; ma entrambe
+	sono accese.
+
+	Poi. Questo aggeggio ha due prese di rete: una sopra, una sotto; quella
+	sopra è esclusivamente NTP funziona anche per l'interfaccia web; quella
+	sotto invece funziona NTP/PTP, ma non per l'interfaccia. E posso settare gli
+	indirizzi e il nome, ma non l'ora: quella da errore. Così non so neanche se
+	l'aggeggio funziona davvero: il led PTP si spegne non appena compare un
+	PTP_Master…
+	sec#
+	title#Data Astrale [<code>L07a</code>]
+	begin#mini@left
+		stitle#L'oscilloscopio mostra
+		p#<strong>GPS-MXS</strong>: <code>±0.04MHz, ±.02ns</code>
+		p#<strong>ETS-DP-V01</strong>: <code>±.06 MHz</code>
+		p#<strong>SyncBox</strong>: <code>±0.02Mhz, ±0.2ns</code>
+	end#mini
+	Grazie alla collaborazione di <em>Jazz</em>, del fisico <em>Mr Grass</em> e
+	del di lui compagno di laboratorio, tal <em>Martini</em>, ci siamo messi a
+	smanettare di oscilloscopio.
+
+	Sono stanco e confuso.
+
+	In ogni caso, quel che emerge è che questi due aggeggi non sono sincroni:
+	entrambi dovrebbero produrre un'onda sinusoidale stabile, a
+	<code>10Mh</code>; quello che si può notare (ad occhio) è che il segnale del
+	<em>GPS-MXS</em> è bello &amp; stabile &amp; pulito, quello del
+	<em>ETS-DP-VO1</em> invece è meno bello, ma soprattutto è dissimile in
+	frequenza: cammina rispetto all'altro, lentamente ma stabilmente, con circa
+	<code>9'</code> tra le coincidenze.
+
+	Come o perché, io non lo so. L'unica cosa che mi è chiara è che misurare la
+	differenza tra questi due segnali dovrebbe (alla lunga, o in teoria) darmi
+	la qualità della sincronizzazione.
+
+	Ma considerato che questi due aggeggi sono attattati allo stesso
+	<code>PTP_MASTER</code> con due cavi lunghi <code>1.5m</code>, non credo
+	dovrebbero essere così diversi. Sarà… intanto, grazie a <em>Marco</em>
+	(quello di <em>Marco&amp;Mirko</em>) sono riuscito ad ottenere la
+	collaborazione del “tizio che ha costruito l'aggeggio”. La cosa bella
+	sarebbe che questi tizi sembrano disposti a rimpiazzarci il coso, a darci
+	altra roba e varie cose fighe; la cosa brutta sarebbe che anche questo tale,
+	come Sgaggio, se ne va in ferie per un tot… le mie speranze…
+
+	La cosa peggiore di oggi, direi, è comunque stato l'oscilloscopio: sembra
+	essere un buon aggeggio, un <em>Agilent Technologies</em> INFISION
+	<code>DSO7032A</code>, che va a <em>350Mh</em> e campiona
+	<code>2GSa/s</code> (sapete che vuol dire? Io no…) e generalmente fa cose
+	fighe. Minchia, <code>7000$</code> in catalogo… mica cazzi.
+
+	Da questo stronzone io potrei anche estrarre dei dati… forse… c'è una
+	<em>Serlet Java</em> scaricabile sul sito, che manda <em>query</em> e riceve
+	dati in vari formati, ma tutto quel che sono riuscito a
+	<code>gnuplot</code>tare (sigh <code>;_;</code>) sono righine
+	insignificanti.
+	
+	reverse#Non son neanche sicuro di stare andando nella direzione giusta.
+	br#
+	Intanto, boh, mostro iniziativa… poi si vedrà. Sgaggio mi vuol vedere
+	giovedì mattina (avrà da fare anche lui, immagino, come noialtri mortali…)
+	ed io intendo arrivare con delle <em>succosità</em> da riferire. Spero che
+	non esploda nulla, nel frattempo.
+	sec#
+	title#Data Astrale [<code>L07b</code>]
+	Credo di essere nella <strong>&lt;CACCA!!!&gt;</strong>
+
+	Abbiamo fatto delle cose: ora i due <em>DI-cosi</em> sono accoppiati l'uno
+	sull'altro e si stanno scaldando; tutto entro limiti ben più che
+	accettabili, ma intanto il <em>GPS-MXS</em> non risponde più via rete
+	(niente interfaccia web, ma il PING c'è) mentre quello stronzone
+	dell'<em>ETS-DP-VO1</em> s'è perso l'ora un'altra volta (segna le
+	<code>00:00</code> del <code>00/00/0000</code>). Forse averli attaccati
+	insieme li ha emozionati troppo.
+
+	reverse#Almeno il tentativo di incesto non ha fatto comparire <em>Spider-man</em>.
 stop#page
 start#side
 	title#Lab of Doom
@@ -390,4 +476,5 @@ start#side
 	p#tid#L04 – @Pre-cablaggio@#l04
 	p#tid#L05 – [@Still@] Pre-cablaggio#l05
 	p#tid#L06 – @Dubbi@#l06
+	p#tid#L07 – @L'altro aggeggio@#l07
 stop#side

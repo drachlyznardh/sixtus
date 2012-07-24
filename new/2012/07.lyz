@@ -3,6 +3,29 @@ prev#News/2012/06/#Giugno@ 2012
 #next#News/2012/08/#Agosto@ 2012
 tabs#alwaysall
 start#page
+tab#22
+	p#link##<em>@22/07/2012@</em>##22
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
+	title#Un mazzo di recensioni
+	Eh, io vedo cose (brutte) e leggo. Ma non scrivo più. In realtà lo faccio,
+	ma per soli motivi di studio (avete presente il
+	link#Extra/LABOFDOOM/#laboratorio del Destino@?).
+	
+	Nel frattempo, ho finito la terribile
+	link#Recensioni/Show/XL/#serie animata di Godzilla@,
+	mi sono letto il magnifico
+	link#Recensioni/Libri/XLI/#fanteria dello spazio
+	e mi sono addentrato sia in <em>Accel World</em> (appena sopra la
+	visibilità, potrei anche arrivare in fondo…) e il tremendo <em>Muv Luv
+	Alternative: Total Eclipse</em> (che per i primi due episodi è il peggio
+	dramma che abbia mai visto). Tecnicamente, poi,
+	link#Recensioni/Show/XIV/#Gundam AGE#e35
+	prosegue imperterrito verso la quarta stagione.
+
+	Purtroppo, di giorno sono impegnato con la tesi, di notte con
+	link#Extra/BUX/#BUX@.
+	Fate i bravi mentre non ci sono.
 tab#09
 	p#link##<em>@09/07/2012@</em>##09
 	/
@@ -37,6 +60,11 @@ stop#page
 start#side
 	stitle#link#News/2012/07/#Luglio@ 2012
 	
+	<em>22/07</em> – [<code>Recensioni</code>]
+	link#Recensioni/Show/XL/#Godzilla@,
+	link#Recensioni/Libri/XLI/#fanteria dello spazio@,
+	link#Recensioni/Show/XIV/#Gundam AGE @e35@#E35
+
 	<em>09/07</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXXIII/#La notte rosa
 

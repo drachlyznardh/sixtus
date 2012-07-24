@@ -40,6 +40,8 @@ tab#cron
 		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider@ – 2011
 		li#link#Recensioni/Film/Brutti/XXXVIII/#Spider-man@ – 2000~2012
 		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky@ – 2000~2012
+		li#link#Recensioni/Show/XL/#Godzilla@ – 1998
+		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio@ – 1959
 	end#ol
 tab#film
 	begin#ul
@@ -84,6 +86,7 @@ tab#show
 		p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
 		p#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 		p#link#Recensioni/Show/XXV/#Chuck### – 2007~2012
+		li#link#Recensioni/Show/XL/#Godzilla@ – 1998
 	end#ul
 tab#libri
 	begin#ul
@@ -91,5 +94,6 @@ tab#libri
 		p#link#Recensioni/Libri/XII/#Harry Potter &amp; …### – 1997~2007
 		li#link#Recensioni/Libri/XXXI/#La compagnia dei Celestini### – 1992
 		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender@ – 1985
+		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio@ – 1959
 	end#ul
 stop#page

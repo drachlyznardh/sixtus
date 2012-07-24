@@ -14,6 +14,7 @@ tab#awesome
 		li#link#Recensioni/Film/XXXII/#I Vendicatori
 		li#link#Recensioni/Giochi/XXXIII/#[ Demon's | Dark ] Souls
 		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender
+		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio
 	end#ul
 tab#buoni
 	stitle#Buono
@@ -85,7 +86,8 @@ tab#bay
 	O semplicemente si dimenticano che le esplosioni non fanno un buon film
 	/ buon anime / buona visione.
 	begin#ul
-	li#link#Recensioni/Show/V/#Blassreiter
+		li#link#Recensioni/Show/V/#Blassreiter
+		li#link#Recensioni/Show/XL/#Godzilla
 	end#ul
 tab#no
 	stitle#No
