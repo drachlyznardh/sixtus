@@ -1,15 +1,19 @@
-title#BUX#Quella “famosa” alternativa al LaTeX che cercavo da tempo immemore…
+title#Bu&chi;#Quella “famosa” alternativa al LaTeX che cercavo da tempo immemore…
 prev#Extra/MLCAD/#MLCAD &amp; LPub
 next#Extra/LABOFDOOM/#Lab of Doom
 start#page
-	title#XLST
+	title#XLS
 	title#FOP
 	title#Bu&chi;
 	br#
+	&Beta;u&chi;
+	
+	&beta;&upsilon;&chi;
+	
 	Prossimamente…
 stop#page
 start#side
-	title#XLST
+	title#XLS
 	title#FOP
-	title#BUX
+	title#Bu&chi;
 stop#side

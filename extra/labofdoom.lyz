@@ -1,7 +1,7 @@
 title#[<em>Cross-dimensional</em>] Lab of Doom
 short#Lab Of Doom
 subtitle#Il mio tempo passato nell'<em>Aula 5</em> a fare il male
-prev#Extra/MLCAD/#MLCAD &amp; LPub
+prev#Extra/BUX/#Bu&chi;
 next#Extra/LABOFDOOM/#Lab of Doom
 related#Extra/Diario/#Il @diario@ del Capitano
 start#page
@@ -466,15 +466,149 @@ tab#l07
 	insieme li ha emozionati troppo.
 
 	reverse#Almeno il tentativo di incesto non ha fatto comparire <em>Spider-man</em>.
+tab#l08
+	title#Data Astrale [<code>L08</code>] <em>25/07</em>
+	begin#mini@right
+		stitle#Dixit
+		“<em>[…] avevamo riscontrato alcune instabilità hardware nella gestione
+		della RAM sull'hardware ETS-DP-V01[…]</em>”
+
+		“<em>[…] effetti collaterali comuni potrebbero essere crash inspiegabili
+		dopo alcune ore o giorni di uptime[…]</em>”
+	end#mini
+	Stamattina, sono tornato in laboratorio con un po' di sconforto: l'unica
+	risposta di Sgaggio è “ne discutiamo giovedì”; non sono certo che sia un
+	male, ma non sono propenso a credere che sia un bene.
+
+	Comunque, il dannato <em>ETS-DP-VO1</em> è morto. Proprio quando ne avevo
+	imparato il nome… i led anteriori non s'accendono proprio; le due porte di
+	rete, sul lato posteriore, lampeggiano, ma non ci sono né risposta né
+	transito. 
+
+	Ho appurato, in effetti, come la temperatura dell'aggeggio fosse salita,
+	significativamente rispetto a ieri, ma sempre entro ragionevolissimi limiti
+	di tolleranza (è caldo, ma non scotta). Staccatolo dalla corrente, l'ho
+	lasciato a prendere aria, l'ho anche rialzato e costretto al riposo. La
+	libertà deve avergli dato alla testa, perché non si è più ripreso.
+
+	Piango per lui, ma poco poco. Spero che lo si possa lasciar semplicemente
+	fuori dall'esperimento.
+	sec#
+	title#Data Astrale [<code>L08a</code>]
+	Ho deciso di testare i due aggeggi sani, ossia il <em>GPS-MXS</em> da una
+	parte, il vecchio <em>SyncBox</em>. Li ho sistemati ad un metro l'uno
+	dall'altro, l'ho attaccati entrambi allo switch <em>Hirschmann</em> ed ho
+	collegato l'oscilloscopio ad entrambi.
+
+	Ed ecco… l'onda “quadra” del <em>SyncBox</em> è costante, stabile e carina;
+	l'onda sinusoidale del <em>GPS-MXS</em> è altrettanto costante, stabile e
+	anche più carina, visto l'ovvio e mal celato richiamo sessuale nella forma
+	del seno… (scusate, sono molto stanco).
+
+	Comunque, l'onda quadra è stabile su <code>10.00 ±.2 Mhz</code>, con un
+	periodo di <code>100 ±.2 ns</code>; l'onda sinusoidale invece traballa di
+	più, <code>± .6Mhz</code> e <code>± .4ns</code>. Come risultato, una delle
+	due resta ferma, una delle due cammina. Con un periodo di svariati minuti,
+	la velocità relativa tra una sovrapposizione di picchi e la successiva può
+	prendere (ad occhio) da <code>2s</code> fino a sembrare ferma. Non sono in
+	gradi di valutare la bontà di questa misura, ma mi sembra buona.
+	sec#
+	title#Data Astrale [<code>L08b</code>]
+	L'altra questione che dovrei sistemare sarebbe quella famosa storia del
+	<code>timestamp hardware</code>. La cosa interessante è che cercando “ptpd2
+	vitesse”, il primo risultato che Google mi da è <strong>QUESTA
+	PAGINA</strong>, questa stessa medesima pagina che sto scrivendo io adesso.
+	Sono onorato…
+
+	Comunque – un po' di <strong>&lt;INTERNET!!!&gt;</strong> dopo – scopro che
+	abilitare il modulo alla compilazione del kernel è sufficiente: <code>$ make
+	linux-menuconfig</code> etc etc etc. Il modulo c'è, lo posso caricare, ma
+	non lo usa nessuno… <code>modprobe vitesse && ptpd2 -Wf /tmp/ptp_stats &&
+	lsmod</code> non mi da risultati. Boh.
+
+	Più di questo, per adesso, non saprei fare… Aiuto.
+tab#l09
+	title#Data Astrale [<code>L09</code>] <em>26/07</em>
+	La prima cosa da precisare è che dopo aver scritto il tab precedente, ho
+	riscritto più o meno la stessa cosa (soltanto, molto più concisa e meno
+	divertente) nella mail per Sgaggio; inviatala, ha dato “<em>un'ultima
+	occhiata</em>”, tanto per fare.
+
+	<strong>&lt;IMPROVVISAMENTE&gt;</strong> l'<em>ETS-DP-VO1</em> torna a
+	funzionare, risponde, mi lascia loggare, mi segna l'ora corretta… dev'essere
+	un miracolo. Dall'altra parte, la sincronia dei due scatolotti è andata
+	<strong>completamente a puttane</strong>.
+
+	Poi sono andato a cercare Sgaggio in ufficio.
+	sec#
+	title#Data Astrale [<code>L09a</code>]
+	Lo trovo, «ciao» «ciao» e poi suona il telefono. Siccom'è una cosa
+	importante, me ne devo andare. Su richiesta, lascio il numero di cellulare.
+	Poi aspetto.
+	sec#
+	title#Data Astrale [<code>L09b</code>]
+	Vengo richiamato (personalmente, non per telefono…) dal laboratorio, ma già
+	ch'eravamo là faccio notare a Sgaggio le simpatiche ondine… in quel momento
+	stavano ferme. «Bello, bello, cos'è quest'onda qui?» «Speravo lo sapesse
+	lei, veramente…» e invece. Saliamo in ufficio.
+
+	Tecnicaglia a parte, tempi stretti a parte, c'è una certa fiducia nei miei
+	confronti. Anche perché qui tutto poggia sulle mie spalle, Sgaggio non
+	sembra in grado di aiutarmi. Quindi, posso starmene qui a scoprire.
+
+	Quindi, in pratica, lunedì mi dovrei ritrovare con le carte per la domanda
+	di laurea firmate in bianco, con il titolo della tesi scelto, in <em>braghe
+	di tela</em> e tante (?) speranze. Se entro una ventina di giorni riesco a:
+	1) scrivere i primi due capitoli della tesi; e 2) cavare dei dati e/o delle
+	misure significative, allora posso consegnare. Altrimenti, <em>ciupa</em>.
+	sec#
+	title#Data Astrale [<code>L09c</code>]
+	Ci sono delle cose buone.
+	begin#ul
+		ho avuto il permesso di impacchattare l'<em>ETS-DP-VO1</em>,
+		considerato quanto esso sia “<em>inaffidabile</em>” e tecnicamente
+		superfluo per l'ambito sperimentale;
+
+		frugando un po' in giro per il laboratorio, ho trovato tre cavi
+		<code>BNC</code> e pure due adattatori a T; ho potuto restituire ai
+		<strong>fisici</strong> i cavi rubati;
+
+		ho delle linee guida per i capitoli della tesi: 1) PTP, come e perché,
+		orologi, sincronizzazione, protocolli, reti… 2) allestimento, problemi,
+		yadde, la stessa guida (magari espansa, stavolta in italiano) e 3)
+		diversi layout utilizzati, opzioni e versioni, altri problemi e
+		risultati; tutto questo, più l'introduzione e la conclusione;
+	end#ul
+	Ci sono anche delle cattive notizie. Sono fondamentalmente solo e
+	abbandonato, Sgaggio se ne parte ed io resto qui, con il laboratorio a
+	disposizione per scoprire della roba. E son cazzi miei.
+	begin#ul
+		perché il <em>SyncBox</em> fa quell'onda quadra? Perché non coincide con
+		l'output del <em>GPS-MXS</em>? Percé traballano? Perché, pur
+		incontrandosi, continua ad oscillare così pesantemente?
+
+		il <code>jitter</code> della rete CISCA è costante? Traballa? Quanto
+		sporca i miei dati? Come lo evito?
+
+		le due Freescale possono operare come <code>transparent clock</code>?
+		(sì, dovrebbero) Le prestazioni migliorano veramente? (dovrebbero) Si
+		può metter mano al dæmone per installare l'algoritmo di
+		<em>d'Artagnan</em>?
+	end#ul
+	br#
+	E infine, testuali parole di Sgaggio:
+	reverse#“<em>[…] appesi per i coglioni</em>”
 stop#page
 start#side
 	title#Lab of Doom
-	p#tid#L00 – @Primo giorno@#l00
-	p#tid#L01 – @Secondo giorno@#l01
-	p#tid#L02 – @Notiziuole@#l02
-	p#tid#L03 – @Tanti giocattoli@#l03
-	p#tid#L04 – @Pre-cablaggio@#l04
-	p#tid#L05 – [@Still@] Pre-cablaggio#l05
-	p#tid#L06 – @Dubbi@#l06
-	p#tid#L07 – @L'altro aggeggio@#l07
+	p#tid#<code>L00</code> – @Primo giorno@#l00
+	p#tid#<code>L01</code> – @Secondo giorno@#l01
+	p#tid#<code>L02</code> – @Notiziuole@#l02
+	p#tid#<code>L03</code> – @Tanti giocattoli@#l03
+	p#tid#<code>L04</code> – @Pre-cablaggio@#l04
+	p#tid#<code>L05</code> – [@Still@] Pre-cablaggio#l05
+	p#tid#<code>L06</code> – @Dubbi@#l06
+	p#tid#<code>L07</code> – @L'altro aggeggio@#l07
+	p#tid#<code>L08</code> – @L'imprevedibilità@#l08
+	p#tid#<code>L09</code> – @Deadline@#l09
 stop#side
