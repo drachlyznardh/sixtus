@@ -3,6 +3,14 @@ prev#News/2012/06/#Giugno@ 2012
 #next#News/2012/08/#Agosto@ 2012
 tabs#alwaysall
 start#page
+tab#27
+	p#link##<em>@27/07/2012@</em>##27
+	title#Qualche aggiornamento
+	Sono un po'-abbastanza-decisamente impegnato, in questi giorni. Tesi, una
+	cosa che uccide. Trullallero, trullallà… aggiorno soltanto
+	link#Legend/CRONACHE/#le @cronache di Legend@#S13
+	e
+	link#Extra/LABOFDOOM/#le disavventure in @Aula 5@.#L10
 tab#22
 	p#link##<em>@22/07/2012@</em>##22
 	/
@@ -24,7 +32,7 @@ tab#22
 	prosegue imperterrito verso la quarta stagione.
 
 	Purtroppo, di giorno sono impegnato con la tesi, di notte con
-	link#Extra/BUX/#BUX@.
+	link#Extra/BUX/#Bu&chi;@.
 	Fate i bravi mentre non ci sono.
 tab#09
 	p#link##<em>@09/07/2012@</em>##09
@@ -60,6 +68,8 @@ stop#page
 start#side
 	stitle#link#News/2012/07/#Luglio@ 2012
 	
+	<em>27/07</em> – [<code>Niente</code>]
+
 	<em>22/07</em> – [<code>Recensioni</code>]
 	link#Recensioni/Show/XL/#Godzilla@,
 	link#Recensioni/Libri/XLI/#fanteria dello spazio@,
