@@ -598,6 +598,118 @@ tab#l09
 	br#
 	E infine, testuali parole di Sgaggio:
 	reverse#“<em>[…] appesi per i coglioni</em>”
+tab#l10
+	title#Data Astrale [<code>L10</code>] <em>27/07</em>
+	Ho deciso di fare cose. Costruirò i risultati di questo esperimento.
+	Obbligherò questa cosa a funzionare. E anche a dirmi il perché.
+
+	Gli esperimenti cominciano, quindi. Per ora, ad occhio; quando avrò
+	tempo/voglia, comincerò anche ad estrare dati dall'oscilloscopio. Intanto,
+	comincio anche a scrivere la tesi; la linkerò qui accanto, al momento
+	opportuno.
+
+	Mentre sono fisicamente impegnato a spostare i componenti dell'esperimento,
+	lascio i due apparecchi fondamentali (<em>SyncBox</em> e <em>GPS-MXS</em>)
+	perpetuamente attaccati all'oscilloscopio.
+	
+	Cominciamo verificando se e come questi due cosi possono andare d'accordo:
+	li lascio staccati dalla rete, come <code>configurazione A00</code>,
+	indisciplinati. Così ad occhio, non sembra che ci sia alcuna sostanziale
+	differenza: traballano esattamente come quando sono attaccati.
+	<code>WAT</code>
+	sec#
+	title#Data Astrale [<code>L10a</code>]
+	begin#mini@right
+		stitle#Date
+		Il comando <code>date</code> per di mostrare e di impostare l'ora di
+		sistema. Per vederla non serve specificare nulla; per impostarla,
+		invece, si indicano – in questo ordine: mese, giorno, ora, minuto,
+		secolo, anno, secondi.
+		
+		Ciascuno di questi valori composto di due cifre.
+
+		WAT.
+	end#mini
+	Questa mattina è stata fruttuosa, poco, ma è già qualcosa. Succede, in
+	pratica, che lasciando i due orologi ciascuno per i fatti suoi, la
+	fluttuazione tra le due velocità è più o meno costante. Che questo sia
+	meglio o peggio, lo devo ancora capire.
+
+	La perturbazione che intendo applicare ora è un'ora casuale su entrambi.
+	Chissà se questo influirà anche sull'onda.
+	br#
+	reverse#Come speravo, non lo fa: le onde restano stabili.
+	sec#
+	title#Data Astrale [<code>L10b</code>]
+	Proviamo ora infilando un contatto. I due aggeggi assieme. Non dovrebbe
+	succedere nulla. E non succede. Ma ci sono un totale di quattro possibilità:
+	S/S, M/S, S/M, M/M. Aspetto un po' e provo…
+
+	Allora, il <em>SyncBox</em> – per quanto riesco a capire dal suo
+	<code>setup</code> – non è in grado di assumere lo stato di PTP_MASTER. Non
+	c'è bottone per quello, non un'opzione… Tutto quel che il manuale è che c'è
+	un'interfaccia web (che non mi risponde, perché una volta un tizio si è
+	loggato da un indirizzo che non è il mio e quindi son cazzi per sempre) e
+	che la scatola dovrebbe essere messa a terra da un certo spinotto. Ma io la
+	terra non ce l'ho qui… Boh, qui dice che la lucina “MSTR” dovrebbe
+	lampeggiare ogni volta che il <em>SyncBox</em> invia un pacchetto PTP… non lo
+	vedo succedere.
+
+	Provo allora a mettere il <em>GPS-MXS</em> in modalità master. L'ho visto
+	non funzionare in passato, credo lo farà ancora.
+
+	Ed ecco… come m'aspettavo, questo aggeggio non sembra in grado di parlare,
+	ma soltanto di ascoltare. Si va avanti…
+	sec#
+	title#Data Astrale [<code>L10c</code>]
+	Siccome l'intera faccenda della rete con i soli scatolotti non funziona (ne
+	sono contento, per la verità) adesso attacco anche la <em>Freescale</em>
+	<code>mpc8313erdb-first</code> (che tecnicamente monta già il famoso – e
+	inservibile – modulo Vitesse per il timestamp hardware) in modo che faccia
+	da master per entrambi i cosi.
+
+	Per prima cosa – «Dai, dai! che magari funziona!» – attacco il dæmone come
+	slave e vediamo se almeno quello vede/sente arrivare qualcosa. Ma no, non
+	succede.
+
+	Metto il dæmone al lavoro: l'ora dei due congegni converge immediatamente.
+	Le ondine, che prima andavano abbastanza d'accordo, hanno cambiato verso ed
+	hanno preso una bella accelerata. Inoltre, per quanto io non abbia idea del
+	perché, l'oscilloscopio ha cominciato a sfrigolare. Poi le ondine frenano;
+	poi ricominciano, poi frenano di colpo. Sembra proprio che il
+	disciplinamento  infastidisca le linee più di ogni altra cosa. E io non ho
+	idea del perchè, né ho idea di come misurare questa roba.
+
+	Intanto, attacco dentro anche l'altra <em>Freescale</em>, cosicché tutti gli
+	aggeggi sono vicini.
+tab#l11
+	title#Data Astrale [<code>L11</code>] <em>30/07</em>
+	Oggi ho trovato il laboratorio “non esattamente in ordine”, niente di grave
+	ma intanto prendo spunto per realizzare un cartello con scritto
+	begin#outside
+		reverse#<em>ESPERIMENTO in CORSO</em>
+	end#outside
+	Sono andato a far visita a Sgaggio con un paio di idee per il titolo. Eccomi
+	di ritorno con le firme sui fogli e l'imminente
+	begin#outside
+		<strong>“Analisi sperimentale delle prestazioni del protocollo
+		<code>PTP</code> in applicazioni di sincronizzazione
+		distribuita”</strong>
+	end#outside
+	Che fare adesso? L'unica via praticabile (visto che di far interagire il
+	demone con il modulo non c'è via né in cielo né in terra…) è cominciare a
+	pastrugnare con dei dati, e l'unico modo per ottenerlo sembra essere un
+	collegamente di rete con l'oscilloscopio e conseguente scambio di
+	domande/risposte.
+	sec#
+	title#Data Astrale [<code>L11a</code>]
+	<em>Hurr durr</em>, non ci riesco. Pare che esistano dei complessi rituali
+	che permettono di interagire con il <em>coso</em>, ma non mi sono
+	accessibili.
+
+	Tutto quel che ho trovato finora è un certo <code>sockets.c</code> che mi
+	dice soltanto “non sono capace di aprire la porta”… Sulle porte aperte non
+	risponde, su quelle chiuse non risponde… boh.
 stop#page
 start#side
 	title#Lab of Doom
@@ -611,4 +723,6 @@ start#side
 	p#tid#<code>L07</code> – @L'altro aggeggio@#l07
 	p#tid#<code>L08</code> – @L'imprevedibilità@#l08
 	p#tid#<code>L09</code> – @Deadline@#l09
+	p#tid#<code>L10</code> – @Cose fighe@#l10
+	p#tid#<code>L11</code> – @Il titolo@#l11
 stop#side
