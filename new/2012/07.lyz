@@ -3,6 +3,16 @@ prev#News/2012/06/#Giugno@ 2012
 #next#News/2012/08/#Agosto@ 2012
 tabs#alwaysall
 start#page
+tab#31
+	p#link##<em>@31/07/2012@</em>##31
+	title#Svolta?
+	È l'ultima notizia del mese. Sto ancora vedendo cose brutte (<em>MuvLuv
+	Alternative: Total Eclipse</em>), cose (poco poco) meno brutte (<em>Accel
+	World</em>) e cose belline (<em>Princess Tutu</em>), mentre il lavoro in
+	laboratorio prosegue.
+
+	Sembra che ci siano buone notizie.
+	link#Extra/LABOFDOOM/#Leggete@.#L12
 tab#27
 	p#link##<em>@27/07/2012@</em>##27
 	title#Qualche aggiornamento
@@ -67,6 +77,9 @@ tab#04
 stop#page
 start#side
 	stitle#link#News/2012/07/#Luglio@ 2012
+	
+	<em>31/07</em> – [<code>Extra</code>]
+	link#Extra/LABOFDOOM/#l'@Oscilloscopio@#L12
 	
 	<em>27/07</em> – [<code>Niente</code>]
 

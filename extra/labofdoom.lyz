@@ -710,6 +710,105 @@ tab#l11
 	Tutto quel che ho trovato finora è un certo <code>sockets.c</code> che mi
 	dice soltanto “non sono capace di aprire la porta”… Sulle porte aperte non
 	risponde, su quelle chiuse non risponde… boh.
+tab#l12
+	title#Data Astrale [<code>L12</code>] <em>31/07</em>
+	Ci sono misure da fare. Per farle, occorre dialogare con l'oscilloscopio,
+	farsi passare una certa quantità di dati e poi <em>pastrugnarli</em> per
+	ottenere qualcosa di significativo.
+
+	Devo comunicare con il coso. Sembra che tramite opportuna connessione di
+	rete questi dati possano essere richiesti e ricevuti.
+
+	Come faccio?
+
+	In teoria – mi dice il sito del produttore, <em>Agilent Technologies</em> –
+	ci sono mazzi&amp;mazzi di librerie, plug-in, cose utili, linee guida… vado
+	a controllare. Prima di tutto vedo di specificare che sono un utente
+	<code>Linux</code>, <em>sfrugno</em> e trovo un magnifico esempio intitolato
+	<code>&lt;numero_del_modello_esatto&gt;.c</code>, wow.
+
+	Ci do un'occhiatina… l'aggeggio importa <em>&gt;9000</em> librerie, apre un
+	<code>socket</code> e comincia a dirci delle cose… compilo&amp;lancio, et
+	voilà compare un errore
+	reverse#“<em>lo strumento non risponde</em>”
+
+	Seguono <em>porchi &amp; madonne</em>.
+	sec#
+	title#Data Astrale [<code>L12a</code>]
+	Oh bene. Trovo un manuale intitolato <em>“Come usa Linux per controllare
+	strumenti LXI attraverso TCP”</em>, un titolo estremamente promettente,
+	considerato ch'è <strong>ESATTAMENTE</strong> quel che voglio fare. 
+
+	Peccato che questo manuale sia poco più di un volantino: soltanto <code>8
+	pagine</code>. Mi spiegano poco più di quello che facevo il programmino
+	d'esempio di cui sopra…
+	begin#ul
+		li#apri un socket
+		li#di' delle cose
+		li#ottiene delle risposte
+		li#???
+		li#PROFIT!
+	end#ul
+	Fondamentalmente, mi dice solo cose note. Eccetto una frase che recita
+	<em>“se l'aggeggio non risponde alla domanda</em>
+	<code>SYST:COMM:TCPIP:CONTROL?</code><em>, vuol dire che non puoi
+	controllarlo”</em> e sono cazzi. Eppure, io ricordo d'aver visto questa cosa
+	funzionare proprio in quel modo… uhm… proviamo un attimino.
+
+	Chiudo il programma ed estraggo il fido <code>nc</code>, m'attacco alla
+	porta <code>5025</code> dell'aggeggio (come dice il manuale) e comincio a
+	sbrodolare cosucce… ed ecco, risposte.
+
+	Fondamentalmente, l'aggeggio è in grado di dirmi tre cose: 1) “ciao”, 2)
+	“non ho capito” e 3) <strong>&lt;numerinumerinumeri&gt;</strong> in ordine
+	sparso.
+
+	Ora, sono in possesso del <em>manualone</em> per questo coso, la <em>“Guida
+	del programmatore alla serie 7000A degli oscilloscopi Agilent
+	InfiniiVision”</em> che conta la bellezza di <code>924 pagine</code>, delle
+	quali circa <code>596</code> sembrano dedicate ai comandi che questo
+	aggeggio supporta. Posso specificare una marea di opzioni e campionare quel
+	che mi pare.
+
+	Devo soltanto capire cosa voglio e capire come chiederlo (ci vorrà tutta una
+	guida, per questo).
+	sec#
+	title#Data Astrale [<code>L12b</code>]
+	&lt;RTFM&gt; in corso… dunque, esistono centinaia di comandi. Ne ho capito
+	qualcuno:
+	begin#ul
+		li#intanto posso sapere con chi sto parlando, chiedendo
+		<code>*IDN?</code>, ottenendo un numero di serie;
+		li#posso chiedere cosa sto acquisendo con <code>:ACQ?</code>
+		li#posso settare il modo e il tipo dell'acquisizione, il canale, la
+		quantità di punti…
+	end#ul
+	Ma poi scopro che tutti i miei tentativi di <code>:ACQuire</code> e
+	<code>:WAVe:DATA?</code> possono catturare soltanto la forma d'onda… per
+	misurare la frequenza di un segnale, invece, devo ricorrere a
+	<code>:MEASure:FREQuency</code>, che però viene parametrizzata in chissà
+	quale maniera…
+
+	Ed ecco, basta chiedere la frequenza (di un singolo canale alla volta) per
+	ottenere la frequenza. Lo zoom va regolato opportunamente, perché il valore
+	di frequenza vien calcolato dalla macchina prendendo in considerazione tutto
+	lo spettro visibile sul monitor, quindi con molte onde si misura più
+	stabilmente; ma io, che ho bisogno di vedere bene l'errore, mi devo mettere
+	vicino vicino. Ed ecco, le mie misure precise, la distanza tra il fronte di
+	salita e di discesa di una singola ondina… e questo, tutte le volte che
+	chiedo.
+	
+	Almeno, credo.
+	sec#
+	title#Data Astrale [<code>L12c</code>]
+	Ho uno script che fa tutto. Ci sono problemi d'attesa (perché l'oscillo-coso
+	non risponde al volo, anzi) ma ora posso campionare le frequenze dei due
+	segnali una volta al secondo in maniera (lenta ma) consistente.
+
+	Questo significa che ho dei dati con cui lavorare. È certamente una buona
+	cosa. Come cavare informazioni utili da questo fiume di numeri, poi, è
+	un'altra storia.
+	reverse#Farò domani, all'urlo di “<strong>&lt;SIGNIFICATIVITÁ!!!&gt;</strong>”
 stop#page
 start#side
 	title#Lab of Doom
@@ -725,4 +824,5 @@ start#side
 	p#tid#<code>L09</code> – @Deadline@#l09
 	p#tid#<code>L10</code> – @Cose fighe@#l10
 	p#tid#<code>L11</code> – @Il titolo@#l11
+	p#tid#<code>L12</code> – @L'oscilloscopio@#l12
 stop#side
