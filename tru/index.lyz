@@ -17,13 +17,10 @@ stop#page
 start#side
 	p#link#Tru/Naluten/Personaggi/#Personaggi
 	title#Tru Naluten
-	br#
-	stitle#link#Tru/Naluten/Vol.I/#Volume I
+	stitle#link#Tru/Naluten/Vol.I/#Volume @I@
 	include#tru/catalogo#i@as@content
-	br#
-	stitle#link#Tru/Naluten/Vol.II/#Volume II
+	stitle#link#Tru/Naluten/Vol.II/#Volume @II@
 	include#tru/catalogo#ii@as@content
-	br#
-	stitle#link#Tru/Naluten/Vol.III/#Volume III
+	stitle#link#Tru/Naluten/Vol.III/#Volume @III@
 	include#tru/catalogo#iii@as@content
 stop#side

@@ -129,36 +129,25 @@ tab#antagonisti
 stop#page
 start#side
 	p#tid#Spoiler#spoiler
-	titler#Tru Naluten
+	title@right#Tru Naluten
 	stitle#tid#eLyznardh#lyznardh
 	reverse#
-	tid#Simak#lyznardh#Simak
-	/
-	tid#Ci#lyznardh#Ci
-	/
-	tid#Lyz#lyznardh#Lyz
-	/
+	tid#Simak#lyznardh#Simak@ /
+	tid#Ci#lyznardh#Ci@ /
+	tid#Lyz#lyznardh#Lyz@ /
 	tid#eLyznardh#lyznardh#eLyznardh
 	stitle#tid#Protagonisti#protagonisti
 	reverse#
-	tid#Jo#protagonisti#Jo
-	/
-	tid#Sacomne#protagonisti#Sacomne
-	/
-	tid#Togan#protagonisti#Togan
-	/
-	tid#Corona#protagonisti#Corona
-	/
+	tid#Jo#protagonisti#Jo@ /
+	tid#Sacomne#protagonisti#Sacomne@ /
+	tid#Togan#protagonisti#Togan@ /
+	tid#Corona#protagonisti#Corona@ /
 	tid#Antico Simak#protagonisti#AnticoSimak
 	stitle#tid#Antagonisti#antagonisti
 	reverse#
-	tid#Son Enkà#antagonisti#SonEnkà
-	/
-	tid#Vad Enkà#antagonisti#VanEnkà
-	/
-	tid#Enka Zan#antagonisti#EnkaZan
-	/
-	tid#Zen Enkà#antagonisti#ZenEnkà
-	/
+	tid#Son Enkà#antagonisti#SonEnkà@ /
+	tid#Vad Enkà#antagonisti#VanEnkà@ /
+	tid#Enka Zan#antagonisti#EnkaZan@ /
+	tid#Zen Enkà#antagonisti#ZenEnkà@ /
 	tid#Simàk Enkà#antagonisti#SimàkEnkà
 stop#side

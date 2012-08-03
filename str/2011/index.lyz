@@ -1,6 +1,6 @@
 title#Storie 2011#Forse meno tristi dell'anno passato
-prev#Storie/2010/#Storie 2010
-next#Storie/2012/#Storie 2012
+prev#Storie/2010/#Storie@ 2010
+next#Storie/2012/#Storie@ 2012
 start#page
 	E così venne il 2011...
 	title#Storie 2011
@@ -58,7 +58,7 @@ start#page
 stop#page
 start#side
 	title#Storie 2011
-	begin#ol@start@18
+	begin#ol@start@18@style@margin-left:5em
 		li#link#Storie/2011/XVIII/#Liber Javae
 		li#link#Storie/2011/XIX/#Permessi
 		li#link#Storie/2011/XX/#Guida
@@ -72,14 +72,14 @@ start#side
 	end#ol
 	titler#Il Magnetismo
 	begin#inside
-		begin#ol@start@28@style@margin-left: 4.5em
+		begin#ol@start@28@style@margin-left:5em
 			li#link#Storie/2011/XXVIII/#L&apos;odio
 			li#link#Storie/2011/XXIX/#Il Magnete
 			li#link#Storie/2011/XXX/#L&apos;interpretazione
 		end#ol
 	end#inside
 	stitle#Primavera 2011
-	begin#ol@start@31@style@margin-left: 5em
+	begin#ol@start@31@style@margin-left:6em
 		li#link#Storie/2011/XXXI/#Deus Ex Machina
 		li#link#Storie/2011/XXXII/#Dottor Odio
 		li#link#Storie/2011/XXXIII/#L&apos;inaspettata
@@ -99,7 +99,7 @@ start#side
 		li#link#Storie/2011/XLVII/#Impresa (II)
 	end#ol
 	stitle#Estate 2011
-	begin#ol@start@48@style@margin-left: 4em
+	begin#ol@start@48@style@margin-left:5em
 		li@class@cat-heart"#link#Storie/2011/XLVIII/#Non ce n&apos;è abbastanza
 		li@class@cat-heart"#link#Storie/2011/XLIX/#Quel che non è abbastanza
 		li@class@cat-heart"#link#Storie/2011/L/#Quel che dovrei fare
@@ -117,12 +117,12 @@ start#side
 		li@class@cat-heart"#link#Storie/2011/LXII/#Normale
 	end#ol
 	stitle#Autunno 2011
-	begin#ol@start@63@style@margin-left: 4em
+	begin#ol@start@63@style@margin-left:5em
 		li#link#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
 		li#link#Storie/2011/LXIV/#La metafora
 		li#link#Storie/2011/LXV/#Il 13 ottobre
 	end#ol
-	begin#ol@start@67@style@margin-left:4em
+	begin#ol@start@67@style@margin-left:5em
 		li#link#Storie/2011/LXVII/#Ancora ce la posso fare
 		li#link#Storie/2011/LXVIII/#Momenti
 		li#link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
