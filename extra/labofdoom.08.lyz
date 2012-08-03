@@ -1,0 +1,35 @@
+start#page
+tab#l13
+	title#Data Astrale [<code>L13</code>] <em>01~03/08</em>
+	Ho avuto da fare. Abbastanza da non avere il tempo di scrivere. Ho fatto
+	cose. Tante cose.
+
+	Per prima cose, mi sono armato di <code>nc</code> &amp; <code>bash</code> ed
+	ho cominciato a campionare i dati dall'oscilloscopio. Purtroppo, né
+	l'aggeggio né <code>netcat</code> sono esattamente <em>veloci</em>, quindi
+	sono stato costretto ad infilare un delay di un intero secondo, tra un
+	campionamento e l'altro, per fare in modo che l'oscilloscopio possa fare le
+	misure e rispondermi, prima di impazzire.
+	
+	Non c'è molto da essere contenti della cosa.
+	br#
+	Intanto, ho estratto l'<strong>&lt;INTERNET!!!&gt;</strong> dalla tasca ed
+	ho cominciato ad imparare il <code>python</code>, visto che i messaggi che
+	ricevo vanno tutti a capo (e tutti mischiati). Non volevo usare
+	<code>R</code>, e imparare il <code>Python</code> è una cosa che ho sempre
+	voluto fare. Et voilà.
+	br#
+	Smanaccia e smanaccia, sbrodolo dei dati che posso dare a
+	<code>Gnuplot</code>, anche se io&amp;lui non ci vogliamo ancora bene.
+	br#
+	Poi mi sono messo a scrivere un pezzo di <code>c</code> che faccia la stessa
+	cosa, ma meglio. Grazie al manualone dell'Agilent, più il manuale, più la
+	yadda e qualche tentativo, eccomi pronto a campionare in maniera sincrona
+	con l'aggeggio, più o meno a <code>10Hz</code>.
+tab#l14
+	title#Data Astrale [<code>L14</code>] <em>XX/XX</em>
+stop#page
+start#side
+	p#tid#<code>L13</code> – @Campioni@#l13
+	p#tid#<code>L14</code> – @Scrittura@#l14
+stop#side

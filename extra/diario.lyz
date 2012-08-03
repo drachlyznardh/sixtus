@@ -1011,13 +1011,11 @@ tab#m21
 stop#page
 start#side
 	title#Diario del Capitano
-	br#
 	stitle@right#Aprile 2012
 	p#tid#<code>M00</code> – Il @primo@ impatto#m00
 	p#tid#<code>M01</code> – È tutta colpa di @Ridley Scott@#m01
 	p#tid#<code>M02</code> – @Igor@! Abbassa la leva!#m02
 	p#tid#<code>M03</code> – La via della @seduzione@#m03
-	br#
 	stitle@right#Maggio 2012
 	p#tid#<code>M04</code> – @Rootfs@ et similia#m04
 	p#tid#<code>M05</code> – @bootpd e tftpd@#m05
@@ -1031,7 +1029,6 @@ start#side
 	p#tid#<code>M13</code> – @Dr. H4x@ mette tutto a posto#m13
 	p#tid#<code>M14</code> – @La quiete@ prima della tempesta#m14
 	p#tid#<code>M15</code> – Altra @quiete@ prima della tempesta#m15
-	br#
 	stitle@right#Giugno 2012
 	p#tid#<code>M16</code> – @La tempesta@, in laboratorio da Sgaggio#m16
 	p#tid#<code>M17</code> – @Lo stupro@#m17

@@ -891,7 +891,7 @@ tab#xiii
 	e tutti possono chiamare tutto.
 stop#page
 start#side
-	tid#Presentazione#intro
+	p#tid#Presentazione#intro
 	title#Sistemi Operativi 1
 	begin#ol
 		li#tid#Il processo#i

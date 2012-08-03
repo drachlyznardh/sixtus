@@ -13,7 +13,7 @@ tab#intro
 	non ve lo dica. Ecco perché c'è una guida.
 
 	C'è stata una 
-	link#Storie/2010/XX/#storia###,
+	link#Storie/2010/XX/#storia@,
 	una volta, che tentava di fare la stessa cosa… beh, quella storia non se la
 	ricorda nessuno, e ad ogni modo ormai è antiquata.
 	sec#
@@ -235,49 +235,32 @@ tab#meta
 stop#page
 start#side
 	p#tid#Perché una guida?#intro
-	p#tid#L'Autore#gods
-	e i suoi
+	p#tid#L'Autore@ e i suoi #gods
 	tid#Allegri compagni#compagni
 	title#Guida
 	stitle#tid#Contenuti#contenuti
 	reverse#
-	tid#Storie#contenuti#Storie
-	e 
-	tid#MiniStorie#contenuti#MiniStorie
-	/ 
-	tid#Recensioni#contenuti#Recensioni
-	reverse#
-	tid#Tru Naluten#contenuti#TruNaluten
-	/ 
-	tid#NaNoWriMo#contenuti#NaNoWriMo
-	/
-	tid#Legend@ RPG#contenuti#Legend
-	/
+	tid#Storie@ e #contenuti#Storie
+	tid#MiniStorie@ / #contenuti#MiniStorie
+	tid#Recensioni@ / #contenuti#Recensioni
+	tid#Tru Naluten@ / #contenuti#TruNaluten
+	tid#NaNoWriMo@ / #contenuti#NaNoWriMo
+	tid#Legend@ RPG / #contenuti#Legend
 	tid#Extra#contenuti#Extra
 	stitle#tid#Meta#meta
 	reverse#
-	tid#Extra#meta#Extra
-	/
-	tid#Modi#meta#Modi
-	/
-	tid#Stili#meta#Stili
-	/
+	tid#Extra@ / #meta#Extra
+	tid#Modi@ / #meta#Modi
+	tid#Stili@ / #meta#Stili
 	tid#Voci#meta#Voci
 	sbr#
 	title#Gli (altri) Extra
-	p#link#Extra/Record/#La pagina dei @Record@
-	/
-	link#Extra/Scimmia/#I prodigi della @scimmia celeste@
-	/
-	link#Extra/SO1/#Appunti di @Sistemi Operativi 1@
-	/
-	link#Extra/Immagini/#L'elenco delle @Immagini@
-	/
-	link#Extra/Diario/#il @diario@ del capitano
-	/
-	link#Extra/MLCAD/#MLCad&amp;LPub
-	/
-	link#Extra/BUX/#XLST, FOP e BUX
-	/
+	p#link#Extra/Record/#La pagina dei @Record@ /
+	link#Extra/Scimmia/#I prodigi della @scimmia celeste@ /
+	link#Extra/SO1/#Appunti di @Sistemi Operativi 1@ /
+	link#Extra/Immagini/#L'elenco delle @Immagini@ /
+	link#Extra/Diario/#il @diario@ del capitano /
+	link#Extra/MLCAD/#MLCad &amp; LPub@ /
+	link#Extra/BUX/#Bu&chi;@ /
 	link#Extra/LABOFDOOM/#Lab Of Doom
 stop#side
