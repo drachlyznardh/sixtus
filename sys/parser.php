@@ -149,10 +149,11 @@
 					return;
 				case 'include':
 					$filename = $frag[1];
-					$partToInclude = $frag[2];
+					if (count($frag) > 2) $partToInclude = $frag[2];
+					else $partToInclude = false;
 
-					if (strpos($frag[2], '@')) {
-						$token = split ('@', $frag[2]);
+					if (strpos($partToInclude, '@')) {
+						$token = split ('@', $partToInclude);
 						switch (count($token)) {
 							case 3:
 								if (strcmp('as', $token[1]) != 0)
@@ -174,7 +175,22 @@
 					else die ('Cannot find ['.$filename.']!!!');
 					if (isset($include)) $parser = $this->getParser($include);
 					else $include = 'SELF!';
-					$this->currentTab->addInclude($parser, $partToInclude, $asContent);
+					if ($partToInclude)
+						$this->currentTab->addInclude($parser, $partToInclude, $asContent);
+					else {
+						
+						if ($this->isTheFirstTab) {
+							$this->page[0] = $parser->page[0];
+							$this->isTheFirstTab = false;
+						} else {
+							$tabs = count($this->page) - 1;
+							$this->page[$tabs]->addContinue($parser->page[0]->getName());
+							$parser->page[0]->addFollow($this->page[$tabs]->getName());
+						}
+
+						foreach (array_keys($parser->page) as $key)
+							$this->page[] = $parser->page[$key];
+					}
 					return;
 				case 'tabs':
 					$frag[1] = strtolower($frag[1]);
@@ -224,21 +240,23 @@
 				case 'subtitle':
 					$this->meta['subtitle'] = $frag[1]; break;
 				case 'prev':
+					if (strpos($frag[2], '@')) $title = split ('@', $frag[2]);
+					else $title = array($frag[2]);
 					switch (count($frag)) {
-						case 6: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], $frag[5]); break;
-						case 5: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4]); break;
-						case 4: $link = $this->d->link($frag[1], $frag[2], $frag[3]); break;
-						case 3: $link = $this->d->link($frag[1], $frag[2]); break;
+						case 5: $link = $this->d->newlink($frag[1], $title, $frag[3], $frag[4]); break;
+						case 4: $link = $this->d->newlink($frag[1], $title, $frag[3], null); break;
+						case 3: $link = $this->d->newlink($frag[1], $title, null, null); break;
 						default: print_r($frag); die ('Prev, WHY U NO LINK? @line'.$lineno);
 					}
 					$this->meta['prev'] = $link;
 					break;
 				case 'next':
+					if (strpos($frag[2], '@')) $title = split ('@', $frag[2]);
+					else $title = array($frag[2]);
 					switch (count($frag)) {
-						case 6: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4], $frag[5]); break;
-						case 5: $link = $this->d->link($frag[1], $frag[2], $frag[3], $frag[4]); break;
-						case 4: $link = $this->d->link($frag[1], $frag[2], $frag[3]); break;
-						case 3: $link = $this->d->link($frag[1], $frag[2]); break;
+						case 5: $link = $this->d->newlink($frag[1], $title, $frag[3], $frag[4]); break;
+						case 4: $link = $this->d->newlink($frag[1], $title, $frag[3], null); break;
+						case 3: $link = $this->d->newlink($frag[1], $title, null, null); break;
 						default: print_r($frag); die ('Next, WHY U NO LINK? @line'.$lineno);
 					}
 					$this->meta['next'] = $link;

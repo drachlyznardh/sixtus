@@ -132,7 +132,7 @@
 			}
 
 			if ($this->continue && !$as) {
-				$frag = array('p', 'tid', 'Continua nel @prossimo@ tab…', $this->continue);
+				$frag = array('reverse', 'tid', 'Continua nel @prossimo@ tab…', $this->continue);
 				$newsec = new Section ($this->d);
 				$newsec->parseLine(-1, $frag[0], $frag);
 				$newsec->prepare();
