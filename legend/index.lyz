@@ -383,26 +383,24 @@ tab#track
 stop#page
 start#side
 	Vedi anche [
-	link#Legend/Cronache/#Cronache### |
-	link#Legend/Spoiler/#<em class="spoiler">Spoiler</em>### ]
+	link#Legend/Cronache/#Cronache@ |
+	link#Legend/Spoiler/#<em class="spoiler">Spoiler</em>@ ]
 	br#
 	title#Legend
 	titler#Rule of Cool
 	stitle#tid#Creature#creature
-	reverse#
-		tid#Caratteristiche#creature#Caratteristiche# / 
-		tid#Creazione#creature#Creazione# / 
+	reverse#tid#Caratteristiche@ / #creature#Caratteristiche
+		tid#Creazione@ / #creature#Creazione 
 		tid#Progressione#creature#Progressione
 	stitle#tid#Combattimento#combattimento
-	reverse#
-		tid#Azioni#combattimento#Azioni# / 
-		tid#Distanze#combattimento#Distanze# / 
-		tid#Durate#combattimento#Durate# / 
-		tid#Manovre#combattimento#Manovre# / 
-		tid#Ferite#combattimento#Ferite
-	p#tid#Magia#magia
-	p#tid#Economia#economia
-	p#tid#Track#track
+	reverse#tid#Azioni@ / #combattimento#Azioni
+		tid#Distanze@ / #combattimento#Distanze
+		tid#Durate@ / #combattimento#Durate
+		tid#Manovre@ / #combattimento#Manovre
+		tid#Ferite@ / #combattimento#Ferite
+	p#tid#Magia@ / #magia
+		tid#Economia@ / #economia
+		tid#Track#track
 	begin#ul
 	end#ul
 stop#side
