@@ -914,6 +914,8 @@ tab#s12
 	include#legend/cronache.12.lyz#page
 tab#s13
 	include#legend/cronache.13.lyz#page
+tab#s14
+	include#legend/cronache.14.lyz#page
 stop#page
 stop#page
 start#side
@@ -934,4 +936,5 @@ start#side
 	p#tid#<code>S11</code> – @Il viaggio@#s11
 	p#tid#<code>S12</code> – @L'accampamento@#s12
 	p#tid#<code>S13</code> – @Il castello dolce@#s13
+	p#tid#<code>S14</code> – @[in corso]@#s14
 stop#side
