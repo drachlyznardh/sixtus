@@ -144,5 +144,6 @@ p.foto img {
 }
 
 em { font-style:italic; }
+em em { font-style:normal; }
 strong { font-weight:bold; }
 code { font-family: monospace }

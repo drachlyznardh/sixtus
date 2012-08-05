@@ -42,6 +42,7 @@ tab#cron
 		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky@ – 2000~2012
 		li#link#Recensioni/Show/XL/#Godzilla@ – 1998
 		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio@ – 1959
+		li#link#Recensioni/Film/XLII/#Starship troopers@ – 1997~2008
 	end#ol
 tab#film
 	begin#ul
@@ -58,6 +59,7 @@ tab#film
 		p#link#Recensioni/Film/XXVII/#Il discorso del re### – 2010
 		p#link#Recensioni/Film/XXIX/#Il gatto con gli stivali### – 2011
 		li#link#Recensioni/Film/XXXII/#I Vendicatori### – 2012
+		li#link#Recensioni/Film/XLII/#Starship troopers@ – 1997~2008
 	end#ul
 tab#brutti
 	begin#ul

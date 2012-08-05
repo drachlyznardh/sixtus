@@ -1,7 +1,18 @@
 title#Agosto 2012#Caaaaaaaaaaaaaaaaaaldo!
 prev#News/2012/07/#Luglio@ 2012
 #next#News/2012/09/#Settembre@ 2012
+tabs#alwaysall
 start#page
+tab#05
+	p#link##<em>@05/08/2012@</em>##05
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
+	title#Reclusione (a fin di bene)
+	Sono chiuso in casa a scrivere per la tesi, che ce n'è bisogno… ma uno non
+	può scrivere soltanto fuffa e/o dettagli tecnici, e così mi prendo una
+	pausa. Visto che nient'altro mi ispira, vi parlo di tre film uno in fila
+	all'altro.
+	link#Recesioni/Film/XLII/#Fuggite@!!!
 tab#03
 	p#link##<em>@03/08/2012@</em>##03
 	/
@@ -12,6 +23,9 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/08/#Agosto@ 2012
+
+	<em>05/08</em> – [<code>Recensioni</code>]
+	link#Recensioni/Film/XLII/#Starship Troopers
 
 	<em>03/08</em> – [<code>Extra</code>]
 	link#Extra/LABOFDOOM/#Campioni#L13

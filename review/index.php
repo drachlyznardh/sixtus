@@ -149,16 +149,11 @@ start#side
 	title#Recensioni
 	stitle#tid#Categorie#categorie
 	reverse#
-		tid#Film#categorie#Film
-		/
-		tid#Film Brutti#categorie#Brutti
-		/
-		tid#Giochi#categorie#Giochi
-		/
-		tid#Show#categorie#Show
-		/
+		tid#Film@ / #categorie#Film
+		tid#Film Brutti@ / #categorie#Brutti
+		tid#Giochi@ / #categorie#Giochi
+		tid#Show@ / #categorie#Show
 		tid#Libri#categorie#Libri
-	br#
 	stitle#tid#Classifica#classifica
 	begin#ol
 		li#tid#Fucking awesome!!!#classifica#awesome
@@ -170,10 +165,9 @@ start#side
 		li#tid#Brutto da ridere#classifica#ridere
 		li#tid#Magnificamente brutto#classifica#magnifici
 	end#ol
-	br#
 	stitle#tid#Indice#indice
 	reverse#
-		tid#Cronologico#indice#cronologico# / 
-		tid#Per categoria#indice#categoria# / 
+		tid#Cronologico@ / #indice#cronologico
+		tid#Per categoria@ / #indice#categoria
 		tid#In corso#indice#incorso
 stop#side
