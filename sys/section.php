@@ -414,7 +414,7 @@
 				array_shift($frag);
 				array_shift($frag);
 			}
-			return "« $content »";
+			return '«'.$content.'»';
 		}
 
 		private function mkfoto ($frag) {
