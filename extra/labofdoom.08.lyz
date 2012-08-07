@@ -27,9 +27,46 @@ tab#l13
 	yadda e qualche tentativo, eccomi pronto a campionare in maniera sincrona
 	con l'aggeggio, più o meno a <code>10Hz</code>.
 tab#l14
-	title#Data Astrale [<code>L14</code>] <em>XX/XX</em>
+	title#Data Astrale [<code>L14</code>] <em>04~05/08</em>
+	Scrivo, scrivo, scrivo… mentre scrivo, tento anche di capire quello che sto
+	dicendo, e vedo di metterlo giù in modo che la gente possa capire… ma
+	dubito.
+
+	Sono stanco.
+tab#l15
+	title#Data Astrale [<code>L15</code>] <em>06/08</em>
+	Adesso ho un pezzo di <code>c</code> che campiona il periodo o la frequenza
+	dei due canali a <code>10H</code> per tutto il tempo che mi serve. Poi ho
+	anche uno script che mi plotta i dati su una <code>png</code> pronta.
+
+	La cosa è pure abbastanza automatizzabile. Ora, resta il fatto che non ho
+	idea di cosa farci, con questi dati… dovrei anche mostrare la differenza tra
+	le due curve, forse mostrarne l'andamento con una media… boh.
+	sec#
+	title#Data Astrale [<code>L15a</code>]
+	Cosa io stia facendo esattamente, non lo so… ma qualcosa sto facendo.
+tab#l16
+	title#Data Astrale [<code>L16</code>] <em>07/08</em>
+	Ancora un altro giorno. Tutto più o meno come ieri. C'è di buono che
+	continuo a migliorare, adesso posso scribacchiare il <code>python</code>,
+	anche con le classi, ho preso confidenza con <code>Gnuplot</code> e posso
+	fare delle cose piuttosto fighe. Cosa esattamente dovrei fare, però, non lo
+	so; probabilmente nemmeno <em>Sgaggio</em> lo saprebbe, ma questo non mi
+	consola.
+
+	Per quanto riguarda la scrittura, con <code>Bu&chi;</code> posso fare
+	praticamente tutto quel che mi serve; quel che manca, riesco ad aggiungerlo
+	quasi a colpo sicuro; non altrettanto bene va la produzione dei primi due
+	capitoli… è difficile capire esattamente quel che devo metterci e quel che
+	devo lasciar fuori.
+
+	Che la roba non sia affatto interessante come vorrei, è un altro discorso;
+	posso soprassedere. Sui contenuti, invece… boh, se <em>Sgaggio</em> fosse
+	qui, forse… boh.
+	reverse#Galleggio per conto mio, e in futuro si vedrà.
 stop#page
 start#side
 	p#tid#<code>L13</code> – @Campioni@#l13
 	p#tid#<code>L14</code> – @Scrittura@#l14
+	p#tid#<code>L15</code> – @I soliti piccoli progressi@#l15
 stop#side

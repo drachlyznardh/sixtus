@@ -3,6 +3,13 @@ prev#News/2012/07/#Luglio@ 2012
 #next#News/2012/09/#Settembre@ 2012
 tabs#alwaysall
 start#page
+tab#07
+	p#link##<em>@07/08/2012@</em>##07
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Recensioni
+	title#Una storia, dopo un mese di silenzio
+	Non potevo lasciar passare troppo tempo senza una storia. Ne ho mess'assieme
+	link#Storie/2012/LXXXIV/#una@, un po' come si faceva una volta…
 tab#05
 	p#link##<em>@05/08/2012@</em>##05
 	/
@@ -23,6 +30,9 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/08/#Agosto@ 2012
+
+	<em>07/08</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXXIV/#L'estate incombe
 
 	<em>05/08</em> – [<code>Recensioni</code>]
 	link#Recensioni/Film/XLII/#Starship Troopers

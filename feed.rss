@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>L'estate incombe</title>
+			<description>Una storia dopo un sacco di tempo… e un aggiornamento
+			del presente feed dopo anche più tempo…</description>
+			<pubDate>Tue, 07 Aug 2012 21:50:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/08/#07</guid>
+		</item>
+		<item>
 			<title>La notte rosa</title>
 			<description>Siamo stati a Rimini, avventura!</description>
 			<pubDate>Mon, 09 Jul 2012 17:00:00 +0100</pubDate>
@@ -17,12 +24,6 @@
 			<description>Un romanzo del Mondodisco di Terry Pratchett.</description>
 			<pubDate>Wed, 30 May 2012 14:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/05/#30</guid>
-		</item>
-		<item>
-			<title>Il 24 maggio</title>
-			<description>Una recensione, una fuffa e un annuncio</description>
-			<pubDate>Thu, 24 May 2012 16:00:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/05/#24</guid>
 		</item>
 	</channel>
 </rss>
