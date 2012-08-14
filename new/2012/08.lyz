@@ -3,10 +3,19 @@ prev#News/2012/07/#Luglio@ 2012
 #next#News/2012/09/#Settembre@ 2012
 tabs#alwaysall
 start#page
+tab#14
+	p#link##<em>@14/08/2012@</em>##14
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#Ho scoperto una cosa brutta
+	Ero lì in laboratorio a fare le mie cose, quando m'è tornata in mente una
+	certa creatura incontrata domenica, e cercando ho scoperto una cosa
+	terribile.
+	link#Storie/2012/LXXXV/#Leggete@.
 tab#07
 	p#link##<em>@07/08/2012@</em>##07
 	/
-	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Recensioni
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#Una storia, dopo un mese di silenzio
 	Non potevo lasciar passare troppo tempo senza una storia. Ne ho mess'assieme
 	link#Storie/2012/LXXXIV/#una@, un po' come si faceva una volta…
@@ -30,6 +39,9 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/08/#Agosto@ 2012
+
+	<em>14/08</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXXV/#L'<em>Argiope Bruennichi</em>
 
 	<em>07/08</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXXIV/#L'estate incombe

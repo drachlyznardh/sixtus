@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Cose terribili!!!<title>
+			<description>Ho scoperto una cosa che m'ha fatto soffrire.</description>
+			<pubDate>Tue, 14 Aug 2012 17:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/08/#14</guid>
+		</item>
+		<item>
 			<title>L'estate incombe</title>
 			<description>Una storia dopo un sacco di tempo… e un aggiornamento
 			del presente feed dopo anche più tempo…</description>
@@ -18,12 +24,6 @@
 			<description>Siamo stati a Rimini, avventura!</description>
 			<pubDate>Mon, 09 Jul 2012 17:00:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/07/#09</guid>
-		</item>
-		<item>
-			<title>A me le guardie!</title>
-			<description>Un romanzo del Mondodisco di Terry Pratchett.</description>
-			<pubDate>Wed, 30 May 2012 14:00:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/05/#30</guid>
 		</item>
 	</channel>
 </rss>

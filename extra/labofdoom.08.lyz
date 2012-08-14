@@ -64,9 +64,42 @@ tab#l16
 	posso soprassedere. Sui contenuti, invece… boh, se <em>Sgaggio</em> fosse
 	qui, forse… boh.
 	reverse#Galleggio per conto mio, e in futuro si vedrà.
+tab#l17
+	title#Data Astrale [<code>L17</code>] <em>09/08</em>
+	r#“Niente di nuovo sul fronte occidentale”
+
+	I miei risultati sono scarsamente rilevanti… non so che fare.
+tab#l18
+	title#Data Astrale [<code>L18</code>] <em>14/08</em>
+	Pur restando piuttosto sconsolato, mi sono messo alla ricerca di altri dati
+	da raccogliere.
+
+	L'interfaccia del <code>GPS-MXS</code> permette – tra le altre cose – di
+	preparare una <em>plottata</em> di cose, nominalmente “<em>stability
+	chart</em>” che mette a confronto le quattro ammissibili fonti per
+	l'aggeggio (se fosse settato su <code>switch: auto</code>, sceglierebbe la
+	fonte migliore). Grazie alle mie incredibili <code>1337 skillz</code> (<span
+	class="spoiler">ho premuto <code>CTRL+U</code>!!!</span>), ho scoperto che i
+	dati vengono richiesti tramite un'opportuna chiamata alle vecchie
+	<code>cgi-bin</code> del coso.
+	
+	<code>H4x</code> per ottenere i dati grezzi, <code>Python</code> per
+	sistemarli e infine <code>GnuPlot</code> per fare dei bei disegnini. Per
+	adesso, non succede niente.
+
+	L'esperimento <code>A0</code> indica che i due orologi sono entrambi
+	stabili, ciascuno per proprio conto. Poi ho inserito una delle mie
+	<em>Freescale</em> per l'esperimento <code>B1</code>, e adesso entrambi i
+	segnali (<code>PTP</code> e <code>Ext</code>) traballano come gli
+	spaventapasseri al vento.
+
+	Aspetto risultati.
 stop#page
 start#side
 	p#tid#<code>L13</code> – @Campioni@#l13
 	p#tid#<code>L14</code> – @Scrittura@#l14
 	p#tid#<code>L15</code> – @I soliti piccoli progressi@#l15
+	p#tid#<code>L16</code> – I soliti piccoli progressi @II@#l16
+	p#tid#<code>L17</code> – I soliti piccoli progressi @III@#l17
+	p#tid#<code>L18</code> – @Alla ricerca di@…#l18
 stop#side
