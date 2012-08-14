@@ -66,6 +66,7 @@
 					$this->mkText($lineno);
 					$this->recursive($lineno, $args);
 					break;
+				case 'r':
 				case 'reverse':
 					$this->unmkText($lineno);
 					$this->mkText($lineno, ' class="reverse"');
