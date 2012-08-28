@@ -1,0 +1,17 @@
+title#Kamen Rider#Henshin!
+prev#Recensioni/Libri/XII/#Harry Potter &amp; …
+next#Recensioni/Show/XIV/#Gundam AGE
+start#page
+	include#review/kr/intro
+	include#review/kr/series
+	include#review/kr/movies
+stop#page
+start#side
+	title#Kamen Rider
+	stitle@right#Cosa e perché
+	include#review/kr/intro#side@as@content
+	stitle@right#Le serie che ho visto
+	include#review/kr/series#side@as@content
+	stitle@right#I film che ho visto
+	include#review/kr/movies#side@as@content
+stop#side

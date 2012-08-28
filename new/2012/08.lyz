@@ -3,6 +3,24 @@ prev#News/2012/07/#Luglio@ 2012
 #next#News/2012/09/#Settembre@ 2012
 tabs#alwaysall
 start#page
+tab#28
+	p#link##<em>@28/08/2012@</em>##28
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
+	title#Tre film di Kamen Rider
+	Tre film assieme, anche se l'ho visti in giorni diversi. Due li consiglio,
+	uno decisamente no. Sono
+	link#Recensioni/Kamen/Rider#Shin@,#shin
+	link#Recensioni/Kamen/Rider#the @First@#thefirst
+	and
+	link#Recensioni/Kamen/Rider#the @Next@.#thenext
+tab#24
+	p#link##<em>@24/08/2012@</em>##24
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#Impresa III
+	Son proprio sfatto. Devo andare in montagna. Parto per un'impresa,
+	link#Storie/2012/LXXXVI/#la @terza@ nella serie.
 tab#14
 	p#link##<em>@14/08/2012@</em>##14
 	/
@@ -39,6 +57,16 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/08/#Agosto@ 2012
+
+	<em>28/08</em> – [<code>Recensioni</code>]
+	Kamen Rider
+	link#Recensioni/Kamen/Rider#Shin@,#shin
+	link#Recensioni/Kamen/Rider#the @First@#thefirst
+	and
+	link#Recensioni/Kamen/Rider#the @Next#thenext
+
+	<em>24/08</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXXVI/#L'impresa @III@
 
 	<em>14/08</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXXV/#L'<em>Argiope Bruennichi</em>

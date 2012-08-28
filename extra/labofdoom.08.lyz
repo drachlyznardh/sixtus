@@ -94,6 +94,41 @@ tab#l18
 	spaventapasseri al vento.
 
 	Aspetto risultati.
+tab#l19
+	title#Data Astrale [<code>L19</code>] <em>21/08</em>
+	r#“Dopo una lunga attesa… molti anni passarono”
+
+	Diciamo pure che mi sono arreso. Le mie acquisizione non danno risultati
+	apprezzabili. Nel corso dell'ultima settimana ho abbandonato l'oscilloscopio
+	e mi sono dato alla ricerca di altre cose. Grazie al <em>GPS-MXS</em> sono
+	stato in grado di estrarre “dati sulla stabilità” dei vari segnali (il
+	trucco di utilizzare la <em>SyncBoxz</em> come input del <em>GPS-MXS</em> è
+	servito almeno a questo) ma con un dato soltanto ogni <code>5'</code> e
+	risultati (leggi plot) che non riesco a comprendere. Poi l'aggeggio ha
+	persino smesso di rispondere via rete…
+
+	Oggi sono alla ricerca di un modo di contare il tempo attraverso la forma
+	d'onda. L'aggeggio dichiara <code>2GSa</code>, quantità che dovrebbe essere
+	più che sufficiente per lasciarmi vedere i picchi, contarli e mettere una X
+	ogni 10000000 di ondine.
+	sec#
+	title#Data Astrale [<code>L19a</code>]
+	Sembra che non si possa fare: posso esaminare un solo canale alla volta. Il
+	<em>GPS-MXS</em> non funziona, l'ho spento; sperando che torni a funzionare
+	dopo un'oretta di pausa.
+
+	Che fare, adesso?
+tab#l20
+	title#Data Astrale [<code>L20</code>] <em>27/08</em>
+	r#Ciupa al <code>Ciupatron</code>
+	p#Perché qui non va un cazzo… il <em>GPS-MXS</em> è interagibile soltanto
+	dal pannello frontale, che non è esattamente comodo da usare… Sono riuscito
+	a riavviare il coso, a metterlo su manuale, a controllare l'indirizzo, a
+	modificare (su manuale) la scelta della fonte, ma nel sistemare il
+	<code>PTP</code> come fonte primaria, <strong>&lt;BOOM&gt;</strong>, tutto
+	ha smesso di funzionare, di nuovo.
+
+	Sono stufo.
 stop#page
 start#side
 	p#tid#<code>L13</code> – @Campioni@#l13
@@ -102,4 +137,6 @@ start#side
 	p#tid#<code>L16</code> – I soliti piccoli progressi @II@#l16
 	p#tid#<code>L17</code> – I soliti piccoli progressi @III@#l17
 	p#tid#<code>L18</code> – @Alla ricerca di@…#l18
+	p#tid#<code>L19</code> – @Resa@?#l19
+	p#tid#<code>L20</code> – @Inchiodato@#l20
 stop#side
