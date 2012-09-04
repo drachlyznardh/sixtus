@@ -67,8 +67,29 @@ tab#l22
 	Puff, nulla, <em>nada</em>… temo che s'andrà (di nuovo, come accadde
 	link#Storie/2011/LII/#qui@)#v
 	con il vecchio <em>IvanPrimeII</em>.
+tab#l23
+	title#Data Astrale [<code>L23</code>] <em>05/09</em>
+	begin#mini@left
+		foto#Extra/SaintIGNUcius.jpg
+		Sì, è molto vecchia.
+	end#mini
+	Brutte notizie, ma notizie peggiori evitate: già ieri sera ho controllato il
+	mio vecchio <em>IvanPrimeII</em>, «tanto per accenderlo e vedere se ce la
+	fa» ma prima ancora di quello ho dato un'occhiata alle porte a disposizione.
+
+	Ho fatto bene a controllare: il poverello dispone infatti di uscita video e
+	di <em>porta parallela</em>, di porta di rete e di modem, di quattro porte
+	USB (v1); ma non c'è porta seriale.
+	br#
+	A questo punto, tutti gl'<em>interwebs</em> mi consigliano d'installare XP
+	su una macchina virtuale e usare quella. <em>Sant'iGNUzio</em> prega per me.
+
+	La “cosa migliore” è che anche <em>Sgaggio</em> sta perdendo le speranze e
+	prendendo in considerazione la possibilità di cercare altro.
+	clear#both
 stop#side
 start#side
 	p#tid#<code>L21</code> – @BOB@#l21
 	p#tid#<code>L22</code> – BOB (@II@)#l22
+	p#tid#<code>L23</code> – Il firmware della cotoletta#l23
 stop#side
