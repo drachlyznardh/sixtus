@@ -1,6 +1,6 @@
 title#Agosto 2012#Caaaaaaaaaaaaaaaaaaldo!
 prev#News/2012/07/#Luglio@ 2012
-#next#News/2012/09/#Settembre@ 2012
+next#News/2012/09/#Settembre@ 2012
 tabs#alwaysall
 start#page
 tab#28
@@ -10,10 +10,10 @@ tab#28
 	title#Tre film di Kamen Rider
 	Tre film assieme, anche se l'ho visti in giorni diversi. Due li consiglio,
 	uno decisamente no. Sono
-	link#Recensioni/Kamen/Rider#Shin@,#shin
-	link#Recensioni/Kamen/Rider#the @First@#thefirst
+	link#Recensioni/Kamen/Rider/#Shin@,#shin
+	link#Recensioni/Kamen/Rider/#the @First@#thefirst
 	and
-	link#Recensioni/Kamen/Rider#the @Next@.#thenext
+	link#Recensioni/Kamen/Rider/#the @Next@.#thenext
 tab#24
 	p#link##<em>@24/08/2012@</em>##24
 	/
@@ -60,10 +60,10 @@ start#side
 
 	<em>28/08</em> – [<code>Recensioni</code>]
 	Kamen Rider
-	link#Recensioni/Kamen/Rider#Shin@,#shin
-	link#Recensioni/Kamen/Rider#the @First@#thefirst
+	link#Recensioni/Kamen/Rider/#Shin@,#shin
+	link#Recensioni/Kamen/Rider/#the @First@#thefirst
 	and
-	link#Recensioni/Kamen/Rider#the @Next#thenext
+	link#Recensioni/Kamen/Rider/#the @Next@#thenext
 
 	<em>24/08</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXXVI/#L'impresa @III@

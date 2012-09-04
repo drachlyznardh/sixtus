@@ -1,0 +1,74 @@
+start#page
+tab#l21
+	title#Data Astrale [<code>L21</code>] <em>03/09</em>
+	Dunque, ho avuto modo di sentire il “<em>parere dell'esperto</em>” – ossia
+	BOB – che m'ha chiesto s'ho riavviato il coso, se l'ho spupazzato e se ho
+	provato con <strong>$ultima_versione</strong> di
+	<strong>$il_nostro_server</strong>.
+
+	Senza la benché minima speranza, mi sono messo a scaricare questo “server
+	TCP” che avrebbe dovuto risolvere il mio problema: trattasi di
+	<code>46MB</code> di file <code>.zip</code> contenente una licenza in 24
+	lingue (in <code>.rtf</code>!!!, santa polenta) e un mare di fuffa; nel
+	marasma, una paio di <code>.dll</code> e l'immancabile
+	<code>setup.exe</code>.
+
+	Quando faccio per chiedere al mio <em>wine</em> di spupazzarselo, quello
+	fugge in <em>Messico</em>; chiedo a <em class="war">War</em> il suo
+	<em>Windows7</em> in prestito, installo il coso (e riavvio, ovviamente) per
+	poi vedermi comparire questo aggeggio davanti. È un'inutile finestrella con
+	un bottone “prendi i dati” e un paio d'altra cose, che mi chiede soltanto
+	l'IP del server.
+
+	Considerato che il server non risponde perché <strong>la strafottuta porta
+	ethernet non funziona</strong>, non succede niente; non un singolo errore.
+	Silenzio. Non so s'essere contento oppure no…
+
+	Direi che non lo sono; il progetto è fermo e voglia di scrivere non ce n'è.
+tab#l22
+	title#Data Astrale [<code>L22</code>] <em>04/09</em>
+	Altra mail da parte di <em>BOB</em> che mi dice le solite cose: controlla
+	l'indirizzo, la sottorete, le lucine della porta, il cavo dritto o
+	incrociato… poi mi allunga <strong>$ultima_versione_del_firmware</strong>,
+	da caricare esclusivamente attraverso la porta seriale, con
+	<strong>$diabolico_applicativo.exe</strong>.
+
+	Questo dice la mail. Quel che succederà veramente, non lo so.
+	sec#
+	title#Data Astrale [<code>L22a</code>]
+	Tolto il fatto che anche questo secondo programma m'arriva in forma di
+	<code>46MB</code> di archivio <code>.zip</code>, l'intero aggeggio
+	s'installa con un singolo riavvio. Poi però cominciano i problemi:
+	l'aggeggio vuole che gli si dica quale connessione seriale s'intende
+	utilizzare; «quale delle quattro disponibili?» mi chiede, ed io &amp; <em
+	class="war">War</em> non abbiamo idea di che si parli, visto che
+	l'adattatore è uno solo, Serial-to-USB.
+
+	Quel che non vi ho detto è che l'adattatore e il <em>GPS-MXS</em> hanno
+	entrambi l'uscita maschio (quella con i 9 pin). Per ovviare a questo
+	problema mi sono rivolto a <em>Federico</em>, che mi ha prontamente fornito
+	un <em>cambiasesso</em> seriale.
+
+	Risolto il collegamento, via con il test. Ma il povero <em>Winzozz</em> non
+	sembra essere in grado di trovare il driver… l'internet consiglia di usare
+	l'<em>anal</em>ogo driver per <em>Vista</em>. Tremo al sol pensiero.
+	sec#
+	title#Data Astrale [<code>L22b</code>]
+	Dunque, riavvio dopo riavvio, sembra che la connessione non funzioni
+	affatto. Il manuale per l'installazione del firmware afferma che la
+	configurazione dei led dovrebbe comportarsi in certe maniere nei vari passi
+	di connessione, cancellazione e riscrittura del contenuto della FLASH, ma
+	niente di questo accade.
+
+	Gli stessi errori avvengono sia che il cavo sia attaccato che volante…
+	qualche tentativo di riavviare o modificare lo stato della
+	<em>Cotoletta</em> non hanno portato a nulla.
+
+	Puff, nulla, <em>nada</em>… temo che s'andrà (di nuovo, come accadde
+	link#Storie/2011/LII/#qui@)#v
+	con il vecchio <em>IvanPrimeII</em>.
+stop#side
+start#side
+	p#tid#<code>L21</code> – @BOB@#l21
+	p#tid#<code>L22</code> – BOB (@II@)#l22
+stop#side

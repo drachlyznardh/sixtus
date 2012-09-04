@@ -2,11 +2,12 @@ title#[<em>Cross-dimensional</em>] Lab of Doom
 short#Lab Of Doom
 subtitle#Il mio tempo passato nell'<em>Aula 5</em> a fare il male
 prev#Extra/BUX/#Bu&chi;
-#next#Extra/LABOFDOOM/#Lab of Doom
+next#Extra/Fitness/#Fitness
 related#Extra/Diario/#Il @diario@ del Capitano
 start#page
 	include#extra/labofdoom.07.lyz
 	include#extra/labofdoom.08.lyz
+	include#extra/labofdoom.09.lyz
 stop#page
 start#side
 	title#Lab of Doom
@@ -14,4 +15,6 @@ start#side
 	include#extra/labofdoom.07.lyz#side@as@content
 	stitle@right#Agosto
 	include#extra/labofdoom.08.lyz#side@as@content
+	stitle@right#Settembre
+	include#extra/labofdoom.09.lyz#side@as@content
 stop#side

@@ -27,8 +27,6 @@ start#page
 stop#page
 start#side
 	title#Ghost Rider
-	p#<em>Ghost rider</em> – 2007
-	title@right#bleargh
-	p#<em>Spirit of Vengeance</em> – 2011
-	title@right#(ri)bleargh
+	p#<em>Ghost rider</em> – 2007: <code>bleargh</code>
+	p#<em>Spirit of Vengeance</em> – 2011: <code>(ri)bleargh</code>
 stop#side

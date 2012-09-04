@@ -262,5 +262,6 @@ start#side
 	link#Extra/Diario/#il @diario@ del capitano /
 	link#Extra/MLCAD/#MLCad &amp; LPub@ /
 	link#Extra/BUX/#Bu&chi;@ /
-	link#Extra/LABOFDOOM/#Lab Of Doom
+	link#Extra/LABOFDOOM/#Lab Of Doom@ /
+	link#Extra/Fitness/#Fitness
 stop#side
