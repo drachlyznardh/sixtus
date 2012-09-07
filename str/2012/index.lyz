@@ -6,6 +6,9 @@ start#page
 
 	Ad un certo punto, con una certa sorpresa, mi ritrovo ad avere una ragazza.
 	Ci credereste? In molti hanno avuto difficoltà.
+	sec#
+	Ma non solo… ho anche la tesi in corso. Tesi, il cui progetto è maledetto e
+	incappa in mille problemi, tanto che si finirà l'anno prossimo…
 stop#page
 start#side
 	title#Storie 2012
@@ -22,5 +25,7 @@ start#side
 		li#link#Storie/2012/LXXXIII/#La notte rosa
 		li#link#Storie/2012/LXXXIV/#L'estate incombe
 		li#link#Storie/2012/LXXXV/#L'Argiope Bruennichi
+		li#link#Storie/2012/LXXXVI/#Impresa (III)
+		li#link#Storie/2012/LXXXVII/#Persi le balle
 	end#ol
 stop#side

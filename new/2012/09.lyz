@@ -3,6 +3,19 @@ prev#News/2012/08/#Agosto@ 2012
 #next#News/2012/10/#Ottobre@ 2012
 tabs#alwaysall
 start#page
+tab#07
+	p#link##<em>@07/09/2012@</em>##07
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#Di come persi le balle in guerra
+	Salivo in facoltà come tutti i giorni, quando
+	<strong>&lt;IMPROVVISAMENTE&gt;</strong> una rottura alla bicicletta m'ha
+	fatto rischiare la discendenza schiando i maroni sulla sella. Ma sto bene.
+	Se volete saper com'è andata veramente, peccato; se volete leggere la
+	storia, invece, andate pure
+	link#Storie/2012/LXXXVII/#qui@.
+	r#Inoltre, sconcertanti verità rivelate. Nel
+	link#Extra/LabOfDoom/#laboratorio@.#l25
 tab#04
 	p#link##<em>@04/09/2012@</em>##04
 	/
@@ -49,6 +62,12 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/09/#Settembre@ 2012
+	<em>07/09</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXXVII/#Persi le balle
+	e [<code>Extra</code>]
+	link#Extra/LabOfDoom/#Rivelazioni#l25
+	per il progetto di tesi
+
 	<em>04/09</em> – [<code>Extra</code>]
 	link#Extra/LabOfDoom/#Il ritorno di @Bob@#l22
 	p#<em>03/09</em> – [<code>Mini</code>]

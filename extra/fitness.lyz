@@ -37,6 +37,23 @@ tab#ii
 	verità: la lavatrice dispone di un miracoloso <em>“Programma 9”</em> che mi
 	permetterà di lavare i miei completi da corsa in un quarto d'ora. Da non
 	credere.
+tab#iii
+	title#Il ritorno sul percorso standard – <em>06/09</em> 
+	begin#mini@right
+		stitle@right#Tempi
+		r#→ <code>15', 18'</code>
+		r#← <code>19', 18'</code>
+		r#Totale <code>1h 10'</code>
+	end#mini
+	Ed ecco, stavolta sono arrivato alla fontanella delle <em>Ghiaie</em> con
+	largo anticipo sulla precendente corsa e con molta più forma residua da
+	spendere, quindi sono andato avanti. Ce la faccio ancora…
+
+	La strada non è cambiata, c'è ancora il sole, e correndo ho rivisto la
+	<em>ragazza secca che cammina e non sorride mai</em> e pure la
+	<em>Gessica</em> delle elementari; più qualche altra faccia già vista le due
+	corse prima.
+	clear#right
 tab#percorsi
 	Non è che io improvvisi giri a caso, faccio sempre gli stessi. Li aggiungo
 	nell'ordine che mi pare…
@@ -52,10 +69,25 @@ tab#percorsi
 	si può; poi si segue la <em>pista ciclabile EST</em> fino alla fine delle
 	<em>Ghiaie</em>, dove si può bere alla fontanella.
 	r#Distanza all'andata <code>3,2km</code>.
+	stitle#Percorso standard
+	Questo sarebbe il percorso che faccio sempre, quello lungo il quale mi sono
+	allenato negli ultimi anni, da quando – era il “lontano” 2008 – ho
+	cominciato a correre decentemente.
+
+	È semplice: dalla fontanella delle <em>Ghiaie</em> (vedi il <em>percorso
+	breve</em>) si prosegue a Sud lungo la <em>pista ciclabile</em> lungo
+	l'<em>Adige</em> e lungo l'<em>aeroporto Caproni</em>, giù e giù finché si
+	arriva alla fontanella, quella dove ci sono il depuratore, il CRM e il
+	ponte.
+
+	r#Distanza <code>3.2km</code> (del percorso breve) e altri <code>3.3km</code>
+	per un totale di <code>6.5km</code> all'andata.
 stop#page
 start#side
 	title#Fitness
 	p#tid#29/08 – @Prima uscita@ – [breve <code>17'+18'</code>]#i
 	p#tid#03/09 – @Il ritorno@ – [breve <code>17'+16</code>]#ii
-	p#tid#Percorsi#percorsi
+	p#tid#06/09@ – Standard [<code>1h 10'</code>]#iii
+	stitle@right#Altra yadda
+	r#tid#Percorsi#percorsi
 stop#side
