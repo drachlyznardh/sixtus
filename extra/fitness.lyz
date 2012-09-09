@@ -54,6 +54,36 @@ tab#iii
 	<em>Gessica</em> delle elementari; più qualche altra faccia già vista le due
 	corse prima.
 	clear#right
+tab#iv
+	title#Deviazione dal percorso standar – <em>09/09</em>
+	begin#mini@right
+		stitle@right#Tempi
+		r#→ <code>17', 20'</code>
+		r#← <code>20', 27'</code>
+		r#Totale <code>1h 24'</code>
+		stitle@right#Distanza
+		r#<code>13km</code>
+		<code>-0.6km</code>
+		<code>+1.2km</code>
+		r#Totale <code>13.6km</code>
+	end#mini
+	Oggi non ero estremamente motivato, e la schiena non stava tanto bene (vedi
+	link#Storie/2012/LXXXVI/#qui@)#iii
+	ma l'alternativa era <em>scrivere la tesi</em>. Quindi fuga. C'è da
+	aggiungere la bicicletta, che non stava tanto bene neanche lei (vedi
+	link#Storie/2012/LXXXVII/#qui@) ed era ancora sperduta su al <em>ponte
+	Cornicchio</em> ad aspettarmi.
+
+	Giunto, come da <em>percorso breve/standard</em>, alla fontana delle Ghiaie,
+	mi sono sentito abbastana bene; ho deciso di continuare fino a Mattarello.
+	In su, come sempre, ma poi, all'altezza del <em>Ponte dei Cavalleggeri</em>
+	ho proseguito dritto lungo il <em>Fersina</em> fino in cima, fino a
+	raggiungere la bicicletta.
+
+	La morte m'ha quasi raggiunti in diversi punti, nei quali ho barcollato non
+	poco; la bici almeno stava bene. Nel tornare a casa (escluso dal
+	cronometraggio) ho spinto la bicicletta come un monopattino, scatenando
+	sguardi basiti da parte di svariate nonnine e svariati cani.
 tab#percorsi
 	Non è che io improvvisi giri a caso, faccio sempre gli stessi. Li aggiungo
 	nell'ordine che mi pare…
@@ -88,6 +118,7 @@ start#side
 	p#tid#29/08 – @Prima uscita@ – [breve <code>17'+18'</code>]#i
 	p#tid#03/09 – @Il ritorno@ – [breve <code>17'+16</code>]#ii
 	p#tid#06/09@ – Standard [<code>1h 10'</code>]#iii
+	r#tid#09/09@ – Standard~ [<code>1h 24'</code>]#iv
 	stitle@right#Altra yadda
 	r#tid#Percorsi#percorsi
 stop#side

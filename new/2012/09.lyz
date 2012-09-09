@@ -3,6 +3,19 @@ prev#News/2012/08/#Agosto@ 2012
 #next#News/2012/10/#Ottobre@ 2012
 tabs#alwaysall
 start#page
+tab#09
+	p#link##<em>@09/09/2012@</em>##09
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#Il pranzone
+	Ancora oggi mi fa male la schiena, come racconto
+	link#Extra/Fitness/#qui@.#iv
+	E la bicicletta è al sicuro. Ma il
+	link#Storie/2012/LXXXVI/#pranzo#iii
+	di ieri merita in entrare nella leggenda. E nel frattempo, mi sono visto
+	<em>SDF Macross</em>, che impiega un po' di tempo ad ingranare, poi ingrana
+	troppo e alla fine smette; ma nell'insieme non è stato affatto male. Forse
+	un giorno scriverò una recensione intera… forse.
 tab#07
 	p#link##<em>@07/09/2012@</em>##07
 	/
@@ -62,7 +75,12 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/09/#Settembre@ 2012
-	<em>07/09</em> – [<code>Storie</code>]
+	<em>09/09</em> – [<code>Storie</code>]
+	link#Storie/2012/LXXXVI/#Il pranzone#iii
+	e la più recente [<code>Extra</code>]
+	link#Extra/Fitness/#corsa@,#iv
+	una delle tante
+	p#<em>07/09</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXXVII/#Persi le balle
 	e [<code>Extra</code>]
 	link#Extra/LabOfDoom/#Rivelazioni#l25
