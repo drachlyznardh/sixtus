@@ -238,6 +238,41 @@ tab#l25
 	bisogno di un riavvio?
 
 	To' guarda, quasi come <em>Windows</em>. 'Fanculo.
+tab#l26
+	title#Data Astrale [<code>L26</code>] <em>10/09</em>
+	Stamattina, come d'accordo, mi sono fiondato nell'ufficio di
+	<em>Sgaggio</em>; arrivato in facoltà per le <code>08:50</code> (non
+	accadeva al <code>1970</code>) trovo l'ufficio sgombro. LOL.
+
+	Poi ricontrollo, e ricontrollo, e ricontrollo ancora. <em>Sgaggio</em> non
+	arriva. Alle <code>10:00</code> mi straccio le balle e decido di fare altro:
+	torno a casa a prendere la mia roba, perché dovevo salire in fretta (e il
+	peso dello zaino è nemico della fretta).
+	sec#
+	title#Data Astrale [<code>L26a</code>]
+	Al ritorno, barcollando, arrivo alle scalette del cosiddetto <em>Angolo
+	Fumatori</em> e sento una voce: è <em>Sgaggio</em>, che se ne sta uscendo.
+	Prima mi dice che non avevamo un appuntamento alle <code>09:00</code>
+	precise, ma un accorgo vago; poi mi dice anche se sarebbe meglio trovarsi
+	dopo pranzo. <em>“subito dopo pranzo”</em> vuol dire appuntamento alle
+	<code>14:30</code>. MFW.
+	sec#
+	title#Data Astrale [<code>L26b</code>]
+	All'ora concordata, <em>Sgaggio</em> sta parlando con qualcuno che cerca
+	<em>d'Artagnan</em>… aspetto il mio turno.
+
+	Ed ecco, una cariolata di yadda dritta sulla mia faccia. Un certo
+	oscilloscopio <code>TDS 3052B</code>, a <code>500MHz</code> e
+	<code>5GSa</code>, con sample real time e “poche righe di MatLab” per
+	acquisire i dati; also “<em>The Beast</em>”, che sarebbe un altro
+	oscilloscopio (da <code>20GSa</code>!!!) che sarebbe esploso nel corso di un
+	<em class="wrong">attacco terroristico alieno</em> <em>esperimento</em>.
+
+	Ora, io devo capire se posso campionare la differenza tra i fronti d'onda di
+	un certo <code>target</code> e un certo <code>riferimento</code>. Chi siano
+	questi due, è ancora da decidere… io &amp; le <code>924 pagine</code> di
+	manuale del vecchio <em>DSO 7032A</em> siamo a lume di candela per vedere
+	che si può fare.
 stop#side
 start#side
 	p#tid#<code>L21</code> – @BOB@#l21
@@ -245,4 +280,5 @@ start#side
 	p#tid#<code>L23</code> – @Il firmware della cotoletta@#l23
 	p#tid#<code>L24</code> – @Evoluzione@#l24
 	p#tid#<code>L25</code> – @Rivelazioni@#l25
+	p#tid#<code>L26</code> – @Altre@ rivelazioni#l26
 stop#side

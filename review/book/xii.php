@@ -1,6 +1,6 @@
 title#Harry Potter#E il lettore non impressionabile
 prev#Recensioni/Libri/XI/#Nessun Dove
-next#Recensioni/Show/XIII/#Kamen Rider
+next#Recensioni/Kamen/Rider/#Kamen Rider
 start#page
 tab#intro
 		<p>

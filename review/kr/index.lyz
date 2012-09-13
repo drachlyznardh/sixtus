@@ -7,9 +7,8 @@ start#page
 	include#review/kr/movies
 stop#page
 start#side
-	title#Kamen Rider
-	stitle@right#Cosa e perché
 	include#review/kr/intro#side@as@content
+	title#Kamen Rider
 	stitle@right#Le serie che ho visto
 	include#review/kr/series#side@as@content
 	stitle@right#I film che ho visto

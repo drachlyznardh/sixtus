@@ -1,9 +1,10 @@
 title#Di come persi le balle in guerra
 subtitle#Galeotta fu la sella della bicicletta
 short#Persi le balle
-prev#Storie/2012/LXXXVI/#Impresa (III)
+prev#Storie/2012/LXXXVI/#Impresa @III@
 #next#Storie/2012/LXXXVIII/#
 start#page
+tab#documentario
 	title#Di come persi le balle in guerra
 	Ho rischiato le balle. È una cosa che ogni ciclista fa. È una minaccia
 	costante per uno che va in bicicletta: cadere è sempre una possibilità. E
@@ -93,8 +94,35 @@ start#page
 	Schienses</code> alle prese con le consegne dei progetti. L'annunciato
 	documentario “il <em>Dacav</em> e il suo protocollo di routing” è sospeso
 	per mancanza del soggetto, datosi alla macchia e attualmente introvabile.
+tab#consegna
+	E fu così che dovetti portare la bicicletta ad aggiustare (per la storia del
+	recupero, leggete
+	link#Extra/Fitness/#questo@).#iv
+	Stracarico della mia roba – come al solito – me ne andai in città,
+	trascinando la bicicletta; con il mozzo rotto, la traballante ruota
+	posteriore sbatteva regolarmente contro il freno, trattendendomi dalla
+	massima velocità.
+
+	<em>Gnikku gnikku</em> con la bicicletta fino a <em>piazza Fiera</em>, là
+	dove mi fermai giusto un momentino (&lt;ironia&gt;) per far sistemare la mia
+	carta d'identità. Il documento mi scadde alcuni mesi fa, ma un timbro bastò
+	per prolungarne la vita per altri cinque anni; per ottenere il timbro, poi,
+	bastò attendere in coda all'anagrafe… soltanto un quarto d'ora d'attesa,
+	dopo aver scelto un numero tra le quindici possibili alternative a
+	disposizione…
+
+	In seguito, ancora con la bicicletta al fianco, fino allo <em>Sportler</em>.
+	Mi dissero che sarebbe stato duopo sostituire non soltanto il mozzo, ma
+	l'intera ruota. Con cattiva luna sul mio avvenire, non v'erano ruote da
+	sostituire, al momento; lasciai dunque il mio recapito cellofonico, nella
+	speranza d'essere avvertito a sostituzione avvenuta.
 stop#page
 start#side
 	title#Persi le balle
-	Storia dolorosa, ma vera
+	r#Storia dolorosa, ma vera
+	begin#ol
+		p#tid#Il documentario#documentario
+		p#tid#La consegna#consegna
+		p#Il ritiro
+	end#ol
 stop#side

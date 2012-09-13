@@ -133,27 +133,22 @@ tab#busa
 	probabilmente, ci riuscirò di nuovo. Ma l'ho fatto.
 stop#page
 start#side
-	p#tid#Intro#intro
-	titler#Record
-	p#tid#Precedenti#i
-	reverse#
-	[<code>Storia</code>]
-	link#Storie/2010/IV/#Impresa (I)
-	reverse#
-	[<code>Storia</code>]
-	link#Storie/2011/XLVII/#Impresa (II)
-	p#tid#Fino a Lavis#ii
-	reverse#
-	[<code>Storia</code>]
+	r#tid#Intro#intro
+	title#Record
+	p#tid#I – @Precedenti@#i
+	r#[<code>Storia</code>]
+	link#Storie/2010/IV/#Impresa @I@
+	r#[<code>Storia</code>]
+	link#Storie/2011/XLVII/#Impresa @II@
+	p#tid#II – @Fino a Lavis@#ii
+	r#[<code>Storia</code>]
 	link#Storie/2011/LXVII/#Ancora ce la posso fare
-	reverse#
-	[<code>Storia</code>]
+	r#[<code>Storia</code>]
 	link#Storie/2011/LXXI/#Libertà
-	p#tid#Quel sentiero che non esiste#iii
-	reverse#
-	[<code>Storia</code>]
+	p#tid#III – @Quel sentiero che non esiste@#iii
+	r#[<code>Storia</code>]
 	link#Storie/2012/LXXVI/#Il giro della Maranza#ii
-	
-	Quei dannati scalini in cima a
-	tid#la busa#busa
+	p#tid#IV – I dannati scalini in cima al@la busa@#busa
+	r#[<code>Storia</code>]
+	link#Storie/2012/LXXXVI/#Impresa @III@#iii
 stop#side

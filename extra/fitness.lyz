@@ -55,7 +55,7 @@ tab#iii
 	corse prima.
 	clear#right
 tab#iv
-	title#Deviazione dal percorso standar – <em>09/09</em>
+	title#Deviazione dal percorso standard – <em>09/09</em>
 	begin#mini@right
 		stitle@right#Tempi
 		r#→ <code>17', 20'</code>
@@ -84,6 +84,36 @@ tab#iv
 	poco; la bici almeno stava bene. Nel tornare a casa (escluso dal
 	cronometraggio) ho spinto la bicicletta come un monopattino, scatenando
 	sguardi basiti da parte di svariate nonnine e svariati cani.
+tab#v
+	title#Dopocena… – <em>11/09</em>
+	begin#mini@right
+		stitle@right#Tempi
+		r#→ <code>15'</code>
+		r#← <code>16'</code>
+		r#Totale <code>31'</code>
+	end#mini
+	Dunque, ieri non sono arrivato a correre per via di
+	<strong>&lt;COSE&gt;</strong>, per cui mi sono riproposto di correre dopo
+	cone anziché prima.
+	
+	Ed ecco, ora posso dire un paio di cose:
+	begin#ul
+		non è un gran problema correre di notte, basta fare attenzione,
+		conoscere la strada, guardarsi dagli sconosciuti…
+
+		non è un gran problema, anzi, è quasi meglio: si sta freschi e si trova
+		meno gente;
+
+		non è un gran problema, <strong>a meno che s'abbia mangiato cieci a
+		pranzo &amp; zuppa di fagioli a cena</strong>…
+	end#ul
+	Ho corso abbastanza bene, era fresco ma non freschetto, ho comunque
+	incrociato un buon numero di altri corridori (ed un incredibile numero di
+	cani a passeggio) ed ho pure fatto lo scattone finale lungo il parco del
+	Fersina.
+
+	Ma la prossima volta mangio altre cose oppure rinuncio.
+	clear#right
 tab#percorsi
 	Non è che io improvvisi giri a caso, faccio sempre gli stessi. Li aggiungo
 	nell'ordine che mi pare…
@@ -115,10 +145,11 @@ tab#percorsi
 stop#page
 start#side
 	title#Fitness
-	p#tid#29/08 – @Prima uscita@ – [breve <code>17'+18'</code>]#i
-	p#tid#03/09 – @Il ritorno@ – [breve <code>17'+16</code>]#ii
+	p#tid#29/08@ – Breve [<code>17'+18'</code>]#i
+	p#tid#03/09@ – Breve [<code>17'+16</code>]#ii
 	p#tid#06/09@ – Standard [<code>1h 10'</code>]#iii
 	r#tid#09/09@ – Standard~ [<code>1h 24'</code>]#iv
+	p#tid#11/09@ – Breve/N [<code>31'</code>]#v
 	stitle@right#Altra yadda
 	r#tid#Percorsi#percorsi
 stop#side

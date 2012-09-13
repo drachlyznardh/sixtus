@@ -111,10 +111,6 @@ tab#intro
 	E comunque a me fa ridere!
 stop#page
 start#side
-	r#tid#Perché uno dovrebbe#intro#I
-	/
-	tid#Di cosa aver paura#intro#II
-	/
-	tid#Come ottenere i LULZ#intro#III
+	r#tid#Perché uno dovrebbe#intro
 stop#side
 

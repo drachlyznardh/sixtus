@@ -916,7 +916,29 @@ tab#s13
 	include#legend/cronache.13.lyz#page
 tab#s14
 	include#legend/cronache.14.lyz#page
-stop#page
+tab#s15
+	Le ultime due sessioni sono state quanto mai sbrigative e improvvisamente;
+	entrambe senza riassunto istantaneo. Ma soprattutto sono state lente &amp;
+	inutili.
+
+	L'intera compagnia è riuscita ad infilarsi nel castello, <em>Mounsier de
+	Camouflage</em> s'è trattenuto dal far esplodere il reattore (resistendo
+	alla tentazione del <em>bottone ROSSO</em>, temendo che l'esplosione avrebbe
+	coinvolto anche gli <em>Oompa Loompa</em>) e tutti si sono addentrati nei
+	piani alti del castello. Grazie alle sole chiacchere, l'intero party s'è
+	travestito da personale di servizio con delle divise rubate; con un
+	ascensore apposito, poi, la compagnia ha raggiunto l'ultimo piano della
+	torre centrale, con la scusa di pulire la cassetta dell'Alligatore.
+
+	L'ultimo piano è un enorme loft, grande esattamente un ettaro. Al suo
+	interno, oltre ai due finti camini, si trovano l'enorme scrivania del
+	<em>Regio Presidente</em>, la cassetta dell'<em>Alligatore
+	Presidenziale</em> (<strong>&lt;musichina presidenziale&gt;</strong>) ed una
+	palude.
+
+	Al momento di attraversare il canneto, la compagnia incappa nell'alligatore
+	(<strong>&lt;musichina&gt;</strong>) che vuole mangiarli. <em>Riusciranno i
+	nostri eroi?</em>
 stop#page
 start#side
 	p#tid#Per cominciare#background
@@ -937,4 +959,5 @@ start#side
 	p#tid#<code>S12</code> – @L'accampamento@#s12
 	p#tid#<code>S13</code> – @Il castello dolce@#s13
 	p#tid#<code>S14</code> – @[in corso]@#s14
+	p#tid#<code>S15~16</code> – @Sneaking@#s15
 stop#side

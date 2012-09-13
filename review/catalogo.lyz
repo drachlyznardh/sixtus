@@ -13,7 +13,7 @@ tab#cron
 		li#link#Recensioni/Film/X/#I Puffi### – 2011
 		li#link#Recensioni/Libri/XI/#Nessun Dove### – 1996
 		li#link#Recensioni/Libri/XII/#Harry Potter### – 1997~2007
-		li#link#Recensioni/Show/XIII/#Kamen Rider### – 1971~2011
+		li#link#Recensioni/Kamen/Rider/#Kamen Rider### – 1971~2011
 		li#link#Recensioni/Show/XIV/#Gundam AGE### – 2011
 		li#link#Recensioni/Show/XV/#TransFormers: Prime### – 2010~2011
 		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap### – 2009
@@ -43,6 +43,7 @@ tab#cron
 		li#link#Recensioni/Show/XL/#Godzilla@ – 1998
 		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio@ – 1959
 		li#link#Recensioni/Film/XLII/#Starship troopers@ – 1997~2008
+		li#link#Recensioni/Show/XLIII/#Macross@ – 1985~2011
 	end#ol
 tab#film
 	begin#ul
@@ -82,13 +83,14 @@ tab#show
 		p#link#Recensioni/Show/V/#BlassReiter### – 2008
 		p#link#Recensioni/Show/VI/#Masterforce### – 1988
 		p#link#Recensioni/Show/IX/#Angel Beats!### – 2010
-		p#link#Recensioni/Show/XIII/#Kamen Rider### – 1971~2011
+		p#link#Recensioni/Kamen/Rider/#Kamen Rider### – 1971~2011
 		p#link#Recensioni/Show/XIV/#Gundam AGE### – 2011
 		p#link#Recensioni/Show/XV/#TransFormers: Prime### – 2011
 		p#link#Recensioni/Show/XXI/#Super Sentai### – 1975~2011
 		p#link#Recensioni/Show/XXII/#Dollhouse### – 2009~2010
 		p#link#Recensioni/Show/XXV/#Chuck### – 2007~2012
 		li#link#Recensioni/Show/XL/#Godzilla@ – 1998
+		li#link#Recensioni/Show/XLIII/#Macross@ – 1985~2011
 	end#ul
 tab#libri
 	begin#ul
