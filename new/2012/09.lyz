@@ -3,6 +3,21 @@ prev#News/2012/08/#Agosto@ 2012
 #next#News/2012/10/#Ottobre@ 2012
 tabs#alwaysall
 start#page
+tab#14
+	p#link##<em>@14/09/2012@</em>##14
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
+	title#Invasion &amp; (quasi tutto) Macross
+	Dunque… mi sono visto delle cose, negli ultimi giorni – per la verità, anche
+	prima, solo che non avevo avuto briga di scrivere  – ed ecco delle
+	recensioni sbrigative. Intanto,
+	link#Recensioni/Film/XLII/#Starship Troopers: @Invasion@#INVASION
+	non è tanto brutto, anzi è praticamente un bel film. Poi, la mia
+	personale <em>quest</em> per vedere tutto (quel che conta di)
+	<em>Macross</em> è quasi finita,
+	link#Recensioni/Show/XLIII/#leggetene@. Poi, veramente, ci sarebbe anche un
+	piccolo aggiornamento sullo stato della
+	link#Storie/2012/LXXXVII/#bicicletta@, se voleste.#CONSEGNA
 tab#09
 	p#link##<em>@09/09/2012@</em>##09
 	/
@@ -75,7 +90,13 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/09/#Settembre@ 2012
-	<em>09/09</em> – [<code>Storie</code>]
+	p#<em>14/09</em> – [<code>Recensioni</code>]
+	link#Recensioni/Film/XLII/#Invasion#INVASION
+	e
+	link#Recensioni/Show/XLIII/#Macross@,
+	ma anche [<code>Storia</code>]
+	link#Storie/2012/LXXXVII/#la @consegna della bicicletta@#CONSEGNA
+	p#<em>09/09</em> – [<code>Storie</code>]
 	link#Storie/2012/LXXXVI/#Il pranzone#iii
 	e la più recente [<code>Extra</code>]
 	link#Extra/Fitness/#corsa@,#iv

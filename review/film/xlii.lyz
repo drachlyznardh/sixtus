@@ -1,4 +1,6 @@
 title#Starship Troopers#Whould you like to know more?
+prev#Recensioni/Libri/XLI/#Fanteria della spazio
+next#Recensioni/Show/XLIII/#Macross
 start#page
 tab#i
 	title#Starship Troopers
@@ -226,12 +228,65 @@ tab#iii
 	Datemi ascolto, cioè no, non a me… ascoltate <a
 	href='http://www.youtube.com/results?search_query=it&apos;s+a+good+day+to+die'>questa</a>
 	canzone. È la parte migliore del film.
+tab#invasion
+	E dopo lunghi anni d'attesa (pochi mesi, in realtà) ecco arrivare un film in
+	grafica… l'hanno fatto in Giappone, e questo solamente rinvigorisce le mie
+	speranze.
+
+	E infatti, 'sto film non è mica male. O meglio, diciamo che “<em>poteva
+	andare molto peggio</em>”, e m'è piaciuto. Ora, vediamo se riesco a
+	raccontarlo senza rovinarlo…
+	sec#
+	C'è un certo <em>sasso spaziale</em> con sopra un forte, che improvvisamente
+	manda un <code>SOS</code> perché – come sempre succede – s'è riempito di
+	<em>bacarozzi</em>; una nave viene mandata in soccorso. Sulla nave ci sono
+	<em>Carmen</em> ed una squadra di <em>poveri truppini</em>; sul sasso ci sono
+	<em>Carl</em> ed una seconda squadra di <em>truppini</em>.
+
+	Segue un gran casino, soldatini morti a destra e a manca… senza dare alcuna
+	spiegazione, <em>Carl</em> – che adesso è <em>Ministro del Paranormale</em>
+	– ruba la nave e lascia tutti a morire… il rest dei tizi, più o meno guidati
+	da <em>Carmen</em> (che ha il maggior grado, comandante, mi pare) raccatta
+	una <em>zattera spaziale</em> per tornare sulla Terra… ma ecco che arriva un
+	altro <code>SOS</code>.
+
+	Il gran generale della base orbitale attorno alla Terra (che sarebbe
+	<em>Johnny</em>, ovviamente) chiama la zattera e la invia al “soccorso” di
+	<em>Carl</em>, che ora è dato per disperso assieme a tutti la nave rubata.
+	Trovata la nave, quasi tutti quelli della zattera salgono a bordo per
+	controllare; non appena accendono la luce, va tutto a puttane:
+	<em>bacarozzi</em> a bordo, cadaveri dappertutto e <em>Carl</em> chiuso in
+	una cella di contenimento.
+
+	In breve, si scopre che una <em>regina dei bacherozzi</em> è salita a bordo
+	ed ha assunto il controllo della nave; il piano di <em>Carl</em> per
+	controllare gli insetti con la mente è andato storto, ma il problema non è
+	quello: la regina intende invadere la Terra con la nave rubata. La Terra è
+	fortunatamente molto lontana, e c'è mezza flotta tra questa nave e la sua
+	meta, no? E invece…
+
+	Attraverso un opportuno <em>wormhole</em> che stava proprio lì, ecco che la
+	nave ribelle arriva ad un passo dalla base orbitale, la scansa per mezzo
+	metro e va a schiantarsi su Parigi. Ma schiva anche quello per mezzo metro,
+	e finisce nel deserto fuori Parigi (eh?!).
+
+	Il piano dei grandi generali è semplice: per fermare l'invasione basta
+	nuclearizzare l'intero sito. Ecco dunque una mezz'ora durante la quale
+	<em>Johnny</em> può fare l'eroe salvando tutti, <code>drop-from-orbit</code>
+	con le capsule e giù botte.
+
+	Alla fine, la nave esplode, muoiono tutti tranne <em>Johnny</em>,
+	<em>Carl</em>, <em>Carmen</em>, il tizio di colore e la bionda che deve
+	tornare a casa dai suoi bambini. Ed ovviamente, un singolo bacarozzo.
+	sec#
+	title#Starship Troopers: Invasion
+	title@right#Poteva andare molto peggio
 stop#page
 start#side
 	title#Starship Troopers
 	p#tid#Starship Troopers@ – 1997#i
 	p#tid#Hero of the federation@ – 2004#ii
 	p#tid#Marauder@ – 2008#iii
-	p#Invasion – 2012
+	p#tid#Invasion@ – 2012#invasion
 	p#Incoming reboot – 20xx
 stop#side

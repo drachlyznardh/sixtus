@@ -25,6 +25,7 @@ tab#intro
 	end#ul
 	Non mi ricordo bene tutto, non ho mai capito tutto…
 tab#sdfmacross
+	title#Super Dimension Fortress Macross – <code>1982</code>
 	Tutto comincia con questa serie, nel lontano <code
 	class="wrong">1982</code> <code>2001</code> (siamo nel futuro): ad un certo
 	punto, una colossale astronave d'origine sconosciuta precipita sulla Terra.
@@ -84,6 +85,7 @@ tab#sdfmacross
 	insopportabile triangolo amoroso di gente che si ama ma forse no ma forse sì
 	ma forse questo ma forse quello.
 tab#plus
+	title#Macross Plus – <code>1994~1995</code>
 	<em>Macross Plus</em> è un film che segue la serie.
 	sec#
 	Non è che ci sia molto da dire… alcuni tizi stanno mettendo a punto un nuovo
@@ -110,6 +112,7 @@ tab#plus
 	Non lo so… mi sembra tanto un incrocio tra <em>Ghost in the shell</em> e
 	<em>Terminator: Salvation</em>.
 tab#7
+	title#Macross 7 – <code>1994</code>
 	Questa credo sia la migliore.
 	sec#
 	Vi ricordate del <em>genio</em> e della <em>guerriera aliena
@@ -144,6 +147,8 @@ tab#7
 	pilota con Basara, l'alieno brutto con l'aliena di luce, l'aliena di luce
 	con Basara… è complicato. L'unica che vive felice è la batterista.
 tab#galaxy
+	title#Macross 7 the movie – <code>1995</code>
+	title@right#The galaxy is calling me
 	Più che un film, questo è un episodio speciale cinematografico.
 	sec#
 	Basara ha ancora un altro intrallazzo, stavolta con un'altra figlia del
@@ -158,6 +163,7 @@ tab#galaxy
 	In mezzo capitano anche i mostri della serie, ma senza particolari danni.
 	Non mi pare che muoia nessuno, qui.
 tab#zero
+	title#Macross Zero – <code>2002</code>
 	Di questo mi ricordo poco.
 	sec#
 	Si tratta di un prequelone. Di quando la <em>Macross</em> non era ancora
@@ -169,6 +175,7 @@ tab#zero
 	importantissimi resti della <strong>&lt;Protoculture!!!&gt;</strong> sotto
 	forma di dipinti rupestri e leggenda di un uomo-pesce spaziale.
 tab#frontier
+	title#Macross Frontier – <code>2007</code>
 	Molto tempo dopo le altre serie, in entrambe le linee temporali.
 	sec#
 	La flotta <em>Frontier</em> è diretta verso il centro della galassia, per
@@ -189,6 +196,10 @@ tab#frontier
 	Per farla breve, l'unico tizio interessante muore; il tizio figo resta figo
 	fino alla fine, il “protagonista” non riesce a decidersi tra le due ragazze
 	e resta solo come un baccalà.
+tab#wings
+	title#Macross Frontier the movie – <code>2011</code>
+	title@right#Wings of goodbye
+	Pensavo d'averlo, ma non ancora…
 stop#page
 start#side
 	r#tid#Cosa? Come? Perché?#intro
