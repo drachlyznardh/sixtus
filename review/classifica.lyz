@@ -89,6 +89,7 @@ tab#bay
 	begin#ul
 		li#link#Recensioni/Show/V/#Blassreiter
 		li#link#Recensioni/Show/XL/#Godzilla
+		li#link#Recensioni/Film/Brutti/XLIV/#Resident Evil: @Retribution@#Retribution
 	end#ul
 tab#no
 	stitle#No

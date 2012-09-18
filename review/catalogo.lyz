@@ -44,6 +44,7 @@ tab#cron
 		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio@ – 1959
 		li#link#Recensioni/Film/XLII/#Starship troopers@ – 1997~2008
 		li#link#Recensioni/Show/XLIII/#Macross@ – 1985~2011
+		li#link#Recensioni/Film/Brutti/XLIV/#Resident Evil@ – 2002~2012
 	end#ol
 tab#film
 	begin#ul
@@ -70,6 +71,7 @@ tab#brutti
 		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider@ – 2011
 		li#link#Recensioni/Film/Brutti/XXXVIII/#Spider-man@ – 2000~2012
 		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky@ – 2000~2012
+		li#link#Recensioni/Film/Brutti/XLIV/#Resident Evil@ – 2002~2012
 	end#ul
 tab#game
 	begin#ul
