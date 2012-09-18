@@ -555,22 +555,19 @@ tab#vi
 	goloso. Il resto, forse, nella prossima storia.
 stop#page
 start#side
-	Nessuno mi sta scrivendo per quella storia del banner ;_; Questo spazio
-	resta quindi disponibile, e potrebbe anche trasformarsi in una
-	link#Extra/#ministoria#contenuti#ministorie
-	composta di piccolossimi pezzetti sparsi.
+	Nessuno mi sta scrivendo per quella storia del banner <code>;_;</code>
+	Questo spazio resta quindi disponibile, e potrebbe anche trasformarsi in una
+	link#Extra/#ministoria#contenuti#ministorie composta di piccolossimi
+	pezzetti sparsi.
 	br#
 	title#Niente di particolare
-	tid#Intro#i
-
-	tid#Il giro della Maranza#ii
-	
-	tid#Quell'incontro sull'EIT ICT Labs#iii
-
-	tid#Preparativi#iv
-
-	tid#Il quarto giorno#v## – sabato 25/02
-
-	E poi,
-	tid#il sesto giorno#vi## – lunedì 27/02
+	begin#ol
+		p#tid#Intro#i
+		p#tid#Il giro della Maranza#ii
+		p#tid#Quell'incontro sull'EIT ICT Labs#iii
+		p#tid#Preparativi#iv
+		p#tid#Il quarto giorno#v## – sabato 25/02
+		p#E poi,
+		tid#il sesto giorno#vi## – lunedì 27/02
+	end#ol
 stop#side

@@ -274,11 +274,11 @@ stop#page
 start#side
 	title#Il finale
 	titler#Storia XVII
-	pre#<ol>
+	begin#ol
 		li#tid#Della settimana della verità#i
 		li#tid#La sera del ballo#ii
 		li#tid#I parenti di Natale#iii
 		li#tid#I regali stupidi#iv
-	pre#</ol>
+	end#ol
 stop#side
 
