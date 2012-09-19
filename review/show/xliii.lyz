@@ -198,8 +198,48 @@ tab#frontier
 	e resta solo come un baccalà.
 tab#wings
 	title#Macross Frontier the movie – <code>2011</code>
-	title@right#Wings of goodbye
-	Pensavo d'averlo, ma non ancora…
+	title@right#The false songstress / Wings of goodbye
+	In realtà, sarebbero due, i film… il primo riprende la serie dall'inizio e
+	la scorre in tutta fretta, e persino il mio occhio (stanco e disattento)
+	s'accorge che non proprio tutto corrisponde… il secondo invece scrive tutto
+	un altro finale.
+	sec#
+	stitle@right#The false songstress
+	Ci sono ancora una volta <em>Alto</em> che vuole fare il pilota perché gli
+	piace volare, <em>Ranka</em> vuole cantare perché cantare è bello, e
+	<em>Sheryl</em> che canta perché è l'unica cosa che sa fare (e poi è figa,
+	quindi tutti vogliono sentirla).
+
+	Poi arrivano gli <em>insetti spaziali</em> che voglio mangiare tutti, ma non
+	<em>Ranka</em>. <strong>&lt;MISTERO!?!?!&gt;</strong> mentre le due ragazze
+	pensano un po' a cantare e un po' a sbavare dietro il tizio, che non se le
+	caga manco un pochettinino e pensa soltanto a fare il soldatino.
+
+	Non è che succeda niente di particolare, in questo film…
+	sec#
+	stitle@right#Wings of goodbye
+	È in questo che le cose succedono veramente. Dunque, <em>Ranka</em> è
+	sorella adottiva di <em>Ozma</em> (che sarebbe un tizio figo della serie) ma
+	in realtà è sorella di <em>Brera</em>, il <code>cyborg-stronzo</code>; e
+	questo tizio non è l'unico <code>cyborg</code>, ce ne sono a mazzi, compresa
+	la <em>produttrice</em> di Sheryl. Succede che <strong>&lt;YADDA &amp;
+	COMPLOTTI!!!&gt;</strong> il governo e i militari vogliono usare le canzoni
+	per controllare gli <em>insetti spaziali</em> e ribellarsi alla Terra.
+
+	Grazie ad una <em>tecnobubbola</em>, entrambe le ragazze possono comunicare
+	con gli <em>insetti spaziali</em> attraverso le canzoni (perché è
+	<em>Macross</em>) e alla lunga questo basta per convincere gli insetti a
+	diventare buoni; il cattivo (che cosa fosse veramente non l'ho capito) viene
+	spaccato di botte e infine c'è più o meno un pianeta che esplode.
+
+	Ciò che conta è che nessuno di importante muore (nemmeno il biondo!) e tutti
+	vivono felici. Alla fine del film, <em>Sheryl</em> viene operata per guarire
+	dall'<code>AIDS spaziale</code> e “potrebbe” anche farcela; <em>Alto</em>,
+	che intanto era andato a stringere la mano a <em>sua Maestà la regina degli
+	insetti spaziali</em>, “sarebbe” stato coinvolto con l'esplosione finale ma
+	ben si vede che l'intero <em>ambaradan</em> effettua un <em>fold</em> e si
+	salva. Quindi, in pratica, non muore nessuno; solo gli stronzi. E finalmente <em
+	class="spoiler">Alto sceglie Sheryl</em>.
 stop#page
 start#side
 	r#tid#Cosa? Come? Perché?#intro
@@ -210,5 +250,6 @@ start#side
 	r#tid#The galaxy is calling me@ – 1995 [M]#galaxy
 	p#tid#Macross Zero@ – 2002#zero
 	p#tid#Macross Frontier@ – 2007#frontier
+	r#tid#The false songstress@ – 2010 [M]#wings
 	r#tid#Wings of goodbye@ – 2011 [M]#wings
 stop#side
