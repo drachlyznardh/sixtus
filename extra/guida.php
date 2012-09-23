@@ -104,7 +104,7 @@ tab#compagni
 tab#contenuti
 	id#Storie
 	Le storie sono il vero cuore della baracca.
-	title#Storie
+	stitle#Storie
 	Si cominciò un po' di tempo fa, mi par che fosse attorno al settembre 2010.
 	Prima di quello, io e i miei allegri compagni, il <span class="em">popolo
 	dell'aula studio</span>, tenevamo le storie per tradizione orale, come
@@ -127,7 +127,7 @@ tab#contenuti
 	più, tutti i contenuti sono spesso inaffidabili, contengono falsità
 	e opinioni assolutamente personali.
 	id#recensioni
-	titler#Recensioni
+	stitle@right#Recensioni
 	Perché, se all'inizio raccontavo soltanto delle cose, un giorno ho
 	finito per scrivere una storia immensamente lunga che in pratica
 	recensiva (nel mio personale e peculiare stile) un certo
@@ -148,7 +148,7 @@ tab#contenuti
 	id#TruNaluten
 	begin#mini@right
 		id#Extra
-		titler#Extra
+		stitle@right#Extra
 		<code>Ricorsione!?!</code> In effetti, c'è una sezione Extra, che
 		contiene le cose che non so dove mettere. Non c'è tanta roba, in
 		effetti; se ci fosse, avrebbe la sua sezione dedicata, ma non c'è.
@@ -160,7 +160,7 @@ tab#contenuti
 	Le pagine più antiche presenti sul sito, tecnicamente. In realtà, sono il
 	motivo per cui il sito esiste. Ma con il tempo sono state soppiantate dalle
 	<code>Storie</code>.
-	title#Tru Naluten
+	stitle#Tru Naluten
 	Questo racconto è l'originale motivo per cui il sito esiste. Si tratta di
 	una lunga e grossa storia fantasy, per la maggior parte ancora non scritta:
 	mi porto dietro il progetto da una decina d'anni, ormai…
@@ -170,7 +170,7 @@ tab#contenuti
 	id#NaNoWriMo
 	begin#mini@left
 	id#Legend
-	title#Legend RPG
+	stitle#Legend RPG
 	Sezione aggiunta dopo parecchio tempo, verso <code>Marzo 2012</code>,
 	dedicata ad un certo sistema di <em>Gioco di Ruolo</em> e alla campagna da
 	me <code>master</code>ata con esso.
@@ -178,7 +178,7 @@ tab#contenuti
 	Sperando che niente d'importante esploda.
 	end#mini
 	br#
-	titler#NaNoWriMo
+	stitle@right#NaNoWriMo
 	Il NaNoWriMo, avvenimento al quale partecipo dal 2010, è una cosa
 	interessante, ma anche lunga. E quindi si merita la sua sezione dedicata. E
 	dopo quello, ci sono stati altri anni e altra fuffa…
