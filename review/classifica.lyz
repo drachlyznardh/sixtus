@@ -41,6 +41,7 @@ tab#buoni
 		link#Recensioni/Libri/XXXV/#Uomini d'arme#II
 		e
 		link#Recensioni/Libri/XXXV/#Piedi d'argilla#III
+		link#Recensioni/Show/XLV/#Princess Tutu
 	end#ul
 tab#lasciano
 	stitle#Si lascia guardare
@@ -133,5 +134,6 @@ tab#magnifici
 		li#link#Recensioni/Film/XXIII/#Zombieland
 		li#The Rocky Horror Picture Show
 		li#link#Recensioni/Show/XIV/#Gundam AGE#ii## dopo un po'
+		li#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter
 	end#ul
 stop#page

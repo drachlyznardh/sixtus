@@ -691,6 +691,72 @@ tab#e35
 	Sono senza parole. È diventato <em>Batman</em> dello spazio, dalla sera alla
 	mattina, perché ha scelto di essere più figo degli altri. Che cazzo avranno
 	in testa gli sceneggiatori? Boh, ma mancano ancora 13 episodi!
+tab#e40
+	Non erano veramente 13 episodi… meglio così. Vediamo un po'… non va meglio
+	di come andava prima: arriva quell'inevitatibile serie di contrasti che
+	vedono Kio – salvatore del mondo che non vuole spargere sangue – contro suo
+	padre Asemu – pirata spaziale che uccide a destra e a manca per mantenere
+	l'equilibrio (eh?!?) – e Furitto – che vuole diventare un genocida spaziale
+	– contro un sacco di altra gente assennata che però non può nulla perché non
+	ha un Gundam…
+
+	Dall'altra parte, i marziani vengono a far la guerra; i loro numeri sono
+	illimitati, la loro fortezza è ad un passo dalla Terra e il loro cannone è
+	<em>graaaaaaande così</em>. Purtroppo, però, Ezelcanto è vecchio e stanco e
+	non ce la fa più; aspettando di morire, passa tutto il comando a Zehatto.
+
+	Povero Zehatto: il comando gli dà alla testa, così come l'essere al comando
+	di un Gundam (quello posticcio di Ezelcanto). Ma ecco un improvviso cambio
+	di scena! Vi ho parlato del misterioso <code>ExaBD</code>? Sarebbe un
+	database che contiene le specifiche dei vecchi mobile suit (quelli delle
+	guerra passate) che sono (<strong>&lt;ovviamente&gt;</strong>) potentissimi
+	e pertanto proibiti; e questo database è così potente e così proibito che si
+	è costruito da solo (eh?!?) un gigantesco <em>mobile armor</em> per
+	proteggersi. E siccome &lt;yadda&amp;motivi plausibili&gt; Zehatto decide
+	che deve sconfiggere questo coso enorme per ereditare il potere… Asemu
+	arriva per aiutarlo… &lt;onore&gt; a destra e a manca, dichiarazione di
+	guerra, schieramento di milioni di soldatini…
+
+	Tutti si stanno menando, finché – al penultimo episodio – Zehatto sbarella
+	(o forse deve obbedire alle pressanti necessità del finale) e ordina di
+	sparare con il mega-cannone; nel farlo, sacrifica la sua <em>gnocca
+	tascabile</em> (che in ogni caso non serviva a niente, quindi non dispiace
+	veramente a nessuno) e un bel po' di gente a caso.
+	<strong>&lt;DRAMMA?&gt;</strong>
+	
+	Asemu arriva e lo uccide. Tanti cari saluti.
+	sec#
+	Poi arriva un altro <em>boss finale</em>, un tizio a caso con un robottone
+	brutto brutto e nero che attacca rogna con tutti, poi però arriva il
+	<em>mobile armor</em> maledetto (e nient'affatto distrutto come si credeva)
+	che se lo mangia, e diventa lo <em>stracazzo di boss finale gigante che
+	ammazza buoni&amp;cattiv, amici&amp;nemici</em>. A quel punto, non ho capito
+	bene come o perché, Furitto decide che tutto deve esplodere, va di corsa a
+	prendere un missilone e poi si fa un bel <em>trip</em> nei ricordi (ve la
+	ricordate <em>Yurin</em>, la ragazza con la quale Furitto aveva avuto una
+	tresca &gt;9000 episodi fa, la ragazza che veniva uccisa?) e – pensando alla
+	ragazza – decide che in fondo va bene anche così.
+
+	Cacciato il discorsone, terrestri e marziani fanno instantaneamente la pace.
+	Wow, cent'anni di guerra finita così, a pacche sulle spalle. Resta però il
+	<em>fantaboss</em>. Basta attivare l'<code>H4x mode</code> del Gundam e dopo
+	quattro colpi di Kio <em>supersaiyan</em> anche il coso esplode.
+
+	Ed è fatta… la vita prosegue, Ezelcanto muore nel suo letto, a Furitto fanno
+	una statua, gli altri diventano vecchi… poteva andare peggio, in fondo…
+	sec#
+	Insomma, che dire? Non mi pare che questa roba sia peggio di <em>Gundam 00
+	R2</em>, ma fa comunque cagare. Nessuno si prende il tempo di scrivere una
+	trama decente, nessuno sviluppa i personaggi, nessuno lascia spazio al
+	finale, al futuro… e almeno la metà delle morti non servono a nient'altro
+	che a sbrodolare <strong>&lt;DRAMMA ISTANTANEO!!!&gt;</strong>. Anche
+	tenendo la storia uguale, ci si poteva concentrare sulle relazioni invece
+	che sulla fuffa e sulle battaglie: c'erano tra generazioni di personaggi per
+	creare una storia vera, e invece non succede niente e alla fine che succede
+	a ciascuno non me lo dicono.
+
+	Ora, la più grande paura è che <em class="spoiler">decidano di fare il
+	film</em>.
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -715,5 +781,6 @@ start#side
 	p#tid#Episodi 30~34#e30
 	/
 	tid# 35~39#e35
-	/ 40~52
+	/
+	tid# 40~49#e40
 stop#side
