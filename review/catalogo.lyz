@@ -45,6 +45,10 @@ tab#cron
 		li#link#Recensioni/Film/XLII/#Starship troopers@ – 1997~2008
 		li#link#Recensioni/Show/XLIII/#Macross@ – 1985~2011
 		li#link#Recensioni/Film/Brutti/XLIV/#Resident Evil@ – 2002~2012
+		li#link#Recensioni/Show/XLV/#Princess Tutu@ – 2002
+		li#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter@ – 2001
+		li#link#Recensioni/Show/XLVII/#Accel World@ – 2012
+		li#link#Recensioni/Film/XLVIII/#The cabin in the woods@ — 2011
 	end#ol
 tab#film
 	begin#ul
@@ -62,6 +66,7 @@ tab#film
 		p#link#Recensioni/Film/XXIX/#Il gatto con gli stivali### – 2011
 		li#link#Recensioni/Film/XXXII/#I Vendicatori### – 2012
 		li#link#Recensioni/Film/XLII/#Starship troopers@ – 1997~2008
+		li#link#Recensioni/Film/XLVIII/#The cabin in the woods@ — 2011
 	end#ul
 tab#brutti
 	begin#ul
@@ -72,6 +77,7 @@ tab#brutti
 		li#link#Recensioni/Film/Brutti/XXXVIII/#Spider-man@ – 2000~2012
 		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky@ – 2000~2012
 		li#link#Recensioni/Film/Brutti/XLIV/#Resident Evil@ – 2002~2012
+		li#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter@ – 2001
 	end#ul
 tab#game
 	begin#ul
@@ -93,6 +99,8 @@ tab#show
 		p#link#Recensioni/Show/XXV/#Chuck### – 2007~2012
 		li#link#Recensioni/Show/XL/#Godzilla@ – 1998
 		li#link#Recensioni/Show/XLIII/#Macross@ – 1985~2011
+		li#link#Recensioni/Show/XLV/#Princess Tutu@ – 2002
+		li#link#Recensioni/Show/XLVII/#Accel World@ – 2012
 	end#ul
 tab#libri
 	begin#ul
