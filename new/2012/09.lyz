@@ -1,8 +1,33 @@
 title#Settembre 2012#Piove, non piove, boh… sembra marzo
 prev#News/2012/08/#Agosto@ 2012
-#next#News/2012/10/#Ottobre@ 2012
+next#News/2012/10/#Ottobre@ 2012
 tabs#alwaysall
 start#page
+tab#30
+	p#link##<em>@30/09/2012@</em>##30
+	/
+	link#Extra/#<strong>@Storia@</strong>#CONTENUTI#Storie
+	title#Si riempì il disco
+	Ecco un problema che m'ha tenuto occupato per un po': lo
+	link#Storie/2012/LXXXIX/#spazio disco
+	s'era esaurito.
+tab#24
+	p#link##<em>@24/09/2012@</em>##24
+	/
+	link#Extra/#<strong>@Recensione@</strong>#CONTENTUTI#Recensioni
+	title#La scuola prosegue
+	Anche oggi lezione, per la prima volta tre diverse; prima d'ora, per vari
+	motivi, qualche professore era stato assente. Comunque, ho notato che –
+	contrariamente a tutte le mie aspettative – questo mese è stato piuttosto
+	ricco di notizie e di cazzatine; mi domando come possa essere accaduto…
+
+	Intanto, questa sera vado al cinema a vedermi il lungamente atteso
+	<em>Prometheus</em>, sperando che i miei 33 anni di attesa (dall'uscita di
+	<em>Alien</em> nel <code>1979</code>, ovviamente) valgano la pena.
+
+	Tra l'altro, è anche finito
+	link#Recensioni/Show/XLVII/#Accel World@,
+	fatto che non mi dispiace poi tanto.
 tab#23
 	p#link##<em>@23/09/2012@</em>##23
 	/
@@ -196,6 +221,8 @@ tab#03
 stop#page
 start#side
 	stitle#link#News/2012/09/#Settembre@ 2012
+	p#<em>30/09</em> – [<code>Storia</code>]
+	link#Storie/2012/LXXXIX/#Si riempì il disco
 	p#<em>23/09</em> – una [<code>Storia</code>]
 	link#Storie/2012/LXXXVIII/#SPAM@,#viagra
 	e varie [<code>Recensioni</code>]
