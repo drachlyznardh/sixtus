@@ -1,0 +1,38 @@
+title#La campagna di War#Sperando vada meglio di quella del GODS
+prev#Legend/Cronache/I/#La campagna del GODS
+start#page
+tab#intro
+	Semi-ufficialmente intitolata
+	title@right#Scozzesi &amp; Elfi
+	Questa è la campagna sceneggiata e masterata da <em class="war">War</em>
+	dopo il travolgente finale della mia. Le cronache di questa campagna,
+	registrate su carta da qualcuno di noi, verranno successivamente postate qui
+	in seguito a qualche adattamento grafico. Per far fronte alle terribili
+	implicazioni che pubblicare su questo sito comporta, ecco una piccola guida.
+	sec#
+	title#Una piccola guida
+	Ci sono pochi comandi in croce; ciasuno di essi viene mappato (senza
+	eccessivo sforzo dalle &amp;9000 scimmie che fan funzionare il server) in
+	PHP / HTML.
+	
+	Per controllare i paragrafi (o i punti in una lista) basta andare a capo due
+	volte, ossia lasciare una riga vuota; per lasciare una riga vuota c'è il
+	comando <code>br♯</code>. Per cambiare sezione si usa il comando
+	<code>sec♯</code>, per lasciare anche lo spazio si usa <code>sbr♯</code>. I
+	titoli incorniciati si fanno con <code>title♯&lt;testo&gt;</code>, quelli
+	sottolineati con <code>stitle♯&lt;testo&gt;</code>; per mettere il testo a
+	destra si aggiunge <code>[s]title@right♯&lt;testo&gt;</code>.
+
+	Come il <em class="bolo">Bolo</em> avrà immaginato di sicuro, per scrivere
+	il <em>cancelletto</em> non c'è strategia che tenga (perché non ho scritto
+	abbastanza codice e <em>'nc'hoppalle</em> di farlo…), quindi usate il
+	simbolo di <em>diesis</em> (<code>♯</code>). Tutte le altre figatine sono
+	<em>segreto professionale™</em> e non ve le dico.
+tab#prologo
+	include#legend/second/prologo#page
+stop#page
+start#side
+	p#tid#Introduzione#intro
+	tid# / @Prologo@#prologo
+	title#Scozzesi &amp; Elfi
+stop#side

@@ -43,6 +43,7 @@
 				'Vol.I' => 'tru/primo',
 				'Vol.II' => 'tru/secondo',
 				'Vol.III' => 'tru/terzo')),
-		'Legend' => 'legend'
+		'Legend' => array ('legend',
+			'Cronache' => 'legend')
 	);
 ?>
