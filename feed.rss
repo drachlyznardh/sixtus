@@ -7,6 +7,13 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>La campagna di War</title>
+			<description>La prima sessione, mentre le ore di lezione mi
+			travolgono.</description>
+			<pubDate>Fri, 12 Oct 2012 20:00:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/10/#12</guid>
+		</item>
+		<item>
 			<title>Alticcio</title>
 			<description>[Queste notizie arrivano in ritardo] Le lezioni mi
 			stanno ammazzando.</description>
@@ -25,13 +32,6 @@
 			<description>Le lezioni sono ricominciate</description>
 			<pubDate>Tue, 18 Sep 2012 15:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/09/#17</guid>
-		</item>
-		<item>
-			<title>Invasion &amp; Macross</title>
-			<description>Vedo cose, le recensisco. E ne racconto delle
-			altre.</description>
-			<pubDate>Fri, 14 Sep 2012 13:15:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/09/#14</guid>
 		</item>
 	</channel>
 </rss>

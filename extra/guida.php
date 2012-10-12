@@ -175,7 +175,8 @@ tab#contenuti
 	dedicata ad un certo sistema di <em>Gioco di Ruolo</em> e alla campagna da
 	me <code>master</code>ata con esso.
 	
-	Sperando che niente d'importante esploda.
+	Sperando che niente d'importante esploda. E poi c'è anche la campagna di
+	War.
 	end#mini
 	br#
 	stitle@right#NaNoWriMo

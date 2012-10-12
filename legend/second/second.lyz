@@ -30,9 +30,47 @@ tab#intro
 	<em>segreto professionale™</em> e non ve le dico.
 tab#prologo
 	include#legend/second/prologo#page
+tab#01
+	<em>BBC Scotland presents</em>
+	r#60 anni dopo…
+	sbr#
+	Sentite il <strong>&lt;BOODOOSH!!!&gt;</strong>? È il caratteristico suono
+	del laboratorio di <em>Crissy</em> che esplode e manda fumo. Giunge
+	trottante il piccolo <em>Rob McGuffin</em> in cerca dell'autrice del botto;
+	ma non per il botto in se, bensì per ordine del vecchio <em>McGuffin</em>.
+	Anche la sorella <em>Emily</em> segue; per strada, poi, le due sorelle e il
+	bimbo incontrano <em>Angus</em>, mandato a chiamare da un altro nipotino del
+	vecchio. <em>Beth</em> invece si trova già alla capanna / casetta / villa
+	/ magione / castello.
+
+	Il povero <em>Colin Ferguson</em>, capo cacciatore della comunità, giace
+	ferito, a sua detta da un animale “piccolo, veloce &amp; stronzo”; pare che
+	lo scontro sia capitato poco fuori dal villaggio, ai piedi di una rampa dove
+	i bimbi sono soliti giocare.
+
+	I quattro convocati e il vecchio s'avviano per investigare; trovano un buco
+	nella montagna e delle tracce nel bosco. Le tracce portano al colpevole: una
+	specie di talpa cornuta, con il corno in fiamme. Prima di riuscire a seccare
+	la prima da lontano, ne spunta un'altra. E mentre i due cadaveri vengono
+	controllati, altre due sbucano dalla caverna.
+	sec#
+	Sistemata la faccenda, il vecchio McGuffin rivela le sue preoccupazioni:
+	voci e misterosi ritrovati tecnologici elfici confermano la possibilità che
+	il governo elfico si adoperi per sopprimere la popolazione scozzese della
+	valle; ma non solo: il povero McGuffin è a corto di uomini e può fidarsi
+	soltanto di questi quattro poveracci.
+
+	Non c'è molto tempo, ovviamente: il buco potrebbe venir chiuso, gli elfi
+	potrebbero muoversi, il panico potrebbe scatenarsi, la cena potrebbe
+	freddarsi. Ciascuno dei nostri eroi saluta i propri cari e si appresta ad
+	infilarsi nel buco per raccattare informazioni, fermare le
+	<em>ignitalpe</em> e salvare <em>Nuova Scozia</em>. Forse.
 stop#page
 start#side
 	p#tid#Introduzione#intro
 	tid# / @Prologo@#prologo
 	title#Scozzesi &amp; Elfi
+	begin#ul
+		li#tid#<code>S01</code> – @11/10@#01
+	end#ul
 stop#side

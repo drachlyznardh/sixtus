@@ -30,9 +30,12 @@ start#page
 		link#NaNoWriMo/2011/#2011
 	stitle#link#Legend/#Legend### RPG
 	reverse#
-		link#Legend/#Regolamento### /
-		link#Legend/Cronache/#Cronache### /
-		link#Legend/Spoiler/#<em class="spoiler">SPOILER</em>
+		link#Legend/#Regolamento
+		/ Cronache [  
+		link#Legend/Cronache/I#GODS
+		/
+		link#Legend/Cronache/II/#War
+		]
 	sec#
 	begin#inside
 		p#link#Extra/Guida/#Modi#META#Modi
