@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>Ho un piano</title>
+			<description>Un piano per sopravvivere al semestre</description>
+			<pubDate>Tue, 30 Oct 2012 21:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/10/#30</guid>
+		</item>
+		<item>
 			<title>La campagna di War</title>
 			<description>La prima sessione, mentre le ore di lezione mi
 			travolgono.</description>
@@ -26,12 +32,6 @@
 			peggio.</description>
 			<pubDate>Wed, 19 Sep 2012 20:45:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/09/#19</guid>
-		</item>
-		<item>
-			<title>Torno a scuola…</title>
-			<description>Le lezioni sono ricominciate</description>
-			<pubDate>Tue, 18 Sep 2012 15:30:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/09/#17</guid>
 		</item>
 	</channel>
 </rss>

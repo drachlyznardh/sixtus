@@ -3,6 +3,18 @@ prev#News/2012/09/#Settembre@ 2012
 #next#News/2012/11/#Novembre@ 2012
 tabs#alwaysall
 start#page
+tab#30
+	p#link##<em>@30/10/2012@</em>##30
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
+	title#È quasi finito ottobre?!?
+	Qui il mese passa ed io sono continuamente a lezione… non riesco più a
+	tenere il ritmo come una volta… quand'ero giovane…
+
+	Spiacente, 'sto mese finisce e potrebbe essere il meno produttivo della
+	storia del sito… <code>&gt;9000</code> scuse da parte mie. Almeno ho un
+	link#Storie/2012/XC/#piano
+	per sopravvivere a questo semestre. E il resto si vedrà.
 tab#12
 	p#link##<em>@12/10/2012@</em>##12
 	/
@@ -32,6 +44,8 @@ tab#01
 stop#page
 start#side
 	stitle#link##Ottobre@ 2012
+	p#<em>30/10</em> – [<code>Storia</code>]
+	link#Storie/2012/XC/#Ho un piano
 	p#<em>12/10</em> – [<code>Legend</code>]
 	link#Legend/Cronache/II/#La prima sessione#01
 	p#<em>01/10</em> – [<code>Recensione</code>]
