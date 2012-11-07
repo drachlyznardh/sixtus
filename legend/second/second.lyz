@@ -65,6 +65,8 @@ tab#01
 	freddarsi. Ciascuno dei nostri eroi saluta i propri cari e si appresta ad
 	infilarsi nel buco per raccattare informazioni, fermare le
 	<em>ignitalpe</em> e salvare <em>Nuova Scozia</em>. Forse.
+tab#02
+	include#legend/second/2#page
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -72,5 +74,6 @@ start#side
 	title#Scozzesi &amp; Elfi
 	begin#ul
 		li#tid#<code>S01</code> – @11/10@#01
+		li#tid#<code>S02</code> – @18/10@#02
 	end#ul
 stop#side
