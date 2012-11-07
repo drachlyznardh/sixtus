@@ -7,6 +7,12 @@
 		<description>Storie stupide e divertenti, ma anche no</description>
 		<language>it</language>
 		<item>
+			<title>La visione</title>
+			<description>Un po' come Abate cruento. Ma nella vita vera.</description>
+			<pubDate>Wed, 08 Nov 2012 11:30:00 +0100</pubDate>
+			<guid>http://gods.roundhousecode.com/News/2012/11/#07</guid>
+		</item>
+		<item>
 			<title>Ho un piano</title>
 			<description>Un piano per sopravvivere al semestre</description>
 			<pubDate>Tue, 30 Oct 2012 21:30:00 +0100</pubDate>
@@ -25,13 +31,6 @@
 			stanno ammazzando.</description>
 			<pubDate>Wed, 10 Oct 2012 09:30:00 +0100</pubDate>
 			<guid>http://gods.roundhousecode.com/News/2012/10/#01</guid>
-		</item>
-		<item>
-			<title>Talk like a pirate day!</title>
-			<description>Poteva andare meglio, ma poteva anche andare
-			peggio.</description>
-			<pubDate>Wed, 19 Sep 2012 20:45:00 +0100</pubDate>
-			<guid>http://gods.roundhousecode.com/News/2012/09/#19</guid>
 		</item>
 	</channel>
 </rss>

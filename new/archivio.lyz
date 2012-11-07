@@ -20,9 +20,11 @@ start#side
 		link#News/2012/06/#Giugno
 	reverse#
 		link#News/2012/07/#Luglio@ /
-		link#News/2012/08/#Agosto@ / Settembre
+		link#News/2012/08/#Agosto@ /
+		link#News/2012/09/#Settembre
 	reverse#
-		Ottobre / Novembre / Dicembre
+		link#News/2012/10/#Ottobre@ /
+		link#News/2012/11/#Novembre@ / Dicembre
 	stitle#link#News/2011/#2011
 	reverse#
 		link#News/2011/07#Luglio@ /

@@ -13,10 +13,10 @@ start#side
 	reverse#
 		link#News/2012/07#Luglio@ /
 		link#News/2012/08#Agosto@ /
-		Settembre
+		link#News/2012/09#Settembre
 	reverse#
-		Ottobre /
-		Novembre /
+		link#News/2012/10#Ottobre@ /
+		link#News/2012/11#Novembre@ /
 		Dicembre
 	sec#
 	title#Notizie
