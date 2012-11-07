@@ -1,0 +1,20 @@
+title#UniTN Sentai Studionger
+short#Studionger
+subtitle#Yunitien Sentai Sotudiyonjā
+start#page
+	Le grandi avventure dei Non-Power-Rangers della facoltà di Scienze!
+	begin#ul
+		li#War: Distributed Studionger
+		li#Jazz: Emotion Studionger
+		li#Gods: Bachelor Studionger
+	end#ul
+	sec#
+	begin#ul
+		li#Complexity Zord
+		li#Concurrency Zord
+		li#Embedded Zord
+		li#Realtime Zord
+		li#Distributed Zord
+		li#Montrezord
+	end#ul
+stop#page
