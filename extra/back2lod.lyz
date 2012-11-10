@@ -1,0 +1,65 @@
+title#Back to the Lab Of Doom
+subtitle#Per l'ultima volta – [La Morte]
+short#Back2LOD
+prev#Extra/Fitness/#Fitness
+related#Storie/2011/LII/#Sgaggiotiem
+related#Extra/FPGA/Download/#con la @Relazione@
+related@li#Extra/Diario/#Il @diario@ del Capitano
+related#Extra/LabOfDoom/#Lab Of Doom
+start#page
+tab#guida
+	title@right#La guida al LabOfDoom
+	Questo tab è dedicato a me. L'ho fatto apposta.
+	<strong>&lt;[NARCISISMO]?!?&gt;</strong> Non proprio… la sua esistenza è
+	dovuta al fatto che cercare <em>cose scientifiche</em> all'interno delle mie
+	guide si sta rivelando arduo.
+
+	È normale, considerato che l'autore sono io, che queste pagine contengano
+	pensieri e fuffa in abbondanza e dettagli tecnici con meno abbondanza. Ergo,
+	un tab serio.
+	stitle#Cose tecniche in ordine sparso
+	begin#double
+		<strong>Ricerca degli Host</strong>: il comando <code>nast</code>
+		permette di ispezionare una rete, in particolare la linea <code>nast -i
+		eth0 -m</code> permette di cercare tutti gli host collegati a questo
+		attraverso la connessione indicata;
+
+		<strong>La Cotoletta</strong>: ufficialmente <em>Digital
+		Instruments</em> <code>GPS-MXS</code>; una porta di rete
+		(<code>192.168.122.105</code>) e con una connessione seriale
+		<code>RS232</code> (da
+		trattare con <code>57600 baud</code> e <code>8n1 bit</code>);
+		l'interfaccia web risponde ovviamente a <em>root/root</em>;
+	end#double
+tab#i
+	title#Il ritorno – <code>08/11</code> 2012
+	Non venivo all'<code>Aula5</code> da quasi due mesi. E niente è cambiato… a
+	parte il fatto che la <em>Cotoletta</em> risponde anche meno di prima…
+
+	E di fatto, la porta di rete è muta; il pannellino LCD sul fronte è acceso
+	ma non da alcun segno; tuttavia, se attacco l'oscilloscopio l'ondina è al
+	suo posto… questo può significare una sola cosa:
+	r#La <em>cotoletta</em> è uno <strong>&lt;[ZOMBIE]!!!&gt;</strong>
+	sec#
+	title#La fine di ogni speranza? – <code>09/11</code> 2012
+	Ho scritto a <em>Sgaggio</em> per chiedere un incontro e mi sono rimesso
+	alla ricerca di tracce di vita intelligente all'interno della
+	<em>Cotoletta</em>; per farlo, ho dovuto chiedere nuovamente in prestito il
+	<em>cambiasesso</em> seriale (ufficialmente denominato <code>mini gender
+	changer</code> per porte <code>SR232</code> – U.S.A. Patent @SHARP@5199906)
+	ed ho riacceso il fidato <em>minicom</em>.
+
+	Ma nemmeno questo funziona. E il vecchio <code>nast -m -i eth0</code> non
+	vede altro <code>host</code> che il mio vecchio <em>Tanngrisnir</em>. Boh.
+	Scriverò questa storia e vedrò che anche <em>Sgaggio</em> accetti che la
+	<em>Cotoletta</em> è un fallimento, che si deve staccare la spina:
+	r#intra@gods#Non c'è altro da fare@pausa drammatica@É l'<strong>&lt;[UNICO MODO]!!!&gt;</strong>
+stop#page
+start#side
+	title#Back 2 LOD
+	p#tid#La [ @Guida@ ] nella guida#guida
+	stitle@right#Novembre 2012
+	begin#ul
+		li#tid#I primi due giorni#i
+	end#ul
+stop#side

@@ -264,5 +264,6 @@ start#side
 	link#Extra/MLCAD/#MLCad &amp; LPub@ /
 	link#Extra/BUX/#Bu&chi;@ /
 	link#Extra/LABOFDOOM/#Lab Of Doom@ /
-	link#Extra/Fitness/#Fitness
+	link#Extra/Fitness/#Fitness@ /
+	link#Extra/Back2LOD/#Back 2 the LOD
 stop#side

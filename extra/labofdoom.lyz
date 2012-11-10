@@ -4,6 +4,7 @@ subtitle#Il mio tempo passato nell'<em>Aula 5</em> a fare il male
 prev#Extra/BUX/#Bu&chi;
 next#Extra/Fitness/#Fitness
 related#Extra/Diario/#Il @diario@ del Capitano
+related@li#Extra/Back2LOD/#Back@ to the Lab Of Doom
 start#page
 	include#extra/labofdoom.07.lyz
 	include#extra/labofdoom.08.lyz
