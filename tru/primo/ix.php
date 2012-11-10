@@ -118,7 +118,7 @@ speak#ci#Purtroppo la distanza rende imprecisi i rilevamenti, ma i sensori indic
 speak#simak#&Egrave; impossibile! Nulla guadagna massa in Datundhum
 speak#ci#I dati sono innegabili. Numerose masse compaiono nel nucleo del pianeta e si muovono disordinatamente al suo interno. I disturbi sono compatibili con numerosi fori nella parete planare
 speak#lyz#Ne arrivano altri, stavolta direttamente da dentro: si mangeranno il pianeta o lo spezzeranno. In ogni caso, &egrave; tardi, non possiamo fermarli
-speak#ci#Successive analisi rilevano la presenza di 363 masse in movimento ed una massa stazionaria. Il numero di masse &egrave; compatitile con un gruppo di [<span class="em">Creatura sconosciuta ♯15</span>] al quinto livello gerarchico
+speak#ci#Successive analisi rilevano la presenza di 363 masse in movimento ed una massa stazionaria. Il numero di masse &egrave; compatitile con un gruppo di [<span class="em">Creatura sconosciuta @SHARP@15</span>] al quinto livello gerarchico
 </div>
 <p>Merda, eLyz ha ragione. E pure Coscienza ce l'ha… Ora c'&eacute; poco da fare, il cuore del pianeta verr&agrave; divorato, poi l'intera struttura del pianeta collasser&agrave;, ma visto il movimento che c'&eacute; all'interno probabilmente esploder&agrave;. Non posso fermare il processo, ma posso sempre distruggere tutto, l'esercito di mostri blu assieme all'intero pianeta.</p>
 <div class="inside">

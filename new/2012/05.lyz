@@ -63,8 +63,8 @@ tab#29
 	<code>IMPOSSIBRU.JPG</code> da parte mia, controllo e vedo che la mia pagina
 	funziona perfettamente. Ma è quella <em>locale</em>, sul mio
 	<em>Tanngrisnir</em>, su cui faccio i test; quella <em>online</em> invece la
-	questione è ben diversa… errore alla prima riga <code>Cannot [start♯page ]
-	@legend/cronache.8.lyz</code>
+	questione è ben diversa… errore alla prima riga <code>Cannot
+	[start@SHARP@page] @legend/cronache.8.lyz</code>
 
 	Dopo un paio di controlli, vado a scoprire che uno <code>switch
 	statement</code> fallisce nel riconoscere la stringa <code>"page"</code>. Il

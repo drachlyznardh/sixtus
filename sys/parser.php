@@ -76,6 +76,11 @@
 			} else $frag = split ('#', $line);
 			$frag[0] = strtolower(trim($frag[0]));
 
+			foreach (array_keys($frag) as $key) {
+				if (preg_match('/@SHARP@/', $frag[$key]))
+					$frag[$key] = preg_replace('/@SHARP@/', '#', $frag[$key]);
+			}
+
 			switch ($frag[0]) {
 
 				case 'if':

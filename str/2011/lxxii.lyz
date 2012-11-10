@@ -82,10 +82,11 @@ tab#ii
 	href="http://it.wikipedia.org/wiki/Anti-Counterfeiting_Trade_Agreement">ACTA</a>,
 	Non censuratemi né uccidetemi per questo ;_;)
 	sbr#
-	Prendo tutto il mio codicione, comincio a <code>♯DEFINE</code>re tutto quel 
-	che serve, metto/aggiungo, cambia/rifaccio… ma nulla serve. È (ovviamente)
-	necessario che tutto il codice sia nello stesso file perché il modulo possa
-	compilare nella maniera corretta (con il <code>Make</code> del Kernel).
+	Prendo tutto il mio codicione, comincio a <code>@SHARP@DEFINE</code>re tutto
+	quel che serve, metto/aggiungo, cambia/rifaccio… ma nulla serve. È
+	(ovviamente) necessario che tutto il codice sia nello stesso file perché il
+	modulo possa compilare nella maniera corretta (con il <code>Make</code> del
+	Kernel).
 
 	Quindi, armato di tutorial da ogni parte del mondo, <code>cat</code>to tutto
 	in un innoquo <code>module.c</code> e aggiungo le varie

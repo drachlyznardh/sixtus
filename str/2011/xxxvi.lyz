@@ -199,7 +199,8 @@ start#page
 		una classe CSS apposita, di quello strano blu scuro, ottenuto con il
 		mio indice destro, strusciato sulla tastiera.
 	
-	Quel colore infatti è nient'altro che il risultato di <span class="code">color:♯123456</span>.
+	Quel colore infatti è nient'altro che il risultato di
+	<code>color:@SHARP@123456</code>.
 	</p>
 </div><div class="section">
 	<p>

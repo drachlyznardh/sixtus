@@ -17,17 +17,18 @@ tab#intro
 	
 	Per controllare i paragrafi (o i punti in una lista) basta andare a capo due
 	volte, ossia lasciare una riga vuota; per lasciare una riga vuota c'è il
-	comando <code>br♯</code>. Per cambiare sezione si usa il comando
-	<code>sec♯</code>, per lasciare anche lo spazio si usa <code>sbr♯</code>. I
-	titoli incorniciati si fanno con <code>title♯&lt;testo&gt;</code>, quelli
-	sottolineati con <code>stitle♯&lt;testo&gt;</code>; per mettere il testo a
-	destra si aggiunge <code>[s]title@right♯&lt;testo&gt;</code>.
+	comando <code>br@SHARP@</code>. Per cambiare sezione si usa il comando
+	<code>sec@SHARP@</code>, per lasciare anche lo spazio si usa
+	<code>sbr@SHARP@</code>. I titoli incorniciati si fanno con
+	<code>title@SHARP@&lt;testo&gt;</code>, quelli sottolineati con
+	<code>stitle@SHARP@&lt;testo&gt;</code>; per mettere il testo a destra si
+	aggiunge <code>[s]title@right@SHARP@&lt;testo&gt;</code>.
 
 	Come il <em class="bolo">Bolo</em> avrà immaginato di sicuro, per scrivere
 	il <em>cancelletto</em> non c'è strategia che tenga (perché non ho scritto
 	abbastanza codice e <em>'nc'hoppalle</em> di farlo…), quindi usate il
-	simbolo di <em>diesis</em> (<code>♯</code>). Tutte le altre figatine sono
-	<em>segreto professionale™</em> e non ve le dico.
+	simbolo di <em>diesis</em> (<code>@SHARP@</code>). Tutte le altre figatine
+	sono <em>segreto professionale™</em> e non ve le dico.
 tab#prologo
 	include#legend/second/prologo#page
 tab#01

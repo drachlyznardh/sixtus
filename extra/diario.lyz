@@ -673,7 +673,7 @@ tab#m18
 	end#mini
 	begin#mini@right
 		stitle@left#/etc/init.d/rcS
-		<code>♯!/bin/sh
+		<code>@SHARP@!/bin/sh
 		p#mount -t proc none /proc
 		p#mount -t sysfs none /sys
 		p#/sbin/mdev -s</code>
