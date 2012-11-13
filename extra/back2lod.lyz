@@ -24,6 +24,13 @@ tab#guida
 		eth0 -m</code> permette di cercare tutti gli host collegati a questo
 		attraverso la connessione indicata;
 
+		<strong>Scansione della rete</strong>: è altrettanto possibile (in
+		particolare, qualora non si conoscesse la sottorete o se ne volessero
+		testare molte) utilizzare il vecchio <code>nmap</code>; esso è in grado
+		di sniffare molte cose, avendo tempo a disposizione; <code>nmap -sn
+		192.168.0.0/16</code> scansiona tutte le sottoreti
+		<code>192.168.255.255</code> con maschera a <code>16bit</code>.
+
 		<strong>La Cotoletta</strong>: ufficialmente <em>Digital
 		Instruments</em> <code>GPS-MXS</code>; una porta di rete
 		(<code>192.168.122.105</code>) e con una connessione seriale
@@ -54,6 +61,43 @@ tab#i
 	Scriverò questa storia e vedrò che anche <em>Sgaggio</em> accetti che la
 	<em>Cotoletta</em> è un fallimento, che si deve staccare la spina:
 	r#intra@gods#Non c'è altro da fare@pausa drammatica@É l'<strong>&lt;[UNICO MODO]!!!&gt;</strong>
+tab#ii
+	title#La <em>Sgaggio</em>machia – <code>13/11</code>
+	Preso un appuntamento e atteso il tempo concordato, mi sono presentato
+	all'ufficio di <em>Sgaggio</em>. È stato un po' come risvegliare un titano,
+	visto che né io né ci ricordiamo un granché dell'intera faccenda.
+	begin#half@right
+		stitle#Brutte notizie
+		Ho un bel po' di roba da fare:
+		begin#ul
+			li#i dati vanno raccolti: devo smanacciare con l'oscilloscopio e
+			ottenere i campionamenti di entrambe le fonti;
+			li#il campionamento dev'essere automatico, quindi il mio vecchio
+			programmino dovra crescere in potenza;
+			li#secondo <em>Sgaggio</em>, avere i capitoli pronti è un forte
+			incentivo psicologico; quindi devo scrivere i capitoli e
+			piacerglieli il prima possibile;
+		end#ul
+	end#half
+	br#
+	begin#half@left
+		stitle@right#Buone notizie
+		begin#ul
+			li#La <em>Cotoletta</em> è stata dichiarata morta, e la cosa non
+			dispiace a nessuno;
+			li#la scadenza al <code>09/01/2013</code> è fattibile, anche secondo
+			<em>Sgaggio</em>;
+		end#ul
+	end#half
+	clear#left
+	br#
+	E questo è quanto. Sono tornato al <em>Lab Of Doom</em> per scrivere questa
+	roba e mettermi al lavoro.
+
+	Utilizzerò la <em>Cotoletta Zombie</em> per verificare i poteri
+	dell'oscilloscopio, per adesso. Per quanto riguarda la stesura dei due
+	famigerati capitoli, mi ci metterò al lavoro di notte.
+	clear#right
 stop#page
 start#side
 	title#Back 2 LOD
@@ -61,5 +105,6 @@ start#side
 	stitle@right#Novembre 2012
 	begin#ul
 		li#tid#I primi due giorni#i
+		li#tid#La Sgaggiomachia#ii
 	end#ul
 stop#side
