@@ -72,6 +72,8 @@ tab#03
 	include#legend/second/3#page
 tab#04
 	include#legend/second/4#page
+tab#05
+	include#legend/second/5#page
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -82,5 +84,6 @@ start#side
 		li#tid#<code>S02</code> – @18/10@#02
 		li#tid#<code>S03</code> – @08/11@#03
 		li#tid#<code>S04</code> – @15/11@#04
+		li#tid#<code>S05</code> – @22/11@#05
 	end#ul
 stop#side
