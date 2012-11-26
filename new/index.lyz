@@ -1,6 +1,7 @@
 title#Novità#Le dieci notizie più recenti
 next#News/Archivio/#Archivio
 start#page
+	include#new/2012/11#26
 	include#new/2012/11#13
 	include#new/2012/11#07
 	sbr#
@@ -12,7 +13,6 @@ start#page
 	include#new/2012/09#23
 	include#new/2012/09#19
 	include#new/2012/09#18
-	include#new/2012/09#17
 stop#page
 start#side
 	include#new/2012/11#side@as@content

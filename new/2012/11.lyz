@@ -3,6 +3,16 @@ prev#News/2012/10/#Ottobre@ 2012
 #next#News/2012/12/#Dicembre@ 2012
 tabs#alwaysall
 start#page
+tab#26
+	p#link##<em>@26/11/2012@</em>##26
+	/
+	link#Storia/#<strong>@Storia@</strong>#CONTENUTI#Storie
+	title#Sogni
+	Un po' di cose che vagamente ricordo la mattina, (<code>prima ⋁ dopo</code>)
+	il primo caffè.
+	link#Storie/2012/XCI/#Un sogno ospite e due miei@,
+	tanto per scrivere qualcosa prima che il mese finisca e che la gente cominci
+	a chiedersi cosa sto facendo.
 tab#13
 	p#link##<em>@13/11/2012@</em>##13
 	/
@@ -85,6 +95,8 @@ tab#07
 stop#page
 start#side
 	stitle#link#News/2012/11/#Novembre@ 2012
+	p#<code>26/11</code> – [<em>Storia</em>]
+	link#Storie/2012/XCI/#Sogni
 	p#<code>13/11</code> – [<em>Extra</em>]
 	link#Extra/Back2LOD/#Back 2 LOD
 	p#<code>07/11</code> – [<em>Ministoria</em>]
