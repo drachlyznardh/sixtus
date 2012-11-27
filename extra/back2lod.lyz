@@ -98,13 +98,53 @@ tab#ii
 	dell'oscilloscopio, per adesso. Per quanto riguarda la stesura dei due
 	famigerati capitoli, mi ci metterò al lavoro di notte.
 	clear#right
+tab#iii
+	title#Lo scoglio – <code>??/11</code> 2012
+	r#Io e l'oscilloscopio non ci intendiamo.
+
+	Non ho scritto fin dall'inizio, non sono sicuro di quanto tempo sia passato
+	dall'inizio di questa tappa della tesi. Ma sono stato in laboratorio per
+	almeno tre diversi giorni in cerca di un modo per intendermi con
+	l'oscilloscopio, per ottenere della <em>datagrezzaglia</em> da analizzare.
+
+	Secondo il manuale, poche righe dovrebbero bastarmi per catturare tutto quel
+	che mi pare, ma invece no. Tolto il collegamento – ch'è una cazzatina,
+	<code>cat scriptino | nc 192.186.2.2 5025 > lol-dati.wannabe.csv</code>. Il
+	comando <code>:DIGitize</code> millanta di campionare i dati riempiendo
+	segmenti di memoria e mandando cose quando i dati ci sono, raccogliendo dai
+	canali specificati. Ma dice anche che tutti i canali “mostrati” dovrebbe
+	venir raccolti; <strong>&lt;[MENTE]!!!&gt;</strong>
+	sec#
+	r#Poi, un giorno
+	title#Superare lo scoglio – <code>27/11</code> 2012
+	Ancora una volta – più o meno nella stessa maniera in cui mi sono comportato
+	con il <code>Java</code>
+	link#Storie/2011/XVIII/#(@quella volta@)
+	– mi sono messo tutto elegante e sono uscito a cena con il manuale del
+	<code>DSO7032A</code> per cavargli i segreti che possiede. C'è voluto molto
+	tempo…
+
+	Alla fine di tutta la <em>yadda</em> scopro che il manuale in parte mente e
+	in parte no. I canali visualizzati non sono quelli che vengono digitalizzati
+	(e trasferiti in memoria) dal comando <code>:DIGitize</code>, al contrario
+	lo sono soltanto quelli specificati (tra l'altro, fino ad un massimo di
+	cinque). Pertanto, chi volesse come me campionare entrambi i canali
+	analogici deve lanciare un <code>:DIG CHAN1,CHAN2</code> prima di ogni
+	richiesta dati.
+	r#Ora lo so.
+
+	Posso dunque risucchiare una certa quantità di dati (per adesso, soltanto un
+	paio di ondine) per ciascun canale senza esplodere, con uno paio di script
+	<code>bash</code>. Come raccogliere più dati in una botta sola lo scoprirò
+	al prossimo tentativo.
 stop#page
 start#side
 	title#Back 2 LOD
 	p#tid#La [ @Guida@ ] nella guida#guida
 	stitle@right#Novembre 2012
 	begin#ul
-		li#tid#I primi due giorni#i
-		li#tid#La Sgaggiomachia#ii
+		li#tid#I primi due giorni@ – <code>08~09</code>#i
+		li#tid#La Sgaggiomachia@ – <code>13</code>#ii
+		li#tid#Scogli@ – <code>~27</code>#iii
 	end#ul
 stop#side
