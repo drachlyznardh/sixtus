@@ -1,4 +1,8 @@
 start#page
+	begin#mini@right
+		Questo riassunto è stato gentilmente redatto da <em>Katia</em>.
+	end#mini
+	stitle#Terza sessione – <code>08/11</code>
 	I nostri eroi, dunque, si dirigono bel belli a cavallo verso la città – tale
 	Long Isle – trascinando i cadaveri, <em class="wrong">smaronati</em>
 	allietati nel frattempo dai racconti della vita di Pio.
