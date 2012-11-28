@@ -9,9 +9,14 @@
 	}
 ?>
 	<p style="text-align: center">
-		/ <span class="em">
-		<?=$d->link($sum, $search['canonical'])?>
-		</span> /
+		<?php
+			$sum = false;
+			foreach ($search['category'] as $category) {
+				$sum .= $category .'/';
+				echo (' / '.$d->link($sum, $category));
+			}
+			echo (' /');
+		?>
 	</p>
 <?php
 	$next = $p->getNext();
