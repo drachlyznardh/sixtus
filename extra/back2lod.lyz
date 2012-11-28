@@ -137,14 +137,23 @@ tab#iii
 	paio di ondine) per ciascun canale senza esplodere, con uno paio di script
 	<code>bash</code>. Come raccogliere più dati in una botta sola lo scoprirò
 	al prossimo tentativo.
+	sec#
+	title#«È fatta» – <code>28/11</code> 2012
+	Dunque, la frase fatidica è stata pronunciata. Attraverso il comando
+	<code>:TIMebase:RANGe</code> è possibile specificare la dimensione della
+	finestra da mostrare / registrare. In più posso misurare quanti punti mi
+	pare. In più riesco a raccogliere i dati e a plottarli senza morire.
+
+	Ed ho pure incontrato <em>Sgaggio</em> sulla porta prima di uscire, quindi
+	non devo nemmeno scrivergli. Domani la discussione. Intanto la tesi cresce.
 stop#page
 start#side
 	title#Back 2 LOD
 	p#tid#La [ @Guida@ ] nella guida#guida
 	stitle@right#Novembre 2012
 	begin#ul
-		li#tid#I primi due giorni@ – <code>08~09</code>#i
-		li#tid#La Sgaggiomachia@ – <code>13</code>#ii
-		li#tid#Scogli@ – <code>~27</code>#iii
+		li#tid#I primi due giorni@ – <code>08~09/11</code>#i
+		li#tid#La Sgaggiomachia@ – <code>13/11</code>#ii
+		li#tid#Scogli@ – <code>~27~28/11</code>#iii
 	end#ul
 stop#side
