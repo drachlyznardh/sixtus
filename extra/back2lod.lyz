@@ -146,6 +146,27 @@ tab#iii
 
 	Ed ho pure incontrato <em>Sgaggio</em> sulla porta prima di uscire, quindi
 	non devo nemmeno scrivergli. Domani la discussione. Intanto la tesi cresce.
+	sec#
+	title#Grandi cose si muovono – <code>29/11</code> 2012
+	Ed ecco, a <em>Sgaggio</em> è piaciuto tutto: il campionamento, i dati, le
+	scadenze… la mia idea era buona e posso portarla avanti, mentre lui provvede
+	a cercarmi un posto comodo per realizzare gli esperimenti.
+
+	La finestra di osservazione deve essere la più stretta possibile
+	(<code>2ns</code> è il limite hardware), mentre la frequenza dei campioni la
+	posso variare tanto per mettere più grafici.
+	
+	La notizia più importante è che – non avendo noi altri strumenti
+	sopravvissuti, poiché i due <em>Digital Instrument</em> sono morti – le
+	uniche macchine produttrici di segnali che possiamo utilizzare per il
+	confronto sono il <em>grandmaster</em> e lo <em>scatolotto</em>. Pertanto,
+	la montagna &amp; Maometto verranno l'una all'altro, in qualche modo:
+	<code>(1)</code> il <em>grandmaster</em> scenderà in laboratorio oppure
+	<code>(2)</code> tutta la yadda si muoverà in uno stanzino del piano di
+	sopra, ossia il semi~ufficio accanto a quello di
+	<em>Sgaggio</em>&amp;<em>d'Artagnan</em>; in questo modo, potrei addirittura
+	evitarmi di passare per il <code>CISCA</code> a chiedere indirizzi e persino
+	di evitare router latori di <code>jitter</code>.
 stop#page
 start#side
 	title#Back 2 LOD
@@ -154,6 +175,6 @@ start#side
 	begin#ul
 		li#tid#I primi due giorni@ – <code>08~09/11</code>#i
 		li#tid#La Sgaggiomachia@ – <code>13/11</code>#ii
-		li#tid#Scogli@ – <code>~27~28/11</code>#iii
+		li#tid#Scogli@ – <code>~27~29/11</code>#iii
 	end#ul
 stop#side
