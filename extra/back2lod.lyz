@@ -167,6 +167,12 @@ tab#iii
 	<em>Sgaggio</em>&amp;<em>d'Artagnan</em>; in questo modo, potrei addirittura
 	evitarmi di passare per il <code>CISCA</code> a chiedere indirizzi e persino
 	di evitare router latori di <code>jitter</code>.
+
+	Inoltre, disse <em>Sgaggio</em>:
+	intra@sgaggio#Poi per analizza' 'sti dati, si dovrà usa' una funzione in <em>MatLab</em>; ma questo non è compito tuo, è compito mio@ma subito dopo@to', figurati se non c'è già qualcuno che…
+	e m'ha mandato sull'internet a cercare qualche poveraccio che avesse
+	scriptato la <em>Varianza di Allan</em> o la sua versione modificata.
+	include#extra/back2lod/12.lyz
 stop#page
 start#side
 	title#Back 2 LOD
@@ -177,4 +183,5 @@ start#side
 		li#tid#La Sgaggiomachia@ – <code>13/11</code>#ii
 		li#tid#Scogli@ – <code>~27~29/11</code>#iii
 	end#ul
+	include#extra/back2lod/12.lyz#side@as@content
 stop#side
