@@ -274,6 +274,110 @@ tab#vi
 		lyznardh@192.168.122.15 'cd &lt;path&gt; -xf -'</code>
 	end#outside
 	Tutti i dati sono stati raccolti.
+	sec#
+	title#Dropbear senza password – <code>17/12</code> 2012
+	L'idea sarebbe stata di utilizzare la memoria di entrambe le schede, una per
+	fare il lavoro e tenere metà della roba, l'altra per tenere l'altra metà.
+	Uno scriptino opportuno avrebbe dovuto attivarsi periodicamente e mandare
+	una certa finestra di dati compressi sull'altra scheda, per poi cancellarli
+	dalla memoria di questa.
+
+	Ma per farlo occorre che io infili la password ad ogni iterazione, oppure
+	che i due host si fidino automaticamente l'uno dell'altro. Per farlo basta
+	aprire la sessione SSH aggingendo un file per le credenziali e tutto
+	dovrebbe funzionare.
+
+	Ma. Ma per questo serve che la chiave pubblica di un host sia fisicamente
+	presente nella memoria dell'altro come chiave affidabile &amp; autorizzata.
+	Quindi bisogna mettercela; la si mette in
+	<code>~/.ssh/authorized_keys</code>. Per mettercela, bisogna estrarla; la si
+	estrae con <code>dropbearkey -y -f /etc/dropbear/dropbear_rsa_host_key |
+	grep ssh-rsa > somekey</code> e la si concatena alle altre. (Per questioni
+	di sicurezza, ovviamente, è bene che questo passaggio avvenga su un canale
+	sicuro).
+	br#
+	Lanciati <code>biggerscript 38 60 1500</code> &amp; <code>lighter.sh 1500
+	38</code> con grandi speranze.
+	sec#
+	title#Togliere dalla memoria – <code>18/12</code>
+	Lo script <code>lighter.sh</code> non funziona a dovere,
+	<em>mpc8313erdb-first</em> dispone soltanto della sua prima finestra,
+	<em>mpc8313erdb-second</em> invece le ha praticamente tutte ed è piena (ma
+	risponde).
+
+	E poi un sacco di yadda.
+
+	Montare un disco USB sulla Freescale per avere più memoria e meno problemi è
+	di per sé un problema, perché il kernel manca del supporto per EXT4, USB,
+	SCSI e molta altra yadda.
+
+	make linux-menuconfig → file system → DOS/FAT/NT Filesystem → VFAT (W95)
+										→ Nativa Language Support → (
+											iso8859-1 default
+											codepage 437 us/canada
+											NLS iso8859-1 latin 1
+										)
+	br#
+	Altro <strong>&lt;[PROBLEMA]&gt;</strong>: sembra che scrivere su
+	<code>Flash/USB</code> sia un po' lentino, e il processo di campionamento ne
+	risente… dividerò la cosa in due in modo che l'acquisizione sia effettuata
+	direttamente in memoria (<code>/tmp/</code>) e
+	successivamente/parallelamente traferita su chiave.
+tab#vii
+	title#L'intruso – <code>19/12</code>
+	Oggi, dopo aver superato l'ultima lezione di <em>Zunino</em> ed essermi
+	preparato emotivamente a consegnare l'ultimo assignment per
+	<em>Computational Complexity</em> e dopo aver pranzato, me ne sono tornato
+	in laboratorio… ed ecco che ci trovo dentro <em>Paperino</em>, il tizio il
+	cui nome è (quasi) attaccato alla porta.
+
+	Doveva fare cose su uno dei server presenti in questo stanzino, ed è venuto
+	a farlo di persona. Ne ho approfittato per andare a stamparmi il testo
+	dell'assignment.
+	sec#
+	title#La memoria <code>FLASH</code> – <code>19/12</code>
+	Ero tanto contento di poter utilizzare una chiavetta per tenere tutto il
+	log, vero? E invece… arrivo e vedo che l'oscilloscopio ha terminato. Ma poi
+	ripiglia. E poi si ferma. E ricomincia…
+
+	Mi vengono dei bei dubbi… se fosse che la scrittura su chiave USB rallenti
+	l'intero processo, devo assolutamente dividere la raccolta (che posso fare
+	in memoria) dal salvataggio permanente (ossia spostare dalla memoria alla
+	chiave, che posso fare con calma).
+
+	Intendo comunque raccogliere un tot di dati, prima. Ne ho circa
+	<code>9100</code>, e volendo aspettare fino a <code>10000</code> ho lanciato
+	un
+	begin#outside
+		<code>&gt;$ sleep 900 && mplayer ~/music/psyco.mp3</code>
+	end#outside
+	che mi avverta.
+	r#Per via del rallentamento, non ha funzionato esattamente…
+	br#
+	Prima di partire per casa, ho lanciato un'acquisizione di
+	<code>(167×300) = 50100Sa</code> assieme ad un altro script che svuota la
+	memoria e riempie la chiave. Intanto, sto pensando di spostare la traduzione
+	delle coordinate offline, e di acquisire soltanto dati grezzi, per
+	risparmiare tempo &amp; spazio.
+tab#viii
+	title#Dati grezzi, traduzione ed estrazioni – <code>20~22/12</code>
+	Estrarre i dati grezzi è semplice. Tradurli è abbastanza semplice. Fare in
+	modo che la <em>Freescale</em> li metta su chiavetta, invece, no. A quanto
+	pare, ogni tanto fallisco nel farmi capire dalla scheda: due esperimenti
+	notturni su tre sono scomparsi, e non ho idea del perché…
+
+	Ma ho sistemato anche questa. Tra ieri e oggi…
+
+	Ora (al <code>22/12</code>) è il caso – mentre piango per essere qui nel
+	buco anche di sabato – di introdurre le coordinate nella traduzione. Dalle
+	mie ultime osservazioni, infatti, non sono esattamente stabili come speravo.
+	br#
+	Ed ecco, ora ho un applicazione che acquisisce i dati dall'oscilloscopio,
+	uno script che sposta i dati su memoria Flash, un applicazione che applica
+	le coordinate ai dati grezzi e uno script che mi plotta le immagini.
+
+	<em>«Dovrebbe essere tutto a posto, adesso»</em>
+	r#Ecco, l'ho detto.
 stop#page
 start#side
 	stitle@right#Dicembre 2012
@@ -284,5 +388,7 @@ start#side
 	begin#ul
 		li#tid#Le coordinate morbide@ – <code>05~07/12</code>#v
 		li#tid#Gli esperimenti@ – <code>12~14/12</code>#vi
+		li#tid#L'intruso / memoria FLASH@ – <code>19/12</code>#vii
+		li#tid#Dati grezzi e altre cose – <code>20~22</code>#viii
 	end#ul
 stop#side
