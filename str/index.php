@@ -23,10 +23,12 @@ start#page
 	include#str/2010/index#page
 	include#str/2011/index#page
 	include#str/2012/index#page
+	include#str/2013/index#page
 stop#page
 
 start#side
 	include#str/2010/index#side
 	include#str/2011/index#side
 	include#str/2012/index#side
+	include#str/2013/index#side
 stop#side

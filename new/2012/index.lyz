@@ -1,5 +1,6 @@
 title#Notizie 2012#Tutte
 prev#News/2011/#2011
+next#News/2013/#2013
 start#side
 	title#2012
 	reverse#
@@ -17,9 +18,17 @@ start#side
 	reverse#
 		link#News/2012/10#Ottobre@ /
 		link#News/2012/11#Novembre@ /
-		Dicembre
+		link#News/2012/12#Dicembre
 	sec#
 	title#Notizie
+	include#new/2012/12#side@as@content
+	br#
+	include#new/2012/11#side@as@content
+	br#
+	include#new/2012/10#side@as@content
+	br#
+	include#new/2012/09#side@as@content
+	br#
 	include#new/2012/08#side@as@content
 	br#
 	include#new/2012/07#side@as@content
@@ -41,6 +50,22 @@ start#page
 	link##alla meno recente##fondo
 	]
 	sec#
+	titler#Dicembre 2012
+	br#
+	include#new/2012/12#page@as@content
+	sbr#
+	titler#Novembre 2012
+	br#
+	include#new/2012/11#page@as@content
+	sbr#
+	titler#Ottobre 2012
+	br#
+	include#new/2012/10#page@as@content
+	sbr#
+	titler#Settembre 2012
+	br#
+	include#new/2012/09#page@as@content
+	sbr#
 	titler#Agosto 2012
 	br#
 	include#new/2012/08#page@as@content

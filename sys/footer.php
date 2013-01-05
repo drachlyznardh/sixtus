@@ -48,7 +48,7 @@
 		e bestemmie.
 	</p></div><p style="text-align: center">
 		La versione 0.7.5&beta;²+2&pi;° di questa baracca è stata
-		scritta con <a href="http://www.vim.org/">VIm</a>. Copyright © 2007–2012 Ivan Simonini.
+		scritta con <a href="http://www.vim.org/">VIm</a>. Copyright © 2007–2013 Ivan Simonini.
 	</p><div class="outside"><p style="text-align: right">
 		Tutto questo è opera mia, pertanto ogni merito e colpa
 		sono miei.
