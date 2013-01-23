@@ -80,6 +80,8 @@ tab#07
 	include#legend/second/7#page
 tab#08
 	include#legend/second/8#page
+tab#09
+	include#legend/second/9#page
 stop#page
 start#side
 	p#tid#Introduzione#intro
@@ -94,6 +96,7 @@ start#side
 		li#tid#<code>S06</code> – @29/11@#06
 		li#tid#<code>S07</code> – @13/12@#07
 		li#tid#<code>S08</code> – @20/12@#08
+		li#tid#<code>S09</code> – @10/01@#09
 	end#ul
 	sec#
 	Una nota sul <code>crowdsourcing</code>: non tutta questa roba è mia… quindi
