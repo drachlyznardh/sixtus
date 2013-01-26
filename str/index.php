@@ -1,5 +1,5 @@
 title#Storie#Cose stupide, divertenti ma tristi, spesso vere
-next#Recensioni/#Recensioni
+next#Diario/#Diario
 start#page
 	Questa è la sezione più idiota del sito.
 

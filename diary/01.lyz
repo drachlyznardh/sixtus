@@ -1,0 +1,15 @@
+title#Diario del Capitano
+short#Diario del Capitano
+subtitle#Di come domai la Freescale MPC8313ERDB
+prev#Diario/00/#Sgaggio Tiem
+next#Diario/02/#Lab Of Doom
+start#page
+	include#extra/diario
+stop#page
+start#side
+	include#extra/diario#side
+	sbr#
+	stitle@right#Ristampa
+	In origine, questa pagina di diario era un <code>Extra</code>
+	link#Extra/Diario/#Leggi l'@originale@.
+stop#side

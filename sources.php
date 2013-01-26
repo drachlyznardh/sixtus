@@ -15,6 +15,7 @@
 	);
 
 	$sources = array (
+		'Diario' => 'diary',
 		'Storie' => array ('str',
 			'Gaem' => 'str/gaem',
 			'2010' => 'str/2010',

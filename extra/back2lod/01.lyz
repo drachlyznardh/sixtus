@@ -1,0 +1,192 @@
+start#page
+tab#ix
+	title#Tirando gli ultimi… – <code>16/01</code>
+	Rieccomi. Ci sono stati notevoli progressi, dall'ultima. Ma il costo in
+	tempo e fatica è stato spaventoso: non ho avuto né il tempo né la forza di
+	tenere traccia di quanto è stato fatto (non qui, almeno).
+
+	Al momento, tutte le applicazioni sono complete, tutti gli esperimenti sono
+	stati effettuati, una bozza semi-definitiva per ciascun capitolo della tesi
+	è stata stesa. Sono stanco morto.
+	sec#
+	Torno qui soltanto per segnarmi alcune cose importanti. Per motivi di
+	ineluttabile incompletezza, Buχ è stato messo da parte (richiederà ancora
+	mesi e mesi di lavoro) per tornare al tanto odiato LaTeX.
+
+	Grazie a <em class="war">War</em> ora so cercare i riferimenti bibliografici
+	dei paper su <em>Google Scolar</em>, che mi fornisce il pezzo di
+	<em>bibtex</em> già pronto. Inoltre, ho considerevolmente migliorato il mio
+	<em>Gnuplot-fu</em>.
+	
+	Inoltre: mai sentito parlare di <em>latexmk</em>? Beh, io sì. Provato fino
+	all'esaurimento e disinstallato per sempre.
+
+	Poi, <em>biblatex</em>: anche se il file <code>.bib</code> con tutta la mia
+	roba è già pronto, devo espressamente citarne i contenuti, altrimenti questi
+	non compaiono, lol.
+tab#x
+	title#Tirando gli ultimi [2]… – <code>17/01</code>
+	Ah. Scrisse <em>Sgaggio</em>, ieri sera, comunicando la data: è lunedì 21.
+	Il preavviso è corto da far schifo. E al grido di “<em>Ramming
+	speed!!!</em>” mi sono messo a finire la tesi.
+
+	War mi ha dato una significativa spinta per abbozzare le slide (cosa in cui
+	è esperto, mentre io sono completamente novello) che a <em>Sgaggio</em>
+	piacquero.
+
+	I capitoli sono finiti (alle 19:30). L'introduzione e la conclusione sono
+	state buttate lì (alle 20:30) e non fanno neanche troppo schifo (alle
+	21:30). La morte.
+	sec#
+	Ma lasciate che condivida con voi una grande verità.
+	r#“Ero là che copincollavo pezzi di capitolo da una parte all'altra”
+	r#“Come spostare questo da qui a lì? mi chiedevo”
+	r#“:vs con VIm per vedere i due file… righe troppo lunghe, non capisco”
+	r#“poi, ecco: terminal→edit→preferences→appearance→font→monospace 10”
+	p#“Tutte le colonne dell'infinito”
+tab#xi
+	title#Tirando gli ultimi [3]… – <code>25/01</code>
+	Ed ecco, è fatta.
+
+	Ancora una volta, si tratta di <em>post commentary</em>, perché tenere il
+	ritmo delle consegne è stato sufficientemente difficile di per sé. Dunque,
+	questo è un riassunto.
+	br#
+	stitle@right#Venerdì 18/01
+	Con i capitoli completi, l'introduzione e la conclusione buttate lì e le
+	slides abbozzate, il piano di <em>Sgaggio</em> prevede la correzione finale
+	notturna della versione che ho mandato.
+
+	La mattina di quel venerdì sono arrivato di balla, ho raccattato la bozza
+	stampata dalla cassetta delle lettere, ho applicato le correzioni alla
+	massima velocità consentitami in lettura/scrittura. Applicato tutto quel che
+	c'era, ho sbrodolato il CD e mi sono catapultato presso il
+	<em>presidio</em>. La consegna è stata effettuata senza problemi, a pochi
+	minuti dalla chiusura.
+
+	Per il resto della giornata, ho ripassato l'intera tesi da cima a fondo,
+	ricontrollando l'ortografia e mettendo a posto un po' di altra roba. Questa
+	versione è stata accettata nel corso della serata.
+	br#
+	stitle#Sabato 19/01
+	Mi sono alzato e mi sono messo a scrivere la pagina dei ringraziamenti.
+	Finita quella, sono uscito di corsa a cercare un posto aperto che potesse
+	stamparmi un paio di copie.
+
+	Ho trovato il posto, ho spiegato quanta fretta avessi e sono fuggito (a
+	casa, a completare le slides).
+
+	Nel pomeriggio, sono tornato in facoltà per provare.
+	br#
+	stitle@right#Domenica 20/01
+	Nel corso della notte, le ultime approvazioni sono giunte. Le slide sono
+	pronte. Le prove sono fatte, il tempo della presentazione è calato a
+	sufficienza per rientrare nei tempi previsti.
+	br#
+	stitle#Lunedì 21/01
+	Mi sveglio il prima possibile, corro in facolà e mi precipito a consengare
+	le slides. Secondo il modulo che ho in mano, da consegnarsi <em>“al prof.
+	Setti, nel Presidio Informatico all'IRST, sotto le scale mobili”</em>.
+
+	Soltanto che lassù c'è un cartello che dice <em>“questo ufficio non esiste
+	più, si è trasferito al Polo Ferrari da >9000 anni LOL”</em>
+	br#
+	Quindi scendo a cercare Setti nel suo nuovo ufficio, ce lo trovo. Ma vengo
+	mandato via, perché di questa roba non si occupa lui, bensì
+	l'<em>omino-150h</em>. Omino che non è nel suo ufficio, ovviamente.
+
+	Ma al secondo tentativo, trovo il tizio, consegno le slides e tutto fila
+	liscio.
+
+	Raduno un po' di amicizia e ce ne andiamo a mangiare.
+	br#
+	Poi arriva il momento. Prendo posto in <code>A205</code>, controllo l'elenco
+	mentre <em>Casati</em> mi annuncia l'ordine dei partecipanti: sono secondo.
+	Prima di me parte un tizio che conosco come <em>“Scusa Paolo, mi sdoppi la
+	variabile?”</em> che parte con una tesi (magistrale) sui diritti d'autore,
+	le certificazioni digitali, la criptazione hardware chiusa, il legittimo uso
+	etc etc etc.
+
+	Ha letto la sua presentazione. L'ha letto stando seduto, nascosto dietro il
+	PC. Ha letto per >9000 secondi e le nostre balle sono esplose. Ma grazie a
+	lui, per confronto, la mia presentazione è andata piuttosto bene.
+
+	Proiettore negli occhi, sguardo sulla commissione, ampia gestualità
+	tipicamente italiana, senza impapinarmi. Pochi minuti ed è fatta. Le domande
+	non sono terribili, me la cavo e <em>Sgaggio</em> interviene in mio
+	soccorso.
+
+	E poi, saluti e arrivederci, caffé per tutti e via, verso nuove incredibili
+	avventure.
+tab#xii
+	Ma non è finita… non ancora. I due ultimi esperimenti, con
+	<code>:TIMebase:REFClock OFF</code> non hanno prodotto alcuna differenza
+	evidente… <em>Sgaggio</em> non è tanto convinto, e mi chiede un altro
+	confronto.
+
+	Vorrebbe 4 esperimenti con i <em>Boundary Clock</em>. Si tratta di
+	utilizzare <em>ptpd2</em> come orologio opaco, non trasparente. Ma non c'è
+	opzione per farlo… sono andato a procurarmi la versione <code>1.1.0</code>,
+	vecchia come il cucco e probabilmente abbastanza diversa per garantire dei
+	risultati che si discostino.
+
+	Sono stanco e stufo. Ma almeno gli esperimenti sono automatici.
+	
+	Vado ora a preparare il primo di questi esperimenti; li farà un po' più
+	lunghi tanto per avere più dati e fabbricare più curve.
+	br#
+	stitle@right#Domande? Dubbi? Perplessità?
+	Quel che succede è che <em>Sgaggio</em> vorrebbe utilizzare i miei risultati
+	per chissà quale pubblicazione. Ma i risultati non sembrano abbastanza buoni
+	da utilizzarsi per cose importanti (e sono d'accordo).
+
+	Quindi, per prima cosa, m'ha chiesto di modificare un pelettino il setup e
+	ripetere un paio di esperimenti (l'ho fatto questa settimana). I nuovi
+	risultati sono sostanzialmente identici a quelli precedenti.
+
+	Per ottenere cose diverse è quindi necessario fare cose diverse:
+	<em>Sgaggio</em> m'ha chiesto di effettuare i quattro esperimenti rilevanti
+	utilizzando le due <em>Freescale</em> in modalità <code>BOUNDARY</code>. Il
+	problema è che <code>PTPd2</code> non offre il supporto per questa modalità.
+	LOL.
+
+	Cosa ho fatto?
+	br#
+	stitle#La magicabuula
+	Dunque dunque. Né la documentazione né i sorgenti di <code>ptpd-2.2.0</code>
+	parlano di modalità <code>BOUNDARY/TRANSPARENT</code>, né nient'altro
+	sull'internet. Sembra che la comunità si sia interessata esclusivamente alla
+	seconda versione del protocollo (perché funziona molto meglio) tralasciando
+	la prima. La mia unica opzione è quindi stata la regressione.
+
+	Mi sono messo a cercare una vecchia versione del dæmone, sperando che
+	funzioni peggio. La versione <code>1.0.0</code> non compila neanche, ma la
+	<code>1.1.0</code> funzionicchia.
+
+	Sono riuscito a compilarla, l'ho installata sulle due <em>Freescale</em> e
+	l'ho accesa. Interfaccia decisamente peggiore, comportamenti più difficili
+	da interpretare. Ma almeno funziona. O forse… uhm… come dire… i due dæmoni
+	non riescono a parlare tra di loro e non vedono il <code>GRANDMASTER</code>:
+	se specifico <code>-g</code> entrambi rimangonon <code>slave</code> e
+	ascoltano per sempre, ma non raccolgono traffico.
+	
+	Ma il <code>SyncBox</code> riconosce comunque il <code>LANTIME M600</code>,
+	senza problemi (almeno, l'indirizzo MAC è quello corretto). La buona notizia
+	è questa, aggiunta (forse) al fatto che i due dæmoni malfunzionanti in mezzo
+	ai due potrebbero produrre prestazioni ragionevolmente peggiori.
+
+	Se e come questi risultati possano essere significativi, lo scoprirò domani.
+	Forse.
+stop#page
+start#side
+	stitle@right#Gennaio 2013
+	begin#ul
+		li#tid#Tirando gli ultimi…@ – <code>16/01</code>#ix
+		li#tid#Tirando gli ultimi [2]…@ – <code>17/01</code>#x
+		li#tid#Tirando gli ultimi [3]…@ – <code>25/01</code>#xi
+	end#ul
+	stitle#Bonus content?!?
+	begin#ul
+		li#tid#E dopo la fine, avanti@ – <code>25/01</code>#xii
+	end#ul
+stop#side

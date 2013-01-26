@@ -1,0 +1,29 @@
+title#Pagine di diario
+short#Diari
+subtitle#Che poi sarebbero storie lunghe lunghe
+prev#Storie/#Storie
+next#Recensioni/#Recensioni
+start#page
+	Alcune storie durano troppo… Alcune storie vengono scritte in corso d'opera…
+	Alcune storie servono più a me – per ricordare la roba – che a voi – per
+	farvi delle risate.
+
+	Per queste storie, ecco le <em>Pagine di Diario</em>, che mi sono servite
+	per tener viva la speranza nei momenti bui.
+	sec#
+	Le prime pagine di diario sono storie e pezzi di contenuti che ho scritto
+	per necessità, e sono state importate in questa sezione per migliorarne la
+	visibilità.
+
+	È possibile che altre pagine originali vengano aggiunte, in futuro.
+stop#page
+start#side
+	stitle@right#Ristampe
+	p#link#Diario/00/#<code>00</code> – @Sgaggio Tiem@
+	p#link#Diario/01/#<code>01</code> – @Diario del Capitano@
+	p#link#Diario/02/#<code>02</code> – @Lab Of Doom@
+	p#link#Diario/03/#<code>03</code> – @Back to the Lab Of Doom@
+	sec#
+	stitle#Diari
+	<[prossimamente]>
+stop#side

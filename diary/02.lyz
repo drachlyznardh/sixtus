@@ -1,0 +1,14 @@
+title#Lab Of Doom
+subtitle#Del mio viaggio in Aula5
+prev#Diario/01/#Diario del Capitano
+next#Diario/03/#Back to the Lab Of Doom
+start#page
+	include#extra/labofdoom
+stop#page
+start#side
+	include#extra/labofdoom#side
+	sbr#
+	stitle@right#Ristampa
+	In origine, questa pagina di diario era un <code>Extra</code>
+	link#Extra/LabOfDoom/#Leggi l'@originale@.
+stop#side

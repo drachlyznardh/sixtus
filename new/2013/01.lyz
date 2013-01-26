@@ -3,6 +3,20 @@ prev#News/2012/12/#Dicembre@ 2013
 next#News/2013/02/#Febbraio@ 2013
 alltab#
 start#page
+tab#25
+	p#link##<em>@25/01/2013@</em>##25
+	/
+	link#Extra/#Diario#CONTENUTI#Diario
+	title#Ed è fatta!
+	Con ampio ritardo, ecco una nuova categoria di pagine pronta per accogliere
+	cronache da aggiornare in corso. Le prime quattro sono già
+	link#Diario/#qui@.
+	Le altre arriveranno, con calma.
+
+	stitle@right#Quasi dottore
+	Intanto, ho finito la tesi, l'ho discussa ed ora rimane soltanto la
+	proclamazione. Per alcuni dettagli finali,
+	link#Diario/03/#leggete@.#xi
 tab#07
 	p#link##<em>@07/01/2013@</em>##07
 	/
@@ -27,5 +41,6 @@ tab#07
 stop#page
 start#side
 	stitle#link#News/2013/01/#Gennaio@ 2013
+	p#link##<code>25/12</code> – [<em>Diario</em>] @Ed è fatta!@##25
 	p#link##<code>07/12</code> – [<em>MiniStoria</em>] @Il voto di Complexity™@##07
 stop#side

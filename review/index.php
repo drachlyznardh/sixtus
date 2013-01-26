@@ -1,5 +1,5 @@
 title#Recensioni#Sincere, spesso brutte
-prev#Storie/#Storie
+prev#Diario/#Diario
 next#Tru/Naluten/#Tru Naluten
 start#page
 tab#intro
