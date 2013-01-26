@@ -2,7 +2,11 @@ title#Storie 2013#Prossimamente…
 prev#Storie/2012/#Storie@ 2012
 #next#Storie/2013/#Storie@ 2014
 start#page
+	Queste sono le storie del 2013. Ad un certo punto divento dottore.
 stop#page
 start#side
 	title#Storie 2013
+	begin#ol@start@92
+		li#link#Storie/2013/XCII/#Il festone
+	end#ol
 stop#side
