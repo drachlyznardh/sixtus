@@ -1,0 +1,34 @@
+title#Il ballo &amp; la prossimità
+subtitle#Al servizio di Sua Maestà la Regina
+start#page
+tab#i
+	Qui sopra di noi, al <code>DISI</code> hanno bisogno di gente che faccia
+	<em>cose fighe</em> in fretta. <em>Sua Maestà la Regina</em> – già relatrice
+	magistrale di <em>Jazz</em> e sua attuale <em>advisor</em> – ha un secondo
+	dottorando, tale <em>Ffabbio</em>. Quest'uomo fa musica in una <em>stanza da
+	musica</em>.
+
+	Ma siccome né lui né il suo compare sono informatici d'origine, il loro
+	programma è un accrocchione da spavento. Hanno bisogno che sia riscritto, ma
+	non hanno il tempo o le capacità; in compenso, <em>Sua Maestà</em> ha i
+	soldi, e cerca una scimmia che li prenda per completare questo mestiere.
+
+	E per quanto il lato burocratico sia ancora in corso, quella scimmia sono
+	io.
+	sec#
+	stitle@right#Il mostro
+	Due persone entrano in una stanza e possono controllare la piacevolezza
+	della musica muovendosi e stando vicini. La stanza misura la loro distanza e
+	la loro velocità e manda questi dati in pasto ad un programmone scritto in
+	<code>SuperCollider</code> che compone la musica in <code>realtime</code>.
+
+	Ora ho visto il codice. E non sono troppo spaventato.
+stop#page
+start#side
+	title#Il ballo &amp; la prossimità
+	br#
+	stitle@right#Marzo 2013
+	begin#ol
+		li#tid#Si comincia!@ – <code>07/03</code>#i
+	end#ol
+stop#side
