@@ -1,7 +1,7 @@
 title#Il festone
 subtitle#Ossia quel blob di persone ed eventi che segue la proclamazione
 prev#Storie/2012/XCI/#Sogni
-#next#Storie/2013/XCIII/#
+next#Storie/2013/XCIII/#Londra
 start#page
 tab#p1
 	r#Trento, <code>26/01/2013</code>
@@ -37,10 +37,27 @@ tab#p1
 	ma ci sono <code>&gt;9000</code> parenti e amici da raccattare. La mia
 	amicizia, oggi, si misura quasi direttamente in minuti di telefonate. Ora
 	devo andare. A chiamare gente…
+tab#p2
+	r#Trento, <code>28/01/2013</code>
+
+	Sono andato a chiamare quella gente.
+	
+	Non è stato troppo terribile. Sono riuscito a chiamare tutti quelli che gli
+	altri (ossia Katia &amp; gli Allegri compagni) non erano ancora riusciti a
+	contattare.
+
+	Dovrebbero esserci tutti. Quelli che vengono da lontano arrivarenno per
+	cena, quelli che abitano meno lontano arriveranno per merenda, quelli che
+	abitano qui dovrebbero arrivare per la proclamazione e quelli che (come me)
+	saranno già qui dovrebbero soltanto spostarsi nella stanza giusta.
+	br#
+	L'unica cosa che mi manca da fare è andare a prenotare abbastanza posti in
+	pizzeria.
 stop#page
 start#side
 	begin#ul
-		li#tid#Prologo [@1@]#p1
+		li#tid#Prologo [ @1@ #p1
+		tid# / @2@ ]#p2
 	end#ul
 	title#Il festone
 stop#side

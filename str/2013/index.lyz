@@ -1,4 +1,4 @@
-title#Storie 2013#Prossimamente…
+title#Storie 2013#Attualmente in corso…
 prev#Storie/2012/#Storie@ 2012
 #next#Storie/2013/#Storie@ 2014
 start#page
@@ -8,5 +8,6 @@ start#side
 	title#Storie 2013
 	begin#ol@start@92
 		li#link#Storie/2013/XCII/#Il festone
+		li#link#Storie/2013/XCIII/#Londra
 	end#ol
 stop#side
