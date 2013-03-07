@@ -3,7 +3,24 @@ prev#News/2013/02/#Febbraio@ 2013
 next#News/2013/04/#Aprile@ 2013
 alltab#
 start#page
+tab#07
+	p#link##<em>@07/03/2013@</em>##07
+	/
+	link#Extra/#Diario#CONTENUTI#Diari
+	title#Il ballo &amp; la prossimità
+	Oggi comincio a
+	link#Diario/04/#lavorare@.
+tab#05
+	p#link##<em>@05/03/2013@</em>##05
+	/
+	link#Extra/#Storia#CONTENUTI#Storie
+	title#Londra
+	Io&amp;Katia ce ne siamo andati a Londra, e siamo anche tornati. Abbiamo
+	camminato moltissimo.
+	link#Storie/2013/XCIII/#Leggete@.
 stop#page
 start#side
 	stitle#link#News/2013/03/#Marzo@ 2013
+	p#link##<code>07/03</code> – [<em>Diario</em>] @Il ballo &amp; la prossimità@##07
+	p#link##<code>05/03</code> – [<em>Storie</em>] @Londra@##05
 stop#side
