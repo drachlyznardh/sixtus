@@ -2,19 +2,30 @@ title#UniTN Sentai Studionger
 short#Studionger
 subtitle#Yunitien Sentai Sotudiyonjā
 start#page
+	begin#mini@left
+		begin#ul
+			li#War: Distributed Studionger
+			li#Jazz: Emotion Studionger
+			li#Gods: Bachelor Studionger
+		end#ul
+	end#mini
+	begin#mini@right
+		begin#ul
+			li#Complexity Zord
+			li#Concurrency Zord
+			li#Embedded Zord
+			li#Realtime Zord
+			li#Distributed Zord
+			li#Montrezord
+		end#ul
+	end#mini
 	Le grandi avventure dei Non-Power-Rangers della facoltà di Scienze!
-	begin#ul
-		li#War: Distributed Studionger
-		li#Jazz: Emotion Studionger
-		li#Gods: Bachelor Studionger
-	end#ul
-	sec#
-	begin#ul
-		li#Complexity Zord
-		li#Concurrency Zord
-		li#Embedded Zord
-		li#Realtime Zord
-		li#Distributed Zord
-		li#Montrezord
-	end#ul
+	br#
+	Ma è soltanto un'idea, purtroppo: non ho idea di come scriverlo. E se lo
+	scrivessi verrebbe brutto. Potrebbe essere buono, forse, solo nella mia
+	testa. E forse nemmeno quello.
+
+	Troppi rischi, troppa poca voglia, e certamente troppo poco tempo. Mi devo
+	laureare, adesso. Sarà per il prossimo anno.
+	clear#both
 stop#page
