@@ -23,6 +23,24 @@ tab#i
 	<code>SuperCollider</code> che compone la musica in <code>realtime</code>.
 
 	Ora ho visto il codice. E non sono troppo spaventato.
+tab#ii
+	Ed ecco, il mio secondo giorno. Dopo essere stato istruito mi sono messo al
+	lavoro. Non è andata particolarmente bene, direi.
+
+	Il primo problema riguarda la struttura del programma, che dipende molto
+	dalle particolarissime <em>feature</em> del <code>SC – SuperCollider</code>;
+	il secondo riguarda la mia terribile legnosità; il terzo riguarda le
+	terribili librerie che mi toccherà usare.
+
+	Infine, il problema più grave: la temperatura dell'<em>Open Space 5</em> è
+	decisamente troppo alta perché io possa operare. Sono dovuto uscire
+	all'aperto a scaricare il vapore.
+	sec#
+	E rimare il fatto che non ho corrente sulla mia postazione: mi tocca
+	infilarmi sotto la scrivania di quello davanti e attaccare la ciabatta
+	dentro un buco nel pavimento. Tecnicamente, è fatto apposta, ma dal mio lato
+	non ci si arriva proprio. E quel tizio lavora sempre, arriva prima e se ne
+	va dopo…
 stop#page
 start#side
 	title#Il ballo &amp; la prossimità
@@ -30,5 +48,6 @@ start#side
 	stitle@right#Marzo 2013
 	begin#ol
 		li#tid#Si comincia!@ – <code>07/03</code>#i
+		li#tid#E ci si inchioda!@ – <code>08/03</code>#ii
 	end#ol
 stop#side
