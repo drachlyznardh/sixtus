@@ -3,6 +3,23 @@ prev#News/2013/02/#Febbraio@ 2013
 next#News/2013/04/#Aprile@ 2013
 alltab#
 start#page
+tab#09
+	p#link##<em>@09/03/2013@</em>##09
+	/
+	link#Extra/#Diario#CONTENUTI#Diari
+	&amp;
+	link#Extra/#Storia#CONTENUTI#Storie
+	title#Cose, cose, cose
+	Ho preso la mia biciclettina e me ne sono andata fin su al
+	<em>Tridente</em>, in quel negozio di modellini, a cercare lo spray da
+	applicare sopra le decalcomanie. Non pedalavo da molto tempo.
+
+	Aggiornamenti di
+	link#Legend/II/#Legend@,#14
+	del
+	link#Diario/04/#Diario#ii
+	e delle
+	link#Storie/2013/XCII/#Storie@.#i
 tab#07
 	p#link##<em>@07/03/2013@</em>##07
 	/
@@ -21,6 +38,7 @@ tab#05
 stop#page
 start#side
 	stitle#link#News/2013/03/#Marzo@ 2013
+	p#link##<code>09/03</code> – [<em>Cose</em>] @Cose@##09
 	p#link##<code>07/03</code> – [<em>Diario</em>] @Il ballo &amp; la prossimità@##07
 	p#link##<code>05/03</code> – [<em>Storie</em>] @Londra@##05
 stop#side
