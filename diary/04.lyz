@@ -41,6 +41,18 @@ tab#ii
 	dentro un buco nel pavimento. Tecnicamente, è fatto apposta, ma dal mio lato
 	non ci si arriva proprio. E quel tizio lavora sempre, arriva prima e se ne
 	va dopo…
+tab#iii
+	Ed ecco un po' di
+	title@right#Real Life Boola
+	perché le specifiche del progetto sono state discusse tra me &amp;
+	<em>Ffabbio</em> davanti ad un caffé delle macchinette. Ci sono cose…
+	sec#
+	Per prima cosa, il linguaggio. <em>Ffabbio</em> non sembra conoscere bene le
+	differenze e le similitudini tra il <code>C</code> e il <code>C++</code>. Lo
+	capisco. Poi ci sono i vari thread, che quanti siano lui non lo sa, io
+	nemmeno; mi inventerò qualcosa.
+
+	E la ruggine mi opprime.
 stop#page
 start#side
 	title#Il ballo &amp; la prossimità
@@ -49,5 +61,6 @@ start#side
 	begin#ol
 		li#tid#Si comincia!@ – <code>07/03</code>#i
 		li#tid#E ci si inchioda!@ – <code>08/03</code>#ii
+		li#tid#Un po' di Real Life Boola@ – <code>11/03</code>#iii
 	end#ol
 stop#side

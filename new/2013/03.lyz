@@ -3,6 +3,18 @@ prev#News/2013/02/#Febbraio@ 2013
 next#News/2013/04/#Aprile@ 2013
 alltab#
 start#page
+tab#11
+	p#link##<em>@11/03/2013@</em>##11
+	title#Primavera?!? Fa un caldo porco!
+	Già da alcuni giorni, con la pioggia, la temperatura è salita. Oggi invece
+	c'è il sole. Sono salito in maniche corte e non è bastato. Ho lasciato gli
+	scarponi per le scarpe da ginnastica e non è bastato. Sono passato alla
+	maglia con i buchi traspiranti sotto le ascelle e non è bastato.
+
+	È soltanto Marzo e già mi tocca passare alla modalità estiva. Come farò in
+	futuro? E come farò a stare nell'<em>Open Space 5</em>, dove il resto della
+	gente indossa ancora tre strati?
+	link#Diario/04/#(@Così@).#iii
 tab#09
 	p#link##<em>@09/03/2013@</em>##09
 	/
@@ -38,6 +50,7 @@ tab#05
 stop#page
 start#side
 	stitle#link#News/2013/03/#Marzo@ 2013
+	p#link##<code>11/03</code> – [<em>Diario</em>] @Caldo@##11
 	p#link##<code>09/03</code> – [<em>Cose</em>] @Cose@##09
 	p#link##<code>07/03</code> – [<em>Diario</em>] @Il ballo &amp; la prossimità@##07
 	p#link##<code>05/03</code> – [<em>Storie</em>] @Londra@##05
