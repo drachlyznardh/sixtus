@@ -3,6 +3,44 @@ prev#News/2013/02/#Febbraio@ 2013
 next#News/2013/04/#Aprile@ 2013
 alltab#
 start#page
+tab#18
+	p#link##<em>@18/03/2013@</em>##18
+	/
+	link#Extra/#Diario#CONTENUTI#Diari
+	&amp;
+	link#Extra/#MiniStoria#CONTENUTI#Ministorie
+	title#Troppo Assassin's Creed 3?
+	Dunque… mi alzo stamattina e nevica. Mi vien da chiedermi se per caso io non
+	possa trovare le tracce di creature e assassinare la gente dall'alto. Forse
+	ho giocato troppo? Ma d'altronde, il mio cappotto è lungo e svolazzante, il
+	mio cappello copre gli occhi e il mio incedere è abbastanza deciso.
+	r#E non è la prima volta che salto alle spalle della gente per ucciderle.
+
+	Comunque, ho consegnato le
+	link#Diario/04/#carte@.#v
+	E dopo quello, visto un certo thread su <code>/po/</code>, ho fatto una
+	scoperta eccezionale.
+	br#
+	stitle@right#Origami! Pattern! Cose fighe!!!
+	È andata così: dondolando su <code>/po/</code>, trovai un <em>thread</em>
+	dedicato a modelli <em>papercraft</em> in tema <em>Doctor Who</em>. Ed ecco
+	spuntare un video illustrante un semplice origami del <code>TARDIS</code>.
+	Il video in questione consta di <code>15'</code> di pieghe in realtime, non
+	commentate.
+	
+	Decisi di seguire il video, ma ben presto il sonno mi chiuse gli occhi.
+	Decisi allora di fissare il <em>crease pattern</em> per il futuro. Decisi
+	allora di domandare agli <em>interwebs</em> un qualcosa per realizzare il
+	pattern in un buon formato. Ed ecco, <a
+	href="origami-resource-center.com">origami-resource-center.com</a> mi
+	consiglia <a href="doodle.sourceforge.net">Doodle</a>. Oh wow!!!
+tab#15
+	p#link##<em>@15/03/2013@</em>##15
+	/
+	link#Extra/#Diario#CONTENUTI#Diari
+	title#Il più umano
+	A quanto pare, sono “<em>il più umano dell'OpenSpace</em>”.
+	link#Diario/04/#Leggete@.#iv
 tab#11
 	p#link##<em>@11/03/2013@</em>##11
 	title#Primavera?!? Fa un caldo porco!
@@ -50,6 +88,8 @@ tab#05
 stop#page
 start#side
 	stitle#link#News/2013/03/#Marzo@ 2013
+	p#link##<code>18/03</code> – [<em>Diario</em>] @Troppo Assassin's Creed 3?@##18
+	p#link##<code>15/03</code> – [<em>Diario</em>] @Il più umano@##15
 	p#link##<code>11/03</code> – [<em>Diario</em>] @Caldo@##11
 	p#link##<code>09/03</code> – [<em>Cose</em>] @Cose@##09
 	p#link##<code>07/03</code> – [<em>Diario</em>] @Il ballo &amp; la prossimità@##07

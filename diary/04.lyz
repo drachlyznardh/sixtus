@@ -53,6 +53,40 @@ tab#iii
 	nemmeno; mi inventerò qualcosa.
 
 	E la ruggine mi opprime.
+tab#iv
+	title#Il più umano
+	Sono già al lavoro per procurarmi notizie più accurate, ma a quanto pare la
+	mia presenza in <em>Open Space</em> è un toccasana per il morale di
+	<em>Ffabbio</em>, ch'era ben stufo di avere colleghi seri.
+
+	Succede che io, con i miei smanacciamenti e quei quattri porconi che tiro
+	ogni giorno portano un po' di vita in quel posto, che normalmente è serio e
+	noioso.
+
+	La mia fonte riferisce:
+	r#“<em>Si nota che è un tipo a cui non frega nulla del
+	giudizio altrui, mi piace come atteggiamento</em>”
+	r#“<em>È più umano degli altri
+	nell'openspace, visto che gli altri lavorano senza fare una piega e lui
+	s'incazza per il codice</em>”
+tab#v
+	title#Le carte sono in regola
+	Il motivo per cui non ho scritto molto e fatto tanto (?) è che la scadenza
+	dei termini per l'iscrizione al bando si avvicinano… pur con il consiglio di
+	<em class="war">War</em> “farò un curriculum serio il giorno che non sarò
+	sicuro di prendere il posto”, <em>Sua Maestà</em> mi s'è raccomandata di
+	scrivere un bel curriculum, nel raro caso in cui qualcun altro presenti una
+	domanda.
+
+	Ed io mi ci sono impegnato. Ho realizzato una pagina con <em>ModernCV</em>,
+	buon formato <code>LaTeX</code> con molta documentazione disponibile. È
+	venuto abbastanza bene. Poi, stamattina, sono arrivato qui di corsa (sotto
+	la neve), mi sono stampato tutte le pagine necessaria, ho firmato e
+	compilato cose, ho atteso il mio turno fuori dalla porta della segreteria
+	del <em>DISI</em>, il tizio l'ha “<em>controllato</em>
+	<strong>&lt;IMMANENTEMENTE!!!&gt;</strong>” ed ecco, sono iscritto.
+
+	r#Ora posso tornare a pensare al codice.
 stop#page
 start#side
 	title#Il ballo &amp; la prossimità
@@ -62,5 +96,7 @@ start#side
 		li#tid#Si comincia!@ – <code>07/03</code>#i
 		li#tid#E ci si inchioda!@ – <code>08/03</code>#ii
 		li#tid#Un po' di Real Life Boola@ – <code>11/03</code>#iii
+		li#tid#Il più umano@ – <code>15/03</code>#iv
+		li#tid#Le carte sono in regola@ – <code>18/03</code>#v
 	end#ol
 stop#side
