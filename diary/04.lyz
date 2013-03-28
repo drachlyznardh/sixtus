@@ -87,6 +87,29 @@ tab#v
 	<strong>&lt;IMMANENTEMENTE!!!&gt;</strong>” ed ecco, sono iscritto.
 
 	r#Ora posso tornare a pensare al codice.
+tab#vi
+	stitle@right#Mercoledì <code>27/03</code>
+	Succedono cose.
+
+	Sabato <code>23/03</code> la <em>MusicRoom</em> è stata esposta al pubblico
+	presso il <em>MTSN</em> ed io ho avuto modo di partecipare. Ci vuole un
+	plotone di volontari per far funzionare il <code>mostro</code>. Accade però
+	che l'intero accrocchione debba essere spostato a Parigi per essere mostrato
+	anche là, ad un pubblico internazionale.
+
+	Ed ecco che – <strong>&lt;[IMPROVVISAMENTE]!!!&gt;</strong> – mi ritrovo a
+	dover integrare tutti i pezzi del mondo in mondo che bastino meno persone.
+	Il ché è vagamente impossibile. Il mio pezzo di codice sta in mezzo a due
+	software a cui non posso accedere…
+
+	Inutile dire che <code>libpd</code>, per quanto buona e capace, è stata
+	scritta da un cane. O forse da un branco di cani. Visto che il Makefile è
+	tutto incagnato, gli esempi non funzionano se non a martellate e i
+	cosiddetti “<em>bindind per C++</em>” non sono nemmeno documentati. Mi sono
+	dovuto arrangiare, ricostruirmi le dipendenze a manina e accrozzare
+	manualmente gli include, perché un qualche dio ha deciso che mettere tutti
+	gli header (necessari all'esterno) nello stesso posto è offensivo.
+	r#<em>Dio Nanos!</em>
 stop#page
 start#side
 	title#Il ballo &amp; la prossimità
@@ -98,5 +121,6 @@ start#side
 		li#tid#Un po' di Real Life Boola@ – <code>11/03</code>#iii
 		li#tid#Il più umano@ – <code>15/03</code>#iv
 		li#tid#Le carte sono in regola@ – <code>18/03</code>#v
+		li#tid#Integrare tutto!@ – <code>27/03</code>#vi
 	end#ol
 stop#side

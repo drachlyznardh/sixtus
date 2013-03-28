@@ -3,6 +3,20 @@ prev#News/2013/02/#Febbraio@ 2013
 next#News/2013/04/#Aprile@ 2013
 alltab#
 start#page
+tab#27
+	begin#mini@right
+	“<em>Questa notizia va in onda in forma ridotta per venire incontro alle mie
+	tempistiche strette</em>”
+	end#mini
+	p#link##<em>@27/03/2013@</em>##27
+	/
+	link#Extra/#Diario#CONTENUTI#Diari
+	title#Troppa roba da fare
+	Succede infatti che la mia schiavitù presso gli HCI cresce &amp; cresce, e
+	mi prende un po' tutto il tempo che c'è.
+	link#Diario/04/#Riassunto@.#vi
+
+	r#Ma il concerto degli <em>Elio e le Storie Tese</em> è stato figo.
 tab#18
 	p#link##<em>@18/03/2013@</em>##18
 	/
@@ -88,6 +102,7 @@ tab#05
 stop#page
 start#side
 	stitle#link#News/2013/03/#Marzo@ 2013
+	p#link##<code>27/03</code> – [<em>Diario</em>] @Troppa roba@##27
 	p#link##<code>18/03</code> – [<em>Diario</em>] @Troppo Assassin's Creed 3?@##18
 	p#link##<code>15/03</code> – [<em>Diario</em>] @Il più umano@##15
 	p#link##<code>11/03</code> – [<em>Diario</em>] @Caldo@##11
