@@ -110,6 +110,26 @@ tab#vi
 	manualmente gli include, perché un qualche dio ha deciso che mettere tutti
 	gli header (necessari all'esterno) nello stesso posto è offensivo.
 	r#<em>Dio Nanos!</em>
+tab#vii
+	title#Ispirazione! ISPIRAZIONE!!!
+	Ho prodotto moltissimo, oggi. Da un lato, questo è bene; dall'altro è male.
+	Avrei dovuto raggiungere Katia e passare la giornata con lei. Invece, sono
+	rimasto chiuso in casa, cercando di risolvere problemi con il
+	<em>mostro</em>.
+
+	Sono riuscito a spezzare la generazione dell'output in due parti separate,
+	in modo che le decisioni prese non interferiscano con i tempi di
+	trasmissione dei pacchetti MIDI da mandare alla scheda audio. Mi ci è voluta
+	tutta la giornata. Ma almeno ho imparato delle cose.
+
+	Devo tutto alla presentazione che mi sono <em class="wrong">guardato</em>
+	ascoltato oggi. <em>Hideo Kojima</em> ha presentato <em>Metal Gear Solid V:
+	The Phantom Pain</em>, seguito da una lunga descrizione del <em>Fox
+	Engine</em> e della sua meravigliosa gestione della luce. La presentazione
+	è terminata con un “venite a lavorare per noi, stiamo assumendo perché
+	abbiamo bisogno di gente capace per fare cose fighe”.
+	r#E questo è il motivo per il quale voglio finire l'università.
+	r#Andare a fare le cose fighe.
 stop#page
 start#side
 	title#Il ballo &amp; la prossimità
@@ -122,5 +142,6 @@ start#side
 		li#tid#Il più umano@ – <code>15/03</code>#iv
 		li#tid#Le carte sono in regola@ – <code>18/03</code>#v
 		li#tid#Integrare tutto!@ – <code>27/03</code>#vi
+		li#tid#Ispirazione@ – <code>30/03</code>#vii
 	end#ol
 stop#side
