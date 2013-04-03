@@ -1,0 +1,88 @@
+title#BioParco!#Le cose brutte esistono. Vi sia il coraggio della bestemmia
+prev#Storie/2013/XCIII/#Londra
+start#page
+tab#intro
+	Ora che faccio parte del gruppo <code>HCI</code> – <em>Human Computer
+	Interaction</em> sono costretto ad interagire anche con le persone. Anche
+	con persone che io odio.
+	r#Ma questa è un'altra storia.
+	p#Questa storia invece riguarda il progetto di <em>BuddyTiem</em>, ma ci
+	arriverò tra un poco… questa è l'introduzione, e quindi introduco. Succede
+	che <em>io&amp;Jazz</em> collaboriamo a questi progetti. Io m'immischio nei
+	suoi, lui s'immischia nei miei.
+
+	Una di questa immischiate è stato il recupero di <em>Insa</em>, stagista al
+	servizio di <em>Sua Maestà</em> che deve stare qui a soffrire un po' come
+	noi, per circa un mese. Lei – poverina – vien dalla Germania. Le abbiamo
+	come funzionano le cose qui, in particolare riguardo come un programmatore
+	nasce, cresce e poi arriva ad una svolta: alternativamente diventa
+	begin#half@left
+		stitle#Silenzioso
+		Il <code>codicei amanuesis silens</code> è quel tipo di programmatore
+		la cui rabbia si spegne, gli occhi si fanno grigi e l'anima non brucia.
+
+		Vaga sui forum, dispensa consigli su <em>StackOverflow</em> e risolve
+		problemi di nascosto, in silezio.
+	end#half
+	begin#half@right
+		stitle#Rumoroso
+		Il <code>codicei amanuesis impetii vehementis</code> mantiene la sua
+		anima incandescente, affronta i problemi a testa bassa e – dopo averli
+		risolti (passo opzionale) – impugna l'arma di propria scelta e s'imbarca
+		alla ricerca del responsabile, per infilargli il senno nella testa, a
+		mazzate.
+	end#half
+	clear#both
+	Io, che sono indiscutibilmente tra i rumorosi, mi sono messo a lavorare a
+	'sto cazzo di progetto con l'<code>NXT-merda</code>. E sto tirando bestemmie
+	da un giorno. E non vedo la fine.
+
+	Continuerò finché la cosa non sarà risolta, ossia fino al giorno in cui il
+	<em>Buddy</em> porrà la dannata firma sul libretto.
+tab#i
+	La prima scadenda d'affrontare riguarda il riconoscimento dei motori.
+	Quello che dovremmo fare è produrre un'equazione differenziale, o meglio
+	estrarre i due parametri che identificano univocamente il comportamento del
+	motore come <em>sistema di 2º grado</em>.
+	
+	Quel che si frappone tra me (&amp; Riccardo, il mio compagno di gruppo con
+	il PC <strong>&lt;ENORME&gt;</strong>) è una cascata di cose:
+	<em>SciCOS</em>, <em>Osek</em>, l'<code>NXT</code>, <em>VirtualBox</em>… In
+	più non siamo buoni comunicatori. Al momento, sto lavorando per conto mio e
+	pescherò il tizio in qualche modo nel futuro.
+	r#Coooooooooooooooooooooooooooomunque.
+	br#
+	Sono riuscito a far funzionare la macchina virtuale. Ho taroccato i permessi
+	(sia dentro sia fuori, molte volte), ho installato cose, ho riavviato il
+	mostro come non ci fosse un domani e infine sono riuscito a lanciare
+	<code>VIm</code> dentro la macchina virtuale e lanciare uno dei programmi
+	d'esempio.
+
+	Non ricordo d'aver mai bestemmiato tanto dai tempi della <em>Cotoletta
+	Milanese</em>. Dico soltanto che <code>$: make</code> e <code>$: make
+	all</code> hanno effetti <strong>&lt;[COMPLETAMENTE]!!!&gt;</strong>
+	diversi. Perché? Quale dio lo ha permesso? Quale mente bacata ha osato
+	modificare il comportamento di <code>make all</code>? Perché infrangerne la
+	sacralità non è ancora reato?
+
+	Altra cosa. I permessi <code>USB</code> dentro e fuori. Un paio di lunghe
+	guide mi indica di creare un gruppo per <em>VirtualBox</em> (fatto) e di
+	associarci i permessi per leggere/scrivere su <code>usbfs</code> (fatto).
+	Tutto questo era in vigore da un bel pezzo, oltre due settimane,
+	effettivamente. Soltanto ieri sera, grazie ad un guida raccoltami dal <em
+	class="jazz">signor dottor Jazzinghen</em>, ho svelato l'arcano che impediva
+	agli utenti della macchina virtuale di accedere all'hardware USB reale:
+	<em>VirtualBox</em> non accede mica alle USB direttamente, lo fa passando
+	per una <strong>variabile d'ambiente</strong> <code>VBOX_USB</code> che deve
+	essere opportunamente settata al lancio.
+	r#<strong>&lt;[OVVIAMENTE]!!!&gt;</strong>
+stop#page
+start#side
+	p#tid#Intro#intro
+	title#BioParco!
+	br#
+	stitle@right#Assignment @SHARP@01: Motore – <code>05/04</code>
+	begin#ol
+		li#tid#Programmare per <code>NXTOSEK</code>@ – <code>02/04</code>#i
+	end#ol
+stop#side
