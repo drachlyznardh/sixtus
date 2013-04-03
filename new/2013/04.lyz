@@ -3,6 +3,17 @@ prev#News/2013/03/#Marzo@ 2013
 next#News/2013/05/#Maggio@ 2013
 alltab#
 start#page
+tab#03
+	p#link##<em>@02/04/2013@</em>##02
+	/
+	link#Extra/#Storia@ [che continua]#CONTENUTI#Storie
+	title#Come ieri, peggio di ieri
+	Possibilmente una delle mattine più infruttuose della storia dell'uomo! Ho
+	sbattuto contro il <code>bluetooth</code> per tutta la dannata mattina senza
+	cavare nulla; ne sono uscito soltanto alle 19:45.
+
+	Tremendo fastidio!
+	link#Storie/2013/XCIV/#Leggete@.#ii
 tab#02
 	p#link##<em>@02/04/2013@</em>##02
 	/
@@ -17,4 +28,6 @@ tab#02
 stop#page
 start#side
 	stitle#link#News/2013/04/#Aprile@ 2013
+	p#link#Storie/2013/XCIV/#<code>03/04</code> – [<em>Storia</em>] BioParco! @II@#ii
+	p#link#Storie/2013/XCIV/#<code>02/04</code> – [<em>Storia</em>] @BioParco!@#
 stop#side

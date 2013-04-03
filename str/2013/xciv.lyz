@@ -76,6 +76,41 @@ tab#i
 	per una <strong>variabile d'ambiente</strong> <code>VBOX_USB</code> che deve
 	essere opportunamente settata al lancio.
 	r#<strong>&lt;[OVVIAMENTE]!!!&gt;</strong>
+tab#ii
+	Il <code>bluetooth</code> non risponde più. Lo ha fatto in passato, ma
+	sicuramente non lo fa adesso. Forse sono io, forse è l'<code>NXT</code>,
+	forse siamo entrambi… fatto sta che il mio <em>SciCOS</em> non comunica e
+	non riceve, non posso raccogliere dati.
+
+	Forse posso tentare di <em>hack</em>are il “bt_server” e raccogliere i
+	pacchetti personalmente. Forse posso <em>hack</em>are il mattone e metterci
+	un programma che invii personalmente i pacchetti. Si potrebbe anche fare.
+
+	Perché il resto certamente non funziona. Ho ripercorso l'intera procedura,
+	seguendo passo passo le varie slide. Il <code>bluetooth</code>, per quanto
+	acceso e visibile, per quanto <em>SciCOS</em> sia pronto, per quanto il
+	server stia girando, per quanto tutto; i dati non arrivano e la simulazione
+	s'inchioda oppure non parte affatto.
+	r#È forse questo il momento di trovarsi un altro corso?
+	sec#
+	[…] Pause per <em>Technical Writing</em> […]
+	sec#
+	Ah! La Morte! È bastato riavviare la macchina virtuale <code>&gt;9000</code>
+	per ottenere finalmente il riconoscimento del <code>bluetooth</code>, che
+	adesso funziona. Posso comunicare con il mattone.
+	
+	La cosa buona è che mi sono messo a lavorare, ho raccolto le rotazioni del
+	motore a diverse potenze erogate e con questi io &amp; il mio compare
+	dovremmo poter estrarre i parametri senza troppe difficoltà.
+
+	La cosa brutta è che passando attraverso <em>SciCOS</em> le tempistiche
+	vanno decisamente a puttane: sicuramente i dieci secondi che passano secondo
+	lui non sono dieci secondi in tempo reale. Bisognerà rifare tutto, passando
+	direttamente in <code>bluetooth</code> senza avere <em>SciCOS</em> in mezzo
+	ai coglioni. Per farlo, però, mi devo infilare sia nei sorgenti di
+	<em>BROFist</em> (che sarebbe la tesi triennale di <em>Jazz</em>) sia sul
+	mattone.
+	r#Tremo al sol pensiero.
 stop#page
 start#side
 	p#tid#Intro#intro
@@ -84,5 +119,6 @@ start#side
 	stitle@right#Assignment @SHARP@01: Motore – <code>05/04</code>
 	begin#ol
 		li#tid#Programmare per <code>NXTOSEK</code>@ – <code>02/04</code>#i
+		li#tid#Il <code>bluetooth</code>@ – <code>03/04</code>#ii
 	end#ol
 stop#side
