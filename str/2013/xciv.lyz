@@ -111,6 +111,73 @@ tab#ii
 	<em>BROFist</em> (che sarebbe la tesi triennale di <em>Jazz</em>) sia sul
 	mattone.
 	r#Tremo al sol pensiero.
+tab#iii
+	begin#half@right
+		stitle@right#Scoperte
+		Operazione 9 su porta 6 (=B) dati.in (=%potenza). Potenza motore.
+		Operazione 6 su porta 6, dati.out. Rotazioni motore.
+
+		Avendo il <code>bluetooth</code> acceso &amp; l'<em>NXT</em> pure, con
+		<code>BROFist -l</code> si scoprono i client BT nella zona. In questo
+		modo recuperiamo l'indirizzo MAC del mattone.
+
+		Con <code>BROFist -m &lt;MAC&gt;</code> possiamo metterci in
+		comunicazione con il mattone e mandare cose. Quel che BROFist fa è
+		rimbalzare pacchetti tra il BT (verso il mattone) e una socket
+		(<code>/tmp/BROFist</code>, verso SciCOS).
+		end#half
+	Oggi, io&amp;Riccardo teniamo
+	title#La <em>Biblio</em><code>hack</code>aton
+	Sapevate che in biblioteca ci sono delle <em>Sale per attività di
+	gruppo</em> che possono essere prenotate, sono chiuse e ci si può far
+	“rumore” dentro? Nemmeno io.
+
+	Fatto sta che sono stato invitato in uno di questi luoghi misteriosi per
+	lavorare. Contro ogni mia aspettativa, poi, entro e trovo altre sette
+	persone. <em>Pokerface</em>, nessuno ha chiesto niente e ciascuno è andato
+	avanti con il proprio lavoro.
+
+	Ma niente di significativo è germogliato dalle nostre fatiche. Abbiamo
+	sbattuto fortissimo contro il codice di <em>BROFist</em>, ci siamo
+	addentrati nei suoi meandri, abbiamo trovato la <code>socket</code>,
+	c'abbiamo parlato ed abbiamo estratto dei dati. A fatica.
+
+	Ma tutto quel che siamo riusciti ad estrarre, dopo molto bestemmiare, era
+	assolutamente paragonabile alle altre schifezze che io ero riuscito ad
+	estrarre da <em>Scicos</em> il giorno precedente. Mentre il mio compare
+	continuava a smanacciare, io mi sono messo ad abbozzare un report nel quale
+	ho cercato di condire la nostra ammissione di fallimento.
+
+	Il piano, alle <code>19:30</code>, consiste nel chiedere pietà al
+	<em>Buddy</em> nella lezione di domani.
+	clear#right
+tab#iv
+	title#WAT
+	Oggi a lezione il <em>Buddy</em> non s'è visto. C'era <em>d'Artagnan</em>. È
+	arrivato, è partito a cannone e non s'è fermato per due ore. Poi gli abbiamo
+	dato l'assalto per controllare le scadenze, i tempi, i modi, il come &amp;
+	il perché… e pur essendo da solo, <em>d'Artagnan</em> risponde in coro un
+	bel
+	r#“<strong>DUNNO LOL</strong> chiedete al <em>Buddy</em>, che probabilmente
+	vi mandera da <em>Alessio</em>”
+	br#
+	Alla nostra seconda domanda, invece, ha risposto che “potrebbe essere
+	tutto”. Lo sapevo anch'io.
+
+	Ad ogni modo… qui pare (<em>voci di voci di corridoio</em>) che la consegna
+	sia stata posticipata a domenica, ma le cose da fare (per me) sono un po'
+	troppe – già ieri ho saltato logica.
+	sec#
+	Poi, <strong>&lt;[IMPROVVISAMENTE]!!!&gt;</strong>, salta fuori il tizio
+	(ch'era sparito dopo lezione adducendo un “scappo a prendere il treno sennò
+	non torno a casa”) e mi dice che vuol venire a prendersi il mattone per il
+	weekend.
+
+	Colto da tutti i dubbi del mondo (c'avrei anche da lavorare, io, e lunedì
+	devo anche fare altra roba) gli ho preparato la scatola e l'ho lasciato
+	fare. Avrò fatto bene? Avrò fatto male? Farà tutto lui? Cosa mi resterà da
+	fare? Sarò capace di farlo?
+	r#Dubbi dubbi dubbi dubbi dubbi dubbi dubbi…
 stop#page
 start#side
 	p#tid#Intro#intro
@@ -120,5 +187,7 @@ start#side
 	begin#ol
 		li#tid#Programmare per <code>NXTOSEK</code>@ – <code>02/04</code>#i
 		li#tid#Il <code>bluetooth</code>@ – <code>03/04</code>#ii
+		li#tid#La <em>bilio<em><code>hack</code>aton@ – <code>04/04</code>#iii
+		li#tid#WAT.@ – <code>05/04</code>#iv
 	end#ol
 stop#side
