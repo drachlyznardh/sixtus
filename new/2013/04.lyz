@@ -3,6 +3,16 @@ prev#News/2013/03/#Marzo@ 2013
 next#News/2013/05/#Maggio@ 2013
 alltab#
 start#page
+tab#09
+	p#link##<em>@09/04/2013@</em>##09
+	/
+	link#Extra/#2 @Storie@#CONTENUTI#Storie
+	title#Storia <code>XCIV</code> – La resa dei conti? &amp; <code>XCV</code> – Le mutande di Katia
+	Il <em>Buddy</em> mi sfugge, ma io non desisto. Cioè, no, desisto
+	completamente, ma… son due cose diverse…
+	link#Storie/2013/XCIV/#leggete@.#vii
+	r#E poi un'altra
+	link#Storie/2013/XCV/#storia@, breve ma originale. 
 tab#05
 	p#link##<em>@05/04/2013@</em>##05
 	/
@@ -59,9 +69,12 @@ tab#02
 stop#page
 start#side
 	stitle#link#News/2013/04/#Aprile@ 2013
-	p#link#Storie/2013/XCIV/#<code>05/04</code> – [<em>Storia</em>] Bioparco @III@
+	p#link#Storie/2013/XCIV/#<code>09/04</code> – [<em>Storia</em>] Bioparco [@VII@]#
 	e
-	link#Storie/2013/XCIV/#IV#iv
-	p#link#Storie/2013/XCIV/#<code>03/04</code> – [<em>Storia</em>] BioParco! @II@#ii
+	link#Storie/2013/XCV/#Le mutande di Katia
+	p#link#Storie/2013/XCIV/#<code>05/04</code> – [<em>Storia</em>] Bioparco [@III@
+	e
+	link#Storie/2013/XCIV/#IV@]#iv
+	p#link#Storie/2013/XCIV/#<code>03/04</code> – [<em>Storia</em>] BioParco!  [@II@]#ii
 	p#link#Storie/2013/XCIV/#<code>02/04</code> – [<em>Storia</em>] @BioParco!@#
 stop#side
