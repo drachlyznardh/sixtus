@@ -3,6 +3,55 @@ prev#News/2013/03/#Marzo@ 2013
 next#News/2013/05/#Maggio@ 2013
 alltab#
 start#page
+tab#12
+	p#link##<em>@12/04/2013@</em>##12
+	/
+	link#Extra/#2@ Ministorie#CONTENUTI#MiniStorie
+	title#I miei ossi da piega
+	Dopo lunga attesa (erano stati ordinati settimane fa) sono arrivati i miei
+	due <em>ossi da piega</em>. Trattasi di due cosetti di plastica pensati
+	espressamente per tracciare e calcare le pieghe, in modo che persone come il
+	sottoscritto possano piegare senza consumarsi le unghie.
+	br#
+	title@right#C++11, amore a prima vista!
+	Il mondo intero ha finalmente accettato quel che doveva essere il
+	<code>C++0x</code> come standard, attualmente <code>C++11</code>. Capita
+	tutto a fagiuolo, che <em>Musicroom</em> è ancora abbastanza giovane da
+	permettermi in includere le nuove specifiche.
+
+	Inizializzatori estesi, <em>lambda expression</em>, Thread &amp; Mutex nella
+	standard library, cose!, cose! cose! Tutto quel che non sapevo di volere ora
+	è disposizione. È un po' come sedersi a tavola e vedersi apperecchiare il
+	banchetto attorno. Come in <a
+	href="http://www.youtube.com/results?search_query=disney+beauty+and+the+beast+be+our+guest">questa</a>
+	canzone. Wow.
+tab#11
+	p#link##<em>@11/04/2013@</em>##11
+	/
+	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
+	title#“Ce l'avete voi, la primavera, in Trentino?”
+	Ero lì che mi leggevo <em>Old man's war</em> (libro passatomi da <em
+	class="war">War</em>, ieri) mentre aspettavo che <em class="jazz">Jazz</em>
+	tornasse con la sua giacca.
+
+	Dopo <code>&gt;9000</code> secondi di attesa, eccolo tornare con
+	<em>Costanza</em> (la povera ragazza che tiene la segreteria del gruppo di
+	<em>Sua Maestà</em>). In sequenza, vengo a scoprire che
+	begin#ol
+		li#il colore della mia polo è assolutamente insolito, ma con accezione
+		positiva (a quanto pare, nessuno nota l'oltremodo artificiale arancione
+		della maglia traspirante che indosso per salire e poi cambio con quella
+		o altre polo);
+		li#io posso mangiare come &amp; quanto mi pare, mentre lei non può
+		neanche masticare le gomme; dovrei essere contento per me (che posso
+		mangiare), triste per lei (che non può) oppure spiegare che
+		<strong>devo</strong> mangiare (perché la fame non mi lascia in pace);
+	end#ol
+	Dubbi a parte, pare che – ancora una volta – il mio indossare le maniche
+	corte sia un privilegio, riservato ai soli <em>veri trentini</em>. Perché la
+	primavera, per <em>noi</em>, è diversamente percepita. La stessa
+	<em>PQ</em> (che viene da Ancora?), avrebbe chiesto – poche ore dopo – se
+	“<em>ce l'avete, voi, la primavera, in Trentino?</em>”
 tab#09
 	p#link##<em>@09/04/2013@</em>##09
 	/
@@ -69,6 +118,8 @@ tab#02
 stop#page
 start#side
 	stitle#link#News/2013/04/#Aprile@ 2013
+	p#link#News/2013/04/#<code>12/04</code> – [<em>MiniStoria</em>] @Gli ossi e i thread@##12
+	p#link#News/2013/04/#<code>11/04</code> – [<em>MiniStoria</em>] @La primavera in Trentino@##11
 	p#link#Storie/2013/XCIV/#<code>09/04</code> – [<em>Storia</em>] Bioparco [@VII@]#
 	e
 	link#Storie/2013/XCV/#Le mutande di Katia
