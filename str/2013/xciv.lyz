@@ -228,6 +228,18 @@ tab#vii
 	una volta, quello che si preoccupa troppo sono io. Non è morto nessuno. A
 	parte <em>Riccardo</em>, forse… se muore senza restituirmi il mattone, poi,
 	mi toccherà riesumarne la salma…
+tab#viii
+	title#Fine
+	Ero lì che me ne facevo un pentolone, attendendo notizie e varia yadda,
+	quanto <em>Riccardo</em> mi ha sorpreso alle spalle. A quanto pare, è
+	intenzionato a proseguire.
+
+	Mi ha chiamato, abbiamo ricomposto la scatola, siamo scesi a lezione, il
+	<em>Buddy</em> m'ha chiesto i motivi del tradimento (sui quali ho glissato),
+	abbiamo preso accordi per la restituizione (è tutto <code>inter nos</code>,
+	ovviamente).
+
+	Ed è fatta.
 stop#page
 start#side
 	p#tid#Intro#intro
@@ -242,5 +254,6 @@ start#side
 		li#tid#Il tracollo@ – <code>06/04</code>#v
 		li#tid#Il tradimento@ – <code>08/04</code>#vi
 		li#tid#La resa dei conti?@ – <code>09/04</code>#vii
+		li#tid#Fine@ – <code>15/04</code>#viii
 	end#ol
 stop#side
