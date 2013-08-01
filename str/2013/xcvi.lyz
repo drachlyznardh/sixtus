@@ -1,0 +1,101 @@
+title#La Costanza che vorrei#<code>}:-{]</code> Mwahahahaha
+prev#Storie/2013/XCV/#Le mutande di Katia#
+start#page
+tab#intro
+	begin#mini@right
+		stitle#Se ve lo steste chiedendo
+		<code>}:-{]</code> è un complessissimo <em>smile</em> di me che rido;
+		nell'ordine ci sono le sopracciglia, gli occhi, il naso, i baffi e la
+		barba.
+	end#mini
+	Questa è una storia lunga e articolata, una storia vecchia che mi sono
+	ritrovato a scrivere in ritardo. È una storia che riguarda la mia ascesa al
+	terzo piano, la complessità delle relazioni che ho intrecciato in questi
+	luoghi e l'abbondante quantità di dubbi che mi assillano.
+	sec#
+	Per i deboli di cuore, per le donne in stato di gravidanza e per le persone
+	facilmente impressionabili, ricordate come ho intitolato la storia
+	precedente. Non preoccupatevi eccessivamente o perderete tutto il
+	divertimento.
+tab#i
+	stitle#La distribuzione
+	Una delle incredibili (?!) capacità di <code>supercollider</code> è il
+	supporto per certa <em>roba randomica</em>. Esso è in grado di scegliere un
+	elemento in un vettore, di scegliere cose secondo una distribuzione e
+	qualche altra cosuccia.
+
+	Io devo ovviamente fornire un'alternativa. Non è tanto difficile produrre un
+	<code>oggetto</code> che possa prendere decisioni basate su una
+	distribuzione a scalini, no? 'Nsomma… mi sono messo lì con il mio codice a
+	scrivere una classe semplice semplice, un vettore di <code>float</code> per
+	gli scalini, un bel <code>return 4</code> (generato casualmente, giuro!) e
+	verifico il primo test. Funziona.
+	r#È già qualcosa, considerate le terribili cose accadute in passato.
+	sec#
+	Proseguo nello sviluppo. Voglio (per pigrizia) poter dichiarare direttamente
+	gli scalini, quindi preparo una chiamata <code>variadic</code>, o almeno ci
+	provo. Basta includere <code>&lt;cstdarg&gt;</code> e utilizzare una
+	<code>va_list</code>, come in <code>C</code>. Ma poi scopro anche un
+	simpatico tipo <code>std::initializer_list&lt;T&gt;</code> che fa
+	automaticamente la stessa cosa (e ben tipizzata, ovviamente). Considerato
+	che i miei argomenti sono tutti float, è meglio.
+
+	Includo, implemento e vivo felice. Poi viene il momento di testare che la
+	randomicità segua effettivamente la distribuzione che specifico. Vado dunque
+	a controllare come si chiamino il <code>rand()</code> e lo
+	<code>srand()</code> adesso… due passi nelle reference e scopro cose
+	incredibili; primo, tre diversi motori di pseudocasualità sono implementati:
+	begin#ul
+		li#quello normale, qui nominato <em>lineare congruente</em>
+		li#il <em>twister</em> di <em>Mersenne</em>
+		li#quello di <em>Fibonacci</em>
+	end#ul
+	Figo, qualunque cosa questi nomi vogliano dire. Ma la pagina dedicata è
+	ancora molto lunga, ed io non posso resistere. Scorrendola, trovo vari
+	perturbatori che possono essere associati al motore. Trovo la fila di
+	generatori standard già pronti. Poi – e qui mi si riempiono gli occhi –
+	trovo una marea di distribuzioni classiche già pronte. Ci sono la lineare,
+	la binomiale, la Poisson, la Gaussiana, la χ², la Cauchy, e persino la
+	distribuzione discreta a scalini che serve a me.
+	sec#
+	Ancora una volta,
+	r#il <code>C++11</code> ti fornisce tutto quel che non sapevi di volere.
+	sbr#
+	Sono spaesato. Restando pur vero che incastrare la distribuzione dietro
+	un'interfaccia con un solo bottone è una cosa che devo fare io, nascondere
+	l'implementazione è comunque una buona cosa, che la mia libreria ha ancora
+	motivo di essere… non lo so… mi sento meno creativo, adesso.
+
+	Un po' come quando, da piccini, sognavamo i galeoni e i castelli di
+	<em>LEGO®</em> ed una volta aperta la scatola scoprivamo che l'intera base
+	era fatta di un unico mattone appositamente sagomato. Anche potendo
+	costruire il resto, usare componenti così grandi e così dedicati mi
+	raffredda lo spirito.
+	r#Sono troppo vecchio per questa roba.
+tab#ii
+	Tutti questi const… devo imparare a diversificare le chiamate
+	const& T __method__ () const;
+	da quello
+	T __method__ ();
+	per semplificare la mia vita.
+
+	Chiamare std::vector::operator[] fa la differenza rispetto a
+	std::vector::at(), poiché il primo è intrusivo mentre il secondo non lo è.
+tab#iii
+	Il namespace è una cosa importante. Se non lo si usa in maniera prevedibile,
+	va tutto a puttane.
+tab#iv
+	CMake e le interdipendenze. Se provo a creare una fila di librerie statiche
+	da incollare insieme mi tocca gestire tutto il linking da solo, per ciascun
+	componente, perché lui poi risolve solo una volta ;_;
+
+	Quindi mi metto a fare tutto insieme, e scopro che per farlo mi tocca
+	sfruttare una MACRO. Vuol dire che CMake è fatto per creare uno svanzo di
+	librerie dinamiche pseudofuffa? O che io voglio troppo dalla vita?
+stop#page
+start#side
+	stitle@right#<strong>&lt;[Attenzione]!!!&gt;</strong>
+	p#Ricordate che al <em>GODS</em> piace intitolare le storie in modo
+	ingannevole, perché è un burlone.
+	title#Storia <code>XCVI</code>
+stop#side
