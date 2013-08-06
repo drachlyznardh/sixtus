@@ -13,7 +13,12 @@
 	<?php } ?>
 	<p>
 		Culo.Right-Side
-	</p>
+	</p> 
+	<?php if (isset($related['next'])) { ?>
+		<div class="outside"><p class="reverse">
+			<b><em>Successivo</em></b> / <a href="<?=make_canonical($attr, $related['next'][0])?>"><?=$related['next'][1]?></a> /
+		</p></div>
+	<?php } ?>	
 </div>
 </div>
 <!-- Sys/Fragments/Related [Stop] -->

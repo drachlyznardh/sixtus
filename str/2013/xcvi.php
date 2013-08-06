@@ -4,7 +4,8 @@
 	$attr['subtitle'] = 'Storia XCVI';
 
 	$related['prev'] = array('Storie/2013/XCV/', 'Le mutande di Katia');
-	$related['next'] = false;
+	#$related['next'] = false;
+	$related['next'] = array('Storie/2013/XCVI/', 'La formattazzazzazione');
 
 	require_once('sys/fragments/in-before.php');
 ?><div class='section'>
