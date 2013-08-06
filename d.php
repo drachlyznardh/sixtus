@@ -1,12 +1,13 @@
 <?php
 
 	require_once("sys/runtime.php");
+	require_once("sys/utils.php");
 	require_once("sys/mimes.php");
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	$request['tab'] = false;
 	$attr['style'] = 'gray';
-	$attr['tabs'] = 'single';
+	$attr['tabs'] = 'singletab';
 
 	$direct_access_file = substr($request['original'], 1);
 
