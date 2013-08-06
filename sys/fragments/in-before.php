@@ -19,3 +19,5 @@
 					<?php require_once("sys/fragments/head.php"); ?>
 				</div> <!-- Head -->
 				<div id="core">
+					<!-- Require_once("Sys/Fragment/Check") -->
+					<?php require_once('sys/fragments/check.php'); ?>
