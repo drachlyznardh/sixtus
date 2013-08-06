@@ -69,12 +69,15 @@
 	$myindex = 0;
 	$mycount = count($request['path']);
 	$mymap = $map;
+	$mycat = false;
 	$mypath = $request['path'][0];
 	$search['dir'] = '.';
 	$search['file'] = 'index.php';
 	while (1) {
 		if (isset($mymap[$mypath])) {
 			$mymap = $mymap[$mypath];
+			$mycat .= ucwords($mypath).'/';
+			$search['cat'][] = array(make_canonical($attr, $mycat), ucwords($mypath));
 
 			if (is_array($mymap)) $search['dir'] = $mymap[0];
 			else $search['dir'] = $mymap;

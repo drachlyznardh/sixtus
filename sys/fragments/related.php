@@ -8,18 +8,22 @@
 <div class="section">
 	<?php if(isset($related['prev'])) { ?>
 		<div class="inside"><p>
-				/ <a href="<?=make_canonical($attr, $related['prev'][0])?>"><?=$related['prev'][1]?></a> / <b><em>Precendente</em></b>
+			/ <a href="<?=make_canonical($attr, $related['prev'][0])?>"><?=$related['prev'][1]?></a> / <b><em>Precendente</em></b>
 		</p></div>
 	<?php } ?>
-	<p>
-		Culo.Right-Side
-	</p> 
+	<p style="text-align: center">
+		/
+		<?php foreach ($search['cat'] as $_) { ?>
+			<a href="<?=$_[0]?>"><?=$_[1]?></a> / 
+		<?php } ?>
+	</p>
 	<?php if (isset($related['next'])) { ?>
 		<div class="outside"><p class="reverse">
 			<b><em>Successivo</em></b> / <a href="<?=make_canonical($attr, $related['next'][0])?>"><?=$related['next'][1]?></a> /
 		</p></div>
 	<?php } ?>	
 </div>
+<br/>
 </div>
 <!-- Sys/Fragments/Related [Stop] -->
 
