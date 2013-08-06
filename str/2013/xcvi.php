@@ -2,6 +2,7 @@
 	
 	$attr['title'] = 'Storia XCVI';
 	$attr['subtitle'] = 'Storia XCVI';
+	$attr['keywords'] = 'Storia Storie XCVI Mutande Katia';
 
 	$related['prev'] = array('Storie/2013/XCV/', 'Le mutande di Katia');
 	#$related['next'] = false;

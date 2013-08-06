@@ -4,8 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author"
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
-		<meta name="keywords" content="News" />
-		<title>Novità</title>
+		<meta name="keywords" content="<?=$attr['keywords']?>" />
+		<title><?=$attr['title']?></title>
 		<link rel="stylesheet" type="text/css" href="sys/style/<?=$attr['style']?>.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/common.css" />
