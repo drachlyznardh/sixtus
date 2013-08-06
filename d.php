@@ -88,6 +88,8 @@
 			} else break;
 		} else {
 			$search['file'] = $mypath . '.php';
+			$mycat .= strtoupper($mypath).'/';
+			$search['page'] = array(make_canonical($attr, $mycat), strtoupper($mypath));
 			break;
 		}
 	}
