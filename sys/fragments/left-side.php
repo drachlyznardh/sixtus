@@ -94,6 +94,51 @@
 		</p>
 	</div>
 </div>
+<div class="section">
+	<div style="width:50%; float:left"><div class="inside">
+			<p style="text-indent:0">
+				Tab [ <?php
+	if ($attr['tabs'] == 'singletab') {
+		echo ('<em>Single</em>');
+	} else {
+		$custom = array('tabs' => 'singletab', 'theme' => $attr['theme']);
+		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+		echo ('<a href="'.$url.'">Single</a>');
+	}
+				?> | <?php
+	if ($attr['tabs'] == 'singletab') {
+		$custom = array('tabs' => 'alltabs', 'theme' => $attr['theme']);
+		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+		echo ('<a href="'.$url.'">All</a>');
+	} else {
+		echo('<em>All</em>');
+	}
+				?> ]
+			</p>
+	</div></div>
+	<div style="width:50%; float:right"><div class="outside">
+			<p class="reverse" style="text-indent:0">
+				[ <?php
+	if ($attr['theme'] == 'gray') {
+		echo ('<em>Gray</em>');
+	} else {
+		$custom = array('tabs' => $attr['tabs'], 'theme' => 'gray');
+		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+		echo ('<a href="'.$url.'">Gray</a>');
+	}
+				?> | <?php
+	if ($attr['theme'] == 'gray') {
+		$custom = array('tabs' => $attr['tabs'], 'theme' => 'white');
+		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+		echo ('<a href="'.$url.'">White</a>');
+	} else {
+		echo ('<em>White</em>');
+	}
+				?> ] Theme
+			</p>
+	</div></div>
+	<div style="float:none; clear:both"></div>
+</div>
 <br />
 <div class="section">
 	<h2><span class="em" title="“Un po&apos; culattoni?” “No, no, solo allegri”">Allegri</span> compagni</h2>

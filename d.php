@@ -6,7 +6,7 @@
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	$request['tab'] = false;
-	$attr['style'] = 'gray';
+	$attr['theme'] = 'gray';
 	$attr['tabs'] = 'singletab';
 
 	$direct_access_file = substr($request['original'], 1);
@@ -42,7 +42,7 @@
 				break;
 			case 'gray':
 			case 'white':
-				$attr['style'] = $token[$key];
+				$attr['theme'] = $token[$key];
 				unset($token[$key]);
 				break;
 			case 'singletab':
@@ -98,7 +98,7 @@
 ?>
 <!DOCTYPE html>
 <!-- $Request[Original] = [<?=$request['original']?>] -->
-<!-- $Attr[Style] = [<?=$attr['style']?>], $Attr[Tabs] = [<?=$attr['tabs']?>] -->
+<!-- $Attr[Theme] = [<?=$attr['theme']?>], $Attr[Tabs] = [<?=$attr['tabs']?>] -->
 <!-- $Request[Path] = [<?php
 	$other=false;
 	foreach ($request['path'] as $key)
