@@ -1,5 +1,14 @@
 <?php
 
+	function polish_line ($_)
+	{
+		$_ = preg_replace('/@SHARP@/', '#', $_);
+		$_ = preg_replace('/\'/', '&apos;', $_);
+		$_ = preg_replace('/"/', '&quot;', $_);
+
+		return $_;
+	}
+
 	class Parser {
 	
 		private $pstate = 'meta';
@@ -35,8 +44,6 @@
 						$cmd_attr = split('@', $fragment[0]);
 						$command = $cmd_attr[0];
 					} else $command = $cmd_attr = $fragment[0];
-					#printf("\tLine#$index has a [$command] command\n");
-
 					switch ($this->pstate) {
 						case 'meta':
 							$this->parse_meta($index, $command, $cmd_attr, $fragment);
@@ -49,11 +56,7 @@
 							break;
 					}
 				} else {
-					#printf("\tLine#$index has no command: [$_]\n");
-					$_ = preg_replace('/@SHARP@/', '#', $_);
-					$_ = preg_replace('/\'/', '&apos;', $_);
-					$_ = preg_replace('/"/', '&quot;', $_);
-					$this->current->parse($index, '', '', array($_));
+					$this->current->parse($index, '', '', array(polish_line($_)));
 				}
 			}
 		}
@@ -64,17 +67,17 @@
 				case 'title':
 					switch(count($cmd_par)){
 						case 3:
-							$this->subtitle = $cmd_par[2];
+							$this->subtitle = polish_line($cmd_par[2]);
 						case 2:
-							$this->title = $cmd_par[1];
+							$this->title = polish_line($cmd_par[1]);
 							break;
 					}
 					break;
 				case 'subtitle':
-					$this->subtitle = $cmd_par[1];
+					$this->subtitle = polish_line($cmd_par[1]);
 					break;
 				case 'keywords':
-					$this->keywords = $cmd_par[1];
+					$this->keywords = polish_line($cmd_par[1]);
 					break;
 				case 'prev':
 					$this->prev = array($cmd_par[1], $cmd_par[2]);
