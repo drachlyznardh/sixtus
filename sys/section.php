@@ -65,6 +65,7 @@
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
+				case 'clear': $this->make_clear(); break;
 				default:
 					$this->closeContext();
 					$this->content[] = '<br/><p class="error">ERROR: [';
@@ -251,6 +252,12 @@
 		{
 			$this->closeContext();
 			$this->content[] = '<br/>';
+		}
+
+		private function make_clear ()
+		{
+			$this->closeContext();
+			$this->content[] = '<div style="float:none; clear:both"></div>';
 		}
 	}
 ?>
