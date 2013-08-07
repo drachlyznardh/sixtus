@@ -1,6 +1,7 @@
 
-@import url("screen.css") screen and (min-width:641px);
-@import url("mobile.css") screen and (max-width:640px);
+@import url("big-screen.css") screen and (min-width:1024px);
+@import url("wide-screen.css") screen and (min-width:480px) and (max-width:1023px);
+@import url("small-screen.css") screen and (max-width:479px);
 
 body {
 	margin: 0;
@@ -159,3 +160,4 @@ em { font-style:italic; }
 em em { font-style:normal; }
 strong { font-weight:bold; }
 code { font-family: monospace }
+

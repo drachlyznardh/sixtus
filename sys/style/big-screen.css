@@ -1,34 +1,37 @@
 
+p#wide-screen { display: none; }
+p#small-screen { display: none; }
+
 div#content {
-	width: 56%;
-	padding-left:  22%;
-	padding-right: 22%;
+	width: 46%;
+	padding-left:  27%;
+	padding-right: 27%;
 	padding-top: 5px;
 	overflow: hidden;
 }
 
 div#right-side {
 	position: fixed;
-	width: 20%;
+	width: 23%;
 	height: 90%;
-	right: 1%;
+	right: 2%;
 	top: 5%;
 	overflow: auto;
 }
 
 div#left-side {
 	position: fixed;
-	width: 20%;
+	width: 23%;
 	height: 90%;
-	left: 1%;
+	left: 2%;
 	top: 5%;
 	overflow: auto;
 }
 
 div#core {
-	width: 70%;
-	margin-left: 15%;
-	margin-right: 15%;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 div.small {
