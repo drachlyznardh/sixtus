@@ -13,7 +13,7 @@
 	<?php } ?>
 	<p style="text-align: center">
 		/
-		<?php foreach ($search['cat'] as $_) { ?>
+		<?php if (isset($search['cat'])) foreach ($search['cat'] as $_) { ?>
 			<a href="<?=make_canonical($attr, $_[0])?>"><?=$_[1]?></a> / 
 		<?php } ?>
 	</p>

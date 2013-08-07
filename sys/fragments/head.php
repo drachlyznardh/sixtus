@@ -14,7 +14,7 @@
 		<a href="http://gods.roundhousecode.com">Gods</a> .
 		<a href="http://roundhousecode.com">RoundhouseCode</a> .
 		<a href="http://roundhousecode.com">com</a> /
-		<?php foreach ($search['cat'] as $_) {?>
+		<?php if (isset($search['cat'])) foreach ($search['cat'] as $_) {?>
 			<a href="<?=make_canonical($attr, $_[0])?>"><?=$_[1]?></a> / 
 		<?php }
 		if (isset($search['page'])) {
