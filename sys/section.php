@@ -19,14 +19,8 @@
 		{
 			switch ($command)
 			{
-				case '':
-					$text = trim($cmd_args[0]);
-					if ($text) {
-						$this->openContext($this->defaultContext);
-						$this->content[] = " $text";
-					} else $this->closeContext();
-					break;
-				case 'id': $this->content[] = '<a id="'.$cmd_args[1].'"></a>'; break;
+				case '': $this->make_text(trim($cmd_args[0])); break;
+				case 'id': $this->make_id($cmd_args[1]); break;
 				case 'p':
 				case 'li': $this->make_p($index, $cmd_args, $cmd_attr); break;
 				case 'r':
@@ -43,6 +37,8 @@
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear(); break;
 				default:
+					printf ("ERROR [$command] @ line $index\n");
+					exit(1);
 					$this->closeContext();
 					$this->content[] = '<br/><p class="error">ERROR: [';
 					$this->content[] = $cmd_args[0];
@@ -170,6 +166,19 @@
 			$link = "<a target=\"_blank\" href=\"$destination\">$image</a>";
 			$result = "<p class=\"foto\">$link</p>";
 			return $result;
+		}
+
+		private function make_text ($text)
+		{
+			if ($text) {
+				$this->openContext($this->defaultContext);
+				$this->content[] = " $text";
+			} else $this->closeContext();
+		}
+
+		private function make_id ($id)
+		{
+			$this->content[] = '<a id="'.$id.'"></a>';
 		}
 
 		private function make_p ($index, $cmd_args, $cmd_attr)
