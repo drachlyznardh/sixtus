@@ -32,6 +32,7 @@
 					} else $this->content[] = $cmd_args[1];
 					break;
 				case 'r':
+				case 'reverse':
 					$this->switchContext('r');
 					$this->content[] = $cmd_args[1];
 					break;
