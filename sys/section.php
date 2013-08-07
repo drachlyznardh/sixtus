@@ -23,6 +23,7 @@
 						$this->content[] = $cmd_args[0];
 					}else $this->closeContext();
 					break;
+				case 'id': $this->content[] = '<a id="'.$cmd_args[1].'"></a>'; break;
 				case 'p':
 				case 'li':
 					$this->switchContext($command);
