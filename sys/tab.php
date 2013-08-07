@@ -14,6 +14,11 @@
 		{
 			switch($cmd)
 			{
+				case 'sbr':
+					$this->content[] = $this->current->getContent();
+					$this->content[] = '<br />';
+					$this->current = new Section();
+					break;
 				case 'sec':
 					$this->content[] = $this->current->getContent();
 					$this->current = new Section();
