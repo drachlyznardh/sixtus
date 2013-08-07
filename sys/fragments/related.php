@@ -14,7 +14,7 @@
 	<p style="text-align: center">
 		/
 		<?php foreach ($search['cat'] as $_) { ?>
-			<a href="<?=$_[0]?>"><?=$_[1]?></a> / 
+			<a href="<?=make_canonical($attr, $_[0])?>"><?=$_[1]?></a> / 
 		<?php } ?>
 	</p>
 	<?php if (isset($related['next'])) { ?>

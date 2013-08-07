@@ -77,7 +77,7 @@
 		if (isset($mymap[$mypath])) {
 			$mymap = $mymap[$mypath];
 			$mycat .= ucwords($mypath).'/';
-			$search['cat'][] = array(make_canonical($attr, $mycat), ucwords($mypath));
+			$search['cat'][] = array($mycat, ucwords($mypath));
 
 			if (is_array($mymap)) $search['dir'] = $mymap[0];
 			else $search['dir'] = $mymap;
@@ -89,7 +89,7 @@
 		} else {
 			$search['file'] = $mypath . '.php';
 			$mycat .= strtoupper($mypath).'/';
-			$search['page'] = array(make_canonical($attr, $mycat), strtoupper($mypath));
+			$search['page'] = array($mycat, strtoupper($mypath));
 			break;
 		}
 	}
