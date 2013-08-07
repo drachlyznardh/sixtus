@@ -3,6 +3,8 @@
 	{
 		private $content;
 		private $context = false;
+		private $environment;
+		private $defaultContext = 'p';
 
 		public function getContent()
 		{
@@ -19,7 +21,7 @@
 			{
 				case '':
 					if ($cmd_args[0]) {
-						$this->openContext('p');
+						$this->openContext($this->defaultContext);
 						$this->content[] = $cmd_args[0];
 					}else $this->closeContext();
 					break;
@@ -60,6 +62,8 @@
 					$this->closeContext();
 					$this->content[] = $this->full_img($cmd_args);
 					break;
+				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
+				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				default:
 					$this->closeContext();
 					$this->content[] = '<br/><p><b><em>ERROR</em></b>: [';
@@ -187,6 +191,59 @@
 			$link = "<a target=\"_blank\" href=\"$destination\">$image</a>";
 			$result = "<p class=\"foto\">$link</p>";
 			return $result;
+		}
+
+		private function make_begin ($args, $attr)
+		{
+			if (preg_match('/@/', $args[1])) {
+				list($env, $side) = preg_split('/@/', $args[1]);
+			} else {
+				$env = $args[1];
+				$side = false;
+			}
+			
+			$this->closeContext();
+			switch($env)
+			{
+				case 'inside':
+				case 'outside':
+					$this->content[] = "<div class=\"$env\">";
+					$this->environment = 'inside';
+					break;
+				case 'ul':
+				case 'ol':
+					$this->content[] = "<$env>";
+					$this->defaultContext = 'li';
+					break;
+				case 'mini':
+				case 'half':
+					if ($side) $this->content[] = "<div class=\"$env-$side\">";
+					else die ("Environment[$env] needs a side");
+					break;
+				default:
+					die("Unknown environment[$env]\n");
+			}
+		}
+
+		private function make_end ($args, $attr)
+		{
+			$this->closeContext();
+			switch ($args[1])
+			{
+				case 'ul':
+				case 'ol':
+					$this->content[] = "</$args[1]>";
+					$this->defaultContext = 'p';
+					break;
+				case 'inside':
+				case 'outside':
+				case 'mini':
+				case 'half':
+					$this->content[] = '</div>';
+					break;
+				default:
+					die("Unknown environment[$args[1]]");
+			}
 		}
 	}
 ?>
