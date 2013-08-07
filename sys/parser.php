@@ -24,6 +24,8 @@
 		private $body = array();
 		private $side = array();
 
+		private $first_tab = true;
+
 		public function __construct()
 		{
 			$this->current = new Tab();
@@ -118,6 +120,16 @@
 					$this->pstate = 'meta';
 					$this->body[] = $this->current;
 					$this->current = new Tab();
+					break;
+				case 'tab':
+					if ($this->first_tab) {
+						$this->current->setName($cmd_args[1]);
+						$this->first_tab = false;
+					} else {
+						$this->body[] = $this->current;
+						$this->current = new Tab();
+						$this->current->setName($cmd_args[1]);
+					}
 					break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);

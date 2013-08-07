@@ -3,6 +3,7 @@
 	{
 		private $content;
 		private $current;
+		private $name;
 
 		public function __construct()
 		{
@@ -26,6 +27,11 @@
 				default:
 					$this->current->parse($index, $cmd, $cmd_attr, $cmd_args);
 			}
+		}
+
+		public function setName($name)
+		{
+			$this->name = $name;
 		}
 
 		public function getContent()
