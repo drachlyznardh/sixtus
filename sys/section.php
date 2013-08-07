@@ -54,6 +54,12 @@
 						$this->content[] = '<h3 class="reverse">'.$cmd_args[1].'</h3>';
 					else $this->content[] = '<h3>'.$cmd_args[1].'</h3>';
 					break;
+				case 'foto':
+				case 'photo':
+				case 'img':
+					$this->closeContext();
+					$this->content[] = $this->full_img($cmd_args);
+					break;
 				default:
 					$this->closeContext();
 					$this->content[] = '<br/><p><b><em>ERROR</em></b>: [';
@@ -161,6 +167,25 @@
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
 			
+			return $result;
+		}
+
+		private function full_img ($args)
+		{
+			switch(count($args))
+			{
+				case 2:
+					$destination = $thumbnail = $args[1];
+					break;
+				case 3:
+					$destination = $args[1];
+					$thumbnail = $args[2];
+					break;
+			}
+
+			$image = "<img src=\"$thumbnail\" />";
+			$link = "<a target=\"_blank\" href=\"$destination\">$image</a>";
+			$result = "<p class=\"foto\">$link</p>";
 			return $result;
 		}
 	}
