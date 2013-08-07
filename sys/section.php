@@ -1,7 +1,7 @@
 <?php
 	class Section
 	{
-		private $content;
+		private $content = array();
 		private $context = false;
 		private $environment;
 		private $defaultContext = 'p';
@@ -11,8 +11,8 @@
 			$this->closeContext();
 			$content = false;
 			foreach ($this->content as $_)
-				$content .= $_."\n";
-			return '<div class="section">'."\n".$content."\n".'</div>'."\n";
+				$content .= $_;
+			return '<div class="section">'."\n".$content.'</div>'."\n";
 		}
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)
@@ -20,10 +20,11 @@
 			switch ($command)
 			{
 				case '':
-					if ($cmd_args[0]) {
+					$text = trim($cmd_args[0]);
+					if ($text) {
 						$this->openContext($this->defaultContext);
-						$this->content[] = $cmd_args[0];
-					}else $this->closeContext();
+						$this->content[] = " $text";
+					} else $this->closeContext();
 					break;
 				case 'id': $this->content[] = '<a id="'.$cmd_args[1].'"></a>'; break;
 				case 'p':
@@ -44,18 +45,8 @@
 					break;
 				case 'link':
 					$this->content[] = $this->full_link($cmd_args); break;
-				case 'title':
-					$this->closeContext();
-					if ($cmd_attr and $cmd_attr[1] == 'right')
-						$this->content[] = '<h2 class="reverse">'.$cmd_args[1].'</h2>';
-					else $this->content[] = '<h2>'.$cmd_args[1].'</h2>';
-					break;
-				case 'stitle':
-					$this->closeContext();
-					if ($cmd_attr and $cmd_attr[1] == 'right')
-						$this->content[] = '<h3 class="reverse">'.$cmd_args[1].'</h3>';
-					else $this->content[] = '<h3>'.$cmd_args[1].'</h3>';
-					break;
+				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
+				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
 				case 'foto':
 				case 'photo':
 				case 'img':
@@ -91,6 +82,7 @@
 				case 'outside': $this->content[] = '</div>'; break;
 			}
 			$this->context = false;
+			$this->content[] = "\n";
 		}
 
 		private function openContext($new)
@@ -193,6 +185,30 @@
 			$link = "<a target=\"_blank\" href=\"$destination\">$image</a>";
 			$result = "<p class=\"foto\">$link</p>";
 			return $result;
+		}
+
+		private function make_title ($lineno, $cmd_args, $cmd_attr)
+		{
+			$this->closeContext();
+			if ($cmd_attr and $cmd_attr[1] == 'right')
+				$this->content[] = '<h2 class="reverse">'.$cmd_args[1].'</h2>';
+			else $this->content[] = '<h2>'.$cmd_args[1].'</h2>';
+			$this->content[] = "\n";
+		}
+
+		private function make_stitle ($lineno, $cmd_args, $cmd_attr)
+		{
+			$this->closeContext();
+			if ($cmd_attr and $cmd_attr[1] == 'right')
+				$open_tag = '<h3 class="reverse">';
+			else $open_tag = '<h3>';
+
+			$this->content[] = $open_tag;
+			if (count($cmd_args) > 2) {
+				array_shift($cmd_args);
+				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+			}
+			$this->content[] = '</h3>'."\n";
 		}
 
 		private function make_begin ($args, $attr)
