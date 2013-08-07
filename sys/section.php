@@ -28,31 +28,16 @@
 					break;
 				case 'id': $this->content[] = '<a id="'.$cmd_args[1].'"></a>'; break;
 				case 'p':
-				case 'li':
-					$this->switchContext($command);
-					if (count($cmd_args) > 2) {
-						array_shift($cmd_args);
-						$this->parse($index, $cmd_args[0], $cmd_attr, $cmd_args);
-					} else $this->content[] = $cmd_args[1];
-					break;
+				case 'li': $this->make_p($index, $cmd_args, $cmd_attr); break;
 				case 'r':
-				case 'reverse':
-					$this->switchContext('r');
-					$this->content[] = $cmd_args[1];
-					break;
-				case 'tid':
-					$this->content[] = $this->full_tid($cmd_args); break;
-					break;
-				case 'link':
-					$this->content[] = $this->full_link($cmd_args); break;
+				case 'reverse': $this->make_r($index, $cmd_args, $cmd_attr); break;
+				case 'tid': $this->make_tid($cmd_args); break;
+				case 'link': $this->make_link($cmd_args); break;
 				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
 				case 'foto':
 				case 'photo':
-				case 'img':
-					$this->closeContext();
-					$this->content[] = $this->full_img($cmd_args);
-					break;
+				case 'img': $this->make_img($cmd_args); break;
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
@@ -187,6 +172,34 @@
 			return $result;
 		}
 
+		private function make_p ($index, $cmd_args, $cmd_attr)
+		{
+			$this->switchContext($cmd_args[0]);
+			if (count($cmd_args) > 2) {
+				array_shift($cmd_args);
+				$this->parse($index, $cmd_args[0], $cmd_attr, $cmd_args);
+			} else $this->content[] = $cmd_args[1];
+		}
+
+		private function make_r ($index, $cmd_args, $cmd_attr)
+		{
+			$this->switchContext('r');
+			if (count($cmd_args) > 2) {
+				array_shift($cmd_args);
+				$this->parse($index, $cmd_args[0], $cmd_attr, $cmd_args);
+			} else $this->content[] = $cmd_args[1];
+		}
+
+		private function make_tid ($args)
+		{
+			$this->content[] = ' '.$this->full_tid($args);
+		}
+
+		private function make_link ($args)
+		{
+			$this->content[] = ' '.$this->full_link($args);
+		}
+
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
@@ -209,6 +222,12 @@
 				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
 			}
 			$this->content[] = '</h3>'."\n";
+		}
+
+		private function make_img ($args)
+		{
+			$this->closeContext();
+			$this->content[] = $this->full_img($args);
 		}
 
 		private function make_begin ($args, $attr)
