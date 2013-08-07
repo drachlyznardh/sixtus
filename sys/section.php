@@ -64,9 +64,10 @@
 					break;
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
+				case 'br': $this->make_break(); break;
 				default:
 					$this->closeContext();
-					$this->content[] = '<br/><p><b><em>ERROR</em></b>: [';
+					$this->content[] = '<br/><p class="error">ERROR: [';
 					$this->content[] = $cmd_args[0];
 					$this->content[] = ']</p>';
 			}
@@ -244,6 +245,12 @@
 				default:
 					die("Unknown environment[$args[1]]");
 			}
+		}
+
+		private function make_break ()
+		{
+			$this->closeContext();
+			$this->content[] = '<br/>';
 		}
 	}
 ?>
