@@ -24,22 +24,22 @@
 					}else $this->closeContext();
 					break;
 				case 'p':
-					$this->switchContext('p');
-					$this->content[] = $cmd_args[1];
+				case 'li':
+					$this->switchContext($command);
+					if (count($cmd_args) > 2) {
+						array_shift($cmd_args);
+						$this->parse($index, $cmd_args[0], $cmd_attr, $cmd_args);
+					} else $this->content[] = $cmd_args[1];
 					break;
 				case 'r':
 					$this->switchContext('r');
 					$this->content[] = $cmd_args[1];
 					break;
 				case 'tid':
-					$this->content[] = "<?=make_tid(\$attr, \$request['tab'], \$search['page'][0], '$cmd_args[1]', '$cmd_args[2]')?>";
+					$this->content[] = $this->full_tid($cmd_args); break;
 					break;
 				case 'link':
-					$dest = polish_line($cmd_args[1]);
-					$title = polish_line($cmd_args[2]);
-					$url = "<?=make_canonical(\$attr, '$dest', '$title')?>";
-					$this->content[] = "<a href=\"$url\">$title</a>";
-					break;
+					$this->content[] = $this->full_link($cmd_args); break;
 				case 'title':
 					$this->closeContext();
 					if ($cmd_attr and $cmd_attr[1] == 'right')
@@ -92,6 +92,74 @@
 				case 'inside': $this->content[] = '<div class="inside">'; break;
 				case 'outside': $this->content[] = '<div class="outside">'; break;
 			}
+		}
+
+		private function full_link ($args)
+		{
+			$destination = polish_line($args[1]);
+			if (preg_match('/@/', polish_line($args[2]))) {
+				$_ = preg_split('/@/', $args[2]);
+				switch(count($_)) {
+					case 2:
+						$before = false;
+						$title = $_[0];
+						$after = $_[1];
+						break;
+					case 3:
+						$before = $_[0];
+						$title = $_[1];
+						$after = $_[2];
+						break;
+				}
+			} else {
+				$title = $args[2];
+				$before = $after = false;
+			}
+
+			$count = count($args);
+			if ($count > 3) $tab = $args[3]; else $tab = 'false';
+			if ($count > 4) $hash = $args[4]; else $hash = 'false';
+			
+			$url = "<?=make_canonical(\$attr, '$destination', '$tab', '$hash')?>";
+			if ($before) $result = $before; else $result = false;
+			$result .= "<a href=\"$url\">$title</a>";
+			if ($after) $result .= $after;
+			
+			return $result;
+		}
+
+		private function full_tid ($args)
+		{
+			$destination = "\$search['page'][0]";
+			if (preg_match('/@/', $args[1])) {
+				$_ = preg_split('/@/', polish_line($args[1]));
+				switch(count($_)){
+					case 2:
+						$before = false;
+						$title = $_[0];
+						$after = $_[1];
+						break;
+					case 3:
+						$before = $_[0];
+						$title = $_[1];
+						$after = $_[2];
+						break;
+				}
+			} else {
+				$title = $args[1];
+				$before = $after = false;
+			}
+
+			$count = count($args);
+			if ($count > 2) $tab = $args[2]; else $tab = 'false';
+			if ($count > 3) $hash = $args[3]; else $hash = 'false';
+			
+			$url = "<?=make_canonical(\$attr, $destination, '$tab', '$hash')?>";
+			if ($before) $result = $before; else $result = false;
+			$result .= "<a href=\"$url\">$title</a>";
+			if ($after) $result .= $after;
+			
+			return $result;
 		}
 	}
 ?>
