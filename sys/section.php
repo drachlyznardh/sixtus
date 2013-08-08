@@ -151,9 +151,10 @@
 			
 			$url = "<?=make_canonical(\$attr, $destination, $tab, $hash)?>";
 			if ($before) $result = $before; else $result = false;
-			$result .= "<a href=\"$url\">$title</a>";
+			$result .= "<?=make_tid(\$attr, \$request['tab'], $destination, $tab, '$title')?>";
 			if ($after) $result .= $after;
 			
+
 			return $result;
 		}
 

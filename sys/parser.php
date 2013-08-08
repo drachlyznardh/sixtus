@@ -126,6 +126,7 @@
 					if ($this->first_tab) {
 						$this->current->setName($cmd_args[1]);
 						$this->first_tab = false;
+						$this->default_tab = $cmd_args[1];
 					} else {
 						$this->current->closeTab();
 						$this->body[] = $this->current;
@@ -145,6 +146,7 @@
 			printf("\t\$attr['title'] = '$this->title';\n");
 			printf("\t\$attr['subtitle'] = '$this->subtitle';\n");
 			printf("\t\$attr['keywords'] = '$this->keywords';\n");
+			printf("\tif(!\$request['tab']) \$request['tab'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)
 				printf("\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");

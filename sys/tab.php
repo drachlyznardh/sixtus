@@ -52,10 +52,6 @@
 				$result = "<!-- Tab[$this->name]/START -->\n";
 				$result .= $content;
 				$result .= "<!-- Tab[$this->name]/STOP -->\n";
-			} else if ($first) {
-				$result = "<?php if (\$request['tab'] == '$this->name' or \$request['tab'] == false) { ?>\n";
-				$result .= $content;
-				$result .= "<?php } ?>\n";
 			} else {
 				$result = "<?php if (\$request['tab'] == '$this->name') { ?>\n";
 				$result .= $content;
