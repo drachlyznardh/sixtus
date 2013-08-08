@@ -157,7 +157,7 @@
 			foreach ($this->body as $_) {
 				printf("?>\n");
 				printf("<!--[Body/Start]-->\n");
-				printf($_->getContent());
+				printf("%s", $_->getContent()) or print_r($_);
 				printf("<!--[Body/Stop]-->\n");
 				printf("<?php \n");
 			}
@@ -165,7 +165,7 @@
 			foreach ($this->side as $_) {
 				printf("?>\n");
 				printf("<!--[Side/Start]-->\n");
-				printf($_->getContent());
+				printf("%s", $_->getContent());
 				printf("<!--[Side/Stop]-->\n");
 				printf("<?php \n");
 			}

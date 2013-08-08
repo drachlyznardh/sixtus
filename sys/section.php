@@ -75,6 +75,8 @@
 		private function openContext($new)
 		{
 			if ($this->context == $new) return;
+			if ($this->context == 'r' && $new == 'p') return;
+			if ($this->context == 'p' && $new == 'r') return;
 			
 			$this->context = $new;
 			switch ($this->context)
@@ -189,7 +191,7 @@
 
 		private function make_p ($index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext($cmd_args[0]);
+			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
 			else $this->content[] = $cmd_args[1];
 		}
@@ -251,7 +253,7 @@
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
 				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
-			}
+			} else $this->content[] = $cmd_args[1];
 			$this->content[] = '</h3>'."\n";
 		}
 
@@ -264,7 +266,8 @@
 		private function make_begin ($args, $attr)
 		{
 			if (preg_match('/@/', $args[1])) {
-				list($env, $side) = preg_split('/@/', $args[1]);
+				$side = preg_split('/@/', $args[1]);
+				$env = $side[0];
 			} else {
 				$env = $args[1];
 				$side = false;
@@ -278,14 +281,23 @@
 					$this->content[] = "<div class=\"$env\">";
 					$this->environment = 'inside';
 					break;
+				case 'double':
+				case 'triple':
+					$this->content[] = "<div class=\"$env-col\">";
+					break;
 				case 'ul':
 				case 'ol':
-					$this->content[] = "<$env>";
+					switch (count($side)) {
+						case 5: $style = " $side[1]=$side[2]; $side[3]=$side[4]"; break;	
+						case 3: $style = " $side[1]=$side[2]"; break;
+						case 1: $style = false;
+					}
+					$this->content[] = "<$env$style>";
 					$this->defaultContext = 'li';
 					break;
 				case 'mini':
 				case 'half':
-					if ($side) $this->content[] = "<div class=\"$env-$side\">";
+					if ($side) $this->content[] = "<div class=\"$env-$side[1]\">";
 					else die ("Environment[$env] needs a side");
 					break;
 				default:
@@ -307,6 +319,8 @@
 				case 'outside':
 				case 'mini':
 				case 'half':
+				case 'double':
+				case 'triple':
 					$this->content[] = '</div>';
 					break;
 				default:
