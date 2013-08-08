@@ -28,6 +28,7 @@
 				case 'tid': $this->make_tid($cmd_args); break;
 				case 'link': $this->make_link($cmd_args); break;
 				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
+				case 'titler': $this->make_titler($index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
 				case 'foto':
 				case 'photo':
@@ -215,6 +216,13 @@
 			if ($cmd_attr and $cmd_attr[1] == 'right')
 				$this->content[] = '<h2 class="reverse">'.$cmd_args[1].'</h2>';
 			else $this->content[] = '<h2>'.$cmd_args[1].'</h2>';
+			$this->content[] = "\n";
+		}
+
+		private function make_titler ($lineno, $args, $attr)
+		{
+			$this->closeContext();
+			$this->content[] = '<h2 class="reverse">'.$args[1].'</h2>';
 			$this->content[] = "\n";
 		}
 
