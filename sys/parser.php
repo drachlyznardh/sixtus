@@ -27,17 +27,13 @@
 
 		private $first_tab = true;
 
-		public function __construct()
-		{
-			$this->current = new Tab();
-		}
-
 		public function parse($filename)
 		{
 			$index = 0;
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
-			foreach ($rows as $_) {
+			foreach ($rows as $_)
+			{
 				$index++;
 				if (preg_match('/^#.*/', $_)) {
 					#printf("\tLine#$index is a comment\n");
@@ -58,7 +54,7 @@
 							$this->parse_body($index, $command, $cmd_attr, $fragment);
 							break;
 					}
-				} else {
+				} else if ($this->pstate != 'meta') {
 					$this->current->parse($index, '', '', array(polish_line($_)));
 				}
 			}
@@ -83,18 +79,20 @@
 					$this->keywords = polish_line($cmd_par[1]);
 					break;
 				case 'prev':
-					$this->prev = array($cmd_par[1], $cmd_par[2]);
+					$this->prev = array($cmd_par[1], polish_line($cmd_par[2]));
 					break;
 				case 'next':
-					$this->next = array($cmd_par[1], $cmd_par[2]);
+					$this->next = array($cmd_par[1], polish_line($cmd_par[2]));
 					break;
 				case 'start':
 					switch($cmd_par[1]) {
 						case 'page':
 							$this->pstate = 'body';
+							$this->current = new Tab();
 							break;
 						case 'side':
 							$this->pstate = 'side';
+							$this->current = new Tab();
 							break;
 					}
 					break;
@@ -106,8 +104,9 @@
 			switch ($cmd) {
 				case 'stop':
 					$this->pstate = 'meta';
+					$this->current->closeTab();
 					$this->side[] = $this->current;
-					$this->current = new Tab();
+					$this->current = null;
 					break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
@@ -119,14 +118,16 @@
 			switch ($cmd) {
 				case 'stop':
 					$this->pstate = 'meta';
+					$this->current->closeTab();
 					$this->body[] = $this->current;
-					$this->current = new Tab();
+					$this->current = null;
 					break;
 				case 'tab':
 					if ($this->first_tab) {
 						$this->current->setName($cmd_args[1]);
 						$this->first_tab = false;
 					} else {
+						$this->current->closeTab();
 						$this->body[] = $this->current;
 						$this->current = new Tab();
 						$this->current->setName($cmd_args[1]);

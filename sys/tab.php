@@ -35,9 +35,14 @@
 			$this->content[] = "<a id=\"tab-$name\"></a>";
 		}
 
-		public function getContent()
+		public function closeTab()
 		{
 			$this->content[] = $this->current->getContent();
+			$this->current = null;
+		}
+
+		public function getContent()
+		{
 			$content = false;
 			foreach ($this->content as $_)
 				$content .= $_."\n";

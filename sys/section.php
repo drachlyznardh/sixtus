@@ -144,10 +144,10 @@
 			}
 
 			$count = count($args);
-			if ($count > 2) $tab = $args[2]; else $tab = 'false';
-			if ($count > 3) $hash = $args[3]; else $hash = 'false';
+			if ($count > 2) $tab = "'$args[2]'"; else $tab = "false";
+			if ($count > 3) $hash = "'$args[3]'"; else $hash = "false";
 			
-			$url = "<?=make_canonical(\$attr, $destination, '$tab', '$hash')?>";
+			$url = "<?=make_canonical(\$attr, $destination, $tab, $hash)?>";
 			if ($before) $result = $before; else $result = false;
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
