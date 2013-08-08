@@ -295,8 +295,8 @@
 				case 'ul':
 				case 'ol':
 					switch (count($side)) {
-						case 5: $style = " $side[1]=$side[2]; $side[3]=$side[4]"; break;	
-						case 3: $style = " $side[1]=$side[2]"; break;
+						case 5: $style = " $side[1]=\"$side[2]\" $side[3]=\"$side[4]\""; break;	
+						case 3: $style = " $side[1]=\"$side[2]\""; break;
 						case 1: $style = false;
 					}
 					$this->content[] = "<$env$style>";
