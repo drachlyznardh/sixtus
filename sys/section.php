@@ -179,8 +179,15 @@
 		private function make_text ($text)
 		{
 			if ($text) {
-				$this->openContext($this->defaultContext);
-				$this->content[] = " $text";
+				if (preg_match('/^</', $text)) {
+					$this->content[] = " $text";
+				} else if (preg_match('/^>/', $text)) {
+					$this->openContext($this->defaultContext);
+					$this->content[] = " <span class=\"green\">$text</span>";
+				} else {
+					$this->openContext($this->defaultContext);
+					$this->content[] = " $text";
+				}
 			} else $this->closeContext();
 		}
 
@@ -348,7 +355,6 @@
 
 		private function make_intra ($lineno, $args, $attr)
 		{
-			$this->closeContext();
 			$result = false;
 			
 			$_ = preg_split('/@/', $args[1]);
