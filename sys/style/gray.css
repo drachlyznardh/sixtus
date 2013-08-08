@@ -29,10 +29,10 @@ div.section h2,
 }
 
 em, strong, code {
-	text-shadow: 0 0 1px #000000;
+	text-shadow: 0 0 1px black;
 }
 
 .green {
 	color: green;
-	text-shadow: 0 0 1px darkgreen;	
+	text-shadow: 0 0 2px white;	
 }
