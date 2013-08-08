@@ -37,6 +37,11 @@
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear(); break;
+
+				case 'speak': $this->make_speak($index, $cmd_args, $cmd_attr); break;
+				case 'intra': $this->make_intra($index, $cmd_args, $cmd_attr); break;
+				case 'inline': $this->make_inline($index, $cmd_args, $cmd_attr); break;
+
 				default:
 					printf ("ERROR [$command] @ line $index\n");
 					exit(1);
@@ -185,19 +190,28 @@
 		private function make_p ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext($cmd_args[0]);
-			if (count($cmd_args) > 2) {
-				array_shift($cmd_args);
-				$this->parse($index, $cmd_args[0], $cmd_attr, $cmd_args);
-			} else $this->content[] = $cmd_args[1];
+			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
+			else $this->content[] = $cmd_args[1];
 		}
 
 		private function make_r ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('r');
-			if (count($cmd_args) > 2) {
-				array_shift($cmd_args);
-				$this->parse($index, $cmd_args[0], $cmd_attr, $cmd_args);
-			} else $this->content[] = $cmd_args[1];
+			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
+			else $this->content[] = $cmd_args[1];
+		}
+
+		private function recursive ($index, $cmd_args, $cmd_attr)
+		{
+			array_shift($cmd_args);
+			if (preg_match('/@/', $cmd_args[0])) {
+				$cmd_attr = preg_split('/@/', $cmd_args[0]);
+				$command = $cmd_attr[0];
+			} else {
+				$command = $cmd_args[0];
+				$cmd_attr = array();
+			}
+			$this->parse($index, $command, $cmd_attr, $cmd_args);
 		}
 
 		private function make_tid ($args)
@@ -310,6 +324,41 @@
 		{
 			$this->closeContext();
 			$this->content[] = '<div style="float:none; clear:both"></div>';
+		}
+
+		private function make_speak ($lineno, $args, $attr)
+		{
+			$this->closeContext();
+			$this->content[] = '<p>«'.$this->dialog($args[1], $args[2]).'»</p>';
+		}
+
+		private function make_intra ($lineno, $args, $attr)
+		{
+			$this->closeContext();
+			$result = false;
+			
+			$_ = preg_split('/@/', $args[1]);
+			$result = $this->dialog($attr[0], $_[0]);
+			array_shift($_);
+			while (count($_))
+			{
+				$result .= ' – '.$_[0].' – ';
+				$result .= $this->dialog($attr[0], $_[1]);
+				array_shift($_);
+				array_shift($_);
+			}
+
+			$this->content[] = '«'.$result.'»';
+		}
+
+		private function make_inline ($lineno, $args, $attr)
+		{
+			$this->content[] = '«'.$this->dialog($args[1], $args[2]).'»';
+		}
+
+		private function dialog ($author, $line)
+		{
+			return '<span title="'.$author.'">'.$line.'</span>';
 		}
 	}
 ?>

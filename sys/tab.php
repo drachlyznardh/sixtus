@@ -32,6 +32,7 @@
 		public function setName($name)
 		{
 			$this->name = $name;
+			$this->content[] = "<a id=\"tab-$name\"></a>";
 		}
 
 		public function getContent()
