@@ -41,12 +41,28 @@
 			$this->current = null;
 		}
 
-		public function getContent()
+		public function getContent($static, $first)
 		{
 			$content = false;
 			foreach ($this->content as $_)
 				$content .= $_."\n";
-			return '<div class="tab">'."\n".$content."\n".'</div>'."\n";
+			$content = '<div class="tab">'."\n".$content."\n".'</div>'."\n";
+
+			if ($static) {
+				$result = "<!-- Tab[$this->name]/START -->\n";
+				$result .= $content;
+				$result .= "<!-- Tab[$this->name]/STOP -->\n";
+			} else if ($first) {
+				$result = "<?php if (\$request['tab'] == '$this->name' or \$request['tab'] == false) { ?>\n";
+				$result .= $content;
+				$result .= "<?php } ?>\n";
+			} else {
+				$result = "<?php if (\$request['tab'] == '$this->name') { ?>\n";
+				$result .= $content;
+				$result .= "<?php } ?>\n";
+			}
+
+			return $result;
 		}
 	}
 ?>

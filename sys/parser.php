@@ -154,21 +154,21 @@
 			else printf("\t\$related['next'] = false;\n");
 			printf("\n");
 			printf("\trequire_once('sys/fragments/in-before.php');\n");
+			printf("?>\n");
+			printf("<!--[Body/Start]-->\n");
+			$first = true;
 			foreach ($this->body as $_) {
-				printf("?>\n");
-				printf("<!--[Body/Start]-->\n");
-				printf("%s", $_->getContent()) or print_r($_);
-				printf("<!--[Body/Stop]-->\n");
-				printf("<?php \n");
+				printf("%s", $_->getContent(false, $first)) or print_r($_);
+				if ($first) $first = false;
 			}
+			printf("<!--[Body/Stop]-->\n");
+			printf("<?php \n");
 			printf("\trequire_once('sys/fragments/in-middle.php');\n");
-			foreach ($this->side as $_) {
-				printf("?>\n");
-				printf("<!--[Side/Start]-->\n");
-				printf("%s", $_->getContent());
-				printf("<!--[Side/Stop]-->\n");
-				printf("<?php \n");
-			}
+			printf("?>\n");
+			printf("<!--[Side/Start]-->\n");
+			foreach ($this->side as $_) printf("%s", $_->getContent(true, false));
+			printf("<!--[Side/Stop]-->\n");
+			printf("<?php \n");
 			printf("\trequire_once('sys/fragments/in-after.php');\n");
 			printf("?>\n");
 		}
