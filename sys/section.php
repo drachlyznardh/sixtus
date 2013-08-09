@@ -12,7 +12,7 @@
 			$content = false;
 			foreach ($this->content as $_)
 				$content .= $_;
-			return '<div class="section">'."\n".$content.'</div>'."\n";
+			return '<div class="section">'.$content.'</div>'."\n";
 		}
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)

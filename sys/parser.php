@@ -161,7 +161,7 @@
 			printf("<!--[Body/Start]-->\n");
 			$first = true;
 			foreach ($this->body as $_) {
-				printf("%s", $_->getContent(false, $first)) or print_r($_);
+				printf("%s", $_->getContent(false, $first));
 				if ($first) $first = false;
 			}
 			printf("<!--[Body/Stop]-->\n");
