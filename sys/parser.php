@@ -26,6 +26,7 @@
 		private $side = array();
 
 		private $first_tab = true;
+		private $default_tab = false;
 
 		public function parse($filename)
 		{
