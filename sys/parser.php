@@ -14,11 +14,11 @@
 	
 		private $pstate = 'meta';
 
-		private $title = '__TITLE__';
-		private $subtitle = '__SUBTITLE__';
-		private $keywords = '__KEYWORDS__';
+		private $title = false;
+		private $subtitle = false;
+		private $keywords = false;
 
-		private $prev = array('__PREV_0__', '__PREV_1__');
+		private $prev = false;
 		private $next = false;
 
 		private $current = null;
