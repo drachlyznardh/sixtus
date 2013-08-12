@@ -6,8 +6,8 @@
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	$request['tab'] = false;
-	$attr['theme'] = 'gray';
-	$attr['tabs'] = 'singletab';
+	$attr['gray'] = true;
+	$attr['single'] = true;
 
 	$direct_access_file = substr($request['original'], 1);
 
@@ -41,13 +41,19 @@
 				unset($token[$key]);
 				break;
 			case 'gray':
-			case 'white':
-				$attr['theme'] = $token[$key];
+				$attr['gray'] = true;
 				unset($token[$key]);
 				break;
-			case 'singletab':
-			case 'alltabs':
-				$attr['tabs'] = $token[$key];
+			case 'white':
+				$attr['gray'] = false;
+				unset($token[$key]);
+				break;
+			case 'single':
+				$attr['single'] = true;
+				unset($token[$key]);
+				break;
+			case 'all':
+				$attr['single'] = false;
 				unset($token[$key]);
 				break;
 		}
@@ -95,10 +101,13 @@
 	}
 	$search['include'] = $search['dir'] .'/'. $search['file'];
 
+	if (isset($search['page'])) $attr['self'] = $search['page'][0];
+	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
+
 ?>
 <!DOCTYPE html>
 <!-- $Request[Original] = [<?=$request['original']?>] -->
-<!-- $Attr[Theme] = [<?=$attr['theme']?>], $Attr[Tabs] = [<?=$attr['tabs']?>] -->
+<!-- $Attr[Theme] = [<?=$attr['gray']?>], $Attr[Tabs] = [<?=$attr['single']?>] -->
 <!-- $Request[Path] = [<?php
 	$other=false;
 	foreach ($request['path'] as $key)
@@ -108,6 +117,7 @@
 <!-- $Search[Dir] = [<?=$search['dir']?>], $Search[File] = [<?=$search['file']?>], $Search[Include] = [<?=$search['include']?>] -->
 <?php
 	
+	$attr['included'] = false;
 	if (is_file($search['include']))
 		require_once($search['include']);
 	else require_once('sys/404-not-found.php');

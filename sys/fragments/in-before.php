@@ -6,10 +6,10 @@
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?=$attr['keywords']?>" />
 		<title><?=$attr['title']?></title>
-		<link rel="stylesheet" type="text/css" href="sys/style/<?=$attr['theme']?>.css" />
+		<link rel="stylesheet" type="text/css" href="sys/style/<?=($attr['gray']?'gray':'white')?>.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/common.css" />
-		<link rel="shortcut icon" type="image/x-icon" href="sys/style/ico/<?=$attr['theme']?>.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="sys/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 	</head>
 	<body>
 		<div id="main">

@@ -98,17 +98,17 @@
 	<div style="width:50%; float:left"><div class="inside">
 			<p style="text-indent:0">
 				Tab [ <?php
-	if ($attr['tabs'] == 'singletab') {
+	if ($attr['single']) {
 		echo ('<em>Single</em>');
 	} else {
-		$custom = array('tabs' => 'singletab', 'theme' => $attr['theme']);
-		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+		$custom = array('single' => true, 'gray' => $attr['gray']);
+		$url = make_canonical($custom, $attr['self'], $request['tab']);
 		echo ('<a href="'.$url.'">Single</a>');
 	}
 				?> | <?php
-	if ($attr['tabs'] == 'singletab') {
-		$custom = array('tabs' => 'alltabs', 'theme' => $attr['theme']);
-		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+	if ($attr['single']) {
+		$custom = array('single' => false, 'gray' => $attr['gray']);
+		$url = make_canonical($custom, $attr['self'], $request['tab']);
 		echo ('<a href="'.$url.'">All</a>');
 	} else {
 		echo('<em>All</em>');
@@ -119,17 +119,17 @@
 	<div style="width:50%; float:right"><div class="outside">
 			<p class="reverse" style="text-indent:0">
 				[ <?php
-	if ($attr['theme'] == 'gray') {
+	if ($attr['gray']) {
 		echo ('<em>Gray</em>');
 	} else {
-		$custom = array('tabs' => $attr['tabs'], 'theme' => 'gray');
-		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+		$custom = array('single' => $attr['single'], 'gray' => true);
+		$url = make_canonical($custom, $attr['self'], $request['tab']);
 		echo ('<a href="'.$url.'">Gray</a>');
 	}
 				?> | <?php
-	if ($attr['theme'] == 'gray') {
-		$custom = array('tabs' => $attr['tabs'], 'theme' => 'white');
-		$url = make_canonical($custom, $search['page'][0], $request['tab']);
+	if ($attr['gray']) {
+		$custom = array('single' => $attr['single'], 'gray' => false);
+		$url = make_canonical($custom, $attr['self'], $request['tab']);
 		echo ('<a href="'.$url.'">White</a>');
 	} else {
 		echo ('<em>White</em>');
