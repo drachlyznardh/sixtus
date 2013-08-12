@@ -150,7 +150,7 @@
 			if ($count > 3) $hash = '\''.strtolower($args[3]).'\''; else $hash = "false";
 			
 			if ($before) $result = $before; else $result = false;
-			$result .= "<?=make_tid(\$attr, $tab, '$title')?>";
+			$result .= "<?=make_tid(\$attr, $tab, '".polish_line($title)."')?>";
 			if ($after) $result .= $after;
 			
 
