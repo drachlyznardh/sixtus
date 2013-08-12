@@ -15,26 +15,34 @@
 		{
 			switch($cmd)
 			{
-				case 'sbr':
-					$this->content[] = $this->current->getContent();
-					$this->content[] = '<br />';
-					$this->current = new Section();
-					break;
-				case 'sec':
-					$this->content[] = $this->current->getContent();
-					$this->current = new Section();
-					break;
-				case 'include':
-					$this->make_include($cmd_args);
-					break;
-				default:
-					if ($this->current == null) $this->current = new Section();
-					$this->current->parse($index, $cmd, $cmd_attr, $cmd_args);
+				case 'sec': $this->make_sec(); break;
+				case 'sbr': $this->make_sbr(); break;
+				case 'include': $this->make_include($cmd_args); break;
+				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
+		}
+
+		private function make_sec ()
+		{
+			if ($this->current != null) $this->content[] = $this->current->getContent();
+			$this->current = new Section();
+			$this->content[] = '<br />';
+		}
+
+		private function make_sbr ()
+		{
+			if ($this->current != null) $this->content[] = $this->current->getContent();
+			$this->current = new Section();
 		}
 
 		private function make_include ($args)
 		{
+			if ($this->current != null)
+			{
+				$this->content[] = $this->current->getContent();
+				$this->current = null;
+			}
+
 			$filename = $args[1].'.php';
 			if (count($args)> 2) {
 				if (preg_match('/@/', $args[2])) {
@@ -51,6 +59,12 @@
 			}
 			
 			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, $as); ?>";
+		}
+
+		private function make_default ($index, $cmd, $cmd_attr, $cmd_args)
+		{
+			if ($this->current == null) $this->current = new Section();
+			$this->current->parse($index, $cmd, $cmd_attr, $cmd_args);
 		}
 
 		public function setName($name)
