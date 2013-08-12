@@ -19,9 +19,9 @@
 		<?php }
 		if (isset($search['page'])) {
 			echo ('<a href="'.make_canonical($attr, $search['page'][0]).'">'.$search['page'][1].'</a> ');
-			if ($request['tab'])
+			if ($attr['part'])
 				echo ('§ <a
-				href="'.make_canonical($attr, $search['page'][0], $request['tab']).'">'.strtoupper($request['tab']).'</a>');
+				href="'.make_canonical($attr, $search['page'][0], $attr['part']).'">'.strtoupper($attr['part']).'</a>');
 			echo ('/');
 		} ?>
 	</p></div><h1 style="text-align:center">

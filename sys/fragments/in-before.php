@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="it">
 	<head>
 		<!-- All your --><base href="http://<?=$_SERVER['SERVER_NAME']?>/" /><!-- are belong to us -->	
@@ -11,6 +12,17 @@
 		<link rel="stylesheet" type="text/css" href="sys/style/common.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="sys/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 	</head>
+	<!-- $Request[Original] = [<?=$request['original']?>] -->
+	<!-- $Attr[Gray] = [<?=$attr['gray']?>], $Attr[Single] = [<?=$attr['single']?>] -->
+	<!-- $Attr[Included] = [<?=$attr['included']?>] -->
+	<!-- $Attr[Part] = [<?=$attr['part']?>], $Attr[Force_All_Tabs] = [<?=$attr['force_all_tabs']?>] -->
+	<!-- $Request[Path] = [<?php
+		$other=false;
+		foreach ($request['path'] as $key)
+			if ($other) { echo"; $key"; }
+			else { $other=true; echo"$key"; }
+	?>] -->
+	<!-- $Search[Dir] = [<?=$search['dir']?>], $Search[File] = [<?=$search['file']?>], $Search[Include] = [<?=$search['include']?>] -->
 	<body>
 		<div id="main">
 			<div id="content">

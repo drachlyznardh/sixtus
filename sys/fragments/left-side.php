@@ -102,13 +102,13 @@
 		echo ('<em>Single</em>');
 	} else {
 		$custom = array('single' => true, 'gray' => $attr['gray']);
-		$url = make_canonical($custom, $attr['self'], $request['tab']);
+		$url = make_canonical($custom, $attr['self'], $attr['part']);
 		echo ('<a href="'.$url.'">Single</a>');
 	}
 				?> | <?php
 	if ($attr['single']) {
 		$custom = array('single' => false, 'gray' => $attr['gray']);
-		$url = make_canonical($custom, $attr['self'], $request['tab']);
+		$url = make_canonical($custom, $attr['self'], $attr['part']);
 		echo ('<a href="'.$url.'">All</a>');
 	} else {
 		echo('<em>All</em>');
@@ -123,13 +123,13 @@
 		echo ('<em>Gray</em>');
 	} else {
 		$custom = array('single' => $attr['single'], 'gray' => true);
-		$url = make_canonical($custom, $attr['self'], $request['tab']);
+		$url = make_canonical($custom, $attr['self'], $attr['part']);
 		echo ('<a href="'.$url.'">Gray</a>');
 	}
 				?> | <?php
 	if ($attr['gray']) {
 		$custom = array('single' => $attr['single'], 'gray' => false);
-		$url = make_canonical($custom, $attr['self'], $request['tab']);
+		$url = make_canonical($custom, $attr['self'], $attr['part']);
 		echo ('<a href="'.$url.'">White</a>');
 	} else {
 		echo ('<em>White</em>');
