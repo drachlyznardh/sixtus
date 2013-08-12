@@ -50,7 +50,7 @@
 				$as = 'false';
 			}
 			
-			$this->content[] = "<?php dynamic_include('$filename', $part, $as); ?>";
+			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, $as); ?>";
 		}
 
 		public function setName($name)
@@ -65,20 +65,21 @@
 			$this->current = null;
 		}
 
-		public function getContent($static, $first)
+		public function getContent($page)
 		{
 			$content = false;
-			foreach ($this->content as $_)
-				$content .= $_."\n";
+			$result = false;
+			foreach ($this->content as $_) $content .= $_;
 			$content = '<div class="tab">'.$content.'</div>'."\n";
+			
+			$condition = $page ? 'tab' : 'side';
+			$condition .= '_condition(';
+			$condition .= $page ? "\$attr, '$this->name'" : '$attr';
+			$condition .= ')';
 
-			if ($static) {
-				$result = $content;
-			} else {
-				$result = "<?php if (\$request['tab'] == '$this->name') { ?>\n";
-				$result .= $content;
-				$result .= "<?php } ?>\n";
-			}
+			$result = "<?php if ($condition) { ?>\n";
+			$result .= $content;
+			$result .= "<?php } ?>\n";
 
 			return $result;
 		}
