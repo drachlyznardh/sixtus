@@ -5,7 +5,10 @@
 	require_once("sys/mimes.php");
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
-	$request['tab'] = false;
+	
+	$attr['included'] = false;
+	$attr['part'] = false;
+	$attr['force_all_tabs'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
 
@@ -66,7 +69,7 @@
 		if (preg_match('/§/', $_)) {
 			list($page_name, $page_tab) = preg_split('/§/', $_);
 			$request['path'][] = $page_name;
-			$request['tab'] = $page_tab;
+			$attr['part'] = $page_tab;
 		} else {
 			$request['path'][] = $_;
 		}
@@ -104,20 +107,6 @@
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
-?>
-<!DOCTYPE html>
-<!-- $Request[Original] = [<?=$request['original']?>] -->
-<!-- $Attr[Theme] = [<?=$attr['gray']?>], $Attr[Tabs] = [<?=$attr['single']?>] -->
-<!-- $Request[Path] = [<?php
-	$other=false;
-	foreach ($request['path'] as $key)
-		if ($other) { echo"; $key"; }
-		else { $other=true; echo"$key"; }
-?>] -->
-<!-- $Search[Dir] = [<?=$search['dir']?>], $Search[File] = [<?=$search['file']?>], $Search[Include] = [<?=$search['include']?>] -->
-<?php
-	
-	$attr['included'] = false;
 	if (is_file($search['include']))
 		require_once($search['include']);
 	else require_once('sys/404-not-found.php');
