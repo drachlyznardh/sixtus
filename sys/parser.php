@@ -144,35 +144,45 @@
 		{
 			printf("<?php\n");
 			printf("\n");
-			printf("\t\$attr['title'] = '$this->title';\n");
-			printf("\t\$attr['subtitle'] = '$this->subtitle';\n");
-			printf("\t\$attr['keywords'] = '$this->keywords';\n");
-			printf("\tif(!\$request['tab']) \$request['tab'] = '$this->default_tab';\n");
+			printf("\tif(!\$attr['included'])\n");
+			printf("\t{\n");
+			printf("\t\t\$attr['title'] = '$this->title';\n");
+			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
+			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
+			printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)
-				printf("\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");
-			else printf("\t\$related['prev'] = false;\n");
+				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");
+			else printf("\t\t\$related['prev'] = false;\n");
 			if ($this->next)
-				printf("\t\$related['next'] = array('".$this->next[0]."', '".$this->next[1]."');\n");
-			else printf("\t\$related['next'] = false;\n");
+				printf("\t\t\$related['next'] = array('".$this->next[0]."', '".$this->next[1]."');\n");
+			else printf("\t\t\$related['next'] = false;\n");
 			printf("\n");
-			printf("\trequire_once('sys/fragments/in-before.php');\n");
+			printf("\t\trequire_once('sys/fragments/in-before.php');\n");
+			printf("\t}\n");
 			printf("?>\n");
 			printf("<!--[Body/Start]-->\n");
 			$first = true;
 			foreach ($this->body as $_) {
-				printf("%s", $_->getContent(false, $first));
+				printf("%s", $_->getContent(true));
 				if ($first) $first = false;
 			}
 			printf("<!--[Body/Stop]-->\n");
 			printf("<?php \n");
-			printf("\trequire_once('sys/fragments/in-middle.php');\n");
+			printf("\tif(!\$attr['included'])\n");
+			printf("\t{\n");
+			printf("\t\trequire_once('sys/fragments/in-middle.php');\n");
+			printf("\t}\n");
 			printf("?>\n");
 			printf("<!--[Side/Start]-->\n");
-			foreach ($this->side as $_) printf("%s", $_->getContent(true, false));
+			foreach ($this->side as $_)
+				printf("%s", $_->getContent(false));
 			printf("<!--[Side/Stop]-->\n");
 			printf("<?php \n");
-			printf("\trequire_once('sys/fragments/in-after.php');\n");
+			printf("\tif(!\$attr['included'])\n");
+			printf("\t{\n");
+			printf("\t\trequire_once('sys/fragments/in-after.php');\n");
+			printf("\t}\n");
 			printf("?>\n");
 		}
 	}
