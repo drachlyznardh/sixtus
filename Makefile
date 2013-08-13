@@ -1,7 +1,7 @@
 
 LYZ_TO_PHP := /opt/devel/web/sixtus/transform/lyz-to-php.php
 
-SRCS := $(shell find src/str/ -name '*.lyz')
+SRCS := $(shell find src/ -name '*.lyz')
 OBJS := $(patsubst src/%.lyz, web/%.php, $(SRCS))
 
 all: $(OBJS)
