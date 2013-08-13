@@ -1,0 +1,38 @@
+
+a { color: #eeeeee; }
+body { background-color: #121212; }
+.mini-left, .mini-right, .half-left, .half-right { background-color: #666666; }
+
+h1, h2, h3 { text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px; }
+
+div.section {
+	background-color: #666666;
+	border-color: #dddddd;
+}
+
+div.section h2 {
+	background-color: #222222;
+	border-color: #dddddd;
+}
+
+div.section h3 { border-color: #444444; }
+
+.inside, .outside {
+	background-color: #444444;
+}
+
+div.section,
+div.section h2,
+.inside,
+.outside {
+	border-color: #eeeeee;
+}
+
+em, strong, code {
+	text-shadow: 0 0 1px black;
+}
+
+.green {
+	color: green;
+	text-shadow: 0 0 2px white;	
+}
