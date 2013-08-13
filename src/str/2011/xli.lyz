@@ -564,12 +564,12 @@ start#side
 		tid#I finali tagliati#intro#tagliati
 	br#
 	titler#Gundam SEED Destiny
-	pre#<ol>
+	begin#ol
 		li#tid#Prima stagione#s01
 		li#tid#Seconda stagione#s02
 		li#tid#Terza stagione#s03
 		li#tid#Quarta stagione#s04
-	pre#</ol>
+	end#ol
 	br#
 	p#tid#Considerazioni#considerazioni
 stop#side

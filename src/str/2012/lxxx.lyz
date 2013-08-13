@@ -22,7 +22,7 @@ start#page
 	O almeno, questo è quel che si vedrebbe in uno spot realizzato “<em>con il
 	patrocinio del ministero de' 'sti cazzi</em>”. In realtà, andò così:
 	begin#outside
-		<code>Domenica 29 aprile 2012</code>, il <em class="gods">GODS</em>
+		p#<code>Domenica 29 aprile 2012</code>, il <em class="gods">GODS</em>
 		dorme nel suo letto, quand'ecco spunta il padre, che son le <em>cinque
 		di mattina</em> e bisogna andare ad aprire il seggio. Mi sbrodolo fuori
 		dal letto, m'attacco alla tazza del caffè (che mio padre ha già
@@ -111,5 +111,5 @@ stop#page
 start#side
 	title#Storia [<code>LXXX</code>]
 	title@right#Il segretario di seggio
-	<code>True story</code>
+	p#<code>True story</code>
 stop#side

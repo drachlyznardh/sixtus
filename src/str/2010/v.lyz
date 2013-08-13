@@ -240,11 +240,11 @@ tab#iii
 	Ero Batman.
 stop#page
 start#side
-title#Condizioni che cambiano
-pre#<ol>
-li#tid#Condizioni che cambiano#i
-li#tid#Deludere le buone speranza#ii
-li#tid#Bonus#iii
-pre#</ol>
+	title#Condizioni che cambiano
+	begin#ol
+		li#tid#Condizioni che cambiano#i
+		li#tid#Deludere le buone speranza#ii
+		li#tid#Bonus#iii
+	end#ol
 stop#side
 

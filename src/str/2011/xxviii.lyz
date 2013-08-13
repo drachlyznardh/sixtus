@@ -495,23 +495,23 @@ tab#iii
 stop#page
 start#side
 	title#L'odio di una volta
-	pre#<ol>
+	begin#ol
 		li#tid#L'odio#i
 		li#tid#$Katia#ii
 		li#tid#$Linda#iii
 		li#tid#$Linda II, il ritorno#iv
-	pre#</ol>
+	end#ol
 	title#L'odio recente
-	pre#<ol>
+	begin#ol
 		li#tid#La ragazza con il dado tondo#v
 		li#tid#La ragazza che si spaventò#vi
 		li#tid#La ragazza magente#vii
-	pre#</ol>
+	end#ol
 	sec#
 	title#Supplementi
-	pre#<ol>
+	begin#ol
 		li#tid#I motivi#viii
 		li#tid#Anche a distanza!#ix
 		li#tid#Ingiustificato#x
-	pre#</ol>
+	end#ol
 stop#side

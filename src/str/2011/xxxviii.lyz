@@ -126,21 +126,17 @@ tab#intro
 	begin#double
 	id#syn0079
 	stitle#Mobile Suit Gundam 0079
-
 	Uhm, quel che diede inizio a tutto. Serie piuttosto avanti per i tempi, ma
 	comunque difficile da approcciare.
 	
 	È triste, piena di gente che muore e di gente che si chiede come mai la
 	gente muoia.
-
 	id#syn0080
 	stitle#0080 War In The Pocket
-
 	Serie piuttosto corta, piuttosto triste.
 
 	Di come due persone posso innamorarsi, sperare di vivere assieme felici e
 	contenti, salvo poi uccidersi per questioni di lavoro. Storia vera.
-
 	id#synIgloo
 	stitle#MS Igloo I &amp; II
 	Collezione di molte piccole storielline di soldatini federali che fanno i conti con visioni di morte, che inevitabilmente s'avverano.
@@ -234,7 +230,7 @@ tab#intro
 	sbr#
 	title#Cosmic Era
 
-	pre#<div class="doublecol">
+	begin#double
 	id#synSEED
 	stitle#Mobile Suit Gundam SEED
 	Ne parlo dopo.
@@ -248,12 +244,10 @@ tab#intro
 	Qualcosa di successivo a Destiny, che poteva benissimo non esistere.
 
 	Ma ai tempi le ragazzine premevano per averne ancora un po', ed ecco che la produzione l'ha accontentate.
-	pre#</div>
-
+	end#double
 	sbr#
 	title#Anno Domini
-
-	pre#<div class="doublecol">
+	begin#double
 	id#syn00
 	stitle#Mobile Suit Gundam 00
 	Supponiamo che sia il momento di fare una nuova serie di Gundam perché non passati dei begli anni dall'ultima...
@@ -279,7 +273,7 @@ tab#intro
 	Ma non è un problema: trecento anni prima Aiolia aveva previsto tutto!!!
 
 	Ed ecco infatti un gundam quantico fatto apposta per permettere al protagonista di comunicare con gli alieni, fondersi con loro e portare un'allegra pace spaziale. Ecco.
-	pre#</div>
+	end#double
 
 	id#a
 tab#ambientazione
@@ -365,34 +359,34 @@ tab#s01
 	Molta yadda dopo, i cattivi e i buoni si ritrovano per scambiare questo malcapitato ostaggio... in quest'occasione Kira e Athrun s'incontrano per lo scambio.
 	begin#outside
 	E mo'...
-	pre#<ul><li>
+	begin#ul
 		lo sapevate che nella battaglia era coinvolta una nave, sulla
 		nave c'era un senatore, il senatore era il padre di Flay, il
 		senatore viene ucciso, Flay impazzisce accusando Kira della
 		morte del padre, per vendetta decide di provarci con lui come
 		una mandrilla sotto acidi, invitandolo ad andare in battaglia il
 		più possibile sperando che muoia
-	</li><li>
+
 		lo sapevate che il padre di Athrun era un membro del
 		consiglio? Lo sapevate che anche il padre di Lacus era un membro
 		del consiglio? Lo sapevate che questi due erano promessi sposi?
-	</li><li>
+
 		lo sapevate che intanto i piloti dei Gundam catturati sono
 		tutti simpatici e si vogliono un gran bene?
-	</li><li>
+
 		lo sapevate che intanto gli allegri compagni di Kira si sono
 		arruolati per dare una mano sulla nave?
-	</li><li>
+
 		lo sapevate che Kira è un coordinatore, proprio come tutti i
 		cattivi? Sapevate che lo considerano un traditore? Sapevate che
 		i buoni sono tutti razzisti arrabbiati e lo odiano e lo
 		considerano traditore anche loro?
-	</li><li>
+
 		sapevate che Athrun prova a convincere Kira a tornare con lui
 		sulla sua nave, ma no che non posso, ma si che puoi, ma non che
 		non posso, guarda che ti sparo, vedo che mi spari, ma
 		l'amicizia, ma la lealtà, ma la fuffa..
-	pre#</ul>
+	end#ul
 	end#outside
 	sec#
 	Insomma, alla fine l'Archangel deve scendere sulla Terra, in Alaska,
@@ -839,14 +833,12 @@ tab#finale
 stop#page
 start#side
 	stitle#tid#Introduzione alla storia#intro
-	reverse#
-		tid#Cosa accadrà dopo?#intro#cosa
+	r#tid#Cosa accadrà dopo?#intro#cosa
 		/
 		tid#Cose! Cose! Cose!#intro#cose
 		/
 		tid#Altre serie#intro#altre
-	reverse#
-		tid#Ambientazione#ambientazione
+	r#tid#Ambientazione#ambientazione
 		/
 		tid#Trama(cci)#ambientazione#trama
 		
@@ -855,7 +847,6 @@ start#side
 	p#tid#Seconda stagione#s02
 	p#tid#Terza stagione#s03
 	p#tid#Quarta stagione#s04
-	
 	p#tid#Finale#finale
 	/
 	tid#Considerazioni#finale#considerazioni

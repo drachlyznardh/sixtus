@@ -185,13 +185,11 @@ tab#vii
 	E insomma. Credetemi quando vi dico che piegare stanca. Perché sono stanco.
 stop#page
 start#side
-	tid#Per il Bolo#i
+	p#tid#Per il Bolo#i
 	title#Quella storia
-	tid#Quella storia#ii
-
-	tid#Quell'altra storia#iii
-	
-	tid#La storia di quella storia#iv
+	p#tid#Quella storia#ii
+	p#tid#Quell'altra storia#iii
+	p#tid#La storia di quella storia#iv
 	br#	
 	Extra I –
 	tid#Le quattro rose#v
@@ -201,4 +199,4 @@ start#side
 
 	Extra III –
 	tid#L'ultimo#vii
-start#side
+stop#side

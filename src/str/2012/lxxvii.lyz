@@ -125,7 +125,6 @@ tab#considerazioni
 stop#page
 start#side
 	stitle#Attenzione!!!
-
 	Ho scritto questa in un momento di particolare contentezza, quindi potrebbe
 	anche essere più esagerata del solito. Non fidatevi di tutto quel che dico,
 	perché potrebbe essere (e probabilmente è) non dico falso, ma neanche troppo
@@ -136,7 +135,7 @@ start#side
 	sec#
 	title#Storia LXXVII
 	titler#La storia migliore
-	tid#Principi#principi
+	p#tid#Principi#principi
 	/
 	tid#Reazioni#reazioni
 	/

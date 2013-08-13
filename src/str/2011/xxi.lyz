@@ -174,9 +174,9 @@ tab#iii
 stop#page
 start#side
 	title#Sezioni
-	pre#<ol>
+	begin#ol
 		li#tid#La storia#i
 		li#tid#La storia vera#ii
 		li#tid#La fine che dovrebbero fare#iii
-	pre#</ol>
+	end#ol
 stop#side

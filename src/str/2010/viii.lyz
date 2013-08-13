@@ -2,6 +2,7 @@ title#I sassi#E pensieri sui sassi
 prev#Storie/2010/VII/#Gundam
 next#Storie/2010/IX/#Attenzione
 start#page
+tab#sassi
 	Oggi non ho niente da fare, e neanche ho la voglia necessaria
 	per scrivere roba interessante. Poi mi sono accorto che non ho
 	mai scritto la storia dei sassi...
@@ -14,7 +15,6 @@ start#page
 	Poi sto anche ascoltando della musica triste appena riscoperta.
 
 	sec#
-	id#Sassi
 	title#I sassi
 	Fin da piccolo, ho amato la pista ciclabile della mia città. La
 	pista ciclabile è un lungo (parecchio lungo) nastro asfaltato
@@ -35,9 +35,7 @@ start#page
 	Volendo tenermi al passo coi tempi, non appena la ciclabile
 	tornò trafficabile, andai a vedere che ci fosse di nuovo. E
 	c'erano i sassi.
-
-	sec#
-	id#Ruolo
+tab#ruolo
 	title#Il ruolo dei sassi
 	Niente di particolare, finora.
 
@@ -69,8 +67,8 @@ start#page
 stop#page
 start#side
 	title#I Sassi
-	pre#<ol>
-		li#tid#I sassi##Sassi
-		li#tid#Il ruolo dei sassi##Ruolo
-	pre#</ol>
+	begin#ol
+		li#tid#I sassi#Sassi
+		li#tid#Il ruolo dei sassi#Ruolo
+	end#ol
 stop#side

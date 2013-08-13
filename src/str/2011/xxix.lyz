@@ -253,12 +253,12 @@ tab#vi
 stop#page
 start#side
 title#Contenuti
-pre#<ol>
+begin#ol
 	li#tid#I probblemi#i
 	li#tid#Mhphghsthrfgh#ii
 	li#tid#Le fonti d'odio#iii
 	li#tid#Son forse io?#iv
 	li#tid#Non ho briga#v
 	li#tid#Il sogno#vi
-pre#</ol>
+end#ol
 stop#side

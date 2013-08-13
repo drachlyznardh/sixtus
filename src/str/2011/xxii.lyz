@@ -45,15 +45,14 @@ start#page
 		sbr#
 		Il mio impianto TV/Stereo. Esso è così composto:
 		begin#inside
-			pre#<ul>
-				pre#<li>TV &ndash; 3x SCART (IN) + ingresso LR+V
-				pre#</li><li>Decoder per il digitale terrestre &ndash; 2x SCART (IN/OUT)
-				pre#</li><li>DVDPlayer/Stereo5.1/Radio &ndash; 2x SCART (IN/OUT)
-				pre#</li><li>SONY PlayStation
-				pre#</li><li>SONY PlayStation2
-				pre#</li><li>Nintento Wii
-				pre#</li>
-			pre#</ul>
+			begin#ul
+				li#TV &ndash; 3x SCART (IN) + ingresso LR+V
+				li#Decoder per il digitale terrestre &ndash; 2x SCART (IN/OUT)
+				li#DVDPlayer/Stereo5.1/Radio &ndash; 2x SCART (IN/OUT)
+				li#SONY PlayStation
+				li#SONY PlayStation2
+				li#Nintento Wii
+			end#ul
 		end#inside
 		Tutto nello stesso armadio, tutto attaccato alla stessa
 		ciabatta, per un totale di tre telecomandi e cinque joypad.
@@ -122,17 +121,15 @@ start#page
 		sec#
 		Or dunque, installare NetBeans è l'unica via d'uscita. Per due
 		motivi:
+		begin#ol
+			nessuno può scrivere il Java: il linguaggio e la
+			Standard Library sono immensamente brodose, troppo
+			lungo fare tutto a mano...
 		
-		pre#<ol><li>
-			pre#nessuno può scrivere il Java: il linguaggio e la
-			pre#Standard Library sono immensamente brodose, troppo
-			pre#lungo fare tutto a mano...
-		pre#</li><li>
-			pre#è quello che il professore vuole. Non scherzo: lui vuole
-			pre#che si usi questo IDE in particolare, perché non vuol
-			pre#prendersi la briga di impararne un altro
-		pre#</li></ol>
-		
+			ello che il professore vuole. Non scherzo: lui vuole
+			che si usi questo IDE in particolare, perché non vuol
+			prendersi la briga di impararne un altro
+		end#ol
 		Quindi prendi il mostro e recupare un po' di conoscenza,
 		dall'internet, dalle slide delle lezioni, dalla memoria a lungo
 		termine.
