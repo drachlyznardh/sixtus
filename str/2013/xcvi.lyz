@@ -2,6 +2,7 @@ title#La formattazzazzazione#Il mio ritorno al web dopo mesi di silenzio
 prev#Storie/2013/XCIV/#Le mutande di Katia
 #next#Storie/2013/XCVI/#
 start#page
+tab#i
 	Ed eccomi, dopo mille anni di silenzio! Il grande ritorno del <em>GODS</em>
 	alla vita pubblica è segnato da alcuni eccezionali eventi che andrò a
 	raccontarvi a breve.
@@ -224,8 +225,47 @@ start#page
 	Per quanto si possa dire che il PC stia funzionando, sono estremamente
 	sconfortato dalla questione. L'intero sistema non è più leggero di prima…
 	qualcuno si trova nella stessa situazione?
+tab#ii
+	Nel pubblicare questa storia, visto che non ho modo / tempo / intenzione di
+	notificare direttamente al mondo quel che scrivo, ho messo un annuncio su
+	<em>Facebook</em> e su <em>Google Plus</em>.
+
+	Forse fin troppo prontamente, il <em>Bolo</em> ha risposto. Il suo
+	consiglio – ch'era tanto era simile al consiglio di <em>Katia</em> che quasi
+	mi spavento – era di sbattersene, che in pratica diceva:
+	begin#outside
+		«[…] Usa GNOME che è una figata, non sarà il più leggero ma è quello che
+		da meno grattacapi […]»
+	end#outside
+	Ed io, dopo aver lungamente sofferto (la settimana più lunga delle ultime
+	settimane!) ho deciso di prendere <em>GNOME3</em> e dargli una possibilità.
+	r#Cosa potrebbe andare storto?
+	sec#
+	Vi dirò che l'interazione con GNOME mi ha portato ad una risoluzione.
+	Drastica. Ma procederò con ordine, perché tutte le cose brutte meritano
+	(almeno un pochino pochettino pochinino) di essere menzionate in questa
+	storia fatta apposta, scritta sul sito fatto apposta, da me che sono
+	evidentemente l'uomo fatto apposta.
+	sbr#
+	Ci sono un po' di cose che fanno fatica a funzionare, ma.
+	title#Facciamo come dice il Bolo
+	Faccio login sotto <em>GNOME</em>. Dopo un po' (ritardo non eccissivo,
+	<code>1 punto</code> a favore) compare <em>gnome-shell</em>. Ci faccio un
+	giretto… pare che i miei due bottoni (nominalmente
+	<code>XF86Audio[Lower|Raise]Volume</code>) funzionano; nel senso che fanno
+	cose; nel senso che quando li premo sento un BEEP calante o crescente e vedo
+	un inutile effetto semitrasparente che mi dice che lo speaker urla di meno o
+	di più.
+	r#Vabbene.
+	sec#
+	Poi cerco il terminale… uhm… 
 stop#page
 start#side
 	title#La formattazzazzazione
 	title@right#Storia <code>XCVI</code>
+	begin#ol
+		li#tid#Il grande ritorno@ – <code>01/08</code>#i
+		li#tid#Facciamo come dice il Bolo@ – <code>02/08</code>#ii
+		li#Finirà mai?!?
+	end#ol
 stop#side
