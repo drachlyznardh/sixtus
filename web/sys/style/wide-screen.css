@@ -1,0 +1,46 @@
+
+p#big-screen { display: none; }
+p#small-screen { display: none; }
+
+div#content {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div#left-side,
+div#right-side {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 15px;
+}
+
+div#left-side br,
+div#right-side br {
+	display: none;
+}
+
+div#core {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+div#sail-the-sea {
+	width: 80%;
+	margin-left: 0%;
+}
+
+div#stuff-is-valid {
+	width: 80%;
+	margin-left: 10%;
+}
+
+div#roses-are-red {
+	width: 80%;
+	margin-left: 20%;
+}
+
