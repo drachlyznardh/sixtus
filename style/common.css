@@ -8,6 +8,7 @@ body {
 div.section {
 	border-style: outset;
 	border-width: 2px;
+	border-radius: 3px;
 	margin: 5px;
 }
 
@@ -26,12 +27,14 @@ div.section {
 .mini-left, .mini-right {
 	width: 35%;
 	border-width: 2px;
+	border-radius: 3px;
 	border-style: outset;
 }
 
 .half-left, .half-right {
 	width: 48%;
 	border-width: 2px;
+	border-radius: 3px;
 	border-style: outset;
 }
 
@@ -71,6 +74,7 @@ p, ul, ol {
 
 h2 {
 	border-style: outset;
+	border-radius: 3px;
 	border-width: 2px;
 	padding: 3px 2px 3px 15px;
 	margin: 2px 2px 2px -5px;
@@ -117,6 +121,7 @@ a:hover { text-decoration: underline; }
 	background-color: #555555;
 	border-style: outset;
 	border-width: 2px;
+	border-radius: 3px;
 }
 
 .inside { margin: 2px 2px 2px -5px; }
