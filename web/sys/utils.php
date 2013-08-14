@@ -41,6 +41,7 @@
 		{
 			case '':
 			case 'page':
+				$attr['part'] = 'page';
 				$attr['force_all_tabs'] = true;
 				break;
 			case 'side':
