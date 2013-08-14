@@ -7,6 +7,7 @@
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
 	$attr['included'] = false;
+	$attr['sections'] = true;
 	$attr['part'] = false;
 	$attr['force_all_tabs'] = false;
 	$attr['gray'] = true;
