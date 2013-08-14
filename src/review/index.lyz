@@ -56,21 +56,18 @@ tab#categorie
 	E siccome le recensioni cominciano ad essere tante, ho diviso
 	l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
 	cose in ordine (in attesa che crescano).
-	begin#mini@right
-		stitle#link#Recensioni/Brutti/#Film brutti
-		include#review/brutti/index#page@as@content
-	end#mini
-	br#
 	stitle#link#Recensioni/Film/#Film
 	include#review/film/index#page@as@content
+	br#
+	stitle#link#Recensioni/Brutti/#Film brutti
+	include#review/brutti/index#page@as@content
 	br#
 	stitle#link#Recensioni/Show/#Show
 	include#review/show/index#page@as@content
 	br#
-	begin#mini@right
-		stitle#link#Recensioni/Giochi/#Giochi
-		include#review/game/index#page@as@content
-	end#mini
+	stitle#link#Recensioni/Giochi/#Giochi
+	include#review/game/index#page@as@content
+	br#
 	stitle#link#Recensioni/Libri/#Libri
 	include#review/book/index#page@as@content
 tab#classifica
