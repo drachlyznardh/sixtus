@@ -230,11 +230,11 @@ tab#v
 stop#page
 start#side
 	title#Attenzione
-	pre#<ol>
+	begin#ol
 		li#tid#Disturbo dell&apos;attenzione#i## – 10/11
 		li#tid#Il daltonismo#ii## – 11/11
 		li#tid#Il malumore#iii## – 12/11
 		li#tid#Lo sguardo#iv## – 16/11
 		li#tid#La doppelganger#v## – 18/11
-	pre#</ol>
+	end#ol
 stop#side

@@ -290,11 +290,11 @@ tab#v
 </p>
 stop#page
 start#side
-	pre#<ol>
+	begin#ol
 		li#tid#Introduzione#i
 		li#tid#L&apos;interpretazione del sogno#ii
 		li#tid#L&apos;interpretazione del signor Jazzinghen#iii
 		li#tid#Conclusioni#iv
 		li#tid#Il lato comico#v
-	pre#</ol>
+	end#ol
 stop#side

@@ -138,12 +138,12 @@ tab#vi
 stop#page
 start#side
 	title#La vecchiaia
-	pre#<ol>
+	begin#ol
 		li#tid#L'età percepita#i
 		li#tid#Gli effetti dell'età#ii
 		li#tid#La nostalgia#iii
 		li#tid#La briga#iv
 		li#tid#L'insofferenza#v
 		li#tid#La corsa lenta#vi
-	pre#</ol>
+	end#ol
 stop#side

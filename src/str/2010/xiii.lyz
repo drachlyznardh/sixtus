@@ -44,11 +44,8 @@ tab#ii
 	interessanti da attirare alcuni ammiratori; tra di essi, le donne
 	delle pulizie, che mi porteranno della carta buona.
 tab#iii
-<h2>
-	I fiori sono a colori
-</h2><h2 class="reverse">
-	sabato 27 novembre 2010
-</h2><p>
+	title#I fiori sono a colori
+	title@right#sabato 27 novembre 2010
 	Ho appena realizzato il prototipo finale. &Egrave; anche migliore
 	dell'ultimo modello di ieri.
 
@@ -75,9 +72,9 @@ tab#iii
 stop#page
 start#side
 	title#Il modello definitivo
-	pre#<ol>
+	begin#ol
 		li#tid#L&apos;altra sponda#i
 		li#tid#Gli ultimi sviluppi#ii
 		li#tid#I fiori sono a colori#iii
-	pre#</ol>
+	end#ol
 stop#side

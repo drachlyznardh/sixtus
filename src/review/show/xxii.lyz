@@ -12,7 +12,7 @@ tab#intro
 	quest'uomo. Perché questo tizio ha fatto molte cose belle, ma anche alcune
 	cose terribili e molte cose che non capisco.
 
-	pre#<div class="doublecol">
+	<div class="doublecol">
 	stitle#Cose buone
 	begin#ol
 		Toy Story
@@ -37,7 +37,7 @@ tab#intro
 
 		Angel
 	end#ol
-	pre#</div>
+	</div>
 
 	Io non so se fare le cose complicate e non farsi capire sia il suo
 	obiettivo, ma di certo mi lascia confuso. Proverò a mettere giù un po' di
@@ -118,9 +118,7 @@ tab#s02
 	futuro resta lo stesso, gente ch'era morta prima non è morta dopo.
 
 	Quindi.
-
-	pre#<div style="clear:both"></div>
-
+	clear#
 	sec#
 	title#Dollhouse S02
 	titler#L'ha fatta Micheal Bay?

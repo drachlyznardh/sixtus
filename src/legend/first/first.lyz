@@ -366,8 +366,7 @@ tab#s04
 
 	<em>Camouflage</em> si arrampica su alcune spire del Drago, e sente una
 	conversazione telefonica. «Pronto? Si, Signor Presidente, è morto».
-	sec#
-	id#s05
+tab#s05
 	Questa invece l'ha scritta <em class="war">War</em> durante la
 	title#<code>[s05]</code> L'Apocalisse sta arrivando [<code>03 maggio</code>]
 	begin#mini@right
@@ -776,7 +775,6 @@ tab#s07
 	Questa sessione è stata un delirio. L'ha scritta <em
 	class="mitch">Mitch</em>.
 	br#
-	start#page
 	stitle#Viaggio sulla nuvola ninja
 	Siamo in viagio verso il castello ninja nella foresta di bambù, per liberare gli
 	ostaggi dei ninja. Nessuno sa che sono ostaggi: noi non lo sappiamo, gli ostaggi

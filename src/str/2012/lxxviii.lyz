@@ -56,7 +56,7 @@ start#page
 	Fortunatamente, a quel punto la macchina è arrivata, e me ne sono potuto
 	andare.
 
-	<code>Storia vera</code>.
+	p#<code>Storia vera</code>.
 	br#
 	Dopo quello, siamo andati a prenderci il <em>cinese</em> d'asporto, ci siamo
 	sbrodolati a casa di <em class="dacav">Simgi</em>&amp;<em
@@ -66,5 +66,5 @@ stop#page
 start#side
 	title#Storia LXXVIII
 	titler#Il pesce invece…
-	<code>True story</code>.
+	p#<code>True story</code>.
 stop#side

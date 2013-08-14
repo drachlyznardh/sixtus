@@ -187,7 +187,7 @@ tab#contenuti
 	Tristemente, l'intera cosa è piuttosto inconcludente.
 	clear#both
 tab#meta
-	pre#<a id="Extra"></a>
+	id#Extra
 	Metasezione!!!
 	title#Meta [ Extra ]
 	Questa sezione è appunto dedicata a questa sezione.

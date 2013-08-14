@@ -6,7 +6,7 @@
 <!-- Sys/Fragments/Related [Start] -->
 <div>
 <div class="section">
-	<?php if(isset($related['prev'])) {
+	<?php if($related['prev']) {
 			if (preg_match('/@/', $related['prev'][1])) {
 				$_ = preg_split('/@/', $related['prev'][1]);
 				switch(count($_))
@@ -29,7 +29,7 @@
 			<a href="<?=make_canonical($attr, $_[0])?>"><?=$_[1]?></a> / 
 		<?php } ?>
 	</p>
-	<?php if (isset($related['next'])) {
+	<?php if ($related['next']) {
 			if (preg_match('/@/', $related['next'][1])) {
 				$_ = preg_split('/@/', $related['next'][1]);
 				switch(count($_))

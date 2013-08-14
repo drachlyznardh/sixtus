@@ -6,11 +6,9 @@ tab#i
 	Il giorno della verità s'avvicina e potrebbe anche essere questo.
 
 	Intanto i preparativi sono stati terminati, tra ieri e stamane.
-</p></div><div class="section"><h2>
-	Definitivamene definitivo, a colori
-</h2><h2 class="reverse">
-	29 novembre 2010
-</h2><p>
+	sec#
+	title#Definitivamene definitivo, a colori
+	title@right#29 novembre 2010
 	Ieri infatti mi sono messo d'impegno. Ho recuperato tre fogli rossi, tre
 	fogli verdi. Quelli verdi eran finiti, ma per realizzare il fusto che
 	regge i tre fiori me ne serviva un quarto. Non ci fu verso di recuperare
@@ -25,7 +23,7 @@ tab#i
 	due settimane ho piegato carta come un drago, risultato: le unghie del
 	pollice e del medio della mano destra (quelle che uso per calcare le
 	pieghe) si stanno consumando e cominciano a dolermi.
-</p></div><div class="section"><p>
+	sec#
 	Evviva l'ambidestria, ho cominciato a piegare con la sinistra. Ma mi ci
 	è voluta quasi un'ora per finire soltanto il primo pezzo. Ovviamente, il
 	cartone è troppo forte per restare chiuso da solo e le pieghe portanti
@@ -39,7 +37,7 @@ tab#i
 	Lo stelo di cartone marrone è tanto forte da riuscire a tenere in
 	equilibrio uno, due o tre fiori. Ho finito, esausto, a mezzanotte e un
 	quarto.
-</p></div><div class="section"><p>
+	sec#
 	E pensai &laquo;&Egrave; normale che mi senta molto stanco dopo
 	tutto questo lavoro, perché ho dovuto spendere degli EXP per
 	realizzarlo!&raquo;
@@ -48,14 +46,14 @@ tab#i
 	per visionare un filmaccio, `Mega Shark Vs Giant Octopus' che sconsiglio
 	a chicchessia, perché si tratta di un film pessimo, che tenta di essere
 	molto più di quanto non sia, e fallisce.
-
 tab#ii
 	Questa mattina, constatato che evidentemente non è possibile abbandonare
 	tre fiori sul tavolo della cucina per una notte senza che i gatti o i
 	fratelli (o forse i genitori) ci mettano mano abbattendo tutto, raccolgo
 	i vari pezzi e, volendo portarli con me nella speranza di consegnare il
 	tutto, mi chiedo come dovrei trasportarli senza che subiscano danni.
-</p><h2>La scatola</h2><h2 class="reverse">30 novembre 2010</h2><p>
+	title#La scatola
+	title@right#30 novembre 2010
 	&laquo;Sarà il caso di metterli in una scatoletta&raquo; mi dissi. Una
 	scatoletta di cartone, piccina da stare nello zaino, forte da non
 	schiacciarsi, grande per tre fiori e il fusto.
@@ -67,16 +65,12 @@ tab#ii
 	l'ultimo episodio della serie.
 
 	E un giro in Gundam è meglio che un giro in bicicletta, giusto?
-</p></div><div class="section"><p>
+	sec#
 	Ho affrontato le conseguenze della stupidità di quest'idea difendomi con
 	la sincerità, perché erano idee completamente spontanee.
-
 tab#iii
-<h2>
-	L'inseguimento
-</h2><h2 class="reverse">
-	02 dicembre 2010
-</h2><p>
+	title#L'inseguimento
+	title@right#02 dicembre 2010
 	Non sto tanto bene.
 
 	Negli ultimi due giorni, lo stomaco si rivolta e le budella si
@@ -160,9 +154,9 @@ tab#iii
 stop#page
 start#side
 	title#L'incontro
-	pre#<ol>
+	begin#ol
 		li#tid#Definitivamente definitivo, a colori#i
 		li#tid#La scatola#ii
 		li#tid#L&apos;inseguimento#iii
-	pre#</ol>
+	end#ol
 stop#side

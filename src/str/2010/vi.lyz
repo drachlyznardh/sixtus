@@ -128,13 +128,13 @@ tab#iii
 	odioso vecchiaccio) aspetta due giorni prima della cerimonia per
 	avvertirci che
 </p><div class="outside"><p>
-		<?=$d->inline('em', 'A coscienza, ma uno dovrebbe essere
-		confessato quando si sposa. Anche i testimoni')?>
+		intra@em#A coscienza, ma uno dovrebbe essere confessato quando si sposa. Anche i testimoni
 </p></div><p>
 	E qui sono contento, perché ha detto “a coscienza”, cosa che di
 	fatto mi è piaciuta. Ovviamente, $testimoneDellaSposa, personaggio
 	femminile già apparso in queste storie, chiamiamola $R = @ragazza[0]
-	(ricordate <?=$d->link('Storie/2010/III/', 'questa storia')?>),
+	(ricordate
+	link#Storie/2010/III/#questa storia@,
 	scoppia perché deve assolutamente trovare un buco in cui tutti noi
 	si possa confessarsi assieme.
 </p>
@@ -154,7 +154,9 @@ tab#iii
 
 	Che ho fatto, dunque? Quello che faccio quando devo prendere una
 	grossa decisione. Sono andato a parlare con i miei sassi (ne parlerò
-	in futuro, forse <?=$d->link('Storie/2010/VIII/', 'qui')?>). Ed è
+	in futuro, forse
+	link#Storie/2010/VIII/#qui@).
+	Ed è
 	stato utile, perché sono riuscito a mettere a fuoco quello che avrei
 	dovuto fare.
 
@@ -197,12 +199,12 @@ tab#iv
 	camerieri cominciano a ripulire il posto.
 stop#page
 start#side
-title#Un posto in cui stare
-pre#<ol>
-li#tid#Il posto in cui stare#i
-li#tid#Com&apos;è andata, e perché#ii
-li#tid#La confessione#iii
-li#tid#Il finale#iv
-pre#</ol>
+	title#Un posto in cui stare
+	begin#ol
+		li#tid#Il posto in cui stare#i
+		li#tid#Com&apos;è andata, e perché#ii
+		li#tid#La confessione#iii
+		li#tid#Il finale#iv
+	end#ol
 stop#side
 

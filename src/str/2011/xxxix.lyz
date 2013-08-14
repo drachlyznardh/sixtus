@@ -186,15 +186,11 @@ tab#vi
 	sec#
 	Mi pare che una volta uno mise in fila i tre punti di una lista che
 	diceva più o meno così:
-	
-	pre#</p><ul><li>
-	pre#sii te stesso
-	pre#</li><li>
-	pre#falla ridere
-	pre#</li><li>
-	pre#la terza non mi viene in mente, ma son sicuro che ci fosse un terzo punto nella lista, quindi...
-	pre#</li></ul>
-
+	begin#ul
+		li#sii te stesso
+		li#falla ridere
+		li#la terza non mi viene in mente, ma son sicuro che ci fosse un terzo punto nella lista, quindi...
+	end#ul
 	Noi non siamo mica da buttar via, non saremo alti, belli, abbronzati e
 	scolpiti, ma non siamo nemmeno delle discariche ambulanti.
 
