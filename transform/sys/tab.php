@@ -32,17 +32,12 @@
 		private function make_sbr ()
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
+			$this->content[] = '<br />';
 			$this->current = new Section();
 		}
 
 		private function make_include ($args)
 		{
-			if ($this->current != null)
-			{
-				$this->content[] = $this->current->getContent();
-				$this->current = null;
-			}
-
 			$filename = $args[1].'.php';
 			if (count($args)> 2) {
 				if (preg_match('/@/', $args[2])) {
@@ -57,8 +52,19 @@
 				$part = 'false';
 				$as = 'false';
 			}
-			
-			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, $as); ?>";
+	
+			if ($as && strcmp($as, '\'content\'') == 0) {
+				if ($this->current == null) $this->current = new Section();
+				$this->current->make_include($filename, $part);
+			} else {
+				if ($this->current != null)
+				{
+					$this->content[] = $this->current->getContent();
+					$this->current = null;
+				}
+
+				$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, true); ?>";
+			}
 		}
 
 		private function make_default ($index, $cmd, $cmd_attr, $cmd_args)
