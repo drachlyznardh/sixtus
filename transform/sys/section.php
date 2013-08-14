@@ -12,7 +12,12 @@
 			$content = false;
 			foreach ($this->content as $_)
 				$content .= $_;
-			return '<div class="section">'.$content.'</div>'."\n";
+
+			$result = '<div class="<?=($attr[\'sections\']?\'section\':\'invisible\')?>">';
+			$result .= $content;
+			$result .= '</div>';
+
+			return $result;
 		}
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)
@@ -50,6 +55,12 @@
 					$this->content[] = $cmd_args[0];
 					$this->content[] = ']</p>';
 			}
+		}
+
+		public function make_include ($filename, $part)
+		{
+			$this->closeContext();
+			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, false); ?>";
 		}
 
 		private function switchContext($new)
