@@ -10,15 +10,17 @@
 		return $result;
 	}
 	
-	function make_tid($attr, $tab, $title)
+	function make_tid($attr, $title, $tab, $hash)
 	{
-		printf("<!-- \$Attr[Part] = [$attr[part]], \$Tab = [$tab] -->");
+		$url = false;
 		
 		if ($attr['single']) {
 			if ($attr['part'] == $tab) {
-				$result = '<em>'.$title.'</em>';
+				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
+				else $result = '<em>'.$title.'</em>';
 			} else {
-				$url = make_canonical ($attr, $attr['self'], $tab);
+				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
+				else $url = make_canonical ($attr, $attr['self'], $tab);
 				$result = '<a href="'.$url.'">'.$title.'</a>';
 			}
 		} else {
@@ -26,7 +28,8 @@
 			$result = '<a href="'.$url.'">'.$title.'</a>';
 		}
 		
-		return $result;
+		if ($url) return '<a href="'.$url.'">'.$title.'</a>';
+		return '<em>'.$title.'</em>';
 	}
 
 	function dynamic_include ($attr, $filename, $part, $as)

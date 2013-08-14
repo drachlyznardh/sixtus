@@ -147,10 +147,10 @@
 
 			$count = count($args);
 			if ($count > 2) $tab = '\''.strtolower($args[2]).'\''; else $tab = "false";
-			if ($count > 3) $hash = '\''.strtolower($args[3]).'\''; else $hash = "false";
+			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
 			
 			if ($before) $result = $before; else $result = false;
-			$result .= "<?=make_tid(\$attr, $tab, '".polish_line($title)."')?>";
+			$result .= "<?=make_tid(\$attr, '".polish_line($title)."', $tab, $hash)?>";
 			if ($after) $result .= $after;
 			
 
