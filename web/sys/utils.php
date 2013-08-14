@@ -5,7 +5,7 @@
 		if ($tab) $result = substr($url, 0, -1).'§'.strtoupper($tab).'/';
 		else $result = $url;
 		if (!$attr['gray']) $result .= 'White/';
-		if (!$attr['single']) $result .= 'AllTabs/';
+		if (!$attr['single']) $result .= 'All/';
 		if ($hash) $result .= '#'.$hash;
 		return $result;
 	}
@@ -36,15 +36,20 @@
 	{
 		$attr['included'] = true;
 		$attr['sections'] = $sections;
-		
+	
 		switch($part)
 		{
 			case '':
 			case 'page':
-				$attr['force_all_tabs'] = true; break;
+				$attr['force_all_tabs'] = true;
+				break;
 			case 'side':
-				$attr['part'] = 'side'; break;
-			default: $attr['part'] = $part;
+				$attr['part'] = 'side';
+				$attr['force_all_tabs'] = false;
+				break;
+			default:
+				$attr['part'] = $part;
+				$attr['force_all_tabs'] = false;
 		}
 
 		require($filename);	
@@ -52,17 +57,12 @@
 
 	function tab_condition ($attr, $name)
 	{
-		printf("\t<!-- [\n");
-		print_r($attr);
-		print_r($name);
-		printf("\n] -->\n");
-		
 		if ($attr['included'])
-			return !$attr['single'] or
-					$attr['force_all_tabs'] or
+			return $attr['part'] == 'page' or
 					$attr['part'] == $name;
 		else
-			return $attr['part'] == $name or
+			return !$attr['single'] or
+					$attr['part'] == $name or
 					$attr['force_all_tabs'];
 	}
 
