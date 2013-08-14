@@ -27,6 +27,7 @@
 
 		private $first_tab = true;
 		private $default_tab = false;
+		private $force_all_tabs = false;
 
 		public function parse($filename)
 		{
@@ -97,6 +98,14 @@
 							break;
 					}
 					break;
+				case 'tabs':
+					if ($cmd_par[1] == 'alwaysall')
+						$this->force_all_tabs = true;
+					break;
+				case 'alltab':
+				case 'alltabs':
+					$this->force_all_tabs = true;
+					break;
 			}
 		}
 
@@ -149,7 +158,10 @@
 			printf("\t\t\$attr['title'] = '$this->title';\n");
 			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
-			printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
+			if ($this->force_all_tabs)
+				printf("\t\t\$attr['force_all_tabs'] = true;\n");
+			else
+				printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)
 				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");
