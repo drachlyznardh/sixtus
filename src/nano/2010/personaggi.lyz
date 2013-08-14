@@ -1,30 +1,24 @@
-<?php
-	$d = $this->d;
-	if ($this->addmeta ()) {
-		$this->addtitle ('Personaggi', 'Chi sono e cosa fanno', 'umanoidi');
-	} if ($this->addpage ()) {
-?><div class="small">
-	<?php if ($d->mktab('umanoidi')) { ?><div class="section">
-		<a id="Corvino"></a><h2>
-			Corvino
-		</h2><p>
-			Il debole, lamentoso, inutile e pigro protagonista comincia come
-			studentello annoiato.
-		</p><p>
-			La sua situazione però si evolve: non appena la sua mente smette di
-			preoccuparsi delle sue inutili magagne, il ragazzo scopre mirabolanti
-			poteri basati sulla gamma dei colori dell'arcobaleno.
-		</p>
-	</div><a id="Camelia"></a><div class="section">
-		<h2>
-			Camelia
-		</h2><p>
-			Questa ragazza è la prima fiamma di Corvino, e sembra misteriosamente
-			interessata a lui.
-		</p><p>
-			Ovviamente, la cosa è ben più seria: questa ragazza è in realtà una
-			strega vecchia di parecchi secoli, se ne va in giro rubando la
-			giovinezza alla gente e lo stesso vuol fare con Corvino.
+start#page
+	pre#
+tab#umanoidi
+	id#Corvino
+	title#Corvino
+	Il debole, lamentoso, inutile e pigro protagonista comincia come studentello
+	annoiato.
+	
+	La sua situazione però si evolve: non appena la sua mente smette di
+	preoccuparsi delle sue inutili magagne, il ragazzo scopre mirabolanti poteri
+	basati sulla gamma dei colori dell'arcobaleno.
+	sec#
+	id#Camelia
+	title#Camelia
+	Questa ragazza è la prima fiamma di Corvino, e sembra misteriosamente
+	interessata a lui.
+
+	Ovviamente, la cosa è ben più seria: questa ragazza è in realtà una strega
+	vecchia di parecchi secoli, se ne va in giro rubando la giovinezza alla
+	gente e lo stesso vuol fare con Corvino.
+tab#bestie
 		</p>
 	</div><?php } if ($d->mktab ('bestie')) { ?><div class="section">
 		<a id="Battesimo"></a><h2>
