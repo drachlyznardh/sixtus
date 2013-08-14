@@ -3,7 +3,7 @@
 	$runtime['home'] = '/News/';
 
 	$map = array (
-		'diario' => array('diary'),
+		'diario' => 'diary',
 		'extra' => array ('extra',
 			'rampa' => 'extra/rampa'),
 		'legend' => array ('legend',

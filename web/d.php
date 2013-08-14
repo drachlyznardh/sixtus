@@ -83,7 +83,7 @@
 	$search['dir'] = '.';
 	$search['file'] = 'index.php';
 	while (1) {
-		if (isset($mymap[$mypath])) {
+		if (is_array($mymap) && isset($mymap[$mypath])) {
 			$mymap = $mymap[$mypath];
 			$mycat .= ucwords($mypath).'/';
 			$search['cat'][] = array($mycat, ucwords($mypath));
