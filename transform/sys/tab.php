@@ -75,7 +75,7 @@
 		public function setName($name)
 		{
 			$this->name = $name;
-			$this->content[] = "<a id=\"tab-$name\"></a>";
+			$this->content[] = '<a id="'.strtoupper($name).'"></a>';
 		}
 
 		public function closeTab()
