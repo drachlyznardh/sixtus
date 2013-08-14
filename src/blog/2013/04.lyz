@@ -1,6 +1,6 @@
 title#Aprile#Aprile 2013
-prev#News/2013/03/#Marzo@ 2013
-next#News/2013/05/#Maggio@ 2013
+prev#Blog/2013/03/#Marzo@ 2013
+next#Blog/2013/05/#Maggio@ 2013
 alltab#
 start#page
 tab#19
@@ -140,10 +140,10 @@ tab#02
 	r#“<em>Free anche a mio cuggino!!!</em>”
 stop#page
 start#side
-	stitle#link#News/2013/04/#Aprile@ 2013
-	p#link#News/2013/04/#<code>19/04</code> – [<em>Storia</em>] BioParco [@Fine@]#viii
-	p#link#News/2013/04/#<code>12/04</code> – [<em>MiniStoria</em>] @Gli ossi e i thread@##12
-	p#link#News/2013/04/#<code>11/04</code> – [<em>MiniStoria</em>] @La primavera in Trentino@##11
+	stitle#link#Blog/2013/04/#Aprile@ 2013
+	p#link#Blog/2013/04/#<code>19/04</code> – [<em>Storia</em>] BioParco [@Fine@]#viii
+	p#link#Blog/2013/04/#<code>12/04</code> – [<em>MiniStoria</em>] @Gli ossi e i thread@##12
+	p#link#Blog/2013/04/#<code>11/04</code> – [<em>MiniStoria</em>] @La primavera in Trentino@##11
 	p#link#Storie/2013/XCIV/#<code>09/04</code> – [<em>Storia</em>] BioParco [@VII@]#
 	e
 	link#Storie/2013/XCV/#Le mutande di Katia

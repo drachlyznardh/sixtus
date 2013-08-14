@@ -1,8 +1,12 @@
 <?php
 
-	$runtime['home'] = '/News/';
+	$runtime['home'] = '/Blog/';
 
 	$map = array (
+		'blog' => array('blog',
+			'2011' => 'blog/2011',
+			'2012' => 'blog/2012',
+			'2013' => 'blog/2013'),
 		'diario' => 'diary',
 		'extra' => array ('extra',
 			'rampa' => 'extra/rampa'),
@@ -14,10 +18,6 @@
 			'2010' => 'nano/2010',
 			'2011' => 'nano/2011',
 			'2012' => 'nano/2012'),
-		'news' => array('news',
-			'2011' => 'news/2011',
-			'2012' => 'news/2012',
-			'2013' => 'news/2013'),
 		'recensioni' => array ('review',
 			'film' => array ('review/film',
 				'brutti' => 'review/brutti'),

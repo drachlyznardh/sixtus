@@ -1,6 +1,6 @@
 title#Gennaio#Gennaio 2013
-prev#News/2012/12/#Dicembre@ 2013
-next#News/2013/02/#Febbraio@ 2013
+prev#Blog/2012/12/#Dicembre@ 2013
+next#Blog/2013/02/#Febbraio@ 2013
 alltab#
 start#page
 tab#25
@@ -40,7 +40,7 @@ tab#07
 	piuttosto buono. Qualcuno avrebbe la patente giusta?»
 stop#page
 start#side
-	stitle#link#News/2013/01/#Gennaio@ 2013
+	stitle#link#Blog/2013/01/#Gennaio@ 2013
 	p#link##<code>25/12</code> – [<em>Diario</em>] @Ed è fatta!@##25
 	p#link##<code>07/12</code> – [<em>MiniStoria</em>] @Il voto di Complexity™@##07
 stop#side

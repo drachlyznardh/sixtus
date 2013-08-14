@@ -1,6 +1,6 @@
 title#Marzo#Marzo 2013
-prev#News/2013/02/#Febbraio@ 2013
-next#News/2013/04/#Aprile@ 2013
+prev#Blog/2013/02/#Febbraio@ 2013
+next#Blog/2013/04/#Aprile@ 2013
 alltab#
 start#page
 tab#30
@@ -110,7 +110,7 @@ tab#05
 	link#Storie/2013/XCIII/#Leggete@.
 stop#page
 start#side
-	stitle#link#News/2013/03/#Marzo@ 2013
+	stitle#link#Blog/2013/03/#Marzo@ 2013
 	p#link##<code>30/03</code> – [<em>Diario</em>] @L'ispirazione@##30
 	p#link##<code>27/03</code> – [<em>Diario</em>] @Troppa roba@##27
 	p#link##<code>18/03</code> – [<em>Diario</em>] @Troppo Assassin's Creed 3?@##18

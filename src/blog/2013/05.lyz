@@ -1,6 +1,6 @@
 title#Maggio#Maggio 2013
-prev#News/2013/04/#Aprile@ 2013
-next#News/2013/06/#Giugno@ 2013
+prev#Blog/2013/04/#Aprile@ 2013
+next#Blog/2013/06/#Giugno@ 2013
 alltab#
 start#page
 tab#01
@@ -66,6 +66,6 @@ tab#01
 	è mai successo qualcosa del genere?
 stop#page
 start#side
-	stitle#link#News/2013/05/#Maggio@ 2013
-	p#link#News/2013/05/#<code>01/05</code> – [<em>MiniStoria</em>] @Il CPP espande una volta sola@##11
+	stitle#link#Blog/2013/05/#Maggio@ 2013
+	p#link#Blog/2013/05/#<code>01/05</code> – [<em>MiniStoria</em>] @Il CPP espande una volta sola@##11
 stop#side

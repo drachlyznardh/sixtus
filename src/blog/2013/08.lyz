@@ -1,6 +1,6 @@
 title#Agosto#Agosto 2013
-prev#News/2013/07/#Luglio@ 2013
-next#News/2013/09/#Settembre@ 2013
+prev#Blog/2013/07/#Luglio@ 2013
+next#Blog/2013/09/#Settembre@ 2013
 alltab#
 start#page
 tab#01
@@ -18,6 +18,6 @@ tab#01
 	Forse. Con calma.
 stop#page
 start#side
-	stitle#link#News/2013/08/#Agosto@ 2013
-	p#link#News/2013/08/#<code>01/08</code> – [<em>Storia</em>] @La formattazzazzazione@##01
+	stitle#link#Blog/2013/08/#Agosto@ 2013
+	p#link#Blog/2013/08/#<code>01/08</code> – [<em>Storia</em>] @La formattazzazzazione@##01
 stop#side
