@@ -33,7 +33,7 @@
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
 			$this->content[] = '<br />';
-			$this->current = new Section();
+			$this->current = null;
 		}
 
 		private function make_include ($args)
