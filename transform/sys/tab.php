@@ -26,7 +26,6 @@
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
 			$this->current = new Section();
-			$this->content[] = '<br />';
 		}
 
 		private function make_sbr ()
