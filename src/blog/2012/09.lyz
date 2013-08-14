@@ -1,6 +1,6 @@
 title#Settembre 2012#Piove, non piove, boh… sembra marzo
-prev#News/2012/08/#Agosto@ 2012
-next#News/2012/10/#Ottobre@ 2012
+prev#Blog/2012/08/#Agosto@ 2012
+next#Blog/2012/10/#Ottobre@ 2012
 tabs#alwaysall
 start#page
 tab#30
@@ -220,7 +220,7 @@ tab#03
 	link#Extra/LABOFDOOM/#laboratorio@.#l21
 stop#page
 start#side
-	stitle#link#News/2012/09/#Settembre@ 2012
+	stitle#link#Blog/2012/09/#Settembre@ 2012
 	p#<em>30/09</em> – [<code>Storia</code>]
 	link#Storie/2012/LXXXIX/#Si riempì il disco
 	p#<em>23/09</em> – una [<code>Storia</code>]
@@ -259,7 +259,7 @@ start#side
 	<em>04/09</em> – [<code>Extra</code>]
 	link#Extra/LabOfDoom/#Il ritorno di @Bob@#l22
 	p#<em>03/09</em> – [<code>Mini</code>]
-	link#News/2012/09/#Cose di Settembre##03
+	link#Blog/2012/09/#Cose di Settembre##03
 	e
 	link#Extra/LABOFDOOM/#BOB#l21
 stop#side

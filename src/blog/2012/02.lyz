@@ -1,6 +1,6 @@
 title#Febbraio#Nevicò giusto un pochino…
-prev#News/2012/01/#Gennaio@ 2012
-next#News/2012/03/#Marzo@ 2012
+prev#Blog/2012/01/#Gennaio@ 2012
+next#Blog/2012/03/#Marzo@ 2012
 tabs#alwaysall
 alltab#
 start#page
@@ -125,7 +125,7 @@ tab#07
 	storia. La prima dell'anno?
 stop#page
 start#side
-	stitle#link#News/2012/02/#Febbraio### 2012
+	stitle#link#Blog/2012/02/#Febbraio### 2012
 
 	<em>27/02</em> –
 	link#Storie/2012/LXXVI/#Altri#v## preparativi

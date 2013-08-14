@@ -1,6 +1,6 @@
 title#Dicembre#Freschetto. Di notte.
-prev#News/2011/11/#Novembre
-next#News/2012/01/#Gennaio 2012
+prev#Blog/2011/11/#Novembre
+next#Blog/2012/01/#Gennaio 2012
 alltab#
 
 start#page
@@ -145,7 +145,7 @@ tab#1
 	non so che pensare. La mia testa esplode.
 stop#page
 start#side
-	stitle#link#News/2011/12/#Dicembre### 2011
+	stitle#link#Blog/2011/12/#Dicembre### 2011
 
 	<em>20/12</em> –
 	link#Storie/2011/LXXIII/#Il Momento GODS
@@ -158,7 +158,7 @@ start#side
 	link#Recensioni/Film/XXIII/#Zombieland
 
 	<em>15/12</em> –
-	link#News/2011/12/#Collezione di MiniStorie##15
+	link#Blog/2011/12/#Collezione di MiniStorie##15
 
 	<em>14/12</em> –
 	link#Storie/2011/LXXI/#Libertà

@@ -1,6 +1,6 @@
 title#Aprile#Il caldo è gia tornato!
-prev#News/2012/03/#Marzo@ 2012
-next#News/2012/05/#Maggio@ 2012
+prev#Blog/2012/03/#Marzo@ 2012
+next#Blog/2012/05/#Maggio@ 2012
 tabs#alwaysall
 start#page
 tab#30
@@ -278,7 +278,7 @@ tab#01
 	<code>Cool story bro</code>. Ed ecco, mi sento giovane.
 stop#page
 start#side
-	stitle#link#News/2012/04/#Aprile### 2012
+	stitle#link#Blog/2012/04/#Aprile### 2012
 
 	<em>30/04</em> – <code>[Storia]</code> Il
 	link#Storie/2012/LXXX/#segretario
@@ -292,10 +292,10 @@ start#side
 	link#Legend/Cronache/#Legend#s04
 
 	<em>19/04</em> – la <code>[MiniStoria]</code>
-	link#News/2012/04/#alimentatore#19##dell'#
+	link#Blog/2012/04/#alimentatore#19##dell'#
 
 	<em>12/04</em> – [<code>MiniStoria</code>]
-	link#News/2012/04/#Un buon giorno per morire##12
+	link#Blog/2012/04/#Un buon giorno per morire##12
 	
 	<em>11/04</em> – [<code>Recensione</code>]
 	link#Recensioni/Film/XXIX/#Il gatto con gli stivali### e il primo contatto con

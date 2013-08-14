@@ -1,6 +1,6 @@
 title#Giugno 2012#Sempre caldo. E umido
-prev#News/2012/05/#Maggio@ 2012
-next#News/2012/07/#Luglio@ 2012
+prev#Blog/2012/05/#Maggio@ 2012
+next#Blog/2012/07/#Luglio@ 2012
 tabs#alwaysall
 start#page
 tab#21
@@ -83,7 +83,7 @@ tab#10
 	link#Storie/2012/LXXXI/#l'@ultima@ storia.
 stop#page
 start#side
-	stitle#link#News/2012/06/#Giungo@ 2012
+	stitle#link#Blog/2012/06/#Giungo@ 2012
 	
 	<em>21/06</em> – [<code>Storia</code>]
 	link#Storie/2012/LXXXI/#Le @nuove creature@ di casa GODS##bonus

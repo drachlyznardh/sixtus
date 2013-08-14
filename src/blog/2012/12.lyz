@@ -1,7 +1,7 @@
 title#Dicembre
 subtitle#Sarà un caso, ma ora fa freschino
-prev#News/2012/11#Novembre@ 2012
-next#News/2013/01#Gennaio@ 2013
+prev#Blog/2012/11#Novembre@ 2012
+next#Blog/2013/01#Gennaio@ 2013
 tabs#alwaysall
 start#page
 tab#17
@@ -36,7 +36,7 @@ tab#05
 	clear#right
 stop#page
 start#side
-	stitle#link#News/2012/12/#Dicembre@ 2012
+	stitle#link#Blog/2012/12/#Dicembre@ 2012
 	p#<code>17/12</code> – Sono stanco
 	p#<code>05/12</code> – Inizio col botto!
 stop#side

@@ -1,6 +1,6 @@
 title#Novembre 2012#Ha fatto freschino… a volte
-prev#News/2012/10/#Ottobre@ 2012
-next#News/2012/12/#Dicembre@ 2012
+prev#Blog/2012/10/#Ottobre@ 2012
+next#Blog/2012/12/#Dicembre@ 2012
 tabs#alwaysall
 start#page
 tab#26
@@ -19,7 +19,7 @@ tab#13
 	link#Extra/#<strong>@Extra@</strong>#CONTENUTI#Extra
 	title#La <em>Sgaggio</em>machia
 	Dopo il terribile sogno d'una settimana fa
-	link#News/2012/11/#(@questa storia@)##07
+	link#Blog/2012/11/#(@questa storia@)##07
 	mi sono scontrato con <em>Sgaggio</em>. Non è successo nulla di particolare,
 	in realtà, ma siccome <strong>&lt;[LA GENTE] [DEVE SAPERE]!!!&gt;</strong> mi
 	sono messo a scriverne. In un
@@ -94,11 +94,11 @@ tab#07
 	visione</a>.
 stop#page
 start#side
-	stitle#link#News/2012/11/#Novembre@ 2012
+	stitle#link#Blog/2012/11/#Novembre@ 2012
 	p#<code>26/11</code> – [<em>Storia</em>]
 	link#Storie/2012/XCI/#Sogni
 	p#<code>13/11</code> – [<em>Extra</em>]
 	link#Extra/Back2LOD/#Back 2 LOD
 	p#<code>07/11</code> – [<em>Ministoria</em>]
-	link#News/2012/11/#La visione##07
+	link#Blog/2012/11/#La visione##07
 stop#side

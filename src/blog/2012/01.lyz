@@ -1,6 +1,6 @@
 title#Gennaio#Non abbastanza freddo
-prev#News/2011/12/#Dicembre@ 2011
-next#News/2012/02/#Febbraio@ 2012
+prev#Blog/2011/12/#Dicembre@ 2011
+next#Blog/2012/02/#Febbraio@ 2012
 alltab#
 start#page
 tab#31
@@ -134,7 +134,7 @@ tab#12
 	link#Storie/2011/LXXII/#Crispone###.
 stop#page
 start#side
-	stitle#link#News/2012/01/#Gennaio### 2012
+	stitle#link#Blog/2012/01/#Gennaio### 2012
 
 	<em>31/01</em> –
 	link#Recensioni/Show/XXV/#Chuck
@@ -152,5 +152,5 @@ start#side
 	link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
 
 	<em>12/01</em> –
-	link#News/2012/01/#Dopo la pausa##12
+	link#Blog/2012/01/#Dopo la pausa##12
 stop#side

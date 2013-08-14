@@ -1,6 +1,6 @@
 title#Maggio 2012#Caaaaaaaaaaaaldo. E umido
-prev#News/2012/04/#Aprile@ 2012
-next#News/2012/06/#Giugno@ 2012
+prev#Blog/2012/04/#Aprile@ 2012
+next#Blog/2012/06/#Giugno@ 2012
 tabs#alwaysall
 start#page
 tab#31
@@ -154,13 +154,13 @@ tab#21
 	passato <em>Movie War Mega Max</em>. Sentai / Rider per un paio d'ore! Yay!
 stop#page
 start#side
-	stitle#link#News/2012/05/#Maggio### 2012
+	stitle#link#Blog/2012/05/#Maggio### 2012
 
 	<em>30/05</em> – [<code>Recensione</code>]
 	link#Recensioni/Libri/XXXV/#A me le guardie!
 
 	<em>29/05</em> – [<code>Ministoria</code>]
-	link#News/2012/05/#'Sto cazzo di <code>PHP</code>##29
+	link#Blog/2012/05/#'Sto cazzo di <code>PHP</code>##29
 
 	<em>24/05</em> – [<code>Recensione</code>]
 	link#Recensioni/Show/XIII/#Movie War Mega Max#MEGAMAX
