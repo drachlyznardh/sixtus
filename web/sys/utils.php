@@ -32,9 +32,10 @@
 		return '<em>'.$title.'</em>';
 	}
 
-	function dynamic_include ($attr, $filename, $part, $as)
+	function dynamic_include ($attr, $filename, $part, $sections)
 	{
 		$attr['included'] = true;
+		$attr['sections'] = $sections;
 		
 		switch($part)
 		{
