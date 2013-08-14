@@ -1,26 +1,26 @@
 title#Novità#Le dieci notizie più recenti
 next#News/Archivio/#Archivio
 start#page
-	include#new/2013/08#01
+	include#news/2013/08#01
 	sbr#
-	include#new/2013/05#01
+	include#news/2013/05#01
 	sbr#
-	include#new/2013/04#19
-	include#new/2013/04#12
-	include#new/2013/04#11
-	include#new/2013/04#09
-	include#new/2013/04#05
-	include#new/2013/04#03
-	include#new/2013/04#02
+	include#news/2013/04#19
+	include#news/2013/04#12
+	include#news/2013/04#11
+	include#news/2013/04#09
+	include#news/2013/04#05
+	include#news/2013/04#03
+	include#news/2013/04#02
 	sbr#
-	include#new/2013/03#30
+	include#news/2013/03#30
 stop#page
 start#side
-	include#new/2013/08#side@as@content
+	include#news/2013/08#side@as@content
 	sbr#
-	include#new/2013/05#side@as@content
+	include#news/2013/05#side@as@content
 	sbr#
-	include#new/2013/04#side@as@content
+	include#news/2013/04#side@as@content
 	sbr#
-	include#new/2013/03#side@as@content
+	include#news/2013/03#side@as@content
 stop#side

@@ -1,5 +1,5 @@
 title#Notizie 2013#Tutte
-prev#News/2013/#2013
+prev#News/2012/#2012
 #next#News/2014/#2014
 start#side
 	title#2013
@@ -10,7 +10,7 @@ start#side
 	reverse#
 		link#News/2013/04/#Aprile@ /
 		link#News/2013/05#Maggio@ /
-		link#News/2013/06#Giugno@ /
+		link#News/2013/06#Giugno
 	reverse#
 		link#News/2013/07#Luglio@ /
 		link#News/2013/08#Agosto@ /
@@ -22,27 +22,16 @@ start#side
 	sec#
 	title#Notizie
 	include#news/2013/12#side@as@content
-	br#
 	include#news/2013/11#side@as@content
-	br#
 	include#news/2013/10#side@as@content
-	br#
 	include#news/2013/09#side@as@content
-	br#
 	include#news/2013/08#side@as@content
-	br#
 	include#news/2013/07#side@as@content
-	br#
 	include#news/2013/06#side@as@content
-	br#
 	include#news/2013/05#side@as@content
-	br#
 	include#news/2013/04#side@as@content
-	br#
 	include#news/2013/03#side@as@content
-	br#
 	include#news/2013/02#side@as@content
-	br#
 	include#news/2013/01#side@as@content
 stop#side
 start#page
