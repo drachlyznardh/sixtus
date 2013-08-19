@@ -577,24 +577,24 @@ tab#v
 			d'aver speso mesi e mesi a cercare di parlamentare con i giganti; così
 			come hanno fatto due allegri schiavetti di Voldemort; ma i giganti non
 			ci stanno.
-		</p><p>
+	
 			Vi ricordate, vero, quella storia dei giganti? Che sono pericolosissimi?
 			Che mangiano i bambini? Che sarebbe una rogna se s'alleassero con
 			Voldemort? Beh, invece no: in quattro c'han provato, sono andati dai
 			giganti con una stecca di cioccolata chiedendo «Fareste la guerra con
 			noi?» e i giganti se ne sono scampanati il batacchio.
-		</p><p>
+
 			Il resto (le ultime 366 pagine) quando avrò finito. O sarò morto
 			provandoci.
 		</p>
 	</div><div class="section"><a id="V2"></a>
 		<p>
 			'Sto libro è lungo come l'anno della fame… adesso sono a pagina 555.
-		</p><p>
+
 			Sono successe altre cose. MOLTE altre cose, tante che non credevo
 			possibili. Ma tra una cosa e l'altra, ancora una volta, non succede
 			niente.
-		</p><p>
+
 			Comunque.
 		</p>
 	</div><div class="section">
@@ -603,10 +603,10 @@ tab#v
 			attraverso terribili tramacci, complici dentro i quadri e cose del
 			genere – riescono a salvarlo. Ma intanto si sospetta la connessione
 			mentale tra il bimbominchia e il cattivone.
-		</p><p>
+
 			Ecco la soluzione «il professore appiccicoso ti stuprerà la testa con il
 			pensiero, Harry, così imparerai a resistere», ottimo piano.
-		</p><p>
+
 			Nel frattempo, yadde. La professoressa stronza mette tutti in riga,
 			studenti e professori; Hagrid e la sibilla sono ovviamente in cima alla
 			lista; ma Hagrid è un personaggio che piace (e poi si sta occupando di
@@ -615,21 +615,22 @@ tab#v
 		</p>
 	</div><div class="section">
 		<p>
-			A quel punto, ecco il piano: se il governo non ci permette di studiare
-			la <span class="em">buula applicata</span>, ce la faremo da soli. Raduna
-			un po' di gente, piglia questo, piglia quello, trova la stanza
-			introvabile (!) ed organizza il corso.
-		</p><p>
-			To' guarda, ecco i segni di miglioramento di Neville l'inutile, che come
-			profetizzato nel <?=$d->link($d->self, 'primo tab', 'I')?>, sta diventando
-			una macchina da guerra.
-		</p><p>
-			Yadda yadda yadda.
-		</p><p>
-			Per qualche motivo (la presenza del senno, immagino) anche Cho partecipa
-			a 'ste lezioni segrete. Le ci prova come farei io: sta lì e spera che
-			qualcosa succede. Harry pure reagisce come farei io: sta lì e non
-			capisce un cazzo.
+	A quel punto, ecco il piano: se il governo non ci permette di studiare la
+	<em>buula applicata</em>, ce la faremo da soli. Raduna un po' di gente,
+	piglia questo, piglia quello, trova la stanza introvabile (!) ed organizza
+	il corso.
+
+	To' guarda, ecco i segni di miglioramento di Neville l'inutile, che come
+	profetizzato nel
+	tid#primo tab@,#i
+	sta diventando una macchina da guerra.
+
+	Yadda yadda yadda.
+
+	Per qualche motivo (la presenza del senno, immagino) anche Cho partecipa
+	a 'ste lezioni segrete. Le ci prova come farei io: sta lì e spera che
+	qualcosa succede. Harry pure reagisce come farei io: sta lì e non
+	capisce un cazzo.
 		</p><p>
 			Passa il tempo…
 		</p><div class="outside"><p>
@@ -1363,11 +1364,9 @@ start#side
 		li#tid#La camera dei segreti#ii
 		li#tid#Il prigioniero di Azkaban#iii
 		li#tid#Il calice di fuoco#iv
-		
-		tid#L&apos;ordine#v#V1## /
+		li#tid#L&apos;ordine#v#V1## /
 		tid#della#v#V2## /
 		tid#Fenice#v#V3
-	
 		li#tid#Il principe mezzosangue#vi
 		li#tid#I doni della morte#vii
 	end#ol

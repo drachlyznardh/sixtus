@@ -89,7 +89,7 @@ tab#classifica
 		br#
 		include#review/classifica#magnifici@as@content
 	end#double
-tab#indice
+tab#catalogo
 	id#cronologico
 	title#Indice cronologico
 	begin#double
@@ -162,9 +162,9 @@ start#side
 		li#tid#Brutto da ridere#classifica#ridere
 		li#tid#Magnificamente brutto#classifica#magnifici
 	end#ol
-	stitle#tid#Indice#indice
+	stitle#tid#Catalogo#catalogo
 	reverse#
-		tid#Cronologico@ / #indice#cronologico
-		tid#Per categoria@ / #indice#categoria
-		tid#In corso#indice#incorso
+		tid#Cronologico@ / #catalogo#cronologico
+		tid#Per categoria@ / #catalogo#categoria
+		tid#In corso#catalogo#incorso
 stop#side
