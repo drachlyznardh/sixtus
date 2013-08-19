@@ -14,18 +14,15 @@
 	{
 		$url = false;
 		
-		if ($attr['single']) {
+		if ($attr['single'] && !$attr['force_all_tabs']) {
 			if ($attr['part'] == $tab) {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
-				else $result = '<em>'.$title.'</em>';
 			} else {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 				else $url = make_canonical ($attr, $attr['self'], $tab);
-				$result = '<a href="'.$url.'">'.$title.'</a>';
 			}
 		} else {
 			$url = make_canonical ($attr, $attr['self'], false, strtoupper($tab));
-			$result = '<a href="'.$url.'">'.$title.'</a>';
 		}
 		
 		if ($url) return '<a href="'.$url.'">'.$title.'</a>';
