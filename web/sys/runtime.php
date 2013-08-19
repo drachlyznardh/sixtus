@@ -33,9 +33,12 @@
 			'2013' => 'str/2013'),
 		'tru' => array ('tru',
 			'naluten' => array ('tru',
-				'vol.I' => 'tru/primo',
-				'vol.II' => 'tru/secondo',
-				'vol.III' => 'tru/terzo'))
+				'vol.i' => 'tru/primo',
+				'vol.ii' => 'tru/secondo',
+				'vol.iii' => 'tru/terzo',
+				'i' => 'tru/primo',
+				'ii' => 'tru/secondo',
+				'iii' => 'tru/terzo'))
 	);
 
 ?>

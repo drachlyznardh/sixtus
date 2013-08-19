@@ -389,7 +389,7 @@
 
 		private function dialog ($author, $line)
 		{
-			return '<span title="'.$author.'">'.$line.'</span>';
+			return '<span class="'.$author.'" title="'.$author.'">'.$line.'</span>';
 		}
 	}
 ?>
