@@ -7,6 +7,7 @@
 			'2011' => 'blog/2011',
 			'2012' => 'blog/2012',
 			'2013' => 'blog/2013'),
+		'cronache' => 'legend',
 		'diario' => 'diary',
 		'extra' => array ('extra',
 			'rampa' => 'extra/rampa'),

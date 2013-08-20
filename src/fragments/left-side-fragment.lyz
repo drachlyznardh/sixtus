@@ -18,12 +18,19 @@ tab#content
 		link#Storie/2012/#'12
 		~
 		link#Storie/2013/#'13
+	stitle#link#Cronache#Cronache
+	r#Le campagne di
+		link#Cronache/I/#GODS
+		/
+		link#Cronache/II/#War
+		/
+		link#Cronache/III/#Mitch
+	sec#
+	title@right#Cose meno interessanti
 	stitle#link#Recensioni/#Recensioni
 	r#link#Recensioni/Classifica#Classifica
 		/
 		link#Recensioni/#Catalogo#CATALOGO
-	sec#
-	title@right#Cose meno interessanti
 	stitle#link#Tru/Naluten/#Tru Naluten
 	r#link#Tru/Naluten/Personaggi/#Personaggi
 		/ Volumi [
@@ -39,11 +46,4 @@ tab#content
 		link#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore
 		/
 		link#NaNoWriMo/2011/#2011
-	stitle#link#Cronache@ di RPG#Cronache
-	r#Le campagne di
-		link#Cronache/I/#GODS
-		/
-		link#Cronache/II/#War
-		/
-		link#Cronache/III/#Mitch
 stop#page
