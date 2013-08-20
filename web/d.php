@@ -12,6 +12,7 @@
 	$attr['force_all_tabs'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
+	$attr['download'] = false;
 
 	$direct_access_file = substr($request['original'], 1);
 
@@ -60,6 +61,10 @@
 				$attr['single'] = false;
 				unset($token[$key]);
 				break;
+			case 'download':
+				$attr['download'] = true;
+				unset($token[$key]);
+				break;
 		}
 	}
 
@@ -82,7 +87,7 @@
 	$mycat = false;
 	$mypath = $request['path'][0];
 	$search['dir'] = '.';
-	$search['file'] = 'index.php';
+	$search['file'] = 'index';
 	while (1) {
 		if (is_array($mymap) && isset($mymap[$mypath])) {
 			$mymap = $mymap[$mypath];
@@ -97,18 +102,24 @@
 				$mypath = $request['path'][$myindex];
 			} else break;
 		} else {
-			$search['file'] = $mypath . '.php';
+			$search['file'] = $mypath;
 			$mycat .= strtoupper($mypath).'/';
 			$search['page'] = array($mycat, strtoupper($mypath));
 			break;
 		}
 	}
-	$search['include'] = $search['dir'] .'/'. $search['file'];
+	
+	if ($attr['download']) $search['include'] = $search['dir'] .'/'. $search['file'].'.pdf';
+	else $search['include'] = $search['dir'] .'/'. $search['file'] .'.php';
 
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
-	if (is_file($search['include']))
+	if ($attr['download'] && is_file($search['include'])) {
+		header('Content-Type: application/pdf');
+		header('Content-Disposition: attachment; filename="'.$search['file'].'.pdf"');
+		readfile($search['include']);
+	} else if (is_file($search['include']))
 		require_once($search['include']);
 	else require_once('sys/404-not-found.php');
 	die();
