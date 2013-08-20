@@ -1,6 +1,5 @@
 title#Il lampione#Corvino Multicolore – VIII
 prev#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
-
 start#side
 	title#Il lampione
 	begin#ol
@@ -14,15 +13,15 @@ start#side
 stop#side
 start#page
 	tab#i
-	include#nano/corvino/viii.d/i.php#page
+	include#nano/corvino/viii.d/i#page
 	tab#ii
-	include#nano/corvino/viii.d/ii.php#page
+	include#nano/corvino/viii.d/ii#page
 	tab#iii
-	include#nano/corvino/viii.d/iii.php#page
+	include#nano/corvino/viii.d/iii#page
 	tab#iv
-	include#nano/corvino/viii.d/iv.php#page
+	include#nano/corvino/viii.d/iv#page
 	tab#v
-	include#nano/corvino/viii.d/v.php#page
+	include#nano/corvino/viii.d/v#page
 	tab#vi
-	include#nano/corvino/viii.d/vi.php#page
+	include#nano/corvino/viii.d/vi#page
 stop#page

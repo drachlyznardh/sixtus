@@ -15,7 +15,7 @@
 			'cronache' => 'legend'),
 		'nanowrimo' => array ('nano',
 			'corvino' => array ('nano/corvino',
-				'multiColore' => 'nano/corvino'),
+				'multicolore' => 'nano/corvino'),
 			'2010' => 'nano/2010',
 			'2011' => 'nano/2011',
 			'2012' => 'nano/2012'),

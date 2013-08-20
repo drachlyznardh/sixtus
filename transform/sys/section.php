@@ -197,7 +197,7 @@
 					$this->content[] = " <span class=\"green\">$text</span>";
 				} else {
 					$this->openContext($this->defaultContext);
-					$this->content[] = " $text";
+					$this->content[] = " $text ";
 				}
 			} else $this->closeContext();
 		}

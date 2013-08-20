@@ -10,7 +10,6 @@ start#page
 	begin#outside
 		Rivedere quella ragazza.
 	end#outside
-
 	sec#
 	title#Campeggio
 	Se ricordo bene, la prima settimana fu una lunga inutile attesa.
@@ -28,104 +27,91 @@ start#page
 	suoi confronti.
 	
 	Fallendo, immagino.
-
 	sec#
 	Perché ai tempi ero un coglione
 	begin#inside
-		E questo è il momento in cui tutti avrebbero
-		detto che non c'era poi tanta differenza tra
-		l'allora e l'adesso… 'sti stronzi.
+		E questo è il momento in cui tutti avrebbero detto che non c'era poi
+		tanta differenza tra l'allora e l'adesso… 'sti stronzi.
 	end#inside
-	molto ma molto più inesperto, immensamente più ingenuo ed ovviamente, per quanto non sembrasse, molto più gioviale di quanto sono ora.
+	molto ma molto più inesperto, immensamente più ingenuo ed ovviamente, per
+	quanto non sembrasse, molto più gioviale di quanto sono ora.
 	
-	Non un topo di biblioteca, ma comunque un discreto
-	lettore (uno di quelli che ancora riesce a leggere un
-	libro intero senza dire cose come
+	Non un topo di biblioteca, ma comunque un discreto lettore (uno di quelli
+	che ancora riesce a leggere un libro intero senza dire cose come
 	begin#outside
 		inline#em#Peccato, mi sarei aspettato di meglio da questo autore, di cui già ho letto questo e quest&apos;altro titolo
 		oppure
 		inline#em#Bene per l&apos;impronta, lo stile, peccato per la scontatezza della trama e la piattezza di alcuni personaggi
 	end#outside
-	non modello da seguire ma discreto studente (uno di quelli che se per caso mi chiedi qualcosa ti so rispondere o indirizzare dalla parte giusta), non un campione ma comunque discreto atleta, non un festaiolo ma comunque uno che se gli chiedi di uscire la sera butta via i suoi altri impegni.
+	non modello da seguire ma discreto studente (uno di quelli che se per caso
+	mi chiedi qualcosa ti so rispondere o indirizzare dalla parte giusta), non
+	un campione ma comunque discreto atleta, non un festaiolo ma comunque uno
+	che se gli chiedi di uscire la sera butta via i suoi altri impegni.
 	
 	Insomma, un tizio.
 	
-	Uno di quelli che indossa degli occhialoni spessi fin da quando andava all'asilo, uno di quelli che con la bicicletta arriverebbe dovunque
+	Uno di quelli che indossa degli occhialoni spessi fin da quando andava
+	all'asilo, uno di quelli che con la bicicletta arriverebbe dovunque
 	begin#inside
 		e l'ho fatto
 	end#inside
-	uno di quelli non alti né bassi, né grassi né magri, uno
-	di quelli che fanno battute divertenti ma non stupide,
-	di quelle che riescono a far ridere tutti, anche gli
-	adulti o i bimbi piccini, ma soprattutto uno di quelli
-	che non hanno mai avuto una ragazza, non ne hanno una e
-	non intendono farsela per due motivi:
+	uno di quelli non alti né bassi, né grassi né magri, uno di quelli che fanno
+	battute divertenti ma non stupide, di quelle che riescono a far ridere
+	tutti, anche gli adulti o i bimbi piccini, ma soprattutto uno di quelli che
+	non hanno mai avuto una ragazza, non ne hanno una e non intendono farsela
+	per due motivi:
 	begin#ul
-		avere una ragazza costa tempo e soldi (o almeno
-		così mi dicevano, ai tempi, quelli che avevano o
-		millantavano d'avere una ragazza)
+		avere una ragazza costa tempo e soldi (o almeno così mi dicevano, ai
+		tempi, quelli che avevano o millantavano d'avere una ragazza)
 
-		le ragazze sono femmine: non hanno niente
-		d'interessante, non capiscono nulla di sport, di
-		videogiochi, né di nient'altro che conti
-		veramente
+		le ragazze sono femmine: non hanno niente d'interessante, non capiscono
+		nulla di sport, di videogiochi, né di nient'altro che conti veramente
 	end#ul
-	
 	Già, a quei tempi mi sfuggivano alcune cose.
 	
 	Parecchie cose.
 	begin#inside
-		Tante di quelle cose che adesso non avrei
-		neanche la forza di ridere per quanto limitato
-		era il mio orizzonte.
+		Tante di quelle cose che adesso non avrei neanche la forza di ridere per quanto limitato era il mio orizzonte.
 	end#inside
-	Ma tornando a quei giorni, non so bene come, non so bene
-	perché, non so bene tramite chi, man mano venni a
-	conoscenza di tutte quelle sudate informazioni.
+	Ma tornando a quei giorni, non so bene come, non so bene perché, non so bene
+	tramite chi, man mano venni a conoscenza di tutte quelle sudate
+	informazioni.
 	
-	La ragazza si chiamava Camelia, frequentava la mia
-	stessa scuola, e abitava anche dalle mie parti, a pochi
-	minuti da casa mia, proprio olte il parcheggio dietro il
-	magazzino del fai-da-te, oltre la terza rampa…
+	La ragazza si chiamava Camelia, frequentava la mia stessa scuola, e abitava
+	anche dalle mie parti, a pochi minuti da casa mia, proprio olte il
+	parcheggio dietro il magazzino del fai-da-te, oltre la terza rampa…
 	
-	Ma anche una volta conosciute queste cose, non avevo
-	chiaro… beh, nulla. Ai tempi non avevo inteso nulla
-	della situazione.
+	Ma anche una volta conosciute queste cose, non avevo chiaro… beh, nulla. Ai
+	tempi non avevo inteso nulla della situazione.
 	
 	Nulla.
 	
-	Quindi in pratica non feci alcunché. Giusto per un paio
-	d'anni.
-
+	Quindi in pratica non feci alcunché. Giusto per un paio d'anni.
 	sec#
 	Beh, non proprio nulla, ovviamente.
 	
 	Ebbi modo di scoprire cose interessanti, per la maggior parte scoprii nuove
 	cose da odiare. Perché una delle cose che fai crescendo è appunto dividere
 	le cose in
-	pre#<ul><li>
-		amate
-	pre#</li><li>
-		non particolarmente amate
-	pre#</li><li>
-		odiate
-	pre#</ul>
-
+	begin#ul
+		li#amate
+		li#non particolarmente amate
+		li#odiate
+	end#ul
 	Nel mio caso, le cose odiate furono la maggior parte.
-
 	sec#
 	Da dove comincio?
-
 	sec#
 	Dalla scuola, direi. La filosofia.
 	begin#inside
-		Perché ho avuto un professore che per tre anni è
-		stato pomposamente a raccontarci non cosa
-		pensassero dei tizi morti da decine, centinaia
-		(ma anche migliaia) di anni, bensì perché
-		pensassero quel che pensavano.
+		Perché ho avuto un professore che per tre anni è stato pomposamente a
+		raccontarci non cosa pensassero dei tizi morti da decine, centinaia (ma
+		anche migliaia) di anni, bensì perché pensassero quel che pensavano.
 	
-		Il perché la gente avesse delle cose in testa, come questo ha o non ha influito sulle vite umane nel periodo loro contemporaneo, ma anche successivo, e magari anche precedente perché se ci fossero stati prima allora le cose sarebbero state differenti.
+		Il perché la gente avesse delle cose in testa, come questo ha o non ha
+		influito sulle vite umane nel periodo loro contemporaneo, ma anche
+		successivo, e magari anche precedente perché se ci fossero stati prima
+		allora le cose sarebbero state differenti.
 	
 		Già, perché lo stesso professore capitava d'insegnarci anche la storia
 	end#inside
@@ -156,23 +142,18 @@ start#page
 	begin#inside
 		Perché ovviamente non esiste una strada comoda.
 	
-		Esiste soltanto una straducola, a senso unico,
-		che serve fondamentalmente per tutti i condomini
-		della zona (perché la scuola dev'essere in mezzo
-		alle case, ovviamente), strada su cui passano
-		quasi esclusivamente gli abitanti della zona,
-		che secondo il comune devono essere tutti dei
-		maniaci della velocità.
+		Esiste soltanto una straducola, a senso unico, che serve
+		fondamentalmente per tutti i condomini della zona (perché la scuola
+		dev'essere in mezzo alle case, ovviamente), strada su cui passano quasi
+		esclusivamente gli abitanti della zona, che secondo il comune devono
+		essere tutti dei maniaci della velocità.
 	
-		Già, perché se 300 metri oltre la scuola parte
-		un bello stradone che esce dalla città e
-		prosegue verso la periferia e lì la gente può
-		tirare i 130 chilometri orari perché un vigile
-		urbano chi l'ha mai visto, sulla cazzo di
-		stradina che io devo percorrere in bici tutte le
-		dannate mattina, qualche ingegnere geniale ha
-		deciso che ci sarebbero stati i dossi per il
-		rallentamento, perché metti caso che
+		Già, perché se 300 metri oltre la scuola parte un bello stradone che
+		esce dalla città e prosegue verso la periferia e lì la gente può tirare
+		i 130 chilometri orari perché un vigile urbano chi l'ha mai visto, sulla
+		cazzo di stradina che io devo percorrere in bici tutte le dannate
+		mattina, qualche ingegnere geniale ha deciso che ci sarebbero stati i
+		dossi per il rallentamento, perché metti caso che
 	end#inside
 	begin#outside
 		speak#em#Sto tornando stanco a casa dal lavoro, ho tanta voglia di stendermi sul divano, per far prima porterò la mia Lamborghini Gallardo alla modica velocità del suono, ma che dico?
@@ -343,17 +324,15 @@ start#page
 	begin#inside
 		non era un bel dì
 	end#inside
-	venni a scoprire per pure purissimo caso che Camelia
-	avrebbe partecipato al campeggio. E questo fu almeno tre
-	settimane prima della partenza.
+	venni a scoprire per pure purissimo caso che Camelia avrebbe partecipato al
+	campeggio. E questo fu almeno tre settimane prima della partenza.
 	
 	Tre settimane d'inferno in terra.
 
 	sec#
-	Perché non c'è niente di peggio nella vita di un uomo
-	(stupido) che attendere qualcosa di completamente
-	sconosciuto. Ai tempi, infatti, andavo completamente
-	allo sbaragaglio.
+	Perché non c'è niente di peggio nella vita di un uomo (stupido) che
+	attendere qualcosa di completamente sconosciuto. Ai tempi, infatti, andavo
+	completamente allo sbaragaglio.
 	
 	Andò così, più o meno…
 	
@@ -361,12 +340,11 @@ start#page
 	begin#inside
 		Come sarà?
 	end#inside
-	pare una domanda semplice, ma riflettete effettivamente
-	un attimo e ditemi come sarà. Come sarà che? La domanda
-	era chiaramente incompleta, ma non me ne resi conto
-	prima di una settimana, poi comincia ad afferrare il
-	problema. Non avevo per nulla chiaro cosa avrei voluto
-	che succedesse. Non un singolo indizio.
+	pare una domanda semplice, ma riflettete effettivamente un attimo e ditemi
+	come sarà. Come sarà che? La domanda era chiaramente incompleta, ma non me
+	ne resi conto prima di una settimana, poi comincia ad afferrare il problema.
+	Non avevo per nulla chiaro cosa avrei voluto che succedesse. Non un singolo
+	indizio.
 	
 	Poi qualcosa cominciò a muoversi, e la domanda spontanea cambio in
 	begin#outside
@@ -374,22 +352,22 @@ start#page
 	end#outside
 	Altra domanda impossibile.
 	
-	Non sapevo infatti cosa dirle, ma nemmeno cosa volessi
-	dirle. Era ancora un vicolo cieco. E così feci una delle
-	cose stupide che si fanno in quei momenti.
+	Non sapevo infatti cosa dirle, ma nemmeno cosa volessi dirle. Era ancora un
+	vicolo cieco. E così feci una delle cose stupide che si fanno in quei
+	momenti.
 	
-	Andai a raccattare due amici, due amici fidati, di
-	quelli che forse &quot;l'avevano vista&quot;.
+	Andai a raccattare due amici, due amici fidati, di quelli che forse
+	&quot;l'avevano vista&quot;.
 	
-	Questi due, per puro caso lo stesso paio d'amici della
-	fontanella la sera del concerto, erano Matta e Sgrebeno.
+	Questi due, per puro caso lo stesso paio d'amici della fontanella la sera
+	del concerto, erano Matta e Sgrebeno.
 	begin#outside
 		inline#Corvino#Allora, stronzi, che mi dite
 		cominciai.
 	
 		inline#Matta#Nulla di particolare
-		fece Matta, che aveva avuto una ragazza e mezza, una alle
-		medie e mezza al liceo.
+		fece Matta, che aveva avuto una ragazza e mezza, una alle medie e mezza
+		al liceo.
 	
 		inline#Sgrebeno#Che mi dici tu, pennellone?
 		disse invece Sgrebeno, che non so bene chi/cosa avesse avuto, ma aveva
@@ -530,17 +508,15 @@ start#page
 
 	Eh, no, non è bello mandarli a cagare.
 
-	Poi finalmente, dopo un'ora prevista di viaggio e un'ora
-	non prevista, finalmente smonti dalla macchina
-	sconosciuta, ti ritrovi in un qualche parcheggio
-	sterrato e cominci a scaricare il tuo zaino.
+	Poi finalmente, dopo un'ora prevista di viaggio e un'ora non prevista,
+	finalmente smonti dalla macchina sconosciuta, ti ritrovi in un qualche
+	parcheggio sterrato e cominci a scaricare il tuo zaino.
 	begin#inside
-		Dov'è il mio zaino? Di chi è questo? Tu col cappello,
-		hai visto il pisauro? Tu biondo, aiutami a scaricare
-		l'idrovora; tu moro, vai a cercare il Mastro di
-		Chiavi… tutto così per mezz'ora almeno, aspettando che
-		tutte le macchine della carovana arrivino, verificando
-		che tutti abbiano tutto, e adesso finalmente possiamo
+		Dov'è il mio zaino? Di chi è questo? Tu col cappello, hai visto il
+		pisauro? Tu biondo, aiutami a scaricare l'idrovora; tu moro, vai a
+		cercare il Mastro di Chiavi… tutto così per mezz'ora almeno, aspettando
+		che tutte le macchine della carovana arrivino, verificando che tutti
+		abbiano tutto, e adesso finalmente possiamo
 		incamminarci, no. Preghiera:
 	end#inside
 	begin#outside
@@ -663,23 +639,18 @@ start#page
 	che qualcuno mettesse delle scarpe sul mio cuscino, e varie altre amenità
 	commesse da un anonimo sconosciuto che ancora maledico la gente a caso
 	sperando di beccare lui.
-
 	sec#
-	La cosa buona arriva: un tale, uno dei responsabili,
-	richiamò l'attenzione di tutti mentre appendeva un
-	cartello bello grande alla porta principale, l'elenco
-	dei gruppi.
+	La cosa buona arriva: un tale, uno dei responsabili, richiamò l'attenzione
+	di tutti mentre appendeva un cartello bello grande alla porta principale,
+	l'elenco dei gruppi.
 
-	Per comodità organizzative, per spartirsi i vari
-	mestieri necessari a mantenere l'ambiente abitabile e
-	per avere già le squadre pronte per giocare, tutti i
-	partecipanti al campeggio vennero infatti divisi in tre
-	gruppi; se ricordo bene, 22 partecipanti per quattro
-	gruppi.
+	Per comodità organizzative, per spartirsi i vari mestieri necessari a
+	mantenere l'ambiente abitabile e per avere già le squadre pronte per
+	giocare, tutti i partecipanti al campeggio vennero infatti divisi in tre
+	gruppi; se ricordo bene, 22 partecipanti per quattro gruppi.
 
-	Ora io non ricordo nulla di quel momento, perché non
-	appena lessi il nome di Camelia vicino al mio
-	nell'elenco dei gruppi, smisi di vedere e di sentire, e
-	finii a trottelellare in un pianeggiante prato colmo di
-	fiori dai colori sgargianti.
+	Ora io non ricordo nulla di quel momento, perché non appena lessi il nome di
+	Camelia vicino al mio nell'elenco dei gruppi, smisi di vedere e di sentire,
+	e finii a trottelellare in un pianeggiante prato colmo di fiori dai colori
+	sgargianti.
 stop#page
