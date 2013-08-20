@@ -23,29 +23,20 @@ start#page
 	Capito, Mitch?
 
 	Completamente opzionali.
-</p>
-</div><div class="section">
-<h2>
-	Download
-</h2><p>
-	Ciascun capitolo è disponibile singolarmente per il download, ma
+	sec#
+	title#Download
+	Ciascun capitolo è disponibile singolarmente per il Download, ma
 	in realtà questo frazionamento è stato effettuato soltato per
 	sfizio. Se voleste scaricare il pdf completo, cliccate <a
-	href="NaNoWriMo/2010/NaNoWriMo2010/download/">questo</a>.
-</p>
-</div><div class="section">
-<h2>
-	Parte I
-</h2><h2 class="reverse">
-	La gioventù
-</h2><p>
+	href="NaNoWriMo/2010/NaNoWriMo2010/Download/">questo</a>.
+	sec#
+	title#Parte I
+	title@right#La gioventù
 	La prima parte del mio NaNoWriMo è certamente la più divertente,
 	o per lo meno è stata la più divertente da scrivere. Si tratta,
 	in breve, della lunga serie di lamentazioni di uno studente, che
 	non ama nulla nella sua vita ad eccezione d'una certa ragazza.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Corvino è un tizio qualunque, studente alle superiori, stanco e annoiato
 	che cerca di tirare avanti, nello studio e nella vita, senza fare troppa
 	fatica.
@@ -60,20 +51,14 @@ start#page
 
 	L'inesperienza di Corvino, oltre a procurargli numerosi fallimenti, si
 	rivela la sua salvezza.
-</p>
-</div><div class="section">
-<h2>
-	Parte II
-</h2><h2 class="reverse">
-	Il Potere
-</h2><p>
+	sec#
+	title#Parte II
+	title@right#Il Potere
 	La seconda parte è un lungo e grosso polpettone, fatto di prove ed
 	errori, che vedono le sofferenze del protagonista alla scoperta di
 	improbabili quanto utili poteri. Padroneggiarli però spingerà il giovane
 	ad imbattersi in individui pericolosi...
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Quella che pareva una delusione amorosa si rivela la via che permette a
 	Corvino di scoprire la magia.
 
@@ -86,20 +71,14 @@ start#page
 
 	Il confronto con un lupo e un corvo gli permetteranno poi di prendere
 	coscenza del nuovo sé.
-</p>
-</div><div class="section">
-<h2>
-	Parte III
-</h2><h2 class="reverse">
-	Le streghe
-</h2><p>
+	sec#
+	title#Parte III
+	title@right#Le streghe
 	Nella terza parte, la più assurda e frammentaria, il protagonista e i
 	suoi compagni danno inizio ad una sconsiderata lotta per la
 	sopravvivenza, che porterà loro qualche rogna, qualche vecchia amicizia
 	e altre cose impossibili.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Corvino scopre un nuovo mondo sovrapposto al nostro e deve fare i conti
 	con le creature che lo abitano. Tra di essi, una vecchia conoscenza, la
 	riunione con la quale non è affatto piacevole.
@@ -117,36 +96,36 @@ start#side
 	title#Parte I
 	titler#La gioventù
 	begin#ol@style@list-style-type: decimal-leading-zero
-		li#link#NaNoWriMo/2010/01/download/#Una sera, al parco
-		li#link#NaNoWriMo/2010/02/download/#Campeggio
-		li#link#NaNoWriMo/2010/03/download/#A contatto
-		li#link#NaNoWriMo/2010/04/download/#Nel bosco
-		li#link#NaNoWriMo/2010/05/download/#La dichiarazione
+		li#link#NaNoWriMo/2010/01/Download/#Una sera, al parco
+		li#link#NaNoWriMo/2010/02/Download/#Campeggio
+		li#link#NaNoWriMo/2010/03/Download/#A contatto
+		li#link#NaNoWriMo/2010/04/Download/#Nel bosco
+		li#link#NaNoWriMo/2010/05/Download/#La dichiarazione
 	end#ol
 	title#Parte II
 	titler#Il Potere
 	begin#ol@start@6@style@list-style-type: decimal-leading-zero
-		li#link#NaNoWriMo/2010/06/download/#Il lampione
-		li#link#NaNoWriMo/2010/07/download/#La lettura
-		li#link#NaNoWriMo/2010/08/download/#La corsa
-		li#link#NaNoWriMo/2010/09/download/#L&apos;estate
-		li#link#NaNoWriMo/2010/10/download/#La morte
-		li#link#NaNoWriMo/2010/11/download/#Il sogno
-		li#link#NaNoWriMo/2010/12/download/#Il lupo e il corvo
-		li#link#NaNoWriMo/2010/13/download/#Il funerale
-		li#link#NaNoWriMo/2010/14/download/#La rivelazione
-		li#link#NaNoWriMo/2010/15/download/#Il mondo &lsquo;di là&rsquo;
+		li#link#NaNoWriMo/2010/06/Download/#Il lampione
+		li#link#NaNoWriMo/2010/07/Download/#La lettura
+		li#link#NaNoWriMo/2010/08/Download/#La corsa
+		li#link#NaNoWriMo/2010/09/Download/#L&apos;estate
+		li#link#NaNoWriMo/2010/10/Download/#La morte
+		li#link#NaNoWriMo/2010/11/Download/#Il sogno
+		li#link#NaNoWriMo/2010/12/Download/#Il lupo e il corvo
+		li#link#NaNoWriMo/2010/13/Download/#Il funerale
+		li#link#NaNoWriMo/2010/14/Download/#La rivelazione
+		li#link#NaNoWriMo/2010/15/Download/#Il mondo &lsquo;di là&rsquo;
 	end#ol
 	title#Parte III
 	titler#Le streghe
 	begin#ol@start@16@style@list-style-type: decimal-leading-zero
-		li#link#NaNoWriMo/2010/16/download/#Il da farsi
-		li#link#NaNoWriMo/2010/17/download/#Le botte
-		li#link#NaNoWriMo/2010/18/download/#La sua storia
-		li#link#NaNoWriMo/2010/19/download/#Io, Strega
-		li#link#NaNoWriMo/2010/20/download/#L&apos;offensiva
-		li#link#NaNoWriMo/2010/21/download/#L&apos;oracolo
-		li#link#NaNoWriMo/2010/22/download/#Il drago
-		li#link#NaNoWriMo/2010/finale/download/#Epilogo
+		li#link#NaNoWriMo/2010/16/Download/#Il da farsi
+		li#link#NaNoWriMo/2010/17/Download/#Le botte
+		li#link#NaNoWriMo/2010/18/Download/#La sua storia
+		li#link#NaNoWriMo/2010/19/Download/#Io, Strega
+		li#link#NaNoWriMo/2010/20/Download/#L&apos;offensiva
+		li#link#NaNoWriMo/2010/21/Download/#L&apos;oracolo
+		li#link#NaNoWriMo/2010/22/Download/#Il drago
+		li#link#NaNoWriMo/2010/finale/Download/#Epilogo
 	end#ol
 stop#side
