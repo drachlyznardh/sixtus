@@ -19,9 +19,9 @@
 		<div class="section">
 			<div class="inside"><p>
 					If you love to sail the sea
-			</p></div><p style="text-align: center">
+			</p></div><p style="text-indent:0px; text-align: center">
 				You are a Pirate.
-			</p><div class="outside"><p title="dice il nonno: «Fate i bravi, guidate piano»" style="text-align: right">
+			</p><div class="outside"><p title="dice il nonno: «Fate i bravi, guidate piano»" class="reverse">
 					Dis 'l nono: «Fe' i bravi, ne' pian»
 			</p></div>
 		</div>
@@ -31,9 +31,9 @@
 		<div class="section">
 			<div class="inside"><p>
 					<a href="http://validator.w3.org/check?uri=news/">HTML Valido</a>
-			</p></div><p style="text-align: center">
+			</p></div><p style="text-indent:0px; text-align: center">
 				<a href="http://users.skynet.be/mgueury/mozilla/">HTML5 Valido</a>
-			</p><div class="outside"><p style="text-align: right">
+			</p><div class="outside"><p class="reverse">
 					<a href="http://jigsaw.w3.org/css-validator/validator?uri=style/raw.css">CSS Valido</a>
 			</p></div>
 		</div>
@@ -43,9 +43,9 @@
 		<div class="section">
 			<div class="inside"><p>
 					Roses are <span style="font-family:monospace; color:#ff0000" title="red">#FF0000</span>
-			</p></div><p style="text-align: center">
+			</p></div><p style="text-indent:0px; text-align: center">
 				Violets are <span style="font-family:monospace; color:#0000ff" title="blue">#0000FF</span>
-			</p><div class="outside"><p title="All my base are belong to &lt;?=$Katia?&gt;" style="text-align: right">
+			</p><div class="outside"><p title="All my base are belong to &lt;?=$Katia?&gt;" class="reverse">
 					4ll my b4s3 r b3long 2 U
 			</p></div>
 		</div>

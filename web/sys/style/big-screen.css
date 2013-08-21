@@ -3,9 +3,9 @@ p#wide-screen { display: none; }
 p#small-screen { display: none; }
 
 div#content {
-	width: 46%;
-	padding-left:  27%;
-	padding-right: 27%;
+	width: 50%;
+	padding-left:  25%;
+	padding-right: 25%;
 	padding-top: 5px;
 	overflow: hidden;
 }
@@ -14,7 +14,7 @@ div#right-side {
 	position: fixed;
 	width: 23%;
 	height: 90%;
-	right: 2%;
+	right: 1%;
 	top: 5%;
 	overflow: auto;
 }
@@ -23,7 +23,7 @@ div#left-side {
 	position: fixed;
 	width: 23%;
 	height: 90%;
-	left: 2%;
+	left: 1%;
 	top: 5%;
 	overflow: auto;
 }
@@ -42,25 +42,20 @@ div.small {
 }
 
 div#sail-the-sea {
-	width: 33%;
-	float: left;
+	float: none;
+	width: 70%;
+	margin-left: 10%;
 }
 
 div#stuff-is-valid {
-	width: 34%;
-	float: left;
+	float: none;
+	width: 70%;
+	margin-left: 15%;
 }
 
 div#roses-are-red {
-	width: 33%;
-	float: right;
-}
-
-div#sail-the-sea div.section,
-div#stuff-is-valid div.section,
-div#roses-are-red div.section
-{
-	margin-top: 0px;
-	margin-bottom: 0px;
+	float: none;
+	width: 70%;
+	margin-left: 20%;
 }
 
