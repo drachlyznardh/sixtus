@@ -315,7 +315,10 @@
 					break;
 				case 'mini':
 				case 'half':
-					if ($side) $this->content[] = "<div class=\"$env-$side[1]\">";
+					if ($side) {
+						$this->content[] = "<div class=\"$env-$side[1]-out\">";
+						$this->content[] = "<div class=\"$env-$side[1]-in\">";
+					}
 					else die ("Environment[$env] needs a side");
 					break;
 				default:
@@ -335,11 +338,13 @@
 					break;
 				case 'inside':
 				case 'outside':
-				case 'mini':
-				case 'half':
 				case 'double':
 				case 'triple':
 					$this->content[] = '</div>';
+					break;
+				case 'mini':
+				case 'half':
+					$this->content[] = '</div></div>';
 					break;
 				default:
 					die("Unknown environment[$args[1]]");

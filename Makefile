@@ -14,27 +14,27 @@ images: $(IMGS)
 pdfs: $(PDFS)
 
 web/%.php: src/%.lyz
-	@echo "[$< => $@]"
+	@echo "Generating [$< => $@]"
 	@mkdir -p $(dir $@)
 	@php5 -f $(LYZ_TO_PHP) src/ $< > $@ || (more $@ && $(RM) $@ && return 1)
 
 web/%.pdf: src/%.pdf
-	@echo "[$< => $@]"
+	@echo "Copying [$< => $@]"
 	@mkdir -p $(dir $@)
 	@cp $< $@
 
 web/%.png: src/%.png
-	@echo "[$< => $@]"
+	@echo "Copying [$< => $@]"
 	@mkdir -p $(dir $@)
 	@cp $< $@
 
 web/%.jpg: src/%.jpg
-	@echo "[$< => $@]"
+	@echo "Copying [$< => $@]"
 	@mkdir -p $(dir $@)
 	@cp $< $@
 
 web/%.gif: src/%.gif
-	@echo "[$< => $@]"
+	@echo "Copying [$< => $@]"
 	@mkdir -p $(dir $@)
 	@cp $< $@
 

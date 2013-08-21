@@ -214,8 +214,10 @@
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
 			if ($this->force_all_tabs)
 				printf("\t\t\$attr['force_all_tabs'] = true;\n");
-			else
+			else {
 				printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
+				printf("\t\tif(!\$attr['current']) \$attr['current'] = '$this->default_tab';\n");
+			}
 			printf("\n");
 			if ($this->prev)
 				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");

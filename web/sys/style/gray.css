@@ -5,7 +5,9 @@ body { background-color: #121212; }
 
 h1, h2, h3 { text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px; }
 
-div.section {
+div.section,
+div.half-right-in, div.half-left-in,
+div.mini-right-in, div.mini-left-in {
 	background-color: #666666;
 	border-color: #dddddd;
 }
@@ -21,7 +23,6 @@ div.section h3 { border-color: #444444; }
 	background-color: #444444;
 }
 
-div.section,
 div.section h2,
 .inside,
 .outside {
