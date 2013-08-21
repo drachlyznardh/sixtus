@@ -109,10 +109,7 @@ h3.reverse {
 	margin: 2px 4px 2px 4px;
 }
 
-ul {
-	margin-left: 2em;
-	text-indent: 0;
-}
+ul { list-style-position: inside; }
 
 div.section ol {
 	margin-left: 4em;
