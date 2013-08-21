@@ -12,7 +12,12 @@
 			$content = false;
 			foreach ($this->content as $_)
 				$content .= $_;
-			return '<div class="section">'.$content.'</div>'."\n";
+
+			$result = '<div class="<?=($attr[\'sections\']?\'section\':\'invisible\')?>">';
+			$result .= $content;
+			$result .= '</div>';
+
+			return $result;
 		}
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)
@@ -50,6 +55,12 @@
 					$this->content[] = $cmd_args[0];
 					$this->content[] = ']</p>';
 			}
+		}
+
+		public function make_include ($filename, $part)
+		{
+			$this->closeContext();
+			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, false); ?>";
 		}
 
 		private function switchContext($new)
@@ -147,10 +158,10 @@
 
 			$count = count($args);
 			if ($count > 2) $tab = '\''.strtolower($args[2]).'\''; else $tab = "false";
-			if ($count > 3) $hash = '\''.strtolower($args[3]).'\''; else $hash = "false";
+			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
 			
 			if ($before) $result = $before; else $result = false;
-			$result .= "<?=make_tid(\$attr, $tab, '".polish_line($title)."')?>";
+			$result .= "<?=make_tid(\$attr, '".polish_line($title)."', $tab, $hash)?>";
 			if ($after) $result .= $after;
 			
 
@@ -186,7 +197,7 @@
 					$this->content[] = " <span class=\"green\">$text</span>";
 				} else {
 					$this->openContext($this->defaultContext);
-					$this->content[] = " $text";
+					$this->content[] = " $text ";
 				}
 			} else $this->closeContext();
 		}
@@ -304,7 +315,10 @@
 					break;
 				case 'mini':
 				case 'half':
-					if ($side) $this->content[] = "<div class=\"$env-$side[1]\">";
+					if ($side) {
+						$this->content[] = "<div class=\"$env-$side[1]-out\">";
+						$this->content[] = "<div class=\"$env-$side[1]-in\">";
+					}
 					else die ("Environment[$env] needs a side");
 					break;
 				default:
@@ -324,11 +338,13 @@
 					break;
 				case 'inside':
 				case 'outside':
-				case 'mini':
-				case 'half':
 				case 'double':
 				case 'triple':
 					$this->content[] = '</div>';
+					break;
+				case 'mini':
+				case 'half':
+					$this->content[] = '</div></div>';
 					break;
 				default:
 					die("Unknown environment[$args[1]]");
@@ -378,7 +394,7 @@
 
 		private function dialog ($author, $line)
 		{
-			return '<span title="'.$author.'">'.$line.'</span>';
+			return '<span class="'.$author.'" title="'.$author.'">'.$line.'</span>';
 		}
 	}
 ?>

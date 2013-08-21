@@ -5,42 +5,49 @@
 		if ($tab) $result = substr($url, 0, -1).'§'.strtoupper($tab).'/';
 		else $result = $url;
 		if (!$attr['gray']) $result .= 'White/';
-		if (!$attr['single']) $result .= 'AllTabs/';
+		if (!$attr['single']) $result .= 'All/';
 		if ($hash) $result .= '#'.$hash;
 		return $result;
 	}
 	
-	function make_tid($attr, $tab, $title)
+	function make_tid($attr, $title, $tab, $hash)
 	{
-		printf("<!-- \$Attr[Part] = [$attr[part]], \$Tab = [$tab] -->");
+		$url = false;
 		
-		if ($attr['single']) {
-			if ($attr['part'] == $tab) {
-				$result = '<em>'.$title.'</em>';
+		if ($attr['single'] && !$attr['force_all_tabs']) {
+			if ($attr['current'] == $tab) {
+				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 			} else {
-				$url = make_canonical ($attr, $attr['self'], $tab);
-				$result = '<a href="'.$url.'">'.$title.'</a>';
+				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
+				else $url = make_canonical ($attr, $attr['self'], $tab);
 			}
 		} else {
 			$url = make_canonical ($attr, $attr['self'], false, strtoupper($tab));
-			$result = '<a href="'.$url.'">'.$title.'</a>';
 		}
 		
-		return $result;
+		if ($url) return '<a href="'.$url.'">'.$title.'</a>';
+		return '<em>'.$title.'</em>';
 	}
 
-	function dynamic_include ($attr, $filename, $part, $as)
+	function dynamic_include ($attr, $filename, $part, $sections)
 	{
 		$attr['included'] = true;
-		
+		$attr['sections'] = $sections;
+	
 		switch($part)
 		{
 			case '':
 			case 'page':
-				$attr['force_all_tabs'] = true; break;
+				$attr['part'] = 'page';
+				$attr['force_all_tabs'] = true;
+				break;
 			case 'side':
-				$attr['part'] = 'side'; break;
-			default: $attr['part'] = $part;
+				$attr['part'] = 'side';
+				$attr['force_all_tabs'] = false;
+				break;
+			default:
+				$attr['part'] = $part;
+				$attr['force_all_tabs'] = false;
 		}
 
 		require($filename);	
@@ -48,17 +55,12 @@
 
 	function tab_condition ($attr, $name)
 	{
-		printf("\t<!-- [\n");
-		print_r($attr);
-		print_r($name);
-		printf("\n] -->\n");
-		
 		if ($attr['included'])
-			return !$attr['single'] or
-					$attr['force_all_tabs'] or
+			return $attr['part'] == 'page' or
 					$attr['part'] == $name;
 		else
-			return $attr['part'] == $name or
+			return !$attr['single'] or
+					$attr['part'] == $name or
 					$attr['force_all_tabs'];
 	}
 

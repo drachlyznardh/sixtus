@@ -6,16 +6,16 @@ next#Extra/Fitness/#Fitness
 related#Extra/Diario/#Il @diario@ del Capitano
 related@li#Extra/Back2LOD/#Back@ to the Lab Of Doom
 start#page
-	include#extra/labofdoom.07.lyz
-	include#extra/labofdoom.08.lyz
-	include#extra/labofdoom.09.lyz
+	include#extra/labofdoom.07
+	include#extra/labofdoom.08
+	include#extra/labofdoom.09
 stop#page
 start#side
 	title#Lab of Doom
 	stitle@right#Luglio
-	include#extra/labofdoom.07.lyz#side@as@content
+	include#extra/labofdoom.07#side@as@content
 	stitle@right#Agosto
-	include#extra/labofdoom.08.lyz#side@as@content
+	include#extra/labofdoom.08#side@as@content
 	stitle@right#Settembre
-	include#extra/labofdoom.09.lyz#side@as@content
+	include#extra/labofdoom.09#side@as@content
 stop#side

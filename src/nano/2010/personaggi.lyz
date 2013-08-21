@@ -1,0 +1,62 @@
+title#Personaggi#Chi sono e cosa fanno
+start#page
+	id#Umani
+	title@right#Umani
+	stitle#Corvino
+	Il debole, lamentoso, inutile e pigro protagonista comincia come studentello
+	annoiato.
+	
+	La sua situazione però si evolve: non appena la sua mente smette di
+	preoccuparsi delle sue inutili magagne, il ragazzo scopre mirabolanti poteri
+	basati sulla gamma dei colori dell'arcobaleno.
+	stitle#Camelia
+	Questa ragazza è la prima fiamma di Corvino, e sembra misteriosamente
+	interessata a lui.
+
+	Ovviamente, la cosa è ben più seria: questa ragazza è in realtà una strega
+	vecchia di parecchi secoli, se ne va in giro rubando la giovinezza alla
+	gente e lo stesso vuol fare con Corvino.
+	sec#
+	id#Bestie
+	title@right#Bestie
+	stitle#Battesimo
+	Il lupo che per primo attenta alla vita di Corvino. Si rivela essere poco
+	più che un docile cagnone selvativo.
+	stitle#Smeraldino
+	Il corvo che tenta di completare l'opera del lupo. Interviene solo a
+	sproposito.
+	stitle#Fisthanlarunai
+	Anche se non compare fino alla fine della prima draft, questo drago lungo
+	come due autobus vive sul fondo di un lago in Argentina.
+	
+	Dopo aver servito la più potente guerriera strega ancora in vita, affronta
+	Corvino in un terribile scontro.
+	sec#
+	id#Glossario
+	title@right#Glossario
+	stitle#Streghe
+	Le streghe sono terribili creature – dotate di spaventosi poteri magici –
+	che vivono sia <em>di qua</em> che <em>di là</em>.
+	stitle#Multicolore
+	Uno degli appellativi di <em>Corvino</em>, dicesi di colui che può assumere
+	più d'un colore contemporaneamente.
+	stitle#Trasparente
+	Altro appellativo per <em>Corvino</em>, dicesi di colui che può evitare di
+	assumere un colore. È grazie a questo potere che il ragazzo riesce a passare
+	<em>di qua</em>, senza lasciare traccia.
+	stitle#Di qua / Di là
+	Esiste una barriera che divide il mondo dove abitano le creature naturali e
+	il mondo dove abitano le creature magiche. Alcune creature sono in grado di
+	attraversare questa barriere.
+
+	Quale lato sia il qua e quale il là dipende da chi parla.
+stop#page
+start#side
+	p#link#NaNoWriMo/2010/#Indice
+	title#NaNoWriMo 2010
+	begin#ul
+		p#tid#Umani##Umani
+		p#tid#Bestie##Bestie
+		p#tid#Glossario##Glossario
+	end#ul
+stop#side

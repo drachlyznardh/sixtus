@@ -29,55 +29,47 @@ div.section {
 	margin: 5px;
 }
 
-.doublecol {
+div.invisible {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.double-col {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	column-count: 2;
 }
 
-.triplecol {
+.triple-col {
 	-moz-column-count: 3;
 	-webkit-column-count: 3;
 	column-count: 3;
 }
 
-.mini-left, .mini-right {
-	width: 35%;
+.mini-right-out, .mini-left-out { width: 35%; }
+.half-right-out, .half-left-out { width: 50%; }
+
+.half-right-out, .mini-right-out { float: right; }
+.half-left-out, .mini-left-out { float: left; }
+
+.half-right-in, .half-left-in,
+.mini-right-in, .mini-left-in {
+	border-style: outset;
 	border-width: 2px;
 	border-radius: 3px;
-	border-style: outset;
+	margin: 5px;
 }
 
-.half-left, .half-right {
-	width: 48%;
-	border-width: 2px;
-	border-radius: 3px;
-	border-style: outset;
+.half-right-in, .mini-right-in {
+	margin-left: 5px;
+	margin-right: -5px;
+	border-left: 0px;
 }
 
-.mini-left, .half-left {
-	float: left;
-	margin: 2px 10px 2px -5px;
-	border-right: 0;
-}
-
-.mini-right, .half-right {
-	float: right;
-	margin: 2px -5px 2px 10px;
-	border-left: 0;
-}
-
-.half-left {
-	float: left;
+.half-left-in, .mini-left-in {
 	margin-left: -5px;
 	margin-right: 5px;
-	border-right: 0;
-}
-
-.half-right {
-	float: right;
-	margin-right: -5px;
-	border-left: 0;
+	border-right: 0px;
 }
 
 p, ul, ol {
