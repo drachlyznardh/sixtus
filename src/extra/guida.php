@@ -56,30 +56,25 @@ tab#compagni
 	compagnia è nota per prendere possesso dei tavoli, far gran casino e
 	dominare sia la vita vera che l'internet.
 	begin#ul
-		il <span class="bolo">buon Bolo</span> è la persona che conosco
-		da più tempo, entro queste mura; abbiamo cominciato insieme,
-		abbiamo collaborato per gli esami per lungo tempe etc etc etc…
-		spesso mi rivolgo a lui direttamente, per evitare che usi i suoi
-		terribili poteri di	<span class="code">Grammar Nazi</span> per
-		spottare errori nelle mia pagine.
-
-		il <span class="dacav">giovane Simgi Dacav</span>, vecchio più
+		li#il <span class="bolo">buon Bolo</span> è la persona che conosco da
+		più tempo, entro queste mura; abbiamo cominciato insieme, abbiamo
+		collaborato per gli esami per lungo tempe etc etc etc… spesso mi rivolgo
+		a lui direttamente, per evitare che usi i suoi terribili poteri di
+		<code>Grammar Nazi</code> per spottare errori nelle mia pagine.
+		p#il <span class="dacav">giovane Simgi Dacav</span>, vecchio più
 		di tutti noi messi assieme, è un troll potente e meticoloso, ne
 		ha viste di tutti i colori e possiede incredibili poteri. Non
 		mangiando brioche e girando spesso con la cremina per le mani, è
 		noto all'esterno come <em>Mr. Benessere</em>.
-
-		<span class="mitch">Mitch</span>, il <em>re del
+		p#<span class="mitch">Mitch</span>, il <em>re del
 		gossip</em> conosce tutto e tutti, ha una lunga esperienza
 		nell'aiutare i nabbi e una grande pazienza. Attualmente, s'è
 		trovato un vero mestiere.
-
-		il <span class="jazz">signor Jazzinghen</span>, ch'è molto
+		p#il <span class="jazz">signor Jazzinghen</span>, ch'è molto
 		importante (tutti lo chiamano “signore”) è un acquisto
 		relativamete recente (in confronto al Dacav, ovviamente), è
 		estramamente rumoroso e blah.
-		
-		il tre volte dottore <span class="war">War(rior)</span> alleggia
+		p#il tre volte dottore <span class="war">War(rior)</span> alleggia
 		nei dintorni, perché lui fa cose. Ne sa un sacco.
 	end#ul
 	sec#
@@ -87,17 +82,14 @@ tab#compagni
 	Non tutti i miei amici studiano in questa facoltà, non ci spendono
 	la vita, ma fanno anche altre cose.
 	begin#ul
-		<em>Luber</em>, ad esempio, ha un lavoro vero e
-		una vita vera. Fa cose, recensisce anime terribili e gioca con
-		me ad Exalted.
-
-		<em>Dave</em> ossia <em>Il
-		Troll</em> invece è una creatura a parte. Narra la leggenda
-		che fosse qui in facoltà da tempo immemore, ma poi – per motivi
-		ignoti ai mortali – sparì ritirandosi a vita eremitica. Torna
-		ogni tanto, attraverso visioni oppure in forma astrale.
-
-		<em>Arber</em> è l'uomo che conosce tutti; anche più di Mitch. Gira in
+		p#<em>Luber</em>, ad esempio, ha un lavoro vero e una vita vera. Fa
+		cose, recensisce anime terribili e gioca con me ad Exalted.
+		p#<em>Dave</em> ossia <em>Il
+		Troll</em> invece è una creatura a parte. Narra la leggenda che fosse
+		qui in facoltà da tempo immemore, ma poi – per motivi ignoti ai mortali
+		– sparì ritirandosi a vita eremitica. Torna ogni tanto, attraverso
+		visioni oppure in forma astrale.
+		p#<em>Arber</em> è l'uomo che conosce tutti; anche più di Mitch. Gira in
 		facoltà da tempo immemore ed ogniqualvolta ci si becca per un caffè, lui
 		incontra qualcuno e si perde via…
 	end#ul
