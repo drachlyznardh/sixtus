@@ -17,7 +17,6 @@
 			{
 				case 'sec': $this->make_sec(); break;
 				case 'sbr': $this->make_sbr(); break;
-				case 'include': $this->make_include($cmd_args); break;
 				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
 		}
@@ -35,23 +34,8 @@
 			$this->current = null;
 		}
 
-		private function make_include ($args)
+		public function make_include ($filename, $part, $as)
 		{
-			$filename = $args[1].'.php';
-			if (count($args)> 2) {
-				if (preg_match('/@/', $args[2])) {
-					$_ = preg_split('/@/', $args[2]);
-					$part = "'$_[0]'";
-					$as = "'$_[2]'";
-				} else {
-					$part = "'$args[2]'";
-					$as = 'false';
-				}
-			} else {
-				$part = 'false';
-				$as = 'false';
-			}
-	
 			if ($as && strcmp($as, '\'content\'') == 0) {
 				if ($this->current == null) $this->current = new Section();
 				$this->current->make_include($filename, $part);

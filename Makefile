@@ -16,7 +16,7 @@ pdfs: $(PDFS)
 web/%.php: src/%.lyz
 	@echo "[$< => $@]"
 	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_PHP) $< > $@ || (more $@ && $(RM) $@ && return 1)
+	@php5 -f $(LYZ_TO_PHP) src/ $< > $@ || (more $@ && $(RM) $@ && return 1)
 
 web/%.pdf: src/%.pdf
 	@echo "[$< => $@]"
