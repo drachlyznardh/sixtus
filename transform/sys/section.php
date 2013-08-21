@@ -102,7 +102,9 @@
 
 		private function full_link ($args)
 		{
-			$destination = polish_line($args[1]);
+			if ($args[1]) $destination = '\''.polish_line($args[1]).'\'';
+			else $destination = '$attr[\'self\']';
+
 			if (preg_match('/@/', polish_line($args[2]))) {
 				$_ = preg_split('/@/', $args[2]);
 				switch(count($_)) {
@@ -126,7 +128,7 @@
 			if ($count > 3) $tab = "'$args[3]'"; else $tab = 'false';
 			if ($count > 4) $hash = "'$args[4]'"; else $hash = 'false';
 			
-			$url = "<?=make_canonical(\$attr, '$destination', $tab, $hash)?>";
+			$url = "<?=make_canonical(\$attr, $destination, $tab, $hash)?>";
 			if ($before) $result = $before; else $result = false;
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
