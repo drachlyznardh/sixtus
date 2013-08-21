@@ -76,6 +76,7 @@
 			list($page_name, $page_tab) = preg_split('/§/', $_);
 			$request['path'][] = $page_name;
 			$attr['part'] = $page_tab;
+			$attr['current'] = $page_tab;
 		} else {
 			$request['path'][] = $_;
 		}
