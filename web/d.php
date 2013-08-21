@@ -9,6 +9,7 @@
 	$attr['included'] = false;
 	$attr['sections'] = true;
 	$attr['part'] = false;
+	$attr['current'] = false;
 	$attr['force_all_tabs'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
