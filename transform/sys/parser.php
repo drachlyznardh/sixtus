@@ -12,24 +12,49 @@
 
 	class Parser {
 	
-		private $pstate = 'meta';
+		private $pstate;
 
-		private $title = false;
-		private $subtitle = false;
-		private $keywords = false;
+		private $prefix;
 
-		private $prev = false;
-		private $next = false;
+		private $title;
+		private $subtitle;
+		private $keywords;
 
-		private $current = null;
-		private $body = array();
-		private $side = array();
+		private $prev;
+		private $next;
 
-		private $first_tab = true;
-		private $default_tab = false;
+		private $current;
+		public $body;
+		public $side;
+
+		private $first_tab;
+		private $default_tab;
+		private $force_all_tabs;
+
+		public function __construct ($prefix)
+		{
+			$this->pstate = 'meta';
+			$this->prefix = $prefix;
+
+			$this->title = false;
+			$this->subtitle = false;
+			$this->keywords = false;
+
+			$this->prev = false;
+			$this->next = false;
+
+			$this->current = null;
+			$this->body = array();
+			$this->side = array();
+
+			$this->first_tab = true;
+			$this->default_tab = false;
+			$this->force_all_tabs = false;
+		}
 
 		public function parse($filename)
 		{
+			$this->include_base = dirname($filename);
 			$index = 0;
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
@@ -97,6 +122,14 @@
 							break;
 					}
 					break;
+				case 'tabs':
+					if ($cmd_par[1] == 'alwaysall')
+						$this->force_all_tabs = true;
+					break;
+				case 'alltab':
+				case 'alltabs':
+					$this->force_all_tabs = true;
+					break;
 			}
 		}
 
@@ -109,6 +142,7 @@
 					$this->side[] = $this->current;
 					$this->current = null;
 					break;
+				case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -135,8 +169,37 @@
 						$this->current->setName($cmd_args[1]);
 					}
 					break;
+				case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
+			}
+		}
+
+		private function make_include ($args)
+		{
+			$filename = $args[1].'.php';
+			$part = false;
+			$as = false;
+
+			if (count($args)> 2)
+				if (preg_match('/@/', $args[2])) {
+					$_ = preg_split('/@/', $args[2]);
+					$part = "'$_[0]'";
+					$as = "'$_[2]'";
+				} else $part = "'$args[2]'";
+	
+			if ($part)
+				$this->current->make_include($filename, $part, $as);
+			else {
+				$this->current->closeTab();
+				$this->body[] = $this->current;
+				
+				$parser = new Parser($this->prefix);
+				$parser->parse("$this->prefix/$args[1].lyz");
+				foreach ($parser->body as $_)
+					$this->body[] = $_;
+				#foreach ($parser->side as $_)
+				#	$this->side[] = $_;
 			}
 		}
 
@@ -149,7 +212,10 @@
 			printf("\t\t\$attr['title'] = '$this->title';\n");
 			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
-			printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
+			if ($this->force_all_tabs)
+				printf("\t\t\$attr['force_all_tabs'] = true;\n");
+			else
+				printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)
 				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");

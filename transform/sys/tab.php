@@ -17,7 +17,6 @@
 			{
 				case 'sec': $this->make_sec(); break;
 				case 'sbr': $this->make_sbr(); break;
-				case 'include': $this->make_include($cmd_args); break;
 				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
 		}
@@ -26,39 +25,29 @@
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
 			$this->current = new Section();
-			$this->content[] = '<br />';
 		}
 
 		private function make_sbr ()
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
-			$this->current = new Section();
+			$this->content[] = '<br />';
+			$this->current = null;
 		}
 
-		private function make_include ($args)
+		public function make_include ($filename, $part, $as)
 		{
-			if ($this->current != null)
-			{
-				$this->content[] = $this->current->getContent();
-				$this->current = null;
-			}
-
-			$filename = $args[1].'.php';
-			if (count($args)> 2) {
-				if (preg_match('/@/', $args[2])) {
-					$_ = preg_split('/@/', $args[2]);
-					$part = "'$_[0]'";
-					$as = "'$_[2]'";
-				} else {
-					$part = "'$args[2]'";
-					$as = 'false';
-				}
+			if ($as && strcmp($as, '\'content\'') == 0) {
+				if ($this->current == null) $this->current = new Section();
+				$this->current->make_include($filename, $part);
 			} else {
-				$part = 'false';
-				$as = 'false';
+				if ($this->current != null)
+				{
+					$this->content[] = $this->current->getContent();
+					$this->current = null;
+				}
+
+				$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, true); ?>";
 			}
-			
-			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, $as); ?>";
 		}
 
 		private function make_default ($index, $cmd, $cmd_attr, $cmd_args)
@@ -70,7 +59,7 @@
 		public function setName($name)
 		{
 			$this->name = $name;
-			$this->content[] = "<a id=\"tab-$name\"></a>";
+			$this->content[] = '<a id="'.strtoupper($name).'"></a>';
 		}
 
 		public function closeTab()

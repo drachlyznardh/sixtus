@@ -1,0 +1,49 @@
+start#page
+tab#content
+	stitle#link#Blog/#Blog
+	r#link#Blog/Archivio#Archivio
+		/
+		link#About/#About
+		/
+		link#Extra/#Extra
+	sbr#
+	title@right#Cose interessanti
+	stitle#link#Storie/#Storie
+	r#link#Diario/#Diario
+		/
+		link#Storie/2010/#2010
+		~
+		link#Storie/2011/#'11
+		~
+		link#Storie/2012/#'12
+		~
+		link#Storie/2013/#'13
+	stitle#link#Cronache#Cronache
+	r#Le campagne di
+		link#Cronache/I/#GODS
+		/
+		link#Cronache/II/#War
+		/
+		link#Cronache/III/#Mitch
+	sec#
+	title@right#Cose meno interessanti
+	stitle#link#Recensioni/#Recensioni
+	r#link#Recensioni/Classifica#Classifica
+		/
+		link#Recensioni/#Catalogo#CATALOGO
+	stitle#link#Tru/Naluten/#Tru Naluten
+	r#link#Tru/Naluten/Personaggi/#Personaggi
+		/ Volumi [
+		link#Tru/Naluten/I/#Vol.I
+		|
+		link#Tru/Naluten/II/#Vol.II
+		|
+		link#Tru/Naluten/III/#Vol.III
+		]
+	stitle#link#NaNoWriMo/#NaNoWriMo
+	r#link#NaNoWriMo/2010/#2010
+		/
+		link#NaNoWriMo/Corvino/Multicolore/#Corvino Multicolore
+		/
+		link#NaNoWriMo/2011/#2011
+stop#page

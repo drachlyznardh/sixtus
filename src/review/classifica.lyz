@@ -1,3 +1,7 @@
+title#Classifica#Delle cose buone e delle cose brutte
+prev#Recensioni/#Recensioni
+next#Recensioni/Indice/#Indice
+alltabs#
 start#page
 tab#awesome
 	stitle#Fucking awesome!!!
@@ -138,3 +142,17 @@ tab#magnifici
 		li#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter
 	end#ul
 stop#page
+start#side
+	title#Classifica
+	r#tid#Fucking Awesome!#awesome
+	r#tid#Buoni#buoni
+	/
+	tid#Si lasciano guardare#lasciano
+	/
+	tid#Meh. / Mah#meh
+	r#tid#L'ha fatto Micheal Bay?#bay
+	/
+	tid#No.#no
+	r#tid#Brutto da ridere#ridere
+	r#tid#Magnificamente brutto#magnifici
+stop#side

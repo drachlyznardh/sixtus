@@ -5,15 +5,11 @@
 
 <!-- Sys/Fragments/Head [Start] -->
 <div class="section">
-	<p id="big-screen">Big-Screen</p>
-	<p id="wide-screen">Wide-Screen</p>
-	<p id="small-screen">Small-Screen</p>
-</div>
-<div class="section">
 	<div class="inside em"><p style="text-align:center">
 		<a href="http://gods.roundhousecode.com">Gods</a> .
 		<a href="http://roundhousecode.com">RoundhouseCode</a> .
 		<a href="http://roundhousecode.com">com</a> /
+		<br class="small-screen"/>
 		<?php if (isset($search['cat'])) foreach ($search['cat'] as $_) {?>
 			<a href="<?=make_canonical($attr, $_[0])?>"><?=$_[1]?></a> / 
 		<?php }

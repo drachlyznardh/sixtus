@@ -19,19 +19,17 @@ tab#guida
 	un tab serio.
 	stitle#Cose tecniche in ordine sparso
 	begin#double
-		<strong>Ricerca degli Host</strong>: il comando <code>nast</code>
+		li#<strong>Ricerca degli Host</strong>: il comando <code>nast</code>
 		permette di ispezionare una rete, in particolare la linea <code>nast -i
 		eth0 -m</code> permette di cercare tutti gli host collegati a questo
 		attraverso la connessione indicata;
-
-		<strong>Scansione della rete</strong>: è altrettanto possibile (in
+		li#<strong>Scansione della rete</strong>: è altrettanto possibile (in
 		particolare, qualora non si conoscesse la sottorete o se ne volessero
 		testare molte) utilizzare il vecchio <code>nmap</code>; esso è in grado
 		di sniffare molte cose, avendo tempo a disposizione; <code>nmap -sn
 		192.168.0.0/16</code> scansiona tutte le sottoreti
 		<code>192.168.255.255</code> con maschera a <code>16bit</code>.
-
-		<strong>La Cotoletta</strong>: ufficialmente <em>Digital
+		li#<strong>La Cotoletta</strong>: ufficialmente <em>Digital
 		Instruments</em> <code>GPS-MXS</code>; una porta di rete
 		(<code>192.168.122.105</code>) e con una connessione seriale
 		<code>RS232</code> (da
@@ -172,8 +170,8 @@ tab#iii
 	intra@sgaggio#Poi per analizza' 'sti dati, si dovrà usa' una funzione in <em>MatLab</em>; ma questo non è compito tuo, è compito mio@ma subito dopo@to', figurati se non c'è già qualcuno che…
 	e m'ha mandato sull'internet a cercare qualche poveraccio che avesse
 	scriptato la <em>Varianza di Allan</em> o la sua versione modificata.
-include#extra/back2lod/12.lyz
-include#extra/back2lod/01.lyz
+include#extra/back2lod/12
+include#extra/back2lod/01
 stop#page
 start#side
 	title#Back 2 LOD
@@ -184,6 +182,6 @@ start#side
 		li#tid#La Sgaggiomachia@ – <code>13/11</code>#ii
 		li#tid#Scogli@ – <code>~27~29/11</code>#iii
 	end#ul
-	include#extra/back2lod/12.lyz#side@as@content
-	include#extra/back2lod/01.lyz#side@as@content
+	include#extra/back2lod/12#side@as@content
+	include#extra/back2lod/01#side@as@content
 stop#side

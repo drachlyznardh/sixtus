@@ -1,0 +1,68 @@
+title#Archivio#Dove tengo le notizie vecchie
+prev#Blog/#Ultime@ novità
+next#Blog/2011/#2011
+start#side
+	title#Archivio
+	stitle@right#Per anni
+	p#link#Blog/2013/#2013
+	/
+	link#Blog/2012/#2012
+	/
+	link#Blog/2011/#2011
+	sec#
+	title@right#Per mesi
+	stitle#link#Blog/2013/#2013
+	reverse#
+		link#Blog/2013/01/#Gennaio@ /
+		Febbraio / Marzo
+#		link#Blog/2013/02/#Febbraio@ /
+#		link#Blog/2013/03/#Marzo
+	reverse#
+		Aprile / Maggio / Giugno
+#		link#Blog/2013/04/#Aprile@ /
+#		link#Blog/2013/05/#Maggio@ /
+#		link#Blog/2013/06/#Giugno
+	reverse#
+		Luglio / Agosto / Settembre
+#		link#Blog/2013/07/#Luglio@ /
+#		link#Blog/2013/08/#Agosto@ /
+#		link#Blog/2013/09/#Settembre
+	reverse#
+		Ottobre / Novembre / Dicembre
+#		link#Blog/2013/10/#Ottobre@ /
+#		link#Blog/2013/11/#Novembre@ /
+#		link#Blog/2013/12/#Dicembre
+	stitle#link#Blog/2012/#2012
+	reverse#
+		link#Blog/2012/01/#Gennaio@ /
+		link#Blog/2012/02/#Febbraio@ /
+		link#Blog/2012/03/#Marzo
+	reverse#
+		link#Blog/2012/04/#Aprile@ /
+		link#Blog/2012/05/#Maggio@ /
+		link#Blog/2012/06/#Giugno
+	reverse#
+		link#Blog/2012/07/#Luglio@ /
+		link#Blog/2012/08/#Agosto@ /
+		link#Blog/2012/09/#Settembre
+	reverse#
+		link#Blog/2012/10/#Ottobre@ /
+		link#Blog/2012/11/#Novembre@ /
+		link#Blog/2012/12/#Dicembre
+	stitle#link#Blog/2011/#2011
+	reverse#
+		link#Blog/2011/07#Luglio@ /
+		link#Blog/2011/08/#Agosto@ /
+		link#Blog/2011/09/#Settembre
+	reverse#
+		link#Blog/2011/10/#Ottobre@ /
+		link#Blog/2011/11#Novembre@ /
+		link#Blog/2011/12#Dicembre
+stop#side
+start#page
+	title#Archivio
+	Questo è il luogo dove le notizie vengono archiviate.
+
+	Tutte le notizie, registrate qui a partire dall'ormai lontano 3
+	luglio 2011, sono ricercabili per anno o per mese.
+stop#page

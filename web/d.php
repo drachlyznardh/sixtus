@@ -7,10 +7,14 @@
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
 	$attr['included'] = false;
+	$attr['sections'] = true;
 	$attr['part'] = false;
 	$attr['force_all_tabs'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
+
+	$attr['download'] = false;
+	$attr['check'] = false;
 
 	$direct_access_file = substr($request['original'], 1);
 
@@ -59,6 +63,14 @@
 				$attr['single'] = false;
 				unset($token[$key]);
 				break;
+			case 'download':
+				$attr['download'] = true;
+				unset($token[$key]);
+				break;
+			case 'check':
+				$attr['check'] = true;
+				unset($token[$key]);
+				break;
 		}
 	}
 
@@ -70,6 +82,7 @@
 			list($page_name, $page_tab) = preg_split('/§/', $_);
 			$request['path'][] = $page_name;
 			$attr['part'] = $page_tab;
+			$attr['current'] = $page_tab;
 		} else {
 			$request['path'][] = $_;
 		}
@@ -81,9 +94,9 @@
 	$mycat = false;
 	$mypath = $request['path'][0];
 	$search['dir'] = '.';
-	$search['file'] = 'index.php';
+	$search['file'] = 'index';
 	while (1) {
-		if (isset($mymap[$mypath])) {
+		if (is_array($mymap) && isset($mymap[$mypath])) {
 			$mymap = $mymap[$mypath];
 			$mycat .= ucwords($mypath).'/';
 			$search['cat'][] = array($mycat, ucwords($mypath));
@@ -96,18 +109,24 @@
 				$mypath = $request['path'][$myindex];
 			} else break;
 		} else {
-			$search['file'] = $mypath . '.php';
+			$search['file'] = $mypath;
 			$mycat .= strtoupper($mypath).'/';
 			$search['page'] = array($mycat, strtoupper($mypath));
 			break;
 		}
 	}
-	$search['include'] = $search['dir'] .'/'. $search['file'];
+	
+	if ($attr['download']) $search['include'] = $search['dir'] .'/'. $search['file'].'.pdf';
+	else $search['include'] = $search['dir'] .'/'. $search['file'] .'.php';
 
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
-	if (is_file($search['include']))
+	if ($attr['download'] && is_file($search['include'])) {
+		header('Content-Type: application/pdf');
+		header('Content-Disposition: attachment; filename="'.$search['file'].'.pdf"');
+		readfile($search['include']);
+	} else if (is_file($search['include']))
 		require_once($search['include']);
 	else require_once('sys/404-not-found.php');
 	die();
