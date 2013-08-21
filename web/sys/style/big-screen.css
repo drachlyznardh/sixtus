@@ -1,6 +1,6 @@
 
-p#wide-screen { display: none; }
-p#small-screen { display: none; }
+.wide-screen { display: none; }
+.small-screen { display: none; }
 
 div#content {
 	width: 50%;

@@ -12,7 +12,9 @@
 	$attr['force_all_tabs'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
+
 	$attr['download'] = false;
+	$attr['check'] = false;
 
 	$direct_access_file = substr($request['original'], 1);
 
@@ -63,6 +65,10 @@
 				break;
 			case 'download':
 				$attr['download'] = true;
+				unset($token[$key]);
+				break;
+			case 'check':
+				$attr['check'] = true;
 				unset($token[$key]);
 				break;
 		}
