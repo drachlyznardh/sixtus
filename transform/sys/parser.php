@@ -30,6 +30,7 @@
 		private $first_tab;
 		private $default_tab;
 		private $force_all_tabs;
+		private $all_or_one;
 
 		public function __construct ($prefix)
 		{
@@ -50,6 +51,7 @@
 			$this->first_tab = true;
 			$this->default_tab = false;
 			$this->force_all_tabs = false;
+			$this->all_or_one = false;
 		}
 
 		public function parse($filename)
@@ -125,6 +127,8 @@
 				case 'tabs':
 					if ($cmd_par[1] == 'alwaysall')
 						$this->force_all_tabs = true;
+					else if (strcmp($cmd_par[1], 'all_or_one') == 0)
+						$this->all_or_one = true;
 					break;
 				case 'alltab':
 				case 'alltabs':
@@ -214,10 +218,11 @@
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
 			if ($this->force_all_tabs)
 				printf("\t\t\$attr['force_all_tabs'] = true;\n");
-			else {
+			else if ($this->all_or_one) 
+				printf("\t\t\$attr['all_or_one'] = true;\n");
+			else 
 				printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
-				printf("\t\tif(!\$attr['current']) \$attr['current'] = '$this->default_tab';\n");
-			}
+			printf("\t\tif(!\$attr['current']) \$attr['current'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)
 				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");
