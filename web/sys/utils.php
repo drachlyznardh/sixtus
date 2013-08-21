@@ -61,6 +61,7 @@
 		else
 			return !$attr['single'] or
 					$attr['part'] == $name or
+					($attr['part'] == false and $attr['all_or_one']) or
 					$attr['force_all_tabs'];
 	}
 
