@@ -57,25 +57,25 @@ div.invisible {
 	border-style: outset;
 	border-width: 2px;
 	border-radius: 3px;
-	margin: 5px;
+	margin: 2px;
 }
 
 .half-right-in, .mini-right-in {
-	margin-left: 5px;
+	margin-left: 2px;
 	margin-right: -5px;
 	border-left: 0px;
 }
 
 .half-left-in, .mini-left-in {
 	margin-left: -5px;
-	margin-right: 5px;
+	margin-right: 2px;
 	border-right: 0px;
 }
 
 p, ul, ol {
 	text-align: justify;
 	text-indent: 1em;
-	padding: 0px 2px 0px 2px;
+	padding: .1em;
 	margin: 2px 2px 2px 2px;
 }
 
@@ -111,11 +111,9 @@ h3.reverse {
 
 ul { list-style-position: inside; }
 
-div.section ol {
-	margin-left: 4em;
-	list-style-type: upper-roman;
-	text-indent: 0;
-}
+ol { list-style-position: inside; list-style-type: upper-roman; }
+ol.roman { list-style-position: outside; }
+ol.roman li { text-indent: -.4em; margin-left: 0px; }
 
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
