@@ -31,7 +31,7 @@ start#page
 stop#page
 start#side
 title#Storie 2010
-	begin#ol
+	begin@3.5em#roman
 		li#link#Storie/2010/I/#Apologia
 		li#link#Storie/2010/II/#Correre
 		li#link#Storie/2010/III/#Progetti
@@ -40,10 +40,10 @@ title#Storie 2010
 		li#link#Storie/2010/VI/#Un posto in cui stare
 		li#link#Storie/2010/VII/#Gundam
 		li#link#Storie/2010/VIII/#Sassi
-	end#ol
+	end#roman
 	titler#La Saga della $Rossa
 	begin#inside
-		begin#ol@start@9
+		begin@4em@9#roman
 			li@class@cat-heart#link#Storie/2010/IX/#Attenzione
 			li@class@cat-heart#link#Storie/2010/X/#Due Storie
 			li@class@cat-heart#link#Storie/2010/XI/#Tre Storie
@@ -52,9 +52,9 @@ title#Storie 2010
 			li@class@cat-heart#link#Storie/2010/XIV/#L'incontro
 			li@class@cat-heart#link#Storie/2010/XV/#La spinta
 			li@class@cat-heart#link#Storie/2010/XVI/#Il lunedì della verità
-		end#ol
+		end#roman
 	end#inside
-	begin#ol@start@17
+	begin@4em@17#roman
 		li#link#Storie/2010/XVII/#Il finale
-	end#ol
+	end#roman
 stop#side

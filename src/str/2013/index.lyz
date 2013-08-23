@@ -6,11 +6,11 @@ start#page
 stop#page
 start#side
 	title#Storie 2013
-	begin#ol@start@92
+	begin@4em@92#roman
 		li#link#Storie/2013/XCII/#Il festone
 		li#link#Storie/2013/XCIII/#Londra
 		li#link#Storie/2013/XCIV/#BioParco!
 		li#link#Storie/2013/XCV/#Le mutande di Katia
 		li#link#Storie/2013/XCVI/#La formattazzazzazione
-	end#ol
+	end#roman
 stop#side
