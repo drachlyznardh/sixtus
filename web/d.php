@@ -11,6 +11,7 @@
 	$attr['part'] = false;
 	$attr['current'] = false;
 	$attr['force_all_tabs'] = false;
+	$attr['all_or_one'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
 
