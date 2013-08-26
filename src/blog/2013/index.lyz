@@ -3,28 +3,13 @@ prev#Blog/2012/#2012
 #next#Blog/2014/#2014
 start#side
 	title#2013
-	reverse#
-		link#Blog/2013/01/#Gennaio@ /
-		link#Blog/2013/02/#Febbraio@ /
-		link#Blog/2013/03/#Marzo
-	reverse#
-		link#Blog/2013/04/#Aprile@ /
-		link#Blog/2013/05#Maggio@ /
-		link#Blog/2013/06#Giugno
-	reverse#
-		link#Blog/2013/07#Luglio@ /
-		link#Blog/2013/08#Agosto@ /
-		link#Blog/2013/09#Settembre
-	reverse#
-		link#Blog/2013/10#Ottobre@ /
-		link#Blog/2013/11#Novembre@ /
-		link#Blog/2013/12#Dicembre
+	include#fragments/years#2013@as@content
 	sec#
 	title#Notizie
-	include#blog/2013/12#side@as@content
-	include#blog/2013/11#side@as@content
-	include#blog/2013/10#side@as@content
-	include#blog/2013/09#side@as@content
+	#include#blog/2013/12#side@as@content
+	#include#blog/2013/11#side@as@content
+	#include#blog/2013/10#side@as@content
+	#include#blog/2013/09#side@as@content
 	include#blog/2013/08#side@as@content
 	include#blog/2013/07#side@as@content
 	include#blog/2013/06#side@as@content
@@ -39,22 +24,22 @@ start#page
 	link##alla meno recente##fondo
 	]
 	sec#
-	titler#Dicembre 2013
-	br#
-	include#blog/2013/12#page@as@content
-	sbr#
-	titler#Novembre 2013
-	br#
-	include#blog/2013/11#page@as@content
-	sbr#
-	titler#Ottobre 2013
-	br#
-	include#blog/2013/10#page@as@content
-	sbr#
-	titler#Settembre 2013
-	br#
-	include#blog/2013/09#page@as@content
-	sbr#
+#	titler#Dicembre 2013
+#	br#
+#	include#blog/2013/12#page@as@content
+#	sbr#
+#	titler#Novembre 2013
+#	br#
+#	include#blog/2013/11#page@as@content
+#	sbr#
+#	titler#Ottobre 2013
+#	br#
+#	include#blog/2013/10#page@as@content
+#	sbr#
+#	titler#Settembre 2013
+#	br#
+#	include#blog/2013/09#page@as@content
+#	sbr#
 	titler#Agosto 2013
 	br#
 	include#blog/2013/08#page@as@content

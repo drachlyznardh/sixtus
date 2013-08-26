@@ -3,12 +3,7 @@ prev#Blog/Archivio/#Archivio
 next#Blog/2012/#2012
 start#side
 	title#2011
-	r#link#Blog/2011/07/#Luglio@ /
-		link#Blog/2011/08/#Agosto@ /
-		link#Blog/2011/09/#Settembre
-	r#link#Blog/2011/10/#Ottobre@ /
-		link#Blog/2011/11/#Novembre@ /
-		link#Blog/2011/12/#Dicembre
+	include#fragments/years#2011@as@content
 	sec#
 	title#Notizie
 	include#blog/2011/12#side@as@content
