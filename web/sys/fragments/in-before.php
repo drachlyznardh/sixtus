@@ -10,6 +10,12 @@
 		<link rel="stylesheet" type="text/css" href="sys/style/<?=($attr['gray']?'gray':'white')?>.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/common.css" />
+		<link rel="stylesheet" type="text/css" href="sys/style/big-screen.css"
+				media="screen and (min-device-width: 1024px), projection" />
+		<link rel="stylesheet" type="text/css" href="sys/style/wide-screen.css"
+				media="screen and (max-device-width: 1023px) and (min-device-width: 480px)" />
+		<link rel="stylesheet" type="text/css" href="sys/style/small-screen.css"
+				media="handheld, only screen and (max-device-width: 479px)" />
 		<link rel="shortcut icon" type="image/x-icon" href="sys/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 	</head>
 	<!-- $Request[Original] = [<?=$request['original']?>] -->
