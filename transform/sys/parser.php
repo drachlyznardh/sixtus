@@ -167,10 +167,13 @@
 						$this->first_tab = false;
 						$this->default_tab = $cmd_args[1];
 					} else {
+						$previous = $this->current->getName();
 						$this->current->closeTab();
+						$this->current->setNext($cmd_args[1]);
 						$this->body[] = $this->current;
 						$this->current = new Tab();
 						$this->current->setName($cmd_args[1]);
+						$this->current->setPrev($previous);
 					}
 					break;
 				case 'include': $this->make_include($cmd_args); break;

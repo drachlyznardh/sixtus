@@ -7,9 +7,11 @@
 <div>
 <?php dynamic_include($attr, 'fragments/left-side-fragment.php', 'content', true);?>
 <div class="section">
-	<div style="width:50%; float:left"><div class="inside">
-			<p style="text-indent:0">
-				Tab [ <?php
+	<!--div style="width:50%; float:left"><div class="inside"-->
+	<div class="half-left-out"><div class="half-left-in">
+			<h3>Tab</h3>
+			<p>
+				<!---Tab -->[ <?php
 	if ($attr['single']) {
 		echo ('<em>Single</em>');
 	} else {
@@ -28,8 +30,10 @@
 				?> ]
 			</p>
 	</div></div>
-	<div style="width:50%; float:right"><div class="outside">
-			<p class="reverse" style="text-indent:0">
+	<!--div style="width:50%; float:right"><div class="outside"-->
+	<div class="half-right-out"><div class="half-right-in">
+			<h3 class="reverse">Theme</h3>
+			<p class="reverse">
 				[ <?php
 	if ($attr['gray']) {
 		echo ('<em>Gray</em>');
@@ -46,7 +50,7 @@
 	} else {
 		echo ('<em>White</em>');
 	}
-				?> ] Theme
+				?> ] <!--Theme-->
 			</p>
 	</div></div>
 	<div style="float:none; clear:both"></div>

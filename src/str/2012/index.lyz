@@ -13,7 +13,7 @@ start#page
 stop#page
 start#side
 	title#Storie 2012
-	begin#ol@start@74@style@margin-left: 6em
+	begin@6.5em@74#roman
 		li#link#Storie/2012/LXXIV/#La prima canzone
 		li#link#Storie/2012/LXXV/#Quella storia
 		li#link#Storie/2012/LXXVI/#Niente di particolare
@@ -32,5 +32,5 @@ start#side
 		li#link#Storie/2012/LXXXIX/#Si riempì il disco
 		li#link#Storie/2012/XC/#Ho un piano
 		li#link#Storie/2012/XCI/#Sogni
-	end#ol
+	end#roman
 stop#side

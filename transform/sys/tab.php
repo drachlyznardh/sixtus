@@ -5,25 +5,33 @@
 		private $current;
 		private $name;
 
+		private $prev;
+		private $next;
+
 		public function __construct()
 		{
 			$this->current = null;
 			$this->content = array();
+
+			$this->name = false;
+			$this->prev = $this->next = false;
 		}
 
 		public function parse($index, $cmd, $cmd_attr, $cmd_args)
 		{
 			switch($cmd)
 			{
-				case 'sec': $this->make_sec(); break;
+				case 'sec': $this->make_sec($cmd_args); break;
 				case 'sbr': $this->make_sbr(); break;
 				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
 		}
 
-		private function make_sec ()
+		private function make_sec ($args)
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
+			if (count($args) > 1 && strcmp($args[1], 'br') == 0)
+				$this->content[] = '<br />';
 			$this->current = new Section();
 		}
 
@@ -56,11 +64,10 @@
 			$this->current->parse($index, $cmd, $cmd_attr, $cmd_args);
 		}
 
-		public function setName($name)
-		{
-			$this->name = $name;
-			$this->content[] = '<a id="'.strtoupper($name).'"></a>';
-		}
+		public function setName($name) { $this->name = $name; }
+		public function getName() { return $this->name; }
+		public function setNext ($name) { $this->next = $name; }
+		public function setPrev ($name) { $this->prev = $name; }
 
 		public function closeTab()
 		{
@@ -72,8 +79,10 @@
 		{
 			$content = false;
 			$result = false;
+			$content = '<div class="tab">';
+			if ($this->name) $content .= '<a id="'.strtoupper($this->name).'"></a>';
 			foreach ($this->content as $_) $content .= $_;
-			$content = '<div class="tab">'.$content.'</div>'."\n";
+			$content .= '</div>'."\n";
 			
 			$condition = $page ? 'tab' : 'side';
 			$condition .= '_condition(';
@@ -81,7 +90,15 @@
 			$condition .= ')';
 
 			$result = "<?php if ($condition) { ?>\n";
+			if ($page && $this->prev) {
+				$result .= '<?php if (tabrel_condition($attr))';
+				$result .= ' echo (make_prev($attr, \''.$this->prev.'\')); ?>';
+			}
 			$result .= $content;
+			if ($page && $this->next) {
+				$result .= '<?php if (tabrel_condition($attr))';
+				$result .= ' echo (make_next($attr, \''.$this->next.'\')); ?>';
+			}
 			$result .= "<?php } ?>\n";
 
 			return $result;

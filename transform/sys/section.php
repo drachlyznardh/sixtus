@@ -315,6 +315,18 @@
 					$this->content[] = "<$env$style>";
 					$this->defaultContext = 'li';
 					break;
+				case 'roman':
+					switch (count($attr)) {
+						case 1:
+							$this->content[] = '<ol class="roman">'; break;
+						case 2:
+							$this->content[] = '<ol class="roman" style="margin-left: '.$attr[1].'">';
+							break;
+						default:
+							$this->content[] = '<ol class="roman" style="margin-left: '.$attr[1].'" start="'.$attr[2].'">';
+					}
+					$this->defaultContext = 'li';
+					break;
 				case 'mini':
 				case 'half':
 					if ($side) {
@@ -336,6 +348,10 @@
 				case 'ul':
 				case 'ol':
 					$this->content[] = "</$args[1]>";
+					$this->defaultContext = 'p';
+					break;
+				case 'roman':
+					$this->content[] = '</ol>';
 					$this->defaultContext = 'p';
 					break;
 				case 'inside':

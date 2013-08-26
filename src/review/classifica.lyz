@@ -1,7 +1,7 @@
 title#Classifica#Delle cose buone e delle cose brutte
 prev#Recensioni/#Recensioni
 next#Recensioni/Indice/#Indice
-alltabs#
+tabs#all_or_one
 start#page
 tab#awesome
 	stitle#Fucking awesome!!!
@@ -47,6 +47,7 @@ tab#buoni
 		e
 		link#Recensioni/Libri/XXXV/#Piedi d'argilla#III
 		link#Recensioni/Show/XLV/#Princess Tutu
+		p#link#Recensioni/Libri/XLIX/#Snow crash
 	end#ul
 tab#lasciano
 	stitle#Si lascia guardare

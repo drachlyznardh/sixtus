@@ -29,6 +29,24 @@
 		return '<em>'.$title.'</em>';
 	}
 
+	function make_next($attr, $name)
+	{
+		$result = '<div class="section"><p class="reverse">';
+		$result .= 'Continua nel '.make_tid($attr, 'prossimo', $name, false).' tab.';
+		$result .= '</p></div>';
+		
+		return $result;
+	}
+
+	function make_prev($attr, $name)
+	{
+		$result = '<div class="section"><p>';
+		$result .= 'Continua dal tab '.make_tid($attr, 'precendente', $name, false).'.';
+		$result .= '</p></div>';
+		
+		return $result;
+	}
+
 	function dynamic_include ($attr, $filename, $part, $sections)
 	{
 		$attr['included'] = true;
@@ -69,5 +87,10 @@
 	{
 		if ($attr['included']) return $attr['part'] == 'side';
 		else return true;
+	}
+
+	function tabrel_condition ($attr)
+	{
+		return $attr['single'] && !$attr['included'] && !$attr['all_or_one'];
 	}
 ?>

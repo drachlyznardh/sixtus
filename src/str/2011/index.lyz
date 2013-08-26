@@ -58,7 +58,7 @@ start#page
 stop#page
 start#side
 	title#Storie 2011
-	begin#ol@start@18@style@margin-left:5em
+	begin@5em@18@#roman
 		li#link#Storie/2011/XVIII/#Liber Javae
 		li#link#Storie/2011/XIX/#Permessi
 		li#link#Storie/2011/XX/#Guida
@@ -69,17 +69,17 @@ start#side
 		li#link#Storie/2011/XXV/#No
 		li#link#Storie/2011/XXVI/#La sconfitta
 		li#link#Storie/2011/XXVII/#LaTeX
-	end#ol
+	end#roman
 	titler#Il Magnetismo
 	begin#inside
-		begin#ol@start@28@style@margin-left:5em
+		begin@5em@28#roman
 			li#link#Storie/2011/XXVIII/#L&apos;odio
 			li#link#Storie/2011/XXIX/#Il Magnete
 			li#link#Storie/2011/XXX/#L&apos;interpretazione
-		end#ol
+		end#roman
 	end#inside
 	stitle#Primavera 2011
-	begin#ol@start@31@style@margin-left:6em
+	begin@6em@31#roman
 		li#link#Storie/2011/XXXI/#Deus Ex Machina
 		li#link#Storie/2011/XXXII/#Dottor Odio
 		li#link#Storie/2011/XXXIII/#L&apos;inaspettata
@@ -97,9 +97,9 @@ start#side
 		li#link#Storie/2011/XLV/#Wireless
 		li#link#Storie/2011/XLVI/#L&apos;uomo con due ombrelli
 		li#link#Storie/2011/XLVII/#Impresa (II)
-	end#ol
+	end#roman
 	stitle#Estate 2011
-	begin#ol@start@48@style@margin-left:5em
+	begin@5em@48#roman
 		li@class@cat-heart"#link#Storie/2011/XLVIII/#Non ce n&apos;è abbastanza
 		li@class@cat-heart"#link#Storie/2011/XLIX/#Quel che non è abbastanza
 		li@class@cat-heart"#link#Storie/2011/L/#Quel che dovrei fare
@@ -115,14 +115,14 @@ start#side
 		li#link#Storie/2011/LX/#Filler
 		li#link#Storie/2011/LXI/#Cattivo
 		li@class@cat-heart"#link#Storie/2011/LXII/#Normale
-	end#ol
+	end#roman
 	stitle#Autunno 2011
-	begin#ol@start@63@style@margin-left:5em
+	begin@5em@63#roman
 		li#link#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
 		li#link#Storie/2011/LXIV/#La metafora
 		li#link#Storie/2011/LXV/#Il 13 ottobre
-	end#ol
-	begin#ol@start@67@style@margin-left:5em
+	end#roman
+	begin@5em@67#roman
 		li#link#Storie/2011/LXVII/#Ancora ce la posso fare
 		li#link#Storie/2011/LXVIII/#Momenti
 		li#link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
@@ -130,5 +130,5 @@ start#side
 		li#link#Storie/2011/LXXI/#Libertà
 		li#link#Storie/2011/LXXII/#L'ultimo progetto
 		li#link#Storie/2011/LXXIII/#Il Momento GODS
-	end#ol
+	end#roman
 stop#side
