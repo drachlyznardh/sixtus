@@ -20,15 +20,17 @@
 		{
 			switch($cmd)
 			{
-				case 'sec': $this->make_sec(); break;
+				case 'sec': $this->make_sec($cmd_args); break;
 				case 'sbr': $this->make_sbr(); break;
 				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
 		}
 
-		private function make_sec ()
+		private function make_sec ($args)
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
+			if (count($args) > 1 && strcmp($args[1], 'br') == 0)
+				$this->content[] = '<br />';
 			$this->current = new Section();
 		}
 
