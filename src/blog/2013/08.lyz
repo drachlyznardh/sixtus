@@ -3,19 +3,19 @@ prev#Blog/2013/07/#Luglio@ 2013
 next#Blog/2013/09/#Settembre@ 2013
 tabs#all_or_one
 start#page
-tab#01
-	id#2013-08-01
-	p#link##<em>@01/08/2013@</em>##01
-	/
-	link#Extra/#Storia#CONTENUTI#Storie
-	title#La formattazzazzazione
-	Torno alla vita dopo un lungo lungo lungo silenzio. Sono successe delle
-	cose. Molte sono cominciate, alcune hanno anche smesso.
-
-	Ed ora che il mio portatile torna a funzionare, festeggio scrivendo una
-	link#Storie/2013/XCVI/#storia@.
-	Con il tempo vedrò, magari, di riempire il buco di tre mesi che ho lasciato.
-	Forse. Con calma.
+tab#26
+	p#link##<em>@26/08/2013@</em>#26
+	title#Un altro weekend a Verona
+	Me ne sono andato a spasso, abbastanza da
+	link#Storie/2013/XCVII/#scrivere una storia@. Già che c'ero, poi, ho anche scritto
+	la
+	link#Recensioni/Libri/XLIX/#recensione di un buon libro@.
+	br#
+	Quest'oggi, poi, il bar e la mensa hanno riaperto i battenti. Dopo l'intera
+	estate passata a tirare a campare, è una bella cosa. Inoltre, mi sono
+	impegnato con la struttura dell'<code>HTML</code> e anche con il
+	<code>CSS</code>. Ora si dovrebbe riuscire a leggere tutto anche da
+	“dispositivi portatili”. Confermate?
 tab#21
 	id#2013-08-21
 	p#link##<em>@21/08/2013@</em>##21
@@ -67,9 +67,24 @@ tab#21
 		ma pochi potranno apprezzare.
 	end#ul
 	r#Ed ecco, è tutto. Non mi viene in mente altro. Saluti.
+tab#01
+	id#2013-08-01
+	p#link##<em>@01/08/2013@</em>##01
+	/
+	link#Extra/#Storia#CONTENUTI#Storie
+	title#La formattazzazzazione
+	Torno alla vita dopo un lungo lungo lungo silenzio. Sono successe delle
+	cose. Molte sono cominciate, alcune hanno anche smesso.
+
+	Ed ora che il mio portatile torna a funzionare, festeggio scrivendo una
+	link#Storie/2013/XCVI/#storia@.
+	Con il tempo vedrò, magari, di riempire il buco di tre mesi che ho lasciato.
+	Forse. Con calma.
 stop#page
 start#side
 	stitle#link#Blog/2013/08/#Agosto@ 2013
+	p#<code>26/08</code> –
+		link#Blog/2013/08/#Un altro weekend a Verona#26
 	p#<code>21/08</code> –
 		link#Blog/2013/08/#La nuova versione#21
 	p#link#Blog/2013/08/#<code>01/08</code> – [<em>Storia</em>] @La formattazzazzazione@#01

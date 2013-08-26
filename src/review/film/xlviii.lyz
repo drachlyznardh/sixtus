@@ -1,6 +1,6 @@
 title#The cabin in the woods#Il miglior film di sempre
 prev#Recensioni/Show/XLVII/#Accel World
-#next#Recensioni//XLIX/#
+next#Recensioni/Libri/XLIX/#Snow Crash
 start#page
 	title#The cabin in the woods
 	Questo film è un dannato capolavoro. Non ho parole per descriverlo. Andate
@@ -8,13 +8,13 @@ start#page
 	sec#
 	Se proprio non volete rischiare, ve lo racconto.
 	
-	<span class="spoiler">Ci sono una <em>ragazza</em>, un'amica <em>zozza</em>
-	e il suo amico pompato (<em>Thor</em>) che devono partire per un weekend nel
-	bosco; con loro ci sono il <em>tizio interessante</em> e il
+	p#<span class="spoiler">Ci sono una <em>ragazza</em>, un'amica
+	<em>zozza</em> e il suo amico pompato (<em>Thor</em>) che devono partire per
+	un weekend nel bosco; con loro ci sono il <em>tizio interessante</em> e il
 	<em>fattone</em>. Tutti sul camper, per andare nel bosco; il tizio del
 	distributore di benzina fa paura e profetizza morte.</span>
 
-	<span class="spoiler">Intanto, il <em>governo</em> è all'opera e già
+	p#<span class="spoiler">Intanto, il <em>governo</em> è all'opera e già
 	sorveglia questi poveracci; l'intero bosco è sotto controllo. I ragazzi, nel
 	frattempo fan la fuffa e comincia ad ubriacarsi. D'un tratto una botola si
 	spalanca, rivelando un sottoscala pieno di roba strana. La <em>ragazza</em>
@@ -22,7 +22,7 @@ start#page
 	della ragazza autrice si risveglia dalla morte; la <em>zozza</em> muore per
 	prima.</span>
 
-	<span class="spoiler">Poi muore il <em>fattone</em>, poi anche
+	p#<span class="spoiler">Poi muore il <em>fattone</em>, poi anche
 	<em>Thor</em>, poi muore anhce il <em>tizio interessante</em>; la
 	<em>ragazza</em> resta da sola e finisce in pericolo mortale. Il
 	<em>governo</em> festeggia, anche perché tutti gli altri set (Tokyo,
@@ -31,7 +31,7 @@ start#page
 	aveva sempre sospettato del <em>governo</em> ed ora ha le prove: una botola
 	porta sotto.</span>
 
-	<span class="spoiler">C'è effettivamente un'enorme struttura sotterranea
+	p#<span class="spoiler">C'è effettivamente un'enorme struttura sotterranea
 	piena di mostri in scatola, da mandare ad ammazzare cinque stronzi, una
 	volta all'anno. È un sacrificio per placare gli dei malvagi che dominavano
 	la Terra. I due riescono a sventare il piano, quindi il sacrificio
