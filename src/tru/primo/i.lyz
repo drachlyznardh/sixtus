@@ -50,7 +50,7 @@ start#page
 	Stavolta, la risposta è:
 	begin#inside
 		p#inline#ci#Il tuo equilibrio mentale &egrave; momentaneamente destabilizzato a causa di
-		p#inline#ci#[<span class="code">errore: causa sconosciuta</span>]
+		p#inline#ci#[<code>errore: causa sconosciuta</code>]
 		p#inline#ci#Tale disturbo potrebbe causare malfunzionamenti della memoria
 	end#inside
 	sec#
@@ -76,11 +76,11 @@ start#page
 	sec#
 	begin#inside
 		p#inline#simak#Dunque, ci sei, vocina?
-		p#inline#ci#Stato: [<span class="code">operativa</span>]
+		p#inline#ci#Stato: [<code>operativa</code>]
 		p#inline#simak#Hai un nome?
 		p#inline#ci#Si
 		p#inline#simak#Ah. Qual &egrave; il tuo nome?
-		p#inline#ci#Identificativo: [<span class="code">Ci</span>]
+		p#inline#ci#Identificativo: [<code>Ci</code>]
 		p#inline#simak#Ci?
 		p#inline#ci#Dimmi
 		p#inline#simak#Dunque, Ci, giusto?
@@ -89,12 +89,12 @@ start#page
 		p#inline#ci#Si
 		p#inline#simak#Uhm. Sai dirmelo?
 		p#inline#ci#Si. Il tuo nome &egrave;
-		p#inline#ci#[<span class="code">errore: memoria corrotta</span>]
-		p#inline#simak#Io mi chiamo “<span class="em">Errore: memoria corrotta</span>”?
+		p#inline#ci#[<code>errore: memoria corrotta</code>]
+		p#inline#simak#Io mi chiamo “<em>Errore: memoria corrotta</em>”?
 		p#inline#ci#Errato
 		p#inline#simak#Quindi non conosci il mio nome?
 		p#inline#ci#Si è verificato un grave errore di memoria
-		p#inline#ci#Eseguire un controllo? [<span class="code">s/n</span>]
+		p#inline#ci#Eseguire un controllo? [<code>s/n</code>]
 		p#inline#simak#Beh, perché no...
 		p#inline#ci#Attendere prego...
 	end#inside
@@ -107,8 +107,8 @@ start#page
 	sec#
 	begin#inside
 		p#inline#simak#Ci, quanto durerà il controllo?
-		p#inline#ci#Controllo in corso [<span class="code">4%</span>]
-		p#inline#ci#Tempo residuo stimato: [<span class="code">13&apos;:20&quot;.043</span>]
+		p#inline#ci#Controllo in corso [<code>4%</code>]
+		p#inline#ci#Tempo residuo stimato: [<code>13&apos;:20&quot;.043</code>]
 	end#inside
 	sec#
 	Wow. Si possono fare un sacco di cose in tredici minuti. Imperi sono
@@ -133,7 +133,7 @@ start#page
 	begin#inside
 		Ma potrei avere fortuna, quindi chiedo
 		p#inline#simak#Eh, senti, tu per caso sai chi sono?
-		p#inline#lyz#Mi prendi per il culo, capo? Qualunque stronzo sa che se il Lynn<span class="forte">nghahaaargh!!!</span>
+		p#inline#lyz#Mi prendi per il culo, capo? Qualunque stronzo sa che se il Lynn<strong>nghahaaargh!!!</strong>
 	end#inside
 	sec#
 	La voce sembra presa da un attacco di dolore, e le mie orecchie
@@ -142,8 +142,8 @@ start#page
 	begin#inside
 		p#inline#simak#Cos&apos;&eacute;?
 		p#inline#ci#Attenzione!
-		p#inline#ci#code#[<span class="code">Errore critico in accesso alla memoria</span>]
-		p#inline#lyz#<em title="Dannato Zathot" class="forte">Shka'Zathot!</em> Questo fa male!
+		p#inline#ci#[<code>Errore critico in accesso alla memoria</code>]
+		p#inline#lyz#<strong title="Dannato Zathot">Shka'Zathot!</strong> Questo fa male!
 	end#inside
 	sec#
 	Sto rantolando per terra, e il <em title="Istinto di colui che possiede eLyz">Lyztinto</em>
