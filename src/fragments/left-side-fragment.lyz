@@ -1,7 +1,7 @@
 start#page
 tab#content
 	stitle#link#Blog/#Blog
-	r#link#Blog/Archivio#Archivio
+	r#link#Blog/Archivio/#Archivio
 		/
 		link#About/#About
 		/

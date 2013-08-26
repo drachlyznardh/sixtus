@@ -5,10 +5,15 @@
 		private $current;
 		private $name;
 
+		private $prev;
+		private $next;
+
 		public function __construct()
 		{
 			$this->current = null;
 			$this->content = array();
+
+			$this->prev = $this->next = false;
 		}
 
 		public function parse($index, $cmd, $cmd_attr, $cmd_args)
@@ -56,11 +61,10 @@
 			$this->current->parse($index, $cmd, $cmd_attr, $cmd_args);
 		}
 
-		public function setName($name)
-		{
-			$this->name = $name;
-			$this->content[] = '<a id="'.strtoupper($name).'"></a>';
-		}
+		public function setName($name) { $this->name = $name; }
+		public function getName() { return $this->name; }
+		public function setNext ($name) { $this->next = $name; }
+		public function setPrev ($name) { $this->prev = $name; }
 
 		public function closeTab()
 		{
@@ -72,8 +76,10 @@
 		{
 			$content = false;
 			$result = false;
+			$content = '<div class="tab">';
+			$content .= '<a id="'.strtoupper($this->name).'"></a>';
 			foreach ($this->content as $_) $content .= $_;
-			$content = '<div class="tab">'.$content.'</div>'."\n";
+			$content .= '</div>'."\n";
 			
 			$condition = $page ? 'tab' : 'side';
 			$condition .= '_condition(';
@@ -81,7 +87,15 @@
 			$condition .= ')';
 
 			$result = "<?php if ($condition) { ?>\n";
+			if ($page && $this->prev) {
+				$result .= '<?php if (tabrel_condition($attr))';
+				$result .= ' echo (make_prev($attr, \''.$this->prev.'\')); ?>';
+			}
 			$result .= $content;
+			if ($page && $this->next) {
+				$result .= '<?php if (tabrel_condition($attr))';
+				$result .= ' echo (make_next($attr, \''.$this->next.'\')); ?>';
+			}
 			$result .= "<?php } ?>\n";
 
 			return $result;
