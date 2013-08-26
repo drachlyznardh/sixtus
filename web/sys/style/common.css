@@ -61,14 +61,14 @@ div.invisible {
 }
 
 .half-right-in, .mini-right-in {
-	margin-left: 2px;
+	margin-left: .5em;
 	margin-right: -5px;
 	border-left: 0px;
 }
 
 .half-left-in, .mini-left-in {
 	margin-left: -5px;
-	margin-right: 2px;
+	margin-right: .5em;
 	border-right: 0px;
 }
 
