@@ -13,6 +13,7 @@
 			$this->current = null;
 			$this->content = array();
 
+			$this->name = false;
 			$this->prev = $this->next = false;
 		}
 
@@ -79,7 +80,7 @@
 			$content = false;
 			$result = false;
 			$content = '<div class="tab">';
-			$content .= '<a id="'.strtoupper($this->name).'"></a>';
+			if ($this->name) $content .= '<a id="'.strtoupper($this->name).'"></a>';
 			foreach ($this->content as $_) $content .= $_;
 			$content .= '</div>'."\n";
 			
