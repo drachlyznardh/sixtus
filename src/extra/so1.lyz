@@ -893,7 +893,7 @@ stop#page
 start#side
 	p#tid#Presentazione#intro
 	title#Sistemi Operativi 1
-	begin#ol
+	begin@3.5em#roman
 		li#tid#Il processo#i
 		li#tid#Comunicazione tra processi#ii
 		li#tid#Thread#iii
@@ -907,5 +907,5 @@ start#side
 		li#tid#I/O#xi
 		li#tid#Protezione#xii
 		li#tid#Real Time#xiii
-	end#ol
+	end#roman
 stop#side
