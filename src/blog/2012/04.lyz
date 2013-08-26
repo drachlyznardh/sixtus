@@ -1,14 +1,12 @@
 title#Aprile#Il caldo è gia tornato!
 prev#Blog/2012/03/#Marzo@ 2012
 next#Blog/2012/05/#Maggio@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#30
-	<em>
-	link##30/04/2012##30
-	</em> / <strong>
-	link#Extra/#Storia#CONTENUTI#Storie
-	</strong>
+	p#link##<em>@30/04/2012@</em>##30
+	/
+	link#Extra/#<strong>@Storia@</strong>#CONTENUTI#Storie
 	title#Il referendum
 	Mentre l'<em>unione europea</em> chiede alla nazione di eliminare le
 	province, noi nel nostro autonomo <em>Trentino</em> discutiamo se mantenere
@@ -17,12 +15,11 @@ tab#30
 	link#Storie/2012/LXXX/#segretario
 	di seggio.
 tab#26
-	<em>
-	link##26/04/2012##26
-	</em> / <strong>
-	link#Extra/#Recensione#CONTENUTI#Recensioni#Una # e
-	link#Extra/#Storia#CONTENUTI#Storie#una #
-	</strong>
+	p#link##<em>@26/04/2012@</em>##26
+	/ Una
+	link#Extra/#<strong>@Recensione@</strong>#CONTENUTI#Recensioni
+	e una
+	link#Extra/#<strong>@Storia@</strong>#CONTENUTI#Storie
 	title#Ieri, l'altro ieri e anche prima
 	In questi ultimi giorni mi sono dedicato alla lettura, al mal di stomaco e
 	al gioco, oltre che allo studio con il <em>magico scatolone</em>. Dopo aver
@@ -34,11 +31,9 @@ tab#26
 	E infine, siccom'era giovedì, abbiamo
 	link#Legend/Cronache/#giocato#s04##.
 tab#19
-	<em>
-	link##19/04/2012##19
-	</em> / Ancora una volta una <strong>
-	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
-	</strong>
+	p#link##<em>@19/04/2012@</em>##19
+	/ Ancora una volta una
+	link#Extra/#<strong>@MiniStoria@</strong>#CONTENUTI#MiniStorie
 	title#Quella del mio alimentatore
 	Questa è la (mini)storia, in varie parti, di come persi un alimentatore e ne
 	guadagnai un altro.
@@ -90,11 +85,9 @@ tab#19
 	E banalmente,
 	inline#gods#È <em>sempre</em> una questione di dimensioni
 tab#12
-	<em>
-	link##12/04/2012##12
-	</em> / <strong>
-	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
-	</strong>
+	p#link##<em>@12/04/2012@</em>##12
+	/
+	link#Extra/#<strong>@MiniStoria@</strong>#CONTENUTI#MiniStorie
 	title#Un buon giorno per morire
 	Oggi sono sereno. E in pace. <code>(^_^)</code>
 	br#
@@ -102,14 +95,11 @@ tab#12
 	capisco anche che per molti, vicini a me, può essere difficile vederlo e
 	capirmi. Ma è vero. Io l'ho capito, potete farlo anche voi.
 tab#11
-	<em>
-	link##11/04/2012##11
-	</em> / <strong>
-	Un paio di
-	link#Extra/#Recensioni#CONTENUTI#Recensioni#,
+	p#link##<em>@11/04/2012@</em>##11
+	/ Un paio di
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	qualche spoiler e
-	link#Extra/#Legend#CONTENUTI#Legend
-	</strong>
+	link#Extra/#<strong>@Legend@</strong>#CONTENUTI#Legend
 	title#Dopo Pasqua
 	Sebbene io stia molto meglio di prima per molti versi, sono ancora pigro. E
 	quindi non c'è ancora una nuova <code>Storia</code>. Scusate. Ma c'è
@@ -121,9 +111,10 @@ tab#11
 	e ne sono rimasto piacevolmente sorpreso. Poi, facendo <em>duddadoo</em> per
 	l'internet – grazie a quei cari <a href="http://over-ti.me">Over-Time</a>
 	che continuo ad elogiare – mi sono visto il primo episodio di una serie
-	link#Recensioni/Show/XXI/#attesissima#Akibaranger## (almeno da certa gente).
+	link#Recensioni/Show/XXI/#attesissima#Akibaranger
+	(almeno da certa gente).
 	
-	<strong>Ma non solo!</strong> Ancora una volta grazie a <a
+	p#<strong>Ma non solo!</strong> Ancora una volta grazie a <a
 	href="http://boards.4chan.org/m/">/m/</a> sono venuto a conoscenza d'un
 	posto magnifico, <a href="http://krdl.info">KRDL.INFO</a>, dov'è possibile
 	procurarsi (addirittura in <code>download diretto</code>!) una spaventosa
@@ -151,7 +142,7 @@ tab#11
 	Space 2</em>,  ch'è ancora lì incartato). Ma intanto scopro che quello
 	stesso fratello va in giro per i genitori a domandare l'ultimo
 	<em>Assassin's Creed: Revelations</em>.
-	link#Recensioni/Giochi/II/#Bravo#Revelations##!
+	link#Recensioni/Giochi/II/#Bravo@!#Revelations
 	br#
 	E quasi dimenticavo! Ci sarebbe anche (a vostro discapito e pericolo… del
 	tipo <strong>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn!</strong> se
@@ -160,14 +151,12 @@ tab#11
 	link#Legend/Cronache/#prima sessione#s01
 	di Legend, di ieri sera. Ch'è stata lo straripare d'un torrente di fuffa.
 tab#05
-	<em>
-	link##05/04/2012##05
-	</em> / <strong>
+	p#link##<em>@05/04/2012@</em>##05
+	/
 	Men che
-	link#Extra/#MiniStorie#CONTENUTI#MiniStorie
+	link#Extra/#<strong>@MiniStorie@</strong>#CONTENUTI#MiniStorie
 	ma anche
-	link#Extra/#Extra#CONTENUTI#Extra
-	</strong>
+	link#Extra/#<strong>@Extra@</strong>#CONTENUTI#Extra
 	title#Quei dannati scalini in cima alla Busa
 	E insomma… sarà che questo è sentimentalemente il miglior periodo della mia
 	vita, sarà anche che intellettualmente è il peggiore (<em>hurr durr</em>, mi
@@ -194,14 +183,12 @@ tab#05
 	siccome mi sveglio tardi e voglio arrivare in facoltà in fretta, ho anche
 	ripreso a salire a Povo in bicicletta. Due giorni fa, sono riuscito a
 	compiere un
-	link#Extra/Record/#record#busa##.
+	link#Extra/Record/#record@.#busa
 	clear#right
 tab#02
-	<em>
-	link##02/04/2012##02
-	</em> / <strong>
-	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
-	</strong>
+	p#link##<em>@02/04/2012@</em>##02
+	/
+	link#Extra/#<strong>@MiniStoria@</strong>#CONTENUTI#MiniStorie
 	title#Le palme
 	begin#mini@left
 		stitle#Cambio del Parroco
@@ -242,11 +229,9 @@ tab#02
 	capito subito.
 	clear#both
 tab#01
-	<em>
-	link##01/04/2012##01
-	</em> / <strong>
-	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
-	</strong>
+	p#link##<em>@01/04/2012@</em>##01
+	/
+	link#Extra/#<strong>@MiniStoria@</strong>#CONTENUTI#MiniStorie
 	title#Sono giovane?!?
 	begin#mini@right
 	stitle#La corsa / Il percorso
@@ -266,49 +251,40 @@ tab#01
 	una chiaccherata e l'altra, tra un saluto e una presentazione, ecco che
 	salta fuori che sono figlio di mio padre.
 	begin#outside
-		inline#em#Ah, davvero? E quanti anni hai?
+		p#inline#em#Ah, davvero? E quanti anni hai?
 		chiede la mamma di qualcuno.
-		
-		inline#gods#26 tra qualche settimana
-		rispondo
-
-		E quella
+		p#inline#gods#26 tra qualche settimana
+		rispondo.
+		p#E quella
 		inline#em#Caspita! Te ne avrei dati 18
 	end#outside
-	<code>Cool story bro</code>. Ed ecco, mi sento giovane.
+	p#<code>Cool story bro</code>. Ed ecco, mi sento giovane.
 stop#page
 start#side
 	stitle#link#Blog/2012/04/#Aprile### 2012
-
-	<em>30/04</em> – <code>[Storia]</code> Il
-	link#Storie/2012/LXXX/#segretario
-	di seggio
-
-	<em>26/04</em> – la <code>[Recensione]</code> di
-	link#Recensioni/Giochi/XXX/#Arkham City
-	e la <code>[Storia]</code> del
-	link#Storie/2012/LXXIX/#viaggio a Verona###,
-	poi
-	link#Legend/Cronache/#Legend#s04
-
-	<em>19/04</em> – la <code>[MiniStoria]</code>
-	link#Blog/2012/04/#alimentatore#19##dell'#
-
-	<em>12/04</em> – [<code>MiniStoria</code>]
-	link#Blog/2012/04/#Un buon giorno per morire##12
-	
-	<em>11/04</em> – [<code>Recensione</code>]
-	link#Recensioni/Film/XXIX/#Il gatto con gli stivali### e il primo contatto con
-	gli [<code>Recensione</code>]
-	link#Recensioni/Show/XXI/#Akibaranger#Akibaranger## e l'anticipazione su
-	[<code>Recensione</code>]
-	link#Recensioni/Giochi/II/#AC: Revelations#Revelations##. E poi anche
-	[<code>Legend</code>] la
-	link#Legend/Cronache/#prima#s01## sessione
-
-	<em>02/04</em> – [<code>MiniStoria</code>]
-	link##Le palme#02
-
-	<em>01/04</em> – [<code>MiniStoria</code>]
-	link##Sono giovane?!?#01
+	p#<em>30/04</em> – <code>[Storia]</code> Il
+		link#Storie/2012/LXXX/#segretario
+		di seggio
+	p#<em>26/04</em> – la <code>[Recensione]</code> di
+		link#Recensioni/Giochi/XXX/#Arkham City
+		e la <code>[Storia]</code> del
+		link#Storie/2012/LXXIX/#viaggio a Verona###,
+		poi
+		link#Legend/Cronache/#Legend#s04
+	p#<em>19/04</em> – la <code>[MiniStoria]</code>
+		link#Blog/2012/04/#alimentatore#19##dell'#
+	p#<em>12/04</em> – [<code>MiniStoria</code>]
+		link#Blog/2012/04/#Un buon giorno per morire##12
+	p#<em>11/04</em> – [<code>Recensione</code>]
+		link#Recensioni/Film/XXIX/#Il gatto con gli stivali### e il primo contatto con
+		gli [<code>Recensione</code>]
+		link#Recensioni/Show/XXI/#Akibaranger#Akibaranger## e l'anticipazione su
+		[<code>Recensione</code>]
+		link#Recensioni/Giochi/II/#AC: Revelations#Revelations##. E poi anche
+		[<code>Legend</code>] la
+		link#Legend/Cronache/#prima#s01## sessione
+	p#<em>02/04</em> – [<code>MiniStoria</code>]
+		link##Le palme#02
+	p#<em>01/04</em> – [<code>MiniStoria</code>]
+		link##Sono giovane?!?#01
 stop#side
