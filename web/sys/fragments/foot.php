@@ -34,7 +34,7 @@
 			</p></div><p style="text-indent:0px; text-align: center">
 				<a href="http://users.skynet.be/mgueury/mozilla/">HTML5 Valido</a>
 			</p><div class="outside"><p class="reverse">
-					<a href="http://jigsaw.w3.org/css-validator/validator?uri=sys/style/all.css">CSS Valido</a>
+					<a href="http://jigsaw.w3.org/css-validator/validator?uri=<?=$_SERVER['SERVER_NAME']?>/sys/style/all.css">CSS Valido</a>
 			</p></div>
 		</div>
 
@@ -50,7 +50,7 @@
 			</p></div>
 		</div>
 
-	</div><div style="clear:both" />
+	</div><div style="clear:both"></div>
 </div>
 
 <div class="section">
