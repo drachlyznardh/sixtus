@@ -1,38 +1,31 @@
 title#Dicembre#Freschetto. Di notte.
 prev#Blog/2011/11/#Novembre
 next#Blog/2012/01/#Gennaio 2012
-alltab#
-
+tabs#all_or_one
 start#page
 tab#20
-	<em>
-	link##20/12/2011##20
-	</em> / <strong>
-	link#Extra/GUIDA/#Storie#contenuti#storie
-	</strong>
+	p#link##<em>@20/12/2011@</em>##20
+	/
+	link#Extra/GUIDA/#<strong>@Storie@</strong>#contenuti#storie
 	title#Il Momento GODS
 	Mi capita
-	link#Storie/2011/LXXIII/#spesso###.
+	link#Storie/2011/LXXIII/#spesso@.
 tab#16
-	<em>
-	link##16/12/2011##16
-	</em> / <strong>
-	link#Extra/GUIDA/#Storie#contentuti#storie
-	</strong>
+	p#link##<em>@16/12/2011@</em>##16
+	/ 
+	link#Extra/GUIDA/#<strong>@Storie@</strong>#contentuti#storie
 	title#L'ultimo progetto
 	È tempo che io parli (e faccia piovere improperi) contro un simpatico
 	professore <em>Croccante</em> e dei suoi
-	link#Storie/2011/LXXII/#progetti###.
+	link#Storie/2011/LXXII/#progetti@.
 	Ma anche qualche altra cosa, un altro po' di
 	link#Recensioni/Show/XIV/#Gundam AGE#iv
 	e una recensione di un
-	link#Recensioni/Film/XXIII/#vecchio film###.
+	link#Recensioni/Film/XXIII/#vecchio film@.
 tab#15
-	<em>
-	link##15/12/2011##15
-	</em> / <strong>
-	link#Extra/GUIDA/#MiniStorie#contenuti#mini
-	</strong>
+	p#link##<em>@15/12/2011@</em>##15
+	/
+	link#Extra/GUIDA/#<strong>@MiniStorie@</strong>#contenuti#mini
 	title#Collezione di MiniStorie
 	Adesso ne racconto un po'.
 	stitle#Le due bio<code>[tecno]</code>loghe
@@ -41,12 +34,12 @@ tab#15
 	ragazze. Ovviamente. Mentre s'attendeva (senza grande briga) il momento
 	delle proclamazioni,
 	begin#mini@left
-	stitle#La storia della Storia LXXI
-	A quanto pare, il fatto che la Storia <code>LXXI</code> copra un arco di
-	eventi che dura circa una settimana causa problemi di localizzazione ad
-	alcune persone, in particolare il <em>Fabio</em>, che ha avuto la sfortuna
-	di interagire con il sottoscritto prima, durante &amp; dopo le avventure,
-	durante la scrittura della storia stesa.
+		stitle#La storia della Storia LXXI
+		A quanto pare, il fatto che la Storia <code>LXXI</code> copra un arco di
+		eventi che dura circa una settimana causa problemi di localizzazione ad
+		alcune persone, in particolare il <em>Fabio</em>, che ha avuto la
+		sfortuna di interagire con il sottoscritto prima, durante &amp; dopo le
+		avventure, durante la scrittura della storia stesa.
 	end#mini
 	ce ne siamo andati a prendere un caffè. Perché era <em>Coffietiem</em>, come
 	sempre.
@@ -113,60 +106,48 @@ tab#15
 
 	>Tutti camminano il dinosauro.
 tab#14
-	<em>
-	link##14/12/2011##14
-	</em> / <strong>
-	link#Extra/GUIDA/#Storie#contenuti#storie
-	</strong>
+	p#link##<em>@14/12/2011@</em>##14
+	/
+	link#Extra/GUIDA/#<strong>@Storie@</strong>#contenuti#storie
 	title#Storia LXXI – Libertà
 	Ci sono cose che non dico, cose che non riesco a spiegare. Ogni tanto me ne
 	frego e me ne vado a spasso.
-	link#Storie/2011/LXXI/#Da solo###.
+	link#Storie/2011/LXXI/#Da solo@.
 	E quando capisco qualcosa, la scrivo qui.
-tab#2
-	<em>
-	link##2/12/2011##2
-	</em> / <strong>
-	link#Extra/GUIDA/#Storie#contenuti#storie
-	</strong>
+tab#02
+	p@link##<em>@02/12/2011@</em>##02
+	/
+	link#Extra/GUIDA/#<strong>@Storie@</strong>#contenuti#storie
 	title#Storia LXX – Spontaneità
 	Faccio cose buone, mio padre mi ringrazia. Dovrei essere più contento, ma
 	non ci riesco. Provate a capire
-	link#Storie/2011/LXX/#perché###.
-tab#1
-	<em>
-	link##1/12/2011##1
-	</em> / <strong>
-	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
-	</strong>
+	link#Storie/2011/LXX/#perché@.
+tab#01
+	p#link##<em>@01/12/2011@</em>##01
+	/
+	link#Extra/GUIDA/#<strong>@Recensioni@</strong>#contenuti#recensioni
 	title#Il finale di Dollhouse
 	Sono arrivato in 
-	link#Recensioni/Show/XXII/#fondo#s02##,
+	link#Recensioni/Show/XXII/#fondo@,#s02
 	non so che pensare. La mia testa esplode.
 stop#page
 start#side
 	stitle#link#Blog/2011/12/#Dicembre### 2011
-
-	<em>20/12</em> –
-	link#Storie/2011/LXXIII/#Il Momento GODS
-
-	<em>16/12</em> –
-	link#Storie/2011/LXXII/#L'ultimo progetto###,
-	ancora
-	link#Recensioni/Show/XIV/#Gundam AGE
-	e
-	link#Recensioni/Film/XXIII/#Zombieland
-
-	<em>15/12</em> –
-	link#Blog/2011/12/#Collezione di MiniStorie##15
-
-	<em>14/12</em> –
-	link#Storie/2011/LXXI/#Libertà
-
-	<em>02/12</em> –
-	link#Storie/2011/LXX/#Spontaneità
-
-	<em>01/12</em> – La
-	link#Recensioni/Show/XXII/#seconda stagione#s02
-	di Dollhouse
+	p#<em>20/12</em> –
+		link#Storie/2011/LXXIII/#Il Momento GODS
+	p#<em>16/12</em> –
+		link#Storie/2011/LXXII/#L'ultimo progetto###,
+		ancora
+		link#Recensioni/Show/XIV/#Gundam AGE
+		e
+		link#Recensioni/Film/XXIII/#Zombieland
+	p#<em>15/12</em> –
+		link#Blog/2011/12/#Collezione di MiniStorie##15
+	p#<em>14/12</em> –
+		link#Storie/2011/LXXI/#Libertà
+	p#<em>02/12</em> –
+		link#Storie/2011/LXX/#Spontaneità
+	p#<em>01/12</em> – La
+		link#Recensioni/Show/XXII/#seconda stagione#s02
+		di Dollhouse
 stop#side

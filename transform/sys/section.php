@@ -392,12 +392,12 @@
 			$result = false;
 			
 			$_ = preg_split('/@/', $args[1]);
-			$result = $this->dialog($attr[0], $_[0]);
+			$result = $this->dialog($attr[1], $_[0]);
 			array_shift($_);
 			while (count($_))
 			{
 				$result .= ' – '.$_[0].' – ';
-				$result .= $this->dialog($attr[0], $_[1]);
+				$result .= $this->dialog($attr[1], $_[1]);
 				array_shift($_);
 				array_shift($_);
 			}

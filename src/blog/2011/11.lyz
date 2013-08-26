@@ -1,31 +1,26 @@
 title#Novembre#Piove, ma fa ancora caldo
 prev#Blog/2011/10/#Ottobre
 next#Blog/2011/12/#Dicembre
-alltab#
-
+tabs#all_or_one
 start#page
 tab#29
-	<em>
-	link##29/11/2010##29
-	</em> / <strong>
-	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
-	</strong>
+	p#link##<em>@29/11/2010@</em>##29
+	/
+	link#Extra/GUIDA/#<strong>@Recensioni@</strong>#contenuti#recensioni
 	title#Altro fiume di recensioni
 	Evidentemente, guardo troppa roba. Comunque, eccovi gli ultimi due Rambo (il
 	link#Recensioni/Film/XVII/#terzo#iii
 	e il
-	link#Recensioni/Film/XVII/#quarto#iv##),
+	link#Recensioni/Film/XVII/#quarto@),#iv
 	gli aggiornamenti sugli ultimi episodi di
 	link#Recensioni/Show/XIV/#Gundam AGE#iv
 	e infine quello che il <em class="bolo">Bolo</em> attendeva da sempre, il
 	mio parere su
-	link#Recensioni/Show/XXII/#Dollhouse###.
+	link#Recensioni/Show/XXII/#Dollhouse@.
 tab#28
-	<em>
-	link##28/11/2011##28
-	</em> / <strong>
-	link#Extra/GUIDA/#Storie#contenuti#storie
-	</strong>
+	p#link##<em>@28/11/2011@</em>##28
+		/
+		link#Extra/GUIDA/#<strong>@Storie@</strong>#contenuti#storie
 	title#Storia LXIX – Le ragazze-__SUFFIX__
 	Ci sono molte ragazze, qui in facoltà:
 	link#Storie/2011/LXIX/#eccovi
@@ -35,11 +30,9 @@ tab#28
 	<em>Cars 2</em>, <em>Shrek Forever After</em>, gli ultimi due Rambo e la
 	prima stagione di <em>Dollhouse</em>.
 tab#23/18:45
-	<em>
-	link##23/11/2011 – 18:45##23/18:45
-	</em> / <strong>
-	link#Extra/GUIDA/#Recensioni#contenuti#recensioni
-	</strong>
+	p#link##<em>@23/11/2011 – 18:45@</em>##23/18:45
+		/
+		link#Extra/GUIDA/#<strong>@Recensioni@</strong>#contenuti#recensioni
 	title#Altre recensioni!
 	E siccome non ho briga di fare altro, eccomi a recensire un
 	link#Recensioni/Film/Brutti/XX/#film bruttarello
@@ -50,13 +43,11 @@ tab#23/18:45
 	link#Recensioni/Show/XIV/#show#iii##,
 	che ci crediate o no.
 tab#20
-	<em>
-	link##20/11/2011 ##20/
-	</em> / (<strong>
-	link#Extra/GUIDA/#Mini#contenuti#mini
-	</strong> ) <strong>
-	link#Extra/GUIDA/#Storie#contenuti#storie
-	</strong>
+	p#link##<em>@20/11/2011@</em>##20/
+	/ (
+	link#Extra/GUIDA/#<strong>@Mini@</strong>#contenuti#mini
+	)
+	link#Extra/GUIDA/#<strong>@Storie@</strong>#contenuti#storie
 	title#Storia LXVIII – Momenti
 	Questa è la storia di oggi. La metto anche tra le mini perché ho bisogno di
 	fare una lunga introduzione, non abbastanza lunga per essere una storia
@@ -74,100 +65,84 @@ tab#20
 	contatti da uno all'altro… partì come una gravidanza, finì come un parto.
 
 	Ma sto prendendo troppo spazio… leggete il 
-	link#Storie/2011/LXVIII/#resto###.
+	link#Storie/2011/LXVIII/#resto@.
 tab#19/19:05
-	<em>
-	link##19/11/2011 19:05##19/19:05
-	</em>
+	p#link##<em>@19/11/2011 19:05@</em>##19/19:05
 	title#Trasloco completato
 	Bene. Credo d'aver finito. Tutte le pagine sono leggibili. Il <a
 	href="gods.roundhousecode.com/feed.rss">nuovo feed</a> verrà pubblicato a
 	breve. Adesso vado a scrivere il redirect per i vecchi siti.
 tab#05/00:35
-	Una cosa bella!
-
-	<span class="em">
-	link##05/11/2011 00:35##05/00:35
+	r#Una cosa bella!
+	p#link##<em>@05/11/2011 00:35@</em>##05/00:35
 	/
-	link#Extra/GUIDA/#MiniStorie#contenuti#MiniStorie
-	</span>
-	title#<span class="cat-heart">KitKat gratis!</span>
+	link#Extra/GUIDA/#<strong>@MiniStorie@</strong>#contenuti#MiniStorie
+	title#KitKat gratis!
 	Questa è una cosa nuova e bella.
 	begin#inside
-		Ero lì al baretto che mi facevo un caffé in compagnia (non
-		tanta, recentemente, ma qualcuno è ancora in zona…) e mentre
-		aspetto al bancone, mi guardo attorno.
+		Ero lì al baretto che mi facevo un caffé in compagnia (non tanta,
+		recentemente, ma qualcuno è ancora in zona…) e mentre aspetto al
+		bancone, mi guardo attorno.
 
-		Vedo alla mia sinistra una bimba alta così (beh, doveva essere
-		una matricola di qualcosa, ma – poverella – era alta un
-		barattolo e una banana) che regge un pacchetto di KitKat.
+		Vedo alla mia sinistra una bimba alta così (beh, doveva essere una
+		matricola di qualcosa, ma – poverella – era alta un barattolo e una
+		banana) che regge un pacchetto di KitKat.
 
-		Il mio cervello va in pappa, tentando di capire, visto che il
-		bar non vende quella roba. Il mio ragionamento è, ovviamente, ad
-		alta voce; e la ragazza mia sente.
+		Il mio cervello va in pappa, tentando di capire, visto che il bar non
+		vende quella roba. Il mio ragionamento è, ovviamente, ad alta voce; e la
+		ragazza mia sente.
 	end#inside
 	Ma ecco la cosa bella.
 	begin#outside
-		«Oh, no: l'ho preso alle macchinette» mi spiega lei, e
-		gentilmente «Ne vuoi un pezzo?»
+		p#intra@em#«Oh, no: l'ho preso alle macchinette@mi spiega lei, e gentilmente@Ne vuoi un pezzo?
 	end#outside
-	Awwwwww. Non solo non si è spaventata, come succede sempre, ma m'ha
-	pure offerto da mangiare. Quale rara circostanza.
+	Awwwwww. Non solo non si è spaventata, come succede sempre, ma m'ha pure
+	offerto da mangiare. Quale rara circostanza.
 
 	Non spero di ritrovare questo angioletto una seconda volta, ma di certo la
-	salverò nella lista delle <span class="code">@Ragazza-__SUFFIX__</span>, per
-	sempre nel mio cuore.
+	salverò nella lista delle <code>@Ragazza-__SUFFIX__</code>, per sempre nel
+	mio cuore.
 tab#03/00:00
-	<span class="em">
-	link##03/11/2011 00:00##03/00:00
-	</span>
+	p#link##<em>@03/11/2011 00:00@</em>##03/00:00
 	title#Rinnovo! Spostamento! Restauro!
-	Lyznardhum (questo sito) si sposta, cambia hosting, cambia
-	indirizzo, cambia veste, cambia implementazione… cambia tutto!
+	Lyznardhum (questo sito) si sposta, cambia hosting, cambia indirizzo, cambia
+	veste, cambia implementazione… cambia tutto!
 
-	Tru Naluten torna in sede! Le recensioni sono state riordinate! È
-	cominciato il NaNoWriMo 2011! Le storie restano identiche!
+	Tru Naluten torna in sede! Le recensioni sono state riordinate! È cominciato
+	il NaNoWriMo 2011! Le storie restano identiche!
 
 	Cominciamo con due recensioni nuove:
 	link#Recensioni/Film/XVII/#First Blood#i
 	e
-	link#Recensioni/Film/XVII/#First Blood Part II#ii##.
+	link#Recensioni/Film/XVII/#First Blood Part II@.#ii
 stop#page
 start#side
 	stitle#link#Blog/2011/11/#Novembre### 2011
-
-	<em>29/11</em> –
-	link#Recensioni/Film/XVII/#Rambo III#iii##,
-	link#Recensioni/Film/XVII/#John Rambo#iv##,
-	link#Recensioni/Show/XXII/#Dollhouse
-	e soprattutto super-fanta
-	link#Recensioni/Show/XIV/#Gundam AGE#iv##!!!
-
-	<em>28/11</em> –
-	link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
-
-	<em>23/11</em> –
-	link#Recensioni/Film/Brutti/XX/#Plan 9
-	e
-	link#Recensioni/Show/XXI/#199 Hero Grand Battle
-	e anche un po' di
-	link#Recensioni/Show/XIV/#Gundam AGE#iii
-
-	<em>20/11</em> –
-	link#Storie/2011/LXVIII/#Momenti
-
-	<em>19/11</em> – Trasloco!
-
-	<em>15/11</em> – Recensioni!
-	link#Recensioni/Libri/XII/#Il principe mezzosangue#vi##,
-	link#Recensioni/Film/XIX/#Ed Wood### & 
-	link#Recensioni/Film/Brutti/XVIII/#Black Sheep
-
-	<em>05/11</em>
-	– <span class="cat-heart">KitKat Gratis!</span>
-
-	<em>03/11</em> – Rinnovo!
-	link#Recensioni/Film/XVII/#First Blood#i
-	(&
-	link#Recensioni/Film/XVII/#Part II#ii##)
+	p#<em>29/11</em> –
+		link#Recensioni/Film/XVII/#Rambo III#iii##,
+		link#Recensioni/Film/XVII/#John Rambo#iv##,
+		link#Recensioni/Show/XXII/#Dollhouse
+		e soprattutto super-fanta
+		link#Recensioni/Show/XIV/#Gundam AGE#iv##!!!
+	p#<em>28/11</em> –
+		link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
+	p#<em>23/11</em> –
+		link#Recensioni/Film/Brutti/XX/#Plan 9
+		e
+		link#Recensioni/Show/XXI/#199 Hero Grand Battle
+		e anche un po' di
+		link#Recensioni/Show/XIV/#Gundam AGE#iii
+	p#<em>20/11</em> –
+		link#Storie/2011/LXVIII/#Momenti
+	p#<em>19/11</em> – Trasloco!
+	p#<em>15/11</em> – Recensioni!
+		link#Recensioni/Libri/XII/#Il principe mezzosangue#vi##,
+		link#Recensioni/Film/XIX/#Ed Wood### & 
+		link#Recensioni/Film/Brutti/XVIII/#Black Sheep
+	p#<em>05/11</em>
+		– <span class="cat-heart">KitKat Gratis!</span>
+	p#<em>03/11</em> – Rinnovo!
+		link#Recensioni/Film/XVII/#First Blood#i
+		(&
+		link#Recensioni/Film/XVII/#Part II#ii##)
 stop#side
