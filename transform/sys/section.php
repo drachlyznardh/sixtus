@@ -28,6 +28,7 @@
 				case 'id': $this->make_id($cmd_args[1]); break;
 				case 'p':
 				case 'li': $this->make_p($index, $cmd_args, $cmd_attr); break;
+				case 'c': $this->make_c($index, $cmd_args, $cmd_attr); break;
 				case 'r':
 				case 'reverse': $this->make_r($index, $cmd_args, $cmd_attr); break;
 				case 'tid': $this->make_tid($cmd_args); break;
@@ -73,7 +74,8 @@
 		{
 			switch ($this->context)
 			{
-				case 'p': $this->content[] = '</p>'; break;
+				case 'p':
+				case 'c':
 				case 'r': $this->content[] = '</p>'; break;
 				case 'li': $this->content[] = '</li>'; break;
 				case 'inside': $this->content[] = '</div>'; break;
@@ -93,6 +95,7 @@
 			switch ($this->context)
 			{
 				case 'p': $this->content[] = '<p>'; break;
+				case 'c': $this->content[] = '<p class="center">'; break;
 				case 'r': $this->content[] = '<p class="reverse">'; break;
 				case 'li': $this->content[] = '<li>'; break;
 				case 'inside': $this->content[] = '<div class="inside">'; break;
@@ -213,6 +216,13 @@
 		{
 			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
+			else $this->content[] = $cmd_args[1];
+		}
+
+		private function make_c ($index, $cmd_args, $cmd_attr)
+		{
+			$this->switchContext('c');
+			if (count($cmd_args) > 3) $this->recursive($index, $cmd_args, $cmd_attr);
 			else $this->content[] = $cmd_args[1];
 		}
 
@@ -384,7 +394,7 @@
 		private function make_speak ($lineno, $args, $attr)
 		{
 			$this->closeContext();
-			$this->content[] = '<p>« '.$this->dialog($args[1], $args[2]).' »</p>';
+			$this->content[] = '<p>'.$this->dialog($args[1], $args[2]).'</p>';
 		}
 
 		private function make_intra ($lineno, $args, $attr)
@@ -402,17 +412,17 @@
 				array_shift($_);
 			}
 
-			$this->content[] = ' « '.$result.' »';
+			$this->content[] = $result;
 		}
 
 		private function make_inline ($lineno, $args, $attr)
 		{
-			$this->content[] = ' « '.$this->dialog($args[1], $args[2]).' »';
+			$this->content[] = $this->dialog($args[1], $args[2]);
 		}
 
 		private function dialog ($author, $line)
 		{
-			return '<span class="'.$author.'" title="'.$author.'">'.$line.'</span>';
+			return '<span class="'.$author.'" title="'.$author.'">« '.$line.' »</span>';
 		}
 	}
 ?>
