@@ -1,10 +1,10 @@
 title#Ottobre 2012#Non fa ancora abbastanza fresco
 prev#Blog/2012/09/#Settembre@ 2012
 next#Blog/2012/11/#Novembre@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#30
-	p#link##<em>@30/10/2012@</em>##30
+	p#link##<em>@30/10/2012@</em>#30
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#È quasi finito ottobre?!?
@@ -16,7 +16,7 @@ tab#30
 	link#Storie/2012/XC/#piano
 	per sopravvivere a questo semestre. E il resto si vedrà.
 tab#12
-	p#link##<em>@12/10/2012@</em>##12
+	p#link##<em>@12/10/2012@</em>#12
 	/
 	link#Extra/#<strong>@Legend@</strong>#CONTENUTI#Legend
 	title#La campagna di War
@@ -31,7 +31,7 @@ tab#12
 
 	E probabilmente eviterò anche di andare alle prove di coro.
 tab#01
-	p#link##<em>@01/10/2012@</em>##01
+	p#link##<em>@01/10/2012@</em>#01
 	/
 	link#Extra/#<strong>@Recensione@</strong>#CONTENUTI#Recensioni
 	title#Alticcio

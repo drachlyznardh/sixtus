@@ -1,10 +1,10 @@
 title#Luglio 2012#Sempre caldo. E umido
 prev#Blog/2012/06/#Giugno@ 2012
 next#Blog/2012/08/#Agosto@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#31
-	p#link##<em>@31/07/2012@</em>##31
+	p#link##<em>@31/07/2012@</em>#31
 	title#Svolta?
 	È l'ultima notizia del mese. Sto ancora vedendo cose brutte (<em>MuvLuv
 	Alternative: Total Eclipse</em>), cose (poco poco) meno brutte (<em>Accel
@@ -14,7 +14,7 @@ tab#31
 	Sembra che ci siano buone notizie.
 	link#Extra/LABOFDOOM/#Leggete@.#L12
 tab#27
-	p#link##<em>@27/07/2012@</em>##27
+	p#link##<em>@27/07/2012@</em>#27
 	title#Qualche aggiornamento
 	Sono un po'-abbastanza-decisamente impegnato, in questi giorni. Tesi, una
 	cosa che uccide. Trullallero, trullallà… aggiorno soltanto
@@ -22,7 +22,7 @@ tab#27
 	e
 	link#Extra/LABOFDOOM/#le disavventure in @Aula 5@.#L10
 tab#22
-	p#link##<em>@22/07/2012@</em>##22
+	p#link##<em>@22/07/2012@</em>#22
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Un mazzo di recensioni
@@ -45,7 +45,7 @@ tab#22
 	link#Extra/BUX/#Bu&chi;@.
 	Fate i bravi mentre non ci sono.
 tab#09
-	p#link##<em>@09/07/2012@</em>##09
+	p#link##<em>@09/07/2012@</em>#09
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#La notte rosa
@@ -59,7 +59,7 @@ tab#09
 	man detto, sarà tanto pessimo da meritare una recensione paragonabile a
 	quella di <em>Transformers 3</em>. BRACE FOR IMPACT.
 tab#04
-	p#link##<em>@04/07/2012@</em>##04
+	p#link##<em>@04/07/2012@</em>#04
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Leggo invece di fare cose…
@@ -77,24 +77,19 @@ tab#04
 stop#page
 start#side
 	stitle#link#Blog/2012/07/#Luglio@ 2012
-	
-	<em>31/07</em> – [<code>Extra</code>]
-	link#Extra/LABOFDOOM/#l'@Oscilloscopio@#L12
-	
-	<em>27/07</em> – [<code>Niente</code>]
-
-	<em>22/07</em> – [<code>Recensioni</code>]
-	link#Recensioni/Show/XL/#Godzilla@,
-	link#Recensioni/Libri/XLI/#fanteria dello spazio@,
-	link#Recensioni/Show/XIV/#Gundam AGE @e35@#E35
-
-	<em>09/07</em> – [<code>Storie</code>]
-	link#Storie/2012/LXXXIII/#La notte rosa
-
-	<em>04/07</em> – [<code>Recensioni</code>]
-	link#Recensioni/Libri/XXXV/#Uomini d'arme@,#II 
-	link#Recensioni/Libri/XXXVI/#il gioco di Ender@,
-	link#Legend/Cronache/#la @decima@ sessione#s10
-	e
-	link#Recensioni/Film/Brutti/XXXVII/#Ghost rider
+	p#<em>31/07</em> – [<code>Extra</code>]
+		link#Extra/LABOFDOOM/#l'@Oscilloscopio@#L12
+	p#<em>27/07</em> – [<code>Niente</code>]
+	p#<em>22/07</em> – [<code>Recensioni</code>]
+		link#Recensioni/Show/XL/#Godzilla@,
+		link#Recensioni/Libri/XLI/#fanteria dello spazio@,
+		link#Recensioni/Show/XIV/#Gundam AGE @e35@#E35
+	p#<em>09/07</em> – [<code>Storie</code>]
+		link#Storie/2012/LXXXIII/#La notte rosa
+	p#<em>04/07</em> – [<code>Recensioni</code>]
+		link#Recensioni/Libri/XXXV/#Uomini d'arme@,#II 
+		link#Recensioni/Libri/XXXVI/#il gioco di Ender@,
+		link#Legend/Cronache/#la @decima@ sessione#s10
+		e
+		link#Recensioni/Film/Brutti/XXXVII/#Ghost rider
 stop#side

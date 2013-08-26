@@ -1,10 +1,10 @@
 title#Marzo#Marzo 2013
 prev#Blog/2013/02/#Febbraio@ 2013
 next#Blog/2013/04/#Aprile@ 2013
-alltab#
+tabs#all_or_one
 start#page
 tab#30
-	p#link##<em>@30/03/2013@</em>##30
+	p#link##<em>@30/03/2013@</em>#30
 	/
 	link#Extra/#Diario#CONTENUTI#Diari
 	title#L'ispirazione
@@ -17,7 +17,7 @@ tab#27
 	“<em>Questa notizia va in onda in forma ridotta per venire incontro alle mie
 	tempistiche strette</em>”
 	end#mini
-	p#link##<em>@27/03/2013@</em>##27
+	p#link##<em>@27/03/2013@</em>#27
 	/
 	link#Extra/#Diario#CONTENUTI#Diari
 	title#Troppa roba da fare
@@ -27,7 +27,7 @@ tab#27
 
 	r#Ma il concerto degli <em>Elio e le Storie Tese</em> è stato figo.
 tab#18
-	p#link##<em>@18/03/2013@</em>##18
+	p#link##<em>@18/03/2013@</em>#18
 	/
 	link#Extra/#Diario#CONTENUTI#Diari
 	&amp;
@@ -58,14 +58,14 @@ tab#18
 	href="http://origami-resource-center.com">origami-resource-center.com</a> mi
 	consiglia <a href="http://doodle.sourceforge.net">Doodle</a>. Oh wow!!!
 tab#15
-	p#link##<em>@15/03/2013@</em>##15
+	p#link##<em>@15/03/2013@</em>#15
 	/
 	link#Extra/#Diario#CONTENUTI#Diari
 	title#Il più umano
 	A quanto pare, sono “<em>il più umano dell'OpenSpace</em>”.
 	link#Diario/04/#Leggete@.#iv
 tab#11
-	p#link##<em>@11/03/2013@</em>##11
+	p#link##<em>@11/03/2013@</em>#11
 	title#Primavera?!? Fa un caldo porco!
 	Già da alcuni giorni, con la pioggia, la temperatura è salita. Oggi invece
 	c'è il sole. Sono salito in maniche corte e non è bastato. Ho lasciato gli
@@ -77,7 +77,7 @@ tab#11
 	gente indossa ancora tre strati?
 	link#Diario/04/#(@Così@).#iii
 tab#09
-	p#link##<em>@09/03/2013@</em>##09
+	p#link##<em>@09/03/2013@</em>#09
 	/
 	link#Extra/#Diario#CONTENUTI#Diari
 	&amp;
@@ -94,14 +94,14 @@ tab#09
 	e delle
 	link#Storie/2013/XCII/#Storie@.#i
 tab#07
-	p#link##<em>@07/03/2013@</em>##07
+	p#link##<em>@07/03/2013@</em>#07
 	/
 	link#Extra/#Diario#CONTENUTI#Diari
 	title#Il ballo &amp; la prossimità
 	Oggi comincio a
 	link#Diario/04/#lavorare@.
 tab#05
-	p#link##<em>@05/03/2013@</em>##05
+	p#link##<em>@05/03/2013@</em>#05
 	/
 	link#Extra/#Storia#CONTENUTI#Storie
 	title#Londra
@@ -111,12 +111,12 @@ tab#05
 stop#page
 start#side
 	stitle#link#Blog/2013/03/#Marzo@ 2013
-	p#link##<code>30/03</code> – [<em>Diario</em>] @L'ispirazione@##30
-	p#link##<code>27/03</code> – [<em>Diario</em>] @Troppa roba@##27
-	p#link##<code>18/03</code> – [<em>Diario</em>] @Troppo Assassin's Creed 3?@##18
-	p#link##<code>15/03</code> – [<em>Diario</em>] @Il più umano@##15
-	p#link##<code>11/03</code> – [<em>Diario</em>] @Caldo@##11
-	p#link##<code>09/03</code> – [<em>Cose</em>] @Cose@##09
-	p#link##<code>07/03</code> – [<em>Diario</em>] @Il ballo &amp; la prossimità@##07
-	p#link##<code>05/03</code> – [<em>Storie</em>] @Londra@##05
+	p#link##<code>30/03</code> – [<em>Diario</em>] @L'ispirazione@#30
+	p#link##<code>27/03</code> – [<em>Diario</em>] @Troppa roba@#27
+	p#link##<code>18/03</code> – [<em>Diario</em>] @Troppo Assassin's Creed 3?@#18
+	p#link##<code>15/03</code> – [<em>Diario</em>] @Il più umano@#15
+	p#link##<code>11/03</code> – [<em>Diario</em>] @Caldo@#11
+	p#link##<code>09/03</code> – [<em>Cose</em>] @Cose@#09
+	p#link##<code>07/03</code> – [<em>Diario</em>] @Il ballo &amp; la prossimità@#07
+	p#link##<code>05/03</code> – [<em>Storie</em>] @Londra@#05
 stop#side

@@ -1,19 +1,18 @@
 title#Gennaio#Non abbastanza freddo
 prev#Blog/2011/12/#Dicembre@ 2011
 next#Blog/2012/02/#Febbraio@ 2012
-alltab#
+tabs#all_or_one
 start#page
 tab#31
-	<em>
-	link##31/01/2012##31
-	</em> / <strong>
-	link#Extra/#Recensioni#CONTENUTI#recensioni
-	</strong>
+	p#link##<em>@31/01/2012@</em>##31
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#recensioni
 	title#Chuck
 	È finito qualche giorno fa. Probabilmente, è stata la prima serie americana
 	che io abbia seguito interamente in lingua originale (fin dal 2008, mi
 	pare…). Un
-	link#Recensioni/Show/XXV/#tributo###, dunque.
+	link#Recensioni/Show/XXV/#tributo@,
+	dunque.
 
 	Collateralmente, il GODS è ancora convalescente, ma può dedicarsi a cose
 	importanti come
@@ -32,12 +31,11 @@ tab#31
 		tenetevi forte per quando ne parlerò
 	end#ul
 tab#29
-	<em>
-	link##29/01/2012##29
-	</em> / <strong>
-	link#Extra/#Recensioni#CONTENUTI#recensioni
-	</strong>
-	title#Harry Potter &amp; la saga che fece sputare sangue al GODS
+	p#link##<em>@29/01/2012@</em>##29
+	/
+	link#Extra/#<strong>Recensioni</strong>#CONTENUTI#recensioni
+	title#Harry Potter
+	title@right#&amp; la saga che fece sputare sangue al GODS
 	Sono arrivato in fondo, ricordate? Beh, oggi che sto piuttosto male (mi
 	copro di macchie rosse, poi vampate di calore, poi brividi di freddo – come
 	Maga Magò…) mi sono messo <span class="wrong">di buona lena</span>
@@ -46,52 +44,44 @@ tab#29
 	Non mi sono trattenuto, quindi se siete minorenni o deboli di cuore state
 	attenti.
 tab#27
-	<em>
-	link##27/01/2012##27
-	</em> / <strong>
-	link#Extra/#Storie#CONTENUTI#storie
-	</strong>
+	p#link##<em>@27/01/2012@</em>##27
+	/
+	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#storie
 	title#La vendetta di Crispo?!
 	Me ne sono appena uscita dallo scritto. Leggetevi
 	link#Storie/2011/LXXII/#tutto#ii
-	quel ch'è successo.
-	Also, se avete tempo e un po' d'anglofonia, sentitevi <a
+	quel ch'è successo. Also, se avete tempo e un po' d'anglofonia, sentitevi <a
 	href="http://www.youtube.com/user/TheBeardsAustralia">questi allegri
 	signori</a>.
 tab#25
-	<em>
-	link##25/01/2012##25
-	</em> / <strong>
-	link#Extra/#Recensioni#CONTENUTI#recensioni
-	</strong>
+	p#link##<em>@25/01/2012@</em>##25
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#recensioni
 	title#(Neverending) Gundam AGE.
 	Sta tornando
-	link#Recensioni/Show/XIV/#brutto#v##, ma è troppo presto per commentare tutto il resto che
-	sto guardando… inoltre, sto ancora studiando per lo scritto di <em>Sistemi
-	Operativi 1</em>, questo venerdì. Poi mi dedicherò ad una storia.
+	link#Recensioni/Show/XIV/#brutto@,#v
+	ma è troppo presto per commentare tutto il resto che sto guardando… inoltre,
+	sto ancora studiando per lo scritto di <em>Sistemi Operativi 1</em>, questo
+	venerdì. Poi mi dedicherò ad una storia.
 
 	E se ve lo steste chiedendo, la storia che vorrei scrivere non sta
 	succedendo. Dopo aver aspettato un mese tondo, ho aspettato altri due
 	giorni; comincio a temere d'essermi sbagliato.
 tab#20
-	<em>
-	link##20/01/2012##20
-	</em> / <strong>
-	link#Extra/#Recensioni#CONTENUTI#recensioni
-	</strong>
+	p#link##<em>@20/01/2012@</em>##20
+	/
+	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#recensioni
 	title#Cowboys&amp;Aliens
 	E siccome sono ancora sotto esami (e sono pigro) mi sono messo a guardare un
 	film. E siccome c'ero, lo
-	link#Recensioni/Film/XXIV/#recensisco###.
+	link#Recensioni/Film/XXIV/#recensisco@.
 	Per il resto, non sta succedendo niente di cui valga la pena scrivere.
 
 	E tutto quel di cui vorrei scrivere non sta succedendo ;_;
 tab#12
-	<em>
-	link##12/01/2012##12
-	</em> / <strong>
-	link#Extra/#MiniStorie#CONTENUTI#ministorie
-	</strong>
+	p#link##<em>@12/01/2012@</em>##12
+	/
+	link#Extra/#<strong>@MiniStorie@</strong>#CONTENUTI#ministorie
 	title#Dopo la pausa
 	E dunque… le feste sono passate. Non scrivo da ventitrè giorni… è tanto
 	tempo. Ho fatto delle cose, in questi giorni. Ho letto libri, ho visto film,
@@ -131,26 +121,20 @@ tab#12
 	end#ul
 	E questo è tutto gente, per adesso. Restante in trepidante attesa, farò
 	cose. Magari scriverò del progetto di
-	link#Storie/2011/LXXII/#Crispone###.
+	link#Storie/2011/LXXII/#Crispone@.
 stop#page
 start#side
-	stitle#link#Blog/2012/01/#Gennaio### 2012
-
-	<em>31/01</em> –
-	link#Recensioni/Show/XXV/#Chuck
-
-	<em>29/01</em> – Harry Potter &amp;
-	link#Recensioni/Libri/XII/# i Doni della Morte#vii
-
-	<em>27/01</em> –
-	link#Storie/2011/LXXII/#Sistemi Operativi 1#ii
-	
-	<em>25/01</em> –
-	link#Recensioni/Show/XIV/#Gundam AGE e10~15#v
-
-	<em>20/01</em> –
-	link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
-
-	<em>12/01</em> –
-	link#Blog/2012/01/#Dopo la pausa##12
+	stitle#link#Blog/2012/01/#Gennaio@ 2012
+	p#<em>31/01</em> –
+		link#Recensioni/Show/XXV/#Chuck
+	p#<em>29/01</em> – Harry Potter &amp;
+		link#Recensioni/Libri/XII/# i Doni della Morte#vii
+	p#<em>27/01</em> –
+		link#Storie/2011/LXXII/#Sistemi Operativi 1#ii
+	p#<em>25/01</em> –
+		link#Recensioni/Show/XIV/#@Gundam AGE@ e10~15#v
+	p#<em>20/01</em> –
+		link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
+	p#<em>12/01</em> –
+		link#Blog/2012/01/#Dopo la pausa##12
 stop#side

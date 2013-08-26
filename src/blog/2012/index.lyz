@@ -3,22 +3,7 @@ prev#Blog/2011/#2011
 next#Blog/2013/#2013
 start#side
 	title#2012
-	reverse#
-		link#Blog/2012/01/#Gennaio@ /
-		link#Blog/2012/02/#Febbraio@ /
-		link#Blog/2012/03/#Marzo
-	reverse#
-		link#Blog/2012/04/#Aprile@ /
-		link#Blog/2012/05#Maggio@ /
-		link#Blog/2012/06#Giugno
-	reverse#
-		link#Blog/2012/07#Luglio@ /
-		link#Blog/2012/08#Agosto@ /
-		link#Blog/2012/09#Settembre
-	reverse#
-		link#Blog/2012/10#Ottobre@ /
-		link#Blog/2012/11#Novembre@ /
-		link#Blog/2012/12#Dicembre
+	include#fragments/years#2012@as@content
 	sec#
 	title#Notizie
 	include#blog/2012/12#side@as@content
@@ -36,7 +21,7 @@ start#side
 stop#side
 start#page
 	In ordine crologico inverso, le notizie del 2012. Salta [
-	link##alla meno recente##fondo
+	link##alla meno recente##Fondo
 	]
 	sec#
 	titler#Dicembre 2012

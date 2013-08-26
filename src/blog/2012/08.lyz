@@ -1,10 +1,10 @@
 title#Agosto 2012#Caaaaaaaaaaaaaaaaaaldo!
 prev#Blog/2012/07/#Luglio@ 2012
 next#Blog/2012/09/#Settembre@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#28
-	p#link##<em>@28/08/2012@</em>##28
+	p#link##<em>@28/08/2012@</em>#28
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Tre film di Kamen Rider
@@ -15,14 +15,14 @@ tab#28
 	and
 	link#Recensioni/Kamen/Rider/#the @Next@.#thenext
 tab#24
-	p#link##<em>@24/08/2012@</em>##24
+	p#link##<em>@24/08/2012@</em>#24
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#Impresa III
 	Son proprio sfatto. Devo andare in montagna. Parto per un'impresa,
 	link#Storie/2012/LXXXVI/#la @terza@ nella serie.
 tab#14
-	p#link##<em>@14/08/2012@</em>##14
+	p#link##<em>@14/08/2012@</em>#14
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#Ho scoperto una cosa brutta
@@ -31,14 +31,14 @@ tab#14
 	terribile.
 	link#Storie/2012/LXXXV/#Leggete@.
 tab#07
-	p#link##<em>@07/08/2012@</em>##07
+	p#link##<em>@07/08/2012@</em>#07
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#Una storia, dopo un mese di silenzio
 	Non potevo lasciar passare troppo tempo senza una storia. Ne ho mess'assieme
 	link#Storie/2012/LXXXIV/#una@, un po' come si faceva una volta…
 tab#05
-	p#link##<em>@05/08/2012@</em>##05
+	p#link##<em>@05/08/2012@</em>#05
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Reclusione (a fin di bene)
@@ -48,7 +48,7 @@ tab#05
 	all'altro.
 	link#Recesioni/Film/XLII/#Fuggite@!!!
 tab#03
-	p#link##<em>@03/08/2012@</em>##03
+	p#link##<em>@03/08/2012@</em>#03
 	/
 	link#Extra/#<strong>@Extra@</strong>#CONTENUTI#Extra
 	title#La mia vita continua – nel laboratorio
@@ -57,26 +57,20 @@ tab#03
 stop#page
 start#side
 	stitle#link#Blog/2012/08/#Agosto@ 2012
-
-	<em>28/08</em> – [<code>Recensioni</code>]
-	Kamen Rider
-	link#Recensioni/Kamen/Rider/#Shin@,#shin
-	link#Recensioni/Kamen/Rider/#the @First@#thefirst
-	and
-	link#Recensioni/Kamen/Rider/#the @Next@#thenext
-
-	<em>24/08</em> – [<code>Storie</code>]
-	link#Storie/2012/LXXXVI/#L'impresa @III@
-
-	<em>14/08</em> – [<code>Storie</code>]
-	link#Storie/2012/LXXXV/#L'<em>Argiope Bruennichi</em>
-
-	<em>07/08</em> – [<code>Storie</code>]
-	link#Storie/2012/LXXXIV/#L'estate incombe
-
-	<em>05/08</em> – [<code>Recensioni</code>]
-	link#Recensioni/Film/XLII/#Starship Troopers
-
-	<em>03/08</em> – [<code>Extra</code>]
-	link#Extra/LABOFDOOM/#Campioni#L13
+	p#<em>28/08</em> – [<code>Recensioni</code>]
+		Kamen Rider
+		link#Recensioni/Kamen/Rider/#Shin@,#shin
+		link#Recensioni/Kamen/Rider/#the @First@#thefirst
+		and
+		link#Recensioni/Kamen/Rider/#the @Next@#thenext
+	p#<em>24/08</em> – [<code>Storie</code>]
+		link#Storie/2012/LXXXVI/#L'impresa @III@
+	p#<em>14/08</em> – [<code>Storie</code>]
+		link#Storie/2012/LXXXV/#L'<em>Argiope Bruennichi</em>
+	p#<em>07/08</em> – [<code>Storie</code>]
+		link#Storie/2012/LXXXIV/#L'estate incombe
+	p#<em>05/08</em> – [<code>Recensioni</code>]
+		link#Recensioni/Film/XLII/#Starship Troopers
+	p#<em>03/08</em> – [<code>Extra</code>]
+		link#Extra/LABOFDOOM/#Campioni#L13
 stop#side

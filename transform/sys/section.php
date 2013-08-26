@@ -384,7 +384,7 @@
 		private function make_speak ($lineno, $args, $attr)
 		{
 			$this->closeContext();
-			$this->content[] = '<p>«'.$this->dialog($args[1], $args[2]).'»</p>';
+			$this->content[] = '<p>« '.$this->dialog($args[1], $args[2]).' »</p>';
 		}
 
 		private function make_intra ($lineno, $args, $attr)
@@ -402,12 +402,12 @@
 				array_shift($_);
 			}
 
-			$this->content[] = '«'.$result.'»';
+			$this->content[] = ' « '.$result.' »';
 		}
 
 		private function make_inline ($lineno, $args, $attr)
 		{
-			$this->content[] = '«'.$this->dialog($args[1], $args[2]).'»';
+			$this->content[] = ' « '.$this->dialog($args[1], $args[2]).' »';
 		}
 
 		private function dialog ($author, $line)
