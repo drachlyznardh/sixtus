@@ -1,10 +1,10 @@
 title#Novembre 2012#Ha fatto freschino… a volte
 prev#Blog/2012/10/#Ottobre@ 2012
 next#Blog/2012/12/#Dicembre@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#26
-	p#link##<em>@26/11/2012@</em>##26
+	p#link##<em>@26/11/2012@</em>#26
 	/
 	link#Storia/#<strong>@Storia@</strong>#CONTENUTI#Storie
 	title#Sogni
@@ -14,12 +14,12 @@ tab#26
 	tanto per scrivere qualcosa prima che il mese finisca e che la gente cominci
 	a chiedersi cosa sto facendo.
 tab#13
-	p#link##<em>@13/11/2012@</em>##13
+	p#link##<em>@13/11/2012@</em>#13
 	/
 	link#Extra/#<strong>@Extra@</strong>#CONTENUTI#Extra
 	title#La <em>Sgaggio</em>machia
 	Dopo il terribile sogno d'una settimana fa
-	link#Blog/2012/11/#(@questa storia@)##07
+	link#Blog/2012/11/#(@questa storia@)#07
 	mi sono scontrato con <em>Sgaggio</em>. Non è successo nulla di particolare,
 	in realtà, ma siccome <strong>&lt;[LA GENTE] [DEVE SAPERE]!!!&gt;</strong> mi
 	sono messo a scriverne. In un
@@ -38,7 +38,7 @@ tab#13
 
 	La prima nota dopo dieci anni <code>;_;</code>
 tab#07
-	p#link##<em>@07/11/2012@</em>##07
+	p#link##<em>@07/11/2012@</em>#07
 	/
 	link#Extra/#<strong>@Ministoria@</strong>#CONTENUTI#MiniStorie
 	title#La visione
@@ -100,5 +100,5 @@ start#side
 	p#<code>13/11</code> – [<em>Extra</em>]
 	link#Extra/Back2LOD/#Back 2 LOD
 	p#<code>07/11</code> – [<em>Ministoria</em>]
-	link#Blog/2012/11/#La visione##07
+	link#Blog/2012/11/#La visione#07
 stop#side
