@@ -1,7 +1,47 @@
 title#La campagna di Mitch#Una storia di pirati fanfaroni e smargiassi
 prev#Cronache/II/#La campagna di War
+tabs#all_or_one
 start#page
-	Prossimamente…
+tab#intro
+	In questa campagna, una banda di pirati se ne va a spasso per lo spazio in
+	cerca di bottino e di avventura…
+tab#s01~04
+	stitle@right#Sessioni 01~04
+	r#Le cronache sono andate perdute. Quel che segue è una ricostruzione.
+	begin#ol
+		p#La ciurma s'imbatte nel <em>Capitano Kid</em>, mena tutti e si
+		impossessa di una mappa;
+		p#seguendo la mappa, la ciurma s'imbatte in <em>Capitan Sasso</em>, mena
+		tutti e prosegue;
+		p#[…]
+		p#il relitto della <em>Scimmia Urlante</em> nasconde un capitano
+		ammazzato, una ciurma avvelenata e un forziere posseduto da <em>Murray
+		il teschio <span style="text-decoration:line-through">demoniaco</span>
+		voo-doo</em>; l'inganno e le botte si concludono con l'accusa del
+		<em>nostromo Jack</em>;
+		p#il <em>Kraken</em> spaziale;
+		p#la ciurma se ne va in cerca del <em>nostromo Jack</em>, che dovrebbe
+		conescere il punto di partenza (la mappa indica la fine, ma non
+		l'inizio) per trovare la <em>testa della colossale statua d'oro
+		massiccio</em>;
+		p#discesi sul pianeta <em>Anonymous</em>, la ciurma raccatta
+		informazioni &amp; rogne;
+		p#un <em>qualche capitano</em> si da all'arrembaggio e fallisce;
+	end#ol
+tab#s05
+	La ciurma si avventura nello spazio <em>federale</em> in cerca del
+	<em>nostromo Jack</em>, che si rifugia nell'altra taverna della galassia. A
+	quanto pare, fa il cuoco da almeno <code>50</code> anni.
+
+	Non soltanto <em>Jack</em> è un cuoco estremamente eccezionale, ma dispone
+	anche di un apprendista (piuttosto eccezionale anche lui). Inoltre, mentre
+	la ciurma aspetta la fine del turno per parlare con il cuoco, ecco comparire
+	l'affascinante e biondissima <em>Ammiraglio Nelson</em>.
+
+	Alla fine, il <em>nostromo Jack</em>, nient'affatto scontroso o colpevole,
+	decide spontaneamente di abbandonare il lavoro per condurre la ciurma
+	all'inizio della mappa.
+	r#La memoria non lo aiuta.
 stop#page
 start#side
 	title#Fanfaroni e smargiassi
