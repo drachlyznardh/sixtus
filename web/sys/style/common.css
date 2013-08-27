@@ -96,6 +96,7 @@ h3 {
 	margin: 2px 4px 2px 4px;
 }
 
+p.center { text-align: center; }
 p.reverse { text-align: right; }
 
 h2.reverse {	
