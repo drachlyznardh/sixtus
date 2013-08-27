@@ -29,7 +29,7 @@ tab#01
 	<code>blah::x</code> non è definito, e sotto i miei occhi ci sono due righe
 	che dicono esattamente
 	begin#outside
-		<code>namespace blah {</code>
+		p#<code>namespace blah {</code>
 		p#<code>&nbsp;&nbsp;Logger x;</code>
 		p#<code>}</code>
 	end#outside
