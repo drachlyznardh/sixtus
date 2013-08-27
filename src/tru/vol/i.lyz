@@ -1,0 +1,41 @@
+title#Tru Naluten – Volume I
+subtitle#Cose strane
+short#Tru Naluten I
+next#Tru/Naluten/Vol/II/#Volume II
+start#page
+tab#intro
+	include#tru/primo/index#page
+tab#i
+	include#tru/primo/i#page
+tab#ii
+	include#tru/primo/ii#page
+tab#iii
+	include#tru/primo/iii#page
+tab#iv
+	include#tru/primo/iv#page
+tab#v
+	include#tru/primo/v#page
+tab#vi
+	include#tru/primo/vi#page
+tab#vii
+	include#tru/primo/vii#page
+tab#viii
+	include#tru/primo/viii#page
+tab#ix
+	include#tru/primo/ix#page
+stop#page
+start#side
+	p#tid#Introduzione#intro
+	stitle@right#Tru Naluten – Volume I
+	begin@3.5em#roman
+		p#tid#Camminavo…#i
+		p#tid#Sacomne#ii
+		p#tid#Il mio nome#iii
+		p#tid#Le altre voci#iv
+		p#tid#La mia faccia#v
+		p#tid#L'altro me#vi
+		p#tid#La meta#vii
+		p#tid#La porta#viii
+		p#tid#La fine del mondo#ix
+	end#roman
+stop#side

@@ -134,6 +134,9 @@
 				case 'alltabs':
 					$this->force_all_tabs = true;
 					break;
+				case 'include':
+					$this->static_include($cmd_par, $cmd_attr);
+					break;
 			}
 		}
 
@@ -207,6 +210,19 @@
 					$this->body[] = $_;
 				#foreach ($parser->side as $_)
 				#	$this->side[] = $_;
+			}
+		}
+
+		private function static_include ($args, $attr)
+		{
+			if (count($attr) > 1 && strcmp($attr[1], 'static') == 0)
+			{
+				$parser = new Parser($this->prefix);
+				$parser->parse($this->prefix.'/'.$args[1].'.lyz');
+				foreach ($parser->body as $_)
+					$this->body[] = $_;
+				foreach ($parser->side as $_)
+					$this->side[] = $_;
 			}
 		}
 

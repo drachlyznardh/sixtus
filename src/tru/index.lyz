@@ -18,9 +18,9 @@ start#side
 	p#link#Tru/Naluten/Personaggi/#Personaggi
 	title#Tru Naluten
 	stitle#link#Tru/Naluten/Vol.I/#Volume @I@
-	include#tru/catalogo#i@as@content
+	include#frag/tru#side-i@as@content
 	stitle#link#Tru/Naluten/Vol.II/#Volume @II@
-	include#tru/catalogo#ii@as@content
+	include#frag/tru#side-ii@as@content
 	stitle#link#Tru/Naluten/Vol.III/#Volume @III@
-	include#tru/catalogo#iii@as@content
+	include#frag/tru#side-iii@as@content
 stop#side

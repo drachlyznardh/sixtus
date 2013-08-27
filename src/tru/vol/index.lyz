@@ -1,0 +1,15 @@
+title#Tru Naluten
+subtitle#L'intera collezione
+start#side
+	p#tid#Introduzione#intro
+		/
+		link#Tru/Naluten/Vol/I/#Vol.I
+		/
+		link#Tru/Naluten/Vol/II/#Vol.II
+		/
+		link#Tru/Naluten/Vol/III/#Vol.III
+	title#Tru Naluten
+stop#side
+include@static#tru/vol/i
+include@static#tru/vol/ii
+include@static#tru/vol/iii
