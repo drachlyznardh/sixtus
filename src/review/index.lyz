@@ -93,26 +93,26 @@ tab#catalogo
 	id#cronologico
 	title#Indice cronologico
 	begin#double
-		include#review/catalogo#cron@as@content
+		include#frag/review#cron@as@content
 	end#double
 	sec#
 	id#categoria
 	title#Per categoria
 	begin#double
 		stitle#Film
-		include#review/catalogo#film@as@content
+		include#frag/review#film@as@content
 		br#
 		stitle#Film brutti
-		include#review/catalogo#brutti@as@content
+		include#frag/review#brutti@as@content
 		br#
 		stitle#Giochi
-		include#review/catalogo#game@as@content
+		include#frag/review#game@as@content
 		br#
 		stitle#Show
-		include#review/catalogo#show@as@content
+		include#frag/review#show@as@content
 		br#
 		stitle#Libri
-		include#review/catalogo#libri@as@content
+		include#frag/review#libri@as@content
 	end#double
 	sec#
 	id#incorso

@@ -10,10 +10,10 @@ start#page
 	piace, mi sono messo a scriverne. Qui.
 	br#
 	begin#double
-		include#review/catalogo#film@as@content
+		include#frag/review#film@as@content
 	end#double
 stop#page
 start#side
 	stitle#Film
-	include#review/catalogo#film@as@content
+	include#frag/review#film@as@content
 stop#side
