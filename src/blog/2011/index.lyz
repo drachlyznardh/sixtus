@@ -3,7 +3,7 @@ prev#Blog/Archivio/#Archivio
 next#Blog/2012/#2012
 start#side
 	title#2011
-	include#fragments/years#2011@as@content
+	include#frag/years#2011@as@content
 	sec#
 	title#Notizie
 	include#blog/2011/12#side@as@content

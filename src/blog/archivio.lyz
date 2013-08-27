@@ -12,11 +12,11 @@ start#side
 	sec#
 	title@right#Per mesi
 	stitle#link#Blog/2013/#2013
-	include#fragments/years#2013@as@content
+	include#frag/years#2013@as@content
 	stitle#link#Blog/2012/#2012
-	include#fragments/years#2012@as@content
+	include#frag/years#2012@as@content
 	stitle#link#Blog/2011/#2011
-	include#fragments/years#2011@as@content
+	include#frag/years#2011@as@content
 stop#side
 start#page
 	title#Archivio
