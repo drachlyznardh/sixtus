@@ -1,6 +1,6 @@
 start#page
-tab#i
-	begin#ol@style@list-style-type: upper-roman
+tab#side-i
+	begin@3.5em#roman
 		li#link#Tru/Naluten/Vol.I/I/#Camminavo
 		li#link#Tru/Naluten/Vol.I/II/#Sacomne
 		li#link#Tru/Naluten/Vol.I/III/#Il mio nome
@@ -10,9 +10,9 @@ tab#i
 		li#link#Tru/Naluten/Vol.I/VII/#La meta
 		li#link#Tru/Naluten/Vol.I/VIII/#La Porta
 		li#link#Tru/Naluten/Vol.I/IX/#La fine del mondo
-	end#ol
-tab#ii
-	begin#ol@start@10
+	end#roman
+tab#side-ii
+	begin@4em@10#roman
 		li#link#Tru/Naluten/Vol.II/X/#La trovatella
 		li#link#Tru/Naluten/Vol.II/XI/#Abbandono &amp; recupero
 		li#link#Tru/Naluten/Vol.II/XII/#Conversazione
@@ -23,9 +23,9 @@ tab#ii
 		li#link#Tru/Naluten/Vol.II/XVII/#Battaglia navale
 		li#link#Tru/Naluten/Vol.II/XVIII/#Duello
 		li#link#Tru/Naluten/Vol.II/XIX/#Lezione
-	end#ol
-tab#iii
-	begin#ol@start@20
+	end#roman
+tab#side-iii
+	begin@3em@20#roman
 		li#link#Tru/Naluten/Vol.III/XX/#Il lavoro di Simak
-	end#ol
+	end#roman
 stop#page
