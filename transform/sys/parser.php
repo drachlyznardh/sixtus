@@ -240,7 +240,7 @@
 			else if ($this->all_or_one) 
 				printf("\t\t\$attr['all_or_one'] = true;\n");
 			else 
-				printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
+				printf("\t\tif(!\$attr['part'] && \$attr['single']) \$attr['part'] = '$this->default_tab';\n");
 			printf("\t\tif(!\$attr['current']) \$attr['current'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)
