@@ -8,7 +8,7 @@ tab#intro
 	Ma prima qualche parola per spiegare questa sezione.
 	sec#
 	Non a caso, quell'arguto professore ch'è War arrivò un giorno e mi disse
-	inline#war#Gods, è normale che non ci sia scritto niente, qui?
+	intra@war#Gods, è normale che non ci sia scritto niente, qui?
 	ed io risposì ch'era tutto come previsto.
 	sec#
 	Insomma, non è che una sezione appena nata meriti subito un'introduzione,
@@ -20,7 +20,7 @@ tab#intro
 	Comunque sia, ecco le mie
 	title#Recensioni
 	Perché come ho dimostrato
-	link#Storie/2011/XXXVIII/#qui###,
+	link#Storie/2011/XXXVIII/#qui@,
 	le storie non sono adatte a recensire… Ecco dunque uno spazio dedicato.
 	sec#
 	Dedicato quasi esclusivamente a recensioni negative, ovviamente. Come ci
@@ -40,7 +40,7 @@ tab#intro
 	cosucce. Lamentele, per la maggior parte. Ma con il tempo… o forse no.
 	sec#
 	Insomma, è vero che l'ho cominciata lamentandomi di
-	link#Recensioni/Film/I/#Thor###,
+	link#Recensioni/Film/I/#Thor@,
 	ma poi ho recensito anche altre cose. Ed ho ancora smesso di creare un nuovo
 	voto per ogni recensione.
 		
@@ -51,7 +51,7 @@ tab#intro
 	E comunque, sappiate che d'ora in poi m'impegno ad essere un po' più
 	imparziale, un po' più seriamente critico. Le cose veramente orribili le
 	metterò nella
-	link#Recensioni/Film/Brutti/#sezione apposita###.
+	link#Recensioni/Film/Brutti/#sezione apposita@.
 tab#categorie
 	E siccome le recensioni cominciano ad essere tante, ho diviso
 	l'ambaradan a categorie. Non sono poi molte, ma preferisco tenere le
