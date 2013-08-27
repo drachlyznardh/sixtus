@@ -401,7 +401,7 @@
 		{
 			$result = false;
 			
-			$_ = preg_split('/@/', $args[1]);
+			$_ = preg_split('/@/', polish_line($args[1]));
 			$result = $this->dialog($attr[1], $_[0]);
 			array_shift($_);
 			while (count($_))
@@ -422,7 +422,7 @@
 
 		private function dialog ($author, $line)
 		{
-			return '<span class="'.$author.'" title="'.$author.'">« '.$line.' »</span>';
+			return ' <span class="'.$author.'" title="'.$author.'">« '.$line.' »</span> ';
 		}
 	}
 ?>
