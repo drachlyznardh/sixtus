@@ -5,7 +5,7 @@
 
 <!-- Sys/Fragments/Left-Side [Start] -->
 <div>
-<?php dynamic_include($attr, 'fragments/left-side-fragment.php', 'content', true);?>
+<?php dynamic_include($attr, 'frag/left-side-fragment.php', 'content', true);?>
 <div class="section">
 	<!--div style="width:50%; float:left"><div class="inside"-->
 	<div class="half-left-out"><div class="half-left-in">
