@@ -1,0 +1,16 @@
+title#Tru Naluten – Volume III
+subtitle#Cose strane
+short#Tru Naluten III
+start#page
+tab#intro
+	include#tru/terzo/index#page
+tab#xx
+	include#tru/terzo/xx#page@as@content
+stop#page
+start#side
+	p#tid#Introduzione#intro
+	stitle@right#Tru Naluten – Volume III
+	begin@3.5em@20#roman
+		p#tid#Il lavoro di Simak#xx
+	end#roman
+stop#side
