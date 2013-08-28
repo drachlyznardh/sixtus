@@ -14,13 +14,13 @@ tab#i
 	title#La domenica dell'eleganza
 	E mentre me ne sto nel mio candido lettino arriva mio padre e mi chiama:
 	begin#outside
-		speak#em#Figlio
+		p#speak@em#Figlio
 		
 		Rispondo
-		inline#gods#Padre!
-		speak#em#Figlio!
-		speak#em#Padre!
-		speak#em#Figlio! Sistema tutta camera tua altrimenti… Altrimenti…  Beh, tu fallo
+		speak@gods#Padre!
+		p#speak@em#Figlio!
+		p#speak@gods#Padre!
+		p#speak@em#Figlio! Sistema tutta camera tua altrimenti… Altrimenti…  Beh, tu fallo
 	end#outside
 	E così mi toccò di sistemare tutta la camera: in particolare, si trattò
 	di sbomberare l'intera scrivania che occupa il buco sotto il mio letto
@@ -32,13 +32,13 @@ tab#i
 	Ma non solo! Perché ad una certa ora (erano le 11:00 del mattino) arriva
 	una telefonata, che andò così:
 	begin#outside
-		speak#em#Nipote!
-		speak#gods#Nonna!
-		speak#em#Nipote!
-		speak#gods#Nonna!
-		speak#em#Nipote!
-		speak#gods#Nonna!
-		speak#em#Nipote! Oggi a pranzo ti voglio elegante!
+		p#speak@em#Nipote!
+		p#speak@gods#Nonna!
+		p#speak@em#Nipote!
+		p#speak@gods#Nonna!
+		p#speak@em#Nipote!
+		p#speak@gods#Nonna!
+		p#speak@em#Nipote! Oggi a pranzo ti voglio elegante!
 	end#outside
 	Perché quel giorno era il compleanno della nonna.
 
@@ -88,15 +88,15 @@ tab#ii
 
 	Ecco dunque una scena del tipo:
 	begin#outside
-		speak#em#Figlio!
-		speak#gods#Padre!
-		speak#em#Figlio!
-		speak#gods#Padre!
-		speak#em#Figlio!
-		speak#gods#Padre!
-		speak#em#Figlio! Eccoti delle scatole nelle quali provvederai a mettere i fiori per i parenti
-		speak#gods#Padre! Queste scatole sono piccole!
-		speak#em#Figlio! Quelle grandi eran finite, inventati qualcosa…
+		p#speak@em#Figlio!
+		p#speak@gods#Padre!
+		p#speak@em#Figlio!
+		p#speak@gods#Padre!
+		p#speak@em#Figlio!
+		p#speak@gods#Padre!
+		p#speak@em#Figlio! Eccoti delle scatole nelle quali provvederai a mettere i fiori per i parenti
+		p#speak@gods#Padre! Queste scatole sono piccole!
+		p#speak@em#Figlio! Quelle grandi eran finite, inventati qualcosa…
 	end#outside
 	E fu così che le balle raggiunsero l'Australia passando per la Cina.
 	Come faccio io a ficcare tre fiori, posti quasi simmetricamente attorno
@@ -115,14 +115,14 @@ tab#ii
 	precedente, avrei forse potuto beccare $rossa nei suoi laboratori… ma
 	in quella giunse questa comunicazione:
 	begin#outside
-		speak#em#Figlio!
-		speak#gods#Madre!
-		speak#em#Figlio!
-		speak#gods#Madre!
-		speak#em#Figlio! Oggi alle 16:10 devi prendere i tuoi fratellini all&apos;asilo…
-		speak#gods#Madre! Ma veramente devo trovare il coraggio di consegnare questo mazzo di fiori di carta ad una certa…
-		speak#em#Figlio! Hai qualche problema?
-		speak#gods#Madre! No, andrò…
+		p#speak@em#Figlio!
+		p#speak@gods#Madre!
+		p#speak@em#Figlio!
+		p#speak@gods#Madre!
+		p#speak@em#Figlio! Oggi alle 16:10 devi prendere i tuoi fratellini all&apos;asilo…
+		p#speak@gods#Madre! Ma veramente devo trovare il coraggio di consegnare questo mazzo di fiori di carta ad una certa…
+		p#speak@em#Figlio! Hai qualche problema?
+		p#speak@gods#Madre! No, andrò…
 	end#outside
 	E fu così che, verso le 15:30, me ne andai a caccia. A vuoto, purtroppo.
 	Gli occhi non furono abbastanza buoni da scorgerla, oppure semplicemente
@@ -162,14 +162,14 @@ tab#ii
 
 	Ma non è finita, perché è ancora venerdì! Arriva questa telefonata:
 	begin#outside
-		speak#em#Figlio!
-		speak#gods#Padre!
-		speak#em#Figlio!
-		speak#gods#Padre!
-		speak#em#Figlio! Che fai a gennaio? Puoi lavorare?
-		speak#gods#Padre! Eh? Boh! Si, forse…
-		speak#em#Figlio! Bene, ti faccio chiamara da $moglieDiUnTizio
-		speak#gods#Padre! Se devo…
+		p#speak@em#Figlio!
+		p#speak@gods#Padre!
+		p#speak@em#Figlio!
+		p#speak@gods#Padre!
+		p#speak@em#Figlio! Che fai a gennaio? Puoi lavorare?
+		p#speak@gods#Padre! Eh? Boh! Si, forse…
+		p#speak@em#Figlio! Bene, ti faccio chiamara da $moglieDiUnTizio
+		p#speak@gods#Padre! Se devo…
 	end#outside
 	E fu così che finii al telefono con $moglieDiUnTizio, che in sostanza mi
 	propose un lavoro in una litotipografia, per un paio di settimane,
@@ -202,7 +202,7 @@ tab#iii
 	E così passa il lunedì, senza vederla e senza lavorare al Java, ch'è
 	orribile.
 	title#Il martedì della verità
-	titler#molto tempo dopo
+	title@right#molto tempo dopo
 	Oggi me ne sono salito in facoltà con tre chiari intenti: finire tutto
 	presto per andare a correre, lavorare al Java e consegnare una versione
 	funzionante, consegnare il fiore.
@@ -270,15 +270,14 @@ tab#iii
 	sec#
 	Mi par di ricordare qualche faccia, di qualche passante, a dire
 	begin#outside
-		inline#em#&apos;ndo andrà questo coi fiori nella
-		scatola?
+		speak@em#&apos;ndo andrà questo coi fiori nella scatola?
 	end#outside
 	ma ero così tremendamente teso che ho dimenticato persino di
 	respirare a fondo prima di farmi avanti.
 
 	Ricordo d'aver esordito con uno
 	begin#outside
-		inline#gods#Scusate
+		p#speak@gods#Scusate
 	end#outside
 	ma il resto è abbastanza nebuloso. So d'aver visto un minuscolissimo
 	delizioso e sublime attimo di stupore nei suoi occhi (alla vista del
@@ -295,13 +294,13 @@ tab#iii
 
 	E a quel punto, lei mi fa
 	begin#outside
-		speak#em#E noi che dovremmo fare?
+		p#speak@em#E noi che dovremmo fare?
 	end#outside
 	Dispiace che abbia detto noi, riferendosi immagino a tutte le presenti a
 	tavolo. E quindi, pensando a quello che ho detto nella storia
 	precedente, ho riflettuto un miginino ed ho risposto
 	begin#outside
-		speak#gods#Uh… niente?
+		p#speak@gods#Uh… niente?
 	end#outside
 	Quindi ho ringraziato e me ne sono andato.
 	sec#
@@ -312,9 +311,9 @@ tab#iii
 stop#page
 start#side
 	title#Il lunedì della verità
-	begin#ol
-		li#tid#La domenica dell'eleganza#i
-		li#tid#Il lunedì della verita#ii
-		li#tid#Il martedì della verita#iii
-	end#ol
+	begin@3em#roman
+		p#tid#La domenica dell'eleganza#i
+		p#tid#Il lunedì della verita#ii
+		p#tid#Il martedì della verita#iii
+	end#roman
 stop#side

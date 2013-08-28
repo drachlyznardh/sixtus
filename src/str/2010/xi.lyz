@@ -5,7 +5,7 @@ start#page
 tab#i
 	Oggi mi sono successe parecchie cose, scriverò molto.
 	title#Le molte cose di oggi
-	titler#23 novembre 2010
+	title@right#23 novembre 2010
 	La premessa di tutta la faccenda è che ieri mi è scaduto l'abbonamento
 	dell'autobus. Una premessa ancora precedente narra di come recentemente
 	– indipendentemente dall'orario – l'autobus che mi porta in università
@@ -75,7 +75,7 @@ tab#iii
 	libera. In fondo, i Gundam possono farlo.
 tab#iv
 	title#La tentazione
-	titler#24 novembre 2010
+	title@right#24 novembre 2010
 	La notte tra ieri e oggi, verso mezzanotte e mezza, mi sono ricordato
 	qual era la prima delle tre storie.
 
@@ -99,10 +99,10 @@ tab#iv
 stop#page
 start#side
 	title#Tre storie
-	begin#ol
-		li#tid#Bonus mentre penso…#i
-		li#tid#Una#ii
-		li#tid#L'altra#iii
-		li#tid#Quella dimenticata#iv
-	end#ol
+	begin@3em#roman
+		p#tid#Bonus mentre penso…#i
+		p#tid#Una#ii
+		p#tid#L'altra#iii
+		p#tid#Quella dimenticata#iv
+	end#roman
 stop#side

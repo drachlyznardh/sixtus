@@ -4,21 +4,21 @@ next#Storie/2010/XIV/#L'incontro
 start#page
 tab#i
 	title#L'altra sponda
-	titler#giovedì 25 novembre 2010
-	Oggi è giovedì. Secondo la statistica, le osservazioni precedenti e
-	varie indagini, dovrei incontrarla a pranzo.
+	title@right#giovedì 25 novembre 2010
+	Oggi è giovedì. Secondo la statistica, le osservazioni precedenti e varie
+	indagini, dovrei incontrarla a pranzo.
 
-	Ma il destino è un burlone e non appena entro al bar, questa mattina
-	alle 9:30, lei è lì. Ma non è questo che mi preoccupa, perché
-	l'unica cosa che riesco a fare in sua presenza è far finta di nulla;
-	e credevo che mi venisse bene.
+	Ma il destino è un burlone e non appena entro al bar, questa mattina alle
+	9:30, lei è lì. Ma non è questo che mi preoccupa, perché l'unica cosa che
+	riesco a fare in sua presenza è far finta di nulla; e credevo che mi venisse
+	bene.
 
-	Mentre sono lì in coda con qualche amico a raccontare qualche
-	cazzatina per ridere, smanacciando e scapocciando, noto una cosa.
-	Lei mi da le spalle, ma due sue amiche sedute invece guardano dalla
-	mia parte. Quelle mi vedono, mi riconoscono e le fanno cenno che
-	'lui è quì'. Poi lei si gira per controllare e i nostri sguardi si
-	incontrano per un nonnulla. Uno sguardo di Dirac.
+	Mentre sono lì in coda con qualche amico a raccontare qualche cazzatina per
+	ridere, smanacciando e scapocciando, noto una cosa.  Lei mi da le spalle, ma
+	due sue amiche sedute invece guardano dalla mia parte. Quelle mi vedono, mi
+	riconoscono e le fanno cenno che 'lui è quì'. Poi lei si gira per
+	controllare e i nostri sguardi si incontrano per un nonnulla. Uno sguardo di
+	Dirac.
 
 	Mi sono sentito uno stalker beccato a spiare.
 
@@ -27,44 +27,39 @@ tab#i
 
 	Quindi è vero: tutte le ragazze carine sono biotecnologhe.
 tab#ii
-<h2>
-	Gli ultimi sviluppi
-</h2><h2 class="reverse">
-	venerdì 26 novembre 2010
-</h2><p>
-	Stamattina pensavo di star per raggiungere il minimo locale
-	dell'umore. Così ho deciso di abbandonare tutto il resto e mi sono
-	concentrato sull'unica cosa che valesse la pena fare: sfruttare
-	l'onda.
+	title#Gli ultimi sviluppi
+	title@right#venerdì 26 novembre 2010
+	Stamattina pensavo di star per raggiungere il minimo locale dell'umore. Così
+	ho deciso di abbandonare tutto il resto e mi sono concentrato sull'unica
+	cosa che valesse la pena fare: sfruttare l'onda.
 
 	Ho studiato, ho teorizzato ed ho provato. A lungo.
 
-	I parziali sono risultati abbastanza interessanti, seguendo una
-	magnifica quanto inaspettata curva di miglioramento. Tanto
-	interessanti da attirare alcuni ammiratori; tra di essi, le donne
-	delle pulizie, che mi porteranno della carta buona.
+	I parziali sono risultati abbastanza interessanti, seguendo una magnifica
+	quanto inaspettata curva di miglioramento. Tanto interessanti da attirare
+	alcuni ammiratori; tra di essi, le donne delle pulizie, che mi porteranno
+	della carta buona.
 tab#iii
 	title#I fiori sono a colori
 	title@right#sabato 27 novembre 2010
 	Ho appena realizzato il prototipo finale. &Egrave; anche migliore
 	dell'ultimo modello di ieri.
 
-	&Egrave; magnifico, e posso sinceramente dire di non aver mai fatto
-	qualcosa di meglio. E ho paura.
+	&Egrave; magnifico, e posso sinceramente dire di non aver mai fatto qualcosa
+	di meglio. E ho paura.
 
-	Il fiore ha diciotto petali, due twist al centro, è saldamento
-	ancorato alla sua corona di foglie aguzze. Due esemplari gemelli
-	sono retti dallo stesso stelo, che ha pure due foglioline in basso.
-	L'intero modello è sufficientemente solido da essere mosso senza
-	danni, e può essere facilmente smontato e rimesso insieme.
+	Il fiore ha diciotto petali, due twist al centro, è saldamento ancorato alla
+	sua corona di foglie aguzze. Due esemplari gemelli sono retti dallo stesso
+	stelo, che ha pure due foglioline in basso.  L'intero modello è
+	sufficientemente solido da essere mosso senza danni, e può essere facilmente
+	smontato e rimesso insieme.
 
-	&Egrave; estremamente simile alle versioni precedenti, la struttura
-	è rimasta sostanzialmente immutata eppure è così spaventosamente
-	migliore che non riesco a capacitarmi di quanti progressi io abbia
-	fatto così in fretta.
+	&Egrave; estremamente simile alle versioni precedenti, la struttura è
+	rimasta sostanzialmente immutata eppure è così spaventosamente migliore che
+	non riesco a capacitarmi di quanti progressi io abbia fatto così in fretta.
 
-	Perché c'è una cosa soltanto che può spingere a quel modo. Ed io so
-	soltanto che aspetto ha e dove andrà a lezione lunedì.
+	Perché c'è una cosa soltanto che può spingere a quel modo. Ed io so soltanto
+	che aspetto ha e dove andrà a lezione lunedì.
 
 	Per puro caso ho ancora tre fogli verdi, in casa.
 
@@ -72,9 +67,9 @@ tab#iii
 stop#page
 start#side
 	title#Il modello definitivo
-	begin#ol
-		li#tid#L&apos;altra sponda#i
-		li#tid#Gli ultimi sviluppi#ii
-		li#tid#I fiori sono a colori#iii
-	end#ol
+	begin@3em#roman
+		p#tid#L&apos;altra sponda#i
+		p#tid#Gli ultimi sviluppi#ii
+		p#tid#I fiori sono a colori#iii
+	end#roman
 stop#side

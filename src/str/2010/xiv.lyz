@@ -154,9 +154,9 @@ tab#iii
 stop#page
 start#side
 	title#L'incontro
-	begin#ol
-		li#tid#Definitivamente definitivo, a colori#i
-		li#tid#La scatola#ii
-		li#tid#L&apos;inseguimento#iii
-	end#ol
+	begin@3em#roman
+		p#tid#Definitivamente definitivo, a colori#i
+		p#tid#La scatola#ii
+		p#tid#L&apos;inseguimento#iii
+	end#roman
 stop#side
