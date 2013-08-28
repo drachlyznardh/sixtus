@@ -79,9 +79,9 @@ tab#iii
 stop#page
 start#side
 	title#Modifiche
-	begin#ol
-		li#tid#La visione#i###– 11/01/2011
-		li#tid#Le sezioni#ii###– 23/01/2011
-		li#tid#L&apos;ispirazione#iii###– 16/04/2011
-	end#ol
+	begin@2.5em#roman
+		li#tid#La visione@ – 11/01/2011#i
+		li#tid#Le sezioni@ – 23/01/2011#ii
+		li#tid#L&apos;ispirazione@ – 16/04/2011#iii
+	end#roman
 stop#side

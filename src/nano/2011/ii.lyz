@@ -22,14 +22,12 @@ tab#1
 	Per quanto fossero stati compagni di liceo, mi pareva un po' prematuro che
 	il Dottore lasciasse a lui le chiavi del capannone, che tecnicamente non era
 	nemmeno suo. Ebbi modo di ricredermi più avanti.
-
 	sec#
 	Io e il geologo passammo il resto della serata nel losco tentativo di
 	ricavare uno spazio abitabile in mezzo ai numerosi scaffali che occupavano
 	la parte di capannone più lontana dall'ingresso. Era d'obbligo, infatti,
 	tenere la mia presenza nascosta visto il fatto che, in pratica, eravamo in
 	clandestinità.
-
 tab#2
 	Eravamo in clandestinità perché al tempo il Dottore non aveva alcun permesso
 	ufficiale per utilizzare quel capannone, né quel capannone poteva legalmente
@@ -44,7 +42,6 @@ tab#2
 	genere. La verità, comunque, fu anche più sorprendente di quello.
 
 	Come ebbi modo di scoprire nei mesi seguenti, il Dottore non dormiva.
-
 	sec#
 	Passai i successivi tre mesi a stretto contatto con il Dottore, per redire
 	questo documento. Nel frattempo, il Dottore passava gran parte del suo tempo
@@ -60,7 +57,6 @@ tab#2
 	Ebbi anche modo di accompagnare il Dottore durante le sue uscite di corsa,
 	seguendolo in bicicletta. Durante una di queste uscite, lo convinsi a
 	raccontarmi almeno una parte della sua storia personale.
-	
 	begin#outside
 		Mi confidò di essersi trovato in quella particolare condizione fin
 		dall'adolescenza. Mi raccontò che, ad un certo punto, aveva semplicemente
@@ -110,7 +106,6 @@ tab#2
 		fondo per la conquista, attualmente dedicato per intero alla ricerca sullo
 		scolapasta.
 	end#outside
-	
 	Verso il termine del nostro primo trimestre di convivenza, vidi il Dottore
 	piuttosto stanco. I suoi sforzi per il miglioramento dello scolapasta erano
 	ad un punto morto e non davano alcuna speranza, e allo stesso tempo la tesi
@@ -119,7 +114,6 @@ tab#2
 	Fu in quell'occasione che domandai quale fosse la ragione che lo spingeva a
 	continuare gli studi fino a quel livello; era mia opinione, infatti, che il
 	suo personale interesse per la materia non fosse all'altezza.
-
 	begin#outside
 		La sincerità con cui il Dottore mi diede ragione fu quasi sconcertante.
 		A quanto pare, si era trovato in sintonia con le scienze e non la
@@ -128,7 +122,6 @@ tab#2
 
 		Con il tempo, però, aveva maturato l'idea della conquista. 
 	end#outside
-
 tab#3
 	begin#outside
 		La ricerca del Dottore lo aveva portato, dopo la seconda laurea, ad
@@ -157,25 +150,22 @@ tab#3
 		sulla sua ricerca non ufficiale, non aveva abbandonato quella per
 		l'università. Perché? A questa domanda, il Dottore rispose con una
 		semplicità disarmante.
-
 		br#
-		inline#odio#È indispensabile, per il mio amor proprio, che in futuro – e in particolare al momento della mia ascesa – ogni persona al mondo mi chiami “dottore”
+		p#intra@#odio#È indispensabile, per il mio amor proprio, che in futuro – e in particolare al momento della mia ascesa – ogni persona al mondo mi chiami “dottore”
 		disse, accennando un sorriso
-		inline#odio#In Italia basta meno, ma all'estero, bisogna avere un dottorato
+		intra@odio#In Italia basta meno, ma all'estero, bisogna avere un dottorato
 		
-		speak#odio#È per questo che intendo terminare quel che ho cominciato
+		p#intra@odio#È per questo che intendo terminare quel che ho cominciato
 		br#
 
 		Era la prima fase del piano.
 	end#outside
-
 	Al primo impatto, la presi come una battuta. Ma feci bene a non darlo a
 	vedere, poiché il Dottore era mortalmente serie su questo argomento. Il
 	titolo costituisce una parte importantissima della sua immagine, e senza di
 	esso non avrebbe trovato la forza di compiere molte delle sue azioni che il
 	pensare comune avrebbe potuto chiamare “discutibili”.
-
-	sbr#
+	sec#br
 	Passò qualche tempo. Venne per il Dottore il momento di ottenere il suo
 	agognato dottorato. Con quello, il primo passo era completato.
 
@@ -184,7 +174,6 @@ tab#3
 	dell'università di assumere il dottore al fine di proseguire la ricerca;
 	secondo, il Dottore tornò a casa (cioè al capannone) con l'idea che avrebbe
 	segnato l'inizio della nostra scalata.
-
 tab#4
 	La prima notizia, seppur negativa, ebbe un'importanza fondamentale nella
 	successione di eventi che ci ha portati qui dove siamo. Il dipartimento di
@@ -209,7 +198,6 @@ tab#4
 	L'unico aspetto positivo è che il Dottore si trovò con l'intero giorno (beh,
 	le ore di luce, almeno) libere. Dedicò quindi tutte le sue giornate a
 	lavorare sullo scolapasta.
-
 	sec#
 	Per la verità, lo scolapasta venne smantellato e i materiali recuperati. La
 	pietra, come il Dottore trovò il tempo di spiegarmi, poteva essere
@@ -288,9 +276,9 @@ start#side
 	title#Parte II
 	titler#La Corona dell'Odio
 	begin#ol
-		li#tid#Sessione 1#1## – 230 parole
-		li#tid#Sessione 2#2## – 762 parole
-		li#tid#Sessione 3#3## – 372 parole
-		li#tid#Sessione 4#4## – 788 parole
+		li#tid#Sessione 1@ – 230 parole#1
+		li#tid#Sessione 2@ – 762 parole#2
+		li#tid#Sessione 3@ – 372 parole#3
+		li#tid#Sessione 4@ – 788 parole#4
 	end#ol
 stop#side
