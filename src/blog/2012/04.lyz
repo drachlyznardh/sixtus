@@ -67,7 +67,7 @@ tab#19
 	continentale) e cerco il <code>pippolo</code> identico al mio.
 
 	E via, ecco la corrente fluire nel PC e nella batteria,
-	inline#em#Oh gioia, oh giubilo, oh gaudio
+	speak@em#Oh gioia, oh giubilo, oh gaudio
 	ma immediatamente m'accordo che anche l'attacco del PC dondolicchia oltre i
 	limiti di tollerabilità, e la lucina va e viene. Cazzo.
 
@@ -81,9 +81,8 @@ tab#19
 	in maniera più continua. D'altronde, l'alimentatore è universale e dispone
 	di <code>8</code> connettori diversi: ecco che usandone uno appena più
 	grande il problema è risolto.
-	reverse#
-	E banalmente,
-	inline#gods#È <em>sempre</em> una questione di dimensioni
+	r#E banalmente,
+	speak@gods#È <em>sempre</em> una questione di dimensioni
 tab#12
 	p#link##<em>@12/04/2012@</em>##12
 	/
@@ -133,11 +132,11 @@ tab#11
 	e alla <code>PS3</code> e applicandosi con un certo metodo ha finito
 	<em>Batman: Arkham Asylum</em> in una settimana. E poi se n'è uscito con le
 	parole che ogni fratello maggiore vuol sentire:
-	inline#em#Ivan, quando compri quello nuovo?
+	speak@em#Ivan, quando compri quello nuovo?
 	ed io mi sono sciolto.
 	
 	Vado immediatamente a comprare <em>Arkham City</em> (
-	inline#gods#Grazie, $oldi di Pa$qua!
+	speak@gods#Grazie, $oldi di Pa$qua!
 	) per donarlo al fratello (nella speranza che non faccia la fine di <em>Dead
 	Space 2</em>,  ch'è ancora lì incartato). Ma intanto scopro che quello
 	stesso fratello va in giro per i genitori a domandare l'ultimo
@@ -224,7 +223,7 @@ tab#02
 	ritirare quelle pronte, ne abbiamo subito ordinata una quinta. Ma viste le
 	nostre pancine morigerate, è presto venuto il momento di ordinare la sesta.
 	Per farmi riconoscere, ho esordito la telefonata con un
-	inline#gods#Salve, sono quello delle cinque maxi…
+	speak@gods#Salve, sono quello delle cinque maxi…
 	scatenando l'ilarità generale in sala; ma almeno, la ragazza delle pizze ha
 	capito subito.
 	clear#both
@@ -251,12 +250,12 @@ tab#01
 	una chiaccherata e l'altra, tra un saluto e una presentazione, ecco che
 	salta fuori che sono figlio di mio padre.
 	begin#outside
-		p#inline#em#Ah, davvero? E quanti anni hai?
+		p#speak@em#Ah, davvero? E quanti anni hai?
 		chiede la mamma di qualcuno.
-		p#inline#gods#26 tra qualche settimana
+		p#speak@gods#26 tra qualche settimana
 		rispondo.
 		p#E quella
-		inline#em#Caspita! Te ne avrei dati 18
+		speak@em#Caspita! Te ne avrei dati 18
 	end#outside
 	p#<code>Cool story bro</code>. Ed ecco, mi sento giovane.
 stop#page

@@ -24,57 +24,56 @@ start#page
 	link##alla meno recente##fondo
 	]
 	sec#
-#	titler#Dicembre 2013
+#	title@right#Dicembre 2013
 #	br#
 #	include#blog/2013/12#page@as@content
-#	sbr#
-#	titler#Novembre 2013
+#	sec#br
+#	title@right#Novembre 2013
 #	br#
 #	include#blog/2013/11#page@as@content
-#	sbr#
-#	titler#Ottobre 2013
+#	sec#br
+#	title@right#Ottobre 2013
 #	br#
 #	include#blog/2013/10#page@as@content
-#	sbr#
-#	titler#Settembre 2013
+#	sec#br
+#	title@right#Settembre 2013
 #	br#
 #	include#blog/2013/09#page@as@content
-#	sbr#
-	titler#Agosto 2013
+#	sec#br
+	title@right#Agosto 2013
 	br#
 	include#blog/2013/08#page@as@content
-	sbr#
-	titler#Luglio 2013
+	sec#br
+	title@right#Luglio 2013
 	br#
 	include#blog/2013/07#page@as@content
-	sbr#
-	titler#Giugno 2013
+	sec#br
+	title@right#Giugno 2013
 	br#
 	include#blog/2013/06#page@as@content
-	sbr#
-	titler#Maggio 2013
+	sec#br
+	title@right#Maggio 2013
 	br#
 	include#blog/2013/05#page@as@content
-	sbr#
-	titler#Aprile 2013
+	sec#br
+	title@right#Aprile 2013
 	br#
 	include#blog/2013/04#page@as@content
-	sbr#
-	titler#Marzo 2013
+	sec#br
+	title@right#Marzo 2013
 	br#
 	include#blog/2013/03#page@as@content
-	sbr#
-	titler#Febbraio 2013
+	sec#br
+	title@right#Febbraio 2013
 	br#
 	include#blog/2013/02#page@as@content
-	sbr#
-	titler#Gennaio 2013
+	sec#br
+	title@right#Gennaio 2013
 	br#
 	include#blog/2013/01#page@as@content
 	sec#
-	reverse#
-	Torna [
-	link##alla più recente###
+	r#Torna [
+	link##alla più recente
 	]
 	id#Fondo
 stop#page

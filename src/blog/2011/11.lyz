@@ -25,7 +25,7 @@ tab#28
 	Ci sono molte ragazze, qui in facoltà:
 	link#Storie/2011/LXIX/#eccovi
 	quelle che (ri)conosco. Ma non solo!
-	titler#SPOILER!!!
+	title@right#SPOILER!!!
 	Stanno per arrivare un sacco di altre recensioni: ultimamente mi sono visto
 	<em>Cars 2</em>, <em>Shrek Forever After</em>, gli ultimi due Rambo e la
 	prima stagione di <em>Dollhouse</em>.
@@ -94,7 +94,7 @@ tab#05/00:35
 	end#inside
 	Ma ecco la cosa bella.
 	begin#outside
-		p#intra@em#«Oh, no: l'ho preso alle macchinette@mi spiega lei, e gentilmente@Ne vuoi un pezzo?
+		p#speak@em#«Oh, no: l'ho preso alle macchinette@mi spiega lei, e gentilmente@Ne vuoi un pezzo?
 	end#outside
 	Awwwwww. Non solo non si è spaventata, come succede sempre, ma m'ha pure
 	offerto da mangiare. Quale rara circostanza.
