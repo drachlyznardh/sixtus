@@ -84,7 +84,7 @@ tab#e01
 	Segue la solita yadda. Arriva un soldatino inutile che si fa mezzo ammazzare
 	ad un metro dai protagonisti.
 	begin#outside
-		inline#em#Ah! Giustizia! Onore! Vendetta! Motivazioni profonde!
+		p#speak@em#Ah! Giustizia! Onore! Vendetta! Motivazioni profonde!
 		dice il bimbominchia.
 	end#outside
 	Cosa vuoi che possa fare questo robottone bianco, che non è mai stato
@@ -353,9 +353,9 @@ tab#e07
 	Succede che un cliente misterioso ha commissionato al $Mercante una
 	customizzazione (un cambio di vernice?) al suo Mobile Suit, solo che quello
 	è chiaramente <em>UE</em>. E guarda caso, appena Furitto lo guarda e dice
-	inline#em#Ma è chiaramente cattivo!
+	speak@em#Ma è chiaramente cattivo!
 	quello si accede e tutto va a puttane. Al grido di
-	inline#em#$Mercante, noleggiaci dei robottoni
+	speak@em#$Mercante, noleggiaci dei robottoni
 	Furitto e Woolf escono a combattere. Questo nuovo cattivo, <em>ZEDAS</em> è
 	spaventosamente potente e veloce. Entrambi prendono una carga di mazzate.
 	Appare abbastanza evidente che serve il Gundam.

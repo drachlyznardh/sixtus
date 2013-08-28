@@ -65,12 +65,12 @@ tab#1
 	La città è invasa e sommersa dalla violenza, quasi in guerra; una guerra
 	combattuta da tre gruppi:
 	begin#ul
-		li#la criminalità, semi-organizzata, composta da uno spropositato numero
+		p#la criminalità, semi-organizzata, composta da uno spropositato numero
 		di bande (ma anche singoli) di cui il film ci fa il piacere di
 		presentare immediatamente il cattivo
-		li#la polizia, anch'essa introdotta a suon di agenti morti o gravemente
+		p#la polizia, anch'essa introdotta a suon di agenti morti o gravemente
 		feriti in servizio
-		li#la megacorporazione che grazie ad uno spaventosono giro di soldi e di
+		p#la megacorporazione che grazie ad uno spaventosono giro di soldi e di
 		tramacci collabora con la polizia
 	end#ul
 	La storia, di suo, è semplice.
@@ -193,7 +193,7 @@ tab#1
 	violenza viene repressa con altra violenza, tutti i cattivi finiscono
 	uccisi, basta.
 	title#Robocop
-	titler#Mh… <code>(-_-)"</code>
+	title@right#Mh… <code>(-_-)"</code>
 	Amarognolo; lascia la sensazione che si potesse (o si dovesse) fare di
 	più.
 
@@ -444,25 +444,22 @@ stop#page
 start#side
 	p#tid#Premessa#intro
 	title#Robocop
-	titler#Meh.
+	title@right#Meh.
 	br#
 	stitle#tid#Robocop#1##– 1987
-	reverse#
-		tid#I personaggi#1#1/Personaggi
+	r#tid#I personaggi#1#1/Personaggi
 		/
 		tid#Il punto#1#1/Punto
 		/
 		tid#Verdetto#1#1/Verdetto
 	stitle#tid#Robocop 2#2##– 1990
-	reverse#
-		tid#Personaggi#2#2/Personaggi
+	r#tid#Personaggi#2#2/Personaggi
 		/
 		tid#Il punto#2#2/Punto
 		/
 		tid#Verdetto#2#2/Verdetto
 	stitle#tid#Robocop 3#3##– 1993
-	reverse#
-		tid#Personaggi#3#3/Personaggi
+	r#tid#Personaggi#3#3/Personaggi
 		/
 		tid#Il punto#3#3/Punto
 		/

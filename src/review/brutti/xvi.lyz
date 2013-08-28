@@ -4,7 +4,7 @@ next#Recensioni/Film/XVII/#Rambo
 start#page
 	Cominciò con War, che un bel giorno (era un giovedì, mi pare) disse
 	begin#outside
-		p#intra@war#Ho un filmaccio per stasera
+		p#speak@war#Ho un filmaccio per stasera
 	end#outside
 	e noi si finì per vedere questa caciotta.
 	sec#

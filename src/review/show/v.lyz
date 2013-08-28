@@ -62,7 +62,7 @@ start#page
 	line-through">50 + 50</code> <code>26 + 26</code> episodi, ho scelto
 	qualcosa di più corto: Blassreiter ne dura soltanto <code>24</code>.
 	begin#outside
-		p#intra@gods#Massì, cosa può andare storto?
+		p#speak@gods#Massì, cosa può andare storto?
 	end#outside
 	mi dissi, e misi su il secondo episodio…
 	sec#
@@ -204,5 +204,5 @@ start#page
 stop#page
 start#side
 	title#Blassreiter
-	titler#L'ha fatto Micheal Bay?
+	title@right#L'ha fatto Micheal Bay?
 stop#side

@@ -50,5 +50,5 @@ start#page
 stop#page
 start#side
 	title#I Puffi
-	titler#Si lascia guardare
+	title@right#Si lascia guardare
 stop#side

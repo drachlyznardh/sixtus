@@ -17,11 +17,11 @@ tab#intro
 	differisce non poco dall'ordine di produzione, è un gran casotto;
 	nell'ordine, ho visto:
 	begin#ul
-		li#Macross Zero
-		li#Macross Frontier
-		li#Macross 7
-		li#SDF Macross
-		li#Macross Plus
+		p#Macross Zero
+		p#Macross Frontier
+		p#Macross 7
+		p#SDF Macross
+		p#Macross Plus
 	end#ul
 	Non mi ricordo bene tutto, non ho mai capito tutto…
 tab#sdfmacross
