@@ -130,10 +130,10 @@
 					else if (strcmp($cmd_par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
 					break;
-				case 'alltab':
-				case 'alltabs':
-					$this->force_all_tabs = true;
-					break;
+#				case 'alltab':
+#				case 'alltabs':
+#					$this->force_all_tabs = true;
+#					break;
 				case 'include':
 					$this->static_include($cmd_par, $cmd_attr);
 					break;

@@ -22,7 +22,7 @@
 			switch($cmd)
 			{
 				case 'sec': $this->make_sec($cmd_args); break;
-				case 'sbr': $this->make_sbr(); break;
+#				case 'sbr': $this->make_sbr(); break;
 				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
 		}
