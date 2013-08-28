@@ -112,12 +112,15 @@ tab#macross7
 	Ed io rimango lì. La serie termina, senza chiudere niente di quello che
 	aveva aperto. Tutte le sottotrame sentimentali stanno lì a galleggiare.
 	title#Macross 7
-	titler#Buono
+	title@right#Buono
 	Ma adesso mi posso leggere <em>Macross 7 Trash</em>!!! E poi c'è anche il
 	film.
 stop#page
 start#side
 	p#tid#Per chi non sa cos'è#intro
 	title#Macross
-	p#tid#Macross 7#macross7## – 1994
+	p#tid#Macross 7@ – 1994#macross7
+	br#
+	stitle@right#Si veda anche…
+	p#link#Recensioni/Show/XLIII/#Il resto di Macross
 stop#side

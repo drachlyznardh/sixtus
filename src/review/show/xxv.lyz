@@ -72,13 +72,12 @@ tab#ii
 		persino Jeff e Lester hanno i loro momenti di gloria…
 	end#ul
 	title#Chuck
-	titler#Buono
+	title@right#Buono
 	Perché non è magnifico, ma non m'è affatto dispiaciuto.
 stop#page
 start#side
 	title#Chuck
-	titler#Buono
-	tid#Senza spoiler#i
-
-	tid#Con spoiler#ii
+	title@right#Buono
+	p#tid#Senza spoiler#i
+	p#tid#Con spoiler#ii
 stop#side

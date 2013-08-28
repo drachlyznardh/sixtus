@@ -12,10 +12,10 @@ start#page
 	letto (recentemente) mentre camminavo.
 	br#
 #begin#double
-		include#review/catalogo#libri@as@content
+		include#frag/review#libri@as@content
 #end#double
 stop#page
 start#side
 	stitle#Libri
-	include#review/catalogo#libri@as@content
+	include#frag/review#libri@as@content
 stop#side

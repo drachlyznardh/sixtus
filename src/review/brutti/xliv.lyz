@@ -88,11 +88,11 @@ stop#page
 start#side
 	r#tid#Fuggite! Fuggite!#intro
 	title#Resident Evil
-	begin#ol
+	begin@3em#roman
 		li#Resident Evil – 2002
 		li#Apocalypse – 2004
 		li#Extinction – 2007
 		li#Afterlife – 2010
 		li#tid#Retribution@ – 2012#retribution
-	end#ol
+	end#roman
 stop#side

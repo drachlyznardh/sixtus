@@ -71,9 +71,9 @@ start#page
 
 	Non è poi così brutto. E poi basta.
 	title#Cowboys&amp;Aliens
-	titler#Si lascia guardare
+	title@right#Si lascia guardare
 stop#page
 start#side
 	title#Cowboys&amp;Aliens
-	titler#Si lascia guardare
+	title@right#Si lascia guardare
 stop#side

@@ -9,22 +9,23 @@ tab#intro
 
 	Prendo il libro in mano, una mattina. Il tempo di prendere un caffè, ed ecco
 	il mio
-	intra@gods#WAT.
-	per ben sei volte.
 	begin#outside
-		p#intra@gods#Ma questo libro è in italiano! WAT. Credevo sarebbe stato
-		in inglese;
-		p#intra@gods#Dice “un capolavoro intramontabile”… ma non è uscito l'anno
-		scorso… uhm, no, è del 1985… WAT;
-		p#Leggo la <em>quarta di copertina</em>: la storia riguarda un <em>super–bimbo
-		super–minchia</em> [<code>spaziale</code>] che essendo “genio tra i
-		geni” viene addestrato dal governo per combattere gli alieni, qualora
-		capiti effettivamente che degli alieni arrivino… WAT. Sarà mica “Gundam
-		AGE – Another story”?
-		p#<em>Ringraziamenti</em>: “parti di questo libro sono presenti nel Gioco di
-		Ender”. Un libro nel libro? Un sottoinsieme improprio del libro? WAT.
-		Tutto è dovuto al fatto che l'autore ha pubblicato un racconto (nel
-		1977) e un libro dalla stesso titolo;
+		p#intra@gods#WAT.
+	end#outside
+	per ben sei volte.
+	sec#
+	begin#outside
+		p#intra@gods#Ma questo libro è in italiano! WAT. Credevo sarebbe stato in inglese…
+		p#intra@gods#Dice “un capolavoro intramontabile”… ma non è uscito l'anno scorso… uhm, no, è del 1985… WAT…
+		p#Leggo la <em>quarta di copertina</em>: la storia riguarda un
+		<em>super–bimbo super–minchia</em> [<code>spaziale</code>] che essendo
+		“genio tra i geni” viene addestrato dal governo per combattere gli
+		alieni, qualora capiti effettivamente che degli alieni arrivino… WAT.
+		Sarà mica “Gundam AGE – Another story”?
+		p#<em>Ringraziamenti</em>: “parti di questo libro sono presenti nel
+		Gioco di Ender”. Un libro nel libro? Un sottoinsieme improprio del
+		libro? WAT.  Tutto è dovuto al fatto che l'autore ha pubblicato un
+		racconto (nel 1977) e un libro dalla stesso titolo;
 		p#<em>Dedica</em>: “[…] come i bambini possano essere molto giovani e
 		molto vecchi”. WAT;
 		p#All'inizio del <em>primo capitolo</em>: 1 Terzo. WAT.
@@ -121,7 +122,7 @@ tab#review
 	colossale frainteso: volevano solo essere amici. Per onorare gli avversari
 	che sterminò, si mette a cercare un buco nel quale riseminare la loro
 	civiltà.
-	sbr#
+	sec#br
 	Wow. Considerato che il libro è del '77, è davvero avanti. Non che non abbia
 	visto arrivare molte cose, ma non m'è affatto dispiaciuto. Non ha vinto
 	premi per nulla… bravo War, buon consiglio. Ma non credo c'entri con Gundam.
