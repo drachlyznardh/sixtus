@@ -1,10 +1,10 @@
 title#Maggio 2012#Caaaaaaaaaaaaldo. E umido
 prev#Blog/2012/04/#Aprile@ 2012
 next#Blog/2012/06/#Giugno@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#31
-	p#link##<em>@31/05/2012@</em>##31
+	p#link##<em>@31/05/2012@</em>#31
 	/
 	link#Extra/#<strong>@Extra@</strong>#CONTENUTI#Extra
 	title#Problemi con il LEGO?
@@ -30,7 +30,7 @@ tab#31
 	i baffi)</em> mi sono messo a scrivere le
 	link#Extra/MLCAD/#cose che ho imparato@.
 tab#30
-	p#link##<em>@30/05/2012@</em>##30
+	p#link##<em>@30/05/2012@</em>#30
 	/
 	link#Extra/#<strong>@Recensione@</strong>#CONTENUTI#Recensioni
 	title#A me le guardie!
@@ -39,11 +39,9 @@ tab#30
 	prevista, ma niente male.
 	link#Recensioni/Libri/XXXV/#Leggetene@.
 tab#29
-	<em>
-	link##29/05/2012##29
-	</em> / <strong>
-	link#Extra/#Ministoria#CONTENUTI#Ministorie
-	</strong>
+	p#link##<em>@29/05/2012@</em>#29
+	/
+	link#Extra/#<strong>@Ministoria@</strong>#CONTENUTI#Ministorie
 	title#'Sto cazzo di <code>PHP</code>
 	Il <code>PHP</code> fa cagare. Lo dicono tutti. Ma ieri sono capitato
 	davanti ad un caso così malo che… una cosa impossibile.
@@ -78,12 +76,10 @@ tab#29
 	produzione (ch'è un <code>5.2</code> contro il mio <code>5.3</code>),
 	<strong>esclusivamente</strong> su quella riga di quel file. 'Fanculo.
 tab#24
-	<em>
-	link##24/05/2012##24
-	</em> / <strong>
-	link#Extra/#Una @recensione@,#CONTENUTI#Recensioni
+	p#link##<em>@24/05/2012@</em>#24
+	/ Una
+	link#Extra/#<strong>@recensione@</strong>,#CONTENUTI#Recensioni
 	una fuffa e un annuncio
-	</strong>
 	title#La mattina del 24 maggio
 	“il Piave mormorava…” mentre io mi trascino in facoltà un po' come ogni
 	giorno, ma diversamente da ogni giorno oggi mi sono trascinano nell'ufficio
@@ -100,13 +96,11 @@ tab#24
 	<em>Coccodrillo robot</em>, che costrii con un kit <em>LEGO Mindstorm</em>
 	qualche anno fa… Ne trarrò una storia.
 tab#23
-	<em>
-	link##23/05/2012##23
-	</em> / <strong>
+	p#link##<em>@23/05/2012@</em>#23
+	/
 	link#Extra/#Recensioni#CONTENUTI#Recensioni
 	e
 	link#Extra/#Extra#CONTENUTI#Extra
-	</strong>
 	title#Scrissi a Sgaggio…
 	Ora che – udite udite – il mio progetto di tesi è arrivato ad un buon punto
 	(la scheda funziona come io voglio) è arrivato il momento di tornare da
@@ -121,11 +115,9 @@ tab#23
 	&amp; OOO: Movie War Mega Max</em>, che non è nient'affatto male. Se ti
 	piacciono i film di Kamen Rider.
 tab#21
-	<em>
-	link##21/05/2012##21
-	</em> / <strong>
+	p#link##<em>@21/05/2012@</em>#21
+	/
 	link#Extra/#Recensioni#CONTENUTI#Recensioni
-	</strong>
 	title#Un mazzo di recensioni
 	Sto vedendo un sacco di cose, in questo periodo. E ne devo scrivere. Così
 	posso anche verificare come funziona 'sto <em>Google Analytics</em> al quale
@@ -141,7 +133,7 @@ tab#21
 	link#Recensioni/Show/XXXIV/#After War @Gundam X@.#X
 	E c'aggiungo anche qualcosa su
 	link#Recensioni/Giochi/XXXIII/#Dark Souls@.#DARK
-	br#
+
 	E già che ci sono, sapete che c'è una <em>nuova serie</em> di Lupin?
 	Tecnicamente, il titolo sarebbe “<em>La donna chiamata Mine Fujiko</em>” e
 	si rifà molto al manga originale di <em>Monkey Punch</em> ed è, quindi… come
@@ -149,31 +141,26 @@ tab#21
 	La trama non ruota attorno a Lupin e ai suoi furti assurdi, ma attorno a
 	Fujiko che non ha pace e a tutti gli altri (che non hanno Fujiko). Cercatene
 	<a href="http://commiesubs.com/?s=lupin">qui</a>.
-	br#
+
 	E infine, sappiate che i miei amici <em>Over-Time</em> m'hanno appena
 	passato <em>Movie War Mega Max</em>. Sentai / Rider per un paio d'ore! Yay!
 stop#page
 start#side
-	stitle#link#Blog/2012/05/#Maggio### 2012
-
-	<em>30/05</em> – [<code>Recensione</code>]
-	link#Recensioni/Libri/XXXV/#A me le guardie!
-
-	<em>29/05</em> – [<code>Ministoria</code>]
-	link#Blog/2012/05/#'Sto cazzo di <code>PHP</code>##29
-
-	<em>24/05</em> – [<code>Recensione</code>]
-	link#Recensioni/Show/XIII/#Movie War Mega Max#MEGAMAX
-
-	<em>23/05</em> – [<code>Extra</code>]
-	link#Extra/Diario/#Il @diario@ del capitano
-	e [<code>Recensione</code>]
-	link#Recensioni/Show/XIV/#Il @30° episodio@ di Gundam AGE#e30
-
-	<em>21/05</em> – [<code>Recensioni</code>]
-	link#Recensioni/Giochi/II/#Assassins's Creed @Revelations@,#REVELATIONS#
-	link#Recensioni/Libri/XXXI/#La Compagnia dei Celestini@,
-	link#Recensioni/Film/XXXII/#Vendicatori@,
-	link#Recensioni/Show/XXXIV/#After War @Gundam X@ e#X
-	link#Recensioni/Giochi/XXXIII/#Dark Souls#DARK
+	stitle#link#Blog/2012/05/#Maggio@ 2012
+	p#<em>30/05</em> – [<code>Recensione</code>]
+		link#Recensioni/Libri/XXXV/#A me le guardie!
+	p#<em>29/05</em> – [<code>Ministoria</code>]
+		link#Blog/2012/05/#'Sto cazzo di <code>PHP</code>#29
+	p#<em>24/05</em> – [<code>Recensione</code>]
+		link#Recensioni/Show/XIII/#Movie War Mega Max#MEGAMAX
+	p#<em>23/05</em> – [<code>Extra</code>]
+		link#Extra/Diario/#Il @diario@ del capitano
+		e [<code>Recensione</code>]
+		link#Recensioni/Show/XIV/#Il @30° episodio@ di Gundam AGE#e30
+	p#<em>21/05</em> – [<code>Recensioni</code>]
+		link#Recensioni/Giochi/II/#Assassins's Creed @Revelations@,#REVELATIONS#
+		link#Recensioni/Libri/XXXI/#La Compagnia dei Celestini@,
+		link#Recensioni/Film/XXXII/#Vendicatori@,
+		link#Recensioni/Show/XXXIV/#After War @Gundam X@ e#X
+		link#Recensioni/Giochi/XXXIII/#Dark Souls#DARK
 stop#side

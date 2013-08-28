@@ -1,10 +1,10 @@
 title#Settembre 2012#Piove, non piove, boh… sembra marzo
 prev#Blog/2012/08/#Agosto@ 2012
 next#Blog/2012/10/#Ottobre@ 2012
-tabs#alwaysall
+tabs#all_or_one
 start#page
 tab#30
-	p#link##<em>@30/09/2012@</em>##30
+	p#link##<em>@30/09/2012@</em>#30
 	/
 	link#Extra/#<strong>@Storia@</strong>#CONTENUTI#Storie
 	title#Si riempì il disco
@@ -12,7 +12,7 @@ tab#30
 	link#Storie/2012/LXXXIX/#spazio disco
 	s'era esaurito.
 tab#24
-	p#link##<em>@24/09/2012@</em>##24
+	p#link##<em>@24/09/2012@</em>#24
 	/
 	link#Extra/#<strong>@Recensione@</strong>#CONTENTUTI#Recensioni
 	title#La scuola prosegue
@@ -29,7 +29,7 @@ tab#24
 	link#Recensioni/Show/XLVII/#Accel World@,
 	fatto che non mi dispiace poi tanto.
 tab#23
-	p#link##<em>@23/09/2012@</em>##23
+	p#link##<em>@23/09/2012@</em>#23
 	/
 	link#Extra/#<strong>@Storia@</strong>#CONTENUTI#Storie
 	e
@@ -61,7 +61,7 @@ tab#23
 	E la seconda parte di
 	link#Storie/2012/LXXXVIII/#SPAM@.#viagra
 tab#19
-	p#link##<em>@19/09/2012@</em>##19
+	p#link##<em>@19/09/2012@</em>#19
 	title#Talk like a pirate day!
 	Anche se la giornata non è andata esattamente come speravo… stamattina
 	<em>Abeni</em> m'ha raccontato altre <code>cose piuttosto-ciocco-fighe
@@ -83,7 +83,7 @@ tab#19
 	invece dello
 	link#Storie/2012/LXXXVIII#SPAM@.
 tab#18
-	p#link##<em>@18/09/2012@</em>##18
+	p#link##<em>@18/09/2012@</em>#18
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Il secondo giorno di scuola
@@ -103,7 +103,7 @@ tab#18
 	r#Ed ecco, tra una cosa e l'altra mi sono deciso a finire
 	link#Recensioni/Show/XLV/#Princess Tutu@.
 tab#17
-	p#link##<em>@17/09/2012@</em>##17
+	p#link##<em>@17/09/2012@</em>#17
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Il primo giorno di scuola
@@ -135,7 +135,7 @@ tab#17
 	corso) non c'è perché comincia la settimana
 	prossima; e anche il corso del <em>Buddy</em>.
 tab#14
-	p#link##<em>@14/09/2012@</em>##14
+	p#link##<em>@14/09/2012@</em>#14
 	/
 	link#Extra/#<strong>@Recensioni@</strong>#CONTENUTI#Recensioni
 	title#Invasion &amp; (quasi tutto) Macross
@@ -150,7 +150,7 @@ tab#14
 	piccolo aggiornamento sullo stato della
 	link#Storie/2012/LXXXVII/#bicicletta@, se voleste.#CONSEGNA
 tab#09
-	p#link##<em>@09/09/2012@</em>##09
+	p#link##<em>@09/09/2012@</em>#09
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#Il pranzone
@@ -163,7 +163,7 @@ tab#09
 	troppo e alla fine smette; ma nell'insieme non è stato affatto male. Forse
 	un giorno scriverò una recensione intera… forse.
 tab#07
-	p#link##<em>@07/09/2012@</em>##07
+	p#link##<em>@07/09/2012@</em>#07
 	/
 	link#Extra/#<strong>@Storie@</strong>#CONTENUTI#Storie
 	title#Di come persi le balle in guerra
@@ -176,7 +176,7 @@ tab#07
 	r#Inoltre, sconcertanti verità rivelate. Nel
 	link#Extra/LabOfDoom/#laboratorio@.#l25
 tab#04
-	p#link##<em>@04/09/2012@</em>##04
+	p#link##<em>@04/09/2012@</em>#04
 	/
 	link#Extra/#<strong>@Extra@</strong>#CONTENUTI#Extra
 	title#Le vane speranze di BOB
@@ -192,7 +192,7 @@ tab#04
 	Nonostante <em>Bob</em>, nonostante le sfighe, nonostante tutto, mi sto
 	scaricando <em>Piranha 3DD</em>. E questo è magnifico.
 tab#03
-	p#link##<em>@03/09/2012@</em>##03
+	p#link##<em>@03/09/2012@</em>#03
 	/
 	link#Extra/#<strong>@MiniStorie@</strong>#CONTENUTI#Mini
 	title#Cose di Settembre

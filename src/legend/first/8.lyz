@@ -7,13 +7,13 @@ end#mini
 stitle#Il piano di battaglia
 begin#inside
 begin#ul
-	li#Di notte <em>Kyu</em> si infiltra con <em>Mark</em> e <em>John</em>, per
+	p#Di notte <em>Kyu</em> si infiltra con <em>Mark</em> e <em>John</em>, per
 	convincere la mugliera;
-	li#La mattina, durante il saluto al sole, la Verità verrà a galla, sperando
+	p#La mattina, durante il saluto al sole, la Verità verrà a galla, sperando
 	che tutto funzioni bene;
-	li#Sfida di <em>Mess</em> al <em>Fausto Ninja</em>;
-	li#????
-	li#PROFIT
+	p#Sfida di <em>Mess</em> al <em>Fausto Ninja</em>;
+	p#????
+	p#PROFIT
 end#ul
 end#inside
 br#
@@ -59,7 +59,7 @@ chiamano <em>Muyle</em>, <em>Phuyle</em> e <em>Kuyle</em>.
 br#
 <em>Camouflage</em> inizia il discorso: «Il fumo è il fumo della libertà»
 
-reverse#«Ma chi sono questi?» chiedono.
+r#«Ma chi sono questi?» chiedono.
 
 «Grazie di aver chiesto» risponde <em>Mess</em> «Gente del popolo ninja
 prestatemi un orecchio. Siamo giunti da un lontano posto, molto lontano difatto,
@@ -68,26 +68,26 @@ cialtroni lassu che vi stanno prendendo per il culo da un sacco di tempo. Il
 fumo laggiù è un chiaro segno della… del fatto che noi siamo i tizi che vi
 salveranno, visto che quello e chiaramente il fumo della salvezza»
 
-reverse#«il fumo della salvezza»
+r#«il fumo della salvezza»
 
 «quello che voleva dirvi camouflage e che state lavorando per la distruzione del
 mondo»
 
-reverse#«prendete i vostri amici e famiglia, immaginateli morti, poi ancora piu
+r#«prendete i vostri amici e famiglia, immaginateli morti, poi ancora piu
 morti, ecco. AScoltate lei che una volta e stata coinvolta in una apocalisse»
 
 «Vero. Ehhhh. Tutti gli altri draghi sono diventati stronzi. Una volta eravamo
 tutti cosi, poi sono diventati stronzi. Stronzi e morti»
 
-reverse#«Volete diventare stronzi anche voi?»
+r#«Volete diventare stronzi anche voi?»
 
 «NO, non voglio diventare stronzo»
 
-reverse#«Quindi ribellatevi!»
+r#«Quindi ribellatevi!»
 
 «E per questo che siamo venuti a sfidare i capi di questo castello»
 
-reverse#«Se voi lavorate per loro, morite. Se lavorate contro di noi, morite.
+r#«Se voi lavorate per loro, morite. Se lavorate contro di noi, morite.
 Quindi, combattete per noi e vivete, neh!»
 br#
 stitle#Il maestro
@@ -112,10 +112,10 @@ dati di fatto.
 <em>GB</em> chiede come condizioni:
 begin#outside
 begin#ul
-	li#Libertà di tutti i Ninja;
-	li#Smettere di lavorare per l'Apocalisse;
-	li#Informazioni sui fautori dell'Apocalisse;
-	li#Un'altare che simboleggi il nostro culto, noi siamo gli
+	p#Libertà di tutti i Ninja;
+	p#Smettere di lavorare per l'Apocalisse;
+	p#Informazioni sui fautori dell'Apocalisse;
+	p#Un'altare che simboleggi il nostro culto, noi siamo gli
 	<strong>Apocalypse-Busters</strong>
 end#ul
 end#outside

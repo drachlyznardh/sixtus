@@ -14,7 +14,7 @@ start#page
 	apprezzabili. Altre invece sono solo brutte.
 	br#
 #begin#double
-	include#review/catalogo#brutti@as@content
+	include#frag/review#brutti@as@content
 #end#double
 stop#page
 start#side

@@ -23,10 +23,10 @@ start#page
 	yadda, i fagioli magici, il castello del gigante, l'oca dalle uova d'oro,
 	yadda, tradimenti, fuga… 
 	title#Il Gatto con gli Stivali
-	titler#Buono
+	title@right#Buono
 	Non eccezionale, ma buono.
 stop#page
 start#side
 	title#Il Gatto con gli Stivali
-	titler#Buono
+	title@right#Buono
 stop#side

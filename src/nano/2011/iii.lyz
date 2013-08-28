@@ -8,15 +8,13 @@ tab#i
 		consultare direttamente il Dottore, chiamai anche Grigo, che rispose
 		prontamente e si presentò…
 	end#inside
-	inline#odio#Broderick! Al mio cospetto!
+	p#intra@odio#Broderick! Al mio cospetto!
 	urlò il Dottor Odio, dalla sua scrivania.
-
-	inline#aug#Ma, Dottore, con tutto il rispetto… sto lavorando alla sua biografia… sto parlando della fondazione dell'azienda…
+	p#intra@aug#Ma, Dottore, con tutto il rispetto… sto lavorando alla sua biografia… sto parlando della fondazione dell'azienda…
 	rispose il dottor Münch, lievemente irritato.
-
-	inline#odio#Poco importa, Broderick! Cose ben più importanti! Cose! Cose!  Pianta lì, che non frega un cazzo a nessuno di quando eravamo giovani e squattrinati!
+	p#intra@odio#Poco importa, Broderick! Cose ben più importanti! Cose! Cose!  Pianta lì, che non frega un cazzo a nessuno di quando eravamo giovani e squattrinati!
 	spiegò il Dottore, urlando
-	inline#odio#La vita va vissuta! Va vissuta al momento! Adesso, per esempio!
+	intra@odio#La vita va vissuta! Va vissuta al momento! Adesso, per esempio!
 
 	Mentre il dottor Münch si alzava dalla sua scrivania, forzatamente, vide di
 	lontano il Dottore, al centro del suo enorme ufficio vetrato. Girando sulle
@@ -27,55 +25,55 @@ tab#i
 	gelido vuoto della superficie lunare. Da lassù, in quel momento, la Terra
 	stava sorgendo.
 
-	inline#aug#Eccomi, Dottore
+	p#intra@aug#Eccomi, Dottore
 	annunciò rispettosamente lo psicologo
-	inline#aug#Ma ancora una volta la devo pregare di non usare il mio secondo nome. È una cosa così fuori moda… la prego, mi chiami Augustus
+	intra@aug#Ma ancora una volta la devo pregare di non usare il mio secondo nome. È una cosa così fuori moda… la prego, mi chiami Augustus
 
-	inline#odio#Ancora con quel discorso, collega? Giammai!
+	p#intra@odio#Ancora con quel discorso, collega? Giammai!
 	sbraitò il Dottore, allargando le braccia
-	inline#odio#Ben lo sai, siamo d'accordo: ti chiamerò “Augustus” soltanto quando comincerai a chiamarmi “Herr Doktor”
+	intra@odio#Ben lo sai, siamo d'accordo: ti chiamerò “Augustus” soltanto quando comincerai a chiamarmi “Herr Doktor”
 	
-	speak#odio#E sappiamo bene entrambi che non succederà presto
+	p#intra@odio#E sappiamo bene entrambi che non succederà presto
 
 	Augustus fissò il Dottore da sopra gli occhiali, con un tono di rimprovero
 	negli occhi: il Dottore s'era sempre divertito a ricordare le origini
 	tedesche di Münch, ma lui non ci faceva caso.
 
-	speak#aug#Desiderava qualcosa, Dottore?
-	speak#odio#Ma certo, Broderick! È il momento, il grande momento! Ho deciso di farlo stasera
-	speak#aug#Ma… Dottore, voglio dire… una cosa del genere, è sicuro? Non… non abbiamo ancora terminato tutti i preparativi…
-	speak#odio#Rischi, Münch! Rischi, ardimento, audacia! Pensi che quelli stiano lì ad aspettare che noi ci si prenda tutto? C'è altra gente – o almeno credo – che potrebbe montarsi la testa, se non ci mettiamo all'opera!
+	p#intra@aug#Desiderava qualcosa, Dottore?
+	p#intra@odio#Ma certo, Broderick! È il momento, il grande momento! Ho deciso di farlo stasera
+	p#intra@aug#Ma… Dottore, voglio dire… una cosa del genere, è sicuro? Non… non abbiamo ancora terminato tutti i preparativi…
+	p#intra@odio#Rischi, Münch! Rischi, ardimento, audacia! Pensi che quelli stiano lì ad aspettare che noi ci si prenda tutto? C'è altra gente – o almeno credo – che potrebbe montarsi la testa, se non ci mettiamo all'opera!
 	
-	inline#odio#Subito! Stasera! Sarà fatto stasera!
+	p#intra@odio#Subito! Stasera! Sarà fatto stasera!
 	affermò il Dottore, con decisione. Poi, rivolgendosi alla sua sinistra,
 	chiamò
-	inline#odio#Igor! Abbassa la leva!
+	intra@odio#Igor! Abbassa la leva!
 
 	Subito, una voce stridula rispose da lontano
-	inline#igor#Subito, padrone! Sarà fatto
+	intra@igor#Subito, padrone! Sarà fatto
 	
 	Una figura minuta, alta non più di un metro, cominciò ad armeggiare su una
 	larga postazione che ospitava un mixer con molte uscite.
 
-	inline#igor#Padrone! Con chi desiderate parlare, padrone?
+	p#intra@igor#Padrone! Con chi desiderate parlare, padrone?
 	abbaiò la creatura, coperta di un cencio marrone.
 	
-	inline#odio#Con il consiglio delle Nazioni Unite, ovviamente. Voglio un canale aperto… oh, aspetta!
+	p#intra@odio#Con il consiglio delle Nazioni Unite, ovviamente. Voglio un canale aperto… oh, aspetta!
 	s'arrestò il Dottore, sbracciandosi nella direzione di Münch
-	inline#odio#Broderick, presto! Corri! Voglio che ci sia anche tu! Qui, alla mia destra, in piedi. Come il pappagallo da pirata
+	intra@odio#Broderick, presto! Corri! Voglio che ci sia anche tu! Qui, alla mia destra, in piedi. Come il pappagallo da pirata
 
 	Un po' stupito, un po' gonfio d'orgoglio, Augustus corse a mettersi un passo
 	dietro la poltrona del Dottore, alla sua destra.
 
-	inline#aug#Allora, lo facciamo davvero?
+	p#intra@aug#Allora, lo facciamo davvero?
 	chiese lo psicologo, che ancora non credeva davvero che il Dottore avrebbe
 	fatto quel che stava per fare
 
-	inline#odio#Si, oggi andiamo pubblici.
+	p#intra@odio#Si, oggi andiamo pubblici.
 	lo rassicurò il Dottore, accomodandosi sulla poltrona e rivolgendola allo
 	schermo
-	inline#odio#Tutti sapranno chi siamo. Igor, siamo pronti?
-	speak#igor#Certo, padrone. Subito, padrone
+	p#intra@odio#Tutti sapranno chi siamo. Igor, siamo pronti?
+	p#intra@igor#Certo, padrone. Subito, padrone
 
 	Un secondo dopo, il gigantesco schermo mandò un «btz» e s'accese. L'immagine
 	mostrò un'enorme sala circolare, con centinaia di delegati impegnati in una
@@ -83,30 +81,31 @@ tab#i
 	l'immagine del Dottore in poltrona, con Münch in piedi al suo fianco.
 
 	br#
-	inline#odio#forte#Mwa ha ha ha ha ha ha ha ha ha ha ha ha
+	p#intra@odio#<strong>Mwa ha ha ha ha ha ha ha ha ha ha ha ha</strong>
 	eccheggiò lentamente la risata del Dottore. Molti dei delegati al Palazzo di
 	Vetro cominciarono a borbottare e a guardarsi tra loro.
 
-	inline#odio#Buonasera, miei signori
+	p#intra@odio#Buonasera, miei signori
 	salutò il Dottore, con cortesia
-	inline#odio#lasciate che mi presenti, sono il Dottor Odio, e questo
-	inline#em#è il suo psicologo, il dottor… eh, Münch. Sappiamo che è lei, dottore
+	intra@odio#lasciate che mi presenti, sono il Dottor Odio, e questo
+	p#intra@em#è il suo psicologo, il dottor… eh, Münch. Sappiamo che è lei, dottore
 	lo interrupe una voce asciutta, con tono saccente
-	inline#em#Sappiamo un sacco di cose di lei, in verità. Il nostro comitato di sorveglianza per i semiumani ha fatto numerose
-	inline#odio#<code>Semi</code>? Sembro <code>semi</code>umano, dite? Come
-	osate?
+	intra@em#Sappiamo un sacco di cose di lei, in verità. Il nostro comitato di sorveglianza per i semiumani ha fatto numerose
+	p#intra@odio#<code>Semi</code>? Sembro <code>semi</code>umano, dite? Come osate?
 
 	Il Dottore fu estremamente irritato di quell'accoglienza, dell'interruzione,
 	ma soprattutto del mancato finale della sua presentazione. Ma la voce
-	saccente, appertente ad un ometto basso e calvo che sedeva nella prima fila,
-	al centro della bancata, direttamente davanti al Dottore, riprese a parlare.
+	saccente, che apperteneva ad un ometto basso e calvo che sedeva nella prima
+	fila, al centro della bancata, direttamente davanti al Dottore, riprese a
+	parlare.
 
-	speak#em#Si, certo. Naturalmente. Ci sono molti individui come lei, dottore.  Molti altri pazzi. Vediamo, cosa mai potrebbe volere, lei? Il mondo? E cosa minaccia di fare? Di polverizzare una città? Di mandarci la tempesta? Di provocare terremoti? Senza offesa, dottore, ma qui c'è gente che lavora
-	inline#odio#Ma io, veramente…
+	p#intra@em#Si, certo. Naturalmente. Ci sono molti individui come lei, dottore.  Molti altri pazzi. Vediamo, cosa mai potrebbe volere, lei? Il mondo? E cosa minaccia di fare? Di polverizzare una città? Di mandarci la tempesta? Di provocare terremoti? Senza offesa, dottore, ma qui c'è gente che lavora
+	p#intra@odio#Ma io, veramente…
 	balbettò il Dottore, colto alla sprovvista
-	inline#odio#Si, si, certamente
+	intra@odio#Si, si, certamente
 	riprese, riacquistando fiducia
-	inline#odio#Sono in possesso di un maser spaziale, montato su uno dei satelliti. Con esso posso bollire un'intera città. Una qualunque capitale
+	intra@odio#Sono in possesso di un maser spaziale, montato su uno dei satelliti. Con esso posso bollire un'intera città. Una qualunque capitale
+	
 	Il Dottore era tornato in possesso di tutta la sua verve, e stava mimando il
 	satellite, il suo avvicinamento alla capitale, l'agonia degli abitanti
 	colpiti dal maser e la loro tragica e teatrale morte. Dall'altra parte della
@@ -114,59 +113,57 @@ tab#i
 
 	La vocetta insistente dell'uomo calvo riprese ancora una volta
 
-	inline#em#Si, si, certo… sappiamo del suo “terribile coso spaziale”, dottore.  Cosa crede? Abbiamo un intera divisione per rispondere a queste stronzate, lei è il terzo megalomane che chiama, solo questa settimana, e non siamo certo impreparati di fronte a
-	inline#magnetron#Magnetron! Tremate, gentili delegati! Poiché io, Magnetron, ho preparato un maser satellitare, con il quale minaccio ogni capitale del mondo
-	inline#odio#Ohi! Chi cazzo è questo? Trovati la tua organizzazione mondiale da minacciare, qua c'ero già io!
-
+	p#intra@em#Si, si, certo… sappiamo del suo “terribile coso spaziale”, dottore.  Cosa crede? Abbiamo un intera divisione per rispondere a queste stronzate, lei è il terzo megalomane che chiama, solo questa settimana, e non siamo certo impreparati di fronte a
+	p#intra@magnetron#Magnetron! Tremate, gentili delegati! Poiché io, Magnetron, ho preparato un maser satellitare, con il quale minaccio ogni capitale del mondo
+	p#intra@odio#Ohi! Chi cazzo è questo? Trovati la tua organizzazione mondiale da minacciare, qua c'ero già io!
 	br#
 	Il Dottore si rivolse con sguardo malefico ad Igor, che si raggomitolò nei
 	suoi stracci, piagnucolando
-	inline#igor#Pietà, padrone! La colpa non è di Igor!
+	p#intra@igor#Pietà, padrone! La colpa non è di Igor!
 	e allontanandosi con passo incerto.
-	speak#odio#Torna alla tua postazione, Igor, brutto scemo! Non voglio punirti! Voglio vedere chi è che parla! Trovami quello che ha interferito con la mia interferenza!
+	p#intra@odio#Torna alla tua postazione, Igor, brutto scemo! Non voglio punirti! Voglio vedere chi è che parla! Trovami quello che ha interferito con la mia interferenza!
+	
 	Sollevato per aver evitato le sfrustate, Igor tornò balzellando al suo posto
-	inline#igor#Certo, padrone. Subito, padrone. Igor troverà la sorgente… ecco!
-
+	intra@igor#Certo, padrone. Subito, padrone. Igor troverà la sorgente… ecco!
 	br#
 	Comparve, sulla metà sinistra dello schermo, un ufficio dannatamente simile
 	a quello del Dottore. Soltanto, quello era immerso nell'acqua.
-	speak#magnetron#Oh, Matusa! Che fai? Mi pesti le scarpe, cioè? È la mia scesa in campo ufficiale, no? Ti levi?
-	inline#odio#Stradannato!
+	p#intra@magnetron#Oh, Matusa! Che fai? Mi pesti le scarpe, cioè? È la mia scesa in campo ufficiale, no? Ti levi?
+	p#intra@odio#Stradannato!
 	gli sputò addosso il Dottore, vorticante d'ira
-	inline#odio#C'ero prima io!
-	speak#magnetron#Oh, scialla! Ma quant'anni c'hai? Fatti da parte, zio. Largo ai giovani! C'ho un pianeta da conquistare, io. Bischelle da mettere in punizione, sai com'è, no? O forse alla tua età non ti tira più, eh, nonno?
-	speak#odio#Scialla? Zio!? Nonno?!?
-	speak#magnetron#Vabbeh, coso, non mi scaramellare. Cioè, io sono qui a demolire nazioni, rovesciare l'ordine mondiali, mica pugnette… ma adesso devo andare, che c'ho la lampada che poi sennò sembro uno di quei vampiri sciattoni… ci becchiamo…
+	intra@odio#C'ero prima io!
+	p#intra@magnetron#Oh, scialla! Ma quant'anni c'hai? Fatti da parte, zio. Largo ai giovani! C'ho un pianeta da conquistare, io. Bischelle da mettere in punizione, sai com'è, no? O forse alla tua età non ti tira più, eh, nonno?
+	p#intra@odio#Scialla? Zio!? Nonno?!?
+	p#intra@magnetron#Vabbeh, coso, non mi scaramellare. Cioè, io sono qui a demolire nazioni, rovesciare l'ordine mondiali, mica pugnette… ma adesso devo andare, che c'ho la lampada che poi sennò sembro uno di quei vampiri sciattoni… ci becchiamo…
 
 	Magnetron chiuse la comunicazione. Il Dottore era furente, ma anche
 	piuttosto confuso. Senza attendere un momento migliore, l'uomo calvo
 	mise il becco per l'ultima volta.
 
-	speak#em#Desolato di interrompere le sue riflessioni sugli insulti che riceve, dottore, ma qui abbiamo importanti e pressanti materie di cui discutere. Una nostra squadra di pronto intervento è già all'opera e sta provvedendo a smantellare il suo satellite maser
-	speak#em#In effetti, se lei non ci avesse mostrato le immagini sarebbe stato molto più complesso portare a termine l'operazione… grazie quindi. Ci risentiremo da qualche mese, immagino, al momento della sua condanna
-	speak#em#Fino ad allora, arrivederci.
+	p#intra@em#Desolato di interrompere le sue riflessioni sugli insulti che riceve, dottore, ma qui abbiamo importanti e pressanti materie di cui discutere. Una nostra squadra di pronto intervento è già all'opera e sta provvedendo a smantellare il suo satellite maser
+	p#intra@em#In effetti, se lei non ci avesse mostrato le immagini sarebbe stato molto più complesso portare a termine l'operazione… grazie quindi. Ci risentiremo da qualche mese, immagino, al momento della sua condanna
+	p#intra@em#Fino ad allora, arrivederci.
 
 	Anche l'uomo calvo chiuse la comunicazione, lasciando il Dottore al buio e
 	senza parole.
-
 	br#
-	inline#aug#Non è esattamente come me lo sarei aspettato, sa
+	p#intra@aug#Non è esattamente come me lo sarei aspettato, sa
 	disse Münch, dopo un lungo silenzio.
 
-	inline#odio#Tz… tz… tz…
+	p#intra@odio#Tz… tz… tz…
 	lo zittì il Dottore, alzandosi di scatto e mettendosi a passeggiare
 	nervosamente per l'ufficio. Immerso nei suoi pensieri, vagò per un paio di
 	minuti, richiamando Münch al silenzio ogni volta che questi tentava di
 	parlare. Infine, il Dottore si illuminò
-	inline#odio#Ah! Ecco! Ecco!
+	p#intra@odio#Ah! Ecco! Ecco!
 
 	Si avvicinò alla scrivania, sbattè entrambe le mani sul piano e fissò Münch
 	negli occhi
-	inline#odio#Broderick! Non vedi? Questo è davvero opera del Destino! Igor! Anche tu, non vedi?
-	speak#igor#Che cosa, padrone?
-	speak#aug#Si, Dottore, cosa? Non capisco
-	speak#odio#Un avversario! Un avversario, miei cari! Qualcuno da distruggere, un'opportunità per affermare il nostro potere. Ci basterà uccidere questo stornzetto, e la gente capirà quanto siamo da temere!
-	speak#odio#Che culo, eh? Non mi toccherà neanche demolire una città, risparieremo un sacco di soldi
+	p#intra@odio#Broderick! Non vedi? Questo è davvero opera del Destino! Igor! Anche tu, non vedi?
+	p#intra@igor#Che cosa, padrone?
+	p#intra@aug#Si, Dottore, cosa? Non capisco
+	p#intra@odio#Un avversario! Un avversario, miei cari! Qualcuno da distruggere, un'opportunità per affermare il nostro potere. Ci basterà uccidere questo stornzetto, e la gente capirà quanto siamo da temere!
+	p#intra@odio#Che culo, eh? Non mi toccherà neanche demolire una città, risparieremo un sacco di soldi
 
 	Se alcun motivo che Igor o il dottor Münch potessero veramente comprendere,
 	il Dottore era raggiante. Quando si avviò verso il dipartimento <em>“Creature
@@ -176,7 +173,7 @@ tab#ii
 		Passando davanti ad un'enorme gabbia contenente alcune tonnellate di
 		bestia incatenata etichettata <em>“Il Traditore”</em>, il Dottore
 		tamburellò le dita sulle sbarre
-		inline#odio#Si tenga pronto anche lei, Traditore. Presto verrà anche il suo momento
+		intra@odio#Si tenga pronto anche lei, Traditore. Presto verrà anche il suo momento
 
 		Attraversato poi l'intero reparto, passando per mucchi di casse,
 		cisterne, droidi al lavoro, le macchinette del caffé e delle merende, il
@@ -188,13 +185,13 @@ tab#ii
 
 		Là dentro, ecco pronto ad essere indossato l'ultimo prototipo
 		dell'originale Corona dell'Odio
-		inline#odio#Eccolo, appena uscito dall'assemblaggio: il mio <code>Mark VIII</code>. Userò questo per affrontare <em>Magnecoso</em>! Io adesso me ne esco a fare un giro di prova, voi trovatemi quello stronzo, fare preparativi, avvisate gente, fate cose…
+		intra@odio#Eccolo, appena uscito dall'assemblaggio: il mio <code>Mark VIII</code>. Userò questo per affrontare <em>Magnecoso</em>! Io adesso me ne esco a fare un giro di prova, voi trovatemi quello stronzo, fare preparativi, avvisate gente, fate cose…
 
 		Intuendo immediatamente quel che sarebbe successo, rivolto allo sgorbio
 		gobbo, gli feci
-		inline#aug#Igor, disponi per il lancio del Dottore. Io torno a scrivere…
+		intra@aug#Igor, disponi per il lancio del Dottore. Io torno a scrivere…
 
-		inline#igor#Subito, signore, subito
+		p#intra@igor#Subito, signore, subito
 		borbottò il barattolo parlante, zoppicando verso un pannello alla
 		parete. Tornai in fretta alla mia scrivania.
 	end#outside
@@ -266,7 +263,6 @@ tab#ii
 stop#page
 start#side
 	title#La rivelazione
-	p#tid#Sessione 1#i## – 1400 parole
-	/
-	tid#Sessione 2#ii## – parole
+	p#tid#Sessione 1@ – 1400 parole#i
+	p#tid#Sessione 2@ – 821 parole#ii
 stop#side

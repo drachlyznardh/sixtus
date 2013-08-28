@@ -29,7 +29,7 @@ tab#dark
 	avnati così finché becco un focolare (!) e una porta luminosa (ch'è chiusa
 	in maniera particolare e vuole sicuramente una chiave apposita) ma il tizio
 	prosegue.
-	inline#gods#Okay
+	p#intra@gods#Okay
 	mi dico, e lo seguo.
 
 	Finisco in un bosco, pieno di quelle piante di prima. Ma stavolta vedo anche
@@ -61,13 +61,13 @@ tab#dark
 	Lo faccio con calma, finché alla viverna cade la coda: recupero la
 	<em>spadina del drago</em> che da sola vale più della mia <em>spada lunga
 	+5</em>.
-	inline#gods#Bene, bene. Ora è il caso di continuare
+	p#intra@gods#Bene, bene. Ora è il caso di continuare
 	br#	
 	Pew pew pew pew pew pew pew pew pew pew
 	br#
 	Noto, dopo qualche minuto, che per quanti danni io stia infliggendo, la vita
 	del drago non cala.
-	inline#gods#Internet!
+	p#intra@gods#Internet!
 	e scopro che effettivamente così non si può fare: ogni volta che torna ad
 	appollaiarsi sul castello, la vita rigenera. Bisogna trovare un altro modo,
 	mi dicono che basta spaccarla di botte. Ci provo.
@@ -75,7 +75,7 @@ tab#dark
 	E fallisco. Riesco a non morire, ma non mi sento in condizione di farcela.
 	Poi guardo oltre, e vedo che la porta oltre la viverna non è chiusa come
 	pensavo.
-	inline#gods#Hey, bestiaccia, vieni qui!
+	p#intra@gods#Hey, bestiaccia, vieni qui!
 	e poi – rotolarotolarotola – passo oltre la viverna, vado e accendo il falò
 	accanto alla statua dei <em>Sunbros</em>. La viverna vola via. Puff.
 

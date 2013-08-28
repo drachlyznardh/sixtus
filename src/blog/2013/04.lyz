@@ -1,10 +1,10 @@
 title#Aprile#Aprile 2013
 prev#Blog/2013/03/#Marzo@ 2013
 next#Blog/2013/05/#Maggio@ 2013
-alltab#
+tabs#all_or_one
 start#page
 tab#19
-	p#link##<em>@19/04/2013@</em>##19
+	p#link##<em>@19/04/2013@</em>#19
 	/
 	link#Extra/#Storia#CONTENUTI#Storie
 	title#Si va avanti…
@@ -27,7 +27,7 @@ tab#19
 	link#Recensioni/Giochi/II/#deheheludente#iii
 	a dir poco.
 tab#12
-	p#link##<em>@12/04/2013@</em>##12
+	p#link##<em>@12/04/2013@</em>#12
 	/
 	link#Extra/#2@ Ministorie#CONTENUTI#MiniStorie
 	title#I miei ossi da piega
@@ -49,7 +49,7 @@ tab#12
 	href="http://www.youtube.com/results?search_query=disney+beauty+and+the+beast+be+our+guest">questa</a>
 	canzone. Wow.
 tab#11
-	p#link##<em>@11/04/2013@</em>##11
+	p#link##<em>@11/04/2013@</em>#11
 	/
 	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
 	title#“Ce l'avete voi, la primavera, in Trentino?”
@@ -76,17 +76,18 @@ tab#11
 	<em>PQ</em> (che viene da Ancora?), avrebbe chiesto – poche ore dopo – se
 	“<em>ce l'avete, voi, la primavera, in Trentino?</em>”
 tab#09
-	p#link##<em>@09/04/2013@</em>##09
+	p#link##<em>@09/04/2013@</em>#09
 	/
 	link#Extra/#2 @Storie@#CONTENUTI#Storie
-	title#Storia <code>XCIV</code> – La resa dei conti? &amp; <code>XCV</code> – Le mutande di Katia
+	title#Storia <code>XCIV</code> – La resa dei conti?
+	title@right#&amp; <code>XCV</code> – Le mutande di Katia
 	Il <em>Buddy</em> mi sfugge, ma io non desisto. Cioè, no, desisto
 	completamente, ma… son due cose diverse…
 	link#Storie/2013/XCIV/#leggete@.#vii
 	r#E poi un'altra
 	link#Storie/2013/XCV/#storia@, breve ma originale. 
 tab#05
-	p#link##<em>@05/04/2013@</em>##05
+	p#link##<em>@05/04/2013@</em>#05
 	/
 	link#Extra/#MiniStoria#CONTENUTI#MiniStorie
 	title#Barcollo
@@ -117,7 +118,7 @@ tab#05
 	e
 	link#Storie/2013/XCIV/#IV@.#iv
 tab#03
-	p#link##<em>@03/04/2013@</em>##03
+	p#link##<em>@03/04/2013@</em>#03
 	/
 	link#Extra/#Storia@ [che continua]#CONTENUTI#Storie
 	title#Come ieri, peggio di ieri
@@ -128,7 +129,7 @@ tab#03
 	Tremendo fastidio!
 	link#Storie/2013/XCIV/#Leggete@.#ii
 tab#02
-	p#link##<em>@02/04/2013@</em>##02
+	p#link##<em>@02/04/2013@</em>#02
 	/
 	link#Extra/#Storia#CONTENUTI#Storie
 	title#BioParco!
@@ -142,8 +143,8 @@ stop#page
 start#side
 	stitle#link#Blog/2013/04/#Aprile@ 2013
 	p#link#Blog/2013/04/#<code>19/04</code> – [<em>Storia</em>] BioParco [@Fine@]#viii
-	p#link#Blog/2013/04/#<code>12/04</code> – [<em>MiniStoria</em>] @Gli ossi e i thread@##12
-	p#link#Blog/2013/04/#<code>11/04</code> – [<em>MiniStoria</em>] @La primavera in Trentino@##11
+	p#link#Blog/2013/04/#<code>12/04</code> – [<em>MiniStoria</em>] @Gli ossi e i thread@#12
+	p#link#Blog/2013/04/#<code>11/04</code> – [<em>MiniStoria</em>] @La primavera in Trentino@#11
 	p#link#Storie/2013/XCIV/#<code>09/04</code> – [<em>Storia</em>] BioParco [@VII@]#
 	e
 	link#Storie/2013/XCV/#Le mutande di Katia

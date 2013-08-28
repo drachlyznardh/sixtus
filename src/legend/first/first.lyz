@@ -66,7 +66,7 @@ tab#background
 	sec#
 	id#Party
 	Ed ora, per chi non lo sa, lasciate che vi presenti.
-	titler#Il Party
+	title@right#Il Party
 	Per quanto potuto capire (ieri sera, <code>03 aprile 2012</code>) abbiamo
 	più o meno messo assieme i personaggi. Adesso vedo di scrivere giù qualcosa.
 	br#
@@ -173,7 +173,7 @@ tab#s01
 	ungere. Anche a forza.
 	begin#mini@left
 		La scusa ufficiale
-		inline#gods#L'ho fatto perché mancava il Dacav
+		intra@gods#L'ho fatto perché mancava il Dacav
 		rimarrà valida finché troverò di meglio.
 
 		In pratica, sto lasciando che tutta la campagna vada in fuffa ancor
@@ -372,10 +372,10 @@ tab#s05
 	begin#mini@right
 	stitle#Nella scorsa Puntata
 	begin#ul
-		li#<em>Mess</em> ha scalato mezza montagna da sola, prima di fermarsi ad aspettarci
-		li#Il team l'ha raggiunta ed ha continuato la scalata
-		li#Il drago <em>Pan Ban</em> è tristemente deceduto
-		li#C'è un tizio al telefono che dice `Pronto? Si, Signor Presidente, è morto`
+		p#<em>Mess</em> ha scalato mezza montagna da sola, prima di fermarsi ad aspettarci
+		p#Il team l'ha raggiunta ed ha continuato la scalata
+		p#Il drago <em>Pan Ban</em> è tristemente deceduto
+		p#C'è un tizio al telefono che dice `Pronto? Si, Signor Presidente, è morto`
 	end#ul
 	end#mini
 	stitle#Sigla
@@ -565,10 +565,10 @@ tab#s06
 	
 	Funzionalità del <em>Frulloscopio</em>:
 	begin#ul
-		li#Invio
-		li#Ricezione
-		li#Cose “Transdimensionali” pericolosissime
-		li#Rubrica
+		p#Invio
+		p#Ricezione
+		p#Cose “Transdimensionali” pericolosissime
+		p#Rubrica
 	end#ul
 	Sotto consiglio di <em class="wrong">Grimaldella</em> Grimelda, lo picchieremo.
 	br#
@@ -605,13 +605,13 @@ tab#s06
 	decide di redimersi. Ora <em>GB</em> gli spiega che l'Apocalisse
 	uccide, nella maggior parte dei casi, TUTTI. Tra cui:
 	begin#ul
-		li#La madre
-		li#I fratellini
-		li#John Jr. III
-		li#Daisy Doe, la sorellina.
-		li#Nonno Rufus
-		li#I suoi gatti
-		li#La sua collezione di sassi levigati
+		p#La madre
+		p#I fratellini
+		p#John Jr. III
+		p#Daisy Doe, la sorellina.
+		p#Nonno Rufus
+		p#I suoi gatti
+		p#La sua collezione di sassi levigati
 	end#ul
 	La redenzione È VICINA!
 
@@ -663,12 +663,12 @@ tab#s06
 	stitle#Adoro i piani ben fatti.
 	Il piano:
 	begin#ul
-		li#Chiamano la nuvola
-		li#<em>John</em> si teletrasporta con <em>Kyu</em>
-		li#<em>Mess</em> corre e vola. E PICCHIA.
-		li#<em>Jonh</em>, quindi, se tutto va bene teletrasporta gli altri
-		li#?????
-		li#Profit (?)
+		p#Chiamano la nuvola
+		p#<em>John</em> si teletrasporta con <em>Kyu</em>
+		p#<em>Mess</em> corre e vola. E PICCHIA.
+		p#<em>Jonh</em>, quindi, se tutto va bene teletrasporta gli altri
+		p#?????
+		p#Profit (?)
 	end#ul
 	<em>John</em> chiama!
 	Alza un altro ninja. Che fissa <em>John</em> in silenzio, attraverso la
@@ -786,9 +786,9 @@ tab#s07
 	può succedere. John conosce i Goose (hanno fatto una grigliata insieme).
 	Facciamo la mappa del villaggio:
 	begin#ul
-		li#C'è un castello a pianta quadrata
-		li#C'è una scala
-		li#Ci sono selle baracche
+		p#C'è un castello a pianta quadrata
+		p#C'è una scala
+		p#Ci sono selle baracche
 	end#ul
 	Come fare ad infiltrarsi? Sentiamo la mancanza di A-ha, che è il più
 	intelligente di tutti. Decidiamo di atterrare al limite dei radar ninja, poi ci
@@ -845,11 +845,11 @@ tab#s07
 	maestro non è particolarmente impegnato, ci manderà incontro i suoi discepoli,
 	quindi basta rimuovere (in maniera non definitiva) i discepoli.
 	begin#ol
-		li#Kyu si infiltra con John e Goose nel villaggio;
-		li#Iniziano l'opera di convincimento (tizi facili, come la moglie di Goose);
-		li#Alla cerimonia dell'alba arrivano gli altri, e continuano a convincere i
+		p#Kyu si infiltra con John e Goose nel villaggio;
+		p#Iniziano l'opera di convincimento (tizi facili, come la moglie di Goose);
+		p#Alla cerimonia dell'alba arrivano gli altri, e continuano a convincere i
 		tizi che l'Apocalisse è male;
-		li#Mess sfida il capo a combattere, il quale ci manderà contro degli
+		p#Mess sfida il capo a combattere, il quale ci manderà contro degli
 		ufficiali, o addirittura lui in persona.
 	end#ol
 	begin#inside
@@ -943,7 +943,7 @@ start#side
 	tid#Il Party#background#Party
 	]
 	title#Legend
-	titler#Le cronache
+	title@right#Le cronache
 	p#tid#<code>S01~03</code> – @Il Pentapippesimo@#s01
 	p#tid#<code>S04</code> – @Il drago Pal Ban@#s04
 	p#tid#<code>S05</code> – @Apocalisse@#s05

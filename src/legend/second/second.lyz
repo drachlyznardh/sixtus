@@ -20,7 +20,7 @@ tab#intro
 	volte, ossia lasciare una riga vuota; per lasciare una riga vuota c'è il
 	comando <code>br@SHARP@</code>. Per cambiare sezione si usa il comando
 	<code>sec@SHARP@</code>, per lasciare anche lo spazio si usa
-	<code>sbr@SHARP@</code>. I titoli incorniciati si fanno con
+	<code>sec@SHARP@br</code>. I titoli incorniciati si fanno con
 	<code>title@SHARP@&lt;testo&gt;</code>, quelli sottolineati con
 	<code>stitle@SHARP@&lt;testo&gt;</code>; per mettere il testo a destra si
 	aggiunge <code>[s]title@right@SHARP@&lt;testo&gt;</code>.

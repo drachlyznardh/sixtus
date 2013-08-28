@@ -10,10 +10,10 @@ start#page
 	vedermelo.
 	br#
 	begin#double
-		include#review/catalogo#show@as@content
+		include#frag/review#show@as@content
 	end#double
 stop#page
 start#side
 	stitle#Show
-	include#review/catalogo#show@as@content
+	include#frag/review#show@as@content
 stop#side

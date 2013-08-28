@@ -34,11 +34,11 @@ tab#content
 	stitle#link#Tru/Naluten/#Tru Naluten
 	r#link#Tru/Naluten/Personaggi/#Personaggi
 		/ Volumi [
-		link#Tru/Naluten/I/#Vol.I
+		link#Tru/Naluten/Vol/I/#Vol.I
 		|
-		link#Tru/Naluten/II/#Vol.II
+		link#Tru/Naluten/Vol/II/#Vol.II
 		|
-		link#Tru/Naluten/III/#Vol.III
+		link#Tru/Naluten/Vol/III/#Vol.III
 		]
 	stitle#link#NaNoWriMo/#NaNoWriMo
 	r#link#NaNoWriMo/2010/#2010

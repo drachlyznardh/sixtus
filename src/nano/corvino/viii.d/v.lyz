@@ -9,9 +9,9 @@ start#page
 	Non successe.
 	sec#
 	begin#inside
-		p#inline#Corvino#Beh, ovviamente
+		p#intra@Corvino#Beh, ovviamente
 		pensai
-		p#inline#Corvino#Egrave; appena successo, non possono essersene già accorti i giornali…
+		p#intra@Corvino#Egrave; appena successo, non possono essersene già accorti i giornali…
 	end#inside
 	Così non ci feci più caso, me ne dimenticai e mi dedicai ad altre questioni
 	più urgenti, quali ad esempio la cena.
@@ -24,9 +24,9 @@ start#page
 	un goccio d'acqua, buttai un occhio all'orologio e scoprii ch'erano le due
 	di notte.
 	begin#inside
-		p#inline#Corvino#Brutta ora
+		p#intra@Corvino#Brutta ora
 		dissi ad alta voce
-		inline#Corvino#per gironzolare per casa
+		intra@Corvino#per gironzolare per casa
 	end#inside
 	Così – dopo aver bevuto dal rubinetto della cucina – mi guardai attorno
 	senza cercare nulla. C'erano, sul divano del soggiorno, entrambi i gatti.
@@ -36,7 +36,7 @@ start#page
 	Io rimasi fermo, contraccambiando i loro sguardi, finché ne ebbero
 	abbastanza e si sistemarono dall'altro lato, dandomi entrambi la schiena.
 	begin#inside
-		p#inline#Corvino#Gatti bastardi e menefreghisti, sono quanto c'è da mangiare fate i coccolosi
+		p#intra@Corvino#Gatti bastardi e menefreghisti, sono quanto c'è da mangiare fate i coccolosi
 	end#inside
 	sec#
 	Non avendo nemmeno i gatti con cui giocherellare, quindi, me ne tornai nel

@@ -1,6 +1,6 @@
 start#page
 tab#cron
-	begin#ol
+	begin@6em#roman
 		li#link#Recensioni/Film/I/#Thor### – 2011
 		li#link#Recensioni/Giochi/II/#AC Brotherhood### – 2010
 		li#link#Recensioni/Film/III/#Robocop### – 1987~1993
@@ -49,7 +49,7 @@ tab#cron
 		li#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter@ – 2001
 		li#link#Recensioni/Show/XLVII/#Accel World@ – 2012
 		li#link#Recensioni/Film/XLVIII/#The cabin in the woods@ — 2011
-	end#ol
+	end#roman
 tab#film
 	begin#ul
 		p#link#Recensioni/Film/I/#Thor### – 2011

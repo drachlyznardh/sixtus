@@ -1,9 +1,6 @@
 title#Gundam#Tutte le serie (o quasi)
 prev#Recensioni/Giochi/XXXIII/#[ Demon's | Dark ] Souls
 next#Recensioni/Libri/XXXV/#A me le guardie!
-related@li#Storie/2011/XXXVIII/#Gundam @SEED@
-related#Storie/2011/XLI/#Gundam SEED @Destiny@
-related@li#Recensioni/Show/XIV/#Gundam @AGE@
 start#page
 tab#intro
 	Visto che (adesso lo dico!) non tutte le serie meritano una recensione
@@ -138,5 +135,13 @@ start#side
 	title#Gundam
 	begin#ul
 		li#tid#After War @Gundam X@ – 1996 <code>[Buono]</code>#X
+	end#ul
+	br#
+	stitle@right#Vedi anche…
+	begin#ul
+		p#link#Storie/2011/XXXVIII/#Gundam @SEED@
+			e
+			link#Storie/2011/XLI/#Gundam SEED @Destiny@
+		p#link#Recensioni/Show/XIV/#Gundam @AGE@
 	end#ul
 stop#side

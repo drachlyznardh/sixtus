@@ -2,26 +2,26 @@ title#Il lampione#Corvino Multicolore – VIII
 prev#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
 start#side
 	title#Il lampione
-	begin#ol
+	begin@3em#roman
 		li#tid#Quella mattina#i
 		li#tid#A casa#ii
 		li#tid#Al parcheggio#iii
 		li#tid#Di corsa#iv
 		li#tid#A casa, di nuovo#v
 		li#tid#Al parco#vi
-	end#ol
+	end#roman
 stop#side
 start#page
-	tab#i
+tab#i
 	include#nano/corvino/viii.d/i#page
-	tab#ii
+tab#ii
 	include#nano/corvino/viii.d/ii#page
-	tab#iii
+tab#iii
 	include#nano/corvino/viii.d/iii#page
-	tab#iv
+tab#iv
 	include#nano/corvino/viii.d/iv#page
-	tab#v
+tab#v
 	include#nano/corvino/viii.d/v#page
-	tab#vi
+tab#vi
 	include#nano/corvino/viii.d/vi#page
 stop#page

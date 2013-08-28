@@ -1,7 +1,6 @@
 title#Maggio#Maggio 2013
 prev#Blog/2013/04/#Aprile@ 2013
 next#Blog/2013/06/#Giugno@ 2013
-alltab#
 start#page
 tab#01
 	p#link##<em>@01/05/2013@</em>##01
@@ -30,7 +29,7 @@ tab#01
 	<code>blah::x</code> non è definito, e sotto i miei occhi ci sono due righe
 	che dicono esattamente
 	begin#outside
-		<code>namespace blah {</code>
+		p#<code>namespace blah {</code>
 		p#<code>&nbsp;&nbsp;Logger x;</code>
 		p#<code>}</code>
 	end#outside
@@ -67,5 +66,5 @@ tab#01
 stop#page
 start#side
 	stitle#link#Blog/2013/05/#Maggio@ 2013
-	p#link#Blog/2013/05/#<code>01/05</code> – [<em>MiniStoria</em>] @Il CPP espande una volta sola@##11
+	p#link#Blog/2013/05/#<code>01/05</code> – [<em>MiniStoria</em>] @Il CPP espande una volta sola@#11
 stop#side

@@ -11,6 +11,6 @@ start#page
 	mostri blu. Alla fine, esplode il mondo.
 stop#page
 start#side
-	title#Volume I
-	include#tru/catalogo#i@as@content
+	title@right#Volume I
+	include#frag/tru#side-i@as@content
 stop#side

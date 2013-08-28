@@ -35,7 +35,7 @@ tab#intro
 tab#e01
 	Allora, il primo episodio…
 	title#Gundam AGE
-	titler#Il primo episodio
+	title@right#Il primo episodio
 	È difficile. È davvero difficile.
 	sec#
 	Si comincia, ovviamente, con il solito bimbominchia, Flit (cioè
@@ -99,7 +99,7 @@ tab#e01
 	almeno una volta. Poi l'episodio finisce.
 	sec#
 	title#Gundam AGE
-	titler#Prima impressione
+	title@right#Prima impressione
 	Sinceramente? Pare 'nam'merda.
 
 	Posso capire che la Bandai voglia abbassare (notevolmente) la soglia d'età
@@ -116,7 +116,7 @@ tab#e02
 		
 	Ma questa roba è troppo grossa per non scriverne.
 	title#Gundam AGE
-	titler#Il secondo episodio
+	title@right#Il secondo episodio
 	Ora che gli UE sono scappati (ancora non sappiamo perché) ecco alcuni
 	momenti di pace. Ed ecco che parte “<em>il piano</em>”: la colonia (dramma!)
 	è perduta, la sua esplosione è INEVITABILE.
@@ -173,7 +173,7 @@ tab#e02
 	sec#
 	Ma non è finita!
 	title#Gundam AGE
-	titler#Il terzo episodio
+	title@right#Il terzo episodio
 	Beh, la caciotta continua!
 
 	Prosegue il dramma! La distruzione <span class="wrong">del pianeta
@@ -217,7 +217,7 @@ tab#e02
 	Infine, nella preview del quarto episodio, uno strafighissimo stracazzuto
 	soldato viene risvegliato dal sonno criogenico per combattere ancora una
 	volta. Mh. Questo tizio ha le orecchie da gatto.
-	sbr#
+	sec#br
 	Ed eccomi. Ho fatto come Luber, mi sono visto tre episodi.
 	br#
 	SRSLY, non so che pensare.
@@ -338,7 +338,7 @@ tab#e07
 
 	Bim! Bum! Bam! Gundam Punch! Gundam Kick! Spallate laser!
 	sec#
-	titler#La figanza continua!
+	title@right#La figanza continua!
 	Proseguiamo! Ora che la guerra tra il <em>BLUE Team</em> e il <em>PURPLE
 	Team</em> (i colori li do a caso), l'equipaggio della DIVA può andarsene a
 	fare altre cose. Furitto e Woolf (più una manica di altri cazzani) vanno a
@@ -475,7 +475,7 @@ tab#e10
 
 	Ma i cattivi sono sempre in agguato. BRIVIDO! TERRORE! RACCAPRICCIO!
 	title#Gundam AGE – e10~15
-	titler#Mah. Meh. Mmmmmmmah.
+	title@right#Mah. Meh. Mmmmmmmah.
 	'Sta roba, da dov'è uscita? Stavano andando bene… cos'è successo? Siamo
 	passati dall'amicizia spaziale, ad una battaglia impossibile, e poi invece
 	siamo ricaduti in tutti i possibili cliché.
@@ -483,7 +483,7 @@ tab#e10
 	E io avevo persino delle speranze ;_;
 tab#e16
 	title#Episodi 16~23
-	titler#Il secondo arco – AGE 2?
+	title@right#Il secondo arco – AGE 2?
 	Ebbene sì. Passano vent'anni, così, da un episodio all'altro. Scusate se non
 	ho il coraggio di recensirli tutti assieme, ma per arrivare qui ho dovuto
 	raccogliere le braccia, ch'eran cadute molto lontano e molto in basso.
@@ -762,25 +762,22 @@ start#side
 	p#tid#Introduzione#intro
 	title#Gundam AGE
 	p#tid#Il primo impatto#e01
-	e
-	tid#Il secondo impatto#e02
-	br#
-	stitle#L'arco di Furitto
+		e
+		tid#Il secondo impatto#e02
+	stitle@right#L'arco di Furitto
 	p#tid#Episodi 4~6#e04
-	/
-	tid#7~9#e07
-	/
-	tid#10~15#e10
-	
-	stitle#L'arco di Asemu
+		/
+		tid#7~9#e07
+		/
+		tid#10~15#e10
+	stitle@right#L'arco di Asemu
 	p#tid#Episodi 16~23#e16
-	/
-	tid#Episodi 24~29#e24
-
-	stitle#L'arco di Kio
+		/
+		tid#Episodi 24~29#e24
+	stitle@right#L'arco di Kio
 	p#tid#Episodi 30~34#e30
-	/
-	tid# 35~39#e35
-	/
-	tid# 40~49#e40
+		/
+		tid# 35~39#e35
+		/
+		tid# 40~49#e40
 stop#side

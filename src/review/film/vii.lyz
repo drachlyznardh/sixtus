@@ -28,15 +28,14 @@ tab#intro
 	numerose da richiedere una gerarchia.
 	id#ii
 	title#Transformers: Dark of the Moon
-	titler#Versione breve
+	title@right#Versione breve
 	Questo film rappresenta un insulto a chi si aspetta trama e coerenza da
 	una pellicola.
 
 	Questo film è riuscito a deludermi, a farmi inorridire, a negare i
 	motivi della sua stessa esistenza.
 	sec#
-	Molti degli amici che m'hanno seguito hanno definito il film <span
-	class="em">ignorante</span>. Di fatto non trovo parola migliore.
+	Molti degli amici che m'hanno seguito hanno definito il film <em>ignorante</em>. Di fatto non trovo parola migliore.
 	Purtroppo, io e loro assegnamo accezioni completamente diverse alla
 	suddetta.
 
@@ -47,7 +46,7 @@ tab#intro
 
 	Questo film, nella mia più gentile opinione, non è altro che un noioso
 	pappone condito con spettacolari quanto ingiustificate
-	<span class="em">baysplosioni</span>.
+	<em>baysplosioni</em>.
 
 	Quindi, se siete venuti soltanto per vedervi le esplosioni del cazzo,
 	più un po' di gnocca, beh, ch'azzo devo dirvi? Fanculo, siete nel posto
@@ -156,8 +155,7 @@ tab#i
 		concentriamo principalmente sul ragazzo, sulla gnocca e sui
 		soldatini»
 
-		reverse#
-		<em>Micheal Bay – regista</em>
+		r#<em>Micheal Bay – regista</em>
 	end#outside
 	È scandaloso quanto il film creda che a noi interessi veramente il
 	rapporto tra Sam e la sua nuova ragazza. È altrettanto scandaloso quando
@@ -230,7 +228,7 @@ tab#i
 	Ovviamente, il film passa quasi immediatamente a presentare la
 	supercazzola di turno, l'uncino che fa partire la “trama”. L'intero
 	programma spaziale umano è stato in risposta ad un naufragio, perché più
-	o meno nel 1961 una nave (l'<span class="em">Ark</span>, ovviamente) s'è
+	o meno nel 1961 una nave (l'<em>Ark</em>, ovviamente) s'è
 	spantazzata sul lato oscuro della Luna.
 
 	A bordo della nave c'è molto probabilmente qualcosa di terribile, il
@@ -294,7 +292,7 @@ tab#i
 	un passo avanti.
 
 	Perché Sentinel è cattivo, e pensava di porre termine alla guerra civile
-	di Cybetron vendendo il suo intero schieramento (e il McGuffin spaziale)
+	di Cybetron vendendo il suo intero schieramento (e il McGuffin /paziale)
 	al nemico, in cambio di una pace istantanea. Il fatto che la guerra sia
 	finita da un milione di anni, a quanto pare, non ha alcuna importanza.
 
@@ -730,35 +728,18 @@ tab#ii
 	l'hanno arrugginito a morte, alle spalle, senza onore. Brutta cosa.
 	Optimus ha perso un braccio, ma chissenefrega.
 	begin#outside
-		«Combatto Sentinel Prime»
-
-		reverse#
-		LIKE A BOSS
-	
-		«Perdo un braccio»
-		
-		reverse#
-		LIKE A BOSS
-	
-		«Arriva Megatron»
-
-		reverse#
-		LIKE A BOSS
-	
-		«Gli strappo la testa»
-
-		reverse#
-		LIKE A BOSS
-	
-		«Ammazzo anche quell'altro»
-
-		reverse#
-		LIKE A BOSS
-	
-		«Vinco la guerra»
-
-		reverse#
-		LIKE A BOSS
+		p#«Combatto Sentinel Prime»
+		r#«LIKE A BOSS»
+		p#«Perdo un braccio»
+		r#«LIKE A BOSS»
+		p#«Arriva Megatron»
+		r#«LIKE A BOSS»
+		p#«Gli strappo la testa»
+		r#«LIKE A BOSS»
+		p#«Ammazzo anche quell'altro»
+		r#«LIKE A BOSS»
+		p#«Vinco la guerra»
+		r#«LIKE A BOSS»
 	end#outside
 	E poi, dopo due ore emmezza di esplosioni, cagate, yadda fuori luogo a
 	fiumi, tutti si dimenticano di chiudere la storia.
@@ -779,7 +760,7 @@ tab#ii
 	id#ii/ix
 	Quindi, no.
 	title#Transformers: Dark Of The Moon
-	titler#No.
+	title@right#No.
 	Questo film è stata la più grossa delusione cinematografica. Questo film
 	m'ha deluso al livello di Spider-Man 3. Questo film è stato innaffiato
 	di soldi, gli è stato dato del potenziale. Ma tutto questo non è andato
@@ -802,7 +783,7 @@ tab#ii
 	Ecco quelle che meritano una nota.
 	sec#
 	Dino ha una sola battuta, nel film, ed è «On the ground,
-	<span class="em">per favore</span>. And stay there». Perché
+	<em>per favore</em>. And stay there». Perché
 	sia italiano nessuno lo sa.
 
 	Megatron dice «All hail Megatron» senza il punto esclamativo.
@@ -825,16 +806,12 @@ tab#ii
 stop#page
 start#side
 	title#Dark Of The Moon
-	stitle#Il lato oscuro
-	stitle@class@reverse#della cinematografia
-	reverse#
-		tid#Premessa#intro
+	stitle#Il lato oscuro della cinematografia
+	r#tid#Premessa#intro
 		/
 		tid#Versione breve#intro#II
-	stitle#Il lato oscuro
-	stitle@class@reverse#della recensione
-	reverse#
-		tid#Scrematura#i#I/I
+	stitle#Il lato oscuro della recensione
+	r#tid#Scrematura#i#I/I
 		/
 		tid#Selezione del target#i#I/II
 		/
@@ -848,8 +825,7 @@ start#side
 		/
 		tid#Il finale#i#I/VII
 	stitle#Considerazioni
-		reverse#
-		tid#Nimoy#ii#II/I
+	r#tid#Nimoy#ii#II/I
 		/
 		tid#I buchi della trama#ii#II/II
 		/
@@ -861,7 +837,7 @@ start#side
 		/
 		tid#Personaggi, in più, in meno#ii#II/VI
 		/
-		tid#Turturro, Malkovich etc#ii#II/VII
+		tid#Turturro, Malkovich, etc#ii#II/VII
 		/
 		tid#La conclusione#ii#II/VIII
 	 	/

@@ -4,19 +4,19 @@ subtitle#Yunitien Sentai Sotudiyonjā
 start#page
 	begin#mini@left
 		begin#ul
-			li#War: Distributed Studionger
-			li#Jazz: Emotion Studionger
-			li#Gods: Bachelor Studionger
+			p#War: Distributed Studionger
+			p#Jazz: Emotion Studionger
+			p#Gods: Bachelor Studionger
 		end#ul
 	end#mini
 	begin#mini@right
 		begin#ul
-			li#Complexity Zord
-			li#Concurrency Zord
-			li#Embedded Zord
-			li#Realtime Zord
-			li#Distributed Zord
-			li#Montrezord
+			p#Complexity Zord
+			p#Concurrency Zord
+			p#Embedded Zord
+			p#Realtime Zord
+			p#Distributed Zord
+			p#Montrezord
 		end#ul
 	end#mini
 	Le grandi avventure dei Non-Power-Rangers della facoltà di Scienze!

@@ -134,6 +134,9 @@
 				case 'alltabs':
 					$this->force_all_tabs = true;
 					break;
+				case 'include':
+					$this->static_include($cmd_par, $cmd_attr);
+					break;
 			}
 		}
 
@@ -210,6 +213,19 @@
 			}
 		}
 
+		private function static_include ($args, $attr)
+		{
+			if (count($attr) > 1 && strcmp($attr[1], 'static') == 0)
+			{
+				$parser = new Parser($this->prefix);
+				$parser->parse($this->prefix.'/'.$args[1].'.lyz');
+				foreach ($parser->body as $_)
+					$this->body[] = $_;
+				foreach ($parser->side as $_)
+					$this->side[] = $_;
+			}
+		}
+
 		public function deploy ()
 		{
 			printf("<?php\n");
@@ -224,7 +240,7 @@
 			else if ($this->all_or_one) 
 				printf("\t\t\$attr['all_or_one'] = true;\n");
 			else 
-				printf("\t\tif(!\$attr['part']) \$attr['part'] = '$this->default_tab';\n");
+				printf("\t\tif(!\$attr['part'] && \$attr['single']) \$attr['part'] = '$this->default_tab';\n");
 			printf("\t\tif(!\$attr['current']) \$attr['current'] = '$this->default_tab';\n");
 			printf("\n");
 			if ($this->prev)

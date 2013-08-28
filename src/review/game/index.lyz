@@ -6,10 +6,10 @@ start#page
 	pochettino. Qualche parere anche in questo campo.
 	br#
 #begin#double
-		include#review/catalogo#game@as@content
+		include#frag/review#game@as@content
 #end#double
 stop#page
 start#side
 	stitle#Giochi
-	include#review/catalogo#game@as@content
+	include#frag/review#game@as@content
 stop#side
