@@ -1,7 +1,6 @@
 title#Dollhouse#Fermate Whedon prima che… troppo tardi
 prev#Recensioni/Show/XXI/#Super Sentai
 next#Recensioni/Film/XXIII/#Zombieland
-
 start#page
 tab#intro
 	E così, dopo &gt;9000 anni d'insistenza da parte del <em
@@ -11,34 +10,26 @@ tab#intro
 	Questa serie è l'ennesima opera di Joss Whedon. Non so se adorare o temere
 	quest'uomo. Perché questo tizio ha fatto molte cose belle, ma anche alcune
 	cose terribili e molte cose che non capisco.
-
-	<div class="doublecol">
-	stitle#Cose buone
-	begin#ol
-		Toy Story
-
-		Titan A.E.
-
-		Firefly (&amp; Serenity)
-
-		Dr. Horrible Sing Along Blog
-
-		e prossimamente The Avengers
-	end#ol
-	stitle#Cose non buone
-	begin#ol
-		Alien Resurection
-	end#ol
-	stitle#Cose meno buone
-	begin#ol
-		Atlantis: The Lost Empire
-
-		Buffy
-
-		Angel
-	end#ol
-	</div>
-
+	begin#half@right
+		stitle#Cose buone
+		begin#ul
+			p#Toy Story
+			p#Titan A.E.
+			p#Firefly (&amp; Serenity)
+			p#Dr. Horrible Sing Along Blog
+			p#e prossimamente The Avengers
+		end#ul
+		stitle#Cose non buone
+		begin#ul
+			p#Alien Resurection
+		end#ul
+		stitle#Cose meno buone
+		begin#ul
+			p#Atlantis: The Lost Empire
+			p#Buffy
+			p#Angel
+		end#ul
+	end#half
 	Io non so se fare le cose complicate e non farsi capire sia il suo
 	obiettivo, ma di certo mi lascia confuso. Proverò a mettere giù un po' di
 	pensieri.
@@ -51,9 +42,10 @@ tab#intro
 
 	E vedo anche un sacco di cose che mi piacciono molto, e molte cose che non
 	mi piacciano. E non credo che la media mi piaccia.
+	clear#
 tab#s01
 	title#Dollhouse
-	titler#Prima stagione
+	title@right#Prima stagione
 	Ci sono una sacco di cose, dappertutto: gente che fa cose, gente che cerca
 	di impedire ad altra gente di fare cose… Abbastanza presto, la serie si
 	degna di spiegarci che succede. Nella Dollhouse ci sono alcuni tizi (loschi
@@ -76,22 +68,20 @@ tab#s01
 	stagione (dodicesimo episodio) c'è un episodio bonus postapocalittico che ci
 	spiega come nel 2019 tutto sarà andato a puttane. Boh.
 	title#Dollhouse S01
-	titler#Si lascia guardare
+	title@right#Si lascia guardare
 	'Sto Joss Whedon, che cazzo avrà in mente?!?! Secondo me esagera, ci prova
 	troppo.
 tab#s02
 	title#Dollhouse
-	titler#Seconda stagione
+	title@right#Seconda stagione
 	Capisco che uno scrittore professionista sia abituato a preparare tante idee
 	e usarle pian piano, con calma, nel corso di molte stagioni. Capisco che
 	quando la produzione deve finire in fretta le trame devono essere
 	accelerate. Posso capire che fatti drammatici capitino e influiscano sui
 	personaggi.
-
-	<div style="float:left">
-	foto#Extra/Deeper.jpg
-	</div>
-
+	begin#half@left
+		foto#Extra/Deeper.jpg
+	end#half
 	Ma. Cazzo. In questa seconda stagione succede troppa roba. Va tutto a
 	puttane, tutti tradiscono tutti, ci sono almeno <em>quattro livelli di
 	complotto</em>. Tutte le bambole della serie vengono scritte e riscritte,
@@ -121,7 +111,7 @@ tab#s02
 	clear#
 	sec#
 	title#Dollhouse S02
-	titler#L'ha fatta Micheal Bay?
+	title@right#L'ha fatta Micheal Bay?
 	Hey, Joss, scusa un attimo. Ci stai provando troppo. Non serve chiudere una
 	stagione di botto, ma se proprio è necessario, non tentare di aprire tutte
 	le trame che avevi in mente, solo per poterle richiudere!
@@ -143,7 +133,6 @@ start#side
 	p#tid#Introduzione#intro
 	title#Dollhouse
 	p#tid#Prima stagione#s01
-
 	p#tid#Seconda stagione#s02
 stop#side
 

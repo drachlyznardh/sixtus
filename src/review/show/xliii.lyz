@@ -5,7 +5,7 @@ start#page
 tab#intro
 	Dunque, <em>Macross</em>.
 
-	<em>Macross</em> è una cosa abbastanza grande, una lunga fila di serie
+	p#<em>Macross</em> è una cosa abbastanza grande, una lunga fila di serie
 	animate, manga, film animati, videogiochi e yadda. Io mi sono visto le serie
 	e i film, ma avrei anche (oramai perduto nei recessi della cantina) uno dei
 	manga. Il resto non m'interessa granché.
@@ -17,7 +17,7 @@ tab#intro
 	differisce non poco dall'ordine di produzione, è un gran casotto;
 	nell'ordine, ho visto:
 	begin#ul
-		Macross Zero
+		li#Macross Zero
 		li#Macross Frontier
 		li#Macross 7
 		li#SDF Macross
@@ -252,4 +252,7 @@ start#side
 	p#tid#Macross Frontier@ – 2007#frontier
 	r#tid#The false songstress@ – 2010 [M]#wings
 	r#tid#Wings of goodbye@ – 2011 [M]#wings
+	br#
+	stitle@right#Si veda anche…
+	p#link#Recensioni/Show/XXVIII/#Macross 7@ – (la prima volta)
 stop#side
