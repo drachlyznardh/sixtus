@@ -11,8 +11,7 @@ start#page
 	Trattasi di un malaugurato filmaccio neozelandese. C'è una fattoria con un
 	fattore e i suoi due figli. Il fattore muore, il fratello minore finisce
 	traumatizzato e il maggiore tiene la fattoria.
-
-	sbr#
+	sec#br
 	Molto tempo dopo, per regolare le questioni di proprietà, il fratello
 	giovane deve tornare a far visita alla fattoria di famiglia per discutere
 	con il fratello maggiore. In breve, il giovane se ne va con una bella
@@ -46,7 +45,6 @@ start#page
 	Breve confrontazione finale tra i due fratelli, l'intera fattoria esplode.
 	Tutti tranne il fratello maggiore vengono curati dalla licantropia tramite
 	il misterioso beverone.
-
 	sec#
 	Beh… che dire?
 
@@ -63,4 +61,6 @@ start#page
 	Sarebbe stato meglio se avesse avuto ancor meno serietà.
 stop#page
 start#side
+	title#Black sheep
+	title@right#Brutto da ridere
 stop#side
