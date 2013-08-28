@@ -33,7 +33,7 @@ tab#intro
 tab#prologo
 	include#legend/second/prologo#page
 tab#01
-	<em>BBC Scotland presents</em>
+	p#<em>BBC Scotland presents</em>
 	r#60 anni dopo…
 	sbr#
 	Sentite il <strong>&lt;BOODOOSH!!!&gt;</strong>? È il caratteristico suono
