@@ -109,17 +109,17 @@ start#page
 
 	C'era un bel numero di persone, quella sera.
 	begin#inside
-		p#intra@Corvino#Strano
+		p#speak@Corvino#Strano
 		pensai
-		p#intra@Corvino#Nessuno qui che possa reggere il confronto? Sono forse troppo rapido per voi, gente?
+		p#speak@Corvino#Nessuno qui che possa reggere il confronto? Sono forse troppo rapido per voi, gente?
 		p#E dovevo esserlo, in effetti.
 	end#inside
 	In quel momento, si fece buio. Vidi sfarfallare tutti i lampioni del parco,
 	che si spensero.
 	begin#inside
-		p#intra@Corvino#Tutti, addirittura?
+		p#speak@Corvino#Tutti, addirittura?
 		mi chiesi, poi scherzai
-		intra@Corvino#Non sarà mica opera di quegli stessi operai che s'occuparono di quel dannato lampione?
+		speak@Corvino#Non sarà mica opera di quegli stessi operai che s'occuparono di quel dannato lampione?
 
 		E come l'ebbi pensato, ecco che tutti i lampioni tornarono a funzionare,
 		riaccendendosi in coro.
@@ -139,11 +139,11 @@ start#page
 		gente. Invece mi sgorgò dal cuore una certa rabbia, o forse era
 		disappunto, per non aver trovato un degno avversario.  Uno di quelli che
 		ti fanno sospirare
-		intra@Corvino#Eh, così in fretta certo non potrei andare
+		speak@Corvino#Eh, così in fretta certo non potrei andare
 		Ero senza grandi avversari, quindi senza grandi onori.
 
 		E mentre mi ritrovavo a pensare che
-		intra@Corvino#Se solo ci fosse qualcuno impegnato, qualche vero atleta…
+		speak@Corvino#Se solo ci fosse qualcuno impegnato, qualche vero atleta…
 		in quella si spensero i lampioni di tutto il viale lungo il fiume.
 		Tutto, anche i semafori.
 	end#inside

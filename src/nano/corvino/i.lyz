@@ -8,7 +8,7 @@ start#page
 	qualche motivo stavo passando per il parco. Mi pare che
 	ci fosse un concerto all'aperto, uno di quelli che
 	begin#outside
-		p#intra@em#dai, Corvino, vieni con noi che ci divertiamo
+		p#speak@em#dai, Corvino, vieni con noi che ci divertiamo
 	end#outside
 	dove i gruppi di giovinastri possono andare a suonare le loro cover del rock
 	`70, quelli che l'assessorato alle politiche giovanili organizza per
@@ -53,7 +53,7 @@ start#page
 	schiamazzi e gente che accorda chitarre, e tizi che s'avvicinano al
 	microfono per dire
 	begin#outside
-		p#intra@em#un due tre
+		p#speak@em#un due tre
 	end#outside
 	e poi se ne vanno.
 	sec#
@@ -157,7 +157,7 @@ start#page
 		rappresentava uno dei confini invalicabili della vita, cose del tipo
 	end#inside
 	begin#outside
-		p#intra@em#Corvino, quando arrivi lì devi fermarti e tornare indietro, almeno fino a quando non sarai diventato grande
+		p#speak@em#Corvino, quando arrivi lì devi fermarti e tornare indietro, almeno fino a quando non sarai diventato grande
 	end#outside
 	begin#inside
 		posti nei quali quando stai giocando a darsela e ci finisci sei fottuto,
