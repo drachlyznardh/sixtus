@@ -51,12 +51,12 @@ start#page
 	essere i fuochi di una citt&agrave;. Una piccola, un villaggio.
 	sec#
 	begin#outside
-		p#intra@ali#Tra un&apos;ora saremo a casa, Araldo
+		p#speak@ali#Tra un&apos;ora saremo a casa, Araldo
 		p#Ancora quello strano nome. Perch&eacute; mantiene questa deferenza? Chiedo:
-		p#intra@jo#Perch&eacute; mi chiami a quel modo? Io sono Jo, nient&apos;altro
+		p#speak@jo#Perch&eacute; mi chiami a quel modo? Io sono Jo, nient&apos;altro
 		p#Sorride, i suoi occhi stanno fissando una bambina con una corona di
 		carta mentre afferma di essere una principessa:
-		intra@ali#Tu ancora non sai, ma domani vedrai. Domani &egrave; il giorno
+		speak@ali#Tu ancora non sai, ma domani vedrai. Domani &egrave; il giorno
 		p#Poi tace, ascolta il canto delle onde.
 	end#outside
 	sec#
@@ -142,7 +142,7 @@ start#page
 	ma chiaramente non sta appeso. Guardo Al&igrave; e cerco il suo sguardo per
 	ottenere una spiegazione, lui sorride:
 	begin#outside
-		p#intra@ali#Sono feticci, pupazzi controllati a distanza. Mi sono di grande aiuto nelle azioni in solitaria, in citt&agrave;. Nessuno corre rischi
+		p#speak@ali#Sono feticci, pupazzi controllati a distanza. Mi sono di grande aiuto nelle azioni in solitaria, in citt&agrave;. Nessuno corre rischi
 	end#outside
 	Comincio a disegnare nella mente l&apos;immagine del mastro burattinaio che
 	si cela dietro il paravento, temendo di trovarmi un qualche altro omaccione
@@ -164,7 +164,7 @@ start#page
 	spalle. Mano sinitra sulla spalla destra, mano destra sulla spalla sinistra,
 	in un atteggiamento che sta a met&agrave; tra la meditazione e la preghiera.
 	begin#outside
-		p#intra@ali#Questa &egrave; mia sorella, Aysha
+		p#speak@ali#Questa &egrave; mia sorella, Aysha
 	end#outside
 	Lei mi rivolge un sorriso, che quasi mi travolge per la sua innocenza. Vedo
 	che la posizione che tiene non &egrave; affatto una scelta: le sue palpebre

@@ -69,7 +69,7 @@ start#page
 	p#Allora mi avvicino per verificare. Dopo un passo nella sua direzione, la
 	rosa mi parla e dice:
 	begin#outside
-		p#intra@lyznardh#Ciao Jo. Questo &egrave; il giorno: coglimi
+		p#speak@lyznardh#Ciao Jo. Questo &egrave; il giorno: coglimi
 	end#outside
 	p#Questa non &egrave; la voce di un fiore, &egrave; troppo profonda, e non
 	&egrave; affatto gentile. Non che i fiori chiedessero per favore, ma il loro
@@ -79,8 +79,8 @@ start#page
 	il fiore parli di nuovo, indicandomi di tornare al villaggio. Ma la voce si
 	fa attendere. Infine, dice:
 	begin#outside
-		p#intra@lyznardh#No, Jo, questo &egrave; il tuo fiore
-		p#intra@lyznardh#Va&apos; a salutare tuo padre
+		p#speak@lyznardh#No, Jo, questo &egrave; il tuo fiore
+		p#speak@lyznardh#Va&apos; a salutare tuo padre
 	end#outside
 	p#Questo &egrave; un evento raro, mi dico. Nessun fiore s&apos;era mai
 	offerto a me come dono, &egrave; la prima volta. Mi lego i capelli con lo
@@ -117,8 +117,8 @@ start#page
 		avessi il tempo di chiedere, quello si gir&ograve; e disse:
 	end#inside
 	begin#outside
-		p#intra@lyznardh#Ecco tua figlia
-		p#intra@lyznardh#Apparterr&agrave; a te, fino al giorno in cui la reclamer&ograve;, a ventuno dei tuoi anni da oggi
+		p#speak@lyznardh#Ecco tua figlia
+		p#speak@lyznardh#Apparterr&agrave; a te, fino al giorno in cui la reclamer&ograve;, a ventuno dei tuoi anni da oggi
 	end#outside
 	begin#inside
 		p#&laquo;Parl&ograve; con un tono che non lasciava spazio di replica.
@@ -154,6 +154,6 @@ start#page
 	incappucciato, completamente coperto dal mantello. Non ha un volto, ma sento
 	il peso del suo sguardo su di me. Saluta:
 	begin#outside
-		p#intra@lyznardh#Ciao Jo
+		p#speak@lyznardh#Ciao Jo
 	end#outside
 stop#page

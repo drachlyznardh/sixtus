@@ -5,105 +5,105 @@ start#page
 	title#Tru Naluten I, IV &ndash; Le altre voci
 	p#Cos&igrave;, io sono Simak.
 	begin#outside
-		p#intra@lyznardh#<span class="em" title="che significa: &laquo;Finalmente!&raquo;">Er aor ha!</span>
+		p#speak@lyznardh#<span class="em" title="che significa: &laquo;Finalmente!&raquo;">Er aor ha!</span>
 	end#outside
 	sec#
 	begin#inside
-		p#intra@simak#Dimmi, Sacomne, io non ti vedo. Come posso parlare con te?
-		p#intra@sacomne#…
-		p#intra@simak#Sacomne?
-		p#intra@sacomne#…
-		p#intra@simak#Oh, Shka&apos;dhum! Come funziona?!? Come posso chiamarti, Sacomne?
-		p#intra@sacomne#Quando ne avrai bisogno, arriver&ograve;
-		p#intra@simak#Quindi, continuerai a comparire come ti pare?
+		p#speak@simak#Dimmi, Sacomne, io non ti vedo. Come posso parlare con te?
+		p#speak@sacomne#…
+		p#speak@simak#Sacomne?
+		p#speak@sacomne#…
+		p#speak@simak#Oh, Shka&apos;dhum! Come funziona?!? Come posso chiamarti, Sacomne?
+		p#speak@sacomne#Quando ne avrai bisogno, arriver&ograve;
+		p#speak@simak#Quindi, continuerai a comparire come ti pare?
 	end#inside
 	p#&Egrave; cos&igrave;, dunque? Questa Sacomne compare dal nulla, dice di amarmi, e poi svanisce a quel modo…
 	begin#inside
-		p#intra@simak#&Egrave; ingiusto!
-		p#intra@lyz#Scemo!
-		p#intra@simak#Ehi!
-		p#intra@lyz#Sei un cazzone!
-		p#intra@simak#Che? C&apos;ho fatto?
-		p#intra@lyz#Sai, se ti ricordassi tutto quello che hai scordato, sapresti quanto Sacomne ti ami e quanto spesso &egrave; stata di grande aiuto a tutti noi
-		p#intra@simak#Uhm… convincimi!
-		p#intra@lyz#D&apos;accordo. Aspetta un pochetto, senza fare niente…
-		p#intra@simak#Vabbene…
+		p#speak@simak#&Egrave; ingiusto!
+		p#speak@lyz#Scemo!
+		p#speak@simak#Ehi!
+		p#speak@lyz#Sei un cazzone!
+		p#speak@simak#Che? C&apos;ho fatto?
+		p#speak@lyz#Sai, se ti ricordassi tutto quello che hai scordato, sapresti quanto Sacomne ti ami e quanto spesso &egrave; stata di grande aiuto a tutti noi
+		p#speak@simak#Uhm… convincimi!
+		p#speak@lyz#D&apos;accordo. Aspetta un pochetto, senza fare niente…
+		p#speak@simak#Vabbene…
 	end#inside
 	p#…
 	begin#inside
-		p#intra@lyz#Guarda! C&apos;&eacute; Sacomne!
-		p#intra@simak#Ah! Dov&apos;&egrave;? Sacomne, amore mio…
+		p#speak@lyz#Guarda! C&apos;&eacute; Sacomne!
+		p#speak@simak#Ah! Dov&apos;&egrave;? Sacomne, amore mio…
 	end#inside
 	p#Al solo pensarla, vado in brodo di giuggiole…
 	sec#
 	p#…
 	p#Rimango a nuotare nel brodo per qualche secondo…
 	begin#inside
-		p#intra@simak#Lyz! Avevi ragione!
-		p#intra@lyz#<em title="che significa: &laquo;Per la Volont&agrave;&raquo;">Du&apos;Nalute!</em> Sono il Lyz, ho <strong>sempre</strong> ragione!
-		p#intra@corona#-- … --
+		p#speak@simak#Lyz! Avevi ragione!
+		p#speak@lyz#<em title="che significa: &laquo;Per la Volont&agrave;&raquo;">Du&apos;Nalute!</em> Sono il Lyz, ho <strong>sempre</strong> ragione!
+		p#speak@corona#-- … --
 	end#inside
 	p#Mi &egrave; parso di sentire qualcosa… una delle voci del mio sogno...
 	begin#inside
-		p#intra@simak#Voi avete sentito nulla?
-		p#intra@ci#[<em>nessun rilevamento</em>] su tutti i canali audio
-		p#intra@lyz#Nemmeno io ho sentito nulla… Hai le allucinazioni?
-		p#intra@simak#Forse mi sbaglio… forse sono stanco...
-		p#intra@ci#Livelli energetici: [&lt; <code>98% | 97% | 100% | 99% | 99%</code> &gt;]
-		p#intra@ci#Condizioni [<em>ottimali</em>]
-		p#intra@lyz#Direi che stiamo bene, in queste condizioni occorrebbe un potere mostruoso per farci cadere vittime di un&apos;allucinazione… E comunque, non avverto alcun pericolo: il ch&eacute; significa che NON c&apos;&eacute; alcun pericolo
-		p#intra@simak#Eppure, m&apos;&eacute; parso di sentire quella voce rossa…
-		p#intra@corona#-- … --
+		p#speak@simak#Voi avete sentito nulla?
+		p#speak@ci#[<em>nessun rilevamento</em>] su tutti i canali audio
+		p#speak@lyz#Nemmeno io ho sentito nulla… Hai le allucinazioni?
+		p#speak@simak#Forse mi sbaglio… forse sono stanco...
+		p#speak@ci#Livelli energetici: [&lt; <code>98% | 97% | 100% | 99% | 99%</code> &gt;]
+		p#speak@ci#Condizioni [<em>ottimali</em>]
+		p#speak@lyz#Direi che stiamo bene, in queste condizioni occorrebbe un potere mostruoso per farci cadere vittime di un&apos;allucinazione… E comunque, non avverto alcun pericolo: il ch&eacute; significa che NON c&apos;&eacute; alcun pericolo
+		p#speak@simak#Eppure, m&apos;&eacute; parso di sentire quella voce rossa…
+		p#speak@corona#-- … --
 	end#inside
 	p#Ecco, l&apos;ho sentita ancora, ma…
 	p#Ahi! …
 	c#Mi fa male …
 	r#La testa …
 	begin#inside
-		p#intra@corona#-- Se insisti nel chiamarmi, eccomi --
-		p#intra@simak#Ah, allora non mi sbagliavo!
-		p#intra@corona#-- Ti sbagli su molte cose, Simak --
-		p#intra@simak#Che fai, sfotti?
+		p#speak@corona#-- Se insisti nel chiamarmi, eccomi --
+		p#speak@simak#Ah, allora non mi sbagliavo!
+		p#speak@corona#-- Ti sbagli su molte cose, Simak --
+		p#speak@simak#Che fai, sfotti?
 	end#inside
 	p#Mh…
 	begin#inside
-		p#intra@simak#Ehi, aspetta un attimo. Tu mi conosci?
-		p#intra@corona#-- Meglio di te stesso --
-		p#intra@simak#Sei… la... sei la mia coscienza?
-		p#intra@corona#-- Non la tua, ma sono una Coscienza. Si, diciamo pure cos&igrave; --
-		p#intra@simak#E hai un nome?
-		p#intra@corona#-- In effetti, no --
-		p#intra@simak#Posso chiamarti Coscienza, dunque?
-		p#intra@corona#-- Se ti aggrada, fai pure. Non ho problemi con i nomi --
-		p#intra@simak#Beh, dimmi, Coscienza, dove siamo?
-		p#intra@corona#-- Questo &egrave; un sogno… --
-		p#intra@simak#Ancora? Mi hai detto questa molto spesso
-		p#intra@corona#-- Ed ho sempre detto il vero --
-		p#intra@simak#Non ricordo di essermi addormentato…
-		p#intra@corona#-- Ho gettato io il sonno su di te, cosicch&eacute; potessimo parlare… --
-		p#intra@simak#Notevole! Questo significa che possiamo parlare solo mentre dormo?
-		p#intra@corona#-- Precisamente. Io esisto solo nella tua mente --
-		p#intra@simak#Ma anche Ci e il Lyz. Perch&egrave; loro non sono qu&igrave; allora? Ho tentato di chiamarli…
-		p#intra@corona#-- Questo &egrave; impossibile. Loro due non si trovano in questo luogo. Noi non siamo nel luogo che ospita le vostre tre menti, ma siano all&apos;interno della tua singola mente, Simak. Qu&igrave;, Ci e il Lyz nemmeno esistono, poich&eacute; sono parte del Lyznardh, ma non parte di Simak --
+		p#speak@simak#Ehi, aspetta un attimo. Tu mi conosci?
+		p#speak@corona#-- Meglio di te stesso --
+		p#speak@simak#Sei… la... sei la mia coscienza?
+		p#speak@corona#-- Non la tua, ma sono una Coscienza. Si, diciamo pure cos&igrave; --
+		p#speak@simak#E hai un nome?
+		p#speak@corona#-- In effetti, no --
+		p#speak@simak#Posso chiamarti Coscienza, dunque?
+		p#speak@corona#-- Se ti aggrada, fai pure. Non ho problemi con i nomi --
+		p#speak@simak#Beh, dimmi, Coscienza, dove siamo?
+		p#speak@corona#-- Questo &egrave; un sogno… --
+		p#speak@simak#Ancora? Mi hai detto questa molto spesso
+		p#speak@corona#-- Ed ho sempre detto il vero --
+		p#speak@simak#Non ricordo di essermi addormentato…
+		p#speak@corona#-- Ho gettato io il sonno su di te, cosicch&eacute; potessimo parlare… --
+		p#speak@simak#Notevole! Questo significa che possiamo parlare solo mentre dormo?
+		p#speak@corona#-- Precisamente. Io esisto solo nella tua mente --
+		p#speak@simak#Ma anche Ci e il Lyz. Perch&egrave; loro non sono qu&igrave; allora? Ho tentato di chiamarli…
+		p#speak@corona#-- Questo &egrave; impossibile. Loro due non si trovano in questo luogo. Noi non siamo nel luogo che ospita le vostre tre menti, ma siano all&apos;interno della tua singola mente, Simak. Qu&igrave;, Ci e il Lyz nemmeno esistono, poich&eacute; sono parte del Lyznardh, ma non parte di Simak --
 	end#inside
 	begin#inside
 		p#Wow! Questa vocina rossa pu&ograve; farmi cadere addormentato e mandarmi dentro me stesso, dove sono solo come un cane… Forse devo temere per la mia sicurezza...
 	end#inside
 	begin#inside
-		p#intra@corona#-- Non hai di che temere, Simak. Sei al sicuro --
-		p#intra@simak#Hei! Com&apos;hai fatto? Mi hai sentito?
-		p#intra@corona#-- Naturalmente --
-		p#intra@simak#Ma come puoi? Stavo solo pensando…
-		p#intra@corona#-- Non c&apos;&eacute; luogo dove io non possa raggiungerti, Simak… Qu&igrave; dentro, io sono potente quanto te --
-		p#intra@simak#D&apos;accordo, ti credo. Ma dimmi, tu… cosa fai qu&igrave;?
-		p#intra@corona#-- &Egrave; semplice: tu hai un compito da svolgere. Io sono qui per aiutarti a compierlo --
-		p#intra@simak#Gi&agrave;… Ricordo questa storia del compito da portare a termine... Tu sai dirmi di pi&ugrave; su questo?
-		p#intra@corona#-- Ahim&eacute;, non &egrave; ancora il momento, Simak… Dovrai aspettare --
-		p#intra@simak#Uhm?
-		p#intra@corona#-- Pazienta. Le risposte arriveranno quando sarai pronto per conoscerle --
-		p#intra@simak#E quando sarebbe questo momento?
-		p#intra@corona#-- … --
-		p#intra@sacomne#Svegliati, Simak!
+		p#speak@corona#-- Non hai di che temere, Simak. Sei al sicuro --
+		p#speak@simak#Hei! Com&apos;hai fatto? Mi hai sentito?
+		p#speak@corona#-- Naturalmente --
+		p#speak@simak#Ma come puoi? Stavo solo pensando…
+		p#speak@corona#-- Non c&apos;&eacute; luogo dove io non possa raggiungerti, Simak… Qu&igrave; dentro, io sono potente quanto te --
+		p#speak@simak#D&apos;accordo, ti credo. Ma dimmi, tu… cosa fai qu&igrave;?
+		p#speak@corona#-- &Egrave; semplice: tu hai un compito da svolgere. Io sono qui per aiutarti a compierlo --
+		p#speak@simak#Gi&agrave;… Ricordo questa storia del compito da portare a termine... Tu sai dirmi di pi&ugrave; su questo?
+		p#speak@corona#-- Ahim&eacute;, non &egrave; ancora il momento, Simak… Dovrai aspettare --
+		p#speak@simak#Uhm?
+		p#speak@corona#-- Pazienta. Le risposte arriveranno quando sarai pronto per conoscerle --
+		p#speak@simak#E quando sarebbe questo momento?
+		p#speak@corona#-- … --
+		p#speak@sacomne#Svegliati, Simak!
 		r#Per favore …
 		c#Datemi …
 		p#Un&apos;aspirina …
@@ -111,35 +111,35 @@ start#page
 	sec#
 	p#Questi strani sogni mi mettono addosso una notevole stanchezza. Anche se stavolta, sono davvero convininto di essermi addormentato, invece che svenire come le altre volte…
 	begin#inside
-		p#intra@simak#Yawn… Come va?
-		p#intra@lyz#Come va cosa? Stai bene, capo?
-		p#intra@simak#Quanto ho dormito?
-		p#intra@lyz#Dormito? Tu non hai dormito affatto! Praticamente, non hai mai smesso di parlare… Poi hai nominato una cerca voce rossa...
-		p#intra@ci#Prima che tu lo chieda, posso confermare. Sei rimasto in silenzio per [<code>0&apos;00&quot;.123</code>], ossia un tempo trascurabile per la tua mente…
+		p#speak@simak#Yawn… Come va?
+		p#speak@lyz#Come va cosa? Stai bene, capo?
+		p#speak@simak#Quanto ho dormito?
+		p#speak@lyz#Dormito? Tu non hai dormito affatto! Praticamente, non hai mai smesso di parlare… Poi hai nominato una cerca voce rossa...
+		p#speak@ci#Prima che tu lo chieda, posso confermare. Sei rimasto in silenzio per [<code>0&apos;00&quot;.123</code>], ossia un tempo trascurabile per la tua mente…
 	end#inside
 	sec#
 	p#Che fa? Sfotte?
 	sec#
 	begin#inside
-		p#intra@simak#Che cosa intenti con &quot;trascurabile per la mia mente&quot;?
-		p#intra@ci#Non t&apos;offendere. Intendo dire che il tempo in cui sei stato zitto non &egrave; indice di nessuna attivit&agrave; particolare, o meglio, indica che nel lasso di tempo trascorso in silezio, non potresti mai addormentarti e risvegliarti. &Egrave; fisicamente impossibile.
-		p#intra@simak#Cio&eacute;… io sto qui in mezzo ad un bosco, praticamente in totale amnesia, sento continuamente delle voci nella mia testa, e tu vieni a parlarmi di cose &quot;fisicamente impossibili&quot;? Lascia stare Ci, non &egrave; il momento...
+		p#speak@simak#Che cosa intenti con &quot;trascurabile per la mia mente&quot;?
+		p#speak@ci#Non t&apos;offendere. Intendo dire che il tempo in cui sei stato zitto non &egrave; indice di nessuna attivit&agrave; particolare, o meglio, indica che nel lasso di tempo trascorso in silezio, non potresti mai addormentarti e risvegliarti. &Egrave; fisicamente impossibile.
+		p#speak@simak#Cio&eacute;… io sto qui in mezzo ad un bosco, praticamente in totale amnesia, sento continuamente delle voci nella mia testa, e tu vieni a parlarmi di cose &quot;fisicamente impossibili&quot;? Lascia stare Ci, non &egrave; il momento...
 	end#inside
 	p#Non lo &egrave;, decisamente.
 	begin#inside
-		p#intra@simak#Oltretutto, neanche ricordo che faccia ho… Ehi, Lyz, non c&apos;&eacute; mica un laghetto qu&igrave; vicino? Vorrei vedere la mia immagine riflessa
-		p#intra@lyz#Chiedi e ti sar&agrave; dato: il Lyz &egrave; qu&igrave; essattamente per questo. Dunque, sento odore di umido verso est, e sento anche il rumore dell&apos;acqua
+		p#speak@simak#Oltretutto, neanche ricordo che faccia ho… Ehi, Lyz, non c&apos;&eacute; mica un laghetto qu&igrave; vicino? Vorrei vedere la mia immagine riflessa
+		p#speak@lyz#Chiedi e ti sar&agrave; dato: il Lyz &egrave; qu&igrave; essattamente per questo. Dunque, sento odore di umido verso est, e sento anche il rumore dell&apos;acqua
 	end#inside
 	p#Inspiro profondamente, e ascolto.
 	begin#inside
-		p#intra@ci#Distanza [<code>238m</code>], direzione [<code>-47&deg;34&apos;45&quot;</code>]
-		p#intra@simak#Sarebbe a dire?
-		p#intra@lyz#Pirla! Un mezzo a sinistra, 48 passi in avanti: l&igrave; c&apos;&eacute; dell&apos;acqua!
+		p#speak@ci#Distanza [<code>238m</code>], direzione [<code>-47&deg;34&apos;45&quot;</code>]
+		p#speak@simak#Sarebbe a dire?
+		p#speak@lyz#Pirla! Un mezzo a sinistra, 48 passi in avanti: l&igrave; c&apos;&eacute; dell&apos;acqua!
 	end#inside
 	p#Era cos&igrave; semplice?
 	p#Non ne sono cos&igrave; convinto. Per&ograve; il Lyz non si sbaglia. C&apos;&eacute; davvero un laghetto… Mi avvicino al bordo e mi affaccio per specchiarmi...
 	begin#outside
-		p#intra@lyznardh#<strong><em title="che significa: &laquo;Porco Mondo!&raquo;">Shka&apos;dhum!</em></strong> Sono io quello? Oh Sacomne, mia adorata! <span title="proprio tanto">Quanto sono brutto…</span>
+		p#speak@lyznardh#<strong><em title="che significa: &laquo;Porco Mondo!&raquo;">Shka&apos;dhum!</em></strong> Sono io quello? Oh Sacomne, mia adorata! <span title="proprio tanto">Quanto sono brutto…</span>
 	end#outside
 	p#Yo! C&apos;ho una faccia che fa spavento! Che razza di bestia sono?
 stop#page

@@ -18,13 +18,13 @@ start#page
 	andar peggio di così? Perché quel momento è sempre quello in cui le cose
 	peggiorano in modo assurdo e imprevedibile.
 	begin#inside
-		p#intra@ci#Attenzione!
-		p#intra@simak#Oh, cosa succede adesso?
-		p#intra@ci#Ho come la sensazione che le cose peggiorenanno in modo assurdo e imprevedibile tra alcuni istanti
-		p#intra@simak#<em title="Maccom'èpossibilequesto?!">Maccom'èpposibilequesto!?</em> Se ben ricordo, il Lyznardh è provvisto di un avanzatissimo sistema in intercettazione di eventi di questo tipo
-		p#intra@lyz#Si, infatti: sono io. E vengo appunto a dirti che le cose stanno per precipitare!
-		p#intra@simak#Promemoria per me stesso: smettere di riflettere su come risolvere i miei problemi personali, per evitare che i suddetti ragionamenti inneschino reazioni impreviste nel mondo reale
-		p#intra@ci#Promeria registrato
+		p#speak@ci#Attenzione!
+		p#speak@simak#Oh, cosa succede adesso?
+		p#speak@ci#Ho come la sensazione che le cose peggiorenanno in modo assurdo e imprevedibile tra alcuni istanti
+		p#speak@simak#<em title="Maccom'èpossibilequesto?!">Maccom'èpposibilequesto!?</em> Se ben ricordo, il Lyznardh è provvisto di un avanzatissimo sistema in intercettazione di eventi di questo tipo
+		p#speak@lyz#Si, infatti: sono io. E vengo appunto a dirti che le cose stanno per precipitare!
+		p#speak@simak#Promemoria per me stesso: smettere di riflettere su come risolvere i miei problemi personali, per evitare che i suddetti ragionamenti inneschino reazioni impreviste nel mondo reale
+		p#speak@ci#Promeria registrato
 	end#inside
 	Ora, questa sensazione di stanchezza mista a sconforto che mi prende
 	ogniqualvolta sta per succedere qualcosa deve essere un sintomo – in caso
@@ -43,16 +43,16 @@ start#page
 	è molto basso, o forse è molto largo, forse entrambi, beh, è quadrato.
 	sec#
 	begin#inside
-		p#intra@simak#Cos&apos;è quello?
-		p#intra@ci#[<code>Analisi in corso</code>]
-		p#intra@simak#Dunque?
-		p#intra@ci#Non lo so, non è qualcosa che conosciamo. È nuovo
-		p#intra@simak#Nuovo?
-		p#intra@lyz#Oh, finalmente! Non ricordo quand&apos;è stata l&apos;ultima volta che ho avuto un avversario nuovo!
-		p#intra@ci#La creatura non rientra in alcun ambito, e ci tengo a precisare che dispongo di un archivio per tutti gli <em title="Spirito">Chadan</em> tutti gli <em title="Progenie di Zathot">Zathotan</em> e tutto quello che compare in <em title="Multiverso">Umundhum</em>
-		p#intra@simak#Poco importa! Le sue intenzioni non sono buone!
-		p#intra@lyz#E tu che ne sai?
-		p#intra@simak#Che c&apos;è, Lyz? I tuoi sensi si sono impigriti?
+		p#speak@simak#Cos&apos;è quello?
+		p#speak@ci#[<code>Analisi in corso</code>]
+		p#speak@simak#Dunque?
+		p#speak@ci#Non lo so, non è qualcosa che conosciamo. È nuovo
+		p#speak@simak#Nuovo?
+		p#speak@lyz#Oh, finalmente! Non ricordo quand&apos;è stata l&apos;ultima volta che ho avuto un avversario nuovo!
+		p#speak@ci#La creatura non rientra in alcun ambito, e ci tengo a precisare che dispongo di un archivio per tutti gli <em title="Spirito">Chadan</em> tutti gli <em title="Progenie di Zathot">Zathotan</em> e tutto quello che compare in <em title="Multiverso">Umundhum</em>
+		p#speak@simak#Poco importa! Le sue intenzioni non sono buone!
+		p#speak@lyz#E tu che ne sai?
+		p#speak@simak#Che c&apos;è, Lyz? I tuoi sensi si sono impigriti?
 	end#inside
 	Le sue intenzioni non sono buone, lo <em>so</em>, posso sentirlo. In un modo
 	che non mi spiego, ma la cosa non ha importanza, al momento. Un tempo mi
@@ -96,9 +96,9 @@ start#page
 	atteggiamento più simile all'appetito.
 	sec#
 	begin#inside
-		p#intra@simak#Credo che stia per mangiarsi qualcuno. E non voglio che lo faccia!
-		p#intra@ci#L&apos;energia scatenata è già il [<code>154%</code>] del limite accettabile per il mantenimento del [<code>basso profilo</code>] atto a [<code>non interferire con il normale andamento di Datundhum</code>]
-		p#intra@a_simak#Corri, Simak! Fa&apos; il tuo lavoro e salva quei poveretti!
+		p#speak@simak#Credo che stia per mangiarsi qualcuno. E non voglio che lo faccia!
+		p#speak@ci#L&apos;energia scatenata è già il [<code>154%</code>] del limite accettabile per il mantenimento del [<code>basso profilo</code>] atto a [<code>non interferire con il normale andamento di Datundhum</code>]
+		p#speak@a_simak#Corri, Simak! Fa&apos; il tuo lavoro e salva quei poveretti!
 	end#inside
 	sec#
 	Merda.
@@ -111,11 +111,11 @@ start#page
 	quì vicino, dev'essere quello il bersaglio.
 	sec#
 	begin#inside
-		p#intra@simak#Ci, emergenza, disattiva i blocchi dal settimo al quinto
-		p#intra@ci#È necessaria l&apos;autorizzazione diretta dell&apos;amministratore del sistema
-		p#intra@simak#Permesso accordato
-		p#intra@ci#[<code>Comando accettato</code>] Rimozione dei blocchi in corso…
-		p#intra@lyz#Libero!
+		p#speak@simak#Ci, emergenza, disattiva i blocchi dal settimo al quinto
+		p#speak@ci#È necessaria l&apos;autorizzazione diretta dell&apos;amministratore del sistema
+		p#speak@simak#Permesso accordato
+		p#speak@ci#[<code>Comando accettato</code>] Rimozione dei blocchi in corso…
+		p#speak@lyz#Libero!
 	end#inside
 	Senza blocchi posso muovermi più liberamente, come si confà ad una persona
 	del mio calibro. Carico quattro delle mie sei gambe – basterà – e spicco il
@@ -194,7 +194,7 @@ start#page
 	sulla superficie, sto sempre tentando di mantere un po' di discrezione.
 	Fisso il basso, mi concentro ed ordino alla roccia di lasciarmi passare.
 	begin#outside
-		p#intra@lyznardh#<em title="Togliti di mezzo">Forde m'hez</em>
+		p#speak@lyznardh#<em title="Togliti di mezzo">Forde m'hez</em>
 	end#outside
 	Obbediente, la roccia si spezza, si rompe e frana per aprire un varco
 	abbastanza largo per consentirmi di passare. Ora che la mia galleria
@@ -244,8 +244,8 @@ start#page
 	alla mia destra, ruotandole sui polsi. Lascio scorrere tutta la mia energia
 	nell'incavo tra le mani, convogliandola in una lucente sfera blu.
 	begin#outside
-		p#intra@lyznardh#Prendi, bestiaccia spaziale, questo è il “<em>Colpo della Tartaruga di Mare</em>”, tutto per te!
-		p#intra@lyznardh#<em title="Colpo della Tartaruga di Mare della scuola di Simak">Simakamehameha!</em>
+		p#speak@lyznardh#Prendi, bestiaccia spaziale, questo è il “<em>Colpo della Tartaruga di Mare</em>”, tutto per te!
+		p#speak@lyznardh#<em title="Colpo della Tartaruga di Mare della scuola di Simak">Simakamehameha!</em>
 	end#outside
 	L'onda prorompe dalle mie mani e si fionda verso lo spazio aperto, raggiunge
 	il suo bersaglio, la comunicazione viene interrotta. E con questo, credo di
@@ -254,32 +254,32 @@ start#page
 	Ora credo che mi prenderò una pausa: mi scrollo di dosso la polvere, tiro il
 	fiato, poi ripristino i blocchi al loro posto.
 	begin#inside
-		p#intra@simak#Ci, ripristina i blocchi fino al settimo, immediatamente
-		p#intra@ci#Ehm, si, certo… Subito, Simak…
+		p#speak@simak#Ci, ripristina i blocchi fino al settimo, immediatamente
+		p#speak@ci#Ehm, si, certo… Subito, Simak…
 		p#Mi sembra poco convinta,
-		intra@simak#Ci sono problemi, Ci?
-		p#intra@lyz#<strong>Occheccazzo si</strong>
+		speak@simak#Ci sono problemi, Ci?
+		p#speak@lyz#<strong>Occheccazzo si</strong>
 		sbotta eLyz,
-		intra@lyz#ci sono dei problemi! Sei cieco, forse? O sei solo scemo? Cos&apos;é successo? Com&apos;hai fatto?
-		p#intra@simak#Beh, ho combattuto. Come sempre
+		speak@lyz#ci sono dei problemi! Sei cieco, forse? O sei solo scemo? Cos&apos;é successo? Com&apos;hai fatto?
+		p#speak@simak#Beh, ho combattuto. Come sempre
 	end#inside
 	Da dove m'è uscita questa? Combatto sempre così, io? Combatto?
 	begin#inside
-		p#intra@lyz#No, non come sempre. Coglione!
+		p#speak@lyz#No, non come sempre. Coglione!
 		e sbuffa.
-		p#intra@lyz#Normalmente parli, chiedi aiuto, chiedi informazioni. O perlomeno, per lanciare i colpi energetici usi me. Ma questa volta no, hai fatto tutto da solo
+		p#speak@lyz#Normalmente parli, chiedi aiuto, chiedi informazioni. O perlomeno, per lanciare i colpi energetici usi me. Ma questa volta no, hai fatto tutto da solo
 		p#Mi si avvicina e chiede
-		intra@lyz#Come?
-		p#intra@simak#Ah già
+		speak@lyz#Come?
+		p#speak@simak#Ah già
 		faccio io, vago
-		intra@simak#dimenticavo che voi non siete stati testimoni diretti della mia ultima “promozione”
+		speak@simak#dimenticavo che voi non siete stati testimoni diretti della mia ultima “promozione”
 	end#inside
 			E questa? Da dove è uscita? Perché dico 'ste cose?
 	begin#inside
-		p#intra@simak#Diciamo che ora non sono più così dipendente da voi, e posso esercitare un controllo più diretto
+		p#speak@simak#Diciamo che ora non sono più così dipendente da voi, e posso esercitare un controllo più diretto
 		aggiungo, cercando di assumere un'aria di superiorità.
 		p#Poi faccio un gesto con la mano, per allontanare questo discorso come
 		farei con una mosca
-		intra@simak#Quando avremo tempo a disposizione ve ne parlerò
+		speak@simak#Quando avremo tempo a disposizione ve ne parlerò
 	end#inside
 stop#page
