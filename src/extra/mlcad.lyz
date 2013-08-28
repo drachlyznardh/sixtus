@@ -4,9 +4,8 @@ next#Extra/BUX#Bu&chi;
 start#page
 tab#intro
 	La prima cose che vi devo chiedere è, ovviamente,
-	intra@gods#Siete proprio sicuri?
-	
-	reverse#Perché la storia è abbastanza brutta… sì, <em>bruta ma bruta ne</em>.
+	speak@gods#Siete proprio sicuri?
+	r#Perché la storia è abbastanza brutta… sì, <em>bruta ma bruta ne</em>.
 
 	Ma visto che siete qui, immagino che vi siati trovati più o meno nella mia
 	condizione. Quindi mettetevi comodi, magari con un cuscino sotto il culo –
@@ -72,7 +71,7 @@ tab#mlcad
 	andate su <a href="http://peeron.com/">peeron</a>, sceglietevi una scatola
 	che conoscete, cercatevi il pezzo che vi serve, guardatene il nome completo
 	e cercatevelo sul CAD. <strong>IMPARATEVI</strong> i nomi dei pezzi.
-	reverse#<em>«Vi salverà la vita»</em>
+	r#<em>«Vi salverà la vita»</em>
 	br#
 	Poi. In alto trovate la lista dei componenti, che sarebbe in pratica poco
 	più della struttura del file come lo salvate. <strong>GUARDATECI</strong>
