@@ -1,5 +1,5 @@
 start#page
-	reverse#Siam tutti stanchi, scrive il <em>Dacav</em>…
+	r#Siam tutti stanchi, scrive il <em>Dacav</em>…
 	stitle#Riassunto delle puntate precedenti
 	Presa la nuvola ninja del supervisore, abbiamo preso le coordinate da
 	<em>William Dalton</em>, fino alla zona di carico-scarico delle nuvole
@@ -17,8 +17,8 @@ start#page
 	notiamo solo quando sorge il sole. È un agritour di Marzapane, e davanti al
 	castello ci sono due guardie di marzapane:
 	begin#ul
-	  li#La guardia con l'alabarda ha i bottoni gommosi;
-	  li#L'intera guardia con la lancia è pralinata.
+	  p#La guardia con l'alabarda ha i bottoni gommosi;
+	  p#L'intera guardia con la lancia è pralinata.
 	end#ul
 	<em>Grimelda</em> ha fatto un sondaggio, dal cui esce che la collettività vuole
 	uccidere la guardia pralinata ed utilizzarla come cena. La seconda guardia
@@ -118,9 +118,9 @@ start#page
 	fanno dolcetti. Non sembrano sapere nulla su nuvole ninja. Un po' di
 	informazioni:
 	begin#ul
-		li#Gli Umpa-Lumpa sono in pace;
-		li#Le guardie servono a tener fuori gli indegni (da cui noi siamo degni);
-		li#Stiamo parlando con il direttore della fabbrica.
+		p#Gli Umpa-Lumpa sono in pace;
+		p#Le guardie servono a tener fuori gli indegni (da cui noi siamo degni);
+		p#Stiamo parlando con il direttore della fabbrica.
 	end#ul
 	<em>Grimelda</em> ottiene da bere (il direttore immerge una tazza nel fiume
 	e porge cortesemente). Nel mentre <em>Mess</em> cerca di fare del
