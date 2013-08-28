@@ -57,12 +57,12 @@
 		public function parse($filename)
 		{
 			$this->include_base = dirname($filename);
-			$index = 0;
+			$index = array($filename, 0);
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
 			foreach ($rows as $_)
 			{
-				$index++;
+				$index[1]++;
 				if (preg_match('/^#.*/', $_)) {
 					#printf("\tLine#$index is a comment\n");
 				} else if (preg_match('/#/', $_)) {

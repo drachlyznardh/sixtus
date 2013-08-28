@@ -52,7 +52,7 @@
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
 
 				default:
-					printf ("ERROR [$command] @ line $index\n");
+					printf ("ERROR [$command] in $index[0] @ line $index[1]\n");
 					exit(1);
 					$this->closeContext();
 					$this->content[] = '<br/><p class="error">ERROR: [';
