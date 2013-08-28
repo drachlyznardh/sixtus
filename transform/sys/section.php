@@ -198,6 +198,9 @@
 		private function make_text ($text)
 		{
 			if ($text) {
+					
+				$text = polish_line($text);
+
 				if (preg_match('/^</', $text)) {
 					$this->content[] = " $text";
 				} else if (preg_match('/^>/', $text)) {
@@ -219,21 +222,21 @@
 		{
 			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->content[] = polish_line($cmd_args[1]);
 		}
 
 		private function make_c ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('c');
 			if (count($cmd_args) > 3) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->content[] = polish_line($cmd_args[1]);
 		}
 
 		private function make_r ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('r');
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->content[] = polish_line($cmd_args[1]);
 		}
 
 		private function recursive ($index, $cmd_args, $cmd_attr)
