@@ -72,7 +72,7 @@ start#page
 
 	Mess: "Ma no, è una macchina; chiamiamo Gertrude e corchiamolo di botte"
 	begin#mini@right
-		foto#Extra/Gertrude.jpg
+		img#Extra/Gertrude.jpg
 		La posa di Gertrude
 	end#mini
 	L'unità Gertrude viene richiamata per arrivare dal Supervisore,

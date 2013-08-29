@@ -56,8 +56,7 @@ tab#ii
 	class="dacav">Dacav</span>) vivevo felice senza scheda grafica.
 
 	Funzionava, eh, per quello. Ma un giorno mi venne voglia di giochicchiare a
-	<span class="em">StarCraft</span>. Una voglia di quelle a cui non avevo
-	voglia di oppormi.
+	<em>StarCraft</em>. Una voglia di quelle a cui non avevo voglia di oppormi.
 
 	Decisi che avrei quindi convinto questa installazione a sfruttare un po'
 	meglio il suo bell'hardware e a permettermi di giocare con un framerate
@@ -182,7 +181,7 @@ tab#ii
 	Poi ho speso il resto della mattina – quel poco ch'è avanzato, prima e dopo
 	il pranzo – per far funzionare <code>mpd</code>, che già mi da delle soddisfazioni.
 
-	Ma senza Wine, come posso giocare a <span class="em">Warning Forever</span>?
+	Ma senza Wine, come posso giocare a <em>Warning Forever</em>?
 tab#iii
 	Ma non solo…  c'è effettivamente un proseguo, ossia il risultato del lavoro
 	di oggi.
@@ -221,8 +220,7 @@ tab#iii
 	e dare un <code>dpkg --build</code> per ottenere il pacchetto.
 	sec#
 	Niente di terribile. Una volta ottenuto il pacchetto, lo si può installare
-	facilmente, con un'altra chiamata a <span class="code">dpkg -i</span> e il
-	gioco è fatto. 
+	facilmente, con un'altra chiamata a <code>dpkg -i</code> e il gioco è fatto. 
 
 	Prima ho provato semplicemente a mimare la libreria incriminata, ma ho
 	scoperto che i conflitti sono abbastanza annidati, e soprattuto sembrano
@@ -318,9 +316,9 @@ tab#iv
 		«<span class="magnet">Esatto! Sei stato uno sciocco, il tuo piano non
 		funzionera!</span>» ridacchia la gelataia, togliendosi la maschera.
 	
-		«<span class="gods">Ah! Maledetti! Tu, Richards! E tu, <span
-		class="em">Ragazza magnete</span>! Mi avete tirato un brutto scherzo… ma
-		non crediate di potermi fermare!</span>»
+		«<span class="gods">Ah! Maledetti! Tu, Richards! E tu, <em>Ragazza
+		magnete</em>! Mi avete tirato un brutto scherzo… ma non crediate di
+		potermi fermare!</span>»
 	end#outside
 	Il Dr.Odio estrae i suoi occhialetti tondi, il suo gilet da Nekki Basara, e
 	la sua speciale V7, chitarrone elettrico modificato personalmente.
@@ -331,7 +329,7 @@ tab#iv
 		superdimensionale trasformabile «<span class="gods">Nessuno si
 		salverà!</span>»
 			
-		«<span class="gods forte">Listen to my song!!!</span>»
+		p#speak@gods#<strong>Listen to my song!!!</strong>
 	end#outside
 	L'odio brucia e arde con l'intensità di un milione di soli.
 	sec#

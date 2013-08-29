@@ -33,8 +33,6 @@
 				case 'link': $this->make_link($index, $cmd_args); break;
 				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
-				case 'foto':
-				case 'photo':
 				case 'img': $this->make_img($cmd_args); break;
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
@@ -81,8 +79,13 @@
 		private function openContext($new)
 		{
 			if ($this->context == $new) return;
+			
 			if ($this->context == 'r' && $new == 'p') return;
 			if ($this->context == 'p' && $new == 'r') return;
+			if ($this->context == 'r' && $new == 'c') return;
+			if ($this->context == 'p' && $new == 'c') return;
+			if ($this->context == 'c' && $new == 'p') return;
+			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
 			switch ($this->context)

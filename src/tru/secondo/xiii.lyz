@@ -22,7 +22,7 @@ start#page
 		p#speak@lyz#Ah, ora ricordo. Tutte quella storia per cui dobbiamo portare la guerra all&apos;universo intero, senza rompere niente. Giusto?
 		p#speak@ci#S&igrave;. Inoltre, eLyznardh ha scelto di non intervenire direttamente nei combattimenti
 		p#speak@lyz#Si, me n&apos;ero dimenticato apposta, per evitare di dire nuovamente:
-		p#speak@lyz forte#Ma che cazzo hai nella testa?!?!
+		p#speak@lyz#<strong>Ma che cazzo hai nella testa?!?!</strong>
 		p#speak@lyz#Simak, tu sei il pi&ugrave; grosso idiota che io abbia mai conosciuto! Ma in fondo questo &egrave; il nostro modo di fare, giusto? eLyznardh &egrave; stupido perch&eacute; dentro ci siamo io e te, Simak! Ora, se permetti, mi dimenticher&ograve; nuovamente di questa faccenda. Per il tuo bene, spero che tu non me la faccia ricordare una seconda volta
 	end#inside
 	p#Mentre quello s&apos;incazza e se la risolve da solo, io e Ci possiamo

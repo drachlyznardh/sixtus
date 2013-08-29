@@ -1,235 +1,144 @@
 title#Guida#Non fatevi prendere dal panico
 prev#Storie/2011/XIX/#Permessi
 next#Storie/2011/XXI/#Programmazione 40.000
-
 start#page
-			Mi sono reso conto che non ho mai spiegato a nessuno le
-			funzionalità nascoste di questo sito.
-		
-			Oggi lo farò.
-		</p><h2>
-			Guida
-		</h2><h2 class="reverse">
-			10 gennaio 2011
-		</h2><p>
-			Dunque, comincierò raccontando un po' di storia...
-		
-			Anzi no, comincierò dicendo che tutto quanto è stato
-			fatto come è stato fatto perché io posso. Non vi piace?
-			Beh, me ne sbatto. Andatevene.
-		</p>
-	</div><div class="section">
-		<p>
-			Oltre a questo, avrete forse notato le freccie che
-			compaiono alla destra di alcuni titoli. Si ottengono
-			grazie allo pseudo-attributo <span>:after</span> del
-			CSS2. Clickando su un qualunque punto della barra del
-			titolo si scatena (altre traduzioni per trigger? Attendo
-			consigli...) uno minuscolo pezzo di javascript che
-			smaneggia con il CSS e appare e scompare (utilizzabile
-			anche come transitivi, a quanto pare) un blocco.
-		
-			La visibilità di questi blocchi è regolata, normalmente,
-			dal mio gusto personale, in base a quanto spazio viene
-			occupato sul mio monitor. Forse un giorno realizzarò un
-			accroccio che metta le vostre preferenze in qualche
-			coockie. FORSE.
-		
-			Poi ci sono le sezioni doppie.
-		</p>
-	</div>
-</div><div class="wider">
-	<div class="widecontent">
-		<div class="section">
-			<p>
-				Come questa.
-			</p><h2>
-				Sezioni doppie
-			</h2><p>
-				Le uso quando i contenuti sono molto articolati,
-				come le sezioni personaggi.
-			
-				Ma non devono per forza mostrare entrambi i
-				blocchi, come potete vedere. Perché? Perché io
-				posso.
-			</p>
-		</div>
-	</div>
-</div><div class="small">
-	<div class="section">
-		<p>
-			E possono anche essere invertite.
-		</p>
-	</div>
-</div><div class="revwider">
-	<div class="widecontent">
-		<div class="section">
-			<p>
-				Come in questo esempio, ancora senza nulla
-				accanto.
-			
-				Ma non vedo grande utilità per questo, e non
-				credo che lo userò mai a quel modo. Tranne che
-				qui, ovviamente. Questa è una dimostrazione di
-				potere.
-			
-				Serve soltanto ad impressionare gli allocchi.
-				Impressionati?
-			</p>
-		</div>
-	</div>
-</div><div class="small">
-	<div class="section">
-		<p>
-			Ma come dicevo prima, le sezioni doppie sono doppie.
-			Hanno del contenuto e una lista di link accanto.
-		</p>
-	</div>
-</div><div id="longrevertable" class="wider">
-	<div class="widecontent">
-		<div class="section">
-			<p>
-				Questo è il contenuto.
-			
-				Può avere più paragrafi.
-			</p>
-		</div><div class="section">
-			<p>
-				Ed anche più sezioni.
-			</p>
-		</div><div class="section">
-			<p>
-				Avete notato quel simbolino accanto al titolo?
-				Vicino alla parola &lsquo;Lista&rsquo;? Quello
-				indica che il contenuto (largo 3px) sta alla
-				sinistra della lista (larga invece 1px).
-			
-				Clickando su un punto della barra, potrete
-				vedere &ndash; grazie al JavaScript e al CSS, i
-				due blocchi invertiti. Pretty cool, uh?
-			</p>
-		</div>
-	</div><div class="widelist">
-		<div class="section">
-			<h2>
-				Lista
-			</h2><p>
-				La lista
-			
-				Può contenere
-			
-				Elenchi di cose
-			
-				Ma sono paragrafi, non liste.
-			</p>
-		</div>
-	</div>
-</div><div class="small">
-	<div class="section">
-		<p>
-			Poi ci sono dei simpatici codici &ndash; inseribili
-			direttamente nell'URL &ndash; che danno effetti
-			mirabolanti.
-		
-			Esistono infatti due cose strambe quando si scrive un
-			sito.
-		</p><ul>
-			<li>
-				niente funziona mai al primo colpo
-			</li><li>
-				ci si scorda quello che si è scritto ieri	
-			</li>
-		</ul><p>
-			Per risolvere il primo problema ho inserito la
-			possibilità di debuggare questo motore, basta scrivere
-			/debug/ dentro l'indirizzo della pagina, in un qualunque
-			punto.
-		
-			Per l'altra cosa, spesso capita che io stesso mi scordi
-			chi dice cosa. Qualcuno di voi ha letto Tru Naluten?
-			Qualcuno si ricorda come parlano i personaggi
-			secondari?
-		
-			Beh, io si. Ma il mio amico Bounce no. Per lui ho
-			realizzato quindi il comando /bounce/ che può essere
-			inserito nell'URL. Provate un po'...
-		
-			Tra l'altro, il nome è un link alla pagina dei
-			personaggi. Ma non clickateci qui, perché questa sezione
-			(Storie, come potete vedere dal debug) non ha una pagina
-			per i personaggi.
-		
-			E se lo volete sapere, è perché il link viene generato
-			automaticamente e non ho palle di scrivere una funzione
-			che associ ad ogni personaggi la corretta pagina.
-		</p>
-	</div>
-</div><div class="section">
-	<p>
-		Dimenticavo. Le sezioni, se voglio, possono anche occupare tutto
-		lo spazio disponibile. Ma lo trovo abbastanza scomodo, perché
-		gli occhi devono fare molta strada per tornare all'inizio della
-		riga successiva. Le righe sono molto lunghe, e lo diventano
-		anche di più quando si ha un bel monitorone come quello di
-		Mitch.
-	</p>
-</div><div class="small">
-	<div class="section">
-		<p>
-			Quindi ecco spiegato perché lascio tutto quello spazio
-			vuoto ai fianchi.
-		
-			Ma lo faccio anche per altri motivi. In particolare,
-			perché in questo modo posso spaziare fuori dai bordi.
-		</p><div class="inside">
-			<p>
-				Spesso lo faccio in questo modo.
-			
-				Questo è un blocco di classe
-				&lsquo;inside&rsquo;. Indica i blocchi di testo
-				in cui il protagonista parla con se stesso.
-			</p>
-			p#speak@simak#Non a caso, quando parlo con Ci, lo vedete dentro questo blocco
-		</div><p>
-			Ma i veri dialoghi non stanno dentro, stanno invece
-			fuori.
-		</p><div class="outside">
-			<p>
-				Quando i personaggi parlano veramente,
-				all'esterno, ecco il blocco
-				&lsquo;outside&rsquo;.	
-			</p>
-			p#speak@lyznardh#Perché alcune voci sono udibili
-			soltanto all&apos;esterno, soprattutto quelle forti
-		</div>
-	</div><div class="section">
-		<p>
-			Che altro posso dire?
-		
-			Forse avrete notato che non ci sono più le barre di
-			scorrimento. Ci sono state per un breve periodo. Le ho
-			rimosse evitando di mostrare l'overflow dei blocchi
-			principali, catturando gli eventi del mouse e facendo
-			mirabolanti movimenti nascosti. Ancora il JavaScript.
-		
-			Non vi funziona? Forse è per la mia scarsa attenzione al
-			supporto crossbrowser. Ma se non vi funziona, non potete
-			essere arrivati qui, lol. Ridete con me.
-		
-			Ah, già! Se clickate su &quot;You are a Pirate&quot; nel
-			footer della pagina potete trovare il pannello segreto.
-		
-			Non è altro che il form di login. Ma non potete usarlo,
-			perché la registrazione non è affatto prevista. L'unico
-			utente riconosciuto sono io, i controlli sono
-			hard-coded, ma soprattutto non offron alcun benefico,
-			perché l'unica cosa che compare dopo il login è un
-			pannellino che saluta ed offre la possibilità di
-			cancella file arbitrariamente.
-		
-			Ma se avete letto la storia precedente, avrete
-			immaginato che nemmeno questo funziona. Eh già, perché
-			l'utente di sistema (nodoby, nel mio caso) non ha
-			permessi di scrittura per i folder e non può quindi né
-			rimuovere né spostare alcunché. Che tristezza.
-			stop#page
+	Mi sono reso conto che non ho mai spiegato a nessuno le funzionalità
+	nascoste di questo sito.
+
+	Oggi lo farò.
+	title#Guida
+	title@right#10 gennaio 2011
+	Dunque, comincierò raccontando un po' di storia…
+
+	Anzi no, comincierò dicendo che tutto quanto è stato fatto come è stato
+	fatto perché io posso. Non vi piace?  Beh, me ne sbatto. Andatevene.
+	sec#
+	Oltre a questo, avrete forse notato le freccie che compaiono alla destra di
+	alcuni titoli. Si ottengono grazie allo pseudo-attributo <span>:after</span>
+	del CSS2. Clickando su un qualunque punto della barra del titolo si scatena
+	(altre traduzioni per trigger? Attendo consigli…) uno minuscolo pezzo di
+	javascript che smaneggia con il CSS e appare e scompare (utilizzabile anche
+	come transitivi, a quanto pare) un blocco.
+
+	La visibilità di questi blocchi è regolata, normalmente, dal mio gusto
+	personale, in base a quanto spazio viene occupato sul mio monitor. Forse un
+	giorno realizzarò un accroccio che metta le vostre preferenze in qualche
+	coockie. FORSE.
+
+	Poi ci sono le sezioni doppie.
+	sec#
+	Come questa.
+	title#Sezioni doppie
+	Le uso quando i contenuti sono molto articolati, come le sezioni personaggi.
+
+	Ma non devono per forza mostrare entrambi i blocchi, come potete vedere.
+	Perché? Perché io posso.
+	sec#
+	E possono anche essere invertite.
+	sec#
+	Come in questo esempio, ancora senza nulla accanto.
+
+	Ma non vedo grande utilità per questo, e non credo che lo userò mai a quel
+	modo. Tranne che qui, ovviamente. Questa è una dimostrazione di potere.
+
+	Serve soltanto ad impressionare gli allocchi. Impressionati?
+	sec#
+	Ma come dicevo prima, le sezioni doppie sono doppie. Hanno del contenuto e
+	una lista di link accanto.
+	Questo è il contenuto.
+
+	Può avere più paragrafi.
+	sec#
+	Ed anche più sezioni.
+	sec#
+	Avete notato quel simbolino accanto al titolo?  Vicino alla parola
+	&lsquo;Lista&rsquo;? Quello indica che il contenuto (largo 3px) sta alla
+	sinistra della lista (larga invece 1px).
+
+	Clickando su un punto della barra, potrete vedere &ndash; grazie al
+	JavaScript e al CSS, i due blocchi invertiti. Pretty cool, uh?
+	title#Lista
+	La lista
+
+	Può contenere
+
+	Elenchi di cose
+
+	Ma sono paragrafi, non liste.
+	sec#
+	Poi ci sono dei simpatici codici &ndash; inseribili direttamente nell'URL
+	&ndash; che danno effetti mirabolanti.
+
+	Esistono infatti due cose strambe quando si scrive un sito.
+	begin#ul
+		p#niente funziona mai al primo colpo
+		p#ci si scorda quello che si è scritto ieri	
+	end#ul
+	Per risolvere il primo problema ho inserito la possibilità di debuggare
+	questo motore, basta scrivere /debug/ dentro l'indirizzo della pagina, in un
+	qualunque punto.
+
+	Per l'altra cosa, spesso capita che io stesso mi scordi chi dice cosa.
+	Qualcuno di voi ha letto Tru Naluten?  Qualcuno si ricorda come parlano i
+	personaggi secondari?
+
+	Beh, io si. Ma il mio amico Bounce no. Per lui ho realizzato quindi il
+	comando /bounce/ che può essere inserito nell'URL. Provate un po'…
+
+	Tra l'altro, il nome è un link alla pagina dei personaggi. Ma non clickateci
+	qui, perché questa sezione (Storie, come potete vedere dal debug) non ha una
+	pagina per i personaggi.
+
+	E se lo volete sapere, è perché il link viene generato automaticamente e non
+	ho palle di scrivere una funzione che associ ad ogni personaggi la corretta
+	pagina.
+	sec#
+	Dimenticavo. Le sezioni, se voglio, possono anche occupare tutto lo spazio
+	disponibile. Ma lo trovo abbastanza scomodo, perché gli occhi devono fare
+	molta strada per tornare all'inizio della riga successiva. Le righe sono
+	molto lunghe, e lo diventano anche di più quando si ha un bel monitorone
+	come quello di Mitch.
+	sec#
+	Quindi ecco spiegato perché lascio tutto quello spazio vuoto ai fianchi.
+
+	Ma lo faccio anche per altri motivi. In particolare, perché in questo modo
+	posso spaziare fuori dai bordi.
+	begin#inside
+		Spesso lo faccio in questo modo.
+	
+		Questo è un blocco di classe &lsquo;inside&rsquo;. Indica i blocchi di
+		testo in cui il protagonista parla con se stesso.
+		p#speak@simak#Non a caso, quando parlo con Ci, lo vedete dentro questo blocco
+	end#inside
+	Ma i veri dialoghi non stanno dentro, stanno invece fuori.
+	begin#outside
+		Quando i personaggi parlano veramente, all'esterno, ecco il blocco
+		&lsquo;outside&rsquo;.	
+		p#speak@lyznardh#Perché alcune voci sono udibili soltanto all&apos;esterno, soprattutto quelle forti
+	end#outside
+	sec#
+	Che altro posso dire?
+
+	Forse avrete notato che non ci sono più le barre di scorrimento. Ci sono
+	state per un breve periodo. Le ho rimosse evitando di mostrare l'overflow
+	dei blocchi principali, catturando gli eventi del mouse e facendo
+	mirabolanti movimenti nascosti. Ancora il JavaScript.
+
+	Non vi funziona? Forse è per la mia scarsa attenzione al supporto
+	crossbrowser. Ma se non vi funziona, non potete essere arrivati qui, lol.
+	Ridete con me.
+
+	Ah, già! Se clickate su &quot;You are a Pirate&quot; nel footer della pagina
+	potete trovare il pannello segreto.
+
+	Non è altro che il form di login. Ma non potete usarlo, perché la
+	registrazione non è affatto prevista. L'unico utente riconosciuto sono io, i
+	controlli sono hard-coded, ma soprattutto non offron alcun benefico, perché
+	l'unica cosa che compare dopo il login è un pannellino che saluta ed offre
+	la possibilità di cancella file arbitrariamente.
+
+	Ma se avete letto la storia precedente, avrete immaginato che nemmeno questo
+	funziona. Eh già, perché l'utente di sistema (nodoby, nel mio caso) non ha
+	permessi di scrittura per i folder e non può quindi né rimuovere né spostare
+	alcunché. Che tristezza.
+stop#page

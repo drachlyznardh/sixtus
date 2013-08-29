@@ -11,16 +11,16 @@ start#page
 		
 			E siccome capitai d'avere delle buone idee, mi misi a scriverle.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Come ogni buon informatico (scienziato?) che debba scrivere
 			qualcosa, prontamente ho sfoderato il vim ed ho cominciato a buttare
 			giù del codice LaTeX per vedere di avere le cose ben fatte fin da
 			subito.
 		
-			E invece...
+			E invece…
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Partendo con l'idea di dover scrivere le bozze per le sessioni,
 			oltre alle note sull'ambientazione, le modifiche al regolamento ed
@@ -45,14 +45,14 @@ start#page
 		
 			Bene. Butto giù una bozza, metto elementi un po' qua, un po' là.
 			Vediamo ora di far comparire una lista degli elementi contati che ho
-			aggiunto... dunque, c'è un pacchetto apposito per le liste di X.
+			aggiunto… dunque, c'è un pacchetto apposito per le liste di X.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Ovviamente, questo non prende contatori; li crea. Quindi va
 			immediatamente a confliggere con quelli che ho fatto io. Lascio
 			quindi che se li faccia lui, 'sto bastardo, a patto che mi disegni
-			le liste come gli dico...
+			le liste come gli dico…
 		
 			Lasciandoli fare i contatori come vuole, il bastardo comincia a
 			funzionare. Sistema nuovamente l'incremento ad ogni capitolo,
@@ -78,7 +78,7 @@ start#page
 			&gt;9000 anni indietro, ovviamente. Possibile che la guida ufficiale
 			disponibile non tenga il passo? Evidentemente.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Cercando un'alternativa, trovo un bel tutorial scritto da un tizio.
 			Eseguo le operazioni consigliate, riesco a togliere i puntini che
@@ -110,13 +110,13 @@ start#page
 		
 			Indovinate.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Provo. I pacchetti confliggono.
 		
 			Scopro che alcuni comandi vengono ridefiniti più di una volta; non
 			s'ha da fare. Tolgo incrementalmente (decrementalmente, forse?)
-			un'opzione, poi un'altra... arrivo ad un punto di stabilità. Succede
+			un'opzione, poi un'altra… arrivo ad un punto di stabilità. Succede
 			quindi che la sua roba funziona, la mia invece sembra uscita dal
 			Rocky Horror Picture Show.
 		
@@ -127,7 +127,7 @@ start#page
 		
 			No, grazie. Tengo alla mia anima.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Chiedi in giro, cerca, ipotizza. L'idea di scrivere il proprio
 			stile, a quanto pare, sembra fattibile come un viaggio in India per
@@ -140,15 +140,15 @@ start#page
 			In effetti, la possibilità di abbandonare il LaTeX per qualcosa di
 			meno peggiore m'allettò. Esistono l'epub, il docbook e molti altri
 			formati. Vediamo il formato epub, quello utilizzato dai lettori
-			multimediali che spingono in questo periodo...
+			multimediali che spingono in questo periodo…
 		
 			Trattasi di un'archivio con dentro delle cose, fondamentalmente html
-			più qualche indice... Niente preprocessore, niente generazione di
+			più qualche indice… Niente preprocessore, niente generazione di
 			contenuti e infine nessun viewer decente per Debian.
 		
 			Scartato.
 		
-			Vediamo docbook. Mh... sembrerebbe uno standard XML con qualcosa
+			Vediamo docbook. Mh… sembrerebbe uno standard XML con qualcosa
 			come &gt;9000 direttive. In più, il paragrafo corrisponde al tag
 			&lt;para&gt;. É decisamente troppo lungo. Non intendo scrivere
 			11 (undici) caratteri ogni volta che voglio andare a capo.
@@ -159,7 +159,7 @@ start#page
 		
 			Scartato.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Capita allora il signor Jazzinghen che dice «Perché non produrre PDF
 			direttamente dall'HTML, come fai con le storie?» e mi passa un
@@ -178,62 +178,62 @@ start#page
 			sia adatto ad un PDF. Mi metto dunque a scriverne un altro,
 			apposito; si migliora molto. Mi metto a smanacciare.
 		
-			Smanaccio per due giorni interi. Alcuni nodi vengono al pettine...
+			Smanaccio per due giorni interi. Alcuni nodi vengono al pettine…
 			capita infatti che il principe mi metta un bollino viola in prima
-			pagina... vabbeh, sopportabile; capita che i sorgenti siano
-			proprietari... vabbeh... capita che un sacco di cose interessanti
+			pagina… vabbeh, sopportabile; capita che i sorgenti siano
+			proprietari… vabbeh… capita che un sacco di cose interessanti
 			(diciamo le interruzioni di pagina, i margini, l'orientamento, la
 			carta) siano da precisare tramite strambe direttive CSS non
-			standard... uhm, non bene.
+			standard… uhm, non bene.
 		
 			Faccio qualche ricerca, faccio qualche tentativo. Scopro che,
 			fondamentalmente, questo tool non è atto al mio scopo: esso serve a
 			poco più che sbrodolare il contenuto di un sito su un PDF, tanto per
 			poterlo distribuire tutto in un botto, tanto per farci cose che non
-			voglio sapere...
+			voglio sapere…
 		
 			Dipendere totalmente da un software proprietario non è una bella
-			cosa...
+			cosa…
 		
 			Mi chiedo dunque come sia possibile che nessuno prima di me abbia
 			avuto la necessità di produrre un PDF per i fatti suoi, senza dover
 			scendere a patti con il LaTeX.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
-			Cerca, cerca, cerca...
+			Cerca, cerca, cerca…
 		
-			Scopro infine una luce di speranza... esiste un certo (enorme) tool
+			Scopro infine una luce di speranza… esiste un certo (enorme) tool
 			Apache, tale FOP, che produce file PDF.
 		
 			Immerso nel marasma, salta fuori un certo formato FOB che
 			sembrerebbe essere il passaggio intermedio per ottenere un PDF,
-			stando a ciò che dicono, esattamente come tu gli dici... sogno o son
+			stando a ciò che dicono, esattamente come tu gli dici… sogno o son
 			desktop?
 		
-			Un po' sognavo...
+			Un po' sognavo…
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
-			Eccomi dunque (circa 200M di download dopo...) alle prese con il
-			tutorial di questa nuova arte mistica... deeddaddoo.... Parrebbe che
+			Eccomi dunque (circa 200M di download dopo…) alle prese con il
+			tutorial di questa nuova arte mistica… deeddaddoo…. Parrebbe che
 			per produrre un PDF bastino poche poche righe di xml
 		
 			Cominciamo con un file di dati, <pre>	name.xml</pre>
 			che contiene esclusivamente un tag &lt;name&gt;. Ci metto il mio
 			nome. Fatto. Poi scriviamo un file .xsl, formato XML che descrive
-			alcune cose... dentro c'è, tra il resto, un oggetto
+			alcune cose… dentro c'è, tra il resto, un oggetto
 			<pre>	&lt;template&gt;</pre> che effettua un match contro "/" e
 			sbrodola alcuni contenuti descrittivi, come il layout di pagina,
 			cosucce accessorie e infine carica il nome dal documento
 			precedentemente citato.
 		
 			Compilando il primo con il secondo ottengo un PDF. Con il mio nome.
-			Dopodiché, il tutorial finisce...
+			Dopodiché, il tutorial finisce…
 		
-			Uhm...
+			Uhm…
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Comincio a chiedere in giro. Scopro alcune cose. Primo, il file XML
 			non è specificato in alcun modo, può contenere ogni porcheria. Il
@@ -258,14 +258,14 @@ start#page
 			avere il suo simil-CSS specificato.
 		
 			Non ci sono classi, non ci sono eredità, non ci sono moduli. Tutto
-			deve essere un unico, lungo, colossale file...
+			deve essere un unico, lungo, colossale file…
 		
 			Rifiutando istintivamente di percorrere questa via, cerco di capire
 			come qualcuno possa seriamente prenderla in considerazione. Scopro
 			quindi, fortunatamente, che questo file può tranquillamente essere
 			generato tramite una trasformazione.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Saltando alcuni passaggi (non ho più ricordi ben chiari di quegli
 			eventi) un file originale XML viene trasformato attraverso un foglio
@@ -278,7 +278,7 @@ start#page
 		
 			La via era chiara.
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Se il FOB si basa su blocchi ed inline, è anche vero che ci sono
 			molte altre cosucce interessanti: il layout di pagina, le sequenze,
@@ -294,7 +294,7 @@ start#page
 			punti dell'albero XML del documento originale.
 		
 			Ed ecco quindi che entra in scena anche XPath, il linguaggio che
-			naviga gli alberi... XSLT funziona con un sistema di template, che
+			naviga gli alberi… XSLT funziona con un sistema di template, che
 			matchano espressioni XPath contro la struttura del documento
 			originale. Partento dalla radice, secondo ricorsione grezza o
 			tramite iterazione su uno specifico subset di elementi, ciascun
@@ -306,11 +306,11 @@ start#page
 			possibile non solo prendere il sorgente e produrne un FOB
 			equivalente, ma è altrettanto possibile ripassare tutto il documento
 			più volte, compilarne quindi degli indici, contarne gli elementi,
-			produrre i bookmark, aggiungere link interni ed esterni...
+			produrre i bookmark, aggiungere link interni ed esterni…
 		
 			E soltanto un paio di settimane dopo, eccomi bel bello con un foglio
 			di stile, magnificamente diviso per ambiti che conta qualcosa come
-			600 righe... un po' troppo per essere facilmente controllabile...
+			600 righe… un po' troppo per essere facilmente controllabile…
 		
 			E soltanto un'altra settimana dopo, eccomi quindi con uno script che
 			prende vari frammenti XSL e ne produce (cattandoli uno dopo l'altro)
@@ -318,9 +318,9 @@ start#page
 			basati su libxml2 che producono il mio sorgente completo (anch'esso
 			splittato su &gt;9000 file) e che lo verificano contro uno schema.
 		
-			Eh già, lo schema...
+			Eh già, lo schema…
 		</p>
-	</div><div class="section">
+		sec#
 		<p>
 			Succede infatti che, ogni tanto, qualcuno voglia verificare la
 			correttezza di un file. Con un parser, verosimilmente. Secondo un
@@ -339,7 +339,7 @@ start#page
 		
 			Infine, basta avere un buon Makefile che metta tutto questo
 			assieme. Aggiungete alcuni decilioni di tentativi per far quadrare
-			tutto, test su test...
+			tutto, test su test…
 		
 			Sostanzialmente, anche se tecnicamente non finito, il mostro è
 			capace di reggersi sulle sue gambe.

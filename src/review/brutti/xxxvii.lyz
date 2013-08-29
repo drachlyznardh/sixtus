@@ -8,7 +8,7 @@ start#page
 	Poi mi dico che lo posso recensire. Li posso recensire entrambi, in una
 	botta sola: ci sono soltanto due cose buone, una per film.
 	begin#half@right
-		foto#Extra/Lanciafiamme.gif
+		img#Extra/Lanciafiamme.gif
 		p#“My piss is a flamethrower”
 	end#half
 	p#<a
