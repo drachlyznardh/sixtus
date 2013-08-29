@@ -196,7 +196,7 @@ start#page
 	$Stregone e $Ladro lasciano il mio cadavere per cercare aiuto. Nella stanza
 	successiva c'è un chierico prigioniero.
 	begin#outside
-		speak#em#Per ringraziarmi d'avermi liberato, resusciterò gratis un vostro compare
+		p#speak@em#Per ringraziarmi d'avermi liberato, resusciterò gratis un vostro compare
 	end#outside
 	Et voilà, eccomi vivo e vegeto. <code>Deus Ex</code>?
 	sec#
@@ -247,7 +247,7 @@ start#page
 	Ma abbiamo il master che abbiamo, e la cosa funziona: il tizio torna in
 	vita, si riattacca il braccio e ci fa
 	begin#outside
-		speak#em#Grazie, cosi, per avermi liberato; andrò ora a salvare il mondo. Addio!
+		p#speak@em#Grazie, cosi, per avermi liberato; andrò ora a salvare il mondo. Addio!
 	end#outside
 	E se ne va…
 

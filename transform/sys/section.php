@@ -41,13 +41,7 @@
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear(); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
-				default:
-					printf ("ERROR [$command] in $index[0] @ line $index[1]\n");
-					exit(1);
-					$this->closeContext();
-					$this->content[] = '<br/><p class="error">ERROR: [';
-					$this->content[] = $cmd_args[0];
-					$this->content[] = ']</p>';
+				default: $this->error($index, $command);
 			}
 		}
 
@@ -245,7 +239,7 @@
 				$command = $cmd_attr[0];
 			} else {
 				$command = $cmd_args[0];
-				$cmd_attr = array();
+				$cmd_attr = array($command);
 			}
 			$this->parse($index, $command, $cmd_attr, $cmd_args);
 		}
@@ -395,33 +389,25 @@
 			$this->content[] = '<div style="float:none; clear:both"></div>';
 		}
 
-		private function make_speak ($lineno, $args, $attr)
-		{
-			$this->closeContext();
-			$this->content[] = '<p>'.$this->dialog($args[1], $args[2]).'</p>';
-		}
-
 		private function make_intra ($lineno, $args, $attr)
 		{
 			$result = false;
-			
-			$_ = preg_split('/@/', polish_line($args[1]));
-			$result = $this->dialog($attr[1], $_[0]);
+			if (count($args) > 2)
+				$this->error($lineno, 'Speak: too many arguments');
+	
+			$_ = preg_split('/@/', $args[1]);
+
+			$result = $this->dialog($attr[1], polish_line($_[0]));
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.$_[0].' – ';
-				$result .= $this->dialog($attr[1], $_[1]);
+				$result .= ' – '.polish_line($_[0]).' – ';
+				$result .= $this->dialog($attr[1], polish_line($_[1]));
 				array_shift($_);
 				array_shift($_);
 			}
 
 			$this->content[] = $result;
-		}
-
-		private function make_inline ($lineno, $args, $attr)
-		{
-			$this->content[] = $this->dialog($args[1], $args[2]);
 		}
 
 		private function dialog ($author, $line)

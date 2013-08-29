@@ -14,7 +14,7 @@ start#page
 	link#Legend/Cronache/#(di cui abbiamo delle @interessanti cronache@). Capitò
 	un bel giovedì che Jazz disse
 	begin#outside
-		speak#jazz#[…] e poi al ritorno mi devo fermare a far benzina […]
+		p#speak@jazz#[…] e poi al ritorno mi devo fermare a far benzina […]
 	end#outside
 	e qualcosa come <code>7m</code> dopo il distributore di <em>via
 	Brennero</em> la macchina fece un brutto rumore, tutte le lucette s'accesero

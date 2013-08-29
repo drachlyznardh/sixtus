@@ -6,7 +6,7 @@ start#page
 	<span class="bolo">il Bolo</span> e anche <span class="dacav">Simgi</span> e
 	forse anche <span class="war">War</span> mi diranno
 	begin#outside
-		speak#em#Perché non scrivi uno <code>script</code>one mannaro che lo faccia al posto tuo?
+		p#speak@em#Perché non scrivi uno <code>script</code>one mannaro che lo faccia al posto tuo?
 	end#outside
 	Beh, no, non lo faccio. Faccio quel che pare a me. Adesso vado e
 	<code>grep</code>po un'immagine alla volta e le scrivo. A mano. Perché io

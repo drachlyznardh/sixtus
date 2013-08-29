@@ -169,7 +169,7 @@ tab#02
 	e stronzo), la vedo. E ne vedo così tanta che non posso esimermi
 	dall'esclamare ad alta voce una frase banale estremamente calzante.
 	begin#outside
-		speak#gods#I cannot believe this shit!
+		p#speak@gods#I cannot believe this shit!
 	end#outside
 	Siete liberi di non credermi, e forse non conoscete le proporzioni del mio
 	divano blu, ma ce n'era proprio tanta. E quel gatto, pur essendo

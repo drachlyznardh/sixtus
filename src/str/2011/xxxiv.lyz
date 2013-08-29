@@ -49,7 +49,7 @@ start#page
 			da un tizio; non particolarmente veloce, non particolarmente
 			impegnato, ma comunque mi sorpassa.
 		
-			Prendo tempo: decido se lasciarlo vincere oppure no... decido, dopo
+			Prendo tempo: decido se lasciarlo vincere oppure no… decido, dopo
 			alcuni metri/passi/secondi che non vale la pena abdicare così
 			facilmente.
 		
@@ -93,7 +93,7 @@ start#page
 	sec#br
 		Ma io non sono certo l'unico che corre: ce ne sono molti altri, sulla
 		ciclabile, sulle roste dell'Adige, anche dietro di noi mentre
-		scendiamo...
+		scendiamo…
 	sec#
 			Cose buffe: ogni tanto capita che io mi guardi attorno e ne veda.
 			Quest'oggi, scendevo dalla facoltà con alcuni allegri compagni,
@@ -111,12 +111,12 @@ start#page
 		<p>
 			Correre è una di quelle naturali che molte persone non sanno fare.
 		
-			Molte ragazze (molte donne? Sessismo dappertutto...) non lo sanno
+			Molte ragazze (molte donne? Sessismo dappertutto…) non lo sanno
 			fare. E non venite a dirmi ch'è perché indossano i tacchi: questa
 			non ce li aveva, aveva invece delle scarpette basse basse.
 		
 			Semplicemente, corricchiava sventolando le braccia all'infuori,
-			senza alzare le ginocchia... 
+			senza alzare le ginocchia… 
 		</p>
 	</div><div class="section">
 		<p>
@@ -169,14 +169,14 @@ start#page
 		</p>
 	</div><div class="section">
 		<p>
-			Quella povera ragazza invece non può andare in fretta... poverella.
+			Quella povera ragazza invece non può andare in fretta… poverella.
 			Ho infine spiegato come questo dipenda dal fatto che le donne non
 			san guidare: non conoscono le marce, non sanno quand'è il momento
 			giusto per cambiare, e non possono nemmeno correre nel modo giusto;
 			credo che abbiano problemi a sentire i giri del motore ad orecchio.
 	
 	sec#br
-		Ed ora un po' di gabole informatiche...
+		Ed ora un po' di gabole informatiche…
 	</p><h2>
 		La Vodafone Station
 	</h2><h2 class="reverse">
@@ -195,15 +195,15 @@ start#page
 		<p>
 			$vicino marcia con una Vodafone Station, router che fa anche da
 			modem, da telefono, da cellulare e forse anche da moka. No, quello
-			sarebbe troppo...
+			sarebbe troppo…
 		
 			E c'è tanto di adesivo con la WPA stampata sopra. Quanto potrà mai
 			essere difficile?
 		
-			Prima cosa: non trovo connettività wireless... LOL, l'interruttore
+			Prima cosa: non trovo connettività wireless… LOL, l'interruttore
 			hardware dell'antenna era spento! Hurr durr, collega l'antenna,
-			seleziona la connessione, infila la password... aspetta &gt;9000
-			anni... 
+			seleziona la connessione, infila la password… aspetta &gt;9000
+			anni… 
 		</p><div class="outside"><p>
 			«Salve, sono Vinzozz S3v3n e non riesco proprio a collegarmi a
 			questa rete. Vuoi che cerchi di capire come mai?»
@@ -217,41 +217,41 @@ start#page
 			</li><li>
 				se al terzo colpo non va, infila il CD
 		</li></ul><p>
-			Abbiamo già scosso, ergo il CD... non compare nulla... cerca
-			l'applicativo...
+			Abbiamo già scosso, ergo il CD… non compare nulla… cerca
+			l'applicativo…
 		</p><div class="outside"><p>
 			«Salve, sono ancora io, Winfoss. Non son mica sicuro di voler
-			eseguire dei programmi; chiedimelo per piacere...»
+			eseguire dei programmi; chiedimelo per piacere…»
 		</p></div><p>
 			Fanculo! Esegui 'sto cazzo di autoplay, che subito va a nascondersi
-			dietro l'orologio di sistema... lo ricatturo, ma quello è soltanto
+			dietro l'orologio di sistema… lo ricatturo, ma quello è soltanto
 			una facciata di plastica cinese che non ha alcun potere di
 			configurazione; si limita a fallire.
 		
-			Prova questo, prova quello...
+			Prova questo, prova quello…
 		</p><div class="outside">
-			speak#gods#Dì un po&apos;, router, che ce l&apos;hai una
+			p#speak@gods#Dì un po&apos;, router, che ce l&apos;hai una
 			configurazione?
 			<p>«Certo, chiamami l'interfaccia da <span
 			class="code">192.168.1.1</span> e saremo amici per sempre»</p>
 		</div><p>
 			Attacca Firefox per Windows, comunica con il router, setta la cara
-			vecchia WEP... improvvisamente, l'iPhone di $vicino si collega
-			alla rete. Eureka? No... Zinvogg non ne vuol sapere, forse non
-			capisce cos'è la WEP... cerca cerca, scopro che la considera
+			vecchia WEP… improvvisamente, l'iPhone di $vicino si collega
+			alla rete. Eureka? No… Zinvogg non ne vuol sapere, forse non
+			capisce cos'è la WEP… cerca cerca, scopro che la considera
 			obsoleta e insicura, quindi mi chiede di firmare un documento col
 			sangue e di certificare la cosa creando una connessione ad hoc.
 		
-			E come la faccio io? Il bottome è molto ben nascosto... procurati il
+			E come la faccio io? Il bottome è molto ben nascosto… procurati il
 			pollo, aspetta il plenilunio, sgozza il pollo, disegna il pentacolo,
-			esegui la coreografia danzando nudo nel bosco... le solite cose...
+			esegui la coreografia danzando nudo nel bosco… le solite cose…
 		</p>
 	</div><div class="section">
 		<p>
 			Non c'è modo di convincerlo. Provo allora a mantenere la connessione
 			ad hoc, resetto il router sulla WPA, <span
 			class="code">auto-tune</span>no tutti i parametri, copio la
-			password... cerca la connessione, cerca cerca... dov'è che non la
+			password… cerca la connessione, cerca cerca… dov'è che non la
 			trovo?
 		
 			Eccola! Era in fondo all'elenco: adesso Ginlocc mi viene a dire che
@@ -292,7 +292,7 @@ start#page
 	una minaccia diretta, negli ultimi due giorni non ho visto la <span
 	class="magnet">Ragazza Magnete</span>, non ho visto la ragazza che
 	si spaventò, non ho visto le odiose matematiche che ci diedero dei
-	trentenni, non ho visto $rossa, non ho visto nessuno da odiare...
+	trentenni, non ho visto $rossa, non ho visto nessuno da odiare…
 
 	Se non posso odiare qualcuno, non andrò in crisi d'astinenza? Non
 	comincerò forse a traboccare odio dalle orecchie? Non infetterò
