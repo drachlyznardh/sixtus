@@ -34,13 +34,6 @@
 			$this->current = new Section();
 		}
 
-		private function make_sbr ()
-		{
-			if ($this->current != null) $this->content[] = $this->current->getContent();
-			$this->content[] = '<br />';
-			$this->current = null;
-		}
-
 		public function make_include ($filename, $part, $as)
 		{
 			if ($as && strcmp($as, '\'content\'') == 0) {

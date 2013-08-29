@@ -41,13 +41,7 @@
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear(); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
-				default:
-					printf ("ERROR [$command] in $index[0] @ line $index[1]\n");
-					exit(1);
-					$this->closeContext();
-					$this->content[] = '<br/><p class="error">ERROR: [';
-					$this->content[] = $cmd_args[0];
-					$this->content[] = ']</p>';
+				default: $this->error($index, $command);
 			}
 		}
 
@@ -395,12 +389,6 @@
 			$this->content[] = '<div style="float:none; clear:both"></div>';
 		}
 
-		private function make_speak ($lineno, $args, $attr)
-		{
-			$this->closeContext();
-			$this->content[] = '<p>'.$this->dialog($args[1], $args[2]).'</p>';
-		}
-
 		private function make_intra ($lineno, $args, $attr)
 		{
 			$result = false;
@@ -420,11 +408,6 @@
 			}
 
 			$this->content[] = $result;
-		}
-
-		private function make_inline ($lineno, $args, $attr)
-		{
-			$this->content[] = $this->dialog($args[1], $args[2]);
 		}
 
 		private function dialog ($author, $line)
