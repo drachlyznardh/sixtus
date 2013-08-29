@@ -86,7 +86,7 @@ start#page
 
 		Stranamente compiaciuto di queste parole, il mozzo spinge l&apos;ammiraglio un paio di passi indietro, assapora il momento e chiede:
 		speak@simak#<strong>Marcus Ace Rennington, mi stai sfidando?</strong>
-		speak@rennington forte#Si, dannato!
+		speak@rennington#<strong>Si, dannato!</strong>
 		speak@simak#Bene!
 	end#outside
 	Sul mozzo cade un fulmine.

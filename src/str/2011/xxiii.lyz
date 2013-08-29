@@ -148,7 +148,7 @@ tab#iv
 	Quando ad un certo punto uno dei nostri spara una cazzata. Io sposto
 	vistosamente la testa, pianto gli occhi fisso davanti a me e urlo
 	begin#outside
-		p#speak@gods forte#Dooooooooooooooon
+		p#speak@gods#<strong>Dooooooooooooooon</strong>
 	end#outside
 	Ora, ricordate <a
 	href="http://www.youtube.com/watch?v=McAeQiLmEYU">questa</a> scena dal film

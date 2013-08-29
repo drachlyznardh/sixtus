@@ -329,7 +329,7 @@ tab#iv
 		superdimensionale trasformabile «<span class="gods">Nessuno si
 		salverà!</span>»
 			
-		«<span class="gods forte">Listen to my song!!!</span>»
+		p#speak@gods#<strong>Listen to my song!!!</strong>
 	end#outside
 	L'odio brucia e arde con l'intensità di un milione di soli.
 	sec#

@@ -4,7 +4,7 @@ next#Tru/Naluten/Vol.II/XV/#La fuga
 start#page
 	title#Tru Naluten XIV &ndash; Proposta
 	begin#outside
-		p#speak@jo forte#Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah
+		p#speak@jo#<strong>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah</strong>
 	end#outside
 	sec#
 	stitle@right#Simak
@@ -17,11 +17,11 @@ start#page
 	sec#
 	begin#outside
 		p#speak@simak#Ciao! Com…
-		p#speak@jo forte#Aaaaaaaaaaaaaaaah! Schifo!
+		p#speak@jo#<strong>Aaaaaaaaaaaaaaaah! Schifo!</strong>
 		p#speak@simak#Scus…
-		p#speak@jo forte#Aaaaaaaaaaaaah!
+		p#speak@jo#<strong>Aaaaaaaaaaaaah!</strong>
 		p#speak@simak#Poss…
-		p#speak@jo forte#Aaaaaaaaaah!
+		p#speak@jo#<strong>Aaaaaaaaaah!</strong>
 	end#outside
 	sec#
 	stitle@right#Jo
