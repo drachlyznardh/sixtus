@@ -8,13 +8,13 @@ tab#i
 	Ero lì che mi facevo gli affari miei, quando improvvisamente capita la
 	telefonata di una signora, che mi domanda:
 	begin#outside
-		p#intra@em#Scusi, lei abita in via Veneto?
-		p#intra@gods#Beh, sì
-		p#intra@em#Sa mica come si chiama quel negozio che vende abiti usati?
-		p#intra@gods#Nope
-		p#intra@em#Ma sa dov'è?
-		p#intra@gods#Quello sì, è tra la canonica di S.Giuseppe e quel negozio di sigarette elettroniche
-		p#intra@em#Grazie &amp; arrivederci
+		p#speak@em#Scusi, lei abita in via Veneto?
+		p#speak@gods#Beh, sì
+		p#speak@em#Sa mica come si chiama quel negozio che vende abiti usati?
+		p#speak@gods#Nope
+		p#speak@em#Ma sa dov'è?
+		p#speak@gods#Quello sì, è tra la canonica di S.Giuseppe e quel negozio di sigarette elettroniche
+		p#speak@em#Grazie &amp; arrivederci
 	end#outside
 	Come questa signora abbia trovato il mio numero di casa, non saprei dire.
 	Poco dopo, squilla nuovamente il telefono, è la mia nonnina: l'indomani

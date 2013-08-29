@@ -9,7 +9,7 @@ tab#principi
 
 	Comunque. È una buona storia, che forse riuscirò a scrivere – con calma –
 	più avanti; intanto, ecco qualcosa che ci somiglia.
-	sbr#
+	sec#br
 	C'erano una volta un <em>principe</em> ed una <em>principessa</em>.
 	begin#mini@left
 		La <em>principessa</em> abitava in una torre nascosta nel bosco per
@@ -40,12 +40,12 @@ tab#principi
 	Ed ecco, il principe vagò finché finì per sbattere contro una torre. Disse
 	allora il principe:
 	begin#outside
-		speak#sacomne#Mi farebbe proprio comodo un fazzolettino, adesso
+		p#speak@sacomne#Mi farebbe proprio comodo un fazzolettino, adesso
 	end#outside
 	Guarda caso, la principessa era alla finestra, sentì le parole del principe
 	e gettò un fazzoletto:
 	begin#outside
-		speak#simak#Non so quanto questo possa aiutare, lo getto volentieri
+		p#speak@simak#Non so quanto questo possa aiutare, lo getto volentieri
 	end#outside
 	br#
 	Il principe raccolse il fazzoletto, ci si soffiò il naso e ci asciugò le
@@ -55,14 +55,13 @@ tab#principi
 
 	Il principe liberò la principessa dalla torre, lei in cambio se lo portò a
 	casa, alla faccia del regno di quell'altro.
-	reverse#
-	E vissero felici e contenti, almeno per un po'.
-	sbr#
+	r#E vissero felici e contenti, almeno per un po'.
+	sec#br
 	E per chi ancora non avesse capito, ecco la lista di
 	title#Personaggi e interpreti
 	begin#ul
-		li#la principessa sono <span class="gods">io</span>;
-		li#il principe, invece, si chiama <span class="sacomne">Katia</span>.
+		p#la principessa sono <span class="gods">io</span>;
+		p#il principe, invece, si chiama <span class="sacomne">Katia</span>.
 	end#ul
 	E sono abbastanza convinto di non essere
 	stato tanto contento dacché vivo.
@@ -105,7 +104,7 @@ tab#considerazioni
 	Sono felice. C'è persino gente che lo nota, mi sono effettivamente sentito
 	dire
 	begin#outside
-		speak#em#Hai lo sguardo d'un uomo innamorato
+		p#speak@em#Hai lo sguardo d'un uomo innamorato
 	end#outside
 	ed è una cosa magnifica. Posso quasi sorridere.
 	br#
@@ -113,7 +112,7 @@ tab#considerazioni
 	stitle#Perdo un sacco di tempo
 	Una delle cose che m'è capitato di sentire, quand'ero solo, era
 	begin#outside
-		speak#em#almeno hai tutto il tempo per te
+		p#speak@em#almeno hai tutto il tempo per te
 	end#outside
 	ed era abbastanza vero. Adesso scopro che, anche soltanto per accompagnare
 	Katia in stazione e tornare a casa, mi va via quasi un'ora; non sono affatto
@@ -134,7 +133,7 @@ start#side
 	Millantato…
 	sec#
 	title#Storia LXXVII
-	titler#La storia migliore
+	title@right#La storia migliore
 	p#tid#Principi#principi
 	/
 	tid#Reazioni#reazioni

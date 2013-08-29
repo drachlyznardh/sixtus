@@ -14,23 +14,23 @@ stop#page
 start#side
 	title#Storie 2012
 	begin@6.5em@74#roman
-		li#link#Storie/2012/LXXIV/#La prima canzone
-		li#link#Storie/2012/LXXV/#Quella storia
-		li#link#Storie/2012/LXXVI/#Niente di particolare
-		li#link#Storie/2012/LXXVII/#La storia migliore
-		li#link#Storie/2012/LXXVIII/#Il pesce invece…
-		li#link#Storie/2012/LXXIX/#Viaggio a Verona
-		li#link#Storie/2012/LXXX/#Il segretario di seggio
-		li#link#Storie/2012/LXXXI/#Non sono morto
-		li#link#Storie/2012/LXXXII/#Lo gnomo
-		li#link#Storie/2012/LXXXIII/#La notte rosa
-		li#link#Storie/2012/LXXXIV/#L'estate incombe
-		li#link#Storie/2012/LXXXV/#L'Argiope Bruennichi
-		li#link#Storie/2012/LXXXVI/#Impresa (@III@)
-		li#link#Storie/2012/LXXXVII/#Persi le balle
-		li#link#Storie/2012/LXXXVIII/#SPAM
-		li#link#Storie/2012/LXXXIX/#Si riempì il disco
-		li#link#Storie/2012/XC/#Ho un piano
-		li#link#Storie/2012/XCI/#Sogni
+		p#link#Storie/2012/LXXIV/#La prima canzone
+		p#link#Storie/2012/LXXV/#Quella storia
+		p#link#Storie/2012/LXXVI/#Niente di particolare
+		p#link#Storie/2012/LXXVII/#La storia migliore
+		p#link#Storie/2012/LXXVIII/#Il pesce invece…
+		p#link#Storie/2012/LXXIX/#Viaggio a Verona
+		p#link#Storie/2012/LXXX/#Il segretario di seggio
+		p#link#Storie/2012/LXXXI/#Non sono morto
+		p#link#Storie/2012/LXXXII/#Lo gnomo
+		p#link#Storie/2012/LXXXIII/#La notte rosa
+		p#link#Storie/2012/LXXXIV/#L'estate incombe
+		p#link#Storie/2012/LXXXV/#L'Argiope Bruennichi
+		p#link#Storie/2012/LXXXVI/#Impresa (@III@)
+		p#link#Storie/2012/LXXXVII/#Persi le balle
+		p#link#Storie/2012/LXXXVIII/#SPAM
+		p#link#Storie/2012/LXXXIX/#Si riempì il disco
+		p#link#Storie/2012/XC/#Ho un piano
+		p#link#Storie/2012/XCI/#Sogni
 	end#roman
 stop#side
