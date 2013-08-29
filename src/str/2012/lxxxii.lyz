@@ -25,9 +25,9 @@ start#page
 	foglio <code>A1</code>. Aveta mai avuto per le mani un foglio così?
 	Tecnicamente, <code>594 × 841mm</code>, piuttosto grande. L'arrotolai e me
 	lo portai a casa…
-	sbr#
+	sec#br
 	[…] piega piega piega […]
-	sbr#
+	sec#br
 	E infine mi ritrovai con il drago piegato. Dopo mezza giornata a casa
 	(avendolo finito una sera, sul tavolo della cucina) il drago venne
 	impacchettato, portato in facoltà e abbandonato – come spesso capita – al
@@ -42,7 +42,7 @@ start#page
 	della facoltà. Lei stava già spammando il mio coinvolgimento con qualcuno di
 	quei colleghi di cui sopra. Disse, a quel punto
 	begin#outside
-		intra@em#Eh, poi ho detto loro che tu sei uno gnomo…@silenzio da parte mia, risate dai miei compagni@nel senso che sei difficile da trovare
+		p#speak@em#Eh, poi ho detto loro che tu sei uno gnomo…@silenzio da parte mia, risate dai miei compagni@nel senso che sei difficile da trovare
 	end#outside
 	E questo è quanto. Sono uno gnomo.
 	sec#

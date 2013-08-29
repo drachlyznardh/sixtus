@@ -80,8 +80,8 @@ stop#page
 start#side
 	title#Modifiche
 	begin@2.5em#roman
-		li#tid#La visione@ – 11/01/2011#i
-		li#tid#Le sezioni@ – 23/01/2011#ii
-		li#tid#L&apos;ispirazione@ – 16/04/2011#iii
+		p#tid#La visione@ – 11/01/2011#i
+		p#tid#Le sezioni@ – 23/01/2011#ii
+		p#tid#L&apos;ispirazione@ – 16/04/2011#iii
 	end#roman
 stop#side

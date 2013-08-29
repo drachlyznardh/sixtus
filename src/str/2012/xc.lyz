@@ -7,11 +7,11 @@ start#page
 	stitle#Il piano
 	begin#ul
 		Abbandonare corsi per liberare ore settimanali
-		li#passare due esami con le provette
-		li#scrivere due capitolo della tesi
-		li#arrivare alla laurea con qualche esame pronto da firmare
-		li#????
-		li#PROFIT!!!
+		p#passare due esami con le provette
+		p#scrivere due capitolo della tesi
+		p#arrivare alla laurea con qualche esame pronto da firmare
+		p#????
+		p#PROFIT!!!
 	end#ul
 	end#mini
 	È semplice.
@@ -21,10 +21,10 @@ start#page
 	abbastanza sicuro.
 	begin#ul
 		Ore di sonno; (nanna)
-		li#Ore di corsi; (lezioni)
-		li#Ore sociali;
-		li#Ore di studio; (tesi)
-		li#Ore di svago; (corsa, montagne, bicicletta, gaming, scrivere storie,
+		p#Ore di corsi; (lezioni)
+		p#Ore sociali;
+		p#Ore di studio; (tesi)
+		p#Ore di svago; (corsa, montagne, bicicletta, gaming, scrivere storie,
 		magari anche il NaNoWriMo, crescere la barba, leggere, altro sonno
 		bonus…)
 	end#ul

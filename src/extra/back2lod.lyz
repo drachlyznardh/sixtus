@@ -4,7 +4,7 @@ short#Back2LOD
 prev#Extra/Fitness/#Fitness
 related#Storie/2011/LII/#Sgaggiotiem
 related#Extra/FPGA/Download/#con la @Relazione@
-related@li#Extra/Diario/#Il @diario@ del Capitano
+related@p#Extra/Diario/#Il @diario@ del Capitano
 related#Extra/LabOfDoom/#Lab Of Doom
 start#page
 tab#guida
@@ -19,17 +19,17 @@ tab#guida
 	un tab serio.
 	stitle#Cose tecniche in ordine sparso
 	begin#double
-		li#<strong>Ricerca degli Host</strong>: il comando <code>nast</code>
+		p#<strong>Ricerca degli Host</strong>: il comando <code>nast</code>
 		permette di ispezionare una rete, in particolare la linea <code>nast -i
 		eth0 -m</code> permette di cercare tutti gli host collegati a questo
 		attraverso la connessione indicata;
-		li#<strong>Scansione della rete</strong>: è altrettanto possibile (in
+		p#<strong>Scansione della rete</strong>: è altrettanto possibile (in
 		particolare, qualora non si conoscesse la sottorete o se ne volessero
 		testare molte) utilizzare il vecchio <code>nmap</code>; esso è in grado
 		di sniffare molte cose, avendo tempo a disposizione; <code>nmap -sn
 		192.168.0.0/16</code> scansiona tutte le sottoreti
 		<code>192.168.255.255</code> con maschera a <code>16bit</code>.
-		li#<strong>La Cotoletta</strong>: ufficialmente <em>Digital
+		p#<strong>La Cotoletta</strong>: ufficialmente <em>Digital
 		Instruments</em> <code>GPS-MXS</code>; una porta di rete
 		(<code>192.168.122.105</code>) e con una connessione seriale
 		<code>RS232</code> (da
@@ -58,7 +58,7 @@ tab#i
 	vede altro <code>host</code> che il mio vecchio <em>Tanngrisnir</em>. Boh.
 	Scriverò questa storia e vedrò che anche <em>Sgaggio</em> accetti che la
 	<em>Cotoletta</em> è un fallimento, che si deve staccare la spina:
-	r#intra@gods#Non c'è altro da fare@pausa drammatica@É l'<strong>&lt;[UNICO MODO]!!!&gt;</strong>
+	r#speak@gods#Non c'è altro da fare@pausa drammatica@É l'<strong>&lt;[UNICO MODO]!!!&gt;</strong>
 tab#ii
 	title#La <em>Sgaggio</em>machia – <code>13/11</code>
 	Preso un appuntamento e atteso il tempo concordato, mi sono presentato
@@ -68,11 +68,11 @@ tab#ii
 		stitle#Brutte notizie
 		Ho un bel po' di roba da fare:
 		begin#ul
-			li#i dati vanno raccolti: devo smanacciare con l'oscilloscopio e
+			p#i dati vanno raccolti: devo smanacciare con l'oscilloscopio e
 			ottenere i campionamenti di entrambe le fonti;
-			li#il campionamento dev'essere automatico, quindi il mio vecchio
+			p#il campionamento dev'essere automatico, quindi il mio vecchio
 			programmino dovra crescere in potenza;
-			li#secondo <em>Sgaggio</em>, avere i capitoli pronti è un forte
+			p#secondo <em>Sgaggio</em>, avere i capitoli pronti è un forte
 			incentivo psicologico; quindi devo scrivere i capitoli e
 			piacerglieli il prima possibile;
 		end#ul
@@ -81,9 +81,9 @@ tab#ii
 	begin#half@left
 		stitle@right#Buone notizie
 		begin#ul
-			li#La <em>Cotoletta</em> è stata dichiarata morta, e la cosa non
+			p#La <em>Cotoletta</em> è stata dichiarata morta, e la cosa non
 			dispiace a nessuno;
-			li#la scadenza al <code>09/01/2013</code> è fattibile, anche secondo
+			p#la scadenza al <code>09/01/2013</code> è fattibile, anche secondo
 			<em>Sgaggio</em>;
 		end#ul
 	end#half
@@ -167,7 +167,7 @@ tab#iii
 	di evitare router latori di <code>jitter</code>.
 
 	Inoltre, disse <em>Sgaggio</em>:
-	intra@sgaggio#Poi per analizza' 'sti dati, si dovrà usa' una funzione in <em>MatLab</em>; ma questo non è compito tuo, è compito mio@ma subito dopo@to', figurati se non c'è già qualcuno che…
+	speak@sgaggio#Poi per analizza' 'sti dati, si dovrà usa' una funzione in <em>MatLab</em>; ma questo non è compito tuo, è compito mio@ma subito dopo@to', figurati se non c'è già qualcuno che…
 	e m'ha mandato sull'internet a cercare qualche poveraccio che avesse
 	scriptato la <em>Varianza di Allan</em> o la sua versione modificata.
 include#extra/back2lod/12
@@ -178,9 +178,9 @@ start#side
 	p#tid#La [ @Guida@ ] nella guida#guida
 	stitle@right#Novembre 2012
 	begin#ul
-		li#tid#I primi due giorni@ – <code>08~09/11</code>#i
-		li#tid#La Sgaggiomachia@ – <code>13/11</code>#ii
-		li#tid#Scogli@ – <code>~27~29/11</code>#iii
+		p#tid#I primi due giorni@ – <code>08~09/11</code>#i
+		p#tid#La Sgaggiomachia@ – <code>13/11</code>#ii
+		p#tid#Scogli@ – <code>~27~29/11</code>#iii
 	end#ul
 	include#extra/back2lod/12#side@as@content
 	include#extra/back2lod/01#side@as@content

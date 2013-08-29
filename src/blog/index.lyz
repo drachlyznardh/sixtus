@@ -4,9 +4,9 @@ start#page
 	include#blog/2013/08#26
 	include#blog/2013/08#21
 	include#blog/2013/08#01
-	sbr#
+	sec#br
 	include#blog/2013/05#01
-	sbr#
+	sec#br
 	include#blog/2013/04#19
 	include#blog/2013/04#12
 	include#blog/2013/04#11
@@ -16,8 +16,8 @@ start#page
 stop#page
 start#side
 	include#blog/2013/08#side@as@content
-	sbr#
+	sec#br
 	include#blog/2013/05#side@as@content
-	sbr#
+	sec#br
 	include#blog/2013/04#side@as@content
 stop#side

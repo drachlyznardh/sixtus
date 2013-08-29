@@ -496,22 +496,22 @@ stop#page
 start#side
 	title#L'odio di una volta
 	begin#ol
-		li#tid#L'odio#i
-		li#tid#$Katia#ii
-		li#tid#$Linda#iii
-		li#tid#$Linda II, il ritorno#iv
+		p#tid#L'odio#i
+		p#tid#$Katia#ii
+		p#tid#$Linda#iii
+		p#tid#$Linda II, il ritorno#iv
 	end#ol
 	title#L'odio recente
 	begin#ol
-		li#tid#La ragazza con il dado tondo#v
-		li#tid#La ragazza che si spaventò#vi
-		li#tid#La ragazza magente#vii
+		p#tid#La ragazza con il dado tondo#v
+		p#tid#La ragazza che si spaventò#vi
+		p#tid#La ragazza magente#vii
 	end#ol
 	sec#
 	title#Supplementi
 	begin#ol
-		li#tid#I motivi#viii
-		li#tid#Anche a distanza!#ix
-		li#tid#Ingiustificato#x
+		p#tid#I motivi#viii
+		p#tid#Anche a distanza!#ix
+		p#tid#Ingiustificato#x
 	end#ol
 stop#side

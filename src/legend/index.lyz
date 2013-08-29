@@ -108,7 +108,7 @@ tab#creature
 	Esperienza per Livello</code>, ma preferirei lasciarla fuori (sempre a
 	<code>pg21</code>).
 tab#combattimento
-	titler#Combattimento
+	title@right#Combattimento
 	Come vi aspettate, il combattimento si svolge diviso in <code>Round</code>
 	da <code>6"</code>, all'interno del quale ogni creatura ha il suo turno,
 	ordinato in base all'iniziativa, che si tira come (d20 + Des + <code>altra
@@ -300,7 +300,7 @@ tab#combattimento
 	fornisce <code>HP</code> che si aggiungono a quelli della guarigione
 	naturale; altrimenti, si possono curare le condizioni.
 tab#magia
-	titler#Magia
+	title@right#Magia
 	La magia è una cosa <em>facile, non semplice</em>. Cosa una magia faccia e
 	come funzioni a grandi linee è una cosa che ogni creatura può comprendere
 	con un tiro di <code>Conoscenze Arcane</code> contro (10), oppure contro (5)
@@ -337,7 +337,7 @@ tab#magia
 	Per il resto, la magia non è nulla di particolare: non ci sono componenti da
 	spendere, oggetti da tenere in mano, yadda da preparare…
 tab#economia
-	titler#Economia
+	title@right#Economia
 	Anche l'economia è stata semplificata molto rispetto ad altri giochi; in
 	particolare, tutti gli oggetti che non sono <code>magici</code> si
 	considerano <code>mondani</code>, ossia normali. Tutti gli oggetti normali
@@ -377,7 +377,7 @@ tab#economia
 	ne raccatta 3 all'inizio di ogni <code>Impresa</code>, proporzionatamente al
 	proprio livello.
 tab#track
-	titler#Track
+	title@right#Track
 	Forse avrei dovuto parlarne prima, visto che le <code>Track</code> sono la
 	meccanica principale del gioco, ma eccomici adesso. Cioè domani… attendete!
 stop#page
@@ -387,13 +387,13 @@ start#side
 	link#Legend/Spoiler/#<em class="spoiler">Spoiler</em>@ ]
 	br#
 	title#Legend
-	titler#Rule of Cool
+	title@right#Rule of Cool
 	stitle#tid#Creature#creature
-	reverse#tid#Caratteristiche@ / #creature#Caratteristiche
+	r#tid#Caratteristiche@ / #creature#Caratteristiche
 		tid#Creazione@ / #creature#Creazione 
 		tid#Progressione#creature#Progressione
 	stitle#tid#Combattimento#combattimento
-	reverse#tid#Azioni@ / #combattimento#Azioni
+	r#tid#Azioni@ / #combattimento#Azioni
 		tid#Distanze@ / #combattimento#Distanze
 		tid#Durate@ / #combattimento#Durate
 		tid#Manovre@ / #combattimento#Manovre

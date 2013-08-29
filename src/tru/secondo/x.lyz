@@ -20,7 +20,7 @@ start#page
 	manona, sobbalzai e rimasi senza fiato, perch&egrave; chi avevo davanti era
 	orrido come un demonio e pensai:
 	begin#inside
-		p#intra@jo#Quello &egrave; il Diavolo
+		p#speak@jo#Quello &egrave; il Diavolo
 	end#inside
 	p#Ironia della sorte, non mi sbagliavo affatto.
 	p#Urlai. Tanto. Quello non se ne cur&ograve; per nulla e afferratami per il
@@ -63,7 +63,7 @@ start#page
 	fiori dappertutto. Mi guardai un po' attorno, non vidi nulla di
 	preoccupante, o spaventoso, o strano in qualsivoglia modo. Pensai
 	begin#inside
-		p#intra@jo#&Egrave; ciato un ciogno? Ce &egrave; coc&igrave;, non voglio ciognare mai pi&ugrave;!
+		p#speak@jo#&Egrave; ciato un ciogno? Ce &egrave; coc&igrave;, non voglio ciognare mai pi&ugrave;!
 	end#inside
 	p#Mi rilassai un attimo, stiracchiandomi. Guardai un po' qua, un po'
 	l&agrave;, e mi resi conto di essere tra le montagne, su un altopiano.
@@ -90,7 +90,7 @@ start#page
 	l&igrave; impietrita come una statuina.
 	p#Poi il mostro parl&ograve;:
 	begin#outside
-		p#intra@lyznardh#<em title="Che piacere vederti sveglia">Benal' zada</em>
+		p#speak@lyznardh#<em title="Che piacere vederti sveglia">Benal' zada</em>
 	end#outside
 	p#La potenza di quel saluto mi stropicci&ograve; il grembiule e mi
 	spettin&ograve; i capelli, tanto era forte. Per quanto lo stupore mi
@@ -100,31 +100,31 @@ start#page
 	p#Fu inutile, ovviamente. Ancora per un po' non successe niente, io e il
 	mostro stavamo fermi. Poi lui parl&ograve; di nuovo:
 	begin#outside
-		p#intra@lyznardh#Posso parlare la tua lingua &ndash; e tutte le altre, se &egrave; per quello &ndash; capisci quello che dico?
+		p#speak@lyznardh#Posso parlare la tua lingua &ndash; e tutte le altre, se &egrave; per quello &ndash; capisci quello che dico?
 	end#outside
 	p#Si, capivo. Per&ograve; non risposi immediatamente.
 	begin#outside
-		p#intra@lyznardh#Mi spiace per il tuo pianeta, ma &egrave; stato necessario distruggerlo per prevenire un danno maggiore al tuo piano
-		p#intra@lyznardh#Ho scelto questo come prossima meta: secondo le mie analisi potrai adattarti senza difficolt&agrave; a questo nuovo ambiente e potrai stabilirti qui
-		p#intra@lyznardh#Esiste una specie compatibile con la tua, su questo pianeta, con sei civilt&agrave; diffuse: oltre quel passo si trova un assediamento della cultura con la pi&ugrave; elevata probabilit&agrave; di integrazione
-		p#intra@lyznardh#Posso guidarti fino a destinazione, se credi
+		p#speak@lyznardh#Mi spiace per il tuo pianeta, ma &egrave; stato necessario distruggerlo per prevenire un danno maggiore al tuo piano
+		p#speak@lyznardh#Ho scelto questo come prossima meta: secondo le mie analisi potrai adattarti senza difficolt&agrave; a questo nuovo ambiente e potrai stabilirti qui
+		p#speak@lyznardh#Esiste una specie compatibile con la tua, su questo pianeta, con sei civilt&agrave; diffuse: oltre quel passo si trova un assediamento della cultura con la pi&ugrave; elevata probabilit&agrave; di integrazione
+		p#speak@lyznardh#Posso guidarti fino a destinazione, se credi
 	end#outside
 	p#Questo non l'avevo capito molto bene, avevo quattro anni… Ma provai uno
 	stranissimo sollievo, quando capii che quel mostro parlava la mia lingua.
 	Pensai:
 	begin#inside
-		p#intra@jo#I moctri non parlano
-		p#intra@jo#Ma quecto parla
-		p#intra@jo#Allora non &egrave; un moctro, &egrave; un cignore
-		p#intra@jo#Anche ce &egrave; brutto
-		p#intra@jo#Force &egrave; un moctro/cignore
+		p#speak@jo#I moctri non parlano
+		p#speak@jo#Ma quecto parla
+		p#speak@jo#Allora non &egrave; un moctro, &egrave; un cignore
+		p#speak@jo#Anche ce &egrave; brutto
+		p#speak@jo#Force &egrave; un moctro/cignore
 	end#inside
 	p#Svanito il terrore agghiacciante che avevo fino ad un attimo prima, dissi
 	candidamente:
 	begin#outside
-		p#intra@jo#Ciao! Io mi chiamo Jo, e tu?
-		p#intra@lyznardh#eLyznardh &ndash; che sono io &ndash; si chiama Lyznardh
-		p#intra@jo#Ciao, Lyznardh!
+		p#speak@jo#Ciao! Io mi chiamo Jo, e tu?
+		p#speak@lyznardh#eLyznardh &ndash; che sono io &ndash; si chiama Lyznardh
+		p#speak@jo#Ciao, Lyznardh!
 	end#outside
 	p#Adesso avevo un amico mostro/signore.
 stop#page

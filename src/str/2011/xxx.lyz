@@ -291,10 +291,10 @@ tab#v
 stop#page
 start#side
 	begin#ol
-		li#tid#Introduzione#i
-		li#tid#L&apos;interpretazione del sogno#ii
-		li#tid#L&apos;interpretazione del signor Jazzinghen#iii
-		li#tid#Conclusioni#iv
-		li#tid#Il lato comico#v
+		p#tid#Introduzione#i
+		p#tid#L&apos;interpretazione del sogno#ii
+		p#tid#L&apos;interpretazione del signor Jazzinghen#iii
+		p#tid#Conclusioni#iv
+		p#tid#Il lato comico#v
 	end#ol
 stop#side

@@ -16,13 +16,12 @@ tab#i
 	sono vere.
 
 	Vado.
-	sbr#
+	sec#br
 	begin#outside
 		p#<em>“Follia: ripetere la stessa azione più e più volte aspettando
 		risultati diversi”</em>
 
-		reverse#
-		(attribuita ad) Albert Einstein
+		r#(attribuita ad) Albert Einstein
 	end#outside
 	Succede, a volte, niente di particolare. Ma capisco che se proseguissi su
 	questo versante, difficilmente la storia potrebbe diventare divertente;
@@ -132,7 +131,7 @@ tab#iii
 	li sto piegando direttamente anche per la biblioteca…) e ascolto questo
 	discorso che, in pratica, può essere riassunto in
 	begin#outside
-		speak#em#'Ndo cazzo sta <em>Mesieur Sicuritè</em>?
+		p#speak@em#'Ndo cazzo sta <em>Mesieur Sicuritè</em>?
 	end#outside
 	rifernendosi all'<em>eminenza grigia</em> del dipartimento d'informatica,
 	che per puro caso è anche responsabile del dipartimento sulla “sicurezza”
@@ -146,9 +145,9 @@ tab#iii
 	università scientifiche parse un po' per tutta l'Europa. Per l'ambito dei
 	<code>sistemi integrati</code>, l'elenco si restringe a
 	begin#ul
-		li#Stoccolma (Svezia)
-		li#Berlino (Germania)
-		li#Eindhoven (Paesi Bassi)
+		p#Stoccolma (Svezia)
+		p#Berlino (Germania)
+		p#Eindhoven (Paesi Bassi)
 	end#ul
 	La lega di queste università ha messo assieme questo programmone
 	sperimentale, che parte giusto adesso, e che prevede un anno in un posto
@@ -176,8 +175,7 @@ tab#iii
 	Ecco, insomma. Cose fighe. L'applicazione scade il 29 febbraio. Sono
 	titubante. Devo correrci sopra.
 	br#
-	reverse#
-	Dovrò correre tanto.
+	r#Dovrò correre tanto.
 tab#iv
 	Fatte le mie corse, parve di non trovare alcun vero motivo contro questa
 	possibilità; neanche veri motivi pro, in realtà. Ma comunque niente di
@@ -206,14 +204,14 @@ tab#iv
 	coda scorre piuttosto in fretta. Nel giro di cinque minuti, eccomi al
 	bancone:
 	begin#outside
-		speak#gods#Salve, sono il GODS
-		speak#em#Salve, sono il CIAL
-		speak#gods#Scopro che m'occorre una certificazione d'inglese alta alta altissima (TOEFL oppure IELTS) entro il 10 d'aprile, e sono qui per scoprire come si fa
-		speak#em#Non lo si fa
-		speak#Gods#Wat
-		speak#em#Eh, non lo si fa
-		speak#gods#Ma non siete voi il CIAL, quello che fa queste cose?
-		speak#em#In teoria, ma facciamo soltanto corsi fuffa per le certificazioni fuffa. E se tu vuoi una certificazione figa, te la vai a cercare da tizi più fighi di noi
+		p#speak@gods#Salve, sono il GODS
+		p#speak@em#Salve, sono il CIAL
+		p#speak@gods#Scopro che m'occorre una certificazione d'inglese alta alta altissima (TOEFL oppure IELTS) entro il 10 d'aprile, e sono qui per scoprire come si fa
+		p#speak@em#Non lo si fa
+		p#speak@Gods#Wat
+		p#speak@em#Eh, non lo si fa
+		p#speak@gods#Ma non siete voi il CIAL, quello che fa queste cose?
+		p#speak@em#In teoria, ma facciamo soltanto corsi fuffa per le certificazioni fuffa. E se tu vuoi una certificazione figa, te la vai a cercare da tizi più fighi di noi
 	end#outside
 	Almeno ho fatto in fretta e sono potuto tornare in facoltà. Deliziosa
 	giornata di sole, in verità; ma il resto… arrivo, trovo un buco e m'infilo
@@ -240,10 +238,9 @@ tab#iv
 
 	Poi il <em>Buddy</em> pronuncia l'emblematica frase
 	begin#outside
-		speak#em#Non è l'unica alternativa. Potresti anche andare a Sant'Anna
+		p#speak@em#Non è l'unica alternativa. Potresti anche andare a Sant'Anna
 	end#outside
-	reverse#
-	><code>Implying</code> che io possa tenere la media richiesta ;_;
+	> <code>Implying</code> che io possa tenere la media richiesta ;_;
 	br#
 	Ma per il resto, mi consiglia di andare a prendere un professore con il
 	quale abbia un buon voto. Lacrime solcano il mio viso nel sentire “buon
@@ -252,7 +249,7 @@ tab#iv
 	<em>Montrezzord</em> all'uscita. Tolti i soliti tizi che domando di spostare
 	gli orari del <code>laboratoire</code>
 	begin#outside
-		speak#em#Per questo dovrete mettervi d'accordo con <span class="war">War</span> LOL
+		p#speak@em#Per questo dovrete mettervi d'accordo con <span class="war">War</span> LOL
 	end#outside
 	io domando e lui risponde. Sembrerebbe fatta. Ma intanto, sono stanco morto.
 	sec#
@@ -394,9 +391,9 @@ tab#v
 	ancora avuto briga d'andarci.
 
 	begin#outside
-		inline#em#Ma tu vai in Bondone e a Vigolo in bici
+		p#speak@em#Ma tu vai in Bondone e a Vigolo in bici
 		dice mio padre
-		inline#em#che vuoi che sia arrivare fino alla Vela?
+		speak@em#che vuoi che sia arrivare fino alla Vela?
 		ed io non rispondo.
 	end#outside
 	Riflettendo, adesso posso dire che non è una questione
@@ -436,9 +433,9 @@ tab#v
 	migliori cose della vita, e di come i miei nipoti avrebbero potuto
 	ascoltarsi quel disco con il mio giradischi.
 	begin#outside
-		inline#em#E poi
+		p#speak@em#E poi
 		ha detto
-		inline#em#hai la giovinezza
+		speak@em#hai la giovinezza
 	end#outside
 	So che ha mentito. Perché <code>200€</code> per un giradischi non sono il
 	miglior acquisto della <em>mia</em> vita. E non solo quello.
@@ -518,7 +515,7 @@ tab#vi
 		questo è un motivo, è un ottimo motivo, per non prendere parte. Non sono
 		così capace.
 	end#outside
-	sbr#
+	sec#br
 	E questo era ieri. Passiamo ad oggi.
 	br#
 	Ho messo via i Gundam, li ho tolti dalla mensola. E anche il <em>Cloth</em>

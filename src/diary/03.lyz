@@ -7,7 +7,7 @@ start#page
 stop#page
 start#side
 	include#extra/back2lod#side
-	sbr#
+	sec#br
 	stitle@right#Ristampa
 	In origine, questa pagina di diario era un <code>Extra</code>
 	link#Extra/Back2LOD/#Leggi l'@originale@.

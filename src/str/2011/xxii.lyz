@@ -27,7 +27,7 @@ start#page
 		end#inside
 		Questo ovviamente sperando che l'esperto ci sia.
 
-		sbr#
+		sec#br
 		Ma noi viviamo in un mondo dove questo spesso non succede. Per
 		un qualche motivo che sinceramente mi sfugge, questo precetto
 		non vale più.
@@ -42,16 +42,16 @@ start#page
 	
 		Faccio un esempio.
 
-		sbr#
+		sec#br
 		Il mio impianto TV/Stereo. Esso è così composto:
 		begin#inside
 			begin#ul
-				li#TV &ndash; 3x SCART (IN) + ingresso LR+V
-				li#Decoder per il digitale terrestre &ndash; 2x SCART (IN/OUT)
-				li#DVDPlayer/Stereo5.1/Radio &ndash; 2x SCART (IN/OUT)
-				li#SONY PlayStation
-				li#SONY PlayStation2
-				li#Nintento Wii
+				p#TV &ndash; 3x SCART (IN) + ingresso LR+V
+				p#Decoder per il digitale terrestre &ndash; 2x SCART (IN/OUT)
+				p#DVDPlayer/Stereo5.1/Radio &ndash; 2x SCART (IN/OUT)
+				p#SONY PlayStation
+				p#SONY PlayStation2
+				p#Nintento Wii
 			end#ul
 		end#inside
 		Tutto nello stesso armadio, tutto attaccato alla stessa
@@ -90,7 +90,7 @@ start#page
 	
 		'Sto cazzo.
 
-		sbr#
+		sec#br
 		Ed ecco la stessa cosa, al contrario.
 	
 		Vedete questo bel sito? L'ho fatto io.
@@ -104,7 +104,7 @@ start#page
 		M'azzarderei a dire che posso realizzare un sito. Visto che ne
 		ho costruito uno. Ma così non è.
 
-		sbr#
+		sec#br
 		Sto lavorando ad un esame nominato &quot;Programmazione per il
 		Web&quot;, storicamente noto come &quot;Tecniche avanzate di
 		programmazione&quot;. Proprio adesso.
@@ -140,7 +140,7 @@ start#page
 	
 		Non servirà.
 
-		sbr#
+		sec#br
 		Perché il progetto si basa su Java Servlet, che girano su
 		Tomcat, che si basano su una pesantissima interfaccia globale
 		sul server, la cui configurazione è un lungo lungo lungo file
@@ -157,7 +157,7 @@ start#page
 		tutta la broda ad ogni modifica, perchè &quot;é così che
 		funziona il sistema&quot;.
 
-		sbr#
+		sec#br
 		Ed ovviamente, ad ogni errore/modifica/test, i tempi di refresh
 		(solitamente attorno al minuto) s'allungano...
 	
@@ -177,7 +177,7 @@ start#page
 		resettare la configurazione e rifarla. Ho provato a ricostruire
 		il progetto dal nulla. Nulla vale.
 
-		sbr#
+		sec#br
 		È possibile che questo aggeggio, così immensamente pesante, così
 		immesamente sovrapotenziato, così poco prestante, così esigente
 		in fatto di risorse, sia globalmente apprezzato e utilizzato?
@@ -198,7 +198,7 @@ start#page
 		Ed mi ritrovo pure un professore con il coraggio di dirmi che
 		questa roba funziona e va bene ed è il futuro.
 
-		sbr#
+		sec#br
 		Ma io mi sento di dire di non essere completamente idiota.
 	
 		E posso dimostrarlo, perché ho qui l'alternativa. Potrei rifare
@@ -210,9 +210,9 @@ start#page
 		permette delle immani porcate, ma almeno fa quello che io gli
 		dico, quando glielo dico.
 
-		sbr#
+		sec#br
 		title#L'ultimo disperato tentativo
-		titler#Domenica mattina &ndash; 30 gennaio 2011
+		title@right#Domenica mattina &ndash; 30 gennaio 2011
 		Allora, stamattina mi sono detto
 		begin#outside
 			&laquo;Cazzo cazzo, le macchine debbono obbedire all'uomo, che le
@@ -233,15 +233,15 @@ start#page
 	
 		Non so proprio che farci.
 
-		sbr#
+		sec#br
 		title#Il rifacimento
-		titler#Lunedì mattina &ndash; 31 gennaio 2011
+		title@right#Lunedì mattina &ndash; 31 gennaio 2011
 		Dunque, l'ho fatto. Come? Non saprei dire... Probabilmente posso
 		dire d'essermi piegato al framework...
 		begin#outside
-			speak##Una scatola di bruciore al culo per il GODS!
-			speak#GODS#Sono io
-			speak##Firmi qui per favore
+			p#speak@#Una scatola di bruciore al culo per il GODS!
+			p#speak@GODS#Sono io
+			p#speak@#Firmi qui per favore
 		end#outside
 		Brucia un pochino...
 	

@@ -7,7 +7,7 @@ start#page
 stop#page
 start#side
 	include#str/2011/lii#side
-	sbr#
+	sec#br
 	stitle@right#Ristampa
 	In origine, questa pagina di diario era la <code>Storia LII</code>, del
 	2011.

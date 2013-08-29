@@ -13,26 +13,26 @@ start#page
 	dire nulla di sensato &ndash; e qui non c&apos;&eacute; nulla di comodo su
 	cui sedersi. Che fare dunque?
 	begin#inside
-		p#intra@ci#Che fare, dunque?
-		p#intra@simak#Ce ne andiamo
-		p#intra@ci#E dove?
-		p#intra@simak#Proseguiremo verso la prossima <em>Porta</em>, e giunti l&igrave; la attraverseremo. &Egrave; semplice
-		p#intra@ci#Calcolo la rotta [<code>attendere prego…</code>]
-		p#intra@lyz#Devo continuare a piedi, vero?
-		p#intra@simak#Si, esatto. Cammineremo lentamente, a passo di <em title="che significa: &laquo;Mortale che cammina sulla Terra&raquo;">Minar kl&apos;vah du&apos;Datundhum</em>. Nessuno si accorger&agrave; di noi
+		p#speak@ci#Che fare, dunque?
+		p#speak@simak#Ce ne andiamo
+		p#speak@ci#E dove?
+		p#speak@simak#Proseguiremo verso la prossima <em>Porta</em>, e giunti l&igrave; la attraverseremo. &Egrave; semplice
+		p#speak@ci#Calcolo la rotta [<code>attendere prego…</code>]
+		p#speak@lyz#Devo continuare a piedi, vero?
+		p#speak@simak#Si, esatto. Cammineremo lentamente, a passo di <em title="che significa: &laquo;Mortale che cammina sulla Terra&raquo;">Minar kl&apos;vah du&apos;Datundhum</em>. Nessuno si accorger&agrave; di noi
 	end#inside
 	p#O almeno spero. Meno mi muover&ograve;, meno danni arrecher&ograve; a questo luogo.
 	sec#
 	begin#inside
-		p#intra@ci#[<code>Ricerca completata</code>]
-		p#intra@simak#Dunque?
-		p#intra@ci#Dobbiamo &ndash; ovviamente &ndash; continuare sulla strada che percorrevamo prima del tuo &quot;<em>risveglio</em>&quot;, poich&eacute; eravamo gia ben indirizzati
-		p#intra@simak#Distanza?
-		p#intra@ci#Circa un giorno e mezzo di cammino, considerando la velocit&agrave; apparente del sole e il dislivello da affrontare
-		p#intra@lyz#Bene! Quanto ho aspettato!
-		p#intra@ci#Veramente, non molto, Lyz: hai dovuto attendere soltanto [<code>2h:13&apos;:45&quot;:123</code>], di cui [<code>1h:48&apos;:34&quot;:754</code>] spesi in stato di incoscenza
-		p#intra@lyz#Non intendevo questo
-		p#intra@ci#Lo so. Mi piace stuzzicarti
+		p#speak@ci#[<code>Ricerca completata</code>]
+		p#speak@simak#Dunque?
+		p#speak@ci#Dobbiamo &ndash; ovviamente &ndash; continuare sulla strada che percorrevamo prima del tuo &quot;<em>risveglio</em>&quot;, poich&eacute; eravamo gia ben indirizzati
+		p#speak@simak#Distanza?
+		p#speak@ci#Circa un giorno e mezzo di cammino, considerando la velocit&agrave; apparente del sole e il dislivello da affrontare
+		p#speak@lyz#Bene! Quanto ho aspettato!
+		p#speak@ci#Veramente, non molto, Lyz: hai dovuto attendere soltanto [<code>2h:13&apos;:45&quot;:123</code>], di cui [<code>1h:48&apos;:34&quot;:754</code>] spesi in stato di incoscenza
+		p#speak@lyz#Non intendevo questo
+		p#speak@ci#Lo so. Mi piace stuzzicarti
 	end#inside
 	p#Ho come l&apos;impressione che il mio risveglio abbia influito anche su
 	questi due… Forse, ora sono pi&ugrave; simili a come li ricordo.
@@ -55,42 +55,42 @@ start#page
 	dev&apos;essere un&apos;eternit&agrave; &ndash; forse lo &egrave; davvero.
 	Anzi, lo &egrave; proprio! Ricordo che una volta, Ci disse:
 	begin#inside
-		p#intra@ci#Per quanto mi riguarda, posso definire come &quot;<em>Eternit&agrave;</em>&quot; un qualsiasi periodo di tempo, la cui durata sia superiore alla vita di Umundhum. Similmente, definisco il termine &quot;<em>da sempre</em>&quot; come qualsiasi periodo di tempo a partire da una data antecedente la fondazione di Umundhum, ed anche &quot;<em>per sempre</em>&quot; qualsiasi periodo di tempo che finisca in una data seguente alla distruzione di Umundhum. Le tre precedenti, supponendo che Umundhum abbia fine
+		p#speak@ci#Per quanto mi riguarda, posso definire come &quot;<em>Eternit&agrave;</em>&quot; un qualsiasi periodo di tempo, la cui durata sia superiore alla vita di Umundhum. Similmente, definisco il termine &quot;<em>da sempre</em>&quot; come qualsiasi periodo di tempo a partire da una data antecedente la fondazione di Umundhum, ed anche &quot;<em>per sempre</em>&quot; qualsiasi periodo di tempo che finisca in una data seguente alla distruzione di Umundhum. Le tre precedenti, supponendo che Umundhum abbia fine
 	end#inside
 	p#Credo avesse ragione.
 	sec#
 	p#Che cos&apos;&eacute;? Avverto un senso di distaza, come se mi trovassi di
 	fronte ad un abisso; come se fossi lontano da qualcosa…
 	begin#inside
-		p#intra@corona#-- Dicesi &quot;<em>nostalgia</em>&quot;, Simak --
-		p#intra@simak#Gi&agrave;, come scordarlo…
-		p#intra@corona#-- E cos&igrave;, sei tornato te stesso, eh, Simak? --
-		p#intra@simak#Forse. Ma non provo piacere, nell&apos;essere tornato &ndash; se &egrave; questo che intendi: &egrave; diverso
-		p#intra@corona#-- Diverso come? --
-		p#intra@simak# Come quando ci si volta indietro per rivedere la propria vita, come quando ci si ferma davanti allo specchio per osservare la propria faccia… Io sono una persona che si &egrave; rivista allo specchio dopo molto tempo, e trova che l&apos;immagine che lo specchio mostra &egrave; dissimile &ndash; e non poco &ndash; da quello che la mente immaginava… Ecco, sono una persona che non si piace; anzi, che ora ricorda di saper bene di non piacersi
-		p#intra@corona#-- E dunque, perch&egrave; rimanere te stesso, Simak? --
-		p#intra@simak#&Egrave; inevitabile
-		p#intra@corona#-- Lo &egrave; davvero? --
-		p#intra@simak#Oh s&igrave;, lo &egrave; davvero: &quot;<em>Vi deve essere eLyznardh: uno ed uno soltanto, sempre</em>&quot;. Mai ho trovato chi fosse degno di sostituirmi, mai qualcuno che potesse reggere
-		p#intra@corona#-- Nemmeno tra i nemici? --
-		p#intra@simak#Ah, gia… tra i nemici, qualcuno v&apos;&egrave; stato. Peccato che abbiano incontrato la morte per mano mia. E questo &ndash; dovrai riconoscerlo &ndash; di fatto ne fa degli indegni
-		p#intra@corona#-- Verr&agrave; ben il degno --
-		p#intra@simak#Un giorno, quando sar&ograve; troppo stanco per andare avanti, sar&agrave; meglio che egli sia arrivato
-		p#intra@corona#-- E se fosse gia arrivato? --
-		p#intra@simak#Chi, lui? Usurpa il nome, il mio volto e il mio trono: che sia dunque degno anche di usurpare il mio titolo? Forse. Ma credo invece che presto comparir&agrave; anch&apos;egli nella lunga lista di coloro che sono caduti per mia mano
-		p#intra@corona#-- Altro sangue sulle tue mani, Simak. Altra distruzione seminata per la tua ambizione. Ormai, non vi &egrave; quasi <em title="che significa: &laquo;Figlio di Zathot&raquo;">Zathotan</em> che non ricordi la morte per tua mano; e per cosa, poi? Per lei? --
-		p#intra@simak#Non la nominare. Che ne sai tu, <em>Coscienza</em>, di quello che pu&ograve; valere un sincero legame? Tu hai gia abbandonato molte volte il tuo compagno: io invece resto fedele a lei fin da sempre. E lei a me
-		p#intra@corona#-- Vivrai dunque per questo legame? Esso non sar&agrave; pi&ugrave;, un giorno: verr&agrave; spezzato. E quando lei verr&agrave; meno al suo giuramento, che cosa farai, Simak? Che cosa onorerai? Vivrai forse del mero ricordo? O forse, <em>morirai</em> del mero ricordo? --
-		p#intra@simak#Sei infida. Ed anche crudele. Ma soprattutto hai torto, e mi compiaccio nel ricordartelo
-		p#intra@corona#-- Vivi un&apos;illusione, Simak. E non sei assicurato: quel giorno perderai tutto, quello che hai e quello che sei. Allora, sar&agrave; compiuto --
-		p#intra@simak#Ho sentito abbastanza
-		p#intra@corona#-- D&apos;accordo, Simak: alla prossima --
-		p#intra@simak#Ah. Sbagli, Coscienza
+		p#speak@corona#-- Dicesi &quot;<em>nostalgia</em>&quot;, Simak --
+		p#speak@simak#Gi&agrave;, come scordarlo…
+		p#speak@corona#-- E cos&igrave;, sei tornato te stesso, eh, Simak? --
+		p#speak@simak#Forse. Ma non provo piacere, nell&apos;essere tornato &ndash; se &egrave; questo che intendi: &egrave; diverso
+		p#speak@corona#-- Diverso come? --
+		p#speak@simak# Come quando ci si volta indietro per rivedere la propria vita, come quando ci si ferma davanti allo specchio per osservare la propria faccia… Io sono una persona che si &egrave; rivista allo specchio dopo molto tempo, e trova che l&apos;immagine che lo specchio mostra &egrave; dissimile &ndash; e non poco &ndash; da quello che la mente immaginava… Ecco, sono una persona che non si piace; anzi, che ora ricorda di saper bene di non piacersi
+		p#speak@corona#-- E dunque, perch&egrave; rimanere te stesso, Simak? --
+		p#speak@simak#&Egrave; inevitabile
+		p#speak@corona#-- Lo &egrave; davvero? --
+		p#speak@simak#Oh s&igrave;, lo &egrave; davvero: &quot;<em>Vi deve essere eLyznardh: uno ed uno soltanto, sempre</em>&quot;. Mai ho trovato chi fosse degno di sostituirmi, mai qualcuno che potesse reggere
+		p#speak@corona#-- Nemmeno tra i nemici? --
+		p#speak@simak#Ah, gia… tra i nemici, qualcuno v&apos;&egrave; stato. Peccato che abbiano incontrato la morte per mano mia. E questo &ndash; dovrai riconoscerlo &ndash; di fatto ne fa degli indegni
+		p#speak@corona#-- Verr&agrave; ben il degno --
+		p#speak@simak#Un giorno, quando sar&ograve; troppo stanco per andare avanti, sar&agrave; meglio che egli sia arrivato
+		p#speak@corona#-- E se fosse gia arrivato? --
+		p#speak@simak#Chi, lui? Usurpa il nome, il mio volto e il mio trono: che sia dunque degno anche di usurpare il mio titolo? Forse. Ma credo invece che presto comparir&agrave; anch&apos;egli nella lunga lista di coloro che sono caduti per mia mano
+		p#speak@corona#-- Altro sangue sulle tue mani, Simak. Altra distruzione seminata per la tua ambizione. Ormai, non vi &egrave; quasi <em title="che significa: &laquo;Figlio di Zathot&raquo;">Zathotan</em> che non ricordi la morte per tua mano; e per cosa, poi? Per lei? --
+		p#speak@simak#Non la nominare. Che ne sai tu, <em>Coscienza</em>, di quello che pu&ograve; valere un sincero legame? Tu hai gia abbandonato molte volte il tuo compagno: io invece resto fedele a lei fin da sempre. E lei a me
+		p#speak@corona#-- Vivrai dunque per questo legame? Esso non sar&agrave; pi&ugrave;, un giorno: verr&agrave; spezzato. E quando lei verr&agrave; meno al suo giuramento, che cosa farai, Simak? Che cosa onorerai? Vivrai forse del mero ricordo? O forse, <em>morirai</em> del mero ricordo? --
+		p#speak@simak#Sei infida. Ed anche crudele. Ma soprattutto hai torto, e mi compiaccio nel ricordartelo
+		p#speak@corona#-- Vivi un&apos;illusione, Simak. E non sei assicurato: quel giorno perderai tutto, quello che hai e quello che sei. Allora, sar&agrave; compiuto --
+		p#speak@simak#Ho sentito abbastanza
+		p#speak@corona#-- D&apos;accordo, Simak: alla prossima --
+		p#speak@simak#Ah. Sbagli, Coscienza
 	end#inside
 	begin#inside
-		p#intra@simak#Ha torto, vero?
-		p#intra@sacomne#Per sempre, giurai. Per sempre sar&agrave;. Per te, Simak, come al principio, ora e sempre
-		p#intra@simak#Ora e sempre, per te, Sacomne
+		p#speak@simak#Ha torto, vero?
+		p#speak@sacomne#Per sempre, giurai. Per sempre sar&agrave;. Per te, Simak, come al principio, ora e sempre
+		p#speak@simak#Ora e sempre, per te, Sacomne
 	end#inside
 	p#Verr&agrave; colui che &egrave; degno. E quando verr&agrave;, sar&ograve; ben lieto di passargli questo fardello. Ma fino ad allora, questo compito rimane mio, ed io soltanto lo porter&ograve; avanti!
 	p#Il mio compito, per&ograve;, non mi obbliga a rimanere sveglio durante gli spostamenti, pertanto ora schiaccer&ograve; un sonnellino.
@@ -102,25 +102,25 @@ start#page
 	end#inside
 	sec#
 	begin#inside
-		p#intra@ci#La Porta &egrave; in vista!
-		p#intra@simak#Yawn! &apos;ngiorno…
-		p#intra@lyz#Oh, guarda come dorme bene il pupo… Perch&eacute; non ti rendi utile?
-		p#intra@simak#&Egrave; perch&eacute; ho piena fiducia in te, Lyz
-		p#intra@lyz#No, &egrave; perch&eacute; sei un fancazzista! Mentre <em>io</em> cammino tu dormi, mentre <em>io</em> combatto tu filosofeggi, mentre <em>io</em> mi do da fare per concludere questa missione in incognito del cazzo, tu cosa fai? Sogni la rossa e parli da solo?!?
-		p#intra@simak#Si, si, Lyz, sappiamo tutti quanto tu sia efficiente nel tuo lavoro. Ecco, prendi uno zuccherino…
-		p#intra@lyz#Ma che fai, mi pigli per il culo?!?
-		p#intra@simak#No, certo che no. Sono pi&ugrave; convinto che te lo meriti. Anzi, to&apos;, <em>due</em> zuccherini
-		p#intra@lyz#Allora vuoi botte, eh? Vieni quaggi&ugrave; e facciamo un po&apos; i conti!
-		p#intra@simak#<strong>Egrave; forse una sfida?</strong>
-		p#intra@lyz#Ehm… no!
-		p#intra@simak#<strong>Perch&eacute; tu sai bene come terminano le cose, quando vengo sfidato</strong>
-		p#intra@lyz#Mh! Certo. Scusa, capo
+		p#speak@ci#La Porta &egrave; in vista!
+		p#speak@simak#Yawn! &apos;ngiorno…
+		p#speak@lyz#Oh, guarda come dorme bene il pupo… Perch&eacute; non ti rendi utile?
+		p#speak@simak#&Egrave; perch&eacute; ho piena fiducia in te, Lyz
+		p#speak@lyz#No, &egrave; perch&eacute; sei un fancazzista! Mentre <em>io</em> cammino tu dormi, mentre <em>io</em> combatto tu filosofeggi, mentre <em>io</em> mi do da fare per concludere questa missione in incognito del cazzo, tu cosa fai? Sogni la rossa e parli da solo?!?
+		p#speak@simak#Si, si, Lyz, sappiamo tutti quanto tu sia efficiente nel tuo lavoro. Ecco, prendi uno zuccherino…
+		p#speak@lyz#Ma che fai, mi pigli per il culo?!?
+		p#speak@simak#No, certo che no. Sono pi&ugrave; convinto che te lo meriti. Anzi, to&apos;, <em>due</em> zuccherini
+		p#speak@lyz#Allora vuoi botte, eh? Vieni quaggi&ugrave; e facciamo un po&apos; i conti!
+		p#speak@simak#<strong>Egrave; forse una sfida?</strong>
+		p#speak@lyz#Ehm… no!
+		p#speak@simak#<strong>Perch&eacute; tu sai bene come terminano le cose, quando vengo sfidato</strong>
+		p#speak@lyz#Mh! Certo. Scusa, capo
 	end#inside
 	p#Avevo scordato quanto eLyz potesse essere strafottente. Ma per fortuna, mi sono anche ricordato di come posso strigliarlo.
 	begin#inside
-		p#intra@simak#Perdona l&apos;interruzione, Ci. Prosegui
-		p#intra@ci#Certo. Dunque, la Porta &egrave; in vista, a circa settanta minuti di cammino di fronte a noi
-		p#intra@lyz#Giusto un po&apos; di pazienza…
+		p#speak@simak#Perdona l&apos;interruzione, Ci. Prosegui
+		p#speak@ci#Certo. Dunque, la Porta &egrave; in vista, a circa settanta minuti di cammino di fronte a noi
+		p#speak@lyz#Giusto un po&apos; di pazienza…
 	end#inside
 	p#Eccola, infatti.
 	p#La Porta si staglia all&apos;orizzonte. Sporge da dietro le montagne, e la

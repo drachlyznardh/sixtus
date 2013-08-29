@@ -1,7 +1,6 @@
 title#Nessun dove#Neil Gaiman ridacchia, io rido con lui
 prev#Recensioni/Film/X/#I Puffi
 next#Recensioni/Libri/XII/#Harry Potter
-
 start#page
 	Questa la metto giù breve che non ho briga di scrivere tanto.
 
@@ -36,5 +35,5 @@ start#page
 stop#page
 start#side
 	title#Nessun Dove
-	titler#Si lascia leggere
+	title@right#Si lascia leggere
 stop#side

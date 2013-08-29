@@ -8,7 +8,7 @@ start#page
 stop#page
 start#side
 	include#extra/diario#side
-	sbr#
+	sec#br
 	stitle@right#Ristampa
 	In origine, questa pagina di diario era un <code>Extra</code>
 	link#Extra/Diario/#Leggi l'@originale@.

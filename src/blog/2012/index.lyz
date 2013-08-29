@@ -24,56 +24,55 @@ start#page
 	link##alla meno recente##Fondo
 	]
 	sec#
-	titler#Dicembre 2012
+	title@right#Dicembre 2012
 	br#
 	include#blog/2012/12#page@as@content
-	sbr#
-	titler#Novembre 2012
+	sec#br
+	title@right#Novembre 2012
 	br#
 	include#blog/2012/11#page@as@content
-	sbr#
-	titler#Ottobre 2012
+	sec#br
+	title@right#Ottobre 2012
 	br#
 	include#blog/2012/10#page@as@content
-	sbr#
-	titler#Settembre 2012
+	sec#br
+	title@right#Settembre 2012
 	br#
 	include#blog/2012/09#page@as@content
-	sbr#
-	titler#Agosto 2012
+	sec#br
+	title@right#Agosto 2012
 	br#
 	include#blog/2012/08#page@as@content
-	sbr#
-	titler#Luglio 2012
+	sec#br
+	title@right#Luglio 2012
 	br#
 	include#blog/2012/07#page@as@content
-	sbr#
-	titler#Giugno 2012
+	sec#br
+	title@right#Giugno 2012
 	br#
 	include#blog/2012/06#page@as@content
-	sbr#
-	titler#Maggio 2012
+	sec#br
+	title@right#Maggio 2012
 	br#
 	include#blog/2012/05#page@as@content
-	sbr#
-	titler#Aprile 2012
+	sec#br
+	title@right#Aprile 2012
 	br#
 	include#blog/2012/04#page@as@content
-	sbr#
-	titler#Marzo 2012
+	sec#br
+	title@right#Marzo 2012
 	br#
 	include#blog/2012/03#page@as@content
-	sbr#
-	titler#Febbraio 2012
+	sec#br
+	title@right#Febbraio 2012
 	br#
 	include#blog/2012/02#page@as@content
-	sbr#
-	titler#Gennaio 2012
+	sec#br
+	title@right#Gennaio 2012
 	br#
 	include#blog/2012/01#page@as@content
 	sec#
-	reverse#
-	Torna [
+	r#Torna [
 	link##alla più recente###
 	]
 	id#Fondo

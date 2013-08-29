@@ -35,7 +35,7 @@ start#page
 	p#Mh…
 	p#… mh…
 	begin#outside
-		p#intra@lyznardh#Tu? Tu, nell&apos;acqua… tu sei me?
+		p#speak@lyznardh#Tu? Tu, nell&apos;acqua… tu sei me?
 	end#outside
 	p#Ph… tace.
 	p#Certo, come potesse davvero rispondermi. Credo sia arrivato il momento di
@@ -133,9 +133,9 @@ start#page
 	fare adesso? Di solito, quando ho un problema del genere, chiedo consiglio a
 	Ci.
 	begin#inside
-		p#intra@simak#Ci, senti un po&apos;… Che animale sono?
-		p#intra@ci#Per rispondere alla domanda, posso dirti che &ndash; dal punto di vista prettamente tassonomico &ndash; rientri nelle seguenti categorie: <code>animalia, eumetazoa bilateria, deuterostomia, chordata, reptilia, diapsida, squamata</code>; ma anche <code>{protostomia ecdysozoa, arthropoda, chelicerata, arachnida, aranea}</code>; ed ancora <code>{hexapoda, insecta, pterygota, lepidoptera}</code>; pure <code>{vertebrata, gnathostomata, ittiopsidi, chondrichthyes, elasmobrachii}</code>; ed infine <code>{mammalia, eutheria, laurasiatheria, ferae, carnivora, feliformia, felidae}</code>
-		p#intra@simak#Mh… woooooow
+		p#speak@simak#Ci, senti un po&apos;… Che animale sono?
+		p#speak@ci#Per rispondere alla domanda, posso dirti che &ndash; dal punto di vista prettamente tassonomico &ndash; rientri nelle seguenti categorie: <code>animalia, eumetazoa bilateria, deuterostomia, chordata, reptilia, diapsida, squamata</code>; ma anche <code>{protostomia ecdysozoa, arthropoda, chelicerata, arachnida, aranea}</code>; ed ancora <code>{hexapoda, insecta, pterygota, lepidoptera}</code>; pure <code>{vertebrata, gnathostomata, ittiopsidi, chondrichthyes, elasmobrachii}</code>; ed infine <code>{mammalia, eutheria, laurasiatheria, ferae, carnivora, feliformia, felidae}</code>
+		p#speak@simak#Mh… woooooow
 	end#inside
 	p#&Egrave; davvero l&apos;unica cosa che riesco a dire, in questo momento.
 stop#page

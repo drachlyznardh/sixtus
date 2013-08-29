@@ -27,9 +27,9 @@ start#page
 	aprile</code>, c'era un po' di festeggiamento. Un nonnino, al semaforo, c'ha
 	chiesto se fossimo italiani, poi ha cominciato
 	begin#outside
-		speak#em#Oggi è la festa di tutti gli italiani, dell'Italia
-		speak#em#Perché, sapete, c'è stata la guerra, e oggi è la festa per tutti, per l'Italia
-		speak#em#E a noi ci piacciono sia gli italiani che gli stranieri che vengono a lavorare in Italia
+		p#speak@em#Oggi è la festa di tutti gli italiani, dell'Italia
+		p#speak@em#Perché, sapete, c'è stata la guerra, e oggi è la festa per tutti, per l'Italia
+		p#speak@em#E a noi ci piacciono sia gli italiani che gli stranieri che vengono a lavorare in Italia
 	end#outside
 	Per fortuna è venuto il verde e ce ne siao potuti andare. Non avrò mai tanto
 	entusiasmo come quel nonnino, ma…
@@ -40,13 +40,13 @@ start#page
 	suo proverbialmente scarso orientamento) non li trova. Salta fuori un tizio
 	a caso che ci guarda e ci domanda
 	begin#outside
-		speak#em#State cercando qualcosa?
-		speak#katia#Sì, i lastroni dell'Arco
-		speak#em#Ah, è chiuso: ci sono i lavori
-		speak#katia#Sì, vedo. Ma c'erano dei lastroni per terra, dove una volta c'era l'arco
-		speak#em#Ah, è chiuso: ci sono i lavori
-		speak#katia#Lo so, vedo i lavori. Ma c'erano 'sti lastroni…
-		speak#em#Ah, è chiuso: ci sono i lavori
+		p#speak@em#State cercando qualcosa?
+		p#speak@katia#Sì, i lastroni dell'Arco
+		p#speak@em#Ah, è chiuso: ci sono i lavori
+		p#speak@katia#Sì, vedo. Ma c'erano dei lastroni per terra, dove una volta c'era l'arco
+		p#speak@em#Ah, è chiuso: ci sono i lavori
+		p#speak@katia#Lo so, vedo i lavori. Ma c'erano 'sti lastroni…
+		p#speak@em#Ah, è chiuso: ci sono i lavori
 	end#outside
 	Credo fosse uno di quei personaggi che ha una sola frase, come
 	<em>Error</em> in quella casetta in <code>Legend of Zelda II</code>:
@@ -85,11 +85,11 @@ start#page
 	poi… poi aspetto anch'io. Per un quarto d'ora almeno, perché il “subito”
 	delle ferrovie dev'essere abbastanza largo o abbastanza elastico.
 
-	inline#gods#Pazienza, leggerò
+	p#speak@gods#Pazienza, leggerò
 	Poi il treno parte. Il capotreno mi avvisa delle fermate,
 	la vicina invece m'informa che, a quanto pare, la tratta
 	<em>Ala~Rovereto</em> sarà coperto in pullman.
-	inline#gods#Oh bene
+	speak@gods#Oh bene
 	mi dico, e via che si va (con calma). E intanto m'ascolto la signora di
 	fronte, che ha lasciato la macchina nel parcheggio del palazzo della
 	provincia (a Trento, dove deve scendere) ed è davvero preoccupata di non
@@ -117,16 +117,16 @@ start#page
 	farlo, svuoto le tasche, ci trovo della carta, mi metto a piegare. In quel
 	momento, passa un tizio a caso che mi vede piegare, <em>s'illumina
 	d'immenso</em> e mi domanda a quale facoltà io sia iscritto perché
-	inline#em#Io sono ingegnere ma non riesco a fare 'sta roba
+	speak@em#Io sono ingegnere ma non riesco a fare 'sta roba
 	e giù complimenti, e dove si può imparare, e quanto ci vuole, e ma come fai
 	etc etc etc… Questo, ovviamente, tra il mio stupore e le risate trattenute a
 	fatica.
-	reverse#<code>True story</code>
+	r#<code>True story</code>
 stop#page
 start#side
 	title#Storia [<code>LXXIX</code>]
 	title@right#Viaggio a Verona
-	reverse#<code>True story</code>
+	r#<code>True story</code>
 	sec#
 	Ambientata interamente il <code>25 aprile 2012</code>, questa storia è stata
 	pubblicata il <code>26 aprile 2012</code> in

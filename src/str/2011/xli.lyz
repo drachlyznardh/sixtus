@@ -558,17 +558,16 @@ tab#considerazioni
 stop#page
 start#side
 	stitle#Introduzione
-	reverse#
-		p#tid#Non sto forse raccontando?#intro
+	r#tid#Non sto forse raccontando?#intro
 		/
 		tid#I finali tagliati#intro#tagliati
 	br#
-	titler#Gundam SEED Destiny
+	title@right#Gundam SEED Destiny
 	begin#ol
-		li#tid#Prima stagione#s01
-		li#tid#Seconda stagione#s02
-		li#tid#Terza stagione#s03
-		li#tid#Quarta stagione#s04
+		p#tid#Prima stagione#s01
+		p#tid#Seconda stagione#s02
+		p#tid#Terza stagione#s03
+		p#tid#Quarta stagione#s04
 	end#ol
 	br#
 	p#tid#Considerazioni#considerazioni

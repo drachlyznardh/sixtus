@@ -56,7 +56,7 @@ tab#compagni
 	compagnia è nota per prendere possesso dei tavoli, far gran casino e
 	dominare sia la vita vera che l'internet.
 	begin#ul
-		li#il <span class="bolo">buon Bolo</span> è la persona che conosco da
+		p#il <span class="bolo">buon Bolo</span> è la persona che conosco da
 		più tempo, entro queste mura; abbiamo cominciato insieme, abbiamo
 		collaborato per gli esami per lungo tempe etc etc etc… spesso mi rivolgo
 		a lui direttamente, per evitare che usi i suoi terribili poteri di
@@ -232,7 +232,7 @@ start#side
 	tid#Allegri compagni#compagni
 	title#Guida
 	stitle#tid#Contenuti#contenuti
-	reverse#
+	r#
 	tid#Storie@ e #contenuti#Storie
 	tid#MiniStorie@ / #contenuti#MiniStorie
 	tid#Recensioni@ / #contenuti#Recensioni
@@ -241,12 +241,12 @@ start#side
 	tid#Legend@ RPG / #contenuti#Legend
 	tid#Extra#contenuti#Extra
 	stitle#tid#Meta#meta
-	reverse#
+	r#
 	tid#Extra@ / #meta#Extra
 	tid#Modi@ / #meta#Modi
 	tid#Stili@ / #meta#Stili
 	tid#Voci#meta#Voci
-	sbr#
+	sec#br
 	title#Gli (altri) Extra
 	p#link#Extra/Record/#La pagina dei @Record@ /
 	link#Extra/Scimmia/#I prodigi della @scimmia celeste@ /

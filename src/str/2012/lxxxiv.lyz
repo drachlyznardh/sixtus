@@ -42,11 +42,11 @@ start#page
 	sec#
 	Siamo tornati lì, per mangiare. Ed ecco, la botta di nostalgia. Pronti?
 	begin#outside
-		intra@war#No! Il flashback no!
-		intra@jazz#Fuga! Fuga! Fuga!
-		intra@dacav#Cambiate canale
-		intra@mitch#Tappate le orecchie ai bambini!
-		intra@bolo#Chiudete porte &amp; finestre!
+		p#speak@war#No! Il flashback no!
+		p#speak@jazz#Fuga! Fuga! Fuga!
+		p#speak@dacav#Cambiate canale
+		p#speak@mitch#Tappate le orecchie ai bambini!
+		p#speak@bolo#Chiudete porte &amp; finestre!
 	end#outside
 	sec#
 	Tutto è cominciato quando, un giorno… <code>&lt;bling-bling &amp;

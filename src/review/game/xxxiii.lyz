@@ -17,7 +17,7 @@ tab#dark
 	corsa la stanza con il demone di titanite e finisco di là, nella
 	vegetazione.
 
-	p#intra@gods#To' guarda@dico mentre lo vedo@Un segno d'evocazione@e mi dico anche@Perché non convocare 'sto tizio?
+	p#speak@gods#To' guarda@dico mentre lo vedo@Un segno d'evocazione@e mi dico anche@Perché non convocare 'sto tizio?
 	e lo evoco. Compare, dopo una certa attesa (perché io di sicuro non mi sarei
 	avventurato avanti da solo!) un tizio grossissimo, che teneva in spalla una
 	spada lunga da qui a lì. Senza neanche salutare, parte verso l'ignoto;
@@ -29,7 +29,7 @@ tab#dark
 	avnati così finché becco un focolare (!) e una porta luminosa (ch'è chiusa
 	in maniera particolare e vuole sicuramente una chiave apposita) ma il tizio
 	prosegue.
-	p#intra@gods#Okay
+	p#speak@gods#Okay
 	mi dico, e lo seguo.
 
 	Finisco in un bosco, pieno di quelle piante di prima. Ma stavolta vedo anche
@@ -61,13 +61,13 @@ tab#dark
 	Lo faccio con calma, finché alla viverna cade la coda: recupero la
 	<em>spadina del drago</em> che da sola vale più della mia <em>spada lunga
 	+5</em>.
-	p#intra@gods#Bene, bene. Ora è il caso di continuare
+	p#speak@gods#Bene, bene. Ora è il caso di continuare
 	br#	
 	Pew pew pew pew pew pew pew pew pew pew
 	br#
 	Noto, dopo qualche minuto, che per quanti danni io stia infliggendo, la vita
 	del drago non cala.
-	p#intra@gods#Internet!
+	p#speak@gods#Internet!
 	e scopro che effettivamente così non si può fare: ogni volta che torna ad
 	appollaiarsi sul castello, la vita rigenera. Bisogna trovare un altro modo,
 	mi dicono che basta spaccarla di botte. Ci provo.
@@ -75,7 +75,7 @@ tab#dark
 	E fallisco. Riesco a non morire, ma non mi sento in condizione di farcela.
 	Poi guardo oltre, e vedo che la porta oltre la viverna non è chiusa come
 	pensavo.
-	p#intra@gods#Hey, bestiaccia, vieni qui!
+	p#speak@gods#Hey, bestiaccia, vieni qui!
 	e poi – rotolarotolarotola – passo oltre la viverna, vado e accendo il falò
 	accanto alla statua dei <em>Sunbros</em>. La viverna vola via. Puff.
 
@@ -100,7 +100,7 @@ tab#dark
 	modo di ucciderla per star sicuro.
 	br#
 	A quel punto mi sono detto che
-	intra@gods#Vaffanculo!@anche IRL@Se non ho umanità da perdere@RrrrrrrrrrAAAAAAAAAAAAAge@andrò dal <em>Demone Capra</em> e succeda quel che succederà
+	speak@gods#Vaffanculo!@anche IRL@Se non ho umanità da perdere@RrrrrrrrrrAAAAAAAAAAAAAge@andrò dal <em>Demone Capra</em> e succeda quel che succederà
 	e successe che il <em>Demone Capra</em> esplose in quattro sole combo di
 	quattro colpi ciascuna. <em>Spada del Drago</em> a due mani, cagnetti del
 	cacchio seccati al primo colpo, fuga sulle scale e caduta e ripeti, quattro
@@ -113,10 +113,10 @@ tab#dark
 
 	Dentro, dopo metri di caduta, ci sono:
 	begin#ul
-		li#scheletri (spada e scudo) 2x;
-		li#scheletri (arco) 2x;
-		li#mago non morto;
-		li#scheletro gigante
+		p#scheletri (spada e scudo) 2x;
+		p#scheletri (arco) 2x;
+		p#mago non morto;
+		p#scheletro gigante
 	end#ul
 	Il mago e gli arceri sono molto molto in alto, ben fuori dalla mia portata
 	(è buio e non vedo la scala) mentre gli altri tre (soprattutto il gigante)

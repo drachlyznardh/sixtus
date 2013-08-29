@@ -42,23 +42,13 @@ tab#ii
 	che ha buon occhio, l'aveva capito.
 
 	begin#mini@right
-		Comincia e neanche la senti arrivare
-
-		reverse#
-		Arriva e ti riempie
-
-		Resta e galleggi
-
-		reverse#
-		Poi svanisce e ti lascia vuoto
-
-		Ricordarla non basterà
-
-		reverse#
-		Ed ogni volta che la ricorderai,
-
-		reverse#
-		vorrai che fosse proseguita
+		p#Comincia e neanche la senti arrivare
+		r#Arriva e ti riempie
+		p#Resta e galleggi
+		r#Poi svanisce e ti lascia vuoto
+		p#Ricordarla non basterà
+		r#Ed ogni volta che la ricorderai,
+		r#vorrai che fosse proseguita
 		br#
 		Esattamente come Firefly
 	end#mini
@@ -174,7 +164,7 @@ tab#vii
 
 	begin#outside
 		Ero a prove, piegavo, un tizio passa e domanda
-		inline#em#Già sai a quale ragazza la darai?
+		speak@em#Già sai a quale ragazza la darai?
 		
 		Rispondo che tutta la yadda è cominciata per caso, perché al baretto me
 		l'hanno chieste, poi alla mensa le han viste e l'han volute anche lì.

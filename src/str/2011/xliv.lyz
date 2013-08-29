@@ -250,9 +250,9 @@ stop#page
 start#side
 	title#Pillole
 	begin#ol
-		li#tid#Regali/Festeggiamenti#i
-		li#tid#Vecchiaia/Giovinezza#ii
-		li#tid#La comunione#iii
+		p#tid#Regali/Festeggiamenti#i
+		p#tid#Vecchiaia/Giovinezza#ii
+		p#tid#La comunione#iii
 	end#ol
 	title#Supposte
 	begin#ol@start@4

@@ -85,17 +85,17 @@ start#side
 	title#Corvino Multicolore
 	stitle@right#Parte I – La gioventù
 	begin@3em#roman
-		li#link#NaNoWriMo/Corvino/Multicolore/I/#Una sera, al parco
-		li#link#NaNoWriMo/Corvino/Multicolore/II/#Campeggio
-		li#link#NaNoWriMo/Corvino/Multicolore/III/#A contatto
-		li#link#NaNoWriMo/Corvino/Multicolore/IV/#Nel bosco
-		li#link#NaNoWriMo/Corvino/Multicolore/V/#Di notte
-		li#link#NaNoWriMo/Corvino/Multicolore/VI/#Gli ultimi giorni
-		li#link#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
+		p#link#NaNoWriMo/Corvino/Multicolore/I/#Una sera, al parco
+		p#link#NaNoWriMo/Corvino/Multicolore/II/#Campeggio
+		p#link#NaNoWriMo/Corvino/Multicolore/III/#A contatto
+		p#link#NaNoWriMo/Corvino/Multicolore/IV/#Nel bosco
+		p#link#NaNoWriMo/Corvino/Multicolore/V/#Di notte
+		p#link#NaNoWriMo/Corvino/Multicolore/VI/#Gli ultimi giorni
+		p#link#NaNoWriMo/Corvino/Multicolore/VII/#La dichiarazione
 	end#roman
 	stitle@right#Parte II – Il Potere
 	begin@4em@8#roman
-		li#link#NaNoWriMo/Corvino/Multicolore/VIII/#Il lampione
+		p#link#NaNoWriMo/Corvino/Multicolore/VIII/#Il lampione
 	end#roman
 	stitle@right#Parte VI – I Demoni
 	Prossimamente…

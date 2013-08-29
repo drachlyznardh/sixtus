@@ -39,11 +39,11 @@ tab#x
 	In questo posto più o meno triste spuntano alcuni personaggi:
 	begin#outside
 	begin#ul
-		li#<em>Garrod</em> (<code>Ga~rodo</code>) è il quindicenne protagonista;
+		p#<em>Garrod</em> (<code>Ga~rodo</code>) è il quindicenne protagonista;
 		fa la sua comparsa salvando un intero villaggio da un brigante con un
 		<em>mobile suit</em>; e poi non è che se lo tenga: lo vende al mercato
 		nero per fare soldi;
-		li#<em>Tiffa</em> (<code>Tifa~</code>) è la ragazza da salvare; sembra
+		p#<em>Tiffa</em> (<code>Tifa~</code>) è la ragazza da salvare; sembra
 		inutile come la principessa <em>Peach</em>
 	end#ul
 	end#outside
@@ -63,14 +63,14 @@ tab#x
 	A bordo trovano
 	begin#inside
 	begin#ul
-		li#<em>Jamil Neat</em> (<code>Jamiru Ni~to</code>) è il comandante, ma è
+		p#<em>Jamil Neat</em> (<code>Jamiru Ni~to</code>) è il comandante, ma è
 		anche il <em>newtype</em> che pilotava il <code>GX</code> nella guerra;
 		è traumatizzato, ha sempre gli occhiali dal sole (anche di notte, anche
 		a letto) e si preoccupa di un sacco di cose
-		li#<em>Roybea</em> (<code>Robi</code>) e <em>Witz</em>
+		p#<em>Roybea</em> (<code>Robi</code>) e <em>Witz</em>
 		(<code>Wee~tzu</code>) sono i piloti della nave, ognuno con un Gundam
 		(ma non erano rarissimi?): l'<em>AirMaster</em> e il <em>Leopard</em>
-		li#poi ci sono anche il <em>dottore</em>, la <em>zozza</em>, la
+		p#poi ci sono anche il <em>dottore</em>, la <em>zozza</em>, la
 		<em>seconda in comando</em> e il <em>timoniere</em>; di sotto ci sono
 		anche i meccanici, tra i quali il geniale <em>capo meccanico</em>
 		tredicenne
@@ -113,12 +113,12 @@ tab#x
 	corsa allo spazio. E poi la serie finisce in fretta, con queste due
 	rivelazioni:
 	begin#ul
-		li#i <em>gemelli Frost</em> sono i veri cattivi: siccome non sono
+		p#i <em>gemelli Frost</em> sono i veri cattivi: siccome non sono
 		<em>newtype</em> ma soltanto telepatici, non sono stati presi nella
 		sezione sperimentale dell'esercito come avrebbero voluto. Quindi,
 		spaccano tutto e decidono di scatenare una nuova guerra, perché <em>a
 		loro la guerra ci piace</em>; sono cattivissimi
-		li#il <em>satellite system</em> (quella cosa che fa luce dalla luna) non
+		p#il <em>satellite system</em> (quella cosa che fa luce dalla luna) non
 		è un'installazione, è un tizio; un tizio spaventosamente
 		<em>newtype</em> che è morto ma non è morto, che appare come sfera
 		luminosa, che legge / scrive nel pensiero, che arriva e svela la verità
@@ -134,7 +134,7 @@ stop#page
 start#side
 	title#Gundam
 	begin#ul
-		li#tid#After War @Gundam X@ – 1996 <code>[Buono]</code>#X
+		p#tid#After War @Gundam X@ – 1996 <code>[Buono]</code>#X
 	end#ul
 	br#
 	stitle@right#Vedi anche…

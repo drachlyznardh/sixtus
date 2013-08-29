@@ -19,7 +19,7 @@ start#page
 			di battaglia, è una cosa molto importante e molto
 			difficile da ottenere. Ed il suo valore non è fisso.
 
-			sbr#
+			sec#br
 	<h2>
 		C'era una volta...
 	</h2><p>
@@ -37,14 +37,14 @@ start#page
 		abbastanza mazzate nei denti da fargli rimpiangere &ndash; non
 		già la scelta fatta &ndash; quanto l'assenza di alternative.
 
-	sbr#
+	sec#br
 		Io non sono qui per scelta.
 	
 		Sono qui per vocazione.
 	
 		Sono qui perché non ho alternative.
 
-	sbr#
+	sec#br
 		A me piace leggere.
 		begin#outside
 		p@style@text-align:right#
@@ -71,7 +71,7 @@ start#page
 		essere Messner.
 	end#outside
 	
-	sbr#
+	sec#br
 		Poi ci sono le cose che posso fare. Ne ho qualcuna.
 	
 		Posso tenere a bada i miei fratellini per un giorno intero. Non
@@ -91,20 +91,20 @@ start#page
 	
 		Senza pagare abbastanza, ovviamente.
 
-		sbr#
+		sec#br
 		Perché i soldi non sono mai un buon motivo. Cioé, non sono mai
 		un motivo sufficiente. Mai.
 
-		sbr#
+		sec#br
 		Ma torniamo al motivo del &lsquo;No&rsquo; che titola questa storia.
 	
 		Salve, mi chiamo Gebedia e faccio fatica a preparare gli esami.
 
-		sbr#
+		sec#br
 			Scroscio di &laquo;Meh&raquo; e di &laquo;Chi non ne
 			fa?&raquo;
 
-		sbr#
+		sec#br
 		Dunque...
 	
 		Io sarò anche uno di quelli che dicono &laquo;Domani
@@ -123,15 +123,15 @@ start#page
 	
 		Adesso ho smesso.
 
-		sbr#
+		sec#br
 		Fatto sta che non soltanto le cose vanno come pianificato, ma lo
 		stesso calendario e la stessa agenda sono mutevoli e
 		inaffidabili.
 
-		sbr#
+		sec#br
 		Ma il problema è un altro. Peggiore, forse.
 
-		sbr#
+		sec#br
 		È l'entusiasmo. L'ho finito.
 
 		sec#
@@ -145,7 +145,7 @@ start#page
 		si rivela insuperabile è come montare lo stesso Gundam la
 		seconda volta.
 
-		sbr#
+		sec#br
 		Mi dicono dalla regia che il miglior modo per tornare a
 		lavorare/studiare con serenità è passare un esame.
 	
@@ -154,7 +154,7 @@ start#page
 		Perché un gioco torni ad essere divertente basta ricominciare a
 		vincere?
 
-		sbr#
+		sec#br
 		L'unico vero motivo per cui posso dire di stare studiando,
 		adesso, è perché ho cominciato.
 	
@@ -174,7 +174,7 @@ start#page
 		per le munizioni illimitate, né una vita in più, e neanche un
 		LevelUp...
 
-		sbr#
+		sec#br
 			Ed ovviamente, mal che vada, tra una decina di giorni la
 			sessione finirà, lasciandomi altro tempo prima della
 			prossima...

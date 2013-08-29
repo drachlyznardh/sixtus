@@ -285,7 +285,7 @@ tab#iii
 	cavallo, riderò.
 
 	title#Rambo III
-	titler#Si lascia guardare
+	title@right#Si lascia guardare
 tab#iv
 	title#John Rambo
 	E poi, vent'anni dopo, questo.
@@ -324,7 +324,7 @@ tab#iv
 
 	Non ho capito.
 	title#John Rambo
-	titler#Si lascia guardare
+	title@right#Si lascia guardare
 	Considerato che il sangue è completamente digitale, gli effetti non sono poi
 	un granché… ma questo film non riesce né a deludermi, né a piacermi. Passa
 	via.
@@ -336,4 +336,3 @@ start#side
 	p#tid#Rambo III@ – 1988#iii
 	p#tid#(John) Rambo@ – 2008#iv
 stop#side
-

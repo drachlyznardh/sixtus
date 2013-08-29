@@ -187,9 +187,9 @@ tab#vi
 	Mi pare che una volta uno mise in fila i tre punti di una lista che
 	diceva più o meno così:
 	begin#ul
-		li#sii te stesso
-		li#falla ridere
-		li#la terza non mi viene in mente, ma son sicuro che ci fosse un terzo punto nella lista, quindi...
+		p#sii te stesso
+		p#falla ridere
+		p#la terza non mi viene in mente, ma son sicuro che ci fosse un terzo punto nella lista, quindi...
 	end#ul
 	Noi non siamo mica da buttar via, non saremo alti, belli, abbronzati e
 	scolpiti, ma non siamo nemmeno delle discariche ambulanti.
@@ -379,26 +379,26 @@ stop#page
 start#side
 	title#Tipi di solitudine
 	p#tid#Prefazione#i
-	titler#La buona solitudine
+	title@right#La buona solitudine
 	begin#inside
 		begin#ol@start@2
-			li#tid#La bicicletta#ii
-			li#tid#La montagna#iii
-			li#tid#Il modellismo#iv
-			li#tid#L'origami#v
+			p#tid#La bicicletta#ii
+			p#tid#La montagna#iii
+			p#tid#Il modellismo#iv
+			p#tid#L'origami#v
 		end#ol
 	end#inside
-	titler#La solitudine meno buona
+	title@right#La solitudine meno buona
 	begin#inside
 		begin#ol@start@6
-			li#tid#Quelli come noi#vi
-			li#tid#C'è o manca?#vii
-			li#tid#Quel che ho di troppo#viii
-			li#tid#Quel che non ho affatto#ix
-			li#tid#Quel che mi merito#x
+			p#tid#Quelli come noi#vi
+			p#tid#C'è o manca?#vii
+			p#tid#Quel che ho di troppo#viii
+			p#tid#Quel che non ho affatto#ix
+			p#tid#Quel che mi merito#x
 		end#ol
 	end#inside
 	begin#ol@start@11
-		li#tid#Postfazione#xi
+		p#tid#Postfazione#xi
 	end#ol
 stop#side

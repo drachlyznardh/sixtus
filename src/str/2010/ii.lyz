@@ -8,7 +8,6 @@ start#page
 	e che sei stanco morto.
 
 	Due giorni fa correvo.
-
 	sec#
 	Mi capita spesso d'andare a correre prima di cena, non per il
 	piacere di correre, non per la stanchezza, non perché voglio tenermi
@@ -34,7 +33,6 @@ start#page
 	molte meno ragazze di quante ne vorrei, di quanto mi aspetterei e di
 	quante potrebbero guadagnare da qualche corsetta. Oppure vado a
 	correre nei posti sbagliati, oppure sbaglio l'orario.
-
 	sec#
 	Ma l'istinto vecchio di milioni di anni può anche “sbagliare”. Non
 	in termini assoluti, perché fa sempre quello che deve fare;
@@ -69,16 +67,14 @@ start#page
 	semplicemente una ragazza tappa. A quel punto, il riflesso nello
 	specchio mi guarda con disappunto e mi dice
 	begin#outside
-	inline#gods#Non ti sbaglierai un po' troppo spesso?
-
-	ed io in silenzio distolgo lo sguardo e cerco d'arrampicarmi sugli specchi, mentre quello aggiunge
-	
-	inline#gods#E ti ricordo che il limite è di 18 anni, e le ragazze di 18 anni, ormai, sono parecchio più giovani
+		p#speak@gods#Non ti sbaglierai un po' troppo spesso?
+		ed io in silenzio distolgo lo sguardo e cerco d'arrampicarmi sugli specchi, mentre quello aggiunge
+		speak@gods#E ti ricordo che il limite è di 18 anni, e le ragazze di 18 anni, ormai, sono parecchio più giovani
 	end#outside
 	In quel momento ho realizzato che 24 corrisponde ai 4/3 di 18. E mi sono
 	sentito molto vecchio.
 stop#page
 start#side
 	title#Correre
-	titler#Storia II
+	title@right#Storia II
 stop#side

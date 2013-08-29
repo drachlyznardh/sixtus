@@ -14,7 +14,7 @@ tab#i
 	Però noto che il fuoco non sta cuocendo alcunché. Va a vuoto, mentre Simak
 	rigira i ciocchi un bastone…
 	begin#outside
-		p#intra@jo#Ehi, Simak. Me la spieghi, la faccenda?
+		p#speak@jo#Ehi, Simak. Me la spieghi, la faccenda?
 	end#outside
 	Ma lui smanetta con il fuoco una volta ancora, poi fa un cenno, indica
 	qualcosa alle mie spalle…
@@ -83,7 +83,7 @@ tab#ii
 
 	Si para tra me e la vegetazione, mi scosta con un braccio.
 	begin#outside
-		p#intra@simak#Ci sarà un po&apos; di trambusto, Jo. Non spaventarti
+		p#speak@simak#Ci sarà un po&apos; di trambusto, Jo. Non spaventarti
 	end#outside
 	Detto questo, mi spinge indietro, verso il fuoco.
 	sec#
@@ -102,7 +102,7 @@ tab#ii
 	Simak allarga il braccio sinistro, come se volesse lasciar cadere quella
 	specie di lancia che tiene in mano. I passi sono ormai prossimi.
 	begin#outside
-		p#intra@simak#Prendi, S&apos;Mak, la tua arma
+		p#speak@simak#Prendi, S&apos;Mak, la tua arma
 	end#outside
 	In quel momento, gli alberi tremano, si torcono e dal varco che si apre tra
 	di essi emerge una figura. Una figura enorme.
@@ -141,16 +141,16 @@ tab#ii
 	Simak fissa la jungla.
 	sec#
 	begin#outside
-		p#intra@smak#Arriva
-		intra@jo#Chi? Cosa?
-		intra@smak#Horgoth
+		p#speak@smak#Arriva
+		speak@jo#Chi? Cosa?
+		speak@smak#Horgoth
 	end#outside
 	Un ruggito terribile mi riempie le orecchie. Tento di coprirle con le mani,
 	chiudo gli occhi per il dolore. Ho come l'impressione di venir schiacciata
 	da questo rumore così sorverchiante, ma poi qualcos'altro arriva e lo
 	sovrasta.
 	begin#outside
-		p#intra@lyznardh#<strong>Sitz!!!</strong>
+		p#speak@lyznardh#<strong>Sitz!!!</strong>
 	end#outside
 tab#iii
 	Quando riapro gli occhi, vedo S'Mak al mio fianco. Si tiene la testa come
@@ -179,7 +179,7 @@ tab#iii
 	a scorgere la lunghezza della creatura, che potrebbe coprire un'ottantina di
 	metri.
 	begin#outside
-		p#intra@jo#L&apos;hai fatto tu, questo, vero? Eh, Simak?
+		p#speak@jo#L&apos;hai fatto tu, questo, vero? Eh, Simak?
 	end#outside
 	Non mi risponde. Ovviamente.
 	sec#
@@ -196,32 +196,32 @@ tab#iii
 	Quando arrivo da Simak, lui si alza. Ovviamente. M'ha fatto salire per
 	niente.
 	begin#outside
-		p#intra@simak#S&apos;Mak, so che sei sveglio. Sbrigati, per favore
+		p#speak@simak#S&apos;Mak, so che sei sveglio. Sbrigati, per favore
 	end#outside
 	Da sotto, sento il disappunto del gigante coperto di fango.
 	begin#outside
-		p#intra@simak#Su. Non vorrai mentire, quando racconterai ai tuoi figli di come fermasti il drago. È per il bene tuo e della tua gente
+		p#speak@simak#Su. Non vorrai mentire, quando racconterai ai tuoi figli di come fermasti il drago. È per il bene tuo e della tua gente
 	end#outside
 	Sporgendomi dalla collina di carne dove sto, vedo che in effetti S'Mak s'è
 	alzato in piedi. Avanza lentamente, dubbioso, verso il drago sdraiato e
 	verso di noi. Regge il suo macete in una mano, nell'altra porta la lancia
 	che Simak gli ha consegnato.
 	begin#outside
-		p#intra@simak#Sai, Jo
+		p#speak@simak#Sai, Jo
 		mi narra Simak
-		intra@simak#ho dubitato della tua chiamata. Ho temuto di dover intervenire per conto mio. Un po&apos; come adesso
+		speak@simak#ho dubitato della tua chiamata. Ho temuto di dover intervenire per conto mio. Un po&apos; come adesso
 	end#outside
 	Intanto, S'Mak giunge a portata del capoccione di questa bestia.  Esita.
 	Esita e non sa decidersi. Credo che ci sia ben altro dietro questa condanna
 	a morte.
 	begin#outside
-		p#intra@jo#Simak, dimmi un po&apos;, perché vuoi trasformare questo tizio nel tuo boia?
-		p#intra@simak#Se tu sapessi, Jo. Questo ragazzo è giovane, forte, ma non ha aspirazioni. Io gli ho dato uno scopo.  Il padre del padre di suo padre ebbe quattro figlie
-		p#intra@simak#Una morì in giovane età, le altre tre andarono in spose ai migliori guerrieri della comunità. Quando il loro genitore morì, i tre loro mariti entrarono in conflitto per la successione
-		p#intra@simak#Due si sfidarono. Lo sconfitto venne ucciso. Il vincitore invece venne acclamato come nuovo re. Il terzo, per evitare di spargere altro sangue, prese la sua gente e andò in esilio
-		p#intra@simak#Da allora, il popoli di S&apos;Mak è diviso in due tribù. Entrambe vivono sotto la minaccia di Horgoth, che ora giace sotto i nostri sederi
-		p#intra@simak#S&apos;Mak è anche promesso sposo di Argala, che appartiene all&apos;altra tribù. Per amor suo, ha chiesto e ottenuto da entrambi i capi la possibilità di sposarla, a patto di sconfiggere la bestia
-		p#intra@simak#Trovandomi in un certo senso nella stessa situazione, ho deciso d&apos;intervenire per aiutarlo. In più, quest&apos;impresa gli permetterà di riunire le due tribù
+		p#speak@jo#Simak, dimmi un po&apos;, perché vuoi trasformare questo tizio nel tuo boia?
+		p#speak@simak#Se tu sapessi, Jo. Questo ragazzo è giovane, forte, ma non ha aspirazioni. Io gli ho dato uno scopo.  Il padre del padre di suo padre ebbe quattro figlie
+		p#speak@simak#Una morì in giovane età, le altre tre andarono in spose ai migliori guerrieri della comunità. Quando il loro genitore morì, i tre loro mariti entrarono in conflitto per la successione
+		p#speak@simak#Due si sfidarono. Lo sconfitto venne ucciso. Il vincitore invece venne acclamato come nuovo re. Il terzo, per evitare di spargere altro sangue, prese la sua gente e andò in esilio
+		p#speak@simak#Da allora, il popoli di S&apos;Mak è diviso in due tribù. Entrambe vivono sotto la minaccia di Horgoth, che ora giace sotto i nostri sederi
+		p#speak@simak#S&apos;Mak è anche promesso sposo di Argala, che appartiene all&apos;altra tribù. Per amor suo, ha chiesto e ottenuto da entrambi i capi la possibilità di sposarla, a patto di sconfiggere la bestia
+		p#speak@simak#Trovandomi in un certo senso nella stessa situazione, ho deciso d&apos;intervenire per aiutarlo. In più, quest&apos;impresa gli permetterà di riunire le due tribù
 	end#outside
 	Sento uno scossone. S'Mak ha piantato la lancia tra gli occhi del mostro.
 tab#iv
@@ -247,10 +247,10 @@ tab#iv
 	Poi si dimentica di me, andandosene incontro al gigante sporco, che ancora
 	stringe la lancia conficcata tra gli occhi del drago.
 	begin#outside
-		p#intra@simak#Sei stato bravo, S&apos;Mak
-		p#intra@simak#Ora torna alla tua gente, sposa la fanciulla che ami e riunisci le due tribù.
-		p#intra@simak#Quando ti chiederanno della lancia, dirai loro che questo è un artiglio di <em>eLyznardh</em>
-		p#intra@simak#Apparterrà a te fino al giorno in cui lo passerai al più degno dei tuoi figli
+		p#speak@simak#Sei stato bravo, S&apos;Mak
+		p#speak@simak#Ora torna alla tua gente, sposa la fanciulla che ami e riunisci le due tribù.
+		p#speak@simak#Quando ti chiederanno della lancia, dirai loro che questo è un artiglio di <em>eLyznardh</em>
+		p#speak@simak#Apparterrà a te fino al giorno in cui lo passerai al più degno dei tuoi figli
 	end#outside
 	E poi tace.
 
@@ -280,22 +280,22 @@ tab#iv
 
 	Ho appena il tempo di voltarmi che Simak mi fa:
 	begin#outside
-		p#intra@simak#Non crucciarti per Horgoth. Ha violato i patti, è stato punito secondo la sua legge
+		p#speak@simak#Non crucciarti per Horgoth. Ha violato i patti, è stato punito secondo la sua legge
 	end#outside
 	begin#inside
 		Lo fisso un po' persa… non afferro bene il concetto. I draghi hanno una
 		legge? Lui l'ha infranta? Simak l'ha punito per questo?
 	end#inside
 	begin#outside
-		p#intra@simak#Vieni, Jo, seguimi. C&apos;è troppa umidità qui nella jungla. T&apos;incresperà i capelli
+		p#speak@simak#Vieni, Jo, seguimi. C&apos;è troppa umidità qui nella jungla. T&apos;incresperà i capelli
 	end#outside
 stop#page
 start#side
 	title#Tru Naluten XX
 	begin#ol
-		li#tid#Parte I#i
-		li#tid#Parte II#ii
-		li#tid#Parte III#iii
-		li#tid#Parte IV#iv
+		p#tid#Parte I#i
+		p#tid#Parte II#ii
+		p#tid#Parte III#iii
+		p#tid#Parte IV#iv
 	end#ol
 stop#side

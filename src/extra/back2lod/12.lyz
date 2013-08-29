@@ -16,7 +16,7 @@ tab#iv
 	riesce anche a darmeli, ma impiega un po' di tempo a convertirli tutti in
 	stringhe.
 	begin#inside
-		intra@gods#Non è un problema@immagino@la conversione posso farla io, no?
+		speak@gods#Non è un problema@immagino@la conversione posso farla io, no?
 	end#inside
 	E invece. Se chiedo dati <em>grezzi</em>, il bastardo mi fornisce
 	<code>2011 byte</code> che rappresentano <code>[¹]</code> l'header e
@@ -70,17 +70,17 @@ tab#iv
 	begin#half@left
 		stitle@right#Float16
 		begin#ul
-			li#<code>1bit</code> per il segno
-			li#<code>6bit</code> per l'esponente (rispetto a <code>15</code>)
-			li#<code>9bit</code> per la mantissa
+			p#<code>1bit</code> per il segno
+			p#<code>6bit</code> per l'esponente (rispetto a <code>15</code>)
+			p#<code>9bit</code> per la mantissa
 		end#ul
 	end#half
 	begin#half@right
 		stitle#Float32
 		begin#ul
-			li#<code>1bit</code> per il segno
-			li#<code>8bit</code> per l'esponente (rispetto a <code>127</code>)
-			li#<code>23bit</code> per la mantissa
+			p#<code>1bit</code> per il segno
+			p#<code>8bit</code> per l'esponente (rispetto a <code>127</code>)
+			p#<code>23bit</code> per la mantissa
 		end#ul
 	end#half
 	per cui applico un semplice
@@ -118,7 +118,7 @@ tab#iv
 	controllo anche nel codice, inverto la raccolta e verifico; l'onda assume
 	magicamente la forma giusta.
 
-	intra@gods#<em>$Pupone</em>, perché menti?
+	speak@gods#<em>$Pupone</em>, perché menti?
 	esclamo, ma lui finge di non capire. Trattengo a stento altre
 	<strong>&lt;[&delta;&epsilon;&iota;] [&pi;&omicron;&rho;&gamma;&eta;&iota;]
 	[&mu;&alpha;&delta;&omicron;&nu;&nu;&epsilon;]&gt;</strong> e vado avanti.
@@ -192,7 +192,7 @@ tab#v
 	Ed eccomi, padrone del mio posticino, <em>al freddo &amp; al gelo</em> per
 	via della finestra aperta (per far passare il cavo).
 	clear#right
-	sbr#
+	sec#br
 	title#Coordinate &amp; riferimenti – <code>07/12</code>
 	Poi si passa ad un altro problema: passare da un sistema di coordinate
 	all'altro.
@@ -382,13 +382,13 @@ stop#page
 start#side
 	stitle@right#Dicembre 2012
 	begin#ul
-		li#tid#'Sti dati@ – <code>03~04/12</code>#iv
+		p#tid#'Sti dati@ – <code>03~04/12</code>#iv
 	end#ul
 	stitle#Hole Of Doom
 	begin#ul
-		li#tid#Le coordinate morbide@ – <code>05~07/12</code>#v
-		li#tid#Gli esperimenti@ – <code>12~14/12</code>#vi
-		li#tid#L'intruso / memoria FLASH@ – <code>19/12</code>#vii
-		li#tid#Dati grezzi e altre cose – <code>20~22</code>#viii
+		p#tid#Le coordinate morbide@ – <code>05~07/12</code>#v
+		p#tid#Gli esperimenti@ – <code>12~14/12</code>#vi
+		p#tid#L'intruso / memoria FLASH@ – <code>19/12</code>#vii
+		p#tid#Dati grezzi e altre cose – <code>20~22</code>#viii
 	end#ul
 stop#side

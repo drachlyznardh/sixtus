@@ -214,12 +214,12 @@ start#page
 	zimbello della compagnia sarei diventato? Ma soprattutto perché venirmi a
 	dire in faccia questa roba, non stavo forse abbastanza male di mio?
 	begin#outside
-		p#intra@Camelia#Ciao, volevo solo dirti che parto. Mi trasferisco in Francia, frequenterò lì il resto del Liceo
+		p#speak@Camelia#Ciao, volevo solo dirti che parto. Mi trasferisco in Francia, frequenterò lì il resto del Liceo
 		dice, e aspetta.
 
 		Io non parlo. Non ci riesco.
 
-		p#intra@Camelia#Allora, ciao
+		p#speak@Camelia#Allora, ciao
 		e poi riattacca.
 	end#outside
 	Fu così, che in un istante, per telefono, capii che significa essere
@@ -301,7 +301,7 @@ start#page
 		la bicicletta. Non potevo mica fare
 	end#inside
 	begin#outside
-		p#intra@Corvino#Ciao mamma, vado a trovare Camelia!
+		p#speak@Corvino#Ciao mamma, vado a trovare Camelia!
 	end#outside
 	begin#inside
 		e andarmene tranquillamente in Francia a trovarla.
@@ -360,7 +360,7 @@ start#page
 	modo di vederla. A quel punto, pur in pessime condizioni psicofisiche, avevo
 	sedimentato un po' la questione e cominciavo a farmi anche domande del tipo
 	begin#inside
-		p#intra@Corvino#Ma come sarà vivere in Francia?
+		p#speak@Corvino#Ma come sarà vivere in Francia?
 	end#inside
 	e quindi nutrivo un sincero interesse su una serata passata a chiacchera, in
 	amicizia, anche con altra gente.

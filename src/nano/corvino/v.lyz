@@ -111,7 +111,7 @@ start#page
 	universalmente noto per essere lento (fisicamente ma anche mentalmente), per
 	i suoi pessimi gusti musicali
 	begin#outside
-		p#intra@Fastidio#li hai mai ascoltati i &lsquo;Witnesses of Bofamoht&apos;s Slaves&apos; Love&rsquo;? No? Ma come! Sono fantastici! Ti presto un loro disco!
+		p#speak@Fastidio#li hai mai ascoltati i &lsquo;Witnesses of Bofamoht&apos;s Slaves&apos; Love&rsquo;? No? Ma come! Sono fantastici! Ti presto un loro disco!
 	end#outside
 	per il senso dell'umorismo bacato ma soprattutto per la sua inadeguatezza
 	(alla fatica, alla vita, a tutto) e alla sua totala mancanza di forza
@@ -225,11 +225,11 @@ start#page
 	Ma non solo l'ultimo della fila,
 	begin#outside
 		c'è chi mi chiama indietro e dice
-		intra@Camelia#Forse c&apos;è una ricompensa anche per te, campione
+		speak@Camelia#Forse c&apos;è una ricompensa anche per te, campione
 	end#outside
 	Mi volto, è Camelia.
 	begin#outside
-		p#intra@Camelia#Non è da tutti portarsi dietro un peso morto come quello e riuscire a tenere il ritmo dei primi: sono impressionata.
+		p#speak@Camelia#Non è da tutti portarsi dietro un peso morto come quello e riuscire a tenere il ritmo dei primi: sono impressionata.
 	end#outside
 	Poi si avvicina.
 
@@ -246,7 +246,7 @@ start#page
 
 	Io arrivo appena a sgranare gli occhi e a dire un impercettibile e soffocato
 	begin#outside
-		p#intra@Corvino#Ah
+		p#speak@Corvino#Ah
 	end#outside
 	che sarebbe un suono senza senso, quel che mi esce spontaneo dopo che m'è
 	caduta la mascella.
@@ -254,7 +254,7 @@ start#page
 	In un attimo di illuminata lucidità mentale vedo chiaramente cosa sta per
 	succedere mentre succede e penso
 	begin#inside
-		p#intra@Corvino#Sta per baciarti sta per baciarti sta per baciarti non fare niente di stupido è il primo non fare niente di stupido niente di stupido sta per baciarti lasciale l&apos;iniziativa ma ricambia immediatamente niente di stupido niente di stupido
+		p#speak@Corvino#Sta per baciarti sta per baciarti sta per baciarti non fare niente di stupido è il primo non fare niente di stupido niente di stupido sta per baciarti lasciale l&apos;iniziativa ma ricambia immediatamente niente di stupido niente di stupido
 	end#inside
 	e per un qualche effetto di distorsione temporale ho il tempo di chiudere
 	gli occhi, perché questa cosa non può essere fatta ad occhi aperti.
@@ -268,7 +268,7 @@ start#page
 
 	Realizzai quanto la voce che disse
 	begin#outside
-		p#intra@Corvino#non fare nulla di stupido
+		p#speak@Corvino#non fare nulla di stupido
 	end#outside
 	fosse già in ritardo, perché già avevo detto qualcosa; dicendolo, avevo
 	soffiato; e meno di un'ora prima avevo ingoiato la belladonna.

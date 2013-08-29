@@ -49,7 +49,7 @@ tab#15
 		miei <em>allegri compagni</em> entra un tizio, viene direttamente verso
 		di me, mentre m'ascolto la mia musica e me ne faccio un pentolone, e mi
 		chiede
-		inline#em#Scusa, hai mica delle cartine?
+		speak@em#Scusa, hai mica delle cartine?
 		ed io, nella <code>troll</code>anza che eredito dai miei geni, gli
 		allungo una striscia di carta avanzata da un quadrato.
 
@@ -74,11 +74,11 @@ tab#15
 
 	Ora, quando arriva la <em>Emma</em> del bar e domanda che cosa vogliamo,
 	rispondo
-	inline#gods#Caffè caffè caffè caffè
+	speak@gods#Caffè caffè caffè caffè
 	poi, però, specifico un due con le dita, perché il caffé lo prendiamo io e
 	il <em class="bolo">Bolo</em> (<em class="war">War</em>, poverino, non beve
 	caffè). Sento una delle due tizie, dietro di me, dire
-	inline#em#Oh beh, se vuoi offrire, fai pure
+	speak@em#Oh beh, se vuoi offrire, fai pure
 
 	Non so dire quanto e cosa ho provato in quel momento, ma qualunque cosa
 	fosse era silenziosa e tentava di risalire dallo stomaco. Mi sono volta a
@@ -87,10 +87,10 @@ tab#15
 
 	Dopo un po', però, prima che il Bolo avesse ottenuto la sua pizzetta, una
 	delle due torna ad interagire, domandando
-	inline#em#Sei tu quello che piega tutti quelli?
+	speak@em#Sei tu quello che piega tutti quelli?
 	indicando i numerosi fiorellini sopra le mensole del bar. In effetti sono
 	io. Ma quella non si ferma
-	inline#em#Ah, perché pensavo che fosse uno del mio corso, che si laurea oggi. Ma lui non è così bravo
+	speak@em#Ah, perché pensavo che fosse uno del mio corso, che si laurea oggi. Ma lui non è così bravo
 
 	WAT.
 

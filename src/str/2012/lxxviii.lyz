@@ -25,7 +25,7 @@ start#page
 	mano m'afferra il braccio e mi tira indietro.
 	begin#outside
 		È un tizio che mi dice
-		inline#em#Wow! Non buttarti!
+		speak@em#Wow! Non buttarti!
 	end#outside
 	E dopo avermi <em>salvato la vita</em>, attacca a spiegarmi la sua.
 	begin#inside
@@ -42,7 +42,7 @@ start#page
 		gli animali pascolavano liberi; adesso la carne la fanno in allevamento,
 		dando mangimi e cose chimiche alle bestie.
 	end#inside
-	titler#Il pesce invece…
+	title@right#Il pesce invece…
 	begin#inside
 		Cresce in mare, quindi… Libero, senza schifezze.
 		
@@ -65,6 +65,6 @@ start#page
 stop#page
 start#side
 	title#Storia LXXVIII
-	titler#Il pesce invece…
+	title@right#Il pesce invece…
 	p#<code>True story</code>.
 stop#side

@@ -27,14 +27,16 @@
 				case '': $this->make_text(trim($cmd_args[0])); break;
 				case 'id': $this->make_id($cmd_args[1]); break;
 				case 'p':
-				case 'li': $this->make_p($index, $cmd_args, $cmd_attr); break;
+#				case 'li':
+					$this->make_p($index, $cmd_args, $cmd_attr); break;
 				case 'c': $this->make_c($index, $cmd_args, $cmd_attr); break;
 				case 'r':
-				case 'reverse': $this->make_r($index, $cmd_args, $cmd_attr); break;
+#				case 'reverse':
+					$this->make_r($index, $cmd_args, $cmd_attr); break;
 				case 'tid': $this->make_tid($cmd_args); break;
 				case 'link': $this->make_link($cmd_args); break;
 				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
-				case 'titler': $this->make_titler($index, $cmd_args, $cmd_attr); break;
+#				case 'titler': $this->make_titler($index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
 				case 'foto':
 				case 'photo':
@@ -44,12 +46,13 @@
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear(); break;
 
-				case 'speak': $this->make_speak($index, $cmd_args, $cmd_attr); break;
-				case 'intra': $this->make_intra($index, $cmd_args, $cmd_attr); break;
-				case 'inline': $this->make_inline($index, $cmd_args, $cmd_attr); break;
+#				case 'speak': $this->make_speak($index, $cmd_args, $cmd_attr); break;
+#				case 'intra': $this->make_intra($index, $cmd_args, $cmd_attr); break;
+#				case 'inline': $this->make_inline($index, $cmd_args, $cmd_attr); break;
+				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
 
 				default:
-					printf ("ERROR [$command] @ line $index\n");
+					printf ("ERROR [$command] in $index[0] @ line $index[1]\n");
 					exit(1);
 					$this->closeContext();
 					$this->content[] = '<br/><p class="error">ERROR: [';
@@ -195,6 +198,9 @@
 		private function make_text ($text)
 		{
 			if ($text) {
+					
+				$text = polish_line($text);
+
 				if (preg_match('/^</', $text)) {
 					$this->content[] = " $text";
 				} else if (preg_match('/^>/', $text)) {
@@ -216,21 +222,21 @@
 		{
 			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->content[] = polish_line($cmd_args[1]);
 		}
 
 		private function make_c ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('c');
 			if (count($cmd_args) > 3) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->content[] = polish_line($cmd_args[1]);
 		}
 
 		private function make_r ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('r');
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->content[] = polish_line($cmd_args[1]);
 		}
 
 		private function recursive ($index, $cmd_args, $cmd_attr)

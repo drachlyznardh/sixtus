@@ -8,7 +8,7 @@ start#page
 	link#Storie/2011/XXXI/#precedente
 	sessione, la compagnia è riunita e il Master è pronto. E questa ve la scrivo
 	in diretta.
-	sbr#
+	sec#br
 	Ce ne siamo andati a mangiare cinese, e adesso, che sono le 22:15,
 	cominciamo il riassunto.
 
@@ -44,14 +44,14 @@ start#page
 	Poi due giorni di pace… poi arriva una nave volante, con sopra
 	Simbad il capitano. Riconosce il mio medaglione, ci raccatta e ci da
 	uno strappo.
-	sbr#
+	sec#br
 	Poi, a spasso… dopo un tot, ecco un tizio fighissimo spuntare dal nulla. Il
 	tizio, eterosessuale nella sua magica luccicanza, trascina con se due
 	dragoni.
 	sec#
 	Si presenta come <em>Oplites</em>, il BBEG.
 	begin#outside
-		inline#em#Sono qui per fermarvi
+		p#speak@em#Sono qui per fermarvi
 		dice.
 	end#outside
 	Teletrasporto.
@@ -80,15 +80,15 @@ start#page
 	uno lì e uno là.
 
 	E tant'è.
-	sbr#
+	sec#br
 	id#ii
 	Ma aspettate! C'è dell'altro.
 	
 	Perché dopo questa sessione ce n'è stata un'altra, forse peggiore!
 	title#Deus Ex Machina Offroad
-	titler#The Journey Of The Savage Land – Part II
+	title@right#The Journey Of The Savage Land – Part II
 	title#The End Of The Beginning Of The Road Of Destiny &amp; Doom &amp; Fate
-	titler#For Freedom, for the King, for the Lulz
+	title@right#For Freedom, for the King, for the Lulz
 	Cose fighe? No.
 	sec#
 	Eravamo appena usciti dal deserto.
@@ -138,7 +138,7 @@ start#page
 	ingroppando quello di sasso. E non è contento che noi lo si abbia
 	interrotto.
 	begin#outside
-		inline#gods#Avrebbe potuto appendere la cravatta alla maniglia!
+		p#speak@gods#Avrebbe potuto appendere la cravatta alla maniglia!
 		esclamo io, mentre l'orso ci carica.
 	end#outside
 	E giù botte, facciamo esplodere 'st'orso 'emmerda.
@@ -153,14 +153,14 @@ start#page
 	&amp; frizzi &amp; lazzi &amp; etc…) s'infiltra e torna per raccontarci
 	che:
 	begin#ul
-		li#c'è una festa
-		li#alla festa c'è un generale
-		li#non è il nostro generale
-		li#c'è anche sua figlia, la principessa
-		li#perché è principessa? Boh!
-		li#c'è anche un mago
-		li#il mago tiene uno spettacolo per intrattenere gli ospiti
-		li#qualcosa non piace, il mago vien cacciato
+		p#c'è una festa
+		p#alla festa c'è un generale
+		p#non è il nostro generale
+		p#c'è anche sua figlia, la principessa
+		p#perché è principessa? Boh!
+		p#c'è anche un mago
+		p#il mago tiene uno spettacolo per intrattenere gli ospiti
+		p#qualcosa non piace, il mago vien cacciato
 	end#ul
 	Raccattiamo il mago, ci facciamo raccontare la rava &amp; la fava, otteniamo
 	delle pozioni.

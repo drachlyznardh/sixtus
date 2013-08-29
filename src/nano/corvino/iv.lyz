@@ -62,7 +62,7 @@ start#page
 		scelto a caso: decidi
 	end#inside
 	begin#outside
-		p#intra@Corvino#Vado a farla lì
+		p#speak@Corvino#Vado a farla lì
 		ci vai e la fai.
 	end#outside
 	begin#inside

@@ -1,7 +1,7 @@
 title#Impresa II#Presi la mia bici un giorno…
 prev#Storie/2011/XLVI/#L'uomo con due ombrelli
 next#Storie/2011/XLVIII/#Non ce n'è abbastanza
-related@li#Storie/2010/IV/#Impresa @I@
+related@p#Storie/2010/IV/#Impresa @I@
 related#Storie/2012/LXXXVI/#Impresa @III@
 start#page
 tab#i
@@ -311,23 +311,23 @@ tab#xii
 stop#page
 start#side
 	begin#ol
-		li#tid#Partenza – Trento#i
+		p#tid#Partenza – Trento#i
 	end#ol
 	title#Tappe
 	begin#ol@start@2
-		li#tid#Trento – Civezzano#ii
-		li#tid#Civezzano – S.Colomba#iii
-		li#tid#S.Colomba – Fontanella#iv
-		li#tid#Fontanella – Lases#v
-		li#tid#Lases – Segonzano#vi
-		li#tid#Segonzano – Cembra#vii
-		li#tid#Cembra – Trento#viii
+		p#tid#Trento – Civezzano#ii
+		p#tid#Civezzano – S.Colomba#iii
+		p#tid#S.Colomba – Fontanella#iv
+		p#tid#Fontanella – Lases#v
+		p#tid#Lases – Segonzano#vi
+		p#tid#Segonzano – Cembra#vii
+		p#tid#Cembra – Trento#viii
 	end#ol
 	title#Considerazioni
 	begin#ol@start@9
-		li#tid#L&apos;acqua di valle#ix
-		li#tid#Tutti tamarri#x
-		li#tid#Le zone di produzione#xi
-		li#tid#Quelli che non si allenano#xii
+		p#tid#L&apos;acqua di valle#ix
+		p#tid#Tutti tamarri#x
+		p#tid#Le zone di produzione#xi
+		p#tid#Quelli che non si allenano#xii
 	end#ol
 stop#side

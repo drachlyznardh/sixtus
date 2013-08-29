@@ -443,9 +443,9 @@ start#side
 	title#Wireless
 	p#tid#Introduzione#intro
 	begin#ol
-		li#tid#mio router#i
-		li#tid#biciclettata#ii
-		li#tid#corsa#iii
-		li#tid#bonus#iv
+		p#tid#mio router#i
+		p#tid#biciclettata#ii
+		p#tid#corsa#iii
+		p#tid#bonus#iv
 	end#ol
 stop#side

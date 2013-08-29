@@ -1,7 +1,6 @@
 title#Capitan America#The First Avenger
 prev#Recensioni/Film/VII/#Dark of the Moon
 next#Recensioni/Show/IX/#Angel Beats!
-
 start#page
 	Questa è la recensione di un buon film, quindi non mi prenderà molto
 	tempo.
@@ -92,5 +91,5 @@ start#page
 stop#page
 start#side
 	title#Capitan America
-	titler#Buono
+	title@right#Buono
 stop#side
