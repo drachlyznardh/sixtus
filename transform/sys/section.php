@@ -81,8 +81,13 @@
 		private function openContext($new)
 		{
 			if ($this->context == $new) return;
+			
 			if ($this->context == 'r' && $new == 'p') return;
 			if ($this->context == 'p' && $new == 'r') return;
+			if ($this->context == 'r' && $new == 'c') return;
+			if ($this->context == 'p' && $new == 'c') return;
+			if ($this->context == 'c' && $new == 'p') return;
+			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
 			switch ($this->context)

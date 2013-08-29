@@ -110,14 +110,14 @@ start#page
 		p#speak@simak#Mai. Tu sei infido, sei malevolo, e sei anche falso
 		p#speak@a_simak#Vero. Ma sono anche pi&ugrave; forte di te
 		p#speak@simak#Non &egrave; affatto vero: io non ho pari
-		p#speak@a_simak#Sbagli: <span class="em">io</span> non ho pari
+		p#speak@a_simak#Sbagli: <em>io</em> non ho pari
 		p#speak@simak#E allora dimostrer&ograve; che ho ragione battendoti!
-		p#speak@a_simak#Bene! <span class="forte em" title="che significa: &laquo;&Egrave; questa una sfida?&raquo;">Vhot pak&apos;ke?</span>
+		p#speak@a_simak#Bene! <strong title="che significa: &laquo;&Egrave; questa una sfida?&raquo;">Vhot pak&apos;ke?</strong>
 		p#speak@simak em#Naturalmente
-		p#speak@a_simak#Bene, Simak non ha <span class="em">mai</span> perso una sfida. Ricordi perch&eacute;?
+		p#speak@a_simak#Bene, Simak non ha <em>mai</em> perso una sfida. Ricordi perch&eacute;?
 		p#speak@simak#Per il suo nome
-		p#speak@a_simak#<span class="em">Esatto!</span> Ora, dillo: <span class="em forte">Perch&eacute;, Simak, non hai mai perso una sfida?</span>
-		p#speak@simak em" title="che significa: &laquo;Poich&eacute; io sono il Lyznardh#Ghane ita be eLyznardh
+		p#speak@a_simak#<em>Esatto!</em> Ora, dillo: <strong>Perch&eacute;, Simak, non hai mai perso una sfida?</strong>
+		p#speak@simak#<em title="che significa: &laquo;Poich&eacute; io sono il Lyznardh">Ghane ita be eLyznardh</em>
 	end#inside
 	sec#
 	r#Ora…

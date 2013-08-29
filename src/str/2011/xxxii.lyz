@@ -1,4 +1,4 @@
-title#Le avventure del Dottor Odio#In questo numero... La Ragazza Magnete!
+title#Le avventure del Dottor Odio#In questo numero… La Ragazza Magnete!
 prev#Storie/2011/XXXI/#Deus Ex Machina
 next#Storie/2011/XXXIII/#L'inaspettata
 start#page
@@ -16,7 +16,6 @@ start#page
 	sottoscritto, tolto il <span class="jazz">signor Jazzinghen</span> che
 	invece deve aver ben afferrato il concetto e conseguentemente non sfotte,
 	arriva il <span class="mitch">Re del Gossip</span>.
-
 	sec#br
 	Andò così:
 	begin#outside
@@ -27,7 +26,7 @@ start#page
 	
 		Decine e decine di passettini (le biologhe sono tutte basse, a quanto
 		pare, le loro gambette son corte corte) eccoci a scoprire i dettagli di
-		questa vagamente informatica storia... tutt'a un tratto, ecco che i miei
+		questa vagamente informatica storia… tutt'a un tratto, ecco che i miei
 		pugni s'alzano entrambi, stretti ad offensiva guisa
 	end#outside
 	begin#inside
@@ -59,78 +58,57 @@ start#page
 	begin#outside
 		p#speak@mitch#Sai, quel tipo che gironzola attorno alla ragazza magnete? Beh, ci sta assieme
 	end#outside
-	In quel momento, ecco una visione comparire nella mia mente...
-
+	In quel momento, ecco una visione comparire nella mia mente…
 	sec#br
 	title#Le mirabolanti avventure del diabolico Dottor Odio
 	Presentate in 2D alla vecchia maniera.
-
 	sec#
 	Mentre me ne sto seduto sul mio trono, nel mio castello nel mio
 	baronato di Latveria, ecco comparire un messaggero.
 	begin#outside
-			«<span class="mitch">
-				Mio signore, abbiamo nuove informazioni! Sappiamo chi è
-				il ragazzo che s'accompagna alla <span
-				class="char">Ragazza Magnete</span>
-			</span>»
-	</p></div><p>
-		In quel momento suona un allarme, i miei <span
-		class="char">Gods-robot</span> cominciano ad essere massacrati
-		da una forza invisibile. Al cadere dell'ultimo drone, il campo
-		di forza s'abbassa rivelando la sagoma della <span
-		class="char">Ragazza Magnete</span>.
-	</p>
+		p#speak@mitch#Mio signore, abbiamo nuove informazioni! Sappiamo chi è il ragazzo che s'accompagna alla <span class="char">Ragazza Magnete</span>
+	end#outside
+	In quel momento suona un allarme, i miei <span
+	class="char">Gods-robot</span> cominciano ad essere massacrati da una forza
+	invisibile. Al cadere dell'ultimo drone, il campo di forza s'abbassa
+	rivelando la sagoma della <span class="char">Ragazza Magnete</span>.
 	sec#
-	<p>
-		Prontamente faccio scattare la mia trappola, la mia gabbia di
-		Faraday le piomba addosso, bloccando i suoi poteri.
-	</p><div class="outside"><p>
-		«<span class="gods">Ah! <span class="char">Ragazza
-		Magnete!</span> È piuttosto sciocco, da parte tua, intrufolarti
-		sola nella mia dimora. Ora sei nelle mia mani</span>»
-	</p></div><p>
-		Mentre preparo la mia terribile risata di trionfo, ecco che
-		salta la luce, la gabbia viene disattivata.
-	</p><div class="outside"><p>
+	Prontamente faccio scattare la mia trappola, la mia gabbia di Faraday le
+	piomba addosso, bloccando i suoi poteri.
+	begin#outside
+		p#speak@gods#Ah! <span class="char">Ragazza Magnete!</span> È piuttosto sciocco, da parte tua, intrufolarti sola nella mia dimora. Ora sei nelle mia mani
+	end#outside
+	Mentre preparo la mia terribile risata di trionfo, ecco che salta la luce,
+	la gabbia viene disattivata.
+	begin#outside
 			Boom! Bang! Pum! Kapof!
-	</p></div><p>
-		Vengo selvaggiamente picchiato, dato che la <span
-		class="char">Ragazza Magnete</span> è immune al mio inceneritore
-		sguardo d'odio.
-	</p><div class="outside"><p>
-		«<span class="gods">Come sei riuscita a disattivare la trappola?</span>»
-	
-		«<span class="magnet">Non l'ho fatto da sola! È stato il mio
-		ragazzo!</span>»
-	</p></div><p>
-		Dietro di lei spunta la sagoma di un qualche ingegnere.
-	</p>
+	end#outside
+	Vengo selvaggiamente picchiato, dato che la <span class="char">Ragazza
+	Magnete</span> è immune al mio inceneritore sguardo d'odio.
+	begin#outside
+		p#speak@gods#Come sei riuscita a disattivare la trappola?
+		p#speak@magnet#Non l'ho fatto da sola! È stato il mio ragazzo!
+	end#outside
+	Dietro di lei spunta la sagoma di un qualche ingegnere.
 	sec#
-	<p>
-		Quando mi riprendo, è troppo tardi: la <span
-		class="char">Ragazza Magnete</span> e il suo ingegnere sono già
-		fuggiti.
+	Quando mi riprendo, è troppo tardi: la <span class="char">Ragazza
+	Magnete</span> e il suo ingegnere sono già fuggiti.
 	
-		Torna dunque il messaggero
-	</p><div class="outside"><p>
-		«<span class="mitch">Ecco, proprio di quel tizio stavo parlando.
-		Si chiama...</span>»
+	Torna dunque il messaggero
+	begin#outside
+		p#speak@mitch#Ecco, proprio di quel tizio stavo parlando. Si chiama…
 	
-		Ma io lo zittisco «<span class="gods">Non serve, so già come
-		chiarmalo</span>»
-	</p></div><p>
-		Poi sbotto, come nell'immagine.
-	</p>
+		Ma io lo zittisco
+		speak@gods#Non serve, so già come chiarmalo
+	end#outside
+	Poi sbotto, come nell'immagine.
 	foto#Extra/Richaaaaaaaaards.gif
-	
 	begin#outside
 		p#speak@gods#Richaaaaaaaaards!!!
 	end#outside
 	L'avventura continua: nel prossimo numero, il Dottor Odio contro i metallici
 	fiori spaziali da Giove.
 	title#SuperDimensionalDoctorHate V7+ – Listen to my song!
-
 	sec#br
 	O forse no?
 	
@@ -140,25 +118,20 @@ start#page
 	title#I progressi (passivi) del (non ancora dottore) Dottor Odio
 	title@right#Venerdì 8 – Mercoledì 13 Aprile 2011
 	È stato un lungo lungo lungo finesettimana.
-	
 	sec#
-	Era venerdì... me ne andavo bel bello a seguire <span
-	class="em">Sgaggio-time</span>, poggio la mia roba, scelgo il posto
-	a sedere, quand'ecco mi vien sete
-</p><div class="inside">
-	p#speak@gods#Mi farò un goccietto prima della lezione
-</div><p>
+	Era venerdì… me ne andavo bel bello a seguire <em>Sgaggio-time</em>, poggio
+	la mia roba, scelgo il posto a sedere, quand'ecco mi vien sete
+	begin#inside
+		p#speak@gods#Mi farò un goccietto prima della lezione
+	end#inside
 	Nell'uscire verso il bagno giro l'angolo ed ecco &gt;9000 ingegneri
 	che mi bloccano la strada in attesa che cominci la loro lezione.
-</p>
 	sec#
-<p>
 	Pianto un piede per terra, ci faccio perno per l'inversione a U e
 	me ne torno sui miei passi
-</p><div class="inside">
-	p#speak@gods#Tanto c&apos;è un cesso anche dall&apos;altra
-	parte
-</div><p>
+	begin#inside
+		p#speak@gods#Tanto c&apos;è un cesso anche dall&apos;altra parte
+	end#inside
 	verso il cesso Nord.
 
 	Volto il secondo angolo, quindi, e m'aspetto di trovare un corridoio
@@ -167,127 +140,101 @@ start#page
 	non me la sarei aspettata!
 
 	Ma ecco seguire anche di meglio: lei non mi vede. NON MI VEDE.
-</p>
 	sec#
-<p>
 	Non ricambia lo sguardo, non si volta, non reagisce. Che abbia forse
 	perduto il magnetismo? Che finalmente il mio odio l'abbia sconfitta?
 
 	Questo caso necessita un esame più approfondito: devo assolutamente
 	ripassare e verificare.
 
-	Purtroppo il <span class="em">Destino</span> era in agguato, sotto
-	forma di lezione a porte chiuse, e dopo aver bevuto il mio goccio
-	d'acqua non ho avuto modo di guardare dentro; ho tentato l'occhiata
-	attraverso la fessura della porta, ch'è larga giusto quel paio di
-	millimetri, ma l'angolo non era corretto e non c'è stato nulla da
-	fare.
+	Purtroppo il <em>Destino</em> era in agguato, sotto forma di lezione a porte
+	chiuse, e dopo aver bevuto il mio goccio d'acqua non ho avuto modo di
+	guardare dentro; ho tentato l'occhiata attraverso la fessura della porta,
+	ch'è larga giusto quel paio di millimetri, ma l'angolo non era corretto e
+	non c'è stato nulla da fare.
 
-	Il nostro <span class="em">Sgaggiotime</span> non ha avuto pause, la
-	porta di quel laboratorio è rimasta chiusa per tutti i miei
-	tentativi di passaggio&amp;occhiataccia, per tutto il giorno, fino
-	alla discesa.
-</p>
+	Il nostro <em>Sgaggiotime</em> non ha avuto pause, la porta di quel
+	laboratorio è rimasta chiusa per tutti i miei tentativi di
+	passaggio&amp;occhiataccia, per tutto il giorno, fino alla discesa.
 	sec#
-<p>
 	E così – inconsciamente giù festeggiando – ho abbassato la guardia e
 	sono stato colpito nei reni da un devastante colpo di primavera
 	(probabilmente mannaro) che m'ha tenuto in stato di pre-morte per
 	circa quattro giorni.
-
 	sec#br
 	E solo allora, bianco come una pezza, cercando di trattenere le budella
-	all'interno del mio corpo, ho capito come tutto fosse un di lei piano...
+	all'interno del mio corpo, ho capito come tutto fosse un di lei piano…
 	title#La trappola magnetica
-	Che scattò già il giovedì precedente...
-
+	Che scattò già il giovedì precedente…
 	sec#
-	Perché già giovedì quel birbone di <span class="mitch">Mitch il re
-	del gossip</span> se ne viene con una notiziona.
+	Perché già giovedì quel birbone di <span class="mitch">Mitch il re del
+	gossip</span> se ne viene con una notiziona.
 
-	La notizia consiste in nulla più del nome della <span
-	class="em">Ragazza Magnete</span>.
+	La notizia consiste in nulla più del nome della <em>Ragazza Magnete</em>.
 
 	Tuttavia, la cosa m'ha indisposto un poco – e non poco.
-</p>
 	sec#
-<p>
-	La conoscenza del nome dell'avversario comporta una
-	de-disumanizzazione. Questo comporta di certo una variazione
-	nell'accezione della mia malvagità quando odio. Giusto?
+	La conoscenza del nome dell'avversario comporta una de-disumanizzazione.
+	Questo comporta di certo una variazione nell'accezione della mia malvagità
+	quando odio. Giusto?
 
 	Ma in che modo?
 
-	Divento forse più malvagio, potendo odiare in modo più personale? O
-	divento invece meno malvagio, potendo appoggiarmi su un contatto
-	personale che facilita il mio mestiere?
-</p>
+	Divento forse più malvagio, potendo odiare in modo più personale? O divento
+	invece meno malvagio, potendo appoggiarmi su un contatto personale che
+	facilita il mio mestiere?
 	sec#
-<p>
-	Scopro che in realtà non c'è alcuna differenza; o meglio, la
-	differenza probabilmente c'è, ma non schiero potendo – a quanto pare
+	Scopro che in realtà non c'è alcuna differenza; o meglio, la differenza
+	probabilmente c'è, ma non schiero potendo – a quanto pare
 	- prescindere dal nome.
 
-	Se il mio conscio era in qualche modo disturbato dalla nuova
-	conoscenza, il mio subconscio continua a pensare a lei
-	esclusivamente come <span class="em">Ragazza Magnete</span>, anche e
-	soprattutto quanto vengo colpito dalla sua tecnica mortale.
+	Se il mio conscio era in qualche modo disturbato dalla nuova conoscenza, il
+	mio subconscio continua a pensare a lei esclusivamente come <em>Ragazza
+	Magnete</em>, anche e soprattutto quanto vengo colpito dalla sua tecnica
+	mortale.
 
 	Fortunatamente io sono invincibile, e l'unico effetto che l'attacco
 	mortale ottiene è di tenermi a terra per qualche giorno.
-</p>
 	sec#
-<p>
-	Ed infatti, ancora ieri, avendo – grazie ai miei mirabolanti poteri
-	d'odio – quasi interamente recuperato la mia invincibilità, eccomi
-	bel bello a lezione, per un altro paio d'ore di <span
-	class="em">Sgaggiotime</span>!
+	Ed infatti, ancora ieri, avendo – grazie ai miei mirabolanti poteri d'odio –
+	quasi interamente recuperato la mia invincibilità, eccomi bel bello a
+	lezione, per un altro paio d'ore di <em>Sgaggiotime</em>!
 
-	Finita questa lezione, senza alcun preavviso, ecco comparire in aula
-	la <span class="em">Ragazza Magnete</span>!
+	Finita questa lezione, senza alcun preavviso, ecco comparire in aula la
+	<em>Ragazza Magnete</em>!
 
-	Ma questa volta, un po' come il venerdì precedente, i nostri sguardi
-	non s'incontrano; il mio sguardo d'odio non rimbalza né su quelle
-	lenti rettangolari né in quegl'occhioni; ma nemmeno fa effetto.
+	Ma questa volta, un po' come il venerdì precedente, i nostri sguardi non
+	s'incontrano; il mio sguardo d'odio non rimbalza né su quelle lenti
+	rettangolari né in quegl'occhioni; ma nemmeno fa effetto.
 
-	Servono qualcose come quattro occhiatacce perché la <span
-	class="em">Ragazza Magnete</span> s'accorga della mia presenza, ma
-	nemmeno allora reagisce.
+	Servono qualcose come quattro occhiatacce perché la <em>Ragazza Magnete</em>
+	s'accorga della mia presenza, ma nemmeno allora reagisce.
 
-	Il dubbio che il magnetismo sia andato perduto riaffiora nella mia
-	mente.
-</p>
+	Il dubbio che il magnetismo sia andato perduto riaffiora nella mia mente.
 	sec#
-<p>
-	Ed infine, stamattina, ecco comparire d'un tratto la ragazza magnete
-	al ritorno dal <span class="em">coffietiem</span>. Le sue reazioni
-	sono lente e deboli.
+	Ed infine, stamattina, ecco comparire d'un tratto la ragazza magnete al
+	ritorno dal <em>coffietiem</em>. Le sue reazioni sono lente e deboli.
 
-	Purtroppo, grazie al caro <span class="em">Xorg</span>, ch'ha deciso
-	d'aggiornarsi un'altra volta, eccomi impegnato a reinstallare ancora
-	una volta gli stradannati driver della scheda video, che non sono
-	minimamente in grado di passare indenni attraverso un singolo
-	aggiornamento, non sono riuscito a perpetrare altri test.
-</p>
+	Purtroppo, grazie al caro <em>Xorg</em>, ch'ha deciso d'aggiornarsi un'altra
+	volta, eccomi impegnato a reinstallare ancora una volta gli stradannati
+	driver della scheda video, che non sono minimamente in grado di passare
+	indenni attraverso un singolo aggiornamento, non sono riuscito a perpetrare
+	altri test.
 	sec#
-<p>
 	Sono sempre più vicino alla vittoria.
-
 	sec#br
-	E nel prossimo numero...
+	E nel prossimo numero…
 	title#Vagliare la qualità del metallo
-	Ora che – sempre grazie a <span class="mitch">Mitch il re del
-	gossip</span> – so cosa la <span class="em">Ragazza con il dado
-	tondo™</span> ascolta (sarebbero i “Burn The Priest”, ora noti come
-	“Lamb Of God” – han dovuto cambiar nome perché qualche bigotto lo
-	riteneva offensivo) ho deciso che avrei prima ascoltato l'intera
-	discografia e avrei poi ringraziato.
-
+	Ora che – sempre grazie a <span class="mitch">Mitch il re del gossip</span>
+	– so cosa la <em>Ragazza con il dado tondo™</em> ascolta (sarebbero i “Burn
+	The Priest”, ora noti come “Lamb Of God” – han dovuto cambiar nome perché
+	qualche bigotto lo riteneva offensivo) ho deciso che avrei prima ascoltato
+	l'intera discografia e avrei poi ringraziato.
 	sec#
-	Metti caso che non poi mi piacciano... che faccio, ringrazio per
-	della musica che non ascolto? Mi pare una cosa ipocrita...
+	Metti caso che non poi mi piacciano… che faccio, ringrazio per della musica
+	che non ascolto? Mi pare una cosa ipocrita…
 
-	Per adesso (sono all'incirca a metà, questi tizi hanno scritto
-	soltanto 76 canzoni dal 1994) posso dire che sono un po' più
-	gutturali di quel che m'aspettavo...
-	stop#page
+	Per adesso (sono all'incirca a metà, questi tizi hanno scritto soltanto 76
+	canzoni dal 1994) posso dire che sono un po' più gutturali di quel che
+	m'aspettavo…
+stop#page

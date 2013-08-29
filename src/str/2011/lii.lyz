@@ -921,12 +921,11 @@ tab#xxi
 	C'ho riprovato. C'ho provato durissimo, fino a giovedì sera… in breve: non
 	esiste. Ma se volete la versione lunga, allora…
 
-	p#<code>gcc-3.4.4</code> dipende da <span class="em">binutils, libiberty,
-	bison</span> e molto altro, e queste cose le trova ma forse no. Poi bisogna
-	indicargli che sto crosscompilando un compilatore, quindi devo settare le
-	tre architetture, quella che effettua la compilazione, quella su cui il
-	compilato andrà a girare e quella per la quale il compilatore compilerà.
-	Chiaro?
+	p#<code>gcc-3.4.4</code> dipende da <em>binutils, libiberty, bison</em> e
+	molto altro, e queste cose le trova ma forse no. Poi bisogna indicargli che
+	sto crosscompilando un compilatore, quindi devo settare le tre architetture,
+	quella che effettua la compilazione, quella su cui il compilato andrà a
+	girare e quella per la quale il compilatore compilerà.  Chiaro?
 
 	Poi bisogna convincere il <code>./configure</code> che non deve testare il
 	compilato sulla piattaforma presente, poi bisogna indicargli dove trovare le

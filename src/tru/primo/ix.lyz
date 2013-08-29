@@ -216,7 +216,7 @@ start#page
 	ali potrebbe essere individuata, ma mi si dovrebbe cercare attivamente per
 	notarla.
 	sec#
-	p#Come previsto, arrivo a portata, rallento e mi porto alle spalle della
+	Come previsto, arrivo a portata, rallento e mi porto alle spalle della
 	creatura. Mi prendo qualche secondo per spiare i suoi pensieri: la si
 	direbbe preoccupata, come se fosse in ritardo. Non noto alcuna nota di
 	dolore, per&ograve;, per i compagni caduti. Forse semplicemente non ne
@@ -227,17 +227,17 @@ start#page
 	mia vittoria. Pazienza, spingo il cadevere verso il pianeta e mi dirigo
 	versa la nona uccisione di questa giornata. Mh, gi&agrave; nove? Ho atteso
 	un sacco di tempo per tornare in attivit&agrave;!
-	p#Mentre viaggio verso il mio prossimo bersaglio (non <span
-	class="em">troppo</span> rapidamente, non voglio fuggire dall'orbita) ho un
-	po' di tempo per riflettere su quello che sto facendo. Si, perch&eacute; non
-	capita tutti i giorni di trovare un gruppo pi&ugrave; o meno organizzato di
-	mostri blu che prima invia una squadra a sterminare la popolazione di un
-	pianeta, e poi ne invia un'altra &ndash; pi&ugrave; grande &ndash;
-	attraverso varchi spaziali per fare chiss&agrave; che cosa… E per quanto
-	attraversare le Porte di Tanje e perforare la continuit&agrave; dello spazio
-	siano reati punibili secondo le <span class="em">Leggi</span>, sono convinto
-	che ci sia dell'altro. Ed ora che ci penso, so anche a chi posso chiedere
-	consiglio…
+	
+	Mentre viaggio verso il mio prossimo bersaglio (non <em>troppo</em>
+	rapidamente, non voglio fuggire dall'orbita) ho un po' di tempo per
+	riflettere su quello che sto facendo. Si, perch&eacute; non capita tutti i
+	giorni di trovare un gruppo pi&ugrave; o meno organizzato di mostri blu che
+	prima invia una squadra a sterminare la popolazione di un pianeta, e poi ne
+	invia un'altra &ndash; pi&ugrave; grande &ndash; attraverso varchi spaziali
+	per fare chiss&agrave; che cosa… E per quanto attraversare le Porte di Tanje
+	e perforare la continuit&agrave; dello spazio siano reati punibili secondo
+	le <em>Leggi</em>, sono convinto che ci sia dell'altro. Ed ora che ci penso,
+	so anche a chi posso chiedere consiglio…
 	begin#inside
 		p#speak@simak#Allora, Coscienza, che mi dici? Operano in squadre di tre, come facevano i tuoi. Avanti, consiglia come sai fare tu
 		p#speak@corona#Forse l&apos;<em>Usurpatore</em> ti assomiglia pi&ugrave; di quanto immagini

@@ -66,10 +66,9 @@ start#page
 	Ecco quindi il terzo, attesissimo volume.
 	sec#
 	id#ii
-	Dal <span class="em">GODS</span>, già Premio Guttember, già disco di
-	platino, già stalker &amp; scienziato &amp; scrittore &amp; millantante
-	sociologo autodidatta, già tre volte ritiratosi dalla vita pubblica, già
-	autore dei celeberrimi
+	Dal <em>GODS</em>, già Premio Guttemberg, già disco di platino, già stalker
+	&amp; scienziato &amp; scrittore &amp; millantante sociologo autodidatta,
+	già tre volte ritiratosi dalla vita pubblica, già autore dei celeberrimi
 	begin#ul
 		p#“<em>7 anni di odio</em>”
 		p#“<em>Hate me baby one more time</em>”
@@ -91,7 +90,7 @@ start#page
 	ma soprattutto per i motivi sbagliati. O travisati. O contorti. O perversi.
 	Ch'è un'altra cosa da cattivi.
 	sec#
-	Seduto nel suo oscuro antro il <span class="wrong">Dr.</span>Odio medita.
+	Seduto nel suo oscuro antro il <gspan class="wrong">Dr.</span>Odio medita.
 
 	È circondato di idioti. Deve essere così, lui lo sa bene. È nel protocollo
 	dei cattivi. È importante. Tutti i migliori cattivi si circondano di idioti.

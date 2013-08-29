@@ -98,8 +98,8 @@ tab#contenuti
 	Le storie sono il vero cuore della baracca.
 	stitle#Storie
 	Si cominciò un po' di tempo fa, mi par che fosse attorno al settembre 2010.
-	Prima di quello, io e i miei allegri compagni, il <span class="em">popolo
-	dell'aula studio</span>, tenevamo le storie per tradizione orale, come
+	Prima di quello, io e i miei allegri compagni, il <em>popolo
+	dell'aula studio</em>, tenevamo le storie per tradizione orale, come
 	facevano gli antichi.
 	begin#mini@right
 	id#MiniStorie
@@ -207,20 +207,20 @@ tab#meta
 	sec#
 	Ma la vita è piena di sorprese. Un bel dì mi venne in mente di dividere
 	le pagine in tab, e scoprii che non tutti i browser supportano l'evento
-	<span class="em">onHashChange</span>, in particolare non il browser
+	<em>onHashChange</em>, in particolare non il browser
 	dell'amico Luber.
 
 	Questo triste fatto gli rese impossibile accedere ad una buona parte dei
-	contenuti… decisi allora di aggiungere il <span class="code">Luber
-	Mode</span>, che spalma tutti i tab uno in fila all'altro. E siccome
-	anche il <span class="bolo">buon Bolo</span> aveva lo stesso problema,
-	creai un alias a suo nome.
+	contenuti… decisi allora di aggiungere il <code>Luber Mode</code>, che
+	spalma tutti i tab uno in fila all'altro. E siccome anche il <span
+	class="bolo">buon Bolo</span> aveva lo stesso problema, creai un alias a suo
+	nome.
 	sec#
 	id#stili
 	title#Meta [ Stili ]
-	Infine, un bel dì mio fratello capitò sul sito e si lamentò di non
-	riuscire a distinguere una beata mazza di quel che vedeva. Per lui c'è
-	quindi il <span class="code">Dado mode</span>, dai colori più classici.
+	Infine, un bel dì mio fratello capitò sul sito e si lamentò di non riuscire
+	a distinguere una beata mazza di quel che vedeva. Per lui c'è quindi il
+	<code>Dado mode</code>, dai colori più classici.
 	sec#
 	Potete passare dalla modalità standard (la mia) alle altre calcando
 	qualche link in alto a sinistra. Se invece sapete scrivere, potete
