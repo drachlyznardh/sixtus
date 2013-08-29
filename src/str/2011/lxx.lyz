@@ -34,8 +34,8 @@ start#page
 	abbondonare baracca e burattini fossi io. Andò così:
 	sec#br
 	begin#outside
-		speak#gods#Sai una cosa, Simgi? Ho avrei proprio voglia d'andare a correre
-		speak#dacav#Di' un po', GODS, non sono forse &gt;9000 giorni che non corri?
+		p#speak@gods#Sai una cosa, Simgi? Ho avrei proprio voglia d'andare a correre
+		p#speak@dacav#Di' un po', GODS, non sono forse &gt;9000 giorni che non corri?
 		L'universo, allora, mi fece squillare il telefono. Era mia madre, fuori
 		dalla porta.
 
@@ -96,7 +96,7 @@ start#page
 	trovai un oggetto estraneo nella mia borsa.
 	begin#outside
 		Già pronto a sguinzagliare i miei mastini, esclamai
-		speak@gods#forte#Chi osa toccare la mia borsa?
+		speak@gods#<strong>Chi osa toccare la mia borsa?</strong>
 		rivolgendomi in pratica ai gatti, visto che non c'era nessun'altro in casa.
 	end#outside
 	Ma non ci fu bisogno di sguinzagliare alcuna belva immaginaria (il

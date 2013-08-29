@@ -245,7 +245,7 @@
 				$command = $cmd_attr[0];
 			} else {
 				$command = $cmd_args[0];
-				$cmd_attr = array();
+				$cmd_attr = array($command);
 			}
 			$this->parse($index, $command, $cmd_attr, $cmd_args);
 		}
@@ -404,14 +404,17 @@
 		private function make_intra ($lineno, $args, $attr)
 		{
 			$result = false;
-			
-			$_ = preg_split('/@/', polish_line($args[1]));
-			$result = $this->dialog($attr[1], $_[0]);
+			if (count($args) > 2)
+				$this->error($lineno, 'Speak: too many arguments');
+	
+			$_ = preg_split('/@/', $args[1]);
+
+			$result = $this->dialog($attr[1], polish_line($_[0]));
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.$_[0].' – ';
-				$result .= $this->dialog($attr[1], $_[1]);
+				$result .= ' – '.polish_line($_[0]).' – ';
+				$result .= $this->dialog($attr[1], polish_line($_[1]));
 				array_shift($_);
 				array_shift($_);
 			}

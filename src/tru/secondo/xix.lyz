@@ -67,8 +67,8 @@ start#page
 		p#speak@simak#Sai, Jo, non ti ho scelta a caso.
 		dice il mozzo
 		speak@simak#All&apos;inizio, forse, potrebbe sembrare, ma non è così
-		speak#jo#Chi sei tu? Che vuoi?
-		p#speak@simak#Eh...
+		p#speak@jo#Chi sei tu? Che vuoi?
+		p#speak@simak#Eh…
 		esista
 		speak@simak#Con tutti i tuoi anni, ancora rimani acerba, Jo cara
 	end#outside
@@ -86,7 +86,7 @@ start#page
 	sec#
 	Rimango persa. Penso che non sto meritando tutta questa tremenda pressione
 	sulle mie spalle, che non dovrei essere qui, che dovrei essere sulla mia
-	collina, a raccogliere i fiori per il negozio, a badare alla mia casa... Poi
+	collina, a raccogliere i fiori per il negozio, a badare alla mia casa… Poi
 	ricordo Alì, che non vedo da prima del duello.
 
 	Esco di corsa, torno in coperta.
@@ -98,12 +98,12 @@ start#page
 	Alì giace a terra. Sanguina, ma non saprei dire quanto. Sta parlando con il
 	mozzo. Dallo sguardo che ha negli occhi, vedo che non gli resta molto.
 	begin#outside
-		speak#ali#Maestro, perdona. Ti ho deluso
+		p#speak@ali#Maestro, perdona. Ti ho deluso
 		p#speak@simak#É vero, Alì, ma non crucciarti risponde
 		quello, senza batter ciglio
 		speak@simak#Dimmi invece quello c&apos;hai compreso
-		speak#ali#Ho sperato troppo, Maestro. Ho sperato e non ho agito. Come riparerò, Maestro?
-		speak#simak#Non puoi, quì. Ora va, Togan ti attende tra le sue schiere. Egli farà di te uno dei miei migliori
+		p#speak@ali#Ho sperato troppo, Maestro. Ho sperato e non ho agito. Come riparerò, Maestro?
+		p#speak@simak#Non puoi, quì. Ora va, Togan ti attende tra le sue schiere. Egli farà di te uno dei miei migliori
 	end#outside
 	Non capisco il senso di queste parole. Non conosco Togan, non conosco le
 	´sue schiere', né i ´suoi migliori'. E neanche vorrei scoprirlo. Ma credo
@@ -122,7 +122,7 @@ start#page
 
 	Via i prigionieri, preparare una nave, non questa che va piano, non quello
 	ch'è danneggiata, prendiamo quella che va in fretta, venga venga Araldo,
-	venga da questa parte...
+	venga da questa parte…
 
 	Nel giro di un paio di minuti io e una ciurma ai miei ordini siamo a bordo
 	di una leggere barchetta, con dieci rematori incitati dall'ufficiale
@@ -214,7 +214,7 @@ start#page
 	begin#outside
 		p#speak@simak#Sai
 		mi dice senza voltarsi
-		speak@simak#è stata una lunga attesa. Anche conoscendo il futuro, non è stato facile aspettare che tu mi chiamassi...
+		speak@simak#è stata una lunga attesa. Anche conoscendo il futuro, non è stato facile aspettare che tu mi chiamassi…
 	end#outside
 	Ma che vuole questo? Che c'ha nella testa?
 	begin#outside
@@ -242,6 +242,6 @@ start#page
 	fuoco, l'aria è paurosamente umida e Simak sta attizzando le fiamme con un
 	bastoncino, mentre sta seduto su un tronco abbattuto.
 	begin#outside
-		speak#simak#Oh, eccoti sveglia. Pronta? Tra poco arriva la cena
+		p#speak@simak#Oh, eccoti sveglia. Pronta? Tra poco arriva la cena
 	end#outside
 stop#page

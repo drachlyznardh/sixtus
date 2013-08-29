@@ -83,7 +83,7 @@ start#page
 			Quand'ecco <span class="dacav">Simgi</span>. Lo <span
 			class="dacav">Simgi</span> arriva e dice
 		</p><div class="outside">
-			speak#dacav#Scusate ragazzi, vado a recuperare la mia roba
+			p#speak@dacav#Scusate ragazzi, vado a recuperare la mia roba
 			in biblioteca
 		</div><p>
 			E noi lo lasciamo andare, lo aspettiamo e accumuliamo altri &gt;9000
@@ -105,7 +105,7 @@ start#page
 			Ma quando poi me ne esco dal bagno ecco che il resto del gruppo
 			m'aspetta assieme a $Mara.
 		</p><div class="outside">
-			speak#forte#Sorpresa!!!
+			p#speak@forte#Sorpresa!!!
 		</div><p>
 			Com'è che lei scende con noi? Chi è? Da dove viene? Chi l'ha
 			invitata? Sul bicchiere di carta non c'è scritto il suo nome! Lei

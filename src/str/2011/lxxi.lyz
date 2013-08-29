@@ -213,7 +213,7 @@ start#page
 	Castagni</em> che sale verso il Bondone. Cerco questo sentiero, lo trovo ma
 	scopro che arriva soltanto in Vanezze.
 	begin#outside
-		p#speak@gods#forte#Cazzuola!
+		p#speak@gods#<strong>Cazzuola!</strong>
 		esclamo
 		speak@gods#Io voglio arrivare in Palon! Ci sarà una strada dritta, no?
 	end#outside
@@ -252,11 +252,11 @@ start#page
 	cartello.
 	foto#Extra/Palon/29.jpg
 	begin#outside
-		p#speak@gods#forte#Waaaaaaaaaaaaaaaaaaaaaaaaaaat
+		p#speak@gods#<strong>Waaaaaaaaaaaaaaaaaaaaaaaaaaat</strong>
 		urlo, ad alta voce.
 		
 		Cinque ore? Cinque intere ore? Che mi senta l'intero bosco
-		speak@gods#forte#You got to be kidding me!
+		speak@gods#<strong>You got to be kidding me!</strong>
 	end#outside
 	Ma quel cartello non mentiva, e non era contraffatto. A quel punto, due
 	cose:

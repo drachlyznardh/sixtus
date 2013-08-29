@@ -64,7 +64,7 @@ tab#ii
 	E siccome ieri non avevo una gran briga di fare altro, né di prendere la
 	bicicletta, mi sono detto
 	begin#outside
-		speak#gods#Perché prendere la bici per andare a correre se posso semplicemente correre di più?
+		p#speak@gods#Perché prendere la bici per andare a correre se posso semplicemente correre di più?
 	end#outside
 	Così ho corso un po' di più.
 	sec#

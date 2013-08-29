@@ -189,7 +189,7 @@ start#page
 				&lsquo;inside&rsquo;. Indica i blocchi di testo
 				in cui il protagonista parla con se stesso.
 			</p>
-			speak#simak#Non a caso, quando parlo con Ci, lo vedete dentro questo blocco
+			p#speak@simak#Non a caso, quando parlo con Ci, lo vedete dentro questo blocco
 		</div><p>
 			Ma i veri dialoghi non stanno dentro, stanno invece
 			fuori.
@@ -199,7 +199,7 @@ start#page
 				all'esterno, ecco il blocco
 				&lsquo;outside&rsquo;.	
 			</p>
-			speak#lyznardh#Perché alcune voci sono udibili
+			p#speak@lyznardh#Perché alcune voci sono udibili
 			soltanto all&apos;esterno, soprattutto quelle forti
 		</div>
 	</div><div class="section">

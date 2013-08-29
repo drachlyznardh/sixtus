@@ -160,7 +160,7 @@ tab#iii
 	<code>root</code>, ci apre &gt;9000 <code>shell</code>, sposta cartelle, fa
 	cose, smanaccia, fruga nella borsa, infine mi chiama:
 	begin#outside
-		speak#em#Chi è il primo?
+		p#speak@em#Chi è il primo?
 	end#outside
 	Arrivo, mi siede, guardo lui, lui guarda me, io guardo lui… cominciamo con
 	il caricare il modulo, e poi apriti cielo. Di ogni yadda:

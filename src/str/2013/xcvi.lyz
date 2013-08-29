@@ -7,7 +7,7 @@ tab#i
 	alla vita pubblica è segnato da alcuni eccezionali eventi che andrò a
 	raccontarvi a breve.
 	begin#outside
-		speak#gods#Ora, <strong>COFFEETIEM</strong>
+		p#speak@gods#Ora, <strong>COFFEETIEM</strong>
 	end#outside
 	sec#
 	Se a qualcuno interessasse, dirò che era un caffé freddo. Creato
