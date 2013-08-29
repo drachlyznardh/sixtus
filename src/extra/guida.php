@@ -123,7 +123,7 @@ tab#contenuti
 	Perché, se all'inizio raccontavo soltanto delle cose, un giorno ho
 	finito per scrivere una storia immensamente lunga che in pratica
 	recensiva (nel mio personale e peculiare stile) un certo
-	link#Storie/2011/XXXVIII/#anime###.
+	link#Storie/2011/XXXVIII/#anime@.
 
 	Da quel punto in poi ho deciso che forse sarebbe stato il caso di
 	riservare uno spazio dedicato a cose come quella. E poi ho cominciato.

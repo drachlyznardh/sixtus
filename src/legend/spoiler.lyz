@@ -198,8 +198,8 @@ start#side
 	br#
 	stitle#tid#Regole extra#regole
 	begin#ul
-		p#tid#Scagnozzi#regole#Scagnozzi# / 
-		tid#Operativi#regole#Operativi# / 
+		p#tid#Scagnozzi@ /#regole#Scagnozzi
+		tid#Operativi@ /#regole#Operativi
 		tid#Mucchi#regole#Mucchi
 		p#tid#Trappole#regole#Trappole
 	end#ul

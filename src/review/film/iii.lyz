@@ -446,19 +446,19 @@ start#side
 	title#Robocop
 	title@right#Meh.
 	br#
-	stitle#tid#Robocop#1##– 1987
+	stitle#tid#Robocop@ – 1987#1
 	r#tid#I personaggi#1#1/Personaggi
 		/
 		tid#Il punto#1#1/Punto
 		/
 		tid#Verdetto#1#1/Verdetto
-	stitle#tid#Robocop 2#2##– 1990
+	stitle#tid#Robocop 2@ – 1990#2
 	r#tid#Personaggi#2#2/Personaggi
 		/
 		tid#Il punto#2#2/Punto
 		/
 		tid#Verdetto#2#2/Verdetto
-	stitle#tid#Robocop 3#3##– 1993
+	stitle#tid#Robocop 3@ – 1993#3
 	r#tid#Personaggi#3#3/Personaggi
 		/
 		tid#Il punto#3#3/Punto

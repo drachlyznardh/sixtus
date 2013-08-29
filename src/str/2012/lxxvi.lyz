@@ -563,8 +563,8 @@ start#side
 		p#tid#Il giro della Maranza#ii
 		p#tid#Quell'incontro sull'EIT ICT Labs#iii
 		p#tid#Preparativi#iv
-		p#tid#Il quarto giorno#v## – sabato 25/02
+		p#tid#Il quarto giorno@ – sabato 25/02#v
 		p#E poi,
-		tid#il sesto giorno#vi## – lunedì 27/02
+		tid#il sesto giorno@ – lunedì 27/02#vi
 	end#ol
 stop#side

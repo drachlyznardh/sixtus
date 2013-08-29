@@ -104,7 +104,7 @@ tab#no
 	begin#ul
 		p#link#Recensioni/Film/I/#Thor
 		p#link#Recensioni/Film/VII/#Dark Of The Moon
-		p#link#Recensioni/Show/XIV/#Gundam AGE#i## all'inizio
+		p#link#Recensioni/Show/XIV/#Gundam AGE@ all'inizio#i
 		p#D–Wars
 		p#Mega shark Vs Giant Octopus
 		p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
@@ -139,7 +139,7 @@ tab#magnifici
 		p#Sharktopus
 		p#link#Recensioni/Film/XXIII/#Zombieland
 		p#The Rocky Horror Picture Show
-		p#link#Recensioni/Show/XIV/#Gundam AGE#ii## dopo un po'
+		p#link#Recensioni/Show/XIV/#Gundam AGE@ dopo un po'#ii
 		p#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter
 	end#ul
 stop#page

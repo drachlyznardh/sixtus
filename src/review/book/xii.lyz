@@ -1222,8 +1222,8 @@ start#side
 		p#tid#La camera dei segreti#ii
 		p#tid#Il prigioniero di Azkaban#iii
 		p#tid#Il calice di fuoco#iv
-		p#tid#L&apos;ordine#v#V1## /
-		tid#della#v#V2## /
+		p#tid#L&apos;ordine@ /#v#V1
+		tid#della@ /#v#V2
 		tid#Fenice#v#V3
 		p#tid#Il principe mezzosangue#vi
 		p#tid#I doni della morte#vii
