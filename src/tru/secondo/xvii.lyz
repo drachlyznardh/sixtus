@@ -10,16 +10,16 @@ start#page
 	forse, l&apos;intervento di qualcuno in alto.
 	sec#
 	begin#inside
-		p#intra@lyznardh#Chiamami
-		p#intra@jo#No
-		p#intra@lyznardh#Chiamami
-		p#intra@jo#No
-		p#intra@lyznardh#Non per te. Ma per altri
-		p#intra@jo#No
-		p#intra@lyznardh#Chiamami
-		p#intra@jo#No
-		p#intra@lyznardh#Domani a mezzogiorno, farai il mio nome
-		p#intra@jo#No
+		p#speak@lyznardh#Chiamami
+		p#speak@jo#No
+		p#speak@lyznardh#Chiamami
+		p#speak@jo#No
+		p#speak@lyznardh#Non per te. Ma per altri
+		p#speak@jo#No
+		p#speak@lyznardh#Chiamami
+		p#speak@jo#No
+		p#speak@lyznardh#Domani a mezzogiorno, farai il mio nome
+		p#speak@jo#No
 	end#inside
 	sec#
 	Quando poi mi sveglio, &egrave; mattina. Forse anche pi&ugrave; tardi. Non
@@ -45,7 +45,7 @@ start#page
 	sballonzolare indietro. Tento di guardarmi attorno; riconosco, tra i miei
 	soccorritori, Al&igrave; che, trafelato, sputa ordini a destra e a manca.
 	begin#outside
-		p#intra@ali#Non temere. Lui verr&agrave;
+		p#speak@ali#Non temere. Lui verr&agrave;
 	end#outside
 	sec#
 	Non mi piace.
@@ -57,8 +57,8 @@ start#page
 	Poi mi sento stanca, e quel torpore che m&apos;ha colto ieri notte torna
 	e mi riprende con s&eacute;... chiudo gli occhi.		
 	begin#inside
-		p#intra@jo#So che sei qui!
-		p#intra@simak#...
+		p#speak@jo#So che sei qui!
+		p#speak@simak#...
 	
 		Poi vedo quello ch&apos;&egrave; successo stamattina.
 	
@@ -132,13 +132,13 @@ start#page
 		propizia, che l&apos;araldo &egrave; d&apos;accordo, che
 		l&apos;ammiraglio &egrave; del tutto ignaro e che il mare &egrave;
 		calmo.
-		p#intra@ali#Lui verr&agrave;
+		p#speak@ali#Lui verr&agrave;
 		Abbiamo seicentotrentanove soldati, tre navi, molto coraggio.  Il piano
 		prevede di remare, remare forte, oltrepassare verso Nord il promontorio
 		di Newport, prendere l&apos;orgogliosa nave ammiraglia con la forza,
 		catturare l&apos;ammiraglio in persona, negoziare nuovo accordi
 		commerciali, tasse, libert&agrave; di circolazione e altre varie cose.
-		p#intra@ali#Lui verr&agrave;
+		p#speak@ali#Lui verr&agrave;
 		La nostra &quot;flotta&quot; parte, verso il promontorio. In
 		verit&agrave; le nostre tre galee sono ben pi&igrave; rapide e
 		manovrabili di quanto possano essere le grosse navi dei nostri
@@ -161,10 +161,10 @@ start#page
 		formaggio svizzero. Non affondano, per&ograve;. Le abbiamo fatte bene, o
 		forse i pivelli sulla Eagle Wings e sulla Sun Storm hanno una pessima
 		mira. 
-		p#intra@ali#Lui verr&agrave;
+		p#speak@ali#Lui verr&agrave;
 		p#Non abbiamo n&eacute; modo n&eacute; motivo per combattere ora. Una
 		barchetta s&apos;avvicina a quella su cui sto anch&apos;io.
-		p#intra@ali#Lui verr&agrave;
+		p#speak@ali#Lui verr&agrave;
 	end#inside
 	Mi sveglio.
 	sec#
@@ -188,18 +188,18 @@ start#page
 	Corro per sorreggerlo, lo prendo appena in tempo. Vomitando sangue, mi fissa
 	e sussurra:
 	begin#outside
-		p#intra@ali#Non temere. Lui verr&agrave;
+		p#speak@ali#Non temere. Lui verr&agrave;
 	end#outside
 	Mentre alcuni ricaricano, altri si fanno avanti. Vedo la morte negli occhi,
 	ancora una volta. Fisso davanti a me, il mozzo Stevenson mi penetra con lo
 	sguardo, e lo sento dire:
 	begin#outside
-		p#intra@lyznardh#Chiamami
+		p#speak@lyznardh#Chiamami
 	end#outside
 	Ho paura. Una sola lacrima mi riga la guancia. Non voglio morire qui. Sette
 	canne di fucile mi puntano. Sento freddo. Lo chiamo.
 	begin#outside
-		p#intra@jo#Lyznardh! Ti prego, vieni!
+		p#speak@jo#Lyznardh! Ti prego, vieni!
 	end#outside
 	Il mare esplode.
 stop#page

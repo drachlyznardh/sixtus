@@ -151,11 +151,11 @@ tab#3
 		l'università. Perché? A questa domanda, il Dottore rispose con una
 		semplicità disarmante.
 		br#
-		p#intra@#odio#È indispensabile, per il mio amor proprio, che in futuro – e in particolare al momento della mia ascesa – ogni persona al mondo mi chiami “dottore”
+		p#speak@odio#È indispensabile, per il mio amor proprio, che in futuro – e in particolare al momento della mia ascesa – ogni persona al mondo mi chiami “dottore”
 		disse, accennando un sorriso
-		intra@odio#In Italia basta meno, ma all'estero, bisogna avere un dottorato
+		speak@odio#In Italia basta meno, ma all'estero, bisogna avere un dottorato
 		
-		p#intra@odio#È per questo che intendo terminare quel che ho cominciato
+		p#speak@odio#È per questo che intendo terminare quel che ho cominciato
 		br#
 
 		Era la prima fase del piano.
@@ -274,11 +274,11 @@ tab#4
 stop#page
 start#side
 	title#Parte II
-	titler#La Corona dell'Odio
+	title@right#La Corona dell'Odio
 	begin#ol
-		li#tid#Sessione 1@ – 230 parole#1
-		li#tid#Sessione 2@ – 762 parole#2
-		li#tid#Sessione 3@ – 372 parole#3
-		li#tid#Sessione 4@ – 788 parole#4
+		p#tid#Sessione 1@ – 230 parole#1
+		p#tid#Sessione 2@ – 762 parole#2
+		p#tid#Sessione 3@ – 372 parole#3
+		p#tid#Sessione 4@ – 788 parole#4
 	end#ol
 stop#side

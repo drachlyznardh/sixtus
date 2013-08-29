@@ -13,9 +13,9 @@ tab#cosmologia
 	Le razze senzienti sono umani, nani, elfi (alti, senza distinzioni, grazie),
 	halfling. Niente gnomi, niente drow, niente cazzi, dappertutto. Più
 	informazioni nella sezione sulle civiltà.
-	sbr#
+	sec#br
 	id#Sommi
-	titler#Sommi
+	title@right#Sommi
 	begin#mini@left
 	stitle#Moraganor
 		La gerarchia divina parte da Moraganor, creatore e ordinatore
@@ -49,9 +49,9 @@ tab#cosmologia
 	sotterfugio. Si circonda di ombre, di animali striscianti e di anime infide.
 	Tuttavia, tiene immancabilmente fede ai patti ed ha un'infinita memoria.
 	Mecna non si schiera né per né contro Moraganor.
-	sbr#
+	sec#br
 	id#Minori
-	titler#Minori
+	title@right#Minori
 	begin#mini@left
 		I due più potenti circoli divini sono la Piramide Rovesciata e il
 		Tribunale Celeste. I due gruppi sono opposti ma raremente in guerra, in
@@ -93,8 +93,8 @@ tab#cosmologia
 	quali li Gnoll, i Koboldi, gli Orchi. Le sole isole del grande arcipelago
 	sono abitate da divinità civili, disinteressate agli ordini e formalmente
 	non benvolute dagli altri dei.
-	sbr#
-	titler#Il Grande Cerchio
+	sec#br
+	title@right#Il Grande Cerchio
 	Di tutto il cosmo, la parte più grande e densamente popolata è il <em>Grande
 	Cerchio</em>, coperto dall'oceano e puntellato di isolette.
 	br#
@@ -182,25 +182,25 @@ start#side
 	dimentico le cose.
 	br#
 	title#Legend
-	titler#Rule of Cool
+	title@right#Rule of Cool
 	br#
 	stitle#tid#Cosmologia#cosmologia
 	begin#ul
-		li#tid#Sommi#me#Sommi
-		li#tid#Minori#me#Minori
+		p#tid#Sommi#me#Sommi
+		p#tid#Minori#me#Minori
 	end#ul
 	br#
 	stitle#tid#Il Grande Cerchio#cerchio
 	begin#ul
-		li#tid#Isole#me#Isole
-		li#tid#Impero#me#Impero
+		p#tid#Isole#me#Isole
+		p#tid#Impero#me#Impero
 	end#ul
 	br#
 	stitle#tid#Regole extra#regole
 	begin#ul
-		li#tid#Scagnozzi#regole#Scagnozzi# / 
-		tid#Operativi#regole#Operativi# / 
+		p#tid#Scagnozzi@ /#regole#Scagnozzi
+		tid#Operativi@ /#regole#Operativi
 		tid#Mucchi#regole#Mucchi
-		li#tid#Trappole#regole#Trappole
+		p#tid#Trappole#regole#Trappole
 	end#ul
 stop#side

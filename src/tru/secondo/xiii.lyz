@@ -4,52 +4,52 @@ next#Tru/Naluten/Vol.II/XIV/#Proposta
 start#page
 	title#Tru Naluten XIII &ndash; Dubbio
 	begin#inside
-		p#intra@simak#Siamo un mare di merda
-		p#intra@lyz#Lo siamo?
-		p#intra@simak#Decisamente e assolutamente
+		p#speak@simak#Siamo un mare di merda
+		p#speak@lyz#Lo siamo?
+		p#speak@simak#Decisamente e assolutamente
 	end#inside
 	p#A volte le cose non vanno come vorrei.
 	begin#inside
-		p#intra@lyz#E perch&eacute; dovremmo essere nella merda?
-		p#intra@simak#Ci, non ho voglia di discutere con l&apos;idiota: fallo tu
-		p#intra@ci#Certo, Simak. Dunque, Lyz, come sai la reazione del soggetto `Jo` &egrave; stata diversa da quello che Simak si aspettava. La sua collaborazione &egrave; incerta e questo difatto &egrave; un ostacolo per il piano
-		p#intra@lyz#Ah, gia, il piano… Posso ricordarvi che il piano &egrave; stupido e che un esercito non ci serve affatto? Tantomeno un esercito di mortali! Cazzo, Simak, ti basterebbe un fischio per schiodare dall&apos;Inferno legioni su legioni di… di… beh, di ogni genere di cosa!
-		p#intra@simak#Quando sei stupido, stupido Lyz. So bene che posso richiamare tutto e tutti, dovunque; e so bene che non mi serve un esercito. Ma se ho scelto cos&igrave;, &egrave; perch&egrave; un buon motivo. Hai scordato anche quello? E dire ch&apos;ero io quello senza memoria…
-		p#intra@lyz#Ehm… ?
-		p#intra@simak#Ci, continua tu per me…
-		p#intra@ci#Certamente. Come consuetudine, eLyznardh ha posto delle condizioni a se stesso per completare l&apos;impresa. Questa volta, inoltre, le limitazioni introdotte sono significativamente superiori a tutte le precedenti
-		p#intra@ci#In particolare, eLyznardh ha imposto che &ndash; nonostante l&apos;invasione &ndash; non sia torto un capello ad alcuno, mortale o immortale, Chadan o Zathotan. Inoltre, eLyznardh ha comandato che Datundhum non subisca danni, e che Cheskaldhum non cada
-		p#intra@lyz#Ah, ora ricordo. Tutte quella storia per cui dobbiamo portare la guerra all&apos;universo intero, senza rompere niente. Giusto?
-		p#intra@ci#S&igrave;. Inoltre, eLyznardh ha scelto di non intervenire direttamente nei combattimenti
-		p#intra@lyz#Si, me n&apos;ero dimenticato apposta, per evitare di dire nuovamente:
-		p#intra@lyz forte#Ma che cazzo hai nella testa?!?!
-		p#intra@lyz#Simak, tu sei il pi&ugrave; grosso idiota che io abbia mai conosciuto! Ma in fondo questo &egrave; il nostro modo di fare, giusto? eLyznardh &egrave; stupido perch&eacute; dentro ci siamo io e te, Simak! Ora, se permetti, mi dimenticher&ograve; nuovamente di questa faccenda. Per il tuo bene, spero che tu non me la faccia ricordare una seconda volta
+		p#speak@lyz#E perch&eacute; dovremmo essere nella merda?
+		p#speak@simak#Ci, non ho voglia di discutere con l&apos;idiota: fallo tu
+		p#speak@ci#Certo, Simak. Dunque, Lyz, come sai la reazione del soggetto `Jo` &egrave; stata diversa da quello che Simak si aspettava. La sua collaborazione &egrave; incerta e questo difatto &egrave; un ostacolo per il piano
+		p#speak@lyz#Ah, gia, il piano… Posso ricordarvi che il piano &egrave; stupido e che un esercito non ci serve affatto? Tantomeno un esercito di mortali! Cazzo, Simak, ti basterebbe un fischio per schiodare dall&apos;Inferno legioni su legioni di… di… beh, di ogni genere di cosa!
+		p#speak@simak#Quando sei stupido, stupido Lyz. So bene che posso richiamare tutto e tutti, dovunque; e so bene che non mi serve un esercito. Ma se ho scelto cos&igrave;, &egrave; perch&egrave; un buon motivo. Hai scordato anche quello? E dire ch&apos;ero io quello senza memoria…
+		p#speak@lyz#Ehm… ?
+		p#speak@simak#Ci, continua tu per me…
+		p#speak@ci#Certamente. Come consuetudine, eLyznardh ha posto delle condizioni a se stesso per completare l&apos;impresa. Questa volta, inoltre, le limitazioni introdotte sono significativamente superiori a tutte le precedenti
+		p#speak@ci#In particolare, eLyznardh ha imposto che &ndash; nonostante l&apos;invasione &ndash; non sia torto un capello ad alcuno, mortale o immortale, Chadan o Zathotan. Inoltre, eLyznardh ha comandato che Datundhum non subisca danni, e che Cheskaldhum non cada
+		p#speak@lyz#Ah, ora ricordo. Tutte quella storia per cui dobbiamo portare la guerra all&apos;universo intero, senza rompere niente. Giusto?
+		p#speak@ci#S&igrave;. Inoltre, eLyznardh ha scelto di non intervenire direttamente nei combattimenti
+		p#speak@lyz#Si, me n&apos;ero dimenticato apposta, per evitare di dire nuovamente:
+		p#speak@lyz#<strong>Ma che cazzo hai nella testa?!?!</strong>
+		p#speak@lyz#Simak, tu sei il pi&ugrave; grosso idiota che io abbia mai conosciuto! Ma in fondo questo &egrave; il nostro modo di fare, giusto? eLyznardh &egrave; stupido perch&eacute; dentro ci siamo io e te, Simak! Ora, se permetti, mi dimenticher&ograve; nuovamente di questa faccenda. Per il tuo bene, spero che tu non me la faccia ricordare una seconda volta
 	end#inside
 	p#Mentre quello s&apos;incazza e se la risolve da solo, io e Ci possiamo
 	discutere del da farsi, visto che abbiamo un nuovo imprevisto.
 	begin#inside
-		p#intra@simak#Dunque, quali sono le nostre speranze attuali?
-		p#intra@ci#Considerando le limitazioni autoimposte, e tenuto conto della tua magra figura di ieri, non molte. Se dovessi esprirermi formalmente, ti darei un [<code>18.5%</code>]
-		p#intra@simak#Se non m&apos;invento qualcosa, non verr&agrave; con noi…
-		p#intra@ci#&Egrave; improbabile che decida di seguirci, in base alla situazione attuale
-		p#intra@ci#Il protocollo suggerirebbe semplicemente di guidare il suo futuro tagliando le altre vie possibili
-		p#intra@simak#Ho scelto di non agire a quel modo, Ci. A quale scopo, infatti, obbligare questi mortali ad essere liberi? Gi&agrave; &egrave; accaduto in Zathot, e sai bene quanto &egrave; costato, a noi e a loro
-		p#intra@simak#Se queste creature devono scorrazzare per il mio regno, allora che ne portino il peso. E non sar&ograve; io a guidare questa marmaglia, ma sar&agrave; uno di loro
-		p#intra@ci#Il soggetto non &egrave; affatto dello stesso parere. L&apos;esercito, per come intendi realizzarlo, diverrebbe pericoloso sotto la sua guida
-		p#intra@simak#E lo sarebbe anche di pi&ugrave; se li lasciassi senza una guida. Devo solo trovare un modo gentile affinch&egrave; lei scelga di accettare
-		p#intra@lyz#Giochi fuori casa, caro il mio Simak. Fa&apos; come fanno i mortali, dunque
-		p#intra@simak#E come fanno, i mortali? E come fanno cosa?
-		p#intra@lyz#Andiamo, sai cosa intendo! I mortali hanno appreso da noi il modo di indirizzare la volont&agrave; altrui, e lo hanno fatto da tempo immemore
-		p#intra@simak#Non ti seguo…
-		p#intra@lyz#Dai, cazzone! Da quando esistono maschi e femmine, tutti gli esseri di Datundhum hanno giocherellato per portare un loro simile a costruire un nido assieme. Anche tu, per quanto differente da loro, hai fatto cose simili
-		p#intra@simak#Stai proponendo un inganno, Lyz?
-		p#intra@lyz#Suvvia, `inganno` &egrave; una parola meschina. Sto parlando di `suggerire` una via…
-		p#intra@simak#Lyz, come puoi suggerire un&apos;idea del genere ad uno come me. Mi conosci bene, conviviamo nella stessa testa da innumerevoli eoni
-		p#intra@lyz#Proprio perch&eacute; ti conosco bene ti sto spingendo verso una grande sfida
-		p#intra@simak#C&apos;&eacute; differenza tra una grande sfida e una sfida impossibile. Credo di sapere dove stai puntando, e so che non pu&ograve; funzionare. Non sono fatto a quel modo!
-		p#intra@lyz#Ah ah! Eccoti, dunque, signor <em>&quot;solo Sacomne mi capisce&quot;</em>, eccoti rinunciare alla sfida
-		p#intra@simak#<strong>Tu!</strong> Tu mi stai dando del codardo?
-		p#intra@lyz#Esatto, <em>grande Simak</em>. Avrai anche grandi poteri, grande scienza, grandi passioni, ma sotto sotto rimani ancora quel piccolo insignificante Cheskal che si nasconde e resta indietro mentre i suoi fratelli minori imparano la vita prima di lui
+		p#speak@simak#Dunque, quali sono le nostre speranze attuali?
+		p#speak@ci#Considerando le limitazioni autoimposte, e tenuto conto della tua magra figura di ieri, non molte. Se dovessi esprirermi formalmente, ti darei un [<code>18.5%</code>]
+		p#speak@simak#Se non m&apos;invento qualcosa, non verr&agrave; con noi…
+		p#speak@ci#&Egrave; improbabile che decida di seguirci, in base alla situazione attuale
+		p#speak@ci#Il protocollo suggerirebbe semplicemente di guidare il suo futuro tagliando le altre vie possibili
+		p#speak@simak#Ho scelto di non agire a quel modo, Ci. A quale scopo, infatti, obbligare questi mortali ad essere liberi? Gi&agrave; &egrave; accaduto in Zathot, e sai bene quanto &egrave; costato, a noi e a loro
+		p#speak@simak#Se queste creature devono scorrazzare per il mio regno, allora che ne portino il peso. E non sar&ograve; io a guidare questa marmaglia, ma sar&agrave; uno di loro
+		p#speak@ci#Il soggetto non &egrave; affatto dello stesso parere. L&apos;esercito, per come intendi realizzarlo, diverrebbe pericoloso sotto la sua guida
+		p#speak@simak#E lo sarebbe anche di pi&ugrave; se li lasciassi senza una guida. Devo solo trovare un modo gentile affinch&egrave; lei scelga di accettare
+		p#speak@lyz#Giochi fuori casa, caro il mio Simak. Fa&apos; come fanno i mortali, dunque
+		p#speak@simak#E come fanno, i mortali? E come fanno cosa?
+		p#speak@lyz#Andiamo, sai cosa intendo! I mortali hanno appreso da noi il modo di indirizzare la volont&agrave; altrui, e lo hanno fatto da tempo immemore
+		p#speak@simak#Non ti seguo…
+		p#speak@lyz#Dai, cazzone! Da quando esistono maschi e femmine, tutti gli esseri di Datundhum hanno giocherellato per portare un loro simile a costruire un nido assieme. Anche tu, per quanto differente da loro, hai fatto cose simili
+		p#speak@simak#Stai proponendo un inganno, Lyz?
+		p#speak@lyz#Suvvia, `inganno` &egrave; una parola meschina. Sto parlando di `suggerire` una via…
+		p#speak@simak#Lyz, come puoi suggerire un&apos;idea del genere ad uno come me. Mi conosci bene, conviviamo nella stessa testa da innumerevoli eoni
+		p#speak@lyz#Proprio perch&eacute; ti conosco bene ti sto spingendo verso una grande sfida
+		p#speak@simak#C&apos;&eacute; differenza tra una grande sfida e una sfida impossibile. Credo di sapere dove stai puntando, e so che non pu&ograve; funzionare. Non sono fatto a quel modo!
+		p#speak@lyz#Ah ah! Eccoti, dunque, signor <em>&quot;solo Sacomne mi capisce&quot;</em>, eccoti rinunciare alla sfida
+		p#speak@simak#<strong>Tu!</strong> Tu mi stai dando del codardo?
+		p#speak@lyz#Esatto, <em>grande Simak</em>. Avrai anche grandi poteri, grande scienza, grandi passioni, ma sotto sotto rimani ancora quel piccolo insignificante Cheskal che si nasconde e resta indietro mentre i suoi fratelli minori imparano la vita prima di lui
 	end#inside
 	p#A volte antichi ricordi tornano alla mia mente. Sono ricordi amari, dei
 	tempi in cui non ero pronto per affrontare il mondo che c&apos;era l&agrave;
@@ -59,29 +59,29 @@ start#page
 	p#Infine mi rialzo, prendo in mano la situazione ed ottengo quello che
 	voglio. Perch&eacute; sono eLyznardh.
 	begin#inside
-		p#intra@simak#<em>Quel</em> Simak &egrave; morto, morto per mano di eLyznardh
-		p#intra@simak#Ed fui <em>io</em> a guidare quella mano
-		p#intra@simak#Ebbene, Datol Lyz, questa &egrave; una sfida, ed io la accetto. Poni le tue condizioni
+		p#speak@simak#<em>Quel</em> Simak &egrave; morto, morto per mano di eLyznardh
+		p#speak@simak#Ed fui <em>io</em> a guidare quella mano
+		p#speak@simak#Ebbene, Datol Lyz, questa &egrave; una sfida, ed io la accetto. Poni le tue condizioni
 	end#inside
 	p#eLyz ride sonoramente. &Egrave; sinceramente divertito, poich&eacute; era
 	molto tempo che non accettavo una sua sfida. Ma questa volta, essa fa il
 	gioco di entrambi.
 	begin#inside
-		p#intra@lyz#Ebbene, queste sono le condizioni che pongo per la sfida. Jo guider&agrave; il nostro esercito, ma giurer&agrave; fedelt&agrave; a Simak soltanto, poich&eacute; sar&agrave; Simak soltanto ad agire. Io giuro qui e subito di trattenermi da qualunque intromissione, fino al giorno in cui Jo assumer&agrave; il comando
-		p#intra@ci#Ed io sottoscrivo e giuro lo stesso
-		p#intra@simak#Ed io infine accetto queste condizioni, dunque
-		p#intra@lyz#Non sia impaziente, bello, non ho ancora finito
-		p#intra@simak#Ah no?
-		p#intra@lyz#No, infatti: abbia dunque la cortesia di lasciarmi finire
-		p#intra@simak#Prego, faccia, faccia pure
-		p#intra@lyz#Orbene, dicevo… Ah, s&igrave;: sar&agrave; Simak soltanto, il Cheskald Simak
-		p#intra@simak#Rinuncier&ograve; dunque ai miei titoli e ai miei poteri per tutto il tempo che sar&agrave; necessario
-		p#intra@lyz#Fino al di lei giuramento, oppure &ndash; in caso di assoluta necessit&agrave; &ndash; fino a quando i tre presenti riterranno opportuno interrompere questo divieto
-		p#intra@simak#Ebbene, &egrave; tutto?
-		p#intra@lyz#&Egrave; tutto
-		p#intra@simak#Allora addio, signori. Ci rivedremo qui tra sette giorni, e quando torner&ograve; eLyznardh avr&agrave; un araldo che guider&agrave; i suoi eserciti
-		p#intra@lyz#Sette giorni, eh? Buona fortuna, dunque
-		p#intra@ci#Buona fortuna, <em>Cheskald</em> Simak
+		p#speak@lyz#Ebbene, queste sono le condizioni che pongo per la sfida. Jo guider&agrave; il nostro esercito, ma giurer&agrave; fedelt&agrave; a Simak soltanto, poich&eacute; sar&agrave; Simak soltanto ad agire. Io giuro qui e subito di trattenermi da qualunque intromissione, fino al giorno in cui Jo assumer&agrave; il comando
+		p#speak@ci#Ed io sottoscrivo e giuro lo stesso
+		p#speak@simak#Ed io infine accetto queste condizioni, dunque
+		p#speak@lyz#Non sia impaziente, bello, non ho ancora finito
+		p#speak@simak#Ah no?
+		p#speak@lyz#No, infatti: abbia dunque la cortesia di lasciarmi finire
+		p#speak@simak#Prego, faccia, faccia pure
+		p#speak@lyz#Orbene, dicevo… Ah, s&igrave;: sar&agrave; Simak soltanto, il Cheskald Simak
+		p#speak@simak#Rinuncier&ograve; dunque ai miei titoli e ai miei poteri per tutto il tempo che sar&agrave; necessario
+		p#speak@lyz#Fino al di lei giuramento, oppure &ndash; in caso di assoluta necessit&agrave; &ndash; fino a quando i tre presenti riterranno opportuno interrompere questo divieto
+		p#speak@simak#Ebbene, &egrave; tutto?
+		p#speak@lyz#&Egrave; tutto
+		p#speak@simak#Allora addio, signori. Ci rivedremo qui tra sette giorni, e quando torner&ograve; eLyznardh avr&agrave; un araldo che guider&agrave; i suoi eserciti
+		p#speak@lyz#Sette giorni, eh? Buona fortuna, dunque
+		p#speak@ci#Buona fortuna, <em>Cheskald</em> Simak
 	end#inside
 	sec#
 	p#L&apos;ho fatto grossa, stavolta.
@@ -99,17 +99,17 @@ start#page
 	Mal che vada, sar&agrave; la prima volta che perdo una sfida.
 	sec#
 	begin#outside
-		p#intra@simadran#E per quanto scoprirsi d&apos;un tratto nudi e inermi, sperduti nel grande mondo sia brutta cosa, lasciamo per qualche tempo il piccolo grande Simak per occuparci invece di qualcuno che navi in acque ben pi&ugrave; minacciose
-		p#intra@simadran#Trattasi di una certa giovane donna che abbiamo lasciato alla sua festa di compleanno, leggermente alterata &ndash; se cos&igrave; ci &egrave; concesso dire &ndash; ma non a sufficienza perch&eacute; qualche invitato potesse pensare a qualcosa di diverso dall&apos;eccitamento per la suddetta festa
-		p#intra@simadran#Avevano lasciato cadere la povera ragazza tra le braccia del padre, il quale &ndash; mirabilmente guidato da una visione simile a quella di lei, ma molto pi&ugrave; positiva (non si dica che eLyznardh scelga male le visioni che invia) &ndash; cercava in ogni modo di raddrizzarle il morale, mentre procedeva goffamente a tentoni, con domande fin troppo vaghe, nel tentativo di comprendere la visione della figlia
-		p#intra@simadran#A sua discolpa diremo che l&apos;amore paterno che dimostr&ograve; con abbracci e tentativi di compresione valse a ripagare la sua incapacit&agrave; di afferare la gravit&agrave; della situazione
-		p#intra@simadran#Tale infatti fu l&apos;ardimento che impieg&ograve; per consolare la figlia che dimentic&ograve; di consolare se stesso ed arriv&ograve; a dimenticare il terribile annuncio ricevuto avuto dalla visione, e cio&egrave; che l&apos;indomani avrebbe dovuto salutare la sua figlia adorata per l&apos;ultima volta. Nella sua dimenticanza, accompagn&ograve; Jo, sfinita, nella sua stanza, l&apos;aiut&ograve; a coricarsi e poi si ritir&ograve; per abbandonarsi ad un sonno senza sogni
+		p#speak@simadran#E per quanto scoprirsi d&apos;un tratto nudi e inermi, sperduti nel grande mondo sia brutta cosa, lasciamo per qualche tempo il piccolo grande Simak per occuparci invece di qualcuno che navi in acque ben pi&ugrave; minacciose
+		p#speak@simadran#Trattasi di una certa giovane donna che abbiamo lasciato alla sua festa di compleanno, leggermente alterata &ndash; se cos&igrave; ci &egrave; concesso dire &ndash; ma non a sufficienza perch&eacute; qualche invitato potesse pensare a qualcosa di diverso dall&apos;eccitamento per la suddetta festa
+		p#speak@simadran#Avevano lasciato cadere la povera ragazza tra le braccia del padre, il quale &ndash; mirabilmente guidato da una visione simile a quella di lei, ma molto pi&ugrave; positiva (non si dica che eLyznardh scelga male le visioni che invia) &ndash; cercava in ogni modo di raddrizzarle il morale, mentre procedeva goffamente a tentoni, con domande fin troppo vaghe, nel tentativo di comprendere la visione della figlia
+		p#speak@simadran#A sua discolpa diremo che l&apos;amore paterno che dimostr&ograve; con abbracci e tentativi di compresione valse a ripagare la sua incapacit&agrave; di afferare la gravit&agrave; della situazione
+		p#speak@simadran#Tale infatti fu l&apos;ardimento che impieg&ograve; per consolare la figlia che dimentic&ograve; di consolare se stesso ed arriv&ograve; a dimenticare il terribile annuncio ricevuto avuto dalla visione, e cio&egrave; che l&apos;indomani avrebbe dovuto salutare la sua figlia adorata per l&apos;ultima volta. Nella sua dimenticanza, accompagn&ograve; Jo, sfinita, nella sua stanza, l&apos;aiut&ograve; a coricarsi e poi si ritir&ograve; per abbandonarsi ad un sonno senza sogni
 	end#outside
 	sec#
 	begin#outside
-		p#intra@simadran#Ed ora che le creature mortali riposano, possiamo tornare da quell&apos;anima che non dorme ormai da alcuni secoli degli uomini
-		p#intra@simadran#Quella creatura &egrave; perduta &ndash; per la prima volta da tempo, ma non per la prima volta &ndash; e cerca di ricordarsi del modo in cui si salv&ograve; quelle altre volte che si ritrov&ograve; in situazioni simili
-		p#intra@simadran#Ahim&egrave;, non ci riusc&igrave; affatto. S&igrave;, perch&eacute; &ndash; per quanto fosse eLyznardh il pi&ugrave; grande e potenti di tutti i viventi del suo tempo, e per quanto egli fosse eLyznardh &ndash; c&apos;&eacute; da dire che Simak, il Cheskald Simak, da solo, non valeva poi un gran ch&eacute;… Ecco dunque quel che successe il mattino seguente, in quello stesso prato dove Jo vide la sua nuova casa per la prima volta
+		p#speak@simadran#Ed ora che le creature mortali riposano, possiamo tornare da quell&apos;anima che non dorme ormai da alcuni secoli degli uomini
+		p#speak@simadran#Quella creatura &egrave; perduta &ndash; per la prima volta da tempo, ma non per la prima volta &ndash; e cerca di ricordarsi del modo in cui si salv&ograve; quelle altre volte che si ritrov&ograve; in situazioni simili
+		p#speak@simadran#Ahim&egrave;, non ci riusc&igrave; affatto. S&igrave;, perch&eacute; &ndash; per quanto fosse eLyznardh il pi&ugrave; grande e potenti di tutti i viventi del suo tempo, e per quanto egli fosse eLyznardh &ndash; c&apos;&eacute; da dire che Simak, il Cheskald Simak, da solo, non valeva poi un gran ch&eacute;… Ecco dunque quel che successe il mattino seguente, in quello stesso prato dove Jo vide la sua nuova casa per la prima volta
 	end#outside
 	p#Per conservare le apparenze, dato che ho gi&agrave; &ndash; ufficialmente
 	&ndash; rinunciato ai miei poteri, eLyz e Ci mi hanno, per cos&igrave; dire,
@@ -174,9 +174,9 @@ start#page
 	braccia. Ora che l&apos;ho al fianco, l&apos;accompagno per un quarto di
 	giro, finch&eacute; mi frappongo tra lei e il padre:
 	begin#outside
-		p#intra@lyznardh#Mi hai servito bene, Jona
-		p#intra@lyznardh#Tutto quello che chiederai, ti verr&agrave; accordato sette volte
-		p#intra@lyznardh#<em>Quel</em> giorno, se lo vorrai, siederai con me alla mia tavola
+		p#speak@lyznardh#Mi hai servito bene, Jona
+		p#speak@lyznardh#Tutto quello che chiederai, ti verr&agrave; accordato sette volte
+		p#speak@lyznardh#<em>Quel</em> giorno, se lo vorrai, siederai con me alla mia tavola
 	end#outside
 	p#Detto questo, prendo Jo e scompaio dalla vista; non visto da occhi
 	mortali, mi porto in alto, verso la vetta del monte, dove nessuno pu&ograve;
@@ -185,7 +185,7 @@ start#page
 	p#Lascio che Jo si stacchi dal braccio, poi mi rialzo per assumere una
 	posizione pi&ugrave; composta:
 	begin#outside
-		p#intra@lyznardh#Ebbene, Jo, lascia che mi presenti nuovamente, perch&eacute; ancora non mi conosci affatto
+		p#speak@lyznardh#Ebbene, Jo, lascia che mi presenti nuovamente, perch&eacute; ancora non mi conosci affatto
 	end#outside
 	p#Detto questo, porto la destra vicino al petto, allargo la sinistra
 	all&apos;indietro, abbasso il capo e riversisco. Attendo dunque un secondo
@@ -205,7 +205,7 @@ start#page
 	mi rialzo su due gambe, strappo l'involucro in cui sono rinchiuso e respiro
 	l'aria di montagna:
 	begin#outside
-		p#intra@simak#Piacere, io sono Simak!
+		p#speak@simak#Piacere, io sono Simak!
 	end#outside
 	p#Allungo la mano destra.
 stop#page

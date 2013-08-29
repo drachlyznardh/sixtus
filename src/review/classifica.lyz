@@ -7,41 +7,41 @@ tab#awesome
 	stitle#Fucking awesome!!!
 	Questi sono decisamente da vedere / provare / comprare. Subito. Di corsa.
 	begin#ul
-		li#link#Recensioni/Film/XLVIII/#The cabin in the woods@ — 2011
-		li#link#Recensioni/Giochi/XXXIII/#[ Demon's | Dark ] Souls
-		li#link#Recensioni/Show/XV/#Transformers: Prime
-		li#link#Recensioni/Giochi/II/#Assassin&apos;s Creed Brotherhood
-		li#link#Recensioni/Show/XIII/#Kamen Rider W#W
-		li#link#Recensioni/Show/XIII/#OOO, Den-O, all Riders: Let's go Kamen Riders#M2011
-		li#link#Recensioni/Show/XXI/#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle#M2011
-		li#link#Recensioni/Film/XXVI/#Meet Joe Black
-		li#link#Recensioni/Show/XXI/#Kaizoku Sentai Gokaiger#gokaiger
-		li#link#Recensioni/Giochi/XXX/#Batman: Arkham [ Asylum | City ]
-		li#link#Recensioni/Film/XXXII/#I Vendicatori
-		li#link#Recensioni/Libri/XXXVI/#Il gioco di Ender
-		li#link#Recensioni/Libri/XLI/#Fanteria dello spazio
-		li#link#Recensioni/Film/XLII/#Starship Troopers#i
+		p#link#Recensioni/Film/XLVIII/#The cabin in the woods@ — 2011
+		p#link#Recensioni/Giochi/XXXIII/#[ Demon's | Dark ] Souls
+		p#link#Recensioni/Show/XV/#Transformers: Prime
+		p#link#Recensioni/Giochi/II/#Assassin&apos;s Creed Brotherhood
+		p#link#Recensioni/Show/XIII/#Kamen Rider W#W
+		p#link#Recensioni/Show/XIII/#OOO, Den-O, all Riders: Let's go Kamen Riders#M2011
+		p#link#Recensioni/Show/XXI/#Gokaiger Goseiger Super Sentai 199 Hero Grand Battle#M2011
+		p#link#Recensioni/Film/XXVI/#Meet Joe Black
+		p#link#Recensioni/Show/XXI/#Kaizoku Sentai Gokaiger#gokaiger
+		p#link#Recensioni/Giochi/XXX/#Batman: Arkham [ Asylum | City ]
+		p#link#Recensioni/Film/XXXII/#I Vendicatori
+		p#link#Recensioni/Libri/XXXVI/#Il gioco di Ender
+		p#link#Recensioni/Libri/XLI/#Fanteria dello spazio
+		p#link#Recensioni/Film/XLII/#Starship Troopers#i
 	end#ul
 tab#buoni
 	stitle#Buono
 	Che ci crediate o meno, questi mi sono piaciuti. Non sono
 	magnificissimi, non sono eccelsi, ma sono buoni.
 	begin#ul
-		li#link#Recensioni/Film/VIII/#Capitan America
-		li#link#Recensioni/Show/IX/#Angel Beats!
-		li#link#Recensioni/Show/XIII/#Kamen Rider OOO#OOO
+		p#link#Recensioni/Film/VIII/#Capitan America
+		p#link#Recensioni/Show/IX/#Angel Beats!
+		p#link#Recensioni/Show/XIII/#Kamen Rider OOO#OOO
 		
 		p#link#Recensioni/Film/XVII/#First Blood#I
 		e
 		link#Recensioni/Film/XVII/#Rambo: First Blood part II#II
 		
-		li#link#Recensoni/Film/XIX/#Ed Wood
-		li#link#Recensioni/Show/XXV/#Chuck
-		li#link#Recensioni/Film/XXVII/#Il discorso del re
-		li#link#Recensioni/Show/XXVIII/#Macross 7#macross7
-		li#link#Recensioni/Libri/XXXI/#La Compagnia dei Celestini
-		li#link#Recensioni/Show/XXXIV/#After War @Gundam X@#X
-		li#link#Recensioni/Libri/XXXV/#A me le guardie!#I
+		p#link#Recensoni/Film/XIX/#Ed Wood
+		p#link#Recensioni/Show/XXV/#Chuck
+		p#link#Recensioni/Film/XXVII/#Il discorso del re
+		p#link#Recensioni/Show/XXVIII/#Macross 7#macross7
+		p#link#Recensioni/Libri/XXXI/#La Compagnia dei Celestini
+		p#link#Recensioni/Show/XXXIV/#After War @Gundam X@#X
+		p#link#Recensioni/Libri/XXXV/#A me le guardie!#I
 		e
 		link#Recensioni/Libri/XXXV/#Uomini d'arme#II
 		e
@@ -53,24 +53,24 @@ tab#lasciano
 	stitle#Si lascia guardare
 	Questi si lasciano guardare. Con le dovute precauzioni.
 	begin#ul
-		li#link#Recensioni/Show/VI/#Masterforce
-		li#link#Recensioni/Film/X/#I Puffi
-		li#link#Recensioni/Libri/XI/#Nessun Dove
+		p#link#Recensioni/Show/VI/#Masterforce
+		p#link#Recensioni/Film/X/#I Puffi
+		p#link#Recensioni/Libri/XI/#Nessun Dove
 		
 		p#link#Recensioni/Film/XVII/#Rambo III#iii
 		e
 		link#Recensioni/Film/XVII/#John Rambo#iv
 
-		li#link#Recensioni/Show/XXII/#Dollhouse
-		li#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
+		p#link#Recensioni/Show/XXII/#Dollhouse
+		p#link#Recensioni/Film/XXIV/#Cowboys&amp;Aliens
 	end#ul
 tab#meh
 	stitle#Meh. / Mah
 	Questi non sono per tutti, sono per chi ha gusti particolari o lo
 	stomaco di ferro.
 	begin#ul
-		li#link#Recensioni/Film/III/#Robocop
-		li#link#Recensioni/Show/IV/#Pani Poni Dash
+		p#link#Recensioni/Film/III/#Robocop
+		p#link#Recensioni/Show/IV/#Pani Poni Dash
 		
 		p#link#Recensioni/Libri/XII/#Harry Potter
 			e
@@ -94,37 +94,37 @@ tab#bay
 	O semplicemente si dimenticano che le esplosioni non fanno un buon film
 	/ buon anime / buona visione.
 	begin#ul
-		li#link#Recensioni/Show/V/#Blassreiter
-		li#link#Recensioni/Show/XL/#Godzilla
-		li#link#Recensioni/Film/Brutti/XLIV/#Resident Evil: @Retribution@#Retribution
+		p#link#Recensioni/Show/V/#Blassreiter
+		p#link#Recensioni/Show/XL/#Godzilla
+		p#link#Recensioni/Film/Brutti/XLIV/#Resident Evil: @Retribution@#Retribution
 	end#ul
 tab#no
 	stitle#No
 	Questi no.
 	begin#ul
-		li#link#Recensioni/Film/I/#Thor
-		li#link#Recensioni/Film/VII/#Dark Of The Moon
-		li#link#Recensioni/Show/XIV/#Gundam AGE#i## all'inizio
-		li#D–Wars
-		li#Mega shark Vs Giant Octopus
-		li#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
-		li#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider
+		p#link#Recensioni/Film/I/#Thor
+		p#link#Recensioni/Film/VII/#Dark Of The Moon
+		p#link#Recensioni/Show/XIV/#Gundam AGE@ all'inizio#i
+		p#D–Wars
+		p#Mega shark Vs Giant Octopus
+		p#link#Recensioni/Film/Brutti/XVI/#Bitch Slap
+		p#link#Recensioni/Film/Brutti/XXXVII/#Ghost Rider
 		e anche
 		link#Recensioni/Film/Brutti/XXXVII/#Spirit of Vengeance
-		li#link#Recensioni/Film/Brutti/XXXVIII/#The Amazing Spider-man#Amazing
-		li#link#Recensioni/Film/XLII/#Starship Troopers 2#ii
+		p#link#Recensioni/Film/Brutti/XXXVIII/#The Amazing Spider-man#Amazing
+		p#link#Recensioni/Film/XLII/#Starship Troopers 2#ii
 	end#ul
 tab#ridere
 	stitle#Brutto da ridere
 	Questi sono bruttarelli. Sono fatti male. Ma non con intenzione. Rido di
 	loro, non con loro.
 	begin#ul
-		li#Robot
-		li#Alien Vs Ninja
-		li#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
-		li#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
-		li#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky
-		li#link#Recensioni/Film/XLII/#Starship Troopers 3#iii
+		p#Robot
+		p#Alien Vs Ninja
+		p#link#Recensioni/Film/Brutti/XVIII/#Black Sheep
+		p#link#Recensioni/Film/Brutti/XX/#Plan 9 from Outer Space
+		p#link#Recensioni/Film/Brutti/XXXIX/#Iron Sky
+		p#link#Recensioni/Film/XLII/#Starship Troopers 3#iii
 	end#ul
 tab#magnifici
 	stitle#Magnificamente brutto
@@ -134,13 +134,13 @@ tab#magnifici
 	Ne parlerò di più quando avrò tempo e briga. Intanto, andate a vedervi
 	un po' di 'sta roba:
 	begin#ul
-		li#Machete
-		li#Planet Terror
-		li#Sharktopus
-		li#link#Recensioni/Film/XXIII/#Zombieland
-		li#The Rocky Horror Picture Show
-		li#link#Recensioni/Show/XIV/#Gundam AGE#ii## dopo un po'
-		li#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter
+		p#Machete
+		p#Planet Terror
+		p#Sharktopus
+		p#link#Recensioni/Film/XXIII/#Zombieland
+		p#The Rocky Horror Picture Show
+		p#link#Recensioni/Show/XIV/#Gundam AGE@ dopo un po'#ii
+		p#link#Recensioni/Film/Brutti/XLVI/#Jesus Christ Vampire Hunter
 	end#ul
 stop#page
 start#side

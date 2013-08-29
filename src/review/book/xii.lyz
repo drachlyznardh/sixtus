@@ -768,8 +768,8 @@ tab#vi
 
 	Poi arriva Silente, che ci ricorda che Piton è completamente affidabile.
 	begin#outside
-		p#intra@gods#Scusi?!?! Tutto quel capitolo iniziale in cui Piton scende a patti con i cattivi a cosa serve? Dovrebbe depistarmi?
-		p#intra@em#Gods! Cosa dici! Rovinerai la suspence!
+		p#speak@gods#Scusi?!?! Tutto quel capitolo iniziale in cui Piton scende a patti con i cattivi a cosa serve? Dovrebbe depistarmi?
+		p#speak@em#Gods! Cosa dici! Rovinerai la suspence!
 	end#outside
 	Vabbeh…
 	sec#
@@ -804,12 +804,12 @@ tab#vi
 	puttana solo per far ingelosire Hermione, Ginny sta con un tizio ancora
 	diverso, ma poi si mollano e…
 	begin#outside
-		p#intra@gods#blah blah blah, abbiamo capito, possiamo andare avanti?
-		p#intra@em#Ma come? Non ti interessano forse tutte queste turbe adolescenziali? Non ti immedesimi?
-		p#intra@gods#No, veramente no. Sono tutti un branco di puttane
-		p#intra@em#Non è vero!
-		p#intra@gods#Si ch'è vero!
-		p#intra@em#Nient'affatto. E per dimostrartelo…
+		p#speak@gods#blah blah blah, abbiamo capito, possiamo andare avanti?
+		p#speak@em#Ma come? Non ti interessano forse tutte queste turbe adolescenziali? Non ti immedesimi?
+		p#speak@gods#No, veramente no. Sono tutti un branco di puttane
+		p#speak@em#Non è vero!
+		p#speak@gods#Si ch'è vero!
+		p#speak@em#Nient'affatto. E per dimostrartelo…
 	end#outside
 	Alla fine dell'ennesima inutile partita di Quiddich, senza che Harry abbia
 	fatto nulla, la squadra vince, tutti festeggiano, Harry bacia Ginny e la
@@ -890,7 +890,7 @@ tab#vi
 	Come dici? È perché provi dei sentimenti per qualcuno? Qualcuno in questa
 	stanza? Sarà forse lui? O magari lui?
 	begin#outside
-		p#intra@gods#O magari non frega uno stracazzo a nessuno?
+		p#speak@gods#O magari non frega uno stracazzo a nessuno?
 	end#outside
 	title#Harry Potter e il Principe Mezzosangue
 	title@right#Maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah
@@ -974,9 +974,9 @@ tab#vii
 	Poi, improvvisamente, si passa al ricevimento e lì Harry incontra un
 	vecchietto e una nonnina. In quella, arriva un fattorino:
 	begin#outside
-		p#intra@em#Il signor Potter, Harry James?
-		p#intra@#Sono io
-		p#intra@em#Eccole una tonnellata di insinuazioni sul passato di Silente.  Firmi qui, prego
+		p#speak@em#Il signor Potter, Harry James?
+		p#speak@#Sono io
+		p#speak@em#Eccole una tonnellata di insinuazioni sul passato di Silente.  Firmi qui, prego
 	end#outside
 	BRagaxejhnrbzfdbnmtxkjmbdnabjkgxbdkibmndkh. Un fiume di cose losche e
 	sospette, una cascata, un pentolone, un fiotto, un geiser! Cose abbastanza
@@ -1180,7 +1180,7 @@ tab#vii
 	No, SRSLY, bella merda.
 	title#Harry Potter &amp; e i Doni della Morte
 	title@right#Meh. / Mah
-	sbr#
+	sec#br
 	Ma non è mai, proprio mai, venuto in mente a Voldemort che ci sono altri
 	modi per uccidere? Tipo il fuoco? Non poteva prendera Harry, in uno dei
 	&gt;9000 momenti adatti, prendere la fottuta bacchetta e dargli fuoco? Non
@@ -1218,15 +1218,15 @@ start#side
 	p#tid#Intro#intro
 	title#Harry Potter e…
 	begin@3em#roman
-		li#tid#La pietra filosofale#i
-		li#tid#La camera dei segreti#ii
-		li#tid#Il prigioniero di Azkaban#iii
-		li#tid#Il calice di fuoco#iv
-		li#tid#L&apos;ordine#v#V1## /
-		tid#della#v#V2## /
+		p#tid#La pietra filosofale#i
+		p#tid#La camera dei segreti#ii
+		p#tid#Il prigioniero di Azkaban#iii
+		p#tid#Il calice di fuoco#iv
+		p#tid#L&apos;ordine@ /#v#V1
+		tid#della@ /#v#V2
 		tid#Fenice#v#V3
-		li#tid#Il principe mezzosangue#vi
-		li#tid#I doni della morte#vii
+		p#tid#Il principe mezzosangue#vi
+		p#tid#I doni della morte#vii
 	end#roman
 stop#side
 

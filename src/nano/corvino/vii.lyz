@@ -40,7 +40,7 @@ tab#i
 		Perché a quei tempi avevo un cellulare.
 	
 		Ce l'avevo perché i miei genitori, modernamente pensando, volevano
-		avermi rintracciabile anche fuori di casa.
+		avermi rspeakcciabile anche fuori di casa.
 	end#inside
 	Era un suo messaggio.
 
@@ -95,21 +95,21 @@ tab#i
 		Poi arrivammo alla porta, ed ero già stremato dalla stanchezza, quando
 		lei pronunciò le fatidiche parole:
 	begin#outside
-		p#intra@Camelia#Ti va di salire?
+		p#speak@Camelia#Ti va di salire?
 	end#outside
 	E dissi di sì per l'ultima volta.
 tab#ii
 	Bella casa, cane simpatico. Un sacco di film che anch'io avevo. E qualche
 	bel quarto d'ora di discorsi inutili.  Poi mi decisi… più o meno.
 	begin#inside
-		p#intra@Corvino#Camelia sospirai
-		p#intra@Corvino#c&apos;è una cosa che devo dirti
+		p#speak@Corvino#Camelia sospirai
+		p#speak@Corvino#c&apos;è una cosa che devo dirti
 	end#inside
 	E poi impiegai lunghi, interminabili minuti. L'anima del mio ragionamento,
 	su consiglio di quegli amici ai quali avevo chiesto consiglio, quei Matta,
 	Sgrebeno e Condo, era sostanzialmente
 	begin#inside
-		p#intra@Corvino#Chi ama meno tiene il controllo, e piuttosto che subire preferisco rinunciare
+		p#speak@Corvino#Chi ama meno tiene il controllo, e piuttosto che subire preferisco rinunciare
 	end#inside
 	begin#inside
 		Una sorta di abbandono della zavorra per continuare a vivere,
@@ -122,9 +122,9 @@ tab#ii
 	end#inside
 	Poi &ndash; finalmente &ndash; riuscii a sputare fuori le parole
 	begin#outside
-		p#intra@Corvino#Camelia
+		p#speak@Corvino#Camelia
 			sospirai
-			intra@Corvino#io… mi sono… innamorato di te. Dal primo momento
+			speak@Corvino#io… mi sono… innamorato di te. Dal primo momento
 	end#outside
 	begin#inside
 		Eh. Classico e smielato, ma almeno era vero.
@@ -135,7 +135,7 @@ tab#ii
 
 	La prima, immediatamente, fu
 	begin#outside
-		p#intra@Camelia#Sei il quinto che me lo dice, questa settimana
+		p#speak@Camelia#Sei il quinto che me lo dice, questa settimana
 	end#outside
 	begin#inside
 		Mica male.
@@ -146,18 +146,18 @@ tab#ii
 	end#inside
 	La guardai negli occhi, sconsolato e dissi incerto
 	begin#outside
-		p#intra@Corvino#Eh… Complimenti?
+		p#speak@Corvino#Eh… Complimenti?
 	end#outside
 	dondolando la testa. Lei, spontaneamente, rise.
 	sec#
 	Poi però &ndash; senza che io avessi detto altro &ndash; lei si lanciò in
 	una lunga apologia che cominciò con
 	begin#outside
-		p#intra@Camelia#Sai, adesso ho un ragazzo…
+		p#speak@Camelia#Sai, adesso ho un ragazzo…
 	end#outside
 	ma contenne anche cose &ndash; assolutamente non richieste &ndash; come
 	begin#outside
-		p#intra@Camelia#… forse non sai che, quando ero ancora in città, sono stata sia con Condo che con Matta, ma non con Sgrebeno (che comunque con me c&apos;ha provato e non poco)
+		p#speak@Camelia#… forse non sai che, quando ero ancora in città, sono stata sia con Condo che con Matta, ma non con Sgrebeno (che comunque con me c&apos;ha provato e non poco)
 	end#outside
 	Mi parve stanca. O almeno credo. Forse quello stanco ero io.
 		
@@ -199,7 +199,7 @@ tab#ii
 		la vita &ndash; e poi concluse con le ultime parole che mi sarei
 		immaginato di poter sentire da lei
 	begin#outside
-		p#intra@Camelia#Che diresti, se ti chiedessi se ti va di baciarmi?
+		p#speak@Camelia#Che diresti, se ti chiedessi se ti va di baciarmi?
 	end#outside
 	begin#inside
 	Ero decisamente impreparato per quelle parole.
@@ -215,7 +215,7 @@ tab#ii
 	end#inside
 	Senza nemmeno pensare, risposi con un candido
 	begin#outside
-		p#intra@Corvino#No
+		p#speak@Corvino#No
 	end#outside
 	e me ne andai.
 	sec#
@@ -235,7 +235,7 @@ stop#page
 start#side
 	title#La dichiarazione
 	begin@2.5em#roman
-		li#tid#A casa mia#i
-		li#tid#A casa sua#ii
+		p#tid#A casa mia#i
+		p#tid#A casa sua#ii
 	end#roman
 stop#side

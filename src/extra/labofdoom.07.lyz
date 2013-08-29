@@ -8,12 +8,12 @@ tab#l00
 	Ma la brutta notizia è che niente sembra funzionare, oggi. La connessione
 	con la <code>MPC8313ERDB</code> c'è, ma il resto no:
 	begin#ul
-		li#<code>ptpd2</code> sulla scheda non risponde più…
-		li#il <code>masterclock</code> continua ad avere problemi con la famosa
+		p#<code>ptpd2</code> sulla scheda non risponde più…
+		p#il <code>masterclock</code> continua ad avere problemi con la famosa
 		<code>tsu_usb_socketd</code>…
-		li#il <code>servoclock</code> e lo switch non rispondono più, né via ssh
+		p#il <code>servoclock</code> e lo switch non rispondono più, né via ssh
 		né via web…
-		li#la rete <code>192.186.122.0</code> pare non avere un server per
+		p#la rete <code>192.186.122.0</code> pare non avere un server per
 		<code>dhcp</code>… mi ci posso collegare a cazzo, però…
 	end#ul
 	sec#
@@ -22,7 +22,7 @@ tab#l00
 	che lancio sulla scheda, con qualunque ragionevole combinazione di opzioni,
 	adesso si pianta sul controllo del file di lock
 	<code>/var/run/kernel_clock</code> e non sembra farcela…
-	reverse#<code>&lt;h4x m0d3 activate&gt;</code>
+	r#<code>&lt;h4x m0d3 activate&gt;</code>
 	br#
 	L'amico <code>grep</code> mi indica la <code>riga 273</code> del solito file
 	<code>dep/startup.c</code> dei sorgenti di <code>ptpd-2.2.0</code>.
@@ -48,13 +48,13 @@ tab#l01
 	title#Data Astrale [<code>L01</code>] <em>12/07</em> 2012
 	Qual è la cosa che si deve controllare <strong>per prima</strong> quando una
 	connessione di rete non funziona?
-	reverse#Lo stracazzo di <strong>cavo</strong>. Lo strafottuto cavo.
+	r#Lo stracazzo di <strong>cavo</strong>. Lo strafottuto cavo.
 	br#
 	La soluzione più probabile è sempre la più semplice. M'è venuto in mente –
 	ovviamente – a casa, mentre ero in bagno (se ricordate quel <a
 	href="http://www.youtube.com/results?search_query=scrubs+roof+toilet">cesso</a>
 	in <em>Scrubs</em>). Ho pensato
-	intra@gods#Quel cavo libero@ho pensato@perché non è già attaccato a qualcosa?@ e poi@Quanti cavi escono dallo switch?
+	speak@gods#Quel cavo libero@ho pensato@perché non è già attaccato a qualcosa?@ e poi@Quanti cavi escono dallo switch?
 	Beh, stamattina ho controllato questo come prima cosa: c'è soltanto un cavo,
 	tra lo switch e il <em>servoclock</em>. Basta. L'altro cavo (quello che ieri
 	pendeva dalla <em>porta Ethernet rossa del Destino</em> l'ho trovato
@@ -143,14 +143,14 @@ tab#l02
 	Fieramente deciso a raccogliere informazioni dal Presidio e dal Cisca, mi
 	reco in entrambi gli uffici. Succede che:
 	begin#ul
-		li#non posso registrare SgaggioTiem perché i miei crediti sono esauriti,
+		p#non posso registrare SgaggioTiem perché i miei crediti sono esauriti,
 		quindi dovrò farmi dare una matricola apposta, registrare il voto come
 		“crediti extra” e poi includerli nella mia magistrale una volta
 		iscritto;
-		li#non posso esattamente prendere IP a cazzo (come in precedenza) dalla
+		p#non posso esattamente prendere IP a cazzo (come in precedenza) dalla
 		rete <code>192.168.122.0</code>, ma scopro che c'è un modulo di
 		richiesta ufficiale che Sgaggio deve firmare;
-		li#l'<em>Omino del Cisca</em> mi dice che non c'è alcun filtro di nessun
+		p#l'<em>Omino del Cisca</em> mi dice che non c'è alcun filtro di nessun
 		tipo su nessun router, e che quindi il fatto che il <em>Master</em> non
 		mandi nulla è colpa sua o mia, non del Cisca…
 	end#ul
@@ -334,17 +334,17 @@ tab#l06
 
 	Ma per verificare che faccia cose buone, che altro dovrei fare se non
 	lasciarlo fare il master? Non so, quindi provo. Dunque… uhm…
-	intra@gods#GPS-MXS?
-	intra@em#Sì, padrone?
-	intra@gods#Fa' il master
-	intra@em#Sì
+	p#speak@gods#GPS-MXS?
+	p#speak@em#Sì, padrone?
+	p#speak@gods#Fa' il master
+	p#speak@em#Sì
 	
 	Lallà lallallero…
 
-	intra@gods#GPS-MXS?
-	intra@em#Sì, padrone?
-	intra@gods#Stai facendo il master, vero? Qui non m'arriva 'na ceppa…
-	intra@em#… Veramente, Maestà…
+	p#speak@gods#GPS-MXS?
+	p#speak@em#Sì, padrone?
+	p#speak@gods#Stai facendo il master, vero? Qui non m'arriva 'na ceppa…
+	p#speak@em#… Veramente, Maestà…
 
 	Scopro che questo aggeggio è un po' come <em>Windows95</em>: ogni modifica
 	del <em>menga</em> diventa effettiva solo dopo il riavvio…
@@ -441,7 +441,7 @@ tab#l07
 	<code>gnuplot</code>tare (sigh <code>;_;</code>) sono righine
 	insignificanti.
 	
-	reverse#Non son neanche sicuro di stare andando nella direzione giusta.
+	r#Non son neanche sicuro di stare andando nella direzione giusta.
 	br#
 	Intanto, boh, mostro iniziativa… poi si vedrà. Sgaggio mi vuol vedere
 	giovedì mattina (avrà da fare anche lui, immagino, come noialtri mortali…)
@@ -459,7 +459,7 @@ tab#l07
 	<code>00:00</code> del <code>00/00/0000</code>). Forse averli attaccati
 	insieme li ha emozionati troppo.
 
-	reverse#Almeno il tentativo di incesto non ha fatto comparire <em>Spider-man</em>.
+	r#Almeno il tentativo di incesto non ha fatto comparire <em>Spider-man</em>.
 tab#l08
 	title#Data Astrale [<code>L08</code>] <em>25/07</em>
 	begin#mini@right
@@ -591,7 +591,7 @@ tab#l09
 	end#ul
 	br#
 	E infine, testuali parole di Sgaggio:
-	reverse#“<em>[…] appesi per i coglioni</em>”
+	r#“<em>[…] appesi per i coglioni</em>”
 tab#l10
 	title#Data Astrale [<code>L10</code>] <em>27/07</em>
 	Ho deciso di fare cose. Costruirò i risultati di questo esperimento.
@@ -632,7 +632,7 @@ tab#l10
 	La perturbazione che intendo applicare ora è un'ora casuale su entrambi.
 	Chissà se questo influirà anche sull'onda.
 	br#
-	reverse#Come speravo, non lo fa: le onde restano stabili.
+	r#Come speravo, non lo fa: le onde restano stabili.
 	sec#
 	title#Data Astrale [<code>L10b</code>]
 	Proviamo ora infilando un contatto. I due aggeggi assieme. Non dovrebbe
@@ -681,7 +681,7 @@ tab#l11
 	Oggi ho trovato il laboratorio “non esattamente in ordine”, niente di grave
 	ma intanto prendo spunto per realizzare un cartello con scritto
 	begin#outside
-		reverse#<em>ESPERIMENTO in CORSO</em>
+		r#<em>ESPERIMENTO in CORSO</em>
 	end#outside
 	Sono andato a far visita a Sgaggio con un paio di idee per il titolo. Eccomi
 	di ritorno con le firme sui fogli e l'imminente
@@ -724,7 +724,7 @@ tab#l12
 	Ci do un'occhiatina… l'aggeggio importa <em>&gt;9000</em> librerie, apre un
 	<code>socket</code> e comincia a dirci delle cose… compilo&amp;lancio, et
 	voilà compare un errore
-	reverse#“<em>lo strumento non risponde</em>”
+	r#“<em>lo strumento non risponde</em>”
 
 	Seguono <em>porchi &amp; madonne</em>.
 	sec#
@@ -737,11 +737,11 @@ tab#l12
 	pagine</code>. Mi spiegano poco più di quello che facevo il programmino
 	d'esempio di cui sopra…
 	begin#ul
-		li#apri un socket
-		li#di' delle cose
-		li#ottiene delle risposte
-		li#???
-		li#PROFIT!
+		p#apri un socket
+		p#di' delle cose
+		p#ottiene delle risposte
+		p#???
+		p#PROFIT!
 	end#ul
 	Fondamentalmente, mi dice solo cose note. Eccetto una frase che recita
 	<em>“se l'aggeggio non risponde alla domanda</em>
@@ -771,10 +771,10 @@ tab#l12
 	&lt;RTFM&gt; in corso… dunque, esistono centinaia di comandi. Ne ho capito
 	qualcuno:
 	begin#ul
-		li#intanto posso sapere con chi sto parlando, chiedendo
+		p#intanto posso sapere con chi sto parlando, chiedendo
 		<code>*IDN?</code>, ottenendo un numero di serie;
-		li#posso chiedere cosa sto acquisendo con <code>:ACQ?</code>
-		li#posso settare il modo e il tipo dell'acquisizione, il canale, la
+		p#posso chiedere cosa sto acquisendo con <code>:ACQ?</code>
+		p#posso settare il modo e il tipo dell'acquisizione, il canale, la
 		quantità di punti…
 	end#ul
 	Ma poi scopro che tutti i miei tentativi di <code>:ACQuire</code> e
@@ -802,7 +802,7 @@ tab#l12
 	Questo significa che ho dei dati con cui lavorare. È certamente una buona
 	cosa. Come cavare informazioni utili da questo fiume di numeri, poi, è
 	un'altra storia.
-	reverse#Farò domani, all'urlo di “<strong>&lt;SIGNIFICATIVITÁ!!!&gt;</strong>”
+	r#Farò domani, all'urlo di “<strong>&lt;SIGNIFICATIVITÁ!!!&gt;</strong>”
 stop#page
 start#side
 	p#tid#<code>L00</code> – @Primo giorno@#l00

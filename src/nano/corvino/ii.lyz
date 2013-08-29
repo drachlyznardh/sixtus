@@ -39,9 +39,9 @@ start#page
 	Non un topo di biblioteca, ma comunque un discreto lettore (uno di quelli
 	che ancora riesce a leggere un libro intero senza dire cose come
 	begin#outside
-		p#intra@em#Peccato, mi sarei aspettato di meglio da questo autore, di cui già ho letto questo e quest&apos;altro titolo
+		p#speak@em#Peccato, mi sarei aspettato di meglio da questo autore, di cui già ho letto questo e quest&apos;altro titolo
 		oppure
-		p#intra@em#Bene per l&apos;impronta, lo stile, peccato per la scontatezza della trama e la piattezza di alcuni personaggi
+		p#speak@em#Bene per l&apos;impronta, lo stile, peccato per la scontatezza della trama e la piattezza di alcuni personaggi
 	end#outside
 	non modello da seguire ma discreto studente (uno di quelli che se per caso
 	mi chiedi qualcosa ti so rispondere o indirizzare dalla parte giusta), non
@@ -94,9 +94,9 @@ start#page
 	cose da odiare. Perché una delle cose che fai crescendo è appunto dividere
 	le cose in
 	begin#ul
-		li#amate
-		li#non particolarmente amate
-		li#odiate
+		p#amate
+		p#non particolarmente amate
+		p#odiate
 	end#ul
 	Nel mio caso, le cose odiate furono la maggior parte.
 	sec#
@@ -116,8 +116,8 @@ start#page
 		Già, perché lo stesso professore capitava d'insegnarci anche la storia
 	end#inside
 	begin#outside
-		speak#em#la storia e la filosofia sono la stessa cosa, come la filosofia della storia e la storia della filosofia, ma anche la fisica e la matematica che nasce come strumento per la fisica
-		speak#em#Così come il matematico è fisico, il filosofo è fisico, lo scienziato è filosofo
+		p#speak@em#la storia e la filosofia sono la stessa cosa, come la filosofia della storia e la storia della filosofia, ma anche la fisica e la matematica che nasce come strumento per la fisica
+		p#speak@em#Così come il matematico è fisico, il filosofo è fisico, lo scienziato è filosofo
 	end#outside
 	begin#inside
 		E come tu sei me, come io sono te, come io e te siamo qui assieme e io
@@ -156,10 +156,10 @@ start#page
 		dossi per il rallentamento, perché metti caso che
 	end#inside
 	begin#outside
-		speak#em#Sto tornando stanco a casa dal lavoro, ho tanta voglia di stendermi sul divano, per far prima porterò la mia Lamborghini Gallardo alla modica velocità del suono, ma che dico?
-		speak#em#E i bambini? E le nonnine?
-		speak#em#Grazie a Dio un ingegnere geniale del comune ha previsto e provveduto a porre su questa mia stradina dei dissuasori, cosicché io eviti di mettere in pericolo me e altri
-		speak#em#Grazie, ingegnere geniale
+		p#speak@em#Sto tornando stanco a casa dal lavoro, ho tanta voglia di stendermi sul divano, per far prima porterò la mia Lamborghini Gallardo alla modica velocità del suono, ma che dico?
+		p#speak@em#E i bambini? E le nonnine?
+		p#speak@em#Grazie a Dio un ingegnere geniale del comune ha previsto e provveduto a porre su questa mia stradina dei dissuasori, cosicché io eviti di mettere in pericolo me e altri
+		p#speak@em#Grazie, ingegnere geniale
 	end#outside
 	begin#inside
 		Peccato che questo affare tenga le macchine sotto i 30 all'ora, loro che
@@ -234,7 +234,7 @@ start#page
 		di gente si sarebbe dovuta fermare a riflettere su
 	end#inside
 	begin#outside
-		speak#em#Cosa voleva dire l&apos;autore con queste parole?
+		p#speak@em#Cosa voleva dire l&apos;autore con queste parole?
 	end#outside
 	begin#inside
 		Ma che cazzo avrà voluto dire con quelle parole se non quello che ha
@@ -251,7 +251,7 @@ start#page
 		pazzoide che
 	end#inside
 	begin#outside
-		speak#em#Ma perché l&apos;autrice ha descritto soltanto gli aspetti negativi di questa scena?
+		p#speak@em#Ma perché l&apos;autrice ha descritto soltanto gli aspetti negativi di questa scena?
 	end#outside
 	begin#inside
 		e poi vai a scoprire che l'illustre e ammirabile autrice è finita
@@ -280,40 +280,40 @@ start#page
 		siamo matti anche noi
 	end#inside
 	begin#outside
-		speak#Corvino#E che cazzo! Perché diavolo devo seguir &apos;ste lezioni, professore?
-		speak#em#Perché sennò ti caccio l&apos;insufficienza in pagella e ti tocca perdere l&apos;estate a ripassare per l&apos;esame di settembre
+		p#speak@Corvino#E che cazzo! Perché diavolo devo seguir &apos;ste lezioni, professore?
+		p#speak@em#Perché sennò ti caccio l&apos;insufficienza in pagella e ti tocca perdere l&apos;estate a ripassare per l&apos;esame di settembre
 	end#outside
 	begin#inside
 		rispose lo stronzo. E vaffanculo lui e il suo cazzo d'esame a settembre.
 		Tre volte l'ho rifatto. Quando morirà, ballerò sulla sua tomba.
 	end#inside
 
-	sbr#
+	sec#br
 	Ma la mia vita fu anche altro. Arrivò infatti l'estate a seguire la terza superiore.
 	
 	Quell'estate, come molte delle precedenti, mi capitò di dover andare in campeggio.
 	
 	Già, perché non è che posso stare a casa tutta l'estate perché
 	begin#outside
-	speak#em#Dai, Corvino, esci un po&apos;! Non hai amici?
+	p#speak@em#Dai, Corvino, esci un po&apos;! Non hai amici?
 	end#outside
 	e non posso neanche uscire tutta l'estate perché
 	begin#outside
-	speak#em#Dai, Corvino, stai un po&apos; a casa
+	p#speak@em#Dai, Corvino, stai un po&apos; a casa
 	che non ti vediamo mai!
 	end#outside
 	e l'unica maniera di interrompere questa routine era finire partecipante al campeggio. Il campeggio della parrocchia, così
 	begin#outside
-	speak#em#Dai, Corvino, che sentire qualche messa
+	p#speak@em#Dai, Corvino, che sentire qualche messa
 	ti fa bene!
 	end#outside
 	e vaffanculo il parroco con le sue interminabili discussioni su come ogni cosa moderna sia il male, e vaffanculo tutta la gente che si vede per tutto un anno e poi torna in campeggio e
 	begin#outside
-		p#intra@em#Oh carissimo, come stai? Come va? Come non va?
+		p#speak@em#Oh carissimo, come stai? Come va? Come non va?
 		e vaffanculo
-	p#intra@em#Metti tutti i tuoi vestiti sporchi in un sacchetto che tra 15 giorni facciamo una lavatrice, forse, forse li buttiamo via
+	p#speak@em#Metti tutti i tuoi vestiti sporchi in un sacchetto che tra 15 giorni facciamo una lavatrice, forse, forse li buttiamo via
 		e ancora vaffanculo
-	p#intra@em#Prendi questa maglietta che tanto non la metti più che poi la buttiamo
+	p#speak@em#Prendi questa maglietta che tanto non la metti più che poi la buttiamo
 	end#outside
 	Vaffanculo, vaffanculo e vaffanculo.
 
@@ -348,7 +348,7 @@ start#page
 	
 	Poi qualcosa cominciò a muoversi, e la domanda spontanea cambio in
 	begin#outside
-		speak#Corvino#Cosa le dico?
+		p#speak@Corvino#Cosa le dico?
 	end#outside
 	Altra domanda impossibile.
 	
@@ -362,32 +362,32 @@ start#page
 	Questi due, per puro caso lo stesso paio d'amici della fontanella la sera
 	del concerto, erano Matta e Sgrebeno.
 	begin#outside
-		p#intra@Corvino#Allora, stronzi, che mi dite
+		p#speak@Corvino#Allora, stronzi, che mi dite
 		cominciai.
 	
-		p#intra@Matta#Nulla di particolare
+		p#speak@Matta#Nulla di particolare
 		fece Matta, che aveva avuto una ragazza e mezza, una alle medie e mezza
 		al liceo.
 	
-		p#intra@Sgrebeno#Che mi dici tu, pennellone?
+		p#speak@Sgrebeno#Che mi dici tu, pennellone?
 		disse invece Sgrebeno, che non so bene chi/cosa avesse avuto, ma aveva
 		una grande &quot;esperienza&quot; nel campo.
 	end#outside
 		Qualunque fosse il campo.
 	begin#outside
-		p#intra@Corvino#Succede che tra un tot partiamo per il campeggio, e so che ci partecipa anche Camelia e io ancora devo spiccicarci parola
+		p#speak@Corvino#Succede che tra un tot partiamo per il campeggio, e so che ci partecipa anche Camelia e io ancora devo spiccicarci parola
 		faccio io.
 	
-		p#intra@Sgrebeno#Qual è il problema? Vuoi fartela?
+		p#speak@Sgrebeno#Qual è il problema? Vuoi fartela?
 		Sgrebeno parte a cannone.
 	
 		Ai tempi, avevo solo una conoscenza teorica della meccanica di quello che intendeva:
-		p#intra@Sgrebeno#Tranquillo, t&apos;insegno tutto io: allora, la prima cosa da fare è dire: &lsquo;Ehi!&rsquo; e poi stare zitti o magari andarsene. Funziona sempre
+		p#speak@Sgrebeno#Tranquillo, t&apos;insegno tutto io: allora, la prima cosa da fare è dire: &lsquo;Ehi!&rsquo; e poi stare zitti o magari andarsene. Funziona sempre
 	
-		p#intra@Corvino#Ah si?
+		p#speak@Corvino#Ah si?
 		butto lì io, poco convinto.
 	
-		p#intra@Sgrebeno#Certo certo, perché le fai capire che lei non è importante. Devi farle capire subito che lei non conta un cazzo, così stabilisci chi è che comanda. Altrimenti lei ti mette sotto e non ne esci più
+		p#speak@Sgrebeno#Certo certo, perché le fai capire che lei non è importante. Devi farle capire subito che lei non conta un cazzo, così stabilisci chi è che comanda. Altrimenti lei ti mette sotto e non ne esci più
 		prosegue il mio amico.
 	end#outside
 	Faticai in quel momento a capire che in quel caso &quot;lei ti mette
@@ -396,7 +396,7 @@ start#page
 	Perché non avendo alcuna esperienza empirica sull'argomento, m'ero limitato
 	ad imparare la teoria e il gergo.
 	begin#inside
-		p#intra@Corvino#<strong>Grazie, Internet!</strong>
+		p#speak@Corvino#<strong>Grazie, Internet!</strong>
 	end#inside
 	ma ero chiaramente alle prime armi e non avevo ben chiari i confini di… non
 	avevo chiaro un cazzo.
@@ -427,7 +427,7 @@ start#page
 	due anni (DUE anni) la faccia di una ragazza era semplicemente dovuto al
 	fatto che ero attratto da lei. Due anni. Due anni buttati nel cesso. E dopo
 	begin#outside
-		p#intra@Gandalf#aver vagato per cento vite d&apos;uomo per questa terra, ora non ho tempo disse una volta uno stregone
+		p#speak@Gandalf#aver vagato per cento vite d&apos;uomo per questa terra, ora non ho tempo disse una volta uno stregone
 	end#outside
 	perché dopo due anni persi a fare un bel cazzo di niente ora mi ritrovavo
 	con nemmeno una settimana di tempo prima di passarne due in campeggio con
@@ -465,7 +465,7 @@ start#page
 	Il giorno della partenza fu tremendamente faticoso. Svegliati la mattina e
 	comincia a rispondere alle solite stupide domande del parentame del tipo
 	begin#outside
-		speak#em#Che bello, oggi parti per il campeggio. Sei contento?
+		p#speak@em#Che bello, oggi parti per il campeggio. Sei contento?
 	end#outside
 	e svariate altre domande del cazzo, visto che quello era
 	qualcosa come il sesto o settimo campeggio al quale
@@ -481,12 +481,12 @@ start#page
 		secondo parte una richiesta di chiarimenti tipo
 	end#inside
 	begin#outside
-		p#intra@em#Ma questa maglia s&apos;intonerà col cielo che si vede in montagna? Ma questi calzini ti stanno bene?
+		p#speak@em#Ma questa maglia s&apos;intonerà col cielo che si vede in montagna? Ma questi calzini ti stanno bene?
 		et similia, quando io posso pensare solamente
-		p#intra@Corvino#I pantaloni devono avere tre buci, le maglie invece devono averne quattro e tutto va bene
+		p#speak@Corvino#I pantaloni devono avere tre buci, le maglie invece devono averne quattro e tutto va bene
 		ed ore e ore (tutta la mattina) passata a riempire una, due, tre borse
 		di &quot;cose d'emergenza&quot; che
-		p#intra@em#non si sa mai che ti serva, ce l&apos;hai
+		p#speak@em#non si sa mai che ti serva, ce l&apos;hai
 	end#outside
 	Ma non solo: esiste una qualche politica parrocchiale per cui non tutti
 	dovrebbero venire in macchina, non tutti con la stessa macchina, ragazzi e
@@ -519,7 +519,7 @@ start#page
 		incamminarci, no. Preghiera:
 	end#inside
 	begin#outside
-		p#intra@em#Ti ringraziamo, o Signore, per essere giunti fin quì…
+		p#speak@em#Ti ringraziamo, o Signore, per essere giunti fin quì…
 		etc etc etc per almeno venti minuti.
 	end#outside
 		Poi si parte.
@@ -552,7 +552,7 @@ start#page
 		bagnata…
 	end#inside
 	begin#outside
-		p#intra@em#Ha piovuto ieri così da far bel tempo per tutto il campeggio
+		p#speak@em#Ha piovuto ieri così da far bel tempo per tutto il campeggio
 		disse il prete
 	end#outside
 	begin#inside
@@ -561,10 +561,10 @@ start#page
 		cominciato a preparare il te caldo, oh, bontà divina.
 	end#inside
 	begin#outside
-		p#intra@Corvino#Posso averne un bicchiere?
+		p#speak@Corvino#Posso averne un bicchiere?
 		chiedo con tutta la cortesia che ho in corpo.
 	
-		p#intra@em#Eh, no, devo prima sentire il prete
+		p#speak@em#Eh, no, devo prima sentire il prete
 		dice lui.
 	end#outside
 	begin#inside
@@ -586,7 +586,7 @@ start#page
 		giunge una voce che annuncia
 	end#inside
 	begin#outside
-		speak#em#Corvino, vai mo&apos; a dare una mano al tizio con il generatore
+		p#speak@em#Corvino, vai mo&apos; a dare una mano al tizio con il generatore
 	end#outside
 	begin#inside
 		Già, perché non c'è la corrente in campeggio ma qualcosa di elettrico ce

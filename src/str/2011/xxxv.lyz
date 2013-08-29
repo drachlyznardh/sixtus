@@ -4,9 +4,8 @@ next#Storie/2011/XXXVI/#Quel tizio
 start#page
 	Salve, mi chiamo Ivan, e sono una persona che odia.
 
-	Non ammetto questa cosa apertamente in tutti gli ambienti; lo faccio
-	perché sono pigro e perché ho poco tempo.
-
+	Non ammetto questa cosa apertamente in tutti gli ambienti; lo faccio perché
+	sono pigro e perché ho poco tempo.
 	sec#
 	Quando dico ‘pigro’ intendo dire che non ho tempo/voglia di spiegare
 	la mia posizione; perché nella vita vera non posso avere un banner
@@ -17,49 +16,45 @@ start#page
 	posso scrivere senza essere interrotto.
 
 	Lasciate quindi che io vi racconti una storia; passatemi la
-	chitarra, sedetevi attorno al fuoco, c'era una volta...
-
-	sbr#
+	chitarra, sedetevi attorno al fuoco, c'era una volta…
+	sec#br
 	La civiltà è nata parecchio tempo fa
-</p><div class="outside"><p>
-	non m'importa quanto - c'è gente che avrebbe da ridire su qualunque data
+	begin#outside
+	non m'importa quanto – c'è gente che avrebbe da ridire su qualunque data
 	- noi tutti sappiamo bene come tutti come nulla sia veramente accaduto
 	prima dell'1 gennaio 1970, giusto?
-</p></div><p>
+	end#outside
 	con l'unico scopo di spostare l'insieme delle problematiche della vita
 	da quel semplice elenco universale che accomuna tutte le forme di vita
-</p><ul><li>
+	begin#ul
 		procurati cibo/acqua/riparo
-	</li><li>
+
 		proteggi i cuccioli/la compagna/la comunità
-	</li><li>
+
 		se t'avanza tempo, dormi
-</li></ul><p>
+	end#ul
 	a qualcosa di molto più complesso, più macchinoso e meno naturale come
-</p><ul><li>
+	begin#ul
 		studia, cresci, trovati un lavoro
-	</li><li>
+
 		procurati soldi/casa/lavoro stabile
-	</li><li>
+
 		compra una macchina, vai al cinema, mantieni le amicizie
-	</li><li>
+
 		yadda yadda
-	</li><li>
+
 		???
-	</li><li>
+
 		profit!
-</li></ul><p>
+	end#ul
 	Il tutto ovviamente alimenta una complessissima rete basata sulla
 	‘fiducia’, sul ‘prestigio’ e sul ‘rispetto’. E questo è l'origine di
 	ogni male.
 
 	Lasciate che spieghi.
-
 	sec#
-	Dunque... prima di tutto c'è il problema della
-</p><h2>
-	Responsabilità
-</h2><p>
+	Dunque… prima di tutto c'è il problema della
+	title#Responsabilità
 	Inventata ben prima dell'ottenimento del concetto scientifico di
 	causa-effetto, ecco che qualche scimmia civilizzata cominciò ad
 	accusare altri della sua specie d'essere responsabili di qualcosa.
@@ -73,28 +68,23 @@ start#page
 	Qualcosa va male? Basta darne la colpa a qualcuno, perseguirlo in
 	varie e diverse possibili maniere, ed ecco che il popolo già non
 	pensa più al problema.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ma spesso è piuttosto difficile dare la colpa a qualcuno con
 	sicurezza
-</p><div class="outside"><p>
+	begin#outside
 		non a caso questa yadda è materia di discussione per filosofi,
 		moralisti, legiferatori, preti, etc etc
-</p></div><p>
+	end#outside
 	quindi qualcuno c'ha pensato (era Hammurabi, se ricordo) ed ha
 	cominciato a scrivere la legge sui sassi, affinché la gente non
 	desse colpe a caso.
 
 	Et voilà, ecco complessissimi sistemi per capire come e dove si può
 	dare la colpa di qualcosa a qualcuno.
-
-	sbr#
+	sec#br
 	Il gioco s'infittisce quando all'accusato viene concessa la
 	possibilità di difendersi.
-</p><h2>
-	Giustificazioni
-</h2><p>
+	title#Giustificazioni
 	A quanto pare, infatti, c'è modo e modo di prendersi la colpa di
 	qualcosa. Alcuni di questi modi sono buoni, altri invece no. Se
 	qualcuno si prende la colpa di qualcosa ma lo fa per il bene, allora
@@ -103,18 +93,14 @@ start#page
 	Ci sono degli scudi, insomma.
 
 	Spesso l'efficacia dello scudo si bassa sulle
-</p><h2>
-	Motivazioni
-</h2><p>
+	title#Motivazioni
 	che spingono qualcuno a fare qualcosa.
 
 	Ed ecco che il gioco si complica ulteriormente: la strategia
 	cambia, si passa dal non fare le cose a trovare un buon motivo per
 	averle fatte. Inoltre, ovviamente, continua a restare valida la
 	faccenda per cui tutto è lecito finché nessun'altro sa.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	La storia delle motivazioni piace tanto alla gente, perché evita di
 	doversi impegnare molto. Fondamentalmente, si può vedere qualcosa di
 	strano e pensare «se sta facendo così, avrà un buon motivo»
@@ -131,13 +117,11 @@ start#page
 	Perché l'aver ragione è proprio quello che permette a certe persone
 	di dire «ah, io sarò anche di mente aperta ma su questo non posso
 	transigere»
-
-	sbr#
-	Sto uscendo dal seminato? Forse... Ma perché mi sono messo a scrivere questa
+	sec#br
+	Sto uscendo dal seminato? Forse… Ma perché mi sono messo a scrivere questa
 	storia? Beh, non senza scherzare, il mio parlare male di chi non sa correre
 	(in particolare le donne che non sanno correre) è stato accusato di odio, di
 	sessismo e di mancanza di tatto.
-
 	sec#
 	Salve, mi chiamo Ivan e posso dire di ritenermi uno spirito
 	abbastanza libero.
@@ -151,18 +135,14 @@ start#page
 	Si tratta di parlare liberamente, di non nascondere il proprio
 	rancore, di smanacciare e gesticolare, di parlare ad alta voce e di
 	trattare gli altri come propri pari.
-</p><h2>
-	Correttezza
-</h2><p>
+	title#Correttezza
 	Mi piace pensare che la sincerità sia una buona cosa. Una cosa
 	veramente buona. Mi piace anche pensare che in fin dei conti
 	nascondere il proprio vero pensiero sia equilvante alla falsa
 	testimonianza.
 
 	Avete visto cosa ho fatto?
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ho citato la Bibbia. Ecco che agli occhi di molti mi sono schierato.
 	Ecco che lascio intendere qualcosa, vero?
 
@@ -172,9 +152,7 @@ start#page
 	storia, unita alla precedente, e la dessimo come traccia per un tema
 	d'italiano per una scuola superiore, non credete che ne uscirebbero
 	le più strambe e prolisse interpretazioni?
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Credo sia dovuto al fatto che l'intelletto umano, nei suoi poteri e
 	nei suoi limiti, sia in qualche modo appositamente strutturato per
 	cercare motivi e interpretare le intenzioni altrui.
@@ -189,24 +167,20 @@ start#page
 	Ogni tanto, muovo le mie cose, lascio indizi, proprio per questo
 	motivo. Vedendo quello che lascio, riuscirei ad ingannare Sherlock?
 	Forse no, essendo quello un gran genio, essendo egli morto un secolo
-	fa... come se la morte fosse un problema...
-</p>
-</div><div class="section">
-<p>
+	fa… come se la morte fosse un problema…
+	sec#
 	Ma torniamo alla mia difesa.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Se vedo una ragazza che non sa correre, dopo aver visto molte
 	ragazze che non sanno correre per molti anni, mi vien da dire che le
 	ragazze non sanno correre. In particolare, utilizzo una
-	generalizzazione - come l'italiano mi consente di fare - per
+	generalizzazione – come l'italiano mi consente di fare – per
 	esprimere un concetto in poche parole e in poco tempo.
 
 	I linguaggi sono ambigui proprio per essere rapidi, no? Ecco quindi
 	che introduco ampi spazi d'interpretazione che chi mi sente può
 	riempire a piacere.
-</p><div class="outside"><p>
+	begin#outside
 		«Il Gods parla spesso della <span class="magnet">Ragazza
 		Magnete</span>, secondo me c'ha l'inciucio»
 	
@@ -216,11 +190,9 @@ start#page
 	
 		«Ah, il Gods s'è rimesso a guardare Gundam SEED, presto,
 		passiamogli Legend Of The Galactic Heroes»
-</p></div><p>
+	end#outside
 	Ecco, queste e molte altre.
-</p>
-</div><div class="section">
-<p id="V">
+	sec#
 	Beh, indovinate un po'? Non ho molta voglia di giocare con voi,
 	perché ritengo che le vostre regole siano un po' restrittive.
 	Giocherò con dei limiti un poco più ampli.
@@ -233,9 +205,7 @@ start#page
 	di voi (è perché non ho paura di sudare) e posso gesticolare con
 	ampi motivimenti delle braccia, e posso anche guardar male la gente
 	comune.
-</p><h2>
-	Libertà
-</h2><p>
+	title#Libertà
 	O forse si chiamava Satanismo?
 
 	È quella cosa che mi permette di divertirmi nella vita vera, ed è
@@ -247,12 +217,11 @@ start#page
 
 	Immagino che quelli pensino a quello che dicono per paura di urtare
 	i sentimenti di qualcun'altro.
-</p><div class="outside"><p>
+	begin#outside
 		Intendo quelli che agiscono in tal modo per poter ribattere ‘a
 		ragione’ quando qualcuno parla per ferire loro
-</p></div>
-</div><div class="section">
-<p>
+	end#outside
+	sec#
 	Ah!
 
 	Non fraintendetemi: non sono masochista, non sono sadico, non vado
@@ -265,9 +234,7 @@ start#page
 	parlare.
 
 	Che, per pigrizia, è quello che la gente fa.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Probabilmente, faccio e penso a questo modo per manifesta
 	superiorità.
 
@@ -284,9 +251,7 @@ start#page
 	resto del giorno è uno spazio che può essere occupato da altre cose.
 	Cose che metto per terra mentre dormo, perché mentre dormo non uso
 	il pavimento, ovviamente.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Per questo urlo quando mi sento di urlare, e non mi lamento quando
 	altri urlano.
 
@@ -302,20 +267,16 @@ start#page
 	chi non sa pedalare, perché io lo so.
 
 	Per questo critico la gente: perché non ascolto le critiche.
-</p>
-</div><div class="section">
-<p id="VI">
+	sec#
 	Ed ecco quello che qualcuno di voi pensa a questo punto.
-</p><div class="outside"><p>
+	begin#outside
 		«Dov'è la coerenza in tutto questo? E se tutti facessero così,
 		come pensi che andrebbe il mondo?»
-</p></div><p>
+	end#outside
 	A queste persone, rispondo che il mondo va già così.
 
 	Rispondo che non c'è alcuna necessità di coerenza.
-</p><h2>
-	Coerenza
-</h2><p>
+	title#Coerenza
 	La coerenza è un vincolo (uno dei) che serve a mantenere la parità
 	delle condizioni all'interno della società: se tutti seguono le
 	regole, se tutti agiscono allo stesso modo, se tutti si trattano da
@@ -329,9 +290,7 @@ start#page
 	che io posso fare e voi no. Posso fare cose che anche voi potreste fare,
 	ma che non avete il coraggio di fare. È perché ci sono cose che io
 	non temo.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Ogni tanto prendo la mia biciclettina e vado a compiere una qualche
 	impresa; me ne sto via una decina di ore, scalo una montagna, vado
 	da solo, m'ammazzo di fatica e torno a casa devastato.
@@ -339,9 +298,7 @@ start#page
 	Io posso farlo. Tu puoi?
 
 	Perché no?
-</p>
-</div><div class="section">
-<p id="VII">
+	sec#
 	Eccomi qui, dunque. Ad odiare la maggior parte delle cose che vedo.
 	Perché? Perché io non temo di dire che odio qualcosa.
 
@@ -351,37 +308,29 @@ start#page
 
 	La questione è ben più larga, ovviamente. Fatto sta che l'odio è un
 	taboo abbastanza grosso.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Io non mi vergogno delle cose che non mi piacciono, non mi vergogno
 	di parlar male degli ingegneri.
-</p><h2>
-	Diritto all'odio
-</h2><p>
+	title#Diritto all'odio
 	Ma a tutti noi, fin da piccoli, viene insegnato a non odiare le
 	cose. Ai bambini non viene permesso di dire «mi fa schifo». Ci vien
 	ben insegnato a trattenere il rancore, anche verbale. Certo, certo,
 	c'è quella storia delle parole che possono ferire più che la spada,
-	certo...
-</p><div class="outside"><p>
+	certo…
+	begin#outside
 		parola/penna, spada/1000 pugnali, fa davvero la differenza?
-</p></div><p>
+	end#outside
 	Questo ci viene insegnato per evitare di infliggere/provare dolore,
 	ma soprattutto per evitare le ripercussioni, che l'odio è tanto
 	capace di portare.
 
 	Vi ricordate le crociate? Beh, sono passati almeno otto secoli dalla
 	prima vero?
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Sto forse dicendo che le guerre sono giuste?
 
 	Se avete pensato questo, vi chiedo di andarvene.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Tutto questo discorso è a parte dei concetti di giusto/sbagliato,
 	come ho avuto modo di chiarire molte righe fa. Ve ne ricordate?
 
@@ -413,10 +362,8 @@ start#page
 
 	Ancora una volta, non avete capito un cazzo. Saluti, ci vediamo
 	quando avrete voglia di ascoltarmi di nuovo.
-</p>
-</div><div class="section">
-<p>
-	«Se c'è una cosa che mi da veramente fastidio...»
+	sec#
+	«Se c'è una cosa che mi da veramente fastidio…»
 
 	Quante volte ho sentito questa frase, all'inizio di un bel discorso
 	su cosa è giusto/sbagliato, su cosa è giustificabile o no?
@@ -437,13 +384,9 @@ start#page
 	odiano come faccio io, non tutti possono.
 
 	Perché non tutti ci riescono?
-</p>
-</div><div class="section">
-<p id="VIII">
+	sec#
 	Ah, anch'io ho un sogno!
-</p><h2>
-	Un mondo d'odio
-</h2><p>
+	title#Un mondo d'odio
 	Non sarebbe forse comodo? Un mondo dover poter pensare male di tutto
 	e tutti? Dove poter parlare male di questo e di quello? Dove nessuno
 	di dica niente perché c'è qualcosa che non ti va?
@@ -451,9 +394,7 @@ start#page
 	Nel mondo in cui vivo io, invece, ogni volta che dico così qualcuno
 	arriva e mi dice che invece di lamentarmi dovrei proporre delle
 	soluzioni alternative.
-</p>
-</div><div class="section">
-<p>
+	sec#
 	Il problema non è l'odio che le persone nutrono per altre persone,
 	ma il fatto che odiando alcuni si sentano giustificati ad agire in
 	malo modo contro quelle persone. Purtroppo, la differenza è così
@@ -469,3 +410,7 @@ start#page
 	Ed una volta che sarò al governo, prometto che non farò proprio
 	niente. Sinceramente, vi odio tutti.
 stop#page
+start#side
+	title#Accuse
+	title@right#Storia <code>XXXV</code>
+stop#side

@@ -17,7 +17,7 @@ tab#intro
 tab#i
 	Forse dovrei, comunque, cominciare con l'unica impresa nella quale non sono
 	stato solo, ossia quella di cui si narra nella
-	link#Storie/2010/IV/#quarta storia###.
+	link#Storie/2010/IV/#quarta storia@.
 	Quella è piccolina, ma merita.
 
 	Una volta ho affrontato la Maranza, a cazzo, con la bicicletta scrausa, DOPO
@@ -64,7 +64,7 @@ tab#ii
 	E siccome ieri non avevo una gran briga di fare altro, né di prendere la
 	bicicletta, mi sono detto
 	begin#outside
-		speak#gods#Perché prendere la bici per andare a correre se posso semplicemente correre di più?
+		p#speak@gods#Perché prendere la bici per andare a correre se posso semplicemente correre di più?
 	end#outside
 	Così ho corso un po' di più.
 	sec#
@@ -78,10 +78,9 @@ tab#ii
 
 	In tristezza, siccom'era prestino, non c'era quasi nessuno…
 
-	Ma, alla fine, ho coperto i <span class="code">17.8km</span> del <a
-	href="http://g.co/maps/d9vz5">percorso</a> in <span class="code">1h
-	53'</span>, con una velocità media di <span class="code">9.6km/h</span>.
-	Mica male…
+	Ma, alla fine, ho coperto i <code>17.8km</code> del <a
+	href="http://g.co/maps/d9vz5">percorso</a> in <code>1h 53'</code>, con una
+	velocità media di <code>9.6km/h</code>.  Mica male…
 
 	Ma la cosa più importante è che non sono morto. Il giorno dopo (ed anche
 	quella sera stessa, in realtà) potevo ancora camminare.

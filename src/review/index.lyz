@@ -8,7 +8,7 @@ tab#intro
 	Ma prima qualche parola per spiegare questa sezione.
 	sec#
 	Non a caso, quell'arguto professore ch'è War arrivò un giorno e mi disse
-	intra@war#Gods, è normale che non ci sia scritto niente, qui?
+	speak@war#Gods, è normale che non ci sia scritto niente, qui?
 	ed io risposì ch'era tutto come previsto.
 	sec#
 	Insomma, non è che una sezione appena nata meriti subito un'introduzione,
@@ -124,47 +124,45 @@ tab#catalogo
 	recensito con certezza.
 	begin#double
 	begin#ul
-		li#Spec-Ops Cell Sentai Gobuster – <code>ep1/~51?</code>
-		li#Kamen Rider Fourze – <code>ep16/~51?</code>
-		li#Gundam AGE – <code>ep19/??</code>
-		li#My Little Pony: Friendship is Magic – <code>s02e19</code>
-		li#After War Gundam X – <code>ep02/39</code>
-		li#Castle – <code>s03e16</code>
-		li#Transformers: Prime – <code>s02e01</code>
-		li#How I met your mother – <code>s07e17</code>
+		p#Spec-Ops Cell Sentai Gobuster – <code>ep1/~51?</code>
+		p#Kamen Rider Fourze – <code>ep16/~51?</code>
+		p#Gundam AGE – <code>ep19/??</code>
+		p#My Little Pony: Friendship is Magic – <code>s02e19</code>
+		p#After War Gundam X – <code>ep02/39</code>
+		p#Castle – <code>s03e16</code>
+		p#Transformers: Prime – <code>s02e01</code>
+		p#How I met your mother – <code>s07e17</code>
 	end#ul
 	end#double
 	Ma d'altro canto, tecnicamente sono ad un buon punto anche con qualche altro
 	titolo.
 	begin#ul
-		li#Dynasty Warrior Gundam 3 (PS3) – <code>49%</code>
-		li#Demon's Souls (PS3) – <code>60%</code>
+		p#Dynasty Warrior Gundam 3 (PS3) – <code>49%</code>
+		p#Demon's Souls (PS3) – <code>60%</code>
 	end#ul
 stop#page
 start#side
 	p#tid#Perché le recensioni?#intro
 	title#Recensioni
 	stitle#tid#Categorie#categorie
-	reverse#
-		tid#Film@ / #categorie#Film
+	r#tid#Film@ / #categorie#Film
 		tid#Film Brutti@ / #categorie#Brutti
 		tid#Giochi@ / #categorie#Giochi
 		tid#Show@ / #categorie#Show
 		tid#Libri#categorie#Libri
 	stitle#tid#Classifica#classifica
 	begin#ol
-		li#tid#Fucking awesome!!!#classifica#awesome
-		li#tid#Buono#classifica#buoni
-		li#tid#Si lascia guardare#classifica#lasciano
-		li#tid#Meh. / Mah#classifica#meh
-		li#tid#L&apos;ha fatto Micheal Bay?#classifica#bay
-		li#tid#No#classifica#no
-		li#tid#Brutto da ridere#classifica#ridere
-		li#tid#Magnificamente brutto#classifica#magnifici
+		p#tid#Fucking awesome!!!#classifica#awesome
+		p#tid#Buono#classifica#buoni
+		p#tid#Si lascia guardare#classifica#lasciano
+		p#tid#Meh. / Mah#classifica#meh
+		p#tid#L&apos;ha fatto Micheal Bay?#classifica#bay
+		p#tid#No#classifica#no
+		p#tid#Brutto da ridere#classifica#ridere
+		p#tid#Magnificamente brutto#classifica#magnifici
 	end#ol
 	stitle#tid#Catalogo#catalogo
-	reverse#
-		tid#Cronologico@ / #catalogo#cronologico
+	r#tid#Cronologico@ / #catalogo#cronologico
 		tid#Per categoria@ / #catalogo#categoria
 		tid#In corso#catalogo#incorso
 stop#side

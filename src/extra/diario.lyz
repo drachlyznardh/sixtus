@@ -25,8 +25,7 @@ tab#m00
 	Come spesso io stesso ho operato in passato, questo <em>Alien</em>
 	<strong>millanta</strong>. La semplice chiamata
 	begin#outside
-		<code>alien --to-deb
-		mtwk-lnx-powerpc-gcc-3.4.3-glibc-2.3.3-0.28-1-i686.rpm</code>
+		p#<code>alien --to-deb mtwk-lnx-powerpc-gcc-3.4.3-glibc-2.3.3-0.28-1-i686.rpm</code>
 	end#outside
 	non produca l'equivalente pacchetto per <code>apt</code>. Non produce
 	alcunché, in effetti. Potrebbe essere colpa del <em>Perl</em>?
@@ -77,13 +76,13 @@ tab#m01
 	accettare il fatto che <strong>sono l'unico al mondo ad avere questo
 	problema</strong>. Non c'è altra soluzione fattibile se non quella di
 	affrontare il problema a basso livello, come facevamo
-	link#Storie/2011/LII/#una volta###.
+	link#Storie/2011/LII/#una volta@.
 	begin#outside
-		speak#gods#Signora Uhura, mi colleghi con tutti i ponti
-		speak#em#Subito, Capitano. È in linea, signore
-		speak#gods#Qui è il Capitano. Annuncio ufficialmente che il tentativo di recuperare la tecnologia aliena è fallito
-		speak#gods#Questa nave procederà nella missione secondo i dettami di <em>Kegel&amp;Custer</em>, alla vecchia maniera
-		speak#gods#Le vostre <strong>ossa, tendini e metallo</strong> faranno la differenza; mi aspetto il meglio da tutti voi
+		p#speak@gods#Signora Uhura, mi colleghi con tutti i ponti
+		p#speak@em#Subito, Capitano. È in linea, signore
+		p#speak@gods#Qui è il Capitano. Annuncio ufficialmente che il tentativo di recuperare la tecnologia aliena è fallito
+		p#speak@gods#Questa nave procederà nella missione secondo i dettami di <em>Kegel&amp;Custer</em>, alla vecchia maniera
+		p#speak@gods#Le vostre <strong>ossa, tendini e metallo</strong> faranno la differenza; mi aspetto il meglio da tutti voi
 	end#outside
 	E dopo questo ottimo discorso, mi sono messo lì con il mio secondo.
 	sec#
@@ -122,7 +121,7 @@ tab#m02
 	va effettivamente acceso.
 	
 	Ammetto che
-	inline#gods#Non ci sarei mai arrivato, da solo, temo
+	speak@gods#Non ci sarei mai arrivato, da solo, temo
 	ma questa è un'altra storia.
 	br#
 	In ogni caso, con l'aggeggio in funzione, come verifico che il mio novello
@@ -134,8 +133,7 @@ tab#m02
 
 	Immagino che dovrò <em>sedurre</em> sia <code>nc</code> sia la scheda, in un
 	complesso triangolo che mi permetterà di farli felici entrambi.
-	reverse#
-	inline@forte#gods#È l'unico modo!
+	r#speak@gods#<strong>È l'unico modo!</strong>
 tab#m03
 	title#Data Astrale [<code>M03</code>] <em>22/04</em> 2012
 	Ed eccomi! Attraverso vari tentativi (<em>a casaccio</em>, secondo il
@@ -157,7 +155,7 @@ tab#m03
 	Trullallà. Visto che sono un giocatore abbastanza esperto e mi ricordo
 	quelll che dice il <em>Credo dell'Assassino</em>,
 	begin#outside
-		inline#em#Niente è reale, tutto è lecito
+		p#speak@em#Niente è reale, tutto è lecito
 	end#outside
 	mi sono messo a <em>sfrugnare</em>. Un po' come si faceva una volta, per far
 	funzionare <code>make</code>, provo con i parametri: in più, in meno, in
@@ -165,11 +163,10 @@ tab#m03
 
 	Ottengo la trasmissione di qualcosa soltanto con
 	begin#inside
-		<code>nc &lt;IP address&gt; &lt;port&gt;</code> sulla scheda
+		p#<code>nc &lt;IP address&gt; &lt;port&gt;</code> sulla scheda
 	end#inside
 	begin#outside
-		reverse#
-		<code>nc -l -p &lt;port&gt; -q0</code> sul portatile
+		r#<code>nc -l -p &lt;port&gt; -q0</code> sul portatile
 	end#outside
 	in tutti gli altri casi la connessione continua ad venirmi rifiutata. Credo
 	sia colpa di entrambe le versioni, una di qua e una di là. Boh. Ma ora mi
@@ -252,16 +249,14 @@ tab#m08
 	br#
 	La variabile <em>bootcmd</em> dell'ambiente di <em>uboot</em> diventa
 	begin#inside
-		<code>setenv bootcmd "setenv loadaddr 100000; dhcp; autoscr 100000"</code>
+		p#<code>setenv bootcmd "setenv loadaddr 100000; dhcp; autoscr 100000"</code>
 	end#inside
 	mentre il file che viene effettivamente trasferito contiene
 	begin#outside
-		<code>
-		p#tftp 0x300000 uimage
-		p#tftp 0x500000 helloworld.img
-		p#tftp 0x7f0000 mpc8313erdb.dtb
-		p#bootm 0x300000 0x500000 0x7f0000
-		</code>
+		p#<code>tftp 0x300000 uimage</code>
+		p#<code>tftp 0x500000 helloworld.img</code>
+		p#<code>tftp 0x7f0000 mpc8313erdb.dtb</code>
+		p#<code>bootm 0x300000 0x500000 0x7f0000</code>
 	end#outside
 tab#m09
 	title#Data Astrale [<code>M09</code>] <em>17/05</em> 2012
@@ -276,14 +271,14 @@ tab#m09
 	non funzionano, io non che cazzo farci…) e verifico che il <code>ptpd</code>
 	parte e subito mi richiede <code>pgrep</code>. Come fare?
 
-	intra@gods#Beh@mi dico@ricompilerò <code>BusyBox</code> perché integri anche
+	p#speak@gods#Beh@mi dico@ricompilerò <code>BusyBox</code> perché integri anche
 	<code>pgrep</code> con tutto il resto
 	e mi metto all'opera. Con la versione più recente, <code>1.20.0</code>, che
 	però sembra dare parecchi problemi: un certo modulo <code>ionice</code> si
 	pianta; lo tolgo (serve soltanto per schedulare i processi) e vedo che altri
 	moduli danno errore… uhm… proverò a tornare un po' indietro.
 
-	intra@gods#Ehy, Freescale@chiedo@che versione monti?
+	p#speak@gods#Ehy, Freescale@chiedo@che versione monti?
 	e scopro che c'è l'antichissima <code>1.1.3</code>, del 2007. Proviamo altre
 	versioni… nuove, vecchie, meno vecchie… uhm… No. Nessuna compila. Dev'essere
 	colpa del mio compilatore merda.
@@ -376,7 +371,7 @@ tab#m12
 
 	Mi sono arreso. Ho messo le mani nei sorgenti di <em>ptpd</em> e vaffanculo.
 
-	<code>CC=/opt/thesis/cross/bin/powerpc-linux-gcc CFLAGS=-fPIC
+	p#<code>CC=/opt/thesis/cross/bin/powerpc-linux-gcc CFLAGS=-fPIC
 	LDFLAGS=-static make</code> m'ha permesso di produrre un eseguibile
 	funzionante. Credete che questo basti?
 	sec#
@@ -386,7 +381,7 @@ tab#m12
 	Si tratta, ora di trovare un sostituto ad un certo frammento di codice che
 	manda tutto a puttane. Cos'è?
 	begin#outside
-		<code>pgrep -x %name | wc -l</code>
+		p#<code>pgrep -x %name | wc -l</code>
 	end#outside
 	Una cazzata. Che però è quasi insormontabile: ci sono delle orribili
 	differenze (di versione, di comandi e di opzioni per questi comandi) tra il
@@ -425,7 +420,7 @@ tab#m13
 	<em>update_vscfw</em>. Controllando bene il contenuto di questi due
 	pisquani, ho scoperto la stessa procedura, esattamente quello
 	<em>Marco&amp;Mirko</em>. E mi son detto
-	inline#gods#Cosa potrebbe mai andare storto? Se ci riprovo… per la quinta volta…
+	p#speak@gods#Cosa potrebbe mai andare storto? Se ci riprovo… per la quinta volta…
 	e pensate un po'… beh, <strong>ha funzionato</strong>.
 
 	I led di tutte le porte si sono accese, l'interfaccia
@@ -474,7 +469,7 @@ tab#m14
 	ossia la <code>TSEC1/eTSEC2</code> ossia la solita porta di rete, salta
 	fuori un bel messaggio
 	begin#outside
-		reverse#<code>PHY: link w4kbntc3hjg5hgjwn5tg6htxjqsh5kgj is UP
+		r#<code>PHY: link w4kbntc3hjg5hgjwn5tg6htxjqsh5kgj is UP
 		1000/FULL</code>
 	end#outside
 	che se capitasse soltanto sull'opportuno <code>/var/log/klog</code> allora
@@ -554,7 +549,7 @@ tab#m16
 	br#
 	Siam finiti a parlare dell'età della scheda e del suo sistema operativo, ed
 	io me ne esco con un
-	intra@gods#Eh già, è vecchiotta, poi 'sto Linux qui è stato compilato nel 2007, è ancora una versione <code>2.6.20</code>
+	p#speak@gods#Eh già, è vecchiotta, poi 'sto Linux qui è stato compilato nel 2007, è ancora una versione <code>2.6.20</code>
 	e mentre lo dico digito un <code>uname -a</code> per controllare, mi esce
 	un <code>Linux 2.6.36-4</code> compilato nel 2011. Mi cascano gli occhi.
 	Deve essere quello che <em>Marco&amp;Mirko</em> c'hanno schiaffato sopra
@@ -617,9 +612,9 @@ tab#m18
 	sec#
 	title#Data Astrale [<code>M18b</code>] <em>03/06</em> 2012
 	title@right#<strong>TOOLCHAIN</strong>
-	<code>cd buildroot/
-	p#make defconfig
-	p#make menuconfig</code>
+	p#<code>cd buildroot/</code>
+	p#<code>make defconfig</code>
+	p#<code>make menuconfig</code>
 	p#Si può togliere tutto: il kernel, busybox, yadda… basta che la toolchain sia
 	completa. Aggiungere il supporto per i grandi file, IPv6, RPC e WCHAR è
 	necessario per far compilare Busybox (separatamente) al primo colpo.
@@ -627,101 +622,100 @@ tab#m18
 	p#Poi, per avere facile accesso
 	p#<code>ln -s buildroot/output/host/src/ /opt/freescalecrosstool/</code>
 	p#Per proseguire felici, basta esportare alcune variabili
-	p#<code>export ARCH=powerpc
-	p#export CROSS_COMPILE=powerpc-linux-
-	p#export PATH=/opt/freescalecrosstool/bin:$PATH</code>
+	p#<code>export ARCH=powerpc</code>
+	p#<code>export CROSS_COMPILE=powerpc-linux-</code>
+	p#<code>export PATH=/opt/freescalecrosstool/bin:$PATH</code>
 	sec#
 	title#Data Astrale [<code>M18c</code>] <em>03/06</em> 2012
 	title@right#<strong>KERNEL</strong>
-	<code>cd linux[-2.6.36-4]/
-	p#make 83xx/mpc8313_rdb_defconfig
-	p#make menuconfig</code>
+	p#<code>cd linux[-2.6.36-4]/</code>
+	p#<code>make 83xx/mpc8313_rdb_defconfig</code>
+	p#<code>make menuconfig</code>
 
 	A me pare che non ci sia nulla da mettere o togliere.
 
-	<code>make uImage
-	p#make mpc8313erdb.dtb</code>
+	p#<code>make uImage</code>
+	p#<code>make mpc8313erdb.dtb</code>
 	
 	Entrambi questi file sono pronti per essere caricati.
 	sec#
 	title#Data Astrale [<code>M18d</code>] <em>03/06</em> 2012
 	title@right#<strong>BUSYBOX</strong>
-	<code>cd busybox[-1.1.19]/
-	p#make defconfig
-	p#make menuconfig</code>
+	p#<code>cd busybox[-1.1.19]/</code>
+	p#<code>make defconfig</code>
+	p#<code>make menuconfig</code>
 
 	A me pare che non ci sia nulla da mettere o togliere. Se necessario,
 	modificare la <code>INSTALL_DIR</code> sulla locazione desiderata
 	(<code>/media/BlackUp</code> per il sottoscritto).
 
-	<code>make</code>
+	p#<code>make</code>
 
 	Seguono ora le rogne. Bisogna produrre il disco e trasformarlo in un sistema
 	completo.
 	
-	<code>touch disk.ext2
-	p#/sbin/mkfs.ext2 disk.ext2 10240
-	p#mount disk.ext2 /media/Black -t ext2 -o loop,rw
-	p#cd busybox && make install
-	p#cd /media/BlackUp && mkdir dev etc ect/init.d proc sys
-	p#touch etc/inittab etc/init.d/rcS
-	p#chmod +x etc/init.d/rcS</code>
-	begin#mini@left
-		stitle@right#/etc/inittab
-		<code>::sysinit:/etc/init.d/rcS
-		p#::askfirst:-/bin/sh</code>
-	end#mini
-	begin#mini@right
-		stitle@left#/etc/init.d/rcS
-		<code>@SHARP@!/bin/sh
-		p#mount -t proc none /proc
-		p#mount -t sysfs none /sys
-		p#/sbin/mdev -s</code>
-	end#mini
+	p#<code>touch disk.ext2</code>
+	p#<code>/sbin/mkfs.ext2 disk.ext2 10240</code>
+	p#<code>mount disk.ext2 /media/Black -t ext2 -o loop,rw</code>
+	p#<code>cd busybox && make install</code>
+	p#<code>cd /media/BlackUp && mkdir dev etc ect/init.d proc sys</code>
+	p#<code>touch etc/inittab etc/init.d/rcS</code>
+	p#<code>chmod +x etc/init.d/rcS</code>
+	begin#half@left
+		stitle@right#/etc/inittab</code>
+		p#<code>::sysinit:/etc/init.d/rcS</code>
+		p#<code>::askfirst:-/bin/sh</code>
+	end#half
+	begin#half@right
+		stitle@left#/etc/init.d/rcS</code>
+		p#<code>@SHARP@!/bin/sh</code>
+		p#<code>mount -t proc none /proc</code>
+		p#<code>mount -t sysfs none /sys</code>
+		p#<code>/sbin/mdev -s</code>
+	end#half
 	Il contenuto minimale dei due file è listato qui accanto.
 
 	Una volta completato, il disco va smontato, compresso ed etichettato come
 	immagine per <em>uboot</em>. Nell'ordine:
 
-	<code>umont /media/BlackUp
-	p#gzip --best -c disk.ext2 &gt; disk.gz
-	p#mkimage -A ppc -O linux -C gzip -T ramdisk -a 0 -e 0 -d disk.gz -n RamDisk
+	p#<code>umont /media/BlackUp</code>
+	p#<code>gzip --best -c disk.ext2 &gt; disk.gz</code>
+	p#<code>mkimage -A ppc -O linux -C gzip -T ramdisk -a 0 -e 0 -d disk.gz -n RamDisk
 	disk.img</code>
 	sec#
-	dd if=/dev/zero of=disk.ext2 bs=1024 count=20480
-	/sbin/mkfs.ext2 disk.ext2 20480 -F -m 0 -b 1024 
-	mount -t ext2 -o loop,rw disk.ext2 /mount/point
-	cp /opt/crosstool/powerpc-linux/sysroot/* /mount/point
-	cd busybox && make CONFIG_PREFIX=/mount/point install
-	/etc ~ inittab ~ rcS…
-	chown root.root /mount/point -r
-	umount
-	gzip
-	mkimage
+	p#<code>dd if=/dev/zero of=disk.ext2 bs=1024 count=20480</code>
+	p#<code>/sbin/mkfs.ext2 disk.ext2 20480 -F -m 0 -b 1024 </code>
+	p#<code>mount -t ext2 -o loop,rw disk.ext2 /mount/point</code>
+	p#<code>cp /opt/crosstool/powerpc-linux/sysroot/* /mount/point</code>
+	p#<code>cd busybox && make CONFIG_PREFIX=/mount/point install</code>
+	p#<code>/etc ~ inittab ~ rcS…</code>
+	p#<code>chown root.root /mount/point -r</code>
+	p#<code>umount</code>
+	p#<code>gzip</code>
+	p#<code>mkimage</code>
 	sec#
 	title#Data Astrale [<code>M18e</code>] <em>03/06</em> 2012
 	title@right#Last try on the <strong>CLEAN WAY</strong>
 	begin#inside
-		<code>cd buildroot
-		p#make defconfig
-		p#make menuconfig</code>
-		<code>target architecture → powerpc
-		p#target architecture variant: generic
-		p#target ABI: classic
-		p#build option → number of jobs → 5
-		p#toolchain → kernel header version 2.6.36.x
-		p#toolchain → support for large files, IPv6, RPC, WCHAR
-		p#system configuration → hostname, issue message
-		p#filesystem → ext2, gzip
-		p#package selection → show packages provided by busybox
-		p#package selection → network → netcat
-		p#package selection → system tools → procps
-		p#(package selection → text editors → vim)
-		p#kernel → version “same as toolchain headers”
-		p#kernel → defconfig name “83xx/mpc8313_rdb”</code>
+		p#<code>cd buildroot</code>
+		p#<code>make defconfig</code>
+		p#<code>make menuconfig</code>
+		p#<code>target architecture → powerpc</code>
+		p#<code>target architecture variant: generic</code>
+		p#<code>target ABI: classic</code>
+		p#<code>build option → number of jobs → 5</code>
+		p#<code>toolchain → kernel header version 2.6.36.x</code>
+		p#<code>toolchain → support for large files, IPv6, RPC, WCHAR</code>
+		p#<code>system configuration → hostname, issue message</code>
+		p#<code>filesystem → ext2, gzip</code>
+		p#<code>package selection → show packages provided by busybox</code>
+		p#<code>package selection → network → netcat</code>
+		p#<code>package selection → system tools → procps</code>
+		p#<code>(package selection → text editors → vim)</code>
+		p#<code>kernel → version “same as toolchain headers”</code>
+		p#<code>kernel → defconfig name “83xx/mpc8313_rdb”</code>
 		p#<code>make</code>
 	end#inside
-	
 	E indovina un po'? <strong>NON FUNZIONA</strong>, lol.
 	sec#
 	title#Data Astrale [<code>M18f</code>] <em>03/06</em> 2012
@@ -738,7 +732,7 @@ tab#m18
 	molti modi diversi; e non è bastato. Ergo, chiedo all'<em>internet</em> che
 	mi trova questo tizio
 	begin#outside
-		reverse#<code>http://tldp.org/HOWTO/Bootdisk-HOWTO/buildroot.html</code>
+		r#<code>http://tldp.org/HOWTO/Bootdisk-HOWTO/buildroot.html</code>
 	end#outside
 	che mi dice delle cose interessanti. Fino ad allora, m'ero assicurato che
 	il filesystem fosse montato <code>rw</code> con una chiamata a
@@ -750,9 +744,8 @@ tab#m18
 	Mi toccherà creare un altro disco, e stavolta fare attenzione alle
 	dimensioni degli inode, in modo da averne tanti.
 	begin#outside
-		<code>dd if=/dev/zero of=disk.ext2 bs=1K count=16000
-		
-		mkfs.ext2 disk.ext2 -F -m 0 32000</code>
+		p#<code>dd if=/dev/zero of=disk.ext2 bs=1K count=16000</code>
+		p#<code>mkfs.ext2 disk.ext2 -F -m 0 32000</code>
 	end#outside
 	poi mi sono scritto un dannato script <code>mkinstall</code> che fa tutta la
 	roba: copiare il <code>sysroot</code> dalla toolchain, creare le cartelle
@@ -763,13 +756,13 @@ tab#m19
 	begin#mini@right
 		stitle#BuildRoot
 		[ <code>2012-05</code> ]
-		reverse#[ <a href="http://buildroot.uclibc.org">buildroot.uclibc.org</a> ]
+		r#[ <a href="http://buildroot.uclibc.org">buildroot.uclibc.org</a> ]
 		stitle#BusyBox
 		[ <code>1.19.3</code> | <code>1.20.1</code> ]
-		reverse#[ <a href="http://www.busybox.net">www.busybox.net</a> ]
+		r#[ <a href="http://www.busybox.net">www.busybox.net</a> ]
 		stitle#Kernel Linux
 		[ <code>2.6.36-4</code> | <code>3.3.7</code> ]
-		reverse#[ <a href="http://kernel.org">kernel.org</a> ]
+		r#[ <a href="http://kernel.org">kernel.org</a> ]
 	end#mini
 	Oggi ci riprovo, nella maniera giusta. Per prima cosa, infatti, devo
 	verificare che l'intera procedura come l'ho fatta io sia riproducibile; poi
@@ -792,9 +785,9 @@ tab#m19
 	bastando da solo, è comunque in grado di produrmi un completo
 	<em>crossompilatore</em> con tutto l'ambiente pronto (e funzionante).
 	begin#outside
-		<code>cd ~/buildroot
-		p#make defconfig
-		p#make menuconfig</code>
+		p#<code>cd ~/buildroot</code>
+		p#<code>make defconfig</code>
+		p#<code>make menuconfig</code>
 	end#outside
 	Il menu interattivo di <code>kconfig</code> permette di navigare le opzioni
 	configurazione. Per prima cosa, controllare l'<em>architettura</em> e la sua
@@ -816,7 +809,7 @@ tab#m19
 	<em>filesystem</em> da generare e il <em>kernel</em>, basta deselezionare
 	tutto. La <em>toolchain</em> è tutto quel che mi serve.
 	begin#outside
-		<code>make</code>
+		p#<code>make</code>
 	end#outside
 	A questo punto è bene andare al bagno, prendere un caffè, piegare della
 	carta o magari scrivere un report come il presente, perché la compilazione –
@@ -832,8 +825,8 @@ tab#m19
 	che mi tengo da parte e mi assicuro che il <code>path</code> lo possa
 	raggiungere:
 	begin#outside
-		<code>ln -s ~/buildroot/output/host/usr/ ~/crosstool
-		p#export PATH=~/crosstool/bin:$PATH</code>
+		p#<code>ln -s ~/buildroot/output/host/usr/ ~/crosstool</code>
+		p#<code>export PATH=~/crosstool/bin:$PATH</code>
 	end#outside
 	br#
 	stitle#Il kernel Linux
@@ -844,13 +837,13 @@ tab#m19
 	essere passati ad ogni chiamata di <code>make</code>, oppure esportati
 	nell'ambiente della shell corrente
 	begin#outside
-		<code>export ARCH=powerpc
-		p#export CROSS_COMPILE=powerpc-linux-</code>
+		p#<code>export ARCH=powerpc</code>
+		p#<code>export CROSS_COMPILE=powerpc-linux-</code>
 	end#outside
 	Ricordatevi di lasciare il trattino in fondo al prefisso del
 	crosscompilatore. Fatto questo, si compila
 	begin#outside
-		<code>cd ~/linux</code>
+		p#<code>cd ~/linux</code>
 		p#<code>make defconfig</code>
 		p#<code>make 83xx/mpc8313_rdb_defconfig</code>
 		p#??? make menuconfig → kernel options → high memory support ???
@@ -868,7 +861,7 @@ tab#m19
 	Tecnicamente, basta che sia presenti i pacchetti necessari per tenere in
 	piedi il sistema e far girare <code>ptpd2</code>.
 	begin#outside
-		<code>cd ~/busybox</code>
+		p#<code>cd ~/busybox</code>
 		p#<code>make defconfig</code> OR <code>make allnoconfig</code>
 		p#<code>make menuconfig</code>
 		p#<code>make</code>
@@ -884,7 +877,7 @@ tab#m19
 	Per prima cosa, ci occorre un filesystem (virtuale) sul quale installare
 	tutto.
 	begin#outside
-		<code>dd if=/dev/zero of=destination.ext2 count=000</code>
+		p#<code>dd if=/dev/zero of=destination.ext2 count=000</code>
 		p#<code>/sbin/mkfs.ext2 destination.ext2 -F -m 0 32000</code>
 	end#outside
 	Tanto per essere sicuri, bisognerebbe controllare (con <code>df -i</code>
@@ -892,19 +885,19 @@ tab#m19
 	grande. Non si sa mai. Una volta montato, possiamo copiarci tutto il
 	necessario.
 	begin#outside
-		<code>make CONFIG_PREFIX=/media/destination install</code>
+		p#<code>make CONFIG_PREFIX=/media/destination install</code>
 	end#outside
 tab#m20
 	title#Data Astrale [<code>M20</code>] <em>05/06</em> 2012
 	Oggi si tenta. Ogni cosa.
 	begin#outside
-		<code>kernel-headers-2.6.36-4</code>
+		p#<code>kernel-headers-2.6.36-4</code>
 		p#<code>uclibc 0.9.31 ~ 0.9.33</code>
 		p#<code>kernel +highmemorysupport -ticklesssystem
 		+highresolutiontimer</code>
 	end#outside
 	begin#inside
-		<code>buildroot</code>
+		p#<code>buildroot</code>
 		p#<code>header 3.3.x</code>
 		p#<code>uclib 0.9.33.x</code>
 		p#<code>binutils 2.22</code>
@@ -912,12 +905,12 @@ tab#m20
 		p#<code>large file, ipv6, rpc, wchar</code>
 	end#inside
 	begin#outside
-		<code>kernel 3.3.7 with 83xx/mpc8313_rdb_defconfig (-highmem +tickless
+		p#<code>kernel 3.3.7 with 83xx/mpc8313_rdb_defconfig (-highmem +tickless
 		+highresol)</code>
 		p#<code>busybox 1.20.1 defconfig</code>
 	end#outside
 	begin#inside
-		<code>buildroot</code>
+		p#<code>buildroot</code>
 		p#<code>header 3.3.x</code>
 		p#<code>uclibc 0.9.33.x</code>
 		p#<code>binutils 2.22</code>
@@ -933,32 +926,32 @@ tab#m21
 	funzionante sulla scheda. Lunghe settimane di sperimentazione sono state
 	condensate in questa guida.
 	begin#outside
-		reverse#<em>“Non prendete iniziative, altrimenti finirete come me”</em> – disse il GODS
+		r#<em>“Non prendete iniziative, altrimenti finirete come me”</em> – disse il GODS
 	end#outside
 	begin#half@right
-		title#KConfig
+		stitle#KConfig
 		stitle@right#→ Target Arch
-		<code>→ powerpc</code>
+		p#<code>→ powerpc</code>
 		stitle@right#→ Build Options
 		opt (<code>→ number of jobs → 5</code>)
 		stitle@right#→ ToolChain
-		<code>→ kernel headers 3.2.x</code>
+		p#<code>→ kernel headers 3.2.x</code>
 		p#<code>→ uClibc 0.9.32, uClibc-0.9.32.config</code>
 		p#<code>→ binutils 2.21.1</code>
 		p#<code>→ gcc 4.5.x</code>
 		p#opt (<code>→ large files, RPC, IPv6, WCHAR</code>)
 		stitle@right#→ System Configuration
-		<code>→ buildroot-2012.02-bleeding</code>
+		p#<code>→ buildroot-2012.02-bleeding</code>
 		stitle@right#→ Package Selection 
-		<code>→ busybox 1.19.x</code>
+		p#<code>→ busybox 1.19.x</code>
 		p#<code>→ show packages provided by busybox</code>
 		p#<code>→ networking → +netcat</code>
 		p#opt (<code>→ shell → +bash, +file, +which</code>)
 		p#<code>→ systemtools → +props</code>
 		stitle@right#→ Filesystem Images 
-		<code>→ ext2+gzip -tar</code>
+		p#<code>→ ext2+gzip -tar</code>
 		stitle@right#→ Kernel
-		<code>→ version 3.2.6</code>
+		p#<code>→ version 3.2.6</code>
 		p#<code>→ use defconfig</code>
 		p#<code>→ config name → 83xx/mpc8313_rdb</code>
 	end#half
@@ -974,7 +967,7 @@ tab#m21
 	configurazioni con <em>opt()</em> non sono necessarie, ma solo consigliate.
 	Notate che è possibile accedere alle singole configurazioni anche tramite
 	begin#outside
-		<code>$ make busybox-menuconfig</code>
+		p#<code>$ make busybox-menuconfig</code>
 		p#<code>$ make uclibc-menuconfig</code>
 		p#<code>$ make linux-menuconfig</code>
 	end#outside
@@ -985,7 +978,7 @@ tab#m21
 	Questa operazione procuce le immagini del <em>kernel</em> e del
 	<em>filesystem</em>:
 	begin#inside
-		<code>$ ls output/images</code>
+		p#<code>$ ls output/images</code>
 		p#<code>uImage rootfs.ext2 rootfs.ext2.gz</code>
 	end#inside
 	Attualmente (alle versioni <code>2012.02~2012.05</code>) <em>buildroot</em>
@@ -1002,7 +995,7 @@ tab#m21
 	conseguente generazione del device tree, nascosto nei recessi del
 	<em>build-tree</em>:
 	begin#inside
-		<code>$ ls arch/powerpc/boot/mpc8313erdb.dtb</code>
+		p#<code>$ ls arch/powerpc/boot/mpc8313erdb.dtb</code>
 		p#<code>mpc8313erdb.dtb</code>
 	end#inside
 	sec#

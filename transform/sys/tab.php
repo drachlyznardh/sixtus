@@ -22,7 +22,6 @@
 			switch($cmd)
 			{
 				case 'sec': $this->make_sec($cmd_args); break;
-				case 'sbr': $this->make_sbr(); break;
 				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
 			}
 		}
@@ -33,13 +32,6 @@
 			if (count($args) > 1 && strcmp($args[1], 'br') == 0)
 				$this->content[] = '<br />';
 			$this->current = new Section();
-		}
-
-		private function make_sbr ()
-		{
-			if ($this->current != null) $this->content[] = $this->current->getContent();
-			$this->content[] = '<br />';
-			$this->current = null;
 		}
 
 		public function make_include ($filename, $part, $as)

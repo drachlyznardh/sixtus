@@ -16,15 +16,15 @@ tab#i
 	su un supporto più affidabile della memoria.
 
 	Lo faccio per i capitoli di Tru Naluten, che ho scritti tutti da tempo
-	(nella mia mente, <span class="em">perché sono un incapace, e non so fare un
-	cazzo</span>, se (<a title="Wow! Parentesi annidate!"
+	(nella mia mente, <em>perché sono un incapace, e non so fare un cazzo</em>,
+	se (<a title="Wow! Parentesi annidate!"
 	href="http://www.youtube.com/results?search_query=elio+e+le+storie+tese+la+saga+di+addolorato">non</a>)
 	mi capite…), lo faccio per queste storie, lo faccio con il codice, e lo
 	faccio anche per le cose che non so dire.
 
 	Perché alcune cose mi vengono naturali, altre invece no. E quando ho tempo
 	mi esercito in quelle che non mi riescono. Saziarmi, ad esempio.
-	sbr#
+	sec#br
 	E insomma… stamattina, come tristemente faccio nelle ultime mattine, tento
 	di inventarmi una conversazione.
 
@@ -56,8 +56,7 @@ tab#ii
 	class="dacav">Dacav</span>) vivevo felice senza scheda grafica.
 
 	Funzionava, eh, per quello. Ma un giorno mi venne voglia di giochicchiare a
-	<span class="em">StarCraft</span>. Una voglia di quelle a cui non avevo
-	voglia di oppormi.
+	<em>StarCraft</em>. Una voglia di quelle a cui non avevo voglia di oppormi.
 
 	Decisi che avrei quindi convinto questa installazione a sfruttare un po'
 	meglio il suo bell'hardware e a permettermi di giocare con un framerate
@@ -182,7 +181,7 @@ tab#ii
 	Poi ho speso il resto della mattina – quel poco ch'è avanzato, prima e dopo
 	il pranzo – per far funzionare <code>mpd</code>, che già mi da delle soddisfazioni.
 
-	Ma senza Wine, come posso giocare a <span class="em">Warning Forever</span>?
+	Ma senza Wine, come posso giocare a <em>Warning Forever</em>?
 tab#iii
 	Ma non solo…  c'è effettivamente un proseguo, ossia il risultato del lavoro
 	di oggi.
@@ -221,8 +220,7 @@ tab#iii
 	e dare un <code>dpkg --build</code> per ottenere il pacchetto.
 	sec#
 	Niente di terribile. Una volta ottenuto il pacchetto, lo si può installare
-	facilmente, con un'altra chiamata a <span class="code">dpkg -i</span> e il
-	gioco è fatto. 
+	facilmente, con un'altra chiamata a <code>dpkg -i</code> e il gioco è fatto. 
 
 	Prima ho provato semplicemente a mimare la libreria incriminata, ma ho
 	scoperto che i conflitti sono abbastanza annidati, e soprattuto sembrano
@@ -264,7 +262,7 @@ tab#iii
 	dei driver NVIDIA non è stata toccata.
 
 	Quanto durera?
-	sbr#
+	sec#br
 	br#	
 	[…]
 	br#	
@@ -277,7 +275,7 @@ tab#iv
 	Il problema è, credo, che questo discorso non possa funzionare in alcun
 	modo. Per la sua stessa struttura. Non può funzionare perché sono io a
 	doverlo pronunciare. E io sono qui per il motivo sbagliato.
-	sbr#
+	sec#br
 	title#Versione @SHARP@1
 	Il Gods s'avvicina alla gelateria, butta dentro un occhio, trova la gelataia
 	da sola, non c'è nessun altro.
@@ -293,7 +291,7 @@ tab#iv
 
 	Il Gods è scappato.
 	sec#
-	titler#Versione @SHARP@2
+	title@right#Versione @SHARP@2
 	Il Gods s'avvicina spavaldo alla gelateria, controlla la situazione, aspetta
 	di poter restare solo con la gelataia, aspetta, aspetta, poi entra, si
 	presenta e attacca bottone.
@@ -318,20 +316,20 @@ tab#iv
 		«<span class="magnet">Esatto! Sei stato uno sciocco, il tuo piano non
 		funzionera!</span>» ridacchia la gelataia, togliendosi la maschera.
 	
-		«<span class="gods">Ah! Maledetti! Tu, Richards! E tu, <span
-		class="em">Ragazza magnete</span>! Mi avete tirato un brutto scherzo… ma
-		non crediate di potermi fermare!</span>»
+		«<span class="gods">Ah! Maledetti! Tu, Richards! E tu, <em>Ragazza
+		magnete</em>! Mi avete tirato un brutto scherzo… ma non crediate di
+		potermi fermare!</span>»
 	end#outside
 	Il Dr.Odio estrae i suoi occhialetti tondi, il suo gilet da Nekki Basara, e
 	la sua speciale V7, chitarrone elettrico modificato personalmente.
 	begin#outside
 		«<span class="gods">Ve l'avevo promesso, no? Nella storia
-		link#Storie/2011/XXXII/#XXXII#II##.
+		link#Storie/2011/XXXII/#XXXII@.#II
 		</span>» esclama il Dottore, ora spalleggiato da un'olografica fortezza
 		superdimensionale trasformabile «<span class="gods">Nessuno si
 		salverà!</span>»
 			
-		«<span class="gods forte">Listen to my song!!!</span>»
+		p#speak@gods#<strong>Listen to my song!!!</strong>
 	end#outside
 	L'odio brucia e arde con l'intensità di un milione di soli.
 	sec#
@@ -354,35 +352,35 @@ tab#iv
 
 	È il momento che questa farsa finisca. Entro.
 	begin#outside
-		speak#gods#Ciao, scusa il disturbo
-		speak#gods#Tu non ti ricordi, vero? … Immaginavo
-		speak#gods#Ti prendo cinque minuti, poi sparisco
-		speak#gods#Io sono qui per il motivo sbagliato. Venerdì scorso… no, il venerdì di due settimane fa, ero qui con alcuni amici a prendere un gelato e t&apos;ho vista
-		speak#gods#E sono rimasto colpito
+		p#speak@gods#Ciao, scusa il disturbo
+		p#speak@gods#Tu non ti ricordi, vero? … Immaginavo
+		p#speak@gods#Ti prendo cinque minuti, poi sparisco
+		p#speak@gods#Io sono qui per il motivo sbagliato. Venerdì scorso… no, il venerdì di due settimane fa, ero qui con alcuni amici a prendere un gelato e t&apos;ho vista
+		p#speak@gods#E sono rimasto colpito
 	end#outside
 	begin#inside
-		speak#gods#All&apos;inizio ho pensato che fosse perché m&apos;hai ricordato una persona che conosco; una ragazza che odio.  Pensavo fosse quello, ma si son sbagliato. Perché stavo pensando a te, non a lei. Anche perché contro di te non ho niente
+		p#speak@gods#All&apos;inizio ho pensato che fosse perché m&apos;hai ricordato una persona che conosco; una ragazza che odio.  Pensavo fosse quello, ma si son sbagliato. Perché stavo pensando a te, non a lei. Anche perché contro di te non ho niente
 	end#inside
 	begin#outside
-		speak#gods#Comunque, mi sono fissato con te. Mi capita.
-		speak#gods#A volte sono Transformers, a volte sono Gundam, a volte sono ragazze. I Transformers li posso trovare abbastanza facilmente, i Gundam invece mi tocca ordinarli dal Giappone e ci vuole una vita… ma quelli li posso comprare; le ragazze, invece… per loro piego fiori
-		speak#gods#Questo è il tuo. L&apos;ho realizzato apposta.  L&apos;ho creato pensando a te, in queste settimane.
-		speak#gods#È il migliore che ho mai fatto. È sempre così
+		p#speak@gods#Comunque, mi sono fissato con te. Mi capita.
+		p#speak@gods#A volte sono Transformers, a volte sono Gundam, a volte sono ragazze. I Transformers li posso trovare abbastanza facilmente, i Gundam invece mi tocca ordinarli dal Giappone e ci vuole una vita… ma quelli li posso comprare; le ragazze, invece… per loro piego fiori
+		p#speak@gods#Questo è il tuo. L&apos;ho realizzato apposta.  L&apos;ho creato pensando a te, in queste settimane.
+		p#speak@gods#È il migliore che ho mai fatto. È sempre così
 	end#outside
 	begin#inside
-		speak#gods#Non ho mai capito come dovrebbe funzionare, so soltanto che mi viene naturale farne uno per queste occasioni; crearne uno nuovo. In qualche modo, rappresenta tutte le speranze che ho. Perché sento che vale la pena di conoscerti e scorpire chi sei, e non posso lasciarti andare senza fare almeno un tentativo
-		speak#gods#Ma non è per questo che sono veramente qui; è perché so che ho torto, e perché so che tra un po&apos; mi passerà
-		speak#gods#Perché chi tu sia io non lo so, e non riesco a convincermi che averti vista una volta possa farmi credere di volerti stare accanto
-		speak#gods#E non so perché mi stai a sentire. Non trovo i motivi; non li vedo
+		p#speak@gods#Non ho mai capito come dovrebbe funzionare, so soltanto che mi viene naturale farne uno per queste occasioni; crearne uno nuovo. In qualche modo, rappresenta tutte le speranze che ho. Perché sento che vale la pena di conoscerti e scorpire chi sei, e non posso lasciarti andare senza fare almeno un tentativo
+		p#speak@gods#Ma non è per questo che sono veramente qui; è perché so che ho torto, e perché so che tra un po&apos; mi passerà
+		p#speak@gods#Perché chi tu sia io non lo so, e non riesco a convincermi che averti vista una volta possa farmi credere di volerti stare accanto
+		p#speak@gods#E non so perché mi stai a sentire. Non trovo i motivi; non li vedo
 	end#inside
 	begin#outside
-		speak#gods#Quindi, se tu volessi accettare il fiore… Grazie
-		reverse#inline#gods#Scusa
+		p#speak@gods#Quindi, se tu volessi accettare il fiore… Grazie
+		r#speak@gods#Scusa
 	end#outside
 	Poi me ne vado.
 tab#v
 	C'è una cosa che non vi ho detto. Prima, mentre scrivevo il
-	link#Storie/2011/L/#primo aggiornamento#III##, 
+	link#Storie/2011/L/#primo aggiornamento@,#III
 	m'è apparso Codd.
 	
 	M'è apparso e non ha detto niente. Se n'è rimasto lì, in silenzio, a
@@ -528,12 +526,12 @@ tab#vi
 stop#page
 start#side
 	title#Quel che dovrei fare
-	begin#ol
-		li#tid#Prima parte#i
-		li#tid#Seconda parte#ii
-		li#tid#Terza parte#iii
-		li#tid#Quarta parte#iv
-		li#tid#Quinta parte#v
-		li#tid#Sesta parte#vi
-	end#ol
+	begin@3em#roman
+		p#tid#Prima parte#i
+		p#tid#Seconda parte#ii
+		p#tid#Terza parte#iii
+		p#tid#Quarta parte#iv
+		p#tid#Quinta parte#v
+		p#tid#Sesta parte#vi
+	end#roman
 stop#side

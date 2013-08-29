@@ -79,7 +79,7 @@ tab#macross7
 	In una scena che sembrava fatta apposta per me, vedo spuntare le rovine
 	dalle acque del mare alieno ed ho appena il tempo di esclamare
 	begin#outside
-		speak#gods#Protoculture!!!
+		p#speak@gods#Protoculture!!!
 	end#outside
 	che parte lo <em>spiegone</em>. Tutti i personaggi non fanno che ripetere
 	<em>“Protoculture”</em> per l'intero episodio. Per chi di voi non fosse

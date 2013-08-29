@@ -1,7 +1,6 @@
 title#Progetti#Le amiche chiedono aiuto
 prev#Storie/2010/II/#Correre
 next#Storie/2010/IV/#Impresa
-
 start#page
 	Quando sei scrittore, scrivi.
 
@@ -12,37 +11,36 @@ start#page
 	finché ce n'è.
 
 	Come ogni persona, faccio tante cose. Tra le altre, sono un fratello
-	maggiore, un tizio che scrive e un programmatore. Fratello maggiore
-	è facile da spiegare, tizio che scrive un po' meno, ma
-	fondamentalmente se siete quì l'avrete capito. “<span
-	class="em">Programmatore</span>” invece è semplice da spiegare;
+	maggiore, un tizio che scrive e un programmatore. Fratello maggiore è facile
+	da spiegare, tizio che scrive un po' meno, ma fondamentalmente se siete quì
+	l'avrete capito. “<em>Programmatore</em>” invece è semplice da spiegare;
 	difficile è invece districarsi nei preconcetti della gente.
 
 	Programmazione -&gt; Computer.
 	begin#outside
-		p#inline#em#Ah, ho un problema con il mio COMPIUTER, mi
+		p#speak@em#Ah, ho un problema con il mio COMPIUTER, mi
 		aiuteresti?
 		o anche
-		inline#em#Non va internet, cosa faccio?
+		speak@em#Non va internet, cosa faccio?
 		e infine
-		inline#em#Guarda, non mi va il PC. Che dici, sarà la RAM?
+		speak@em#Guarda, non mi va il PC. Che dici, sarà la RAM?
 	end#outside
 	Ma lasciamo questa smoccolata per un'altra storia.
 
 	sec#
 	Io sono tecnicamente uno studente universitario, iscritto al corso di
-	Informatica, che in inglese si rende con “<span class="em">Computer
-	Science</span>” e che tento di spiegare alla gente con la formula
-	“<span class="em">Tizio che spiega al calcolatore come fare le
-	cose</span>”. La parola su cui vorrei che la gente si concentrasse è
-	“<span class="em">studente</span>”. Ahimé, io non son dottore, non
+	Informatica, che in inglese si rende con “<em>Computer
+	Science</em>” e che tento di spiegare alla gente con la formula
+	“<em>Tizio che spiega al calcolatore come fare le
+	cose</em>”. La parola su cui vorrei che la gente si concentrasse è
+	“<em>studente</em>”. Ahimé, io non son dottore, non
 	ancora. E non so quando lo diventerò. Studente è un tizio che ne sa,
 	ma deve ancora impararne.
 
 	E questa è la mia parte. Arriviamo alla parte di lei. Partiamo dal passato.
 	Un bel dì, @ragazza[0] mi chiede
 	begin#outside
-		inline#em#Ma tu hai passato $esame?
+		p#speak@em#Ma tu hai passato $esame?
 	end#outside
 	In effetti, sì, l'ho passato alcuni anni or sono. @ragazza[0] deve
 	realizzare un progetto enorme, terribile e arduo, da sola e senza
@@ -59,7 +57,7 @@ start#page
 
 	Poi spunta @ragazza[1], che dice
 	begin#outside
-		inline#em#Devo passare $altro_esame, ma non so programmare in Java
+		p#speak@em#Devo passare $altro_esame, ma non so programmare in Java
 	end#outside
 	Non avendo scuse, e siccome sono un coglione, accetto. E scopro, ovviamente,
 	che il Java è l'ultimo dei problemi, perché @ragazza[1] non ha capito una
@@ -78,7 +76,7 @@ start#page
 	E finora non ero coinvolto. E il riflesso nello specchio, fissandomi torvo,
 	sentenzia
 	begin#outside
-		inline#gods#Coglionazzo, queste erano solo amiche o conoscienti. Quando te lo chiederà una ragazza a cui tieni veramente, che farai?
+		p#speak@gods#Coglionazzo, queste erano solo amiche o conoscienti. Quando te lo chiederà una ragazza a cui tieni veramente, che farai?
 	end#outside
 	E finora era stato al sicuro. Poi è successo.
 
@@ -97,26 +95,25 @@ start#page
 	vecchio di milioni di anni c'avrà la sua parte di scienza, ma io
 	sono un vecchio bastardo che odia la gente senza motivo, e aggiungo
 	questa ragazza al mucchio di ragazze, che in pratica corrisponde al
-	“<span class="em">una botta se dovesse capitare</span>”. Tanto non
-	capita.
+	“<em>una botta se dovesse capitare</em>”. Tanto non capita.
 
 	sec#
 	Poi c'è il
-	titler#caso anomalo
+	title@right#caso anomalo
 	Capita, molto raramente, che la ragazza ricambi lo sguardo, che si
 	avvicini e che saluti. Per queste orecchie, il saluta di una ragazza
 	sconosciuta è come una fresca brezza di primavera, sa di fiori, di
 	montagna e di spensieratezza.  Ma il riflesso nello specchio,
 	scuotendo la testa, suggerisce
 	begin#outside
-		inline#gods#Guarda che questa c&apos;ha un problema col PC
+		p#speak@gods#Guarda che questa c&apos;ha un problema col PC
 	end#outside
 	E lei ha davvero un problema col PC. Tutti i sistemi idraulici interrompono
 	i preparativi e lo scienziato che c'è in me torna in campo.
 
 	sec#
 	Poi c'è il
-	titler#caso completamente anomalo
+	title@right#caso completamente anomalo
 	$ragazza_carina, conosciuta recentemente. Lei arriva mentre sono
 	preso da altre attività. Ciao, ciao.  Lei legge cose di cui ho
 	sentito parlare, ma non abbastanza per attaccar bottone. Passa la
@@ -128,7 +125,7 @@ start#page
 	ritrovarci con altri amici
 	begin#outside
 		E uno dei miei dice 
-		inline#jazz#Hey, dobbiamo passare a raccattare $ragazza_carina, che viene con noi
+		speak@jazz#Hey, dobbiamo passare a raccattare $ragazza_carina, che viene con noi
 	end#outside
 	Ding! suona il campanello della segreta speranza. Andiamo a
 	prenderela a casa sua. Ciao, ciao. E lei mi guarda. E' interesse
@@ -138,10 +135,10 @@ start#page
 	dalle ragazze carine, si sa, son le più buone del mondo.
 	begin#outside
 		E io butto lì un
-		inline#gods#Uhm, potrei passare un giorno a comprare una di queste
+		speak@gods#Uhm, potrei passare un giorno a comprare una di queste
 		(genuino interesse per la torta, mascherato interesse per la ragazza) e
 		lei contraccambia con
-		inline#em#Certo, vieni vieni, lavoro $giorno_perfetto fino alle $ora_perfetta
+		speak@em#Certo, vieni vieni, lavoro $giorno_perfetto fino alle $ora_perfetta
 	end#outside
 	Ding ding ding! trilla il campanello. E poi la serata se ne passa
 	tranquilla.
@@ -149,21 +146,21 @@ start#page
 	Poi, quando meno me l'aspetto, passo nel solito luogo e me la trovo lì. E
 	lei, che stava facendo altre cose, s'interrompe per chiedermi
 	begin#outside
-		inline#em#Senti, sei libero
+		p#speak@em#Senti, sei libero
 		– ding! –
-		inline#em#dal 15 luglio in poi?
+		speak@em#dal 15 luglio in poi?
 	end#outside
 	Ding! Il campanello della speranza esplode. Poi però noto che il
 	riflesso nello specchio mi guarda storto…
 	begin#outside
 	Non sarà che…
-	inline#em#… perché avrai questo progetto di grafica 3D, texture e cose… Me la daresti una mano?
+	speak@em#… perché avrai questo progetto di grafica 3D, texture e cose… Me la daresti una mano?
 	end#outside
 	E il sangue gela. Gli organi si pietrificano. Il pensiero collassa.
 	Le mie speranze crollano.
 	begin#outside
 		Sinceramente, rispondo
-		inline#gods#Non lo so, ci devo pensare
+		speak@gods#Non lo so, ci devo pensare
 		e lei reagisce come se conoscesse in anticipo questa mia risposta.
 	end#outside
 	E così, ciao, ciao, me ne torno a casa, metto su della buona musica, mi
@@ -172,11 +169,11 @@ start#page
 	questa faccenda. Chiedo consiglio, ma il riflesso alza le spalle e
 	candidamente asserisce
 	begin#outside
-		inline#gods#Coso, non lo so
+		p#speak@gods#Coso, non lo so
 	end#outside
 	Ed ora che son quì, vi dirò che scrivere non porta consiglio.
 stop#page
 start#side
 	title#Progetti
-	titler#Storia III
+	title@right#Storia III
 stop#side

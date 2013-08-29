@@ -26,36 +26,27 @@
 			{
 				case '': $this->make_text(trim($cmd_args[0])); break;
 				case 'id': $this->make_id($cmd_args[1]); break;
-				case 'p':
-				case 'li': $this->make_p($index, $cmd_args, $cmd_attr); break;
+				case 'p': $this->make_p($index, $cmd_args, $cmd_attr); break;
 				case 'c': $this->make_c($index, $cmd_args, $cmd_attr); break;
-				case 'r':
-				case 'reverse': $this->make_r($index, $cmd_args, $cmd_attr); break;
-				case 'tid': $this->make_tid($cmd_args); break;
-				case 'link': $this->make_link($cmd_args); break;
+				case 'r': $this->make_r($index, $cmd_args, $cmd_attr); break;
+				case 'tid': $this->make_tid($index, $cmd_args); break;
+				case 'link': $this->make_link($index, $cmd_args); break;
 				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
-				case 'titler': $this->make_titler($index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
-				case 'foto':
-				case 'photo':
 				case 'img': $this->make_img($cmd_args); break;
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear(); break;
-
-				case 'speak': $this->make_speak($index, $cmd_args, $cmd_attr); break;
-				case 'intra': $this->make_intra($index, $cmd_args, $cmd_attr); break;
-				case 'inline': $this->make_inline($index, $cmd_args, $cmd_attr); break;
-
-				default:
-					printf ("ERROR [$command] @ line $index\n");
-					exit(1);
-					$this->closeContext();
-					$this->content[] = '<br/><p class="error">ERROR: [';
-					$this->content[] = $cmd_args[0];
-					$this->content[] = ']</p>';
+				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
+				default: $this->error($index, $command);
 			}
+		}
+
+		private function error ($index, $command)
+		{
+			printf("ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
+			exit(1);
 		}
 
 		public function make_include ($filename, $part)
@@ -88,8 +79,13 @@
 		private function openContext($new)
 		{
 			if ($this->context == $new) return;
+			
 			if ($this->context == 'r' && $new == 'p') return;
 			if ($this->context == 'p' && $new == 'r') return;
+			if ($this->context == 'r' && $new == 'c') return;
+			if ($this->context == 'p' && $new == 'c') return;
+			if ($this->context == 'c' && $new == 'p') return;
+			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
 			switch ($this->context)
@@ -103,7 +99,7 @@
 			}
 		}
 
-		private function full_link ($args)
+		private function full_link ($index, $args)
 		{
 			if ($args[1]) $destination = '\''.polish_line($args[1]).'\'';
 			else $destination = '$attr[\'self\']';
@@ -130,6 +126,7 @@
 			$count = count($args);
 			if ($count > 3) $tab = "'$args[3]'"; else $tab = 'false';
 			if ($count > 4) $hash = "'$args[4]'"; else $hash = 'false';
+			if ($count > 5) $this->error($index, 'Link: too many arguments');
 			
 			$url = "<?=make_canonical(\$attr, $destination, $tab, $hash)?>";
 			if ($before) $result = $before; else $result = false;
@@ -139,7 +136,7 @@
 			return $result;
 		}
 
-		private function full_tid ($args)
+		private function full_tid ($index, $args)
 		{
 			$destination = "\$search['page'][0]";
 			if (preg_match('/@/', $args[1])) {
@@ -164,6 +161,7 @@
 			$count = count($args);
 			if ($count > 2) $tab = '\''.strtolower($args[2]).'\''; else $tab = "false";
 			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
+			if ($count > 4) $this->error($index, 'Tid: too many arguments');
 			
 			if ($before) $result = $before; else $result = false;
 			$result .= "<?=make_tid(\$attr, '".polish_line($title)."', $tab, $hash)?>";
@@ -195,6 +193,9 @@
 		private function make_text ($text)
 		{
 			if ($text) {
+					
+				$text = polish_line($text);
+
 				if (preg_match('/^</', $text)) {
 					$this->content[] = " $text";
 				} else if (preg_match('/^>/', $text)) {
@@ -216,21 +217,21 @@
 		{
 			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->make_text($cmd_args[1]);
 		}
 
 		private function make_c ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('c');
 			if (count($cmd_args) > 3) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->make_text($cmd_args[1]);
 		}
 
 		private function make_r ($index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('r');
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->content[] = $cmd_args[1];
+			else $this->make_text($cmd_args[1]);
 		}
 
 		private function recursive ($index, $cmd_args, $cmd_attr)
@@ -241,19 +242,19 @@
 				$command = $cmd_attr[0];
 			} else {
 				$command = $cmd_args[0];
-				$cmd_attr = array();
+				$cmd_attr = array($command);
 			}
 			$this->parse($index, $command, $cmd_attr, $cmd_args);
 		}
 
-		private function make_tid ($args)
+		private function make_tid ($index, $args)
 		{
-			$this->content[] = ' '.$this->full_tid($args);
+			$this->content[] = ' '.$this->full_tid($index, $args);
 		}
 
-		private function make_link ($args)
+		private function make_link ($index, $args)
 		{
-			$this->content[] = ' '.$this->full_link($args);
+			$this->content[] = ' '.$this->full_link($index, $args);
 		}
 
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
@@ -391,33 +392,25 @@
 			$this->content[] = '<div style="float:none; clear:both"></div>';
 		}
 
-		private function make_speak ($lineno, $args, $attr)
-		{
-			$this->closeContext();
-			$this->content[] = '<p>'.$this->dialog($args[1], $args[2]).'</p>';
-		}
-
 		private function make_intra ($lineno, $args, $attr)
 		{
 			$result = false;
-			
-			$_ = preg_split('/@/', polish_line($args[1]));
-			$result = $this->dialog($attr[1], $_[0]);
+			if (count($args) > 2)
+				$this->error($lineno, 'Speak: too many arguments');
+	
+			$_ = preg_split('/@/', $args[1]);
+
+			$result = $this->dialog($attr[1], polish_line($_[0]));
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.$_[0].' – ';
-				$result .= $this->dialog($attr[1], $_[1]);
+				$result .= ' – '.polish_line($_[0]).' – ';
+				$result .= $this->dialog($attr[1], polish_line($_[1]));
 				array_shift($_);
 				array_shift($_);
 			}
 
 			$this->content[] = $result;
-		}
-
-		private function make_inline ($lineno, $args, $attr)
-		{
-			$this->content[] = $this->dialog($args[1], $args[2]);
 		}
 
 		private function dialog ($author, $line)

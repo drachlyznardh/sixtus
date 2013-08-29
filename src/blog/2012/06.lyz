@@ -28,9 +28,9 @@ tab#15
 	end#ul
 	Ed ecco, io posso cavallerescamente cedere il libro che leggo alla mia
 	morosa e guadagnarne subito un altro, che a detta di War potrebbe essere
-	inline#war#Harry Potter, nello spazio
+	speak@war#Harry Potter, nello spazio
 	ma forse anche
-	inline#war#cugino di Gundam
+	speak@war#cugino di Gundam
 	e sembra che la coppia <em>me&amp;questo libro</em> potrebbe generare una
 	un'ottima <em>unt</em> spassosa
 	link#Recensioni/Libri/XXXVI/#recensione@. Quindi.
@@ -41,14 +41,14 @@ tab#14
 	Entro al baretto per l'ultimo caffè della giornata, ordino e aspetto.
 	Quand'ecco, d'improvviso, la <em>Emma</em> mi fa
 	begin#outside
-		speak#em#'Scolta 'n po', Ivan. Non è che un giorno, mentre non c'ero, hai fatto il papa?
+		p#speak@em#'Scolta 'n po', Ivan. Non è che un giorno, mentre non c'ero, hai fatto il papa?
 	end#outside
 	La mia faccia, e quella di tutti i presenti, nel sentire questa frase.
 	Generalmente basiti, tutti quanti.
 	br#
-	reverse#Si scoprì in seguito che la domanda fu intesa a riguardare un certo
+	r#Si scoprì in seguito che la domanda fu intesa a riguardare un certo
 	<em>Buddah</em>
-	reverse#da me piegato svariate settimane fa
+	r#da me piegato svariate settimane fa
 
 	<em>Emma</em> non l'aveva notato.
 	sec#

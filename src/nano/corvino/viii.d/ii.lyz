@@ -12,7 +12,7 @@ start#page
 	E poi che cosa avrei potuto dirle?
 	end#inside
 	begin#outside
-		p#intra@Corvino#Uhm, scusa ancora per averti piantata, ieri… Senti un po', tu che ne sai della gente che rifiuta le tue labbra e poi se ne torna a casa senza toccare per terra?
+		p#speak@Corvino#Uhm, scusa ancora per averti piantata, ieri… Senti un po', tu che ne sai della gente che rifiuta le tue labbra e poi se ne torna a casa senza toccare per terra?
 	end#outside
 	begin#inside
 	Si, certo. Ottimo approccio.
@@ -29,7 +29,7 @@ start#page
 	end#inside
 	Alla fine mi decisi. Mi alzai dal letto dove stavo sdraiato, tirai un bel
 	begin#outside
-		p#intra@Corvino#Evvaffanculo! Posso farlo e lo farò
+		p#speak@Corvino#Evvaffanculo! Posso farlo e lo farò
 	end#outside
 	ad alta voce, presi la mia roba e uscii di casa.
 	sec#

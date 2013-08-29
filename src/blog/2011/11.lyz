@@ -25,7 +25,7 @@ tab#28
 	Ci sono molte ragazze, qui in facoltà:
 	link#Storie/2011/LXIX/#eccovi
 	quelle che (ri)conosco. Ma non solo!
-	titler#SPOILER!!!
+	title@right#SPOILER!!!
 	Stanno per arrivare un sacco di altre recensioni: ultimamente mi sono visto
 	<em>Cars 2</em>, <em>Shrek Forever After</em>, gli ultimi due Rambo e la
 	prima stagione di <em>Dollhouse</em>.
@@ -37,10 +37,10 @@ tab#23/18:45
 	E siccome non ho briga di fare altro, eccomi a recensire un
 	link#Recensioni/Film/Brutti/XX/#film bruttarello
 	(anche se meno di quel che temevo) e uno
-	link#Recensioni/Show/XXI/#oscenamente magnifico###.
+	link#Recensioni/Show/XXI/#oscenamente magnifico@.
 	Ma fate attenzione ad entrambi, perché sono <em>IO</em> che li sto
 	giudicando. Ed ho buone notizie anche per un altro
-	link#Recensioni/Show/XIV/#show#iii##,
+	link#Recensioni/Show/XIV/#show@,#iii
 	che ci crediate o no.
 tab#20
 	p#link##<em>@20/11/2011@</em>##20/
@@ -94,7 +94,7 @@ tab#05/00:35
 	end#inside
 	Ma ecco la cosa bella.
 	begin#outside
-		p#intra@em#«Oh, no: l'ho preso alle macchinette@mi spiega lei, e gentilmente@Ne vuoi un pezzo?
+		p#speak@em#«Oh, no: l'ho preso alle macchinette@mi spiega lei, e gentilmente@Ne vuoi un pezzo?
 	end#outside
 	Awwwwww. Non solo non si è spaventata, come succede sempre, ma m'ha pure
 	offerto da mangiare. Quale rara circostanza.
@@ -117,13 +117,13 @@ tab#03/00:00
 	link#Recensioni/Film/XVII/#First Blood Part II@.#ii
 stop#page
 start#side
-	stitle#link#Blog/2011/11/#Novembre### 2011
+	stitle#link#Blog/2011/11/#Novembre@ 2011
 	p#<em>29/11</em> –
-		link#Recensioni/Film/XVII/#Rambo III#iii##,
-		link#Recensioni/Film/XVII/#John Rambo#iv##,
+		link#Recensioni/Film/XVII/#Rambo III@,#iii
+		link#Recensioni/Film/XVII/#John Rambo@,#iv
 		link#Recensioni/Show/XXII/#Dollhouse
 		e soprattutto super-fanta
-		link#Recensioni/Show/XIV/#Gundam AGE#iv##!!!
+		link#Recensioni/Show/XIV/#Gundam AGE@!!!#iv
 	p#<em>28/11</em> –
 		link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
 	p#<em>23/11</em> –
@@ -136,13 +136,13 @@ start#side
 		link#Storie/2011/LXVIII/#Momenti
 	p#<em>19/11</em> – Trasloco!
 	p#<em>15/11</em> – Recensioni!
-		link#Recensioni/Libri/XII/#Il principe mezzosangue#vi##,
-		link#Recensioni/Film/XIX/#Ed Wood### & 
+		link#Recensioni/Libri/XII/#Il principe mezzosangue@,#vi
+		link#Recensioni/Film/XIX/#Ed Wood@ & 
 		link#Recensioni/Film/Brutti/XVIII/#Black Sheep
 	p#<em>05/11</em>
 		– <span class="cat-heart">KitKat Gratis!</span>
 	p#<em>03/11</em> – Rinnovo!
 		link#Recensioni/Film/XVII/#First Blood#i
 		(&
-		link#Recensioni/Film/XVII/#Part II#ii##)
+		link#Recensioni/Film/XVII/#Part II@)#ii
 stop#side

@@ -14,7 +14,7 @@ start#page
 	link#Legend/Cronache/#(di cui abbiamo delle @interessanti cronache@). Capitò
 	un bel giovedì che Jazz disse
 	begin#outside
-		speak#jazz#[…] e poi al ritorno mi devo fermare a far benzina […]
+		p#speak@jazz#[…] e poi al ritorno mi devo fermare a far benzina […]
 	end#outside
 	e qualcosa come <code>7m</code> dopo il distributore di <em>via
 	Brennero</em> la macchina fece un brutto rumore, tutte le lucette s'accesero
@@ -44,7 +44,7 @@ start#page
 	una semplice eccessiva scarsezza di benzina nel serbatoio. Non vi dico
 	quante se n'è sentite Jazz e quante gliene abbiamo dette…
 	begin#mini@left
-		foto#Extra/Trionfo.jpg
+		img#Extra/Trionfo.jpg
 	end#mini
 	Restava il problema di procurare la benzina. Lo zio, trovandosi in possesso
 	d'una tanica e d'un'automobile con benzina, s'offri di procurarci
@@ -62,7 +62,7 @@ start#page
 	in mente… C'è anche quella di quando (ieri&amp;oggi) sono stato a Verona a
 	conoscere gli amici di Katia ed ho scoperto una rarissima specie di
 	<em>Dacav</em> locale.
-	reverse#<code>True story.</code>
+	r#<code>True story.</code>
 	sec#
 	Ma forse un'altra volta. Intanto, visto che ne sono appena state aggiunte,
 	scriverò delle

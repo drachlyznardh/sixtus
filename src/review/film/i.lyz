@@ -35,7 +35,7 @@ start#page
 
 	Ora, non venite a dirmi
 	begin#outside
-		p#intra@em#Ivan, che ci speravi veramente? Ivan, non ti eri forse preparato?
+		p#speak@em#Ivan, che ci speravi veramente? Ivan, non ti eri forse preparato?
 	end#outside
 	Perché la risposta è sì, ovviamente. Io sono - come avrò modo di scrivere
 	nelle prossime recensioni - quel tizio che ha attesa il primo Transformers
@@ -97,7 +97,7 @@ start#page
 	l'altro è Loki, che già a diec'anni si sfrega le mani complottando contro
 	tutto e tutti. Arriva quindi Odino, che li abbraccia e dice
 	begin#outside
-		p#intra@em#Cari figlioli, vi dico questo affinché uno di voi possa prossimamente salire al trono e l'altro possa essere estremamente geloso di lui, avete ben capito?
+		p#speak@em#Cari figlioli, vi dico questo affinché uno di voi possa prossimamente salire al trono e l'altro possa essere estremamente geloso di lui, avete ben capito?
 	end#outside
 	Passano &gt;9000 anni (che ne so io di quanto lentamente invecchino gli
 	dei?!?) e quei due fratelli sono diventati uno ulteriormente sborone,
@@ -179,5 +179,5 @@ start#page
 stop#page
 start#side
 	title#Thor
-	titler#No
+	title@right#No
 stop#side

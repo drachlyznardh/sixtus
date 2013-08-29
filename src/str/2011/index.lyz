@@ -2,7 +2,7 @@ title#Storie 2011#Forse meno tristi dell'anno passato
 prev#Storie/2010/#Storie@ 2010
 next#Storie/2012/#Storie@ 2012
 start#page
-	E così venne il 2011...
+	E così venne il 2011…
 	title#Storie 2011
 	E forse c'è spazio, qui, per qualche considerazione sull'anno
 	passato. Ah, l'anno passato. Quelli ch'han letto le storie
@@ -23,14 +23,14 @@ start#page
 	Ma poi cominciano a comparire delle persone, il cui effetto - almeno
 	per quanto mi riguarda, non è affatto trascurabile.
 
-	E dopo un po' di tempo durante il quale non accadde nulla di nulla...
+	E dopo un po' di tempo durante il quale non accadde nulla di nulla…
 	stitle#Primavera 2011
 	Ora che ho quasi battuto la <span class="magnet">Ragazza
 	Magnete</span> la mia vita può andare avanti. Cosa farò adesso?
 	
 	Beh, dirò che molte cose hanno semplicemente smesso di capitare:
 	la <span class="magnet">Ragazza Magnete</span> non compare quasi
-	più, $rossa e le sue amiche-radar non frequentano più il bar...
+	più, $rossa e le sue amiche-radar non frequentano più il bar…
 	devo forse passare a fonti d'odio alterntative?
 
 	E poi la primavera passò, venne il caldo e cominciò l'estate.
@@ -42,13 +42,11 @@ start#page
 
 	Questo e qualche altra cosa…
 
-	Infatti. Durante quest'estate, alla fine, sono riuscito a
-	passare <span class="em">Database</span>, ho quasi passato anche
-	<span class="em">Discreta1</span>.
+	Infatti. Durante quest'estate, alla fine, sono riuscito a passare
+	<em>Database</em>, ho quasi passato anche <em>Discreta1</em>.
 
-	Alla fine, modulo un esame perduto nel tempo per via
-	dell'omonimia, mi sono iscritto <span class="em">in attesa di
-	laurea</span>. Finalmente. Bastera?
+	Alla fine, modulo un esame perduto nel tempo per via dell'omonimia, mi sono
+	iscritto <em>in attesa di laurea</em>. Finalmente. Bastera?
 
 	Poi, senza che me lo aspettassi veramente, l'estate è finita e l'autunno
 	è arrivato.
@@ -59,76 +57,76 @@ stop#page
 start#side
 	title#Storie 2011
 	begin@5em@18@#roman
-		li#link#Storie/2011/XVIII/#Liber Javae
-		li#link#Storie/2011/XIX/#Permessi
-		li#link#Storie/2011/XX/#Guida
-		li#link#Storie/2011/XXI/#Programmazione 40.000
-		li#link#Storie/2011/XXII/#Tecniche avanzate
-		li#link#Storie/2011/XXIII/#Cose complicate
-		li#link#Storie/2011/XXIV/#Il futuro
-		li#link#Storie/2011/XXV/#No
-		li#link#Storie/2011/XXVI/#La sconfitta
-		li#link#Storie/2011/XXVII/#LaTeX
+		p#link#Storie/2011/XVIII/#Liber Javae
+		p#link#Storie/2011/XIX/#Permessi
+		p#link#Storie/2011/XX/#Guida
+		p#link#Storie/2011/XXI/#Programmazione 40.000
+		p#link#Storie/2011/XXII/#Tecniche avanzate
+		p#link#Storie/2011/XXIII/#Cose complicate
+		p#link#Storie/2011/XXIV/#Il futuro
+		p#link#Storie/2011/XXV/#No
+		p#link#Storie/2011/XXVI/#La sconfitta
+		p#link#Storie/2011/XXVII/#LaTeX
 	end#roman
-	titler#Il Magnetismo
+	title@right#Il Magnetismo
 	begin#inside
 		begin@5em@28#roman
-			li#link#Storie/2011/XXVIII/#L&apos;odio
-			li#link#Storie/2011/XXIX/#Il Magnete
-			li#link#Storie/2011/XXX/#L&apos;interpretazione
+			p#link#Storie/2011/XXVIII/#L&apos;odio
+			p#link#Storie/2011/XXIX/#Il Magnete
+			p#link#Storie/2011/XXX/#L&apos;interpretazione
 		end#roman
 	end#inside
 	stitle#Primavera 2011
 	begin@6em@31#roman
-		li#link#Storie/2011/XXXI/#Deus Ex Machina
-		li#link#Storie/2011/XXXII/#Dottor Odio
-		li#link#Storie/2011/XXXIII/#L&apos;inaspettata
-		li#link#Storie/2011/XXXIV/#Considerazioni
-		li#link#Storie/2011/XXXV/#Accuse
-		li#link#Storie/2011/XXXVI/#Quel tizio
-		li#link#Storie/2011/XXXVII/#PHP
-		li#link#Storie/2011/XXXVIII/#Raccontare
-		li#link#Storie/2011/XXXIX/#Forever Alone
-		li#link#Storie/2011/XL/#Domanda&amp;Offerta
-		li#link#Storie/2011/XLI/#Raccontare II
-		li#link#Storie/2011/XLII/#La vecchiaia
-		li#link#Storie/2011/XLIII/#Gli anni
-		li#link#Storie/2011/XLIV/#Pillole
-		li#link#Storie/2011/XLV/#Wireless
-		li#link#Storie/2011/XLVI/#L&apos;uomo con due ombrelli
-		li#link#Storie/2011/XLVII/#Impresa (II)
+		p#link#Storie/2011/XXXI/#Deus Ex Machina
+		p#link#Storie/2011/XXXII/#Dottor Odio
+		p#link#Storie/2011/XXXIII/#L&apos;inaspettata
+		p#link#Storie/2011/XXXIV/#Considerazioni
+		p#link#Storie/2011/XXXV/#Accuse
+		p#link#Storie/2011/XXXVI/#Quel tizio
+		p#link#Storie/2011/XXXVII/#PHP
+		p#link#Storie/2011/XXXVIII/#Raccontare
+		p#link#Storie/2011/XXXIX/#Forever Alone
+		p#link#Storie/2011/XL/#Domanda&amp;Offerta
+		p#link#Storie/2011/XLI/#Raccontare II
+		p#link#Storie/2011/XLII/#La vecchiaia
+		p#link#Storie/2011/XLIII/#Gli anni
+		p#link#Storie/2011/XLIV/#Pillole
+		p#link#Storie/2011/XLV/#Wireless
+		p#link#Storie/2011/XLVI/#L&apos;uomo con due ombrelli
+		p#link#Storie/2011/XLVII/#Impresa (II)
 	end#roman
 	stitle#Estate 2011
 	begin@5em@48#roman
-		li@class@cat-heart"#link#Storie/2011/XLVIII/#Non ce n&apos;è abbastanza
-		li@class@cat-heart"#link#Storie/2011/XLIX/#Quel che non è abbastanza
-		li@class@cat-heart"#link#Storie/2011/L/#Quel che dovrei fare
-		li#link#Storie/2011/LI/#Il Druido
-		li#link#Storie/2011/LII/#Sgaggio Tiem
-		li@class@cat-heart"#link#Storie/2011/LIII/#Quel che ho fatto
-		li#link#Storie/2011/LIV/#Niente
-		li@class@cat-heart"#link#Storie/2011/LV/#Spezzato
-		li#link#Storie/2011/LVI/#Correre di notte
-		li#link#Storie/2011/LVII/#Il potere
-		li#link#Storie/2011/LVIII/#Deus Ex Machina Evolved
-		li#link#Storie/2011/LIX/#Violenza&amp;Soddisfazione
-		li#link#Storie/2011/LX/#Filler
-		li#link#Storie/2011/LXI/#Cattivo
-		li@class@cat-heart"#link#Storie/2011/LXII/#Normale
+		p#link#Storie/2011/XLVIII/#Non ce n&apos;è abbastanza
+		p#link#Storie/2011/XLIX/#Quel che non è abbastanza
+		p#link#Storie/2011/L/#Quel che dovrei fare
+		p#link#Storie/2011/LI/#Il Druido
+		p#link#Storie/2011/LII/#Sgaggio Tiem
+		p#link#Storie/2011/LIII/#Quel che ho fatto
+		p#link#Storie/2011/LIV/#Niente
+		p#link#Storie/2011/LV/#Spezzato
+		p#link#Storie/2011/LVI/#Correre di notte
+		p#link#Storie/2011/LVII/#Il potere
+		p#link#Storie/2011/LVIII/#Deus Ex Machina Evolved
+		p#link#Storie/2011/LIX/#Violenza&amp;Soddisfazione
+		p#link#Storie/2011/LX/#Filler
+		p#link#Storie/2011/LXI/#Cattivo
+		p#link#Storie/2011/LXII/#Normale
 	end#roman
 	stitle#Autunno 2011
 	begin@5em@63#roman
-		li#link#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
-		li#link#Storie/2011/LXIV/#La metafora
-		li#link#Storie/2011/LXV/#Il 13 ottobre
+		p#link#Storie/2011/LXIII/#Gli scagnozzi del Dr.Odio
+		p#link#Storie/2011/LXIV/#La metafora
+		p#link#Storie/2011/LXV/#Il 13 ottobre
 	end#roman
 	begin@5em@67#roman
-		li#link#Storie/2011/LXVII/#Ancora ce la posso fare
-		li#link#Storie/2011/LXVIII/#Momenti
-		li#link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
-		li#link#Storie/2011/LXX/#Spontaneità
-		li#link#Storie/2011/LXXI/#Libertà
-		li#link#Storie/2011/LXXII/#L'ultimo progetto
-		li#link#Storie/2011/LXXIII/#Il Momento GODS
+		p#link#Storie/2011/LXVII/#Ancora ce la posso fare
+		p#link#Storie/2011/LXVIII/#Momenti
+		p#link#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
+		p#link#Storie/2011/LXX/#Spontaneità
+		p#link#Storie/2011/LXXI/#Libertà
+		p#link#Storie/2011/LXXII/#L'ultimo progetto
+		p#link#Storie/2011/LXXIII/#Il Momento GODS
 	end#roman
 stop#side

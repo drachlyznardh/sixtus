@@ -9,22 +9,22 @@ start#page
 	sec#
 	title#Tru Naluten IX - La fine del Mondo
 	begin#inside
-		p#intra@a_simak#Vi fu un tempo in cui fui principe, poi venne il tempo in cui fui re, poi venne il tempo in cui l&apos;usurpatore mi prese regno, corona e nome, il tempo in cui divenni nulla. Vi &egrave; stato il tempo in cui ho ottenuto un&apos;altra corona, ed ora sono re, di nuovo. Verr&agrave; il tempo in cui riavr&ograve; ci&ograve; che era mio, e sar&ograve; imperatore. Quando la mia principessa, gi&agrave;  regina, sar&agrave; imperatrice al mio fianco
+		p#speak@a_simak#Vi fu un tempo in cui fui principe, poi venne il tempo in cui fui re, poi venne il tempo in cui l&apos;usurpatore mi prese regno, corona e nome, il tempo in cui divenni nulla. Vi &egrave; stato il tempo in cui ho ottenuto un&apos;altra corona, ed ora sono re, di nuovo. Verr&agrave; il tempo in cui riavr&ograve; ci&ograve; che era mio, e sar&ograve; imperatore. Quando la mia principessa, gi&agrave;  regina, sar&agrave; imperatrice al mio fianco
 		p#…
 		p#…
 	end#inside
 	begin#inside
-		p#intra@simak#Sacomne!
+		p#speak@simak#Sacomne!
 	end#inside
 	p#Era un sogno?
 	p#Era la mia voce?
 	p#Altri ricordi sepolti?
 	begin#inside
-		p#intra@ci#Simak! Credo tu abbia bisogno di una diagnostica [<em title="&Egrave; necessaria una ricerca estesa">gi&agrave; cominciata</em>]
-		p#intra@simak#Perch&eacute;? Ch&apos;&egrave; successo?
-		p#intra@ci#Come registrato precedentemente in un numero imprecisato di casi, sei stato [<code>STATO="assente"</code>] per un periodo di tempo compreso tra [<code>00h00&apos;00"042</code>] e [<code>00h00&apos;02"347</code>], senza dare spiegazioni, senza motivo apparente
-		p#intra@simak#Devo aver sognato. Registra ed archivia, Ci: eLyznardh ha gi&agrave; affrontato situazioni in cui io non ero <em>&quot;disponibile&quot;</em>, se capitasse ancora sono certo che tu e il Lyz possiate occuparvene. Giusto?
-		p#intra@lyz#A me pare una cazzata, capo! Se cerchi scuse per non lavorare, almeno fa&apos; che siano scuse plausibili. Altrimenti potresti dire semplicemente che non vuoi farlo: la porta &egrave; da quella parte!
+		p#speak@ci#Simak! Credo tu abbia bisogno di una diagnostica [<em title="&Egrave; necessaria una ricerca estesa">gi&agrave; cominciata</em>]
+		p#speak@simak#Perch&eacute;? Ch&apos;&egrave; successo?
+		p#speak@ci#Come registrato precedentemente in un numero imprecisato di casi, sei stato [<code>STATO="assente"</code>] per un periodo di tempo compreso tra [<code>00h00&apos;00"042</code>] e [<code>00h00&apos;02"347</code>], senza dare spiegazioni, senza motivo apparente
+		p#speak@simak#Devo aver sognato. Registra ed archivia, Ci: eLyznardh ha gi&agrave; affrontato situazioni in cui io non ero <em>&quot;disponibile&quot;</em>, se capitasse ancora sono certo che tu e il Lyz possiate occuparvene. Giusto?
+		p#speak@lyz#A me pare una cazzata, capo! Se cerchi scuse per non lavorare, almeno fa&apos; che siano scuse plausibili. Altrimenti potresti dire semplicemente che non vuoi farlo: la porta &egrave; da quella parte!
 	end#inside
 	p#Forse eLyz ha ragione, ma non vedo come potrei evitare queste fasi di
 	sonno temporaneo e improssivo. Non dipendono da me, almeno non credo.
@@ -37,7 +37,7 @@ start#page
 	estremo all'altro di Cheskaldhum; prima della guerra, prima di avere una
 	corona sul capo, prima…
 	begin#inside
-		p#intra@a_simak#Focalizza, Simak. Avrai tempo di ricordare pi&ugrave; avanti, ora pensa al cucciolo
+		p#speak@a_simak#Focalizza, Simak. Avrai tempo di ricordare pi&ugrave; avanti, ora pensa al cucciolo
 	end#inside
 	p#<em>Quale</em> cucciolo?
 	p#Impiego qualche secondo a capire a cosa si riferisse l'ordine: anche dopo
@@ -77,16 +77,16 @@ start#page
 	mio muso (che non &egrave; poi molto, dato che il soffitto di questa
 	casupola mi obbliga a strisciare per terra) e lo osservo.
 	begin#inside
-		p#intra@simak#Impressioni?
-		p#intra@lyz#&Egrave; insufficiente anche per uno spuntino, ma forse puoi usarlo come condimento…
-		p#intra@simak#Ci?
-		p#intra@ci#Ad un&apos;analisi preliminare, l&apos;esemplare si direbbe in salute
-		p#intra@lyz#<em>Allora</em> &egrave; commestibile, che aspettiamo?
-		p#intra@simak#Lo portiamo con noi
-		p#intra@ci#Oh
-		p#intra@lyz#Cosa?!? Perch&eacute;?!?
-		p#intra@simak#&Egrave; l&apos;ultimo della sua specie, no? <em title="Non &egrave; vero, professor Jones?">Dovrebbe stare in un museo.</em> E poi l&apos;istinto mi dice che &egrave; bene che io lo prenda con me
-		p#intra@lyz#Meccheccazzo dici? Sono <em>io</em> l&apos;istinto. Ascolta me! Mangialo e andiamocene!
+		p#speak@simak#Impressioni?
+		p#speak@lyz#&Egrave; insufficiente anche per uno spuntino, ma forse puoi usarlo come condimento…
+		p#speak@simak#Ci?
+		p#speak@ci#Ad un&apos;analisi preliminare, l&apos;esemplare si direbbe in salute
+		p#speak@lyz#<em>Allora</em> &egrave; commestibile, che aspettiamo?
+		p#speak@simak#Lo portiamo con noi
+		p#speak@ci#Oh
+		p#speak@lyz#Cosa?!? Perch&eacute;?!?
+		p#speak@simak#&Egrave; l&apos;ultimo della sua specie, no? <em title="Non &egrave; vero, professor Jones?">Dovrebbe stare in un museo.</em> E poi l&apos;istinto mi dice che &egrave; bene che io lo prenda con me
+		p#speak@lyz#Meccheccazzo dici? Sono <em>io</em> l&apos;istinto. Ascolta me! Mangialo e andiamocene!
 	end#inside
 	sec#
 	p#Sempre strisciando, esco dalla casupola reggendo il fagotto col dito. Una
@@ -94,9 +94,9 @@ start#page
 	braccia, curvo la schiena e guardo verso l'alto. Quello che vedo non mi
 	piace affatto.
 	begin#inside
-		p#intra@simak#Dimmi che non &egrave; come sembra
-		p#intra@ci#Rilevate multiple intrusioni in Datundhum da [<code>luogo sconosciuto</code>]. Sono varchi extra-dimensionali, paralleli alle Porte di Tanje. E sono illegali
-		p#intra@lyz#E non &egrave; da tutti aprirli
+		p#speak@simak#Dimmi che non &egrave; come sembra
+		p#speak@ci#Rilevate multiple intrusioni in Datundhum da [<code>luogo sconosciuto</code>]. Sono varchi extra-dimensionali, paralleli alle Porte di Tanje. E sono illegali
+		p#speak@lyz#E non &egrave; da tutti aprirli
 	end#inside
 	p#Vedo uno strano movimento, alto nel cielo. &Egrave; simile all'apertura di
 	una Porta, ma avviene in spazio aperto, senza battenti o serrature, &egrave;
@@ -104,12 +104,12 @@ start#page
 	Datundhum per poterci entrare da fuori… E dallo squarcio, guarda caso, esce
 	un'altra creatura blu a scaglie.
 	begin#inside
-		p#intra@simak#Quanti sono?
-		p#intra@ci#Quattro in vista, ma possono essercene altri
-		p#intra@lyz#Questa &egrave; loro seconda ondata: sono tredici
-		p#intra@simak#Blocchi dal settimo al quinto, subito. Conferma dell&apos;Amministratore
-		p#intra@ci#Accettato. Rimozione in corso
-		p#intra@lyz#Stavolta vedi di far far qualcosa anche a me, egoista bastardo!
+		p#speak@simak#Quanti sono?
+		p#speak@ci#Quattro in vista, ma possono essercene altri
+		p#speak@lyz#Questa &egrave; loro seconda ondata: sono tredici
+		p#speak@simak#Blocchi dal settimo al quinto, subito. Conferma dell&apos;Amministratore
+		p#speak@ci#Accettato. Rimozione in corso
+		p#speak@lyz#Stavolta vedi di far far qualcosa anche a me, egoista bastardo!
 	end#inside
 	p#Afferro il cucciolo, lo piazzo sotto di me, lo metto al sicuro. Spalanco
 	le ali, carico tutte le gambe, scatto. Sorpasso tre strati di nuvole prima
@@ -125,8 +125,8 @@ start#page
 	chilometri) ce n'&egrave; un altro, ma la gravit&agrave; quass&ugrave;
 	&egrave; praticamente nulla, mi servir&agrave; aiuto.
 	begin#inside
-		p#intra@simak#Lyz, portami l&igrave;
-		p#intra@lyz#Certo, signore, dove la porto? Sono 2&euro; per il primo chilometro, poi 50 centesimi per i successivi
+		p#speak@simak#Lyz, portami l&igrave;
+		p#speak@lyz#Certo, signore, dove la porto? Sono 2&euro; per il primo chilometro, poi 50 centesimi per i successivi
 	end#inside
 	p#Grazie alle prodezze del Lyz, particelle luminose piovigginano dalle mie
 	ali, spingendomi dove voglio andare. &Egrave; vero che avrei potuto usare il
@@ -139,7 +139,7 @@ start#page
 	spalanco la bocca, proprio quando il mostro blu si accorge della mia
 	presenza.
 	begin#outside
-		p#intra@lyznardh#Normalmente non bacierei al primo appuntamento, ma lei &egrave; tanto blu da spingermi a far un&apos;eccezione!
+		p#speak@lyznardh#Normalmente non bacierei al primo appuntamento, ma lei &egrave; tanto blu da spingermi a far un&apos;eccezione!
 	end#outside
 	p#Serro le zanne, recidendo la testa tozza di quest'essere alla base del
 	collo, ma il sapore non sembra un granch&eacute;… Con una mano afferro il
@@ -164,10 +164,10 @@ start#page
 	scarsit&agrave; di materia prima, arrostir&ograve; lui, usando la sua stessa
 	forza.
 	begin#inside
-		p#intra@simak#Ci, calcola la velocit&agrave; del colpo, la velocit&agrave; del bersaglio, triangola la sua posizione quando il raggio entrer&agrave; in collisione con il bersaglio dopo che l&apos;avr&ograve; deflesso
-		p#intra@ci#Fatto
-		p#intra@simak#Bene. Ora, Lyz, evocami uno specchio curvo, su misura cosicch&eacute; possa deflettere il raggio secondo la curvatura che Ci ha calcolato
-		p#intra@lyz#Vado…
+		p#speak@simak#Ci, calcola la velocit&agrave; del colpo, la velocit&agrave; del bersaglio, triangola la sua posizione quando il raggio entrer&agrave; in collisione con il bersaglio dopo che l&apos;avr&ograve; deflesso
+		p#speak@ci#Fatto
+		p#speak@simak#Bene. Ora, Lyz, evocami uno specchio curvo, su misura cosicch&eacute; possa deflettere il raggio secondo la curvatura che Ci ha calcolato
+		p#speak@lyz#Vado…
 	end#inside
 	p#Per quanto sia bello sentire le ossa dei miei avversari piegarsi,
 	incrinarsi e spezzarsi sotto il peso dei miei colpi, sono in grado di
@@ -180,7 +180,7 @@ start#page
 	&egrave; lo stesso di allora, soltanto ho l'accortezza di non rivelare i
 	miei piani agli avversari.
 	begin#outside
-		p#intra@lyznardh#<em title="Mi occorre uno specchio">Mes erv enspejo</em>
+		p#speak@lyznardh#<em title="Mi occorre uno specchio">Mes erv enspejo</em>
 	end#outside
 	p#Allargo le mani, afferro lo specchio che prende forma e sostanza davanti a
 	me, lo oriento correttamente, e aspetto. Il raggio arriva e colpisce lo
@@ -216,7 +216,7 @@ start#page
 	ali potrebbe essere individuata, ma mi si dovrebbe cercare attivamente per
 	notarla.
 	sec#
-	p#Come previsto, arrivo a portata, rallento e mi porto alle spalle della
+	Come previsto, arrivo a portata, rallento e mi porto alle spalle della
 	creatura. Mi prendo qualche secondo per spiare i suoi pensieri: la si
 	direbbe preoccupata, come se fosse in ritardo. Non noto alcuna nota di
 	dolore, per&ograve;, per i compagni caduti. Forse semplicemente non ne
@@ -227,49 +227,49 @@ start#page
 	mia vittoria. Pazienza, spingo il cadevere verso il pianeta e mi dirigo
 	versa la nona uccisione di questa giornata. Mh, gi&agrave; nove? Ho atteso
 	un sacco di tempo per tornare in attivit&agrave;!
-	p#Mentre viaggio verso il mio prossimo bersaglio (non <span
-	class="em">troppo</span> rapidamente, non voglio fuggire dall'orbita) ho un
-	po' di tempo per riflettere su quello che sto facendo. Si, perch&eacute; non
-	capita tutti i giorni di trovare un gruppo pi&ugrave; o meno organizzato di
-	mostri blu che prima invia una squadra a sterminare la popolazione di un
-	pianeta, e poi ne invia un'altra &ndash; pi&ugrave; grande &ndash;
-	attraverso varchi spaziali per fare chiss&agrave; che cosa… E per quanto
-	attraversare le Porte di Tanje e perforare la continuit&agrave; dello spazio
-	siano reati punibili secondo le <span class="em">Leggi</span>, sono convinto
-	che ci sia dell'altro. Ed ora che ci penso, so anche a chi posso chiedere
-	consiglio…
+	
+	Mentre viaggio verso il mio prossimo bersaglio (non <em>troppo</em>
+	rapidamente, non voglio fuggire dall'orbita) ho un po' di tempo per
+	riflettere su quello che sto facendo. Si, perch&eacute; non capita tutti i
+	giorni di trovare un gruppo pi&ugrave; o meno organizzato di mostri blu che
+	prima invia una squadra a sterminare la popolazione di un pianeta, e poi ne
+	invia un'altra &ndash; pi&ugrave; grande &ndash; attraverso varchi spaziali
+	per fare chiss&agrave; che cosa… E per quanto attraversare le Porte di Tanje
+	e perforare la continuit&agrave; dello spazio siano reati punibili secondo
+	le <em>Leggi</em>, sono convinto che ci sia dell'altro. Ed ora che ci penso,
+	so anche a chi posso chiedere consiglio…
 	begin#inside
-		p#intra@simak#Allora, Coscienza, che mi dici? Operano in squadre di tre, come facevano i tuoi. Avanti, consiglia come sai fare tu
-		p#intra@corona#Forse l&apos;<em>Usurpatore</em> ti assomiglia pi&ugrave; di quanto immagini
-		p#intra@simak#Non credo: io li manderei a squadre di cinque. Tre elementi non sono sufficienti per i miei scopi
-		p#intra@corona#Rifletti dunque sugli scopi del tuo nemico, Simak. Credi forse che soffra di scarsit&agrave; di sottoposti? O forse per il suo scopo squadre di tre sono sufficienti?
-		p#intra@simak#Tre alla volta sarebbe sufficiente? No, affatto: lui ne manda tre alla volta per risparmiare sul controllo, cos&igrave; che non debba stancarsi troppo ad dare ordini a chi li accetta e ad imporli a chi invece non lo fa. In ogni caso, da questa distanza, il controllo sar&agrave; scarso e gli ordini semplici
-		p#intra@corona#E quali sono gli ordini semplici che daresti a queste truppe?
-		p#intra@simak#Obiettivi semplici e lineari: &quot;uccidi&quot;, o forse &quot;fai la guardia&quot;, nient&apos;altro. Credo che &quot;riporta&quot; sia il limite per queste creature
-		p#intra@corona#Meno che cani, dunque. Ma queste creature attraversano le Porte e all&apos;occorrenza sfondano le pareti di Datundhum. Cosa credi che vogliano? Manda creature che possono cacciare attraverso le dimensioni. Lui sa che sei vivo, e ti vuole scovare. Sa anche che ti nascondi in Datundhum, quindi distrugger&agrave; i luoghi in cui pu&ograve; nasconderti
-		p#intra@simak#No, lui non sa che sono vivo, ma teme che potrei esserlo. E teme anche te. Teme noi e i nostri domini legittimi, quindi li sta distruggendo. Eliminando le creature di Datundhum rovina il mio regno, ma eliminandole la loro ombra scompare e il tuo reame si spopola
-		p#intra@corona#…
+		p#speak@simak#Allora, Coscienza, che mi dici? Operano in squadre di tre, come facevano i tuoi. Avanti, consiglia come sai fare tu
+		p#speak@corona#Forse l&apos;<em>Usurpatore</em> ti assomiglia pi&ugrave; di quanto immagini
+		p#speak@simak#Non credo: io li manderei a squadre di cinque. Tre elementi non sono sufficienti per i miei scopi
+		p#speak@corona#Rifletti dunque sugli scopi del tuo nemico, Simak. Credi forse che soffra di scarsit&agrave; di sottoposti? O forse per il suo scopo squadre di tre sono sufficienti?
+		p#speak@simak#Tre alla volta sarebbe sufficiente? No, affatto: lui ne manda tre alla volta per risparmiare sul controllo, cos&igrave; che non debba stancarsi troppo ad dare ordini a chi li accetta e ad imporli a chi invece non lo fa. In ogni caso, da questa distanza, il controllo sar&agrave; scarso e gli ordini semplici
+		p#speak@corona#E quali sono gli ordini semplici che daresti a queste truppe?
+		p#speak@simak#Obiettivi semplici e lineari: &quot;uccidi&quot;, o forse &quot;fai la guardia&quot;, nient&apos;altro. Credo che &quot;riporta&quot; sia il limite per queste creature
+		p#speak@corona#Meno che cani, dunque. Ma queste creature attraversano le Porte e all&apos;occorrenza sfondano le pareti di Datundhum. Cosa credi che vogliano? Manda creature che possono cacciare attraverso le dimensioni. Lui sa che sei vivo, e ti vuole scovare. Sa anche che ti nascondi in Datundhum, quindi distrugger&agrave; i luoghi in cui pu&ograve; nasconderti
+		p#speak@simak#No, lui non sa che sono vivo, ma teme che potrei esserlo. E teme anche te. Teme noi e i nostri domini legittimi, quindi li sta distruggendo. Eliminando le creature di Datundhum rovina il mio regno, ma eliminandole la loro ombra scompare e il tuo reame si spopola
+		p#speak@corona#…
 	end#inside
 	begin#inside
-		p#intra@a_simak#Non dimenticare la terra, Simak. Lui non si dimentica della casa in cui vorresti tornare
+		p#speak@a_simak#Non dimenticare la terra, Simak. Lui non si dimentica della casa in cui vorresti tornare
 	end#inside
 	begin#inside
-		p#intra@simak#La casa in cui voglio tornare? Si, lui distrugge anche le case. Anche i pianeti proiettano la loro ombra nel tuo mondo, vero? Per limitare il tuo potere, toglier&agrave; anche quelli
-		p#intra@corona#Il tuo odio &egrave; tale da lasciarlo fare, dunque? Lascierai soffrire quei tuoi miseri sudditi per avere la tua vendetta? Ti basta forse che il mio impero venga danneggiato dal nostro nemico per placarti? Eh, Simak?
-		p#intra@simak#Dunque lo temi
-		p#intra@corona#…
-		p#intra@simak#Ebbene, sei fortunata, Coscienza. Nessuno pu&ograve; permettersi di fare i suoi comodi in casa degli altri, e questa casa appartiene a me. Lui pagher&agrave; e cos&igrave; anche i suoi sottoposti, liberi o controllati che siano
-		p#intra@corona#E sia. Ma come salverai un pianeta morto?
+		p#speak@simak#La casa in cui voglio tornare? Si, lui distrugge anche le case. Anche i pianeti proiettano la loro ombra nel tuo mondo, vero? Per limitare il tuo potere, toglier&agrave; anche quelli
+		p#speak@corona#Il tuo odio &egrave; tale da lasciarlo fare, dunque? Lascierai soffrire quei tuoi miseri sudditi per avere la tua vendetta? Ti basta forse che il mio impero venga danneggiato dal nostro nemico per placarti? Eh, Simak?
+		p#speak@simak#Dunque lo temi
+		p#speak@corona#…
+		p#speak@simak#Ebbene, sei fortunata, Coscienza. Nessuno pu&ograve; permettersi di fare i suoi comodi in casa degli altri, e questa casa appartiene a me. Lui pagher&agrave; e cos&igrave; anche i suoi sottoposti, liberi o controllati che siano
+		p#speak@corona#E sia. Ma come salverai un pianeta morto?
 	end#inside
 	p#Questo pianeta soffre, certo, ma ancora vive. E io intendo proteggerlo, perch&eacute; mi appartiene.
 	begin#inside
-		p#intra@ci#Pericolo! Ricevo segnali di cedimento dalla struttura del pianeta. Da un&apos;analisi preliminare, si direbbe in procinto di collassare
-		p#intra@simak#Questo &egrave; impossibile: ho attraversato il cuore di quel pianeta meno di dieci minuti fa e stava pi&ugrave; che bene
-		p#intra@ci#Purtroppo la distanza rende imprecisi i rilevamenti, ma i sensori indicano un indebolimento della struttura contemporaneamente ad un aumento di massa
-		p#intra@simak#&Egrave; impossibile! Nulla guadagna massa in Datundhum
-		p#intra@ci#I dati sono innegabili. Numerose masse compaiono nel nucleo del pianeta e si muovono disordinatamente al suo interno. I disturbi sono compatibili con numerosi fori nella parete planare
-		p#intra@lyz#Ne arrivano altri, stavolta direttamente da dentro: si mangeranno il pianeta o lo spezzeranno. In ogni caso, &egrave; tardi, non possiamo fermarli
-		p#intra@ci#Successive analisi rilevano la presenza di 363 masse in movimento ed una massa stazionaria. Il numero di masse &egrave; compatitile con un gruppo di [<code>Creatura sconosciuta @SHARP@15</code>] al quinto livello gerarchico
+		p#speak@ci#Pericolo! Ricevo segnali di cedimento dalla struttura del pianeta. Da un&apos;analisi preliminare, si direbbe in procinto di collassare
+		p#speak@simak#Questo &egrave; impossibile: ho attraversato il cuore di quel pianeta meno di dieci minuti fa e stava pi&ugrave; che bene
+		p#speak@ci#Purtroppo la distanza rende imprecisi i rilevamenti, ma i sensori indicano un indebolimento della struttura contemporaneamente ad un aumento di massa
+		p#speak@simak#&Egrave; impossibile! Nulla guadagna massa in Datundhum
+		p#speak@ci#I dati sono innegabili. Numerose masse compaiono nel nucleo del pianeta e si muovono disordinatamente al suo interno. I disturbi sono compatibili con numerosi fori nella parete planare
+		p#speak@lyz#Ne arrivano altri, stavolta direttamente da dentro: si mangeranno il pianeta o lo spezzeranno. In ogni caso, &egrave; tardi, non possiamo fermarli
+		p#speak@ci#Successive analisi rilevano la presenza di 363 masse in movimento ed una massa stazionaria. Il numero di masse &egrave; compatitile con un gruppo di [<code>Creatura sconosciuta @SHARP@15</code>] al quinto livello gerarchico
 	end#inside
 	p#Merda, eLyz ha ragione. E pure Coscienza ce l'ha… Ora c'&eacute; poco da
 	fare, il cuore del pianeta verr&agrave; divorato, poi l'intera struttura del
@@ -278,9 +278,9 @@ start#page
 	sempre distruggere tutto, l'esercito di mostri blu assieme all'intero
 	pianeta.
 	begin#inside
-		p#intra@simak#Allora, Lyz, come distruggo un pianeta?
-		p#intra@lyz#Con <em>Meteor</em>?
-		p#intra@c#Non abbiamo la <em title="ce l&apos;ha Sephiroth">Black Materia</em>
+		p#speak@simak#Allora, Lyz, come distruggo un pianeta?
+		p#speak@lyz#Con <em>Meteor</em>?
+		p#speak@c#Non abbiamo la <em title="ce l&apos;ha Sephiroth">Black Materia</em>
 	end#inside
 	sec#
 	p#Mentre io e i miei coinquilini perdiamo tempo nella testa del Lyznardh,
@@ -329,16 +329,16 @@ start#page
 	dimensioni, con l'abbassamento di qualche punto sull'indice di massa
 	corporea (nel senso che ora &egrave; meno tozza di prima).
 	begin#inside
-		p#intra@simak#I pianeti non schivano i colpi, le creature di stazza planetaria possono
-		p#intra@lyz#Basta colpire subito e forte, senza lasciarle il tempo di reagire: &egrave; ancora mezza dentro al sasso, le ci vorr&agrave; del tempo per uscire. Attacca ora
-		p#intra@simak#Con cosa?
-		p#intra@lyz#Con qualcosa di rapido e definitivo
-		p#intra@simak#Ci, leva il quarto blocco
-		p#intra@ci#Subito
+		p#speak@simak#I pianeti non schivano i colpi, le creature di stazza planetaria possono
+		p#speak@lyz#Basta colpire subito e forte, senza lasciarle il tempo di reagire: &egrave; ancora mezza dentro al sasso, le ci vorr&agrave; del tempo per uscire. Attacca ora
+		p#speak@simak#Con cosa?
+		p#speak@lyz#Con qualcosa di rapido e definitivo
+		p#speak@simak#Ci, leva il quarto blocco
+		p#speak@ci#Subito
 	end#inside
 	p#Punto il dito.
 	begin#outside
-		p#intra@lyznardh#<strong title="Sterminio">Exterminatio</strong>
+		p#speak@lyznardh#<strong title="Sterminio">Exterminatio</strong>
 	end#outside
 	p#Le 363 creature, il mostro di dimensioni planetarie e il pianeta svaniscono.
 	sec#
@@ -350,9 +350,9 @@ start#page
 	albero, la mia casa, i miei fratelli, la mia amata; oh, ci sono anch'io…
 	p#In piedi davanti ai battenti, mi schiarisco la voce e chiedo cortesemente:
 	begin#outside
-		p#intra@lyznardh#&Egrave; permesso?
+		p#speak@lyznardh#&Egrave; permesso?
 	end#outside
-	p#La porta si apre, dentro &egrave; buio, ma si intravedono i gradini.
+	p#La porta si apre, dentro &egrave; buio, ma si speakvedono i gradini.
 	c#Entro.
 	r#La porta si richiude.
 stop#page

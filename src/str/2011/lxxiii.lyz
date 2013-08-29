@@ -64,7 +64,7 @@ start#page
 	costretto a fare quel che facevano i nostri antenati: <em>pensare</em>. E
 	purtroppo, quando penso vado a rischio di capire delle cose.
 	begin#mini@left
-		foto#Extra/PhilosoGODS.png
+		img#Extra/PhilosoGODS.png
 		Quest'immagine è stata cortesemente realizzata da <em
 		class="dacav">Simgi</em>. Che non ha un cazzo da fare.
 	end#mini
@@ -91,7 +91,7 @@ start#page
 	io mi blocchi per qualche istante. Ed ovviamente, la maggior parte dei
 	momenti è <em>triste</em>.
 	clear#both
-	sbr#
+	sec#br
 	E adesso, se mi riesce, scriverò altre cose. Mi par di ricordare, infatti,
 	che ci fossero altre cose meritevoli, oggi.
 	begin#mini@right
@@ -104,11 +104,11 @@ start#page
 	end#mini
 	Eccone una: ho visto la Mara, oggi. È saltata fuori, poi è sparita. Ma è
 	anche tornata, ed io ho potuto incassare uno dei due caffé della
-	link#Storie/2011/XLVI/#leggenda#vi##.
+	link#Storie/2011/XLVI/#leggenda@.#vi
 	begin#mini@left
 		Ed eccone anche un'altra. Vi ricordate del <em>Mago Bandai</em>? Ne ho
 		parlato
-		link#Storie/2011/LXXI/#recentemente###.
+		link#Storie/2011/LXXI/#recentemente@.
 		
 		Ecco, ora quel mago ha venduto quasi tutti i miei stradannati <em>Strike
 		Freedom PG</em> (erano un centianio!) e quindi posso affermare che non
@@ -118,7 +118,7 @@ start#page
 		
 		<strong>Ten - ta - zio - ne</strong>!!!
 		
-		<em class="forte">Tentazione</em>!!!
+		<strong><em>Tentazione</em></strong>!!!
 	end#mini
 	La <em>Emma</em> del bar m'ha chiesto di piegarle il presepe. Questo mesi
 	fa, ed io m'ero tranquillamente offerto di provvedere.
@@ -128,12 +128,12 @@ start#page
 	piegare m'è evaporata e non ce n'è più. Tutta la mia creatività – o meglio,
 	le mie energie – è stata rediretta verso un antico sport, che non praticavo
 	da qualche tempo.
-	inline#em#La corsa?
+	p#speak@em#La corsa?
 	direte voi. No. <em>Demon's Souls</em>.
 	sec#
 	E proseguo.
 	begin#mini@right
-		foto#Extra/Allegri.jpg
+		img#Extra/Allegri.jpg
 	end#mini
 	Giorni fa (oltre una settimana, per la verità) il <em class="bolo">Bolo</em>
 	saltò fuori dicendo di come, dopo le mie numerose lamentazioni, si fosse

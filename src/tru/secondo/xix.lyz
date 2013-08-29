@@ -4,10 +4,10 @@ next#Tru/Naluten/Vol.III/XX/#Il lavoro di Simak
 start#page
 	title#Tru Naluten II, XIX &ndash; La Lezione
 		begin#outside
-			p#intra@lyznardh#Qualcun&apos;altro?
+			p#speak@lyznardh#Qualcun&apos;altro?
 			chiede il Lyznardh, guardandosi attorno, poi prosegue
-			intra@lyznardh#Così vinci una battaglia, Jo. Così ho vinto le mie. E le mie sono molte
-			p#intra@jo#Vedo, Lyznardh
+			speak@lyznardh#Così vinci una battaglia, Jo. Così ho vinto le mie. E le mie sono molte
+			p#speak@jo#Vedo, Lyznardh
 			risponde l'Araldo
 		end#outside
 	sec#
@@ -64,29 +64,29 @@ start#page
 
 	E gli ho pure dato ascolto. Perchè?
 	begin#outside
-		p#intra@simak#Sai, Jo, non ti ho scelta a caso.
+		p#speak@simak#Sai, Jo, non ti ho scelta a caso.
 		dice il mozzo
-		intra@simak#All&apos;inizio, forse, potrebbe sembrare, ma non è così
-		speak#jo#Chi sei tu? Che vuoi?
-		p#intra@simak#Eh...
+		speak@simak#All&apos;inizio, forse, potrebbe sembrare, ma non è così
+		p#speak@jo#Chi sei tu? Che vuoi?
+		p#speak@simak#Eh…
 		esista
-		intra@simak#Con tutti i tuoi anni, ancora rimani acerba, Jo cara
+		speak@simak#Con tutti i tuoi anni, ancora rimani acerba, Jo cara
 	end#outside
 	Non lo capisco.
 	begin#outside
-		p#intra@simak#Ma il tempo non è certo un problema
+		p#speak@simak#Ma il tempo non è certo un problema
 		afferma il mozzo
-		intra@simak#E in fondo, ho ottenuto quello che volevo: hai fatto il mio nome, Jo. E non solo: Rennington è bello che morto e questo potrebbe smuovere la gente di questa cittadina
+		speak@simak#E in fondo, ho ottenuto quello che volevo: hai fatto il mio nome, Jo. E non solo: Rennington è bello che morto e questo potrebbe smuovere la gente di questa cittadina
 		
 		Mi fissa per un attimo, poi s'avvicina, mi mette un braccio sopra le
 		spalle e mi fa
-		intra@simak#Dunque, ecco quel che rimane da fare. Ora, io provvederò personalmente a risolvere alcune altre faccende in sospeso, mentre tu dovresti cortesemente farti riportare al villaggio e convocare Aysha. Firmerà la pace. Quando avrai finito, verrò a prenderti.
+		speak@simak#Dunque, ecco quel che rimane da fare. Ora, io provvederò personalmente a risolvere alcune altre faccende in sospeso, mentre tu dovresti cortesemente farti riportare al villaggio e convocare Aysha. Firmerà la pace. Quando avrai finito, verrò a prenderti.
 	end#outside
 	Detto questo, prende e se ne va.
 	sec#
 	Rimango persa. Penso che non sto meritando tutta questa tremenda pressione
 	sulle mie spalle, che non dovrei essere qui, che dovrei essere sulla mia
-	collina, a raccogliere i fiori per il negozio, a badare alla mia casa... Poi
+	collina, a raccogliere i fiori per il negozio, a badare alla mia casa… Poi
 	ricordo Alì, che non vedo da prima del duello.
 
 	Esco di corsa, torno in coperta.
@@ -98,12 +98,12 @@ start#page
 	Alì giace a terra. Sanguina, ma non saprei dire quanto. Sta parlando con il
 	mozzo. Dallo sguardo che ha negli occhi, vedo che non gli resta molto.
 	begin#outside
-		speak#ali#Maestro, perdona. Ti ho deluso
-		p#intra@simak#É vero, Alì, ma non crucciarti risponde
+		p#speak@ali#Maestro, perdona. Ti ho deluso
+		p#speak@simak#É vero, Alì, ma non crucciarti risponde
 		quello, senza batter ciglio
-		intra@simak#Dimmi invece quello c&apos;hai compreso
-		speak#ali#Ho sperato troppo, Maestro. Ho sperato e non ho agito. Come riparerò, Maestro?
-		speak#simak#Non puoi, quì. Ora va, Togan ti attende tra le sue schiere. Egli farà di te uno dei miei migliori
+		speak@simak#Dimmi invece quello c&apos;hai compreso
+		p#speak@ali#Ho sperato troppo, Maestro. Ho sperato e non ho agito. Come riparerò, Maestro?
+		p#speak@simak#Non puoi, quì. Ora va, Togan ti attende tra le sue schiere. Egli farà di te uno dei miei migliori
 	end#outside
 	Non capisco il senso di queste parole. Non conosco Togan, non conosco le
 	´sue schiere', né i ´suoi migliori'. E neanche vorrei scoprirlo. Ma credo
@@ -122,7 +122,7 @@ start#page
 
 	Via i prigionieri, preparare una nave, non questa che va piano, non quello
 	ch'è danneggiata, prendiamo quella che va in fretta, venga venga Araldo,
-	venga da questa parte...
+	venga da questa parte…
 
 	Nel giro di un paio di minuti io e una ciurma ai miei ordini siamo a bordo
 	di una leggere barchetta, con dieci rematori incitati dall'ufficiale
@@ -138,7 +138,7 @@ start#page
 
 	Aysha è già al corrente. Ne sono certa.
 	begin#outside
-		p#intra@em#Araldo, gentile da parte tua venirmi incontro. Egli già mi ha narrato tutto. Vieni, siedi con me
+		p#speak@em#Araldo, gentile da parte tua venirmi incontro. Egli già mi ha narrato tutto. Vieni, siedi con me
 		dice una voce.
 		
 		Ricordo che uno dei feticci è in grado di parlare.
@@ -169,13 +169,13 @@ start#page
 	piazza sul mare, quella che ho attraversato di corsa, fuggendo dalla
 	prigione con Alì, solo poche ore prima.
 	begin#outside
-		p#intra@jo#Che succederà, adesso?
+		p#speak@jo#Che succederà, adesso?
 		chiedo alla fanciulla che m'accompagna.
 
-		p#intra@em#Egli ha detto che sarà la pace tra il nostro popolo e questa gente, ed anche tra noi e i Glah&apos;li
+		p#speak@em#Egli ha detto che sarà la pace tra il nostro popolo e questa gente, ed anche tra noi e i Glah&apos;li
 		risponde lei, attraverso la sua creatura
-		intra@em#E che starà a tre di noi sovrintendere affinché la pace duri.
-		p#intra@em#Preparati, lui è quì per te
+		speak@em#E che starà a tre di noi sovrintendere affinché la pace duri.
+		p#speak@em#Preparati, lui è quì per te
 	end#outside
 	E noto in effetti un ragazzo ad attenderci in piazza. Non è il mozzo. É
 	Simak. Quello sgorbio ch'era uscito, tutto nudo e tutto unto, dalla bocca
@@ -190,9 +190,9 @@ start#page
 		
 	Sempre tenendomi per mano, quello comincia a parlare alla folla:
 	begin#outside
-		p#intra@simak#<strong>Gente, questo è un giorno grande!</strong>
-		p#intra@simak#<strong>Questo mio Araldo vi porta la mia sacerdotessa dalla costa, perché sovrintenda a questi luoghi, assieme a questo soldato dell&apos;entroterra e a questo cacciatore del mare.</strong>
-		p#intra@simak#<strong>Affinché la vostra pace duri</strong>
+		p#speak@simak#<strong>Gente, questo è un giorno grande!</strong>
+		p#speak@simak#<strong>Questo mio Araldo vi porta la mia sacerdotessa dalla costa, perché sovrintenda a questi luoghi, assieme a questo soldato dell&apos;entroterra e a questo cacciatore del mare.</strong>
+		p#speak@simak#<strong>Affinché la vostra pace duri</strong>
 	end#outside
 	Noto, in effetti, altre due figure, dietro Simak. Sono un Glah'li,
 	chiaramente agghindato per la caccia, con balestra, arpione, coltelli,
@@ -212,15 +212,15 @@ start#page
 	palazzi che circondano la piazza, per allontanarmi dal centro
 	dell'attenzione.
 	begin#outside
-		p#intra@simak#Sai
+		p#speak@simak#Sai
 		mi dice senza voltarsi
-		intra@simak#è stata una lunga attesa. Anche conoscendo il futuro, non è stato facile aspettare che tu mi chiamassi...
+		speak@simak#è stata una lunga attesa. Anche conoscendo il futuro, non è stato facile aspettare che tu mi chiamassi…
 	end#outside
 	Ma che vuole questo? Che c'ha nella testa?
 	begin#outside
-		p#intra@simak#Vieni con me, Jo, andiamo
+		p#speak@simak#Vieni con me, Jo, andiamo
 		dice senza lasciarmi la mano
-		intra@lyznardh#É il momento che tu sappia chi io sia
+		speak@lyznardh#É il momento che tu sappia chi io sia
 	end#outside
 	E così dicendo riprende il suo vecchio, normale, aspetto. Quello di enorme
 	mostro a sei zampe e sei occhi, con le ali scheletriche sulle spalle, con il
@@ -228,8 +228,8 @@ start#page
 	entrambe le braccia, mi trascina sotto di sé e mi spruzza addosso, con
 	quelle schifose quattro tettine che tiene sotto quel suo tozzo addome.
 	begin#outside
-		p#intra@lyznardh#La tela serve per mantenere un ambiente confortevole, per temperatura, pressione, atmosfera.
-		p#intra@lyznardh#Ricorda, per favore, di sigillare i tuoi orifizi sensibili
+		p#speak@lyznardh#La tela serve per mantenere un ambiente confortevole, per temperatura, pressione, atmosfera.
+		p#speak@lyznardh#Ricorda, per favore, di sigillare i tuoi orifizi sensibili
 	end#outside
 	Poi spicchiamo il volo, attraverso la tela vedo appena il panorama.  Scorgo
 	la città mentre ce ne allontaniamo, vedo il cielo scurirsi, diventare nero,
@@ -242,6 +242,6 @@ start#page
 	fuoco, l'aria è paurosamente umida e Simak sta attizzando le fiamme con un
 	bastoncino, mentre sta seduto su un tronco abbattuto.
 	begin#outside
-		speak#simak#Oh, eccoti sveglia. Pronta? Tra poco arriva la cena
+		p#speak@simak#Oh, eccoti sveglia. Pronta? Tra poco arriva la cena
 	end#outside
 stop#page

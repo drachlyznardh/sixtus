@@ -116,38 +116,38 @@ start#page
 	è comunque sufficiente, c'è pochissimissimo traffico, nessuno spacca le
 	palle… insomma, nessuno svantaggio.
 
-	E quindi me ne vado, <span class="em">FOREVER ALONE</span>, lungo la mia
+	E quindi me ne vado, <em>FOREVER ALONE</em>, lungo la mia
 	strada. E mentre corro, ecco che mi compare Codd:
 	begin#inside
-		speak#codd#&apos;sup Gods
-		speak#gods#&apos;sup Edgar F
-		speak#codd#Che fai?
-		speak#gods#Corro, Edgar F
-		speak#codd#Perché non vai a scrivere un altro capitolo di Tru
+		p#speak@codd#&apos;sup Gods
+		p#speak@gods#&apos;sup Edgar F
+		p#speak@codd#Che fai?
+		p#speak@gods#Corro, Edgar F
+		p#speak@codd#Perché non vai a scrivere un altro capitolo di Tru
 		Naluten?
-		speak#gods#Perché tanto so come va a finire… il prossimo passo
+		p#speak@gods#Perché tanto so come va a finire… il prossimo passo
 		è l&apos;enorme spiegone prima del flashback lungo come l&apos;anno
 		della fame
-		speak#codd#Davverp?
-		speak#gods#Si, si, mo&apos; ti racconto…
+		p#speak@codd#Davverp?
+		p#speak@gods#Si, si, mo&apos; ti racconto…
 	end#inside
 	begin#outside
 		<p>[segue il capitolo XXI di Tru Naluten… prossimamente]</p>
 	end#outside
 	begin#inside
-		speak#codd#Però… figo
-		speak#gods#Eh, grazie. &apos;scolta un po&apos;… che vuoi?
-		speak#codd#L&apos;hai finito il fiore, no?
-		speak#gods#Si, è abbastanza definitivo, nuovo fiore, nuovo
+		p#speak@codd#Però… figo
+		p#speak@gods#Eh, grazie. &apos;scolta un po&apos;… che vuoi?
+		p#speak@codd#L&apos;hai finito il fiore, no?
+		p#speak@gods#Si, è abbastanza definitivo, nuovo fiore, nuovo
 		calice
-		speak#codd#Non credi che sarebbe il caso di consegnarlo?
-		speak#gods#Non è un po&apos; prestino? Sai, vorrei evitare che
+		p#speak@codd#Non credi che sarebbe il caso di consegnarlo?
+		p#speak@gods#Non è un po&apos; prestino? Sai, vorrei evitare che
 		la consegna fosse la sola occasione d&apos;interagire
-		speak#codd#Non finirai mica come tutte le altre sere, a far la
+		p#speak@codd#Non finirai mica come tutte le altre sere, a far la
 		mammoletta, a passarle davanti senza dire niente, senza neanche
 		guardarla, a tornartene a casa da solo, come al solito? Che tanto lei ti
 		vede e chissà che si mette a pensare!
-		speak#gods#Codd, vaffanculo!
+		p#speak@gods#Codd, vaffanculo!
 	end#inside
 	Codd non ha ancora imparato che certe cose le deve lasciar fare a me.
 	sec#
@@ -172,8 +172,8 @@ start#page
 		È il motivo per cui mi sono distratto nelle ultime due settimane.
 		
 		Se m'avvicino troppo, qualche primitiva ghiandola nel cervello comincia
-		a bombardarmi il subconscio con le parole “<span
-		class="em">Pericolo!</span>” e “<span class="em">Scappa!</span>”
+		a bombardarmi il subconscio con le parole “<em>Pericolo!</em>” e
+		“<em>Scappa!</em>”
 	end#ul
 	Ed io, che mi sono appena fatto il giro di tutta la città (bevendo tra
 	l'altro da &gt;9000 fontanelle diverse) che faccio? Scappo… perché qualunque

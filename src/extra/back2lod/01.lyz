@@ -199,13 +199,13 @@ stop#page
 start#side
 	stitle@right#Gennaio 2013
 	begin#ul
-		li#tid#Tirando gli ultimi…@ – <code>16/01</code>#ix
-		li#tid#Tirando gli ultimi [2]…@ – <code>17/01</code>#x
-		li#tid#Tirando gli ultimi [3]…@ – <code>25/01</code>#xi
+		p#tid#Tirando gli ultimi…@ – <code>16/01</code>#ix
+		p#tid#Tirando gli ultimi [2]…@ – <code>17/01</code>#x
+		p#tid#Tirando gli ultimi [3]…@ – <code>25/01</code>#xi
 	end#ul
 	stitle#Bonus content?!?
 	begin#ul
-		li#tid#E dopo la fine, avanti@ – <code>25/01</code>#xii
-		li#tid#La magicaboola continua…@ – <code>26~29/01</code>#xiii
+		p#tid#E dopo la fine, avanti@ – <code>25/01</code>#xii
+		p#tid#La magicaboola continua…@ – <code>26~29/01</code>#xiii
 	end#ul
 stop#side

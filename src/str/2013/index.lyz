@@ -7,11 +7,11 @@ stop#page
 start#side
 	title#Storie 2013
 	begin@4.5em@92#roman
-		li#link#Storie/2013/XCII/#Il festone
-		li#link#Storie/2013/XCIII/#Londra
-		li#link#Storie/2013/XCIV/#BioParco!
-		li#link#Storie/2013/XCV/#Le mutande di Katia
-		li#link#Storie/2013/XCVI/#La formattazzazzazione
-		li#link#Storie/2013/XCVII/#Gli gnocchi che cercavo
+		p#link#Storie/2013/XCII/#Il festone
+		p#link#Storie/2013/XCIII/#Londra
+		p#link#Storie/2013/XCIV/#BioParco!
+		p#link#Storie/2013/XCV/#Le mutande di Katia
+		p#link#Storie/2013/XCVI/#La formattazzazzazione
+		p#link#Storie/2013/XCVII/#Gli gnocchi che cercavo
 	end#roman
 stop#side

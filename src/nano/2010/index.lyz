@@ -94,38 +94,38 @@ start#side
 	title#NaNoWriMo 2010
 	p#link#NaNoWriMo/2010/Personaggi/#Personaggi
 	title#Parte I
-	titler#La gioventù
+	title@right#La gioventù
 	begin#ol@style@list-style-type: decimal-leading-zero
-		li#link#NaNoWriMo/2010/01/Download/#Una sera, al parco
-		li#link#NaNoWriMo/2010/02/Download/#Campeggio
-		li#link#NaNoWriMo/2010/03/Download/#A contatto
-		li#link#NaNoWriMo/2010/04/Download/#Nel bosco
-		li#link#NaNoWriMo/2010/05/Download/#La dichiarazione
+		p#link#NaNoWriMo/2010/01/Download/#Una sera, al parco
+		p#link#NaNoWriMo/2010/02/Download/#Campeggio
+		p#link#NaNoWriMo/2010/03/Download/#A contatto
+		p#link#NaNoWriMo/2010/04/Download/#Nel bosco
+		p#link#NaNoWriMo/2010/05/Download/#La dichiarazione
 	end#ol
 	title#Parte II
-	titler#Il Potere
+	title@right#Il Potere
 	begin#ol@start@6@style@list-style-type: decimal-leading-zero
-		li#link#NaNoWriMo/2010/06/Download/#Il lampione
-		li#link#NaNoWriMo/2010/07/Download/#La lettura
-		li#link#NaNoWriMo/2010/08/Download/#La corsa
-		li#link#NaNoWriMo/2010/09/Download/#L&apos;estate
-		li#link#NaNoWriMo/2010/10/Download/#La morte
-		li#link#NaNoWriMo/2010/11/Download/#Il sogno
-		li#link#NaNoWriMo/2010/12/Download/#Il lupo e il corvo
-		li#link#NaNoWriMo/2010/13/Download/#Il funerale
-		li#link#NaNoWriMo/2010/14/Download/#La rivelazione
-		li#link#NaNoWriMo/2010/15/Download/#Il mondo &lsquo;di là&rsquo;
+		p#link#NaNoWriMo/2010/06/Download/#Il lampione
+		p#link#NaNoWriMo/2010/07/Download/#La lettura
+		p#link#NaNoWriMo/2010/08/Download/#La corsa
+		p#link#NaNoWriMo/2010/09/Download/#L&apos;estate
+		p#link#NaNoWriMo/2010/10/Download/#La morte
+		p#link#NaNoWriMo/2010/11/Download/#Il sogno
+		p#link#NaNoWriMo/2010/12/Download/#Il lupo e il corvo
+		p#link#NaNoWriMo/2010/13/Download/#Il funerale
+		p#link#NaNoWriMo/2010/14/Download/#La rivelazione
+		p#link#NaNoWriMo/2010/15/Download/#Il mondo &lsquo;di là&rsquo;
 	end#ol
 	title#Parte III
-	titler#Le streghe
+	title@right#Le streghe
 	begin#ol@start@16@style@list-style-type: decimal-leading-zero
-		li#link#NaNoWriMo/2010/16/Download/#Il da farsi
-		li#link#NaNoWriMo/2010/17/Download/#Le botte
-		li#link#NaNoWriMo/2010/18/Download/#La sua storia
-		li#link#NaNoWriMo/2010/19/Download/#Io, Strega
-		li#link#NaNoWriMo/2010/20/Download/#L&apos;offensiva
-		li#link#NaNoWriMo/2010/21/Download/#L&apos;oracolo
-		li#link#NaNoWriMo/2010/22/Download/#Il drago
-		li#link#NaNoWriMo/2010/finale/Download/#Epilogo
+		p#link#NaNoWriMo/2010/16/Download/#Il da farsi
+		p#link#NaNoWriMo/2010/17/Download/#Le botte
+		p#link#NaNoWriMo/2010/18/Download/#La sua storia
+		p#link#NaNoWriMo/2010/19/Download/#Io, Strega
+		p#link#NaNoWriMo/2010/20/Download/#L&apos;offensiva
+		p#link#NaNoWriMo/2010/21/Download/#L&apos;oracolo
+		p#link#NaNoWriMo/2010/22/Download/#Il drago
+		p#link#NaNoWriMo/2010/finale/Download/#Epilogo
 	end#ol
 stop#side

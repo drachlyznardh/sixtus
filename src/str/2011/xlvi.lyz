@@ -1,4 +1,4 @@
-title#L&apos;uomo con due ombrelli#Tante piccole grandi storiellucce
+title#L&apos;uomo con due ombrelp#Tante piccole grandi storiellucce
 prev#Storie/2011/XLV/#Wireless
 next#Storie/2011/XLVII/#Impresa @II@
 start#page
@@ -28,7 +28,7 @@ tab#i
 	Per vari motivi, nessuno vien a partecipare alla visione se non io e
 	$capocoro. Forse qualcuno conosce $capocoro perché, per varie storie di vita
 	vissuta, lei coincide con
-	link#Storie/2010/III/#@ragazza[0]###.
+	link#Storie/2010/III/#@ragazza[0]@.
 	Cose terribili.
 	sec#
 	E sapendo chi mi trovo al fianco, mi preparo. Ma anche preparandosi al
@@ -58,7 +58,7 @@ tab#i
 	La mia guardia s'abbassa, e in quel momento vengono coppinato: $capocoro
 	al mio fianco s'avvicina e mi fa
 	begin#outside
-		speak#em#Pensa se il parroco fosse qui a vedere
+		p#speak@em#Pensa se il parroco fosse qui a vedere
 	end#outside
 	E le mie balle caddero.
 
@@ -105,9 +105,9 @@ tab#iii
 	sec#
 	Io e il buon Fabio ci mettiamo in viaggio
 	begin#outside
-		speak#gods#Tanto, basta arrivare a Pozza di Fassa, attraversiamo il ponte vicino alla gelateria dove abbiam mangiato nove anni fa e poi la strada me la ricordo
+		p#speak@gods#Tanto, basta arrivare a Pozza di Fassa, attraversiamo il ponte vicino alla gelateria dove abbiam mangiato nove anni fa e poi la strada me la ricordo
 	
-		speak#gods#Certo, certo, io mi sono scritto tutti i paesi che dobbiamo attraversare
+		p#speak@gods#Certo, certo, io mi sono scritto tutti i paesi che dobbiamo attraversare
 	end#outside
 	Così parlarono i due sprovveduti.
 	sec#
@@ -150,7 +150,7 @@ tab#iii
 	nessun cartello per Pozza, nessun cartello per la Val S.Nicolò, tutti
 	indicano esclusivamente Canazei oppure Cortina.
 	begin#outside
-		speak#gods#Fabio, stai tranquillo, mi ricordo di quell'albero, mi ricordo di quel prato, andiamo avanti
+		p#speak@gods#Fabio, stai tranquillo, mi ricordo di quell'albero, mi ricordo di quel prato, andiamo avanti
 	end#outside
 	E ci perdemmo.
 
@@ -175,8 +175,8 @@ tab#iv
 	Venne la pioggia, si fermò fino ad ora tarda, ed io e il <em
 	class="jazz">signor Jazzinghen</em> ci dicemmo:
 	begin#outside
-		speak#jazz#Sarà meglio aspettare che piova meno
-		speak#gods#Di fatto, non può piovere per sempre
+		p#speak@jazz#Sarà meglio aspettare che piova meno
+		p#speak@gods#Di fatto, non può piovere per sempre
 	end#outside
 	E così i due sprovveduti attesero.
 	sec#
@@ -209,8 +209,8 @@ tab#iv
 	appunti. Anche il libro della tristezza, che mi son messo a leggere
 	soltanto per far prendere aria alle pagine.
 tab#v
-	Ma è grazie a quell'ombrello che oggi son potuto salire <em class="em">like
-	a boss</em>.
+	Ma è grazie a quell'ombrello che oggi son potuto salire <em>like a
+	boss</em>.
 
 	L'ombrello, rimasto in mio possesso fin dallo scorso venerdì, doveva
 	essere restituito, per la Giustizia.
@@ -229,20 +229,20 @@ tab#v
 
 	E quando la vocina del buonsenso mi sottolinea che
 	begin#inside
-		speak#corona#non è opportuno andarsene in giro con due ombrelli
+		p#speak@corona#non è opportuno andarsene in giro con due ombrelli
 	
-		inline#gods#Ah sì?!
+		p#speak@gods#Ah sì?!
 		rispondo
-		inline#gods#Challenge accepted!
+		speak@gods#Challenge accepted!
 	end#inside
 	E me ne salgo con due ombrelli.
 	sec#
 	E siccome non avevo nulla che potesse bagnarsi come un libro (non avendo
 	libro in mano…) e non pioveva molto, me ne sono salito nella
 	pioggerellina con due ombrelli in mano.
-	titler#LIKE A BOSS
+	title@right#LIKE A BOSS
 	title#LIKE A BOSS
-	titler#<span style="color: red">LIKE</span> &forall; <span style="color: yellow">BOSS</span>
+	title@right#<span style="color: red">LIKE</span> &forall; <span style="color: yellow">BOSS</span>
 	title#LIKE A BOSS
 	Non immaginate quanto la gente possa stupirsi per così poco.
 tab#vi
@@ -260,7 +260,7 @@ tab#vi
 	pronunciate dalla sua voce cambiano completamente e ti lasciano a
 	galleggiare in un dolce mare zuccheroso.
 
-	inline#em#Ma di che cazzo sta parlando?
+	p#speak@em#Ma di che cazzo sta parlando?
 	vi chiederete…
 	sec#
 	Ero in aulastudio come tutti i santi giorni, ero lì a fare le mie cose
@@ -268,10 +268,10 @@ tab#vi
 	qualche altro terribile episodio di <em>Transformers Super-God
 	Masterforce</em> quando ad un certo punto spunta la Mara, che forse
 	ricorderete essere
-	link#Storie/2011/XXVIII/#la ragazza con il dado sferico#V##.
+	link#Storie/2011/XXVIII/#la ragazza con il dado sferico@.#V
 	sec#
 	begin#mini@left
-		foto#Extra/Alpha.png
+		img#Extra/Alpha.png
 	end#mini
 	> Giunge la fanciulla alle nostre spalle dopo essere tornata in aula.
 
@@ -300,11 +300,11 @@ stop#page
 start#side
 title#Blah.
 begin#ol
-	li#tid#Le infermierine e il parroco#i
-	li#tid#Il nonno, lo struzzo e le botte#ii
-	li#tid#Le località montane e come arrivarci#iii
-	li#tid#L'acqua nelle scarpe, l'acqua nello zaino#iv
-	li#tid#L'uomo con due ombrelli#v
-	li#tid#Quello che un uomo vuol sentirsi dire#vi
+	p#tid#Le infermierine e il parroco#i
+	p#tid#Il nonno, lo struzzo e le botte#ii
+	p#tid#Le località montane e come arrivarci#iii
+	p#tid#L'acqua nelle scarpe, l'acqua nello zaino#iv
+	p#tid#L'uomo con due ombrelli#v
+	p#tid#Quello che un uomo vuol sentirsi dire#vi
 end#ol
 stop#side

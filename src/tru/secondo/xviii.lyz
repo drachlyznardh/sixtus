@@ -32,8 +32,8 @@ start#page
 	lo trova: sono io. Fa altri due passi in avanti, mi guarda, si inchina
 	poggiando il ginocchio sinistro sul ponte della nave.
 	begin#outside
-		p#intra@ahli#Perdona il ritardo, Araldo
-		p#intra@ahli#Io sono Ah&apos;li dei Glah&apos;li. Mi manda Lui
+		p#speak@ahli#Perdona il ritardo, Araldo
+		p#speak@ahli#Io sono Ah&apos;li dei Glah&apos;li. Mi manda Lui
 	end#outside
 	sec#
 	Sono alti un paio di metri, superano in possanza chiunque altro, oggi. Hanno
@@ -48,15 +48,15 @@ start#page
 	Entrambe le flotte, per lo stupore &ndash; ma anche per la stanchezza
 	&ndash; sono ferme e riprendono il fiato. Poi un grido rompe il silenzio.
 	begin#outside
-		p#intra@rennington#Chi siete? Chi vi manda? Esigo una risposta!
+		p#speak@rennington#Chi siete? Chi vi manda? Esigo una risposta!
 	end#outside
 	Torna il silenzio.
 
 	Le vene sul collo dell'ammiraglio si gonfiano e il suo volto s'arrossa.
 	begin#outside
 		Urla ancora:
-		intra@em#Voglio il nome del responsabile! Chi ha avuto l&apos;ardire di organizzare questa trappola diabolica?
-		p#inline#simak#Non si adiri, ammiraglio
+		speak@em#Voglio il nome del responsabile! Chi ha avuto l&apos;ardire di organizzare questa trappola diabolica?
+		p#speak@simak#Non si adiri, ammiraglio
 		dice una voce alla sue spalle.
 	end#outside
 	Quello si volta con gli occhi iniettati di sangue, voglioso di tagliar la
@@ -65,29 +65,29 @@ start#page
 	Si avvicina un piccoletto con la divisa sgualcita, a passi decisi, senza
 	alcun timore.
 	begin#outside
-		p#intra@em#Tu! Stevenson! Come osi comparire ora! Tu e i tuoi consigli! Perch&eacute; t&apos;ho dato ascolto? Che sono &apos;ste bestie? Parla!
+		p#speak@em#Tu! Stevenson! Come osi comparire ora! Tu e i tuoi consigli! Perch&eacute; t&apos;ho dato ascolto? Che sono &apos;ste bestie? Parla!
 	
 		Il mozzo Stevenson, con calma, senza curarsi del suo ammiraglio, si
 		rivolge invece a me:
-		p#intra@simak#Visto, Jo? Alla fine hai chiamato. E hai fatto bene: molta della tua gente &egrave; stata salvata. Accetterai le condizioni, ora?
-		p#intra@em#Come osi? Bastardo, ti rivolgi al nemico, al mio cospetto, ignorando le mie domande? Finirai sulla forca, per questo
+		p#speak@simak#Visto, Jo? Alla fine hai chiamato. E hai fatto bene: molta della tua gente &egrave; stata salvata. Accetterai le condizioni, ora?
+		p#speak@em#Come osi? Bastardo, ti rivolgi al nemico, al mio cospetto, ignorando le mie domande? Finirai sulla forca, per questo
 		sentenzia l'ammiraglio, rimasto un momento in disparte.
-	p#intra@simak#Perdona un momento, Jo 
+	p#speak@simak#Perdona un momento, Jo 
 	end#outside
 	Furente, l&apos;ammiraglio si divincola dalla stretta dei suoi aguzzini,
 	estrae la spada, scatta verso il mozzo per impalarlo. Ruotando sul posto, il
 	mozzo gli afferra il polso, blocca l&apos;arma e chiede:
 	begin#outside
-		p#intra@simak#Che vuol fare, ammiraglio? Vuole la lotta?
-		p#intra@simak#Farebbe meglio ad ammettere la sconfitta, a ritirare i suoi uomini &ndash; che avranno salva la vita &ndash; e lasciare che questa gente viva libera secondi i propri costumi, come uomini liberi
+		p#speak@simak#Che vuol fare, ammiraglio? Vuole la lotta?
+		p#speak@simak#Farebbe meglio ad ammettere la sconfitta, a ritirare i suoi uomini &ndash; che avranno salva la vita &ndash; e lasciare che questa gente viva libera secondi i propri costumi, come uomini liberi
 		
 		Ancora stretto e bloccato, l&apos;ammiraglio inveisce:
-		inline#rennington#Pazzo! Queste parole sono degne solo di un eretico! Con tutto quello che ho fatto per te! Ora che altro dirai? Che adori anche tu il loro dio?  Che adori Lui? Morirai qui e subito, per mia mano!
+		speak@rennington#Pazzo! Queste parole sono degne solo di un eretico! Con tutto quello che ho fatto per te! Ora che altro dirai? Che adori anche tu il loro dio?  Che adori Lui? Morirai qui e subito, per mia mano!
 
 		Stranamente compiaciuto di queste parole, il mozzo spinge l&apos;ammiraglio un paio di passi indietro, assapora il momento e chiede:
-		intra@simak#<strong>Marcus Ace Rennington, mi stai sfidando?</strong>
-		intra@rennington forte#Si, dannato!
-		intra@simak#Bene!
+		speak@simak#<strong>Marcus Ace Rennington, mi stai sfidando?</strong>
+		speak@rennington#<strong>Si, dannato!</strong>
+		speak@simak#Bene!
 	end#outside
 	Sul mozzo cade un fulmine.
 	sec#
@@ -97,9 +97,9 @@ start#page
 	Prima di riacquistare una chiara visione, con il rimbombo pulsante nelle orecchie
 	e la testa come una campana, Rennington riesce a distinguere queste parole:
 	begin#outside
-		p#intra@lyznardh#Scegli la tua arma, mortale
-		p#intra@rennington#Non ho che questa! Ma sar&agrave; sufficiente anche per te, mostro
-		p#intra@lyznardh#Sia!
+		p#speak@lyznardh#Scegli la tua arma, mortale
+		p#speak@rennington#Non ho che questa! Ma sar&agrave; sufficiente anche per te, mostro
+		p#speak@lyznardh#Sia!
 	end#outside
 	Tutti i presenti si tirano indietro, i nostri, i loro, i Glah&apos;li, tutti.
 	Davanti all&apos;ammiraglio, spada sguainata e occhi iniettati di sangue,
@@ -134,7 +134,7 @@ start#page
 	estrae la lama dalla sinistra, la punta alla gola del suo avversario, e gelido
 	chiede:
 	begin#outside
-		p#intra@lyznardh#Marcus Ace Rennington, temi tu la morte?
+		p#speak@lyznardh#Marcus Ace Rennington, temi tu la morte?
 	end#outside
 	Senza fiato per lo sforzo, l&apos;uomo rimane sorpreso e boccheggia. Credo
 	equivalga ad un &quot;s&igrave;&quot;

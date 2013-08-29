@@ -19,7 +19,7 @@ tab#i
 	anche se quella è stata la sua prime (e per molto tempo unica) funzione.
 
 	Vi ricordate di
-	link#Storie/2010/XII/#$Montanara#iii##?
+	link#Storie/2010/XII/#$Montanara@?#iii
 	Beh, quella ragazza un giorno se ne uscì con un «ma tu ce l'hai un sito?» ed io risposi «adesso sì».
 
 	È un motivo stupido, vero? Lo so.
@@ -49,10 +49,10 @@ tab#ii
 	begin#outside
 		«Udite, udite, voi tutti sudditi di questo reame:»
 	
-		«<span class="latino">Salve, mi chiamo Ivan e mi piace avere la
-		navigazione indipendente dai contenuti perché quando cerco un
-		riferimento a qualcosa non voglio dover tornare in cima alla pagina
-		che perdo il segno, perdo interesse e mi spacco le palle</span>»
+		«<code>Salve, mi chiamo Ivan e mi piace avere la navigazione
+		indipendente dai contenuti perché quando cerco un riferimento a qualcosa
+		non voglio dover tornare in cima alla pagina che perdo il segno, perdo
+		interesse e mi spacco le palle</code>»
 	end#outside
 	Ora, io odio anche le barre di scorrimento.
 tab#iii
@@ -119,10 +119,9 @@ tab#v
 	nemmeno la mette.
 
 	Devo forse mettermi l'anima in pace e mettermi ad utilizzare uno di quei
-	motori da blog, come fanno tutti quelli segnalati tra gli <span
-	class="em">Allegri Compagni</span> (tranne il <span
-	class="bolo">Bolo</span>, ovviamente, lui non è così <span
-	class="em">mainstream</span>).
+	motori da blog, come fanno tutti quelli segnalati tra gli <em>Allegri
+	Compagni</em> (tranne il <span class="bolo">Bolo</span>, ovviamente, lui non
+	è così <em>mainstream</em>).
 
 	Brutte cose.
 
@@ -143,14 +142,14 @@ stop#page
 start#side
 	title#Offerte
 	begin#ol
-		li#tid#Fin da sempre!#i
-		li#tid#Questo layout#ii
-		li#tid#Le barre di scorrimento#iii
+		p#tid#Fin da sempre!#i
+		p#tid#Questo layout#ii
+		p#tid#Le barre di scorrimento#iii
 	end#ol
 	title#Domande
 	begin#ol@start@4
-		li#tid#Il cliente ha sempre ragione#iv
-		li#tid#A spada tratta#v
-		li#tid#Le alternative#vi
+		p#tid#Il cliente ha sempre ragione#iv
+		p#tid#A spada tratta#v
+		p#tid#Le alternative#vi
 	end#ol
 stop#side

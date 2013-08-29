@@ -32,29 +32,29 @@ stop#page
 start#side
 title#Storie 2010
 	begin@3.5em#roman
-		li#link#Storie/2010/I/#Apologia
-		li#link#Storie/2010/II/#Correre
-		li#link#Storie/2010/III/#Progetti
-		li#link#Storie/2010/IV/#Impresa
-		li#link#Storie/2010/V/#Condizioni
-		li#link#Storie/2010/VI/#Un posto in cui stare
-		li#link#Storie/2010/VII/#Gundam
-		li#link#Storie/2010/VIII/#Sassi
+		p#link#Storie/2010/I/#Apologia
+		p#link#Storie/2010/II/#Correre
+		p#link#Storie/2010/III/#Progetti
+		p#link#Storie/2010/IV/#Impresa
+		p#link#Storie/2010/V/#Condizioni
+		p#link#Storie/2010/VI/#Un posto in cui stare
+		p#link#Storie/2010/VII/#Gundam
+		p#link#Storie/2010/VIII/#Sassi
 	end#roman
-	titler#La Saga della $Rossa
+	title@right#La Saga della $Rossa
 	begin#inside
 		begin@4em@9#roman
-			li@class@cat-heart#link#Storie/2010/IX/#Attenzione
-			li@class@cat-heart#link#Storie/2010/X/#Due Storie
-			li@class@cat-heart#link#Storie/2010/XI/#Tre Storie
-			li@class@cat-heart#link#Storie/2010/XII/#La musa
-			li@class@cat-heart#link#Storie/2010/XIII/#Il modello definitivo
-			li@class@cat-heart#link#Storie/2010/XIV/#L'incontro
-			li@class@cat-heart#link#Storie/2010/XV/#La spinta
-			li@class@cat-heart#link#Storie/2010/XVI/#Il lunedì della verità
+			p#link#Storie/2010/IX/#Attenzione
+			p#link#Storie/2010/X/#Due Storie
+			p#link#Storie/2010/XI/#Tre Storie
+			p#link#Storie/2010/XII/#La musa
+			p#link#Storie/2010/XIII/#Il modello definitivo
+			p#link#Storie/2010/XIV/#L'incontro
+			p#link#Storie/2010/XV/#La spinta
+			p#link#Storie/2010/XVI/#Il lunedì della verità
 		end#roman
 	end#inside
 	begin@4em@17#roman
-		li#link#Storie/2010/XVII/#Il finale
+		p#link#Storie/2010/XVII/#Il finale
 	end#roman
 stop#side

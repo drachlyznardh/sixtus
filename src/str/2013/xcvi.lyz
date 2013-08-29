@@ -7,7 +7,7 @@ tab#i
 	alla vita pubblica è segnato da alcuni eccezionali eventi che andrò a
 	raccontarvi a breve.
 	begin#outside
-		speak#gods#Ora, <strong>COFFEETIEM</strong>
+		p#speak@gods#Ora, <strong>COFFEETIEM</strong>
 	end#outside
 	sec#
 	Se a qualcuno interessasse, dirò che era un caffé freddo. Creato
@@ -22,12 +22,12 @@ tab#i
 	sec#
 	I motivi per i quali non scrivo da lung tempo sono due:
 	begin#ol
-		li#Ho avuto da fare;
-		li#Mi sono dimenticato la password;
-		li#Ho dovuto far funzionare tutto il resto, prima.
+		p#Ho avuto da fare;
+		p#Mi sono dimenticato la password;
+		p#Ho dovuto far funzionare tutto il resto, prima.
 	end#ol
 	r#Procedo ora a raccontare le varie cose con ordine.
-	sbr#
+	sec#br
 	title#Ho avuto da fare
 	Ci sono state cose, nella vita vera, che mi hanno impedito di essere qui
 	sull'internet a scrivere della vita vera.
@@ -61,7 +61,7 @@ tab#i
 	r#«Ohi ohi, il mio po po» come disse l'odiato <em>sergente Tortilla</em>
 	br#
 	Ma il film è stato un sacco figo.
-	sbr#
+	sec#br
 	title#Mi sono dimenticato la password
 	Poi c'è stata quella faccenda della password. Quando, ad un certo punto, un
 	mese fa, mi sono messo a scrivere una cazzatina, ho avuto un crollo
@@ -77,7 +77,7 @@ tab#i
 
 	Ed ecco, ne ho creata una nuova e l'ho scelta bene, così da ricordarmela per
 	sempre.
-	sbr#
+	sec#br
 	title#La formattazzazzazione
 	Poi, con una settimana di anticipo a sorpresa, ho dato l'esame di <em>Teoria
 	della Concorrenza</em> con <em>PQ</em>. Completata una serie di fuffe
@@ -246,7 +246,7 @@ tab#ii
 	(almeno un pochino pochettino pochinino) di essere menzionate in questa
 	storia fatta apposta, scritta sul sito fatto apposta, da me che sono
 	evidentemente l'uomo fatto apposta.
-	sbr#
+	sec#br
 	Ci sono un po' di cose che fanno fatica a funzionare, ma.
 	title#Facciamo come dice il Bolo
 	Faccio login sotto <em>GNOME</em>. Dopo un po' (ritardo non eccissivo,
@@ -264,8 +264,8 @@ start#side
 	title#La formattazzazzazione
 	title@right#Storia <code>XCVI</code>
 	begin#ol
-		li#tid#Il grande ritorno@ – <code>01/08</code>#i
-		li#tid#Facciamo come dice il Bolo@ – <code>02/08</code>#ii
-		li#Finirà mai?!?
+		p#tid#Il grande ritorno@ – <code>01/08</code>#i
+		p#tid#Facciamo come dice il Bolo@ – <code>02/08</code>#ii
+		p#Finirà mai?!?
 	end#ol
 stop#side

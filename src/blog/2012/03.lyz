@@ -11,7 +11,8 @@ tab#30
 	È anche vero che – <em>ancora una volta</em> – non è molto lunga, ma è un
 	sacco di tempo che non scrivo una storia che sia una <code>Storia</code>,
 	quindi l'ho
-	link#Storie/2012/LXXVIII/#fatto###. È successo ieri.
+	link#Storie/2012/LXXVIII/#fatto@.
+	È successo ieri.
 tab#26
 	p#link##<em>@26/03/2012@</em>##26
 	/
@@ -31,7 +32,7 @@ tab#26
 		stitle#Ritorno ad una recensione!
 		Indovinate un po' quale tra i vostri recensori perditempo
 		preferiti s'è andato a vedere gli ultimi episodi di
-		link#Recensioni/Show/XIV/#Gundam AGE#E16##.
+		link#Recensioni/Show/XIV/#Gundam AGE@.#E16
 		<strong class="spoiler">Sono io!</strong>
 	end#mini
 	Avrò provato quaranti vini e cinque olii, più un insano quantitativo di
@@ -73,10 +74,11 @@ tab#24
 		stitle#Legend
 		Se aveste briga di leggere, sto collezionando idee e appunti nella
 		sezione <code>Extra</code>, come spesso faccio.
-		reverse#
+		r#
 		Leggete
-		link#Legend/#qui###. Non temete, nessuno <strong
-		class="spoiler">SPOLIER</strong> presente (sono troppo pigro).
+		link#Legend/#qui@.
+		Non temete, nessuno <strong class="spoiler">SPOLIER</strong> presente
+		(sono troppo pigro).
 	end#mini
 	br#
 	Intanto, visto che il mio giovedì non è più occupato dal coro, sto pensando
@@ -99,7 +101,7 @@ tab#21
 	link#Extra/#<strong>@Storie@</strong>#contenuti#STORIE
 	title#In corso di maturazione
 	Vi ricordate di quando, mesi fa, citai la mia entrata nel
-	link#Storie/2011/LXV/#coro sgaggio#ii##?
+	link#Storie/2011/LXV/#coro sgaggio@?#ii
 	È passato del tempo da allora; tempo durante il quale, ogni giovedì e
 	(diversamente da quanto specificato allora) soltanto saltuariamente qualche
 	lunedì (erano prove extra) mi sono trovato a cantare canzoni sulle montagne,
@@ -114,9 +116,9 @@ tab#21
 	tempi e i modi di questo corso (che, mi dicono, potrebbe prendere un
 	triennio intero!) e la mia voglia di andare avanti. Ce ne sarà?
 	br#
-	reverse#
-	Ma non solo! Ecco infatti un pezzo interessante, il primo della mia
-	link#Storie/2012/LXXVII/#storia migliore###. Storia vera.
+	r#Ma non solo! Ecco infatti un pezzo interessante, il primo della mia
+	link#Storie/2012/LXXVII/#storia migliore@.
+	Storia vera.
 tab#19
 	p#link##<em>@19/03/2012@</em>##19
 	/
@@ -125,7 +127,7 @@ tab#19
 	È una di quelle cose che si mettono nelle <code>tesi</code> per riempire
 	pagine di cose; e siccome sono stanco (son passato a <em>Verona</em>, ieri)
 	non ho briga di fare altro; voi fate i bravi, intanto. E leggetevi
-	link#Extra/Immagini/#'st'elenco###.
+	link#Extra/Immagini/#'st'elenco@.
 tab#12
 	p#link##<em>@12/03/2012@</em>##12
 	/
@@ -134,7 +136,7 @@ tab#12
 	Dunque… due ministorie in fila? Non era mai accaduto! Macchissene, ho roba
 	importante (?) da scrivere. Ero lì, un bel dì, che non avevo voglia di
 	lavorare alla tesi (scriverò anche di questo… un giorno, forse…
-	inline#gods#Ciao, War!
+	speak@gods#Ciao, War!
 	e poi fuggo)
 
 	Siccome (forse non lo sapete perché non l'ho mai detto) questo sito è
@@ -167,7 +169,7 @@ tab#02
 	e stronzo), la vedo. E ne vedo così tanta che non posso esimermi
 	dall'esclamare ad alta voce una frase banale estremamente calzante.
 	begin#outside
-		speak#gods#I cannot believe this shit!
+		p#speak@gods#I cannot believe this shit!
 	end#outside
 	Siete liberi di non credermi, e forse non conoscete le proporzioni del mio
 	divano blu, ma ce n'era proprio tanta. E quel gatto, pur essendo
@@ -195,7 +197,7 @@ start#side
 		alla <em>Storia Migliore</em>, ma anche [<code>Extra</code>] appunti di
 		link#Legend/#Legend
 	p#<em>21/03</em> – [<code>Mini</code>]
-		link##In corso di maturazione##21#,
+		link##In corso di maturazione@,##21
 		ma anche [<code>Storia LXXVII</code>]
 	link#Storie/2012/LXXVII/#Principi#principi
 		p#<em>19/03</em> – [Extra] La

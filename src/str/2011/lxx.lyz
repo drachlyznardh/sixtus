@@ -1,7 +1,6 @@
 title#Spontaneità#La scrivo come viene
 prev#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
 next#Storie/2011/LXXI/#Libertà
-
 start#page
 	title#Attenzione!
 	begin#outside
@@ -12,14 +11,12 @@ start#page
 		capire quel che volevo dire, non prendetevela. Il messaggio è molto ben
 		nascosto”
 
-		reverse#
-		Il GODS
+		r#Il GODS
 	end#outside
 	Questa storia mi viene così.
-
-	sbr#
+	sec#br
 	title#Spontaneità
-	titler#Mercoledì 30 Novembre 2011
+	title@right#Mercoledì 30 Novembre 2011
 	È successo, ieri o forse l'altro ieri, mia madre s'è dimenticata le chiavi.
 	Di nuovo. Gliele ho gettate dalla finestra. E non sono state pigliate al
 	volo, sono cadute a terra ed hanno preso una bella botta.
@@ -35,11 +32,10 @@ start#page
 	padre stava pure lui al lavoro (semi-sperduto a Pergine), nonché tutto il
 	parentame pure al lavoro, capitò che l'unico familiare disponibile ad
 	abbondonare baracca e burattini fossi io. Andò così:
-
-	sbr#
+	sec#br
 	begin#outside
-		speak#gods#Sai una cosa, Simgi? Ho avrei proprio voglia d'andare a correre
-		speak#dacav#Di' un po', GODS, non sono forse &gt;9000 giorni che non corri?
+		p#speak@gods#Sai una cosa, Simgi? Ho avrei proprio voglia d'andare a correre
+		p#speak@dacav#Di' un po', GODS, non sono forse &gt;9000 giorni che non corri?
 		L'universo, allora, mi fece squillare il telefono. Era mia madre, fuori
 		dalla porta.
 
@@ -50,7 +46,6 @@ start#page
 		risolva senza problemi (l'ultima volta che la porta ha dato problemi, mi
 		pare, si perse una giornata intera).
 	end#outside
-		
 	Non senza sboroneggiare un po', dichiaro spavaldamente di poter essere a
 	casa in mezz'ora. Abbandono quindi <em class="dacav">Simgi</em> e la Linda,
 	che se ne stavano lì al mio tavolo e prendo la via di casa.
@@ -67,14 +62,13 @@ start#page
 		anche se non vado a correre da un mese intero, non sono un rudere. Beh,
 		si. Ma posso provare… sarebbe una morte gloriosa, no?
 	end#ul
-
 	Ed ecco che mi metto a correre, giù per la rampa, oltre il cavalcavia, giù
 	per la stradina, a cavallo della ferrovia, sulla stradina dove mio nonno
 	slittava da piccolo (narra la leggenda), giù fino a Mesiano, giù per la
 	Busa, fino al ponte di ferro del Galilei…
 
 	A quel punto (
-	inline#gods#puff puff
+	speak@gods#puff puff
 	) mi sono dovuto fermare un attimillo. Poi mi sono ripigliato!
 
 	E via! Giù per il Fersina, giù e giù e giù, tolta la giacca (perché c'era il
@@ -83,8 +77,7 @@ start#page
 	prendere la posta, su di corsa, ecco la porta del Destino.
 
 	Infila la chiave, gira la chiave, <em>clonk clank</em> e tutto s'apre.
-
-	sbr#
+	sec#br
 	A seguire, due cose complicate. Misurare i 4ml della dose richiese parecchio
 	tempo e parecchie energie. Con un cucchiaino da 5ml e nient'altro sarebbe
 	stato impossibile, quindi ricorremmo ad una siringa segnata. Riuscire poi a
@@ -93,7 +86,7 @@ start#page
 
 	L'altra cosa fu, ovviamente, convincere la chiave a tornare a funzionare.
 	Martello, pinza e un cacciavite (
-	inline#em#Luigi! Fa gl'indraulici felici l'aver sempre attrezzi amici
+	speak@em#Luigi! Fa gl'indraulici felici l'aver sempre attrezzi amici
 	diceva qualcuno in un film orribile) m'aiutarono ad uscire da quella brutta
 	situazione. Anche se temo che la mia <code>patch hardware</code> non abbia
 	lasciato un'aspettativa di molte aperture utili a quella chiave. Poverella,
@@ -101,20 +94,17 @@ start#page
 
 	Ma il punto di questa storia fu che la mattina seguente, al mio risveglio,
 	trovai un oggetto estraneo nella mia borsa.
-
 	begin#outside
 		Già pronto a sguinzagliare i miei mastini, esclamai
-		inline#gods#forte#Chi osa toccare la mia borsa?
+		speak@gods#<strong>Chi osa toccare la mia borsa?</strong>
 		rivolgendomi in pratica ai gatti, visto che non c'era nessun'altro in casa.
 	end#outside
-
 	Ma non ci fu bisogno di sguinzagliare alcuna belva immaginaria (il
 	<em>Truffolone</em> resta saldamente rinchiuso): l'oggetto estraneo pareva
 	infatti innocuo. Non si trattava, come avevo temuto, di una bomba nascosta
 	nel mio equipaggiamento dopo una tortura (
-	inline#gods#forte#Oooooooooocelooooooooooooooooooooot
+	speak@gods#Oooooooooocelooooooooooooooooooooot
 	) bensì un magnifico oggetto, largamente desiderabile.
-	
 	br#
 	Era una confezione di ben quattro <em>Snickers™</em>!!! Allegato, un
 	messaggio di mio padre. Una di quelle cose che scaldano il cuore. Una cosa
@@ -124,7 +114,6 @@ start#page
 	sicuro di meritarlo. Tolto il fatto che adoro gli Snickers e non cederei
 	quella confezione per nulla al mondo (no, nemmeno per degli altri Snickers),
 	il dubbio m'è venuto.
-
 	sec#
 	Io faccio un sacco di cose stupide di questo tipo. Non più tardi di due
 	giorni fa, sono andata ad accompagnare <em class="war">War</em> in
@@ -138,7 +127,6 @@ start#page
 	E chi mi legge sa che mi faccio problemi e scrivo storie per cose del
 	genere. Temo infatti che mi le mie intenzioni si possano fraintendere. È un
 	po' la solita storia… le solite pare. Pronti?
-
 	begin#inside
 		Salve, mi chiamo Ivan e faccio cose per i motivi sbagliati. E a volte
 		faccio cose senza motivo e poi mi chiedo il perché.
@@ -172,10 +160,9 @@ start#page
 		un altro fiore, succederà di nuovo. Non gioco per vincere.
 	end#outside
 	Scusate. È tutto nella mia testa.
-
-	sbr#
+	sec#br
 	E comunque gli Snickers me li mangio. Grazie, papà.
 stop#page
 start#side
-	titler#Storia LXX – Spontaneità
+	title@right#Storia LXX – Spontaneità
 stop#side

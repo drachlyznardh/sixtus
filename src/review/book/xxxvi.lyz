@@ -10,13 +10,13 @@ tab#intro
 	Prendo il libro in mano, una mattina. Il tempo di prendere un caffè, ed ecco
 	il mio
 	begin#outside
-		p#intra@gods#WAT.
+		p#speak@gods#WAT.
 	end#outside
 	per ben sei volte.
 	sec#
 	begin#outside
-		p#intra@gods#Ma questo libro è in italiano! WAT. Credevo sarebbe stato in inglese…
-		p#intra@gods#Dice “un capolavoro intramontabile”… ma non è uscito l'anno scorso… uhm, no, è del 1985… WAT…
+		p#speak@gods#Ma questo libro è in italiano! WAT. Credevo sarebbe stato in inglese…
+		p#speak@gods#Dice “un capolavoro intramontabile”… ma non è uscito l'anno scorso… uhm, no, è del 1985… WAT…
 		p#Leggo la <em>quarta di copertina</em>: la storia riguarda un
 		<em>super–bimbo super–minchia</em> [<code>spaziale</code>] che essendo
 		“genio tra i geni” viene addestrato dal governo per combattere gli
@@ -37,7 +37,7 @@ tab#review
 	
 	Vi basti questo, o siate preparati ad una bella valangata di spoiler. Perché
 	non intendo trattenermi.
-	sbr#
+	sec#br
 	stitle#Premessa
 	Ad un certo punto, nel futuro, arrivano gli <em>Alieni</em>. Vogliono
 	riempirci di botte, e ci riescono. Poi però, fuori dal nulla, salta fuori il

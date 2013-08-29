@@ -136,12 +136,12 @@ start#side
 	br#
 	stitle@right#Marzo 2013
 	begin#ol
-		li#tid#Si comincia!@ – <code>07/03</code>#i
-		li#tid#E ci si inchioda!@ – <code>08/03</code>#ii
-		li#tid#Un po' di Real Life Boola@ – <code>11/03</code>#iii
-		li#tid#Il più umano@ – <code>15/03</code>#iv
-		li#tid#Le carte sono in regola@ – <code>18/03</code>#v
-		li#tid#Integrare tutto!@ – <code>27/03</code>#vi
-		li#tid#Ispirazione@ – <code>30/03</code>#vii
+		p#tid#Si comincia!@ – <code>07/03</code>#i
+		p#tid#E ci si inchioda!@ – <code>08/03</code>#ii
+		p#tid#Un po' di Real Life Boola@ – <code>11/03</code>#iii
+		p#tid#Il più umano@ – <code>15/03</code>#iv
+		p#tid#Le carte sono in regola@ – <code>18/03</code>#v
+		p#tid#Integrare tutto!@ – <code>27/03</code>#vi
+		p#tid#Ispirazione@ – <code>30/03</code>#vii
 	end#ol
 stop#side

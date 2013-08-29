@@ -129,13 +129,13 @@ tab#ii
 	mittente aspetta solo quando la casella è piena; s'è illimitata, il mittente
 	lascia e se ne va.
 
-	titler#Socket
+	title@right#Socket
 	La forma di comunicazione più comoda (anche via rete) è la socket, associata
 	ad una porta logica su un particolare indirizzo IP. Sulla/dalla socket
 	possono arrivare/essere mandati dati grezzi in quantità arbitraria, anche
 	in/da remoto.
 
-	titler#Pipe
+	title@right#Pipe
 	Alternativamente, si usano le pipe, ossia dei tubi. Da una parte la roba
 	entra, dall'altra esce; ma forse no. Normalmente, un'estremità può essere
 	scritta, l'altra letta.
@@ -170,7 +170,7 @@ tab#iii
 	Un <code>signal-handler</code> gestisce tutta la baracca: un segnale arriva,
 	viene consegnato al processo/thread e questi lo gestisce.
 
-	titler#Pool di Thread.
+	title@right#Pool di Thread.
 	Siccome i thread sono leggeri, non è sempre necessario o utile creare solo
 	quelli necessari. È buona pratica tenerne da parte una certa quantità,
 	lasciandoli fermi ma sempre disponibili; quando una richiesta arriva, il
@@ -894,18 +894,18 @@ start#side
 	p#tid#Presentazione#intro
 	title#Sistemi Operativi 1
 	begin@3.5em#roman
-		li#tid#Il processo#i
-		li#tid#Comunicazione tra processi#ii
-		li#tid#Thread#iii
-		li#tid#CPU Scheduling#iv
-		li#tid#Sincronizzazione#v
-		li#tid#Deadlock#vi
-		li#tid#Memoria#vii
-		li#tid#Memoria Virtuale#viii
-		li#tid#File System#ix
-		li#tid#Dischi#x
-		li#tid#I/O#xi
-		li#tid#Protezione#xii
-		li#tid#Real Time#xiii
+		p#tid#Il processo#i
+		p#tid#Comunicazione tra processi#ii
+		p#tid#Thread#iii
+		p#tid#CPU Scheduling#iv
+		p#tid#Sincronizzazione#v
+		p#tid#Deadlock#vi
+		p#tid#Memoria#vii
+		p#tid#Memoria Virtuale#viii
+		p#tid#File System#ix
+		p#tid#Dischi#x
+		p#tid#I/O#xi
+		p#tid#Protezione#xii
+		p#tid#Real Time#xiii
 	end#roman
 stop#side

@@ -4,7 +4,7 @@ next#Tru/Naluten/Vol.II/XV/#La fuga
 start#page
 	title#Tru Naluten XIV &ndash; Proposta
 	begin#outside
-		p#intra@jo forte#Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah
+		p#speak@jo#<strong>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah</strong>
 	end#outside
 	sec#
 	stitle@right#Simak
@@ -16,12 +16,12 @@ start#page
 	rivoltante…
 	sec#
 	begin#outside
-		p#intra@simak#Ciao! Com…
-		p#intra@jo forte#Aaaaaaaaaaaaaaaah! Schifo!
-		p#intra@simak#Scus…
-		p#intra@jo forte#Aaaaaaaaaaaaah!
-		p#intra@simak#Poss…
-		p#intra@jo forte#Aaaaaaaaaah!
+		p#speak@simak#Ciao! Com…
+		p#speak@jo#<strong>Aaaaaaaaaaaaaaaah! Schifo!</strong>
+		p#speak@simak#Scus…
+		p#speak@jo#<strong>Aaaaaaaaaaaaah!</strong>
+		p#speak@simak#Poss…
+		p#speak@jo#<strong>Aaaaaaaaaah!</strong>
 	end#outside
 	sec#
 	stitle@right#Jo
@@ -34,8 +34,8 @@ start#page
 	presento:
 	sec#
 	begin#outside
-		p#intra@simak#Ciao Jo, io so..
-		p#intra@jo#Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah
+		p#speak@simak#Ciao Jo, io so..
+		p#speak@jo#Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah
 	end#outside
 	sec#
 	stitle@right#Jo
@@ -54,8 +54,8 @@ start#page
 	occhi esprimono un terrore misto a sorpresa; finalmente qualcosa la distrae
 	dal mio aspetto.
 	begin#outside
-		p#intra@simak#L&apos;effetto &egrave; temporaneo, ti restituir&ograve; la parola se mi concederai di presentarmi. Ciao Jo, io sono Simak
-		p#intra@simak#Pensi che potremmo avere una pacifica conversazione se dovessi permetterti di parlare nuovamente?
+		p#speak@simak#L&apos;effetto &egrave; temporaneo, ti restituir&ograve; la parola se mi concederai di presentarmi. Ciao Jo, io sono Simak
+		p#speak@simak#Pensi che potremmo avere una pacifica conversazione se dovessi permetterti di parlare nuovamente?
 	end#outside
 	p#La creatura respira, cerca ancora di emettere un suono, poi annuisce.
 	Libero la sua voce con un gesto della mano, lei respira a fondo, capisce di
@@ -63,29 +63,29 @@ start#page
 	soffermo ad osservare le sue reazioni: sembra distratta da qualcosa, come se
 	si sforzasse guardare altrove senza riuscirci.
 	begin#outside
-		p#intra@simak#C&apos;&eacute; qualcosa che ti disturba, nel mio aspetto?
-		p#intra@jo#Sei… unto?
-		p#intra@simak#No, questa secrezione non &egrave; grassa, si tratta del gel che ho utilizzato per creare questo corpo temporaneo, si asciuger&agrave; in alcuni minuti senza lasciare traccia
-		p#intra@jo#E perch&eacute; sei nudo?
-		p#intra@simak#Perch&eacute; &egrave; cos&igrave; che voi nascete. Ho cercato di ricreare le vostre condizioni, con questo mio simulacro
-		p#intra@jo#E perch&eacute; non hai… niente… l&igrave; in basso?
-		p#intra@simak#Voi umani avete l&apos;addome e il torace congiunti, non separati come invece li ho io. Inoltre, le vostre anche sono sotto l&apos;addome, non davanti. Se invece ti riferisci alle filiere, le ho rimosse dal disegno per incompatibilit&agrave;
-		p#intra@jo#Ma tu sei un uomo: dovresti avere degli attributi da uomo!
-		p#intra@simak#Ti sbagli, non sono un uomo, ho soltanto preso un aspetto umano standard
-		p#intra@jo#Ma… ma tu hai la barba!
-		p#intra@simak#Si. Perch&eacute; io <em>ho</em> la barba, ed anche gli umani possono averla; per questo non l&apos;ho rimossa. Soltanto, i miei barbigli sono molto pi&ugrave; sensibili di questi semplici peli, come fate a sopravvivere con uno spettro sensoriale tanto ridotto?
-		p#intra@jo#Beh, noi… Che c&apos;entra questo? Perch&eacute;, se hai creato questo tuo &quot;simulacro&quot; e ti sei lasciato crescere la barba non hai finito il lavoro? Hai dubbi sullo schieramento da sciegliere?
-		p#intra@simak#A che pro costruire un organismo biologico completamente funzionante? Non intendo spingermi oltre un&apos;interazione sociale moderata: ho evitato di ricreare gli apparati inutili, per questo sono privo di apparato digerente, sistema circolatorio, sistema immunitario e apparato riproduttivo
-		p#intra@jo#Cosa ti &egrave; rimasto?
-		p#intra@simak#L&apos;apparenza umana, la mobilit&agrave; e la sensibilit&agrave;: devo sono sembrare uno di voi. Ho creduto che assumere le sembianze della tua specie ti sarebbe stato pi&ugrave; familiare. Se non ti va, posso sempre tornare al mio aspetto originale, o prenderne un qualunque altro. Anche il tuo, se preferisci
-		p#intra@jo#No, grazie. Lo fai per mettermi a mio agio, giusto? Bene, allora fa&apos; un favore e vestiti!
-		p#intra@simak#Perch&eacute;? La mia nudit&agrave; ti disturba? Essendo privo di ci&ograve; che procupura il… &quot;pudore&quot;, ho creduto che potessi mantenere il mio abito usuale
-		p#intra@jo#Vivi nudo?
-		p#intra@simak#Si, certo. La maggior parte delle creature viventi lo fa
-		p#intra@jo#E non hai freddo? O paura di ferirti?
-		p#intra@simak#La mia pelle &egrave; sufficiente, grazie
-		p#intra@jo#Potresti vestirti comunque? Per favore?
-		p#intra@simak#Se insisti…
+		p#speak@simak#C&apos;&eacute; qualcosa che ti disturba, nel mio aspetto?
+		p#speak@jo#Sei… unto?
+		p#speak@simak#No, questa secrezione non &egrave; grassa, si tratta del gel che ho utilizzato per creare questo corpo temporaneo, si asciuger&agrave; in alcuni minuti senza lasciare traccia
+		p#speak@jo#E perch&eacute; sei nudo?
+		p#speak@simak#Perch&eacute; &egrave; cos&igrave; che voi nascete. Ho cercato di ricreare le vostre condizioni, con questo mio simulacro
+		p#speak@jo#E perch&eacute; non hai… niente… l&igrave; in basso?
+		p#speak@simak#Voi umani avete l&apos;addome e il torace congiunti, non separati come invece li ho io. Inoltre, le vostre anche sono sotto l&apos;addome, non davanti. Se invece ti riferisci alle filiere, le ho rimosse dal disegno per incompatibilit&agrave;
+		p#speak@jo#Ma tu sei un uomo: dovresti avere degli attributi da uomo!
+		p#speak@simak#Ti sbagli, non sono un uomo, ho soltanto preso un aspetto umano standard
+		p#speak@jo#Ma… ma tu hai la barba!
+		p#speak@simak#Si. Perch&eacute; io <em>ho</em> la barba, ed anche gli umani possono averla; per questo non l&apos;ho rimossa. Soltanto, i miei barbigli sono molto pi&ugrave; sensibili di questi semplici peli, come fate a sopravvivere con uno spettro sensoriale tanto ridotto?
+		p#speak@jo#Beh, noi… Che c&apos;entra questo? Perch&eacute;, se hai creato questo tuo &quot;simulacro&quot; e ti sei lasciato crescere la barba non hai finito il lavoro? Hai dubbi sullo schieramento da sciegliere?
+		p#speak@simak#A che pro costruire un organismo biologico completamente funzionante? Non intendo spingermi oltre un&apos;interazione sociale moderata: ho evitato di ricreare gli apparati inutili, per questo sono privo di apparato digerente, sistema circolatorio, sistema immunitario e apparato riproduttivo
+		p#speak@jo#Cosa ti &egrave; rimasto?
+		p#speak@simak#L&apos;apparenza umana, la mobilit&agrave; e la sensibilit&agrave;: devo sono sembrare uno di voi. Ho creduto che assumere le sembianze della tua specie ti sarebbe stato pi&ugrave; familiare. Se non ti va, posso sempre tornare al mio aspetto originale, o prenderne un qualunque altro. Anche il tuo, se preferisci
+		p#speak@jo#No, grazie. Lo fai per mettermi a mio agio, giusto? Bene, allora fa&apos; un favore e vestiti!
+		p#speak@simak#Perch&eacute;? La mia nudit&agrave; ti disturba? Essendo privo di ci&ograve; che procupura il… &quot;pudore&quot;, ho creduto che potessi mantenere il mio abito usuale
+		p#speak@jo#Vivi nudo?
+		p#speak@simak#Si, certo. La maggior parte delle creature viventi lo fa
+		p#speak@jo#E non hai freddo? O paura di ferirti?
+		p#speak@simak#La mia pelle &egrave; sufficiente, grazie
+		p#speak@jo#Potresti vestirti comunque? Per favore?
+		p#speak@simak#Se insisti…
 	end#outside
 	p#Questo suo imbarazzo mi sfugge completamente.
 	p#Osservo il suo abito, me ne creo una copia addosso.
@@ -93,9 +93,9 @@ start#page
 	stitle@right#Jo
 	p#Questo &quot;coso&quot; &egrave; un idiota.
 	begin#outside
-		p#intra@jo#No, non il mio. Fatti un vestito da uomo
-		p#intra@simak#Cos&agrave; questo che non va? L&apos;ho modificato per la mia taglia
-		p#intra@jo#Il mio &egrave; un vestito da donne! Capisci la differenza? Toglietelo, quella scollatura ti sta da schifo!
+		p#speak@jo#No, non il mio. Fatti un vestito da uomo
+		p#speak@simak#Cos&agrave; questo che non va? L&apos;ho modificato per la mia taglia
+		p#speak@jo#Il mio &egrave; un vestito da donne! Capisci la differenza? Toglietelo, quella scollatura ti sta da schifo!
 	end#outside
 	sec#
 	stitle@right#Simak
@@ -103,12 +103,12 @@ start#page
 	sec#
 	stitle@right#Jo
 	begin#outside
-		p#intra@simak#Senti, ho un&apos;idea. Pensa a quello che vorresti vedermi addosso
-		p#intra@jo#Cosa?
-		p#intra@simak#Tu fai come ti dico, focalizza un&apos;immagine nella mente
-		p#intra@jo#Uhm… fatto
-		p#intra@simak#Bene, adesso guardami
-		p#intra@jo#Pf!…
+		p#speak@simak#Senti, ho un&apos;idea. Pensa a quello che vorresti vedermi addosso
+		p#speak@jo#Cosa?
+		p#speak@simak#Tu fai come ti dico, focalizza un&apos;immagine nella mente
+		p#speak@jo#Uhm… fatto
+		p#speak@simak#Bene, adesso guardami
+		p#speak@jo#Pf!…
 	end#outside
 	p#Fatico a trattenere le lacrime. Trattieni. Trattieni, non ridere. Non
 	ridere.
@@ -128,18 +128,18 @@ start#page
 	p#Mi sono fatto baggare da una ragazza qualunque sette minuti dopo aver
 	perso il contatto.
 	begin#inside
-		p#intra@simak#E ora come me la cavo, Ci? Come reagisco allo scherzo?
-		p#intra@corona#-- Plinnplonn… Ci non &egrave; disponibile al momento, riprovare pi&ugrave; tardi… Come butta, Simak caro? --
-		p#intra@simak#Oh, Coscienza, da quanto tempo…
-		p#intra@corona#-- Siamo soli, adesso. Non ci sono pi&ugrave; i due impiccioni a spiarci, chiamami con il mio nome --
-		p#intra@simak#Vero, non c&apos;&eacute; pericolo. Dunque, Corona, da quanto tempo…
-		p#intra@corona#-- Eh, ne &egrave; passato parecchio, in effetti. Come procede il tuo piano di conquista, Simak caro? --
-		p#intra@simak#Non troppo bene, ho combinato una cazzata e non so bene come uscirne… Devo conquistare Jo prima che il sole di questo mondo tramonti due volte o far&ograve; tardi all&apos;appuntamento e il mio novello esercito si trover&agrave; senza comandante…
-		p#intra@corona#-- Di che si preoccupa mai l&apos;audace Simak, che si sia scordato della Corona che indossa? --
-		p#intra@simak#No, mi ricordo, mi ricordo, ho soltanto paura che qualcuno si accorga di quello che sto facendo
-		p#intra@corona#-- Un tizio con dei baffi finti entra in un bar e dice: &quot;Ehi, gente, qua fuori stanno atterrando gli alieni!&quot;. Quanti si ricorderanno dei baffi? --
-		p#intra@simak#Mh…
-		p#intra@corona#-- Suvvia, non &egrave; di gran lunga pi&ugrave; importante portare la mortale dalla tua parte? Non era un cardine del tuo mirabile piano? --
+		p#speak@simak#E ora come me la cavo, Ci? Come reagisco allo scherzo?
+		p#speak@corona#-- Plinnplonn… Ci non &egrave; disponibile al momento, riprovare pi&ugrave; tardi… Come butta, Simak caro? --
+		p#speak@simak#Oh, Coscienza, da quanto tempo…
+		p#speak@corona#-- Siamo soli, adesso. Non ci sono pi&ugrave; i due impiccioni a spiarci, chiamami con il mio nome --
+		p#speak@simak#Vero, non c&apos;&eacute; pericolo. Dunque, Corona, da quanto tempo…
+		p#speak@corona#-- Eh, ne &egrave; passato parecchio, in effetti. Come procede il tuo piano di conquista, Simak caro? --
+		p#speak@simak#Non troppo bene, ho combinato una cazzata e non so bene come uscirne… Devo conquistare Jo prima che il sole di questo mondo tramonti due volte o far&ograve; tardi all&apos;appuntamento e il mio novello esercito si trover&agrave; senza comandante…
+		p#speak@corona#-- Di che si preoccupa mai l&apos;audace Simak, che si sia scordato della Corona che indossa? --
+		p#speak@simak#No, mi ricordo, mi ricordo, ho soltanto paura che qualcuno si accorga di quello che sto facendo
+		p#speak@corona#-- Un tizio con dei baffi finti entra in un bar e dice: &quot;Ehi, gente, qua fuori stanno atterrando gli alieni!&quot;. Quanti si ricorderanno dei baffi? --
+		p#speak@simak#Mh…
+		p#speak@corona#-- Suvvia, non &egrave; di gran lunga pi&ugrave; importante portare la mortale dalla tua parte? Non era un cardine del tuo mirabile piano? --
 	end#inside
 	p#Come darle torto?
 	p#Intanto &ndash; frugando nella mente di Jo, cercando di compensare questo
@@ -159,17 +159,17 @@ start#page
 	riporta indietro: come osa il bastardo indossare gli stessi abiti di mio
 	padre! Non l&apos;ho lasciato da neanche un quarto d&apos;ora.
 	begin#outside
-		p#intra@jo#Ehi! Abbi un po&apos; di rispetto!
-		p#intra@simak#Cercavo un abito per occasioni speciali e l&apos;ho trovato: ora mi ascolterai?
-		p#intra@jo#Ho scelta?
-		p#intra@simak#No, l&apos;ho chiesto solo per gentilezza
-		p#intra@jo#Bene, allora?
-		p#intra@simak#Vorrei che venissi con me, Jo
-		p#intra@jo#No. Stop. Tu non puoi parlarmi cos&igrave;!
-		p#intra@jo#Questa &ndash; se non ho fatto male i conti &ndash; &egrave; la terza volta che te ne esci con una richiesta amichevole &quot;Jo, per favore, dovresti fare questo e quello&quot;, beh, sai che c&apos;&eacute;? No, non puoi
-		p#intra@jo#Questo &egrave; un rapimento, ed &egrave; anche il secondo! In quale posto t&apos;hanno insegnato a rapire la gente? E poi tu chi saresti? Cosa vuoi? Da dove vieni?
-		p#intra@jo#Chi ti da il diritto di portarmi via? E poi che cazzo di presenti nudo a chiedermi di seguirti? Queste sono molestie, lo sai? E poi rubi i vestiti a mio padre?
-		p#intra@jo#Non ti
+		p#speak@jo#Ehi! Abbi un po&apos; di rispetto!
+		p#speak@simak#Cercavo un abito per occasioni speciali e l&apos;ho trovato: ora mi ascolterai?
+		p#speak@jo#Ho scelta?
+		p#speak@simak#No, l&apos;ho chiesto solo per gentilezza
+		p#speak@jo#Bene, allora?
+		p#speak@simak#Vorrei che venissi con me, Jo
+		p#speak@jo#No. Stop. Tu non puoi parlarmi cos&igrave;!
+		p#speak@jo#Questa &ndash; se non ho fatto male i conti &ndash; &egrave; la terza volta che te ne esci con una richiesta amichevole &quot;Jo, per favore, dovresti fare questo e quello&quot;, beh, sai che c&apos;&eacute;? No, non puoi
+		p#speak@jo#Questo &egrave; un rapimento, ed &egrave; anche il secondo! In quale posto t&apos;hanno insegnato a rapire la gente? E poi tu chi saresti? Cosa vuoi? Da dove vieni?
+		p#speak@jo#Chi ti da il diritto di portarmi via? E poi che cazzo di presenti nudo a chiedermi di seguirti? Queste sono molestie, lo sai? E poi rubi i vestiti a mio padre?
+		p#speak@jo#Non ti
 	end#outside
 	p#Vado avanti ad accusarlo per qualche secondo, ma non sento nulla: non
 	riesco pi&ugrave; a parlare, quello ha mosso la mano come ha fatto prima.
@@ -191,8 +191,8 @@ start#page
 	Ascolter&ograve; quello che ha da dire, andr&ograve; dove vorr&agrave;
 	portarmi. Aspetto.
 	begin#outside
-		p#intra@simak#Tu diventerai il mio araldo. Questo &egrave; quello che accadr&agrave;, perch&eacute; &egrave; cos&igrave; che ho stabilito. Ma non voglio costringerti, non subito
-		p#intra@simak#Perci&ograve; cos&igrave; parlo: io sottoscritto, Cheskald Simak, chiedo a te, mortale Jo di <em title="il pianeta d&apos;origine di Jo, quello distrutto da eLyznardh">Luun</em>, figlia di Jona di <em title="il presente pianeta">Aptom</em>, vuoi tu essere il mio araldo, vuoi tu guidare il mio esercito, come io ti indicher&ograve;?
+		p#speak@simak#Tu diventerai il mio araldo. Questo &egrave; quello che accadr&agrave;, perch&eacute; &egrave; cos&igrave; che ho stabilito. Ma non voglio costringerti, non subito
+		p#speak@simak#Perci&ograve; cos&igrave; parlo: io sottoscritto, Cheskald Simak, chiedo a te, mortale Jo di <em title="il pianeta d&apos;origine di Jo, quello distrutto da eLyznardh">Luun</em>, figlia di Jona di <em title="il presente pianeta">Aptom</em>, vuoi tu essere il mio araldo, vuoi tu guidare il mio esercito, come io ti indicher&ograve;?
 	end#outside
 	p#Sembra quasi un contratto… E io, cio&egrave;, dovrei fare cosa? Guidare un
 	esercito?
@@ -202,11 +202,11 @@ start#page
 	sarebbe, poi?) ma io non intendo certo accettare &apos;sta cosa. Scuoto la
 	testa.
 	begin#outside
-		p#intra@simak#Lo prendo per un rifiuto. Bene, l&apos;ho chiesto gentilmente, ora vedr&ograve; di passare a qualche metodo pi&ugrave; <em>persuasivo</em>
-		p#intra@simak#Una volta, un mio… vediamo… &quot;collega&quot; ebbe la necessit&agrave; che un tizio entrasse al suo servizio
-		p#intra@simak#Affinch&egrave; quel tale accettasse, il mio collega si rec&ograve; presso di lui nel deserto e tent&ograve; per tre volte: prima lo tent&ograve; con il cibo, poi gli chiese di gettarsi dal pinnacolo di un tempio, e infine gli offr&igrave; tutti i regni della terra
-		p#intra@simak#Alla fine quel tale rifiut&ograve;, ma un metodo tanto teatrale mi affascina e credo che coglier&ograve; l&apos;occasione per imitarlo: chiss&agrave; cosa farai tu?
-		p#intra@simak#Ebbene, lo vedremo: prima prova. Chiamami, se ne hai bisogno
+		p#speak@simak#Lo prendo per un rifiuto. Bene, l&apos;ho chiesto gentilmente, ora vedr&ograve; di passare a qualche metodo pi&ugrave; <em>persuasivo</em>
+		p#speak@simak#Una volta, un mio… vediamo… &quot;collega&quot; ebbe la necessit&agrave; che un tizio entrasse al suo servizio
+		p#speak@simak#Affinch&egrave; quel tale accettasse, il mio collega si rec&ograve; presso di lui nel deserto e tent&ograve; per tre volte: prima lo tent&ograve; con il cibo, poi gli chiese di gettarsi dal pinnacolo di un tempio, e infine gli offr&igrave; tutti i regni della terra
+		p#speak@simak#Alla fine quel tale rifiut&ograve;, ma un metodo tanto teatrale mi affascina e credo che coglier&ograve; l&apos;occasione per imitarlo: chiss&agrave; cosa farai tu?
+		p#speak@simak#Ebbene, lo vedremo: prima prova. Chiamami, se ne hai bisogno
 	end#outside
 	p#Poi muove la mano, tutto svanisce.
 	p#Tutto &egrave; nero, non ho niente attorno. Ma sono ancora seduta. Fa

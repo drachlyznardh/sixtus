@@ -5,7 +5,6 @@
 		$_ = preg_replace('/@SHARP@/', '#', $_);
 		$_ = preg_replace('/@AT@/', '@', $_);
 		$_ = preg_replace('/\'/', '&apos;', $_);
-		#$_ = preg_replace('/"/', '&quot;', $_);
 
 		return $_;
 	}
@@ -57,12 +56,12 @@
 		public function parse($filename)
 		{
 			$this->include_base = dirname($filename);
-			$index = 0;
+			$index = array($filename, 0);
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
 			foreach ($rows as $_)
 			{
-				$index++;
+				$index[1]++;
 				if (preg_match('/^#.*/', $_)) {
 					#printf("\tLine#$index is a comment\n");
 				} else if (preg_match('/#/', $_)) {
@@ -129,10 +128,6 @@
 						$this->force_all_tabs = true;
 					else if (strcmp($cmd_par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
-					break;
-				case 'alltab':
-				case 'alltabs':
-					$this->force_all_tabs = true;
 					break;
 				case 'include':
 					$this->static_include($cmd_par, $cmd_attr);
@@ -208,8 +203,6 @@
 				$parser->parse("$this->prefix/$args[1].lyz");
 				foreach ($parser->body as $_)
 					$this->body[] = $_;
-				#foreach ($parser->side as $_)
-				#	$this->side[] = $_;
 			}
 		}
 
