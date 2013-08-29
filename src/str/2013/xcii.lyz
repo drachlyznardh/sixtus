@@ -24,12 +24,12 @@ tab#p1
 	Ma le rogne non sono affatto finite ed il mio <em>meritato riposo</em> non è
 	ancora pronto. Lancerò un po' di date:
 	begin#ul
-		li#<code>19/12</code> – scadenza per depositare la domanda
-		li#<code>09/01</code> – altra scadenza per depositare la domanda
-		li#<code>07/01</code> – scadenza per la consegna della tesi
-		li#<code>18/01</code> – scadenza per la consegna delle slides
-		li#<code>21/01</code> – data della discussione
-		li#<code>30/01</code> – proclamazione
+		p#<code>19/12</code> – scadenza per depositare la domanda
+		p#<code>09/01</code> – altra scadenza per depositare la domanda
+		p#<code>07/01</code> – scadenza per la consegna della tesi
+		p#<code>18/01</code> – scadenza per la consegna delle slides
+		p#<code>21/01</code> – data della discussione
+		p#<code>30/01</code> – proclamazione
 	end#ul
 	C'è ancora un po' di tempo. Ma c'è anche tanta “roba che devo fare io”. Un
 	po' come a Natale… non solo
@@ -154,13 +154,13 @@ tab#iii
 stop#page
 start#side
 	begin#ul
-		li#tid#Prologo [ @1@ #p1
+		p#tid#Prologo [ @1@ #p1
 		tid# / @2@ ]#p2
 	end#ul
 	title#Il festone
 	begin#ul
-		li#tid#La proclamazione#i
-		li#tid#La merenda#ii
-		li#tid#La cena#iii
+		p#tid#La proclamazione#i
+		p#tid#La merenda#ii
+		p#tid#La cena#iii
 	end#ul
 stop#side

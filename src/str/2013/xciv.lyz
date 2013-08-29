@@ -247,13 +247,13 @@ start#side
 	br#
 	stitle@right#Assignment @SHARP@01: Motore – <code>05/04</code>
 	begin#ol
-		li#tid#Programmare per <code>NXTOSEK</code>@ – <code>02/04</code>#i
-		li#tid#Il <code>bluetooth</code>@ – <code>03/04</code>#ii
-		li#tid#La <em>bilio<em><code>hack</code>aton@ – <code>04/04</code>#iii
-		li#tid#WAT.@ – <code>05/04</code>#iv
-		li#tid#Il tracollo@ – <code>06/04</code>#v
-		li#tid#Il tradimento@ – <code>08/04</code>#vi
-		li#tid#La resa dei conti?@ – <code>09/04</code>#vii
-		li#tid#Fine@ – <code>15/04</code>#viii
+		p#tid#Programmare per <code>NXTOSEK</code>@ – <code>02/04</code>#i
+		p#tid#Il <code>bluetooth</code>@ – <code>03/04</code>#ii
+		p#tid#La <em>bilio<em><code>hack</code>aton@ – <code>04/04</code>#iii
+		p#tid#WAT.@ – <code>05/04</code>#iv
+		p#tid#Il tracollo@ – <code>06/04</code>#v
+		p#tid#Il tradimento@ – <code>08/04</code>#vi
+		p#tid#La resa dei conti?@ – <code>09/04</code>#vii
+		p#tid#Fine@ – <code>15/04</code>#viii
 	end#ol
 stop#side
