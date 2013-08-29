@@ -21,7 +21,7 @@ tab#05
 	title#Inizio col botto!
 	begin#half@right
 		Prima di tutto, questa me l'ha chiesta <em>Zunino</em>:
-		foto#extra/question.png
+		img#extra/question.png
 		r#speak@em#And <em>this</em> is the question
 	end#half
 	Ci sono incredibili sviluppi nei riguardi del <em>Lab Of Doom</em>. Tutto è

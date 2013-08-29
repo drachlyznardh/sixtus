@@ -102,7 +102,7 @@ start#page
 		speak@gods#Non serve, so già come chiarmalo
 	end#outside
 	Poi sbotto, come nell'immagine.
-	foto#Extra/Richaaaaaaaaards.gif
+	img#Extra/Richaaaaaaaaards.gif
 	begin#outside
 		p#speak@gods#Richaaaaaaaaards!!!
 	end#outside

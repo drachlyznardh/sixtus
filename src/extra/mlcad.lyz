@@ -117,7 +117,7 @@ tab#mlcad
 	sono mai avventurato.
 tab#lpub
 	begin#mini@right
-		foto#Extra/DatAss.jpg
+		img#Extra/DatAss.jpg
 		«<code>.DAT</code> file»	
 	end#mini
 	title#LPub
