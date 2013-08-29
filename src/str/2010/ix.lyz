@@ -207,10 +207,10 @@ stop#page
 start#side
 	title#Attenzione
 	begin@3em#roman
-		p#tid#Disturbo dell&apos;attenzione#i## – 10/11
-		p#tid#Il daltonismo#ii## – 11/11
-		p#tid#Il malumore#iii## – 12/11
-		p#tid#Lo sguardo#iv## – 16/11
-		p#tid#La doppelganger#v## – 18/11
+		p#tid#Disturbo dell&apos;attenzione@ – 10/11#i
+		p#tid#Il daltonismo@ – 11/11#ii
+		p#tid#Il malumore@ – 12/11#iii
+		p#tid#Lo sguardo@ – 16/11#iv
+		p#tid#La doppelganger@ – 18/11#v
 	end#roman
 stop#side

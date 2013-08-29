@@ -73,7 +73,7 @@ start#page
 	include#blog/2012/01#page@as@content
 	sec#
 	r#Torna [
-	link##alla più recente###
+	link##alla più recente
 	]
 	id#Fondo
 stop#page

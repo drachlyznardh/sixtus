@@ -5,7 +5,6 @@
 		$_ = preg_replace('/@SHARP@/', '#', $_);
 		$_ = preg_replace('/@AT@/', '@', $_);
 		$_ = preg_replace('/\'/', '&apos;', $_);
-		#$_ = preg_replace('/"/', '&quot;', $_);
 
 		return $_;
 	}
@@ -130,10 +129,6 @@
 					else if (strcmp($cmd_par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
 					break;
-#				case 'alltab':
-#				case 'alltabs':
-#					$this->force_all_tabs = true;
-#					break;
 				case 'include':
 					$this->static_include($cmd_par, $cmd_attr);
 					break;
@@ -208,8 +203,6 @@
 				$parser->parse("$this->prefix/$args[1].lyz");
 				foreach ($parser->body as $_)
 					$this->body[] = $_;
-				#foreach ($parser->side as $_)
-				#	$this->side[] = $_;
 			}
 		}
 
