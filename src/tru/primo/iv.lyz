@@ -5,7 +5,7 @@ start#page
 	title#Tru Naluten I, IV &ndash; Le altre voci
 	p#Cos&igrave;, io sono Simak.
 	begin#outside
-		p#speak@lyznardh#<span class="em" title="che significa: &laquo;Finalmente!&raquo;">Er aor ha!</span>
+		p#speak@lyznardh#<em title="che significa: &laquo;Finalmente!&raquo;">Er aor ha!</em>
 	end#outside
 	sec#
 	begin#inside
