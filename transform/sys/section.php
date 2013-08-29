@@ -29,8 +29,8 @@
 				case 'p': $this->make_p($index, $cmd_args, $cmd_attr); break;
 				case 'c': $this->make_c($index, $cmd_args, $cmd_attr); break;
 				case 'r': $this->make_r($index, $cmd_args, $cmd_attr); break;
-				case 'tid': $this->make_tid($cmd_args); break;
-				case 'link': $this->make_link($cmd_args); break;
+				case 'tid': $this->make_tid($index, $cmd_args); break;
+				case 'link': $this->make_link($index, $cmd_args); break;
 				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
 				case 'foto':
@@ -49,6 +49,12 @@
 					$this->content[] = $cmd_args[0];
 					$this->content[] = ']</p>';
 			}
+		}
+
+		private function error ($index, $command)
+		{
+			printf("ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
+			exit(1);
 		}
 
 		public function make_include ($filename, $part)
@@ -96,7 +102,7 @@
 			}
 		}
 
-		private function full_link ($args)
+		private function full_link ($index, $args)
 		{
 			if ($args[1]) $destination = '\''.polish_line($args[1]).'\'';
 			else $destination = '$attr[\'self\']';
@@ -123,6 +129,7 @@
 			$count = count($args);
 			if ($count > 3) $tab = "'$args[3]'"; else $tab = 'false';
 			if ($count > 4) $hash = "'$args[4]'"; else $hash = 'false';
+			if ($count > 5) $this->error($index, 'Link: too many arguments');
 			
 			$url = "<?=make_canonical(\$attr, $destination, $tab, $hash)?>";
 			if ($before) $result = $before; else $result = false;
@@ -132,7 +139,7 @@
 			return $result;
 		}
 
-		private function full_tid ($args)
+		private function full_tid ($index, $args)
 		{
 			$destination = "\$search['page'][0]";
 			if (preg_match('/@/', $args[1])) {
@@ -157,6 +164,7 @@
 			$count = count($args);
 			if ($count > 2) $tab = '\''.strtolower($args[2]).'\''; else $tab = "false";
 			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
+			if ($count > 4) $this->error($index, 'Tid: too many arguments');
 			
 			if ($before) $result = $before; else $result = false;
 			$result .= "<?=make_tid(\$attr, '".polish_line($title)."', $tab, $hash)?>";
@@ -242,14 +250,14 @@
 			$this->parse($index, $command, $cmd_attr, $cmd_args);
 		}
 
-		private function make_tid ($args)
+		private function make_tid ($index, $args)
 		{
-			$this->content[] = ' '.$this->full_tid($args);
+			$this->content[] = ' '.$this->full_tid($index, $args);
 		}
 
-		private function make_link ($args)
+		private function make_link ($index, $args)
 		{
-			$this->content[] = ' '.$this->full_link($args);
+			$this->content[] = ' '.$this->full_link($index, $args);
 		}
 
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
