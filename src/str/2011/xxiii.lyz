@@ -118,7 +118,7 @@ tab#iv
 	
 	Essa è, per l'appunto
 	begin#outside
-		p#inline#GODS#Doooooooooon
+		p#speak@GODS#Doooooooooon
 	end#outside
 	ed è una cosa che spesso dico non appena qualcuno spara una cazzatina.
 	L'espressione assume connotato positivo o negativo a seconda della
@@ -127,7 +127,7 @@ tab#iv
 	
 	Onomatopeicamente, quando dico
 	begin#outside
-		p#inline#GODS#Doooooon
+		p#speak@GODS#Doooooon
 	end#outside
 	mi volto verso una direzione a caso, con un largo movimento del collo.
 	
@@ -148,7 +148,7 @@ tab#iv
 	Quando ad un certo punto uno dei nostri spara una cazzata. Io sposto
 	vistosamente la testa, pianto gli occhi fisso davanti a me e urlo
 	begin#outside
-		p#inline#gods forte#Dooooooooooooooon
+		p#speak@gods forte#Dooooooooooooooon
 	end#outside
 	Ora, ricordate <a
 	href="http://www.youtube.com/watch?v=McAeQiLmEYU">questa</a> scena dal film
@@ -395,27 +395,27 @@ start#side
 	title#Prima parte
 	begin#outside
 		begin#ol
-			li#tid#La programmazione (I)#i
-			li#tid#La programmazione (II)#ii
+			p#tid#La programmazione (I)#i
+			p#tid#La programmazione (II)#ii
 		end#ol
 	end#outside
 	begin#ol@start@3
-		li#tid#La vita fuori di qui#iii
-		li#tid#Doooon!!!#iv
+		p#tid#La vita fuori di qui#iii
+		p#tid#Doooon!!!#iv
 	end#ol
 	begin#outside
 		begin#ol@start@5
-			li#tid#Java è il male (I)#v
-			li#tid#Java è il male (II)#vi
-			li#tid#Java è il male (III)#vii
-			li#tid#Java è il male (IV)#viii
+			p#tid#Java è il male (I)#v
+			p#tid#Java è il male (II)#vi
+			p#tid#Java è il male (III)#vii
+			p#tid#Java è il male (IV)#viii
 		end#ol
 	end#outside
 	sec#
 	title#Seconda parte
 	begin#ol@start@9
-		li#tid#Il sogno#ix
-		li#tid#Il sogno dal sogno#x
+		p#tid#Il sogno#ix
+		p#tid#Il sogno dal sogno#x
 	end#ol
 	sec#
 	<form style="margin: 2px 2px 5px 2px; text-aling: center;">

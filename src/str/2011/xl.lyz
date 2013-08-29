@@ -143,14 +143,14 @@ stop#page
 start#side
 	title#Offerte
 	begin#ol
-		li#tid#Fin da sempre!#i
-		li#tid#Questo layout#ii
-		li#tid#Le barre di scorrimento#iii
+		p#tid#Fin da sempre!#i
+		p#tid#Questo layout#ii
+		p#tid#Le barre di scorrimento#iii
 	end#ol
 	title#Domande
 	begin#ol@start@4
-		li#tid#Il cliente ha sempre ragione#iv
-		li#tid#A spada tratta#v
-		li#tid#Le alternative#vi
+		p#tid#Il cliente ha sempre ragione#iv
+		p#tid#A spada tratta#v
+		p#tid#Le alternative#vi
 	end#ol
 stop#side

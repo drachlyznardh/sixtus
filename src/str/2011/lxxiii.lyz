@@ -91,7 +91,7 @@ start#page
 	io mi blocchi per qualche istante. Ed ovviamente, la maggior parte dei
 	momenti è <em>triste</em>.
 	clear#both
-	sbr#
+	sec#br
 	E adesso, se mi riesce, scriverò altre cose. Mi par di ricordare, infatti,
 	che ci fossero altre cose meritevoli, oggi.
 	begin#mini@right
@@ -128,7 +128,7 @@ start#page
 	piegare m'è evaporata e non ce n'è più. Tutta la mia creatività – o meglio,
 	le mie energie – è stata rediretta verso un antico sport, che non praticavo
 	da qualche tempo.
-	inline#em#La corsa?
+	p#speak@em#La corsa?
 	direte voi. No. <em>Demon's Souls</em>.
 	sec#
 	E proseguo.

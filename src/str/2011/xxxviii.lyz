@@ -10,8 +10,8 @@ tab#intro
 	end#outside
 	Lo è per due motivi distinti:
 	begin#ul
-		li#la storia deve essere interessante
-		li#la storia deve avere senso
+		p#la storia deve essere interessante
+		p#la storia deve avere senso
 	end#ul
 	Fallire in uno di questi obiettivi significa perdere molti lettori.
 	sec#
@@ -53,22 +53,22 @@ tab#intro
 	Ho letto un sacco di roba per entrambi i casi. Ma ne ho anche vista.
 	id#cose
 	Ad esempio, eccomi fresco fresco dall'aver rivisto Gundam SEED. Mo' vi
-	spiego...
+	spiego…
 	title#Le cose che uno vede
-	titler#che non vorrebbe vedere
+	title@right#che non vorrebbe vedere
 	title#che vorrebbe ma non vede
-	Insomma...
+	Insomma…
 	sec#
 	Come la maggior parte delle volte, tutto comincia per colpa del <span
 	class="dacav">Dacav</span>. Ovviamente.
 
 	L'uomo se ne sbuca fuori un bel dì e mi dice
 	begin#outside
-		speak#dacav#Forse è il caso che mi guardi un po' di Gundam
+		p#speak@dacav#Forse è il caso che mi guardi un po' di Gundam
 	
-		inline#gods#Figlio!
+		p#speak@gods#Figlio!
 		– rispondo gonfio d'orgoglio –
-		inline#gods#ho lungamente atteso questo giorno. Seguimi
+		speak@gods#ho lungamente atteso questo giorno. Seguimi
 	end#outside
 	E prometto che gli avrei passato qualcosa.
 
@@ -80,31 +80,31 @@ tab#intro
 	begin#ul
 		<em>UC – Universal Century</em>
 		begin#ul
-			li#0079 – originale
-			li#0080 – War in the pocket
-			li#MsIgloo – I &amp; II
-			li#0083 – Stardust memory
-			li#ZGundam
-			li#ZZGundam
-			li#Char's Counterattack
-			li#Gundam Victory
+			p#0079 – originale
+			p#0080 – War in the pocket
+			p#MsIgloo – I &amp; II
+			p#0083 – Stardust memory
+			p#ZGundam
+			p#ZZGundam
+			p#Char's Counterattack
+			p#Gundam Victory
 		end#ul
-		li#&forall; Gundam
-		li#Gundam G
-		li#Gundam Wing
+		p#&forall; Gundam
+		p#Gundam G
+		p#Gundam Wing
 
 		<em>CE – Cosmic Era</em>
 		begin#ul
-			li#Gundam SEED
-			li#Gundam SEED Destiny
-			li#CE73 – Stargazer
+			p#Gundam SEED
+			p#Gundam SEED Destiny
+			p#CE73 – Stargazer
 		end#ul
 
 		<em>AD – Anno Domini</em>
 		begin#ul
-			li#Gundam 00
-			li#Gundam 00 R2
-			li#A Wakening of the Trailblazer
+			p#Gundam 00
+			p#Gundam 00 R2
+			p#A Wakening of the Trailblazer
 		end#ul
 	end#ul
 	end#triple
@@ -173,9 +173,9 @@ tab#intro
 	
 	Sempre la stessa roba: ragazzino trova Gundam, ragazzino si rivela asso
 	impareggiabile, ragazzino conosce l'orrore della guerra, ragazzino acquista
-	maturità... gente che muore, gente che muore, gente che muore.
+	maturità… gente che muore, gente che muore, gente che muore.
 	end#double
-	sbr#
+	sec#br
 	id#syn&forall;
 	title#&forall; Gundam
 	Serie realizzata per il ventennale.
@@ -188,7 +188,7 @@ tab#intro
 
 	Biplani di legno, dirigibili, schiavi neri nei campi di cotone, villette coloniali stile '800…
 
-	sbr#
+	sec#br
 	id#synG
 	title#Mobile Fighter G Gundam
 	Ah! Una serie MAGNIFICA.
@@ -205,7 +205,7 @@ tab#intro
 
 	Supremo.
 
-	sbr#
+	sec#br
 	id#synW
 	title#New Mobile Report Gundam Wing
 	Mettiamo poi che nel '95 la Bandai dicesse che anche le
@@ -227,7 +227,7 @@ tab#intro
 	
 	Ma almeno la trama bellico/politica c'era, e il mecha-design faceva UNF UNF UNF UNF UNF UNF UFN UFNU FUNF.
 
-	sbr#
+	sec#br
 	title#Cosmic Era
 
 	begin#double
@@ -245,14 +245,14 @@ tab#intro
 
 	Ma ai tempi le ragazzine premevano per averne ancora un po', ed ecco che la produzione l'ha accontentate.
 	end#double
-	sbr#
+	sec#br
 	title#Anno Domini
 	begin#double
 	id#syn00
 	stitle#Mobile Suit Gundam 00
-	Supponiamo che sia il momento di fare una nuova serie di Gundam perché non passati dei begli anni dall'ultima...
+	Supponiamo che sia il momento di fare una nuova serie di Gundam perché non passati dei begli anni dall'ultima…
 
-	Prendiamo che un tizio, Aiolia, abbia previsto il futuro, grazie al suo genio. Poniamo che questo tizio avesse ideato una teoria per costruire fornaci solari (che cazzo saranno mai, boh...) per alimentare astronavi et similia.
+	Prendiamo che un tizio, Aiolia, abbia previsto il futuro, grazie al suo genio. Poniamo che questo tizio avesse ideato una teoria per costruire fornaci solari (che cazzo saranno mai, boh…) per alimentare astronavi et similia.
 
 	Poniamo che il tizio abbia inviato nel futuro quattro tizi con quattro Gundam per fermare una guerra. Ecco.
 
@@ -279,7 +279,7 @@ tab#intro
 tab#ambientazione
 	Dunque.
 	title#Gundam SEED
-	titler#ovvero le avventure di Jesus Yamato
+	title@right#ovvero le avventure di Jesus Yamato
 	Serie criticatissima, piena di cose terribiliose che però a me è piaciuta.
 	title#Premesse dell'ambientazione
 	Ancora una volta l'umanità s'è spinta nello spazio: ci sono un sacco (tipo un centinaio) di colonie spaziali (ciascuna delle quali può ospitare diverse centinaia di migliaia di abitanti) con un sacco di gente sopra.
@@ -308,11 +308,11 @@ tab#s01
 
 	Piccolo avvertimento: attenti ai nomi assurdi.
 	title#Prima stagione
-	Kira (che in giapponico si dice «<span class="em">Kira</span>») e i suoi allegri compagni vanno a scuola, fanno le loro cose etc etc etc... Con lui c'è Flay (che in giapponico si dice <span class="em">Furei</span>) che con lui ci prova come un'assassina, pur stando con un altro, ma bisogna comprenderla, in fondo ha il ruolo della puttana psicopatica per tutta la serie.
+	Kira (che in giapponico si dice «<span class="em">Kira</span>») e i suoi allegri compagni vanno a scuola, fanno le loro cose etc etc etc… Con lui c'è Flay (che in giapponico si dice <span class="em">Furei</span>) che con lui ci prova come un'assassina, pur stando con un altro, ma bisogna comprenderla, in fondo ha il ruolo della puttana psicopatica per tutta la serie.
 
 	Ad un certo punto, Kira sbatte contro una ragazza – Cagalli (che in giapponico si dice «<span class="em">Kagari</span>») che poi scompare per 20 episodi.
 
-	Ad un certo punto, &gt;9000 soldati di ZAFT entrano nella colonia e cominciano a far esplodere cose. Kira corre corre a cercare un rifugio, ma casualmente finisce in un hangar militare (c'erano i militari? Si, c'erano... Ma era una colonia neutrale! Chissene...) e sbatte contro una ragazza – tale Murroe (che in giapponico si legge «<span class="em">Maru</span>») – mentre tutti sparano a tutti.
+	Ad un certo punto, &gt;9000 soldati di ZAFT entrano nella colonia e cominciano a far esplodere cose. Kira corre corre a cercare un rifugio, ma casualmente finisce in un hangar militare (c'erano i militari? Si, c'erano… Ma era una colonia neutrale! Chissene…) e sbatte contro una ragazza – tale Murroe (che in giapponico si legge «<span class="em">Maru</span>») – mentre tutti sparano a tutti.
 
 	Quand'ecco, ad un certo punto, Kira finisce faccia a faccia con un soldato di ZAFT; i due si conoscono: il soldato è un vecchio amico di Kira (facevano l'asilo insieme) e si chiama Athrun (che in giapponico si dice «<span class="em">Azuran</span>»). Questo tizio e altri tre bricconi sono venuti a rubare i Gundam.
 
@@ -322,7 +322,7 @@ tab#s01
 
 	Tutti i Gundam sono protetti da una qualche phase-shifting armor che li rende summmmmmmamente indistruttibili finché han batteria. Ora, i quattro Gundam rubati scappano, mentre il quinto viene attaccato per essere distrutto.
 
-	<span class="em forte">Sorpresa!</span> I quattro che scappano lo fanno senza alcun problema, ma il quinto – d'ora in poi Strike (che in giapponico si dice «<span class="em">Storaik</span>») – non può... perché? Perché era l'ultimo in sviluppo e non ha un OS montato sopra... sfiga, eh?
+	<span class="em forte">Sorpresa!</span> I quattro che scappano lo fanno senza alcun problema, ma il quinto – d'ora in poi Strike (che in giapponico si dice «<span class="em">Storaik</span>») – non può… perché? Perché era l'ultimo in sviluppo e non ha un OS montato sopra… sfiga, eh?
 
 	<span class="em forte">Sorpresa!</span> Kira s'accorge del problema, tira fuori dal nulla una tastiera, e cosa fa? <span class="em">SCRIVE IL SISTEMA OPERATIVO PER IL GUNDAM</span>. Lo fa durante lo scontro. E ci vince la battaglia.
 
@@ -354,11 +354,11 @@ tab#s01
 	end#outside
 	Fortunatamente questo è il futuro: attorno alla Terra c'è una nutritissima cortina di vecchi satelliti, asteroidi e altra fuffa che trabocca di risorse riciclabili.
 
-	Trullallà, recupera questo, recupera quello, la nave sbatte contro i rottami della colonia distrutta all'inizio della guerra. Ricordate?  Ad un certo punto, ecco spuntare un pod di salvataggio con dentro qualcuno. Recuperatolo, chi ci trovano? Tale Lacus (che in giapponico si dice «<span class="em">Laksu</span>») che fa la cantante per il governo di ZAFT: era venuta lì per il concerto per l'anniversario... bah!
+	Trullallà, recupera questo, recupera quello, la nave sbatte contro i rottami della colonia distrutta all'inizio della guerra. Ricordate?  Ad un certo punto, ecco spuntare un pod di salvataggio con dentro qualcuno. Recuperatolo, chi ci trovano? Tale Lacus (che in giapponico si dice «<span class="em">Laksu</span>») che fa la cantante per il governo di ZAFT: era venuta lì per il concerto per l'anniversario… bah!
 
-	Molta yadda dopo, i cattivi e i buoni si ritrovano per scambiare questo malcapitato ostaggio... in quest'occasione Kira e Athrun s'incontrano per lo scambio.
+	Molta yadda dopo, i cattivi e i buoni si ritrovano per scambiare questo malcapitato ostaggio… in quest'occasione Kira e Athrun s'incontrano per lo scambio.
 	begin#outside
-	E mo'...
+	E mo'…
 	begin#ul
 		lo sapevate che nella battaglia era coinvolta una nave, sulla
 		nave c'era un senatore, il senatore era il padre di Flay, il
@@ -397,7 +397,7 @@ tab#s02
 	title#Seconda stagione
 	Già, il deserto. Appena mettono fuori il naso, ecco comparire Waltfeld (che in giapponico si dice «<span class="em">Valtofeldo</span>»), magnifico comandante di ZAFT che passa il suo tempo ad elaborare strategie geniali e a mescere il caffè. Delizioso caffè.
 
-	Che ci crediate o meno, la prima puntata, Kira si mette lì e – battaglia in corso – riprogramma l'OS dello Strike per adattarsi alla gravità, alla sabbia e al pulviscolo atmosferico (che interferisce coi laser...).
+	Che ci crediate o meno, la prima puntata, Kira si mette lì e – battaglia in corso – riprogramma l'OS dello Strike per adattarsi alla gravità, alla sabbia e al pulviscolo atmosferico (che interferisce coi laser…).
 
 	Che ci crediate o meno, la seconda puntata, Kira e Cagalli (da dove
 	spunta lei, poi?) sono al mercato a far la fuffa e to', compare
@@ -492,7 +492,7 @@ tab#s02
 	E chi c'è sopra? C'è il redivivo Kira. E dove cazzo l'ha preso, il
 	Gundam?
 </p><div class="outside"><p>
-		Qualche puntata prima, scopriamo alcune cose...
+		Qualche puntata prima, scopriamo alcune cose…
 </p><ul><li>
 			<p>Kira non è morto: l'esplosione l'ha semplicemente
 			scagliato molto lontato</p>
@@ -615,7 +615,7 @@ tab#s04
 		</li><li>
 			<p>tutti i sopravvissuti di Orb erano neutrali ma adesso sono
 			nemici della Federazione, perché presunti alleati di ZAFT, ma
-			ZAFT non lo sa...</p>
+			ZAFT non lo sa…</p>
 		</li><li>
 			<p>Athrun e un suo compare (Dearka, che in giapponico si dice
 			«<span class="em">Diakka</span>» han deciso che la guerra deve
@@ -625,7 +625,7 @@ tab#s04
 		Eh, già, lo sapeva che c'era un cattivo? E invece i cattivi sono
 		due. E invece sono tre.
 	</p><div class="outside"><p>
-		Questo effettivamente non salta fuori subito... Mo' vi spiego:
+		Questo effettivamente non salta fuori subito… Mo' vi spiego:
 	</p><ul><li>
 			<p>Vi ricordate i tre Gundam cazzari? Sono stati sviluppati da
 			un programma segreto federale, agli ordini di un certo Azrael
@@ -655,7 +655,7 @@ tab#s04
 		Azrael, che le sfrutta per convincere il malvagio consiglio Federale
 		ad usare le testate nucleari per l'attacco definitivo.
 	
-		E sapete cosa ancora non vi ho detto? Eh, ce n'è di roba...
+		E sapete cosa ancora non vi ho detto? Eh, ce n'è di roba…
 	</p><div class="outside"><ul><li>
 			<p>sapevate che Kira e Cagalli sono gemelli separati alla
 			nascita?</p>
@@ -760,21 +760,21 @@ tab#finale
 		E senza che nessuno abbia modo di dire qualcosa di significativo, la
 		guerra finisce. E la serie pure. Cut!
 	
-	sbr#
+	sec#br
 	id#considerazioni
-		Eh, non è stato facile...
+		Eh, non è stato facile…
 	</p><h2>
 		Considerazioni
 	</h2><p>
 		Sappiate, poi, che questa serie è considerata infinitamente superiore al
 		suo seguito, Gundam SEED Destiny, composto di altri bei 50 episodi.
 	
-		Eppure... eppure a me questa serie non dispiace... perché? Non saprei
-		dire...
+		Eppure… eppure a me questa serie non dispiace… perché? Non saprei
+		dire…
 	
 		Sarà che negli anni ho sviluppato un gusto per l'orrido, per le serie
 		fuffe, sarà che ho visto un sacco di cose giapponesi terribili, sarà che
-		sono un cazzo di fanboy...
+		sono un cazzo di fanboy…
 	</p>
 </div><div class="section">
 	<p>
@@ -793,7 +793,7 @@ tab#finale
 			collegamento con il cattivo con la maschera</p>
 		</li><li>
 			<p>cattivo con la maschera (Rau/Char) che salta fuori immediatamente
-			ma non combatte subito contro il protagonista, ma tornerà...</p>
+			ma non combatte subito contro il protagonista, ma tornerà…</p>
 		</li><li>
 			<p>battaglia per la sopravvivenza fino alla discesa sulla Terra</p>
 		</li><li>
@@ -802,9 +802,9 @@ tab#finale
 			essere maestro per il protagonista, che combatte con un'arma stramba
 			(BuCUE/That's no Zaku, boy! No Zaku! – Gouf custom)</p>
 	</li></ul></div><p>
-		Andando avanti, però, comincia a rimanerti in bocca un sapore strano...
+		Andando avanti, però, comincia a rimanerti in bocca un sapore strano…
 		sembra che tutto vada un po' troppo come vogliono gli autori, come
-		vogliono i bimbiminchia, non come vorrei io...
+		vogliono i bimbiminchia, non come vorrei io…
 	
 		E ci sono i buchi.
 	</p>

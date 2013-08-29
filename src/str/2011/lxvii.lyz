@@ -340,16 +340,16 @@ stop#page
 start#side
 	p#tid#Introduzione#intro
 	title#L'impresa
-	begin#ol
-		li#tid#Comincia la salita#i
-		li#tid#Il bivio#ii
-		li#tid#Verso Fai#iii
-		li#tid#Verso la cima#iv
-		li#tid#In barba alla legge#v
-		li#tid#Verso la cima#vi
-		li#tid#Il salto#vii
-		li#tid#E ancora un po'#viii
-		li#tid#Panorami#ix
-		li#tid#Protagonista#x
-	end#ol
+	begin@4em#roman
+		p#tid#Comincia la salita#i
+		p#tid#Il bivio#ii
+		p#tid#Verso Fai#iii
+		p#tid#Verso la cima#iv
+		p#tid#In barba alla legge#v
+		p#tid#Verso la cima#vi
+		p#tid#Il salto#vii
+		p#tid#E ancora un po'#viii
+		p#tid#Panorami#ix
+		p#tid#Protagonista#x
+	end#roman
 stop#side

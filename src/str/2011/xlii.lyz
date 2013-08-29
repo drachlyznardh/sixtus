@@ -87,7 +87,7 @@ tab#v
 		qualcosa da dire, quindi probabilmente me n'andrò a giocare a
 		DoDonPachi.
 
-		sbr#
+		sec#br
 		Rieccomi.
 	
 		E quando pare che andarsene a casa sia l'unica cosa buona da fare,
@@ -139,11 +139,11 @@ stop#page
 start#side
 	title#La vecchiaia
 	begin#ol
-		li#tid#L'età percepita#i
-		li#tid#Gli effetti dell'età#ii
-		li#tid#La nostalgia#iii
-		li#tid#La briga#iv
-		li#tid#L'insofferenza#v
-		li#tid#La corsa lenta#vi
+		p#tid#L'età percepita#i
+		p#tid#Gli effetti dell'età#ii
+		p#tid#La nostalgia#iii
+		p#tid#La briga#iv
+		p#tid#L'insofferenza#v
+		p#tid#La corsa lenta#vi
 	end#ol
 stop#side

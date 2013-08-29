@@ -16,36 +16,36 @@ start#page
 	ruolo).
 
 	Va più o meno così.
-	sbr#
+	sec#br
 	begin#inside
-		speak#simak#Sono stanco e scazzato e non ho la benché minima voglia di fare niente…
-		speak#ci#Sai, forse potresti lasciar perdere questa roba – qualunque essa sia – e darti all&apos;interazione sociale
-		speak#corona#Piega un fiore! Piega un fiore! Piega un calice per il fiore! Prendi la bicicletta!
-		speak#simak#Uhm… non so… forse potrei semplicemente farmi una dormita…
-		speak#ci#Nononononononono. Le analisi indicano una vergenza.  Perché non ci concentriamo su quella?
-		speak#corona#Perché è pericoloso e inutile. Dovremmo fare dei fiori, invece
-		speak#simak#Ma veramente io…
-		speak#ci#È senz&apos;altro prioritario controllare. Dobbiamo verificare chi/cosa si trova nell&apos;area segnalata
-		speak#corona#Già sappiamo cos&apos;è, ed è pericolosa. Andiamo via. Facciamo fiori
+		p#speak@simak#Sono stanco e scazzato e non ho la benché minima voglia di fare niente…
+		p#speak@ci#Sai, forse potresti lasciar perdere questa roba – qualunque essa sia – e darti all&apos;interazione sociale
+		p#speak@corona#Piega un fiore! Piega un fiore! Piega un calice per il fiore! Prendi la bicicletta!
+		p#speak@simak#Uhm… non so… forse potrei semplicemente farmi una dormita…
+		p#speak@ci#Nononononononono. Le analisi indicano una vergenza.  Perché non ci concentriamo su quella?
+		p#speak@corona#Perché è pericoloso e inutile. Dovremmo fare dei fiori, invece
+		p#speak@simak#Ma veramente io…
+		p#speak@ci#È senz&apos;altro prioritario controllare. Dobbiamo verificare chi/cosa si trova nell&apos;area segnalata
+		p#speak@corona#Già sappiamo cos&apos;è, ed è pericolosa. Andiamo via. Facciamo fiori
 	end#inside
 	sec#
 	Poi me ne vado a correre un pochettino e le cose cambiano…
-	sbr#
+	sec#br
 	begin#inside
-		speak#simak#Oh, finalmente un po&apos; di pace, nessun altro che corre, nessuno che spacca le palle, niente traffico, niente fuffa, mente libera da pensieri…
-		speak#ci#E invece! Perché non passiamo in città? Sai, lì c&apos;è quella gelateria. Così magari ci mangiamo un gelato. Così troviamo quella gelataia. Sai, è importante. Dovremmo chiederle come si chiama. Dovremmo chiederle di uscire. Magari smette di lavorare, magari può venire a spasso con noi, magari le va di stare assieme un pochettino, magari le va di stare assieme per sempre, magari possiamo andare in ferie, andare in montagna, partire e non tornare mai più, andare nella jungla, aprire una gelateria, distruggere il Metal Gear, salvare il mondo, trovare la felicità…
-		speak#simak#Mah, non ti pare un po&apos; poco razionale, tutto questo?
-		speak#ci#Ma che dici! E poi non dimenticare la parte con il gelato, ch&apos;è la più importante!	
-		speak#simak#Sai, non sono tanto convinto…
-		speak#ci#Ma come? Non ti fidi? Fidati, invece. Fidati che c&apos;ho ragggggione
-		speak#simak#Veramente… non so, facendo due conti, quante volte hai dimostrato d&apos;avere ragione, in passato?
-		speak#ci#Beh, veramente…
-		speak#simak#Ecco. Mi pare che tu abbia un bello 0 nella classifica delle previsione azzeccate, un bel 100% di fallimenti
-		speak#ci#Si, sarà anche vero, ma perché non darmi fiducia e provarci lo stesso, eh? Perché no? Magari, stavolta…
-		speak#simak#…
-		speak#ci#Ma magari stavolta funziona! Forza! Su! Che non si sa mai! Hop! Hop! Forza e coraggio! Vai! Che finché non ci provi non puoi sapere se ce la fai o no! Hop!
-		speak#simak#Ma…
-		speak#ci#Niente ma! Niente forse! Forza! Forza! Di corsa! Vai!  Affronta il destino! Il cuore oltre l&apos;ostacolo! Hop! Olio cuore!
+		p#speak@simak#Oh, finalmente un po&apos; di pace, nessun altro che corre, nessuno che spacca le palle, niente traffico, niente fuffa, mente libera da pensieri…
+		p#speak@ci#E invece! Perché non passiamo in città? Sai, lì c&apos;è quella gelateria. Così magari ci mangiamo un gelato. Così troviamo quella gelataia. Sai, è importante. Dovremmo chiederle come si chiama. Dovremmo chiederle di uscire. Magari smette di lavorare, magari può venire a spasso con noi, magari le va di stare assieme un pochettino, magari le va di stare assieme per sempre, magari possiamo andare in ferie, andare in montagna, partire e non tornare mai più, andare nella jungla, aprire una gelateria, distruggere il Metal Gear, salvare il mondo, trovare la felicità…
+		p#speak@simak#Mah, non ti pare un po&apos; poco razionale, tutto questo?
+		p#speak@ci#Ma che dici! E poi non dimenticare la parte con il gelato, ch&apos;è la più importante!	
+		p#speak@simak#Sai, non sono tanto convinto…
+		p#speak@ci#Ma come? Non ti fidi? Fidati, invece. Fidati che c&apos;ho ragggggione
+		p#speak@simak#Veramente… non so, facendo due conti, quante volte hai dimostrato d&apos;avere ragione, in passato?
+		p#speak@ci#Beh, veramente…
+		p#speak@simak#Ecco. Mi pare che tu abbia un bello 0 nella classifica delle previsione azzeccate, un bel 100% di fallimenti
+		p#speak@ci#Si, sarà anche vero, ma perché non darmi fiducia e provarci lo stesso, eh? Perché no? Magari, stavolta…
+		p#speak@simak#…
+		p#speak@ci#Ma magari stavolta funziona! Forza! Su! Che non si sa mai! Hop! Hop! Forza e coraggio! Vai! Che finché non ci provi non puoi sapere se ce la fai o no! Hop!
+		p#speak@simak#Ma…
+		p#speak@ci#Niente ma! Niente forse! Forza! Forza! Di corsa! Vai!  Affronta il destino! Il cuore oltre l&apos;ostacolo! Hop! Olio cuore!
 	end#inside
 	E insomma… non è che ci sia tanto da fare, perché in fondo questa voce è
 	quel che penso, quindi… forza e coraggio, e mi son messo in viaggio.
@@ -60,12 +60,12 @@ start#page
 	Il problema è che, per quanto mi è dato di capire, esiste un campo a
 	repulsione che in qualche modo ha il potere di eliminare questa vocina (e le
 	musichine annesse) e quindi di annullare il suo effetto.
-	sbr#
+	sec#br
 	Ed eccomi quindi nelle vicinanze della gelateria. Quei famosi quindici
 	metri. Entro questa distanza la prima voce tace, torna la seconda. E non fa
 	altro che ripetere questo:
 	begin#inside
-		speak#corona#Pericolo! Scappa! Fuggi! Pericolo! Via! Lontano!  A casa! Pericolo! Corri! Scappa! Lontano! Torna!
+		p#speak@corona#Pericolo! Scappa! Fuggi! Pericolo! Via! Lontano!  A casa! Pericolo! Corri! Scappa! Lontano! Torna!
 	end#inside
 	La sensazione che trasmette è qualcosa di estremamente antico e profondo.
 	
@@ -98,11 +98,11 @@ start#page
 	Dopo qualche passo, dopo essere uscito dalla zona di pericolo, ecco che
 	quella voce torna e chiede
 	begin#inside
-		speak#ci#Mah, coso, eri lì, eri a portata, non c&apos;era nessuno. Perché non l&apos;hai fatto?
+		p#speak@ci#Mah, coso, eri lì, eri a portata, non c&apos;era nessuno. Perché non l&apos;hai fatto?
 	end#inside
 	Ed io ci penso. E quando capisco, sono anche meno contento di prima.
 	begin#inside
-		speak#simak#Perché io di te non mi fido. Ho smesso
+		p#speak@simak#Perché io di te non mi fido. Ho smesso
 	end#inside
 stop#page
 start#side

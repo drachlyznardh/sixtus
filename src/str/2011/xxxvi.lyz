@@ -10,7 +10,7 @@ start#page
 			Capitasse la vostra risposta d'essere affermativa, per favore,
 			scrivetemi e spiegatemi quel che avete capito, così me lo scrivo.
 	
-	sbr#
+	sec#br
 		Dunque, chi è <span class="em">quel tizio</span>?
 	
 		Da non confordersi con “quel tizio” in termini di gioco di ruolo (quello
@@ -133,7 +133,7 @@ start#page
 			dalle medie, è l'unica cosa interessante che ho fatto alle
 			superiori, non vedo perché all'università dovrei smettere.
 	
-	sbr#
+	sec#br
 		Un bel dì, ad esempio, me ne vado al bar con il <span
 		class="jazz">signor Jazzinghen</span> a prendere il caffè.
 	</p><div class="inside"><p>
@@ -209,7 +209,7 @@ start#page
 	
 		Grazie per l'attenzione, tornate alla storia principale.
 	
-	sbr#
+	sec#br
 			E queste sono alcune delle mie battutine del bar; poi ci sono quelle
 			che faccio sugli ingegneri, quando sono in coda per il panino...
 			quelle le risparmio per loro.
@@ -295,7 +295,7 @@ start#page
 			E anche tra voi, la fuori, magari, c'è un <span class="em">quel
 			tizio</span>... potresti anche essere tu...
 	
-	sbr#
+	sec#br
 		Mi sono dimenticato una parte piuttosto importante, in effetti.
 	</p><h2>
 		<span class="em">QUEI tizi</span>

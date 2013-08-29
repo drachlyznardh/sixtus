@@ -1,7 +1,6 @@
 title#Libertà#Di andare a spasso
 prev#Storie/2011/LXX/#Spontaneità
 next#Storie/2011/LXXII/#L'ultimo progetto
-
 start#page
 	Salve, sono il <em class="gods">GODS</em> e nascondo molte cose. Ma non
 	tutte. Alcune cose le indosso. Ecco un bell'elencone:
@@ -33,16 +32,16 @@ start#page
 	end#outside
 	sec#
 	Così equipaggiato, me ne stavo triste e solo al portatile, in cucina,
-	titler#Domenica, 4 Dicembre 2011
+	title@right#Domenica, 4 Dicembre 2011
 	a farmene un pentolone, chattando con <em class="jazz">Jazz</em> e altre
 	tristi cose della domenica. Ad un tratto, riflettendo sui massimi sistemi,
 	sull'universo e sulla gita in
 	link#Storie/2011/LXVIII/#Goccia d'oro#escursione
 	e su altre cose, mi sono detto
 	begin#inside
-		inline#gods#Non me ne starò qui, triste e solo, per tutto il giorno!
+		p#speak@gods#Non me ne starò qui, triste e solo, per tutto il giorno!
 		e raccolte tutte le mie energie, mi sono alzato
-		inline#gods#Me ne andrò triste e solo da qualche altre parte!
+		speak@gods#Me ne andrò triste e solo da qualche altre parte!
 		e me ne sono andato.
 	end#inside
 	Verso nuove ed incredibili avventure? Esattamente.
@@ -51,7 +50,7 @@ start#page
 	link#Recensioni/Libri/XII/#libraccio#vii##,
 	mi sono messo per strada. Mi sorse allora una domanda:
 	begin#inside
-		inline#gods#Come starà il Parco delle Coste? Sarà ancora lì?
+		p#speak@gods#Come starà il Parco delle Coste? Sarà ancora lì?
 	end#inside
 	E quindi, via: su per il Fersina, gira alla Busa, su fino a via Valsugana,
 	dentro per le casette, su e su e su fino al Santuario della Madonna delle
@@ -62,10 +61,10 @@ start#page
 	porta a Martignano. Ma lì compare un cartello, un cartello che mi guarda
 	beffardo e mi dice
 	begin#outside
-		speak#em#Hey, GODS, lo sai che ci vogliono ore ed ore, da qui, per arrivare fin sul Calisio?
-		inline#gods#Ma davvero?
+		p#speak@em#Hey, GODS, lo sai che ci vogliono ore ed ore, da qui, per arrivare fin sul Calisio?
+		p#speak@gods#Ma davvero?
 		rispondo io, controllando l'orologio
-		inline#gods#Se tu non menti – e considerato che io posso fare la stessa strada in metà del tempo – allora posso salire in cima e tornare a casa per cena.
+		speak@gods#Se tu non menti – e considerato che io posso fare la stessa strada in metà del tempo – allora posso salire in cima e tornare a casa per cena.
 	end#outside
 	ChallengeAccepted.jpg
 	sec#
@@ -98,7 +97,7 @@ start#page
 	nuvola. Nebbia. Nebbia fitta fitta che non si distingueva niente oltre i
 	cinque metri.
 	begin#inside
-		speak#gods#Beh, è un po' tardi per tornare indietro… no?
+		p#speak@gods#Beh, è un po' tardi per tornare indietro… no?
 	end#inside
 	Così proseguo. Avanzo molto più lentamente, perché quel che c'è davanti non
 	lo si vede. Complici l'umidità e il caldo (perché io sudo nel raggio di un
@@ -107,13 +106,13 @@ start#page
 
 	Improvvisamente, poi, vedo una luce che galleggia in mezzo alla strada.
 	begin#inside
-		inline#gods#Oh! Mio Dio! Un fuoco fatuo?!?!?
+		p#speak@gods#Oh! Mio Dio! Un fuoco fatuo?!?!?
 		penso, sudando freddo.
 	end#inside
 	Ed ecco, mentre lo spavento mi risucchia un paio d'anni di vita, dietro la
 	lucina danzante intravedo comparire una sagoma scura. S'avvicina,
 	s'avvicina. Passando, dice
-	inline#em#Salve!
+	speak@em#Salve!
 
 	Ah! Era solo un tizio in bici. Ma intanto, mi s'incanutisce il capoccione.
 	sec#
@@ -124,11 +123,12 @@ start#page
 
 	Gironzolo finché m'imbatto in un cane.
 	begin#outside
-		inline#gods#Ciao, cane
+		p#speak@gods#Ciao, cane
 		saluto.
-		speak#em#Buonasera
+		p#speak@em#Buonasera
+
 		Sgrano gli occhi
-		inline#gods#Wat
+		speak@gods#Wat
 	end#outside
 	Ma non stavo perdendo il senno: m'ero semplicemente accorto soltanto del
 	cane e non del padrone, che stava uscendo dal bosco in quel momento. Scambio
@@ -162,9 +162,9 @@ start#page
 	bianca, comoda, e la seguo verso Nord. Dopo dieci minuti buoni, finalmente,
 	vedo delle luci, le luci di Martignano: sono un centinaio di metri più in basso…
 	begin#inside
-		inline#gods#Beh
+		p#speak@gods#Beh
 		mi dico
-		inline#gods#che vuoi che sia? Basteranno un paio di curve…
+		speak@gods#che vuoi che sia? Basteranno un paio di curve…
 	end#inside
 	Ma a quel punto, la strada smette di scendere… mi ritrovo in piano per un
 	chilometro, forse due… la strada continua verso Nord… per quanto sicuro di
@@ -196,16 +196,16 @@ start#page
 	sono tornato alle Laste, sono sceso dal basso, poi ho preso la strada del
 	Santuario, sono sbucato alla Saluga, sono passato per il parco di piazza
 	Venezia come non facevo da qualche anno e poi a casuccia.
-	sbr#
+	sec#br
 	begin#outside
 		Poco dopo, passa di là il destino – sotto forma di padre – e mi dice
-		inline#em#Guarda, Ivan, giovedì noi ce ne andiamo dai nonni per il ponte
+		speak@em#Guarda, Ivan, giovedì noi ce ne andiamo dai nonni per il ponte
 		ed io colgo al volo l'occasione
-		inline#gods#per l'Immacolata me ne andrò a spasso, allora
+		speak@gods#per l'Immacolata me ne andrò a spasso, allora
 	end#outside
 	Ancora una volta da solo, ancora una volta senza tanta briga, ma stavolta
 	senza libro, ho preso la mia strada.
-	titler#Giovedì, 8 Dicembre 2011
+	title@right#Giovedì, 8 Dicembre 2011
 	Dopo un po', mi sono ritrovato a Sardagna, di fronte ad uno di quei cartelli
 	per turisti al quale ho chiesto delle indicazioni.
 
@@ -213,16 +213,16 @@ start#page
 	Castagni</em> che sale verso il Bondone. Cerco questo sentiero, lo trovo ma
 	scopro che arriva soltanto in Vanezze.
 	begin#outside
-		inline#gods#forte#Cazzuola!
+		p#speak@gods#forte#Cazzuola!
 		esclamo
-		inline#gods#Io voglio arrivare in Palon! Ci sarà una strada dritta, no?
+		speak@gods#Io voglio arrivare in Palon! Ci sarà una strada dritta, no?
 	end#outside
 	E infatti c'era, un certo <em>Sentiero 626</em>, che però parte da Ravina. E
 	siccome non era poi così tardi, e siccome non avevo proprio altro da fare,
 	me ne sono sceso fino a Ravina. Da lì, sono andato al limite del paesello,
 	dove il sentiero comincia. Bello bello, ma era notte e avevo pure fame.
 	L'avventura avrebbe dovuto attendere. Due giorni.
-	sbr#
+	sec#br
 	E così, senza alcuna vera preparazione, senza grande entusiasmo, senza
 	briga, sabato mattina mi sono svegliato tardissimo, verso le 10:30, mi sono
 	messo su il caffè, me lo sono bevuto, ho girovagato, me ne sono andato
@@ -232,7 +232,7 @@ start#page
 
 	Passo all'Orvea, mi compro qualche pezzo di pane e della cioccolata, e
 	m'incammino. E via, verso nuove incredibili avventure. Alle 11:45.
-	titler#Sabato, 10 Dicembre 2011
+	title@right#Sabato, 10 Dicembre 2011
 	Cammina cammina, arrivo verso Ravina. Quando mi fermo a prendere questa foto
 	foto#Extra/Palon/25.jpg
 	abbasso un attimo gli occhi e vedo questo
@@ -240,7 +240,7 @@ start#page
 	Immaginate la mia faccia quando.
 	sec#
 	Ma questo
-	inline#pugliese#non è poi così importante
+	speak@pugliese#non è poi così importante
 	(direbbe un vecchio professore), quindi mi arrampico su per la rampa di
 	Ravina, fino al torrentello, all'imboccatura del sentiero.
 	foto#Extra/Palon/28.jpg
@@ -252,11 +252,11 @@ start#page
 	cartello.
 	foto#Extra/Palon/29.jpg
 	begin#outside
-		inline#gods#forte#Waaaaaaaaaaaaaaaaaaaaaaaaaaat
+		p#speak@gods#forte#Waaaaaaaaaaaaaaaaaaaaaaaaaaat
 		urlo, ad alta voce.
 		
 		Cinque ore? Cinque intere ore? Che mi senta l'intero bosco
-		inline#gods#forte#You got to be kidding me!
+		speak@gods#forte#You got to be kidding me!
 	end#outside
 	Ma quel cartello non mentiva, e non era contraffatto. A quel punto, due
 	cose:
@@ -291,9 +291,9 @@ start#page
 	cartello. Un pezzo di sentiero sale, un pezzo scende, uno torna indietro.
 	
 	begin#inside
-		inline#gods#Vediamo un po'
+		p#speak@gods#Vediamo un po'
 		penso
-		inline#gods#Se questo porta a vedere qualche panorama interessante
+		speak@gods#Se questo porta a vedere qualche panorama interessante
 	end#inside
 	E infatti, dopo un paio di minuti, ecco una <a targert="_blank"
 	href="Extra/Palon/53.jpg">panchina</a> dalla quale si gode un buon
@@ -381,7 +381,7 @@ start#page
 
 	Entro, tutto sudato, con le maniche arrotolate, con la giaccia appesa allo
 	zaino, con gli occhiali appannati, faccio
-	inline#gods#Duddadu, salve, cerco il sentiero 645. Dove parte?
+	speak@gods#Duddadu, salve, cerco il sentiero 645. Dove parte?
 	e aspetto che lo stupore scivoli via dalla faccia di questo tizio, prima che
 	possa tentare di spiegarmi che lui non lo sa. Ma la sua cartina, eccola
 	pronta, indica più o meno la stessa cosa del cartellone qui fuori. Pare
@@ -417,7 +417,7 @@ start#page
 	caviglie, ch'è in grado di piegarsi senza lasciarmi cadere. Corro finché
 	arrivo ad uno slargo nel bosco, da dove posso vedere Sardagna.
 	
-	inline#war#È fatta!
+	p#speak@war#È fatta!
 	direbbe War. Io continuo a correre, nel buio, finché smetto di sentire i
 	sassi sotto i piedi e trovo del cemento, poi dell'asfalto. Arrivo a
 	Sardagna, incontro un signore che porta il cane a spasso, arrivo alla
@@ -435,7 +435,7 @@ start#page
 	non li trovo: erano ancora allo spettacolo. Vado a casa e mi sbrodolo sul
 	divano. Consumo &gt;9000 litri d'acqua calda durante la terza doccia più
 	lunga del mondo. Fortuna che era sabato.
-	sbr#
+	sec#br
 	Come avrete immaginato, ho avuto parecchio tempo pensare mentre me ne andavo
 	a spasso. In breve
 	begin#ol
@@ -517,5 +517,5 @@ start#page
 stop#page
 start#side
 	title#Storia LXXI
-	titler#Libertà
+	title@right#Libertà
 stop#side

@@ -221,13 +221,13 @@ tab#vi
 </p><div class="outside">
 	<p>
 		Il Dacav dice sempre e soltanto
-		inline#dacav#Ma, è anche carina! come se la cosa fosse in qualche modo pertinente.
+		speak@dacav#Ma, è anche carina! come se la cosa fosse in qualche modo pertinente.
 	
 		Il signor Jazzinghen, invece, dice sempre qualcosa che non afferro bene ma
 		che ineggia in qualche modo ad una possibile interazione
 		magneto-fisica tra me e la fonte/bersaglio del mio rancore, qualcosa
 		del tipo
-		inline#jazz#Cioè cioè, tu [...] lei [...] &lt;UNF&gt; [...] letto [blah]
+		speak@jazz#Cioè cioè, tu [...] lei [...] &lt;UNF&gt; [...] letto [blah]
 	</p>
 </div><p>
 	La stessa cosa accade ciclicamente qualcosa come quattro volte: io me ne
@@ -254,11 +254,11 @@ stop#page
 start#side
 title#Contenuti
 begin#ol
-	li#tid#I probblemi#i
-	li#tid#Mhphghsthrfgh#ii
-	li#tid#Le fonti d'odio#iii
-	li#tid#Son forse io?#iv
-	li#tid#Non ho briga#v
-	li#tid#Il sogno#vi
+	p#tid#I probblemi#i
+	p#tid#Mhphghsthrfgh#ii
+	p#tid#Le fonti d'odio#iii
+	p#tid#Son forse io?#iv
+	p#tid#Non ho briga#v
+	p#tid#Il sogno#vi
 end#ol
 stop#side

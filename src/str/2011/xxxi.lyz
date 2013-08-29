@@ -45,7 +45,7 @@ start#page
 	title#Deus Ex Machina - La Campagna per 3 giocatori
 	Tutto cominciò quasi per scherzo, in alternativa ad un'altra campagna
 	che pareva sul punto di arenarsi…
-	sbr#
+	sec#br
 	Si comincia con $mago intento a chiaccherare con un amico elfo in
 	una taverna nella capitale della repubblica. Per un qualche motivo,
 	i due hanno preso tavoli diversi e comunicano con un incantesimo.
@@ -115,14 +115,14 @@ start#page
 
 	Il cattivo, il Cancelliere verosimilmente proprietario dell'elmo rubato, è
 	sulle nostre tracce. Lui e le sue &gt;9000 guardie…
-	sbr#
+	sec#br
 	Ma perché? Come ci conosce? Come c'han trovati? Boh… non è dato
 	sapere…
 	title#La galleria
 	Tramite lo sceriffo fratello dell'elfo, veniamo a sapere che lontano a
 	Nord, oltre le montagne, passando il confine, potremmo essere al sicuro,
 	perché lassù il governo di $Cancelliere non arriva.
-	sbr#
+	sec#br
 	Raggiungiamo le montagne del confine tritando mostri ad ogni angolo.
 	All'ingresso delle gallerie troviamo un povero nano ferito, Malcor. Lo
 	riaccompagnamo a casa sua.
@@ -174,7 +174,7 @@ start#page
 	end#inside
 		Storia lunga in poche parole, eccoci con una missione: andare di
 		notte in $cimitero e recuperare $libro_maledetto.
-	sbr#
+	sec#br
 	Quando arriviamo lì, $ladro quasi muore per il veleno di cui il libro è
 	coperto. Ovviamente.
 
@@ -182,7 +182,7 @@ start#page
 	per sempre, giù e giù e giù…
 	title#`IL' Dungeon
 	Ne uscimmo soltanto l'anno dopo.
-	sbr#
+	sec#br
 	Dunque, eccoci al buio; torcia. C'è un lungo corridio; &gt;9000 stanze
 	vuote.
 
@@ -252,13 +252,13 @@ start#page
 	E se ne va…
 
 	A quel punto, ecco l'uscita.
-	sbr#
+	sec#br
 	Appena messa la testa fuori, scopriamo non solo di aver viaggiato per
 	mezzo continente, ma di essere sotto la casa del signore del mondo.
 	title#Lo spiegone
 	Quindi, in casa di questo tizio, rifocillati, lucidati e cresciutoci il
 	drago di dieci metri senza alcun motivo, ci viene spiegato tutto. TUTTO.
-	sbr#
+	sec#br
 	Dunque, io non ho capito gran ché…
 
 	In pratica, il nonnino che ci racconta la storia, qualche secolo fa, era il
@@ -312,11 +312,11 @@ start#page
 	la guerra al BBEG.
 
 	Noi veniamo infine congedati.
-	sbr#
+	sec#br
 	Eccoci dunque tornati a casa, bel belli. Ognun per la sua strada?
 	title#La conclusione?
 	E invece no.
-	sbr#
+	sec#br
 	Lo stregone riceve una lettera: la sua sede (aveva una sede!?!?) è in
 	pericolo.
 	begin#inside
@@ -390,12 +390,12 @@ start#page
 	&gt;9000 punti ferita guariti dopo eccoci (assieme al ladro, misteriosamente
 	riapparso da una nuvola fatta di polvere e magheggiamenti) di fronte a
 	$Cancelliere in persona.
-	sbr#
+	sec#br
 	E che vorrà questo da noi?
 	title#Ancora una cosa
 	Quest'uomo, ancora una volta, vuole affidarci una missione. Nonostante
 	sia malvagio e noi i suoi nemici.
-	sbr#
+	sec#br
 	In cambio di un'amnistia completa, $Cancelliere ci vorrebbe far
 	recuperare le gemme dell'elmo. QUELL'ELMO. Quello che non vediamo da
 	qualche anno ormai…

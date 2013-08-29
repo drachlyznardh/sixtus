@@ -1,7 +1,6 @@
 title#Momenti#Come raddrizzare una giornata con delle cose tristi
 prev#Storie/2011/LXVII/#Ancora ce la posso fare
 next#Storie/2011/LXIX/#Le ragazze-__SUFFIX__
-
 start#page
 tab#contatti
 	Alcune giornate sono semplicemente <em>non buone</em>. Cominciano male,
@@ -52,7 +51,7 @@ tab#contatti
 	Vespa scoppiettante con le fiamme espulse dalla <em>petomarmitta</em> ed
 	esclamo
 	begin#outside
-		speak#supergiovane#Ed ora, la mia arma finale…
+		p#speak@supergiovane#Ed ora, la mia arma finale…
 	end#outside
 	ed estraggo il mio <span class="wrong">fidatissimo</span>
 	<code>IvanPrime</code>, che potreste ricordare per la sua ultima
@@ -76,11 +75,11 @@ tab#contatti
 	<code>mirror</code>ati sul mio PC. Ecco, bravo <code>IvanPrimeII</code>,
 	eccoti un biscottino… ora
 	begin#outside
-		inline#gods#Allora, <code>Nokia PC Suite</code> de' miei calzari, dimmi, come esporto i miei dati così li posso mettere sullo stradannato iPhone4 del mi' babbo?
+		p#speak@gods#Allora, <code>Nokia PC Suite</code> de' miei calzari, dimmi, come esporto i miei dati così li posso mettere sullo stradannato iPhone4 del mi' babbo?
 		chiedo io, con tutta la gentilezza rimasta.
 
 		Ed ecco che
-		inline#nokiaPCSuite#T'attacchi a 'sto cazzo di legno svedese
+		speak@nokiaPCSuite#T'attacchi a 'sto cazzo di legno svedese
 		è la risposta che ricevo.
 	end#outside
 	Succede infatti che la Nokia non ha la minima intenzione di lasciarmi
@@ -97,7 +96,6 @@ tab#contatti
 	Grazie ad un'opportuna passata di <code>perl</code> raccattato grazie ad un
 	anonimo tizio, eccomi con una bella fila di <code>comma separated
 	values</code> che dovrebbe andare bene per tutto. Spero basti.
-	
 	sec#
 	E questa è stata la mia mattinata. E siccome c'erano stati porchi & madonne
 	in abbondanza, e siccome la storia è stata ben più ostica di come l'ho
@@ -140,10 +138,8 @@ tab#nostalgia
 	ricordo era falso. Non ero mai stato con quella persona nel posto che avevo
 	in mente. Fu una cosa strana davvero. Era un ricordo dal futuro? Era un
 	desiderio? Era una visione? Non lo so…
-
 	sec#
-	titler#La persona
-		
+	title@right#La persona
 	Parlare della persona è probabilmente inutile, e forse anche dannoso. Lo
 	farò per lo stesso motivo di sempre, per amor della sincerità. Spero non
 	costi troppo. Accadde un sabato. Un sabato normale. Il 22 ottobre 2011.
@@ -163,7 +159,6 @@ tab#nostalgia
 
 		Forse un giorno lo apriranno al pubblico.
 	end#half
-	
 	Il venerdì precedente, questa persona aveva fatto la cosa peggiore che
 	potesse fare a me. O forse la migliore. Chiese di seguirmi in una delle mie
 	uscite. Dovevo passare in fumetteria, e poco oltre c'era il Bosco della
@@ -196,8 +191,7 @@ tab#nostalgia
 	Da allora, aspetto e spero che mi chieda di portarla da qualche altra parte.
 	Sto seduto davanti alla porta, con le orecchie basse e il guinzaglio in
 	bocca.
-
-	sbr#
+	sec#br
 	Oggi ho preso il mio cappello, il mio libro, un pezzo di carta, la mia
 	borraccia, e me ne sono andato su per quella rampa, per vedere se d'autunno
 	è bella com'è d'estate.
@@ -214,7 +208,6 @@ tab#escursione
 	Ma le recinzioni non possono fermarmi, se voglio andare oltre. Ho trovato un
 	buco, mi ci sono addentrato e mi sono trovato oltre la recinzione. Sono
 	finito in mezzo ad un altro appezzamento di vigne.
-
 	sec#
 	Non volendo finire dentro un capanno e trovarci magari un cane poco cortese,
 	mi sono avventurato pochi metri lungo una stradina, ho trovato un sentierino
@@ -278,21 +271,20 @@ tab#escursione
 
 	Vedo un cane. Vedo un altro cane. Vedo una ragazza. 
 	begin#outside
-		inline#gods#Salve
+		p#speak@gods#Salve
 		saluto con la mano.
 	end#outside
 	La ragazza mi apre.
 	begin#outside
-		speak#gods#Eh… io mi sono perso. Ero a Gocciadoro, e poi…
-		speak#em#E sei entrato dal buco?
-		speak#gods#Eh si. Io non vorrei disturbare, ma vedo che c'è un cancello. Come esco?
-		speak#em#Oh, nessun problema. Ti apro io
-		speak#gods#Grazie. Arrivederci
+		p#speak@gods#Eh… io mi sono perso. Ero a Gocciadoro, e poi…
+		p#speak@em#E sei entrato dal buco?
+		p#speak@gods#Eh si. Io non vorrei disturbare, ma vedo che c'è un cancello. Come esco?
+		p#speak@em#Oh, nessun problema. Ti apro io
+		p#speak@gods#Grazie. Arrivederci
 	end#outside
 	Mi aprirono il cancello, me ne andai. Girata una curva, scoprii d'essere in
 	tale “via di Castel di Pietrapiana”, a Povo. Poco più in là sbucai accanto
 	al CRM. E da lì la strada m'era ben nota.
-
 	sec#
 	Poi me ne sono tornato a casuccia. Ma adesso, in quella casa, in via di
 	Castel di Pietrapiana, c'è una ragazza che potrà raccontare che una volta,
@@ -303,10 +295,10 @@ tab#escursione
 stop#page
 start#side
 	title#Momenti
-	titler#Storia LXVIII
-	begin#ol
-		li#tid#700 contatti#contatti
-		li#tid#Nostalgia#nostalgia
-		li#tid#Escursione#escursione
-	end#ol
+	title@right#Storia LXVIII
+	begin@3em#roman
+		p#tid#700 contatti#contatti
+		p#tid#Nostalgia#nostalgia
+		p#tid#Escursione#escursione
+	end#roman
 stop#side

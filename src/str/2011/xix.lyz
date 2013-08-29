@@ -20,14 +20,14 @@ start#page
 			idea:
 		</p><div class="outside">
 			<p>
-				inline##Fondiamo la società!!! disse.
+				p#speak@#Fondiamo la società!!! disse.
 			</p>
 		</div><p>
 			E anche se dovrei biasimare lui per la sua idea moderna,
 			me la prendo invece con quello che ebbe la vera colpa:
 			il coglione che rispose
 		</p><div class="outside">
-			speak##Uhm, perché no?
+			p#speak@#Uhm, perché no?
 		</div>
 	</div><div class="section">
 		<p>
@@ -185,7 +185,7 @@ start#page
 			pensato il tizio che dirigeva la baracca, almeno)
 			m'hanno affibiato i piani alti. Da fare con la scala.
 		</p><div class="outside"><p>
-			speak##Firma qui per la scala, per favore
+			p#speak@#Firma qui per la scala, per favore
 		</p></div><p>
 			Leggo il documento: mi informa, per filo e per segno, su
 			come devo salire, stare e scendere, su una scala. Una

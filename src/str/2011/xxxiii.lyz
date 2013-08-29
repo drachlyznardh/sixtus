@@ -7,7 +7,7 @@ start#page
 		Innanzitutto, comincia con un frammento che a posteriori non c'entra
 		nulla.
 
-		sbr#
+		sec#br
 			Lunedì mattina ho scritto
 		</p><div class="inside"><p>
 			“Sarà che non sto bene, sarà ch'è lunedì mattina, sarà il tempo, ma
@@ -50,10 +50,10 @@ start#page
 			cancellarlo - che dico, a <span class="code">git
 			checkout</span>arlo.
 
-	sbr#
+	sec#br
 		Ma poi è accaduta una cosa degna d'essere scritta.
 		title#La discesa con $Mara
-		titler#Mercoledì 13 aprile 2011
+		title@right#Mercoledì 13 aprile 2011
 			Dunque, come nel finale della precedente, eccoci tutti scazzati
 			pronti a scendere verso casa.
 		</p><div class="outside"><p>
@@ -118,7 +118,7 @@ start#page
 	</div><div class="section">
 		Si scende, dunque.
 
-	sbr#
+	sec#br
 		Verso il basso, verso la città, verso l'ignoto.
 		title#L'effettiva discesa con $Mara
 			Mentre il mio allarme torna a suonare, ci si incammina. A quanto
@@ -198,7 +198,7 @@ start#page
 			essere meglio identificabili.
 		
 			Ma non prima di aver guadagnato una certa importanza.
-	sbr#
+	sec#br
 		E infine, ecco qualche parolina su quei simpaticoni dei “Lamb of God”:
 		sono un po' troppo “groove” e troppo poco “trash” per i miei gusti; ho
 		tentato di ascoltarli, purtroppo il cantante ha urlato sopra le canzoni

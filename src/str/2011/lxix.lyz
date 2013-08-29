@@ -1,7 +1,6 @@
 title#Le ragazze-__SUFFIX__#Si accumulano negli anni
 prev#Storie/2011/LXVIII/#Momenti
 next#Storie/2011/LXX/#Spontaneità
-
 start#page
 	Esistono moltissimi altri personaggi nelle storie. Solo che voi non li
 	vedete. Non li vedete perché io non ne parlo. Non ne parlo perché sono
@@ -10,8 +9,7 @@ start#page
 	Ci sono un sacco di persone che non menziono, ma che noto spesso a spasso
 	per la facoltà. Indicherò, in ordine sparso, tutte quelle che mi vengono in
 	mente.
-
-	sbr#
+	sec#br
 	title#La ragazza-Gozer
 	Ho visto comparire questa ragazza all'inizio dell'anno. Porta i capelli
 	molto corti, tenuti su con il gel. E non posso fare a meno di pensare al
@@ -59,8 +57,11 @@ start#page
 	Questa è una ragazza normale. O forse no. Secondo me, assomiglia a Mike
 	Myres, e ogni volta che la vedo passare, sento Austin Powers che mi dice
 	“That's a man, baby”.
-
-	sbr#
+	sec#br
 	Ed è largamente possibile che io abbia lasciato fuori molte altre persone.
 	Le aggiungerò forse, se e quando etc etc etc…
 stop#page
+start#side
+	title#Le Ragazze-__SUFFIX__
+	title@right#Storia <code>LXIX</code>
+stop#side

@@ -175,8 +175,8 @@ stop#page
 start#side
 	title#Sezioni
 	begin#ol
-		li#tid#La storia#i
-		li#tid#La storia vera#ii
-		li#tid#La fine che dovrebbero fare#iii
+		p#tid#La storia#i
+		p#tid#La storia vera#ii
+		p#tid#La fine che dovrebbero fare#iii
 	end#ol
 stop#side

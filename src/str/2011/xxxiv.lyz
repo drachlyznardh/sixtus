@@ -10,7 +10,7 @@ start#page
 	<p>
 		Scrivo ciò che penso. Ciò che penso da probabilmente fastidio.
 
-	sbr#
+	sec#br
 			Cominciamo con qualche consiglio indiscutibilmente utile.
 		</p><h2>
 			La convalescenza, la corsa, il fegato
@@ -90,7 +90,7 @@ start#page
 			Ho comunque sfiorato il mio record personale: non sono affatto da
 			buttare.
 		end#outside
-	sbr#
+	sec#br
 		Ma io non sono certo l'unico che corre: ce ne sono molti altri, sulla
 		ciclabile, sulle roste dell'Adige, anche dietro di noi mentre
 		scendiamo...
@@ -175,7 +175,7 @@ start#page
 			giusto per cambiare, e non possono nemmeno correre nel modo giusto;
 			credo che abbiano problemi a sentire i giri del motore ad orecchio.
 	
-	sbr#
+	sec#br
 		Ed ora un po' di gabole informatiche...
 	</p><h2>
 		La Vodafone Station
@@ -264,7 +264,7 @@ start#page
 			ovviamente importantissimo - e il resto della Winzozzeria s'accatta
 			al dannato cavo che tanto c'hai 4 porte ethernet.
 	
-	sbr#
+	sec#br
 		Ed infine, ecco il vero motivo per cui scrissi la storia.
 	</p><h2>
 		La mancata discesa con $Mara

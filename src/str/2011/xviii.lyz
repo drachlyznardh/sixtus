@@ -7,8 +7,8 @@ start#page
 	Abbiate la premura di pronunciare una delle seguenti:
 	begin#inside
 	begin#ul
-		li#intra@em#Klaatu Barado Nikto
-		li#intra@em#Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn
+		p#speak@em#Klaatu Barado Nikto
+		p#speak@em#Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn
 	end#ul
 	end#inside
 	nel momento in cui aprite questa pagina. E non temete: si leggono entrambe
@@ -77,7 +77,7 @@ start#page
 	bevuto oltre ogni dire – mentre (o forse dopo) stavo dando di stomaco
 	rimettendo una buona metà della cena (eh, semideliziosa cena), alla domanda
 	di chi si preoccupava
-	intra@em#Dobbiamo portarlo all'ospedale?
+	speak@em#Dobbiamo portarlo all'ospedale?
 	il mio buon amico risponse che in fondo ero responsivo e non ce n'era bisogno.
 
 	Perché il mio stomaco è più forte del ferro e l'alcool non può far nulla se

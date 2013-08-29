@@ -42,7 +42,7 @@ tab#i
 	vorrebbe dire? Se non è nemmeno possibile far funzionare veramente il primo
 	livello, come dovrei mettercene due? E poi, dove lo metto? Va fatto a
 	granularità superiore oppure inferiore? Sopra i blocchi oppure sotto?
-	sbr#
+	sec#br
 	Vorrei davvero conoscere lo spacciatore di questi tizi, perché voglio
 	credere che non sia tutta colpa loro. Non credo che le tracce di un progetto
 	possano essere fatte così male.
@@ -81,7 +81,7 @@ tab#ii
 	<a href="http://it.wikipedia.org/wiki/Stop_Online_Piracy_Act">SOPA</a>, <a
 	href="http://it.wikipedia.org/wiki/Anti-Counterfeiting_Trade_Agreement">ACTA</a>,
 	Non censuratemi né uccidetemi per questo ;_;)
-	sbr#
+	sec#br
 	Prendo tutto il mio codicione, comincio a <code>@SHARP@DEFINE</code>re tutto
 	quel che serve, metto/aggiungo, cambia/rifaccio… ma nulla serve. È
 	(ovviamente) necessario che tutto il codice sia nello stesso file perché il
@@ -105,15 +105,15 @@ tab#ii
 	href="http://lwn.net/Kernel/LDD3/">LDD3</a> sotto mano mi metto a scrivere
 	tutto dalla base. Qualche
 	begin#outside
-		inline#gods#forte#Ora ora ora ora ora ora ora ora ora ora ora!!!
-		inline#gods#forte#Muda muda muda muda muda muda muda muda muda muda muda!!!
-		inline#gods#forte#Fus Ro Dah!!!
-		inline#gods#forte#You shall not pass!!!
-		inline#gods#forte#I am Gundam!!!
-		inline#gods#forte#Go, Aquarion!!!
-		inline#gods#forte#I use to wonder what friendship could be!!!
-		inline#gods#forte#What is love? Baby don't hurt me
-		inline#gods#forte#Let's Go! Let's Gokaiger!
+		p#speak@gods#Ora ora ora ora ora ora ora ora ora ora ora!!!
+		p#speak@gods#Muda muda muda muda muda muda muda muda muda muda muda!!!
+		p#speak@gods#Fus Ro Dah!!!
+		p#speak@gods#You shall not pass!!!
+		p#speak@gods#I am Gundam!!!
+		p#speak@gods#Go, Aquarion!!!
+		p#speak@gods#I use to wonder what friendship could be!!!
+		p#speak@gods#What is love? Baby don't hurt me
+		p#speak@gods#Let's Go! Let's Gokaiger!
 	end#outside
 	dopo, ecco finito il progetto. Due giorni di intensa codifica, come una
 	volta, e
@@ -239,10 +239,10 @@ tab#iv
 stop#page
 start#side
 	title#L'ultimo progetto
-	begin#ol
-		li#tid#La traccia#i
-		li#tid#I due tentativi#ii
-		li#tid#L'orale#iii
-		li#tid#Lo scritto#iv
-	end#ol
+	begin@3.5em#roman
+		p#tid#La traccia#i
+		p#tid#I due tentativi#ii
+		p#tid#L'orale#iii
+		p#tid#Lo scritto#iv
+	end#roman
 stop#side

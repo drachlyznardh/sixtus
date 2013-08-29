@@ -17,7 +17,7 @@ start#page
 	invece deve aver ben afferrato il concetto e conseguentemente non sfotte,
 	arriva il <span class="mitch">Re del Gossip</span>.
 
-	sbr#
+	sec#br
 	Andò così:
 	begin#outside
 		Alle nostre spalle, mentre meditiamo di andare a farci un giretto, ecco
@@ -47,9 +47,9 @@ start#page
 		solo saluta <span class="mitch">Mitch</span>, ma ha anche il tempo di
 		guardarmi e resistere al mio sguardo di sangue.
 	
-		inline#gods#Dannata <span class="magnet">Ragazza Magnete</span>!!!
+		p#speak@gods#Dannata <span class="magnet">Ragazza Magnete</span>!!!
 		penso
-		inline#gods#Un giorno ti esploderò la testa!
+		speak@gods#Un giorno ti esploderò la testa!
 
 		Ma la conversazione (diciamo la problematica) era abbastanza
 		interessante, l'ho seguita ed ho dimenticato la faccenda. Ma poi…
@@ -57,11 +57,11 @@ start#page
 	Poi arriva la cosa che non mi aspetto: <span class="mitch">Mitch</span> mi
 	prende da parte e fa
 	begin#outside
-		speak#mitch#Sai, quel tipo che gironzola attorno alla ragazza magnete? Beh, ci sta assieme
+		p#speak@mitch#Sai, quel tipo che gironzola attorno alla ragazza magnete? Beh, ci sta assieme
 	end#outside
 	In quel momento, ecco una visione comparire nella mia mente...
 
-	sbr#
+	sec#br
 	title#Le mirabolanti avventure del diabolico Dottor Odio
 	Presentate in 2D alla vecchia maniera.
 
@@ -125,20 +125,20 @@ start#page
 	foto#Extra/Richaaaaaaaaards.gif
 	
 	begin#outside
-		speak#gods#Richaaaaaaaaards!!!
+		p#speak@gods#Richaaaaaaaaards!!!
 	end#outside
 	L'avventura continua: nel prossimo numero, il Dottor Odio contro i metallici
 	fiori spaziali da Giove.
 	title#SuperDimensionalDoctorHate V7+ – Listen to my song!
 
-	sbr#
+	sec#br
 	O forse no?
 	
 	Probabilmente no.
 
 	Di fatto, no.
 	title#I progressi (passivi) del (non ancora dottore) Dottor Odio
-	titler#Venerdì 8 – Mercoledì 13 Aprile 2011
+	title@right#Venerdì 8 – Mercoledì 13 Aprile 2011
 	È stato un lungo lungo lungo finesettimana.
 	
 	sec#
@@ -146,7 +146,7 @@ start#page
 	class="em">Sgaggio-time</span>, poggio la mia roba, scelgo il posto
 	a sedere, quand'ecco mi vien sete
 </p><div class="inside">
-	speak#gods#Mi farò un goccietto prima della lezione
+	p#speak@gods#Mi farò un goccietto prima della lezione
 </div><p>
 	Nell'uscire verso il bagno giro l'angolo ed ecco &gt;9000 ingegneri
 	che mi bloccano la strada in attesa che cominci la loro lezione.
@@ -156,7 +156,7 @@ start#page
 	Pianto un piede per terra, ci faccio perno per l'inversione a U e
 	me ne torno sui miei passi
 </p><div class="inside">
-	speak#gods#Tanto c&apos;è un cesso anche dall&apos;altra
+	p#speak@gods#Tanto c&apos;è un cesso anche dall&apos;altra
 	parte
 </div><p>
 	verso il cesso Nord.
@@ -195,7 +195,7 @@ start#page
 	(probabilmente mannaro) che m'ha tenuto in stato di pre-morte per
 	circa quattro giorni.
 
-	sbr#
+	sec#br
 	E solo allora, bianco come una pezza, cercando di trattenere le budella
 	all'interno del mio corpo, ho capito come tutto fosse un di lei piano...
 	title#La trappola magnetica
@@ -273,7 +273,7 @@ start#page
 <p>
 	Sono sempre più vicino alla vittoria.
 
-	sbr#
+	sec#br
 	E nel prossimo numero...
 	title#Vagliare la qualità del metallo
 	Ora che – sempre grazie a <span class="mitch">Mitch il re del

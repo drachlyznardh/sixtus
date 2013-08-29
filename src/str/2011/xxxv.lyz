@@ -19,7 +19,7 @@ start#page
 	Lasciate quindi che io vi racconti una storia; passatemi la
 	chitarra, sedetevi attorno al fuoco, c'era una volta...
 
-	sbr#
+	sec#br
 	La civiltà è nata parecchio tempo fa
 </p><div class="outside"><p>
 	non m'importa quanto - c'è gente che avrebbe da ridire su qualunque data
@@ -89,7 +89,7 @@ start#page
 	Et voilà, ecco complessissimi sistemi per capire come e dove si può
 	dare la colpa di qualcosa a qualcuno.
 
-	sbr#
+	sec#br
 	Il gioco s'infittisce quando all'accusato viene concessa la
 	possibilità di difendersi.
 </p><h2>
@@ -132,7 +132,7 @@ start#page
 	di dire «ah, io sarò anche di mente aperta ma su questo non posso
 	transigere»
 
-	sbr#
+	sec#br
 	Sto uscendo dal seminato? Forse... Ma perché mi sono messo a scrivere questa
 	storia? Beh, non senza scherzare, il mio parlare male di chi non sa correre
 	(in particolare le donne che non sanno correre) è stato accusato di odio, di
