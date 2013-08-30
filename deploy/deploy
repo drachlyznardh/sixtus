@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Default command: link instead of copy
+link='ln -f'
+
+# Calling getopt to parse options
+TEMP=$(getopt -q -ocl -- "$@")
+if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
+eval set -- "$TEMP"
+
+# Parsing for options
+while true; do
+	case "$1" in
+		-c) link='cp'; shift;;
+		-l) link='ln -f'; shift;;
+		--) shift; break;;
+	esac
+done
+
+# Need two arguments
+if [ $# -lt 2 ]; then
+	printf "usage: %s <src_dir> <dest_dir>\n" $0
+	exit 1;
+fi
+
+# Saving source and destination
+src=$1
+dest=$2
+shift 
+shift
+
+# Invoking make
+exec make IN_DIR=$src OUT_DIR=$dest LN_CMD="$link" -f /opt/devel/web/sixtus/deploy/Makefile $@
