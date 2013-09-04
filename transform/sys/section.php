@@ -37,7 +37,7 @@
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
-				case 'clear': $this->make_clear(); break;
+				case 'clear': $this->make_clear($index, $cmd_args); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
 				default: $this->error($index, $command);
 			}
@@ -176,17 +176,18 @@
 			switch(count($args))
 			{
 				case 2:
-					$destination = $thumbnail = $args[1];
+					$destination = $thumbnail = polish_line($args[1]);
 					break;
 				case 3:
-					$destination = $args[1];
-					$thumbnail = $args[2];
+					$destination = polish_line($args[1]);
+					$thumbnail = polish_line($args[2]);
 					break;
 			}
 
 			$image = "<img src=\"$thumbnail\" />";
-			$link = "<a target=\"_blank\" href=\"$destination\">$image</a>";
-			$result = "<p class=\"foto\">$link</p>";
+			$link = "<a class=\"img\" target=\"_blank\" href=\"$destination\">$image</a>";
+			return $link;
+			$result = "<p class=\"img\">$link</p>";
 			return $result;
 		}
 
@@ -386,10 +387,12 @@
 			$this->content[] = '<br/>';
 		}
 
-		private function make_clear ()
+		private function make_clear ($lineno, $args)
 		{
 			$this->closeContext();
-			$this->content[] = '<div style="float:none; clear:both"></div>';
+			if (count($args) > 1 && $args[1]) $clear = $args[1];
+			else $clear = 'both';
+			$this->content[] = '<div style="float:none; clear:'.$clear.'"></div>';
 		}
 
 		private function make_intra ($lineno, $args, $attr)
