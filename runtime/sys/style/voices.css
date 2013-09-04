@@ -21,7 +21,6 @@
 @import "coolstories.css";
 
 .unknown {
-
 	font-style: italic;
 	color: #dddddd;
 }
@@ -101,31 +100,8 @@
 	text-transform: capitalize;
 }
 
-.forte {
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.em {
-	font-style: italic;
-	font-weight: bold;
-	letter-spacing: 1px;
-}
-
 .wrong {
 	text-decoration: line-through;
-}
-
-.latino {
-	font-family: Times new roman;
-	font-style: italic;
-	text-transform: capitalize;
-	letter-spacing: 1px;
-}
-
-.code {
-	font-size: 120%;
-	font-family: monospace;
 }
 
 .simadran, .codd {

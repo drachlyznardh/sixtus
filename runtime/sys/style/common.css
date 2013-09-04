@@ -137,20 +137,12 @@ a:hover { text-decoration: underline; }
 
 .spoiler:hover { color: #ffffff; }
 
-.cat-heart:after { content:url('img/heart.png'); }
-
-p.foto {
-	text-align: center;
-	text-indent: 0;
-	margin: 2px;
-	padding: 3px;
-}
-
-p.foto img {
+a.img img {
 	width: 100%;
+	vertical-align: text-bottom;
 }
 
-em { font-style:italic; }
+em, .em { font-style:italic; }
 em em { font-style:normal; }
 strong { font-weight:bold; }
 code { font-family: monospace }

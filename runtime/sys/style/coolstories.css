@@ -1,11 +1,4 @@
 
-/* Stile */
-.forte { font-weight: bold; text-transform: uppercase; }
-.em { font-style: italic; font-weight: bold; }
-.wrong { text-decoration: line-through; }
-.latino { font-style: italic; text-transform: capitalize; }
-.code { font-family: monospace; }
-
 /* Allegri compagni */
 .mitch { color: #00ff00; text-shadow: #ffffff 0 0 1px; }
 .dacav {color: #347235; text-shadow: #000000 1px 1px 1px, #ffffff -1px -1px 1px; }

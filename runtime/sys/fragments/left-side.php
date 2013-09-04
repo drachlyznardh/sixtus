@@ -5,7 +5,7 @@
 
 <!-- Sys/Fragments/Left-Side [Start] -->
 <div>
-<?php dynamic_include($attr, 'frag/left-side-fragment.php', 'content', true);?>
+<?php dynamic_include($attr, 'frag/left-nav.php', true, true);?>
 <div class="section">
 	<!--div style="width:50%; float:left"><div class="inside"-->
 	<div class="half-left-out"><div class="half-left-in">
@@ -56,20 +56,7 @@
 	<div style="float:none; clear:both"></div>
 </div>
 <br />
-<div class="section">
-	<h2><span class="em" title="“Un po&apos; culattoni?” “No, no, solo allegri”">Allegri</span> compagni</h2>
-	<p>
-		Le <a href="http://kiyuko.org/blog/">idee</a> del <span
-		class="bolo">Bolo</span>, le <a
-		href="http://dacav.roundhousecode.com/">seghe</a> di <span
-		class="dacav">Simgi Dacav</span>, le <a
-		href="http://mikezasch.wordpress.com/">lamentele</a> di <span
-		class="mitch">Mitch</span>, le <a
-		href="http://jazzinghen.wordpress.com/">opinioni</a> di <span
-		class="jazz">Jazzinghen</span> e le <em>nuove</em> <a
-		href="https://plus.google.com/communities/117214031469177046669">cose fighe</a> del <em>Barone</em>.
-	</p>
-</div>
+<?php dynamic_include($attr, 'frag/friends.php', true, true);?>
 </div>
 <!-- Sys/Fragments/Left-Side [Stop] -->
 
