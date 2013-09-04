@@ -208,15 +208,24 @@
 
 		private function static_include ($args, $attr)
 		{
-			if (count($attr) > 1 && strcmp($attr[1], 'static') == 0)
-			{
-				$parser = new Parser($this->prefix);
-				$parser->parse($this->prefix.'/'.$args[1].'.lyz');
-				foreach ($parser->body as $_)
-					$this->body[] = $_;
-				foreach ($parser->side as $_)
-					$this->side[] = $_;
+			if (count($attr) < 2 || strcmp($attr[1], 'static') != 0) return;
+		
+			if (preg_match('/\.s?lyz$/', $args[1])) 
+				$filename = $args[1];
+			else $filename = $args[1].'.lyz';
+
+			if (is_file($filename)) $includefile = $filename;
+			else {
+				$includefile = $this->include_base.'/'.$filename;
+				if (!is_file($includefile)) die ("Cannot locate [$filename]\n");
 			}
+
+			$parser = new Parser($this->prefix);
+			$parser->parse($includefile);
+			foreach ($parser->body as $_)
+				$this->body[] = $_;
+			foreach ($parser->side as $_)
+				$this->side[] = $_;
 		}
 
 		public function deploy ()
