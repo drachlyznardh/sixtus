@@ -217,7 +217,12 @@
 			if (is_file($filename)) $includefile = $filename;
 			else {
 				$includefile = $this->include_base.'/'.$filename;
-				if (!is_file($includefile)) die ("Cannot locate [$filename]\n");
+				if (!is_file($includefile))
+				{
+					$includefile = $this->prefix.'/'.$filename;
+					if (!is_file($includefile)) 
+						die ("Cannot locate [$filename], from [$this->include_base] nor from [$this->prefix]\n");
+				}
 			}
 
 			$parser = new Parser($this->prefix);
@@ -228,12 +233,8 @@
 				$this->side[] = $_;
 		}
 
-		public function deploy ()
+		private function deploy_attr ()
 		{
-			printf("<?php\n");
-			printf("\n");
-			printf("\tif(!\$attr['included'])\n");
-			printf("\t{\n");
 			printf("\t\t\$attr['title'] = '$this->title';\n");
 			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
@@ -242,8 +243,8 @@
 			else if ($this->all_or_one) 
 				printf("\t\t\$attr['all_or_one'] = true;\n");
 			else 
-				printf("\t\tif(!\$attr['part'] && \$attr['single']) \$attr['part'] = '$this->default_tab';\n");
-			printf("\t\tif(!\$attr['current']) \$attr['current'] = '$this->default_tab';\n");
+				echo("\t\t".'if(!$attr[\'part\'] && $attr[\'single\']) $attr[\'part\'] = \''.$this->body[0]->getName().'\';'."\n");
+			echo("\t\t".'if(!$attr[\'current\']) $attr[\'current\'] = \''.$this->body[0]->getName().'\';'."\n");
 			printf("\n");
 			if ($this->prev)
 				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");
@@ -251,33 +252,62 @@
 			if ($this->next)
 				printf("\t\t\$related['next'] = array('".$this->next[0]."', '".$this->next[1]."');\n");
 			else printf("\t\t\$related['next'] = false;\n");
-			printf("\n");
-			printf("\t\trequire_once('sys/fragments/in-before.php');\n");
-			printf("\t}\n");
-			printf("?>\n");
-			printf("<!--[Body/Start]-->\n");
-			$first = true;
-			foreach ($this->body as $_) {
-				printf("%s", $_->getContent(true));
-				if ($first) $first = false;
+		}
+
+		private function deploy_body()
+		{
+			$previous = false;
+			$current = false;
+			foreach ($this->body as $_)
+			{
+				$previous = $current;
+				$current = $_;
+
+				if ($previous && $current)
+				{
+					$previous->setNext($current->getName());
+					$current->setPrev($previous->getName());
+				}
 			}
+			foreach ($this->body as $_)
+				printf("%s", $_->getContent(true));
+		}
+
+		private function deploy_side()
+		{
+			foreach ($this->side as $_)
+				printf("%s", $_->getContent(false));
+		}
+
+		public function deploy ()
+		{
+			printf("%s%s\n", '<', '?php');
+			printf("\n");
+			printf("\tif(!\$attr['included'])\n");
+				printf("\t{\n");
+				$this->deploy_attr();
+				printf("\n");
+				printf("\t\trequire_once('sys/fragments/in-before.php');\n");
+			printf("\t}\n");
+			printf("%s%s\n", '?', '>');
+			printf("<!--[Body/Start]-->\n");
+			$this->deploy_body();
 			printf("<!--[Body/Stop]-->\n");
 			printf("<?php \n");
 			printf("\tif(!\$attr['included'])\n");
 			printf("\t{\n");
 			printf("\t\trequire_once('sys/fragments/in-middle.php');\n");
 			printf("\t}\n");
-			printf("?>\n");
+			printf("%s%s\n", '?', '>');
 			printf("<!--[Side/Start]-->\n");
-			foreach ($this->side as $_)
-				printf("%s", $_->getContent(false));
+			$this->deploy_side();
 			printf("<!--[Side/Stop]-->\n");
 			printf("<?php \n");
 			printf("\tif(!\$attr['included'])\n");
 			printf("\t{\n");
 			printf("\t\trequire_once('sys/fragments/in-after.php');\n");
 			printf("\t}\n");
-			printf("?>\n");
+			printf("%s%s\n", '?', '>');
 		}
 	}
 ?>
