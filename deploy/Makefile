@@ -2,7 +2,7 @@
 PREFIX := /opt/devel/web/sixtus/
 LYZ_TO_PHP := $(PREFIX)transform/lyz-to-php.php
 LYZ_TO_DEP := $(PREFIX)transform/lyz-to-dep.php
-PAG_TO_TAG := $(PREFIX)transfrom/pag-to-tag.php
+PAG_TO_TAG := $(PREFIX)transform/pag-to-tag.php
 
 SRC_DIR := $(IN_DIR)src/
 RES_DIR := $(IN_DIR)res/
@@ -42,7 +42,7 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
 $(TAG_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating tags for page $@
 	@mkdir -p $(dir $@)
-	@echo php5 -f $(PAG_TO_TAG) $< $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $<)
+	@php5 -f $(PAG_TO_TAG) $< $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $<)
 
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
