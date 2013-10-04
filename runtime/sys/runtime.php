@@ -34,6 +34,7 @@
 			'2011' => 'str/2011',
 			'2012' => 'str/2012',
 			'2013' => 'str/2013'),
+		'test' => 'test',
 		'tru' => array ('tru',
 			'naluten' => array ('tru',
 				'vol' => 'tru/vol',
