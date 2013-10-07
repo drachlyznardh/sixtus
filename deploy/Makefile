@@ -17,9 +17,10 @@ PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
 SYSS := $(sort $(shell find $(SYS_DIR) -type f))
 RESS := $(sort $(shell find $(RES_DIR) -type f))
 
-PHPS := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
-DEPS := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
-TAGS := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
+PHPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
+PHPS   += $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $(PAGS))
+DEPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
+TAGS   := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
 O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
 O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
 
@@ -47,6 +48,11 @@ $(TAG_DIR)%.php: $(SRC_DIR)%.pag
 
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
+	@echo Generating page $@
+	@mkdir -p $(dir $@)
+	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
+
+$(DEST_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating page $@
 	@mkdir -p $(dir $@)
 	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
