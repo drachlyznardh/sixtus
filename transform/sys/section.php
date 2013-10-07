@@ -424,11 +424,15 @@
 
 		private function make_search ($index, $args, $attr) 
 		{
-			$result = '<form class="search" action="Tag/Search/">';
-			$result .= '<input type="text" name="query" value="search" />';
-			$result .= '</form>';
-
-			$this->content[] = '<?php include_search_form();?>';
+			switch ($args[1])
+			{
+				case 'result':
+					$this->content[] = '<'.'?php include_search_result(); ?'.'>';
+					break;
+				case 'search':
+				default:
+					$this->content[] = '<'.'?php include_search_form();?'.'>';
+			}
 		}
 	}
 ?>
