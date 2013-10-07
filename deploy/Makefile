@@ -4,11 +4,12 @@ LYZ_TO_PHP := $(PREFIX)transform/lyz-to-php.php
 LYZ_TO_DEP := $(PREFIX)transform/lyz-to-dep.php
 PAG_TO_TAG := $(PREFIX)transform/pag-to-tag.php
 
-SRC_DIR := $(IN_DIR)src/
-RES_DIR := $(IN_DIR)res/
-SYS_DIR := $(IN_DIR)sys/
-DEP_DIR := $(IN_DIR).dep/
-TAG_DIR := $(IN_DIR).tag/
+SRC_DIR  := $(IN_DIR)src/
+RES_DIR  := $(IN_DIR)res/
+SYS_DIR  := $(IN_DIR)sys/
+DEP_DIR  := $(IN_DIR).dep/
+TAG_DIR  := $(IN_DIR).tag/
+DB_DIR   := $(IN_DIR).tagdb/
 DEST_DIR := $(OUT_DIR)
 
 LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
@@ -42,7 +43,7 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
 $(TAG_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating tags for page $@
 	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $< $@ $(SYS_DIR)sys/runtime.php
+	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(SYS_DIR)sys/runtime.php
 
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
