@@ -42,7 +42,7 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
 $(TAG_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating tags for page $@
 	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_TAG) $< $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $<)
+	@php5 -f $(PAG_TO_TAG) $< $@ $(SYS_DIR)sys/runtime.php
 
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
