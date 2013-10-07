@@ -93,4 +93,47 @@
 	{
 		return $attr['single'] && !$attr['included'] && !$attr['all_or_one'];
 	}
+
+	function include_search_form ()
+	{
+		include ('sys/fragments/search.php');
+	}
+
+	function get_GET_parameters ()
+	{
+		$query = urldecode(strtolower($_SERVER['REQUEST_URI']));
+		$index = strpos($query, '?');
+		$query = substr($query, $index + 1);
+
+		foreach (split('&', $query) as $_)
+		{
+			$param = split('=', $_);
+
+			if (count($param) == 1) $data[$param[0]] = $param[0];
+			else $data[$param[0]] = $param[1];
+		}
+
+		return $data;
+	}
+
+	function get_filename_from_tag ($tagname)
+	{
+		if (strlen($tagname) == 1) return $tagname[0].'/'.$tagname.'.tag';
+		else return $tagname[0].'/'.$tagname[0].$tagname[1].'/'.$tagname.'.tag';
+	}
+
+	function include_search_result ()
+	{
+		$param = get_GET_parameters();
+		
+		echo ("<p>");
+		print_r ($param);
+		echo ("</p>");
+
+		foreach (split('\+', $param['query']) as $_)
+		{
+			$dbfile = get_filename_from_tag ($_);
+			echo ("<p>Now opening [$dbfile]</p>");
+		}
+	}
 ?>
