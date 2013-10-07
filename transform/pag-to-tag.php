@@ -1,7 +1,7 @@
 <?php
 
 	require_once('utils.php');
-	require_once('../runtime/sys/utils.php');
+	require_once('runtime-utils.php');
 
 	function put_array_on_file ($filename, $array_name, $array_data)
 	{
