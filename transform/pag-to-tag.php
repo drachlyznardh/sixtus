@@ -1,18 +1,7 @@
 <?php
 
 	require_once('utils.php');
-
-	function get_filename_from_tag ($name)
-	{
-		switch (strlen($name))
-		{
-			case 1: $filename = $name[0].'/'.$name[0].'.tag'; break;
-			case 2:
-			default: $filename = $name[0].'/'.$name[0].$name[1].'/'.$name.'.tag';
-		}
-
-		return $filename;
-	}
+	require_once('../runtime/sys/utils.php');
 
 	function put_array_on_file ($filename, $array_name, $array_data)
 	{
