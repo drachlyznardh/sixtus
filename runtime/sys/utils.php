@@ -96,7 +96,7 @@
 
 	function include_search_form ()
 	{
-		include ('sys/fragments/search.php');
+		echo ('<input type="text" name="query" value="search" />');
 	}
 
 	function get_GET_parameters ()
