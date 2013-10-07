@@ -39,6 +39,7 @@
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear($index, $cmd_args); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
+				case 'search': $this->make_search($index, $cmd_args, $cmd_attr); break;
 				default: $this->error($index, $command);
 			}
 		}
@@ -419,6 +420,15 @@
 		private function dialog ($author, $line)
 		{
 			return ' <span class="'.$author.'" title="'.$author.'">« '.$line.' »</span> ';
+		}
+
+		private function make_search ($index, $args, $attr) 
+		{
+			$result = '<form class="search" action="Tag/Search/">';
+			$result .= '<input type="text" name="query" value="search" />';
+			$result .= '</form>';
+
+			$this->content[] = '<?php include_search_form();?>';
 		}
 	}
 ?>
