@@ -96,7 +96,7 @@
 
 	function include_search_form ()
 	{
-		echo ('<input type="text" name="query" value="search" />');
+		echo ('<input type="text" name="query" value="" placeholder="Search" />');
 	}
 
 	function get_GET_parameters ()
@@ -118,12 +118,15 @@
 
 	function get_filename_from_tag ($tagname)
 	{
+		$tagname = strtolower($tagname);
+		
 		if (strlen($tagname) == 1) return $tagname[0].'/'.$tagname.'.tag';
 		else return $tagname[0].'/'.$tagname[0].$tagname[1].'/'.$tagname.'.tag';
 	}
 
-	function include_search_result ()
+	function include_search_result ($attr)
 	{
+		$result = array();
 		$param = get_GET_parameters();
 		
 		echo ("<p>");
@@ -132,8 +135,36 @@
 
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
-			$dbfile = get_filename_from_tag ($_);
-			echo ("<p>Now opening [$dbfile]</p>");
+			$dbfile = '.tagdb/'.get_filename_from_tag ($_);
+			echo ("<p>Now opening [$dbfile], ".getcwd()."</p>");
+			if (file_exists($dbfile))
+			{
+				$tag = array();
+				include($dbfile);
+				$result[$_] = $tag;
+			} else echo ('<p>['.$dbfile.']: 404 no such file.</p>');
+		}
+
+		if (count($result) == 0)
+		{
+			echo ('<p>No match found.</p>');
+			return;
+		}
+
+		echo ('<p>Results:');
+		print_r($result);
+		echo ('</p>');
+
+		foreach(array_keys($result) as $_)
+		{
+			echo ('<h3 class="reverse">Risultati per [');
+			echo ('<a href="'.make_canonical($attr, ucwords($_).'/', false, false).'">'.ucwords($_).'</a>');
+			echo(']:</h3><ul>');
+			foreach (array_keys($result[$_]) as $__)
+			{
+				echo ('<li><a href="'.make_canonical($attr, $__, false, false).'">'.$__.'</a></li>');
+			}
+			echo ('</ul>');
 		}
 	}
 ?>
