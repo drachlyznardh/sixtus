@@ -130,7 +130,7 @@
 		print_r ($param);
 		echo ("</p>");
 
-		foreach (split('\+', $param['query']) as $_)
+		foreach (split('[ \+]', $param['query']) as $_)
 		{
 			$dbfile = get_filename_from_tag ($_);
 			echo ("<p>Now opening [$dbfile]</p>");
