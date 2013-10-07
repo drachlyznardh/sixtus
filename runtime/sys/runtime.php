@@ -33,6 +33,7 @@
 			'2011' => 'str/2011',
 			'2012' => 'str/2012',
 			'2013' => 'str/2013'),
+		'tag' => 'tag',
 		'test' => 'test',
 		'tru' => array ('',
 			'naluten' => array ('tru',
