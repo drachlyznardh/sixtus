@@ -37,6 +37,8 @@
 		}
 	}
 
+	$index = strpos($request['original'], '?');
+	if ($index !== false) $request['original'] = substr($request['original'], 0, $index);
 	$_ = strtok($request['original'], '/');
 	$token = array();
 	while ($_ !== false) {
