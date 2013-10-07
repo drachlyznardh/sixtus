@@ -129,31 +129,32 @@
 		$result = array();
 		$param = get_GET_parameters();
 		
-		echo ("<p>");
-		print_r ($param);
-		echo ("</p>");
+		#echo ("<p>");
+		#print_r ($param);
+		#echo ("</p>");
 
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
 			$dbfile = '.tagdb/'.get_filename_from_tag ($_);
-			echo ("<p>Now opening [$dbfile], ".getcwd()."</p>");
+			#echo ("<p>Now opening [$dbfile], ".getcwd()."</p>");
 			if (file_exists($dbfile))
 			{
 				$tag = array();
 				include($dbfile);
 				$result[$_] = $tag;
-			} else echo ('<p>['.$dbfile.']: 404 no such file.</p>');
+			} #else echo ('<p>['.$dbfile.']: 404 no such file.</p>');
 		}
 
 		if (count($result) == 0)
 		{
+			echo ('<h3 class="reverse">Sorry</h3>');
 			echo ('<p>No match found.</p>');
 			return;
 		}
 
-		echo ('<p>Results:');
-		print_r($result);
-		echo ('</p>');
+		#echo ('<p>Results:');
+		#print_r($result);
+		#echo ('</p>');
 
 		foreach(array_keys($result) as $_)
 		{
