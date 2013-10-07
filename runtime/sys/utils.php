@@ -159,7 +159,7 @@
 		foreach(array_keys($result) as $_)
 		{
 			echo ('<h3 class="reverse">Risultati per [');
-			echo ('<a href="'.make_canonical($attr, ucwords($_).'/', false, false).'">'.ucwords($_).'</a>');
+			echo ('<a href="'.make_canonical($attr, '/Tag/SEARCH/', false, false).'?query='.$_.'">'.ucwords($_).'</a>');
 			echo(']:</h3><ul>');
 			foreach (array_keys($result[$_]) as $__)
 			{
