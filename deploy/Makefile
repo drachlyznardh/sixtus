@@ -32,10 +32,19 @@ all: $(DEPS) pages resources system tags dbs
 #	@echo System: $(SYSS)
 
 pages: $(PHPS)
+	@echo $(shell echo $(PHPS) | wc -w | xargs printf "%04d") pages were generated.
+
 resources: $(O_RESS)
+	@echo $(shell echo $(O_RESS) | wc -w | xargs printf "%04d") resources were linked.
+
 system: $(O_SYSS)
+	@echo $(shell echo $(O_SYSS) | wc -w | xargs printf "%04d") system resources were linked.
+
 tags: $(TAGS)
-dbs: $(O_DBS)
+	@echo $(shell echo $(TAGS) | wc -w | xargs printf "%04d") tag files were generated.
+
+dbs: tags $(O_DBS)
+	@echo $(shell echo $(O_DBS) | wc -w | xargs printf "%04d") database entries were generated.
 
 #Dependency generation
 $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
