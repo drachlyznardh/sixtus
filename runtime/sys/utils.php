@@ -137,6 +137,20 @@
 	
 	function include_search_cloud ($attr)
 	{
+		include('.tagdb/totals.php');
+		echo ('<p style="text-align: center; text-indent: 0px">');
+		ksort($total_values);
+		foreach(array_keys($total_values) as $key)
+		{
+			$size = 11 + 2*sqrt($total_values[$key]);
+			$style = 'font-size: '.$size.'px';
+			echo ("\n<span style=\"$style\"><a href=\"");
+			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
+			echo ("\">$key</span>");
+		}
+		echo ('</p>');
+		return;
+		
 		$collection = array();
 		$dir = scandir('.tagdb');
 		array_shift($dir);
@@ -191,6 +205,7 @@
 		#echo ("</p>");
 
 		if (count($param) == 0) return;
+		if (!isset($param['query'])) return;
 		if (strlen($param['query']) == 0) return;
 
 		foreach (split('[ \+]', $param['query']) as $_)
@@ -216,14 +231,18 @@
 		#print_r($result);
 		#echo ('</p>');
 
-		foreach(array_keys($result) as $_)
+		#foreach(array_keys($result) as $_)
+		foreach($result as $_)
 		{
+			$current = array_keys($_)[0];
 			echo ('<h3 class="reverse">Risultati per [');
-			echo ('<a href="'.make_canonical($attr, '/Tag/', false, false).'?query='.$_.'">'.ucwords($_).'</a>');
+			echo ('<a href="'.make_canonical($attr, '/Tag/', false,
+			false).'?query='.$current.'">'.ucwords($current).'</a>');
 			echo(']:</h3><ul>');
-			foreach (array_keys($result[$_]) as $__)
+			foreach (array_keys($_[$current]) as $__)
 			{
-				echo ('<li><a href="'.make_canonical($attr, $__, false, false).'">'.$__.'</a></li>');
+				echo ('<li><a href="'.make_canonical($attr, $__, false,
+				false).'">'.$_[$current][$__].'</a></li>');
 			}
 			echo ('</ul>');
 		}
