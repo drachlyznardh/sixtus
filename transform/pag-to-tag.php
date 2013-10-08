@@ -1,18 +1,7 @@
 <?php
 
 	require_once('utils.php');
-
-	function get_filename_from_tag ($name)
-	{
-		switch (strlen($name))
-		{
-			case 1: $filename = $name[0].'/'.$name[0].'.tag'; break;
-			case 2:
-			default: $filename = $name[0].'/'.$name[0].$name[1].'/'.$name.'.tag';
-		}
-
-		return $filename;
-	}
+	require_once('runtime-utils.php');
 
 	function put_array_on_file ($filename, $array_name, $array_data)
 	{
@@ -20,12 +9,24 @@
 		foreach(array_keys($array_data) as $key)
 		{
 			$to_file .= "\n\t";
-			$to_file .= '$'.$array_name.'[\''.$key.'\'] = '.$array_data[$key].';';
+			#print_r($array_data[$key]);
+			$to_file .= "\$tag['$array_name'] = '".array_keys($array_data[$key])[0]."';";
 		}
-		$to_file .= '?>';
+		$to_file .= "\n".'?>';
 
 		if (!file_exists($filename)) mkdir(dirname($filename), 0777, true);
 		file_put_contents($filename, $to_file);
+	}
+
+	function get_array_from_tagfile ($filename)
+	{
+		if (file_exists($filename))
+		{
+			include ($filename);
+			return $tag;
+		}
+
+		return array();
 	}
 
 	function put_tag_into_tag_files ($taglist, $base_dir, $canonical_name)
@@ -38,18 +39,45 @@
 			//echo ("Tag [$key] goes in file [$filename]\n");
 			
 			$includename = $base_dir.$filename;
-			if (file_exists($includename)) include ($includename);
+			if (file_exists($includename))
+				$tag = get_array_from_tagfile($includename);
 
-			$tag[$canonical_name] = true;
-			put_array_on_file($includename, 'tag', $tag);
+			$tag[$key] = $canonical_name;
+			put_array_on_file($includename, $key, $tag);
 			//echo ("\nWrote on [$includename]\n");
 		}
 		//echo ("Done.\n");
 	}
 
+	function put_tag_into_tagfile ($tagname, $basedir, $pagename, $pagetitle)
+	{
+		$filename = $basedir.get_filename_from_tag($tagname);
+		#echo ("Now adding [$pagename] to tag[$tagname] list in [$filename]\n");
+		$formerlist = get_array_from_tagfile($filename);
+		$newlist = $formerlist;
+		$newlist[$tagname][$pagename] = $pagetitle;
+
+		#echo ("\n[Newlist]\n");
+		#print_r($newlist);
+
+		$to_file = '<?php';
+		foreach (array_keys($newlist[$tagname]) as $_)
+			$to_file .= "\n\t\$tag['$tagname']['$_'] = '".$newlist[$tagname][$_]."';";
+		$to_file .= "\n".'?>';
+
+		#print_r($to_file);
+		#echo ("\n\tFilename[$filename], Dir[".dirname($filename)."]\n\n");
+		if (!file_exists(dirname($filename))) mkdir(dirname($filename), 0777, true);
+		#echo ("\n\n");
+		file_put_contents($filename, $to_file);
+		
+		return count($newlist[$tagname]);
+	}
+
 	$taglist = array();
 	$rows = make_lines_from_file($argv[3]);
 	$base = dirname($argv[3]);
+	$pagetitle = false;
 
 	foreach ($rows as $_)
 	{
@@ -58,6 +86,16 @@
 			$result = split('#', $_);
 			array_shift($result);
 			foreach ($result as $r) $taglist[$r] = true;
+		} else if (preg_match('/title#/', $_))
+		{
+			$result = split('#', $_);
+			if ($pagetitle == false)
+			{
+				$pagetitle = $result[1];
+				#echo ("\n$pagetitle\n");
+				$pagetitle = str_replace('\'', '&apos;', $pagetitle);
+				#echo ("\n$pagetitle\n");
+			}
 		}
 	}
 
@@ -87,7 +125,21 @@
 	$to_file .= "\n";
 	$to_file .= '?>';
 
+	//echo ($to_file);
 	file_put_contents($argv[4], $to_file);
 
-	put_tag_into_tag_files($taglist, $argv[2], $canonical_name);
+	$total_file = $argv[2].'totals.php';
+	if (file_exists($total_file)) include($total_file);
+
+	foreach (array_keys($taglist) as $_)
+		$total_values[$_] = put_tag_into_tagfile ($_, $argv[2], $canonical_name, $pagetitle);
+	
+	#print_r($total_values);
+	$to_file = '<?php';
+	foreach(array_keys($total_values) as $_)
+		$to_file .= "\n\t\$total_values['$_'] = $total_values[$_];";
+	$to_file .= "\n".'?>';
+
+	#echo ($to_file);
+	file_put_contents($total_file, $to_file);
 ?>

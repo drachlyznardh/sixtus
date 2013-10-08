@@ -427,7 +427,10 @@
 			switch ($args[1])
 			{
 				case 'result':
-					$this->content[] = '<'.'?php include_search_result(); ?'.'>';
+					$this->content[] = '<'.'?php include_search_result($attr); ?'.'>';
+					break;
+				case 'cloud':
+					$this->content[] = '<'.'?php include_search_cloud($attr)?'.'>';
 					break;
 				case 'search':
 				default:

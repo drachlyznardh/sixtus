@@ -16,22 +16,35 @@ LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
 PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
 SYSS := $(sort $(shell find $(SYS_DIR) -type f))
 RESS := $(sort $(shell find $(RES_DIR) -type f))
+DBS  := $(sort $(shell find $(DB_DIR) -type f))
 
-PHPS := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
-DEPS := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
-TAGS := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
+PHPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
+PHPS   += $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $(PAGS))
+DEPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
+TAGS   := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
 O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
 O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
+O_DBS  := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(DBS))
 
-all: $(DEPS) pages resources system tags
+all: $(DEPS) pages resources system tags dbs
 #	@printf "in = %s, out = %s\n" $(IN_DIR) $(OUT_DIR)
 #	@printf "src = %s, res = %s, sys = %s, out = %s\n" $(SRC_DIR) $(RES_DIR) $(SYS_DIR) $(DEST_DIR)
 #	@echo System: $(SYSS)
 
 pages: $(PHPS)
+	@echo $(shell echo $(PHPS) | wc -w | xargs printf "%04d") pages were generated.
+
 resources: $(O_RESS)
+	@echo $(shell echo $(O_RESS) | wc -w | xargs printf "%04d") resources were linked.
+
 system: $(O_SYSS)
+	@echo $(shell echo $(O_SYSS) | wc -w | xargs printf "%04d") system resources were linked.
+
 tags: $(TAGS)
+	@echo $(shell echo $(TAGS) | wc -w | xargs printf "%04d") tag files were generated.
+
+dbs: tags $(O_DBS)
+	@echo $(shell echo $(O_DBS) | wc -w | xargs printf "%04d") database entries were generated.
 
 #Dependency generation
 $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
@@ -51,6 +64,11 @@ $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
 	@mkdir -p $(dir $@)
 	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
 
+$(DEST_DIR)%.php: $(SRC_DIR)%.pag
+	@echo Generating page $@
+	@mkdir -p $(dir $@)
+	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
+
 #File linking
 $(DEST_DIR)%: $(RES_DIR)%
 	@echo Linking resource file $@
@@ -59,6 +77,11 @@ $(DEST_DIR)%: $(RES_DIR)%
 
 $(DEST_DIR)%: $(SYS_DIR)%
 	@echo Linking system file $@
+	@mkdir -p $(dir $@)
+	@$(LN_CMD) $< $@
+
+$(DEST_DIR)%: $(IN_DIR)%
+	@echo Linking database entry $@
 	@mkdir -p $(dir $@)
 	@$(LN_CMD) $< $@
 
