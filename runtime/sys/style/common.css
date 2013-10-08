@@ -147,3 +147,11 @@ em em { font-style:normal; }
 strong { font-weight:bold; }
 code { font-family: monospace }
 
+form.search {
+	display: inline;
+}
+
+form.search input {
+	width: 4em;
+}
+
