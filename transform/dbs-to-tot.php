@@ -75,7 +75,28 @@
 		return count($newlist[$tagname]);
 	}
 
+	echo ("Argv\n");
 	print_r($argv);
+	if (file_exists($argv[2])) include ($argv[2]);
+	else $tag = array();
+	echo ("Tag\n");
+	if (count($tag)) print_r($tag); else echo ("[Empty]\n");
+	if (file_exists($argv[1])) include ($argv[1]);
+	else $total_values = array();
+	echo ("Total Values\n");
+	if (count($total_values)) print_r($total_values); else echo ("[Empty]\n");
+
+	$current_tag = array_keys($tag)[0];
+	$current_value = count($tag[$current_tag]);
+	echo ("Current Tag [$current_tag], Current Value [$current_value]\n");
+
+	$to_file = '<?php';
+	foreach(array_keys($total_values) as $_)
+		$to_file .= "\n\t\$total_values['$_'] = $total_values[$_];";
+	$to_file .= "\n".'?>';
+
+	#echo ($to_file);
+	file_put_contents($argv[1], $to_file);
 	return;
 
 	$taglist = array();
