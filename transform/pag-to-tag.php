@@ -76,7 +76,7 @@
 	}
 
 	print_r($argv);
-	return;
+	#return;
 
 	$taglist = array();
 	$rows = make_lines_from_file($argv[3]);
@@ -129,11 +129,11 @@
 	$to_file .= "\n";
 	$to_file .= '?>';
 
-	//echo ($to_file);
+	echo ($to_file);
 	file_put_contents($argv[4], $to_file);
 
-	$total_file = $argv[2].'totals.php';
-	if (file_exists($total_file)) include($total_file);
+	$cloud_file = $argv[6];
+	if (file_exists($cloud_file)) include($cloud_file);
 
 	foreach (array_keys($taglist) as $_)
 		$total_values[$_] = put_tag_into_tagfile ($_, $argv[2], $canonical_name, $pagetitle);
@@ -145,5 +145,5 @@
 	$to_file .= "\n".'?>';
 
 	#echo ($to_file);
-	file_put_contents($total_file, $to_file);
+	file_put_contents($cloud_file, $to_file);
 ?>
