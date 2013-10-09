@@ -3,24 +3,27 @@ PREFIX := /opt/devel/web/sixtus/
 LYZ_TO_PHP := $(PREFIX)transform/lyz-to-php.php
 LYZ_TO_DEP := $(PREFIX)transform/lyz-to-dep.php
 PAG_TO_TAG := $(PREFIX)transform/pag-to-tag.php
+DBS_TO_TOT := $(PREFIX)transform/dbs-to-tot.php
 
 SRC_DIR  := $(IN_DIR)src/
 RES_DIR  := $(IN_DIR)res/
 SYS_DIR  := $(IN_DIR)sys/
 DEP_DIR  := $(IN_DIR).dep/
 TAG_DIR  := $(IN_DIR).tag/
-DB_DIR   := $(IN_DIR).tagdb/
+DB_DIR   := $(IN_DIR).db/
+DB_TOT   := $(DB_DIR)totals.php
 DEST_DIR := $(OUT_DIR)
 
 LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
 PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
 SYSS := $(sort $(shell find $(SYS_DIR) -type f))
 RESS := $(sort $(shell find $(RES_DIR) -type f))
-DBS  := $(sort $(shell find $(DB_DIR) -type f))
+#DBS  := $(sort $(shell find $(DB_DIR) -type f))
 
 PHPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
 PHPS   += $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $(PAGS))
 DEPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
+DEPS   += $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
 TAGS   := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
 O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
 O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
@@ -43,20 +46,36 @@ system: $(O_SYSS)
 tags: $(TAGS)
 	@echo $(shell echo $(TAGS) | wc -w | xargs printf "%04d") tag files were generated.
 
-dbs: tags $(O_DBS)
+dbs: tags $(O_DBS) $(TOTAL_FILE)
 	@echo $(shell echo $(O_DBS) | wc -w | xargs printf "%04d") database entries were generated.
 
 #Dependency generation
 $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
-	@echo Generating dependencies for page $@
+	@echo Generating dependencies for page $<
 	@mkdir -p $(dir $@)
 	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $<) > $@
+
+$(DEP_DIR)%.dep: $(SRC_DIR)%.pag
+	@echo Generating dependencies for page $<
+	@mkdir -p $(dir $@)
+	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $<) > $@
 
 #Tag generation
 $(TAG_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating tags for page $@
 	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(SYS_DIR)sys/runtime.php
+	@#php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(SYS_DIR)sys/runtime.php
+	@touch $@
+
+$(DB_DEP): $(TAGS)
+	@echo Updating database dependencies
+	@mkdir -p $(dir $@)
+	@echo -n "$(DB_TOT):" > $@
+	@for i in $$(find $(TAG_DIR) -type f ); do echo -n " $$i" >> $@; done && more $@
+
+$(DB_TOT): $(DB_DEP) $(O_DBS)
+	@echo Evaluating tag values
+	@#for i in $(O_DBS); do php5 -f $(DBS_TO_TOT) $@ $$i; done
 
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
@@ -93,4 +112,4 @@ clean:
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)
 
--include $(DEPS)
+-include $(DEPS) $(DB_DEP)
