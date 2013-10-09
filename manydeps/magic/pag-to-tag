@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in $(grep 'tag' $1); do
+	token=$(echo ${i/tag/} | tr "#" " ")
+	for j in $token; do echo $j >> $2; done
+done
