@@ -11,8 +11,10 @@ SYS_DIR  := $(IN_DIR)sys/
 DEP_DIR  := $(IN_DIR).dep/
 TAG_DIR  := $(IN_DIR).tag/
 DB_DIR   := $(IN_DIR).db/
-DB_TOT   := $(DB_DIR)totals.php
 DEST_DIR := $(OUT_DIR)
+
+CLOUD_FILE := $(IN_DIR).cloud.php
+MAP_FILE   := $(IN_DIR)sys/sys/runtime.php
 
 LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
 PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
@@ -64,8 +66,7 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.pag
 $(TAG_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating tags for page $@
 	@mkdir -p $(dir $@)
-	@#php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(SYS_DIR)sys/runtime.php
-	@touch $@
+	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(MAP_FILE) $(CLOUD_FILE)
 
 $(DB_DEP): $(TAGS)
 	@echo Updating database dependencies
@@ -111,5 +112,6 @@ clean:
 	@$(RM) $(PHPS)
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)
+	@$(RM) -rf $(DEP_DIR) $(TAG_DIR) $(DB_DIR)
 
 -include $(DEPS) $(DB_DEP)
