@@ -142,11 +142,11 @@
 		ksort($total_values);
 		foreach(array_keys($total_values) as $key)
 		{
-			$size = 11 + 2*sqrt($total_values[$key]);
+			$size = 12 + 4*floor(log($total_values[$key]));
 			$style = 'font-size: '.$size.'px';
 			echo ("\n<span style=\"$style\"><a href=\"");
 			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
-			echo ("\">$key</span>");
+			echo ("\">$key</a></span>");
 		}
 		echo ('</p>');
 		return;
