@@ -2,6 +2,7 @@
 PREFIX := /opt/devel/web/sixtus/
 LYZ_TO_PHP  := $(PREFIX)transform/lyz-to-php.php
 LYZ_TO_DEP  := $(PREFIX)transform/lyz-to-dep.php
+TAG_TO_DEP  := $(PREFIX)transform/tag-to-dep.php
 PAG_TO_TAG  := $(PREFIX)transform/pag-to-tag.php
 DBS_TO_TOT  := $(PREFIX)transform/dbs-to-tot.php
 TAG_TO_DBE  := $(PREFIX)transform/tag-to-dbe.php
@@ -23,18 +24,17 @@ LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
 PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
 SYSS := $(sort $(shell find $(SYS_DIR) -type f))
 RESS := $(sort $(shell find $(RES_DIR) -type f))
-DBES := $(sort $(shell find $(DB_DIR) -type f))
 
 PHPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
 PHPS   += $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $(PAGS))
-DEPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
-DEPS   += $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
+P_DEPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
+P_DEPS   += $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
 TAGS   := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
+T_DEPS := $(TAGS:.php=.dep)
 O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
 O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
-O_DBS  := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(DBS))
 
-#all: $(DEPS) pages resources system tags dbes
+#all: $(P_DEPS) pages resources system tags dbes
 all: deploy
 deploy: content tagging
 content: pages resources system
@@ -57,10 +57,6 @@ system: $(O_SYSS)
 tags: $(TAGS)
 	@echo $(shell echo $(TAGS) | wc -w | xargs printf "%04d") tag files were generated.
 
-dbes: $(DBES) $(CLOUD_FILE)
-	@#echo $(DBES)
-	@echo $(shell echo $(DBES) | wc -w | xargs printf "%04d") database entries were generated.
-
 #Dependency generation
 $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
 	@echo Generating dependencies for page $<
@@ -72,25 +68,19 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.pag
 	@mkdir -p $(dir $@)
 	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $<) > $@
 
+$(TAG_DIR)%.dep: $(TAG_DIR)%.php
+	@echo Generating tag reverse dependecy $< $@
+	@php5 -f $(TAG_TO_DEP) $< $@ $(DB_DIR)
+
 #Tag generation
 $(TAG_DIR)%.php: $(SRC_DIR)%.pag $(RMAP_FILE)
 	@echo Generating tags for page $<
 	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(RMAP_FILE) $(CLOUD_FILE)
+	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(RMAP_FILE)
 
 $(RMAP_FILE): $(MAP_FILE)
 	@echo Generating reverse map
 	@php5 -f $(MAP_TO_RMAP) $< $@
-
-%.dbe: $(TAGS)
-	@echo Updating totals for $<
-	@php5 -f $(TAG_TO_DBE) $< $(CLOUD_FILE)
-	@touch $@
-
-$(CLOUD_FILE): $(DBES)
-	@echo Evaluating tag values
-	@touch $@
-	@#rm $(TAGS:.php=.dbe)
 
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
@@ -122,10 +112,9 @@ $(DEST_DIR)%: $(IN_DIR)%
 #Cleaning
 .PHONY: clean
 clean:
-	@$(RM) $(DEPS)
+	@$(RM) $(P_DEPS)
 	@$(RM) $(PHPS)
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)
-	@$(RM) -rf $(DEP_DIR) $(TAG_DIR) $(DB_DIR)
 
--include $(DEPS) $(DB_DEP)
+include $(P_DEPS) $(T_DEPS)
