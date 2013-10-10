@@ -76,7 +76,7 @@
 	}
 
 	print_r($argv);
-	#return;
+	return;
 
 	$taglist = array();
 	$rows = make_lines_from_file($argv[3]);
