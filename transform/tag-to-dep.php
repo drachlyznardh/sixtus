@@ -2,9 +2,16 @@
 	require_once('utils.php');
 	require_once('runtime-utils.php');
 
+	$tag = array();
 	include($argv[1]);
-	$tag_rdep = array();
 
+	if (count($tag) == 0)
+	{
+		file_put_contents($argv[2], false);
+		return;
+	}
+
+	$tag_rdep = array();
 	$key = array_keys($tag)[0];
 	foreach($tag[$key] as $_)
 		foreach (array_keys($_) as $__)

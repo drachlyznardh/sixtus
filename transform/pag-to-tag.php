@@ -3,22 +3,6 @@
 	require_once('utils.php');
 	require_once('runtime-utils.php');
 
-	function put_array_on_file ($filename, $array_name, $array_data)
-	{
-		$array_name = ucwords($array_name);
-		$to_file = '<?php';
-		foreach(array_keys($array_data) as $key)
-		{
-			$to_file .= "\n\t";
-			#print_r($array_data[$key]);
-			$to_file .= "\$tag['$array_name'] = '".array_keys($array_data[$key])[0]."';";
-		}
-		$to_file .= "\n".'?>';
-
-		if (!file_exists($filename)) mkdir(dirname($filename), 0777, true);
-		file_put_contents($filename, $to_file);
-	}
-
 	function get_array_from_tagfile ($filename)
 	{
 		if (file_exists($filename))
@@ -33,29 +17,18 @@
 	function put_tag_into_tagfile ($tagname, $basedir, $pagename, $pagetitle)
 	{
 		$filename = $basedir.get_filename_from_tag($tagname);
-		#echo ("Now adding [$pagename] to tag[$tagname] list in [$filename]\n");
 		$formerlist = get_array_from_tagfile($filename);
 		$newlist = $formerlist;
 		$newlist[$tagname][$pagename] = $pagetitle;
 
-		#echo ("\n[Newlist]\n");
-		#print_r($newlist);
-
 		$to_file = '<?php';
 		foreach (array_keys($newlist[$tagname]) as $_)
-			$to_file .= "\n\t\$tag['".ucwords($tagname)."']['$_'] = '".$newlist[$tagname][$_]."';";
+			$to_file .= "\n\t\$tag['$tagname']['$_'] = '".$newlist[$tagname][$_]."';";
 		$to_file .= "\n".'?>';
 
-		#print_r($to_file);
-		#echo ("\n\tFilename[$filename], Dir[".dirname($filename)."]\n\n");
 		if (!file_exists(dirname($filename))) mkdir(dirname($filename), 0777, true);
-		#echo ("\n\n");
 		file_put_contents($filename, $to_file);
-		
-		return count($newlist[$tagname]);
 	}
-
-	#print_r($argv);
 
 	$taglist = array();
 	$rows = make_lines_from_file($argv[3]);
@@ -114,16 +87,4 @@
 	foreach (array_keys($taglist) as $_)
 		put_tag_into_tagfile ($_, $argv[2], $canonical_name, $pagetitle);
 	die();
-	
-	$cloud_file = $argv[6];
-	if (file_exists($cloud_file)) include($cloud_file);
-
-	#print_r($total_values);
-	$to_file = '<?php';
-	foreach(array_keys($total_values) as $_)
-		$to_file .= "\n\t\$total_values['$_'] = $total_values[$_];";
-	$to_file .= "\n".'?>';
-
-	#echo ($to_file);
-	file_put_contents($cloud_file, $to_file);
 ?>
