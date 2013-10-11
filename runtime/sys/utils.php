@@ -137,18 +137,18 @@
 	
 	function include_search_cloud ($attr)
 	{
-		include('.tagdb/totals.php');
-		echo ('<p style="text-align: center; text-indent: 0px">');
-		ksort($total_values);
-		foreach(array_keys($total_values) as $key)
+		include('.cloud.php');
+		echo ('<div id="cloud"><p>');
+		ksort($cloud);
+		foreach(array_keys($cloud) as $key)
 		{
-			$size = 12 + 4*floor(log($total_values[$key]));
+			$size = 12 + 4*floor(log($cloud[$key], 2));
 			$style = 'font-size: '.$size.'px';
 			echo ("\n<span style=\"$style\"><a href=\"");
 			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
-			echo ("\">$key</a></span>");
+			echo ('">'.ucwords($key).'['.$cloud[$key].']</a></span>');
 		}
-		echo ('</p>');
+		echo ('</p></div>');
 		return;
 		
 		$collection = array();
@@ -210,7 +210,7 @@
 
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
-			$dbfile = '.tagdb/'.get_filename_from_tag ($_);
+			$dbfile = '.db/'.get_filename_from_tag ($_);
 			#echo ("<p>Now opening [$dbfile], ".getcwd()."</p>");
 			if (file_exists($dbfile))
 			{
