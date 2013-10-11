@@ -7,6 +7,7 @@ PAG_TO_TAG  := $(PREFIX)transform/pag-to-tag.php
 DBS_TO_TOT  := $(PREFIX)transform/dbs-to-tot.php
 TAG_TO_DBE  := $(PREFIX)transform/tag-to-dbe.php
 MAP_TO_RMAP := $(PREFIX)transform/map-to-rmap.php
+export TCH_TO_CLOUD := $(PREFIX)transform/tch-to-cloud.php
 
 export SRC_DIR  := $(IN_DIR)src/
 export RES_DIR  := $(IN_DIR)res/
@@ -39,6 +40,9 @@ all: deploy
 deploy: content tagging
 content: pages resources system
 tagging: tags db
+
+-include $(P_DEPS) $(T_DEPS)
+
 db: $(TAGS)
 	@$(MAKE) -f /opt/devel/web/sixtus/deploy/db.makefile
 #	@printf "in = %s, out = %s\n" $(IN_DIR) $(OUT_DIR)
@@ -112,9 +116,7 @@ $(DEST_DIR)%: $(IN_DIR)%
 #Cleaning
 .PHONY: clean
 clean:
-	@$(RM) $(P_DEPS)
 	@$(RM) $(PHPS)
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)
 
-include $(P_DEPS) $(T_DEPS)
