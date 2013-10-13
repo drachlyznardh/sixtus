@@ -57,6 +57,9 @@
 		{
 			$this->include_base = dirname($filename);
 			$index = array($filename, 0);
+			
+			if (!file_exists($filename))
+				die("[$filename] does not exists, cannot parse");
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
 			foreach ($rows as $_)

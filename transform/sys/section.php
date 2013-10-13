@@ -24,6 +24,8 @@
 		{
 			switch ($command)
 			{
+				case 'tag': break;
+				
 				case '': $this->make_text(trim($cmd_args[0])); break;
 				case 'id': $this->make_id($cmd_args[1]); break;
 				case 'p': $this->make_p($index, $cmd_args, $cmd_attr); break;
@@ -39,6 +41,7 @@
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear($index, $cmd_args); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
+				case 'search': $this->make_search($index, $cmd_args, $cmd_attr); break;
 				default: $this->error($index, $command);
 			}
 		}
@@ -419,6 +422,22 @@
 		private function dialog ($author, $line)
 		{
 			return ' <span class="'.$author.'" title="'.$author.'">« '.$line.' »</span> ';
+		}
+
+		private function make_search ($index, $args, $attr) 
+		{
+			switch ($args[1])
+			{
+				case 'result':
+					$this->content[] = '<'.'?php include_search_result($attr); ?'.'>';
+					break;
+				case 'cloud':
+					$this->content[] = '<'.'?php include_search_cloud($attr)?'.'>';
+					break;
+				case 'search':
+				default:
+					$this->content[] = '<'.'?php include_search_form();?'.'>';
+			}
 		}
 	}
 ?>
