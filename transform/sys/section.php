@@ -434,6 +434,9 @@
 				case 'cloud':
 					$this->content[] = '<'.'?php include_search_cloud($attr)?'.'>';
 					break;
+				case 'static':
+					$this->content[] = '<'.'?php include_search_static($attr, \''.$attr[1].'\')?'.'>';
+					break;
 				case 'search':
 				default:
 					$this->content[] = '<'.'?php include_search_form();?'.'>';

@@ -151,6 +151,31 @@
 		return;
 	}
 
+	function display_search_result ($attr, $current, $result)
+	{
+		echo ('<h3 class="reverse">Risultati per [');
+		echo ('<a href="'.make_canonical($attr, '/Tag/', false,
+		false).'?query='.$current.'">'.ucwords($current).'</a>');
+		echo(']:</h3><ul>');
+		foreach (array_keys($result) as $_)
+			foreach (array_keys($result[$_]) as $__)
+			{
+				if (strcmp($__, 'page') == 0) $tab = false;
+				else $tab = $__;
+				$href = make_canonical($attr, $_, $tab, false);
+				
+				echo ('<li><a href="'.$href.'">'.$result[$_][$__].'</a></li>');
+			}
+		echo ('</ul>');
+	}
+
+	function include_search_static ($attr, $keyword)
+	{
+		$dbfile = '.db/'.get_filename_from_tag($keyword);
+		if (file_exists($dbfile)) include($dbfile); else return;
+		display_search_result($attr, $keyword, $tag);
+	}
+
 	function include_search_result ($attr)
 	{
 		$result = array();
