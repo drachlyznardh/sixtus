@@ -2,9 +2,11 @@
 	include($argv[1]);
 	include($argv[2]);
 	
-	$key = array_keys($tag)[0];
-	$update = count($tag[$key]);
-	$cloud[$key] = $update;
+	#$key = array_keys($tag)[0];
+	#$update = count($tag[$key]);
+	#$cloud[$key] = $update;
+	$key = basename($argv[1], '.tag');
+	$cloud[$key] = count($tag);
 
 	$to_file = '<'.'?php';
 	foreach(array_keys($cloud) as $_)

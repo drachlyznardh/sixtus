@@ -16,9 +16,12 @@
 	foreach($tag[$key] as $_)
 		foreach (array_keys($_) as $__)
 			$tag_rdep[] = get_filename_from_tag($__);
-	
-	$to_file = false;
+
 	foreach ($tag_rdep as $_)
+		$actual_deps[$_] = true;
+
+	$to_file = false;
+	foreach (array_keys($actual_deps) as $_)
 		$to_file .= "$argv[3]$_: $argv[1]\n";
 
 	file_put_contents($argv[2], $to_file);

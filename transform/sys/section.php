@@ -24,6 +24,8 @@
 		{
 			switch ($command)
 			{
+				case 'tag': break;
+				
 				case '': $this->make_text(trim($cmd_args[0])); break;
 				case 'id': $this->make_id($cmd_args[1]); break;
 				case 'p': $this->make_p($index, $cmd_args, $cmd_attr); break;

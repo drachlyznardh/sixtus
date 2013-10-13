@@ -146,7 +146,8 @@
 			$style = 'font-size: '.$size.'px';
 			echo ("\n<span style=\"$style\"><a href=\"");
 			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
-			echo ('">'.ucwords($key).'['.$cloud[$key].']</a></span>');
+			#echo ('">'.ucwords($key).'['.$cloud[$key].']</a></span>');
+			echo ('">'.ucwords($key).'</a></span>');
 		}
 		echo ('</p></div>');
 		return;
@@ -227,23 +228,27 @@
 			return;
 		}
 
-		#echo ('<p>Results:');
-		#print_r($result);
-		#echo ('</p>');
+		echo ('<p>Results:');
+		print_r($result);
+		echo ('</p>');
 
 		#foreach(array_keys($result) as $_)
-		foreach($result as $_)
+		foreach(array_keys($result) as $current)
 		{
-			$current = array_keys($_)[0];
+			#$current = array_keys($_)[0];
 			echo ('<h3 class="reverse">Risultati per [');
 			echo ('<a href="'.make_canonical($attr, '/Tag/', false,
 			false).'?query='.$current.'">'.ucwords($current).'</a>');
 			echo(']:</h3><ul>');
-			foreach (array_keys($_[$current]) as $__)
-			{
-				echo ('<li><a href="'.make_canonical($attr, $__, false,
-				false).'">'.$_[$current][$__].'</a></li>');
-			}
+			foreach (array_keys($result[$current]) as $_)
+				foreach (array_keys($result[$current][$_]) as $__)
+				{
+					if (strcmp($__, 'page') == 0) $tab = false;
+					else $tab = $__;
+					$href = make_canonical($attr, $_, $tab, false);
+					
+					echo ('<li><a href="'.$href.'">'.$result[$current][$_][$__].'</a></li>');
+				}
 			echo ('</ul>');
 		}
 	}
