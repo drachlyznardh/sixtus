@@ -131,7 +131,6 @@
 		foreach($rows as $row) echo ("<p>$row</p>");
 		
 		include ($filename);
-		//print_r($tag);
 		return count($tag);
 	}
 	
@@ -146,54 +145,10 @@
 			$style = 'font-size: '.$size.'px';
 			echo ("\n<span style=\"$style\"><a href=\"");
 			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
-			#echo ('">'.ucwords($key).'['.$cloud[$key].']</a></span>');
 			echo ('">'.ucwords($key).'</a></span>');
 		}
 		echo ('</p></div>');
 		return;
-		
-		$collection = array();
-		$dir = scandir('.tagdb');
-		array_shift($dir);
-		array_shift($dir);
-
-		#echo ('<p>');
-		#print_r($dir);
-		#echo ('</p>');
-
-		foreach($dir as $_)
-		{
-			$ddir = scandir(".tagdb/$_");
-			array_shift($ddir);
-			array_shift($ddir);
-			foreach($ddir as $__)
-			{
-				$filename = ".tagdb/$_/$__";
-				if (is_file($filename)) $collection[] = $__;
-				else {
-					$dddir = scandir($filename);
-					array_shift($dddir);
-					array_shift($dddir);
-					foreach($dddir as $___) $collection[] = $___;
-				}
-			}
-		}
-
-		#echo ('<p>');
-		#print_r($collection);
-		#echo ('</p>');
-
-		foreach ($collection as $_)
-		{
-			$tagname = substr($_, 0, -4);
-			$tagfile = get_filename_from_tag($tagname);
-			//echo ("<p>Tagname[$tagname] → Tagfile[$tagfile], from [".getcwd()."]</p>");
-			$weight[$tagname] = count_tags(".tagdb/$tagfile");
-		}
-
-		echo ('<p>');
-		print_r($weight);
-		echo ('</p>');
 	}
 
 	function include_search_result ($attr)
@@ -201,10 +156,6 @@
 		$result = array();
 		$param = get_GET_parameters();
 	
-		#echo ("<p>");
-		#print_r ($param);
-		#echo ("</p>");
-
 		if (count($param) == 0) return;
 		if (!isset($param['query'])) return;
 		if (strlen($param['query']) == 0) return;
@@ -212,13 +163,12 @@
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
 			$dbfile = '.db/'.get_filename_from_tag ($_);
-			#echo ("<p>Now opening [$dbfile], ".getcwd()."</p>");
 			if (file_exists($dbfile))
 			{
 				$tag = array();
 				include($dbfile);
 				$result[$_] = $tag;
-			} #else echo ('<p>['.$dbfile.']: 404 no such file.</p>');
+			}
 		}
 
 		if (count($result) == 0)
@@ -228,14 +178,8 @@
 			return;
 		}
 
-		echo ('<p>Results:');
-		print_r($result);
-		echo ('</p>');
-
-		#foreach(array_keys($result) as $_)
 		foreach(array_keys($result) as $current)
 		{
-			#$current = array_keys($_)[0];
 			echo ('<h3 class="reverse">Risultati per [');
 			echo ('<a href="'.make_canonical($attr, '/Tag/', false,
 			false).'?query='.$current.'">'.ucwords($current).'</a>');
