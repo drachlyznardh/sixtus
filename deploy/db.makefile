@@ -6,7 +6,7 @@ TCHS   := $(DBES:=.tch)
 all: $(CLOUD_FILE) $(O_DBES)
 
 %.tch: %
-	@echo $@ comes from $<
+	@echo Updating database for entry $<
 	@touch $@
 	@php5 -f $(TCH_TO_CLOUD) $< $(CLOUD_FILE)
 

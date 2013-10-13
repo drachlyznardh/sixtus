@@ -64,7 +64,7 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.pag
 	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $<) > $@
 
 $(TAG_DIR)%.dep: $(TAG_DIR)%.php
-	@echo Generating tag reverse dependecy $< $@
+	@echo Generating tag reverse dependecy $<
 	@php5 -f $(TAG_TO_DEP) $< $@ $(DB_DIR)
 
 #Tag generation
