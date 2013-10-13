@@ -24,7 +24,6 @@
 			foreach ($data[$_] as $__)
 				$newlist[$__[0]][$_] = $__[1];
 
-		print_r($newlist);
 		$to_file = '<'.'?php'."\n";
 		foreach(array_keys($newlist) as $_)
 			foreach(array_keys($newlist[$_]) as $__)
@@ -112,8 +111,9 @@
 		foreach (array_keys($taglist[$_]) as $__)
 			$rtmap[$__][$_][] = array($canonical_name, $pagetitle[$_]);
 
-	foreach (array_keys($rtmap) as $_)
-		put_tag_into_tagfile ($_, $argv[2], $rtmap[$_]);
+	if (isset($rtmap))
+		foreach (array_keys($rtmap) as $_)
+			put_tag_into_tagfile ($_, $argv[2], $rtmap[$_]);
 
 	die();
 ?>
