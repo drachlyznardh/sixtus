@@ -141,7 +141,7 @@
 		ksort($cloud);
 		foreach(array_keys($cloud) as $key)
 		{
-			$size = 12 + 4*floor(log($cloud[$key], 2));
+			$size = 11 + 4*ceil(log($cloud[$key], 2));
 			$style = 'font-size: '.$size.'px';
 			echo ("\n<span style=\"$style\"><a href=\"");
 			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
