@@ -1,9 +1,13 @@
 <?php
 	include($argv[1]);
 	include($argv[2]);
-	
+
+	$value = 0;
+	foreach(array_keys($tag) as $_)
+		$value += count($tag[$_]);
+
 	$key = basename($argv[1], '.tag');
-	$cloud[$key] = count($tag);
+	$cloud[$key] = $value;
 
 	$to_file = '<'.'?php';
 	foreach(array_keys($cloud) as $_)
