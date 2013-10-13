@@ -3,22 +3,6 @@
 	require_once('utils.php');
 	require_once('runtime-utils.php');
 
-	function put_array_on_file ($filename, $array_name, $array_data)
-	{
-		$array_name = ucwords($array_name);
-		$to_file = '<?php';
-		foreach(array_keys($array_data) as $key)
-		{
-			$to_file .= "\n\t";
-			#print_r($array_data[$key]);
-			$to_file .= "\$tag['$array_name'] = '".array_keys($array_data[$key])[0]."';";
-		}
-		$to_file .= "\n".'?>';
-
-		if (!file_exists($filename)) mkdir(dirname($filename), 0777, true);
-		file_put_contents($filename, $to_file);
-	}
-
 	function get_array_from_tagfile ($filename)
 	{
 		if (file_exists($filename))
@@ -30,37 +14,48 @@
 		return array();
 	}
 
-	function put_tag_into_tagfile ($tagname, $basedir, $pagename, $pagetitle)
+	function put_tag_into_tagfile ($tagname, $basedir, $data)
 	{
 		$filename = $basedir.get_filename_from_tag($tagname);
-		#echo ("Now adding [$pagename] to tag[$tagname] list in [$filename]\n");
 		$formerlist = get_array_from_tagfile($filename);
 		$newlist = $formerlist;
-		$newlist[$tagname][$pagename] = $pagetitle;
 
-		#echo ("\n[Newlist]\n");
-		#print_r($newlist);
+		foreach (array_keys($data) as $_)
+			foreach ($data[$_] as $__)
+				$newlist[$__[0]][$_] = $__[1];
 
-		$to_file = '<?php';
-		foreach (array_keys($newlist[$tagname]) as $_)
-			$to_file .= "\n\t\$tag['".ucwords($tagname)."']['$_'] = '".$newlist[$tagname][$_]."';";
-		$to_file .= "\n".'?>';
+		$to_file = '<'.'?php'."\n";
+		foreach(array_keys($newlist) as $_)
+			foreach(array_keys($newlist[$_]) as $__)
+				$to_file .= "\t\$tag['$_']['$__'] = '".$newlist[$_][$__]."';\n";
+		$to_file .= '?'.'>';
 
-		#print_r($to_file);
-		#echo ("\n\tFilename[$filename], Dir[".dirname($filename)."]\n\n");
 		if (!file_exists(dirname($filename))) mkdir(dirname($filename), 0777, true);
-		#echo ("\n\n");
 		file_put_contents($filename, $to_file);
+		return;
 		
-		return count($newlist[$tagname]);
-	}
+		foreach (array_keys($pagetitle) as $_)
+		{
+			if (strcmp($_, 'page') == 0) $key = $pagename;
+			else $key = substr($pagename, 0, -1).'§'.$_.'/';
+			$newlist[$pagename][$_] = $pagetitle[$_];
+		}
 
-	#print_r($argv);
+		$to_file = '<'.'?php';
+		foreach (array_keys($newlist) as $_)
+			foreach (array_keys($newlist[$_]) as $__)
+				$to_file .= "\n\t\$tag['$_']['$__'] = '".$newlist[$_][$__]."';";
+		$to_file .= "\n".'?'.'>';
+
+		if (!file_exists(dirname($filename))) mkdir(dirname($filename), 0777, true);
+		file_put_contents($filename, $to_file);
+	}
 
 	$taglist = array();
 	$rows = make_lines_from_file($argv[3]);
 	$base = dirname($argv[3]);
 	$pagetitle = false;
+	$environment = 'page';
 
 	foreach ($rows as $_)
 	{
@@ -68,18 +63,19 @@
 		{
 			$result = split('#', strtolower($_));
 			array_shift($result);
-			foreach ($result as $r) $taglist[$r] = true;
-		} else if (preg_match('/title#/', $_))
-		{
-			$result = split('#', $_);
-			if ($pagetitle == false)
-			{
-				$pagetitle = $result[1];
-				#echo ("\n$pagetitle\n");
-				$pagetitle = str_replace('\'', '&apos;', $pagetitle);
-				#echo ("\n$pagetitle\n");
-			}
+			foreach ($result as $r) $taglist[$environment][$r] = true;
 		}
+		else if (preg_match('/title#/', $_))
+		{
+			$result = split('#', $_)[1];
+			$result = str_replace('\'', '&apos;', $result);
+			if (!isset($pagetitle[$environment]))
+				$pagetitle[$environment] = $result;
+		}
+		else if (preg_match('/stop#/', $_))
+			$environment = 'page';
+		else if (preg_match('/tab#/', $_))
+			$environment = split('#', $_)[1];
 	}
 
 	if (file_exists($argv[5])) include($argv[5]);
@@ -89,7 +85,7 @@
 	$current_page = str_replace('.lyz', '', $current_file);
 	$current_page = str_replace('.pag', '', $current_page);
 	$current_page = str_replace('/index', '', $current_page);
-	#echo ("Current [$current_page]");
+
 	if (isset($rmap[$current_page])) $canonical_name = $rmap[$current_page];
 	else {
 		$index = strrpos($current_page, '/');
@@ -97,33 +93,27 @@
 		$current_name = substr($current_page, $index + 1);
 		$canonical_name = $rmap[$current_category].strtoupper($current_name).'/';
 	}
-	#echo (", Canonical [$canonical_name]\n");
 
 	$to_file = '<'.'?php';
-	$to_file .= "\n\t\$pagetitle='$pagetitle';";
+	foreach (array_keys($pagetitle) as $_)
+		$to_file .= "\n\t\$pagetitle['$_']='$pagetitle[$_]';";
 	foreach (array_keys($taglist) as $_)
+		foreach (array_keys($taglist[$_]) as $__)
 	{
 		$to_file .= "\n\t";
-		$to_file .= '$tag[\''.$canonical_name.'\'][\'page\'][\''.ucwords($_).'\'] = '.$taglist[$_].';';
+		$to_file .= '$tag[\''.$canonical_name.'\'][\''.$_.'\'][\''.ucwords($__).'\'] = '.$taglist[$_][$__].';';
 	}
 	$to_file .= "\n".'?'.'>';
-
-	#echo ($to_file);
 	file_put_contents($argv[4], $to_file);
 
+	// Creating the reverse map
 	foreach (array_keys($taglist) as $_)
-		put_tag_into_tagfile ($_, $argv[2], $canonical_name, $pagetitle);
+		foreach (array_keys($taglist[$_]) as $__)
+			$rtmap[$__][$_][] = array($canonical_name, $pagetitle[$_]);
+
+	if (isset($rtmap))
+		foreach (array_keys($rtmap) as $_)
+			put_tag_into_tagfile ($_, $argv[2], $rtmap[$_]);
+
 	die();
-	
-	$cloud_file = $argv[6];
-	if (file_exists($cloud_file)) include($cloud_file);
-
-	#print_r($total_values);
-	$to_file = '<?php';
-	foreach(array_keys($total_values) as $_)
-		$to_file .= "\n\t\$total_values['$_'] = $total_values[$_];";
-	$to_file .= "\n".'?>';
-
-	#echo ($to_file);
-	file_put_contents($cloud_file, $to_file);
 ?>
