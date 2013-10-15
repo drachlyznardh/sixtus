@@ -114,4 +114,5 @@ clean:
 	@$(RM) $(PHPS)
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)
+	@$(RM) $(TAG_DIR) $(DB_DIR)
 
