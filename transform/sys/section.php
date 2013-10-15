@@ -131,7 +131,7 @@
 			if ($count > 4) $hash = "'$args[4]'"; else $hash = 'false';
 			if ($count > 5) $this->error($index, 'Link: too many arguments');
 			
-			$url = "<?=make_canonical(\$attr, $destination, $tab, $hash)?>";
+			$url = '<'."?=make_canonical(\$attr, $destination, $tab, $hash)?".'>';
 			if ($before) $result = $before; else $result = false;
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
@@ -141,9 +141,10 @@
 
 		private function full_tid ($index, $args)
 		{
+			$argument = polish_line($args[1]);
 			$destination = "\$search['page'][0]";
-			if (preg_match('/@/', $args[1])) {
-				$_ = preg_split('/@/', polish_line($args[1]));
+			if (preg_match('/@/', $argument)) {
+				$_ = preg_split('/@/', polish_line($argument));
 				switch(count($_)){
 					case 2:
 						$before = false;
@@ -264,9 +265,10 @@
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
+			$title = polish_line($cmd_args[1]);
 			if ($cmd_attr and $cmd_attr[1] == 'right')
-				$this->content[] = '<h2 class="reverse">'.$cmd_args[1].'</h2>';
-			else $this->content[] = '<h2>'.$cmd_args[1].'</h2>';
+				$this->content[] = '<h2 class="reverse">'.$title.'</h2>';
+			else $this->content[] = '<h2>'.$title.'</h2>';
 			$this->content[] = "\n";
 		}
 
