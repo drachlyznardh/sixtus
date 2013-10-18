@@ -17,7 +17,7 @@
 			echo ('<a href="'.make_canonical($attr, $search['page'][0]).'">'.$search['page'][1].'</a> ');
 			if ($attr['part'])
 				echo ('§ <a href="'.make_canonical($attr, $search['page'][0], $attr['part']).'">'.strtoupper($attr['part']).'</a>');
-			echo ('/');
+			echo (' /');
 		} ?>
 	</p></div><h1 style="text-align:center">
 		<?=$attr['title']?>
