@@ -107,6 +107,7 @@
 			if ($args[1]) $destination = '\''.polish_line($args[1]).'\'';
 			else $destination = '$attr[\'self\']';
 
+			$args[2] = polish_line($args[2]);
 			if (preg_match('/@/', polish_line($args[2]))) {
 				$_ = preg_split('/@/', $args[2]);
 				switch(count($_)) {

@@ -3,7 +3,7 @@
 	function polish_line ($_)
 	{
 		$_ = preg_replace('/@SHARP@/', '#', $_);
-		$_ = preg_replace('/@AT@/', '@', $_);
+		$_ = preg_replace('/@AT@/', '&#64;', $_);
 		$_ = preg_replace('/\'/', '&apos;', $_);
 
 		return $_;
