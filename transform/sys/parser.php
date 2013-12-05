@@ -59,7 +59,10 @@
 			$index = array($filename, 0);
 			
 			if (!file_exists($filename))
-				die("[$filename] does not exists, cannot parse");
+			{
+				echo("\n<!-- [$filename] does not exists, cannot parse -->");
+				return false;
+			}
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
 			foreach ($rows as $_)
@@ -203,7 +206,9 @@
 				$this->body[] = $this->current;
 				
 				$parser = new Parser($this->prefix);
-				$parser->parse("$this->prefix/$args[1].lyz");
+				$parser->parse("$this->prefix/$args[1].lyz")
+					or $parser->parse("$this->prefix/$args[1].slyz")
+					or $parser->parse("$this->prefix/$args[1].pag");
 				foreach ($parser->body as $_)
 					$this->body[] = $_;
 			}
