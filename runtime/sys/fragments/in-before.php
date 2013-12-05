@@ -6,7 +6,7 @@
 		<meta name="author"
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?=$attr['keywords']?>" />
-		<title><?=$attr['title']?></title>
+		<title><?=$attr['short']?></title>
 		<link rel="stylesheet" type="text/css" href="sys/style/<?=($attr['gray']?'gray':'white')?>.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="sys/style/common.css" />

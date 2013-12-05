@@ -59,7 +59,10 @@
 			$index = array($filename, 0);
 			
 			if (!file_exists($filename))
-				die("[$filename] does not exists, cannot parse");
+			{
+				echo("\n<!-- [$filename] does not exists, cannot parse -->");
+				return false;
+			}
 			$rows = file ($filename, FILE_IGNORE_NEW_LINES);
 
 			foreach ($rows as $_)
@@ -99,8 +102,12 @@
 							$this->subtitle = polish_line($cmd_par[2]);
 						case 2:
 							$this->title = polish_line($cmd_par[1]);
+							$this->short = $this->title;
 							break;
 					}
+					break;
+				case 'short':
+					$this->short = polish_line($cmd_par[1]);
 					break;
 				case 'subtitle':
 					$this->subtitle = polish_line($cmd_par[1]);
@@ -203,7 +210,9 @@
 				$this->body[] = $this->current;
 				
 				$parser = new Parser($this->prefix);
-				$parser->parse("$this->prefix/$args[1].lyz");
+				$parser->parse("$this->prefix/$args[1].lyz")
+					or $parser->parse("$this->prefix/$args[1].slyz")
+					or $parser->parse("$this->prefix/$args[1].pag");
 				foreach ($parser->body as $_)
 					$this->body[] = $_;
 			}
@@ -214,6 +223,8 @@
 			if (count($attr) < 2 || strcmp($attr[1], 'static') != 0) return;
 		
 			if (preg_match('/\.s?lyz$/', $args[1])) 
+				$filename = $args[1];
+			else if (preg_match('/\.pag$/', $args[1]))
 				$filename = $args[1];
 			else $filename = $args[1].'.lyz';
 
@@ -239,6 +250,7 @@
 		private function deploy_attr ()
 		{
 			printf("\t\t\$attr['title'] = '$this->title';\n");
+			printf("\t\t\$attr['short'] = '$this->short';\n");
 			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
 			if ($this->force_all_tabs)
