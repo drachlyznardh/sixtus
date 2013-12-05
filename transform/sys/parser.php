@@ -37,6 +37,7 @@
 			$this->prefix = $prefix;
 
 			$this->title = false;
+			$this->short = false;
 			$this->subtitle = false;
 			$this->keywords = false;
 
