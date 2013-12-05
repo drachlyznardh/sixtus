@@ -102,8 +102,12 @@
 							$this->subtitle = polish_line($cmd_par[2]);
 						case 2:
 							$this->title = polish_line($cmd_par[1]);
+							$this->short = $this->title;
 							break;
 					}
+					break;
+				case 'short':
+					$this->short = polish_line($cmd_par[1]);
 					break;
 				case 'subtitle':
 					$this->subtitle = polish_line($cmd_par[1]);
@@ -246,6 +250,7 @@
 		private function deploy_attr ()
 		{
 			printf("\t\t\$attr['title'] = '$this->title';\n");
+			printf("\t\t\$attr['short'] = '$this->short';\n");
 			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
 			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
 			if ($this->force_all_tabs)
