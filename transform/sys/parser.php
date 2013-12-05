@@ -220,6 +220,8 @@
 		
 			if (preg_match('/\.s?lyz$/', $args[1])) 
 				$filename = $args[1];
+			else if (preg_match('/\.pag$/', $args[1]))
+				$filename = $args[1];
 			else $filename = $args[1].'.lyz';
 
 			if (is_file($filename)) $includefile = $filename;
