@@ -9,13 +9,16 @@
 		public function getContent()
 		{
 			$this->closeContext();
+
+			if (count($this->content) == 0) return;
+
 			$content = false;
 			foreach ($this->content as $_)
 				$content .= $_;
 
-			$result = '<div class="<?=($attr[\'sections\']?\'section\':\'invisible\')?>">';
+			$result = "\n".'<div class="<?=($attr[\'sections\']?\'section\':\'invisible\')?>">';
 			$result .= $content;
-			$result .= '</div>';
+			$result .= '</div>'."\n";
 
 			return $result;
 		}
@@ -76,7 +79,7 @@
 				case 'outside': $this->content[] = '</div>'; break;
 			}
 			$this->context = false;
-			$this->content[] = "\n";
+			// $this->content[] = "\n";
 		}
 
 		private function openContext($new)
@@ -206,11 +209,12 @@
 					$this->content[] = " $text";
 				} else if (preg_match('/^>/', $text)) {
 					$this->openContext($this->defaultContext);
-					$this->content[] = " <span class=\"green\">$text</span>";
+					$this->content[] = " <span class=\"green\">$text</span>\n";
 				} else {
 					$this->openContext($this->defaultContext);
-					$this->content[] = " $text ";
+					$this->content[] = " $text\n";
 				}
+			
 			} else $this->closeContext();
 		}
 
@@ -390,7 +394,7 @@
 		private function make_break ()
 		{
 			$this->closeContext();
-			$this->content[] = '<br/>';
+			$this->content[] = '<br/>'."\n";
 		}
 
 		private function make_clear ($lineno, $args)
@@ -398,7 +402,7 @@
 			$this->closeContext();
 			if (count($args) > 1 && $args[1]) $clear = $args[1];
 			else $clear = 'both';
-			$this->content[] = '<div style="float:none; clear:'.$clear.'"></div>';
+			$this->content[] = "\n".'<div style="float:none; clear:'.$clear.'"></div>'."\n";
 		}
 
 		private function make_intra ($lineno, $args, $attr)
