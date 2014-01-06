@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /membri/drachlyznardh/
+
+RewriteCond %{REQUEST_URI} !/d.php$
+RewriteRule $ /d.php [L]
