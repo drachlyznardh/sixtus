@@ -38,11 +38,14 @@ O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
 O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
 
 all: deploy
-deploy: content tagging $(O_CLOUD_FILE) $(O_RMAP_FILE)
+deploy: blog content tagging $(O_CLOUD_FILE) $(O_RMAP_FILE)
 content: pages resources system
 tagging: tags db
 
 -include $(P_DEPS) $(T_DEPS)
+
+blog:
+	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile
 
 db: $(TAGS)
 	@$(MAKE) -f /opt/devel/web/sixtus/deploy/db.makefile
