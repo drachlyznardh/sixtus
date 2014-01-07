@@ -24,22 +24,25 @@ export MAP_FILE     := $(IN_DIR)sys/sys/runtime.php
 export RMAP_FILE    := $(IN_DIR).rmap.php
 export O_RMAP_FILE  := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(RMAP_FILE))
 
-all: content
-	@$(MAKE) -f $(PREFIX)/deploy/deploy.makefile
+all: deploy
+
+deploy: content
+	@$(MAKE) -f $(PREFIX)/deploy/content.makefile deploy
+	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile deploy
+	@$(MAKE) -f $(PREFIX)/deploy/db.makefile deploy
 
 content: db blog
-	@$(MAKE) -f $(PREFIX)/deploy/content.makefile
+	@$(MAKE) -f $(PREFIX)/deploy/content.makefile build
 
 blog:
-	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile
+	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile build
 
 db:
-	@$(MAKE) -f $(PREFIX)/deploy/db.makefile
+	@$(MAKE) -f $(PREFIX)/deploy/db.makefile build
 
 #Cleaning
 .PHONY: clean
 clean:
-	@$(MAKE) -f $(PREFIX)/deploy/deploy.makefile clean
 	@$(MAKE) -f $(PREFIX)/deploy/content.makefile clean
 	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile clean
 	@$(MAKE) -f $(PREFIX)/deploy/db.makefile clean

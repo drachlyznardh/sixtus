@@ -3,7 +3,9 @@ DBES   := $(sort $(shell find $(DB_DIR) -type f -name '*.tag'))
 O_DBES := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(DBES))
 TCHS   := $(DBES:=.tch)
 
-all: $(CLOUD_FILE) $(O_DBES)
+all: build
+build: $(CLOUD_FILE)
+deploy: build $(O_DBES)
 
 %.tch: %
 	@echo Updating database for entry $<
@@ -21,3 +23,4 @@ $(DEST_DIR)%.tag: $(IN_DIR)%.tag
 
 .PHONY: clean
 clean:
+	@$(RM) -rf 

@@ -13,22 +13,15 @@ T_DEPS := $(TAGS:.php=.dep)
 O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
 O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
 
-all: pages resources system
-deploy: blog content tagging $(O_CLOUD_FILE) $(O_RMAP_FILE)
-tagging: tags db
+all: build
+build: 
+deploy: build pages resources system
 
 -include $(P_DEPS) $(T_DEPS)
 
-blog:
-	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile
-
-db: $(TAGS)
-	@$(MAKE) -f /opt/devel/web/sixtus/deploy/db.makefile
-
 pages: $(PHPS)
 resources: $(O_RESS)
-system: $(O_SYSS)
-tags: $(TAGS)
+system: $(O_SYSS) $(O_CLOUD_FILE) $(O_RMAP_FILE)
 
 #Dependency generation
 $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
@@ -92,5 +85,4 @@ clean:
 	@$(RM) $(PHPS)
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)
-	@$(RM) -rf $(TAG_DIR) $(DB_DIR)
 
