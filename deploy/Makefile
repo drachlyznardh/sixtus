@@ -2,8 +2,9 @@
 all: deploy
 build: maps tags blog
 
-include vars.makefile
-include maps.makefile
+PREFIX := /opt/devel/web/sixtus/
+include $(PREFIX)deploy/vars.makefile
+include $(PREFIX)deploy/maps.makefile
 
 deploy: build
 	@echo making pages
@@ -19,5 +20,5 @@ blog:
 	@echo generating blog pages
 
 .PHONY: clean
-clean:
+clean: maps-clean
 	@echo Cleaning

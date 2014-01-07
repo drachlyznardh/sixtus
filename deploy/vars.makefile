@@ -1,5 +1,7 @@
 
-PREFIX := /opt/devel/web/sixtus/
+export CP  := cp
+export PHP := php5
+
 export LYZ_TO_PHP   := $(PREFIX)transform/lyz-to-php.php
 export LYZ_TO_DEP   := $(PREFIX)transform/lyz-to-dep.php
 export TAG_TO_DEP   := $(PREFIX)transform/tag-to-dep.php
@@ -18,6 +20,7 @@ export TAG_DIR  := $(IN_DIR).tag/
 export DB_DIR   := $(IN_DIR).db/
 export DEST_DIR := $(OUT_DIR)
 
-export ACCESS_MAP_FILE  := $(DEST_DIR)runtime/direct-map.php
+export ACCESS_MAP_FILE  := $(IN_DIR)access-map.php
+export DIRECT_MAP_FILE  := $(DEST_DIR)runtime/direct-map.php
 export REVERSE_MAP_FILE := $(DEST_DIR)runtime/reverse-map.php
 
