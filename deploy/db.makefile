@@ -18,3 +18,6 @@ $(DEST_DIR)%.tag: $(IN_DIR)%.tag
 	@echo Linking database entry $<
 	@mkdir -p $(dir $@)
 	@$(LN_CMD) $< $@
+
+.PHONY: clean
+clean:

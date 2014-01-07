@@ -10,3 +10,6 @@ all: $(LYZS)
 	@echo Generating blog page $< from $@
 	@mkdir -p $(dir $@)
 	@php5 -f $(POST_TO_LYZ) $< $@
+
+.PHONY: clean
+clean:
