@@ -74,13 +74,13 @@
 
 	ksort($out_rows);
 	$out_rows = array_reverse($out_rows, true);
-	printf("title#%s#%s %s\n", $year, name_that_month($month), $year);
-	printf("prev#Blog/%s/%s/#%s@ %s\n",
+	$output[] = sprintf("title#%s#%s %s\n", $year, name_that_month($month), $year);
+	$output[] = sprintf("prev#Blog/%s/%s/#%s@ %s\n",
 		$year, $month, name_that_month($month - 1), prev_year($month, $year));
-	printf("next#Blog/%s/%s/#%s@ %s\n",
+	$output[] = sprintf("next#Blog/%s/%s/#%s@ %s\n",
 		$year, $month, name_that_month($month + 1), next_year($month, $year));
-	printf("tabs#all_or_one\n");
-	printf("start#page\n");
+	$output[] = sprintf("tabs#all_or_one\n");
+	$output[] = sprintf("start#page\n");
 
 	foreach (array_keys($out_rows) as $day)
 	{
@@ -88,18 +88,18 @@
 		
 		foreach ($posts as $post)
 		{
-			printf("tab#%s\n", $post['tab']);
-			printf("\tp#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s\n",
+			$output[] = sprintf("tab#%s\n", $post['tab']);
+			$output[] = sprintf("\tp#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s\n",
 				$year, $month, $day, $month, $year, $post['tab']);
-			printf("\ttitle#%s\n", $title);
+			$output[] = sprintf("\ttitle#%s\n", $title);
 
-			if (isset($post['content'])) foreach ($post['content'] as $line) printf("%s\n", $line);
+			if (isset($post['content'])) foreach ($post['content'] as $line) $output[] = sprintf("%s\n", $line);
 		}
 	}
 
-	printf("stop#page\n");
-	printf("start#side\n");
-	printf("\tstitle#link#Blog/%s/%s/#%s@ %s\n",
+	$output[] = sprintf("stop#page\n");
+	$output[] = sprintf("start#side\n");
+	$output[] = sprintf("\tstitle#link#Blog/%s/%s/#%s@ %s\n",
 		$year, $month, name_that_month($month), $year);
 	
 	foreach (array_keys($out_rows) as $day)
@@ -108,18 +108,19 @@
 		$first = true;
 		$count = count($posts);
 
-		printf("\tp#<code>%02d/%s</code> –\n", $day, $month);
+		$output[] = sprintf("\tp#<code>%02d/%s</code> –\n", $day, $month);
 
 		for ($i = 0; $i < $count; $i++)
 		{
 			$post = $posts[$count - $i - 1];
 			
 			if ($first) $first = false;
-			else printf("\t\t&amp;\n");
-			printf("\t\tlink#Blog/%s/%s/#%s#%s\n",
+			else $output[] = sprintf("\t\t&amp;\n");
+			$output[] = sprintf("\t\tlink#Blog/%s/%s/#%s#%s\n",
 				$year, $month, $post['title'], $post['tab']);
 		}
 	}
 
-	printf("stop#side\n");
+	$output[] = sprintf("stop#side\n");
+	file_put_contents($argv[2], $output);
 ?>
