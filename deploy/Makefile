@@ -24,37 +24,22 @@ export MAP_FILE     := $(IN_DIR)sys/sys/runtime.php
 export RMAP_FILE    := $(IN_DIR).rmap.php
 export O_RMAP_FILE  := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(RMAP_FILE))
 
-LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
-PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
-SYSS := $(sort $(shell find $(SYS_DIR) -type f))
-RESS := $(sort $(shell find $(RES_DIR) -type f))
+all: content
+	@$(MAKE) -f $(PREFIX)/deploy/deploy.makefile
 
-PHPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
-PHPS   += $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $(PAGS))
-P_DEPS := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
-P_DEPS += $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
-TAGS   := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
-T_DEPS := $(TAGS:.php=.dep)
-O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
-O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
-
-all: deploy
-deploy: content $(O_CLOUD_FILE) $(O_RMAP_FILE)
-
--include $(P_DEPS) $(T_DEPS)
+content: db blog
+	@$(MAKE) -f $(PREFIX)/deploy/content.makefile
 
 blog:
 	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile
 
 db:
-	@$(MAKE) -f /opt/devel/web/sixtus/deploy/db.makefile
-
-content: db blog
-	@$(MAKE) -f $(PREFIX)/deploy/content.makefile
+	@$(MAKE) -f $(PREFIX)/deploy/db.makefile
 
 #Cleaning
 .PHONY: clean
 clean:
+	@$(MAKE) -f $(PREFIX)/deploy/deploy.makefile clean
 	@$(MAKE) -f $(PREFIX)/deploy/content.makefile clean
 	@$(MAKE) -f $(PREFIX)/deploy/blog.makefile clean
 	@$(MAKE) -f $(PREFIX)/deploy/db.makefile clean
