@@ -3,13 +3,14 @@ all: deploy
 build: maps tags blog
 
 include vars.makefile
+include maps.makefile
 
 deploy: build
 	@echo making pages
 	@echo moving resources
 	@echo moving system files
 
-maps: $(ACCESS_MAP_FILE) $(REVERSE_MAP_FILE)
+maps: $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
 
 tags:
 	@echo generating tags
