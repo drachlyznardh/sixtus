@@ -11,7 +11,6 @@ export TAG_TO_DEP   := $(PREFIX)transform/tag-to-dep.php
 export PAG_TO_TAG   := $(PREFIX)transform/pag-to-tag.php
 export DBS_TO_TOT   := $(PREFIX)transform/dbs-to-tot.php
 export TAG_TO_DBE   := $(PREFIX)transform/tag-to-dbe.php
-export POST_TO_LYZ  := $(PREFIX)transform/post-to-lyz.php
 export TCH_TO_CLOUD := $(PREFIX)transform/tch-to-cloud.php
 
 export SRC_DIR  := $(IN_DIR)src/

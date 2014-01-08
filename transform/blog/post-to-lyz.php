@@ -1,13 +1,11 @@
 <?php
 
-	require_once('utils.php');
-
 	$day     = 0;
 	$month   = 0;
 	$year    = 0;
 	$current = array();
 
-	$in_rows = make_lines_from_file($argv[1]);
+	$in_rows = file($argv[1], FILE_IGNORE_NEW_LINES);
 
 	foreach ($in_rows as $_)
 	{

@@ -24,3 +24,4 @@ blog:
 clean: maps-clean
 	@echo Cleaning
 	@$(MAKE) -f $(PREFIX)deploy/blog.makefile clean
+

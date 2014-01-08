@@ -19,4 +19,5 @@ $(REVERSE_MAP_FILE): $(DIRECT_MAP_FILE)
 	@$(PHP) -f $(DMAP_TO_RMAP) $< $@
 
 maps-clean:
+	@echo "\tCleaning map files"
 	@$(RM) $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
