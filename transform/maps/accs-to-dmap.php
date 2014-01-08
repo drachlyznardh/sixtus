@@ -10,6 +10,7 @@
 	}
 
 	$data = load_content($argv[1]);
+	ksort($data);
 
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
@@ -28,7 +29,7 @@
 						if ($data[$key][$kkey][$kkkey])
 							if ($kkkey) $to_file[] = sprintf("\t%s['%s/%s/%s/'] = '%s';\n",
 								'$direct', $KEY, $KKEY, ucwords($kkkey), $data[$key][$kkey][$kkkey]);
-							else $to_file[] = sprintf("\t%s['%s/%s/'] = '%s'\n",
+							else $to_file[] = sprintf("\t%s['%s/%s/'] = '%s';\n",
 								'$direct', $KEY, $KKEY, $data[$key][$kkey][$kkkey]);
 					}
 				}
