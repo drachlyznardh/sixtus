@@ -17,8 +17,10 @@ tags:
 	@echo generating tags
 
 blog:
-	@echo generating blog pages
+	@echo "Generating blog pages"
+	@$(MAKE) -f $(PREFIX)deploy/blog.makefile
 
 .PHONY: clean
 clean: maps-clean
 	@echo Cleaning
+	@$(MAKE) -f $(PREFIX)deploy/blog.makefile clean

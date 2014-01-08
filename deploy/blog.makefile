@@ -1,17 +1,35 @@
 
 BLOG_DIR := $(SRC_DIR)blog/
 
-POSTS := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
-LYZS  := $(POSTS:.post=.lyz)
+POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
+MONTHS  := $(POSTS:.post=.lyz)
+YEARS   := $(addsuffix index.lyz, $(sort $(dir $(MONTHS))))
+ARCHIVE := $(BLOG_DIR)archive.lyz
 
-all: build
-build: $(LYZS)
+all: months years archive
+
+months: $(MONTHS)
+	echo $(MONTHS)
+
+years: $(YEARS)
+	echo $(YEARS)
+
+archive: $(ARCHIVE)
+	echo $(ARCHIVE)
 
 %.lyz: %.post
-	@echo Generating blog page $< from $@
+	@echo "\tGenerating blog page $< from $@"
 	@mkdir -p $(dir $@)
 	@php5 -f $(POST_TO_LYZ) $< $@
 
-.PHONY: clean deploy
+$(ARCHIVE):
+	touch $@
+
+%index.lyz:
+	touch $@
+
+.PHONY: clean
 clean:
-deploy: build
+	$(RM) $(MONTHS)
+	$(RM) $(YEARS)
+	$(RM) $(ARCHIVE)
