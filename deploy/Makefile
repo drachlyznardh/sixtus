@@ -11,7 +11,7 @@ deploy: build
 	@echo moving resources
 	@echo moving system files
 
-maps: $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
+maps: $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
 
 tags:
 	@echo generating tags
