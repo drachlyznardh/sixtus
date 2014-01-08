@@ -23,6 +23,5 @@ blog:
 .PHONY: clean
 clean: maps-clean
 	@echo Cleaning
-	@$(MAKE) -f $(PREFIX)deploy/maps.makefile clean
 	@$(MAKE) -f $(PREFIX)deploy/blog.makefile clean
 
