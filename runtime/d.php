@@ -132,8 +132,7 @@
 
 	$myindex = 0;
 	$mycount = count($request['path']);
-	#$mymap = $map;
-	$mymap = $direct;
+	$mymap = $map;
 	$mycat = false;
 	$mypath = $request['path'][0];
 	$search['dir'] = '.';
