@@ -4,7 +4,7 @@ CREATE_MAP  := $(TRANSFORM)blog/create-map.php
 CREATE_YEAR := $(TRANSFORM)blog/create-year.php
 UPDATE_MAP  := $(TRANSFORM)blog/update-blog-map.sh
 BLOG_DIR    := $(SRC_DIR)blog/
-BLOG_MAP    := $(BLOG_DIR)blog-map.txt
+BLOG_MAP    := $(BLOG_DIR)blog-map.php
 
 POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
 MONTHS  := $(POSTS:.post=.lyz)

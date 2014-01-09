@@ -1,6 +1,4 @@
 
-blog:
-
 all: deploy
 build: maps tags blog
 
