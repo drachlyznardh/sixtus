@@ -18,7 +18,7 @@
 	$attr['download'] = false;
 	$attr['check'] = false;
 
-	$direct_access_file = substr($request['original'], 1);
+	$direct_access_file = $_SERVER['DOCUMENT_ROOT'].substr($request['original'], 1);
 
 	if (is_file($direct_access_file)) {
 
