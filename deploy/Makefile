@@ -12,9 +12,7 @@ MAKE_PAGES   := $(MAKE) -f $(PREFIX)deploy/pages.makefile
 
 deploy: build
 	@echo moving resources
-	@echo moving system files
 	@$(MAKE_RUNTIME)
-	@echo making pages
 	@$(MAKE_PAGES)
 
 maps: $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
