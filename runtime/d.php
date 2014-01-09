@@ -92,7 +92,41 @@
 		}
 	}
 
-	require_once('direct-map.php');
+	function search_for_page ($attr, $path)
+	{
+		require_once('direct-map.php');
+
+		$short = false;
+		$limit = count($path) - 1;
+		for ($i = 0; $i < $limit; $i++) $short .= ucwords($path[$i]).'/';
+		$long = $short.ucwords($path[$limit]).'/';
+
+		#print_r($keyword);
+		print_r($attr);
+		#print_r($path);
+		#print_r($direct);
+
+		if (isset($direct[$long]))
+		{
+			printf ("Found [%s] Long\n", $long);
+			$target = sprintf("%sindex", strtolower($long));
+		}
+		else if (isset($direct[$short]))
+		{
+			printf ("Found [%s] Short\n", $short);
+			$target = sprintf("%s", substr(strtolower($long), 0, strlen($long) - 1));
+		}
+		
+		if (isset($target))
+		{
+			if ($attr['part']) $target .= '.d/'.$attr['part'];
+			$target .= '.php';
+			
+			printf("Loading file [%s]\n", $target);
+		}
+		else printf("Not found [%s]\n", $keyword);
+	}
+
 	$myindex = 0;
 	$mycount = count($request['path']);
 	#$mymap = $map;
@@ -128,12 +162,14 @@
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
+	search_for_page($attr, $request['path']);
+
 	if ($attr['download'] && is_file($search['include'])) {
 		header('Content-Type: application/pdf');
 		header('Content-Disposition: attachment; filename="'.$search['file'].'.pdf"');
 		readfile($search['include']);
 	} else if (is_file($search['include']))
 		require_once($search['include']);
-	else require_once('sys/404-not-found.php');
+	else require_once('runtime/404-not-found.php');
 	die();
 ?>
