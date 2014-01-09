@@ -102,18 +102,18 @@
 		$long = $short.ucwords($path[$limit]).'/';
 
 		#print_r($keyword);
-		print_r($attr);
+		#print_r($attr);
 		#print_r($path);
 		#print_r($direct);
 
 		if (isset($direct[$long]))
 		{
-			printf ("Found [%s] Long\n", $long);
+			#printf ("Found [%s] Long\n", $long);
 			$target = sprintf("%sindex", strtolower($long));
 		}
 		else if (isset($direct[$short]))
 		{
-			printf ("Found [%s] Short\n", $short);
+			#printf ("Found [%s] Short\n", $short);
 			$target = sprintf("%s", substr(strtolower($long), 0, strlen($long) - 1));
 		}
 		else $target = false;
@@ -123,7 +123,7 @@
 			if ($attr['part']) $target .= '.d/'.$attr['part'];
 			$target .= '.php';
 			
-			printf("Loading file [%s]\n", $target);
+			#printf("Loading file [%s]\n", $target);
 		}
 		else printf("Not found [%s]\n", $keyword);
 
@@ -165,7 +165,9 @@
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
-	$target_file = search_for_page($attr, $request['path']);
+	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($attr, $request['path']);
+	#require_once($target_file);
+	
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
