@@ -21,6 +21,8 @@ export TAG_DIR  := $(IN_DIR).tag/
 export DB_DIR   := $(IN_DIR).db/
 export DEST_DIR := $(OUT_DIR)
 
+export RUNTIME_DIR := $(PREFIX)runtime/
+
 ### Map files
 export ACCESS_MAP_FILE   := $(IN_DIR)access-map.php
 export RUNTIME_CONF_FILE := $(DEST_DIR)runtime/conf.php
