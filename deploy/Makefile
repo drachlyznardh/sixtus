@@ -2,7 +2,7 @@
 all: deploy
 build: maps tags blog
 
-PREFIX := /opt/devel/web/sixtus/
+export PREFIX := /opt/devel/web/sixtus/
 include $(PREFIX)deploy/vars.makefile
 include $(PREFIX)deploy/maps.makefile
 
