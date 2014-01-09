@@ -1,8 +1,8 @@
 <?php
 
-	require_once("sys/runtime.php");
-	require_once("sys/utils.php");
-	require_once("sys/mimes.php");
+	require_once("runtime.php");
+	require_once("utils.php");
+	require_once("mimes.php");
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
@@ -92,7 +92,7 @@
 		}
 	}
 
-	require_once('runtime/direct-map.php');
+	require_once('direct-map.php');
 	$myindex = 0;
 	$mycount = count($request['path']);
 	#$mymap = $map;
