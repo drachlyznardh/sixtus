@@ -1,19 +1,17 @@
 
-SOURCE_FILES  := $(sort $(shell find $(RUNTIME_DIR) -type f))
-RUNTIME_FILES := $(patsubst $(RUNTIME_DIR), $(DEST_DIR), $(SOURCE_FILES))
+RUNTIME_IN_DIR  := $(PREFIX)runtime/
+RUNTIME_OUT_DIR := $(DEST_DIR)runtime/
+
+SOURCE_FILES  := $(sort $(shell find $(RUNTIME_IN_DIR) -type f))
+RUNTIME_FILES := $(patsubst $(RUNTIME_IN_DIR)%, $(RUNTIME_OUT_DIR)%, $(SOURCE_FILES))
 
 all: deploy
-
 deploy: $(RUNTIME_FILES)
-	@echo Deploying runtime files
-	@echo {$(RUNTIME_DIR)}
-	@echo {$(SOURCE_FILES)}
-	@echo {$(RUNTIME_FILES)}
 
-$(DEST_DIR)%: $(RUNTIME_DIR)%
+$(RUNTIME_OUT_DIR)%: $(RUNTIME_IN_DIR)%
 	@echo Linking runtime file $@
 	@mkdir -p $(dir $@)
-	@$(LN_CMD) $< $@
+	@$(CP) $< $@
 
 .PHONY: clean
 clean:
