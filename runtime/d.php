@@ -116,8 +116,9 @@
 			printf ("Found [%s] Short\n", $short);
 			$target = sprintf("%s", substr(strtolower($long), 0, strlen($long) - 1));
 		}
+		else $target = false;
 		
-		if (isset($target))
+		if ($target)
 		{
 			if ($attr['part']) $target .= '.d/'.$attr['part'];
 			$target .= '.php';
@@ -125,6 +126,8 @@
 			printf("Loading file [%s]\n", $target);
 		}
 		else printf("Not found [%s]\n", $keyword);
+
+		return $target;
 	}
 
 	$myindex = 0;
@@ -162,7 +165,11 @@
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
-	search_for_page($attr, $request['path']);
+	$target_file = search_for_page($attr, $request['path']);
+	if (is_file($target_file))
+		require_once($target_file);
+	else require_once('404-not-found.php');
+	die();
 
 	if ($attr['download'] && is_file($search['include'])) {
 		header('Content-Type: application/pdf');
