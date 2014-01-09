@@ -2,6 +2,7 @@
 
 	function scan_for_months ($directory)
 	{
+		$result = array();
 		foreach(scandir($directory) as $file)
 			if (preg_match('/^(..)\.post$/', $file))
 				$result[] = preg_replace('/^(..)\.post$/', '$1', $file);
