@@ -34,8 +34,8 @@
 			<div id="content">
 				<div id="head">
 					<!-- Require_once("Sys/Fragment/Head") -->
-					<?php require_once("sys/fragments/head.php"); ?>
+					<?php require_once("page-head.php"); ?>
 				</div> <!-- Head -->
 				<div id="core">
 					<!-- Require_once("Sys/Fragment/Check") -->
-					<?php require_once('sys/fragments/check.php'); ?>
+					<?php require_once('page-check.php'); ?>
