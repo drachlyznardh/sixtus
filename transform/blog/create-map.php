@@ -20,8 +20,6 @@
 	}
 
 	$result = scan_for_years ($argv[2]);
-	print_r($argv);
-	print_r($result);
 	
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 	foreach (array_keys($result) as $key)
