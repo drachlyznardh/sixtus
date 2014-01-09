@@ -12,18 +12,12 @@ YEARS   := $(addsuffix index.lyz, $(sort $(dir $(MONTHS))))
 ARCHIVE := $(BLOG_DIR)archive.lyz
 
 all: months years archive
-
 months: $(MONTHS)
-	echo $(MONTHS)
-
 years: $(YEARS)
-	echo $(YEARS)
-
 archive: $(ARCHIVE)
-	echo $(ARCHIVE)
 
-$(BLOG_MAP):
-	@echo "\tInitializing blog map $@"
+$(BLOG_MAP): $(POSTS)
+	@echo "\tGenerating blog map $@"
 	@$(PHP) -f $(CREATE_MAP) $@ $(BLOG_DIR)
 
 %.lyz: %.post $(BLOG_MAP)
@@ -32,10 +26,10 @@ $(BLOG_MAP):
 	@php5 -f $(POST_TO_LYZ) $< $@
 
 $(ARCHIVE): $(BLOG_MAP)
-	echo Archive $@
-	touch $@
+	@#echo "\tGenerating archive page $@"
+	@#$(PHP) -f $(CREATE_ARCHIVE) $@ $(BLOG_MAP)
 
-%index.lyz: $(BLOG_MAP)
+%.lyz: $(BLOG_MAP)
 	@echo "\tGenerating year page $@"
 	@$(PHP) -f $(CREATE_YEAR) $@ $(BLOG_MAP)
 
