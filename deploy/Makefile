@@ -1,4 +1,6 @@
 
+blog:
+
 all: deploy
 build: maps tags blog
 
@@ -17,7 +19,6 @@ tags:
 	@echo generating tags
 
 blog:
-	@echo "Generating blog pages"
 	@$(MAKE) -f $(PREFIX)deploy/blog.makefile
 
 .PHONY: clean
