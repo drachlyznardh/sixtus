@@ -25,7 +25,7 @@
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 	foreach (array_keys($result) as $key)
 		if (is_array($result[$key])) foreach ($result[$key] as $kkey)
-			$to_file[] = sprintf("\t%s['%s']['%s'];\n",
+			$to_file[] = sprintf("\t%s['%s'][] = '%s';\n",
 				'$blog_map', $key, $kkey);
 	$to_file[] = sprintf("\n%s%s\n", '?', '>');
 
