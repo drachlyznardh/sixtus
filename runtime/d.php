@@ -31,7 +31,6 @@
 			readfile($direct_access_file);
 			die();
 		} else {
-			#require_once('sys/403-forbidden.php');
 			require_once('sys/404-not-found.php');
 			die();
 		}
