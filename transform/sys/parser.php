@@ -303,7 +303,7 @@
 				printf("\t{\n");
 				$this->deploy_attr();
 				printf("\n");
-				printf("\t\trequire_once('sys/fragments/in-before.php');\n");
+				printf("\t\trequire_once('page-top.php');\n");
 			printf("\t}\n");
 			printf("%s%s\n", '?', '>');
 			printf("<!--[Body/Start]-->\n");
@@ -312,7 +312,7 @@
 			printf("<?php \n");
 			printf("\tif(!\$attr['included'])\n");
 			printf("\t{\n");
-			printf("\t\trequire_once('sys/fragments/in-middle.php');\n");
+			printf("\t\trequire_once('page-middle.php');\n");
 			printf("\t}\n");
 			printf("%s%s\n", '?', '>');
 			printf("<!--[Side/Start]-->\n");
@@ -321,7 +321,7 @@
 			printf("<?php \n");
 			printf("\tif(!\$attr['included'])\n");
 			printf("\t{\n");
-			printf("\t\trequire_once('sys/fragments/in-after.php');\n");
+			printf("\t\trequire_once('page-bottom.php');\n");
 			printf("\t}\n");
 			printf("%s%s\n", '?', '>');
 		}

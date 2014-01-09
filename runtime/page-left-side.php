@@ -5,7 +5,7 @@
 
 <!-- Sys/Fragments/Left-Side [Start] -->
 <div>
-<?php dynamic_include($attr, 'frag/left-nav.php', true, true);?>
+<?php dynamic_include($attr, $_SERVER['DOCUMENT_ROOT'].'frag/left-nav.php', true, true);?>
 <div class="section">
 	<!--div style="width:50%; float:left"><div class="inside"-->
 	<div class="half-left-out"><div class="half-left-in">
@@ -56,7 +56,7 @@
 	<div style="float:none; clear:both"></div>
 </div>
 <br />
-<?php dynamic_include($attr, 'frag/friends.php', true, true);?>
+<?php dynamic_include($attr, $_SERVER['DOCUMENT_ROOT'].'frag/friends.php', true, true);?>
 </div>
 <!-- Sys/Fragments/Left-Side [Stop] -->
 

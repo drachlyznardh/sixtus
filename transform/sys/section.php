@@ -58,7 +58,7 @@
 		public function make_include ($filename, $part)
 		{
 			$this->closeContext();
-			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, false); ?>";
+			$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, false); ?>";
 		}
 
 		private function switchContext($new)
