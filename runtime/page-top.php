@@ -7,16 +7,16 @@
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?=$attr['keywords']?>" />
 		<title><?=$attr['short']?></title>
-		<link rel="stylesheet" type="text/css" href="style/style/<?=($attr['gray']?'gray':'white')?>.css" />
-		<link rel="stylesheet" type="text/css" href="style/style/voices.css" />
-		<link rel="stylesheet" type="text/css" href="style/style/common.css" />
-		<link rel="stylesheet" type="text/css" href="style/style/big-screen.css"
+		<link rel="stylesheet" type="text/css" href="runtime/style/<?=($attr['gray']?'gray':'white')?>.css" />
+		<link rel="stylesheet" type="text/css" href="runtime/style/voices.css" />
+		<link rel="stylesheet" type="text/css" href="runtime/style/common.css" />
+		<link rel="stylesheet" type="text/css" href="runtime/style/big-screen.css"
 				media="screen and (min-device-width: 1024px), projection" />
-		<link rel="stylesheet" type="text/css" href="style/style/wide-screen.css"
+		<link rel="stylesheet" type="text/css" href="runtime/style/wide-screen.css"
 				media="screen and (max-device-width: 1023px) and (min-device-width: 480px)" />
-		<link rel="stylesheet" type="text/css" href="style/style/small-screen.css"
+		<link rel="stylesheet" type="text/css" href="runtime/style/small-screen.css"
 				media="handheld, only screen and (max-device-width: 479px)" />
-		<link rel="shortcut icon" type="image/x-icon" href="style/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 	</head>
 	<!-- $Request[Original] = [<?=$request['original']?>] -->
 	<!-- $Attr[Gray] = [<?=$attr['gray']?>], $Attr[Single] = [<?=$attr['single']?>] -->
