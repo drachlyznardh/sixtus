@@ -19,4 +19,23 @@
 		}
 	}
 
+	function scan_for_years ($keys, $current)
+	{
+		$limit = count($keys);
+		$result = array(false, false);
+
+		for ($i = 0; $i < $limit; $i++)
+			if ($keys[$i] == $current)
+			{
+				$prev = $i - 1;
+				$next = $i + 1;
+				if (isset($keys[$prev])) $result[0] = $keys[$prev];
+				if (isset($keys[$next])) $result[1] = $keys[$next];
+				
+				break;
+			}
+
+		return $result;
+	}
+
 ?>
