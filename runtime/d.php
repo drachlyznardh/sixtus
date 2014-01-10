@@ -108,7 +108,10 @@
 		if (preg_match('/blog/', $path[0]))
 		{
 			#printf("<!-- Blog entry [%s] detected -->\n", $long);
-			$target = substr(strtolower($long), 0, strlen($long) - 1);
+			print_r($path);
+			if (count($path) > 2 or count($path) > 1 and !preg_match('/[0-9][0-9][0-9][0-9]/', $path[1]))
+				$target = substr(strtolower($long), 0, strlen($long) - 1);
+			else $target = sprintf("%sindex", strtolower($long));
 		}
 		else if (isset($direct[$long]))
 		{
