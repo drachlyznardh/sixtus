@@ -366,6 +366,48 @@
 			return;
 		}
 
+		public function deploy_page ($target_file, $unique)
+		{
+			printf("Page file goes into [%s]\n", $target_file);
+
+			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
+
+			### Unique function
+			$unique_fun_name = sprintf('%s', str_replace('/', '_', $unique));
+			$to_file[] = sprintf("\tfunction %s (%s, %s)\n\t{\n",
+				$unique_fun_name, '$attr', '$sec');
+			$to_file[] = sprintf("\t\t%s['%s'] = %s;\n", '$attr', 'included', 'true');
+			foreach ($this->body as $_)
+			{
+				$to_file[] = sprintf("\t\t%s(%s['%s'].'%s.d/%s.php');\n",
+					'require_once', '$_SERVER', 'DOCUMENT_ROOT',
+					$unique, $_->getName());
+				$to_file[] = sprintf("\t\t%s_%s(%s, %s);\n",
+					$unique_fun_name, $_->getName(), '$attr', '$sec');
+			}
+			$to_file[] = sprintf("\t}\n\n");
+			### Unique function
+
+			### Calling unique function
+			$to_file[] = sprintf("\tif(%s['%s']) %s(%s, '%s');\n",
+				'$attr', 'included', $unique_fun_name, '$attr', 'invisible');
+			$to_file[] = sprintf("\telse {\n");
+				$to_file[] = $this->deploy_attr();
+				$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
+			$to_file[] = sprintf("\t\t%s(%s, '%s');\n", $unique_fun_name, '$attr', 'section');
+			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
+			$to_file[] = sprintf("\t\trequire_once(%s['%s'].'%s.d/%s');\n",
+				'$_SERVER', 'DOCUMENT_ROOT', $unique, 'right-side.php');
+			$to_file[] = sprintf("\t\trequire_once('page-bottom.php');\n");
+			$to_file[] = sprintf("\t}\n");
+			$to_file[] = sprintf("\n%s%s\n", '?', '>');
+			### Calling unique function
+
+			file_put_contents($target_file, $to_file);
+			return;
+		}
+
 		public function deploy ($target_file, $target_dir, $unique)
 		{
 			if (count($this->body) > 1)
@@ -374,6 +416,7 @@
 				foreach ($this->body as $_)
 					$this->deploy_tab($target_dir, $_, $unique);
 				$this->deploy_right_side($target_dir);
+				$this->deploy_page($target_file, $unique);
 			}
 			else
 			{
