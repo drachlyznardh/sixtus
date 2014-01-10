@@ -354,10 +354,16 @@
 			return;
 		}
 
-		private function deploy_side()
+		private function deploy_right_side($target_dir)
 		{
+			$target_file = sprintf("%s/%s.php", $target_dir, 'right-side');
+			printf("Side file goes into [%s]\n", $target_file);
+			
 			foreach ($this->side as $_)
-				printf("%s", $_->getContent(false));
+				$to_file[] = $_->getContent(false);
+			
+			file_put_contents($target_file, $to_file);
+			return;
 		}
 
 		public function deploy ($target_file, $target_dir, $unique)
@@ -367,41 +373,12 @@
 				$this->link_tabs();
 				foreach ($this->body as $_)
 					$this->deploy_tab($target_dir, $_, $unique);
+				$this->deploy_right_side($target_dir);
 			}
 			else
 			{
 				$this->deploy_one_tab($target_file, $this->body[0]);
 			}
-
-			/*
-			printf("%s%s\n", '<', '?php');
-			printf("\n");
-			printf("\tif(!\$attr['included'])\n");
-				printf("\t{\n");
-				$this->deploy_attr();
-				printf("\n");
-				printf("\t\trequire_once('page-top.php');\n");
-			printf("\t}\n");
-			printf("%s%s\n", '?', '>');
-			printf("<!--[Body/Start]-->\n");
-			$this->deploy_body();
-			printf("<!--[Body/Stop]-->\n");
-			printf("<?php \n");
-			printf("\tif(!\$attr['included'])\n");
-			printf("\t{\n");
-			printf("\t\trequire_once('page-middle.php');\n");
-			printf("\t}\n");
-			printf("%s%s\n", '?', '>');
-			printf("<!--[Side/Start]-->\n");
-			$this->deploy_side();
-			printf("<!--[Side/Stop]-->\n");
-			printf("<?php \n");
-			printf("\tif(!\$attr['included'])\n");
-			printf("\t{\n");
-			printf("\t\trequire_once('page-bottom.php');\n");
-			printf("\t}\n");
-			printf("%s%s\n", '?', '>');
-			*/
 		}
 	}
 ?>
