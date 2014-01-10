@@ -72,10 +72,10 @@
 			$content[] = '<div class="tab">';
 			if ($this->name)
 				$content[] = sprintf('<a id="%s">', strtoupper($this->name));
-			$content[] = implode($this->content);
+			$content[] = implode("\n", $this->content);
 			$content[] = '</div>';
 
-			return implode($content);
+			return implode("\n", $content);
 			
 			$content = false;
 			$result = false;
