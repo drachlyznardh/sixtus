@@ -13,10 +13,24 @@
 	if ($prev) $to_file[] = sprintf("prev#Blog/%s/#%s\n", $prev, $prev);
 	if ($next) $to_file[] = sprintf("next#Blog/%s/#%s\n", $next, $next);
 	$to_file[] = sprintf("start#page\n");
+
+	### body
 	foreach ($blog_map[$year] as $_)
+	{
+		$to_file[] = sprintf("\tid#%s\n", $_);
 		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n", $year, $_);
+	}
+	### body
+
 	$to_file[] = sprintf("stop#page\n");
 	$to_file[] = sprintf("start#side\n");
+
+	### side
+	$to_file[] = sprintf("\tstitle#%s\n", $year);
+	foreach ($blog_map[$year] as $_)
+		$to_file[] = sprintf("\tp#tid#%s#%s\n", name_that_month($_), $_);
+	### side
+
 	$to_file[] = sprintf("stop#side\n");
 
 	file_put_contents($argv[1], $to_file);
