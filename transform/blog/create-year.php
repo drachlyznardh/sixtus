@@ -13,6 +13,8 @@
 	if ($prev) $to_file[] = sprintf("prev#Blog/%s/#%s\n", $prev, $prev);
 	if ($next) $to_file[] = sprintf("next#Blog/%s/#%s\n", $next, $next);
 	$to_file[] = sprintf("start#page\n");
+	foreach ($blog_map[$year] as $_)
+		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n", $year, $_);
 	$to_file[] = sprintf("stop#page\n");
 	$to_file[] = sprintf("start#side\n");
 	$to_file[] = sprintf("stop#side\n");

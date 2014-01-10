@@ -186,6 +186,9 @@
 					}
 					break;
 				case 'include': $this->make_include($cmd_args); break;
+				case 'require':
+					$this->current->make_require($cmd_attr[1], $cmd_args[1]);
+					break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
