@@ -335,13 +335,14 @@
 			### Unique function
 
 			### Calling unique function
-			$to_file[] = sprintf("\tif(%s['%s']) %s(%s, '%s');\n",
-				'$attr', 'included', $unique_fun_name, '$attr', 'invisible');
-			$to_file[] = sprintf("\telse {\n");
-				$to_file[] = $this->deploy_attr();
-				$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\tif(!%s['%s'])\n\t{\n",
+				'$attr', 'included');
+			$to_file[] = $this->deploy_attr();
+			$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\t\t%s = '%s';\n", '$sec', 'section');
 			$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
-			$to_file[] = sprintf("\t\t%s(%s, '%s');\n", $unique_fun_name, '$attr', 'section');
+			$to_file[] = sprintf("\t\t%s(%s, %s);\n",
+				$unique_fun_name, '$attr', '$sec');
 			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
 			$to_file[] = sprintf("\t\trequire_once(%s['%s'].'%s.d/%s');\n",
 				'$_SERVER', 'DOCUMENT_ROOT', $unique, 'right-side.php');
@@ -389,13 +390,14 @@
 			### Unique function
 
 			### Calling unique function
-			$to_file[] = sprintf("\tif(%s['%s']) %s(%s, '%s');\n",
-				'$attr', 'included', $unique_fun_name, '$attr', 'invisible');
-			$to_file[] = sprintf("\telse {\n");
-				$to_file[] = $this->deploy_attr();
-				$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\tif(!%s['%s'])\n\t{\n",
+				'$attr', 'included');
+			$to_file[] = $this->deploy_attr();
+			$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\t\t%s = '%s';\n", '$sec', 'section');
 			$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
-			$to_file[] = sprintf("\t\t%s(%s, '%s');\n", $unique_fun_name, '$attr', 'section');
+			$to_file[] = sprintf("\t\t%s(%s, %s);\n",
+				$unique_fun_name, '$attr', '$sec');
 			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
 			$to_file[] = sprintf("\t\trequire_once(%s['%s'].'%s.d/%s');\n",
 				'$_SERVER', 'DOCUMENT_ROOT', $unique, 'right-side.php');
