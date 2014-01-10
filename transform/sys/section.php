@@ -271,12 +271,16 @@
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
-			$title = polish_line($cmd_args[1]);
-			$this->content[] = "\n";
 			if ($cmd_attr and $cmd_attr[1] == 'right')
-				$this->content[] = '<h2 class="reverse">'.$title.'</h2>';
-			else $this->content[] = '<h2>'.$title.'</h2>';
-			$this->content[] = "\n";
+				$open_tag = '<h2 class="reverse">';
+			else $open_tag = '<h2>';
+
+			$this->content[] = "\n".$open_tag;
+			if (count($cmd_args) > 2) {
+				array_shift($cmd_args);
+				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+			} else $this->content[] = $cmd_args[1];
+			$this->content[] = '</h2>'."\n";
 		}
 
 		private function make_titler ($lineno, $args, $attr)
