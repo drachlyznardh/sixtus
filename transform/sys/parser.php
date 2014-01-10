@@ -327,7 +327,7 @@
 			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
 			### Unique function
-			$unique_fun_name = sprintf('%s_%s', $unique, $target->getName());
+			$unique_fun_name = sprintf('%s_%s', str_replace('/', '_', $unique), $target->getName());
 			$to_file[] = sprintf("\tfunction %s (%s, %s) {%s%s\n",
 				$unique_fun_name, '$attr', '$sec', '?', '>');
 			$to_file[] = $target->getContent(true);
@@ -343,6 +343,8 @@
 			$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
 			$to_file[] = sprintf("\t\t%s(%s, '%s');\n", $unique_fun_name, '$attr', 'section');
 			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
+			$to_file[] = sprintf("\t\trequire_once(%s['%s'].'%s.d/%s');\n",
+				'$_SERVER', 'DOCUMENT_ROOT', $unique, 'right-side.php');
 			$to_file[] = sprintf("\t\trequire_once('page-bottom.php');\n");
 			$to_file[] = sprintf("\t}\n");
 			$to_file[] = sprintf("\n%s%s\n", '?', '>');
@@ -350,33 +352,6 @@
 
 			file_put_contents($target_file, $to_file);
 			return;
-
-			$to_file[] = sprintf("\tif(!\$attr['included'])\n");
-				$to_file[] = sprintf("\t{\n");
-				$to_file[] = $this->deploy_attr();
-				$to_file[] = sprintf("\n");
-				$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
-			$to_file[] = sprintf("\t}\n");
-			$to_file[] = sprintf("%s%s\n", '?', '>');
-			$to_file[] = sprintf("<!--[Body/Start]-->\n");
-			#$this->de[]$to_file = sploy_body();
-			$to_file[] = sprintf("<!--[Body/Stop]-->\n");
-			$to_file[] = sprintf("<?php \n");
-			$to_file[] = sprintf("\tif(!\$attr['included'])\n");
-			$to_file[] = sprintf("\t{\n");
-			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
-			$to_file[] = sprintf("\t}\n");
-			$to_file[] = sprintf("%s%s\n", '?', '>');
-			$to_file[] = sprintf("<!--[Side/Start]-->\n");
-			#$this->de[]$to_file = sploy_side();
-			$to_file[] = sprintf("<!--[Side/Stop]-->\n");
-			$to_file[] = sprintf("<?php \n");
-			$to_file[] = sprintf("\tif(!\$attr['included'])\n");
-			$to_file[] = sprintf("\t{\n");
-			$to_file[] = sprintf("\t\trequire_once('page-bottom.php');\n");
-			$to_file[] = sprintf("\t}\n");
-			$to_file[] = sprintf("\n%s%s\n", '?', '>');
-
 		}
 
 		private function deploy_side()
