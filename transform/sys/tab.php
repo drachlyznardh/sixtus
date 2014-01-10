@@ -69,6 +69,14 @@
 
 		public function getContent($page)
 		{
+			$content[] = '<div class="tab">';
+			if ($this->name)
+				$content[] = sprintf('<a id="%s">', strtoupper($this->name));
+			$content[] = implode($this->content);
+			$content[] = '</div>';
+
+			return implode($content);
+			
 			$content = false;
 			$result = false;
 			$content = '<div class="tab">';
