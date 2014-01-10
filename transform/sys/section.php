@@ -58,7 +58,7 @@
 		public function make_include ($filename, $part)
 		{
 			$this->closeContext();
-			$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'invisible'); ?>";
+			$this->content[] = "\n<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'invisible'); ?>";
 		}
 
 		private function switchContext($new)
@@ -94,6 +94,7 @@
 			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
+			$this->content[] = "\n";
 			switch ($this->context)
 			{
 				case 'p': $this->content[] = '<p>'; break;
@@ -271,6 +272,7 @@
 		{
 			$this->closeContext();
 			$title = polish_line($cmd_args[1]);
+			$this->content[] = "\n";
 			if ($cmd_attr and $cmd_attr[1] == 'right')
 				$this->content[] = '<h2 class="reverse">'.$title.'</h2>';
 			else $this->content[] = '<h2>'.$title.'</h2>';
@@ -280,6 +282,7 @@
 		private function make_titler ($lineno, $args, $attr)
 		{
 			$this->closeContext();
+			$this->content[] = "\n";
 			$this->content[] = '<h2 class="reverse">'.$args[1].'</h2>';
 			$this->content[] = "\n";
 		}
@@ -291,7 +294,7 @@
 				$open_tag = '<h3 class="reverse">';
 			else $open_tag = '<h3>';
 
-			$this->content[] = $open_tag;
+			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
 				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
