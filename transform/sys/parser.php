@@ -250,24 +250,32 @@
 
 		private function deploy_attr ()
 		{
-			printf("\t\t\$attr['title'] = '$this->title';\n");
-			printf("\t\t\$attr['short'] = '$this->short';\n");
-			printf("\t\t\$attr['subtitle'] = '$this->subtitle';\n");
-			printf("\t\t\$attr['keywords'] = '$this->keywords';\n");
+			$format = "\t\t%s['%s'] = '%s';\n";
+			
+			$to_file[] = sprintf($format, '$attr', 'title', $this->title);
+			$to_file[] = sprintf($format, '$attr', 'short', $this->short);
+			$to_file[] = sprintf($format, '$attr', 'subtitle', $this->subtitle);
+			$to_file[] = sprintf($format, '$attr', 'keywords', $this->keywords);
 			if ($this->force_all_tabs)
-				printf("\t\t\$attr['force_all_tabs'] = true;\n");
+				$to_file[] = sprintf($format, '$attr', 'force_all_tabs', 'true');
 			else if ($this->all_or_one) 
-				printf("\t\t\$attr['all_or_one'] = true;\n");
+				$to_file[] = sprintf($format, '$attr', 'all_or_one', 'true');
 			else 
-				echo("\t\t".'if(!$attr[\'part\'] && $attr[\'single\']) $attr[\'part\'] = \''.$this->body[0]->getName().'\';'."\n");
-			echo("\t\t".'if(!$attr[\'current\']) $attr[\'current\'] = \''.$this->body[0]->getName().'\';'."\n");
-			printf("\n");
+				$to_file[] = sprintf("\t\tif(!%s['part'] && %s['single']) %s['part'] = '%s';\n",
+					'$attr', '$attr', '$attr', $this->body[0]->getName());
+			$to_file[] = sprintf("\t\tif(!%s['current']) %s['current'] = '%s';\n",
+				'$attr', '$attr', $this->body[0]->getName());
+			$to_file[] = sprintf("\n");
 			if ($this->prev)
-				printf("\t\t\$related['prev'] = array('".$this->prev[0]."', '".$this->prev[1]."');\n");
-			else printf("\t\t\$related['prev'] = false;\n");
+				$to_file[] = sprintf("\t\t%s['%s'] = array('%s', '%s');\n",
+					'$related', 'prev', $this->prev[0], $this->prev[1]);
+			else $to_file[] = sprintf("\t\t%s['%s'] = %s;\n", '$related', 'prev', 'false');
 			if ($this->next)
-				printf("\t\t\$related['next'] = array('".$this->next[0]."', '".$this->next[1]."');\n");
-			else printf("\t\t\$related['next'] = false;\n");
+				$to_file[] = sprintf("\t\t%s['%s'] = array('%s', '%s');\n",
+					'$related', 'next', $this->next[0], $this->next[1]);
+			else $to_file[] = sprintf("\t\t%s['%s'] = %s;\n", '$related', 'next', 'false');
+
+			return implode($to_file);
 		}
 
 		private function deploy_body()
@@ -289,14 +297,108 @@
 				printf("%s", $_->getContent(true));
 		}
 
+		private function link_tabs()
+		{
+			$previous = false;
+			$current = false;
+			foreach ($this->body as $_)
+			{
+				$previous = $current;
+				$current = $_;
+
+				if ($previous && $current)
+				{
+					$previous->setNext($current->getName());
+					$current->setPrev($previous->getName());
+				}
+			}
+		}
+
+		private function deploy_one_tab($target_file, $target)
+		{
+			printf("With no tabs, it goes into [%s]\n", $target_file);
+		}
+
+		private function deploy_tab($target_dir, $target, $unique)
+		{
+			$target_file = sprintf("%s/%s.php", $target_dir, $target->getName());
+			printf("Tab[%s] goes into [%s]\n", $target->getName(), $target_file);
+
+			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
+
+			### Unique function
+			$unique_fun_name = sprintf('%s_%s', $unique, $target->getName());
+			$to_file[] = sprintf("\tfunction %s (%s, %s) {%s%s\n",
+				$unique_fun_name, '$attr', '$sec', '?', '>');
+			$to_file[] = $target->getContent(true);
+			$to_file[] = sprintf("%s%s }\n\n", '<', '?php');
+			### Unique function
+
+			### Calling unique function
+			$to_file[] = sprintf("\tif(%s['%s']) %s(%s, '%s');\n",
+				'$attr', 'included', $unique_fun_name, '$attr', 'invisible');
+			$to_file[] = sprintf("\telse {\n");
+				$to_file[] = $this->deploy_attr();
+				$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
+			$to_file[] = sprintf("\t\t%s(%s, '%s');\n", $unique_fun_name, '$attr', 'section');
+			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
+			$to_file[] = sprintf("\t\trequire_once('page-bottom.php');\n");
+			$to_file[] = sprintf("\t}\n");
+			$to_file[] = sprintf("\n%s%s\n", '?', '>');
+			### Calling unique function
+
+			file_put_contents($target_file, $to_file);
+			return;
+
+			$to_file[] = sprintf("\tif(!\$attr['included'])\n");
+				$to_file[] = sprintf("\t{\n");
+				$to_file[] = $this->deploy_attr();
+				$to_file[] = sprintf("\n");
+				$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
+			$to_file[] = sprintf("\t}\n");
+			$to_file[] = sprintf("%s%s\n", '?', '>');
+			$to_file[] = sprintf("<!--[Body/Start]-->\n");
+			#$this->de[]$to_file = sploy_body();
+			$to_file[] = sprintf("<!--[Body/Stop]-->\n");
+			$to_file[] = sprintf("<?php \n");
+			$to_file[] = sprintf("\tif(!\$attr['included'])\n");
+			$to_file[] = sprintf("\t{\n");
+			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
+			$to_file[] = sprintf("\t}\n");
+			$to_file[] = sprintf("%s%s\n", '?', '>');
+			$to_file[] = sprintf("<!--[Side/Start]-->\n");
+			#$this->de[]$to_file = sploy_side();
+			$to_file[] = sprintf("<!--[Side/Stop]-->\n");
+			$to_file[] = sprintf("<?php \n");
+			$to_file[] = sprintf("\tif(!\$attr['included'])\n");
+			$to_file[] = sprintf("\t{\n");
+			$to_file[] = sprintf("\t\trequire_once('page-bottom.php');\n");
+			$to_file[] = sprintf("\t}\n");
+			$to_file[] = sprintf("\n%s%s\n", '?', '>');
+
+		}
+
 		private function deploy_side()
 		{
 			foreach ($this->side as $_)
 				printf("%s", $_->getContent(false));
 		}
 
-		public function deploy ()
+		public function deploy ($target_file, $target_dir, $unique)
 		{
+			if (count($this->body) > 1)
+			{
+				$this->link_tabs();
+				foreach ($this->body as $_)
+					$this->deploy_tab($target_dir, $_, $unique);
+			}
+			else
+			{
+				$this->deploy_one_tab($target_file, $this->body[0]);
+			}
+
+			/*
 			printf("%s%s\n", '<', '?php');
 			printf("\n");
 			printf("\tif(!\$attr['included'])\n");
@@ -324,6 +426,7 @@
 			printf("\t\trequire_once('page-bottom.php');\n");
 			printf("\t}\n");
 			printf("%s%s\n", '?', '>');
+			*/
 		}
 	}
 ?>

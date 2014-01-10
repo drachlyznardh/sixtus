@@ -50,13 +50,13 @@ $(RMAP_FILE): $(MAP_FILE)
 #File generation
 $(DEST_DIR)%.php: $(SRC_DIR)%.lyz
 	@echo Generating page $@
-	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
+	@mkdir -p $(patsubst %.php, %, $@).d
+	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< $@ $(patsubst %.php, %, $@).d $(patsubst $(SRC_DIR)%.lyz, %, $<)
 
 $(DEST_DIR)%.php: $(SRC_DIR)%.pag
 	@echo Generating page $@
 	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
+	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< $@ $(dir $@)
 
 #File linking
 $(DEST_DIR)%: $(RES_DIR)%
