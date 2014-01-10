@@ -16,7 +16,7 @@
 			foreach ($this->content as $_)
 				$content .= $_;
 
-			$result = "\n".'<div class="<?=($attr[\'sections\']?\'section\':\'invisible\')?>">';
+			$result = "\n".'<div class="<?=$sec?>">';
 			$result .= $content;
 			$result .= '</div>'."\n";
 
@@ -58,7 +58,7 @@
 		public function make_include ($filename, $part)
 		{
 			$this->closeContext();
-			$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, false); ?>";
+			$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'invisible'); ?>";
 		}
 
 		private function switchContext($new)
