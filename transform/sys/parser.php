@@ -322,7 +322,7 @@
 		private function deploy_tab($target_dir, $target, $unique)
 		{
 			$target_file = sprintf("%s/%s.php", $target_dir, $target->getName());
-			printf("Tab[%s] goes into [%s]\n", $target->getName(), $target_file);
+			#printf("Tab[%s] goes into [%s]\n", $target->getName(), $target_file);
 
 			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
@@ -358,7 +358,7 @@
 		private function deploy_right_side($target_dir)
 		{
 			$target_file = sprintf("%s/%s.php", $target_dir, 'right-side');
-			printf("Side file goes into [%s]\n", $target_file);
+			#printf("Side file goes into [%s]\n", $target_file);
 			
 			foreach ($this->side as $_)
 				$to_file[] = $_->getContent(false);
@@ -369,7 +369,7 @@
 
 		public function deploy_page ($target_file, $unique)
 		{
-			printf("Page file goes into [%s]\n", $target_file);
+			#printf("Page file goes into [%s]\n", $target_file);
 
 			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
