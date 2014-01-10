@@ -105,7 +105,12 @@
 		#print_r($path);
 		#print_r($direct);
 
-		if (isset($direct[$long]))
+		if (preg_match('/blog/', $path[0]))
+		{
+			#printf("<!-- Blog entry [%s] detected -->\n", $long);
+			$target = substr(strtolower($long), 0, strlen($long) - 1);
+		}
+		else if (isset($direct[$long]))
 		{
 			#printf ("Found [%s] Long\n", $long);
 			$target = sprintf("%sindex", strtolower($long));
