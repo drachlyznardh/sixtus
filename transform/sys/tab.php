@@ -46,7 +46,7 @@
 					$this->current = null;
 				}
 
-				$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, true); ?>";
+				$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'section'); ?>";
 			}
 		}
 
@@ -69,6 +69,14 @@
 
 		public function getContent($page)
 		{
+			$content[] = '<div class="tab">';
+			if ($this->name)
+				$content[] = sprintf('<a id="%s">', strtoupper($this->name));
+			$content[] = implode("\n", $this->content);
+			$content[] = '</div>';
+
+			return implode("\n", $content);
+			
 			$content = false;
 			$result = false;
 			$content = '<div class="tab">';

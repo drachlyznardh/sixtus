@@ -4,8 +4,10 @@
 	require_once('sys/tab.php');
 	require_once('sys/parser.php');
 
+	print_r($argv);
+
 	$p = new Parser($argv[1]);
 	$p->parse($argv[2]);
-	$p->deploy();
+	$p->deploy($argv[3], $argv[4], $argv[5]);
 
 ?>
