@@ -23,7 +23,7 @@ $(BLOG_MAP): $(POSTS)
 	@$(PHP) -f $(CREATE_MAP) $@ $(BLOG_DIR)
 
 %.lyz: %.post $(BLOG_MAP)
-	@echo Generating blog page $< from $@
+	@echo Generating blog page $@ from $<
 	@mkdir -p $(dir $@)
 	@php5 -f $(POST_TO_LYZ) $< $@
 

@@ -316,7 +316,7 @@
 
 		private function deploy_one_tab($target_file, $unique)
 		{
-			printf("With no tabs, it goes into [%s]\n", $target_file);
+			#printf("With no tabs, it goes into [%s]\n", $target_file);
 
 			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
