@@ -94,7 +94,7 @@
 			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
-			$this->content[] = "\n";
+			#$this->content[] = "\n";
 			switch ($this->context)
 			{
 				case 'p': $this->content[] = '<p>'; break;
@@ -228,7 +228,7 @@
 		{
 			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->make_text($cmd_args[1]);
+			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
 		private function make_c ($index, $cmd_args, $cmd_attr)

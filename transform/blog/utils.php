@@ -38,4 +38,25 @@
 		return $result;
 	}
 
+	function dump_that_year ($year, $months)
+	{
+		$format = "\n\t\tlink#Blog/%s/%s#%s";
+		
+		for ($i = 0; $i < 4; $i++)
+		{
+			$result[] = "\n\tp#";
+			for ($j = 0; $j < 3; $j++)
+			{
+				$month = sprintf('%02d', $i * 3 + $j + 1);
+				if ($j) $result[] = "\n\t\t/";
+				if (array_search($month, $months) !== false)
+					$result[] = sprintf($format,
+						$year, $month, name_that_month($month));
+				else $result[] = sprintf("\n\t\t%s", name_that_month($month));
+			}
+		}
+
+		return implode($result);
+	}
+
 ?>
