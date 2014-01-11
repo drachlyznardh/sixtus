@@ -468,9 +468,40 @@
 			return;
 		}
 
+		private function write_content_file ($target, $unique)
+		{
+			$target_file = sprintf('%scontent.php', $target);
+			printf("\tPutting content into [%s]\n", $target_file);
+		
+			if (count($this->body) > 1)
+			{
+				$to_file[] = sprintf("%s%s function %s_content (%s, %s) {\n",
+					'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec');
+				foreach($this->body as $_)
+				{
+					$to_file[] = sprintf("\trequire_once(%s['%s'].'%stab-%s.php');\n",
+						'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
+					$to_file[] = sprintf("\t%s_%s (%s, %s);\n",
+						str_replace('/', '_', $unique), $_->getName(), '$attr', '$sec');
+				}
+				$to_file[] = sprintf("} %s%s\n", '?', '>');
+			}
+			else
+			{
+				$to_file[] = sprintf("%s%s function %s_content (%s, %s) { %s%s\n",
+					'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec', '?', '>');
+				$to_file[] = $this->body[0]->getContent(true);
+				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
+			}
+
+			file_put_contents($target_file, $to_file);
+			return;
+		}
+
 		public function deploy ($target, $unique)
 		{
 			$this->write_side_file($target, $unique);
+			$this->write_content_file($target, $unique);
 			return;
 			
 			if (count($this->body) > 1)
