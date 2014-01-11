@@ -25,7 +25,7 @@ $(BLOG_MAP): $(POSTS)
 %.lyz: %.post $(BLOG_MAP)
 	@echo Generating blog page $@ from $<
 	@mkdir -p $(dir $@)
-	@php5 -f $(POST_TO_LYZ) $< $@
+	@php5 -f $(POST_TO_LYZ) $< $@ $(BLOG_MAP)
 
 $(ARCHIVE): $(BLOG_MAP)
 	@echo Generating archive page $@

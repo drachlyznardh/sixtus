@@ -1,6 +1,7 @@
 <?php
 
 	require_once('utils.php');
+	require_once($argv[3]);
 
 	$_ = explode('/', $argv[2]);
 	$limit = count($_);
@@ -38,6 +39,29 @@
 
 	####
 
+	function scan_for_month ($month, $year, $map)
+	{
+		$limit = count($map);
+		$result[] = false;
+		$result[] = false;
+
+		$key = array_search($month, $map[$year]);
+		if (isset($map[$year][$key - 1]))
+		{
+			$result[0][] = $year;
+			$result[0][] = sprintf('%02d', $map[$year][$key - 1]);
+		}
+
+		$key = array_search($month, $map[$year]);
+		if (isset($map[$year][$key + 1]))
+		{
+			$result[1][] = $year;
+			$result[1][] = sprintf('%02d', $map[$year][$key + 1]);
+		}
+
+		return $result;
+	}
+
 	function prev_year($month, $year)
 	{
 		if ($month == 1) return $year - 1;
@@ -52,11 +76,14 @@
 
 	ksort($out_rows);
 	$out_rows = array_reverse($out_rows, true);
+	list($prev, $next) = scan_for_month($month, $year, $blog_map);
 	$output[] = sprintf("title#%s#%s %s\n", $year, name_that_month($month), $year);
-	$output[] = sprintf("prev#Blog/%s/%s/#%s@ %s\n",
-		$year, $month, name_that_month($month - 1), prev_year($month, $year));
-	$output[] = sprintf("next#Blog/%s/%s/#%s@ %s\n",
-		$year, $month, name_that_month($month + 1), next_year($month, $year));
+	if ($prev)
+		$output[] = sprintf("prev#Blog/%s/%02d/#%s@ %s\n",
+			$prev[0], $prev[1], name_that_month($prev[1]), $prev[0]);
+	if ($next)
+		$output[] = sprintf("next#Blog/%s/%02d/#%s@ %s\n",
+			$year[1], $next[1], name_that_month($next[1]), $next[0]);
 	$output[] = sprintf("tabs#all_or_one\n");
 	$output[] = sprintf("start#page\n");
 
