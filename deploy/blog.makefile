@@ -10,7 +10,7 @@ BLOG_MAP := $(BLOG_DIR)blog-map.php
 
 POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
 MONTHS  := $(POSTS:.post=.lyz)
-YEARS   := $(addsuffix index.lyz, $(sort $(dir $(MONTHS))))
+YEARS   := $(patsubst %/, %.lyz, $(sort $(dir $(MONTHS))))
 ARCHIVE := $(BLOG_DIR)archivio.lyz
 
 all: months years archive
