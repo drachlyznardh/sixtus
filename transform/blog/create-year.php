@@ -6,7 +6,8 @@
 	require_once($argv[2]);
 
 	$year = split('/', $argv[1]);
-	$year = $year[count($year) - 2];
+	$year = $year[count($year) - 1];
+	$year = substr($year, 0, 4);
 	list($prev, $next) = scan_for_years(array_keys($blog_map), $year);
 
 	$to_file[] = sprintf("title#Notizie %s#Tutte le notizie del %s\n", $year, $year);
