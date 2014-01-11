@@ -77,7 +77,8 @@
 	ksort($out_rows);
 	$out_rows = array_reverse($out_rows, true);
 	list($prev, $next) = scan_for_month($month, $year, $blog_map);
-	$output[] = sprintf("title#%s#%s %s\n", $year, name_that_month($month), $year);
+	$output[] = sprintf("title#%s %s#Le notizie di %s\n",
+		name_that_month($month), $year, name_that_month($month));
 	if ($prev)
 		$output[] = sprintf("prev#Blog/%s/%02d/#%s@ %s\n",
 			$prev[0], $prev[1], name_that_month($prev[1]), $prev[0]);
