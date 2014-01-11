@@ -324,9 +324,9 @@
 					'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec');
 				foreach($this->body as $_)
 				{
-					$to_file[] = sprintf("\trequire_once(%s['%s'].'%stab-%s.php');\n",
+					$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
 						'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
-					$to_file[] = sprintf("\t%s_%s (%s, %s);\n",
+					$to_file[] = sprintf("\t%s_tab_%s (%s, %s);\n",
 						str_replace('/', '_', $unique), $_->getName(), '$attr', '$sec');
 				}
 				$to_file[] = sprintf("} %s%s\n", '?', '>');
@@ -380,12 +380,34 @@
 			return;
 		}
 
+		private function write_tab_file ($target, $unique)
+		{
+			if (count($this->body) < 2) return;
+
+			$prefix = str_replace('/', '_', $unique);
+
+			foreach ($this->body as $_)
+			{
+				$to_file = array();
+				$target_file = sprintf('%stab-%s.php', $target, $_->getName());
+				printf("\tPutting tab content into [%s]\n", $target_file);
+
+				$to_file[] = sprintf("%s%s function %s_tab_%s (%s, %s) { %s%s\n",
+					'<', '?php', $prefix, $_->getName(), '$attr','$sec', '?', '>');
+				$to_file[] = $_->getContent(true);
+				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
+
+				file_put_contents($target_file, $to_file);
+			}
+		}
+
 		public function deploy ($target, $unique)
 		{
 			$this->link_tabs();
 			$this->write_side_file($target, $unique);
 			$this->write_content_file($target, $unique);
 			$this->write_page_file($target, $unique);
+			$this->write_tab_file($target, $unique);
 			return;
 		}
 	}
