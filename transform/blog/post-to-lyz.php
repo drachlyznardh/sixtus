@@ -39,39 +39,61 @@
 
 	####
 
+	function last_month_of_prev_year($year, $map)
+	{
+		$key = array_keys($map);
+		$index = array_search($year, $key);
+
+		if (isset($key[$index - 1]))
+		{
+			$one = $key[$index - 1];
+			$two = $map[$one];
+			$three = $two[count($two) - 1];
+			
+			printf("Prev is %s/%s\n", $three, $one);
+			print_r($map[$one]);
+			return array($one, $three);
+			
+		} else return false;
+		printf("\n\t%s previous of %s\n", $key[$index - 1], $key[$index]);
+	}
+
+	function first_month_of_next_year($year, $map)
+	{
+		$key = array_keys($map);
+		$index = array_search($year, $key);
+
+		if (isset($key[$index + 1]))
+		{
+			$one = $key[$index + 1];
+			$two = $one[0];
+			return array($one, $two);
+			
+		} else return false;
+		printf("\n\t%s next of %s\n", $key[$index+1], $key[$index]);
+	}
+
 	function scan_for_month ($month, $year, $map)
 	{
 		$limit = count($map);
-		$result[] = false;
-		$result[] = false;
+		$result[0] = false;
+		$result[1] = false;
 
 		$key = array_search($month, $map[$year]);
 		if (isset($map[$year][$key - 1]))
 		{
 			$result[0][] = $year;
 			$result[0][] = sprintf('%02d', $map[$year][$key - 1]);
-		}
+		} else $result[0] = last_month_of_prev_year($year, $map);
 
 		$key = array_search($month, $map[$year]);
 		if (isset($map[$year][$key + 1]))
 		{
 			$result[1][] = $year;
 			$result[1][] = sprintf('%02d', $map[$year][$key + 1]);
-		}
+		} else $result[1] = first_month_of_next_year($year, $map);
 
 		return $result;
-	}
-
-	function prev_year($month, $year)
-	{
-		if ($month == 1) return $year - 1;
-		return $year;
-	}
-
-	function next_year($month, $year)
-	{
-		if ($month == 12) return $year + 1;
-		return $year;
 	}
 
 	ksort($out_rows);
@@ -84,7 +106,7 @@
 			$prev[0], $prev[1], name_that_month($prev[1]), $prev[0]);
 	if ($next)
 		$output[] = sprintf("next#Blog/%s/%02d/#%s@ %s\n",
-			$year[1], $next[1], name_that_month($next[1]), $next[0]);
+			$next[0], $next[1], name_that_month($next[1]), $next[0]);
 	$output[] = sprintf("tabs#all_or_one\n");
 	$output[] = sprintf("start#page\n");
 
