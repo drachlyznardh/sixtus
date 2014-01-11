@@ -29,7 +29,7 @@
 	### side
 	$to_file[] = sprintf("\tstitle#%s\n", $year);
 	foreach ($blog_map[$year] as $_)
-		$to_file[] = sprintf("\tp#tid#%s#%s\n", name_that_month($_), $_);
+		$to_file[] = sprintf("\tp#tid#%s##%s\n", name_that_month($_), $_);
 	### side
 
 	$to_file[] = sprintf("stop#side\n");
