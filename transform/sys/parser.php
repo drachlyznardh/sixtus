@@ -453,8 +453,26 @@
 			return;
 		}
 
-		public function deploy ($target_file, $target_dir, $unique)
+		private function write_side_file ($target, $unique)
 		{
+			$target_file = sprintf('%sright-side.php', $target);
+			printf("\tPutting side content into [%s]\n", $target_file);
+		
+			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s) { %s%s\n",
+				'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec', '?', '>');
+			foreach($this->side as $_)
+				$to_file[] = $_->getContent(false);
+			$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
+
+			file_put_contents($target_file, $to_file);
+			return;
+		}
+
+		public function deploy ($target, $unique)
+		{
+			$this->write_side_file($target, $unique);
+			return;
+			
 			if (count($this->body) > 1)
 			{
 				$this->link_tabs();
