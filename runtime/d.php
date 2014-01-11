@@ -1,8 +1,8 @@
 <?php
 
-	require_once("sys/runtime.php");
-	require_once("sys/utils.php");
-	require_once("sys/mimes.php");
+	require_once("runtime.php");
+	require_once("utils.php");
+	require_once("mimes.php");
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
@@ -18,7 +18,7 @@
 	$attr['download'] = false;
 	$attr['check'] = false;
 
-	$direct_access_file = substr($request['original'], 1);
+	$direct_access_file = $_SERVER['DOCUMENT_ROOT'].substr($request['original'], 1);
 
 	if (is_file($direct_access_file)) {
 
@@ -31,7 +31,6 @@
 			readfile($direct_access_file);
 			die();
 		} else {
-			#require_once('sys/403-forbidden.php');
 			require_once('sys/404-not-found.php');
 			die();
 		}
@@ -92,6 +91,52 @@
 		}
 	}
 
+	function search_for_page ($attr, $path)
+	{
+		require_once('direct-map.php');
+
+		$short = false;
+		$limit = count($path) - 1;
+		for ($i = 0; $i < $limit; $i++) $short .= ucwords($path[$i]).'/';
+		$long = $short.ucwords($path[$limit]).'/';
+
+		#print_r($keyword);
+		#print_r($attr);
+		#print_r($path);
+		#print_r($direct);
+
+		if (preg_match('/blog/', $path[0]))
+		{
+			#printf("<!-- Blog entry [%s] detected -->\n", $long);
+			#if (count($path) > 2 or count($path) > 1 and !preg_match('/[0-9][0-9][0-9][0-9]/', $path[1]))
+			#	$target = substr(strtolower($long), 0, strlen($long) - 1);
+			#else 
+			$target = sprintf("%spage", strtolower($long));
+		}
+		else if (isset($direct[$long]))
+		{
+			#printf ("Found [%s] Long\n", $long);
+			$target = sprintf("%sindex", strtolower($long));
+		}
+		else if (isset($direct[$short]))
+		{
+			#printf ("Found [%s] Short\n", $short);
+			$target = sprintf("%s", substr(strtolower($long), 0, strlen($long) - 1));
+		}
+		else $target = false;
+		
+		if ($target)
+		{
+			#if ($attr['part']) $target .= '.d/'.$attr['part'];
+			$target .= '.php';
+			
+			#printf("Loading file [%s]\n", $target);
+		}
+		else printf("Not found [%s]\n", $keyword);
+
+		return $target;
+	}
+
 	$myindex = 0;
 	$mycount = count($request['path']);
 	$mymap = $map;
@@ -126,12 +171,20 @@
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
 
+	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($attr, $request['path']);
+	#require_once($target_file);
+	
+	if (is_file($target_file))
+		require_once($target_file);
+	else require_once('404-not-found.php');
+	die();
+
 	if ($attr['download'] && is_file($search['include'])) {
 		header('Content-Type: application/pdf');
 		header('Content-Disposition: attachment; filename="'.$search['file'].'.pdf"');
 		readfile($search['include']);
 	} else if (is_file($search['include']))
 		require_once($search['include']);
-	else require_once('sys/404-not-found.php');
+	else require_once('runtime/404-not-found.php');
 	die();
 ?>

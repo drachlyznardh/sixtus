@@ -46,7 +46,7 @@
 					$this->current = null;
 				}
 
-				$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, true); ?>";
+				$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'section'); ?>";
 			}
 		}
 
@@ -69,6 +69,14 @@
 
 		public function getContent($page)
 		{
+			$content[] = '<div class="tab">';
+			if ($this->name)
+				$content[] = sprintf('<a id="%s">', strtoupper($this->name));
+			$content[] = implode("\n", $this->content);
+			$content[] = '</div>';
+
+			return implode("\n", $content);
+			
 			$content = false;
 			$result = false;
 			$content = '<div class="tab">';
@@ -94,6 +102,20 @@
 			$result .= "<?php } ?>\n";
 
 			return $result;
+		}
+
+		public function make_require ($part, $file)
+		{
+			switch ($part)
+			{
+				case 'side':
+					$format = "<?php require(%s['%s'].'%s.d/right-side.php'); ?>";
+					$this->content[] = sprintf($format,
+						'$_SERVER', 'DOCUMENT_ROOT', $file);
+					break;
+				default:
+					die("Tab->Make_Require: [$part] unknown.\n");	
+			}
 		}
 	}
 ?>
