@@ -2,20 +2,17 @@
 
 	require_once('utils.php');
 
-	$day     = 0;
-	$month   = 0;
-	$year    = 0;
-	$current = array();
+	$_ = explode('/', $argv[2]);
+	$limit = count($_);
+	$year = $_[$limit - 2];
+	$month = substr($_[$limit - 1], 0, 2);
 
+	$current = array();
 	$in_rows = file($argv[1], FILE_IGNORE_NEW_LINES);
 
 	foreach ($in_rows as $_)
 	{
-		if (preg_match('/blog#/', $_))
-		{
-			list($_, $year, $month) = split('#', $_);
-		}
-		else if (preg_match('/post#/', $_))
+		if (preg_match('/post#/', $_))
 		{
 			if (count($current) > 0) $out_rows[$day][] = $current;
 			list($_, $day, $title) = split('#', $_);
