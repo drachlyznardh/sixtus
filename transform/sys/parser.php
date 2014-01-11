@@ -456,7 +456,7 @@
 		private function write_side_file ($target, $unique)
 		{
 			$target_file = sprintf('%sright-side.php', $target);
-			printf("\tPutting side content into [%s]\n", $target_file);
+			#printf("\tPutting side content into [%s]\n", $target_file);
 		
 			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s) { %s%s\n",
 				'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec', '?', '>');
@@ -471,7 +471,7 @@
 		private function write_content_file ($target, $unique)
 		{
 			$target_file = sprintf('%scontent.php', $target);
-			printf("\tPutting content into [%s]\n", $target_file);
+			#printf("\tPutting content into [%s]\n", $target_file);
 		
 			if (count($this->body) > 1)
 			{
@@ -503,7 +503,7 @@
 			$header = "\n\t### %s\n";
 			$prefix = str_replace('/', '_', $unique);
 			$target_file = sprintf('%spage.php', $target);
-			printf("\tPutting page data into [%s]\n", $target_file);
+			#printf("\tPutting page data into [%s]\n", $target_file);
 		
 			$to_file[] = sprintf("%s%s if (!%s['%s']) {\n",
 				'<', '?php', '$attr', 'included');
