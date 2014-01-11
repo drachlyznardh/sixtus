@@ -253,7 +253,7 @@
 
 		private function deploy_attr ()
 		{
-			$format = "\t\t%s['%s'] = '%s';\n";
+			$format = "\t%s['%s'] = '%s';\n";
 			
 			$to_file[] = sprintf($format, '$attr', 'title', $this->title);
 			$to_file[] = sprintf($format, '$attr', 'short', $this->short);
@@ -264,19 +264,19 @@
 			else if ($this->all_or_one) 
 				$to_file[] = sprintf($format, '$attr', 'all_or_one', 'true');
 			else 
-				$to_file[] = sprintf("\t\tif(!%s['part'] && %s['single']) %s['part'] = '%s';\n",
+				$to_file[] = sprintf("\tif(!%s['part'] && %s['single']) %s['part'] = '%s';\n",
 					'$attr', '$attr', '$attr', $this->body[0]->getName());
-			$to_file[] = sprintf("\t\tif(!%s['current']) %s['current'] = '%s';\n",
+			$to_file[] = sprintf("\tif(!%s['current']) %s['current'] = '%s';\n",
 				'$attr', '$attr', $this->body[0]->getName());
 			$to_file[] = sprintf("\n");
 			if ($this->prev)
-				$to_file[] = sprintf("\t\t%s['%s'] = array('%s', '%s');\n",
+				$to_file[] = sprintf("\t%s['%s'] = array('%s', '%s');\n",
 					'$related', 'prev', $this->prev[0], $this->prev[1]);
-			else $to_file[] = sprintf("\t\t%s['%s'] = %s;\n", '$related', 'prev', 'false');
+			else $to_file[] = sprintf("\t%s['%s'] = %s;\n", '$related', 'prev', 'false');
 			if ($this->next)
-				$to_file[] = sprintf("\t\t%s['%s'] = array('%s', '%s');\n",
+				$to_file[] = sprintf("\t%s['%s'] = array('%s', '%s');\n",
 					'$related', 'next', $this->next[0], $this->next[1]);
-			else $to_file[] = sprintf("\t\t%s['%s'] = %s;\n", '$related', 'next', 'false');
+			else $to_file[] = sprintf("\t%s['%s'] = %s;\n", '$related', 'next', 'false');
 
 			return implode($to_file);
 		}
@@ -498,10 +498,48 @@
 			return;
 		}
 
+		private function write_page_file ($target, $unique)
+		{
+			$header = "\n\t### %s\n";
+			$prefix = str_replace('/', '_', $unique);
+			$target_file = sprintf('%spage.php', $target);
+			printf("\tPutting page data into [%s]\n", $target_file);
+		
+			$to_file[] = sprintf("%s%s if (!%s['%s']) {\n",
+				'<', '?php', '$attr', 'included');
+			
+			### data
+			$to_file[] = sprintf($header, 'data');
+			$to_file[] = $this->deploy_attr();
+			
+			### settings
+			$to_file[] = sprintf($header, 'settings');
+			$to_file[] = sprintf("\t%s = '%s';\n", '$sec', 'section');
+			$to_file[] = sprintf("\t%s['%s'] = %s;\n", '$attr', 'included', 'true');
+			
+			### content
+			$to_file[] = sprintf($header, 'content');
+			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-top.php');
+			$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/content.php');\n",
+				'$_SERVER', 'DOCUMENT_ROOT', $unique);
+			$to_file[] = sprintf("\t%s_content (%s, %s);\n", $prefix, '$attr', '$sec');
+			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-middle.php');
+			$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/right-side.php');\n",
+				'$_SERVER', 'DOCUMENT_ROOT', $unique);
+			$to_file[] = sprintf("\t%s_right_side (%s, %s);\n", $prefix, '$attr', '$sec');
+			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-bottom.php');
+			
+			$to_file[] = sprintf("} %s%s\n", '?', '>');
+
+			file_put_contents($target_file, $to_file);
+			return;
+		}
+
 		public function deploy ($target, $unique)
 		{
 			$this->write_side_file($target, $unique);
 			$this->write_content_file($target, $unique);
+			$this->write_page_file($target, $unique);
 			return;
 			
 			if (count($this->body) > 1)
