@@ -15,10 +15,11 @@ YEARS   := $(patsubst %/, %.lyz, $(sort $(dir $(MONTHS))))
 ARCHIVE := $(BLOG_DIR)archivio.lyz
 INDEX   := $(SRC_DIR)blog.lyz
 
-all: months years archive
+all: months years archive index
 months: $(MONTHS)
 years: $(YEARS)
 archive: $(ARCHIVE)
+index: $(INDEX)
 
 $(BLOG_MAP): $(POSTS)
 	@echo Generating blog map $@
