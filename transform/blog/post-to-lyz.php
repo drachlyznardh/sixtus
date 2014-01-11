@@ -118,7 +118,7 @@
 			$output[] = sprintf("tab#%s\n", $post['tab']);
 			$output[] = sprintf("\tp#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s\n",
 				$year, $month, $day, $month, $year, $post['tab']);
-			$output[] = sprintf("\ttitle#%s\n", $title);
+			$output[] = sprintf("\ttitle#%s\n", $post['title']);
 
 			if (isset($post['content'])) foreach ($post['content'] as $line) $output[] = sprintf("%s\n", $line);
 		}
