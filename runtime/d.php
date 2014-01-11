@@ -108,9 +108,10 @@
 		if (preg_match('/blog/', $path[0]))
 		{
 			#printf("<!-- Blog entry [%s] detected -->\n", $long);
-			if (count($path) > 2 or count($path) > 1 and !preg_match('/[0-9][0-9][0-9][0-9]/', $path[1]))
-				$target = substr(strtolower($long), 0, strlen($long) - 1);
-			else $target = sprintf("%sindex", strtolower($long));
+			#if (count($path) > 2 or count($path) > 1 and !preg_match('/[0-9][0-9][0-9][0-9]/', $path[1]))
+			#	$target = substr(strtolower($long), 0, strlen($long) - 1);
+			#else 
+			$target = sprintf("%spage", strtolower($long));
 		}
 		else if (isset($direct[$long]))
 		{
@@ -126,7 +127,7 @@
 		
 		if ($target)
 		{
-			if ($attr['part']) $target .= '.d/'.$attr['part'];
+			#if ($attr['part']) $target .= '.d/'.$attr['part'];
 			$target .= '.php';
 			
 			#printf("Loading file [%s]\n", $target);

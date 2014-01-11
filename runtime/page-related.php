@@ -1,55 +1,55 @@
-
-<!--
-	This file is a fragment for gods.roundhousecode.com
--->
-
-<!-- Sys/Fragments/Related [Start] -->
-<div>
-<div class="section">
-	<?php if($related['prev']) {
-			if (preg_match('/@/', $related['prev'][1])) {
-				$_ = preg_split('/@/', $related['prev'][1]);
-				switch(count($_))
-				{
-					case 2: $before = false; $title = $_[0]; $after = $_[1]; break;
-					case 3: $before = $_[0]; $title = $_[1]; $after = $_[2]; break;
-				}
-			} else {
-				$before = $after = false;
-				$title = $related['prev'][1];
+<?php
+	printf('<div class="section">');
+	if($related['prev'])
+	{
+		if (preg_match('/@/', $related['prev'][1])) {
+			$_ = preg_split('/@/', $related['prev'][1]);
+			switch(count($_))
+			{
+				case 2: $before = false; $title = $_[0]; $after = $_[1]; break;
+				case 3: $before = $_[0]; $title = $_[1]; $after = $_[2]; break;
 			}
-	?>
-		<div class="inside"><p>
-			/ <?=$before?><a href="<?=make_canonical($attr, $related['prev'][0])?>"><?=$title?></a><?=$after?> / <b><em>Precendente</em></b>
-		</p></div>
-	<?php } ?>
-	<p style="text-align: center">
-		/
-		<?php if (isset($search['cat'])) foreach ($search['cat'] as $_) { ?>
-			<a href="<?=make_canonical($attr, $_[0])?>"><?=$_[1]?></a> / 
-		<?php } ?>
-	</p>
-	<?php if ($related['next']) {
-			if (preg_match('/@/', $related['next'][1])) {
-				$_ = preg_split('/@/', $related['next'][1]);
-				switch(count($_))
-				{
-					case 2: $before = false; $title = $_[0]; $after = $_[1]; break;
-					case 3: $before = $_[0]; $title = $_[1]; $after = $_[2]; break;
-				}
-			} else {
-				$before = $after = false;
-				$title = $related['next'][1];
-			}
-	?>
-		<div class="outside"><p class="reverse">
-			<b><em>Successivo</em></b> / <?=$before?><a
-			href="<?=make_canonical($attr,
-			$related['next'][0])?>"><?=$title?></a><?=$after?> /
-		</p></div>
-	<?php } ?>	
-</div>
-<br/>
-</div>
-<!-- Sys/Fragments/Related [Stop] -->
+		} else {
+			$before = $after = false;
+			$title = $related['prev'][1];
+		}
+		
+		printf('<div class="inside"><p>');
+		printf('/ %s<a href="%s">%s</a>%s / %s', $before,
+			make_canonical($attr, $related['prev'][0]), $title, $after, 'Precedente');
+		printf('</p></div>');
+	}
 
+	printf ('<p style="text-align: center">');
+	$cumulative = array();
+	$limit = count($request['path']) - 1;
+	for($i = 0; $i < $limit; $i++) {
+		$current = ucwords($request['path'][$i]);
+		$cumulative[] = $current;
+		printf(' / <a href="%s/">%s</a>',
+			make_canonical($attr, implode('/', $cumulative)), $current);
+	}
+	printf (' / </p>');
+
+	if ($related['next'])
+	{
+		if (preg_match('/@/', $related['next'][1])) {
+			$_ = preg_split('/@/', $related['next'][1]);
+			switch(count($_))
+			{
+				case 2: $before = false; $title = $_[0]; $after = $_[1]; break;
+				case 3: $before = $_[0]; $title = $_[1]; $after = $_[2]; break;
+			}
+		} else {
+			$before = $after = false;
+			$title = $related['next'][1];
+		}
+		
+		printf('<div class="outside"><p class="reverse">');
+		printf('%s / %s<a href="%s">%s</a>%s /',
+			'Successivo', $before,
+			make_canonical($attr, $related['next'][0]), $title, $after);
+		printf('</p></div>');
+	}
+	printf('</div><br/>');
+?>	
