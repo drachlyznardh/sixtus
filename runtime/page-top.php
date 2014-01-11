@@ -17,25 +17,11 @@
 		<link rel="stylesheet" type="text/css" href="runtime/style/small-screen.css"
 				media="handheld, only screen and (max-device-width: 479px)" />
 		<link rel="shortcut icon" type="image/x-icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
-	</head>
-	<!-- $Request[Original] = [<?=$request['original']?>] -->
-	<!-- $Attr[Gray] = [<?=$attr['gray']?>], $Attr[Single] = [<?=$attr['single']?>] -->
-	<!-- $Attr[Included] = [<?=$attr['included']?>] -->
-	<!-- $Attr[Part] = [<?=$attr['part']?>], $Attr[Force_All_Tabs] = [<?=$attr['force_all_tabs']?>] -->
-	<!-- $Request[Path] = [<?php
-		$other=false;
-		foreach ($request['path'] as $key)
-			if ($other) { echo"; $key"; }
-			else { $other=true; echo"$key"; }
-	?>] -->
-	<!-- $Search[Dir] = [<?=$search['dir']?>], $Search[File] = [<?=$search['file']?>], $Search[Include] = [<?=$search['include']?>] -->
-	<body>
+	</head><body>
 		<div id="main">
 			<div id="content">
 				<div id="head">
-					<!-- Require_once("Sys/Fragment/Head") -->
-					<?php require_once("page-head.php"); ?>
+<?php require_once('page-head.php'); ?>
 				</div> <!-- Head -->
 				<div id="core">
-					<!-- Require_once("Sys/Fragment/Check") -->
-					<?php require_once('page-check.php'); ?>
+<?php require_once('page-check.php'); ?>
