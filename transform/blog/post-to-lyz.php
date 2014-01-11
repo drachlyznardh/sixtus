@@ -50,12 +50,10 @@
 			$two = $map[$one];
 			$three = $two[count($two) - 1];
 			
-			printf("Prev is %s/%s\n", $three, $one);
-			print_r($map[$one]);
+			#printf("Prev is %s/%s\n", $three, $one);
 			return array($one, $three);
 			
 		} else return false;
-		printf("\n\t%s previous of %s\n", $key[$index - 1], $key[$index]);
 	}
 
 	function first_month_of_next_year($year, $map)
@@ -66,11 +64,12 @@
 		if (isset($key[$index + 1]))
 		{
 			$one = $key[$index + 1];
-			$two = $one[0];
+			$two = $map[$one][0];
+
+			#printf("Next is %s/%s\n", $two, $one);
 			return array($one, $two);
 			
 		} else return false;
-		printf("\n\t%s next of %s\n", $key[$index+1], $key[$index]);
 	}
 
 	function scan_for_month ($month, $year, $map)
