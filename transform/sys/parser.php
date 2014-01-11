@@ -390,7 +390,7 @@
 			{
 				$to_file = array();
 				$target_file = sprintf('%stab-%s.php', $target, $_->getName());
-				printf("\tPutting tab content into [%s]\n", $target_file);
+				#printf("\tPutting tab content into [%s]\n", $target_file);
 
 				$to_file[] = sprintf("%s%s function %s_tab_%s (%s, %s) { %s%s\n",
 					'<', '?php', $prefix, $_->getName(), '$attr','$sec', '?', '>');
