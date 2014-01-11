@@ -186,6 +186,9 @@
 					}
 					break;
 				case 'include': $this->make_include($cmd_args); break;
+				case 'require':
+					$this->current->make_require($cmd_attr[1], $cmd_args[1]);
+					break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -314,15 +317,55 @@
 			}
 		}
 
-		private function deploy_one_tab($target_file, $target)
+		private function deploy_one_tab($target_file, $unique)
 		{
-			printf("With no tabs, it goes into [%s]\n", $target_file);
+			#printf("With no tabs, it goes into [%s]\n", $target_file);
+
+			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
+
+			### Unique function
+			$unique_fun_name = sprintf('%s', str_replace('/', '_', $unique));
+			$to_file[] = sprintf("\tfunction %s (%s, %s) {%s%s\n",
+				$unique_fun_name, '$attr', '$sec', '?', '>');
+			$to_file[] = $this->body[0]->getContent(true);
+			$to_file[] = sprintf("%s%s }\n\n", '<', '?php');
+			### Unique function
+
+			### Unique side function
+			$unique_fun_name = sprintf('%s', str_replace('/', '_', $unique));
+			$to_file[] = sprintf("\tfunction %s_side (%s, %s) {%s%s\n",
+				$unique_fun_name, '$attr', '$sec', '?', '>');
+			foreach ($this->side as $_)
+				$to_file[] = $_->getContent(true);
+			$to_file[] = sprintf("%s%s }\n\n", '<', '?php');
+			### Unique side function
+
+			### Calling unique function
+			$to_file[] = sprintf("\tif(!%s['%s'])\n\t{\n",
+				'$attr', 'included');
+			$to_file[] = $this->deploy_attr();
+			$to_file[] = sprintf("\n");
+			$to_file[] = sprintf("\t\t%s = '%s';\n", '$sec', 'section');
+			$to_file[] = sprintf("\t\trequire_once('page-top.php');\n");
+			$to_file[] = sprintf("\t\t%s(%s, %s);\n",
+				$unique_fun_name, '$attr', '$sec');
+			$to_file[] = sprintf("\t\trequire_once('page-middle.php');\n");
+			$to_file[] = sprintf("\t\t%s_side(%s, %s);\n",
+				$unique_fun_name, '$attr', '$sec');
+			$to_file[] = sprintf("\t\trequire_once('page-bottom.php');\n");
+			$to_file[] = sprintf("\t}\n");
+			### Calling unique function
+
+			$to_file[] = sprintf("\n%s%s\n", '?', '>');
+
+			file_put_contents($target_file, $to_file);
+			return;
 		}
 
 		private function deploy_tab($target_dir, $target, $unique)
 		{
 			$target_file = sprintf("%s/%s.php", $target_dir, $target->getName());
-			printf("Tab[%s] goes into [%s]\n", $target->getName(), $target_file);
+			#printf("Tab[%s] goes into [%s]\n", $target->getName(), $target_file);
 
 			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
@@ -358,7 +401,7 @@
 		private function deploy_right_side($target_dir)
 		{
 			$target_file = sprintf("%s/%s.php", $target_dir, 'right-side');
-			printf("Side file goes into [%s]\n", $target_file);
+			#printf("Side file goes into [%s]\n", $target_file);
 			
 			foreach ($this->side as $_)
 				$to_file[] = $_->getContent(false);
@@ -369,7 +412,7 @@
 
 		public function deploy_page ($target_file, $unique)
 		{
-			printf("Page file goes into [%s]\n", $target_file);
+			#printf("Page file goes into [%s]\n", $target_file);
 
 			$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 
@@ -422,7 +465,7 @@
 			}
 			else
 			{
-				$this->deploy_one_tab($target_file, $this->body[0]);
+				$this->deploy_one_tab($target_file, $unique);
 			}
 		}
 	}

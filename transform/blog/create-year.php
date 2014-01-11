@@ -2,25 +2,6 @@
 
 	require_once('utils.php');
 
-	function scan_for_years ($keys, $current)
-	{
-		$limit = count($keys);
-		$result = array(false, false);
-
-		for ($i = 0; $i < $limit; $i++)
-			if ($keys[$i] == $current)
-			{
-				$prev = $i - 1;
-				$next = $i + 1;
-				if (isset($keys[$prev])) $result[0] = $keys[$prev];
-				if (isset($keys[$next])) $result[1] = $keys[$next];
-				
-				break;
-			}
-
-		return $result;
-	}
-
 	# Load map
 	require_once($argv[2]);
 
@@ -29,9 +10,27 @@
 	list($prev, $next) = scan_for_years(array_keys($blog_map), $year);
 
 	$to_file[] = sprintf("title#Notizie %s#Tutte le notizie del %s\n", $year, $year);
+	if ($prev) $to_file[] = sprintf("prev#Blog/%s/#%s\n", $prev, $prev);
+	if ($next) $to_file[] = sprintf("next#Blog/%s/#%s\n", $next, $next);
 	$to_file[] = sprintf("start#page\n");
+
+	### body
+	foreach ($blog_map[$year] as $_)
+	{
+		$to_file[] = sprintf("\tid#%s\n", $_);
+		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n", $year, $_);
+	}
+	### body
+
 	$to_file[] = sprintf("stop#page\n");
 	$to_file[] = sprintf("start#side\n");
+
+	### side
+	$to_file[] = sprintf("\tstitle#%s\n", $year);
+	foreach ($blog_map[$year] as $_)
+		$to_file[] = sprintf("\tp#tid#%s#%s\n", name_that_month($_), $_);
+	### side
+
 	$to_file[] = sprintf("stop#side\n");
 
 	file_put_contents($argv[1], $to_file);
