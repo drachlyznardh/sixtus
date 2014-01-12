@@ -36,7 +36,7 @@ $(ARCHIVE): $(BLOG_MAP)
 
 $(NEWS): $(BLOG_MAP)
 	@echo Generating index page $@
-	@$(PHP) -f $(CREATE_NEWS) $@ $(BLOG_MAP)
+	@$(PHP) -f $(CREATE_NEWS) $@ $(BLOG_MAP) $(BLOG_DIR)
 
 %.lyz: $(BLOG_MAP)
 	@echo Generating year page $@

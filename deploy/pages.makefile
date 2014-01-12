@@ -49,7 +49,7 @@ $(RMAP_FILE): $(MAP_FILE)
 
 #File generation
 $(DEST_DIR)%/page.php: $(SRC_DIR)%.lyz
-	@echo Generating page $@
+	@echo Generating page $@ and contents
 	@mkdir -p $(patsubst %page.php, %, $@)
 	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< $@ $(patsubst %page.php, %, $@) $(patsubst $(SRC_DIR)%.lyz, %, $<)
 
