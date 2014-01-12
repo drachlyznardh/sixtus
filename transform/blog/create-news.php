@@ -48,10 +48,21 @@
 	
 	### body
 	$to_file[] = sprintf("start#page\n");
+	foreach ($result as $_)
+		if ($_[3] == 1)
+			$to_file[] = sprintf("\trequire@tab-%s#blog/%s/%s\n",
+				$_[2], $_[0], $_[1]);
+		else
+			for ($i = $_[3]; $i > 0; $i--)
+				$to_file[] = sprintf("\trequire@tab-%s%c#blog/%s/%s\n",
+					$_[2], 96 + $i, $_[0], $_[1]);
 	$to_file[] = sprintf("stop#page\n");
 	
 	### side
 	$to_file[] = sprintf("start#side\n");
+	foreach (array_keys($sides) as $_)
+		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n",
+			$_, array_keys($sides[$_])[0]);
 	$to_file[] = sprintf("stop#side\n");
 
 	file_put_contents($argv[1], $to_file);
