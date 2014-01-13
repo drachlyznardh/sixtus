@@ -22,7 +22,8 @@
 
 	printf ('<p style="text-align: center">');
 	$cumulative = array();
-	$limit = count($request['path']) - 1;
+	$limit = count($request['path']);
+	if ($limit > 1) $limit--;
 	for($i = 0; $i < $limit; $i++) {
 		$current = ucwords($request['path'][$i]);
 		$cumulative[] = $current;
