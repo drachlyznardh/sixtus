@@ -106,16 +106,8 @@
 
 		public function make_require ($part, $file)
 		{
-			switch ($part)
-			{
-				case 'side':
-					$format = "<?php require(%s['%s'].'%s.d/right-side.php'); ?>";
-					$this->content[] = sprintf($format,
-						'$_SERVER', 'DOCUMENT_ROOT', $file);
-					break;
-				default:
-					die("Tab->Make_Require: [$part] unknown.\n");	
-			}
+			if ($this->current == null) $this->current = new Section();
+			$this->current->make_require ($part, $file);
 		}
 	}
 ?>

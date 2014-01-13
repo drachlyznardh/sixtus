@@ -6,7 +6,8 @@
 	require_once($argv[2]);
 
 	$year = split('/', $argv[1]);
-	$year = $year[count($year) - 2];
+	$year = $year[count($year) - 1];
+	$year = substr($year, 0, 4);
 	list($prev, $next) = scan_for_years(array_keys($blog_map), $year);
 
 	$to_file[] = sprintf("title#Notizie %s#Tutte le notizie del %s\n", $year, $year);
@@ -14,8 +15,10 @@
 	if ($next) $to_file[] = sprintf("next#Blog/%s/#%s\n", $next, $next);
 	$to_file[] = sprintf("start#page\n");
 
+	$reverse = array_reverse($blog_map[$year], true);
+
 	### body
-	foreach ($blog_map[$year] as $_)
+	foreach ($reverse as $_)
 	{
 		$to_file[] = sprintf("\tid#%s\n", $_);
 		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n", $year, $_);
@@ -27,8 +30,8 @@
 
 	### side
 	$to_file[] = sprintf("\tstitle#%s\n", $year);
-	foreach ($blog_map[$year] as $_)
-		$to_file[] = sprintf("\tp#tid#%s#%s\n", name_that_month($_), $_);
+	foreach ($reverse as $_)
+		$to_file[] = sprintf("\tp#tid#%s##%s\n", name_that_month($_), $_);
 	### side
 
 	$to_file[] = sprintf("stop#side\n");

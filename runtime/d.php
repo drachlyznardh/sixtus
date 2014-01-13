@@ -1,8 +1,9 @@
 <?php
 
-	require_once("runtime.php");
-	require_once("utils.php");
-	require_once("mimes.php");
+	require_once('runtime.php');
+	require_once('conf.php');
+	require_once('utils.php');
+	require_once('mimes.php');
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
@@ -170,6 +171,17 @@
 
 	if (isset($search['page'])) $attr['self'] = $search['page'][0];
 	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
+
+	function find_self($map)
+	{
+		$limit = count($map) - 1;
+		for ($i = 0; $i < $limit; $i++)
+			$self[] = sprintf('%s/', ucwords($map[$i]));
+		$self[] = sprintf('%s/', strtoupper($map[$limit]));
+		return implode($self);
+	}
+
+	$attr['self'] = find_self($request['path']);
 
 	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($attr, $request['path']);
 	#require_once($target_file);

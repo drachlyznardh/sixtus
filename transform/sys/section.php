@@ -51,14 +51,35 @@
 
 		private function error ($index, $command)
 		{
-			printf("ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
+			printf("Section ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
 			exit(1);
 		}
 
-		public function make_include ($filename, $part)
+		public function make_require ($part, $file)
+		{
+			$this->make_include ($part, $file);
+		}
+
+		public function make_include ($part, $file)
 		{
 			$this->closeContext();
-			$this->content[] = "\n<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'invisible'); ?>";
+
+			switch ($part)
+			{
+				case 'side':
+					$this->content[] = sprintf("<?php require(%s['%s'].'%s/right-side.php');",
+						'$_SERVER', 'DOCUMENT_ROOT', $file);
+					$this->content[] = sprintf("\t%s_right_side (%s, '%s'); ?>",
+						str_replace('/', '_', $file), '$attr', 'invisible');
+					break;
+				default:
+					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/%s.php');\n",
+						'$_SERVER', 'DOCUMENT_ROOT', $file, $part);
+					$this->content[] = sprintf("\t%s_%s (%s, '%s'); ?>\n",
+						str_replace('/', '_', $file), str_replace('-', '_', $part), '$attr', 'invisible');
+					break;
+					die("Section->Make_Require: [$part] unknown.\n");	
+			}
 		}
 
 		private function switchContext($new)
