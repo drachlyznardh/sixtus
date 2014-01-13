@@ -140,7 +140,7 @@
 	
 	function include_search_cloud ($attr)
 	{
-		include('.cloud.php');
+		include('cloud.php');
 		echo ('<div id="cloud"><p>');
 		ksort($cloud);
 		foreach(array_keys($cloud) as $key)
@@ -182,7 +182,8 @@
 	function include_search_static ($attr, $keyword)
 	{
 		$tag = array();
-		$dbfile = '.db/'.get_filename_from_tag($keyword);
+		$dbfile = 'db/'.get_filename_from_tag($keyword);
+		printf("<p>Tag file [%s]</p>\n", $dbfile);
 		if (file_exists($dbfile)) include($dbfile);
 		display_search_result($attr, $keyword, $tag);
 	}

@@ -1,11 +1,18 @@
 
-DBES   := $(sort $(shell find $(DB_DIR) -type f -name '*.tag'))
-O_DBES := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(DBES))
-TCHS   := $(DBES:=.tch)
+PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
+TAGS := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
 
-all: build
-build: $(CLOUD_FILE)
-deploy: build $(O_DBES)
+IN_DBES  := $(sort $(shell find $(IN_DB_DIR) -type f -name '*.tag'))
+OUT_DBES := $(patsubst $(IN_DB_DIR)%, $(OUT_DB_DIR)%, $(IN_DBES))
+
+TCHS   := $(IN_DBES:=.tch)
+
+all: $(CLOUD_FILE) $(OUT_DBES)
+
+$(TAG_DIR)%.php: $(SRC_DIR)%.pag $(REVERSE_MAP_FILE)
+	@echo Generating tags for page $<
+	@mkdir -p $(dir $@)
+	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(REVERSE_MAP_FILE)
 
 %.tch: %
 	@echo Updating database for entry $<
@@ -16,13 +23,13 @@ $(CLOUD_FILE): $(TCHS)
 	@echo Updating database…
 	@touch $@
 
-$(DEST_DIR)%.tag: $(IN_DIR)%.tag
-	@echo Linking database entry $<
+$(OUT_DB_DIR)%.tag: $(IN_DB_DIR)%.tag
+	@echo Linking database entry $@
 	@mkdir -p $(dir $@)
-	@$(LN_CMD) $< $@
+	@$(CP) $< $@
 
 .PHONY: clean
 clean:
 	@echo Cleaning database
-	@$(RM) $(O_DBES)
+	@$(RM) $(OUT_DBES)
 	@$(RM) $(CLOUD_FILE)
