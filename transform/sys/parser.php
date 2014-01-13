@@ -368,9 +368,24 @@
 			### content
 			$to_file[] = sprintf($header, 'content');
 			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-top.php');
-			$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/content.php');\n",
+
+			$to_file[] = sprintf("\tswitch (%s['%s']) {\n", '$attr', 'part');
+			$to_file[] = sprintf("\t\tcase '':\n");
+			$to_file[] = sprintf("\t\t\trequire_once(%s['%s'].'%s/content.php');\n",
 				'$_SERVER', 'DOCUMENT_ROOT', $unique);
-			$to_file[] = sprintf("\t%s_content (%s, %s);\n", $prefix, '$attr', '$sec');
+			$to_file[] = sprintf("\t\t\t%s_content (%s, %s);\n", $prefix, '$attr', '$sec');
+			$to_file[] = sprintf("\t\t\tbreak;\n");
+			foreach ($this->body as $_) {
+				$to_file[] = sprintf("\t\tcase '%s':\n", $_->getName());
+				$to_file[] = sprintf("\t\t\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
+					'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
+				$to_file[] = sprintf("\t\t\t%s_tab_%s (%s, %s);\n",
+					$prefix, $_->getName(), '$attr', '$sec');
+				$to_file[] = sprintf("\t\t\tbreak;\n");
+			}
+			$to_file[] = sprintf("\t\tdefault: require('runtime-error.php');\n");
+			$to_file[] = sprintf("\t}\n");
+
 			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-middle.php');
 			$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/right-side.php');\n",
 				'$_SERVER', 'DOCUMENT_ROOT', $unique);
