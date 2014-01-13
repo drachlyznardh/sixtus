@@ -15,4 +15,5 @@ $(RUNTIME_OUT_DIR)%: $(RUNTIME_IN_DIR)%
 
 .PHONY: clean
 clean:
+	@echo Cleaning runtime files
 	@$(RM) $(RUNTIME_FILES)
