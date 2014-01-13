@@ -158,9 +158,15 @@
 	function display_search_result ($attr, $current, $result)
 	{
 		echo ('<h3 class="reverse">Risultati per [');
-		echo ('<a href="'.make_canonical($attr, '/Tag/', false,
-		false).'?query='.$current.'">'.ucwords($current).'</a>');
-		echo(']:</h3><ul>');
+		echo ('<a href="'.make_canonical($attr, '/Tag/', false, false).'?query='.$current.'">'.ucwords($current).'</a>');
+		echo (']:</h3>');
+		
+		if (count($result) < 1) {
+			echo ('<p>Nessun risultato.</p>');
+			return;
+		}
+		
+		echo ('<ul>');
 		foreach (array_keys($result) as $_)
 			foreach (array_keys($result[$_]) as $__)
 			{
@@ -175,8 +181,9 @@
 
 	function include_search_static ($attr, $keyword)
 	{
+		$tag = array();
 		$dbfile = '.db/'.get_filename_from_tag($keyword);
-		if (file_exists($dbfile)) include($dbfile); else return;
+		if (file_exists($dbfile)) include($dbfile);
 		display_search_result($attr, $keyword, $tag);
 	}
 
