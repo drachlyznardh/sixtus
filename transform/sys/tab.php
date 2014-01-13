@@ -82,32 +82,6 @@
 			$content[] = sprintf("</div>\n");
 
 			return implode($content);
-			
-			$content = false;
-			$result = false;
-			$content = '<div class="tab">';
-			if ($this->name) $content .= '<a id="'.strtoupper($this->name).'"></a>';
-			foreach ($this->content as $_) $content .= $_;
-			$content .= '</div>'."\n";
-			
-			$condition = $page ? 'tab' : 'side';
-			$condition .= '_condition(';
-			$condition .= $page ? "\$attr, '$this->name'" : '$attr';
-			$condition .= ')';
-
-			$result = "<?php if ($condition) { ?>\n";
-			if ($page && $this->prev) {
-				$result .= '<?php if (tabrel_condition($attr))';
-				$result .= ' echo (make_prev($attr, \''.$this->prev.'\')); ?>';
-			}
-			$result .= $content;
-			if ($page && $this->next) {
-				$result .= '<?php if (tabrel_condition($attr))';
-				$result .= ' echo (make_next($attr, \''.$this->next.'\')); ?>';
-			}
-			$result .= "<?php } ?>\n";
-
-			return $result;
 		}
 
 		public function make_require ($part, $file)
