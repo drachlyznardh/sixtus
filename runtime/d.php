@@ -103,21 +103,20 @@
 
 		if (preg_match('/blog/', $path[0]))
 		{
-			$target = sprintf("%spage", strtolower($long));
+			$target = sprintf("%spage.php", strtolower($long));
 		}
 		else if (isset($direct[$long]))
 		{
 			#printf ("Found [%s] Long\n", $long);
-			$target = sprintf("%sindex", strtolower($long));
+			$target = sprintf("%s/page.php", strtolower($direct[$long]));
 		}
 		else if (isset($direct[$short]))
 		{
 			#printf ("Found [%s] Short\n", $short);
-			$target = sprintf("%s", substr(strtolower($long), 0, strlen($long) - 1));
+			$target = sprintf("%s/%s/page.php",
+				strtolower($direct[$short]), $path[$limit]);
 		}
 		else $target = false;
-		
-		if ($target) $target .= '.php';
 
 		return $target;
 	}
