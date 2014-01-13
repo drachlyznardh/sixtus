@@ -13,13 +13,13 @@ POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
 MONTHS  := $(POSTS:.post=.lyz)
 YEARS   := $(patsubst %/, %.lyz, $(sort $(dir $(MONTHS))))
 ARCHIVE := $(BLOG_DIR)archivio.lyz
-NEWS    := $(BLOG_DIR)../blog.lyz
+NEWS    := $(abspath $(BLOG_DIR)../blog.lyz)
 
-all: months years archive index
+all: months years archive news
 months: $(MONTHS)
 years: $(YEARS)
 archive: $(ARCHIVE)
-index: $(NEWS)
+news: $(NEWS)
 
 $(BLOG_MAP): $(POSTS)
 	@echo Generating blog map $@
@@ -35,7 +35,7 @@ $(ARCHIVE): $(BLOG_MAP)
 	@$(PHP) -f $(CREATE_ARCHIVE) $@ $(BLOG_MAP)
 
 $(NEWS): $(BLOG_MAP)
-	@echo Generating index page $@
+	@echo Generating news page $@
 	@$(PHP) -f $(CREATE_NEWS) $@ $(BLOG_MAP) $(BLOG_DIR)
 
 %.lyz: $(BLOG_MAP)
