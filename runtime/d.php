@@ -101,17 +101,8 @@
 		for ($i = 0; $i < $limit; $i++) $short .= ucwords($path[$i]).'/';
 		$long = $short.ucwords($path[$limit]).'/';
 
-		#print_r($keyword);
-		#print_r($attr);
-		#print_r($path);
-		#print_r($direct);
-
 		if (preg_match('/blog/', $path[0]))
 		{
-			#printf("<!-- Blog entry [%s] detected -->\n", $long);
-			#if (count($path) > 2 or count($path) > 1 and !preg_match('/[0-9][0-9][0-9][0-9]/', $path[1]))
-			#	$target = substr(strtolower($long), 0, strlen($long) - 1);
-			#else 
 			$target = sprintf("%spage", strtolower($long));
 		}
 		else if (isset($direct[$long]))
@@ -126,14 +117,7 @@
 		}
 		else $target = false;
 		
-		if ($target)
-		{
-			#if ($attr['part']) $target .= '.d/'.$attr['part'];
-			$target .= '.php';
-			
-			#printf("Loading file [%s]\n", $target);
-		}
-		else printf("Not found [%s]\n", $keyword);
+		if ($target) $target .= '.php';
 
 		return $target;
 	}
