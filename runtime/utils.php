@@ -31,6 +31,8 @@
 
 	function make_next($attr, $name)
 	{
+		if ($attr['included']) return;
+		
 		$result = '<div class="section"><p class="reverse">';
 		$result .= 'Continua nel '.make_tid($attr, 'prossimo', $name, false).' tab.';
 		$result .= '</p></div>';
@@ -40,6 +42,8 @@
 
 	function make_prev($attr, $name)
 	{
+		if ($attr['included']) return;
+		
 		$result = '<div class="section"><p>';
 		$result .= 'Continua dal tab '.make_tid($attr, 'precendente', $name, false).'.';
 		$result .= '</p></div>';

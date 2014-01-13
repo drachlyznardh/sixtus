@@ -325,6 +325,7 @@
 			{
 				$to_file[] = sprintf("%s%s function %s_content (%s, %s) {\n",
 					'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec');
+				$to_file[] = sprintf("\t%s['%s'] = true;\n", '$attr', 'included');
 				foreach($this->body as $_)
 				{
 					$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
@@ -363,7 +364,7 @@
 			### settings
 			$to_file[] = sprintf($header, 'settings');
 			$to_file[] = sprintf("\t%s = '%s';\n", '$sec', 'section');
-			$to_file[] = sprintf("\t%s['%s'] = %s;\n", '$attr', 'included', 'true');
+			#$to_file[] = sprintf("\t%s['%s'] = %s;\n", '$attr', 'included', 'true');
 			
 			### content
 			$to_file[] = sprintf($header, 'content');

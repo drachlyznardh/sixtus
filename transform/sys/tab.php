@@ -69,13 +69,19 @@
 
 		public function getContent($page)
 		{
-			$content[] = '<div class="tab">';
+			$content[] = sprintf('<div class="%s">', 'tab', "\n");
 			if ($this->name)
-				$content[] = sprintf('<a id="%s">', strtoupper($this->name));
-			$content[] = implode("\n", $this->content);
-			$content[] = '</div>';
+				$content[] = sprintf('<a id="%s"></a>', strtoupper($this->name));
+			if ($this->prev)
+				$content[] = sprintf("%s%s=make_prev (%s, '%s'); %s%s",
+					'<', '?', '$attr', $this->prev, '?', '>');
+			$content[] = implode($this->content);
+			if ($this->next)
+				$content[] = sprintf("%s%s=make_next (%s, '%s'); %s%s",
+					'<', '?', '$attr', $this->next, '?', '>');
+			$content[] = sprintf("</div>\n");
 
-			return implode("\n", $content);
+			return implode($content);
 			
 			$content = false;
 			$result = false;
