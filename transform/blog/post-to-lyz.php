@@ -16,9 +16,20 @@
 		if (preg_match('/post#/', $_))
 		{
 			if (count($current) > 0) $out_rows[$day][] = $current;
-			list($_, $day, $title) = split('#', $_);
+
+			$data = split('#', $_);
+			$day = $data[1];
+			$title = $data[2];
+			if (count($data) > 3) {
+				$tags = $data;
+				array_shift($tags);
+				array_shift($tags);
+				array_shift($tags);
+			} else $tags = false;
+
 			$current = array();
 			$current['title'] = $title;
+			$current['tags'] = $tags;
 		}
 		else $current['content'][] = $_;
 	}
@@ -98,16 +109,16 @@
 	ksort($out_rows);
 	$out_rows = array_reverse($out_rows, true);
 	list($prev, $next) = scan_for_month($month, $year, $blog_map);
-	$output[] = sprintf("title#%s %s#Le notizie di %s\n",
+	$to_file[] = sprintf("title#%s %s#Le notizie di %s\n",
 		name_that_month($month), $year, name_that_month($month));
 	if ($prev)
-		$output[] = sprintf("prev#Blog/%s/%02d/#%s@ %s\n",
+		$to_file[] = sprintf("prev#Blog/%s/%02d/#%s@ %s\n",
 			$prev[0], $prev[1], name_that_month($prev[1]), $prev[0]);
 	if ($next)
-		$output[] = sprintf("next#Blog/%s/%02d/#%s@ %s\n",
+		$to_file[] = sprintf("next#Blog/%s/%02d/#%s@ %s\n",
 			$next[0], $next[1], name_that_month($next[1]), $next[0]);
-	$output[] = sprintf("tabs#all_or_one\n");
-	$output[] = sprintf("start#page\n");
+	$to_file[] = sprintf("tabs#all_or_one\n");
+	$to_file[] = sprintf("start#page\n");
 
 	foreach (array_keys($out_rows) as $day)
 	{
@@ -115,18 +126,26 @@
 		
 		foreach ($posts as $post)
 		{
-			$output[] = sprintf("tab#%s\n", $post['tab']);
-			$output[] = sprintf("\tp#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s\n",
+			$to_file[] = sprintf("tab#%s\n", $post['tab']);
+			$to_file[] = sprintf("\tp#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s\n",
 				$year, $month, $day, $month, $year, $post['tab']);
-			$output[] = sprintf("\ttitle#%s\n", $post['title']);
+			$limit = count($post['tags']);
+			if (is_array($post['tags'])) for ($i = 0; $i < $limit; $i++) {
+				if ($i) $to_file[] = sprintf("\t&amp;\n");
+				else $to_file[] = sprintf("\t/\n");
+				$to_file[] = sprintf("\tlink#About/#%s#%s\n",
+					ucwords($post['tags'][$i]),
+					strtoupper($post['tags'][$i]));
+			}
+			$to_file[] = sprintf("\ttitle#%s\n", $post['title']);
 
-			if (isset($post['content'])) foreach ($post['content'] as $line) $output[] = sprintf("%s\n", $line);
+			if (isset($post['content'])) foreach ($post['content'] as $line) $to_file[] = sprintf("%s\n", $line);
 		}
 	}
 
-	$output[] = sprintf("stop#page\n");
-	$output[] = sprintf("start#side\n");
-	$output[] = sprintf("\tstitle#link#Blog/%s/%s/#%s@ %s\n",
+	$to_file[] = sprintf("stop#page\n");
+	$to_file[] = sprintf("start#side\n");
+	$to_file[] = sprintf("\tstitle#link#Blog/%s/%s/#%s@ %s\n",
 		$year, $month, name_that_month($month), $year);
 	
 	foreach (array_keys($out_rows) as $day)
@@ -135,19 +154,19 @@
 		$first = true;
 		$count = count($posts);
 
-		$output[] = sprintf("\tp#<code>%02d/%s</code> –\n", $day, $month);
+		$to_file[] = sprintf("\tp#<code>%02d/%s</code> –\n", $day, $month);
 
 		for ($i = 0; $i < $count; $i++)
 		{
 			$post = $posts[$count - $i - 1];
 			
 			if ($first) $first = false;
-			else $output[] = sprintf("\t\t&amp;\n");
-			$output[] = sprintf("\t\tlink#Blog/%s/%s/#%s#%s\n",
+			else $to_file[] = sprintf("\t\t&amp;\n");
+			$to_file[] = sprintf("\t\tlink#Blog/%s/%s/#%s#%s\n",
 				$year, $month, $post['title'], $post['tab']);
 		}
 	}
 
-	$output[] = sprintf("stop#side\n");
-	file_put_contents($argv[2], $output);
+	$to_file[] = sprintf("stop#side\n");
+	file_put_contents($argv[2], $to_file);
 ?>
