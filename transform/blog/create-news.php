@@ -28,43 +28,18 @@
 				if (isset($found[$day])) $found[$day] += 1;
 				else $found[$day] = 1;
 			}
+
 			ksort($found);
-			$found = array_reverse($found, true);
-			printf("Found for %s %s:\n", $year, $month);
-			print_r($found);
+			$keys = array_reverse(array_keys($found));
 		
-			while ($counter < $post_limit && count($found) > 0)
+			while ($counter < $post_limit && count($keys) > 0)
 			{
-				$key = array_keys($found)[0];
-				printf("Now recording %s %s %s %s\n",
-					$year, $month, $key, $found[$key]);
+				$key = $keys[0];
 				$result[$counter] = array($year, $month, $key, $found[$key]);
 				$sides[$year][$month] = true;
-				array_shift($found);
+				array_shift($keys);
 				$counter++;
 			}
-
-/*
-			$day = 0; $prev_day = 0;
-			foreach ($source_rows as $row) if (preg_match('/^post#/', $row))
-			{
-				$data = split('#', $row);
-				$prev_day = $day;
-				$day = $data[1];
-			
-				#printf("Check %s vs %s on counter %s\n", $prev_day, $day, $counter);
-				if ($day == $prev_day) {
-					$score = $result[$counter - 1][3];
-					$result[$counter - 1][3] = $score + 1;
-				} else {
-					$sides[$year][$month] = true;
-					$result[$counter] = array($year, $month, $data[1], 1);
-					$counter++;
-				}
-
-				if ($counter >= 15) break 3;
-			}
-*/
 		}
 	}
 
@@ -76,16 +51,22 @@
 	
 	### body
 	$to_file[] = sprintf("start#page\n");
-	foreach ($result as $_)
+	$keys = array_keys($result);
+	$limit = count($keys);
+	for ($i = 0; $i < $limit; $i++)
 	{
-		$to_file[] = sprintf("\tsec#\n");
+		$_ = $result[$keys[$i]];
+		if ($i) $to_file[] = sprintf("\tsec#br\n");
 		if ($_[3] == 1)
 			$to_file[] = sprintf("\trequire@tab-%s#blog/%s/%s\n",
 				$_[2], $_[0], $_[1]);
 		else
-			for ($i = $_[3]; $i > 0; $i--)
+			for ($j = $_[3]; $j > 0; $j--)
+			{
+				if ($j) $to_file[] = sprintf("\tsec#\n");
 				$to_file[] = sprintf("\trequire@tab-%s%c#blog/%s/%s\n",
-					$_[2], 96 + $i, $_[0], $_[1]);
+					$_[2], 96 + $j, $_[0], $_[1]);
+			}
 	}
 	$to_file[] = sprintf("stop#page\n");
 	
@@ -96,7 +77,7 @@
 	for ($i = 0; $i < $limit; $i++)
 	{
 		$_ = $keys[$i];
-		if ($i) $to_file[] = sprintf("\tsec#\n");
+		if ($i) $to_file[] = sprintf("\tsec#br\n");
 		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n",
 			$_, array_keys($sides[$_])[0]);
 	}
