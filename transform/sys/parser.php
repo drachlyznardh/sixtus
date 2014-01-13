@@ -385,7 +385,7 @@
 
 		private function write_tab_file ($target, $unique)
 		{
-			if (count($this->body) < 2) return;
+			if (count($this->body) < 2 && !$this->body[0]->getName()) return;
 
 			$prefix = str_replace('/', '_', $unique);
 
