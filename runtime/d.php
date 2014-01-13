@@ -1,8 +1,9 @@
 <?php
 
-	require_once("runtime.php");
-	require_once("utils.php");
-	require_once("mimes.php");
+	require_once('runtime.php');
+	require_once('conf.php');
+	require_once('utils.php');
+	require_once('mimes.php');
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
