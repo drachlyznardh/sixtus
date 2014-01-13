@@ -81,6 +81,7 @@ $(DEST_DIR)%.php: $(IN_DIR)%.php
 #Cleaning
 .PHONY: clean
 clean:
+	@echo Removing pages
 	@$(RM) $(PHPS)
 	@$(RM) $(O_RESS)
 	@$(RM) $(O_SYSS)

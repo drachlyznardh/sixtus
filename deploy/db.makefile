@@ -23,4 +23,6 @@ $(DEST_DIR)%.tag: $(IN_DIR)%.tag
 
 .PHONY: clean
 clean:
-	@$(RM) -rf 
+	@echo Cleaning database
+	@$(RM) $(O_DBES)
+	@$(RM) $(CLOUD_FILE)
