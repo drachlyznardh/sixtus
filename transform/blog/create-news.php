@@ -63,7 +63,7 @@
 		else
 			for ($j = $_[3]; $j > 0; $j--)
 			{
-				if ($j) $to_file[] = sprintf("\tsec#\n");
+				if ($j != $_[3]) $to_file[] = sprintf("\tsec#\n");
 				$to_file[] = sprintf("\trequire@tab-%s%c#blog/%s/%s\n",
 					$_[2], 96 + $j, $_[0], $_[1]);
 			}

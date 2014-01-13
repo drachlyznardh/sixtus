@@ -13,7 +13,7 @@ POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
 MONTHS  := $(POSTS:.post=.lyz)
 YEARS   := $(patsubst %/, %.lyz, $(sort $(dir $(MONTHS))))
 ARCHIVE := $(BLOG_DIR)archivio.lyz
-NEWS    := $(BLOG_DIR)news.lyz
+NEWS    := $(BLOG_DIR)../blog.lyz
 
 all: months years archive index
 months: $(MONTHS)
