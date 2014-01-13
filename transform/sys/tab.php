@@ -69,39 +69,19 @@
 
 		public function getContent($page)
 		{
-			$content[] = '<div class="tab">';
+			$content[] = sprintf('<div class="%s">', 'tab', "\n");
 			if ($this->name)
-				$content[] = sprintf('<a id="%s">', strtoupper($this->name));
-			$content[] = implode("\n", $this->content);
-			$content[] = '</div>';
+				$content[] = sprintf('<a id="%s"></a>', strtoupper($this->name));
+			if ($this->prev)
+				$content[] = sprintf("%s%s=make_prev (%s, '%s'); %s%s",
+					'<', '?', '$attr', $this->prev, '?', '>');
+			$content[] = implode($this->content);
+			if ($this->next)
+				$content[] = sprintf("%s%s=make_next (%s, '%s'); %s%s",
+					'<', '?', '$attr', $this->next, '?', '>');
+			$content[] = sprintf("</div>\n");
 
-			return implode("\n", $content);
-			
-			$content = false;
-			$result = false;
-			$content = '<div class="tab">';
-			if ($this->name) $content .= '<a id="'.strtoupper($this->name).'"></a>';
-			foreach ($this->content as $_) $content .= $_;
-			$content .= '</div>'."\n";
-			
-			$condition = $page ? 'tab' : 'side';
-			$condition .= '_condition(';
-			$condition .= $page ? "\$attr, '$this->name'" : '$attr';
-			$condition .= ')';
-
-			$result = "<?php if ($condition) { ?>\n";
-			if ($page && $this->prev) {
-				$result .= '<?php if (tabrel_condition($attr))';
-				$result .= ' echo (make_prev($attr, \''.$this->prev.'\')); ?>';
-			}
-			$result .= $content;
-			if ($page && $this->next) {
-				$result .= '<?php if (tabrel_condition($attr))';
-				$result .= ' echo (make_next($attr, \''.$this->next.'\')); ?>';
-			}
-			$result .= "<?php } ?>\n";
-
-			return $result;
+			return implode($content);
 		}
 
 		public function make_require ($part, $file)

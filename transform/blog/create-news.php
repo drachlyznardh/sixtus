@@ -1,7 +1,5 @@
 <?php
 
-	print_r($argv);
-
 	# Load map
 	require_once($argv[2]);
 
