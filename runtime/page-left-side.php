@@ -1,4 +1,5 @@
-<?php dynamic_include($attr, $_SERVER['DOCUMENT_ROOT'].'frag/left-nav.php', true, true);?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'frag/left-nav/content.php');
+	frag_left_nav_content($attr, 'section'); ?>
 <div class="section">
 	<div class="half-left-out"><div class="half-left-in">
 			<h3>Tab</h3>
@@ -41,4 +42,5 @@
 	<div style="float:none; clear:both"></div>
 </div>
 <br />
-<?php dynamic_include($attr, $_SERVER['DOCUMENT_ROOT'].'frag/friends.php', true, true);?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'frag/friends/content.php');
+	frag_friends_content($attr, 'section'); ?>
