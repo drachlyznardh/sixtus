@@ -9,6 +9,13 @@
 		return $_;
 	}
 
+	function underscore ($target)
+	{
+		$result = str_replace(array('/', '-'), array('_', '_'), $target);
+		printf("UNDERSCORE %s -> %s\n", $target, $result);
+		return $result;
+	}
+
 	class Parser {
 	
 		private $pstate;
@@ -307,7 +314,7 @@
 			#printf("\tPutting side content into [%s]\n", $target_file);
 		
 			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s) { %s%s\n",
-				'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec', '?', '>');
+				'<', '?php', underscore($unique), '$attr', '$sec', '?', '>');
 			foreach($this->side as $_)
 				$to_file[] = $_->getContent(false);
 			$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
@@ -319,26 +326,27 @@
 		private function write_content_file ($target, $unique)
 		{
 			$target_file = sprintf('%scontent.php', $target);
+			$prefix = underscore($unique);
 			#printf("\tPutting content into [%s]\n", $target_file);
 		
 			if (count($this->body) > 1)
 			{
 				$to_file[] = sprintf("%s%s function %s_content (%s, %s) {\n",
-					'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec');
+					'<', '?php', $prefix, '$attr', '$sec');
 				$to_file[] = sprintf("\t%s['%s'] = true;\n", '$attr', 'included');
 				foreach($this->body as $_)
 				{
 					$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
 						'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
 					$to_file[] = sprintf("\t%s_tab_%s (%s, %s);\n",
-						str_replace('/', '_', $unique), $_->getName(), '$attr', '$sec');
+						$prefix, $_->getName(), '$attr', '$sec');
 				}
 				$to_file[] = sprintf("} %s%s\n", '?', '>');
 			}
 			else
 			{
 				$to_file[] = sprintf("%s%s function %s_content (%s, %s) { %s%s\n",
-					'<', '?php', str_replace('/', '_', $unique), '$attr', '$sec', '?', '>');
+					'<', '?php', $prefix, '$attr', '$sec', '?', '>');
 				$to_file[] = $this->body[0]->getContent(true);
 				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
 			}
@@ -350,7 +358,7 @@
 		private function write_page_file ($target, $unique)
 		{
 			$header = "\n\t### %s\n";
-			$prefix = str_replace('/', '_', $unique);
+			$prefix = underscore($unique);
 			$target_file = sprintf('%spage.php', $target);
 			#printf("\tPutting page data into [%s]\n", $target_file);
 		
@@ -376,7 +384,7 @@
 				'$_SERVER', 'DOCUMENT_ROOT', $unique);
 			$to_file[] = sprintf("\t\t\t%s_content (%s, %s);\n", $prefix, '$attr', '$sec');
 			$to_file[] = sprintf("\t\t\tbreak;\n");
-			foreach ($this->body as $_) {
+			if (count($this->body) > 1) foreach ($this->body as $_) {
 				$to_file[] = sprintf("\t\tcase '%s':\n", $_->getName());
 				$to_file[] = sprintf("\t\t\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
 					'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
@@ -403,7 +411,7 @@
 		{
 			if (count($this->body) < 2 && !$this->body[0]->getName()) return;
 
-			$prefix = str_replace('/', '_', $unique);
+			$prefix = underscore($unique);
 
 			foreach ($this->body as $_)
 			{
