@@ -3,7 +3,9 @@
 	### Args
 	# 0 : this PHP script
 	# 1 : source .PAG file
-	print_r($argv);
+	# 2 : naked filename for this page
+	# 3 : reverse map file
+	# 4 : destination directory
 
 	require_once('runtime-utils.php');
 
@@ -66,24 +68,19 @@
 		for ($i = 0; $i < $limit; $i++)
 		{
 			$acc .= $data[$i].'/';
-			printf("\t mkdir %s\n", $acc);
+			#printf("\t mkdir %s\n", $acc);
 			if (!is_dir($acc)) mkdir($acc, 0755);
 		}
 	}
 
 	function update_tag_file ($target, $page, $tab, $title)
 	{
-		printf("Now adding {%s}{%s} = '%s' to %s\n", $page, $tab, $title, $target);
+		#printf("Now adding {%s}{%s} = '%s' to %s\n", $page, $tab, $title, $target);
 
 		if (is_file($target)) require($target);
 		else prepare_directories_for ($target);
-		printf("BEFORE\n");
-		print_r($tag);
 
 		$tag[$page][$tab] = $title;
-
-		printf("AFTER\n");
-		print_r($tag);
 
 		$to_file[] = sprintf("%s%s\n", '<', '?php');
 		foreach (array_keys($tag) as $_)
