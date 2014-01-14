@@ -418,7 +418,7 @@
 				#printf("\tPutting tab content into [%s]\n", $target_file);
 
 				$to_file[] = sprintf("%s%s function %s_tab_%s (%s, %s) { %s%s\n",
-					'<', '?php', $prefix, $_->getName(), '$attr','$sec', '?', '>');
+					'<', '?php', $prefix, underscore($_->getName()), '$attr','$sec', '?', '>');
 				$to_file[] = $_->getContent(true);
 				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
 

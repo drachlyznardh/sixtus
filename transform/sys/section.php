@@ -63,6 +63,7 @@
 		public function make_include ($part, $file)
 		{
 			$this->closeContext();
+			$prefix = underscore($file);
 
 			switch ($part)
 			{
@@ -70,13 +71,19 @@
 					$this->content[] = sprintf("<?php require(%s['%s'].'%s/right-side.php');",
 						'$_SERVER', 'DOCUMENT_ROOT', $file);
 					$this->content[] = sprintf("\t%s_right_side (%s, '%s'); ?>",
-						str_replace('/', '_', $file), '$attr', 'invisible');
+						underscore($file), '$attr', 'invisible');
+					break;
+				case 'content':
+					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/content.php');\n",
+						'$_SERVER', 'DOCUMENT_ROOT', $file, $part);
+					$this->content[] = sprintf("\t%s_content (%s, '%s'); ?>\n",
+						underscore($file), '$attr', 'invisible');
 					break;
 				default:
-					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/%s.php');\n",
+					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/tab-%s.php');\n",
 						'$_SERVER', 'DOCUMENT_ROOT', $file, $part);
-					$this->content[] = sprintf("\t%s_%s (%s, '%s'); ?>\n",
-						str_replace('/', '_', $file), str_replace('-', '_', $part), '$attr', 'invisible');
+					$this->content[] = sprintf("\t%s_tab_%s (%s, '%s'); ?>\n",
+						underscore($file), underscore($part), '$attr', 'invisible');
 					break;
 					die("Section->Make_Require: [$part] unknown.\n");	
 			}
