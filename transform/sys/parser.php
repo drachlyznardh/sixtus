@@ -11,9 +11,7 @@
 
 	function underscore ($target)
 	{
-		$result = str_replace(array('/', '-'), array('_', '_'), $target);
-		printf("UNDERSCORE %s -> %s\n", $target, $result);
-		return $result;
+		return str_replace(array('/', '-'), array('_', '_'), $target);
 	}
 
 	class Parser {
