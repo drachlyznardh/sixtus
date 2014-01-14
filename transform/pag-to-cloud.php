@@ -90,19 +90,31 @@
 		$to_file[] = sprintf("%s%s", '?', '>');
 
 		file_put_contents($target, $to_file);
+
+		return count($tag);
 	}
 
 	list($titles, $taglist) = scan_for_tags($argv[1]);
 	$canonical_name = scan_for_canonical($argv[3], $argv[2]);
 	#print_r($titles);
 	#print_r($taglist);
-
+	
+	$cloud_file = $argv[4].'cloud.php';
+	if (is_file($cloud_file)) require_once($cloud_file);
 	foreach (array_keys($taglist) as $env)
 		foreach (array_keys($taglist[$env]) as $tagname)
 		{
 			#printf("\tPage[%s][%s] as tag [%s]\n",
 			#	$titles[$env], $env, $tagname);
 			$tagfile = $argv[4].get_tag_filename ($tagname);
-			update_tag_file($tagfile, $canonical_name, $env, $titles[$env]);
+			$cloud[$tagname] = update_tag_file($tagfile, $canonical_name, $env, $titles[$env]);
 		}
+	
+	print_r($cloud);
+	$to_file[] = sprintf("%s%s\n", '<', '?php');
+	foreach (array_keys($cloud) as $_)
+			$to_file[] = sprintf("\t%s['%s'] = %s;\n",
+				'$cloud', $_, $cloud[$_]);
+	$to_file[] = sprintf("%s%s", '?', '>');
+	file_put_contents($cloud_file, $to_file);
 ?>

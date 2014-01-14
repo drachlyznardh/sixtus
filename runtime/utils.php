@@ -158,7 +158,7 @@
 	
 	function include_search_cloud ($attr)
 	{
-		include('cloud.php');
+		require('db/cloud.php');
 		echo ('<div id="cloud"><p>');
 		ksort($cloud);
 		foreach(array_keys($cloud) as $key)
