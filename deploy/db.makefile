@@ -1,35 +1,21 @@
 
-PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
-TAGS := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
+SRCS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
+TCHS := $(SRCS:.pag=.tch)
 
-IN_DBES  := $(sort $(shell find $(IN_DB_DIR) -type f -name '*.tag'))
-OUT_DBES := $(patsubst $(IN_DB_DIR)%, $(OUT_DB_DIR)%, $(IN_DBES))
+PAG_TO_CLOUD = $(PHP) -f $(PREFIX)transform/pag-to-cloud.php
 
-TCHS   := $(IN_DBES:=.tch)
+DB_DIR     := $(DEST_DIR)runtime/db/
+CLOUD_FILE := $(DB_DIR)cloud.php
 
-all: $(CLOUD_FILE) $(OUT_DBES)
+all: $(TCHS) $(CLOUD_FILE)
+$(COULD_FILE): $(TCHS)
 
-$(TAG_DIR)%.php: $(SRC_DIR)%.pag $(REVERSE_MAP_FILE)
+%.tch: %.pag
 	@echo Generating tags for page $<
-	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(REVERSE_MAP_FILE)
-
-%.tch: %
-	@echo Updating database for entry $<
-	@touch $@
-	@php5 -f $(TCH_TO_CLOUD) $< $(CLOUD_FILE)
-
-$(CLOUD_FILE): $(TCHS)
-	@echo Updating database…
-	@touch $@
-
-$(OUT_DB_DIR)%.tag: $(IN_DB_DIR)%.tag
-	@echo Linking database entry $@
-	@mkdir -p $(dir $@)
-	@$(CP) $< $@
+	@$(PAG_TO_CLOUD) $< $@ $(DB_DIR) 
 
 .PHONY: clean
 clean:
 	@echo Cleaning database
-	@$(RM) $(OUT_DBES)
+	@$(RM) $(TCHS)
 	@$(RM) $(CLOUD_FILE)

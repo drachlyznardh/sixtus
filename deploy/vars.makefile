@@ -21,7 +21,6 @@ export TAG_DIR  := $(IN_DIR).tag/
 export IN_DB_DIR   := $(IN_DIR).db/
 
 export DEST_DIR   := $(OUT_DIR)
-export OUT_DB_DIR := $(DEST_DIR)runtime/db/
 
 export RUNTIME_DIR := $(PREFIX)runtime/
 
@@ -30,5 +29,4 @@ export ACCESS_MAP_FILE   := $(IN_DIR)access-map.php
 export RUNTIME_CONF_FILE := $(DEST_DIR)runtime/conf.php
 export DIRECT_MAP_FILE   := $(DEST_DIR)runtime/direct-map.php
 export REVERSE_MAP_FILE  := $(DEST_DIR)runtime/reverse-map.php
-export CLOUD_FILE        := $(DEST_DIR)runtime/cloud.php
 
