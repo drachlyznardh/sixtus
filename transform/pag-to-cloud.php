@@ -3,9 +3,9 @@
 	### Args
 	# 0 : this PHP script
 	# 1 : source .PAG file
-	# 2 : fake target .TCH file
-	# 3 : database directory
 	print_r($argv);
+
+	require_once('runtime-utils.php');
 
 	### reading source
 	function scan_for_tags ($filename)
@@ -36,10 +36,76 @@
 			else if (preg_match('/tab#/', $_))
 				$environment = split('#', $_)[1];
 		}
-		return $result;
+		return array($pagetitle, $result);
 	}
 
-	$taglist = scan_for_tags($argv[1]);
-	print_r($taglist);
+	### search this page's canonical name
+	function scan_for_canonical ($map_file, $name)
+	{
+		require_once($map_file);
 
+		$data = split('/', $name);
+		$limit = count($data) - 1;
+		$short = $data[0];
+		for ($i = 1; $i < $limit; $i++) $short .= '/'.$data[$i];
+		$long = $short.'/'.$data[$limit];
+
+		if (isset($reverse[$short]))
+			return $reverse[$short].strtoupper($data[$limit]);
+		if (isset($reverse[$long]))
+			return $reverse[$long];
+		return false;
+	}
+
+	function prepare_directories_for ($target)
+	{
+		printf("\tPreparing directories for %s\n", $target);
+		$data = split('/', $target);
+		$limit = count($data) - 1;
+		$acc = false;
+		for ($i = 0; $i < $limit; $i++)
+		{
+			$acc .= $data[$i].'/';
+			printf("\t mkdir %s\n", $acc);
+			if (!is_dir($acc)) mkdir($acc, 0755);
+		}
+	}
+
+	function update_tag_file ($target, $page, $tab, $title)
+	{
+		printf("Now adding {%s}{%s} = '%s' to %s\n", $page, $tab, $title, $target);
+
+		if (is_file($target)) require($target);
+		else prepare_directories_for ($target);
+		printf("BEFORE\n");
+		print_r($tag);
+
+		$tag[$page][$tab] = $title;
+
+		printf("AFTER\n");
+		print_r($tag);
+
+		$to_file[] = sprintf("%s%s\n", '<', '?php');
+		foreach (array_keys($tag) as $_)
+			foreach (array_keys($tag[$_]) as $__)
+				$to_file[] = sprintf("\t%s['%s']['%s'] = '%s';\n",
+					'$tag', $_, $__, $tag[$_][$__]);
+		$to_file[] = sprintf("%s%s", '?', '>');
+
+		file_put_contents($target, $to_file);
+	}
+
+	list($titles, $taglist) = scan_for_tags($argv[1]);
+	$canonical_name = scan_for_canonical($argv[3], $argv[2]);
+	#print_r($titles);
+	#print_r($taglist);
+
+	foreach (array_keys($taglist) as $env)
+		foreach (array_keys($taglist[$env]) as $tagname)
+		{
+			#printf("\tPage[%s][%s] as tag [%s]\n",
+			#	$titles[$env], $env, $tagname);
+			$tagfile = $argv[4].get_tag_filename ($tagname);
+			update_tag_file($tagfile, $canonical_name, $env, $titles[$env]);
+		}
 ?>

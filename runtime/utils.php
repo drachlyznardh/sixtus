@@ -98,6 +98,24 @@
 		return $attr['single'] && !$attr['included'] && !$attr['all_or_one'];
 	}
 
+	function get_tag_filename ($tag)
+	{
+		switch(strlen($tag))
+		{
+			case 1:
+				$target = sprintf('%s.php', $tag[0]);
+				break;
+			case 2:
+				$target = sprintf('%s/%s.php', $tag[0], $tag);
+				break;
+			default:
+				$target = sprintf('%s/%s%s/%s.php', $tag[0], $tag[0], $tag[1], $tag);
+				break;
+		}
+		#printf("Tag[%s] lives in %s\n", $tag, $target);
+		return $target;
+	}
+
 	function include_search_form ()
 	{
 		echo ('<input type="text" name="query" value="" placeholder="Search" />');
@@ -155,37 +173,33 @@
 		return;
 	}
 
-	function display_search_result ($attr, $current, $result)
+	function include_search_static ($attr, $tagname)
 	{
+		$tag = array();
+		$dbfile = 'db/'.get_tag_filename($tagname);
+		#printf("<p>Tag file [%s]</p>\n", $dbfile);
+		if (file_exists($dbfile)) include($dbfile);
+
 		echo ('<h3 class="reverse">Risultati per [');
-		echo ('<a href="'.make_canonical($attr, '/Tag/', false, false).'?query='.$current.'">'.ucwords($current).'</a>');
+		echo ('<a href="'.make_canonical($attr, '/Tag/', false, false).'?query='.$tagname.'">'.ucwords($tagname).'</a>');
 		echo (']:</h3>');
 		
-		if (count($result) < 1) {
+		if (count($tag) < 1) {
 			echo ('<p>Nessun risultato.</p>');
 			return;
 		}
 		
 		echo ('<ul>');
-		foreach (array_keys($result) as $_)
-			foreach (array_keys($result[$_]) as $__)
+		foreach (array_keys($tag) as $_)
+			foreach (array_keys($tag[$_]) as $__)
 			{
 				if (strcmp($__, 'page') == 0) $tab = false;
 				else $tab = $__;
 				$href = make_canonical($attr, $_, $tab, false);
 				
-				echo ('<li><a href="'.$href.'">'.$result[$_][$__].'</a></li>');
+				echo ('<li><a href="'.$href.'">'.$tag[$_][$__].'</a></li>');
 			}
 		echo ('</ul>');
-	}
-
-	function include_search_static ($attr, $keyword)
-	{
-		$tag = array();
-		$dbfile = 'db/'.get_filename_from_tag($keyword);
-		printf("<p>Tag file [%s]</p>\n", $dbfile);
-		if (file_exists($dbfile)) include($dbfile);
-		display_search_result($attr, $keyword, $tag);
 	}
 
 	function include_search_result ($attr)
