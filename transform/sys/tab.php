@@ -83,11 +83,5 @@
 
 			return implode($content);
 		}
-
-		public function make_require ($part, $file)
-		{
-			if ($this->current == null) $this->current = new Section();
-			$this->current->make_require ($part, $file);
-		}
 	}
 ?>

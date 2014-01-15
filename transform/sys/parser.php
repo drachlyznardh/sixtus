@@ -14,6 +14,12 @@
 		return str_replace(array('/', '-'), array('_', '_'), $target);
 	}
 
+	function fail ($message)
+	{
+		echo ($message);
+		exit (1);
+	}
+
 	class Parser {
 	
 		private $pstate;
@@ -145,9 +151,9 @@
 					else if (strcmp($cmd_par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
 					break;
-				case 'include':
-					$this->static_include($cmd_par, $cmd_attr);
-					break;
+				#case 'include':
+				#	$this->static_include($cmd_par, $cmd_attr);
+				#	break;
 			}
 		}
 
@@ -160,10 +166,7 @@
 					$this->side[] = $this->current;
 					$this->current = null;
 					break;
-				case 'include': $this->make_include($cmd_args); break;
-				case 'require':
-					$this->current->make_require($cmd_attr[1], $cmd_args[1]);
-					break;
+				#case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -193,10 +196,7 @@
 						$this->current->setPrev($previous);
 					}
 					break;
-				case 'include': $this->make_include($cmd_args); break;
-				case 'require':
-					$this->current->make_require($cmd_attr[1], $cmd_args[1]);
-					break;
+				#case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -247,7 +247,7 @@
 				{
 					$includefile = $this->prefix.'/'.$filename;
 					if (!is_file($includefile)) 
-						die ("Cannot locate [$filename], from [$this->include_base] nor from [$this->prefix]\n");
+						fail ("Cannot locate [$filename], from [$this->include_base] nor from [$this->prefix]\n");
 				}
 			}
 
