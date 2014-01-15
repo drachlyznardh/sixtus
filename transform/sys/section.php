@@ -80,9 +80,19 @@
 						underscore($file), '$attr', 'invisible');
 					break;
 				case 'tab':
+					if (count($part) < 2)
+						die("Section->Make_Require: Tab requires a name.\n");
 					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/tab-%s.php');\n",
 						'$_SERVER', 'DOCUMENT_ROOT', $file, $part[1]);
 					$this->content[] = sprintf("\t%s_tab_%s (%s, '%s'); ?>\n",
+						underscore($file), underscore($part[1]), '$attr', 'invisible');
+					break;
+				case 'ghost':
+					if (count($part) < 2)
+						die("Section->Make_Require: Ghost requires a name.\n");
+					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/ghost-%s.php');\n",
+						'$_SERVER', 'DOCUMENT_ROOT', $file, $part[1]);
+					$this->content[] = sprintf("\t%s_ghost_%s (%s, '%s'); ?>\n",
 						underscore($file), underscore($part[1]), '$attr', 'invisible');
 					break;
 				default:
