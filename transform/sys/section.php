@@ -65,7 +65,7 @@
 			$this->closeContext();
 			$prefix = underscore($file);
 
-			switch ($part)
+			switch ($part[0])
 			{
 				case 'side':
 					$this->content[] = sprintf("<?php require(%s['%s'].'%s/right-side.php');",
@@ -73,18 +73,19 @@
 					$this->content[] = sprintf("\t%s_right_side (%s, '%s'); ?>",
 						underscore($file), '$attr', 'invisible');
 					break;
-				case 'content':
+				case 'body':
 					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/content.php');\n",
 						'$_SERVER', 'DOCUMENT_ROOT', $file, $part);
 					$this->content[] = sprintf("\t%s_content (%s, '%s'); ?>\n",
 						underscore($file), '$attr', 'invisible');
 					break;
-				default:
+				case 'tab':
 					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/tab-%s.php');\n",
-						'$_SERVER', 'DOCUMENT_ROOT', $file, $part);
+						'$_SERVER', 'DOCUMENT_ROOT', $file, $part[1]);
 					$this->content[] = sprintf("\t%s_tab_%s (%s, '%s'); ?>\n",
-						underscore($file), underscore($part), '$attr', 'invisible');
+						underscore($file), underscore($part[1]), '$attr', 'invisible');
 					break;
+				default:
 					die("Section->Make_Require: [$part] unknown.\n");	
 			}
 		}
