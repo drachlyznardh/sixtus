@@ -63,40 +63,24 @@
 		public function make_require ($lineno, $args, $attr)
 		{
 			$this->closeContext();
-			$prefix = underscore($args[1]);
 
 			$open = sprintf("%s%s", '<', '?php');
 			$close = sprintf("%s%s", '?', '>');
 
 			switch ($attr[1])
 			{
-				case 'side':
-					$this->content[] = sprintf("%s require(%s['%s'].'%s/right-side.php');",
-						$open, '$_SERVER', 'DOCUMENT_ROOT', $args[1]);
-					$this->content[] = sprintf("\t%s_right_side (%s, '%s'); %s",
-						underscore($args[1]), '$attr', 'invisible', $close);
-					break;
-				case 'body':
-					$this->content[] = sprintf("\n%s require(%s['%s'].'%s/content.php');\n",
-						$open, '$_SERVER', 'DOCUMENT_ROOT', $args[1]);
-					$this->content[] = sprintf("\t%s_content (%s, '%s'); %s\n",
-						underscore($args[1]), '$attr', 'invisible', $close);
-					break;
 				case 'tab':
-					if (count($attr) < 2)
-						fail("Section->Make_Require: Tab requires a name.\n");
-					$this->content[] = sprintf("\n%s require(%s['%s'].'%s/tab-%s.php');\n",
-						$open, '$_SERVER', 'DOCUMENT_ROOT', $args[1], $attr[2]);
-					$this->content[] = sprintf("\t%s_tab_%s (%s, '%s'); %s\n",
-						underscore($args[1]), underscore($attr[1]), '$attr', 'invisible', $close);
-					break;
 				case 'ghost':
 					if (count($attr) < 2)
 						fail("Section->Make_Require: Ghost requires a name.\n");
-					$this->content[] = sprintf("\n%s require(%s['%s'].'%s/ghost-%s.php');\n",
-						$open, '$_SERVER', 'DOCUMENT_ROOT', $args[0], $attr[2]);
-					$this->content[] = sprintf("\t%s_ghost_%s (%s, '%s'); %s\n",
-						underscore($args[1]), underscore($attr[1]), '$attr', 'invisible', $close);
+				case 'side':
+				case 'body':
+					if (!isset($attr[2])) $attr[2] = false;
+					$this->content[] = sprintf("\n%s require(%s);\n",
+						$open, function_file($attr[1], $args[1], $attr[2]));
+					$this->content[] = sprintf("\t%s (%s, '%s', %s); %s\n",
+						function_name($attr[1], $args[1], $attr[2]),
+						'$attr', 'invisible', 'false', $close);
 					break;
 				default:
 					fail("Section->Make_Require: [$attr[1]] unknown.\n");	

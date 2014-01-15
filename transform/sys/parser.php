@@ -1,25 +1,5 @@
 <?php
 
-	function polish_line ($_)
-	{
-		$_ = preg_replace('/@SHARP@/', '#', $_);
-		$_ = preg_replace('/@AT@/', '&#64;', $_);
-		$_ = preg_replace('/\'/', '&apos;', $_);
-
-		return $_;
-	}
-
-	function underscore ($target)
-	{
-		return str_replace(array('/', '-'), array('_', '_'), $target);
-	}
-
-	function fail ($message)
-	{
-		echo ($message);
-		exit (1);
-	}
-
 	class Parser {
 	
 		private $pstate;
@@ -335,22 +315,28 @@
 		
 			if (count($this->body) > 1)
 			{
-				$to_file[] = sprintf("%s%s function %s_content (%s, %s) {\n",
-					'<', '?php', $prefix, '$attr', '$sec');
-				$to_file[] = sprintf("\t%s['%s'] = true;\n", '$attr', 'included');
+				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) { %s%s\n",
+					'<', '?php',
+					function_name('body', $prefix, false),
+					'$attr', '$sec', '$standalone', '?', '>');
+				#$to_file[] = sprintf("\t%s['%s'] = true;\n", '$attr', 'included');
 				foreach($this->body as $_)
 				{
-					$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
-						'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
-					$to_file[] = sprintf("\t%s_tab_%s (%s, %s);\n",
-						$prefix, $_->getName(), '$attr', '$sec');
+					$to_file[] = sprintf("\trequire_once(%s);\n",
+						function_file('tab', $unique, $_->getName()));
+					$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
+						function_name('tab', $prefix, $_->getName()),
+						'$attr', '$sec', 'false');
 				}
 				$to_file[] = sprintf("} %s%s\n", '?', '>');
 			}
 			else
 			{
-				$to_file[] = sprintf("%s%s function %s_content (%s, %s) { %s%s\n",
-					'<', '?php', $prefix, '$attr', '$sec', '?', '>');
+				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) { %s%s\n",
+					'<', '?php',
+					function_name('body', $prefix, false),
+					'$attr', '$sec', '$standalone', '?', '>');
+				#$to_file[] = sprintf("\t%s['%s'] = true; %s%s\n", '$attr', 'included', '?', '>');
 				$to_file[] = $this->body[0]->getContent(true);
 				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
 			}
@@ -384,25 +370,28 @@
 
 			$to_file[] = sprintf("\tswitch (%s['%s']) {\n", '$attr', 'part');
 			$to_file[] = sprintf("\t\tcase '':\n");
-			$to_file[] = sprintf("\t\t\trequire_once(%s['%s'].'%s/content.php');\n",
-				'$_SERVER', 'DOCUMENT_ROOT', $unique);
-			$to_file[] = sprintf("\t\t\t%s_content (%s, %s);\n", $prefix, '$attr', '$sec');
+			$to_file[] = sprintf("\t\t\trequire_once(%s);\n",
+				function_file('body', $unique, false));
+			$to_file[] = sprintf("\t\t\t%s (%s, %s, %s);\n",
+				function_name('body', $prefix, false), '$attr', '$sec', 'true');
 			$to_file[] = sprintf("\t\t\tbreak;\n");
 			if (count($this->body) > 1) foreach ($this->body as $_) {
 				$to_file[] = sprintf("\t\tcase '%s':\n", $_->getName());
-				$to_file[] = sprintf("\t\t\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
-					'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
-				$to_file[] = sprintf("\t\t\t%s_tab_%s (%s, %s);\n",
-					$prefix, underscore($_->getName()), '$attr', '$sec');
+				$to_file[] = sprintf("\t\t\trequire_once(%s);\n",
+					function_file('tab', $unique, $_->getName()));
+				$to_file[] = sprintf("\t\t\t%s (%s, %s, %s);\n",
+					function_name('tab', $prefix, $_->getName()), '$attr', '$sec', 'true');
 				$to_file[] = sprintf("\t\t\tbreak;\n");
 			}
 			$to_file[] = sprintf("\t\tdefault: require('runtime-error.php');\n");
 			$to_file[] = sprintf("\t}\n");
 
 			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-middle.php');
-			$to_file[] = sprintf("\trequire_once(%s['%s'].'%s/right-side.php');\n",
-				'$_SERVER', 'DOCUMENT_ROOT', $unique);
-			$to_file[] = sprintf("\t%s_right_side (%s, %s);\n", $prefix, '$attr', '$sec');
+			$to_file[] = sprintf("\trequire_once(%s);\n",
+				function_file('side', $unique, false));
+			$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
+				function_name('side', $prefix, false),
+				'$attr', '$sec', 'false');
 			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-bottom.php');
 			
 			$to_file[] = sprintf("} %s%s\n", '?', '>');
@@ -423,8 +412,10 @@
 				$target_file = sprintf('%stab-%s.php', $target, $_->getName());
 				#printf("\tPutting tab content into [%s]\n", $target_file);
 
-				$to_file[] = sprintf("%s%s function %s_tab_%s (%s, %s) { %s%s\n",
-					'<', '?php', $prefix, underscore($_->getName()), '$attr','$sec', '?', '>');
+				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) { %s%s\n",
+					'<', '?php', 
+					function_name('tab', $unique, $_->getName()),
+					'$attr','$sec', '$standalone', '?', '>');
 				$to_file[] = $_->getContent(true);
 				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
 
