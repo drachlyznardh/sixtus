@@ -15,7 +15,7 @@
 	if ($attr['part'])
 		printf(' § <a href="%s§%s/">%s</a>',
 			make_canonical($attr, implode('/', $cumulative)),
-			$attr['part'], strtoupper($attr['part']));
+			strtoupper($attr['part']), strtoupper($attr['part']));
 ?>
 	/ </p></div>
 		<h1 style="text-align:center"><?=$attr['title']?></h1>
