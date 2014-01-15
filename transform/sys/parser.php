@@ -98,6 +98,8 @@
 						case 'body':
 							$this->parse_body($index, $command, $cmd_attr, $fragment);
 							break;
+						default:
+							fail("Parser->parse: unknown pstate [$pstate]\n");
 					}
 				} else if ($this->pstate != 'meta') {
 					$this->current->parse($index, '', '', array(polish_line($_)));
@@ -108,6 +110,8 @@
 		private function parse_meta ($lineno, $cmd, $cmd_attr, $cmd_par)
 		{
 			switch($cmd) {
+				case 'tag': break;
+				case 'related': break;
 				case 'title':
 					switch(count($cmd_par)){
 						case 3:
@@ -151,9 +155,11 @@
 					else if (strcmp($cmd_par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
 					break;
-				#case 'include':
-				#	$this->static_include($cmd_par, $cmd_attr);
-				#	break;
+				case 'include':
+					$this->static_include($cmd_par, $cmd_attr);
+					break;
+				default:
+					fail("Parser->parse_meta: unknown command [$cmd]\n");
 			}
 		}
 
@@ -387,7 +393,7 @@
 				$to_file[] = sprintf("\t\t\trequire_once(%s['%s'].'%s/tab-%s.php');\n",
 					'$_SERVER', 'DOCUMENT_ROOT', $unique, $_->getName());
 				$to_file[] = sprintf("\t\t\t%s_tab_%s (%s, %s);\n",
-					$prefix, $_->getName(), '$attr', '$sec');
+					$prefix, underscore($_->getName()), '$attr', '$sec');
 				$to_file[] = sprintf("\t\t\tbreak;\n");
 			}
 			$to_file[] = sprintf("\t\tdefault: require('runtime-error.php');\n");
