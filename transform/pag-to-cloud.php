@@ -64,7 +64,7 @@
 
 	function prepare_directories_for ($target)
 	{
-		printf("\tPreparing directories for %s\n", $target);
+		#printf("\tPreparing directories for %s\n", $target);
 		$data = split('/', $target);
 		$limit = count($data) - 1;
 		$acc = false;
