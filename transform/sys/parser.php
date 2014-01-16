@@ -315,10 +315,10 @@
 		
 			if (count($this->body) > 1)
 			{
-				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) { %s%s\n",
+				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) {\n",
 					'<', '?php',
 					function_name('body', $prefix, false),
-					'$attr', '$sec', '$standalone', '?', '>');
+					'$attr', '$sec', '$standalone');
 				#$to_file[] = sprintf("\t%s['%s'] = true;\n", '$attr', 'included');
 				foreach($this->body as $_)
 				{
@@ -332,10 +332,11 @@
 			}
 			else
 			{
-				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) { %s%s\n",
+				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) {%s%s\n",
 					'<', '?php',
 					function_name('body', $prefix, false),
-					'$attr', '$sec', '$standalone', '?', '>');
+					'$attr', '$sec', '$standalone',
+					'?', '>');
 				#$to_file[] = sprintf("\t%s['%s'] = true; %s%s\n", '$attr', 'included', '?', '>');
 				$to_file[] = $this->body[0]->getContent(true);
 				$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
