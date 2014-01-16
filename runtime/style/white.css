@@ -7,8 +7,8 @@ div.section,
 div.section h2,
 div.inside,
 div.outside,
-.mini-left, .mini-right,
-.half-left, .half-right {
+div.mini-left-in, div.mini-right-in,
+div.half-left-in, div.half-right-in {
 	background: #ffffff;
 }
 
@@ -16,8 +16,8 @@ div.section,
 div.section h2,
 div.inside,
 div.outside,
-.mini-left, .mini-right,
-.half-left, .half-right {
+div.mini-left-in, div.mini-right-in,
+div.half-left-in, div.half-right-in {
 	border-color: #888888;
 	-webkit-box-shadow: 0 0 5px #888888;
 	box-shadow: 0 0 5px #888888;
