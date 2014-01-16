@@ -160,18 +160,17 @@
 	
 	function include_search_cloud ($attr)
 	{
-		require('db/cloud.php');
-		echo ('<div id="cloud"><p>');
+		require_once('db/cloud.php');
 		ksort($cloud);
+		
+		printf ('<div id="cloud"><p>');
 		foreach(array_keys($cloud) as $key)
-		{
-			$size = 11 + 4*ceil(log($cloud[$key], 2));
-			$style = 'font-size: '.$size.'px';
-			echo ("\n<span style=\"$style\"><a href=\"");
-			echo make_canonical($attr, 'Tag/?query='.$key, false, false);
-			echo ('">'.ucwords($key).'</a></span>');
-		}
-		echo ('</p></div>');
+			printf ('%s<span style="%s"><a href="%s?query=%s">%s</a></span>',
+				"\n",
+				sprintf('font-size: %dpx', 11 + 4*ceil(log($cloud[$key], 2))),
+				make_canonical($attr, 'Tag/', false, false),
+				$key, ucwords($key));
+		printf ('%s</p></div>', "\n");
 		return;
 	}
 
@@ -179,7 +178,7 @@
 	{
 		$tag = array();
 		$dbfile = 'db/'.get_tag_filename($tagname);
-		#printf("<p>Tag file [%s]</p>\n", $dbfile);
+		printf("<p>Tag [%s] file [%s]</p>\n", $tagname, $dbfile);
 		if (file_exists($dbfile)) include($dbfile);
 
 		echo ('<h3 class="reverse">Risultati per [');
@@ -215,7 +214,7 @@
 
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
-			$dbfile = '.db/'.get_filename_from_tag ($_);
+			$dbfile = 'db/'.get_tag_filename($_);
 			if (file_exists($dbfile))
 			{
 				$tag = array();
