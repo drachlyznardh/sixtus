@@ -53,10 +53,13 @@
 		$long = $short.'/'.$data[$limit];
 
 		if (isset($reverse[$short]))
-			return $reverse[$short].strtoupper($data[$limit]);
-		if (isset($reverse[$long]))
-			return $reverse[$long];
-		return false;
+			$result = $reverse[$short].strtoupper($data[$limit]).'/';
+		else if (isset($reverse[$long]))
+			$result = $reverse[$long].'/';
+		else $result = false;
+
+		#printf("Canonical for [%s] is [%s]\n", $name, $result);
+		return $result;
 	}
 
 	function prepare_directories_for ($target)
@@ -75,7 +78,7 @@
 
 	function update_tag_file ($target, $page, $tab, $title)
 	{
-		#printf("Now adding {%s}{%s} = '%s' to %s\n", $page, $tab, $title, $target);
+		#printf("Now adding [%s][%s] = [%s] to [%s]\n", $page, $tab, $title, $target);
 
 		if (is_file($target)) require($target);
 		else prepare_directories_for ($target);
@@ -85,7 +88,7 @@
 		$to_file[] = sprintf("%s%s\n", '<', '?php');
 		foreach (array_keys($tag) as $_)
 			foreach (array_keys($tag[$_]) as $__)
-				$to_file[] = sprintf("\t%s['%s']['%s'] = '%s';\n",
+				$to_file[] = sprintf("\t%s['%s/']['%s'] = '%s';\n",
 					'$tag', $_, $__, $tag[$_][$__]);
 		$to_file[] = sprintf("%s%s", '?', '>');
 
