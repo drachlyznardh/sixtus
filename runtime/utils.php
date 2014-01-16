@@ -29,22 +29,28 @@
 		return '<em>'.$title.'</em>';
 	}
 
-	function make_next($attr, $name)
+	function make_next($attr, $name, $standalone)
 	{
-		$result = '<div class="section"><p class="reverse">';
-		$result .= 'Continua nel '.make_tid($attr, 'prossimo', $name, false).' tab.';
-		$result .= '</p></div>';
+		if (!$standalone) return;
 		
-		return $result;
+		$result[] = '<div class="section"><p class="reverse">';
+		$result[] = sprintf('Continua nel %s tab.',
+			make_tid($attr, 'prossimo', $name, false));
+		$result[] = '</p></div>';
+		
+		printf(implode($result));
 	}
 
-	function make_prev($attr, $name)
+	function make_prev($attr, $name, $standalone)
 	{
-		$result = '<div class="section"><p>';
-		$result .= 'Continua dal tab '.make_tid($attr, 'precendente', $name, false).'.';
-		$result .= '</p></div>';
+		if (!$standalone) return;
 		
-		return $result;
+		$result[] = '<div class="section"><p>';
+		$result[] = sprintf('Continua dal tab %s.',
+			make_tid($attr, 'precendente', $name, false));
+		$result[] = '</p></div>';
+		
+		printf(implode($result));
 	}
 
 	function dynamic_include ($attr, $filename, $part, $sections)

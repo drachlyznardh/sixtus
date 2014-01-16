@@ -73,12 +73,12 @@
 			if ($this->name)
 				$content[] = sprintf('<a id="%s"></a>', strtoupper($this->name));
 			if ($this->prev)
-				$content[] = sprintf("%s%s if (%s) make_prev (%s, '%s'); %s%s",
-					'<', '?php', '$standalone', '$attr', $this->prev, '?', '>');
+				$content[] = sprintf("%s%s=make_prev(%s, '%s', %s)%s%s",
+					'<', '?', '$attr', $this->prev, '$standalone', '?', '>');
 			$content[] = implode($this->content);
 			if ($this->next)
-				$content[] = sprintf("%s%s if (%s) make_next (%s, '%s'); %s%s",
-					'<', '?php', '$standalone', '$attr', $this->next, '?', '>');
+				$content[] = sprintf("%s%s=make_next(%s, '%s', %s)%s%s",
+					'<', '?', '$attr', $this->next, '$standalone', '?', '>');
 			$content[] = sprintf("</div>\n");
 
 			return implode($content);
