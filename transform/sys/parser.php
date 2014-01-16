@@ -313,7 +313,7 @@
 			$prefix = underscore($unique);
 			#printf("\tPutting content into [%s]\n", $target_file);
 		
-			if (count($this->body) > 1)
+			if (count($this->body) > 1 || $this->body[0]->getName())
 			{
 				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) {\n",
 					'<', '?php',
@@ -376,7 +376,7 @@
 			$to_file[] = sprintf("\t\t\t%s (%s, %s, %s);\n",
 				function_name('body', $prefix, false), '$attr', '$sec', 'true');
 			$to_file[] = sprintf("\t\t\tbreak;\n");
-			if (count($this->body) > 1) foreach ($this->body as $_) {
+			if (count($this->body) > 1 || $this->body[0]->getName(0)) foreach ($this->body as $_) {
 				$to_file[] = sprintf("\t\tcase '%s':\n", $_->getName());
 				$to_file[] = sprintf("\t\t\trequire_once(%s);\n",
 					function_file('tab', $unique, $_->getName()));
