@@ -77,29 +77,6 @@
 		require($filename);	
 	}
 
-	function tab_condition ($attr, $name)
-	{
-		if ($attr['included'])
-			return $attr['part'] == 'page' or
-					$attr['part'] == $name;
-		else
-			return !$attr['single'] or
-					$attr['part'] == $name or
-					($attr['part'] == false and $attr['all_or_one']) or
-					$attr['force_all_tabs'];
-	}
-
-	function side_condition ($attr)
-	{
-		if ($attr['included']) return $attr['part'] == 'side';
-		else return true;
-	}
-
-	function tabrel_condition ($attr)
-	{
-		return $attr['single'] && !$attr['included'] && !$attr['all_or_one'];
-	}
-
 	function get_tag_filename ($tag)
 	{
 		switch(strlen($tag))
@@ -140,24 +117,6 @@
 		return $data;
 	}
 
-	function get_filename_from_tag ($tagname)
-	{
-		$tagname = strtolower($tagname);
-		
-		if (strlen($tagname) == 1) return $tagname[0].'/'.$tagname.'.tag';
-		else return $tagname[0].'/'.$tagname[0].$tagname[1].'/'.$tagname.'.tag';
-	}
-
-	function count_tags ($filename)
-	{
-		echo ("<p>[$filename]</p><br/>");
-		$rows = file($filename);
-		foreach($rows as $row) echo ("<p>$row</p>");
-		
-		include ($filename);
-		return count($tag);
-	}
-	
 	function include_search_cloud ($attr)
 	{
 		require_once('db/cloud.php');
