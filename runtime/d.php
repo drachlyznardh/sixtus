@@ -4,6 +4,7 @@
 	require_once('conf.php');
 	require_once('utils.php');
 	require_once('mimes.php');
+	require_once('direct-map.php');
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
@@ -92,10 +93,8 @@
 		}
 	}
 
-	function search_for_page ($attr, $path)
+	function search_for_page ($map, $attr, $path)
 	{
-		require_once('direct-map.php');
-
 		$short = false;
 		$limit = count($path) - 1;
 		for ($i = 0; $i < $limit; $i++) $short .= ucwords($path[$i]).'/';
@@ -105,16 +104,16 @@
 		{
 			$target = sprintf("%spage.php", strtolower($long));
 		}
-		else if (isset($direct[$long]))
+		else if (isset($map[$long]))
 		{
 			#printf ("Found [%s] Long\n", $long);
-			$target = sprintf("%s/page.php", strtolower($direct[$long]));
+			$target = sprintf("%s/page.php", strtolower($map[$long]));
 		}
-		else if (isset($direct[$short]))
+		else if (isset($map[$short]))
 		{
 			#printf ("Found [%s] Short\n", $short);
 			$target = sprintf("%s/%s/page.php",
-				strtolower($direct[$short]), $path[$limit]);
+				strtolower($map[$short]), $path[$limit]);
 		}
 		else $target = false;
 
@@ -167,7 +166,7 @@
 
 	$attr['self'] = find_self($request['path']);
 
-	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($attr, $request['path']);
+	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
 	#require_once($target_file);
 	
 	if (is_file($target_file))
