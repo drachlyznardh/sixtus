@@ -178,7 +178,7 @@
 	{
 		$tag = array();
 		$dbfile = 'db/'.get_tag_filename($tagname);
-		printf("<p>Tag [%s] file [%s]</p>\n", $tagname, $dbfile);
+		#printf("<p>Tag [%s] file [%s]</p>\n", $tagname, $dbfile);
 		if (file_exists($dbfile)) include($dbfile);
 
 		echo ('<h3 class="reverse">Risultati per [');
