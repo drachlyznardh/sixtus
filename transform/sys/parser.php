@@ -5,6 +5,7 @@
 		private $pstate;
 
 		private $prefix;
+		private $target;
 
 		private $title;
 		private $subtitle;
@@ -47,6 +48,7 @@
 
 		public function parse($filename)
 		{
+			$this->target = $filename;
 			$this->include_base = dirname($filename);
 			$index = array($filename, 0);
 			
@@ -233,7 +235,8 @@
 				{
 					$includefile = $this->prefix.'/'.$filename;
 					if (!is_file($includefile)) 
-						fail ("Cannot locate [$filename], from [$this->include_base] nor from [$this->prefix]\n");
+						fail (sprintf ("Cannot locate [%s], from [%s] nor from [%s] while scanning [%s]\n",
+							$filename, $this->include_base, $this->prefix, $this->target));
 				}
 			}
 
