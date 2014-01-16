@@ -27,8 +27,8 @@
 	for($i = 0; $i < $limit; $i++) {
 		$current = ucwords($request['path'][$i]);
 		$cumulative[] = $current;
-		printf(' / <a href="%s/">%s</a>',
-			make_canonical($attr, implode('/', $cumulative)), $current);
+		printf(' / <a href="%s">%s</a>',
+			make_canonical($attr, implode('/', $cumulative).'/'), $current);
 	}
 	printf (' / </p>');
 

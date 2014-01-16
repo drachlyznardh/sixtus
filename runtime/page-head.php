@@ -6,15 +6,21 @@
 		<br class="small-screen"/>
 <?php
 	$cumulative = array();
-	foreach ($request['path'] as $_) {
-		$current = ucwords($_);
+	$limit = count($request['path']) - 1;
+	for ($i = 0; $i < $limit; $i++) {
+		$current = ucwords($request['path'][$i]);
 		$cumulative[] = $current;
-		printf(' / <a href="%s/">%s</a>',
-			make_canonical($attr, implode('/', $cumulative)), $current);
+		printf(' / <a href="%s">%s</a>',
+			make_canonical($attr, implode('/', $cumulative).'/'), $current);
 	}
+	if ($limit) $current = strtoupper($request['path'][$limit]);
+	else $current = ucwords($request['path'][$limit]);
+	$cumulative[] = $current;
+	printf(' / <a href="%s">%s</a>',
+		make_canonical($attr, implode('/', $cumulative).'/'), $current);
 	if ($attr['part'])
-		printf(' § <a href="%s§%s/">%s</a>',
-			make_canonical($attr, implode('/', $cumulative)),
+		printf(' § <a href="%s§%s">%s</a>',
+			make_canonical($attr, implode('/', $cumulative).'/'),
 			strtoupper($attr['part']), strtoupper($attr['part']));
 ?>
 	/ </p></div>
