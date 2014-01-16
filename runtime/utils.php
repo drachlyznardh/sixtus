@@ -249,6 +249,33 @@
 		}
 	}
 
+	function search_for_page ($map, $attr, $path)
+	{
+		$short = false;
+		$limit = count($path) - 1;
+		for ($i = 0; $i < $limit; $i++) $short .= ucwords($path[$i]).'/';
+		$long = $short.ucwords($path[$limit]).'/';
+
+		if (preg_match('/blog/', $path[0]))
+		{
+			$target = sprintf("%spage.php", strtolower($long));
+		}
+		else if (isset($map[$long]))
+		{
+			#printf ("Found [%s] Long\n", $long);
+			$target = sprintf("%s/page.php", strtolower($map[$long]));
+		}
+		else if (isset($map[$short]))
+		{
+			#printf ("Found [%s] Short\n", $short);
+			$target = sprintf("%s/%s/page.php",
+				strtolower($map[$short]), $path[$limit]);
+		}
+		else $target = false;
+
+		return $target;
+	}
+
 	function extract_heading_path ($attr, $request, $part, $map)
 	{
 		$previous = false;

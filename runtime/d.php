@@ -93,72 +93,10 @@
 		}
 	}
 
-	function search_for_page ($map, $attr, $path)
-	{
-		$short = false;
-		$limit = count($path) - 1;
-		for ($i = 0; $i < $limit; $i++) $short .= ucwords($path[$i]).'/';
-		$long = $short.ucwords($path[$limit]).'/';
-
-		if (preg_match('/blog/', $path[0]))
-		{
-			$target = sprintf("%spage.php", strtolower($long));
-		}
-		else if (isset($map[$long]))
-		{
-			#printf ("Found [%s] Long\n", $long);
-			$target = sprintf("%s/page.php", strtolower($map[$long]));
-		}
-		else if (isset($map[$short]))
-		{
-			#printf ("Found [%s] Short\n", $short);
-			$target = sprintf("%s/%s/page.php",
-				strtolower($map[$short]), $path[$limit]);
-		}
-		else $target = false;
-
-		return $target;
-	}
-
-	$myindex = 0;
-	$mycount = count($request['path']);
-	$mymap = $map;
-	$mycat = false;
-	$mypath = $request['path'][0];
-	$search['dir'] = '.';
-	$search['file'] = 'index';
-	while (1) {
-		if (is_array($mymap) && isset($mymap[$mypath])) {
-			$mymap = $mymap[$mypath];
-			$mycat .= ucwords($mypath).'/';
-			$search['cat'][] = array($mycat, ucwords($mypath));
-
-			if (is_array($mymap)) $search['dir'] = $mymap[0];
-			else $search['dir'] = $mymap;
-		
-			$myindex++;
-			if ($myindex < $mycount) {
-				$mypath = $request['path'][$myindex];
-			} else break;
-		} else {
-			$search['file'] = $mypath;
-			$mycat .= strtoupper($mypath).'/';
-			$search['page'] = array($mycat, strtoupper($mypath));
-			break;
-		}
-	}
-	
-	if ($attr['download']) $search['include'] = $search['dir'] .'/'. $search['file'].'.pdf';
-	else $search['include'] = $search['dir'] .'/'. $search['file'] .'.php';
-
-	if (isset($search['page'])) $attr['self'] = $search['page'][0];
-	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
-
 	$heading = extract_heading_path($attr, $request['path'], $attr['part'], $direct);
 	$attr['self'] = find_self($heading);
 
 	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
-	#require_once($target_file);
 	
 	if (is_file($target_file))
 		require_once($target_file);
