@@ -160,7 +160,8 @@
 		$limit = count($map) - 1;
 		for ($i = 0; $i < $limit; $i++)
 			$self[] = sprintf('%s/', ucwords($map[$i]));
-		$self[] = sprintf('%s/', strtoupper($map[$limit]));
+		if ($limit) $self[] = sprintf('%s/', strtoupper($map[$limit]));
+		else $self[] = sprintf('%s/', ucwords($map[$limit]));
 		return implode($self);
 	}
 
