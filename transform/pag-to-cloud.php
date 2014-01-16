@@ -88,7 +88,7 @@
 		$to_file[] = sprintf("%s%s\n", '<', '?php');
 		foreach (array_keys($tag) as $_)
 			foreach (array_keys($tag[$_]) as $__)
-				$to_file[] = sprintf("\t%s['%s/']['%s'] = '%s';\n",
+				$to_file[] = sprintf("\t%s['%s']['%s'] = '%s';\n",
 					'$tag', $_, $__, $tag[$_][$__]);
 		$to_file[] = sprintf("%s%s", '?', '>');
 
