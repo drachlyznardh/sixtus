@@ -9,7 +9,7 @@ p.error {
 	background-color: black;
 }
 
-body {
+body, input {
 	margin: 0;
 	font: 8pt/10pt "Georgia", serif;
 	color: #000000;
