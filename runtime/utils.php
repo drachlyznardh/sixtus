@@ -300,10 +300,15 @@
 		return implode($self);
 	}
 
-	function display_heading_server ()
+	function display_heading_server ($server)
 	{
-		foreach (explode('.', $_SERVER['HTTP_HOST']) as $_)
-			printf('[%s]', $_);
+		$servername = $_SERVER['HTTP_HOST'];
+		if (isset($server[$servername])) $target = $server[$servername];
+		
+		foreach (array_keys($target) as $_)
+			$output[] = sprintf('<a href="%s">%s</a>', $target[$_], $_);
+
+		printf(implode(' . ', $output));
 	}
 
 	function display_heading_path ($heading)
