@@ -475,7 +475,13 @@
 					$this->content[] = '<'.'?php include_search_cloud($attr)?'.'>';
 					break;
 				case 'static':
-					$this->content[] = '<'.'?php include_search_static($attr, \''.$attr[1].'\')?'.'>';
+					$data = explode('+', $attr[1]);
+					$this->content[] = sprintf("%s?php %s(%s, array('%s'))?%s",
+						'<',
+						'include_search_static',
+						'$attr',
+						implode("', '", $data),
+						'>');
 					break;
 				case 'search':
 				default:
