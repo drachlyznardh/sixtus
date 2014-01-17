@@ -1,8 +1,10 @@
 <?php
 
-	require_once("sys/runtime.php");
-	require_once("sys/utils.php");
-	require_once("sys/mimes.php");
+	require_once('runtime.php');
+	require_once('conf.php');
+	require_once('utils.php');
+	require_once('mimes.php');
+	require_once('direct-map.php');
 
 	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
 	
@@ -18,7 +20,7 @@
 	$attr['download'] = false;
 	$attr['check'] = false;
 
-	$direct_access_file = substr($request['original'], 1);
+	$direct_access_file = $_SERVER['DOCUMENT_ROOT'].substr($request['original'], 1);
 
 	if (is_file($direct_access_file)) {
 
@@ -31,7 +33,6 @@
 			readfile($direct_access_file);
 			die();
 		} else {
-			#require_once('sys/403-forbidden.php');
 			require_once('sys/404-not-found.php');
 			die();
 		}
@@ -92,39 +93,15 @@
 		}
 	}
 
-	$myindex = 0;
-	$mycount = count($request['path']);
-	$mymap = $map;
-	$mycat = false;
-	$mypath = $request['path'][0];
-	$search['dir'] = '.';
-	$search['file'] = 'index';
-	while (1) {
-		if (is_array($mymap) && isset($mymap[$mypath])) {
-			$mymap = $mymap[$mypath];
-			$mycat .= ucwords($mypath).'/';
-			$search['cat'][] = array($mycat, ucwords($mypath));
+	$heading = extract_heading_path($attr, $request['path'], $attr['part'], $direct);
+	$attr['self'] = find_self($heading);
 
-			if (is_array($mymap)) $search['dir'] = $mymap[0];
-			else $search['dir'] = $mymap;
-		
-			$myindex++;
-			if ($myindex < $mycount) {
-				$mypath = $request['path'][$myindex];
-			} else break;
-		} else {
-			$search['file'] = $mypath;
-			$mycat .= strtoupper($mypath).'/';
-			$search['page'] = array($mycat, strtoupper($mypath));
-			break;
-		}
-	}
+	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
 	
-	if ($attr['download']) $search['include'] = $search['dir'] .'/'. $search['file'].'.pdf';
-	else $search['include'] = $search['dir'] .'/'. $search['file'] .'.php';
-
-	if (isset($search['page'])) $attr['self'] = $search['page'][0];
-	else $attr['self'] = $search['cat'][count($search['cat']) - 1][0];
+	if (is_file($target_file))
+		require_once($target_file);
+	else require_once('404-not-found.php');
+	die();
 
 	if ($attr['download'] && is_file($search['include'])) {
 		header('Content-Type: application/pdf');
@@ -132,6 +109,6 @@
 		readfile($search['include']);
 	} else if (is_file($search['include']))
 		require_once($search['include']);
-	else require_once('sys/404-not-found.php');
+	else require_once('runtime/404-not-found.php');
 	die();
 ?>

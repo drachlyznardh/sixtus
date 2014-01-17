@@ -1,11 +1,10 @@
 
 a { color: #eeeeee; }
 body { background-color: #121212; }
-.mini-left, .mini-right, .half-left, .half-right { background-color: #666666; }
 
 h1, h2, h3 { text-shadow: #ffffff 0 0 0.3em, #000000 1px 1px 1px; }
 
-div.section,
+div.section, input,
 div.half-right-in, div.half-left-in,
 div.mini-right-in, div.mini-left-in {
 	background-color: #666666;

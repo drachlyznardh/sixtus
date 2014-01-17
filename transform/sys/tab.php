@@ -46,7 +46,7 @@
 					$this->current = null;
 				}
 
-				$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, true); ?>";
+				$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'section'); ?>";
 			}
 		}
 
@@ -69,31 +69,19 @@
 
 		public function getContent($page)
 		{
-			$content = false;
-			$result = false;
-			$content = '<div class="tab">';
-			if ($this->name) $content .= '<a id="'.strtoupper($this->name).'"></a>';
-			foreach ($this->content as $_) $content .= $_;
-			$content .= '</div>'."\n";
-			
-			$condition = $page ? 'tab' : 'side';
-			$condition .= '_condition(';
-			$condition .= $page ? "\$attr, '$this->name'" : '$attr';
-			$condition .= ')';
+			$content[] = sprintf('<div class="%s">', 'tab', "\n");
+			if ($this->name)
+				$content[] = sprintf('<a id="%s"></a>', strtoupper($this->name));
+			if ($this->prev)
+				$content[] = sprintf("%s%s=make_prev(%s, '%s', %s)%s%s",
+					'<', '?', '$attr', $this->prev, '$standalone', '?', '>');
+			$content[] = implode($this->content);
+			if ($this->next)
+				$content[] = sprintf("%s%s=make_next(%s, '%s', %s)%s%s",
+					'<', '?', '$attr', $this->next, '$standalone', '?', '>');
+			$content[] = sprintf("</div>\n");
 
-			$result = "<?php if ($condition) { ?>\n";
-			if ($page && $this->prev) {
-				$result .= '<?php if (tabrel_condition($attr))';
-				$result .= ' echo (make_prev($attr, \''.$this->prev.'\')); ?>';
-			}
-			$result .= $content;
-			if ($page && $this->next) {
-				$result .= '<?php if (tabrel_condition($attr))';
-				$result .= ' echo (make_next($attr, \''.$this->next.'\')); ?>';
-			}
-			$result .= "<?php } ?>\n";
-
-			return $result;
+			return implode($content);
 		}
 	}
 ?>

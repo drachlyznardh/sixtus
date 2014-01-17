@@ -16,7 +16,7 @@
 			foreach ($this->content as $_)
 				$content .= $_;
 
-			$result = "\n".'<div class="<?=($attr[\'sections\']?\'section\':\'invisible\')?>">';
+			$result = "\n".'<div class="<?=$sec?>">';
 			$result .= $content;
 			$result .= '</div>'."\n";
 
@@ -45,20 +45,46 @@
 				case 'clear': $this->make_clear($index, $cmd_args); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
 				case 'search': $this->make_search($index, $cmd_args, $cmd_attr); break;
+
+				case 'require':
+					$this->make_require($index, $cmd_args, $cmd_attr);
+					break;
+
 				default: $this->error($index, $command);
 			}
 		}
 
 		private function error ($index, $command)
 		{
-			printf("ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
+			printf("Section ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
 			exit(1);
 		}
 
-		public function make_include ($filename, $part)
+		public function make_require ($lineno, $args, $attr)
 		{
 			$this->closeContext();
-			$this->content[] = "<?php dynamic_include(\$attr, '$filename', $part, false); ?>";
+
+			$open = sprintf("%s%s", '<', '?php');
+			$close = sprintf("%s%s", '?', '>');
+
+			switch ($attr[1])
+			{
+				case 'tab':
+				case 'ghost':
+					if (count($attr) < 2)
+						fail("Section->Make_Require: Ghost requires a name.\n");
+				case 'side':
+				case 'body':
+					if (!isset($attr[2])) $attr[2] = false;
+					$this->content[] = sprintf("\n%s require(%s);\n",
+						$open, function_file($attr[1], $args[1], $attr[2]));
+					$this->content[] = sprintf("\t%s (%s, '%s', %s); %s\n",
+						function_name($attr[1], $args[1], $attr[2]),
+						'$attr', 'invisible', 'false', $close);
+					break;
+				default:
+					fail("Section->Make_Require: [$attr[1]] unknown.\n");	
+			}
 		}
 
 		private function switchContext($new)
@@ -94,6 +120,7 @@
 			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
+			#$this->content[] = "\n";
 			switch ($this->context)
 			{
 				case 'p': $this->content[] = '<p>'; break;
@@ -227,7 +254,7 @@
 		{
 			$this->switchContext($this->defaultContext);
 			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->make_text($cmd_args[1]);
+			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
 		private function make_c ($index, $cmd_args, $cmd_attr)
@@ -270,16 +297,22 @@
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
-			$title = polish_line($cmd_args[1]);
 			if ($cmd_attr and $cmd_attr[1] == 'right')
-				$this->content[] = '<h2 class="reverse">'.$title.'</h2>';
-			else $this->content[] = '<h2>'.$title.'</h2>';
-			$this->content[] = "\n";
+				$open_tag = '<h2 class="reverse">';
+			else $open_tag = '<h2>';
+
+			$this->content[] = "\n".$open_tag;
+			if (count($cmd_args) > 2) {
+				array_shift($cmd_args);
+				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+			} else $this->content[] = $cmd_args[1];
+			$this->content[] = '</h2>'."\n";
 		}
 
 		private function make_titler ($lineno, $args, $attr)
 		{
 			$this->closeContext();
+			$this->content[] = "\n";
 			$this->content[] = '<h2 class="reverse">'.$args[1].'</h2>';
 			$this->content[] = "\n";
 		}
@@ -291,7 +324,7 @@
 				$open_tag = '<h3 class="reverse">';
 			else $open_tag = '<h3>';
 
-			$this->content[] = $open_tag;
+			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
 				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
@@ -355,10 +388,10 @@
 						$this->content[] = "<div class=\"$env-$side[1]-out\">";
 						$this->content[] = "<div class=\"$env-$side[1]-in\">";
 					}
-					else die ("Environment[$env] needs a side");
+					else fail ("Environment[$env] needs a side");
 					break;
 				default:
-					die("Unknown environment[$env]\n");
+					fail("Unknown environment[$env]\n");
 			}
 		}
 
@@ -387,7 +420,7 @@
 					$this->content[] = '</div></div>';
 					break;
 				default:
-					die("Unknown environment[$args[1]]");
+					fail("Unknown environment[$args[1]]");
 			}
 		}
 

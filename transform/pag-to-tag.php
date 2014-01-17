@@ -52,8 +52,9 @@
 	}
 
 	$taglist = array();
-	$rows = make_lines_from_file($argv[3]);
-	$base = dirname($argv[3]);
+	print_r($argv);
+	$rows = file($argv[2], FILE_IGNORE_NEW_LINES);
+	$base = dirname($argv[2]);
 	$pagetitle = false;
 	$environment = 'page';
 
@@ -78,7 +79,7 @@
 			$environment = split('#', $_)[1];
 	}
 
-	if (file_exists($argv[5])) include($argv[5]);
+	if (file_exists($argv[4])) include($argv[4]);
 	else $rmap = array();
 	
 	$current_file = str_replace($argv[1], '', $argv[3]);
@@ -91,7 +92,7 @@
 		$index = strrpos($current_page, '/');
 		$current_category = substr($current_page, 0, $index);
 		$current_name = substr($current_page, $index + 1);
-		$canonical_name = $rmap[$current_category].strtoupper($current_name).'/';
+		$canonical_name = $reverse[$current_category].strtoupper($current_name).'/';
 	}
 
 	$to_file = '<'.'?php';
