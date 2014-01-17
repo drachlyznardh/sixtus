@@ -1,5 +1,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Nova+Mono);
 
 @import url("big-screen.css") screen and (min-width:1024px);
 @import url("wide-screen.css") screen and (min-width:480px) and (max-width:1023px);
@@ -13,7 +14,7 @@ p.error {
 
 body, input {
 	margin: 0;
-	font: 10pt/12pt 'Averia Serif Libre';
+	font: 10pt/12pt 'Averia Serif Libre', cursive;
 	color: #000000;
 }
 
@@ -147,7 +148,7 @@ a.img img {
 em, .em { font-style:italic; }
 em em { font-style:normal; }
 strong { font-weight:bold; }
-code { font-family: monospace }
+code { font-family: 'Nova Mono', cursive; }
 
 form.search {
 	display: inline;
