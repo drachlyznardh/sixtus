@@ -304,6 +304,7 @@
 	{
 		$servername = $_SERVER['HTTP_HOST'];
 		if (isset($server[$servername])) $target = $server[$servername];
+		else $target = array($servername => 'http://'.$servername);
 		
 		foreach (array_keys($target) as $_)
 			$output[] = sprintf('<a href="%s">%s</a>', $target[$_], $_);
