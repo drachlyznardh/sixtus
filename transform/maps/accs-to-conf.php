@@ -10,6 +10,7 @@
 
 		$result['homepage'] = $homepage;
 		$result['style'] = $style;
+		$result['server'] = $server;
 
 		return $result;
 	}
@@ -25,6 +26,12 @@
 		if ($i > 0) $to_file[] = sprintf(", '%s'", $data['style'][$i]);
 		else $to_file[] = sprintf("'%s'", $data['style'][$i]);
 	$to_file[] = sprintf(");\n");
+
+	foreach (array_keys($data['server']) as $_)
+		foreach (array_keys($data['server'][$_]) as $__)
+			$to_file[] = sprintf("\t%s['%s']['%s'] = '%s';\n",
+				'$server', $_, $__, $data['server'][$_][$__]);
+
 	$to_file[] = sprintf("\n%s%s\n", '?', '>');
 
 	file_put_contents($argv[2], $to_file);

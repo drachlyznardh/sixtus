@@ -21,15 +21,7 @@
 	}
 
 	printf ('<p style="text-align: center">');
-	$cumulative = array();
-	$limit = count($request['path']);
-	if ($limit > 1) $limit--;
-	for($i = 0; $i < $limit; $i++) {
-		$current = ucwords($request['path'][$i]);
-		$cumulative[] = $current;
-		printf(' / <a href="%s/">%s</a>',
-			make_canonical($attr, implode('/', $cumulative)), $current);
-	}
+	display_heading_path($heading);
 	printf (' / </p>');
 
 	if ($related['next'])

@@ -19,4 +19,5 @@ $(COULD_FILE): $(TCHS)
 clean:
 	@echo Cleaning database
 	@$(RM) $(TCHS)
+	@$(RM) $(DB_DIR)
 	@$(RM) $(CLOUD_FILE)

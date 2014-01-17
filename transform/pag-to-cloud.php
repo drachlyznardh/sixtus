@@ -53,15 +53,18 @@
 		$long = $short.'/'.$data[$limit];
 
 		if (isset($reverse[$short]))
-			return $reverse[$short].strtoupper($data[$limit]);
-		if (isset($reverse[$long]))
-			return $reverse[$long];
-		return false;
+			$result = $reverse[$short].strtoupper($data[$limit]).'/';
+		else if (isset($reverse[$long]))
+			$result = $reverse[$long].'/';
+		else $result = false;
+
+		#printf("Canonical for [%s] is [%s]\n", $name, $result);
+		return $result;
 	}
 
 	function prepare_directories_for ($target)
 	{
-		printf("\tPreparing directories for %s\n", $target);
+		#printf("\tPreparing directories for %s\n", $target);
 		$data = split('/', $target);
 		$limit = count($data) - 1;
 		$acc = false;
@@ -75,7 +78,7 @@
 
 	function update_tag_file ($target, $page, $tab, $title)
 	{
-		#printf("Now adding {%s}{%s} = '%s' to %s\n", $page, $tab, $title, $target);
+		#printf("Now adding [%s][%s] = [%s] to [%s]\n", $page, $tab, $title, $target);
 
 		if (is_file($target)) require($target);
 		else prepare_directories_for ($target);
