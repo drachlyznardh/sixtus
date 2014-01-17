@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'frag/left-nav/content.php');
-	frag_left_nav_content($attr, 'section'); ?>
+	frag_left_nav_content($attr, 'section', false); ?>
 <div class="section">
 	<div class="half-left-out"><div class="half-left-in">
 			<h3>Tab</h3>
@@ -43,4 +43,4 @@
 </div>
 <br />
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'frag/friends/content.php');
-	frag_friends_content($attr, 'section'); ?>
+	frag_friends_content($attr, 'section', false); ?>

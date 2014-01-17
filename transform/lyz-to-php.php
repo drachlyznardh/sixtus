@@ -1,5 +1,6 @@
 <?php
 
+	require_once('sys/utils.php');
 	require_once('sys/section.php');
 	require_once('sys/tab.php');
 	require_once('sys/parser.php');

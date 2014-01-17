@@ -45,6 +45,11 @@
 				case 'clear': $this->make_clear($index, $cmd_args); break;
 				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
 				case 'search': $this->make_search($index, $cmd_args, $cmd_attr); break;
+
+				case 'require':
+					$this->make_require($index, $cmd_args, $cmd_attr);
+					break;
+
 				default: $this->error($index, $command);
 			}
 		}
@@ -55,30 +60,30 @@
 			exit(1);
 		}
 
-		public function make_require ($part, $file)
-		{
-			$this->make_include ($part, $file);
-		}
-
-		public function make_include ($part, $file)
+		public function make_require ($lineno, $args, $attr)
 		{
 			$this->closeContext();
 
-			switch ($part)
+			$open = sprintf("%s%s", '<', '?php');
+			$close = sprintf("%s%s", '?', '>');
+
+			switch ($attr[1])
 			{
+				case 'tab':
+				case 'ghost':
+					if (count($attr) < 2)
+						fail("Section->Make_Require: Ghost requires a name.\n");
 				case 'side':
-					$this->content[] = sprintf("<?php require(%s['%s'].'%s/right-side.php');",
-						'$_SERVER', 'DOCUMENT_ROOT', $file);
-					$this->content[] = sprintf("\t%s_right_side (%s, '%s'); ?>",
-						str_replace('/', '_', $file), '$attr', 'invisible');
+				case 'body':
+					if (!isset($attr[2])) $attr[2] = false;
+					$this->content[] = sprintf("\n%s require(%s);\n",
+						$open, function_file($attr[1], $args[1], $attr[2]));
+					$this->content[] = sprintf("\t%s (%s, '%s', %s); %s\n",
+						function_name($attr[1], $args[1], $attr[2]),
+						'$attr', 'invisible', 'false', $close);
 					break;
 				default:
-					$this->content[] = sprintf("\n<?php require(%s['%s'].'%s/%s.php');\n",
-						'$_SERVER', 'DOCUMENT_ROOT', $file, $part);
-					$this->content[] = sprintf("\t%s_%s (%s, '%s'); ?>\n",
-						str_replace('/', '_', $file), str_replace('-', '_', $part), '$attr', 'invisible');
-					break;
-					die("Section->Make_Require: [$part] unknown.\n");	
+					fail("Section->Make_Require: [$attr[1]] unknown.\n");	
 			}
 		}
 
@@ -383,10 +388,10 @@
 						$this->content[] = "<div class=\"$env-$side[1]-out\">";
 						$this->content[] = "<div class=\"$env-$side[1]-in\">";
 					}
-					else die ("Environment[$env] needs a side");
+					else fail ("Environment[$env] needs a side");
 					break;
 				default:
-					die("Unknown environment[$env]\n");
+					fail("Unknown environment[$env]\n");
 			}
 		}
 
@@ -415,7 +420,7 @@
 					$this->content[] = '</div></div>';
 					break;
 				default:
-					die("Unknown environment[$args[1]]");
+					fail("Unknown environment[$args[1]]");
 			}
 		}
 

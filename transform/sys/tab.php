@@ -73,21 +73,15 @@
 			if ($this->name)
 				$content[] = sprintf('<a id="%s"></a>', strtoupper($this->name));
 			if ($this->prev)
-				$content[] = sprintf("%s%s=make_prev (%s, '%s'); %s%s",
-					'<', '?', '$attr', $this->prev, '?', '>');
+				$content[] = sprintf("%s%s=make_prev(%s, '%s', %s)%s%s",
+					'<', '?', '$attr', $this->prev, '$standalone', '?', '>');
 			$content[] = implode($this->content);
 			if ($this->next)
-				$content[] = sprintf("%s%s=make_next (%s, '%s'); %s%s",
-					'<', '?', '$attr', $this->next, '?', '>');
+				$content[] = sprintf("%s%s=make_next(%s, '%s', %s)%s%s",
+					'<', '?', '$attr', $this->next, '$standalone', '?', '>');
 			$content[] = sprintf("</div>\n");
 
 			return implode($content);
-		}
-
-		public function make_require ($part, $file)
-		{
-			if ($this->current == null) $this->current = new Section();
-			$this->current->make_require ($part, $file);
 		}
 	}
 ?>

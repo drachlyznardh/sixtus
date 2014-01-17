@@ -56,13 +56,13 @@
 		$_ = $result[$keys[$i]];
 		if ($i) $to_file[] = sprintf("\tsec#br\n");
 		if ($_[3] == 1)
-			$to_file[] = sprintf("\trequire@tab-%s#blog/%s/%s\n",
+			$to_file[] = sprintf("\trequire@tab@%s#blog/%s/%s\n",
 				$_[2], $_[0], $_[1]);
 		else
 			for ($j = $_[3]; $j > 0; $j--)
 			{
 				if ($j != $_[3]) $to_file[] = sprintf("\tsec#\n");
-				$to_file[] = sprintf("\trequire@tab-%s%c#blog/%s/%s\n",
+				$to_file[] = sprintf("\trequire@tab@%s%c#blog/%s/%s\n",
 					$_[2], 96 + $j, $_[0], $_[1]);
 			}
 	}
