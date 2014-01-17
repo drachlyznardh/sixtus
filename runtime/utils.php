@@ -232,6 +232,7 @@
 		}
 		else $target = false;
 
+		#printf("Short[%s], Long[%s], Target[%s]", $short, $long, $target);
 		return $target;
 	}
 
