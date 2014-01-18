@@ -24,7 +24,7 @@ $(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
 $(DEP_DIR)%.dep: $(SRC_DIR)%.pag
 	@echo Generating dependencies for page $<
 	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $<) $@
+	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%/page.php, $<) $@
 
 #File generation
 $(DEST_DIR)%/page.php: $(SRC_DIR)%.lyz
