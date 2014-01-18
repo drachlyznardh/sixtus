@@ -78,14 +78,14 @@
 			implode('</li><li>', $excluded));
 		}
 
-		printf('<h3>%s</h3>', implode(' &amp; ', array_keys($result)));
+		#printf('<h3>%s</h3>', implode(' &amp; ', array_keys($result)));
 		$tagnames = array_keys($result);
 		$tagcount = count($tagnames);
 		$combined = array_keys($result[$tagnames[0]]);
 		foreach ($tagnames as $_)
 			$combined = array_intersect($combined, array_keys($result[$_]));
-		var_dump($combined);
-		printf('<p>---------------------------------</p>');
+		#var_dump($combined);
+		#printf('<p>---------------------------------</p>');
 		foreach ($combined as $_) {
 			#printf('<h3>%s</h3>', $_);
 			foreach (array_keys($result) as $ctag) {
@@ -128,7 +128,7 @@
 					make_canonical($attr, $page,
 						($part == 'page') ? false : $part,
 					false), $result[$tagnames[0]][$page][$part]);
-		var_dump($final);
+		#var_dump($final);
 		printf('</ul>');
 		return;
 
@@ -158,6 +158,7 @@
 		if (strlen($param['query']) == 0) return;
 
 		display_search_result($attr, split('[\ +]', $param['query']));
+		return;
 
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
