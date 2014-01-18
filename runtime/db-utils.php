@@ -219,7 +219,7 @@
 		for ($i = 1; $i < $limit; $i++)
 			$query[] = $args[$i];
 		display_search_result($attr, $query);
-		die();
+		return;
 
 		$tag = array();
 		$dbfile = 'db/'.get_tag_filename($tagname);
