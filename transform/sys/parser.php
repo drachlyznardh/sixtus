@@ -321,7 +321,7 @@
 						function_file('tab', $unique, $_->getName()));
 					$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
 						function_name('tab', $prefix, $_->getName()),
-						'$attr', '$sec', 'false');
+						'$attr', 'true', 'false');
 				}
 				$to_file[] = sprintf("} %s%s\n", '?', '>');
 			}
