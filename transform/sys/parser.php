@@ -154,7 +154,6 @@
 					$this->side[] = $this->current;
 					$this->current = null;
 					break;
-				#case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -184,7 +183,6 @@
 						$this->current->setPrev($previous);
 					}
 					break;
-				#case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
