@@ -99,7 +99,19 @@
 	$attr['self'] = find_self($token);
 
 	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
-	
+
+	if ($attr['download'])
+	{
+		$target_file_size = strlen($target_file_size);
+		$target_file = sprintf('%s.pdf', substr($target_file, 0, $target_file_size - 9));
+
+		if (is_file($target_file)) {
+			header('Content-Type: application/pdf');
+			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
+			readfile($search['include']);
+		}
+	}
+
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
