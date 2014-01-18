@@ -65,6 +65,8 @@
 		if (!isset($param['query'])) return;
 		if (strlen($param['query']) == 0) return;
 
+		display_search_result($attr, split('[\ +]', $param['query']));
+
 		foreach (split('[ \+]', $param['query']) as $_)
 		{
 			$dbfile = 'db/'.get_tag_filename($_);
@@ -109,9 +111,8 @@
 
 		for ($i = 1; $i < $limit; $i++)
 			$query[] = $args[$i];
-		#search_display_result($query);
-
-		print_r($query);
+		display_search_result($attr, $query);
+		die();
 
 		$tag = array();
 		$dbfile = 'db/'.get_tag_filename($tagname);
