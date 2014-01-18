@@ -80,18 +80,56 @@
 
 		printf('<h3>%s</h3>', implode(' &amp; ', array_keys($result)));
 		$tagnames = array_keys($result);
+		$tagcount = count($tagnames);
 		$combined = array_keys($result[$tagnames[0]]);
 		foreach ($tagnames as $_)
 			$combined = array_intersect($combined, array_keys($result[$_]));
 		var_dump($combined);
-		foreach ($combined as $_)
-			foreach (array_keys($result) as $__)
-				foreach (array_keys($result[$__]) as $___)	
-					foreach (array_keys($result[$__][$___]) as $____)
-						$final[$_][$____] = $__;
 		printf('<p>---------------------------------</p>');
+		foreach ($combined as $_) {
+			#printf('<h3>%s</h3>', $_);
+			foreach (array_keys($result) as $ctag) {
+				#printf('<p>Now matching %s</p>', $ctag);
+				foreach (array_keys($result[$ctag][$_]) as $__) {
+					#var_dump($__);
+					#printf('<p>Recording %s %s</p>', $__, $result[$ctag][$_][$__]);
+					#$final[$_][$__] = $result[$ctag][$_][$__];
+					$final[$_][$__][$ctag] = true;
+				}
+			}
+		}
+		foreach (array_keys($final) as $_)
+			if (isset($final[$_]['page']))
+				foreach (array_keys($final[$_]) as $__)
+					foreach (array_keys($final[$_]['page']) as $___)
+						$final[$_][$__][$___] = true;
+
+		foreach (array_keys($final) as $_)
+			foreach (array_keys($final[$_]) as $__)
+				if (count($final[$_][$__]) < $tagcount)
+					unset($final[$_][$__]);
+
+		foreach (array_keys($final) as $_)
+			if (count($final[$_]) < 1)
+					unset($final[$_]);
+
+		$finalcount = count($final);
+		printf('<h3 class="reverse">Risultati per [');
+		for($i = 0; $i < $finalcount; $i++) {
+			if ($i) printf(' &amp; ');
+			printf('<a href="%s?query=%s">%s</a>',
+				make_canonical($attr, 'Tag/', false, false),
+				$tagnames[$i], ucwords($tagnames[$i]));
+		}
+		printf(']</h3><ul>');
+		foreach (array_keys($final) as $page)
+			foreach (array_keys($final[$page]) as $part)
+				printf('<li><a href="%s">%s</a></li>',
+					make_canonical($attr, $page,
+						($part == 'page') ? false : $part,
+					false), $result[$tagnames[0]][$page][$part]);
 		var_dump($final);
-		printf('<p>---------------------------------</p>');
+		printf('</ul>');
 		return;
 
 		$limit = count($result);
@@ -100,7 +138,7 @@
 		for ($i = 1; $i < $limit; $i++)
 			$combine = array_intersect_key($combine, $result[$keys[$i]]);
 
-		printf('<h3>%s</h3>', implode(' &amp; ', $keys));
+		printf('<h3 class="reverse">%s</h3>', implode(' &amp; ', $keys));
 		foreach (array_keys($combine) as $_) 
 			foreach (array_keys($combine[$_]) as $__)
 				printf('<p>%s => %s / %s</p>',
