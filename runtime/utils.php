@@ -155,11 +155,12 @@
 		return $result;
 	}
 
-	function find_self($pieces)
+	function find_self($heading)
 	{
-		foreach ($pieces as $_)
-			$result[] = ucwords($_);
-		return implode('/', $result).'/';
+		if ($heading['page']) return $heading['page'][1];
+		
+		$limit = count($heading['cat']) - 1;
+		return $heading['cat'][$limit][1];
 	}
 
 	function display_heading_server ($server)
