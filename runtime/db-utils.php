@@ -78,6 +78,8 @@
 			implode('</li><li>', $excluded));
 		}
 
+		if (count($result) < 1) return;
+
 		#printf('<h3>%s</h3>', implode(' &amp; ', array_keys($result)));
 		$tagnames = array_keys($result);
 		$tagcount = count($tagnames);
