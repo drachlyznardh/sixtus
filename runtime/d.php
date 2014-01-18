@@ -96,7 +96,7 @@
 	}
 
 	$heading = extract_heading_path($attr, $request['path'], $attr['part'], $direct);
-	$attr['self'] = find_self($heading);
+	$attr['self'] = find_self($token);
 
 	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
 	

@@ -155,19 +155,11 @@
 		return $result;
 	}
 
-	function find_self($heading)
+	function find_self($pieces)
 	{
-		if ($heading['page']) return $heading['page'][1];
-
-		$limit = count($heading['cat']);
-		return $heading['cat'][$limit - 1][1];
-
-		$limit = count($map) - 1;
-		for ($i = 0; $i < $limit; $i++)
-			$self[] = sprintf('%s/', ucwords($map[$i]));
-		if ($limit) $self[] = sprintf('%s/', strtoupper($map[$limit]));
-		else $self[] = sprintf('%s/', ucwords($map[$limit]));
-		return implode($self);
+		foreach ($pieces as $_)
+			$result[] = ucwords($_);
+		return implode('/', $result).'/';
 	}
 
 	function display_heading_server ($server)
