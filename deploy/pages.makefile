@@ -33,6 +33,6 @@ STUFF += $(shell find $(DEST_DIR) -name 'tab-*.php')
 clean:
 	@echo Cleaning pages
 	@$(RM) $(PHPS)
-	@$(RM) $(DEPS)
+	@$(RM) $(DEP_DIR)
 	@$(RM) $(STUFF)
 
