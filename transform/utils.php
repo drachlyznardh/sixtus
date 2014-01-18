@@ -9,7 +9,7 @@
 	{
 		if (is_file($filename)) return $filename;
 
-		$filename = $base.'/'.$filename;
+		$filename = $base.$filename;
 		if (is_file($filename)) return $filename;
 
 		return false;
