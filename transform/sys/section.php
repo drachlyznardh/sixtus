@@ -478,7 +478,7 @@
 					$data = explode('+', $attr[1]);
 					$this->content[] = sprintf("%s?php %s(%s, array('%s'))?%s",
 						'<',
-						'include_search_static',
+						'display_search_result',
 						'$attr',
 						implode("', '", $data),
 						'>');
