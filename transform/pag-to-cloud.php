@@ -7,7 +7,7 @@
 	# 3 : reverse map file
 	# 4 : destination directory
 
-	require_once('runtime-utils.php');
+	require_once('runtime-db-utils.php');
 
 	### reading source
 	function scan_for_tags ($filename)
