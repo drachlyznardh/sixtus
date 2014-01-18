@@ -16,11 +16,11 @@
 			foreach ($this->content as $_)
 				$content .= $_;
 
-			$result = "\n".'<div class="<?=$sec?>">';
-			$result .= $content;
-			$result .= '</div>'."\n";
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$standalone', '<div class="section">', '>');
+			$result[] = $content;
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$standalone', '</div>', '>');
 
-			return $result;
+			return implode($result);
 		}
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)
