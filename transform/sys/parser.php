@@ -218,13 +218,7 @@
 
 		private function static_include ($args, $attr)
 		{
-			if (count($attr) < 2 || strcmp($attr[1], 'static') != 0) return;
-		
-			if (preg_match('/\.s?lyz$/', $args[1])) 
-				$filename = $args[1];
-			else if (preg_match('/\.pag$/', $args[1]))
-				$filename = $args[1];
-			else $filename = $args[1].'.lyz';
+			$filename = $args[1];
 
 			if (is_file($filename)) $includefile = $filename;
 			else {
