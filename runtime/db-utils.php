@@ -78,6 +78,22 @@
 			implode('</li><li>', $excluded));
 		}
 
+		printf('<h3>%s</h3>', implode(' &amp; ', array_keys($result)));
+		$tagnames = array_keys($result);
+		$combined = array_keys($result[$tagnames[0]]);
+		foreach ($tagnames as $_)
+			$combined = array_intersect($combined, array_keys($result[$_]));
+		var_dump($combined);
+		foreach ($combined as $_)
+			foreach (array_keys($result) as $__)
+				foreach (array_keys($result[$__]) as $___)	
+					foreach (array_keys($result[$__][$___]) as $____)
+						$final[$_][$____] = $__;
+		printf('<p>---------------------------------</p>');
+		var_dump($final);
+		printf('<p>---------------------------------</p>');
+		return;
+
 		$limit = count($result);
 		$keys = array_keys($result);
 		$combine = $result[$keys[0]];
