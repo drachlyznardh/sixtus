@@ -12,6 +12,7 @@ $(COULD_FILE): $(TCHS)
 
 %.tch: %.pag
 	@echo Generating tags for page $<
+	@mkdir -p $(DB_DIR)
 	@$(PAG_TO_CLOUD) $< $(patsubst $(SRC_DIR)%.pag, %, $<) $(REVERSE_MAP_FILE) $(DB_DIR)
 	@touch $@
 
