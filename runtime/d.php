@@ -1,8 +1,10 @@
 <?php
 
-	require_once('runtime.php');
+	#require_once('runtime.php');
 	require_once('conf.php');
 	require_once('utils.php');
+	require_once('db-utils.php');
+
 	require_once('mimes.php');
 	require_once('direct-map.php');
 
