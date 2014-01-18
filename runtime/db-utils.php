@@ -63,7 +63,6 @@
 		
 		foreach ($query as $_)
 		{
-			#printf("<p>Now including tagfile for %s</p>", $_);
 			$target_file = 'db/'.get_tag_filename($_);
 			if (is_file($target_file)) {
 				include($target_file);
@@ -80,26 +79,15 @@
 
 		if (count($result) < 1) return;
 
-		#printf('<h3>%s</h3>', implode(' &amp; ', array_keys($result)));
 		$tagnames = array_keys($result);
 		$tagcount = count($tagnames);
 		$combined = array_keys($result[$tagnames[0]]);
 		foreach ($tagnames as $_)
 			$combined = array_intersect($combined, array_keys($result[$_]));
-		#var_dump($combined);
-		#printf('<p>---------------------------------</p>');
-		foreach ($combined as $_) {
-			#printf('<h3>%s</h3>', $_);
-			foreach (array_keys($result) as $ctag) {
-				#printf('<p>Now matching %s</p>', $ctag);
-				foreach (array_keys($result[$ctag][$_]) as $__) {
-					#var_dump($__);
-					#printf('<p>Recording %s %s</p>', $__, $result[$ctag][$_][$__]);
-					#$final[$_][$__] = $result[$ctag][$_][$__];
+		foreach ($combined as $_)
+			foreach (array_keys($result) as $ctag)
+				foreach (array_keys($result[$ctag][$_]) as $__)
 					$final[$_][$__][$ctag] = true;
-				}
-			}
-		}
 
 		if (isset($final)) {
 			foreach (array_keys($final) as $_)
@@ -141,25 +129,9 @@
 						make_canonical($attr, $page,
 							($part == 'page') ? false : $part,
 						false), $titles[$page][$part]);
-			#var_dump($final);
 			printf('</ul>');
 		} else printf('<p>Nessun risultato.</p>');
 		return;
-
-		$limit = count($result);
-		$keys = array_keys($result);
-		$combine = $result[$keys[0]];
-		for ($i = 1; $i < $limit; $i++)
-			$combine = array_intersect_key($combine, $result[$keys[$i]]);
-
-		printf('<h3 class="reverse">%s</h3>', implode(' &amp; ', $keys));
-		foreach (array_keys($combine) as $_) 
-			foreach (array_keys($combine[$_]) as $__)
-				printf('<p>%s => %s / %s</p>',
-				$combine[$_][$__],
-				$_, $__);
-
-		var_dump($result);
 	}
 
 	function include_search_result ($attr)
@@ -173,42 +145,6 @@
 
 		display_search_result($attr, split('[\ +]', $param['query']));
 		return;
-
-		foreach (split('[ \+]', $param['query']) as $_)
-		{
-			$dbfile = 'db/'.get_tag_filename($_);
-			if (file_exists($dbfile))
-			{
-				$tag = array();
-				include($dbfile);
-				$result[$_] = $tag;
-			}
-		}
-
-		if (count($result) == 0)
-		{
-			echo ('<h3 class="reverse">Sorry</h3>');
-			echo ('<p>No match found.</p>');
-			return;
-		}
-
-		foreach(array_keys($result) as $current)
-		{
-			echo ('<h3 class="reverse">Risultati per [');
-			echo ('<a href="'.make_canonical($attr, '/Tag/', false,
-			false).'?query='.$current.'">'.ucwords($current).'</a>');
-			echo(']:</h3><ul>');
-			foreach (array_keys($result[$current]) as $_)
-				foreach (array_keys($result[$current][$_]) as $__)
-				{
-					if (strcmp($__, 'page') == 0) $tab = false;
-					else $tab = $__;
-					$href = make_canonical($attr, $_, $tab, false);
-					
-					echo ('<li><a href="'.$href.'">'.$result[$current][$_][$__].'</a></li>');
-				}
-			echo ('</ul>');
-		}
 	}
 
 	function include_search_static ($attr)
@@ -220,32 +156,6 @@
 			$query[] = $args[$i];
 		display_search_result($attr, $query);
 		return;
-
-		$tag = array();
-		$dbfile = 'db/'.get_tag_filename($tagname);
-		#printf("<p>Tag [%s] file [%s]</p>\n", $tagname, $dbfile);
-		if (file_exists($dbfile)) include($dbfile);
-
-		echo ('<h3 class="reverse">Risultati per [');
-		echo ('<a href="'.make_canonical($attr, '/Tag/', false, false).'?query='.$tagname.'">'.ucwords($tagname).'</a>');
-		echo (']:</h3>');
-		
-		if (count($tag) < 1) {
-			echo ('<p>Nessun risultato.</p>');
-			return;
-		}
-		
-		echo ('<ul>');
-		foreach (array_keys($tag) as $_)
-			foreach (array_keys($tag[$_]) as $__)
-			{
-				if (strcmp($__, 'page') == 0) $tab = false;
-				else $tab = $__;
-				$href = make_canonical($attr, $_, $tab, false);
-				
-				echo ('<li><a href="'.$href.'">'.$tag[$_][$__].'</a></li>');
-			}
-		echo ('</ul>');
 	}
 
 ?>
