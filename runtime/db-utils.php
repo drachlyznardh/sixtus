@@ -98,38 +98,50 @@
 				}
 			}
 		}
-		foreach (array_keys($final) as $_)
-			if (isset($final[$_]['page']))
+
+		if (isset($final)) {
+			foreach (array_keys($final) as $_)
+				if (isset($final[$_]['page']))
+					foreach (array_keys($final[$_]) as $__)
+						foreach (array_keys($final[$_]['page']) as $___)
+							$final[$_][$__][$___] = true;
+
+			foreach (array_keys($final) as $_)
 				foreach (array_keys($final[$_]) as $__)
-					foreach (array_keys($final[$_]['page']) as $___)
-						$final[$_][$__][$___] = true;
+					if (count($final[$_][$__]) < $tagcount)
+						unset($final[$_][$__]);
 
-		foreach (array_keys($final) as $_)
-			foreach (array_keys($final[$_]) as $__)
-				if (count($final[$_][$__]) < $tagcount)
-					unset($final[$_][$__]);
+			foreach (array_keys($final) as $_)
+				if (count($final[$_]) < 1)
+						unset($final[$_]);
+		}
 
-		foreach (array_keys($final) as $_)
-			if (count($final[$_]) < 1)
-					unset($final[$_]);
-
-		$finalcount = count($final);
+		$limit = count($tagnames);
 		printf('<h3 class="reverse">Risultati per [');
-		for($i = 0; $i < $finalcount; $i++) {
+		for($i = 0; $i < $limit; $i++) {
 			if ($i) printf(' &amp; ');
 			printf('<a href="%s?query=%s">%s</a>',
 				make_canonical($attr, 'Tag/', false, false),
 				$tagnames[$i], ucwords($tagnames[$i]));
 		}
-		printf(']</h3><ul>');
-		foreach (array_keys($final) as $page)
-			foreach (array_keys($final[$page]) as $part)
-				printf('<li><a href="%s">%s</a></li>',
-					make_canonical($attr, $page,
-						($part == 'page') ? false : $part,
-					false), $result[$tagnames[0]][$page][$part]);
-		#var_dump($final);
-		printf('</ul>');
+		printf(']</h3>');
+		
+		if (isset($final)) {
+			foreach ($result as $_)
+				foreach (array_keys($_) as $__)
+					foreach (array_keys($_[$__]) as $___)
+						$titles[$__][$___] = $_[$__][$___];
+
+			printf('<ul>');
+			foreach (array_keys($final) as $page)
+				foreach (array_keys($final[$page]) as $part)
+					printf('<li><a href="%s">%s</a></li>',
+						make_canonical($attr, $page,
+							($part == 'page') ? false : $part,
+						false), $titles[$page][$part]);
+			#var_dump($final);
+			printf('</ul>');
+		} else printf('<p>Nessun risultato.</p>');
 		return;
 
 		$limit = count($result);
