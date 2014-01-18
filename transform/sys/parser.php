@@ -292,8 +292,8 @@
 			$target_file = sprintf('%sright-side.php', $target);
 			#printf("\tPutting side content into [%s]\n", $target_file);
 		
-			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s) { %s%s\n",
-				'<', '?php', underscore($unique), '$attr', '$sec', '?', '>');
+			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s, %s) { %s%s\n",
+				'<', '?php', underscore($unique), '$attr', '$sec', '$standalone', '?', '>');
 			foreach($this->side as $_)
 				$to_file[] = $_->getContent(false);
 			$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
@@ -321,7 +321,7 @@
 						function_file('tab', $unique, $_->getName()));
 					$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
 						function_name('tab', $prefix, $_->getName()),
-						'$attr', '$sec', 'false');
+						'$attr', 'true', 'false');
 				}
 				$to_file[] = sprintf("} %s%s\n", '?', '>');
 			}
@@ -387,7 +387,7 @@
 				function_file('side', $unique, false));
 			$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
 				function_name('side', $prefix, false),
-				'$attr', '$sec', 'false');
+				'$attr', '$sec', 'true');
 			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-bottom.php');
 			
 			$to_file[] = sprintf("} %s%s\n", '?', '>');
