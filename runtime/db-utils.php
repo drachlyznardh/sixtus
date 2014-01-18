@@ -56,6 +56,44 @@
 		return;
 	}
 
+	function display_search_result ($attr, $query)
+	{
+		$result = array();
+		$excluded = array();
+		
+		foreach ($query as $_)
+		{
+			#printf("<p>Now including tagfile for %s</p>", $_);
+			$target_file = 'db/'.get_tag_filename($_);
+			if (is_file($target_file)) {
+				include($target_file);
+				$result[$_] = $tag;
+				unset($tag);
+			} else $excluded[] = $_;
+		}
+
+		if (count($excluded) > 0) {
+			printf('<p>%s</p><ul><li>%s</li></ul>',
+			'I seguenti tag sono stati esclusi dalla ricerca, in quanto non hanno prodotto alcun risultato.',
+			implode('</li><li>', $excluded));
+		}
+
+		$limit = count($result);
+		$keys = array_keys($result);
+		$combine = $result[$keys[0]];
+		for ($i = 1; $i < $limit; $i++)
+			$combine = array_intersect_key($combine, $result[$keys[$i]]);
+
+		printf('<h3>%s</h3>', implode(' &amp; ', $keys));
+		foreach (array_keys($combine) as $_) 
+			foreach (array_keys($combine[$_]) as $__)
+				printf('<p>%s => %s / %s</p>',
+				$combine[$_][$__],
+				$_, $__);
+
+		var_dump($result);
+	}
+
 	function include_search_result ($attr)
 	{
 		$result = array();
