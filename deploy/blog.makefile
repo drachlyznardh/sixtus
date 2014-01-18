@@ -1,5 +1,5 @@
 
-POST_TO_LYZ    := $(TRANSFORM)blog/post-to-lyz.php
+POST_TO_PAG    := $(TRANSFORM)blog/post-to-pag.php
 CREATE_MAP     := $(TRANSFORM)blog/create-map.php
 CREATE_YEAR    := $(TRANSFORM)blog/create-year.php
 CREATE_ARCHIVE := $(TRANSFORM)blog/create-archive.php
@@ -10,10 +10,10 @@ BLOG_DIR := $(SRC_DIR)blog/
 BLOG_MAP := $(BLOG_DIR)blog-map.php
 
 POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
-MONTHS  := $(POSTS:.post=.lyz)
-YEARS   := $(patsubst %/, %.lyz, $(sort $(dir $(MONTHS))))
-ARCHIVE := $(BLOG_DIR)archivio.lyz
-NEWS    := $(abspath $(BLOG_DIR)../blog.lyz)
+MONTHS  := $(POSTS:.post=.pag)
+YEARS   := $(patsubst %/, %.pag, $(sort $(dir $(MONTHS))))
+ARCHIVE := $(BLOG_DIR)archivio.pag
+NEWS    := $(abspath $(BLOG_DIR)../blog.pag)
 
 all: months years archive news
 months: $(MONTHS)
@@ -25,10 +25,10 @@ $(BLOG_MAP): $(POSTS)
 	@echo Generating blog map $@
 	@$(PHP) -f $(CREATE_MAP) $@ $(BLOG_DIR)
 
-%.lyz: %.post $(BLOG_MAP)
+%.pag: %.post $(BLOG_MAP)
 	@echo Generating blog page $@ from $<
 	@mkdir -p $(dir $@)
-	@php5 -f $(POST_TO_LYZ) $< $@ $(BLOG_MAP)
+	@php5 -f $(POST_TO_PAG) $< $@ $(BLOG_MAP)
 
 $(ARCHIVE): $(BLOG_MAP)
 	@echo Generating archive page $@
@@ -38,7 +38,7 @@ $(NEWS): $(BLOG_MAP)
 	@echo Generating news page $@
 	@$(PHP) -f $(CREATE_NEWS) $@ $(BLOG_MAP) $(BLOG_DIR)
 
-%.lyz: $(BLOG_MAP)
+%.pag: $(BLOG_MAP)
 	@echo Generating year page $@
 	@$(PHP) -f $(CREATE_YEAR) $@ $(BLOG_MAP)
 
