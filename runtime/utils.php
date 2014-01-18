@@ -77,137 +77,6 @@
 		require($filename);	
 	}
 
-	function get_tag_filename ($tag)
-	{
-		switch(strlen($tag))
-		{
-			case 1:
-				$target = sprintf('%s.php', $tag[0]);
-				break;
-			case 2:
-				$target = sprintf('%s/%s.php', $tag[0], $tag);
-				break;
-			default:
-				$target = sprintf('%s/%s%s/%s.php', $tag[0], $tag[0], $tag[1], $tag);
-				break;
-		}
-		#printf("Tag[%s] lives in %s\n", $tag, $target);
-		return $target;
-	}
-
-	function include_search_form ()
-	{
-		echo ('<input type="text" name="query" value="" placeholder="Search" />');
-	}
-
-	function get_GET_parameters ()
-	{
-		$query = urldecode(strtolower($_SERVER['REQUEST_URI']));
-		$index = strpos($query, '?');
-		$query = substr($query, $index + 1);
-
-		foreach (split('&', $query) as $_)
-		{
-			$param = split('=', $_);
-
-			if (count($param) == 1) $data[$param[0]] = $param[0];
-			else $data[$param[0]] = $param[1];
-		}
-
-		return $data;
-	}
-
-	function include_search_cloud ($attr)
-	{
-		require_once('db/cloud.php');
-		ksort($cloud);
-		
-		printf ('<div id="cloud"><p>');
-		foreach(array_keys($cloud) as $key)
-			printf ('%s<span style="%s"><a href="%s?query=%s">%s</a></span>',
-				"\n",
-				sprintf('font-size: %dpx', 11 + 4*ceil(log($cloud[$key], 2))),
-				make_canonical($attr, 'Tag/', false, false),
-				$key, ucwords($key));
-		printf ('%s</p></div>', "\n");
-		return;
-	}
-
-	function include_search_static ($attr, $tagname)
-	{
-		$tag = array();
-		$dbfile = 'db/'.get_tag_filename($tagname);
-		#printf("<p>Tag [%s] file [%s]</p>\n", $tagname, $dbfile);
-		if (file_exists($dbfile)) include($dbfile);
-
-		echo ('<h3 class="reverse">Risultati per [');
-		echo ('<a href="'.make_canonical($attr, '/Tag/', false, false).'?query='.$tagname.'">'.ucwords($tagname).'</a>');
-		echo (']:</h3>');
-		
-		if (count($tag) < 1) {
-			echo ('<p>Nessun risultato.</p>');
-			return;
-		}
-		
-		echo ('<ul>');
-		foreach (array_keys($tag) as $_)
-			foreach (array_keys($tag[$_]) as $__)
-			{
-				if (strcmp($__, 'page') == 0) $tab = false;
-				else $tab = $__;
-				$href = make_canonical($attr, $_, $tab, false);
-				
-				echo ('<li><a href="'.$href.'">'.$tag[$_][$__].'</a></li>');
-			}
-		echo ('</ul>');
-	}
-
-	function include_search_result ($attr)
-	{
-		$result = array();
-		$param = get_GET_parameters();
-	
-		if (count($param) == 0) return;
-		if (!isset($param['query'])) return;
-		if (strlen($param['query']) == 0) return;
-
-		foreach (split('[ \+]', $param['query']) as $_)
-		{
-			$dbfile = 'db/'.get_tag_filename($_);
-			if (file_exists($dbfile))
-			{
-				$tag = array();
-				include($dbfile);
-				$result[$_] = $tag;
-			}
-		}
-
-		if (count($result) == 0)
-		{
-			echo ('<h3 class="reverse">Sorry</h3>');
-			echo ('<p>No match found.</p>');
-			return;
-		}
-
-		foreach(array_keys($result) as $current)
-		{
-			echo ('<h3 class="reverse">Risultati per [');
-			echo ('<a href="'.make_canonical($attr, '/Tag/', false,
-			false).'?query='.$current.'">'.ucwords($current).'</a>');
-			echo(']:</h3><ul>');
-			foreach (array_keys($result[$current]) as $_)
-				foreach (array_keys($result[$current][$_]) as $__)
-				{
-					if (strcmp($__, 'page') == 0) $tab = false;
-					else $tab = $__;
-					$href = make_canonical($attr, $_, $tab, false);
-					
-					echo ('<li><a href="'.$href.'">'.$result[$current][$_][$__].'</a></li>');
-				}
-			echo ('</ul>');
-		}
-	}
-
 	function search_for_page ($map, $attr, $path)
 	{
 		$short = false;
@@ -232,6 +101,7 @@
 		}
 		else $target = false;
 
+		#printf("Short[%s], Long[%s], Target[%s]", $short, $long, $target);
 		return $target;
 	}
 
@@ -288,22 +158,16 @@
 	function find_self($heading)
 	{
 		if ($heading['page']) return $heading['page'][1];
-
-		$limit = count($heading['cat']);
-		return $heading['cat'][$limit - 1][1];
-
-		$limit = count($map) - 1;
-		for ($i = 0; $i < $limit; $i++)
-			$self[] = sprintf('%s/', ucwords($map[$i]));
-		if ($limit) $self[] = sprintf('%s/', strtoupper($map[$limit]));
-		else $self[] = sprintf('%s/', ucwords($map[$limit]));
-		return implode($self);
+		
+		$limit = count($heading['cat']) - 1;
+		return $heading['cat'][$limit][1];
 	}
 
 	function display_heading_server ($server)
 	{
 		$servername = $_SERVER['HTTP_HOST'];
 		if (isset($server[$servername])) $target = $server[$servername];
+		else $target = array($servername => 'http://'.$servername);
 		
 		foreach (array_keys($target) as $_)
 			$output[] = sprintf('<a href="%s">%s</a>', $target[$_], $_);

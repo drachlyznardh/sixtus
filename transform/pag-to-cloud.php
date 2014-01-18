@@ -7,7 +7,7 @@
 	# 3 : reverse map file
 	# 4 : destination directory
 
-	require_once('runtime-utils.php');
+	require_once('runtime-db-utils.php');
 
 	### reading source
 	function scan_for_tags ($filename)
@@ -115,7 +115,8 @@
 	
 	#print_r($cloud);
 	$to_file[] = sprintf("%s%s\n", '<', '?php');
-	foreach (array_keys($cloud) as $_)
+	if (isset($cloud))
+		foreach (array_keys($cloud) as $_)
 			$to_file[] = sprintf("\t%s['%s'] = %s;\n",
 				'$cloud', $_, $cloud[$_]);
 	$to_file[] = sprintf("%s%s", '?', '>');

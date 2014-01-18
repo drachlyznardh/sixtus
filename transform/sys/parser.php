@@ -154,7 +154,6 @@
 					$this->side[] = $this->current;
 					$this->current = null;
 					break;
-				#case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -184,7 +183,6 @@
 						$this->current->setPrev($previous);
 					}
 					break;
-				#case 'include': $this->make_include($cmd_args); break;
 				default:
 					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 			}
@@ -220,13 +218,7 @@
 
 		private function static_include ($args, $attr)
 		{
-			if (count($attr) < 2 || strcmp($attr[1], 'static') != 0) return;
-		
-			if (preg_match('/\.s?lyz$/', $args[1])) 
-				$filename = $args[1];
-			else if (preg_match('/\.pag$/', $args[1]))
-				$filename = $args[1];
-			else $filename = $args[1].'.lyz';
+			$filename = $args[1];
 
 			if (is_file($filename)) $includefile = $filename;
 			else {
@@ -300,8 +292,8 @@
 			$target_file = sprintf('%sright-side.php', $target);
 			#printf("\tPutting side content into [%s]\n", $target_file);
 		
-			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s) { %s%s\n",
-				'<', '?php', underscore($unique), '$attr', '$sec', '?', '>');
+			$to_file[] = sprintf("%s%s function %s_right_side (%s, %s, %s) { %s%s\n",
+				'<', '?php', underscore($unique), '$attr', '$sec', '$standalone', '?', '>');
 			foreach($this->side as $_)
 				$to_file[] = $_->getContent(false);
 			$to_file[] = sprintf("%s%s } %s%s\n", '<', '?php', '?', '>');
@@ -329,7 +321,7 @@
 						function_file('tab', $unique, $_->getName()));
 					$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
 						function_name('tab', $prefix, $_->getName()),
-						'$attr', '$sec', 'false');
+						'$attr', 'true', 'false');
 				}
 				$to_file[] = sprintf("} %s%s\n", '?', '>');
 			}
@@ -395,7 +387,7 @@
 				function_file('side', $unique, false));
 			$to_file[] = sprintf("\t%s (%s, %s, %s);\n",
 				function_name('side', $prefix, false),
-				'$attr', '$sec', 'false');
+				'$attr', '$sec', 'true');
 			$to_file[] = sprintf("\trequire_once('%s');\n", 'page-bottom.php');
 			
 			$to_file[] = sprintf("} %s%s\n", '?', '>');

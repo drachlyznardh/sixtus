@@ -1,8 +1,10 @@
 <?php
 
-	require_once('runtime.php');
+	#require_once('runtime.php');
 	require_once('conf.php');
 	require_once('utils.php');
+	require_once('db-utils.php');
+
 	require_once('mimes.php');
 	require_once('direct-map.php');
 
@@ -97,18 +99,22 @@
 	$attr['self'] = find_self($heading);
 
 	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
-	
+
+	if ($attr['download'])
+	{
+		$target_file_size = strlen($target_file_size);
+		$target_file = sprintf('%s.pdf', substr($target_file, 0, $target_file_size - 9));
+
+		if (is_file($target_file)) {
+			header('Content-Type: application/pdf');
+			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
+			readfile($search['include']);
+			die();
+		}
+	}
+
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
-	die();
-
-	if ($attr['download'] && is_file($search['include'])) {
-		header('Content-Type: application/pdf');
-		header('Content-Disposition: attachment; filename="'.$search['file'].'.pdf"');
-		readfile($search['include']);
-	} else if (is_file($search['include']))
-		require_once($search['include']);
-	else require_once('runtime/404-not-found.php');
 	die();
 ?>

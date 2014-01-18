@@ -16,11 +16,11 @@
 			foreach ($this->content as $_)
 				$content .= $_;
 
-			$result = "\n".'<div class="<?=$sec?>">';
-			$result .= $content;
-			$result .= '</div>'."\n";
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '<div class="section">', '>');
+			$result[] = $content;
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '</div>', '>');
 
-			return $result;
+			return implode($result);
 		}
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)
@@ -78,9 +78,9 @@
 					if (!isset($attr[2])) $attr[2] = false;
 					$this->content[] = sprintf("\n%s require(%s);\n",
 						$open, function_file($attr[1], $args[1], $attr[2]));
-					$this->content[] = sprintf("\t%s (%s, '%s', %s); %s\n",
+					$this->content[] = sprintf("\t%s (%s, %s, %s); %s\n",
 						function_name($attr[1], $args[1], $attr[2]),
-						'$attr', 'invisible', 'false', $close);
+						'$attr', 'false', 'false', $close);
 					break;
 				default:
 					fail("Section->Make_Require: [$attr[1]] unknown.\n");	
@@ -475,7 +475,13 @@
 					$this->content[] = '<'.'?php include_search_cloud($attr)?'.'>';
 					break;
 				case 'static':
-					$this->content[] = '<'.'?php include_search_static($attr, \''.$attr[1].'\')?'.'>';
+					$data = explode('+', $attr[1]);
+					$this->content[] = sprintf("%s?php %s(%s, array('%s'))?%s",
+						'<',
+						'display_search_result',
+						'$attr',
+						implode("', '", $data),
+						'>');
 					break;
 				case 'search':
 				default:

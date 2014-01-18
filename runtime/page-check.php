@@ -24,5 +24,10 @@
 	<p class="big-screen">Big-Screen</p>
 	<p class="wide-screen">Wide-Screen</p>
 	<p class="small-screen">Small-Screen</p>
+	<p>Token = [<?=var_dump($token)?>]</p>
+	<p>Attr = [<?=var_dump($attr)?>]</p>
+	<p>Heading = [<?=var_dump($heading)?>]</p>
+	<p>Request = [<?=var_dump($request)?>]</p>
+	<p>Target File = [<?=$target_file?>]</p>
 </div>
 <?php } ?>
