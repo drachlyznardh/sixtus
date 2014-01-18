@@ -109,20 +109,12 @@
 			header('Content-Type: application/pdf');
 			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
 			readfile($search['include']);
+			die();
 		}
 	}
 
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
-	die();
-
-	if ($attr['download'] && is_file($search['include'])) {
-		header('Content-Type: application/pdf');
-		header('Content-Disposition: attachment; filename="'.$search['file'].'.pdf"');
-		readfile($search['include']);
-	} else if (is_file($search['include']))
-		require_once($search['include']);
-	else require_once('runtime/404-not-found.php');
 	die();
 ?>
