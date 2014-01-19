@@ -305,7 +305,7 @@
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
 				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
-			} else $this->content[] = $cmd_args[1];
+			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h2>'."\n";
 		}
 
@@ -328,7 +328,7 @@
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
 				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
-			} else $this->content[] = $cmd_args[1];
+			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h3>'."\n";
 		}
 
