@@ -18,8 +18,6 @@ deploy: build
 	@$(MAKE_RESOURCES)
 	@$(MAKE_PAGES)
 
-maps: $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
-
 tags:
 	@$(MAKE_DB)
 
