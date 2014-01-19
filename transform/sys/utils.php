@@ -58,7 +58,7 @@
 				break;
 		}
 
-		return sprintf("%s['%s'].'%s.php'", '$_SERVER', 'DOCUMENT_ROOT', $result);
+		return sprintf("%s.'%s.php'", 'docroot()', $result);
 	}
 
 ?>
