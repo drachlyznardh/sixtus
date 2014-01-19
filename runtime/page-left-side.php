@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'frag/left-nav/content.php');
+<?php require_once(docroot().'frag/left-nav/content.php');
 	frag_left_nav_content($attr, 'section', true); ?>
 <div class="section">
 	<h3 class="reverse">Theme</h3>
@@ -18,5 +18,5 @@
 	?> ]</p>
 </div>
 <br />
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'frag/friends/content.php');
+<?php require_once(docroot().'frag/friends/content.php');
 	frag_friends_content($attr, 'section', true); ?>

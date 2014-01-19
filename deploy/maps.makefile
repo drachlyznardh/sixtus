@@ -1,7 +1,10 @@
 
 ACCS_TO_DMAP := $(TRANSFORM)maps/accs-to-dmap.php
 ACCS_TO_CONF := $(TRANSFORM)maps/accs-to-conf.php
+ACCS_TO_RSLV := $(TRANSFORM)maps/accs-to-resolve.php
 DMAP_TO_RMAP := $(TRANSFORM)maps/dmap-to-rmap.php
+
+maps: $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(RESOLVE_FILE) $(REVERSE_MAP_FILE)
 
 $(RUNTIME_CONF_FILE): $(ACCESS_MAP_FILE)
 	@echo Generating runtime configuration file
@@ -13,6 +16,11 @@ $(DIRECT_MAP_FILE): $(ACCESS_MAP_FILE)
 	@mkdir -p $(dir $@)
 	@$(PHP) -f $(ACCS_TO_DMAP) $< $@
 
+$(RESOLVE_FILE): $(ACCESS_MAP_FILE)
+	@echo Generating resolve file
+	@mkdir -p $(dir $@)
+	@$(PHP) -f $(ACCS_TO_RSLV) $< $@
+
 $(REVERSE_MAP_FILE): $(DIRECT_MAP_FILE)
 	@echo Generating reverse map file
 	@mkdir -p $(dir $@)
@@ -20,4 +28,4 @@ $(REVERSE_MAP_FILE): $(DIRECT_MAP_FILE)
 
 maps-clean:
 	@echo Cleaning map files
-	@$(RM) $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(REVERSE_MAP_FILE)
+	@$(RM) $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(RESOLVE_FILE) $(REVERSE_MAP_FILE)

@@ -2,6 +2,7 @@
 
 	#require_once('runtime.php');
 	require_once('conf.php');
+	require_once('resolve.php');
 	require_once('utils.php');
 	require_once('db-utils.php');
 
@@ -22,7 +23,7 @@
 	$attr['download'] = false;
 	$attr['check'] = false;
 
-	$direct_access_file = $_SERVER['DOCUMENT_ROOT'].substr($request['original'], 1);
+	$direct_access_file = docroot().substr($request['original'], 1);
 
 	if (is_file($direct_access_file)) {
 
@@ -98,7 +99,7 @@
 	$heading = extract_heading_path($attr, $request['path'], $attr['part'], $direct);
 	$attr['self'] = find_self($heading);
 
-	$target_file = $_SERVER['DOCUMENT_ROOT'].search_for_page($direct, $attr, $request['path']);
+	$target_file = docroot().search_for_page($direct, $attr, $request['path']);
 
 	if ($attr['download'])
 	{

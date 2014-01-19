@@ -26,7 +26,8 @@ export RUNTIME_DIR := $(PREFIX)runtime/
 
 ### Map files
 export ACCESS_MAP_FILE   := $(IN_DIR)access-map.php
-export RUNTIME_CONF_FILE := $(DEST_DIR)runtime/conf.php
 export DIRECT_MAP_FILE   := $(DEST_DIR)runtime/direct-map.php
+export RUNTIME_CONF_FILE := $(DEST_DIR)runtime/conf.php
+export RESOLVE_FILE      := $(DEST_DIR)runtime/resolve.php
 export REVERSE_MAP_FILE  := $(DEST_DIR)runtime/reverse-map.php
 

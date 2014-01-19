@@ -46,7 +46,7 @@
 					$this->current = null;
 				}
 
-				$this->content[] = "<?php dynamic_include(\$attr, \$_SERVER['DOCUMENT_ROOT'].'$filename', $part, 'section'); ?>";
+				$this->content[] = "<?php dynamic_include(\$attr, docroot().'$filename', $part, 'section'); ?>";
 			}
 		}
 
