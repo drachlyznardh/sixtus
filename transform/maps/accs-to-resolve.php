@@ -4,37 +4,49 @@
 	{
 		require_once($filename);
 
-		if (!isset($homepage)) die("\$Homepage is not defined.\n");
-		if (!isset($style)) die("\$Style is not defined.\n");
-		if (!is_array($style)) die("\$Style is not an array.\n");
+		if (isset($docroot)) return $docroot;
+		return false;
+	}
 
-		$result['homepage'] = $homepage;
-		$result['style'] = $style;
-		$result['server'] = $server;
+	function deploy_default ()
+	{
+		return sprintf("\t\treturn %s['%s'];\n",
+			'$_SERVER', 'DOCUMENT_ROOT');
+	}
 
-		return $result;
+	function deploy_one ($data)
+	{
+		$key = array_keys($data)[0];
+		return sprintf("\t\treturn '%s';\n", $data[$key]);
+	}
+
+	function deploy_many ($data)
+	{
+		$output[] = sprintf("\t\tswitch(%s['%s']) {\n",
+			'$_SERVER', 'HTTP_HOST');
+		foreach (array_keys($data) as $key)
+			if ($data[$key])
+				$output[] = sprintf("\t\t\tcase '%s': return '%s'; break;\n",
+					$key, $data[$key]);
+		$output[] = sprintf("\t\t\tdefault: return %s['%s']; break;\n",
+			'$_SERVER', 'DOCUMENT_ROOT');
+		$output[] = sprintf("\t\t}\n");
+	
+		return implode($output);
 	}
 
 	$data = load_content($argv[1]);
+	$output[] = sprintf("%s?php\n\n", '<');
+	$output[] = sprintf("\tfunction docroot() {\n");
 
-	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
-	$to_file[] = sprintf("\t%s = '%s';\n",
-		'$runtime[\'home\']', $data['homepage']);
+	if ($data)
+		if (count($data) > 1) $output[] = deploy_many($data);
+		else $output[] = deploy_one($data);
+	else $output[] = deploy_default();
 
-	$to_file[] = sprintf("\t%s = array(", '$style');
-	for ($i = 0; $i < count($data['style']); $i++)
-		if ($i > 0) $to_file[] = sprintf(", '%s'", $data['style'][$i]);
-		else $to_file[] = sprintf("'%s'", $data['style'][$i]);
-	$to_file[] = sprintf(");\n");
-
-	foreach (array_keys($data['server']) as $_)
-		foreach (array_keys($data['server'][$_]) as $__)
-			$to_file[] = sprintf("\t%s['%s']['%s'] = '%s';\n",
-				'$server', $_, $__, $data['server'][$_][$__]);
-
-	$to_file[] = sprintf("\n%s%s\n", '?', '>');
-
-	file_put_contents($argv[2], $to_file);
+	$output[] = sprintf("\t}\n");
+	$output[] = sprintf("\n?%s\n", '>');
+	file_put_contents($argv[2], $output);
 	die();
 
 ?>
