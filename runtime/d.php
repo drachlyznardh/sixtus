@@ -2,6 +2,7 @@
 
 	#require_once('runtime.php');
 	require_once('conf.php');
+	require_once('resolve.php');
 	require_once('utils.php');
 	require_once('db-utils.php');
 
