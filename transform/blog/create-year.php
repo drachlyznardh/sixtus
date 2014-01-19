@@ -20,6 +20,7 @@
 	### body
 	foreach ($reverse as $_)
 	{
+		$to_file[] = sprintf("\tsec#\n");
 		$to_file[] = sprintf("\tid#%s\n", $_);
 		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n", $year, $_);
 	}
