@@ -18,7 +18,7 @@ deploy: build
 	@$(MAKE_RESOURCES)
 	@$(MAKE_PAGES)
 
-tags:
+tags: blog
 	@$(MAKE_DB)
 
 blog:
