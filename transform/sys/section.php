@@ -1,6 +1,7 @@
 <?php
 	class Section
 	{
+		private $id = false;
 		private $content = array();
 		private $context = false;
 		private $environment;
@@ -17,11 +18,14 @@
 				$content .= $_;
 
 			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '<div class="section">', '>');
+			if ($this->id) $result[] = sprintf('<a id="%s"></a>', $this->id);
 			$result[] = $content;
 			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '</div>', '>');
 
 			return implode($result);
 		}
+
+		public function setId($id) { $this->id = $id; }
 
 		public function parse($index, $command, $cmd_attr, $cmd_args)
 		{

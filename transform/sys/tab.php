@@ -17,21 +17,23 @@
 			$this->prev = $this->next = false;
 		}
 
-		public function parse($index, $cmd, $cmd_attr, $cmd_args)
+		public function parse($index, $cmd, $attr, $args)
 		{
 			switch($cmd)
 			{
-				case 'sec': $this->make_sec($cmd_args); break;
-				default: $this->make_default($index, $cmd, $cmd_attr, $cmd_args); break;
+				case 'sec': $this->make_sec($index, $cmd, $attr, $args); break;
+				default: $this->make_default($index, $cmd, $attr, $args); break;
 			}
 		}
 
-		private function make_sec ($args)
+		private function make_sec ($index, $cmd, $attr, $args)
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
 			if (count($args) > 1 && strcmp($args[1], 'br') == 0)
 				$this->content[] = '<br />';
+
 			$this->current = new Section();
+			if (isset($attr[1])) $this->current->setId($attr[1]);
 		}
 
 		public function make_include ($filename, $part, $as)
