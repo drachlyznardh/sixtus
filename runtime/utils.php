@@ -2,7 +2,7 @@
 
 	function make_canonical ($attr, $url, $tab=false, $hash=false)
 	{
-		if ($tab) $result = substr($url, 0, -1).'§'.strtoupper($tab).'/';
+		if ($tab) $result = substr($url, 0, -1).'§'.mb_strtoupper($tab, 'UTF-8').'/';
 		else $result = $url;
 		if (!$attr['gray']) $result .= 'White/';
 		if (!$attr['single']) $result .= 'All/';
@@ -22,7 +22,7 @@
 				else $url = make_canonical ($attr, $attr['self'], $tab);
 			}
 		} else {
-			$url = make_canonical ($attr, $attr['self'], false, strtoupper($tab));
+			$url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		}
 		
 		if ($url) return '<a href="'.$url.'">'.$title.'</a>';
@@ -138,7 +138,7 @@
 			}
 
 			if ($missing) {
-				$TITLE = strtoupper($title);
+				$TITLE = mb_strtoupper($title, 'UTF-8');
 				$previous .= $TITLE.'/';
 				$canon = make_canonical($attr, $previous, false, false);
 				$result['page'] = array($TITLE, $canon);
@@ -147,7 +147,7 @@
 		}
 
 		if ($part) {
-			$PART = strtoupper($part);
+			$PART = mb_strtoupper($part, 'UTF-8');
 			$canon = make_canonical($attr, $previous, $PART, false);
 			$result['part'] = array($PART, $canon);
 		} else $result['part'] = false;
