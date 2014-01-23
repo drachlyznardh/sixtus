@@ -114,7 +114,7 @@
 		$index = strrpos($current_page, '/');
 		$current_category = substr($current_page, 0, $index);
 		$current_name = substr($current_page, $index + 1);
-		$canonical_name = $page_reverse_map[$current_category].strtoupper($current_name).'/';
+		$canonical_name = $page_reverse_map[$current_category].mb_strtoupper($current_name, 'UTF-8').'/';
 	}
 	echo (", Canonical [$canonical_name]\n");
 
