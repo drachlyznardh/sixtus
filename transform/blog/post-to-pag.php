@@ -135,7 +135,7 @@
 				else $to_file[] = sprintf("\t/\n");
 				$to_file[] = sprintf("\tlink#About/#%s#%s\n",
 					ucwords($post['tags'][$i]),
-					strtoupper($post['tags'][$i]));
+					mb_strtoupper($post['tags'][$i], 'UTF-8'));
 			}
 			$to_file[] = sprintf("\ttitle#%s\n", $post['title']);
 

@@ -73,7 +73,7 @@
 		{
 			$content[] = sprintf('<div class="%s">', 'tab', "\n");
 			if ($this->name)
-				$content[] = sprintf('<a id="%s"></a>', strtoupper($this->name));
+				$content[] = sprintf('<a id="%s"></a>', mb_strtoupper($this->name, 'UTF-8'));
 			if ($this->prev)
 				$content[] = sprintf("%s%s=make_prev(%s, '%s', %s)%s%s",
 					'<', '?', '$attr', $this->prev, '$standalone', '?', '>');

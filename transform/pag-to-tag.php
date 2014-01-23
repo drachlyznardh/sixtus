@@ -92,7 +92,7 @@
 		$index = strrpos($current_page, '/');
 		$current_category = substr($current_page, 0, $index);
 		$current_name = substr($current_page, $index + 1);
-		$canonical_name = $reverse[$current_category].strtoupper($current_name).'/';
+		$canonical_name = $reverse[$current_category].mb_strtoupper($current_name, 'UTF-8').'/';
 	}
 
 	$to_file = '<'.'?php';

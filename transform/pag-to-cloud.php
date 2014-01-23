@@ -53,7 +53,7 @@
 		$long = $short.'/'.$data[$limit];
 
 		if (isset($reverse[$short]))
-			$result = $reverse[$short].strtoupper($data[$limit]).'/';
+			$result = $reverse[$short].mb_strtoupper($data[$limit], 'UTF-8').'/';
 		else if (isset($reverse[$long]))
 			$result = $reverse[$long].'/';
 		else $result = false;
