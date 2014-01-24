@@ -86,18 +86,18 @@
 
 		if (preg_match('/blog/', $path[0]))
 		{
-			$target = sprintf("%spage.php", strtolower($long));
+			$target = sprintf("%spage.php", mb_strtolower($long), 'UTF-8');
 		}
 		else if (isset($map[$long]))
 		{
 			#printf ("Found [%s] Long\n", $long);
-			$target = sprintf("%s/page.php", strtolower($map[$long]));
+			$target = sprintf("%s/page.php", mb_strtolower($map[$long], 'UTF-8'));
 		}
 		else if (isset($map[$short]))
 		{
 			#printf ("Found [%s] Short\n", $short);
 			$target = sprintf("%s/%s/page.php",
-				strtolower($map[$short]), $path[$limit]);
+				mb_strtolower($map[$short], 'UTF-8'), $path[$limit]);
 		}
 		else $target = false;
 

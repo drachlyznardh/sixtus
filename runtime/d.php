@@ -9,7 +9,7 @@
 	require_once('mimes.php');
 	require_once('direct-map.php');
 
-	$request['original'] = urldecode(strtolower($_SERVER['REQUEST_URI']));
+	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	
 	$attr['included'] = false;
 	$attr['sections'] = true;
