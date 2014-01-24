@@ -198,7 +198,7 @@
 			}
 
 			$count = count($args);
-			if ($count > 2) $tab = '\''.strtolower($args[2]).'\''; else $tab = "false";
+			if ($count > 2) $tab = '\''.mb_strtolower($args[2], 'UTF-8').'\''; else $tab = "false";
 			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
 			if ($count > 4) $this->error($index, 'Tid: too many arguments');
 			

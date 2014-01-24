@@ -25,7 +25,7 @@
 
 	function get_GET_parameters ()
 	{
-		$query = urldecode(strtolower($_SERVER['REQUEST_URI']));
+		$query = urldecode(mb_strtolower($_SERVER['REQUEST_URI'], 'UTF-8'));
 		$index = strpos($query, '?');
 		$query = substr($query, $index + 1);
 
