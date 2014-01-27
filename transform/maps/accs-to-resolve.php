@@ -10,7 +10,7 @@
 
 	function deploy_default ()
 	{
-		return sprintf("\t\treturn %s['%s'];\n",
+		return sprintf("\t\treturn %s['%s'].'/';\n",
 			'$_SERVER', 'DOCUMENT_ROOT');
 	}
 
@@ -26,9 +26,9 @@
 			'$_SERVER', 'HTTP_HOST');
 		foreach (array_keys($data) as $key)
 			if ($data[$key])
-				$output[] = sprintf("\t\t\tcase '%s': return '%s'; break;\n",
+				$output[] = sprintf("\t\t\tcase '%s': return '%s/'; break;\n",
 					$key, $data[$key]);
-		$output[] = sprintf("\t\t\tdefault: return %s['%s']; break;\n",
+		$output[] = sprintf("\t\t\tdefault: return %s['%s'].'/'; break;\n",
 			'$_SERVER', 'DOCUMENT_ROOT');
 		$output[] = sprintf("\t\t}\n");
 	
