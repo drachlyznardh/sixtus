@@ -7,6 +7,7 @@
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?=$attr['keywords']?>" />
 		<title><?=$attr['short']?></title>
+		<link rel="icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/<?=($attr['gray']?'gray':'white')?>.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/common.css" />
@@ -16,7 +17,6 @@
 				media="screen and (max-device-width: 1023px) and (min-device-width: 480px)" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/small-screen.css"
 				media="handheld, only screen and (max-device-width: 479px)" />
-		<link rel="shortcut icon" type="image/x-icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 	</head><body>
 		<div id="main">
 			<div id="content">
