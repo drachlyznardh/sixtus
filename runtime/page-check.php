@@ -21,13 +21,16 @@
 </div>
 <?php } ?>
 <div class="section">
-	<p class="big-screen">Big-Screen</p>
-	<p class="wide-screen">Wide-Screen</p>
-	<p class="small-screen">Small-Screen</p>
+	<p>Now displaying [
+		<span class="big-screen">Big-Screen</span>
+		<span class="wide-screen">Wide-Screen</span>
+		<span class="small-screen">Small-Screen</span>
+	] CSS sheet.</p>
+	<h3 class="reverse">Runtime parameters</h3>
 	<p>Token = [<?=var_dump($token)?>]</p>
 	<p>Attr = [<?=var_dump($attr)?>]</p>
 	<p>Heading = [<?=var_dump($heading)?>]</p>
 	<p>Request = [<?=var_dump($request)?>]</p>
-	<p>Target File = [<?=$target_file?>]</p>
+	<p>Target File = [<?=$target_file?>] on [<?=$_SERVER['HTTP_HOST']?>]</p>
 </div>
 <?php } ?>
