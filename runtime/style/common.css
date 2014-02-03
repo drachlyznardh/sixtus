@@ -168,3 +168,6 @@ div#cloud p {
 	text-indent: 0px;
 	line-height: 25px;
 }
+
+table { width: 100%; }
+td { text-align: center; }
