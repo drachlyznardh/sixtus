@@ -75,9 +75,13 @@
 	for ($i = 0; $i < $limit; $i++)
 	{
 		$_ = $keys[$i];
-		if ($i) $to_file[] = sprintf("\tsec#br\n");
-		$to_file[] = sprintf("\trequire@side#blog/%s/%s\n",
-			$_, array_keys($sides[$_])[0]);
+		$ljmjt = count($sides[$_]);
+		for ($j = 0; $j < $ljmjt; $j++)
+		{
+			if ($i + $j) $to_file[] = sprintf("\tsec#br\n");
+			$to_file[] = sprintf("\trequire@side#blog/%s/%s\n",
+				$_, array_keys($sides[$_])[$j]);
+		}
 	}
 	$to_file[] = sprintf("stop#side\n");
 
