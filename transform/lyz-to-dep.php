@@ -1,15 +1,27 @@
 <?php
 
-	require_once('utils.php');
+	function make_include_filename ($base, $localbase, $filename)
+	{
+		$dest = $localbase.'/'.$filename;
+		if (is_file($dest)) return $dest;
+
+		$dest = $base.$filename;
+		if (is_file($dest)) return $dest;
+
+		$dest = $filename;
+		if (is_file($dest)) return $dest;
+
+		return false;
+	}
 
 	$deps = array();
-	$rows = make_lines_from_file($argv[1]);
+	$rows = file($argv[1], FILE_IGNORE_NEW_LINES);
 
 	foreach ($rows as $_)
 		if (preg_match('/include#/', $_))
 		{
 			$request = split('#', $_);
-			$include = make_include_filename ($argv[2], $request[1]);
+			$include = make_include_filename ($argv[2], dirname($argv[1]), $request[1]);
 			$deps[] = $include;
 		}
 

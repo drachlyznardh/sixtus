@@ -5,16 +5,6 @@
 		return file($filename, FILE_IGNORE_NEW_LINES);
 	}
 
-	function make_include_filename ($base, $filename)
-	{
-		if (is_file($filename)) return $filename;
-
-		$filename = $base.$filename;
-		if (is_file($filename)) return $filename;
-
-		return false;
-	}
-
 	function make_page_map ($filename)
 	{
 		require_once($filename);
