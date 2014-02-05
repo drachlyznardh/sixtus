@@ -2,6 +2,12 @@
 .big-screen { display: none; }
 .wide-screen { display: none; }
 
+body, input {
+	margin: 0;
+	font: 30pt/36pt 'Averia Serif Libre', cursive;
+	color: #000000;
+}
+
 div#content {
 	width: 100%;
 	margin: 0;

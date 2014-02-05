@@ -12,11 +12,11 @@
 		<link rel="stylesheet" type="text/css" href="runtime/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/common.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/big-screen.css"
-				media="screen and (min-device-width: 1024px), projection" />
+				media="screen and (min-device-width: 1025px), projection" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/wide-screen.css"
-				media="screen and (max-device-width: 1023px) and (min-device-width: 480px)" />
+				media="screen and (max-device-width: 1024px) and (min-device-width: 481px)" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/small-screen.css"
-				media="handheld, only screen and (max-device-width: 479px)" />
+				media="handheld, only screen and (max-device-width: 480px)" />
 	</head><body>
 		<div id="main">
 			<div id="content">

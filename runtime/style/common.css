@@ -2,20 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=Nova+Mono);
 
-@import url("big-screen.css") screen and (min-width:1024px);
-@import url("wide-screen.css") screen and (min-width:480px) and (max-width:1023px);
-@import url("small-screen.css") screen and (max-width:479px);
-
 p.error {
 	font-weight: bold;
 	color: red;
 	background-color: black;
-}
-
-body, input {
-	margin: 0;
-	font: 10pt/12pt 'Averia Serif Libre', cursive;
-	color: #000000;
 }
 
 div#main {
@@ -124,7 +114,6 @@ a:hover { text-decoration: underline; }
 
 .inside,
 .outside {
-	background-color: #555555;
 	border-style: outset;
 	border-width: 2px;
 	border-radius: 3px;
