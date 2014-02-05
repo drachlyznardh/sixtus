@@ -44,5 +44,5 @@
 			make_canonical($attr, $related['next'][0]), $title, $after);
 		printf('</p></div>');
 	}
-	printf('</div><br/>');
+	printf('</div><div class="spacer"></div>');
 ?>	

@@ -30,7 +30,7 @@
 		{
 			if ($this->current != null) $this->content[] = $this->current->getContent();
 			if (count($args) > 1 && strcmp($args[1], 'br') == 0)
-				$this->content[] = '<br />';
+				$this->content[] = '<div class="spacer"></div>';
 
 			$this->current = new Section();
 			if (isset($attr[1])) $this->current->setId($attr[1]);

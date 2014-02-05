@@ -431,7 +431,7 @@
 		private function make_break ()
 		{
 			$this->closeContext();
-			$this->content[] = '<br/>'."\n";
+			$this->content[] = '<div class="spacer"></div>'."\n";
 		}
 
 		private function make_clear ($lineno, $args)

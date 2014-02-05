@@ -17,6 +17,6 @@
 	} else printf ('<em>White</em>');
 	?> ]</p>
 </div>
-<br />
+<div class="spacer"></div>
 <?php require_once(docroot().'frag/friends/content.php');
 	frag_friends_content($attr, 'section', true); ?>
