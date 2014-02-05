@@ -76,7 +76,7 @@ h2 {
 	border-style: outset;
 	border-radius: 3px;
 	border-width: 2px;
-	padding: 3px 2px 3px 15px;
+	padding: .3em .1em .3em .7em;
 	margin: 2px 2px 2px -5px;
 }
 
@@ -85,7 +85,7 @@ h3 {
 	border-bottom-width: 2px;
 	text-align: justify;
 	text-indent: 1em;
-	padding: 5px 2px 0px 2px;
+	padding: .3em .1em .05em .1em;
 	margin: 2px 4px 2px 4px;
 }
 
@@ -94,13 +94,12 @@ p.reverse { text-align: right; }
 
 h2.reverse {	
 	text-align: right;
-	padding: 3px 15px 3px 2px;
+	padding: .3em .7em .3em .1em;
 	margin: 2px -5px 2px 2px;
 }
 
 h3.reverse {
 	text-align: right;
-	margin: 2px 4px 2px 4px;
 }
 
 ul { list-style-position: inside; }
