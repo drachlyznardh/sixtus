@@ -25,7 +25,8 @@
 		foreach(array_keys($map) as $key)
 			$output[] = dump_content_help(ucwords($key).'/', false, $map[$key]);
 		
-		return implode($output);
+		if (isset($output)) return implode($output);
+		return sprintf("\t%s = array();\n", '$direct');
 	}
 
 	$data = load_content($argv[1]);

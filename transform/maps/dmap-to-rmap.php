@@ -18,9 +18,12 @@
 	ksort($result);
 
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
-	foreach (array_keys($result) as $key)
+	if (count($result))
+		foreach (array_keys($result) as $key)
 			$to_file[] = sprintf("\t%s['%s'] = '%s';\n",
 				'$reverse', $key, $result[$key]);
+	else
+		$to_file[] = sprintf("\t%s = array();\n", '$reverse');
 	$to_file[] = sprintf("\n%s%s\n", '?', '>');
 
 	file_put_contents($argv[2], $to_file);
