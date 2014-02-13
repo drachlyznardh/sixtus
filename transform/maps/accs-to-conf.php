@@ -12,7 +12,6 @@
 
 		if (!isset($homepage)) fail('$Homepage is not defined.');
 		if (!isset($style)) fail('$Style is not defined.');
-		if (!is_array($style)) fail('$Style is not an array.');
 
 		$result['homepage'] = $homepage;
 		$result['style'] = $style;
