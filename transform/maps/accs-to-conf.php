@@ -1,12 +1,18 @@
 <?php
 
+	function fail($message)
+	{
+		printf("%s\n", $message);
+		exit(1);
+	}
+
 	function load_content($filename)
 	{
 		require_once($filename);
 
-		if (!isset($homepage)) die("\$Homepage is not defined.\n");
-		if (!isset($style)) die("\$Style is not defined.\n");
-		if (!is_array($style)) die("\$Style is not an array.\n");
+		if (!isset($homepage)) fail('$Homepage is not defined.');
+		if (!isset($style)) fail('$Style is not defined.');
+		if (!is_array($style)) fail('$Style is not an array.');
 
 		$result['homepage'] = $homepage;
 		$result['style'] = $style;
@@ -35,6 +41,6 @@
 	$to_file[] = sprintf("\n%s%s\n", '?', '>');
 
 	file_put_contents($argv[2], $to_file);
-	die();
+	exit(0);
 
 ?>
