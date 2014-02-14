@@ -19,7 +19,16 @@
 		return $result;
 	}
 
+	function scan_for_previous ($target)
+	{
+		if (!is_file($target)) return array();
+
+		require_once($target);
+		return $blog_map;
+	}
+
 	$result = scan_for_years ($argv[2]);
+	$previous = scan_for_previous ($argv[1]);
 	
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
 	foreach (array_keys($result) as $key)
