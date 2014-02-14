@@ -34,10 +34,10 @@
 			$mimetype = $mimetypes[$extension];
 			header("Content-Type: $mimetype");
 			readfile($direct_access_file);
-			die();
+			exit(0);
 		} else {
 			require_once('sys/404-not-found.php');
-			die();
+			exit(0);
 		}
 	}
 
@@ -110,12 +110,12 @@
 			header('Content-Type: application/pdf');
 			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
 			readfile($search['include']);
-			die();
+			exit(0);
 		}
 	}
 
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
-	die();
+	exit(0);
 ?>
