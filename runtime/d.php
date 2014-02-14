@@ -120,5 +120,19 @@
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
+
+	$s = true;
+
+	require_once('page-top.php');
+	if ($attr['layout'])
+		require_once(docroot().$p['self'].'content.php');
+	else if ($attr['part'])
+		require_once(docroot().$p['self'].'tab-'.$attr['part'].'.php');
+	else if ($attr['part'])
+		require_once(docroot().$p['self'].'tab-'.$c[0].'.php');
+	require_once('page-middle.php');
+	require_once(docroot().$p['self'].'right-side.php');
+	require_once('page-bottom.php');
+
 	exit(0);
 ?>
