@@ -19,6 +19,7 @@
 	$attr['all_or_one'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
+	$attr['layout'] = 0;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
@@ -65,10 +66,12 @@
 				break;
 			case 'single':
 				$attr['single'] = true;
+				$attr['layout'] = 0;
 				unset($token[$key]);
 				break;
 			case 'all':
 				$attr['single'] = false;
+				$attr['layout'] = 1;
 				unset($token[$key]);
 				break;
 			case 'download':
