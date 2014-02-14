@@ -5,8 +5,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author"
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
-		<meta name="keywords" content="<?=$attr['keywords']?>" />
-		<title><?=$attr['short']?></title>
+		<meta name="keywords" content="<?=$p['keywords']?>" />
+		<title><?=$p['short']?></title>
 		<link rel="icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/<?=($attr['gray']?'gray':'white')?>.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/voices.css" />
