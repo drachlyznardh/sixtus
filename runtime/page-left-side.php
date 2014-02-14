@@ -1,5 +1,5 @@
-<?php require_once(docroot().'frag/left-nav/content.php');
-	frag_left_nav_content($attr, 'section', true); ?>
+<!--?php require_once(docroot().'frag/left-nav/content.php');
+	frag_left_nav_content($attr, 'section', true); ?-->
 <div class="section">
 	<h3 class="reverse">Theme</h3>
 	<p class="reverse">[ <?php
@@ -18,5 +18,5 @@
 	?> ]</p>
 </div>
 <div class="spacer"></div>
-<?php require_once(docroot().'frag/friends/content.php');
-	frag_friends_content($attr, 'section', true); ?>
+<!--?php require_once(docroot().'frag/friends/content.php');
+	frag_friends_content($attr, 'section', true); ?-->

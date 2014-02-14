@@ -1,6 +1,6 @@
 
 all: deploy
-build: maps tags blog
+build: maps tags
 
 export PREFIX := /opt/devel/web/sixtus/
 include $(PREFIX)deploy/vars.makefile
@@ -18,7 +18,7 @@ deploy: build
 	@$(MAKE_RESOURCES)
 	@$(MAKE_PAGES)
 
-tags: blog
+tags:
 	@$(MAKE_DB)
 
 blog:

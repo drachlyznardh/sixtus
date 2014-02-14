@@ -46,6 +46,51 @@
 			$this->all_or_one = false;
 		}
 
+		private function open_env($target)
+		{
+			$this->close_env();
+			switch ($target)
+			{
+				case 'meta':
+					$this->pstate = 'meta';
+					break;
+				case 'page':
+				case 'body':
+					$this->pstate = 'body';
+					$this->current = new Tab();
+					break;
+				case 'side':
+					$this->pstate = 'side';
+					$this->current = new Tab();
+					break;
+				default:
+					fail("Parser->Open_Env: unknown env[$target]\n");
+			}
+		}
+
+		public function close_env()
+		{
+			switch($this->pstate) {
+				case 'meta':
+					break;
+				case 'side':
+					$this->pstate = 'meta';
+					$this->current->closeTab();
+					$this->side[] = $this->current;
+					$this->current = null;
+					break;
+				case 'page':
+				case 'body':
+					$this->pstate = 'meta';
+					$this->current->closeTab();
+					$this->body[] = $this->current;
+					$this->current = null;
+					break;
+				default:
+					fail("Parser->Open_Env: unknown PState [$this->pstate]\n");
+			}
+		}
+
 		public function parse($filename)
 		{
 			$this->target = $filename;
@@ -70,7 +115,12 @@
 						$cmd_attr = split('@', $fragment[0]);
 						$command = $cmd_attr[0];
 					} else $command = $cmd_attr = $fragment[0];
-					switch ($this->pstate) {
+
+					if (strcmp($command, 'start') == 0)
+						$this->open_env($fragment[1]);
+					else if (strcmp($command, 'stop') == 0)
+						$this->close_env();
+					else switch ($this->pstate) {
 						case 'meta':
 							$this->parse_meta($index, $command, $cmd_attr, $fragment);
 							break;
@@ -87,6 +137,8 @@
 					$this->current->parse($index, '', '', array(polish_line($_)));
 				}
 			}
+
+			$this->close_env();
 		}
 
 		private function parse_meta ($lineno, $cmd, $cmd_attr, $cmd_par)
@@ -119,18 +171,6 @@
 				case 'next':
 					$this->next = array($cmd_par[1], polish_line($cmd_par[2]));
 					break;
-				case 'start':
-					switch($cmd_par[1]) {
-						case 'page':
-							$this->pstate = 'body';
-							$this->current = new Tab();
-							break;
-						case 'side':
-							$this->pstate = 'side';
-							$this->current = new Tab();
-							break;
-					}
-					break;
 				case 'tabs':
 					if ($cmd_par[1] == 'alwaysall')
 						$this->force_all_tabs = true;
@@ -147,27 +187,12 @@
 
 		private function parse_side ($lineno, $cmd, $cmd_attr, $cmd_args)
 		{
-			switch ($cmd) {
-				case 'stop':
-					$this->pstate = 'meta';
-					$this->current->closeTab();
-					$this->side[] = $this->current;
-					$this->current = null;
-					break;
-				default:
-					$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
-			}
+			$this->current->parse($lineno, $cmd, $cmd_attr, $cmd_args);
 		}
 
 		private function parse_body ($lineno, $cmd, $cmd_attr, $cmd_args)
 		{
 			switch ($cmd) {
-				case 'stop':
-					$this->pstate = 'meta';
-					$this->current->closeTab();
-					$this->body[] = $this->current;
-					$this->current = null;
-					break;
 				case 'tab':
 					if ($this->first_tab) {
 						$this->current->setName($cmd_args[1]);
@@ -307,7 +332,7 @@
 			$target_file = sprintf('%scontent.php', $target);
 			$prefix = underscore($unique);
 			#printf("\tPutting content into [%s]\n", $target_file);
-		
+	
 			if (count($this->body) > 1 || $this->body[0]->getName())
 			{
 				$to_file[] = sprintf("%s%s function %s (%s, %s, %s) {\n",
@@ -371,7 +396,7 @@
 			$to_file[] = sprintf("\t\t\t%s (%s, %s, %s);\n",
 				function_name('body', $prefix, false), '$attr', '$sec', 'true');
 			$to_file[] = sprintf("\t\t\tbreak;\n");
-			if (count($this->body) > 1 || $this->body[0]->getName(0)) foreach ($this->body as $_) {
+			if (count($this->body) > 1 || $this->body[0]->getName()) foreach ($this->body as $_) {
 				$to_file[] = sprintf("\t\tcase '%s':\n", $_->getName());
 				$to_file[] = sprintf("\t\t\trequire_once(%s);\n",
 					function_file('tab', $unique, $_->getName()));
