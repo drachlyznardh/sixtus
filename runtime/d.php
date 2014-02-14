@@ -19,6 +19,7 @@
 	$attr['all_or_one'] = false;
 	$attr['gray'] = true;
 	$attr['single'] = true;
+	$attr['layout'] = 0;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
@@ -34,10 +35,10 @@
 			$mimetype = $mimetypes[$extension];
 			header("Content-Type: $mimetype");
 			readfile($direct_access_file);
-			die();
+			exit(0);
 		} else {
 			require_once('sys/404-not-found.php');
-			die();
+			exit(0);
 		}
 	}
 
@@ -65,10 +66,12 @@
 				break;
 			case 'single':
 				$attr['single'] = true;
+				$attr['layout'] = 0;
 				unset($token[$key]);
 				break;
 			case 'all':
 				$attr['single'] = false;
+				$attr['layout'] = 1;
 				unset($token[$key]);
 				break;
 			case 'download':
@@ -110,12 +113,26 @@
 			header('Content-Type: application/pdf');
 			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
 			readfile($search['include']);
-			die();
+			exit(0);
 		}
 	}
 
 	if (is_file($target_file))
 		require_once($target_file);
 	else require_once('404-not-found.php');
-	die();
+
+	$s = true;
+
+	require_once('page-top.php');
+	if ($attr['layout'])
+		require_once(docroot().$p['self'].'content.php');
+	else if ($attr['part'])
+		require_once(docroot().$p['self'].'tab-'.$attr['part'].'.php');
+	else if ($attr['part'])
+		require_once(docroot().$p['self'].'tab-'.$c[0].'.php');
+	require_once('page-middle.php');
+	require_once(docroot().$p['self'].'right-side.php');
+	require_once('page-bottom.php');
+
+	exit(0);
 ?>

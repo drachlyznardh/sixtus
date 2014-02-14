@@ -1,9 +1,9 @@
 <?php
 	printf('<div class="section">');
-	if($related['prev'])
+	if($r['prev'])
 	{
-		if (preg_match('/@/', $related['prev'][1])) {
-			$_ = preg_split('/@/', $related['prev'][1]);
+		if (preg_match('/@/', $r['prev'][1])) {
+			$_ = preg_split('/@/', $r['prev'][1]);
 			switch(count($_))
 			{
 				case 2: $before = false; $title = $_[0]; $after = $_[1]; break;
@@ -11,12 +11,12 @@
 			}
 		} else {
 			$before = $after = false;
-			$title = $related['prev'][1];
+			$title = $r['prev'][1];
 		}
 		
 		printf('<div class="inside"><p>');
 		printf('/ %s<a href="%s">%s</a>%s / %s', $before,
-			make_canonical($attr, $related['prev'][0]), $title, $after, 'Precedente');
+			make_canonical($attr, $r['prev'][0]), $title, $after, 'Precedente');
 		printf('</p></div>');
 	}
 
@@ -24,10 +24,10 @@
 	display_heading_path($heading);
 	printf (' / </p>');
 
-	if ($related['next'])
+	if ($r['next'])
 	{
-		if (preg_match('/@/', $related['next'][1])) {
-			$_ = preg_split('/@/', $related['next'][1]);
+		if (preg_match('/@/', $r['next'][1])) {
+			$_ = preg_split('/@/', $r['next'][1]);
 			switch(count($_))
 			{
 				case 2: $before = false; $title = $_[0]; $after = $_[1]; break;
@@ -35,13 +35,13 @@
 			}
 		} else {
 			$before = $after = false;
-			$title = $related['next'][1];
+			$title = $r['next'][1];
 		}
 		
 		printf('<div class="outside"><p class="reverse">');
 		printf('%s / %s<a href="%s">%s</a>%s /',
 			'Successivo', $before,
-			make_canonical($attr, $related['next'][0]), $title, $after);
+			make_canonical($attr, $r['next'][0]), $title, $after);
 		printf('</p></div>');
 	}
 	printf('</div><div class="spacer"></div>');

@@ -7,8 +7,8 @@
 	display_heading_page($heading);
 		?> / </p>
 	</div>
-		<h1 style="text-align:center"><?=$attr['title']?></h1>
+		<h1 style="text-align:center"><?=$p['title']?></h1>
 	<div class="outside em">
-		<p style="text-align: center"><?=$attr['subtitle']?></p>
+		<p style="text-align: center"><?=$p['subtitle']?></p>
 	</div>
 </div>
