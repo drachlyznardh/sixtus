@@ -30,7 +30,6 @@ $(DEST_DIR)%/page.php: $(SRC_DIR)%.pag
 ### Fragment generation
 $(TMP_DIR)%.tch: $(SRC_DIR)%.pag
 	@echo Splitting up $< info fragments in $@
-	@echo $(patsubst %.tch, %/, $@)
 	@mkdir -p $(patsubst %.tch, %/, $@)
 	@php5 -f $(PAG_TO_FRAG) $< $(SRC_DIR) $(patsubst %.tch, %/, $@)
 	@touch $@

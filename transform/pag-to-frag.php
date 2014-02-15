@@ -32,9 +32,11 @@
 		$out[] = sprintf("####\n");
 		foreach($content as $_) $out[] = sprintf("%d %04d %s\n", $_[0], $_[1], $_[2]);
 
-		printf("Now writing %s\n", $target);
 		if (file_put_contents($target, $out) === false)
-			printf("Something went wrong\n");
+		{
+			printf("Could not write file %s.\n", $target);
+			exit(1);
+		}
 	}
 
 	class Splitter {
