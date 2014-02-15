@@ -82,23 +82,28 @@
 						case 'start':
 							if ($token[1] != 'meta' && $token[1] != 'body'
 								&& $token[1] != 'ghost' && $token[1] != 'side')
-									fail('Unkown environment '.$token[1], $srcfile, $lineno);
-							$state = $token[1];
-							$current = &$$token[1];
+									fail('Unkown environment '.$token[1], $fileno, $lineno);
+							$this->state = $token[1];
+							$this->current = &$this->{$token[1]};
 							break;
 						case 'tab':
-							if ($state != 'body' && $state != 'ghost')
-								fail('No tabs allowed in '.$state, $srcfile, $lineno);
-							${$state}[$token[1]] = array();
-							$current = &${$state}[$token[1]];
+							if ($this->state != 'body' && $this->state != 'ghost')
+								fail('No tabs allowed in '.$this->state, $fileno, $lineno);
+							$this->{$this->state}[$token[1]] = array();
+							$this->current = &$this->{$this->state}[$token[1]];
+							break;
+						case 'include':
+							$this->_include($token[1], dirname($target), $indir, $fileno, $lineno);
 							break;
 						default:
-							$current[] = array(&$srcfile, $lineno, $line);
+							$this->current[] = array($fileno, $lineno, $line);
 					}
 				}
-				else $current[] = array(&$srcfile, $lineno, $line);
+				else
+				{
+					$this->current[] = array($fileno, $lineno, $line);
+				}
 			}
-
 		}
 		
 		public function dump () {
