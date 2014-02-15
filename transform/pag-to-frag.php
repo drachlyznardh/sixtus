@@ -1,5 +1,11 @@
 <?php
 
+	function fail ($message, $file, $line)
+	{
+		printf("Error: %s, in %2 @%04d\n", $message, $file, $line);
+		exit(1);
+	}
+
 	function output_on_file ($target, $srcfile, $content)
 	{
 		$i = 0;
@@ -36,6 +42,8 @@
 					$current = &$$token[1];
 					break;
 				case 'tab':
+					if ($state != 'body' && $state != 'ghost')
+						fail('No tabs allowed in '.$state, $srcfile, $lineno);
 					${$state}[$token[1]] = array();
 					$current = &${$state}[$token[1]];
 					break;
