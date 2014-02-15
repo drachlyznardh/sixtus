@@ -15,7 +15,7 @@ MAKE_PAGES     := $(MAKE) -f $(PREFIX)deploy/pages.makefile
 MAKE_PAGE      := $(MAKE) -f $(PREFIX)deploy/page.makefile
 MAKE_FRAG      := $(MAKE) -f $(PREFIX)deploy/frag.makefile
 
-deploy: build
+deploy: build page
 	@$(MAKE_RUNTIME)
 	@$(MAKE_RESOURCES)
 	@$(MAKE_PAGES)
@@ -29,7 +29,7 @@ frag:
 blog:
 	@$(MAKE_BLOG)
 
-page: blog frag
+page: frag #blog
 	@$(MAKE_PAGE)
 
 .PHONY: clean
