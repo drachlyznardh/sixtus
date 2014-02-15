@@ -49,6 +49,8 @@
 	output_on_file('meta', array($srcfile), $meta);
 	foreach(array_keys($body) as $_)
 		output_on_file('tab-'.$_, array($srcfile), $body[$_]);
+	foreach(array_keys($ghost) as $_)
+		output_on_file('ghost-'.$_, array($srcfile), $ghost[$_]);
 	output_on_file('side', array($srcfile), $side);
 
 ?>
