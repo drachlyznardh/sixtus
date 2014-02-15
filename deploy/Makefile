@@ -18,7 +18,6 @@ MAKE_FRAG      := $(MAKE) -f $(PREFIX)deploy/frag.makefile
 deploy: build page
 	@$(MAKE_RUNTIME)
 	@$(MAKE_RESOURCES)
-	@$(MAKE_PAGES)
 
 tags:
 	@$(MAKE_DB)
