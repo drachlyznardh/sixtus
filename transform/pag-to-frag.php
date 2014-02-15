@@ -106,23 +106,33 @@
 			}
 		}
 		
-		public function dump () {
+		private function _include ($target, $localdir, $indir, $fileno, $lineno)
+		{
+			$filename = find_include_file($localdir, $indir, $target);
+			
+			if ($filename) $this->parse($filename, $indir);
+			else fail ('Unable to locate '.$filename, $fileno, $lineno);
 
-			output_on_file('meta', array($srcfile), $meta);
-			foreach(array_keys($body) as $_)
-				output_on_file('tab-'.$_, array($srcfile), $body[$_]);
-			foreach(array_keys($ghost) as $_)
-				output_on_file('ghost-'.$_, array($srcfile), $ghost[$_]);
-			output_on_file('side', array($srcfile), $side);
 		}
 
-		public function split ($target)
+		private function dump ($outdir) {
+
+			output_on_file($outdir.'meta.frag', $this->parsedfiles, $this->meta);
+			foreach(array_keys($this->body) as $_)
+				output_on_file($outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
+			foreach(array_keys($this->ghost) as $_)
+				output_on_file($outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
+			output_on_file($outdir.'side.frag', $this->parsedfiles, $this->side);
+		}
+
+		public function split ($target, $indir, $outdir)
 		{
-			$this->parse($target);
-			$this->dump();
+			$this->parse($target, $indir);
+			$this->dump($outdir);
 		}
 	}
 
-	new Parser().split($argv[1]);
+	print_r($argv);
+	(new Splitter())->split($argv[1], $argv[2], $argv[3]);
 
 ?>
