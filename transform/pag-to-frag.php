@@ -32,6 +32,9 @@
 					$current = &$$token[1];
 					break;
 				case 'stop':
+				case 'tab':
+					${$state}[$token[1]] = array();
+					$current = &${$state}[$token[1]];
 					break;
 				default:
 					$current[] = array(&$srcfile, $lineno, $line);
