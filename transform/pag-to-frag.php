@@ -14,7 +14,8 @@
 	$ghost = array();
 	$side  = array();
 
-	$state = 0;
+	$statename = array('meta', 'body', 'ghost', 'side');
+	$state = 'meta';
 	$current = &$meta;
 	$srcfile = $argv[1];
 	$row = file($srcfile);
@@ -31,6 +32,7 @@
 				case 'stop':
 					break;
 				case 'start':
+					$state = $token[1];
 					$current = &$$token[1];
 					break;
 				case 'tab':
