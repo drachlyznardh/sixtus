@@ -6,7 +6,20 @@
 		exit(1);
 	}
 
-	function output_on_file ($target, $srcfile, $content)
+	function find_include_file ($localdir, $sourcedir, $target)
+	{
+		if (is_file($target)) return $target;
+		
+		$tmp = sprintf('%s%s', $localdir, $target);
+		if (is_file($tmp)) return $tmp;
+		
+		$tmp = sprintf('%s%s', $sourcedir, $target);
+		if (is_file($tmp)) return $tmp;
+
+		return false;
+	}
+
+	function output_on_file ($target, $sourcefile, $content)
 	{
 		$i = 0;
 		
