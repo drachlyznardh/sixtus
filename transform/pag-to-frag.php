@@ -45,9 +45,10 @@
 		private $side;
 
 		private $state;
-		private $sourcefile;
+		private $current;
+		private $parsedfiles;
 
-		public __construct ()
+		public function __construct ()
 		{
 			$this->meta  = array();
 			$this->body  = array();
@@ -55,8 +56,10 @@
 			$this->side  = array();
 		}
 
-		public function parse ($target)
+		private function parse ($target, $indir)
 		{
+			array_push($this->parsedfiles, $target);
+			$fileno = count($this->parsedfiles) - 1;
 
 			$this->state = 'meta';
 			$current = &$meta;
@@ -64,6 +67,7 @@
 
 			$row = file($sourcefile);
 			
+			$row = file($target);
 			foreach (array_keys($row) as $lineno)
 			{
 				$line = trim($row[$lineno]);
