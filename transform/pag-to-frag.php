@@ -54,6 +54,10 @@
 			$this->body  = array();
 			$this->ghost = array();
 			$this->side  = array();
+
+			$this->state = 'meta';
+			$this->current = &$this->meta;
+			$this->parsedfiles = array();
 		}
 
 		private function parse ($target, $indir)
@@ -61,12 +65,6 @@
 			array_push($this->parsedfiles, $target);
 			$fileno = count($this->parsedfiles) - 1;
 
-			$this->state = 'meta';
-			$current = &$meta;
-			$sourcefile = $target;
-
-			$row = file($sourcefile);
-			
 			$row = file($target);
 			foreach (array_keys($row) as $lineno)
 			{
