@@ -1,6 +1,5 @@
 <?php
 
-	var_dump($argv);
 	function output_on_file ($target, $srcfile, $content)
 	{
 		$i = 0;
@@ -24,19 +23,15 @@
 	{
 		$line = trim($row[$lineno]);
 
-		printf("%10s %04d: [%s]\n", $srcfile, $lineno, $line);
-		
 		if (preg_match('/#/', $line))
 		{
 			$token = split('#', $line);
 
 			switch ($token[0]) {
 				case 'start':
-					printf("\tEntering [%s]\n", $token[1]);
 					$current = &$$token[1];
 					break;
 				case 'stop':
-					printf("\tLeaving [%s]\n", $token[1]);
 					break;
 				default:
 					$current[] = array(&$srcfile, $lineno, $line);
