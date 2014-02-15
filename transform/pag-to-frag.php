@@ -39,10 +39,10 @@
 					printf("\tLeaving [%s]\n", $token[1]);
 					break;
 				default:
-					$current[] = array($srcfile, $lineno, $line);
+					$current[] = array(&$srcfile, $lineno, $line);
 			}
 		}
-		else $current[] = array($srcfile, $lineno, $line);
+		else $current[] = array(&$srcfile, $lineno, $line);
 	}
 
 	output_on_file('meta', array($srcfile), $meta);
