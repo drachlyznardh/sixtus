@@ -28,6 +28,9 @@ $(DEST_DIR)%/page.php: $(SRC_DIR)%.pag
 	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< $@ $(patsubst %page.php, %, $@) $(patsubst $(SRC_DIR)%.pag, %, $<)
 
 ### Fragment generation
+$(TMP_DIR)%:
+	@mkdir -p $(dir $@)
+
 $(TMP_DIR)%/.tch: $(SRC_DIR)%.pag
 	@echo Splitting up $< info fragments in $@
 	@mkdir -p $(dir $@)
