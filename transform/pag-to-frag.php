@@ -28,10 +28,11 @@
 			$token = split('#', $line);
 
 			switch ($token[0]) {
+				case 'stop':
+					break;
 				case 'start':
 					$current = &$$token[1];
 					break;
-				case 'stop':
 				case 'tab':
 					${$state}[$token[1]] = array();
 					$current = &${$state}[$token[1]];
