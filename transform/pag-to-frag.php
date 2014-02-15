@@ -9,10 +9,19 @@
 	function output_on_file ($target, $srcfile, $content)
 	{
 		$i = 0;
-		printf("#### file %s\n", $target);
-		foreach ($srcfile as $_) printf("%d %s\n", $i++, $_);
-		printf("####\n");
-		foreach($content as $_) printf("%d %04d %s\n", 0, $_[1], $_[2]);
+		
+		$current = basename($target);
+		$page = basename(dirname($target));
+		$location = dirname(dirname($target));
+		
+		$out[] = sprintf("#### file %s %s %s\n", $location, $page, $current);
+		foreach ($sourcefile as $_) $out[] = sprintf("%d %s\n", $i++, $_);
+		$out[] = sprintf("####\n");
+		foreach($content as $_) $out[] = sprintf("%d %04d %s\n", $_[0], $_[1], $_[2]);
+
+		printf("Now writing %s\n", $target);
+		if (file_put_contents($target, $out) === false)
+			printf("Something went wrong\n");
 	}
 
 	class Splitter {
