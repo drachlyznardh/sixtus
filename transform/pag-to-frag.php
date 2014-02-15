@@ -1,6 +1,14 @@
 <?php
 
 	var_dump($argv);
+	function output_on_file ($target, $srcfile, $content)
+	{
+		$i = 0;
+		printf("#### file %s\n", $target);
+		foreach ($srcfile as $_) printf("%d %s\n", $i++, $_);
+		printf("####\n");
+		foreach($content as $_) printf("%d %04d %s\n", 0, $_[1], $_[2]);
+	}
 
 	$meta  = array();
 	$body  = array();
@@ -37,8 +45,9 @@
 		else $current[] = array($srcfile, $lineno, $line);
 	}
 
-	print_r($meta);
-	print_r($body);
-	print_r($side);
+	output_on_file('meta', array($srcfile), $meta);
+	foreach(array_keys($body) as $_)
+		output_on_file('tab-'.$_, array($srcfile), $body[$_]);
+	output_on_file('side', array($srcfile), $side);
 
 ?>
