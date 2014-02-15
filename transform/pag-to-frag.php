@@ -132,7 +132,6 @@
 		}
 	}
 
-	print_r($argv);
 	(new Splitter())->split($argv[1], $argv[2], $argv[3]);
 
 ?>
