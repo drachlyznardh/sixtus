@@ -38,6 +38,9 @@
 				case 'stop':
 					break;
 				case 'start':
+					if ($token[1] != 'meta' && $token[1] != 'body'
+						&& $token[1] != 'ghost' && $token[1] != 'side')
+							fail('Unkown environment '.$token[1], $srcfile, $lineno);
 					$state = $token[1];
 					$current = &$$token[1];
 					break;
