@@ -75,6 +75,8 @@
 					$token = split('#', $line);
 
 					switch ($token[0]) {
+						case '':
+							break;
 						case 'stop':
 							break;
 						case 'start':
