@@ -2,9 +2,10 @@
 
 	var_dump($argv);
 
-	$meta = array();
-	$body = array();
-	$side = array();
+	$meta  = array();
+	$body  = array();
+	$ghost = array();
+	$side  = array();
 
 	$state = 0;
 	$current = &$meta;
