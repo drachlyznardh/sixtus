@@ -6,7 +6,7 @@ export RM  := rm -rf
 export TRANSFORM := $(PREFIX)transform/
 
 export LYZ_TO_PHP   := $(PREFIX)transform/lyz-to-php.php
-export LYZ_TO_DEP   := $(PREFIX)transform/lyz-to-dep.php
+export PAG_TO_DEP   := $(TRANSFORM)pag-to-dep.php
 export TAG_TO_DEP   := $(PREFIX)transform/tag-to-dep.php
 export PAG_TO_TAG   := $(PREFIX)transform/pag-to-tag.php
 export PAG_TO_FRAG  := $(TRANSFORM)pag-to-frag.php

@@ -3,8 +3,7 @@ PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
 PHPS := $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%/page.php, $(PAGS))
 DEPS := $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
 
-FRAG_DIRS := $(patsubst $(SRC_DIR)%.pag, $(TMP_DIR)%, $(PAGS))
-FRAG_TCHS := $(addsuffix .tch, $(FRAG_DIRS))
+FRAG_TCHS := $(patsubst $(SRC_DIR)%.pag, $(TMP_DIR)%.tch, $(PAGS))
 
 all: pages
 

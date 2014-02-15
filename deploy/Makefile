@@ -12,6 +12,8 @@ MAKE_RESOURCES := $(MAKE) -f $(PREFIX)deploy/resources.makefile
 MAKE_BLOG      := $(MAKE) -f $(PREFIX)deploy/blog.makefile
 MAKE_DB        := $(MAKE) -f $(PREFIX)deploy/db.makefile
 MAKE_PAGES     := $(MAKE) -f $(PREFIX)deploy/pages.makefile
+MAKE_PAGE      := $(MAKE) -f $(PREFIX)deploy/page.makefile
+MAKE_FRAG      := $(MAKE) -f $(PREFIX)deploy/frag.makefile
 
 deploy: build
 	@$(MAKE_RUNTIME)
@@ -21,8 +23,14 @@ deploy: build
 tags:
 	@$(MAKE_DB)
 
+frag:
+	@$(MAKE_FRAG)
+
 blog:
 	@$(MAKE_BLOG)
+
+page: blog frag
+	@$(MAKE_PAGE)
 
 .PHONY: clean
 clean: maps-clean
