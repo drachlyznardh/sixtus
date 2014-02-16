@@ -1,12 +1,49 @@
 <?php
+	
+	require_once('section.php');
+	
 	class Parser {
-		
-		public function parse ($f, $l, $s)
-		{}
+	
+		private $content;
+		private $current;
+
+		public function __construct ()
+		{
+			$this->content = array();
+			$this->current = new Section();
+		}
+
+		public function parse ($f, $l, $cmd, $attr, $par)
+		{
+			switch($cmd){
+				case 'sec':
+					$this->content[] = $this->current->getContent();
+					if (isset($par[1]))
+						if (strcmp($par[1], 'br') == 0)
+							$this->content[] = '<div class="spacer"></div>';
+						else fail("Unknown parameter [$par[1]]", $f, $l);
+					$this->current = new Section();
+					if (isset($attr[1])) $this->current->setId($attr[1]);
+					break;
+				default:
+					$this->current->parse($f, $l, $cmd, $attr, $par);
+			}
+		}
+
+		public function close ()
+		{
+			if ($this->current == null) return;
+
+			$this->content[] = $this->current->getContent();
+			$this->current = null;
+		}
 
 		public function dump ($target)
 		{
-			$out = array();
+			$this->close();
+
+			$out = implode("\n", $this->content);
+			printf("%s", $out);
 
 			file_put_contents($target, $out);
 		}
@@ -16,7 +53,8 @@
 	foreach ($row as $_)
 	{
 		list($f, $l, $s) = check_line_format($_, $i++);
-		$p->parse($f, $l, $s);
+		list($cmd, $attr, $par) = split_line_content($s);
+		$p->parse($f, $l, $cmd, $attr, $par);
 	}
 
 	$p->dump($argv[2]);
