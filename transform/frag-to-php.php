@@ -1,5 +1,14 @@
 <?php
 
+	function polish_line ($_)
+	{
+		$_ = preg_replace('/@SHARP@/', '#', $_);
+		$_ = preg_replace('/@AT@/', '&#64;', $_);
+		$_ = preg_replace('/\'/', '&apos;', $_);
+
+		return $_;
+	}
+
 	function fail ($m, $f, $l)
 	{
 		printf("Error in %s @%04d: %s\n", $f, $l, $m);
