@@ -27,7 +27,7 @@ $(FRAG_DIR)%.tch: $(SRC_DIR)%.pag
 #Cleaning
 .PHONY: clean
 clean:
-	@echo Cleaning pages
+	@echo Cleaning fragments
 	@rm -rf $(TCHS)
 	@rm -rf $(DEP_DIR)
 

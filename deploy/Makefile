@@ -1,6 +1,6 @@
 
 all: deploy
-build: maps tags
+build: map tag
 
 export PREFIX := /opt/devel/web/sixtus/
 include $(PREFIX)deploy/vars.makefile
@@ -19,23 +19,32 @@ deploy: build page
 	@$(MAKE_RUNTIME)
 	@$(MAKE_RESOURCES)
 
-tags:
-	@$(MAKE_DB)
-
 frag:
 	@$(MAKE_FRAG)
+
+frag-clean:
+	@$(MAKE_FRAG) clean
 
 blog:
 	@$(MAKE_BLOG)
 
+blog-clean:
+	@$(MAKE_BLOG) clean
+
 page: frag #blog
 	@$(MAKE_PAGE)
 
-.PHONY: clean
-clean: maps-clean
-	@$(MAKE_BLOG) clean
+page-clean:
+	@$(MAKE_PAGE) clean
+
+tag:
+	@$(MAKE_DB)
+
+tag-clean:
 	@$(MAKE_DB) clean
+
+.PHONY: clean, blog-clean, frag-clean, page-clean, tag-clean
+clean: map-clean frag-clean page-clean tag-clean
 	@$(MAKE_RUNTIME) clean
 	@$(MAKE_RESOURCES) clean
-	@$(MAKE_PAGES) clean
 
