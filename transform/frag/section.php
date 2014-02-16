@@ -71,13 +71,16 @@
 				case 'ghost':
 					if (count($attr) < 2)
 						fail("Section->Make_Require: Tabs & Ghosts require a name.\n");
+					$this->content[] = sprintf("<%s=require_one(%s, '%s/%s-%s.php')%s>",
+						'?', '$attr', $args[1], $attr[1], $attr[2], '?');
+					break;
 				case 'side':
-					if (!isset($attr[2])) $attr[2] = false;
-					$this->content[] = sprintf("<%s require(%s);%s>",
-						'?', function_file($attr[1], $args[1], $attr[2]), '?');
+					$this->content[] = sprintf("<%s=require_one(%s, '%s/side.php')%s>",
+						'?', '$attr', $args[1], '?');
 					break;
 				case 'body':
-					$this->content[] = sprintf("<%s=require_all('%s/meta.php')%s>", '?', $args[1], '?');
+					$this->content[] = sprintf("<%s=require_all(%s, '%s/meta.php')%s>",
+						'?', '$attr', $args[1], '?');
 					break;
 				default:
 					fail("Section->Make_Require: [$attr[1]] unknown.\n", $f, $l);	
