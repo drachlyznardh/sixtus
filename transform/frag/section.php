@@ -287,10 +287,10 @@
 			$this->content[] = ' '.$this->full_link($f, $index, $args);
 		}
 
-		private function make_title ($l, $cmd_args, $cmd_attr)
+		private function make_title ($f, $l, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
-			if ($cmd_attr and $cmd_attr[1] == 'right')
+			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h2 class="reverse">';
 			else $open_tag = '<h2>';
 
@@ -300,14 +300,6 @@
 				$this->parse($l, $cmd_args[0], $cmd_attr, $cmd_args);
 			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h2>'."\n";
-		}
-
-		private function make_titler ($l, $args, $attr)
-		{
-			$this->closeContext();
-			$this->content[] = "\n";
-			$this->content[] = '<h2 class="reverse">'.$args[1].'</h2>';
-			$this->content[] = "\n";
 		}
 
 		private function make_stitle ($f, $l, $cmd_args, $cmd_attr)
