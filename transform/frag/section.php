@@ -1,7 +1,8 @@
 <?php
 	class Section
 	{
-		private $id = false;
+		public  $id = false;
+
 		private $content = array();
 		private $context = false;
 		private $environment;
@@ -19,8 +20,6 @@
 
 			return implode("\n", $result);
 		}
-
-		public function setId($id) { $this->id = $id; }
 
 		public function parse($f, $index, $command, $cmd_attr, $cmd_args)
 		{

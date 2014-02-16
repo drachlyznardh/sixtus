@@ -23,7 +23,7 @@
 							$this->content[] = '<div class="spacer"></div>';
 						else fail("Unknown parameter [$par[1]]", $f, $l);
 					$this->current = new Section();
-					if (isset($attr[1])) $this->current->setId($attr[1]);
+					if (isset($attr[1])) $this->current->id = $attr[1];
 					break;
 				default:
 					$this->current->parse($f, $l, $cmd, $attr, $par);
