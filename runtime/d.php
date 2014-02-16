@@ -122,16 +122,17 @@
 	else require_once('404-not-found.php');
 
 	$s = true;
+	$lwself = strtolower($attr['self']);
 
 	require_once('page-top.php');
 	if ($attr['layout'])
-		require_once(docroot().$attr['self'].'content.php');
+		require_once(docroot().$lwself.'content.php');
 	else if ($attr['part'])
-		require_once(docroot().$attr['self'].'tab-'.$attr['part'].'.php');
+		require_once(docroot().$lwself.'tab-'.$attr['part'].'.php');
 	else
-		require_once(docroot().$attr['self'].'tab-'.$c[0].'.php');
+		require_once(docroot().$lwself.'tab-'.$c[0].'.php');
 	require_once('page-middle.php');
-	require_once(docroot().$attr['self'].'right-side.php');
+	require_once(docroot().$lwself.'right-side.php');
 	require_once('page-bottom.php');
 
 	exit(0);
