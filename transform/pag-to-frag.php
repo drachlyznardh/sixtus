@@ -42,6 +42,7 @@
 			printf("Could not write file %s.\n", $target);
 			exit(1);
 		}
+		#printf("\tFragment file %s extracted.\n", basename($target));
 	}
 
 	class Splitter {
