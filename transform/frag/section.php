@@ -29,30 +29,30 @@
 				
 				case '': $this->make_text(trim($cmd_args[0])); break;
 				case 'id': $this->make_id($cmd_args[1]); break;
-				case 'p': $this->make_p($index, $cmd_args, $cmd_attr); break;
-				case 'c': $this->make_c($index, $cmd_args, $cmd_attr); break;
-				case 'r': $this->make_r($index, $cmd_args, $cmd_attr); break;
-				case 'tid': $this->make_tid($index, $cmd_args); break;
-				case 'link': $this->make_link($index, $cmd_args); break;
-				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
-				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
+				case 'p': $this->make_p($f, $index, $cmd_args, $cmd_attr); break;
+				case 'c': $this->make_c($f, $index, $cmd_args, $cmd_attr); break;
+				case 'r': $this->make_r($f, $index, $cmd_args, $cmd_attr); break;
+				case 'tid': $this->make_tid($f, $index, $cmd_args); break;
+				case 'link': $this->make_link($f, $index, $cmd_args); break;
+				case 'title': $this->make_title($f, $index, $cmd_args, $cmd_attr); break;
+				case 'stitle': $this->make_stitle($f, $index, $cmd_args, $cmd_attr); break;
 				case 'img': $this->make_img($cmd_args); break;
 				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
 				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
-				case 'clear': $this->make_clear($index, $cmd_args); break;
-				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
-				case 'search': $this->make_search($index, $cmd_args, $cmd_attr); break;
+				case 'clear': $this->make_clear($f, $index, $cmd_args); break;
+				case 'speak': $this->make_intra($f, $index, $cmd_args, $cmd_attr); break;
+				case 'search': $this->make_search($f, $index, $cmd_args, $cmd_attr); break;
 
 				case 'require':
-					$this->make_require($index, $cmd_args, $cmd_attr);
+					$this->make_require($f, $index, $cmd_args, $cmd_attr);
 					break;
 
-				default: fail("Unknown command [$command]", $f, $index); $this->error($index, $command);
+				default: fail("Unknown command [$command]", $f, $index); $this->error($f, $index, $command);
 			}
 		}
 
-		private function error ($index, $command)
+		private function error ($f, $index, $command)
 		{
 			printf("Section ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
 			exit(1);
@@ -128,7 +128,7 @@
 			}
 		}
 
-		private function full_link ($index, $args)
+		private function full_link ($f, $index, $args)
 		{
 			if ($args[1]) $destination = '\''.polish_line($args[1]).'\'';
 			else $destination = '$attr[\'self\']';
@@ -156,7 +156,7 @@
 			$count = count($args);
 			if ($count > 3) $tab = "'$args[3]'"; else $tab = 'false';
 			if ($count > 4) $hash = "'$args[4]'"; else $hash = 'false';
-			if ($count > 5) $this->error($index, 'Link: too many arguments');
+			if ($count > 5) $this->error($f, $index, 'Link: too many arguments');
 			
 			$url = '<'."?=make_canonical(\$attr, $destination, $tab, $hash)?".'>';
 			if ($before) $result = $before; else $result = false;
@@ -166,7 +166,7 @@
 			return $result;
 		}
 
-		private function full_tid ($index, $args)
+		private function full_tid ($f, $index, $args)
 		{
 			$argument = polish_line($args[1]);
 			$destination = "\$search['page'][0]";
@@ -192,7 +192,7 @@
 			$count = count($args);
 			if ($count > 2) $tab = '\''.mb_strtolower($args[2], 'UTF-8').'\''; else $tab = "false";
 			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
-			if ($count > 4) $this->error($index, 'Tid: too many arguments');
+			if ($count > 4) $this->error($f, $index, 'Tid: too many arguments');
 			
 			if ($before) $result = $before; else $result = false;
 			$result .= "<?=make_tid(\$attr, '".polish_line($title)."', $tab, $hash)?>";
@@ -246,28 +246,28 @@
 			$this->content[] = '<a id="'.$id.'"></a>';
 		}
 
-		private function make_p ($index, $cmd_args, $cmd_attr)
+		private function make_p ($f, $index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext($this->defaultContext);
-			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
+			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
-		private function make_c ($index, $cmd_args, $cmd_attr)
+		private function make_c ($f, $index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('c');
-			if (count($cmd_args) > 3) $this->recursive($index, $cmd_args, $cmd_attr);
+			if (count($cmd_args) > 3) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else $this->make_text($cmd_args[1]);
 		}
 
-		private function make_r ($index, $cmd_args, $cmd_attr)
+		private function make_r ($f, $index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('r');
-			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
+			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else $this->make_text($cmd_args[1]);
 		}
 
-		private function recursive ($index, $cmd_args, $cmd_attr)
+		private function recursive ($f, $index, $cmd_args, $cmd_attr)
 		{
 			array_shift($cmd_args);
 			if (preg_match('/@/', $cmd_args[0])) {
@@ -277,17 +277,17 @@
 				$command = $cmd_args[0];
 				$cmd_attr = array($command);
 			}
-			$this->parse($index, $command, $cmd_attr, $cmd_args);
+			$this->parse($f, $index, $command, $cmd_attr, $cmd_args);
 		}
 
-		private function make_tid ($index, $args)
+		private function make_tid ($f, $index, $args)
 		{
-			$this->content[] = ' '.$this->full_tid($index, $args);
+			$this->content[] = ' '.$this->full_tid($f, $index, $args);
 		}
 
-		private function make_link ($index, $args)
+		private function make_link ($f, $index, $args)
 		{
-			$this->content[] = ' '.$this->full_link($index, $args);
+			$this->content[] = ' '.$this->full_link($f, $index, $args);
 		}
 
 		private function make_title ($lineno, $cmd_args, $cmd_attr)
@@ -313,7 +313,7 @@
 			$this->content[] = "\n";
 		}
 
-		private function make_stitle ($lineno, $cmd_args, $cmd_attr)
+		private function make_stitle ($f, $lineno, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
 			if ($cmd_attr and $cmd_attr[1] == 'right')
@@ -323,7 +323,7 @@
 			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
-				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+				$this->parse($f, $lineno, $cmd_args[0], $cmd_attr, $cmd_args);
 			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h3>'."\n";
 		}
@@ -460,7 +460,7 @@
 			return ' <span class="'.$author.'" title="'.$author.'">« '.$line.' »</span> ';
 		}
 
-		private function make_search ($index, $args, $attr) 
+		private function make_search ($f, $index, $args, $attr) 
 		{
 			switch ($args[1])
 			{
