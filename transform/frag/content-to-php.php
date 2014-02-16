@@ -51,7 +51,7 @@
 	{
 		list($f, $l, $s) = check_line_format($_, $i++);
 		list($cmd, $attr, $par) = split_line_content($s);
-		$p->parse($f, $l, $cmd, $attr, $par);
+		$p->parse($filenames[$f], $l, $cmd, $attr, $par);
 	}
 
 	$p->dump($argv[2]);
