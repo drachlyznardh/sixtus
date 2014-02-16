@@ -428,7 +428,7 @@
 			$this->content[] = "\n".'<div style="float:none; clear:'.$clear.'"></div>'."\n";
 		}
 
-		private function make_intra ($l, $args, $attr)
+		private function make_intra ($f, $l, $args, $attr)
 		{
 			$result = false;
 			if (count($args) > 2)
