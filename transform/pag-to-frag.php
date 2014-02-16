@@ -1,10 +1,6 @@
 <?php
 
-	function fail ($message, $file, $line)
-	{
-		printf("Error: %s, in %s @%04d\n", $message, $file, $line);
-		exit(1);
-	}
+	require('frag/utils.php');
 
 	function find_include_file ($localdir, $sourcedir, $target)
 	{
@@ -78,43 +74,39 @@
 			{
 				$line = trim($row[$lineno]);
 
-				if (preg_match('/#/', $line))
-				{
-					$token = split('#', $line);
+				list($cmd, $attr, $par) = split_line_content($line);
 
-					switch ($token[0]) {
-						case '':
-							break;
-						case 'stop':
-							break;
-						case 'start':
-							if ($token[1] == 'page') $token[1] = 'body'; // h4x
-							if ($token[1] != 'meta' && $token[1] != 'body'
-								&& $token[1] != 'ghost' && $token[1] != 'side')
-									fail("Unkown environment [$token[1]]",
-										$target, $lineno + 1);
-							$this->state = $token[1];
-							if ($this->state != 'body' && $this->state != 'ghost')
-								$this->current = &$this->{$token[1]};
-							else $this->current = &$this->{$token[1]}['default'];
-							break;
-						case 'tab':
-							if ($this->state != 'body' && $this->state != 'ghost')
-								fail('No tabs allowed in '.$this->state,
-									$fileno, $lineno + 1);
-							$this->{$this->state}[$token[1]] = array();
-							$this->current = &$this->{$this->state}[$token[1]];
-							break;
-						case 'include':
-							$this->_include($token[1], dirname($target), $indir, $fileno, $lineno + 1);
-							break;
-						default:
-							$this->current[] = array($fileno, $lineno + 1, $line);
-					}
-				}
-				else
-				{
-					$this->current[] = array($fileno, $lineno + 1, $line);
+				switch ($cmd) {
+					case '':
+						print_r($par);
+						if ($par[0])
+							$this->current[] = array($fileno, $lineno + 1, $par[0]);
+						break;
+					case 'stop':
+						break;
+					case 'start':
+						if ($par[1] == 'page') $par[1] = 'body'; // h4x
+						if ($par[1] != 'meta' && $par[1] != 'body'
+							&& $par[1] != 'ghost' && $par[1] != 'side')
+								fail("Unkown environment [$par[1]]",
+									$target, $lineno + 1);
+						$this->state = $par[1];
+						if ($this->state != 'body' && $this->state != 'ghost')
+							$this->current = &$this->{$par[1]};
+						else $this->current = &$this->{$par[1]}['default'];
+						break;
+					case 'tab':
+						if ($this->state != 'body' && $this->state != 'ghost')
+							fail('No tabs allowed in '.$this->state,
+								$fileno, $lineno + 1);
+						$this->{$this->state}[$par[1]] = array();
+						$this->current = &$this->{$this->state}[$par[1]];
+						break;
+					case 'include':
+						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
+						break;
+					default:
+						$this->current[] = array($fileno, $lineno + 1, $line);
 				}
 			}
 		}
