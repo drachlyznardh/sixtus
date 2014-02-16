@@ -41,10 +41,7 @@
 		public function dump ($target)
 		{
 			$this->close();
-
 			$out = implode("\n", $this->content);
-			printf("%s", $out);
-
 			file_put_contents($target, $out);
 		}
 	}
