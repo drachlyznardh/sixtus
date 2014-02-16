@@ -103,7 +103,6 @@
 				case 'outside': $this->content[] = '</div>'; break;
 			}
 			$this->context = false;
-			// $this->content[] = "\n";
 		}
 
 		private function openContext($new)
@@ -118,7 +117,6 @@
 			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
-			#$this->content[] = "\n";
 			switch ($this->context)
 			{
 				case 'p': $this->content[] = '<p>'; break;
@@ -231,13 +229,13 @@
 				$text = polish_line($text);
 
 				if (preg_match('/^</', $text)) {
-					$this->content[] = " $text";
+					$this->content[] = $text;
 				} else if (preg_match('/^>/', $text)) {
 					$this->openContext($this->defaultContext);
-					$this->content[] = " <span class=\"green\">$text</span>\n";
+					$this->content[] = "<span class=\"green\">$text</span>\n";
 				} else {
 					$this->openContext($this->defaultContext);
-					$this->content[] = " $text\n";
+					$this->content[] = $text;
 				}
 			
 			} else $this->closeContext();
