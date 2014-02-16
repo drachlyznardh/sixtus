@@ -88,6 +88,7 @@
 						case 'stop':
 							break;
 						case 'start':
+							if ($token[1] == 'page') $token[1] = 'body'; // h4x
 							if ($token[1] != 'meta' && $token[1] != 'body'
 								&& $token[1] != 'ghost' && $token[1] != 'side')
 									fail("Unkown environment [$token[1]]",
