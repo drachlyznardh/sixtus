@@ -37,5 +37,6 @@ clean: maps-clean
 	@$(MAKE_DB) clean
 	@$(MAKE_RUNTIME) clean
 	@$(MAKE_RESOURCES) clean
-	@$(MAKE_PAGES) clean
+	@$(MAKE_PAGE) clean
+	@$(MAKE_FRAG) clean
 
