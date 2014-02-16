@@ -125,13 +125,13 @@
 
 	require_once('page-top.php');
 	if ($attr['layout'])
-		require_once(docroot().$p['self'].'content.php');
+		require_once(docroot().$attr['self'].'content.php');
 	else if ($attr['part'])
-		require_once(docroot().$p['self'].'tab-'.$attr['part'].'.php');
-	else if ($attr['part'])
-		require_once(docroot().$p['self'].'tab-'.$c[0].'.php');
+		require_once(docroot().$attr['self'].'tab-'.$attr['part'].'.php');
+	else
+		require_once(docroot().$attr['self'].'tab-'.$c[0].'.php');
 	require_once('page-middle.php');
-	require_once(docroot().$p['self'].'right-side.php');
+	require_once(docroot().$attr['self'].'right-side.php');
 	require_once('page-bottom.php');
 
 	exit(0);
