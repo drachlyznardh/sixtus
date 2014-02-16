@@ -21,7 +21,7 @@
 					if (isset($par[1]))
 						if (strcmp($par[1], 'br') == 0)
 							$this->content[] = '<div class="spacer"></div>';
-						else fail("Unknown parameter [$par[1]]", $f, $l);
+						else if ($par[1]) fail("Unknown parameter [$par[1]]", $f, $l);
 					$this->current = new Section();
 					if (isset($attr[1])) $this->current->id = $attr[1];
 					break;

@@ -58,7 +58,7 @@
 			exit(1);
 		}
 
-		public function make_require ($lineno, $args, $attr)
+		public function make_require ($f, $l, $args, $attr)
 		{
 			$this->closeContext();
 
@@ -74,14 +74,11 @@
 				case 'side':
 				case 'body':
 					if (!isset($attr[2])) $attr[2] = false;
-					$this->content[] = sprintf("\n%s require(%s);\n",
-						$open, function_file($attr[1], $args[1], $attr[2]));
-					$this->content[] = sprintf("\t%s (%s, %s, %s); %s\n",
-						function_name($attr[1], $args[1], $attr[2]),
-						'$attr', 'false', 'false', $close);
+					$this->content[] = sprintf("<%s require(%s);%s>",
+						'?', function_file($attr[1], $args[1], $attr[2]), '?');
 					break;
 				default:
-					fail("Section->Make_Require: [$attr[1]] unknown.\n");	
+					fail("Section->Make_Require: [$attr[1]] unknown.\n", $f, $l);	
 			}
 		}
 
@@ -290,7 +287,7 @@
 			$this->content[] = ' '.$this->full_link($f, $index, $args);
 		}
 
-		private function make_title ($lineno, $cmd_args, $cmd_attr)
+		private function make_title ($l, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
 			if ($cmd_attr and $cmd_attr[1] == 'right')
@@ -300,12 +297,12 @@
 			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
-				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+				$this->parse($l, $cmd_args[0], $cmd_attr, $cmd_args);
 			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h2>'."\n";
 		}
 
-		private function make_titler ($lineno, $args, $attr)
+		private function make_titler ($l, $args, $attr)
 		{
 			$this->closeContext();
 			$this->content[] = "\n";
@@ -313,17 +310,17 @@
 			$this->content[] = "\n";
 		}
 
-		private function make_stitle ($f, $lineno, $cmd_args, $cmd_attr)
+		private function make_stitle ($f, $l, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
-			if ($cmd_attr and $cmd_attr[1] == 'right')
+			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h3 class="reverse">';
 			else $open_tag = '<h3>';
 
 			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
-				$this->parse($f, $lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+				$this->parse($f, $l, $cmd_args[0], $cmd_attr, $cmd_args);
 			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h3>'."\n";
 		}
@@ -426,7 +423,7 @@
 			$this->content[] = '<div class="spacer"></div>'."\n";
 		}
 
-		private function make_clear ($lineno, $args)
+		private function make_clear ($l, $args)
 		{
 			$this->closeContext();
 			if (count($args) > 1 && $args[1]) $clear = $args[1];
@@ -434,11 +431,11 @@
 			$this->content[] = "\n".'<div style="float:none; clear:'.$clear.'"></div>'."\n";
 		}
 
-		private function make_intra ($lineno, $args, $attr)
+		private function make_intra ($l, $args, $attr)
 		{
 			$result = false;
 			if (count($args) > 2)
-				$this->error($lineno, 'Speak: too many arguments');
+				$this->error($l, 'Speak: too many arguments');
 	
 			$_ = preg_split('/@/', $args[1]);
 

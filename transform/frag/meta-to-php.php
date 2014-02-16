@@ -78,8 +78,14 @@
 			$out[] = sprintf($format, '$p', 'subtitle', $this->subtitle);
 			$out[] = sprintf($format, '$p', 'keywords', $this->keywords);
 			$out[] = sprintf("\n");
-			$out[] = sprintf($format, '$r', 'prev', $this->prev);
-			$out[] = sprintf($format, '$r', 'next', $this->next);
+			if (is_array($this->prev))
+				$out[] = sprintf("\t%s['%s'] = array('%s');\n",
+					'$r', 'prev', implode("', '", $this->prev));
+			else $out[] = sprintf($format, '$r', 'prev', $this->prev);
+			if (is_array($this->next))
+				$out[] = sprintf("\t%s['%s'] = array('%s');\n",
+					'$r', 'next', implode("', '", $this->next));
+			else $out[] = sprintf($format, '$r', 'next', $this->next);
 			$out[] = sprintf("\t%s['%s'] = array('%s');\n",
 				'$r', 'rel', implode("', '", $this->related));
 			$out[] = sprintf("\n");
