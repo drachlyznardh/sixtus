@@ -117,7 +117,19 @@
 				}
 			}
 		}
-		
+
+		private function relate ()
+		{
+			$related = array();
+			foreach (array_keys($this->body) as $_)
+				if (count($this->body[$_]))
+					$related[] = $_;
+
+			printf("Related {%s}\n", implode(' -> ', $related));
+			foreach ($related as $_)
+				$this->meta[] = array(false, false, "tab#".$_);
+		}
+
 		private function _include ($target, $localdir, $indir, $fileno, $lineno)
 		{
 			$filename = find_include_file($localdir, $indir, $target);
@@ -140,6 +152,7 @@
 		public function split ($target, $indir, $outdir)
 		{
 			$this->parse($target, $indir);
+			$this->relate();
 			$this->dump($outdir);
 		}
 	}
