@@ -2,8 +2,6 @@
 
 	require_once('frag/utils.php');
 
-	print_r($argv);
-
 	$row = file($argv[1], FILE_IGNORE_NEW_LINES);
 
 	$pattern = '/^#### ([01])$/';
@@ -28,10 +26,6 @@
 		fail("Missing separator", $argv[1], $i);
 	
 	array_shift($row);
-	$pattern ='/^([0-9]+) ([0-9]+) (.*)$/'; 
-	foreach ($filenames as $_)
-		printf("\t[%s]\n", $_);
-
 	if ($filetype) require_once('frag/meta-to-php.php');
 	else require_once('frag/content-to-php.php');
 ?>
