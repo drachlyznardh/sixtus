@@ -135,7 +135,7 @@
 			$filename = find_include_file($localdir, $indir, $target);
 			
 			if ($filename) $this->parse($filename, $indir);
-			else fail ('Unable to locate '.$filename, $fileno, $lineno);
+			else fail ('Unable to locate '.$target, $this->parsedfiles[$fileno], $lineno);
 
 		}
 
