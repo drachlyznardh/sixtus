@@ -133,7 +133,7 @@
 	else 
 		require_once($target_dir.'tab-'.$request['part'].'.php');
 	require_once('page-middle.php');
-	require_once($target_dir.'side.php');
+	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
 	require_once('page-bottom.php');
 
 	exit(0);
