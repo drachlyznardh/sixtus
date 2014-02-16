@@ -135,7 +135,7 @@
 			if (isset($map[$tmp]))
 			{
 				$missing = false;
-				$canon = make_canonical($attr, $address, false, false);
+				$canon = $address;#make_canonical($attr, $address, false, false);
 				$result['cat'][$i] = array($title, $canon);
 				#printf(' / <a href="%s">%s</a>', $canon, $title);
 			}
@@ -144,7 +144,7 @@
 				$tmp .= ucwords($request[$j]).'/';
 				if (isset($map[$tmp])) {
 					$missing = false;
-					$canon = make_canonical($attr, $tmp, false, false);
+					$canon = $tmp;#make_canonical($attr, $tmp, false, false);
 					$result['cat'][$i] = array($title, $canon);
 					#printf(' / <a href="%s">%s</a>', $result['cat'][$i][1], $title);
 					break;
@@ -154,7 +154,7 @@
 			if ($missing) {
 				$TITLE = mb_strtoupper($title, 'UTF-8');
 				$previous .= $TITLE.'/';
-				$canon = make_canonical($attr, $previous, false, false);
+				$canon = $previous;#make_canonical($attr, $previous, false, false);
 				$result['page'] = array($TITLE, $canon);
 				#printf(' / <a href="%s">%s</a>', $TITLE, $canon);
 			} else $result['page'] = false;
@@ -162,7 +162,7 @@
 
 		if ($part) {
 			$PART = mb_strtoupper($part, 'UTF-8');
-			$canon = make_canonical($attr, $previous, $PART, false);
+			$canon = $previous;#make_canonical($attr, $previous, $PART, false);
 			$result['part'] = array($PART, $canon);
 		} else $result['part'] = false;
 
@@ -189,18 +189,23 @@
 		printf(implode(' . ', $output));
 	}
 
-	function display_heading_path ($heading)
+	function display_heading_path ($attr, $heading)
 	{
 		foreach ($heading['cat'] as $_)
-			printf(' / <a href="%s">%s</a>', $_[1], $_[0]);
+			printf(' / <a href="%s">%s</a>',
+				make_canonical($attr, $_[1]), $_[0]);
 	}
 
-	function display_heading_page ($heading)
+	function display_heading_page ($attr, $heading)
 	{
 		if ($heading['page'])
-			printf(' / <a href="%s">%s</a>', $heading['page'][1], $heading['page'][0]);
+			printf(' / <a href="%s">%s</a>',
+				make_canonical($attr, $heading['page'][1]),
+				$heading['page'][0]);
 		if ($heading['part'])
-			printf(' § <a href="%s">%s</a>', $heading['part'][1], $heading['part'][0]);
+			printf(' § <a href="%s">%s</a>',
+				make_canonical($attr, $heading['part'][1]),
+				$heading['part'][0]);
 	}
 	
 	function load_page_title ($target)
