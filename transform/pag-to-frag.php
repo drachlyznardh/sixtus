@@ -19,15 +19,20 @@
 		return false;
 	}
 
-	function output_on_file ($target, $sourcefile, $content)
+	function output_on_file ($type, $target, $sourcefile, $content)
 	{
-		$i = 0;
+		if (count($content) < 1) return;
 		
+		/*
 		$current = basename($target);
 		$page = basename(dirname($target));
 		$location = dirname(dirname($target));
 		
 		$out[] = sprintf("#### file %s %s %s\n", $location, $page, $current);
+		*/
+		
+		$out[] = sprintf("#### %d\n", $type);
+		$i = 0;
 		foreach ($sourcefile as $_) $out[] = sprintf("%d %s\n", $i++, $_);
 		$out[] = sprintf("####\n");
 		foreach($content as $_) $out[] = sprintf("%d %04d %s\n", $_[0], $_[1], $_[2]);
@@ -37,6 +42,7 @@
 			printf("Could not write file %s.\n", $target);
 			exit(1);
 		}
+		#printf("\tFragment file %s extracted.\n", basename($target));
 	}
 
 	class Splitter {
@@ -53,8 +59,8 @@
 		public function __construct ()
 		{
 			$this->meta  = array();
-			$this->body  = array();
-			$this->ghost = array();
+			$this->body  = array('default' => array());
+			$this->ghost = array('default' => array());
 			$this->side  = array();
 
 			$this->state = 'meta';
@@ -86,7 +92,9 @@
 								&& $token[1] != 'ghost' && $token[1] != 'side')
 									fail('Unkown environment '.$token[1], $fileno, $lineno);
 							$this->state = $token[1];
-							$this->current = &$this->{$token[1]};
+							if ($this->state != 'body' && $this->state != 'ghost')
+								$this->current = &$this->{$token[1]};
+							else $this->current = &$this->{$token[1]}['default'];
 							break;
 						case 'tab':
 							if ($this->state != 'body' && $this->state != 'ghost')
@@ -119,12 +127,12 @@
 
 		private function dump ($outdir) {
 
-			output_on_file($outdir.'meta.frag', $this->parsedfiles, $this->meta);
+			output_on_file(true, $outdir.'meta.frag', $this->parsedfiles, $this->meta);
 			foreach(array_keys($this->body) as $_)
-				output_on_file($outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
+				output_on_file(false, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
 			foreach(array_keys($this->ghost) as $_)
-				output_on_file($outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
-			output_on_file($outdir.'side.frag', $this->parsedfiles, $this->side);
+				output_on_file(false, $outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
+			output_on_file(false, $outdir.'side.frag', $this->parsedfiles, $this->side);
 		}
 
 		public function split ($target, $indir, $outdir)
