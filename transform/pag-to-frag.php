@@ -90,7 +90,8 @@
 						case 'start':
 							if ($token[1] != 'meta' && $token[1] != 'body'
 								&& $token[1] != 'ghost' && $token[1] != 'side')
-									fail('Unkown environment '.$token[1], $fileno, $lineno);
+									fail('Unkown environment '.$token[1],
+										$fileno, $lineno + 1);
 							$this->state = $token[1];
 							if ($this->state != 'body' && $this->state != 'ghost')
 								$this->current = &$this->{$token[1]};
@@ -98,24 +99,37 @@
 							break;
 						case 'tab':
 							if ($this->state != 'body' && $this->state != 'ghost')
-								fail('No tabs allowed in '.$this->state, $fileno, $lineno);
+								fail('No tabs allowed in '.$this->state,
+									$fileno, $lineno + 1);
 							$this->{$this->state}[$token[1]] = array();
 							$this->current = &$this->{$this->state}[$token[1]];
 							break;
 						case 'include':
-							$this->_include($token[1], dirname($target), $indir, $fileno, $lineno);
+							$this->_include($token[1], dirname($target), $indir, $fileno, $lineno + 1);
 							break;
 						default:
-							$this->current[] = array($fileno, $lineno, $line);
+							$this->current[] = array($fileno, $lineno + 1, $line);
 					}
 				}
 				else
 				{
-					$this->current[] = array($fileno, $lineno, $line);
+					$this->current[] = array($fileno, $lineno + 1, $line);
 				}
 			}
 		}
-		
+
+		private function relate ()
+		{
+			$related = array();
+			foreach (array_keys($this->body) as $_)
+				if (count($this->body[$_]))
+					$related[] = $_;
+
+			printf("Related {%s}\n", implode(' -> ', $related));
+			foreach ($related as $_)
+				$this->meta[] = array(false, false, "tab#".$_);
+		}
+
 		private function _include ($target, $localdir, $indir, $fileno, $lineno)
 		{
 			$filename = find_include_file($localdir, $indir, $target);
@@ -138,6 +152,7 @@
 		public function split ($target, $indir, $outdir)
 		{
 			$this->parse($target, $indir);
+			$this->relate();
 			$this->dump($outdir);
 		}
 	}

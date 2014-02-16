@@ -13,10 +13,10 @@
 			$this->closeContext();
 			if (count($this->content) == 0) return;
 
-			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '<div class="section">', '>');
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '<div class="section">', '>');
 			if ($this->id) $result[] = sprintf('<a id="%s"></a>', $this->id);
 			$result[] = implode("\n", $this->content);
-			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '</div>', '>');
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '</div>', '>');
 
 			return implode("\n", $result);
 		}

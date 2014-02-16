@@ -11,6 +11,8 @@
 		private $next = false;
 		private $related = array();
 
+		private $c = array();
+
 		public function parse ($f, $l, $s)
 		{
 			if (!preg_match('/#/', $s))
@@ -45,6 +47,9 @@
 				case 'next':
 					$this->next = array($token[1], polish_line($token[2]));
 					break;
+				case 'tab':
+					$this->c[] = $token[1];
+					break;
 				case 'tabs':
 					if ($token[1] == 'alwaysall')
 						$this->force_all_tabs = true;
@@ -73,6 +78,9 @@
 			$out[] = sprintf($format, '$r', 'next', $this->next);
 			$out[] = sprintf("\t%s['%s'] = array('%s');\n",
 				'$r', 'rel', implode("', '", $this->related));
+			$out[] = sprintf("\n");
+			$out[] = sprintf("\t%s = array('%s');\n",
+				'$c', implode("', '", $this->c));
 			$out[] = sprintf("?%s\n", '>');
 			
 			file_put_contents($target, $out);
