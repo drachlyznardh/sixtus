@@ -15,7 +15,7 @@
 		$url = false;
 		
 		if ($attr['single'] && !$attr['force_all_tabs']) {
-			if ($attr['current'] == $tab) {
+			if ($attr['part'] == $tab) {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 			} else {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);

@@ -10,11 +10,10 @@
 	require_once('direct-map.php');
 
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
+	$request['part'] = false;
 	
 	$attr['included'] = false;
 	$attr['sections'] = true;
-	$attr['part'] = false;
-	$attr['current'] = false;
 	$attr['force_all_tabs'] = false;
 	$attr['all_or_one'] = false;
 	$attr['gray'] = true;
@@ -92,15 +91,11 @@
 		if (preg_match('/§/', $_)) {
 			list($page_name, $page_tab) = preg_split('/§/', $_);
 			$request['path'][] = $page_name;
-			$attr['part'] = $page_tab;
-			$attr['current'] = $page_tab;
+			$request['part'] = $page_tab;
 		} else {
 			$request['path'][] = $_;
 		}
 	}
-
-	$heading = extract_heading_path($attr, $request['path'], $attr['part'], $direct);
-	$attr['self'] = find_self($heading);
 
 	$target_file = docroot().search_for_page($direct, $attr, $request['path']);
 
@@ -121,15 +116,20 @@
 		require_once($target_file);
 	else require_once('404-not-found.php');
 
-	if (!$attr['part']) $attr['part'] = $c[0];
-	$s = true;
+	if (!$request['part']) $request['part'] = $c[0];
+	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
+	$attr['self'] = find_self($heading);
 	$lwself = strtolower($attr['self']);
 
+	$s = true; // Display sections
+	$attr['part'] = $request['part']; // For internal links
+
+	### Outputting page
 	require_once('page-top.php');
 	if ($attr['layout'])
 		require_once(docroot().$lwself.'content.php');
 	else 
-		require_once(docroot().$lwself.'tab-'.$attr['part'].'.php');
+		require_once(docroot().$lwself.'tab-'.$request['part'].'.php');
 	require_once('page-middle.php');
 	require_once(docroot().$lwself.'side.php');
 	require_once('page-bottom.php');
