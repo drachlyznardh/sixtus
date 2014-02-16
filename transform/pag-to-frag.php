@@ -2,7 +2,7 @@
 
 	function fail ($message, $file, $line)
 	{
-		printf("Error: %s, in %2 @%04d\n", $message, $file, $line);
+		printf("Error: %s, in %s @%04d\n", $message, $file, $line);
 		exit(1);
 	}
 
@@ -90,8 +90,8 @@
 						case 'start':
 							if ($token[1] != 'meta' && $token[1] != 'body'
 								&& $token[1] != 'ghost' && $token[1] != 'side')
-									fail('Unkown environment '.$token[1],
-										$fileno, $lineno + 1);
+									fail("Unkown environment [$token[1]]",
+										$target, $lineno + 1);
 							$this->state = $token[1];
 							if ($this->state != 'body' && $this->state != 'ghost')
 								$this->current = &$this->{$token[1]};
