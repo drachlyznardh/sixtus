@@ -21,7 +21,7 @@
 
 	function output_on_file ($type, $target, $sourcefile, $content)
 	{
-		$i = 0;
+		if (count($content) < 1) return;
 		
 		/*
 		$current = basename($target);
@@ -30,7 +30,9 @@
 		
 		$out[] = sprintf("#### file %s %s %s\n", $location, $page, $current);
 		*/
+		
 		$out[] = sprintf("#### %d\n", $type);
+		$i = 0;
 		foreach ($sourcefile as $_) $out[] = sprintf("%d %s\n", $i++, $_);
 		$out[] = sprintf("####\n");
 		foreach($content as $_) $out[] = sprintf("%d %04d %s\n", $_[0], $_[1], $_[2]);
