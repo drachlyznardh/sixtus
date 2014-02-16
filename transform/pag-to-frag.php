@@ -125,7 +125,6 @@
 				if (count($this->body[$_]))
 					$related[] = $_;
 
-			printf("Related {%s}\n", implode(' -> ', $related));
 			foreach ($related as $_)
 				$this->meta[] = array(false, false, "tab#".$_);
 		}
