@@ -40,25 +40,4 @@
 		$u = split('@', $t[0]);
 		return array($u[0], $u, $t);
 	}
-
-	function function_file ($type, $unique, $name)
-	{
-		switch ($type)
-		{
-			case 'side';
-				$result = sprintf('%s/right-side', $unique);
-				break;
-			case 'body';
-				$result = sprintf('%s/content', $unique);
-				break;
-			case 'tab';
-				$result = sprintf('%s/tab-%s', $unique, $name);
-				break;
-			case 'ghost';
-				$result = sprintf('%s/ghost-%s', $unique, $name);
-				break;
-		}
-
-		return sprintf("%s.'%s.php'", 'docroot()', $result);
-	}
 ?>
