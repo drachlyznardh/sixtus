@@ -10,10 +10,10 @@
 	{
 		if (is_file($target)) return $target;
 		
-		$tmp = sprintf('%s%s', $localdir, $target);
+		$tmp = sprintf('%s/%s', $localdir, $target);
 		if (is_file($tmp)) return $tmp;
 		
-		$tmp = sprintf('%s%s', $sourcedir, $target);
+		$tmp = sprintf('%s/%s', $sourcedir, $target);
 		if (is_file($tmp)) return $tmp;
 
 		return false;
