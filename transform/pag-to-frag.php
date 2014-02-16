@@ -58,8 +58,8 @@
 		public function __construct ()
 		{
 			$this->meta  = array();
-			$this->body  = array();
-			$this->ghost = array();
+			$this->body  = array('default' => array());
+			$this->ghost = array('default' => array());
 			$this->side  = array();
 
 			$this->state = 'meta';
@@ -91,7 +91,9 @@
 								&& $token[1] != 'ghost' && $token[1] != 'side')
 									fail('Unkown environment '.$token[1], $fileno, $lineno);
 							$this->state = $token[1];
-							$this->current = &$this->{$token[1]};
+							if ($this->state != 'body' && $this->state != 'ghost')
+								$this->current = &$this->{$token[1]};
+							else $this->current = &$this->{$token[1]}['default'];
 							break;
 						case 'tab':
 							if ($this->state != 'body' && $this->state != 'ghost')
