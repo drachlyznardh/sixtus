@@ -50,5 +50,6 @@
 	foreach ($filenames as $_)
 		printf("\t[%s]\n", $_);
 
-	exit(1);
+	if ($filetype) require_once('frag/meta-to-php.php');
+	else require_once('frag/content-to-php.php');
 ?>
