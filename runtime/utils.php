@@ -189,4 +189,25 @@
 			printf(' § <a href="%s">%s</a>', $heading['part'][1], $heading['part'][0]);
 	}
 	
+	function load_page_title ($target)
+	{
+		require_once(docroot().strtolower($target).'meta.php');
+		return array(false, $target, $p['short'], false);
+	}
+
+	function parse_related ($rel)
+	{
+		if (preg_match('/@/', $rel[1])) {
+			$_ = preg_split('/@/', $rel[1]);
+			switch(count($_))
+			{
+				case 2: $bf = false; $title = $_[0]; $af = $_[1]; break;
+				case 3: $bf = $_[0]; $title = $_[1]; $af = $_[2]; break;
+			}
+		} else {
+			$bf = $af = false;
+			$title = $rel[1];
+		}
+		return array($bf, $rel[1], $title, $af);
+	}
 ?>

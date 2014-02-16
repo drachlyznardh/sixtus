@@ -42,10 +42,14 @@
 					$this->keywords = polish_line($token[1]);
 					break;
 				case 'prev':
-					$this->prev = array($token[1], polish_line($token[2]));
+					if (count($token) > 2)
+						$this->prev = array($token[1], polish_line($token[2]));
+					else $this->prev = $token[1];
 					break;
 				case 'next':
-					$this->next = array($token[1], polish_line($token[2]));
+					if (count($token) > 2)
+						$this->next = array($token[1], polish_line($token[2]));
+					else $this->next = $token[1];
 					break;
 				case 'tab':
 					$this->c[] = $token[1];
