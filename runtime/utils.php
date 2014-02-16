@@ -15,7 +15,7 @@
 		$url = false;
 		
 		if ($attr['single'] && !$attr['force_all_tabs']) {
-			if ($attr['current'] == $tab) {
+			if ($attr['part'] == $tab) {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 			} else {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
@@ -77,7 +77,21 @@
 		require($filename);	
 	}
 
-	function search_for_page ($map, $attr, $path)
+	function require_all ($attr, $target)
+	{
+		require(docroot().$target);
+		$target_dir = docroot().dirname($target);
+		$s = false;
+		foreach ($c as $_) require ("$target_dir/tab-$_.php");
+	}
+
+	function require_one ($attr, $target)
+	{
+		$s = false;
+		require(docroot().$target);
+	}
+
+	function search_for_dir ($map, $attr, $path)
 	{
 		$short = false;
 		$limit = count($path) - 1;
@@ -86,17 +100,17 @@
 
 		if (preg_match('/blog/', $path[0]))
 		{
-			$target = sprintf("%smeta.php", mb_strtolower($long), 'UTF-8');
+			$target = sprintf("%s", mb_strtolower($long), 'UTF-8');
 		}
 		else if (isset($map[$long]))
 		{
 			#printf ("Found [%s] Long\n", $long);
-			$target = sprintf("%s/meta.php", mb_strtolower($map[$long], 'UTF-8'));
+			$target = sprintf("%s/", mb_strtolower($map[$long], 'UTF-8'));
 		}
 		else if (isset($map[$short]))
 		{
 			#printf ("Found [%s] Short\n", $short);
-			$target = sprintf("%s/%s/meta.php",
+			$target = sprintf("%s/%s/",
 				mb_strtolower($map[$short], 'UTF-8'), $path[$limit]);
 		}
 		else $target = false;
@@ -189,4 +203,25 @@
 			printf(' § <a href="%s">%s</a>', $heading['part'][1], $heading['part'][0]);
 	}
 	
+	function load_page_title ($target)
+	{
+		require_once(docroot().strtolower($target).'meta.php');
+		return array(false, $target, $p['short'], false);
+	}
+
+	function parse_related ($rel)
+	{
+		if (preg_match('/@/', $rel[1])) {
+			$_ = preg_split('/@/', $rel[1]);
+			switch(count($_))
+			{
+				case 2: $bf = false; $title = $_[0]; $af = $_[1]; break;
+				case 3: $bf = $_[0]; $title = $_[1]; $af = $_[2]; break;
+			}
+		} else {
+			$bf = $af = false;
+			$title = $rel[1];
+		}
+		return array($bf, $rel[0], $title, $af);
+	}
 ?>

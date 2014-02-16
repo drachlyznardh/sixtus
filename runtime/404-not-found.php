@@ -1,12 +1,12 @@
 <?php
 
-	$attr['title'] = '404 Not Found';
-	$attr['short'] = '404 Not Found';
-	$attr['subtitle'] = 'No such file or directory';
-	$attr['keywords'] = '';
+	$p['title'] = '404 Not Found';
+	$p['short'] = '404 Not Found';
+	$p['subtitle'] = 'No such file or directory';
+	$p['keywords'] = '';
 
-	$related['prev'] = false;
-	$related['next'] = false;
+	$r['prev'] = false;
+	$r['next'] = false;
 
 	require_once('page-top.php');
 ?><div class="section">

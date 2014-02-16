@@ -40,5 +40,4 @@
 		$u = split('@', $t[0]);
 		return array($u[0], $u, $t);
 	}
-
 ?>
