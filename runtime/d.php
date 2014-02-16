@@ -97,7 +97,8 @@
 		}
 	}
 
-	$target_file = docroot().search_for_page($direct, $attr, $request['path']);
+	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
+	$target_file = "${target_dir}meta.php";
 
 	if ($attr['download'])
 	{
@@ -116,10 +117,11 @@
 		require_once($target_file);
 	else require_once('404-not-found.php');
 
-	if (!$request['part']) $request['part'] = $c[0];
+	if (!$request['part'] && $c[0] != 'default') $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
+	if (!$request['part']) $request['part'] = $c[0];
 	$attr['self'] = find_self($heading);
-	$lwself = strtolower($attr['self']);
+	#$lwself = strtolower($attr['self']);
 
 	$s = true; // Display sections
 	$attr['part'] = $request['part']; // For internal links
@@ -127,11 +129,11 @@
 	### Outputting page
 	require_once('page-top.php');
 	if ($attr['layout'])
-		require_once(docroot().$lwself.'content.php');
+		require_once($target_dir.'content.php');
 	else 
-		require_once(docroot().$lwself.'tab-'.$request['part'].'.php');
+		require_once($target_dir.'tab-'.$request['part'].'.php');
 	require_once('page-middle.php');
-	require_once(docroot().$lwself.'side.php');
+	require_once($target_dir.'side.php');
 	require_once('page-bottom.php');
 
 	exit(0);
