@@ -78,7 +78,6 @@
 
 				switch ($cmd) {
 					case '':
-						print_r($par);
 						if ($par[0])
 							$this->current[] = array($fileno, $lineno + 1, $par[0]);
 						break;
