@@ -10,7 +10,8 @@
 
 	$row = file($argv[1], FILE_IGNORE_NEW_LINES);
 
-	if (!preg_match('/#### .* .* .*/', $row[0]))
+	$pattern = '/^#### ([01])$/';
+	if (!preg_match($pattern, $row[0]))
 		fail("Wrong format", $argv[1], 1);
 
 	foreach ($row as $_)
