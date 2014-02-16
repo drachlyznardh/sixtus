@@ -19,15 +19,18 @@
 		return false;
 	}
 
-	function output_on_file ($target, $sourcefile, $content)
+	function output_on_file ($type, $target, $sourcefile, $content)
 	{
 		$i = 0;
 		
+		/*
 		$current = basename($target);
 		$page = basename(dirname($target));
 		$location = dirname(dirname($target));
 		
 		$out[] = sprintf("#### file %s %s %s\n", $location, $page, $current);
+		*/
+		$out[] = sprintf("#### %d\n", $type);
 		foreach ($sourcefile as $_) $out[] = sprintf("%d %s\n", $i++, $_);
 		$out[] = sprintf("####\n");
 		foreach($content as $_) $out[] = sprintf("%d %04d %s\n", $_[0], $_[1], $_[2]);
@@ -119,12 +122,12 @@
 
 		private function dump ($outdir) {
 
-			output_on_file($outdir.'meta.frag', $this->parsedfiles, $this->meta);
+			output_on_file(true, $outdir.'meta.frag', $this->parsedfiles, $this->meta);
 			foreach(array_keys($this->body) as $_)
-				output_on_file($outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
+				output_on_file(false, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
 			foreach(array_keys($this->ghost) as $_)
-				output_on_file($outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
-			output_on_file($outdir.'side.frag', $this->parsedfiles, $this->side);
+				output_on_file(false, $outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
+			output_on_file(false, $outdir.'side.frag', $this->parsedfiles, $this->side);
 		}
 
 		public function split ($target, $indir, $outdir)
