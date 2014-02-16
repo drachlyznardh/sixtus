@@ -13,58 +13,57 @@
 
 		private $c = array();
 
-		public function parse ($f, $l, $s)
+		public function parse ($f, $l, $cmd, $attr, $par)
 		{
-			if (!preg_match('/#/', $s))
-				fail ("No meta command in [$s]", $f, $l);
-
-			$token = split('#', $s);
-			switch($token[0]) {
+			switch($cmd) {
 				case '': break;
 				case 'tag': break;
 				case 'title':
-					switch(count($token)){
+					switch(count($par)){
 						case 3:
-							$this->subtitle = polish_line($token[2]);
+							$this->subtitle = polish_line($par[2]);
 						case 2:
-							$this->title = polish_line($token[1]);
+							$this->title = polish_line($par[1]);
 							$this->short = $this->title;
 							break;
 					}
 					break;
 				case 'short':
-					$this->short = polish_line($token[1]);
+					$this->short = polish_line($par[1]);
 					break;
 				case 'subtitle':
-					$this->subtitle = polish_line($token[1]);
+					$this->subtitle = polish_line($par[1]);
 					break;
 				case 'keywords':
-					$this->keywords = polish_line($token[1]);
+					$this->keywords = polish_line($par[1]);
 					break;
 				case 'prev':
-					if (count($token) > 2)
-						$this->prev = array($token[1], polish_line($token[2]));
-					else $this->prev = $token[1];
+					if (count($par) > 2)
+						$this->prev = array($par[1], polish_line($par[2]));
+					else $this->prev = $par[1];
 					break;
 				case 'next':
-					if (count($token) > 2)
-						$this->next = array($token[1], polish_line($token[2]));
-					else $this->next = $token[1];
+					if (count($par) > 2)
+						$this->next = array($par[1], polish_line($par[2]));
+					else $this->next = $par[1];
+					break;
+				case 'related':
+					$this->related[] = $par[1];
 					break;
 				case 'tab':
-					$this->c[] = $token[1];
+					$this->c[] = $par[1];
 					break;
 				case 'tabs':
-					if ($token[1] == 'alwaysall')
+					if ($par[1] == 'alwaysall')
 						$this->force_all_tabs = true;
-					else if (strcmp($token[1], 'all_or_one') == 0)
+					else if (strcmp($par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
 					break;
 				case 'include':
-					$this->static_include($token, $cmd_attr);
+					$this->static_include($par, $attr);
 					break;
 				default:
-					fail("Unknown command [$token[0]]\n", $f, $l);
+					fail("Unknown command [$par[0]]\n", $f, $l);
 			}
 		}
 
@@ -101,7 +100,8 @@
 	foreach ($row as $_)
 	{
 		list($f, $l, $s) = check_line_format ($_, $i++);
-		$p->parse($f, $l, $s);
+		list($cmd, $attr, $par) = split_line_content($s);
+		$p->parse($f, $l, $cmd, $attr, $par);
 	}
 
 	$p->dump($argv[2]);
