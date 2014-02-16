@@ -59,9 +59,6 @@
 					else if (strcmp($par[1], 'all_or_one') == 0)
 						$this->all_or_one = true;
 					break;
-				case 'include':
-					$this->static_include($par, $attr);
-					break;
 				default:
 					fail("Unknown command [$par[0]]\n", $f, $l);
 			}
