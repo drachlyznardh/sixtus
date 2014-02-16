@@ -59,7 +59,7 @@
 			}
 		}
 
-		public function dump ()
+		public function dump ($target)
 		{
 			$format = "\t%s['%s'] = '%s';\n";
 			
@@ -75,7 +75,7 @@
 				'$r', 'rel', implode("', '", $this->related));
 			$out[] = sprintf("?%s\n", '>');
 			
-			printf("%s", implode($out));
+			file_put_contents($target, $out);
 		}
 	}
 
@@ -86,7 +86,7 @@
 		$p->parse($f, $l, $s);
 	}
 
-	$p->dump();
+	$p->dump($argv[2]);
 
 	exit(0);
 ?>
