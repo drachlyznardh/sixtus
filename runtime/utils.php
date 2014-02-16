@@ -77,6 +77,14 @@
 		require($filename);	
 	}
 
+	function require_all ($target)
+	{
+		require(docroot().$target);
+		$target_dir = docroot().dirname($target);
+		$s = false;
+		foreach ($c as $_) require ("$target_dir/tab-$_.php");
+	}
+
 	function search_for_dir ($map, $attr, $path)
 	{
 		$short = false;

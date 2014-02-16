@@ -70,12 +70,14 @@
 				case 'tab':
 				case 'ghost':
 					if (count($attr) < 2)
-						fail("Section->Make_Require: Ghost requires a name.\n");
+						fail("Section->Make_Require: Tabs & Ghosts require a name.\n");
 				case 'side':
-				case 'body':
 					if (!isset($attr[2])) $attr[2] = false;
 					$this->content[] = sprintf("<%s require(%s);%s>",
 						'?', function_file($attr[1], $args[1], $attr[2]), '?');
+					break;
+				case 'body':
+					$this->content[] = sprintf("<%s=require_all('%s/meta.php')%s>", '?', $args[1], '?');
 					break;
 				default:
 					fail("Section->Make_Require: [$attr[1]] unknown.\n", $f, $l);	
