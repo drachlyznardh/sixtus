@@ -222,6 +222,6 @@
 			$bf = $af = false;
 			$title = $rel[1];
 		}
-		return array($bf, $rel[1], $title, $af);
+		return array($bf, $rel[0], $title, $af);
 	}
 ?>
