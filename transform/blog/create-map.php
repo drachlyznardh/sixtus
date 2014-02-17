@@ -53,6 +53,20 @@
 	$result = scan_for_years ($argv[2]);
 	$previous = scan_for_previous ($argv[1]);
 
+	foreach (array_keys($result) as $year)
+		foreach ($result[$year] as $month)
+			$series[] = sprintf('%s/%s', $year, $month);
+	
+	$limit = count($series);
+	$prev = $argv[2].$series[0].'.pag';
+	for ($i = 1; $i < $limit; $i++)
+	{
+		$curr = $argv[2].$series[$i].'.pag';
+		printf("%s: %s\n", $prev, $curr);
+		printf("%s: %s\n", $curr, $prev);
+		$prev = $curr;
+	}
+
 	if (scan_for_equal($result, $previous)) exit(0);
 
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
