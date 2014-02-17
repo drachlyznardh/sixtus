@@ -30,7 +30,7 @@ $(BLOG_MAP): $(POSTS)
 $(FRAG_DIR)%.month: $(BLOG_DIR)%.post
 	@echo Extracting fragments from $<
 	@mkdir -p $(dir $@)
-	@php5 -f $(POST_TO_FRAG) $< $(BLOG_MAP)
+	@php5 -f $(POST_TO_FRAG) $< $@ $(BLOG_MAP) $(basename $@)/
 
 %.pag: %.post $(BLOG_MAP)
 	@echo Generating blog page $@ from $<
