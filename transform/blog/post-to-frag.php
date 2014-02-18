@@ -150,9 +150,10 @@
 	$to_file[] = sprintf("tabs#all_or_one\n");
 	$to_file[] = sprintf("start#page\n");
 
-	print_r($argv);
-	dump_meta($argv[1], sprintf('%smeta.php', $argv[4]), name_that_month($month), $year, scan_for_month($month, $year, $blog_map));
-	exit(1);
+	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
+	name_that_month($month), $year, scan_for_month($month, $year, $blog_map),
+	array_keys($out_rows));
+	exit(0);
 
 	foreach (array_keys($out_rows) as $day)
 	{
