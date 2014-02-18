@@ -128,9 +128,11 @@
 
 	### Outputting page
 	require_once('page-top.php');
-	if ($attr['layout'])
-		require_once($target_dir.'content.php');
-	else 
+	if ($attr['layout'] || $ct) foreach ($c as $_) {
+		$targetfile = "$target_dir/tab-$_.php";
+		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
+		else missing_tab($_);
+	} else 
 		require_once($target_dir.'tab-'.$request['part'].'.php');
 	require_once('page-middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
