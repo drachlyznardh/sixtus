@@ -16,10 +16,13 @@ YEARS   := $(patsubst %/, %.pag, $(sort $(dir $(MONTHS))))
 ARCHIVE := $(BLOG_DIR)archivio.pag
 NEWS    := $(abspath $(BLOG_DIR)../blog.pag)
 
-all: blog-map months years archive news
-	@echo $(BLOG_DIR)
+all: blog
+
+blog:
+	@echo Blog generated from $(BLOG_DIR) to $(BLOG_ODIR)
+
+blog: blog-map months years archive news
 months: $(MONTHS)
-	@echo $(MONTHS)
 years: $(YEARS)
 archive: $(ARCHIVE)
 news: $(NEWS)

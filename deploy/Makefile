@@ -12,47 +12,53 @@ MAKE_PAGES     := $(MAKE) $(QUIET) -f $(PREFIX)deploy/pages.makefile
 MAKE_PAGE      := $(MAKE) $(QUIET) -f $(PREFIX)deploy/page.makefile
 MAKE_FRAG      := $(MAKE) $(QUIET) -f $(PREFIX)deploy/frag.makefile
 
-build: map tag
+sixtus-build: sixtus-map sixtus-tag
 
-deploy: build page runtime resources
+sixtus-deploy: sixtus-build sixtus-page sixtus-runtime sixtus-resources
 
-runtime:
+sixtus-runtime:
 	@$(MAKE_RUNTIME)
 	
-runtime-clean:
+sixtus-runtime-clean:
 	@$(MAKE_RUNTIME) clean
 	
-resources:
+sixtus-resources:
 	@$(MAKE_RESOURCES)
 
-resources-clean:
+sixtus-resources-clean:
 	@$(MAKE_RESOURCES) clean
 
-frag:
+sixtus-frag:
 	@$(MAKE_FRAG)
 
-frag-clean:
+sixtus-frag-clean:
 	@$(MAKE_FRAG) clean
 
-blog:
+sixtus-blog:
 	@$(MAKE_BLOG)
 
-blog-clean:
+sixtus-blog-clean:
 	@$(MAKE_BLOG) clean
 
-page: frag
+sixtus-page: sixtus-frag
 	@$(MAKE_PAGE)
 
-page-clean:
+sixtus-page-clean:
 	@$(MAKE_PAGE) clean
 
-tag:
+sixtus-tag:
 	@$(MAKE_DB)
 
-tag-clean:
+sixtus-tag-clean:
 	@$(MAKE_DB) clean
 
-.PHONY: clean, blog-clean, frag-clean, page-clean, resources-clean, runtime-clean, tag-clean
-clean: map-clean frag-clean page-clean resources-clean runtime-clean tag-clean
+.PHONY: sixtus-blog-clean, sixtus-frag-clean, sixtus-page-clean
+sixtus-clean: sixtus-map-clean sixtus-frag-clean sixtus-page-clean
+
+.PHONY: sixtus-resources-clean, sixtus-runtime-clean, sixtus-tag-clean
+sixtus-clean: sixtus-resources-clean sixtus-runtime-clean sixtus-tag-clean
+
+.PHONY: sixtus-clean
+sixtus-clean: 
 	@rm -rf $(BUILD_DIR)
 
