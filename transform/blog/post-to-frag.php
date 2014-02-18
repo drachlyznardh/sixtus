@@ -26,7 +26,7 @@
 		if ($prev) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'prev', $prev);
 		if ($next) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'next', $next);
 		
-		printf("%s\n", implode("\n", $out));
+		file_put_contents($target, implode("\n", $out));
 	}
 
 	$_ = explode('/', $argv[2]);
