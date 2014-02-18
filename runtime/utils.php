@@ -229,4 +229,12 @@
 		}
 		return array($bf, $rel[0], $title, $af);
 	}
+
+	function missing_tab ($tabname)
+	{
+		printf('<div class="section">');
+		printf('<h3 class="reverse">Missing tab</h3>');
+		printf('<p>This page has no tab [%s]. Sorry.</p>', $tabname);
+		printf('</div>');
+	}
 ?>
