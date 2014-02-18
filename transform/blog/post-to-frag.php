@@ -30,7 +30,6 @@
 			$out[] = sprintf('%d %04d %s#%s',
 				0, 0, 'tab', $_);
 		
-		printf("\tDumping %s\n", $target);
 		file_put_contents($target, implode("\n", $out));
 	}
 
@@ -39,12 +38,9 @@
 		$out[] = sprintf("#### 0");
 		$out[] = sprintf("%d %s", 0, $source);
 		$out[] = sprintf("####");
-		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'start', 'body');
-		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'tab', $tab);
 		foreach (array_keys($content) as $l)
 			$out[] = sprintf('%d %04d %s', 0, $l, $content[$l]);
 		
-		printf("\tDumping %s\n", $target);
 		file_put_contents($target, implode("\n", $out));
 	}
 
@@ -53,8 +49,6 @@
 		$out[] = sprintf("#### 0");
 		$out[] = sprintf("%d %s", 0, $source);
 		$out[] = sprintf("####");
-		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'start', 'ghost');
-		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'tab', $day);
 		
 		$limit = count($names);
 		for ($i = 0; $i < $limit; $i++) {
@@ -63,7 +57,6 @@
 				0, 0, $names[$i], $year, $month);
 		}
 		
-		printf("\tDumping %s\n", $target);
 		file_put_contents($target, implode("\n", $out));
 	}
 
@@ -74,7 +67,6 @@
 
 	$current = array();
 	$in_rows = file($argv[1], FILE_IGNORE_NEW_LINES);
-	$i = 0;
 	$limit = count($in_rows);
 
 	for ($i = 0; $i < $limit; $i++)
