@@ -117,9 +117,8 @@
 		require_once($target_file);
 	else require_once('404-not-found.php');
 
-	if (!$request['part'] && $c[0] != 'default') $request['part'] = $c[0];
+	if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
-	if (!$request['part']) $request['part'] = $c[0];
 	$attr['self'] = find_self($heading);
 	#$lwself = strtolower($attr['self']);
 
