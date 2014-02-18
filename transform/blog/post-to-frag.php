@@ -3,7 +3,7 @@
 	require_once('utils.php');
 	require_once($argv[3]);
 
-	function dump_meta ($source, $target, $month, $year, $rel)
+	function dump_meta ($source, $target, $month, $year, $rel, $tabs)
 	{
 		$title = sprintf('%s %s', $month, $year);
 		$subtitle = sprintf('Le notizie di %s', $month);
@@ -25,6 +25,10 @@
 		$out[] = sprintf("%d %04d %s#%s", 0, 0, 'subtitle', $subtitle);
 		if ($prev) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'prev', $prev);
 		if ($next) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'next', $next);
+		$out[] = sprintf('%d %04d %s#%s', 0, 0, 'tabs', 'all_or_one');
+		foreach ($tabs as $_)
+			$out[] = sprintf('%d %04d %s#%s',
+				0, 0, 'tab', $_);
 		
 		file_put_contents($target, implode("\n", $out));
 	}
