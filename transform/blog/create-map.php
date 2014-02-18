@@ -56,6 +56,12 @@
 	foreach (array_keys($result) as $year)
 		foreach ($result[$year] as $month)
 			$series[] = sprintf('%s/%s', $year, $month);
+
+	foreach (array_keys($result) as $year)
+		$short[] = sprintf("\t'%s' => array('%s')",
+			$year, implode("', '", $result[$year]));
+	file_put_contents($argv[1], sprintf("<%sphp %s = array(\n%s\n); %s>\n",
+		'?', '$blog_map', implode(",\n", $short), '?'));
 	
 	$limit = count($series);
 	$prev = $argv[2].$series[0].'.pag';
@@ -67,6 +73,7 @@
 		$prev = $curr;
 	}
 
+	exit(0);
 	if (scan_for_equal($result, $previous)) exit(0);
 
 	$to_file[] = sprintf("%s%s\n\n", '<', '?php');
