@@ -7,7 +7,8 @@ CREATE_ARCHIVE := $(TRANSFORM)blog/create-archive.php
 CREATE_NEWS    := $(TRANSFORM)blog/create-news.php
 UPDATE_MAP     := $(TRANSFORM)blog/update-blog-map.sh
 
-BLOG_MAP := $(BLOG_DIR)blog-map.php
+BLOG_ODIR := $(BUILD_DIR)blog/
+BLOG_MAP  := $(BLOG_ODIR)map.php
 
 POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
 MONTHS  := $(patsubst $(BLOG_DIR)%.post, $(FRAG_DIR)%.month, $(POSTS))
@@ -22,12 +23,14 @@ months: $(MONTHS)
 years: $(YEARS)
 archive: $(ARCHIVE)
 news: $(NEWS)
+blog-map: $(BLOG_MAP)
 
 $(BLOG_MAP): $(POSTS)
 	@echo Generating blog map $@
+	@mkdir -p $(dir $@)
 	@$(PHP) -f $(CREATE_MAP) $@ $(BLOG_DIR)
 
-$(FRAG_DIR)%.month: $(BLOG_DIR)%.post
+$(FRAG_DIR)%.month: $(BLOG_DIR)%.post #blog-map
 	@echo Extracting fragments from $<
 	@mkdir -p $(dir $@)
 	@php5 -f $(POST_TO_FRAG) $< $@ $(BLOG_MAP) $(basename $@)/
