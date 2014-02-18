@@ -30,6 +30,40 @@
 			$out[] = sprintf('%d %04d %s#%s',
 				0, 0, 'tab', $_);
 		
+		printf("\tDumping %s\n", $target);
+		file_put_contents($target, implode("\n", $out));
+	}
+
+	function dump_tag($source, $target, $tab, $content)
+	{
+		$out[] = sprintf("#### 0");
+		$out[] = sprintf("%d %s", 0, $source);
+		$out[] = sprintf("####");
+		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'start', 'body');
+		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'tab', $tab);
+		foreach (array_keys($content) as $l)
+			$out[] = sprintf('%d %04d %s', 0, $l, $content[$l]);
+		
+		printf("\tDumping %s\n", $target);
+		file_put_contents($target, implode("\n", $out));
+	}
+
+	function dump_ghost($source, $target, $year, $month, $day, $names)
+	{
+		$out[] = sprintf("#### 0");
+		$out[] = sprintf("%d %s", 0, $source);
+		$out[] = sprintf("####");
+		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'start', 'ghost');
+		#$out[] = sprintf("%d %04d %s#%s", 0, 0, 'tab', $day);
+		
+		$limit = count($names);
+		for ($i = 0; $i < $limit; $i++) {
+			if ($i) $out[] = sprintf('%d %04d %s', 0, 0, 'sec#');
+			$out[] = sprintf('%d %04d require@tab@%s#blog/%s/%02d/',
+				0, 0, $names[$i], $year, $month);
+		}
+		
+		printf("\tDumping %s\n", $target);
 		file_put_contents($target, implode("\n", $out));
 	}
 
@@ -70,6 +104,31 @@
 	if (count($current) > 0) $out_rows[$day][] = $current;
 
 	####
+	
+	foreach (array_keys($out_rows) as $day)
+	{
+		#printf("\tDay #%s has %02d posts.\n", $day, $out_rows[$day]);
+
+		$limit = count($out_rows[$day]);
+
+		if ($limit > 1)
+		{
+			for ($i = 0; $i < $limit; $i++)
+			{
+				$tab = sprintf('%02d%c', $day, 96 + $limit - $i);
+				$names[] = $tab;
+				dump_tag($argv[1],
+					sprintf('%stab-%s.frag', $argv[4], $tab),
+					$tab, $out_rows[$day][$i]['content']);
+			}
+			dump_ghost($argv[1],
+				sprintf('%stab-%02d.frag', $argv[4], $day),
+				$year, $month, $day, $names);
+		}
+		else dump_tag($argv[1],
+			sprintf('%stab-%02d.frag', $argv[4], $day),
+			$day, $out_rows[$day][0]['content']);
+	}
 
 	foreach (array_keys($out_rows) as $day)
 	{
