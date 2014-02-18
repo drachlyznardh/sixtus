@@ -3,6 +3,32 @@
 	require_once('utils.php');
 	require_once($argv[3]);
 
+	function dump_meta ($source, $target, $month, $year, $rel)
+	{
+		$title = sprintf('%s %s', $month, $year);
+		$subtitle = sprintf('Le notizie di %s', $month);
+
+		if ($rel[0])
+			$prev = printf('Blog/%s/%02d/#%s@ %s',
+				$rel[0][0], $rel[0][1], name_that_month($rel[0][1]), $rel[0][0]);
+		else $prev = false;
+		if ($rel[1])
+			$next = printf('Blog/%s/%02d/#%s@ %s',
+				$rel[1][0], $rel[1][1], name_that_month($rel[1][1]), $rel[1][0]);
+		else $next = false;
+		
+		$out[] = sprintf("#### 1");
+		$out[] = sprintf("%d %s", 0, $source);
+		$out[] = sprintf("####");
+		$out[] = sprintf("%d %04d %s#%s", 0, 0, 'title', $title);
+		$out[] = sprintf("%d %04d %s#%s", 0, 0, 'short', $title);
+		$out[] = sprintf("%d %04d %s#%s", 0, 0, 'subtitle', $subtitle);
+		if ($prev) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'prev', $prev);
+		if ($next) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'next', $next);
+		
+		printf("%s\n", implode("\n", $out));
+	}
+
 	$_ = explode('/', $argv[2]);
 	$limit = count($_);
 	$year = $_[$limit - 2];
@@ -120,6 +146,10 @@
 	$to_file[] = sprintf("tabs#all_or_one\n");
 	$to_file[] = sprintf("start#page\n");
 
+	print_r($argv);
+	dump_meta($argv[1], sprintf('%smeta.php', $argv[4]), name_that_month($month), $year, scan_for_month($month, $year, $blog_map));
+	exit(1);
+
 	foreach (array_keys($out_rows) as $day)
 	{
 		$posts = $out_rows[$day];
@@ -168,7 +198,7 @@
 	}
 
 	$to_file[] = sprintf("stop#side\n");
-	printf("%s", implode($to_file));
+	#printf("%s", implode($to_file));
 	exit(0);
 	file_put_contents($argv[2], $to_file);
 ?>
