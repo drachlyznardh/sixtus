@@ -9,11 +9,11 @@
 		$subtitle = sprintf('Le notizie di %s', $month);
 
 		if ($rel[0])
-			$prev = printf('Blog/%s/%02d/#%s@ %s',
+			$prev = sprintf('Blog/%s/%02d/#%s@ %s',
 				$rel[0][0], $rel[0][1], name_that_month($rel[0][1]), $rel[0][0]);
 		else $prev = false;
 		if ($rel[1])
-			$next = printf('Blog/%s/%02d/#%s@ %s',
+			$next = sprintf('Blog/%s/%02d/#%s@ %s',
 				$rel[1][0], $rel[1][1], name_that_month($rel[1][1]), $rel[1][0]);
 		else $next = false;
 		
