@@ -40,14 +40,17 @@
 
 	$current = array();
 	$in_rows = file($argv[1], FILE_IGNORE_NEW_LINES);
+	$i = 0;
+	$limit = count($in_rows);
 
-	foreach ($in_rows as $_)
+	for ($i = 0; $i < $limit; $i++)
 	{
-		if (preg_match('/post#/', $_))
+		$line = trim($in_rows[$i]);
+		if (preg_match('/post#/', $line))
 		{
 			if (count($current) > 0) $out_rows[$day][] = $current;
 
-			$data = split('#', $_);
+			$data = split('#', $line);
 			$day = $data[1];
 			$title = $data[2];
 			if (count($data) > 3) {
@@ -61,7 +64,7 @@
 			$current['title'] = $title;
 			$current['tags'] = $tags;
 		}
-		else $current['content'][] = $_;
+		else $current['content'][$i] = $line;
 	}
 
 	if (count($current) > 0) $out_rows[$day][] = $current;
