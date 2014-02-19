@@ -97,7 +97,7 @@
 				array_shift($tags);
 				array_shift($tags);
 				array_shift($tags);
-			} else $tags = false;
+			} else $tags = array();
 
 			$current = array();
 			$current['title'] = $title;
