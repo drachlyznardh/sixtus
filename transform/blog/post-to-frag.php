@@ -41,6 +41,15 @@
 
 		$out[] = sprintf('%d %04d p#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s',
 			0, 0, $year, $month, $day, $month, $year, $data['tab']);
+		
+		$limit = count($data['tags']);
+		for ($i = 0; $i < $limit; $i++)
+		{
+			$out[] = sprintf('%d %04d %s', 0, 0, $i?'&amp;':'/');
+			$out[] = sprintf('%d %04d link#About/#%s#%s',
+				0, 0, ucwords($data['tags'][$i]),
+				mb_strtoupper($data['tags'][$i], 'UTF-8'));
+		}
 
 		foreach (array_keys($data['content']) as $l)
 			$out[] = sprintf('%d %04d %s', 0, $l, $data['content'][$l]);
