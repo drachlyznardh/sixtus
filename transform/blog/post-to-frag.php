@@ -103,6 +103,16 @@
 	
 	foreach (array_keys($out_rows) as $day)
 	{
+		$count = count($out_rows[$day]);
+
+		if ($count > 1)
+			for ($i = 0; $i < $count; $i++)
+				$out_rows[$day][$i]['tab'] = sprintf('%02d%c', $day, 96 + $count - $i);
+		else $out_rows[$day][0]['tab'] = sprintf("%02d", $day);
+	}
+
+	foreach (array_keys($out_rows) as $day)
+	{
 		#printf("\tDay #%s has %02d posts.\n", $day, $out_rows[$day]);
 
 		$limit = count($out_rows[$day]);
@@ -124,16 +134,6 @@
 		else dump_tag($argv[1],
 			sprintf('%stab-%02d.frag', $argv[4], $day),
 			$year, $month, $day, $out_rows[$day][0]);
-	}
-
-	foreach (array_keys($out_rows) as $day)
-	{
-		$count = count($out_rows[$day]);
-
-		if ($count > 1)
-			for ($i = 0; $i < $count; $i++)
-				$out_rows[$day][$i]['tab'] = sprintf('%02d%c', $day, 96 + $count - $i);
-		else $out_rows[$day][0]['tab'] = sprintf("%02d", $day);
 	}
 
 	####
