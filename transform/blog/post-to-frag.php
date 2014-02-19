@@ -33,13 +33,17 @@
 		file_put_contents($target, implode("\n", $out));
 	}
 
-	function dump_tag($source, $target, $tab, $content)
+	function dump_tag($source, $target, $year, $month, $day, $data)
 	{
 		$out[] = sprintf("#### 0");
 		$out[] = sprintf("%d %s", 0, $source);
 		$out[] = sprintf("####");
-		foreach (array_keys($content) as $l)
-			$out[] = sprintf('%d %04d %s', 0, $l, $content[$l]);
+
+		$out[] = sprintf('%d %04d p#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s',
+			0, 0, $year, $month, $day, $month, $year, $data['tab']);
+
+		foreach (array_keys($data['content']) as $l)
+			$out[] = sprintf('%d %04d %s', 0, $l, $data['content'][$l]);
 		
 		file_put_contents($target, implode("\n", $out));
 	}
@@ -111,7 +115,7 @@
 				$names[] = $tab;
 				dump_tag($argv[1],
 					sprintf('%stab-%s.frag', $argv[4], $tab),
-					$tab, $out_rows[$day][$i]['content']);
+					$year, $month, $day, $out_rows[$day][$i]);
 			}
 			dump_ghost($argv[1],
 				sprintf('%stab-%02d.frag', $argv[4], $day),
@@ -119,7 +123,7 @@
 		}
 		else dump_tag($argv[1],
 			sprintf('%stab-%02d.frag', $argv[4], $day),
-			$day, $out_rows[$day][0]['content']);
+			$year, $month, $day, $out_rows[$day][0]);
 	}
 
 	foreach (array_keys($out_rows) as $day)
