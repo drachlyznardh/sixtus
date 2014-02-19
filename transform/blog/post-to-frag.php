@@ -51,6 +51,8 @@
 				mb_strtoupper($data['tags'][$i], 'UTF-8'));
 		}
 
+		$out[] = sprintf('%d %04d title#%s', 0, 0, $data['title']);
+
 		foreach (array_keys($data['content']) as $l)
 			$out[] = sprintf('%d %04d %s', 0, $l, $data['content'][$l]);
 		
