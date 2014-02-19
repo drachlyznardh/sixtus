@@ -127,7 +127,7 @@
 
 	### Outputting page
 	require_once('page-top.php');
-	if ($attr['layout'] || $ct) foreach ($c as $_) {
+	if (!$request['part'] && ($attr['layout'] || $ct)) foreach ($c as $_) {
 		$targetfile = "$target_dir/tab-$_.php";
 		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
 		else missing_tab($_);
