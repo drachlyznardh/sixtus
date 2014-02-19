@@ -117,9 +117,8 @@
 		require_once($target_file);
 	else require_once('404-not-found.php');
 
-	if (!$request['part'] && $c[0] != 'default') $request['part'] = $c[0];
+	if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
-	if (!$request['part']) $request['part'] = $c[0];
 	$attr['self'] = find_self($heading);
 	#$lwself = strtolower($attr['self']);
 
@@ -128,9 +127,11 @@
 
 	### Outputting page
 	require_once('page-top.php');
-	if ($attr['layout'])
-		require_once($target_dir.'content.php');
-	else 
+	if ($attr['layout'] || $ct) foreach ($c as $_) {
+		$targetfile = "$target_dir/tab-$_.php";
+		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
+		else missing_tab($_);
+	} else 
 		require_once($target_dir.'tab-'.$request['part'].'.php');
 	require_once('page-middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');

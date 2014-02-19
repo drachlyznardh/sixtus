@@ -1,14 +1,14 @@
 
-RESOURCES_IN_DIR  := $(IN_DIR)res/
-RESOURCES_OUT_DIR := $(OUT_DIR)
+RES_IDIR := $(IN_DIR)res/
+RES_ODIR := $(OUT_DIR)
 
-IN_FILES  := $(sort $(shell find $(RESOURCES_IN_DIR) -type f))
-OUT_FILES := $(patsubst $(RESOURCES_IN_DIR)%, $(RESOURCES_OUT_DIR)%, $(IN_FILES))
+IFILES  := $(sort $(shell if [ -d $RES_IDIR ]; then find $(RES_IDIR) -type f; fi))
+OFILES := $(patsubst $(RES_IDIR)%, $(RES_ODIR)%, $(IFILES))
 
 all: deploy
 deploy: $(OUT_FILES)
 
-$(RESOURCES_OUT_DIR)%: $(RESOURCES_IN_DIR)%
+$(RES_ODIR)%: $(RES_IDIR)%
 	@echo Linking runtime file $@
 	@mkdir -p $(dir $@)
 	@$(CP) $< $@
@@ -16,4 +16,4 @@ $(RESOURCES_OUT_DIR)%: $(RESOURCES_IN_DIR)%
 .PHONY: clean
 clean:
 	@echo Cleaning resources
-	@$(RM) $(OUT_FILES)
+	@$(RM) $(OFILES)

@@ -14,7 +14,7 @@
 	}
 
 	printf ('<p style="text-align: center">');
-	display_heading_path($heading);
+	display_heading_path($attr, $heading);
 	printf (' / </p>');
 
 	if ($r['next'])
