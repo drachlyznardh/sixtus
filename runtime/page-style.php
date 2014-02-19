@@ -5,13 +5,13 @@
 	else {
 		$custom = array('single' => $attr['single'], 'gray' => true);
 		printf ('<a href="%s">Gray</a>',
-			make_canonical($custom, $attr['self'], $heading['part']));
+			make_canonical($custom, $attr['self'], $heading['part'][0]));
 	}
 	?> | <?php
 	if ($attr['gray']) {
 		$custom = array('single' => $attr['single'], 'gray' => false);
 		printf ('<a href="%s">White</a>',
-			make_canonical($custom, $attr['self'], $heading['part']));
+			make_canonical($custom, $attr['self'], $heading['part'][0]));
 	} else printf ('<em>White</em>');
 	?> ]</p>
 </div>
