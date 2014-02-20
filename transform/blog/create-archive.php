@@ -67,7 +67,6 @@
 			$out[] = dump_that_year ($key[$i], $map[$key[$i]]);
 		}
 
-		printf("%s\n", implode("\n", $out));
 		file_put_contents($target, implode("\n", $out));
 	}
 
@@ -87,7 +86,8 @@
 			if ($i++) $out[] = sprintf('%d %04d /', 0, 0, $_, $_);
 			$out[] = sprintf('%d %04d tid#%s##%s', 0, 0, $_, $_);
 		}
-		printf("%s\n", implode("\n", $out));
+		
+		file_put_contents($target, implode("\n", $out));
 	}
 
 	# Load map
