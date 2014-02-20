@@ -61,7 +61,7 @@
 						$this->ct = true;
 					break;
 				default:
-					fail("Unknown command [$par[0]]\n", $f, $l);
+					fail("[Meta-2-PHP] Unknown command [$par[0]]\n", $f, $l);
 			}
 		}
 

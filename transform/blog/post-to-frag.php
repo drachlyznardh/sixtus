@@ -81,6 +81,9 @@
 		$out[] = sprintf("%d %s", 0, $source);
 		$out[] = sprintf("####");
 		
+		$out[] = sprintf('%d %04d stitle@right#link#Blog/%s/%02d/#%s@ %s',
+			0, 0, $year, $month, name_that_month($month), $year);
+
 		foreach (array_keys($data) as $day)
 		{
 			$i = 0;
