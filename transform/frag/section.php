@@ -87,10 +87,10 @@
 			}
 		}
 
-		private function switchContext($new)
+		private function switchContext($new, $direction)
 		{
 			$this->closeContext();
-			$this->openContext($new);
+			$this->openContext($new, $direction);
 		}
 
 		private function closeContext()
@@ -107,24 +107,22 @@
 			$this->context = false;
 		}
 
-		private function openContext($new)
+		private function openContext($new, $direction)
 		{
 			if ($this->context == $new) return;
-			
-			if ($this->context == 'r' && $new == 'p') return;
-			if ($this->context == 'p' && $new == 'r') return;
-			if ($this->context == 'r' && $new == 'c') return;
-			if ($this->context == 'p' && $new == 'c') return;
-			if ($this->context == 'c' && $new == 'p') return;
-			if ($this->context == 'c' && $new == 'r') return;
 			
 			$this->context = $new;
 			switch ($this->context)
 			{
-				case 'p': $this->content[] = '<p>'; break;
-				case 'c': $this->content[] = '<p class="center">'; break;
-				case 'r': $this->content[] = '<p class="reverse">'; break;
+				case 'p': switch ($direction) {
+					case '':
+					case 'p': $this->content[] = '<p>'; break;
+					case 'c': $this->content[] = '<p class="center">'; break;
+					case 'r': $this->content[] = '<p class="reverse">'; break;
+				}; break;
+
 				case 'li': $this->content[] = '<li>'; break;
+
 				case 'inside': $this->content[] = '<div class="inside">'; break;
 				case 'outside': $this->content[] = '<div class="outside">'; break;
 			}
@@ -236,7 +234,7 @@
 					$this->openContext($this->defaultContext);
 					$this->content[] = "<span class=\"green\">$text</span>\n";
 				} else {
-					$this->openContext($this->defaultContext);
+					$this->openContext($this->defaultContext, false);
 					$this->content[] = $text;
 				}
 			
@@ -250,21 +248,21 @@
 
 		private function make_p ($f, $index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext($this->defaultContext);
+			$this->switchContext($this->defaultContext, false);
 			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
 		private function make_c ($f, $index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext('c');
+			$this->switchContext('p', 'c');
 			if (count($cmd_args) > 3) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else $this->make_text($cmd_args[1]);
 		}
 
 		private function make_r ($f, $index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext('r');
+			$this->switchContext('p', 'r');
 			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else $this->make_text($cmd_args[1]);
 		}
