@@ -13,7 +13,7 @@ BLOG_MAP  := $(BLOG_ODIR)map.php
 POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
 MONTHS  := $(patsubst $(BLOG_DIR)%.post, $(BLOG_ODIR)%.month, $(POSTS))
 YEARS   := $(patsubst %/, %.year, $(sort $(dir $(MONTHS))))
-ARCHIVE := $(BLOG_DIR)archivio.pag
+ARCHIVE := $(BLOG_ODIR)archivio/.arch
 NEWS    := $(BLOG_ODIR).news
 
 all: blog
@@ -48,18 +48,11 @@ $(BLOG_ODIR).news:
 	@$(PHP) -f $(CREATE_NEWS) $(BLOG_MAP) $(basename $@)
 	@touch $@
 
-%.pag: %.post $(BLOG_MAP)
-	@echo Generating blog page $@ from $<
-	@mkdir -p $(dir $@)
-	@php5 -f $(POST_TO_PAG) $< $@ $(BLOG_MAP)
-
-$(ARCHIVE): $(BLOG_MAP)
+$(BLOG_ODIR)%.arch:
 	@echo Generating archive page $@
-	@$(PHP) -f $(CREATE_ARCHIVE) $@ $(BLOG_MAP)
-
-%.pag: $(BLOG_MAP)
-	@echo Generating year page $@
-	@$(PHP) -f $(CREATE_YEAR) $@ $(BLOG_MAP)
+	@mkdir -p $(basename $@)/
+	@$(PHP) -f $(CREATE_ARCHIVE) $(BLOG_MAP) $(basename $@)
+	@touch $@
 
 .PHONY: clean
 clean:
