@@ -26,7 +26,7 @@
 		if ($next) $out[] = sprintf('%d %04d next#Blog/%s/#%s',
 			0, 0, $next, $next);
 
-		printf("%smeta.frag\n%s\n", $target, implode("\n", $out));
+		file_put_contents(sprintf('%smeta.frag', $target), implode("\n", $out));
 	}
 
 	function dump_content ($target, $year, $months)
@@ -38,7 +38,7 @@
 		foreach ($months as $month)
 			$out[] = sprintf('%d %04d require@side#blog/%s/%s', 0, 0, $year, $month);
 	
-		printf("%stab-default.frag\n%s\n", $target, implode("\n", $out));
+		file_put_contents(sprintf('%stab-default.frag', $target), implode("\n", $out));
 	}
 
 	function dump_side ($target, $year, $months)
@@ -51,13 +51,13 @@
 		foreach ($months as $month)
 			$out[] = sprintf('%d %04d p#tid#%s##%s', 0, 0, name_that_month($month), $month);
 	
-		printf("%sside.frag\n%s\n", $target, implode("\n", $out));
+		file_put_contents(sprintf('%sside.frag', $target), implode("\n", $out));
 	}
 
 	dump_meta($argv[3], $argv[1], $blog_map);
 	dump_content($argv[3], $argv[1], $blog_map[$argv[1]]);
 	dump_side($argv[3], $argv[1], $blog_map[$argv[1]]);
-	exit(1);
+	exit(0);
 
 	$year = split('/', $argv[1]);
 	$year = $year[count($year) - 1];
