@@ -284,12 +284,12 @@
 
 		private function make_tid ($f, $index, $args)
 		{
-			$this->content[] = ' '.$this->full_tid($f, $index, $args);
+			$this->content[] = $this->full_tid($f, $index, $args);
 		}
 
 		private function make_link ($f, $index, $args)
 		{
-			$this->content[] = ' '.$this->full_link($f, $index, $args);
+			$this->content[] = $this->full_link($f, $index, $args);
 		}
 
 		private function make_title ($f, $l, $cmd_args, $cmd_attr)
