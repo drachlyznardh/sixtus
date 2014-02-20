@@ -21,8 +21,6 @@ all: blog
 blog: blog-map months years archive news
 months: $(MONTHS)
 years: $(YEARS)
-	@echo $(YEARS)
-
 archive: $(ARCHIVE)
 news: $(NEWS)
 blog-map: $(BLOG_MAP)
@@ -42,7 +40,7 @@ $(BLOG_ODIR)%.year:
 	@echo Generating year page $@
 	@mkdir -p $(basename $@)/
 	@$(PHP) -f $(CREATE_YEAR) $(notdir $(basename $@)) $(BLOG_MAP) $(basename $@)/
-	@#touch $@
+	@touch $@
 
 %.pag: %.post $(BLOG_MAP)
 	@echo Generating blog page $@ from $<
