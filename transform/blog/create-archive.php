@@ -2,6 +2,48 @@
 
 	require_once('utils.php');
 
+	function dump_that_year ($year, $months)
+	{
+		$format = "link#Blog/%s/%s#%s";
+		$slash = "\n\t\t/\n\t\t";
+		
+		for ($i = 0; $i < 4; $i++)
+		{
+			$result[] = "\tc#";
+
+			$month = sprintf('%02d', $i * 3 + 1);
+			if (array_search($month, $months) !== false)
+				$result[] = sprintf($format,
+					$year, $month, name_that_month($month));
+			else $result[] = sprintf("%s", name_that_month($month));
+
+			$result[] = $slash;
+
+			$month = sprintf('%02d', $i * 3 + 2);
+			if (array_search($month, $months) !== false)
+				$result[] = sprintf($format,
+					$year, $month, name_that_month($month));
+			else $result[] = sprintf("%s", name_that_month($month));
+		
+			$result[] = $slash;
+
+			$month = sprintf('%02d', $i * 3 + 3);
+			if (array_search($month, $months) !== false)
+				$result[] = sprintf($format,
+					$year, $month, name_that_month($month));
+			else $result[] = sprintf("%s", name_that_month($month));
+
+			$result[] = "\n";
+		}
+
+		return implode($result);
+	}
+
+	print_r($argv);
+	exit(1);
+
+	require_once('utils.php');
+
 	# Load map
 	require_once($argv[2]);
 
