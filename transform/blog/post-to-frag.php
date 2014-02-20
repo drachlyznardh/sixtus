@@ -33,6 +33,12 @@
 		file_put_contents($target, implode("\n", $out));
 	}
 
+	function dump_c($target, $tabs)
+	{
+		file_put_contents($target, sprintf("<%sphp\n%s = array('%s');\n%s>",
+			'?', '$c', implode("', '", $tabs), '?'));
+	}
+
 	function dump_tag($source, $target, $year, $month, $day, $data)
 	{
 		$out[] = sprintf("#### 0");
@@ -248,6 +254,7 @@
 	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
 		name_that_month($month), $year, scan_for_month($month, $year, $blog_map),
 		array_keys($out_rows));
+	dump_c($argv[4].'c.php', array_keys($out_rows));
 	dump_side($argv[1], sprintf('%sside.frag', $argv[4]),
 		$year, $month, $out_rows);
 	exit(0);
