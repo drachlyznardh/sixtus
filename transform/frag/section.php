@@ -48,7 +48,7 @@
 					$this->make_require($f, $index, $cmd_args, $cmd_attr);
 					break;
 
-				default: fail("Unknown command [$command]", $f, $index); $this->error($f, $index, $command);
+				default: fail("[Section] Unknown command [$command]", $f, $index); $this->error($f, $index, $command);
 			}
 		}
 
