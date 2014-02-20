@@ -113,7 +113,7 @@
 			$target = sprintf("%s/%s/",
 				mb_strtolower($map[$short], 'UTF-8'), $path[$limit]);
 		}
-		else $target = false;
+		else $target = 'runtime/404/';
 
 		#printf("Short[%s], Long[%s], Target[%s]", $short, $long, $target);
 		return $target;
