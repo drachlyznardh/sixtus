@@ -39,8 +39,6 @@
 		{
 			$out[] = sprintf('%d %04d sec#', 0, 0);
 			$out[] = sprintf('%d %04d id#%s', 0, 0, $month);
-			$out[] = sprintf('%d %04d stitle@right#link#Blog/%s/%02d/#%s@ %s',
-				0, 0, $year, $month, name_that_month($month), $year);
 			$out[] = sprintf('%d %04d require@side#blog/%s/%s', 0, 0, $year, $month);
 		}
 
