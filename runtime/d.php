@@ -98,7 +98,7 @@
 	}
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
-	$target_file = "${target_dir}meta.php";
+	$target_file = sprintf('%smeta.php', $target_dir);
 
 	if ($attr['download'])
 	{
@@ -115,7 +115,7 @@
 
 	if (is_file($target_file))
 		require_once($target_file);
-	else require_once('404-not-found.php');
+	else require_once('404/meta.php');
 
 	if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
@@ -131,8 +131,8 @@
 		$targetfile = "$target_dir/tab-$_.php";
 		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
 		else missing_tab($_);
-	} else 
-		require_once($target_dir.'tab-'.$request['part'].'.php');
+	} else if ($request['part']) require_once($target_dir.'tab-'.$request['part'].'.php');
+	else require_once($target_dir.'tab-'.$c[0].'.php');
 	require_once('page-middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
 	require_once('page-bottom.php');
