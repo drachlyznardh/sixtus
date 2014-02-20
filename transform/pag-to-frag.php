@@ -52,6 +52,8 @@
 		private $current;
 		private $parsedfiles;
 
+		private $tabs;
+
 		public function __construct ()
 		{
 			$this->meta  = array();
@@ -119,6 +121,8 @@
 
 			foreach ($related as $_)
 				$this->meta[] = array(false, false, "tab#".$_);
+
+			$this->tabs = $related;
 		}
 
 		private function _include ($target, $localdir, $indir, $fileno, $lineno)
