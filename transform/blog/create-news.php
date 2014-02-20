@@ -61,8 +61,6 @@
 		file_put_contents($target, implode("\n", $out));
 	}
 
-	print_r($argv);
-	
 	# Load map
 	require_once($argv[1]);
 
@@ -81,7 +79,7 @@
 	dump_meta("$argv[2]meta.frag");
 	dump_content("$argv[2]tab-default.frag", $year, $news);
 	dump_side("$argv[2]side.frag", $year, $sides);
-	exit(1);
+	exit(0);
 
 	$post_limit = 15;
 	$counter = 0;
