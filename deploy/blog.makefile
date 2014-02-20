@@ -49,7 +49,7 @@ $(BLOG_ODIR).news:
 	@touch $@
 
 $(BLOG_ODIR)%.arch:
-	@echo Generating news page $@
+	@echo Generating archive page $@
 	@mkdir -p $(basename $@)/
 	@$(PHP) -f $(CREATE_ARCHIVE) $(BLOG_MAP) $(basename $@)
 	@touch $@

@@ -79,13 +79,12 @@
 		$key = array_keys($map);
 
 		$out[] = sprintf('%d %04d title@right#Salta all&apos;anno', 0, 0);
+		$out[] = sprintf('%d %04d p#', 0, 0);
 
-		$i = 0;
+		$out[] = sprintf('%d %04d tid#%s##%s', 0, 0, $key[0], $key[0]);
+		array_shift($key);
 		foreach ($key as $_)
-		{
-			if ($i++) $out[] = sprintf('%d %04d /', 0, 0, $_, $_);
-			$out[] = sprintf('%d %04d tid#%s##%s', 0, 0, $_, $_);
-		}
+			$out[] = sprintf('%d %04d tid#/ @%s@##%s', 0, 0, $_, $_);
 		
 		file_put_contents($target, implode("\n", $out));
 	}
