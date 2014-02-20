@@ -75,6 +75,29 @@
 		file_put_contents($target, implode("\n", $out));
 	}
 
+	function dump_side($source, $target, $year, $month, $data)
+	{
+		$out[] = sprintf("#### 0");
+		$out[] = sprintf("%d %s", 0, $source);
+		$out[] = sprintf("####");
+		
+		foreach (array_keys($data) as $day)
+		{
+			$i = 0;
+			$out[] = sprintf('%d %04d p#<code>%02d/%s</code> –',
+				0, 0, $day, $month);
+
+			foreach (array_reverse($data[$day]) as $post)
+			{
+				if ($i++) $out[] = sprintf('%d %04d %s', 0, 0, '&amp;');
+				$out[] = sprintf('%d %04d link#Blog/%s/%s/#%s#%s',
+					0, 0, $year, $month, $post['title'], $post['tab']);
+			}
+		}
+		
+		file_put_contents($target, implode("\n", $out));
+	}
+
 	$_ = explode('/', $argv[2]);
 	$limit = count($_);
 	$year = $_[$limit - 2];
@@ -220,8 +243,10 @@
 	$to_file[] = sprintf("start#page\n");
 
 	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
-	name_that_month($month), $year, scan_for_month($month, $year, $blog_map),
-	array_keys($out_rows));
+		name_that_month($month), $year, scan_for_month($month, $year, $blog_map),
+		array_keys($out_rows));
+	dump_side($argv[1], sprintf('%sside.frag', $argv[4]),
+		$year, $month, $out_rows);
 	exit(0);
 
 	foreach (array_keys($out_rows) as $day)
