@@ -18,9 +18,6 @@ NEWS    := $(abspath $(BLOG_DIR)../blog.pag)
 
 all: blog
 
-blog:
-	@echo Blog generated from $(BLOG_DIR) to $(BLOG_ODIR)
-
 blog: blog-map months years archive news
 months: $(MONTHS)
 years: $(YEARS)
