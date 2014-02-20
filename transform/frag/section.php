@@ -257,14 +257,14 @@
 		{
 			$this->switchContext('p', 'c');
 			if (count($cmd_args) > 3) $this->recursive($f, $index, $cmd_args, $cmd_attr);
-			else $this->make_text($cmd_args[1]);
+			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
 		private function make_r ($f, $index, $cmd_args, $cmd_attr)
 		{
 			$this->switchContext('p', 'r');
 			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
-			else $this->make_text($cmd_args[1]);
+			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
 		private function recursive ($f, $index, $cmd_args, $cmd_attr)
