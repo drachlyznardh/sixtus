@@ -31,7 +31,7 @@
 		foreach ($months as $month)
 			$out[] = sprintf('%d %04d p#tid#%s##%s', 0, 0, name_that_month($month), $month);
 	
-		printf("%stab-default.frag\n%s\n", $target, implode("\n", $out));
+		printf("%sside.frag\n%s\n", $target, implode("\n", $out));
 	}
 
 	dump_content($argv[3], $argv[1], $blog_map[$argv[1]]);
