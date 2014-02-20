@@ -32,9 +32,9 @@
 	function split_line_content ($line)
 	{
 		if (preg_match('/^#/', $line))
-			return array(false, false, array(false));
+			return array(false, array(false), array(false));
 		if (!preg_match('/#/', $line))
-			return array(false, false, array($line));
+			return array(false, array(false), array($line));
 
 		$t = split('#', $line);
 		$u = split('@', $t[0]);
