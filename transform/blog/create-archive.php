@@ -4,39 +4,37 @@
 
 	function dump_that_year ($year, $months)
 	{
-		$format = "link#Blog/%s/%s#%s";
-		$slash = "\n\t\t/\n\t\t";
+		$format = '%d %04d link#Blog/%s/%s#%s';
+		$slash = sprintf('%d %04d /', 0, 0);
 		
 		for ($i = 0; $i < 4; $i++)
 		{
-			$result[] = "\tc#";
+			$result[] = sprintf('%d %04d c#', 0, 0);
 
 			$month = sprintf('%02d', $i * 3 + 1);
 			if (array_search($month, $months) !== false)
 				$result[] = sprintf($format,
-					$year, $month, name_that_month($month));
-			else $result[] = sprintf("%s", name_that_month($month));
+					0, 0, $year, $month, name_that_month($month));
+			else $result[] = sprintf('%d %04d %s', 0, 0, name_that_month($month));
 
 			$result[] = $slash;
 
 			$month = sprintf('%02d', $i * 3 + 2);
 			if (array_search($month, $months) !== false)
 				$result[] = sprintf($format,
-					$year, $month, name_that_month($month));
-			else $result[] = sprintf("%s", name_that_month($month));
+					0, 0, $year, $month, name_that_month($month));
+			else $result[] = sprintf('%d %04d %s', 0, 0, name_that_month($month));
 		
 			$result[] = $slash;
 
 			$month = sprintf('%02d', $i * 3 + 3);
 			if (array_search($month, $months) !== false)
 				$result[] = sprintf($format,
-					$year, $month, name_that_month($month));
-			else $result[] = sprintf("%s", name_that_month($month));
-
-			$result[] = "\n";
+					0, 0, $year, $month, name_that_month($month));
+			else $result[] = sprintf('%d %04d %s', 0, 0, name_that_month($month));
 		}
 
-		return implode($result);
+		return implode("\n", $result);
 	}
 
 	function dump_meta ($target)
