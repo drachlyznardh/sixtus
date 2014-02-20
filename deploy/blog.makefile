@@ -35,7 +35,7 @@ $(BLOG_MAP): $(POSTS)
 
 $(BLOG_ODIR)%.month: $(BLOG_DIR)%.post #blog-map
 	@echo Extracting fragments from $<
-	@mkdir -p $(dir $@)
+	@mkdir -p $(basename $@)/
 	@php5 -f $(POST_TO_FRAG) $< $@ $(BLOG_MAP) $(basename $@)/
 	@touch $@
 
