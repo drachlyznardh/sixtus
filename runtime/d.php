@@ -40,22 +40,6 @@
 
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
-	$direct_access_file = docroot().substr($request['original'], 1);
-
-	if (is_file($direct_access_file)) {
-
-		#$token = preg_split('/\./', $direct_access_file);
-		#$extension = end($token);#[count($token) -1];
-		$extension = end(split('\.', $direct_access_file));
-		if (isset($mimetypes[$extension]))
-		{
-			$mimetype = $mimetypes[$extension];
-			header("Content-Type: $mimetype");
-			readfile($direct_access_file);
-			exit(0);
-		}
-	}
-
 	$index = strpos($request['original'], '?');
 	if ($index !== false) $request['original'] = substr($request['original'], 0, $index);
 	$_ = strtok($request['original'], '/');
