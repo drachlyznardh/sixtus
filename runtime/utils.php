@@ -4,7 +4,9 @@
 	{
 		if ($tab) $result = substr($url, 0, -1).'§'.mb_strtoupper($tab, 'UTF-8').'/';
 		else $result = $url;
-		if (!$attr['gray']) $result .= 'White/';
+		#if (!$attr['gray']) $result .= 'White/';
+		if (strcmp($attr['style'], $attr['defstyle']))
+			$result .= sprintf('%s/', $attr['style']);
 		if (!$attr['single']) $result .= 'All/';
 		if ($hash) $result .= '#'.$hash;
 		return $result;
