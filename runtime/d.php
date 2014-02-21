@@ -27,6 +27,8 @@
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
+	$layout = array('one-tab', 'one-tab-for-all', 'all-tabs');
+
 	$attr['style'] = $attr['defstyle'] = $style[0];
 	$attr['layout'] = $attr['deflayout'] = $layout[0];
 
