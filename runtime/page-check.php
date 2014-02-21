@@ -26,6 +26,10 @@
 		<span class="wide-screen">Wide-Screen</span>
 		<span class="small-screen">Small-Screen</span>
 	] CSS sheet.</p>
+	<h3 class="reverse">Page parameters</h3>
+	<p>$p = [<?=var_dump($p)?>]</p>
+	<p>$r = [<?=var_dump($r)?>]</p>
+	<p>$c = [<?=var_dump($c)?>]</p>
 	<h3 class="reverse">Runtime parameters</h3>
 	<p>Token = [<?=var_dump($token)?>]</p>
 	<p>Attr = [<?=var_dump($attr)?>]</p>

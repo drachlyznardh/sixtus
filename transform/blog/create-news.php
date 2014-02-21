@@ -23,6 +23,7 @@
 
 		$out[] = sprintf('%d %04d title#%s#%s', 0, 0, 'Novità', 'Le notizie più recenti');
 		$out[] = sprintf('%d %04d next#%s#%s', 0, 0, 'Blog/ARCHIVIO/', 'Archivio');
+		$out[] = sprintf('%d %04d tab#default', 0, 0);
 
 		file_put_contents($target, implode("\n", $out));
 	}

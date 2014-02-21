@@ -85,7 +85,8 @@
 	}
 
 	// In case of empty request, redirect onto HomePage
-	if (count($token) == 0) header("Location: $runtime[home]");
+	if (count($token) == 0) header(sprintf('Location: %s',
+		make_canonical($attr, $runtime['home'])));
 
 	foreach ($token as $_) {
 		if (preg_match('/§/', $_)) {
@@ -132,7 +133,7 @@
 		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
 		else missing_tab($_);
 	} else if ($request['part']) require_once($target_dir.'tab-'.$request['part'].'.php');
-	else require_once($target_dir.'tab-default.php');
+	else require_once($target_dir.'tab-'.$c[0].'.php');
 	require_once('page-middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
 	require_once('page-bottom.php');

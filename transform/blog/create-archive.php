@@ -45,6 +45,7 @@
 
 		$out[] = sprintf('%d %04d title#%s#%s',
 			0, 0, 'Archivio', 'Tutte le notizie di sempre');
+		$out[] = sprintf('%d %04d tab#default', 0, 0);
 
 		file_put_contents($target, implode("\n", $out));
 	}

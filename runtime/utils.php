@@ -177,7 +177,7 @@
 		return $heading['cat'][$limit][1];
 	}
 
-	function display_heading_server ($server)
+	function display_heading_server ($attr, $server)
 	{
 		$servername = $_SERVER['HTTP_HOST'];
 		if (isset($server[$servername])) $target = $server[$servername];
