@@ -28,7 +28,7 @@
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
-	$attr['layout'] = $attr['deflayout'] = $layout[0];
+	$attr['layout'] = $attr['deflayout'] = 0;
 
 	$attr['included'] = false;
 	$attr['sections'] = true;
