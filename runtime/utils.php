@@ -7,7 +7,9 @@
 		#if (!$attr['gray']) $result .= 'White/';
 		if (strcmp($attr['style'], $attr['defstyle']))
 			$result .= sprintf('%s/', $attr['style']);
-		if (!$attr['single']) $result .= 'All/';
+		#if (!$attr['single']) $result .= 'All/';
+		if (strcmp($attr['layout'], $attr['deflayout']))
+			$result .= sprintf('%s/', $attr['layout']);
 		if ($hash) $result .= '#'.$hash;
 		return $result;
 	}
