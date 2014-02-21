@@ -66,6 +66,7 @@
 	{
 		switch ($token[$key]) {
 			case '':
+			case 'one-tab':
 				unset($token[$key]);
 				break 2;
 			case 'download':
@@ -76,20 +77,16 @@
 				$attr['check'] = true;
 				unset($token[$key]);
 				break 2;
+			case 'all-tabs':
+				$attr['layout'] = true;
+				unset($token[$key]);
+				break 2;
 		}
 
 		foreach ($style as $_)
 			if (strcmp($token[$key], $_) == 0)
 			{
 				$attr['style'] = $_;
-				unset($token[$key]);
-				break 2;
-			}
-
-		foreach ($layout as $_)
-			if (strcmp($token[$key], $_) == 0)
-			{
-				$attr['layout'] = $_;
 				unset($token[$key]);
 				break 2;
 			}
