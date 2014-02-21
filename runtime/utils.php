@@ -7,8 +7,8 @@
 
 		if (strcmp($attr['style'], $attr['defstyle']))
 			$result .= sprintf('%s/', ucwords($attr['style']));
-		if (strcmp($attr['layout'], $attr['deflayout']))
-			$result .= sprintf('%s/', ucwords($attr['layout']));
+		if ($attr['layout'])
+			$result .= 'All-Tabs/';
 		if ($hash) $result .= '#'.$hash;
 
 		return $result;
