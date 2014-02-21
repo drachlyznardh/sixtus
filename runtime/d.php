@@ -28,14 +28,12 @@
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
+	$attr['layout'] = $attr['deflayout'] = $layout[0];
 
 	$attr['included'] = false;
 	$attr['sections'] = true;
 	$attr['force_all_tabs'] = false;
 	$attr['all_or_one'] = false;
-	#$attr['gray'] = true;
-	#$attr['single'] = true;
-	$attr['layout'] = 0;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
