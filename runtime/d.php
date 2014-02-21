@@ -6,7 +6,6 @@
 	require_once('utils.php');
 	require_once('db-utils.php');
 
-	require_once('mimes.php');
 	require_once('direct-map.php');
 
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
@@ -25,6 +24,7 @@
 
 	function check_direct_file_access ($target)
 	{
+		require_once('mimes.php');
 		if (is_file($target))
 		{
 			$extension = end(split('\.', $target));
