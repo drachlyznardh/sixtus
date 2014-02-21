@@ -8,20 +8,6 @@
 
 	require_once('direct-map.php');
 
-	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
-	$request['part'] = false;
-	
-	$attr['included'] = false;
-	$attr['sections'] = true;
-	$attr['force_all_tabs'] = false;
-	$attr['all_or_one'] = false;
-	$attr['gray'] = true;
-	$attr['single'] = true;
-	$attr['layout'] = 0;
-
-	$attr['download'] = false;
-	$attr['check'] = false;
-
 	function check_direct_file_access ($target)
 	{
 		require_once('mimes.php');
@@ -38,7 +24,20 @@
 		}
 	}
 
+	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	check_direct_file_access(docroot().substr($request['original'], 1));
+
+	$attr['included'] = false;
+	$attr['sections'] = true;
+	$attr['force_all_tabs'] = false;
+	$attr['all_or_one'] = false;
+	$attr['gray'] = true;
+	$attr['single'] = true;
+	$attr['layout'] = 0;
+
+	$attr['download'] = false;
+	$attr['check'] = false;
+	$request['part'] = false;
 
 	$index = strpos($request['original'], '?');
 	if ($index !== false) $request['original'] = substr($request['original'], 0, $index);
