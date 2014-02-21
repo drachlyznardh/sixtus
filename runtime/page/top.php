@@ -7,8 +7,8 @@
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
 		<meta name="keywords" content="<?=$p['keywords']?>" />
 		<title><?=$p['short']?></title>
-		<link rel="icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
-		<link rel="stylesheet" type="text/css" href="runtime/style/<?=($attr['gray']?'gray':'white')?>.css" />
+		<link rel="icon" href="runtime/style/ico/<?=$attr['style']?>.ico" />
+		<link rel="stylesheet" type="text/css" href="runtime/style/<?=$attr['style']?>.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/common.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/big-screen.css"
