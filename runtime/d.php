@@ -46,7 +46,8 @@
 	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
-	$attr['layout'] = $attr['deflayout'] = 0;
+	$attr['layout'] = false;
+	$attr['ct'] = 0;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
@@ -128,7 +129,7 @@
 		require_once($target_file);
 	else require_once('404/meta.php');
 
-	if ($ct) $attr['layout'] = $ct;
+	if ($ct) $attr['ct'] = $ct;
 
 	#if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
@@ -141,7 +142,7 @@
 
 	### Outputting page
 	require_once('page/top.php');
-	foreach (tabs_to_display($attr['layout'], $request['part'], $c) as $_)
+	foreach (tabs_to_display($attr['ct'], $request['part'], $c) as $_)
 	{
 		$targetfile = "$target_dir/tab-$_.php";
 		if (is_file($targetfile))
