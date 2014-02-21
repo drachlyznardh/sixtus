@@ -23,6 +23,23 @@
 	$attr['download'] = false;
 	$attr['check'] = false;
 
+	function check_direct_file_access ($target)
+	{
+		if (is_file($target))
+		{
+			$extension = end(split('\.', $target));
+			if (isset($mimetypes[$extension]))
+			{
+				$mimetype = $mimetypes[$extension];
+				header("Content-Type: $mimetype");
+				readfile($target);
+				exit(0);
+			}
+		}
+	}
+
+	check_direct_file_access(docroot().substr($request['original'], 1));
+
 	$direct_access_file = docroot().substr($request['original'], 1);
 
 	if (is_file($direct_access_file)) {
