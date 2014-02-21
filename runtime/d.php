@@ -85,7 +85,8 @@
 	}
 
 	// In case of empty request, redirect onto HomePage
-	if (count($token) == 0) header("Location: $runtime[home]");
+	if (count($token) == 0) header(sprintf('Location: %s',
+		make_canonical($attr, $runtime['home'])));
 
 	foreach ($token as $_) {
 		if (preg_match('/§/', $_)) {
