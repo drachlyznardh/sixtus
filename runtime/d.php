@@ -35,7 +35,7 @@
 			case 1: # One tab for all / Blog months
 				if ($requested) return array($requested);
 				return $list;
-			case 2: # All tabs / Listings, indexes
+			case 3: # All tabs / Listings, indexes
 				return $list;
 		}
 	}
