@@ -27,16 +27,14 @@
 
 	if (is_file($direct_access_file)) {
 
-		$token = preg_split('/\./', $direct_access_file);
-		$extension = $token[count($token) -1];
-
-		if (isset($mimetypes[$extension])) {
+		#$token = preg_split('/\./', $direct_access_file);
+		#$extension = end($token);#[count($token) -1];
+		$extension = end(split('\.', $direct_access_file));
+		if (isset($mimetypes[$extension]))
+		{
 			$mimetype = $mimetypes[$extension];
 			header("Content-Type: $mimetype");
 			readfile($direct_access_file);
-			exit(0);
-		} else {
-			require_once('sys/404-not-found.php');
 			exit(0);
 		}
 	}
