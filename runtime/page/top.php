@@ -24,4 +24,4 @@
 <?php require_once('head.php'); ?>
 				</div> <!-- Head -->
 				<div id="core">
-<?php require_once('check.php'); ?>
+<?php if ($attr['check']) require_once('check.php'); ?>
