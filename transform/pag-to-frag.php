@@ -80,8 +80,7 @@
 
 				switch ($cmd) {
 					case '':
-						if ($par[0])
-							$this->current[] = array($fileno, $lineno + 1, $par[0]);
+						$this->current[] = array($fileno, $lineno + 1, $par[0]);
 						break;
 					case 'stop':
 						break;
