@@ -20,6 +20,8 @@
 		if ($next) $out[] = sprintf('%d %04d next#Blog/%s/#%s',
 			0, 0, $next, $next);
 
+		$out[] = sprintf('%d %04d tab#default', 0, 0);
+
 		file_put_contents(sprintf('%smeta.frag', $target), implode("\n", $out));
 	}
 
