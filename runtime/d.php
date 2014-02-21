@@ -6,40 +6,40 @@
 	require_once('utils.php');
 	require_once('db-utils.php');
 
-	require_once('mimes.php');
 	require_once('direct-map.php');
 
+	function check_direct_file_access ($target)
+	{
+		require_once('mimes.php');
+		if (is_file($target))
+		{
+			$extension = end(split('\.', $target));
+			if (isset($mimetypes[$extension]))
+			{
+				$mimetype = $mimetypes[$extension];
+				header("Content-Type: $mimetype");
+				readfile($target);
+				exit(0);
+			}
+		}
+	}
+
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
-	$request['part'] = false;
-	
+	check_direct_file_access(docroot().substr($request['original'], 1));
+
+	$layout = array('one-tab', 'one-tab-for-all', 'all-tabs');
+
+	$attr['style'] = $attr['defstyle'] = $style[0];
+	$attr['layout'] = $attr['deflayout'] = $layout[0];
+
 	$attr['included'] = false;
 	$attr['sections'] = true;
 	$attr['force_all_tabs'] = false;
 	$attr['all_or_one'] = false;
-	$attr['gray'] = true;
-	$attr['single'] = true;
-	$attr['layout'] = 0;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
-
-	$direct_access_file = docroot().substr($request['original'], 1);
-
-	if (is_file($direct_access_file)) {
-
-		$token = preg_split('/\./', $direct_access_file);
-		$extension = $token[count($token) -1];
-
-		if (isset($mimetypes[$extension])) {
-			$mimetype = $mimetypes[$extension];
-			header("Content-Type: $mimetype");
-			readfile($direct_access_file);
-			exit(0);
-		} else {
-			require_once('sys/404-not-found.php');
-			exit(0);
-		}
-	}
+	$request['part'] = false;
 
 	$index = strpos($request['original'], '?');
 	if ($index !== false) $request['original'] = substr($request['original'], 0, $index);
@@ -50,38 +50,37 @@
 		$_ = strtok('/');
 	}
 
-	foreach (array_keys($token) as $key) {
+	foreach (array_keys($token) as $key)
+	{
 		switch ($token[$key]) {
 			case '':
 				unset($token[$key]);
-				break;
-			case 'gray':
-				$attr['gray'] = true;
-				unset($token[$key]);
-				break;
-			case 'white':
-				$attr['gray'] = false;
-				unset($token[$key]);
-				break;
-			case 'single':
-				$attr['single'] = true;
-				$attr['layout'] = 0;
-				unset($token[$key]);
-				break;
-			case 'all':
-				$attr['single'] = false;
-				$attr['layout'] = 1;
-				unset($token[$key]);
-				break;
+				break 2;
 			case 'download':
 				$attr['download'] = true;
 				unset($token[$key]);
-				break;
+				break 2;
 			case 'check':
 				$attr['check'] = true;
 				unset($token[$key]);
-				break;
+				break 2;
 		}
+
+		foreach ($style as $_)
+			if (strcmp($token[$key], $_) == 0)
+			{
+				$attr['style'] = $_;
+				unset($token[$key]);
+				break 2;
+			}
+
+		foreach ($layout as $_)
+			if (strcmp($token[$key], $_) == 0)
+			{
+				$attr['layout'] = $_;
+				unset($token[$key]);
+				break 2;
+			}
 	}
 
 	// In case of empty request, redirect onto HomePage

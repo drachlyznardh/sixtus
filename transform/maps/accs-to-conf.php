@@ -31,11 +31,15 @@
 	$to_file[] = sprintf("\t%s = '%s';\n",
 		'$runtime[\'home\']', $data['homepage']);
 
-	$to_file[] = sprintf("\t%s = array(", '$style');
-	for ($i = 0; $i < count($data['style']); $i++)
-		if ($i > 0) $to_file[] = sprintf(", '%s'", $data['style'][$i]);
-		else $to_file[] = sprintf("'%s'", $data['style'][$i]);
-	$to_file[] = sprintf(");\n");
+	if (is_array($data['style']))
+	{
+		$to_file[] = sprintf("\t%s = array(", '$style');
+		for ($i = 0; $i < count($data['style']); $i++)
+			if ($i > 0) $to_file[] = sprintf(", '%s'", $data['style'][$i]);
+			else $to_file[] = sprintf("'%s'", $data['style'][$i]);
+		$to_file[] = sprintf(");\n");
+	} else $to_file[] = sprintf("\t%s = array('%s');\n",
+		'$style', $data['style']);
 
 	foreach (array_keys($data['server']) as $_)
 		foreach (array_keys($data['server'][$_]) as $__)
