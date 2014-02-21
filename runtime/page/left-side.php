@@ -1,5 +1,5 @@
 <?php
-	function display_left_side ($attr, $list)
+	function display_left_side ($attr, $style, $layout, $list)
 	{
 		$i = 0;
 		foreach ($list as $e)
@@ -9,5 +9,5 @@
 		}
 	}
 	
-	display_left_side ($attr, $leftside);
+	display_left_side ($attr, $style, $layout, $leftside);
 ?>
