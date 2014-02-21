@@ -50,38 +50,37 @@
 		$_ = strtok('/');
 	}
 
-	foreach (array_keys($token) as $key) {
+	foreach (array_keys($token) as $key)
+	{
 		switch ($token[$key]) {
 			case '':
 				unset($token[$key]);
-				break;
-			case 'gray':
-				$attr['gray'] = true;
-				unset($token[$key]);
-				break;
-			case 'white':
-				$attr['gray'] = false;
-				unset($token[$key]);
-				break;
-			case 'single':
-				$attr['single'] = true;
-				$attr['layout'] = 0;
-				unset($token[$key]);
-				break;
-			case 'all':
-				$attr['single'] = false;
-				$attr['layout'] = 1;
-				unset($token[$key]);
-				break;
+				break 2;
 			case 'download':
 				$attr['download'] = true;
 				unset($token[$key]);
-				break;
+				break 2;
 			case 'check':
 				$attr['check'] = true;
 				unset($token[$key]);
-				break;
+				break 2;
 		}
+
+		foreach ($style as $_)
+			if (strcmp($token[$key], $_) == 0)
+			{
+				$attr['style'] = $_;
+				unset($token[$key]);
+				break 2;
+			}
+
+		foreach ($layout as $_)
+			if (strcmp($token[$key], $_) == 0)
+			{
+				$attr['layout'] = $_;
+				unset($token[$key]);
+				break 2;
+			}
 	}
 
 	// In case of empty request, redirect onto HomePage
