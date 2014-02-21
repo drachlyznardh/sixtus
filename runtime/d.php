@@ -127,16 +127,16 @@
 	$attr['part'] = $request['part']; // For internal links
 
 	### Outputting page
-	require_once('page-top.php');
+	require_once('page/top.php');
 	if (!$request['part'] && ($attr['layout'] || $ct)) foreach ($c as $_) {
 		$targetfile = "$target_dir/tab-$_.php";
 		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
 		else missing_tab($_);
 	} else if ($request['part']) require_once($target_dir.'tab-'.$request['part'].'.php');
 	else require_once($target_dir.'tab-'.$c[0].'.php');
-	require_once('page-middle.php');
+	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
-	require_once('page-bottom.php');
+	require_once('page/bottom.php');
 
 	exit(0);
 ?>
