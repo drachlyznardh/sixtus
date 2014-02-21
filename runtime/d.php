@@ -24,6 +24,22 @@
 		}
 	}
 
+	function tabs_to_display ($layout, $requested, $list)
+	{
+		switch ($layout)
+		{
+			case 0: # One Tab / Pages
+			case 2: # Just one tab / Special request
+				if ($requested) return array($requested);
+				return array($list[0]);
+			case 1: # One tab for all / Blog months
+				if ($requested) return array($requested);
+				return $list;
+			case 2: # All tabs / Listings, indexes
+				return $list;
+		}
+	}
+
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
@@ -31,11 +47,6 @@
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
 	$attr['layout'] = $attr['deflayout'] = 0;
-
-	$attr['included'] = false;
-	$attr['sections'] = true;
-	$attr['force_all_tabs'] = false;
-	$attr['all_or_one'] = false;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
@@ -117,24 +128,26 @@
 		require_once($target_file);
 	else require_once('404/meta.php');
 
-	if (!$ct) $attr['layout'] = $ct;
-	
-	if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
+	if ($ct) $attr['layout'] = $ct;
+
+	#if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
 	$attr['self'] = find_self($heading);
 	#$lwself = strtolower($attr['self']);
 
 	$s = true; // Display sections
-	$attr['part'] = $request['part']; // For internal links
+	if ($request['part']) $attr['part'] = $request['part']; // For internal links
+	else $attr['part'] = $c[0];
 
 	### Outputting page
 	require_once('page/top.php');
-	if (!$request['part'] && ($attr['layout'] || $ct)) foreach ($c as $_) {
+	foreach (tabs_to_display($attr['layout'], $request['part'], $c) as $_)
+	{
 		$targetfile = "$target_dir/tab-$_.php";
-		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
+		if (is_file($targetfile))
+			require ("$target_dir/tab-$_.php");
 		else missing_tab($_);
-	} else if ($request['part']) require_once($target_dir.'tab-'.$request['part'].'.php');
-	else require_once($target_dir.'tab-'.$c[0].'.php');
+	}
 	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
 	require_once('page/bottom.php');
