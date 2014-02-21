@@ -27,10 +27,10 @@
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
-	$layout = array('one-tab', 'one-tab-for-all', 'all-tabs');
+	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
-	$attr['layout'] = $attr['deflayout'] = $layout[0];
+	$attr['layout'] = $attr['deflayout'] = 0;
 
 	$attr['included'] = false;
 	$attr['sections'] = true;

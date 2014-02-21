@@ -18,7 +18,8 @@
 	{
 		$url = false;
 		
-		if ($attr['single'] && !$attr['force_all_tabs']) {
+		#if ($attr['single'] && !$attr['force_all_tabs']) {
+		if ($attr['layout'] == 0 || $attr['layout'] == 2) {
 			if ($attr['part'] == $tab) {
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 			} else {
@@ -29,6 +30,10 @@
 			$url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		}
 		
+		if ($url) return sprintf('<a href="%s">%s</a>',
+			$url, $title);
+
+		return sprintf('<em>%s</em>', $title);
 		if ($url) return '<a href="'.$url.'">'.$title.'</a>';
 		return '<em>'.$title.'</em>';
 	}
