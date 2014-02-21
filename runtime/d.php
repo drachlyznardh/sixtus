@@ -117,7 +117,7 @@
 		require_once($target_file);
 	else require_once('404/meta.php');
 
-	if (strcmp($ct, 'one-tab') != 0) $attr['layout'] = $ct;
+	if (!$ct) $attr['layout'] = $ct;
 	
 	if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
