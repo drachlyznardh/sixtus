@@ -159,6 +159,7 @@
 		#printf("\tDay #%s has %02d posts.\n", $day, $out_rows[$day]);
 
 		$limit = count($out_rows[$day]);
+		$names = array();
 
 		if ($limit > 1)
 		{
