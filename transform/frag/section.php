@@ -231,7 +231,7 @@
 				if (preg_match('/^</', $text)) {
 					$this->content[] = $text;
 				} else if (preg_match('/^>/', $text)) {
-					$this->openContext($this->defaultContext);
+					$this->openContext($this->defaultContext, false);
 					$this->content[] = "<span class=\"green\">$text</span>\n";
 				} else {
 					$this->openContext($this->defaultContext, false);
