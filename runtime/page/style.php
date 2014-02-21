@@ -15,4 +15,3 @@
 	} else printf ('<em>White</em>');
 	?> ]</p>
 </div>
-<div class="spacer"></div>
