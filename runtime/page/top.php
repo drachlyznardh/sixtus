@@ -21,7 +21,7 @@
 		<div id="main">
 			<div id="content">
 				<div id="head">
-<?php require_once('page-head.php'); ?>
+<?php require_once('head.php'); ?>
 				</div> <!-- Head -->
 				<div id="core">
-<?php require_once('page-check.php'); ?>
+<?php require_once('check.php'); ?>
