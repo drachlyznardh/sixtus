@@ -41,7 +41,7 @@
 	function parse_request ($request, $styles)
 	{
 		$style = false;
-		$layout = false;
+		$layout = 0;
 		$download = false;
 		$check = false;
 		$path = array();
@@ -51,7 +51,7 @@
 		{
 			case '': break;
 			case 'one-tab': $layout = 0; break;
-			case 'all-tabs': $layout = 1; break;
+			case 'all-tabs': $layout = 3; break;
 			case 'download': $download = true; break;
 			case 'check': $check = true; break;
 
