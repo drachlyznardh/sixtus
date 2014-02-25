@@ -1,11 +1,9 @@
 <?php
 
-	#require_once('runtime.php');
 	require_once('conf.php');
 	require_once('resolve.php');
 	require_once('utils.php');
 	require_once('db-utils.php');
-
 	require_once('direct-map.php');
 
 	function check_direct_file_access ($target)
@@ -39,19 +37,6 @@
 				return $list;
 		}
 	}
-
-	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
-	check_direct_file_access(docroot().substr($request['original'], 1));
-
-	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
-
-	$attr['style'] = $attr['defstyle'] = $style[0];
-	$attr['layout'] = false;
-	$attr['ct'] = 0;
-
-	$attr['download'] = false;
-	$attr['check'] = false;
-	$request['part'] = false;
 
 	function parse_request ($request, $styles)
 	{
@@ -94,6 +79,19 @@
 	
 		return array($style, $layout, $download, $check, $path, $part);
 	}
+
+	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
+	check_direct_file_access(docroot().substr($request['original'], 1));
+
+	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
+
+	$attr['style'] = $attr['defstyle'] = $style[0];
+	$attr['layout'] = false;
+	$attr['ct'] = 0;
+
+	$attr['download'] = false;
+	$attr['check'] = false;
+	$request['part'] = false;
 
 	list($attr['style'], $attr['layout'],
 		$attr['download'], $attr['check'],
