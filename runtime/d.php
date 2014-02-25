@@ -116,6 +116,7 @@
 	else require_once('404/meta.php');
 
 	if (!$ct) $ct = $attr['layout'];
+	if ($ct < 2) $tabrel = true; else $tabrel = false;
 	if (!$attr['style']) $attr['style'] = $style[0];
 
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
@@ -130,9 +131,9 @@
 	{
 		$targetfile = "$target_dir/tab-$_.php";
 		if (is_file($targetfile)) {
-			if ($ct == 0) tab_prev($attr, $_, $c);
+			if ($tabrel) tab_prev($attr, $_, $c);
 			require ("$target_dir/tab-$_.php");
-			if ($ct == 0) tab_next($attr, $_, $c);
+			if ($tabrel) tab_next($attr, $_, $c);
 		} else missing_tab($_);
 	}
 	require_once('page/middle.php');
