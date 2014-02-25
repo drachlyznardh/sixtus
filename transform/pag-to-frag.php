@@ -101,6 +101,8 @@
 								$fileno, $lineno + 1);
 						$this->{$this->state}[$par[1]] = array();
 						$this->current = &$this->{$this->state}[$par[1]];
+						$this->current[] = array($fileno, $lineno + 1,
+							sprintf('id#%s', mb_strtoupper($par[1], 'UTF-8')));
 						break;
 					case 'include':
 						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
