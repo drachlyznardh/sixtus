@@ -4,33 +4,29 @@
 	{
 		if ($tab) $result = substr($url, 0, -1).'§'.mb_strtoupper($tab, 'UTF-8').'/';
 		else $result = $url;
-		#if (!$attr['gray']) $result .= 'White/';
+
 		if (strcmp($attr['style'], $attr['defstyle']))
 			$result .= sprintf('%s/', ucwords($attr['style']));
-		#if (!$attr['single']) $result .= 'All/';
-		if (strcmp($attr['layout'], $attr['deflayout']))
-			$result .= sprintf('%s/', ucwords($attr['layout']));
+		if ($attr['layout'])
+			$result .= 'All-Tabs/';
 		if ($hash) $result .= '#'.$hash;
+
 		return $result;
 	}
 	
 	function make_tid($attr, $title, $tab, $hash)
 	{
-		$url = false;
-		
-		if ($attr['single'] && !$attr['force_all_tabs']) {
-			if ($attr['part'] == $tab) {
+		if ($attr['layout'] == 0 || $attr['layout'] == 2)
+			if ($attr['part'] == $tab)
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
-			} else {
+				else $url = false;
+			else
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 				else $url = make_canonical ($attr, $attr['self'], $tab);
-			}
-		} else {
-			$url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
-		}
+		else $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		
-		if ($url) return '<a href="'.$url.'">'.$title.'</a>';
-		return '<em>'.$title.'</em>';
+		if ($url) return sprintf('<a href="%s">%s</a>', $url, $title);
+		return sprintf('<em>%s</em>', $title);
 	}
 
 	function make_next($attr, $name, $standalone)

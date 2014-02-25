@@ -1,11 +1,9 @@
 <?php
 
-	#require_once('runtime.php');
 	require_once('conf.php');
 	require_once('resolve.php');
 	require_once('utils.php');
 	require_once('db-utils.php');
-
 	require_once('direct-map.php');
 
 	function check_direct_file_access ($target)
@@ -24,78 +22,80 @@
 		}
 	}
 
+	function tabs_to_display ($layout, $requested, $list)
+	{
+		switch ($layout)
+		{
+			case 0: # One Tab / Pages
+			case 2: # Just one tab / Special request
+				if ($requested) return array($requested);
+				return array($list[0]);
+			case 1: # One tab for all / Blog months
+				if ($requested) return array($requested);
+				return $list;
+			case 3: # All tabs / Listings, indexes
+				return $list;
+		}
+	}
+
+	function parse_request ($request, $styles)
+	{
+		$style = false;
+		$layout = 0;
+		$download = false;
+		$check = false;
+		$path = array();
+		$part = false;
+
+		foreach (split('/', $request) as $token) switch ($token)
+		{
+			case '': break;
+			case 'one-tab': $layout = 0; break;
+			case 'all-tabs': $layout = 3; break;
+			case 'download': $download = true; break;
+			case 'check': $check = true; break;
+
+			default: $next[] = $token;
+		}
+
+		foreach ($next as $token) 
+		{
+			$found = false;
+			foreach ($styles as $current)
+				if (strcmp($token, $current) == 0)
+				{
+					$style = $current;
+					$found = true;
+					break;
+				}
+			if (!$found) $nnext[] = $token;
+		}
+
+		foreach ($nnext as $token)
+			if (preg_match('/§/', $token)) {
+				list($piece, $part) = preg_split('/§/', $token);
+				$path[] = $piece;
+			} else $path[] = $token;
+	
+		return array($style, $layout, $download, $check, $path, $part);
+	}
+
 	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
-	$layout = array('one-tab', 'one-tab-for-all', 'all-tabs');
+	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
-	$attr['layout'] = $attr['deflayout'] = $layout[0];
-
-	$attr['included'] = false;
-	$attr['sections'] = true;
-	$attr['force_all_tabs'] = false;
-	$attr['all_or_one'] = false;
+	$attr['layout'] = false;
+	$attr['part'] = false;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
 	$request['part'] = false;
 
-	$index = strpos($request['original'], '?');
-	if ($index !== false) $request['original'] = substr($request['original'], 0, $index);
-	$_ = strtok($request['original'], '/');
-	$token = array();
-	while ($_ !== false) {
-		$token[] = $_;
-		$_ = strtok('/');
-	}
-
-	foreach (array_keys($token) as $key)
-	{
-		switch ($token[$key]) {
-			case '':
-				unset($token[$key]);
-				break 2;
-			case 'download':
-				$attr['download'] = true;
-				unset($token[$key]);
-				break 2;
-			case 'check':
-				$attr['check'] = true;
-				unset($token[$key]);
-				break 2;
-		}
-
-		foreach ($style as $_)
-			if (strcmp($token[$key], $_) == 0)
-			{
-				$attr['style'] = $_;
-				unset($token[$key]);
-				break 2;
-			}
-
-		foreach ($layout as $_)
-			if (strcmp($token[$key], $_) == 0)
-			{
-				$attr['layout'] = $_;
-				unset($token[$key]);
-				break 2;
-			}
-	}
-
-	// In case of empty request, redirect onto HomePage
-	if (count($token) == 0) header(sprintf('Location: %s',
-		make_canonical($attr, $runtime['home'])));
-
-	foreach ($token as $_) {
-		if (preg_match('/§/', $_)) {
-			list($page_name, $page_tab) = preg_split('/§/', $_);
-			$request['path'][] = $page_name;
-			$request['part'] = $page_tab;
-		} else {
-			$request['path'][] = $_;
-		}
-	}
+	list($attr['style'], $attr['layout'],
+		$attr['download'], $attr['check'],
+		$request['path'], $request['part']) = parse_request($request['original'], $style);
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
 	$target_file = sprintf('%smeta.php', $target_dir);
@@ -117,22 +117,26 @@
 		require_once($target_file);
 	else require_once('404/meta.php');
 
-	if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
+	if (!$ct) $ct = $attr['layout'];
+	if (!$attr['style']) $attr['style'] = $style[0];
+
+	#if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
 	$attr['self'] = find_self($heading);
 	#$lwself = strtolower($attr['self']);
 
 	$s = true; // Display sections
-	$attr['part'] = $request['part']; // For internal links
+	if ($request['part']) $attr['part'] = $request['part']; // For internal links
 
 	### Outputting page
 	require_once('page/top.php');
-	if (!$request['part'] && ($attr['layout'] || $ct)) foreach ($c as $_) {
+	foreach (tabs_to_display($ct, $request['part'], $c) as $_)
+	{
 		$targetfile = "$target_dir/tab-$_.php";
-		if (is_file($targetfile)) require ("$target_dir/tab-$_.php");
+		if (is_file($targetfile))
+			require ("$target_dir/tab-$_.php");
 		else missing_tab($_);
-	} else if ($request['part']) require_once($target_dir.'tab-'.$request['part'].'.php');
-	else require_once($target_dir.'tab-'.$c[0].'.php');
+	}
 	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
 	require_once('page/bottom.php');

@@ -8,8 +8,8 @@
 	<p>$p = [<?=var_dump($p)?>]</p>
 	<p>$r = [<?=var_dump($r)?>]</p>
 	<p>$c = [<?=var_dump($c)?>]</p>
+	<p>$ct = [<?=var_dump($ct)?>]</p>
 	<h3 class="reverse">Runtime parameters</h3>
-	<p>Token = [<?=var_dump($token)?>]</p>
 	<p>Attr = [<?=var_dump($attr)?>]</p>
 	<p>Heading = [<?=var_dump($heading)?>]</p>
 	<p>Request = [<?=var_dump($request)?>]</p>

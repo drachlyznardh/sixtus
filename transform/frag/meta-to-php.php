@@ -12,7 +12,7 @@
 		private $related = array();
 
 		private $c = array();
-		private $ct = false;
+		private $ct = 0;
 
 		public function parse ($f, $l, $cmd, $attr, $par)
 		{
@@ -55,10 +55,15 @@
 					$this->c[] = $par[1];
 					break;
 				case 'tabs':
-					if ($par[1] == 'alwaysall')
-						$this->ct = true;
-					else if (strcmp($par[1], 'all_or_one') == 0)
-						$this->ct = true;
+					if (strcmp($par[1], 'alwaysall') == 0
+						|| strcmp($par[1], 'all-tabs') == 0)
+						$this->ct = 3;
+					else if (strcmp($par[1], 'all_or_one') == 0
+						|| strcmp($par[1], 'one-tab-for-all') == 0)
+						$this->ct = 1;
+					else if (strcmp($par[1], 'just-one') == 0)
+						$this->ct = 2;
+					else $this->ct = 0;
 					break;
 				default:
 					fail("[Meta-2-PHP] Unknown command [$par[0]]\n", $f, $l);
@@ -88,7 +93,7 @@
 			$out[] = sprintf("\n");
 			$out[] = sprintf("\t%s = array('%s');\n",
 				'$c', implode("', '", $this->c));
-			$out[] = sprintf("\t%s = %s;\n", '$ct', $this->ct?'true':'false');
+			$out[] = sprintf("\t%s = %s;\n", '$ct', $this->ct);
 			$out[] = sprintf("?%s\n", '>');
 			
 			file_put_contents($target, $out);
