@@ -3,7 +3,7 @@
 	require_once('utils.php');
 	require_once($argv[3]);
 
-	function dump_meta ($source, $target, $month, $year, $rel, $tabs)
+	function dump_meta ($source, $target, $month, $year, $rel, $days)
 	{
 		$title = sprintf('%s %s', $month, $year);
 		$subtitle = sprintf('Le notizie di %s', $month);
@@ -26,10 +26,15 @@
 		if ($prev) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'prev', $prev);
 		if ($next) $out[] = sprintf("%d %04d %s#%s", 0, 0, 'next', $next);
 		$out[] = sprintf('%d %04d %s#%s', 0, 0, 'tabs', 'all_or_one');
-		foreach ($tabs as $_)
-			$out[] = sprintf('%d %04d %s#%s',
-				0, 0, 'tab', $_);
-		
+		foreach (array_keys($days) as $day)
+		{
+			$count = count($days[$day]);
+			if ($count > 1)
+				for ($i = 0; $i < $count; $i++)
+					$out[] = sprintf('%d %04d tab#%02d%c', 0, 0, $day, 96 + $count - $i);
+			else $out[] = sprintf("%d %04d tab#%02d", 0, 0, $day);
+		}
+
 		file_put_contents($target, implode("\n", $out));
 	}
 
@@ -253,8 +258,10 @@
 	$to_file[] = sprintf("start#page\n");
 
 	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
-		name_that_month($month), $year, scan_for_month($month, $year, $blog_map),
-		array_keys($out_rows));
+		name_that_month($month),
+		$year,
+		scan_for_month($month, $year, $blog_map),
+		$out_rows);
 	dump_c($argv[4].'c.php', array_keys($out_rows));
 	dump_side($argv[1], sprintf('%sside.frag', $argv[4]),
 		$year, $month, $out_rows);
