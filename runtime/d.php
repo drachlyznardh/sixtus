@@ -87,7 +87,7 @@
 
 	$attr['style'] = $attr['defstyle'] = $style[0];
 	$attr['layout'] = false;
-	$attr['ct'] = 0;
+	$attr['part'] = false;
 
 	$attr['download'] = false;
 	$attr['check'] = false;
@@ -127,7 +127,6 @@
 
 	$s = true; // Display sections
 	if ($request['part']) $attr['part'] = $request['part']; // For internal links
-	else $attr['part'] = $c[0];
 
 	### Outputting page
 	require_once('page/top.php');
