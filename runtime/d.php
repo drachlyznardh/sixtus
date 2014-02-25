@@ -102,13 +102,11 @@
 
 	if ($attr['download'])
 	{
-		$target_file_size = strlen($target_file_size);
-		$target_file = sprintf('%s.pdf', substr($target_file, 0, $target_file_size - 9));
-
+		$target_file = sprintf('%s.pdf', substr($target_dir, 0, -1));
 		if (is_file($target_file)) {
 			header('Content-Type: application/pdf');
-			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
-			readfile($search['include']);
+			header(sprintf('Content-Disposition: attachment; filename="%s.pdf"', end($request['path'])));
+			readfile($target_file);
 			exit(0);
 		}
 	}
@@ -118,12 +116,11 @@
 	else require_once('404/meta.php');
 
 	if (!$ct) $ct = $attr['layout'];
+	if ($ct < 2) $tabrel = true; else $tabrel = false;
 	if (!$attr['style']) $attr['style'] = $style[0];
 
-	#if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
 	$attr['self'] = find_self($heading);
-	#$lwself = strtolower($attr['self']);
 
 	$s = true; // Display sections
 	if ($request['part']) $attr['part'] = $request['part']; // For internal links
@@ -133,9 +130,11 @@
 	foreach (tabs_to_display($ct, $request['part'], $c) as $_)
 	{
 		$targetfile = "$target_dir/tab-$_.php";
-		if (is_file($targetfile))
+		if (is_file($targetfile)) {
+			if ($tabrel) tab_prev($attr, $_, $c);
 			require ("$target_dir/tab-$_.php");
-		else missing_tab($_);
+			if ($tabrel) tab_next($attr, $_, $c);
+		} else missing_tab($_);
 	}
 	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');

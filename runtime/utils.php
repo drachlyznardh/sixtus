@@ -29,6 +29,36 @@
 		return sprintf('<em>%s</em>', $title);
 	}
 
+	function tab_prev($attr, $name, $list)
+	{
+		$index = array_search($name, $list);
+		if ($index === false) return;
+		if (isset($list[$index - 1])) $target = $list[$index - 1];
+		else return;
+		
+		$result[] = '<div class="section"><p>';
+		$result[] = sprintf('Continua dal %s tab.',
+			make_tid($attr, 'precedente', $target, false));
+		$result[] = '</p></div>';
+		
+		printf(implode($result));
+	}
+
+	function tab_next($attr, $name, $list)
+	{
+		$index = array_search($name, $list);
+		if ($index === false) return;
+		if (isset($list[$index + 1])) $target = $list[$index + 1];
+		else return;
+		
+		$result[] = '<div class="section"><p class="reverse">';
+		$result[] = sprintf('Continua nel %s tab.',
+			make_tid($attr, 'prossimo', $target, false));
+		$result[] = '</p></div>';
+		
+		printf(implode($result));
+	}
+
 	function make_next($attr, $name, $standalone)
 	{
 		if (!$standalone) return;
