@@ -53,59 +53,6 @@
 	$attr['check'] = false;
 	$request['part'] = false;
 
-	$index = strpos($request['original'], '?');
-	if ($index !== false) $request['original'] = substr($request['original'], 0, $index);
-	$_ = strtok($request['original'], '/');
-	$token = array();
-	while ($_ !== false) {
-		$token[] = $_;
-		$_ = strtok('/');
-	}
-
-	foreach (array_keys($token) as $key)
-	{
-		switch ($token[$key]) {
-			case '':
-			case 'one-tab':
-				unset($token[$key]);
-				break 2;
-			case 'download':
-				$attr['download'] = true;
-				unset($token[$key]);
-				break 2;
-			case 'check':
-				$attr['check'] = true;
-				unset($token[$key]);
-				break 2;
-			case 'all-tabs':
-				$attr['layout'] = true;
-				unset($token[$key]);
-				break 2;
-		}
-
-		foreach ($style as $_)
-			if (strcmp($token[$key], $_) == 0)
-			{
-				$attr['style'] = $_;
-				unset($token[$key]);
-				break 2;
-			}
-	}
-
-	// In case of empty request, redirect onto HomePage
-	if (count($token) == 0) header(sprintf('Location: %s',
-		make_canonical($attr, $runtime['home'])));
-
-	foreach ($token as $_) {
-		if (preg_match('/§/', $_)) {
-			list($page_name, $page_tab) = preg_split('/§/', $_);
-			$request['path'][] = $page_name;
-			$request['part'] = $page_tab;
-		} else {
-			$request['path'][] = $_;
-		}
-	}
-
 	function parse_request ($request, $styles)
 	{
 		$style = false;
