@@ -54,6 +54,23 @@
 			$result[1][] = sprintf('%02d', $map[$year][$key + 1]);
 		} else $result[1] = first_month_of_next_year($year, $map);
 
+		var_dump($result);
+		
+		$prev = false;
+		$next = false;
+
+		foreach (array_keys($map) as $_)
+			foreach ($map[$_] as $__)
+				$short[] = sprintf('%s/%02d', $_, $__);
+
+		$target = sprintf('%s/%02d', $year, $month);
+		$index = array_search($target, $short);
+
+		if (isset($short[$index - 1])) $prev = split('/', $short[$index - 1]);
+		if (isset($short[$index + 1])) $next = split('/', $short[$index + 1]);
+
+		var_dump(array($prev, $next));
+
 		return $result;
 	}
 
