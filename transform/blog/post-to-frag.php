@@ -130,10 +130,9 @@
 		file_put_contents($target, implode("\n", $out));
 	}
 
-	$_ = explode('/', $argv[2]);
-	$limit = count($_);
-	$year = $_[$limit - 2];
-	$month = substr($_[$limit - 1], 0, 2);
+	$pattern = '/^.*\/(....)\/(..)\.month$/';
+	$year = preg_replace($pattern, '$1', $argv[2]);
+	$month = preg_replace($pattern, '$2', $argv[2]);
 
 	$current = array();
 	$in_rows = file($argv[1], FILE_IGNORE_NEW_LINES);
