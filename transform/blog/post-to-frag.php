@@ -3,6 +3,60 @@
 	require_once('utils.php');
 	require_once($argv[3]);
 
+	function last_month_of_prev_year($year, $map)
+	{
+		$key = array_keys($map);
+		$index = array_search($year, $key);
+
+		if (isset($key[$index - 1]))
+		{
+			$one = $key[$index - 1];
+			$two = $map[$one];
+			$three = $two[count($two) - 1];
+			
+			return array($one, $three);
+			
+		} else return false;
+	}
+
+	function first_month_of_next_year($year, $map)
+	{
+		$key = array_keys($map);
+		$index = array_search($year, $key);
+
+		if (isset($key[$index + 1]))
+		{
+			$one = $key[$index + 1];
+			$two = $map[$one][0];
+
+			return array($one, $two);
+			
+		} else return false;
+	}
+
+	function scan_for_month ($month, $year, $map)
+	{
+		$limit = count($map);
+		$result[0] = false;
+		$result[1] = false;
+
+		$key = array_search($month, $map[$year]);
+		if (isset($map[$year][$key - 1]))
+		{
+			$result[0][] = $year;
+			$result[0][] = sprintf('%02d', $map[$year][$key - 1]);
+		} else $result[0] = last_month_of_prev_year($year, $map);
+
+		$key = array_search($month, $map[$year]);
+		if (isset($map[$year][$key + 1]))
+		{
+			$result[1][] = $year;
+			$result[1][] = sprintf('%02d', $map[$year][$key + 1]);
+		} else $result[1] = first_month_of_next_year($year, $map);
+
+		return $result;
+	}
+
 	function dump_meta ($source, $target, $month, $year, $rel, $days)
 	{
 		$title = sprintf('%s %s', $month, $year);
@@ -147,8 +201,6 @@
 
 	if (count($current) > 0) $out_rows[$day][] = $current;
 
-	####
-	
 	foreach (array_keys($out_rows) as $day)
 	{
 		$count = count($out_rows[$day]);
@@ -181,62 +233,6 @@
 		else dump_tag($argv[1],
 			sprintf('%stab-%02d.frag', $argv[4], $day),
 			$year, $month, $day, $out_rows[$day][0]);
-	}
-
-	####
-
-	function last_month_of_prev_year($year, $map)
-	{
-		$key = array_keys($map);
-		$index = array_search($year, $key);
-
-		if (isset($key[$index - 1]))
-		{
-			$one = $key[$index - 1];
-			$two = $map[$one];
-			$three = $two[count($two) - 1];
-			
-			return array($one, $three);
-			
-		} else return false;
-	}
-
-	function first_month_of_next_year($year, $map)
-	{
-		$key = array_keys($map);
-		$index = array_search($year, $key);
-
-		if (isset($key[$index + 1]))
-		{
-			$one = $key[$index + 1];
-			$two = $map[$one][0];
-
-			return array($one, $two);
-			
-		} else return false;
-	}
-
-	function scan_for_month ($month, $year, $map)
-	{
-		$limit = count($map);
-		$result[0] = false;
-		$result[1] = false;
-
-		$key = array_search($month, $map[$year]);
-		if (isset($map[$year][$key - 1]))
-		{
-			$result[0][] = $year;
-			$result[0][] = sprintf('%02d', $map[$year][$key - 1]);
-		} else $result[0] = last_month_of_prev_year($year, $map);
-
-		$key = array_search($month, $map[$year]);
-		if (isset($map[$year][$key + 1]))
-		{
-			$result[1][] = $year;
-			$result[1][] = sprintf('%02d', $map[$year][$key + 1]);
-		} else $result[1] = first_month_of_next_year($year, $map);
-
-		return $result;
 	}
 
 	ksort($out_rows);
