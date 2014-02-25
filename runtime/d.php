@@ -118,6 +118,7 @@
 	else require_once('404/meta.php');
 
 	if (!$ct) $ct = $attr['layout'];
+	if (!$attr['style']) $attr['style'] = $style[0];
 
 	#if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
