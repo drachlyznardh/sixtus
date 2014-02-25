@@ -120,10 +120,8 @@
 	if (!$ct) $ct = $attr['layout'];
 	if (!$attr['style']) $attr['style'] = $style[0];
 
-	#if (!$request['part'] && !$ct && count($c[0]) > 1) $request['part'] = $c[0];
 	$heading = extract_heading_path($attr, $request['path'], $request['part'], $direct);
 	$attr['self'] = find_self($heading);
-	#$lwself = strtolower($attr['self']);
 
 	$s = true; // Display sections
 	if ($request['part']) $attr['part'] = $request['part']; // For internal links
