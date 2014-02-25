@@ -131,9 +131,11 @@
 	foreach (tabs_to_display($ct, $request['part'], $c) as $_)
 	{
 		$targetfile = "$target_dir/tab-$_.php";
-		if (is_file($targetfile))
+		if (is_file($targetfile)) {
+			if ($ct == 0) tab_prev($attr, $_, $c);
 			require ("$target_dir/tab-$_.php");
-		else missing_tab($_);
+			if ($ct == 0) tab_next($attr, $_, $c);
+		} else missing_tab($_);
 	}
 	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
