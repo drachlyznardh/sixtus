@@ -102,13 +102,11 @@
 
 	if ($attr['download'])
 	{
-		$target_file_size = strlen($target_file_size);
-		$target_file = sprintf('%s.pdf', substr($target_file, 0, $target_file_size - 9));
-
+		$target_file = sprintf('%s.pdf', substr($target_dir, 0, -1));
 		if (is_file($target_file)) {
 			header('Content-Type: application/pdf');
-			header('Content-Disposition: attachment; filename="'.$heading['page'][0].'.pdf"');
-			readfile($search['include']);
+			header(sprintf('Content-Disposition: attachment; filename="%s.pdf"', end($request['path'])));
+			readfile($target_file);
 			exit(0);
 		}
 	}
