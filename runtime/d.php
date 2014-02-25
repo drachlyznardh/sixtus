@@ -148,7 +148,9 @@
 		return array($style, $layout, $download, $check, $path, $part);
 	}
 
-	var_dump(parse_request($request['original'], $style));
+	list($attr['style'], $attr['layout'],
+		$attr['download'], $attr['check'],
+		$request['path'], $request['part']) = parse_request($request['original'], $style);
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
 	$target_file = sprintf('%smeta.php', $target_dir);
