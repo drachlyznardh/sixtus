@@ -198,20 +198,6 @@
 			$year, $month, $day, $out_rows[$day][0]);
 	}
 
-	ksort($out_rows);
-	$out_rows = array_reverse($out_rows, true);
-	list($prev, $next) = scan_for_month($month, $year, $blog_map);
-	$to_file[] = sprintf("title#%s %s#Le notizie di %s\n",
-		name_that_month($month), $year, name_that_month($month));
-	if ($prev)
-		$to_file[] = sprintf("prev#Blog/%s/%02d/#%s@ %s\n",
-			$prev[0], $prev[1], name_that_month($prev[1]), $prev[0]);
-	if ($next)
-		$to_file[] = sprintf("next#Blog/%s/%02d/#%s@ %s\n",
-			$next[0], $next[1], name_that_month($next[1]), $next[0]);
-	$to_file[] = sprintf("tabs#all_or_one\n");
-	$to_file[] = sprintf("start#page\n");
-
 	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
 		name_that_month($month),
 		$year,
