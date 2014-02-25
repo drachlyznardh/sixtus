@@ -106,6 +106,50 @@
 		}
 	}
 
+	function parse_request ($request, $styles)
+	{
+		$style = false;
+		$layout = false;
+		$download = false;
+		$check = false;
+		$path = array();
+		$part = false;
+
+		foreach (split('/', $request) as $token) switch ($token)
+		{
+			case '': break;
+			case 'one-tab': $layout = 0; break;
+			case 'all-tabs': $layout = 1; break;
+			case 'download': $download = true; break;
+			case 'check': $check = true; break;
+
+			default: $next[] = $token;
+		}
+
+		foreach ($next as $token) 
+		{
+			$found = false;
+			foreach ($styles as $current)
+				if (strcmp($token, $current) == 0)
+				{
+					$style = $current;
+					$found = true;
+					break;
+				}
+			if (!$found) $nnext[] = $token;
+		}
+
+		foreach ($nnext as $token)
+			if (preg_match('/§/', $token)) {
+				list($piece, $part) = preg_split('/§/', $token);
+				$path[] = $piece;
+			} else $path[] = $token;
+	
+		return array($style, $layout, $download, $check, $path, $part);
+	}
+
+	var_dump(parse_request($request['original'], $style));
+
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
 	$target_file = sprintf('%smeta.php', $target_dir);
 
