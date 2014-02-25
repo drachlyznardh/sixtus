@@ -161,8 +161,6 @@
 
 	foreach (array_keys($out_rows) as $day)
 	{
-		#printf("\tDay #%s has %02d posts.\n", $day, $out_rows[$day]);
-
 		$limit = count($out_rows[$day]);
 		$names = array();
 
@@ -198,7 +196,6 @@
 			$two = $map[$one];
 			$three = $two[count($two) - 1];
 			
-			#printf("Prev is %s/%s\n", $three, $one);
 			return array($one, $three);
 			
 		} else return false;
@@ -214,7 +211,6 @@
 			$one = $key[$index + 1];
 			$two = $map[$one][0];
 
-			#printf("Next is %s/%s\n", $two, $one);
 			return array($one, $two);
 			
 		} else return false;
@@ -266,56 +262,4 @@
 	dump_side($argv[1], sprintf('%sside.frag', $argv[4]),
 		$year, $month, $out_rows);
 	exit(0);
-
-	foreach (array_keys($out_rows) as $day)
-	{
-		$posts = $out_rows[$day];
-		
-		foreach ($posts as $post)
-		{
-			$to_file[] = sprintf("tab#%s\n", $post['tab']);
-			$to_file[] = sprintf("\tp#link#Blog/%s/%s/#<em>@%02d/%s/%s@</em>#%s\n",
-				$year, $month, $day, $month, $year, $post['tab']);
-			$limit = count($post['tags']);
-			if (is_array($post['tags'])) for ($i = 0; $i < $limit; $i++) {
-				if ($i) $to_file[] = sprintf("\t&amp;\n");
-				else $to_file[] = sprintf("\t/\n");
-				$to_file[] = sprintf("\tlink#About/#%s#%s\n",
-					ucwords($post['tags'][$i]),
-					mb_strtoupper($post['tags'][$i], 'UTF-8'));
-			}
-			$to_file[] = sprintf("\ttitle#%s\n", $post['title']);
-
-			if (isset($post['content'])) foreach ($post['content'] as $line) $to_file[] = sprintf("%s\n", $line);
-		}
-	}
-
-	$to_file[] = sprintf("stop#page\n");
-	$to_file[] = sprintf("start#side\n");
-	$to_file[] = sprintf("\tstitle#link#Blog/%s/%s/#%s@ %s\n",
-		$year, $month, name_that_month($month), $year);
-	
-	foreach (array_keys($out_rows) as $day)
-	{
-		$posts = $out_rows[$day];
-		$first = true;
-		$count = count($posts);
-
-		$to_file[] = sprintf("\tp#<code>%02d/%s</code> –\n", $day, $month);
-
-		for ($i = 0; $i < $count; $i++)
-		{
-			$post = $posts[$count - $i - 1];
-			
-			if ($first) $first = false;
-			else $to_file[] = sprintf("\t\t&amp;\n");
-			$to_file[] = sprintf("\t\tlink#Blog/%s/%s/#%s#%s\n",
-				$year, $month, $post['title'], $post['tab']);
-		}
-	}
-
-	$to_file[] = sprintf("stop#side\n");
-	#printf("%s", implode($to_file));
-	exit(0);
-	file_put_contents($argv[2], $to_file);
 ?>
