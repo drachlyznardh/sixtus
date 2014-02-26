@@ -4,7 +4,7 @@ ACCS_TO_CONF := $(TRANSFORM)maps/accs-to-conf.php
 ACCS_TO_RSLV := $(TRANSFORM)maps/accs-to-resolve.php
 DMAP_TO_RMAP := $(TRANSFORM)maps/dmap-to-rmap.php
 
-maps: $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(RESOLVE_FILE) $(REVERSE_MAP_FILE)
+sixtus-map: $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(RESOLVE_FILE) $(REVERSE_MAP_FILE)
 
 $(RUNTIME_CONF_FILE): $(ACCESS_MAP_FILE)
 	@echo Generating runtime configuration file
@@ -26,6 +26,6 @@ $(REVERSE_MAP_FILE): $(DIRECT_MAP_FILE)
 	@mkdir -p $(dir $@)
 	@$(PHP) -f $(DMAP_TO_RMAP) $< $@
 
-maps-clean:
+sixtus-map-clean:
 	@echo Cleaning map files
 	@$(RM) $(RUNTIME_CONF_FILE) $(DIRECT_MAP_FILE) $(RESOLVE_FILE) $(REVERSE_MAP_FILE)

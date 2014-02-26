@@ -1,46 +1,58 @@
 
 POST_TO_PAG    := $(TRANSFORM)blog/post-to-pag.php
+POST_TO_FRAG   := $(TRANSFORM)blog/post-to-frag.php
 CREATE_MAP     := $(TRANSFORM)blog/create-map.php
 CREATE_YEAR    := $(TRANSFORM)blog/create-year.php
 CREATE_ARCHIVE := $(TRANSFORM)blog/create-archive.php
 CREATE_NEWS    := $(TRANSFORM)blog/create-news.php
 UPDATE_MAP     := $(TRANSFORM)blog/update-blog-map.sh
 
-BLOG_DIR := $(SRC_DIR)blog/
-BLOG_MAP := $(BLOG_DIR)blog-map.php
+BLOG_ODIR := $(FRAG_DIR)blog/
+BLOG_MAP  := $(BLOG_ODIR)map.php
 
 POSTS   := $(sort $(shell find $(BLOG_DIR) -type f -name '*.post'))
-MONTHS  := $(POSTS:.post=.pag)
-YEARS   := $(patsubst %/, %.pag, $(sort $(dir $(MONTHS))))
-ARCHIVE := $(BLOG_DIR)archivio.pag
-NEWS    := $(abspath $(BLOG_DIR)../blog.pag)
+MONTHS  := $(patsubst $(BLOG_DIR)%.post, $(BLOG_ODIR)%.month, $(POSTS))
+YEARS   := $(patsubst %/, %.year, $(sort $(dir $(MONTHS))))
+ARCHIVE := $(BLOG_ODIR)archivio/.arch
+NEWS    := $(BLOG_ODIR).news
 
-all: months years archive news
+all: blog
+
+blog: blog-map months years archive news
 months: $(MONTHS)
 years: $(YEARS)
 archive: $(ARCHIVE)
 news: $(NEWS)
+blog-map: $(BLOG_MAP)
 
 $(BLOG_MAP): $(POSTS)
 	@echo Generating blog map $@
+	@mkdir -p $(dir $@)
 	@$(PHP) -f $(CREATE_MAP) $@ $(BLOG_DIR)
 
-%.pag: %.post $(BLOG_MAP)
-	@echo Generating blog page $@ from $<
-	@mkdir -p $(dir $@)
-	@php5 -f $(POST_TO_PAG) $< $@ $(BLOG_MAP)
+$(BLOG_ODIR)%.month: $(BLOG_DIR)%.post #blog-map
+	@echo Extracting fragments from $<
+	@mkdir -p $(basename $@)/
+	@php5 -f $(POST_TO_FRAG) $< $@ $(BLOG_MAP) $(basename $@)/
+	@touch $@
 
-$(ARCHIVE): $(BLOG_MAP)
-	@echo Generating archive page $@
-	@$(PHP) -f $(CREATE_ARCHIVE) $@ $(BLOG_MAP)
-
-$(NEWS): $(BLOG_MAP)
-	@echo Generating news page $@
-	@$(PHP) -f $(CREATE_NEWS) $@ $(BLOG_MAP) $(BLOG_DIR)
-
-%.pag: $(BLOG_MAP)
+$(BLOG_ODIR)%.year:
 	@echo Generating year page $@
-	@$(PHP) -f $(CREATE_YEAR) $@ $(BLOG_MAP)
+	@mkdir -p $(basename $@)/
+	@$(PHP) -f $(CREATE_YEAR) $(notdir $(basename $@)) $(BLOG_MAP) $(basename $@)/
+	@touch $@
+
+$(BLOG_ODIR).news:
+	@echo Generating news page $@
+	@mkdir -p $(basename $@)/
+	@$(PHP) -f $(CREATE_NEWS) $(BLOG_MAP) $(basename $@)
+	@touch $@
+
+$(BLOG_ODIR)%.arch:
+	@echo Generating archive page $@
+	@mkdir -p $(basename $@)/
+	@$(PHP) -f $(CREATE_ARCHIVE) $(BLOG_MAP) $(basename $@)
+	@touch $@
 
 .PHONY: clean
 clean:

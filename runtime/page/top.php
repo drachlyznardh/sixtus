@@ -5,10 +5,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author"
 			content="drachlyznardh &lt;drachlyznardh@roundhousecode.com &gt;" />
-		<meta name="keywords" content="<?=$attr['keywords']?>" />
-		<title><?=$attr['short']?></title>
-		<link rel="icon" href="runtime/style/ico/<?=($attr['gray']?'gray':'white')?>.ico" />
-		<link rel="stylesheet" type="text/css" href="runtime/style/<?=($attr['gray']?'gray':'white')?>.css" />
+		<meta name="keywords" content="<?=$p['keywords']?>" />
+		<title><?=$p['short']?></title>
+		<link rel="icon" href="runtime/style/ico/<?=$attr['style']?>.ico" />
+		<link rel="stylesheet" type="text/css" href="runtime/style/<?=$attr['style']?>.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/voices.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/common.css" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/big-screen.css"
@@ -21,7 +21,7 @@
 		<div id="main">
 			<div id="content">
 				<div id="head">
-<?php require_once('page-head.php'); ?>
+<?php require_once('head.php'); ?>
 				</div> <!-- Head -->
 				<div id="core">
-<?php require_once('page-check.php'); ?>
+<?php if ($attr['check']) require_once('check.php'); ?>
