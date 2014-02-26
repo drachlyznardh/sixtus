@@ -29,7 +29,8 @@
 			case 0: # One Tab / Pages
 			case 2: # Just one tab / Special request
 				if ($requested) return array($requested);
-				return array($list[0]);
+				if (isset($list[0])) return array($list[0]);
+				return false;
 			case 1: # One tab for all / Blog months
 				if ($requested) return array($requested);
 				return $list;
