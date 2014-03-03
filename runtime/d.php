@@ -39,7 +39,7 @@
 		}
 	}
 
-	function parse_request ($request, $styles)
+	function parse_request ($request, $styles, $homepage)
 	{
 		$style = false;
 		$layout = 0;
@@ -58,6 +58,8 @@
 
 			default: $next[] = $token;
 		}
+
+		if (!isset($next)) $next[] = $homepage;
 
 		foreach ($next as $token) 
 		{
@@ -96,7 +98,8 @@
 
 	list($attr['style'], $attr['layout'],
 		$attr['download'], $attr['check'],
-		$request['path'], $request['part']) = parse_request($request['original'], $style);
+		$request['path'], $request['part']) =
+	parse_request($request['original'], $style, $runtime['home']);
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
 	$target_file = sprintf('%smeta.php', $target_dir);
