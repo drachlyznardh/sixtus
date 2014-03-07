@@ -35,9 +35,13 @@
 		$out[] = sprintf('####');
 
 		$i = 0;
+		$m = $news[0][1];
 		foreach ($news as $_)
 		{
-			if ($i++) $out[] = sprintf('%d %04d sec#br', 0, 0);
+			if ($i++)
+				if ($m == $_[1]) $out[] = sprintf('%d %04d sec#', 0, 0);
+				else $out[] = sprintf('%d %04d sec#br', 0, 0);
+			$m = $_[1];
 			$out[] = sprintf('%d %04d require@tab@%s#blog/%s/%s',
 				0, 0, $_[2], $_[0], $_[1]);
 		}
