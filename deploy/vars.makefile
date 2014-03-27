@@ -20,7 +20,9 @@ export BLOG_DIR := $(IN_DIR)blog/
 export RES_DIR  := $(IN_DIR)res/
 export SYS_DIR  := $(IN_DIR)sys/
 
+ifndef BUILD_DIR
 export BUILD_DIR := /tmp/sixtus$(shell echo $(IN_DIR) | sed -e 's/\//-/g')tmp/
+endif
 export FRAG_DIR  := $(BUILD_DIR)frag/
 export DEP_DIR   := $(BUILD_DIR)dep/
 export TAG_DIR   := $(BUILD_DIR)tag/
