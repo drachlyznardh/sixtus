@@ -37,8 +37,8 @@
 				case 'title': $this->make_title($f, $index, $cmd_args, $cmd_attr); break;
 				case 'stitle': $this->make_stitle($f, $index, $cmd_args, $cmd_attr); break;
 				case 'img': $this->make_img($cmd_args); break;
-				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
-				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
+				case 'begin': $this->make_begin($f, $index, $cmd_args, $cmd_attr); break;
+				case 'end': $this->make_end($f, $index, $cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
 				case 'clear': $this->make_clear($f, $index, $cmd_args); break;
 				case 'speak': $this->make_intra($f, $index, $cmd_args, $cmd_attr); break;
@@ -326,7 +326,7 @@
 			$this->content[] = $this->full_img($args);
 		}
 
-		private function make_begin ($args, $attr)
+		private function make_begin ($f, $l, $args, $attr)
 		{
 			if (preg_match('/@/', $args[1])) {
 				$side = preg_split('/@/', $args[1]);
@@ -376,14 +376,14 @@
 						$this->content[] = "<div class=\"$env-$side[1]-out\">";
 						$this->content[] = "<div class=\"$env-$side[1]-in\">";
 					}
-					else fail ("Environment[$env] needs a side");
+					else fail ("Environment[$env] needs a side", $f, $l);
 					break;
 				default:
-					fail("Unknown environment[$env]\n");
+					fail("Unknown environment[$env]\n", $f, $l);
 			}
 		}
 
-		private function make_end ($args, $attr)
+		private function make_end ($f, $l, $args, $attr)
 		{
 			$this->closeContext();
 			switch ($args[1])
@@ -408,7 +408,7 @@
 					$this->content[] = '</div></div>';
 					break;
 				default:
-					fail("Unknown environment[$args[1]]");
+					fail("Unknown environment[$args[1]]", $f, $l);
 			}
 		}
 
