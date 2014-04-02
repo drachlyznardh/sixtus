@@ -163,6 +163,7 @@
 	}
 
 	if (count($current) > 0) $out_rows[$day][] = $current;
+	krsort($out_rows);
 
 	foreach (array_keys($out_rows) as $day)
 	{
