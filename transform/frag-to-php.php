@@ -22,8 +22,11 @@
 		}
 		else break;
 	
-	if (!preg_match('/^####$/', $row[0]))
-		fail("Missing separator", $argv[1], $i);
+	if (preg_match('/^#### (.*)$/', $row[0]))
+		$tab_id = preg_replace('/^#### (.*)$/', '$1', $row[0]);
+	else if (preg_match('/^####$/', $row[0]))
+		$tab_id = false;
+	else fail("Missing separator", $argv[1], $i);
 	
 	array_shift($row);
 	if ($filetype) require_once('frag/meta-to-php.php');
