@@ -62,6 +62,7 @@
 			$year, implode("', '", $result[$year]));
 	file_put_contents($argv[1], sprintf("<%sphp %s = array(\n%s\n); %s>\n",
 		'?', '$blog_map', implode(",\n", $short), '?'));
+	exit(0);
 	
 	$limit = count($series);
 	$prev = $argv[2].$series[0].'.pag';
