@@ -13,6 +13,11 @@
 			$this->current = new Section();
 		}
 
+		public function check_id ($id)
+		{
+			if ($id) $this->content[] = sprintf('<a id="%s"></a>', $id);
+		}
+
 		public function parse ($f, $l, $cmd, $attr, $par)
 		{
 			switch($cmd){
@@ -47,6 +52,7 @@
 	}
 
 	$p = new Parser();
+	$p->check_id($tab_id);
 	foreach ($row as $_)
 	{
 		list($f, $l, $s) = check_line_format($_, $i++);
