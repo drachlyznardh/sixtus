@@ -19,14 +19,6 @@
 	{
 		if (count($content) < 1) return;
 		
-		/*
-		$current = basename($target);
-		$page = basename(dirname($target));
-		$location = dirname(dirname($target));
-		
-		$out[] = sprintf("#### file %s %s %s\n", $location, $page, $current);
-		*/
-		
 		$out[] = sprintf("#### %d\n", $type);
 		$i = 0;
 		foreach ($sourcefile as $_) $out[] = sprintf("%d %s\n", $i++, $_);
@@ -39,7 +31,6 @@
 			printf("Could not write file %s.\n", $target);
 			exit(1);
 		}
-		#printf("\tFragment file %s extracted.\n", basename($target));
 	}
 
 	class Splitter {
@@ -102,8 +93,6 @@
 								$fileno, $lineno + 1);
 						$this->{$this->state}[$par[1]] = array();
 						$this->current = &$this->{$this->state}[$par[1]];
-						//$this->current[] = array($fileno, $lineno + 1,
-						//	sprintf('id#%s', mb_strtoupper($par[1], 'UTF-8')));
 						break;
 					case 'include':
 						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
