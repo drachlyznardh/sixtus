@@ -129,16 +129,25 @@
 	$s = true; // Display sections
 	if ($request['part']) $attr['part'] = $request['part']; // For internal links
 
+	$tabs_to_display = tabs_to_display($ct, $request['part'], $c);
+
 	### Outputting page
 	require_once('page/top.php');
-	foreach (tabs_to_display($ct, $request['part'], $c) as $_)
+	if (count($tabs_to_display) > 1) foreach ($tabs_to_display as $_)
 	{
 		$targetfile = "$target_dir/tab-$_.php";
+		if (is_file($targetfile)) require ($targetfile);
+		else missing_tab($_);
+	}
+	else
+	{
+		$targettab = $tabs_to_display[0];
+		$targetfile = "$target_dir/tab-$targettab.php";
 		if (is_file($targetfile)) {
-			if ($tabrel) tab_prev($attr, $_, $c);
-			require ("$target_dir/tab-$_.php");
-			if ($tabrel) tab_next($attr, $_, $c);
-		} else missing_tab($_);
+			if ($tabrel) tab_prev($attr, $targettab, $c);
+			require ($targetfile);
+			if ($tabrel) tab_next($attr, $targettab, $c);
+		} else missing_tab($targettab);
 	}
 	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
