@@ -26,8 +26,8 @@
 		else if ($hash) $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($hash, 'UTF-8'));
 		else $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		
-		if ($url) return sprintf('<a href="%s">%s</a>', $url, $title);
-		return sprintf('<em>%s</em>', $title);
+		if ($url) return sprintf('<a href="%s">%s</a>', $url, $title)."\n";
+		return sprintf('<em>%s</em>', $title)."\n";
 	}
 
 	function tab_prev($attr, $name, $list)

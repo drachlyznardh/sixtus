@@ -119,7 +119,7 @@
 			$out[] = sprintf('%d %04d p#<code>%02d/%s</code> –',
 				0, 0, $day, $month);
 
-			foreach (array_reverse($data[$day]) as $post)
+			foreach (/*array_reverse(*/$data[$day]/*)*/ as $post)
 			{
 				if ($i++) $out[] = sprintf('%d %04d %s', 0, 0, '&amp;');
 				$out[] = sprintf('%d %04d link#Blog/%s/%s/#%s#%s',
