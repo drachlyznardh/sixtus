@@ -49,7 +49,7 @@
 			$count = count($days[$day]);
 			if ($count > 1)
 				for ($i = 0; $i < $count; $i++)
-					$out[] = sprintf('%d %04d tab#%02d%c', 0, 0, $day, 96 + $count - $i);
+					$out[] = sprintf('%d %04d tab#%02d%c', 0, 0, $day, 97 + $i);
 			else $out[] = sprintf("%d %04d tab#%02d", 0, 0, $day);
 		}
 
