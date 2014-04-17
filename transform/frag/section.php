@@ -295,6 +295,8 @@
 			$this->closeContext();
 			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h2 class="reverse">';
+			else if (isset($cmd_attr[1]) and $cmd_attr[1] == 'center')
+				$open_tag = '<h2 class="center">';
 			else $open_tag = '<h2>';
 
 			$this->content[] = "\n".$open_tag;
@@ -310,6 +312,8 @@
 			$this->closeContext();
 			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h3 class="reverse">';
+			else if (isset($cmd_attr[1]) and $cmd_attr[1] == 'center')
+				$open_tag = '<h3 class="center">';
 			else $open_tag = '<h3>';
 
 			$this->content[] = "\n".$open_tag;
