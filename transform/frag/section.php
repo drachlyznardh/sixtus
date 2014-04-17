@@ -14,7 +14,8 @@
 			if (count($this->content) == 0) return;
 
 			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '<div class="section">', '>');
-			if ($this->id) $result[] = sprintf('<a id="%s"></a>', $this->id);
+			if ($this->id)
+				$result[] = sprintf('<a id="%s"></a>', mb_strtoupper($this->id, 'UTF-8'));
 			$result[] = implode("\n", $this->content);
 			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '</div>', '>');
 

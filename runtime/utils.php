@@ -16,6 +16,8 @@
 	
 	function make_tid($attr, $title, $tab, $hash)
 	{
+		if ($hash) $hash = mb_strtoupper($hash, 'UTF-8');
+
 		if ($attr['layout'] == 0 || $attr['layout'] == 2)
 			if ($attr['part'] == $tab)
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
@@ -23,7 +25,7 @@
 			else
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 				else $url = make_canonical ($attr, $attr['self'], $tab);
-		else if ($hash) $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($hash, 'UTF-8'));
+		else if ($hash) $url = make_canonical ($attr, $attr['self'], false, $hash);
 		else $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		
 		if ($url) return sprintf('<a href="%s">%s</a>', $url, $title)."\n";
