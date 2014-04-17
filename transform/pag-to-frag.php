@@ -97,6 +97,9 @@
 					case 'include':
 						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
 						break;
+					case 'require':
+						if (strlen($par[1]) < 1)
+							$line .= substr($target, strlen($indir), -4);
 					default:
 						$this->current[] = array($fileno, $lineno + 1, $line);
 				}
@@ -121,7 +124,7 @@
 			$filename = find_include_file($localdir, $indir, $target);
 			
 			if ($filename) $this->parse($filename, $indir);
-			else fail ('Unable to locate '.$target, $this->parsedfiles[$fileno], $lineno);
+			else fail ('Unable to locate ['.$target.']['.$filename.']', $this->parsedfiles[$fileno], $lineno);
 
 		}
 
@@ -131,7 +134,7 @@
 			foreach(array_keys($this->body) as $_)
 				output_on_file(false, $_, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
 			foreach(array_keys($this->ghost) as $_)
-				output_on_file(false, $_, $outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
+				output_on_file(false, $_, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
 			output_on_file(false, false, $outdir.'side.frag', $this->parsedfiles, $this->side);
 		}
 
