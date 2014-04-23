@@ -435,7 +435,7 @@
 		{
 			$result = false;
 			if (count($args) > 2)
-				$this->error($l, 'Speak: too many arguments');
+				$this->error($f, $l, 'Speak: too many arguments');
 	
 			$_ = preg_split('/@/', $args[1]);
 
