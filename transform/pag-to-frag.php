@@ -2,6 +2,12 @@
 
 	require('frag/utils.php');
 
+	function fix_tab_title ($found)
+	{
+		$result = mb_strtolower($found, 'UTF-8');
+		return preg_replace('/ /', '-', $result);
+	}
+
 	function find_include_file ($localdir, $sourcedir, $target)
 	{
 		if (is_file($target)) return $target;
@@ -91,8 +97,9 @@
 						if ($this->state != 'body' && $this->state != 'ghost')
 							fail('No tabs allowed in '.$this->state,
 								$fileno, $lineno + 1);
-						$this->{$this->state}[$par[1]] = array();
-						$this->current = &$this->{$this->state}[$par[1]];
+						$title = fix_tab_title($par[1]);
+						$this->{$this->state}[$title] = array();
+						$this->current = &$this->{$this->state}[$title];
 						break;
 					case 'include':
 						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
