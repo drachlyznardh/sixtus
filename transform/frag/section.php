@@ -443,9 +443,11 @@
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.polish_line($_[0]).' – ';
-				$result .= $this->dialog($attr[1], polish_line($_[1]));
+				$result .= ' – '.polish_line($_[0]);
 				array_shift($_);
+
+				if (count($_))
+					$result .= ' – '.$this->dialog($attr[1], polish_line($_[0]));
 				array_shift($_);
 			}
 
