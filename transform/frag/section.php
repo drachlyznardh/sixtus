@@ -437,17 +437,17 @@
 			if (count($args) > 2)
 				$this->error($f, $l, 'Speak: too many arguments');
 	
-			$_ = preg_split('/@/', $args[1]);
+			$_ = preg_split('/@/', polish_line($args[1]));
 
-			$result = $this->dialog($attr[1], polish_line($_[0]));
+			$result = $this->dialog($attr[1], $_[0]);
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.polish_line($_[0]);
+				$result .= ' – '.$_[0];
 				array_shift($_);
 
 				if (count($_))
-					$result .= ' – '.$this->dialog($attr[1], polish_line($_[0]));
+					$result .= ' – '.$this->dialog($attr[1], $_[0]);
 				array_shift($_);
 			}
 
