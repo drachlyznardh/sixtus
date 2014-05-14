@@ -63,11 +63,16 @@
 			{
 				$out[] = sprintf('0 0000 stitle@right#link#Blog/%s/%02d/#%s@ %s',
 					$year, $month, name_that_month($month), $year);
+				$pday = '00';
 				foreach (array_keys($sides[$year][$month]) as $day)
 				{
+					$cday = sprintf('%02d', $day);
+					if ($pday != $cday)
 						$out[] = sprintf('0 0000 p#<code>%02d/%02d</code> –', $day, $month);
+					else $out[] = sprintf('0 0000 &amp;');
 					$out[] = sprintf('0 0000 link#Blog/%04d/%02d/#%s#%s',
 						$year, $month, $sides[$year][$month][$day], $day);
+					$pday = $cday;
 				}
 			}
 
