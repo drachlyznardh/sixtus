@@ -59,6 +59,19 @@
 		foreach (array_keys($sides) as $year)
 			foreach (array_keys($sides[$year]) as $month)
 			{
+				$out[] = sprintf('0 0000 stitle@right#link#Blog/%s/%02d/#%s@ %s',
+					$year, $month, name_that_month($month), $year);
+				foreach (array_keys($sides[$year][$month]) as $day)
+				{
+						$out[] = sprintf('0 0000 p#<code>%02d/%02d</code> –', $day, $month);
+					$out[] = sprintf('0 0000 link#Blog/%04d/%02d/#%s#%s',
+						$year, $month, $sides[$year][$month][$day], $day);
+				}
+			}
+
+		foreach (array_keys($sides) as $year)
+			foreach (array_keys($sides[$year]) as $month)
+			{
 				if ($i++) $out[] = sprintf('%d %04d sec#br', 0, 0);
 				$out[] = sprintf('%d %04d require@side#blog/%s/%s', 0, 0, $year, $month);
 			}
