@@ -75,10 +75,10 @@
 		foreach (array_reverse($blog_map[$year]) as $month)
 			foreach (dig_posts($argv[2], $year, $month) as $post)
 			{
-				$news[] = array($year, $month, $post);
-				$sides[$year][$month] = true;
-
 				if ($i < $limit) $i++; else break 3;
+
+				$news[] = array($year, $month, $post[0]);
+				$sides[$year][$month][$post[0]] = $post[1];
 			}
 
 	dump_meta("$argv[2]meta.frag");
