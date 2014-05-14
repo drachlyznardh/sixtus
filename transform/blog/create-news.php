@@ -1,5 +1,7 @@
 <?php
 
+	require_once('utils.php');
+
 	function dig_posts ($prefix, $year, $month)
 	{
 		$c = array();
