@@ -58,11 +58,12 @@
 
 	function dump_c($target, $tabs)
 	{
-		foreach ($tabs as $_) foreach ($_ as $__) $all[] = $__['tab'];
+		foreach ($tabs as $_) foreach ($_ as $__)
+			$all[] = sprintf('array("%s", "%s")', $__['tab'], $__['title']);
 		arsort($all);
 
-		file_put_contents($target, sprintf("<%sphp\n%s = array('%s');\n%s>",
-			'?', '$c', implode("', '", $all), '?'));
+		file_put_contents($target, sprintf("<%sphp\n%s = array(%s);\n%s>",
+			'?', '$c', implode(', ', $all), '?'));
 	}
 
 	function dump_tag($source, $target, $year, $month, $day, $data)
