@@ -76,13 +76,6 @@
 				}
 			}
 
-		foreach (array_keys($sides) as $year)
-			foreach (array_keys($sides[$year]) as $month)
-			{
-				if ($i++) $out[] = sprintf('%d %04d sec#br', 0, 0);
-				$out[] = sprintf('%d %04d require@side#blog/%s/%s', 0, 0, $year, $month);
-			}
-
 		file_put_contents($target, implode("\n", $out));
 	}
 
