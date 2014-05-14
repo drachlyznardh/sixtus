@@ -58,8 +58,12 @@
 
 	function dump_c($target, $tabs)
 	{
-		file_put_contents($target, sprintf("<%sphp\n%s = array('%s');\n%s>",
-			'?', '$c', implode("', '", $tabs), '?'));
+		foreach ($tabs as $_) foreach ($_ as $__)
+			$all[] = sprintf('array("%s", "%s")', $__['tab'], $__['title']);
+		arsort($all);
+
+		file_put_contents($target, sprintf("<%sphp\n%s = array(%s);\n%s>",
+			'?', '$c', implode(', ', $all), '?'));
 	}
 
 	function dump_tag($source, $target, $year, $month, $day, $data)
@@ -163,7 +167,7 @@
 	}
 
 	if (count($current) > 0) $out_rows[$day][] = $current;
-	krsort($out_rows);
+	ksort($out_rows);
 
 	foreach (array_keys($out_rows) as $day)
 	{
@@ -171,7 +175,7 @@
 
 		if ($count > 1)
 			for ($i = 0; $i < $count; $i++)
-				$out_rows[$day][$i]['tab'] = sprintf('%02d%c', $day, 96 + $count - $i);
+				$out_rows[$day][$i]['tab'] = sprintf('%02d%c', $day, 97 + $i);
 		else $out_rows[$day][0]['tab'] = sprintf("%02d", $day);
 	}
 
@@ -184,7 +188,7 @@
 		{
 			for ($i = 0; $i < $limit; $i++)
 			{
-				$tab = sprintf('%02d%c', $day, 96 + $limit - $i);
+				$tab = sprintf('%02d%c', $day, 97 + $i);
 				$names[] = $tab;
 				dump_tag($argv[1],
 					sprintf('%stab-%s.frag', $argv[4], $tab),
@@ -202,7 +206,7 @@
 	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
 		name_that_month($month), $year,
 		scan_for_month($month, $year, $blog_map), $out_rows);
-	dump_c($argv[4].'c.php', array_keys($out_rows));
+	dump_c($argv[4].'c.php', $out_rows);
 	dump_side($argv[1], sprintf('%sside.frag', $argv[4]),
 		$year, $month, $out_rows);
 	exit(0);
