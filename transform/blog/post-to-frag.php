@@ -163,7 +163,7 @@
 	}
 
 	if (count($current) > 0) $out_rows[$day][] = $current;
-	krsort($out_rows);
+	ksort($out_rows);
 
 	foreach (array_keys($out_rows) as $day)
 	{
@@ -171,7 +171,7 @@
 
 		if ($count > 1)
 			for ($i = 0; $i < $count; $i++)
-				$out_rows[$day][$i]['tab'] = sprintf('%02d%c', $day, 96 + $count - $i);
+				$out_rows[$day][$i]['tab'] = sprintf('%02d%c', $day, 97 + $i);
 		else $out_rows[$day][0]['tab'] = sprintf("%02d", $day);
 	}
 
@@ -184,7 +184,7 @@
 		{
 			for ($i = 0; $i < $limit; $i++)
 			{
-				$tab = sprintf('%02d%c', $day, 96 + $limit - $i);
+				$tab = sprintf('%02d%c', $day, 97 + $i);
 				$names[] = $tab;
 				dump_tag($argv[1],
 					sprintf('%stab-%s.frag', $argv[4], $tab),
