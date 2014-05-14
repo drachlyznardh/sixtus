@@ -58,8 +58,11 @@
 
 	function dump_c($target, $tabs)
 	{
+		foreach ($tabs as $_) foreach ($_ as $__) $all[] = $__['tab'];
+		arsort($all);
+
 		file_put_contents($target, sprintf("<%sphp\n%s = array('%s');\n%s>",
-			'?', '$c', implode("', '", $tabs), '?'));
+			'?', '$c', implode("', '", $all), '?'));
 	}
 
 	function dump_tag($source, $target, $year, $month, $day, $data)
@@ -202,7 +205,7 @@
 	dump_meta($argv[1], sprintf('%smeta.frag', $argv[4]),
 		name_that_month($month), $year,
 		scan_for_month($month, $year, $blog_map), $out_rows);
-	dump_c($argv[4].'c.php', array_keys($out_rows));
+	dump_c($argv[4].'c.php', $out_rows);
 	dump_side($argv[1], sprintf('%sside.frag', $argv[4]),
 		$year, $month, $out_rows);
 	exit(0);
