@@ -29,7 +29,7 @@
 		else $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		
 		if ($url) return sprintf('<a href="%s">%s</a>', $url, $title)."\n";
-		return sprintf('<em>%s</em>', $title)."\n";
+		return sprintf('<em id="active-tid">%s</em>', $title)."\n";
 	}
 
 	function tab_prev($attr, $name, $list)
