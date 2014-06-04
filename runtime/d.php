@@ -39,7 +39,7 @@
 		}
 	}
 
-	function parse_request ($request, $styles, $homepage)
+	function parse_request ($full_request, $styles, $homepage)
 	{
 		$style = false;
 		$layout = 0;
@@ -47,6 +47,10 @@
 		$check = false;
 		$path = array();
 		$part = false;
+
+		if (strpos($full_request, '?') !== false)
+			$request = split('\?', $full_request)[0];
+		else $request = $full_request;
 
 		foreach (split('/', $request) as $token) switch ($token)
 		{
