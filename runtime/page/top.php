@@ -17,7 +17,7 @@
 				media="screen and (max-device-width: 1024px) and (min-device-width: 481px)" />
 		<link rel="stylesheet" type="text/css" href="runtime/style/small-screen.css"
 				media="handheld, only screen and (max-device-width: 480px)" />
-	</head><script>
+		<script>
 
 function makeTidVisible()
 {
@@ -28,7 +28,8 @@ function makeTidVisible()
 	return;
 }
 
-	</script><body onLoad="makeTidVisible();">
+		</script>
+	</head><body onLoad="makeTidVisible();">
 		<div id="main">
 			<div id="content">
 				<div id="head">
