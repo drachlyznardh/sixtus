@@ -49,7 +49,7 @@
 		$part = false;
 
 		if (strpos($full_request, '?') !== false)
-			$request = split('\?', $full_request)[0];
+			list($request) = split('\?', $full_request);
 		else $request = $full_request;
 
 		foreach (split('/', $request) as $token) switch ($token)
