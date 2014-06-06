@@ -94,22 +94,24 @@ h3 {
 	margin: 2px 4px 2px 4px;
 }
 
-p.center { text-align: center; }
-p.reverse { text-align: right; }
+p.center { text-align: center; text-indent: 0; }
+p.reverse { text-align: right; text-indent: 0; }
 
 h2.center {
 	text-align: center;
 	padding: .3em;
 	margin: 2px -5px 2px -5px;
+	text-indent: 0;
 }
 h2.reverse {	
 	text-align: right;
 	padding: .3em .7em .3em .1em;
 	margin: 2px -5px 2px 2px;
+	text-indent: 0;
 }
 
-h3.center { text-align: center; }
-h3.reverse { text-align: right; }
+h3.center { text-align: center; text-indent: 0; }
+h3.reverse { text-align: right; text-indent: 0; }
 
 ul { list-style-position: inside; }
 
