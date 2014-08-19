@@ -9,8 +9,8 @@ deploy: $(OFILES)
 
 $(RES_ODIR)%: $(RES_IDIR)%
 	@echo Linking runtime file $@
-	@mkdir -p $(dir $@)
-	@$(CP) $< $@
+	@mkdir -p $(@D)
+	@$(CP) -rL $< $@
 
 .PHONY: clean
 clean:
