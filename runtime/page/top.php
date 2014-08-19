@@ -28,7 +28,17 @@ function makeTidVisible()
 	return;
 }
 
+		</script><!--script type="text/javascript"
+			src="runtime/mathjax/MathJax.js?config=Tex-AMS-MML_HTMLorMML">
+		</script-->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax:{
+				inlineMath: [['`', '`'], ["\\(", "\\)"]], processEscape: true
+			}});
+		</script><script type="text/javascript"
+			src="runtime/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		</script>
+			<!--src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"-->
 	</head><body onLoad="makeTidVisible();">
 		<div id="main">
 			<div id="content">
