@@ -6,19 +6,23 @@
 	require_once('db-utils.php');
 	require_once('direct-map.php');
 
-	function check_direct_file_access ($target)
+	function check_direct_file_access ($input)
 	{
+		if (is_file($input)) $target = $input;
+		else {
+			$potential = current(split('\?', $input));
+			if (is_file($potential)) $target = $potential;
+			else return;
+		}
+
 		require_once('mimes.php');
-		if (is_file($target))
+		$extension = end(split('\.', $target));
+		if (isset($mimetypes[$extension]))
 		{
-			$extension = end(split('\.', $target));
-			if (isset($mimetypes[$extension]))
-			{
-				$mimetype = $mimetypes[$extension];
-				header("Content-Type: $mimetype");
-				readfile($target);
-				exit(0);
-			}
+			$mimetype = $mimetypes[$extension];
+			header("Content-Type: $mimetype");
+			readfile($target);
+			exit(0);
 		}
 	}
 
@@ -87,7 +91,7 @@
 		return array($style, $layout, $download, $check, $path, $part);
 	}
 
-	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
+	$request['original'] = urldecode($_SERVER['REQUEST_URI']);
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
 	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
@@ -103,7 +107,7 @@
 	list($attr['style'], $attr['layout'],
 		$attr['download'], $attr['check'],
 		$request['path'], $request['part']) =
-	parse_request($request['original'], $style, $runtime['home']);
+	parse_request(mb_strtolower($request['original'], 'UTF-8'), $style, $runtime['home']);
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
 	$target_file = sprintf('%smeta.php', $target_dir);
