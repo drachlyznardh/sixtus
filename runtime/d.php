@@ -91,7 +91,6 @@
 		return array($style, $layout, $download, $check, $path, $part);
 	}
 
-	#$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
 	$request['original'] = urldecode($_SERVER['REQUEST_URI']);
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
@@ -108,7 +107,6 @@
 	list($attr['style'], $attr['layout'],
 		$attr['download'], $attr['check'],
 		$request['path'], $request['part']) =
-	#parse_request($request['original'], $style, $runtime['home']);
 	parse_request(mb_strtolower($request['original'], 'UTF-8'), $style, $runtime['home']);
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
