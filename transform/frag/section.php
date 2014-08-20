@@ -164,7 +164,7 @@
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
 			
-			return $result;
+			return $result."\n";
 		}
 
 		private function full_tid ($f, $index, $args)
@@ -200,7 +200,7 @@
 			if ($after) $result .= $after;
 			
 
-			return $result;
+			return $result."\n";
 		}
 
 		private function full_img ($args)
