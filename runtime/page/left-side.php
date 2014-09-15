@@ -5,7 +5,7 @@
 		foreach ($list as $e)
 		{
 			if ($i++) printf('%s', '<div class="spacer"></div>');
-			require_once(docroot().$e);
+			require(docroot().$e);
 		}
 	}
 	
