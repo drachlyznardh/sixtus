@@ -8,7 +8,7 @@ DB_DIR     := $(DEST_DIR)runtime/db/
 CLOUD_FILE := $(DB_DIR)cloud.php
 
 all: $(TCHS) $(CLOUD_FILE)
-$(COULD_FILE): $(TCHS)
+$(CLOUD_FILE): $(TCHS)
 
 %.tch: %.pag
 	@echo Generating tags for page $<
