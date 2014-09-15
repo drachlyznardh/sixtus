@@ -17,7 +17,8 @@
 	function deploy_one ($data)
 	{
 		$key = array_keys($data)[0];
-		return sprintf("\t\treturn '%s';\n", $data[$key]);
+		if ($data[$key]) return sprintf("\t\treturn '%s';\n", $data[$key]);
+		else return deploy_default();
 	}
 
 	function deploy_many ($data)
