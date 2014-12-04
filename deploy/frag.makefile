@@ -1,7 +1,7 @@
 
 PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
 DEPS := $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
-TCHS := $(patsubst $(SRC_DIR)%.pag, $(FRAG_DIR)%.tch, $(PAGS))
+TCHS := $(patsubst $(SRC_DIR)%.pag, $(TCH_DIR)%.frag.tch, $(PAGS))
 
 all: touches
 
@@ -15,13 +15,13 @@ touches: $(TCHS)
 $(DEP_DIR)%.dep: $(SRC_DIR)%.pag
 	@echo Generating dependencies for page $<
 	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_DEP) $< $(SRC_DIR) $(patsubst $(SRC_DIR)%.pag, $(FRAG_DIR)%.tch, $<) $@
+	@php5 -f $(PAG_TO_DEP) $< $(SRC_DIR) $(patsubst $(SRC_DIR)%.pag, $(TCH_DIR)%.tch, $<) $@
 
 ### Fragment generation
-$(FRAG_DIR)%.tch: $(SRC_DIR)%.pag
+$(TCH_DIR)%.frag.tch: $(SRC_DIR)%.pag
 	@echo Splitting up $< info fragments
-	@mkdir -p $(patsubst %.tch, %/, $@)
-	@php5 -f $(PAG_TO_FRAG) $< $(SRC_DIR) $(patsubst %.tch, %/, $@)
+	@mkdir -p $(patsubst $(TCH_DIR)%.frag.tch, $(FRAG_DIR)%/, $@)
+	php5 -f $(PAG_TO_FRAG) $< $(SRC_DIR) $(patsubst $(TCH_DIR)%.frag.tch, $(FRAG_DIR)%/, $@)
 	@touch $@
 
 #Cleaning
