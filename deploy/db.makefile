@@ -1,5 +1,5 @@
 
-SRCS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
+SRCS := $(sort $(shell find $(SRC_DIR) -type f -name '*.pag'))
 TCHS := $(SRCS:.pag=.tch)
 
 PAG_TO_CLOUD = $(PHP) -f $(PREFIX)transform/pag-to-cloud.php
