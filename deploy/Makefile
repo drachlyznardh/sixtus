@@ -1,118 +1,64 @@
 
-PREFIX := /opt/devel/web/sixtus/
-LYZ_TO_PHP  := $(PREFIX)transform/lyz-to-php.php
-LYZ_TO_DEP  := $(PREFIX)transform/lyz-to-dep.php
-TAG_TO_DEP  := $(PREFIX)transform/tag-to-dep.php
-PAG_TO_TAG  := $(PREFIX)transform/pag-to-tag.php
-DBS_TO_TOT  := $(PREFIX)transform/dbs-to-tot.php
-TAG_TO_DBE  := $(PREFIX)transform/tag-to-dbe.php
-MAP_TO_RMAP := $(PREFIX)transform/map-to-rmap.php
-export TCH_TO_CLOUD := $(PREFIX)transform/tch-to-cloud.php
+export PREFIX := /opt/devel/web/sixtus/
+include $(PREFIX)deploy/vars.makefile
+include $(PREFIX)deploy/maps.makefile
 
-export SRC_DIR  := $(IN_DIR)src/
-export RES_DIR  := $(IN_DIR)res/
-export SYS_DIR  := $(IN_DIR)sys/
-export DEP_DIR  := $(IN_DIR).dep/
-export TAG_DIR  := $(IN_DIR).tag/
-export DB_DIR   := $(IN_DIR).db/
-export DEST_DIR := $(OUT_DIR)
+### Other makefiles
+MAKE_RUNTIME   := $(MAKE) $(QUIET) -f $(PREFIX)deploy/runtime.makefile
+MAKE_RESOURCES := $(MAKE) $(QUIET) -f $(PREFIX)deploy/resources.makefile
+MAKE_BLOG      := $(MAKE) $(QUIET) -f $(PREFIX)deploy/blog.makefile
+MAKE_DB        := $(MAKE) $(QUIET) -f $(PREFIX)deploy/db.makefile
+MAKE_PAGES     := $(MAKE) $(QUIET) -f $(PREFIX)deploy/pages.makefile
+MAKE_PAGE      := $(MAKE) $(QUIET) -f $(PREFIX)deploy/page.makefile
+MAKE_FRAG      := $(MAKE) $(QUIET) -f $(PREFIX)deploy/frag.makefile
 
-export CLOUD_FILE   := $(IN_DIR).cloud.php
-export O_CLOUD_FILE := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(CLOUD_FILE))
-export MAP_FILE     := $(IN_DIR)sys/sys/runtime.php
-export RMAP_FILE    := $(IN_DIR).rmap.php
-export O_RMAP_FILE  := $(patsubst $(IN_DIR)%, $(DEST_DIR)%, $(RMAP_FILE))
+sixtus-build: sixtus-map sixtus-tag
 
-LYZS := $(sort $(shell find $(SRC_DIR) -name '*.lyz'))
-PAGS := $(sort $(shell find $(SRC_DIR) -name '*.pag'))
-SYSS := $(sort $(shell find $(SYS_DIR) -type f))
-RESS := $(sort $(shell find $(RES_DIR) -type f))
+sixtus-deploy: sixtus-build sixtus-page sixtus-runtime sixtus-resources
 
-PHPS   := $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $(LYZS))
-PHPS   += $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $(PAGS))
-P_DEPS := $(patsubst $(SRC_DIR)%.lyz, $(DEP_DIR)%.dep, $(LYZS))
-P_DEPS += $(patsubst $(SRC_DIR)%.pag, $(DEP_DIR)%.dep, $(PAGS))
-TAGS   := $(patsubst $(SRC_DIR)%.pag, $(TAG_DIR)%.php, $(PAGS))
-T_DEPS := $(TAGS:.php=.dep)
-O_RESS := $(patsubst $(RES_DIR)%, $(DEST_DIR)%, $(RESS))
-O_SYSS := $(patsubst $(SYS_DIR)%, $(DEST_DIR)%, $(SYSS))
+sixtus-runtime:
+	@$(MAKE_RUNTIME)
+	
+sixtus-runtime-clean:
+	@$(MAKE_RUNTIME) clean
+	
+sixtus-resources:
+	@$(MAKE_RESOURCES)
 
-all: deploy
-deploy: content tagging $(O_CLOUD_FILE) $(O_RMAP_FILE)
-content: pages resources system
-tagging: tags db
+sixtus-resources-clean:
+	@$(MAKE_RESOURCES) clean
 
--include $(P_DEPS) $(T_DEPS)
+sixtus-frag:
+	@$(MAKE_FRAG)
 
-db: $(TAGS)
-	@$(MAKE) -f /opt/devel/web/sixtus/deploy/db.makefile
+sixtus-frag-clean:
+	@$(MAKE_FRAG) clean
 
-pages: $(PHPS)
-resources: $(O_RESS)
-system: $(O_SYSS)
-tags: $(TAGS)
+sixtus-blog:
+	@$(MAKE_BLOG)
 
-#Dependency generation
-$(DEP_DIR)%.dep: $(SRC_DIR)%.lyz
-	@echo Generating dependencies for page $<
-	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.lyz, $(DEST_DIR)%.php, $<) > $@
+sixtus-blog-clean:
+	@$(MAKE_BLOG) clean
 
-$(DEP_DIR)%.dep: $(SRC_DIR)%.pag
-	@echo Generating dependencies for page $<
-	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_DEP) $< $(patsubst $(SRC_DIR)%.pag, $(DEST_DIR)%.php, $<) > $@
+sixtus-page: sixtus-frag
+	@$(MAKE_PAGE)
 
-$(TAG_DIR)%.dep: $(TAG_DIR)%.php
-	@echo Generating tag reverse dependecy $<
-	@php5 -f $(TAG_TO_DEP) $< $@ $(DB_DIR)
+sixtus-page-clean:
+	@$(MAKE_PAGE) clean
 
-#Tag generation
-$(TAG_DIR)%.php: $(SRC_DIR)%.pag $(RMAP_FILE)
-	@echo Generating tags for page $<
-	@mkdir -p $(dir $@)
-	@php5 -f $(PAG_TO_TAG) $(SRC_DIR) $(DB_DIR) $< $@ $(RMAP_FILE)
+sixtus-tag:
+	@$(MAKE_DB)
 
-$(RMAP_FILE): $(MAP_FILE)
-	@echo Generating reverse map
-	@php5 -f $(MAP_TO_RMAP) $< $@
+sixtus-tag-clean:
+	@$(MAKE_DB) clean
 
-#File generation
-$(DEST_DIR)%.php: $(SRC_DIR)%.lyz
-	@echo Generating page $@
-	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
+.PHONY: sixtus-blog-clean, sixtus-frag-clean, sixtus-page-clean
+sixtus-clean: sixtus-map-clean sixtus-frag-clean sixtus-page-clean
 
-$(DEST_DIR)%.php: $(SRC_DIR)%.pag
-	@echo Generating page $@
-	@mkdir -p $(dir $@)
-	@php5 -f $(LYZ_TO_PHP) $(SRC_DIR) $< > $@ || (more $@ && $(RM) $@ && return 1)
+.PHONY: sixtus-resources-clean, sixtus-runtime-clean, sixtus-tag-clean
+sixtus-clean: sixtus-resources-clean sixtus-runtime-clean sixtus-tag-clean
 
-#File linking
-$(DEST_DIR)%: $(RES_DIR)%
-	@echo Linking resource file $@
-	@mkdir -p $(dir $@)
-	@$(LN_CMD) $< $@
-
-$(DEST_DIR)%: $(SYS_DIR)%
-	@echo Linking system file $@
-	@mkdir -p $(dir $@)
-	@$(LN_CMD) $< $@
-
-$(DEST_DIR)%: $(IN_DIR)%
-	@echo Linking database entry $@
-	@mkdir -p $(dir $@)
-	@$(LN_CMD) $< $@
-
-$(DEST_DIR)%.php: $(IN_DIR)%.php
-	@echo Linking autogenerated source $@
-	@$(LN_CMD) $< $@
-
-#Cleaning
-.PHONY: clean
-clean:
-	@$(RM) $(PHPS)
-	@$(RM) $(O_RESS)
-	@$(RM) $(O_SYSS)
-	@$(RM) -rf $(TAG_DIR) $(DB_DIR)
+.PHONY: sixtus-clean
+sixtus-clean: 
+	@rm -rf $(BUILD_DIR)
 

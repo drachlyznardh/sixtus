@@ -1,0 +1,60 @@
+
+.wide-screen { display: none; }
+.small-screen { display: none; }
+
+body, input {
+	margin: 0;
+	font: 10pt/12pt 'Averia Serif Libre', cursive;
+	color: #000000;
+}
+
+div#content {
+	width: 50%;
+	padding-left:  25%;
+	padding-right: 25%;
+	padding-top: 5px;
+	overflow: hidden;
+}
+
+div#right-side {
+	position: fixed;
+	width: 23%;
+	height: 90%;
+	right: 1%;
+	top: 5%;
+	overflow: auto;
+}
+
+div#left-side {
+	position: fixed;
+	width: 23%;
+	height: 90%;
+	left: 1%;
+	top: 5%;
+	overflow: auto;
+}
+
+div#core {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+div#sail-the-sea {
+	float: none;
+	width: 70%;
+	margin-left: 10%;
+}
+
+div#stuff-is-valid {
+	float: none;
+	width: 70%;
+	margin-left: 15%;
+}
+
+div#roses-are-red {
+	float: none;
+	width: 70%;
+	margin-left: 20%;
+}
+

@@ -1,7 +1,8 @@
 <?php
 	class Section
 	{
-		private $id = false;
+		public  $id = false;
+
 		private $content = array();
 		private $context = false;
 		private $environment;
@@ -10,24 +11,18 @@
 		public function getContent()
 		{
 			$this->closeContext();
-
 			if (count($this->content) == 0) return;
 
-			$content = false;
-			foreach ($this->content as $_)
-				$content .= $_;
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '<div class="section">', '>');
+			if ($this->id)
+				$result[] = sprintf('<a id="%s"></a>', mb_strtoupper($this->id, 'UTF-8'));
+			$result[] = implode("\n", $this->content);
+			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '</div>', '>');
 
-			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '<div class="section">', '>');
-			if ($this->id) $result[] = sprintf('<a id="%s"></a>', $this->id);
-			$result[] = $content;
-			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$sec', '</div>', '>');
-
-			return implode($result);
+			return implode("\n", $result);
 		}
 
-		public function setId($id) { $this->id = $id; }
-
-		public function parse($index, $command, $cmd_attr, $cmd_args)
+		public function parse($f, $index, $command, $cmd_attr, $cmd_args)
 		{
 			switch ($command)
 			{
@@ -35,36 +30,36 @@
 				
 				case '': $this->make_text(trim($cmd_args[0])); break;
 				case 'id': $this->make_id($cmd_args[1]); break;
-				case 'p': $this->make_p($index, $cmd_args, $cmd_attr); break;
-				case 'c': $this->make_c($index, $cmd_args, $cmd_attr); break;
-				case 'r': $this->make_r($index, $cmd_args, $cmd_attr); break;
-				case 'tid': $this->make_tid($index, $cmd_args); break;
-				case 'link': $this->make_link($index, $cmd_args); break;
-				case 'title': $this->make_title($index, $cmd_args, $cmd_attr); break;
-				case 'stitle': $this->make_stitle($index, $cmd_args, $cmd_attr); break;
+				case 'p': $this->make_p($f, $index, $cmd_args, $cmd_attr); break;
+				case 'c': $this->make_c($f, $index, $cmd_args, $cmd_attr); break;
+				case 'r': $this->make_r($f, $index, $cmd_args, $cmd_attr); break;
+				case 'tid': $this->make_tid($f, $index, $cmd_args); break;
+				case 'link': $this->make_link($f, $index, $cmd_args); break;
+				case 'title': $this->make_title($f, $index, $cmd_args, $cmd_attr); break;
+				case 'stitle': $this->make_stitle($f, $index, $cmd_args, $cmd_attr); break;
 				case 'img': $this->make_img($cmd_args); break;
-				case 'begin': $this->make_begin($cmd_args, $cmd_attr); break;
-				case 'end': $this->make_end($cmd_args, $cmd_attr); break;
+				case 'begin': $this->make_begin($f, $index, $cmd_args, $cmd_attr); break;
+				case 'end': $this->make_end($f, $index, $cmd_args, $cmd_attr); break;
 				case 'br': $this->make_break(); break;
-				case 'clear': $this->make_clear($index, $cmd_args); break;
-				case 'speak': $this->make_intra($index, $cmd_args, $cmd_attr); break;
-				case 'search': $this->make_search($index, $cmd_args, $cmd_attr); break;
+				case 'clear': $this->make_clear($f, $index, $cmd_args); break;
+				case 'speak': $this->make_intra($f, $index, $cmd_args, $cmd_attr); break;
+				case 'search': $this->make_search($f, $index, $cmd_args, $cmd_attr); break;
 
 				case 'require':
-					$this->make_require($index, $cmd_args, $cmd_attr);
+					$this->make_require($f, $index, $cmd_args, $cmd_attr);
 					break;
 
-				default: $this->error($index, $command);
+				default: fail("[Section] Unknown command [$command]", $f, $index); $this->error($f, $index, $command);
 			}
 		}
 
-		private function error ($index, $command)
+		private function error ($f, $index, $command)
 		{
 			printf("Section ERROR[%s] in %s @line %d\n", $command, $index[0], $index[1]);
 			exit(1);
 		}
 
-		public function make_require ($lineno, $args, $attr)
+		public function make_require ($f, $l, $args, $attr)
 		{
 			$this->closeContext();
 
@@ -76,25 +71,27 @@
 				case 'tab':
 				case 'ghost':
 					if (count($attr) < 2)
-						fail("Section->Make_Require: Ghost requires a name.\n");
+						fail("Section->Make_Require: Tabs & Ghosts require a name.\n");
+					$this->content[] = sprintf("<%s=require_one(%s, '%s/%s-%s.php')%s>",
+						'?', '$attr', $args[1], $attr[1], $attr[2], '?');
+					break;
 				case 'side':
+					$this->content[] = sprintf("<%s=require_one(%s, '%s/side.php')%s>",
+						'?', '$attr', $args[1], '?');
+					break;
 				case 'body':
-					if (!isset($attr[2])) $attr[2] = false;
-					$this->content[] = sprintf("\n%s require(%s);\n",
-						$open, function_file($attr[1], $args[1], $attr[2]));
-					$this->content[] = sprintf("\t%s (%s, %s, %s); %s\n",
-						function_name($attr[1], $args[1], $attr[2]),
-						'$attr', 'false', 'false', $close);
+					$this->content[] = sprintf("<%s=require_all(%s, '%s/meta.php')%s>",
+						'?', '$attr', $args[1], '?');
 					break;
 				default:
-					fail("Section->Make_Require: [$attr[1]] unknown.\n");	
+					fail("Section->Make_Require: [$attr[1]] unknown.\n", $f, $l);	
 			}
 		}
 
-		private function switchContext($new)
+		private function switchContext($new, $direction)
 		{
 			$this->closeContext();
-			$this->openContext($new);
+			$this->openContext($new, $direction);
 		}
 
 		private function closeContext()
@@ -109,34 +106,30 @@
 				case 'outside': $this->content[] = '</div>'; break;
 			}
 			$this->context = false;
-			// $this->content[] = "\n";
 		}
 
-		private function openContext($new)
+		private function openContext($new, $direction)
 		{
 			if ($this->context == $new) return;
 			
-			if ($this->context == 'r' && $new == 'p') return;
-			if ($this->context == 'p' && $new == 'r') return;
-			if ($this->context == 'r' && $new == 'c') return;
-			if ($this->context == 'p' && $new == 'c') return;
-			if ($this->context == 'c' && $new == 'p') return;
-			if ($this->context == 'c' && $new == 'r') return;
-			
 			$this->context = $new;
-			#$this->content[] = "\n";
 			switch ($this->context)
 			{
-				case 'p': $this->content[] = '<p>'; break;
-				case 'c': $this->content[] = '<p class="center">'; break;
-				case 'r': $this->content[] = '<p class="reverse">'; break;
+				case 'p': switch ($direction) {
+					case '':
+					case 'p': $this->content[] = '<p>'; break;
+					case 'c': $this->content[] = '<p class="center">'; break;
+					case 'r': $this->content[] = '<p class="reverse">'; break;
+				}; break;
+
 				case 'li': $this->content[] = '<li>'; break;
+
 				case 'inside': $this->content[] = '<div class="inside">'; break;
 				case 'outside': $this->content[] = '<div class="outside">'; break;
 			}
 		}
 
-		private function full_link ($index, $args)
+		private function full_link ($f, $index, $args)
 		{
 			if ($args[1]) $destination = '\''.polish_line($args[1]).'\'';
 			else $destination = '$attr[\'self\']';
@@ -164,17 +157,17 @@
 			$count = count($args);
 			if ($count > 3) $tab = "'$args[3]'"; else $tab = 'false';
 			if ($count > 4) $hash = "'$args[4]'"; else $hash = 'false';
-			if ($count > 5) $this->error($index, 'Link: too many arguments');
+			if ($count > 5) $this->error($f, $index, 'Link: too many arguments');
 			
 			$url = '<'."?=make_canonical(\$attr, $destination, $tab, $hash)?".'>';
 			if ($before) $result = $before; else $result = false;
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
 			
-			return $result;
+			return $result."\n";
 		}
 
-		private function full_tid ($index, $args)
+		private function full_tid ($f, $index, $args)
 		{
 			$argument = polish_line($args[1]);
 			$destination = "\$search['page'][0]";
@@ -200,14 +193,14 @@
 			$count = count($args);
 			if ($count > 2) $tab = '\''.mb_strtolower($args[2], 'UTF-8').'\''; else $tab = "false";
 			if ($count > 3) $hash = '\''.$args[3].'\''; else $hash = "false";
-			if ($count > 4) $this->error($index, 'Tid: too many arguments');
+			if ($count > 4) $this->error($f, $index, 'Tid: too many arguments');
 			
 			if ($before) $result = $before; else $result = false;
 			$result .= "<?=make_tid(\$attr, '".polish_line($title)."', $tab, $hash)?>";
 			if ($after) $result .= $after;
 			
 
-			return $result;
+			return $result."\n";
 		}
 
 		private function full_img ($args)
@@ -237,13 +230,13 @@
 				$text = polish_line($text);
 
 				if (preg_match('/^</', $text)) {
-					$this->content[] = " $text";
+					$this->content[] = $text;
 				} else if (preg_match('/^>/', $text)) {
-					$this->openContext($this->defaultContext);
-					$this->content[] = " <span class=\"green\">$text</span>\n";
+					$this->openContext($this->defaultContext, false);
+					$this->content[] = "<span class=\"green\">$text</span>\n";
 				} else {
-					$this->openContext($this->defaultContext);
-					$this->content[] = " $text\n";
+					$this->openContext($this->defaultContext, false);
+					$this->content[] = $text;
 				}
 			
 			} else $this->closeContext();
@@ -254,28 +247,28 @@
 			$this->content[] = '<a id="'.$id.'"></a>';
 		}
 
-		private function make_p ($index, $cmd_args, $cmd_attr)
+		private function make_p ($f, $index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext($this->defaultContext);
-			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
+			$this->switchContext($this->defaultContext, false);
+			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
 			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
-		private function make_c ($index, $cmd_args, $cmd_attr)
+		private function make_c ($f, $index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext('c');
-			if (count($cmd_args) > 3) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->make_text($cmd_args[1]);
+			$this->switchContext('p', 'c');
+			if (count($cmd_args) > 3) $this->recursive($f, $index, $cmd_args, $cmd_attr);
+			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
-		private function make_r ($index, $cmd_args, $cmd_attr)
+		private function make_r ($f, $index, $cmd_args, $cmd_attr)
 		{
-			$this->switchContext('r');
-			if (count($cmd_args) > 2) $this->recursive($index, $cmd_args, $cmd_attr);
-			else $this->make_text($cmd_args[1]);
+			$this->switchContext('p', 'r');
+			if (count($cmd_args) > 2) $this->recursive($f, $index, $cmd_args, $cmd_attr);
+			else if ($cmd_args[1]) $this->make_text($cmd_args[1]);
 		}
 
-		private function recursive ($index, $cmd_args, $cmd_attr)
+		private function recursive ($f, $index, $cmd_args, $cmd_attr)
 		{
 			array_shift($cmd_args);
 			if (preg_match('/@/', $cmd_args[0])) {
@@ -285,53 +278,49 @@
 				$command = $cmd_args[0];
 				$cmd_attr = array($command);
 			}
-			$this->parse($index, $command, $cmd_attr, $cmd_args);
+			$this->parse($f, $index, $command, $cmd_attr, $cmd_args);
 		}
 
-		private function make_tid ($index, $args)
+		private function make_tid ($f, $index, $args)
 		{
-			$this->content[] = ' '.$this->full_tid($index, $args);
+			$this->content[] = $this->full_tid($f, $index, $args);
 		}
 
-		private function make_link ($index, $args)
+		private function make_link ($f, $index, $args)
 		{
-			$this->content[] = ' '.$this->full_link($index, $args);
+			$this->content[] = $this->full_link($f, $index, $args);
 		}
 
-		private function make_title ($lineno, $cmd_args, $cmd_attr)
+		private function make_title ($f, $l, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
-			if ($cmd_attr and $cmd_attr[1] == 'right')
+			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h2 class="reverse">';
+			else if (isset($cmd_attr[1]) and $cmd_attr[1] == 'center')
+				$open_tag = '<h2 class="center">';
 			else $open_tag = '<h2>';
 
 			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
-				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+				$this->parse($f, $l, $cmd_args[0], $cmd_attr, $cmd_args);
 			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h2>'."\n";
 		}
 
-		private function make_titler ($lineno, $args, $attr)
+		private function make_stitle ($f, $l, $cmd_args, $cmd_attr)
 		{
 			$this->closeContext();
-			$this->content[] = "\n";
-			$this->content[] = '<h2 class="reverse">'.$args[1].'</h2>';
-			$this->content[] = "\n";
-		}
-
-		private function make_stitle ($lineno, $cmd_args, $cmd_attr)
-		{
-			$this->closeContext();
-			if ($cmd_attr and $cmd_attr[1] == 'right')
+			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h3 class="reverse">';
+			else if (isset($cmd_attr[1]) and $cmd_attr[1] == 'center')
+				$open_tag = '<h3 class="center">';
 			else $open_tag = '<h3>';
 
 			$this->content[] = "\n".$open_tag;
 			if (count($cmd_args) > 2) {
 				array_shift($cmd_args);
-				$this->parse($lineno, $cmd_args[0], $cmd_attr, $cmd_args);
+				$this->parse($f, $l, $cmd_args[0], $cmd_attr, $cmd_args);
 			} else $this->content[] = polish_line($cmd_args[1]);
 			$this->content[] = '</h3>'."\n";
 		}
@@ -342,7 +331,7 @@
 			$this->content[] = $this->full_img($args);
 		}
 
-		private function make_begin ($args, $attr)
+		private function make_begin ($f, $l, $args, $attr)
 		{
 			if (preg_match('/@/', $args[1])) {
 				$side = preg_split('/@/', $args[1]);
@@ -392,14 +381,14 @@
 						$this->content[] = "<div class=\"$env-$side[1]-out\">";
 						$this->content[] = "<div class=\"$env-$side[1]-in\">";
 					}
-					else fail ("Environment[$env] needs a side");
+					else fail ("Environment[$env] needs a side", $f, $l);
 					break;
 				default:
-					fail("Unknown environment[$env]\n");
+					fail("Unknown environment[$env]\n", $f, $l);
 			}
 		}
 
-		private function make_end ($args, $attr)
+		private function make_end ($f, $l, $args, $attr)
 		{
 			$this->closeContext();
 			switch ($args[1])
@@ -424,7 +413,7 @@
 					$this->content[] = '</div></div>';
 					break;
 				default:
-					fail("Unknown environment[$args[1]]");
+					fail("Unknown environment[$args[1]]", $f, $l);
 			}
 		}
 
@@ -434,7 +423,7 @@
 			$this->content[] = '<div class="spacer"></div>'."\n";
 		}
 
-		private function make_clear ($lineno, $args)
+		private function make_clear ($l, $args)
 		{
 			$this->closeContext();
 			if (count($args) > 1 && $args[1]) $clear = $args[1];
@@ -442,21 +431,23 @@
 			$this->content[] = "\n".'<div style="float:none; clear:'.$clear.'"></div>'."\n";
 		}
 
-		private function make_intra ($lineno, $args, $attr)
+		private function make_intra ($f, $l, $args, $attr)
 		{
 			$result = false;
 			if (count($args) > 2)
-				$this->error($lineno, 'Speak: too many arguments');
+				$this->error($f, $l, 'Speak: too many arguments');
 	
-			$_ = preg_split('/@/', $args[1]);
+			$_ = preg_split('/@/', polish_line($args[1]));
 
-			$result = $this->dialog($attr[1], polish_line($_[0]));
+			$result = $this->dialog($attr[1], $_[0]);
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.polish_line($_[0]).' – ';
-				$result .= $this->dialog($attr[1], polish_line($_[1]));
+				$result .= ' – '.$_[0];
 				array_shift($_);
+
+				if (count($_))
+					$result .= ' – '.$this->dialog($attr[1], $_[0]);
 				array_shift($_);
 			}
 
@@ -468,7 +459,7 @@
 			return ' <span class="'.$author.'" title="'.$author.'">« '.$line.' »</span> ';
 		}
 
-		private function make_search ($index, $args, $attr) 
+		private function make_search ($f, $index, $args, $attr) 
 		{
 			switch ($args[1])
 			{
