@@ -16,6 +16,8 @@
 	
 	function make_tid($attr, $title, $tab, $hash)
 	{
+		if ($hash) $hash = mb_strtoupper($hash, 'UTF-8');
+
 		if ($attr['layout'] == 0 || $attr['layout'] == 2)
 			if ($attr['part'] == $tab)
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
@@ -23,10 +25,11 @@
 			else
 				if ($hash) $url = make_canonical ($attr, $attr['self'], $tab, $hash);
 				else $url = make_canonical ($attr, $attr['self'], $tab);
+		else if ($hash) $url = make_canonical ($attr, $attr['self'], false, $hash);
 		else $url = make_canonical ($attr, $attr['self'], false, mb_strtoupper($tab, 'UTF-8'));
 		
 		if ($url) return sprintf('<a href="%s">%s</a>', $url, $title);
-		return sprintf('<em>%s</em>', $title);
+		return sprintf('<em id="active-tid">%s</em>', $title);
 	}
 
 	function tab_prev($attr, $name, $list)
@@ -263,8 +266,13 @@
 	function missing_tab ($tabname)
 	{
 		printf('<div class="section">');
-		printf('<h3 class="reverse">Missing tab</h3>');
-		printf('<p>This page has no tab [%s]. Sorry.</p>', $tabname);
+		if ($tabname) {
+			printf('<h3 class="reverse">Missing tab</h3>');
+			printf('<p>This page has no tab [%s]. Sorry.</p>', $tabname);
+		} else {
+			printf('<h3 class="reverse">Empty page</h3>');
+			printf('<p>This page has no tabs. Sorry.</p>');
+		}
 		printf('</div>');
 	}
 ?>

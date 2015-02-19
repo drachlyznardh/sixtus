@@ -42,7 +42,7 @@ $(BLOG_ODIR)%.year:
 	@$(PHP) -f $(CREATE_YEAR) $(notdir $(basename $@)) $(BLOG_MAP) $(basename $@)/
 	@touch $@
 
-$(BLOG_ODIR).news:
+$(BLOG_ODIR).news: $(POSTS)
 	@echo Generating news page $@
 	@mkdir -p $(basename $@)/
 	@$(PHP) -f $(CREATE_NEWS) $(BLOG_MAP) $(basename $@)

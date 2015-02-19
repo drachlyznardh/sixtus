@@ -2,6 +2,12 @@
 
 	require('frag/utils.php');
 
+	function fix_tab_title ($found)
+	{
+		$result = mb_strtolower($found, 'UTF-8');
+		return preg_replace('/ /', '-', $result);
+	}
+
 	function find_include_file ($localdir, $sourcedir, $target)
 	{
 		if (is_file($target)) return $target;
@@ -15,22 +21,15 @@
 		return false;
 	}
 
-	function output_on_file ($type, $target, $sourcefile, $content)
+	function output_on_file ($type, $id, $target, $sourcefile, $content)
 	{
 		if (count($content) < 1) return;
-		
-		/*
-		$current = basename($target);
-		$page = basename(dirname($target));
-		$location = dirname(dirname($target));
-		
-		$out[] = sprintf("#### file %s %s %s\n", $location, $page, $current);
-		*/
 		
 		$out[] = sprintf("#### %d\n", $type);
 		$i = 0;
 		foreach ($sourcefile as $_) $out[] = sprintf("%d %s\n", $i++, $_);
-		$out[] = sprintf("####\n");
+		if ($id) $out[] = sprintf("#### %s\n", mb_strtoupper($id, 'UTF-8'));
+		else $out[] = sprintf("####\n");
 		foreach($content as $_) $out[] = sprintf("%d %04d %s\n", $_[0], $_[1], $_[2]);
 
 		if (file_put_contents($target, $out) === false)
@@ -38,7 +37,6 @@
 			printf("Could not write file %s.\n", $target);
 			exit(1);
 		}
-		#printf("\tFragment file %s extracted.\n", basename($target));
 	}
 
 	class Splitter {
@@ -99,14 +97,16 @@
 						if ($this->state != 'body' && $this->state != 'ghost')
 							fail('No tabs allowed in '.$this->state,
 								$fileno, $lineno + 1);
-						$this->{$this->state}[$par[1]] = array();
-						$this->current = &$this->{$this->state}[$par[1]];
-						$this->current[] = array($fileno, $lineno + 1,
-							sprintf('id#%s', mb_strtoupper($par[1], 'UTF-8')));
+						$title = fix_tab_title($par[1]);
+						$this->{$this->state}[$title] = array();
+						$this->current = &$this->{$this->state}[$title];
 						break;
 					case 'include':
 						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
 						break;
+					case 'require':
+						if (strlen($par[1]) < 1)
+							$line .= substr($target, strlen($indir), -4);
 					default:
 						$this->current[] = array($fileno, $lineno + 1, $line);
 				}
@@ -131,18 +131,18 @@
 			$filename = find_include_file($localdir, $indir, $target);
 			
 			if ($filename) $this->parse($filename, $indir);
-			else fail ('Unable to locate '.$target, $this->parsedfiles[$fileno], $lineno);
+			else fail ('Unable to locate ['.$target.']['.$filename.']', $this->parsedfiles[$fileno], $lineno);
 
 		}
 
 		private function dump ($outdir) {
 
-			output_on_file(true, $outdir.'meta.frag', $this->parsedfiles, $this->meta);
+			output_on_file(true, false, $outdir.'meta.frag', $this->parsedfiles, $this->meta);
 			foreach(array_keys($this->body) as $_)
-				output_on_file(false, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
+				output_on_file(false, $_, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
 			foreach(array_keys($this->ghost) as $_)
-				output_on_file(false, $outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
-			output_on_file(false, $outdir.'side.frag', $this->parsedfiles, $this->side);
+				output_on_file(false, $_, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
+			output_on_file(false, false, $outdir.'side.frag', $this->parsedfiles, $this->side);
 		}
 
 		public function split ($target, $indir, $outdir)

@@ -18,7 +18,7 @@
 	$rows = file($argv[1], FILE_IGNORE_NEW_LINES);
 
 	foreach ($rows as $_)
-		if (preg_match('/include#/', $_))
+		if (preg_match('/include#/', $_) or preg_match('/include@static#/', $_))
 		{
 			$request = split('#', $_);
 			$include = make_include_filename ($argv[2], dirname($argv[1]), $request[1]);

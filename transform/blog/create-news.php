@@ -1,5 +1,7 @@
 <?php
 
+	require_once('utils.php');
+
 	function dig_posts ($prefix, $year, $month)
 	{
 		$c = array();
@@ -35,9 +37,13 @@
 		$out[] = sprintf('####');
 
 		$i = 0;
+		$m = $news[0][1];
 		foreach ($news as $_)
 		{
-			if ($i++) $out[] = sprintf('%d %04d sec#br', 0, 0);
+			if ($i++)
+				if ($m == $_[1]) $out[] = sprintf('%d %04d sec#', 0, 0);
+				else $out[] = sprintf('%d %04d sec#br', 0, 0);
+			$m = $_[1];
 			$out[] = sprintf('%d %04d require@tab@%s#blog/%s/%s',
 				0, 0, $_[2], $_[0], $_[1]);
 		}
@@ -55,8 +61,19 @@
 		foreach (array_keys($sides) as $year)
 			foreach (array_keys($sides[$year]) as $month)
 			{
-				if ($i++) $out[] = sprintf('%d %04d sec#br', 0, 0);
-				$out[] = sprintf('%d %04d require@side#blog/%s/%s', 0, 0, $year, $month);
+				$out[] = sprintf('0 0000 stitle@right#link#Blog/%s/%02d/#%s@ %s',
+					$year, $month, name_that_month($month), $year);
+				$pday = '00';
+				foreach (array_keys($sides[$year][$month]) as $day)
+				{
+					$cday = sprintf('%02d', $day);
+					if ($pday != $cday)
+						$out[] = sprintf('0 0000 p#<code>%02d/%02d</code> –', $day, $month);
+					else $out[] = sprintf('0 0000 &amp;');
+					$out[] = sprintf('0 0000 link#Blog/%04d/%02d/#%s#%s',
+						$year, $month, $sides[$year][$month][$day], $day);
+					$pday = $cday;
+				}
 			}
 
 		file_put_contents($target, implode("\n", $out));
@@ -71,10 +88,10 @@
 		foreach (array_reverse($blog_map[$year]) as $month)
 			foreach (dig_posts($argv[2], $year, $month) as $post)
 			{
-				$news[] = array($year, $month, $post);
-				$sides[$year][$month] = true;
-
 				if ($i < $limit) $i++; else break 3;
+
+				$news[] = array($year, $month, $post[0]);
+				$sides[$year][$month][$post[0]] = $post[1];
 			}
 
 	dump_meta("$argv[2]meta.frag");

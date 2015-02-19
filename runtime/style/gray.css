@@ -17,6 +17,7 @@ div.section h2 {
 }
 
 div.section h3 { border-color: #444444; }
+div.outside h3, div.inside h3 { border-color: #666666; }
 
 .inside, .outside {
 	background-color: #444444;

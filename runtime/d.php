@@ -6,19 +6,23 @@
 	require_once('db-utils.php');
 	require_once('direct-map.php');
 
-	function check_direct_file_access ($target)
+	function check_direct_file_access ($input)
 	{
+		if (is_file($input)) $target = $input;
+		else {
+			$potential = current(split('\?', $input));
+			if (is_file($potential)) $target = $potential;
+			else return;
+		}
+
 		require_once('mimes.php');
-		if (is_file($target))
+		$extension = end(split('\.', $target));
+		if (isset($mimetypes[$extension]))
 		{
-			$extension = end(split('\.', $target));
-			if (isset($mimetypes[$extension]))
-			{
-				$mimetype = $mimetypes[$extension];
-				header("Content-Type: $mimetype");
-				readfile($target);
-				exit(0);
-			}
+			$mimetype = $mimetypes[$extension];
+			header("Content-Type: $mimetype");
+			readfile($target);
+			exit(0);
 		}
 	}
 
@@ -29,7 +33,8 @@
 			case 0: # One Tab / Pages
 			case 2: # Just one tab / Special request
 				if ($requested) return array($requested);
-				return array($list[0]);
+				if (isset($list[0])) return array($list[0]);
+				return false;
 			case 1: # One tab for all / Blog months
 				if ($requested) return array($requested);
 				return $list;
@@ -38,7 +43,7 @@
 		}
 	}
 
-	function parse_request ($request, $styles)
+	function parse_request ($full_request, $styles, $homepage)
 	{
 		$style = false;
 		$layout = 0;
@@ -46,6 +51,10 @@
 		$check = false;
 		$path = array();
 		$part = false;
+
+		if (strpos($full_request, '?') !== false)
+			list($request) = split('\?', $full_request);
+		else $request = $full_request;
 
 		foreach (split('/', $request) as $token) switch ($token)
 		{
@@ -57,6 +66,8 @@
 
 			default: $next[] = $token;
 		}
+
+		if (!isset($next)) $next[] = $homepage;
 
 		foreach ($next as $token) 
 		{
@@ -80,7 +91,7 @@
 		return array($style, $layout, $download, $check, $path, $part);
 	}
 
-	$request['original'] = mb_strtolower(urldecode($_SERVER['REQUEST_URI']), 'UTF-8');
+	$request['original'] = urldecode($_SERVER['REQUEST_URI']);
 	check_direct_file_access(docroot().substr($request['original'], 1));
 
 	$layout = array('one-tab', 'one-tab-for-all', 'just-one-tab', 'all-tabs');
@@ -95,7 +106,8 @@
 
 	list($attr['style'], $attr['layout'],
 		$attr['download'], $attr['check'],
-		$request['path'], $request['part']) = parse_request($request['original'], $style);
+		$request['path'], $request['part']) =
+	parse_request(mb_strtolower($request['original'], 'UTF-8'), $style, $runtime['home']);
 
 	$target_dir = docroot().search_for_dir($direct, $attr, $request['path']);
 	$target_file = sprintf('%smeta.php', $target_dir);
@@ -125,16 +137,25 @@
 	$s = true; // Display sections
 	if ($request['part']) $attr['part'] = $request['part']; // For internal links
 
+	$tabs_to_display = tabs_to_display($ct, $request['part'], $c);
+
 	### Outputting page
 	require_once('page/top.php');
-	foreach (tabs_to_display($ct, $request['part'], $c) as $_)
+	if (count($tabs_to_display) > 1) foreach ($tabs_to_display as $_)
 	{
 		$targetfile = "$target_dir/tab-$_.php";
+		if (is_file($targetfile)) require ($targetfile);
+		else missing_tab($_);
+	}
+	else
+	{
+		$targettab = $tabs_to_display[0];
+		$targetfile = "$target_dir/tab-$targettab.php";
 		if (is_file($targetfile)) {
-			if ($tabrel) tab_prev($attr, $_, $c);
-			require ("$target_dir/tab-$_.php");
-			if ($tabrel) tab_next($attr, $_, $c);
-		} else missing_tab($_);
+			if ($tabrel) tab_prev($attr, $targettab, $c);
+			require ($targetfile);
+			if ($tabrel) tab_next($attr, $targettab, $c);
+		} else missing_tab($targettab);
 	}
 	require_once('page/middle.php');
 	if (is_file($target_dir.'side.php')) require_once($target_dir.'side.php');
