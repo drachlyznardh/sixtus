@@ -1,0 +1,93 @@
+body {
+	margin: 0em;
+	color: #999999;
+	background-color: #222222;
+}
+
+div#content {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+
+div#left-side-panel, div#right-side-panel {
+	display: none;
+	background-color: #222222;
+	position: fixed;
+	overflow: auto;
+	width: 92%;
+	max-height: 98%;
+	top: 0;
+	border-bottom: 1px solid white;
+}
+
+div#left-side-panel {
+	left: 0;
+	border-right: 1px solid white;
+	border-bottom-right-radius: 3px;
+}
+
+div#right-side-panel {
+	left: 8%;
+	border-left: 1px solid white;
+	border-bottom-left-radius: 3px;
+}
+
+div#right-side-icon, div#right-back { text-align: right; }
+
+div#right-side-icon, div#left-side-icon {
+	background-color: #222222;
+	position: fixed;
+	width: 8%;
+	top: 0;
+}
+
+div#left-side-icon { left: 0; }
+div#right-side-icon { left: 92%; }
+
+div.content { margin: 1em; }
+a { color: #ffffff; text-shadow: 3px 3px black; }
+div.spacer { margin: 1em; }
+
+div.half-right-out, div.half-left-out { width: 50%; }
+div.mini-right-out, div.mini-left-out { width: 33%; }
+
+div.half-right-out, div.mini-right-out { float: right; }
+div.half-left-out, div.mini-left-out { float: left; }
+div.half-right-in, div.mini-right-in { margin-left: .5em; }
+div.half-left-in, div.mini-left-in { margin-right: .5em; }
+
+p,h2 { text-align: justify; text-indent: .5em; margin: .5em 0em .5em 0em; }
+.reverse { text-align: right; }
+.center { text-align: center; }
+
+div.inside, div.outside,
+div#footnote, div#location, div#subtitle
+{ background-color: #111111; padding: .1em .7em; }
+
+div#location p, div#maintitle h1, div#subtitle p
+{ text-align: center; text-indent: 0; margin: .2em .7em; }
+
+div.outside {
+	margin: 0em -1em 0em 2em;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+div.inside {
+	margin: 0 2em 0 -1em;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+div#footnote p { text-align: center; text-indent: 0;  }
+
+@media screen and (min-device-width: 801px) {
+	div#content { width: 50%; padding-left: 25%; padding-right: 25%; }
+	div#left-side-panel { width: 24%; display: block; }
+	div#right-side-panel { width: 24%; left: 76%; display: block; }
+	div#left-side-icon, div#right-side-icon,
+	div#left-back, div#right-back { display: none; }
+}
+
