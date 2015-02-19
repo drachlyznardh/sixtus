@@ -2,6 +2,12 @@
 
 	require('frag/utils.php');
 
+	function fix_tab_title ($found)
+	{
+		$result = mb_strtolower($found, 'UTF-8');
+		return preg_replace('/ /', '-', $result);
+	}
+
 	function find_include_file ($localdir, $sourcedir, $target)
 	{
 		if (is_file($target)) return $target;
@@ -91,12 +97,16 @@
 						if ($this->state != 'body' && $this->state != 'ghost')
 							fail('No tabs allowed in '.$this->state,
 								$fileno, $lineno + 1);
-						$this->{$this->state}[$par[1]] = array();
-						$this->current = &$this->{$this->state}[$par[1]];
+						$title = fix_tab_title($par[1]);
+						$this->{$this->state}[$title] = array();
+						$this->current = &$this->{$this->state}[$title];
 						break;
 					case 'include':
 						$this->_include($par[1], dirname($target), $indir, $fileno, $lineno + 1);
 						break;
+					case 'require':
+						if (strlen($par[1]) < 1)
+							$line .= substr($target, strlen($indir), -4);
 					default:
 						$this->current[] = array($fileno, $lineno + 1, $line);
 				}
@@ -121,7 +131,7 @@
 			$filename = find_include_file($localdir, $indir, $target);
 			
 			if ($filename) $this->parse($filename, $indir);
-			else fail ('Unable to locate '.$target, $this->parsedfiles[$fileno], $lineno);
+			else fail ('Unable to locate ['.$target.']['.$filename.']', $this->parsedfiles[$fileno], $lineno);
 
 		}
 
@@ -131,7 +141,7 @@
 			foreach(array_keys($this->body) as $_)
 				output_on_file(false, $_, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->body[$_]);
 			foreach(array_keys($this->ghost) as $_)
-				output_on_file(false, $_, $outdir.'ghost-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
+				output_on_file(false, $_, $outdir.'tab-'.$_.'.frag', $this->parsedfiles, $this->ghost[$_]);
 			output_on_file(false, false, $outdir.'side.frag', $this->parsedfiles, $this->side);
 		}
 

@@ -14,7 +14,8 @@
 			if (count($this->content) == 0) return;
 
 			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '<div class="section">', '>');
-			if ($this->id) $result[] = sprintf('<a id="%s"></a>', $this->id);
+			if ($this->id)
+				$result[] = sprintf('<a id="%s"></a>', mb_strtoupper($this->id, 'UTF-8'));
 			$result[] = implode("\n", $this->content);
 			$result[] = sprintf("%s?=%s?'%s':''?%s", '<', '$s', '</div>', '>');
 
@@ -163,7 +164,7 @@
 			$result .= "<a href=\"$url\">$title</a>";
 			if ($after) $result .= $after;
 			
-			return $result;
+			return $result."\n";
 		}
 
 		private function full_tid ($f, $index, $args)
@@ -199,7 +200,7 @@
 			if ($after) $result .= $after;
 			
 
-			return $result;
+			return $result."\n";
 		}
 
 		private function full_img ($args)
@@ -295,6 +296,8 @@
 			$this->closeContext();
 			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h2 class="reverse">';
+			else if (isset($cmd_attr[1]) and $cmd_attr[1] == 'center')
+				$open_tag = '<h2 class="center">';
 			else $open_tag = '<h2>';
 
 			$this->content[] = "\n".$open_tag;
@@ -310,6 +313,8 @@
 			$this->closeContext();
 			if (isset($cmd_attr[1]) and $cmd_attr[1] == 'right')
 				$open_tag = '<h3 class="reverse">';
+			else if (isset($cmd_attr[1]) and $cmd_attr[1] == 'center')
+				$open_tag = '<h3 class="center">';
 			else $open_tag = '<h3>';
 
 			$this->content[] = "\n".$open_tag;
@@ -430,17 +435,19 @@
 		{
 			$result = false;
 			if (count($args) > 2)
-				$this->error($l, 'Speak: too many arguments');
+				$this->error($f, $l, 'Speak: too many arguments');
 	
-			$_ = preg_split('/@/', $args[1]);
+			$_ = preg_split('/@/', polish_line($args[1]));
 
-			$result = $this->dialog($attr[1], polish_line($_[0]));
+			$result = $this->dialog($attr[1], $_[0]);
 			array_shift($_);
 			while (count($_))
 			{
-				$result .= ' – '.polish_line($_[0]).' – ';
-				$result .= $this->dialog($attr[1], polish_line($_[1]));
+				$result .= ' – '.$_[0];
 				array_shift($_);
+
+				if (count($_))
+					$result .= ' – '.$this->dialog($attr[1], $_[0]);
 				array_shift($_);
 			}
 
