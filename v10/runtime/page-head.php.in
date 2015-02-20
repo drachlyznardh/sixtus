@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<meta name="author" content="drachlyznardh &lt;drachlyznardh@gmail.com &gt;" />
+		<meta name="author" content="@SITE_AUTHOR@" />
 
 		<link rel="icon" href="/sixtus/icon.ico" />
 		<link rel="stylesheet" href="/sixtus/style.css" />
 		<script src="/sixtus/panel.js"></script>
 
-		<title>Siχtus MOBILE</title>
+		<title><?=$d[1]?></title>
 	</head><body>
 		<div id="content" onclick="hide_all_sides();">
 			<div id="header">
