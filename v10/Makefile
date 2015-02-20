@@ -31,8 +31,8 @@ $(SIXTUS_OUT_DIR)page-top.php: $(SIXTUS_IN_DIR)page-head.php.in
 	@$(CMD_DIR)make-page-top.sh $< $@ $(SITE_AUTHOR)
 	@echo page top [$@] generated
 
-$(SIXTUS_OUT_DIR)page-middle.php: $(SIXTUS_IN_DIR)page-neck.php.in $(SIXTUS_IN_DIR)page-knee.php.in
-	@echo $(CP) $< $@
+$(SIXTUS_OUT_DIR)page-middle.php: $(SIXTUS_IN_DIR)page-neck.php.in $(SIXTUS_IN_DIR)page-left-side.php.in $(SIXTUS_IN_DIR)page-knee.php.in
+	@$(CMD_DIR)make-page-middle.sh $^ $@ $(SITE_COPYRIGHT_YEARS) $(SITE_COPYRIGHT_OWNER) $(SITE_KEYWORD_PREV) $(SITE_KEYWORD_NEXT)
 
 $(SIXTUS_OUT_DIR)page-bottom.php: $(SIXTUS_IN_DIR)page-foot.php.in
 	@$(CMD_DIR)make-page-bottom.sh $< $@
