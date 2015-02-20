@@ -5,4 +5,4 @@ if [ $# -ne 3 ]; then
 	exit 1
 fi
 
-cat $1 | sed -e "s/\@SITE_AUTHOR\@/${3//&/\\&}/"
+cat $1 | sed -e "s/\@SITE_AUTHOR\@/${3//&/\\&}/" > $2

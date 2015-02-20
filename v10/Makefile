@@ -32,7 +32,6 @@ $(SIXTUS_OUT_DIR)%: $(SIXTUS_IN_DIR)%
 	@echo Default copy $(CP) $< $@
 
 $(SIXTUS_OUT_DIR)page-top.php: $(SIXTUS_IN_DIR)page-head.php.in
-	@echo $(CP) $< $@
 	$(CMD_DIR)make-page-top.sh $< $@ $(SITE_AUTHOR)
 
 $(SIXTUS_OUT_DIR)page-middle.php: $(SIXTUS_IN_DIR)page-neck.php.in $(SIXTUS_IN_DIR)page-knee.php.in
