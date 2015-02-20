@@ -14,3 +14,4 @@ sixtus-pages: $(PHP_FILES)
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo $< $@
+	@$(CMD_DIR)six-to-php.py $< #> $@
