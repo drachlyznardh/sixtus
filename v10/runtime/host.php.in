@@ -1,0 +1,1 @@
+<?php $host='Tanngnojstr'; ?>
