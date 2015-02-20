@@ -1,6 +1,6 @@
 
 SIXTUS_DIR := /opt/devel/web/sixtus/v10/
-DEPLOY_DIR := /opt/web/mobile
+DEPLOY_DIR := /opt/web/mobile/
 
 SIXTUS_IN_DIR := $(SIXTUS_DIR)runtime/
 SIXTUS_OUT_DIR := $(DEPLOY_DIR)sixtus/
