@@ -1,7 +1,9 @@
 
 SITE_AUTHOR          := "Ivan Simonini &lt;drachlyznardh@gmail.com&gt;"
-SITE_COPYROGHT_YEAR  := "2007-2015"
-SITE_COPYROGHT_OWNER := "Ivan Simonini"
+SITE_COPYRIGHT_YEARS := "2007-2015"
+SITE_COPYRIGHT_OWNER := "Ivan Simonini"
+SITE_KEYWORD_PREV    := "Precendente"
+SITE_KEYWORD_NEXT    := "Successivo"
 
 SIXTUS_DIR := /opt/devel/web/sixtus/v10/
 DEPLOY_DIR := /opt/web/mobile/
