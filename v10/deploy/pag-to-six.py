@@ -78,17 +78,18 @@ for name, value in tabs.items():
 
 	if name == None: continue
 	
-	filepath = ('%s%s/%s/index.six' % (sys.argv[4], sitemap[sys.argv[3]], name.upper()))
+	pagepath = sitemap[sys.argv[3]]
+	filepath = ('%s%s/%s/index.six' % (sys.argv[4], pagepath, name.upper()))
 	
 	dirpath = os.path.dirname(filepath)
 	if not os.path.exists(dirpath):
 		os.makedirs(dirpath)
 
 	if name in prevs.keys() and prevs[name]:
-		meta += '\ntabprev#%s' % prevs[name]
+		meta += '\ntabprev#/%s/%s/' % (pagepath, prevs[name].upper())
 
 	if name in nexts.keys() and nexts[name]:
-		meta += '\ntabnext#%s' % nexts[name]
+		meta += '\ntabnext#/%s/%s/' % (pagepath, nexts[name].upper())
 
 	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (meta, side, value))
 	with open(filepath, 'w') as outfile:
