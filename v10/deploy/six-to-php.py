@@ -140,6 +140,8 @@ class Converter:
 		else:
 			self.content += ('<li>%s' % text)
 
+		self.writing = True
+
 	def make_link (self, args):
 
 		if self.debug:
