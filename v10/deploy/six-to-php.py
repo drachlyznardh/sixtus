@@ -25,7 +25,7 @@ class Converter:
 
 	def error (self, message):
 
-		print('%s @line %d: %s' % (filename, lineno, message), file=sys.stderr)
+		print('%s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename, location):
