@@ -201,6 +201,16 @@ class Converter:
 			next = self.meta['next']
 			output += ('array("%s","%s")' % (next[0], next[1]))
 		else: output += 'false'
+		output += ','
+		if 'tabprev' in self.meta.keys():
+			tabprev = self.meta['tabprev']
+			output += ('"%s"' % tabprev)
+		else: output += 'false'
+		output += ','
+		if 'tabnext' in self.meta.keys():
+			tabnext = self.meta['tabnext']
+			output += ('"%s"' % tabnext)
+		else: output += 'false'
 		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
 		output += 'require_once($sixtus."page-top.php"); ?>'
