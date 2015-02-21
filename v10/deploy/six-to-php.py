@@ -17,6 +17,18 @@ for i in f:
 		print("{%s}" % line)
 		continue
 
+	token = line.split('#')
+	print("%s" % token)
+
+	command = token[0]
+
+	if command == 'title':
+		print("<h2>%s</h2>" % token[1:])
+	elif command == 'subtitle':
+		print("<h3>%s</h3>" % token[1:])
+
+	continue
+
 	if re.match(r'^title#(.*)', line):
 		title = re.sub(r'^title#(.*)', r'\1', line)
 		print("Title (%s)" % title)
