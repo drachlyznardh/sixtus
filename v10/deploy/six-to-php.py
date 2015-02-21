@@ -1,12 +1,16 @@
 #!/usr/bin/python
 # -*- encoding: utf-8 -*-
 
+from __future__ import print_function
+
 import sys
 import re
 
 class Converter:
 
 	def __init__ (self):
+
+		self.debug = False
 
 		self.meta = {}
 		self.location = ''
@@ -21,7 +25,8 @@ class Converter:
 
 	def error (self, message):
 
-		print('%s @line %d: %s' % (filename, lineno, message))
+		print('%s @line %d: %s' % (filename, lineno, message), file=sys.stderr)
+		sys.exit(1)
 
 	def parse_file (self, filename, location):
 
@@ -38,7 +43,7 @@ class Converter:
 
 	def parse_line (self, line):
 
-		print('Parse_Line (%s)' % (line))
+		if self.debug: print('Parse_Line (%s)' % (line))
 
 		if '#' not in line:
 			self.append_content(line);
@@ -58,7 +63,7 @@ class Converter:
 
 	def parse_meta (self, command, args):
 
-		print('Parse_Meta (%s, %s)' % (command, args))
+		if self.debug: print('Parse_Meta (%s, %s)' % (command, args))
 
 		if command == 'title':
 			self.meta['title'] = args[0]
@@ -71,7 +76,7 @@ class Converter:
 
 	def parse_content (self, command, args):
 
-		print('Parse_Content (%s, %s)' % (command, args))
+		if self.debug: print('Parse_Content (%s, %s)' % (command, args))
 
 		if command == 'title':
 			self.stop_writing()
@@ -127,7 +132,7 @@ class Converter:
 
 	def make_link (self, args):
 
-		print('Make_Link (%s)' % args)
+		if self.debug: print('Make_Link (%s)' % args)
 
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], args[2])
@@ -181,37 +186,10 @@ class Converter:
 		output += '%s' % self.side
 		output += '<?php require_once($sixtus."page-bottom.php"); ?>'
 
-		print output
-
-print
-for i in sys.argv: print("[%s]" % i)
-print
+		print('%s' % output)
 
 if len(sys.argv) < 3:
-	print ("Usage: %s <source file> <location>")
+	print ("Usage: %s <source file> <location>", file=sys.stderr)
 	sys.exit(1)
 
-f = open(sys.argv[1], 'r')
-
-for i in f:
-	line = i.strip()
-
-	if '#' not in line:
-		print("{%s}" % line)
-		continue
-
-	token = line.split('#')
-	print("%s" % token)
-
-	command = token[0]
-
-	if command == 'title':
-		print("<h2>%s</h2>" % token[1:])
-	elif command == 'subtitle':
-		print("<h3>%s</h3>" % token[1:])
-
-print
-
 Converter().parse_file(sys.argv[1], sys.argv[2]).dump_output();
-
-print
