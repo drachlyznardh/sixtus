@@ -5,8 +5,8 @@ from __future__ import print_function
 import sys
 import os
 
-if len(sys.argv) != 5:
-	print("Usage: %s <pag file> <map file> <location> <build dir>", file=sys.stderr)
+if len(sys.argv) != 6:
+	print("Usage: %s <pag file> <map file> <location> <pagename> <build dir>", file=sys.stderr)
 	sys.exit(1)
 
 debug = False
@@ -78,8 +78,8 @@ for name, value in tabs.items():
 
 	if name == None: continue
 	
-	pagepath = sitemap[sys.argv[3]]
-	filepath = ('%s%s/%s/index.six' % (sys.argv[4], pagepath, name.upper()))
+	pagepath = '%s/%s' % (sitemap[sys.argv[3]], sys.argv[4].upper())
+	filepath = '%s%s/%s/index.six' % (sys.argv[5], pagepath, name.upper())
 	
 	dirpath = os.path.dirname(filepath)
 	if not os.path.exists(dirpath):
