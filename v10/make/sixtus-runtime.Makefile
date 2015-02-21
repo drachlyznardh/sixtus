@@ -6,7 +6,7 @@ SIXTUS_RUNTIME_FILES += page-top.php page-middle.php page-bottom.php
 
 SIXTUS_RUNTIME_OUT_FILES += $(addprefix $(SIXTUS_RUNTIME_OUT_DIR), $(SIXTUS_RUNTIME_FILES))
 
-sixtus_runtime: $(SIXTUS_RUNTIME_OUT_FILES)
+sixtus-runtime: $(SIXTUS_RUNTIME_OUT_FILES)
 
 $(SIXTUS_RUNTIME_OUT_DIR)%: $(SIXTUS_RUNTIME_IN_DIR)%
 	@cp $< $@

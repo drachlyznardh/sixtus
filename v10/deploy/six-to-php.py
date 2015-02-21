@@ -10,7 +10,7 @@ class Converter:
 
 	def __init__ (self):
 
-		self.debug = False
+		self.debug = True #False
 
 		self.meta = {}
 		self.location = ''
@@ -43,7 +43,8 @@ class Converter:
 
 	def parse_line (self, line):
 
-		if self.debug: print('Parse_Line (%s)' % (line))
+		if self.debug:
+			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
 		if '#' not in line:
 			self.append_content(line);
@@ -63,7 +64,8 @@ class Converter:
 
 	def parse_meta (self, command, args):
 
-		if self.debug: print('Parse_Meta (%s, %s)' % (command, args))
+		if self.debug:
+			print('Parse_Meta (%s, %s)' % (command, args), file=sys.stderr)
 
 		if command == 'title':
 			self.meta['title'] = args[0]
@@ -76,7 +78,8 @@ class Converter:
 
 	def parse_content (self, command, args):
 
-		if self.debug: print('Parse_Content (%s, %s)' % (command, args))
+		if self.debug:
+			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
 
 		if command == 'title':
 			self.stop_writing()
@@ -132,7 +135,8 @@ class Converter:
 
 	def make_link (self, args):
 
-		if self.debug: print('Make_Link (%s)' % args)
+		if self.debug:
+			print('Make_Link (%s)' % args, file=sys.stderr)
 
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], args[2])
