@@ -10,7 +10,7 @@ class Converter:
 
 	def __init__ (self):
 
-		self.debug = True #False
+		self.debug = False
 
 		self.meta = {}
 		self.location = ''
@@ -75,8 +75,6 @@ class Converter:
 			self.meta['prev'] = ((args[0], args[1]))
 		elif command == 'next':
 			self.meta['next'] = ((args[0], args[1]))
-
-		print(self.meta, file=sys.stderr)
 
 	def parse_content (self, command, args):
 
