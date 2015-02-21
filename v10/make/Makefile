@@ -9,8 +9,6 @@ SIX_FILES := $(sort $(shell find $(BUILD_DIR) -name '*.six'))
 PHP_FILES := $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 
 sixtus-pages: sixtus-runtime $(PHP_FILES)
-	@echo $(SIX_FILES)
-	@echo $(PHP_FILES)
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo $< $@
