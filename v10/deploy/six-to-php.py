@@ -72,6 +72,31 @@ class Converter:
 			self.content += ('<h2>%s</h2>' % args[0])
 		elif command == 'stitle':
 			self.content += ('<h3>%s</h3>' % args[0])
+		elif command == 'link':
+			self.content += self.make_link(args)
+
+	def make_link (self, args):
+
+		print('Make_Link (%s)' % args)
+
+		if len(args) == 2: href = args[0]
+		else: href = '%s#%s' % (args[0], args[2])
+
+		if '@' not in args[1]:
+			title = args[1]
+			prev = next = ''
+		else:
+			token = args[1].split('@')
+			if len(token) == 2:
+				prev = ''
+				title = token[0]
+				next = token[1]
+			else:
+				prev = token[0]
+				title = token[1]
+				next = token[2]
+
+		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
 
 	def state_update (self, newstate):
 
