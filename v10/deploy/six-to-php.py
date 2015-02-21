@@ -73,9 +73,13 @@ class Converter:
 		elif command == 'subtitle':
 			self.meta['subtitle'] = args[0]
 		elif command == 'prev':
-			self.meta['prev'] = ((args[0], args[1]))
+			self.meta['prev'] = (args[0], args[1])
 		elif command == 'next':
-			self.meta['next'] = ((args[0], args[1]))
+			self.meta['next'] = (args[0], args[1])
+		elif command == 'tabprev':
+			self.meta['tabprev'] = args[0]
+		elif command == 'tabnext':
+			self.meta['tabnext'] = args[0]
 
 	def parse_content (self, command, args):
 
