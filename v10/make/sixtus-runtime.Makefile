@@ -1,7 +1,7 @@
 SIXTUS_RUNTIME_IN_DIR := $(SIXTUS_DIR)runtime/
 SIXTUS_RUNTIME_OUT_DIR := $(DEPLOY_DIR)sixtus/
 
-SIXTUS_RUNTIME_FILES += style.css icon.ico
+SIXTUS_RUNTIME_FILES += style.css icon.ico panel.js
 SIXTUS_RUNTIME_FILES += page-top.php page-middle.php page-bottom.php
 
 SIXTUS_RUNTIME_OUT_FILES += $(addprefix $(SIXTUS_RUNTIME_OUT_DIR), $(SIXTUS_RUNTIME_FILES))
