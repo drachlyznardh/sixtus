@@ -11,12 +11,17 @@ class Converter:
 		self.meta = {}
 		self.location = ''
 		self.state = 'meta'
-		self.environment = ''
-		self.context = ''
+		self.environment = None
+		self.writing = False
+		self.p_or_li = True
 
 		self.page = ''
 		self.side = ''
 		self.content = ''
+
+	def error (self, message):
+
+		print('%s @line %d: %s' % (filename, lineno, message))
 
 	def parse_file (self, filename, location):
 
@@ -36,7 +41,7 @@ class Converter:
 		print('Parse_Line (%s)' % (line))
 
 		if '#' not in line:
-			self.content += line;
+			self.append_content(line);
 
 		token = line.split('#')
 		command = token[0]
@@ -69,11 +74,56 @@ class Converter:
 		print('Parse_Content (%s, %s)' % (command, args))
 
 		if command == 'title':
-			self.content += ('<h2>%s</h2>' % args[0])
+			self.stop_writing()
+			self.content += ('<h2>%s</h2>' % self.parse_args(args))
 		elif command == 'stitle':
-			self.content += ('<h3>%s</h3>' % args[0])
+			self.stop_writing()
+			self.content += ('<h3>%s</h3>' % self.parse_args(args))
 		elif command == 'link':
-			self.content += self.make_link(args)
+			self.append_content(self.make_link(args))
+		elif command == 'p' or command == 'c' or command == 'r':
+			self.start_writing(command, self.parse_args(args))
+
+	def parse_args (self, args):
+
+		if len(args) == 1: return args[0]
+
+		if args[0] == 'link':
+			return self.make_link(args[1:])
+		else: self.error('Parse_Args: not a link! %s' % args)
+
+	def start_writing (self, type, text):
+
+		if self.writing: self.stop_writing()
+
+		if type == 'p':
+			self.content += ('<p>%s' % text)
+		elif type == 'c':
+			self.content += ('<p class="center">%s' % text)
+		elif type == 'r':
+			self.content += ('<p class="reverse">%s' % text)
+
+		self.writing = True
+
+	def stop_writing (self):
+
+		if not self.writing: return
+
+		if self.p_or_li:
+			self.content += '</p>'
+		else:
+			self.content += '</li>'
+
+		self.writing = False
+
+	def append_content (self, text):
+
+		if self.writing:
+			self.content += (' %s' % text)
+		elif self.p_or_li:
+			self.content += ('<p>%s' % text)
+		else:
+			self.content += ('<li>%s' % text)
 
 	def make_link (self, args):
 
@@ -99,6 +149,8 @@ class Converter:
 		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
 
 	def state_update (self, newstate):
+
+		self.stop_writing()
 
 		if self.state == 'page':
 			self.page += self.content
