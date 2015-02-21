@@ -19,7 +19,9 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(BUILD_DIR)
 	@mkdir -p $(dir $@)
 	@touch $@
+	@echo Splitting source file $@
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@mkdir -p $(dir $@)
 	@$(CMD_DIR)six-to-php.py $< $(*D) > $@
+	@echo Generating page file $@
