@@ -29,13 +29,33 @@ class Converter:
 		if '#' not in line:
 			self.content += line;
 
+		token = line.strip().split('#')
+		command = token[0]
+
+		if command == 'title':
+			self.meta['title'] = token[1]
+		elif command == 'subtitle':
+			self.meta['subtitle'] = token[1]
+		elif command == 'prev':
+			self.meta['prev'] = (token[1], token[2])
+		elif command == 'next':
+			self.meta['next'] = (token[1], token[2])
+
 	def dump_output (self):
 
-		print ('<?php require_once($sixtus."page-top.php"); ?>')
-		print ('%s' % self.page)
-		print ('<?php require_once($sixtus."page-middle.php"); ?>')
-		print ('%s' % self.side)
-		print ('<?php require_once($sixtus."page-bottom.php"); ?>')
+		output = ''
+
+		output += '<?php $d=array('
+		output += ('"%s","%s",' % (self.meta['title'], self.meta['subtitle']))
+		output += ');'
+		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
+		output += 'require_once($sixtus."page-top.php"); ?>'
+		output += '%s' % self.page
+		output += '<?php require_once($sixtus."page-middle.php"); ?>'
+		output += '%s' % self.side
+		output += '<?php require_once($sixtus."page-bottom.php"); ?>'
+
+		print output
 
 print
 for i in sys.argv: print("[%s]" % i)
