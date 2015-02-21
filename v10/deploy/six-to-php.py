@@ -72,9 +72,11 @@ class Converter:
 		elif command == 'subtitle':
 			self.meta['subtitle'] = args[0]
 		elif command == 'prev':
-			self.meta['prev'] = (args[0], args[1])
+			self.meta['prev'] = ((args[0], args[1]))
 		elif command == 'next':
-			self.meta['next'] = (args[0], args[1])
+			self.meta['next'] = ((args[0], args[1]))
+
+		print(self.meta, file=sys.stderr)
 
 	def parse_content (self, command, args):
 
@@ -177,11 +179,15 @@ class Converter:
 		output = '<?php $d=array('
 		output += ('array("%s"),' % ('","'.join(self.location.split('/'))))
 		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
-		try: output += ('array%s' % self.meta['prev'])
-		except: output += 'false'
+		if 'prev' in self.meta.keys():
+			prev = self.meta['prev']
+			output += ('array("%s","%s")' % (prev[0], prev[1]))
+		else: output += 'false'
 		output += ','
-		try: output += ('array%s' % self.meta['next'])
-		except: output += 'false'
+		if 'next' in self.meta.keys():
+			next = self.meta['next']
+			output += ('array("%s","%s")' % (next[0], next[1]))
+		else: output += 'false'
 		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
 		output += 'require_once($sixtus."page-top.php"); ?>'
