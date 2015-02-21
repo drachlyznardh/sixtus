@@ -9,6 +9,8 @@ if len(sys.argv) != 5:
 	print("Usage: %s <pag file> <map file> <location> <build dir>", file=sys.stderr)
 	sys.exit(1)
 
+debug = False
+
 state = 'meta'
 meta = ''
 content = False
@@ -20,16 +22,16 @@ with open(sys.argv[1]) as f:
 	for i in f:
 		
 		line = i.strip()
-		print(line)
+		if debug: print(line)
 
 		if line[0] == '#':
-			print('Line is a comment, skip')
+			if debug: print('Line is a comment, skip')
 			continue
 
 		if '#' not in line:
 			if content: content += ('\n%s' % line)
 			else: content = line
-			print('Line is simple content, appending')
+			if debug: print('Line is simple content, appending')
 			continue
 
 		token = line.split('#')
