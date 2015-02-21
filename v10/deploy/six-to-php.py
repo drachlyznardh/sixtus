@@ -31,6 +31,7 @@ class Converter:
 	def parse_file (self, filename, location):
 
 		self.location = location
+		self.pagelocation = '/'.join(location.split('/')[:-1])
 		self.filename = filename
 		self.lineno = 0
 
@@ -98,7 +99,13 @@ class Converter:
 
 		if args[0] == 'link':
 			return self.make_link(args[1:])
-		else: self.error('Parse_Args: not a link! %s' % args)
+		elif args[0] == 'tid':
+			linkargs = []
+			linkargs.append('/%s/%s/' % (self.pagelocation, args[2].upper()))
+			linkargs.append(args[1])
+			if len(args) > 3: linkargs.append(args[3:])
+			return self.make_link(linkargs)
+		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
 
