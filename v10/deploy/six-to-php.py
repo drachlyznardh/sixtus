@@ -148,6 +148,8 @@ class Converter:
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], args[2])
 
+		if href[0] != '/': href = '/%s' % href
+
 		if '@' not in args[1]:
 			title = args[1]
 			prev = next = ''
