@@ -39,14 +39,19 @@ class Converter:
 		token = line.strip().split('#')
 		command = token[0]
 
+		if self.state == 'meta':
+			self.parse_meta(token[0], token[1:])
+
+	def parse_meta (self, command, args):
+
 		if command == 'title':
-			self.meta['title'] = token[1]
+			self.meta['title'] = args[0]
 		elif command == 'subtitle':
-			self.meta['subtitle'] = token[1]
+			self.meta['subtitle'] = args[0]
 		elif command == 'prev':
-			self.meta['prev'] = (token[1], token[2])
+			self.meta['prev'] = (args[0], args[1])
 		elif command == 'next':
-			self.meta['next'] = (token[1], token[2])
+			self.meta['next'] = (args[0], args[1])
 
 	def dump_output (self):
 
