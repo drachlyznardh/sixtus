@@ -3,9 +3,81 @@
 
 from __future__ import print_function
 import sys
+import os
 
-for i in sys.argv: print('[%s]' % i, file=sys.stderr)
+if len(sys.argv) != 5:
+	print("Usage: %s <pag file> <map file> <location> <build dir>", file=sys.stderr)
+	sys.exit(1)
+
+state = 'meta'
+meta = ''
+content = False
+tabname = None
+tabs = {}
+side = ''
+
+with open(sys.argv[1]) as f:
+	for i in f:
+		
+		line = i.strip()
+		print(line)
+
+		if line[0] == '#':
+			print('Line is a comment, skip')
+			continue
+
+		if '#' not in line:
+			if content: content += ('\n%s' % line)
+			else: content = line
+			print('Line is simple content, appending')
+			continue
+
+		token = line.split('#')
+		command = token[0]
+
+		if command == 'start':
+			
+			if state == 'meta':
+				meta += content
+			elif state == 'side':
+				side += content
+			elif state == 'page':
+				tabs[tabname] = content
+
+			content = False
+			state = token[1]
+			continue
+
+		elif command == 'tab':
+			tabs[tabname] = content
+			content = False
+			tabname = token[1]
+			continue
+
+		elif content:
+			content += ('\n%s' % line)
+		else:
+			content = line
+
+if state == 'meta':
+	meta += content
+elif state == 'side':
+	side += content
+elif state == 'page':
+	tabs[tabname] = content
 
 with open(sys.argv[2]) as f: sitemap = eval(f.read())
 
-print(sitemap)
+for name, value in tabs.items():
+
+	if name == None: continue
+	
+	filepath = ('%s%s/%s/index.php' % (sys.argv[4], sitemap[sys.argv[3]], name.upper()))
+	
+	dirpath = os.path.dirname(filepath)
+	if not os.path.exists(dirpath):
+		os.makedirs(dirpath)
+
+	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (meta, side, value))
+	with open(filepath, 'w') as outfile:
+		outfile.write(filecontent)

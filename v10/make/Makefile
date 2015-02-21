@@ -16,7 +16,7 @@ PHP_FILES := $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
-	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE)
+	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(BUILD_DIR)
 	@mkdir -p $(dir $@)
 	@touch $@
 
