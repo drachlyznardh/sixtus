@@ -9,6 +9,7 @@ class Converter:
 	def __init__ (self):
 
 		self.meta = {}
+		self.location = ''
 		self.state = 'meta'
 		self.environment = ''
 		self.context = ''
@@ -17,7 +18,9 @@ class Converter:
 		self.side = ''
 		self.content = ''
 
-	def parse_file (self, filename):
+	def parse_file (self, filename, location):
+
+		self.location = location
 
 		f = open(filename, 'r')
 		for line in f: self.parse_line(line)
@@ -44,7 +47,7 @@ class Converter:
 	def dump_output (self):
 
 		output = '<?php $d=array('
-		output += ('array("%s"),' % ('","'.join(['Blog','2015','02','EXAMPLE'])))
+		output += ('array("%s"),' % ('","'.join(self.location.split('/'))))
 		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
 		try: output += ('array%s' % self.meta['prev'])
 		except: output += 'false'
@@ -86,6 +89,6 @@ for i in f:
 
 print
 
-Converter().parse_file(sys.argv[1]).dump_output();
+Converter().parse_file(sys.argv[1], sys.argv[2]).dump_output();
 
 print
