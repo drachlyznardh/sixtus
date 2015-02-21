@@ -43,11 +43,15 @@ class Converter:
 
 	def dump_output (self):
 
-		output = ''
-
-		output += '<?php $d=array('
-		output += ('"%s","%s",' % (self.meta.get('title',""), self.meta.get('subtitle',"")))
-		output += ('array%s,array%s);' % (self.meta.get('prev',("","")), self.meta.get('next',("",""))))
+		output = '<?php $d=array('
+		output += ('array("%s"),' % ('","'.join(['Blog','2015','02','EXAMPLE'])))
+		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
+		try: output += ('array%s' % self.meta['prev'])
+		except: output += 'false'
+		output += ','
+		try: output += ('array%s' % self.meta['next'])
+		except: output += 'false'
+		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
 		output += 'require_once($sixtus."page-top.php"); ?>'
 		output += '%s' % self.page
