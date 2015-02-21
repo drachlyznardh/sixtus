@@ -14,6 +14,7 @@ debug = False
 state = 'meta'
 meta = ''
 content = False
+first = False
 tabname = None
 tabs = {}
 prevs = {}
@@ -53,6 +54,7 @@ with open(sys.argv[1]) as f:
 			continue
 
 		elif command == 'tab':
+			if not first: first = token[1]
 			tabs[tabname] = content
 			content = False
 			nexts[tabname] = token[1]
@@ -73,6 +75,12 @@ elif state == 'page':
 	tabs[tabname] = content
 
 with open(sys.argv[2]) as f: sitemap = eval(f.read())
+
+if len(tabs) == 1:
+	
+	filecontent = '<?php header("Location: %s")?>' % …
+
+	return
 
 for name, value in tabs.items():
 

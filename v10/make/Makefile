@@ -21,7 +21,6 @@ sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR)
-	@echo $(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR)
 	@mkdir -p $(dir $@)
 	@touch $@
 	@echo Splitting source file $@
