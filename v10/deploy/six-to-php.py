@@ -4,6 +4,19 @@
 import sys
 import re
 
+class Converter:
+
+	def __init__ (self):
+
+		self.meta = {}
+		self.state = 'meta'
+		self.environment = ''
+		self.context = ''
+
+		self.page = ''
+		self.side = ''
+		self.content = ''
+
 print
 for i in sys.argv: print("[%s]" % i)
 print
