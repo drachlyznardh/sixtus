@@ -72,6 +72,10 @@ print
 for i in sys.argv: print("[%s]" % i)
 print
 
+if len(sys.argv) < 3:
+	print ("Usage: %s <source file> <location>")
+	sys.exit(1)
+
 f = open(sys.argv[1], 'r')
 
 for i in f:
