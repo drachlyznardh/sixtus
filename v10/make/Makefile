@@ -3,7 +3,8 @@ SIXTUS_DIR := /opt/devel/web/sixtus/v10/
 CMD_DIR    := $(SIXTUS_DIR)deploy/
 MAKE_DIR   := $(SIXTUS_DIR)make/
 
-PAG_DIR := $(SOURCE_DIR)src/
+MAP_FILE := $(SOURCE_DIR)map.txt
+PAG_DIR  := $(SOURCE_DIR)src/
 
 include $(MAKE_DIR)sixtus-runtime.Makefile
 
@@ -15,11 +16,10 @@ PHP_FILES := $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
-	@echo $< $@
+	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE)
 	@mkdir -p $(dir $@)
 	@touch $@
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
-	@echo $< $@
 	@mkdir -p $(dir $@)
 	@$(CMD_DIR)six-to-php.py $< $(*D) > $@
