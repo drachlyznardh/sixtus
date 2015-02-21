@@ -17,6 +17,26 @@ class Converter:
 		self.side = ''
 		self.content = ''
 
+	def parse_file (self, filename):
+
+		f = open(filename, 'r')
+		for line in f: self.parse_line(line)
+
+		return self
+
+	def parse_line (self, line):
+
+		if '#' not in line:
+			self.content += line;
+
+	def dump_output (self):
+
+		print ('<?php require_once($sixtus."page-top.php"); ?>')
+		print ('%s' % self.page)
+		print ('<?php require_once($sixtus."page-middle.php"); ?>')
+		print ('%s' % self.side)
+		print ('<?php require_once($sixtus."page-bottom.php"); ?>')
+
 print
 for i in sys.argv: print("[%s]" % i)
 print
@@ -39,5 +59,9 @@ for i in f:
 		print("<h2>%s</h2>" % token[1:])
 	elif command == 'subtitle':
 		print("<h3>%s</h3>" % token[1:])
+
+print
+
+Converter().parse_file(sys.argv[1]).dump_output();
 
 print
