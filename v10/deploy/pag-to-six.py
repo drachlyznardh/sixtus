@@ -74,7 +74,7 @@ for name, value in tabs.items():
 
 	if name == None: continue
 	
-	filepath = ('%s%s/%s/index.php' % (sys.argv[4], sitemap[sys.argv[3]], name.upper()))
+	filepath = ('%s%s/%s/index.six' % (sys.argv[4], sitemap[sys.argv[3]], name.upper()))
 	
 	dirpath = os.path.dirname(filepath)
 	if not os.path.exists(dirpath):
