@@ -85,12 +85,14 @@ for name, value in tabs.items():
 	if not os.path.exists(dirpath):
 		os.makedirs(dirpath)
 
+	varmeta = meta
+
 	if name in prevs.keys() and prevs[name]:
-		meta += '\ntabprev#/%s/%s/' % (pagepath, prevs[name].upper())
+		varmeta += '\ntabprev#/%s/%s/' % (pagepath, prevs[name].upper())
 
 	if name in nexts.keys() and nexts[name]:
-		meta += '\ntabnext#/%s/%s/' % (pagepath, nexts[name].upper())
+		varmeta += '\ntabnext#/%s/%s/' % (pagepath, nexts[name].upper())
 
-	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (meta, side, value))
+	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, side, value))
 	with open(filepath, 'w') as outfile:
 		outfile.write(filecontent)
