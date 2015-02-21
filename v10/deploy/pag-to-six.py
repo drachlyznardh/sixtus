@@ -16,6 +16,8 @@ meta = ''
 content = False
 tabname = None
 tabs = {}
+prevs = {}
+nexts = {}
 side = ''
 
 with open(sys.argv[1]) as f:
@@ -53,6 +55,8 @@ with open(sys.argv[1]) as f:
 		elif command == 'tab':
 			tabs[tabname] = content
 			content = False
+			nexts[tabname] = token[1]
+			prevs[token[1]] = tabname
 			tabname = token[1]
 			continue
 
@@ -80,6 +84,14 @@ for name, value in tabs.items():
 	if not os.path.exists(dirpath):
 		os.makedirs(dirpath)
 
-	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (meta, side, value))
+	if name in prevs.keys():
+		prevline = 'prev#%s' % prevs[name]
+	else: prevline = ''
+
+	if name in nexts.keys():
+		nextline = 'next#%s' % nexts[name]
+	else: nextline = ''
+
+	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s%s%s' % (meta, side, prevline, value, nextline))
 	with open(filepath, 'w') as outfile:
 		outfile.write(filecontent)
