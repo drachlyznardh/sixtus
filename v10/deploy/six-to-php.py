@@ -21,9 +21,13 @@ class Converter:
 	def parse_file (self, filename, location):
 
 		self.location = location
+		self.filename = filename
+		self.lineno = 0
 
 		f = open(filename, 'r')
-		for line in f: self.parse_line(line)
+		for line in f:
+			self.lineno += 1
+			self.parse_line(line)
 
 		return self
 
