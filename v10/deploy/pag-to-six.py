@@ -84,14 +84,12 @@ for name, value in tabs.items():
 	if not os.path.exists(dirpath):
 		os.makedirs(dirpath)
 
-	if name in prevs.keys():
-		prevline = 'prev#%s' % prevs[name]
-	else: prevline = ''
+	if name in prevs.keys() and prevs[name]:
+		meta += '\ntabprev#%s' % prevs[name]
 
-	if name in nexts.keys():
-		nextline = 'next#%s' % nexts[name]
-	else: nextline = ''
+	if name in nexts.keys() and nexts[name]:
+		meta += '\ntabnext#%s' % nexts[name]
 
-	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s%s%s' % (meta, side, prevline, value, nextline))
+	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (meta, side, value))
 	with open(filepath, 'w') as outfile:
 		outfile.write(filecontent)
