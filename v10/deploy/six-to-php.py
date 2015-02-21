@@ -46,8 +46,8 @@ class Converter:
 		output = ''
 
 		output += '<?php $d=array('
-		output += ('"%s","%s",' % (self.meta['title'], self.meta['subtitle']))
-		output += ');'
+		output += ('"%s","%s",' % (self.meta.get('title',""), self.meta.get('subtitle',"")))
+		output += ('array%s,array%s);' % (self.meta.get('prev',("","")), self.meta.get('next',("",""))))
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
 		output += 'require_once($sixtus."page-top.php"); ?>'
 		output += '%s' % self.page
