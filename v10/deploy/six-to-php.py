@@ -20,5 +20,16 @@ for i in f:
 	if re.match(r'^title#(.*)', line):
 		title = re.sub(r'^title#(.*)', r'\1', line)
 		print("Title (%s)" % title)
+	if re.match(r'^subtitle#(.*)', line):
+		subtitle = re.sub(r'^subtitle#(.*)', r'\1', line)
+		print("Subtitle (%s)" % subtitle)
+	if re.match(r'^prev#(.*)', line):
+		prev = line.split('#')
+		prev.pop(0)
+		print("Prev (%s)" % prev)
+	if re.match(r'^next#(.*)', line):
+		next = line.split('#')
+		next.pop(0)
+		print("Next (%s)" % next)
 
 print
