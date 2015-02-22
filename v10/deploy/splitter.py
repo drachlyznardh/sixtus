@@ -157,6 +157,8 @@ class Splitter:
 
 		if self.debug: print('Dump Touch', file=sys.stderr)
 
+		self.touchlist.append(self.index_path)
+
 		with open(sys.argv[6], 'w') as f:
 			print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
 			for i in self.touchlist:
