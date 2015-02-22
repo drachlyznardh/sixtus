@@ -76,17 +76,23 @@ elif state == 'page':
 
 with open(sys.argv[2]) as f: sitemap = eval(f.read())
 
-if len(tabs) == 1:
-	
-	filecontent = '<?php header("Location: %s")?>' % …
+pagepath = '%s/%s' % (sitemap[sys.argv[3]], sys.argv[4].upper())
 
-	return
+filepath = '%s%s/index.six' % (sys.argv[5], pagepath)
+print("Default %s" % filepath, file=sys.stderr)
+
+dirpath = os.path.dirname(filepath)
+if not os.path.exists(dirpath):
+	os.makedirs(dirpath)
+
+filecontent = ("jump#%s/%s/index.php" % (pagepath, first.upper()))
+with open(filepath, 'w') as outfile:
+	outfile.write(filecontent)
 
 for name, value in tabs.items():
 
 	if name == None: continue
 	
-	pagepath = '%s/%s' % (sitemap[sys.argv[3]], sys.argv[4].upper())
 	filepath = '%s%s/%s/index.six' % (sys.argv[5], pagepath, name.upper())
 	
 	dirpath = os.path.dirname(filepath)
