@@ -3,7 +3,6 @@
 
 from __future__ import print_function
 import sys
-import os
 from splitter import Splitter
 
 if len(sys.argv) != 6:
