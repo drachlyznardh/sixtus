@@ -24,7 +24,6 @@ SITE_MIDDLE_PARAMS += $(SITE_TAB_NEXT_BEFORE) $(SITE_TAB_NEXT_LINK) $(SITE_TAB_N
 SITE_MIDDLE_PARAMS += $(SITE_PAGE_PREV) $(SITE_PAGE_NEXT)
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in $(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
-	echo $(SITE_MIDDLE_PARAMS)
 	@$(CMD_DIR)make-page-middle.sh $^ $@ $(SITE_MIDDLE_PARAMS)
 	@echo page middle [$@] generated
 
