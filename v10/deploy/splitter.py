@@ -15,7 +15,7 @@ class Splitter:
 
 		self.meta    = ''
 		self.side    = ''
-		self.content = False
+		self.content = ''
 
 		self.first   = False
 		self.tabname = None
@@ -23,6 +23,10 @@ class Splitter:
 		self.tabs  = {}
 		self.prevs = {}
 		self.nexts = {}
+
+		self.filename = ''
+		self.lineno = 0
+		self.inclusion = []
 
 	def load_parameters (self, args):
 
@@ -48,11 +52,17 @@ class Splitter:
 			self.tabs[self.tabname] = self.content
 
 		self.state = newstate
-		self.content = False
+		self.content = ''
 
 		return self
 
 	def split_file (self, filename):
+
+		if self.filename:
+			self.inclusion.append((self.filename, self.lineno + 1))
+		self.filename = filename
+		self.lineno = 0
+		self.content += ('filename#%s#0' % filename)
 
 		if self.debug:
 			print('Now splitting file %s' % filename, file=sys.stderr)
@@ -84,7 +94,7 @@ class Splitter:
 
 					if not self.first: self.first = token[1]
 					self.tabs[self.tabname] = self.content
-					self.content = False
+					self.content = ''
 					self.nexts[self.tabname] = token[1]
 					self.prevs[token[1]] = self.tabname
 					self.tabname = token[1]
@@ -94,7 +104,11 @@ class Splitter:
 				else:
 					self.content = line
 
-		self.update_state('meta')
+		if len(self.inclusion):
+			self.filename, self.lineno = self.inclusion.pop()
+			self.content += ('filename#%s#%d' % (self.filename, self.lineno))
+		else: self.update_state('meta')
+
 		return self
 
 	def check_dir_path (self, filepath):
