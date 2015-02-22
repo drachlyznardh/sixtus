@@ -31,7 +31,7 @@ class Splitter:
 	def load_parameters (self, args):
 
 		with open(args[0]) as f:
-			sitemap = eval(f.read)
+			sitemap = eval(f.read())
 
 		self.pag_path = '%s/%s' % (sitemap[args[1]], args[2].upper())
 		self.index_path = '%s%s/index.six' % (args[3], self.pag_path)
