@@ -154,6 +154,6 @@ class Splitter:
 		if self.first:
 			self.dump_index()
 			self.dump_tabs()
+			self.dump_touch()
 		else: self.dump_single_tab()
 
-		self.dump_touch()
