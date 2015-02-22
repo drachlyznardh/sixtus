@@ -63,7 +63,7 @@ class Splitter:
 				line = i.strip()
 				if self.debug: print(line)
 
-				if line[0] == '#':
+				if len(line) and line[0] == '#':
 					if self.debug: print('Line is a comment, skip')
 					continue
 
