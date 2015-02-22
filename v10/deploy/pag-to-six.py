@@ -38,6 +38,8 @@ class Splitter:
 
 		return self
 
+Splitter().load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
+
 with open(sys.argv[1]) as f:
 	for i in f:
 		
