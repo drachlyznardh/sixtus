@@ -105,6 +105,8 @@ class Splitter:
 
 	def dump_index (self):
 
+		if self.debug: print('Dump Index', file=sys.stderr)
+
 		self.check_dir_path(self.index_path)
 
 		filecontent = ("jump#%s/%s/" % (self.pag_path, self.first.upper()))
@@ -112,6 +114,8 @@ class Splitter:
 			outfile.write(filecontent)
 
 	def dump_tabs (self):
+
+		if self.debug: print('Dump Tabs', file=sys.stderr)
 
 		self.touchlist = []
 
@@ -138,6 +142,8 @@ class Splitter:
 
 	def dump_single_tab (self):
 
+		if self.debug: print('Dump Single Tab', file=sys.stderr)
+
 		self.check_dir_path(self.index_path)
 		filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
 		with open(self.index_path, 'w') as outfile:
@@ -148,6 +154,8 @@ class Splitter:
 			print('%s: %s' % (self.index_path, sys.argv[1]), file=f)
 
 	def dump_touch (self):
+
+		if self.debug: print('Dump Touch', file=sys.stderr)
 
 		with open(sys.argv[6], 'w') as f:
 			print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
