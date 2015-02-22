@@ -17,7 +17,7 @@ $(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
 	@echo page top [$@] generated
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in $(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
-	@$(CMD_DIR)make-page-middle.sh $^ $@ $(SITE_COPYRIGHT_YEARS) $(SITE_COPYRIGHT_OWNER) $(SITE_KEYWORD_PREV) $(SITE_KEYWORD_NEXT)
+	@$(CMD_DIR)make-page-middle.sh $^ $@ $(SITE_COPYRIGHT_YEARS) $(SITE_COPYRIGHT_OWNER) $(SITE_PAGE_PREV) $(SITE_PAGE_NEXT)
 	@echo page middle [$@] generated
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-bottom.php: $(SIXTUS_RUNTIME_IN_DIR)page-foot.php.in
