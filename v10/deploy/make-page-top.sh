@@ -1,8 +1,9 @@
 #!/bin/bash
 
 if [ $# -ne 6 ]; then
-	param="@SITE_AUTHOR@ @SITE_TAB_PREV_BEFORE@ @SITE_TAB_PREV_LINK@ @SITE_TAB_PREV_AFTER@"
-	echo "Usage: $0 <php.in file> <php file> $param"
+	files="<php.in file> <php file>"
+	params="@SITE_AUTHOR@ @SITE_TAB_PREV_BEFORE@ @SITE_TAB_PREV_LINK@ @SITE_TAB_PREV_AFTER@"
+	echo "Usage: $0 $files $params"
 	exit 1
 fi
 
