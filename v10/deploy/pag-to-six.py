@@ -79,27 +79,15 @@ class Splitter:
 				if command == 'start':
 
 					self.update_state(token[1])
-					continue
-
-					if state == 'meta':
-						meta += content
-					elif state == 'side':
-						side += content
-					elif state == 'page':
-						tabs[tabname] = content
-
-					content = False
-					state = token[1]
-					continue
 
 				elif command == 'tab':
+
 					if not self.first: self.first = token[1]
 					self.tabs[self.tabname] = self.content
 					self.content = False
 					self.nexts[self.tabname] = token[1]
 					self.prevs[token[1]] = self.tabname
 					self.tabname = token[1]
-					continue
 
 				elif self.content:
 					self.content += ('\n%s' % line)
@@ -108,13 +96,6 @@ class Splitter:
 
 		self.update_state('meta')
 		return self
-
-		if state == 'meta':
-			meta += content
-		elif state == 'side':
-			side += content
-		elif state == 'page':
-			tabs[tabname] = content
 
 	def check_dir_path (self, filepath):
 
@@ -142,9 +123,6 @@ class Splitter:
 			self.touchlist.append(file_path)
 
 			self.check_dir_path(file_path)
-			#dirpath = os.path.dirname(file_path)
-			#if not os.path.exists(dirpath):
-			#	os.makedirs(dirpath)
 
 			varmeta = self.meta
 
