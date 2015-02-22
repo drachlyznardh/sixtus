@@ -22,4 +22,4 @@
 				<div id="subtitle"><p><?=$d[2]?></p></div>
 
 			</div><div class="content">
-				<?php if ($d[5]) { ?><div id="tab_prev" class="inside"><p>Continua dal tab <a href="<?=$d[5]?>">precedente</a></p></div><?php } ?>
+				<?php if ($d[5]) { ?><div id="tab_prev" class="inside"><p>@SITE_TAB_PREV_BEFORE@<a href="<?=$d[5]?>">@SITE_TAB_PREV_LINK@</a>@SITE_TAB_PREV_AFTER@</p></div><?php } ?>

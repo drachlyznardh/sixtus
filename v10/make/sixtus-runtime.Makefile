@@ -12,8 +12,11 @@ $(SIXTUS_RUNTIME_OUT_DIR)%: $(SIXTUS_RUNTIME_IN_DIR)%
 	@cp $< $@
 	@echo page component [$@] copied
 
+SITE_TOP_PARAMS += $(SITE_AUTHOR)
+SITE_TOP_PARAMS += $(SITE_TAB_PREV_BEFORE) $(SITE_TAB_PREV_LINK) $(SITE_TAB_PREV_AFTER)
+
 $(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
-	@$(CMD_DIR)make-page-top.sh $< $@ $(SITE_AUTHOR)
+	@$(CMD_DIR)make-page-top.sh $< $@ $(SITE_TOP_PARAMS)
 	@echo page top [$@] generated
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in $(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
