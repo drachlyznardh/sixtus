@@ -29,6 +29,10 @@ class Splitter:
 		with open(args[0]) as f:
 			sitemap = eval(f.read())
 
+		if args[1] not in sitemap:
+			print('Cannot map [%s] from [%s]!' % (args[1], args[0]), file=sys.stderr)
+			sys.exit(1)
+
 		self.pag_path = '%s/%s' % (sitemap[args[1]], args[2].upper())
 		self.index_path = '%s%s/index.six' % (args[3], self.pag_path)
 
