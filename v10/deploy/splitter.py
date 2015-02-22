@@ -139,7 +139,7 @@ class Splitter:
 	def dump_single_tab (self):
 
 		self.check_dir_path(self.index_path)
-		filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.content))
+		filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
 		with open(self.index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
