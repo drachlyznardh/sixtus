@@ -45,7 +45,7 @@ class Splitter:
 		elif self.state == 'side':
 			self.side += self.content
 		elif self.state == 'page':
-			self.tabs[tabname] = self.content
+			self.tabs[self.tabname] = self.content
 
 		self.state = newstate
 		self.content = False
@@ -66,8 +66,8 @@ class Splitter:
 					continue
 
 				if '#' not in line:
-					if content: content += ('\n%s' % line)
-					else: content = line
+					if self.content: self.content += ('\n%s' % line)
+					else: self.content = line
 					if self.debug: print('Line is simple content, appending')
 					continue
 
@@ -91,18 +91,18 @@ class Splitter:
 					continue
 
 				elif command == 'tab':
-					if not first: first = token[1]
-					tabs[tabname] = content
-					content = False
-					nexts[tabname] = token[1]
-					prevs[token[1]] = tabname
-					tabname = token[1]
+					if not self.first: self.first = token[1]
+					self.tabs[self.tabname] = self.content
+					self.content = False
+					self.nexts[self.tabname] = token[1]
+					self.prevs[token[1]] = self.tabname
+					self.tabname = token[1]
 					continue
 
-				elif content:
-					content += ('\n%s' % line)
+				elif self.content:
+					self.content += ('\n%s' % line)
 				else:
-					content = line
+					self.content = line
 
 		self.update_state('meta')
 		return
