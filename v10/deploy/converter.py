@@ -193,7 +193,7 @@ class Converter:
 
 		self.state = newstate
 
-	def dump_output (self):
+	def dump_output (self, filename):
 
 		if self.jump:
 			self.dump_jump()
@@ -231,9 +231,9 @@ class Converter:
 		output += '%s' % self.side
 		output += '<?php require_once($sixtus."page-bottom.php"); ?>'
 
-		print('%s' % output)
+		with open(filename, 'w') as f: print('%s' % output, file=f)
 
 	def dump_jump (self):
 
 		output = '<?php header("Location: /%s"); die(); ?>' % self.jump
-		print('%s' % output)
+		with open(filename, 'w') as f: print('%s' % output, file=f)

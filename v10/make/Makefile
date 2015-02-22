@@ -30,5 +30,5 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@mkdir -p $(dir $@)
-	@$(CMD_DIR)six-to-php.py $< $(*D) > $@
+	@$(CMD_DIR)six-to-php.py $< $(*D) $@
 	@echo Generating page file $@
