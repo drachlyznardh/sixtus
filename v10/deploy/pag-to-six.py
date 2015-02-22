@@ -9,17 +9,24 @@ if len(sys.argv) != 6:
 	print("Usage: %s <pag file> <map file> <location> <pagename> <build dir>", file=sys.stderr)
 	sys.exit(1)
 
-debug = False
+class Splitter:
 
-state = 'meta'
-meta = ''
-content = False
-first = False
-tabname = None
-tabs = {}
-prevs = {}
-nexts = {}
-side = ''
+	def __init__ (self):
+
+		self.debug = False
+
+		self.state = 'meta'
+
+		self.meta    = ''
+		self.side    = ''
+		self.content = False
+
+		self.first   = False
+		self.tabname = None
+
+		self.tabs  = {}
+		self.prevs = {}
+		self.nexts = {}
 
 with open(sys.argv[1]) as f:
 	for i in f:
