@@ -19,6 +19,12 @@ var hide_right_side = function () {
 var hide_all_sides = function () {
 	var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	if (w < 801) { hide_left_side(); hide_right_side(); }
+	else {
+		document.getElementById('left-side-panel').style.display = 'block';
+		document.getElementById('left-side-icon').style.display = 'none';
+		document.getElementById('right-side-panel').style.display = 'block';
+		document.getElementById('right-side-icon').style.display = 'none';
+	}
 }
 var makeTidVisible = function () {
 	var rtid = document.getElementById('active-tid').getBoundingClientRect().bottom;

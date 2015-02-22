@@ -22,3 +22,4 @@
 				<div id="subtitle"><p><?=$d[2]?></p></div>
 
 			</div><div class="content">
+				<?php if ($d[5]) { ?><div class="inside"><p>Continua dal tab <a href="<?=$d[5]?>">precedente</a></p></div><?php } ?>
