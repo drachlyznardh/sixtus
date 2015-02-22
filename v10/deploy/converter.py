@@ -79,9 +79,11 @@ class Converter:
 		elif command == 'subtitle':
 			self.meta['subtitle'] = args[0]
 		elif command == 'prev':
-			self.meta['prev'] = (args[0], args[1])
+			try: self.meta['prev'] = (args[0], args[1])
+			except: self.error('Parse_Meta/Prev: need two arguments')
 		elif command == 'next':
-			self.meta['next'] = (args[0], args[1])
+			try: self.meta['next'] = (args[0], args[1])
+			except: self.error('Parse_Meta/Next: need two arguments')
 		elif command == 'tabprev':
 			self.meta['tabprev'] = args[0]
 		elif command == 'tabnext':
