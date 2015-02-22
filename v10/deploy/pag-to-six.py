@@ -85,7 +85,7 @@ dirpath = os.path.dirname(filepath)
 if not os.path.exists(dirpath):
 	os.makedirs(dirpath)
 
-filecontent = ("jump#%s/%s/index.php" % (pagepath, first.upper()))
+filecontent = ("jump#%s/%s/" % (pagepath, first.upper()))
 with open(filepath, 'w') as outfile:
 	outfile.write(filecontent)
 

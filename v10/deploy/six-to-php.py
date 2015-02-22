@@ -23,6 +23,8 @@ class Converter:
 		self.side = ''
 		self.content = ''
 
+		self.jump = False
+
 	def error (self, message):
 
 		print('%s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
@@ -67,6 +69,10 @@ class Converter:
 
 		if self.debug:
 			print('Parse_Meta (%s, %s)' % (command, args), file=sys.stderr)
+
+		if command == 'jump':
+			self.jump = args[0]
+			return
 
 		if command == 'title':
 			self.meta['title'] = args[0]
@@ -187,6 +193,10 @@ class Converter:
 
 	def dump_output (self):
 
+		if self.jump:
+			self.dump_jump()
+			return
+
 		self.state_update('meta')
 
 		output = '<?php $d=array('
@@ -219,6 +229,11 @@ class Converter:
 		output += '%s' % self.side
 		output += '<?php require_once($sixtus."page-bottom.php"); ?>'
 
+		print('%s' % output)
+
+	def dump_jump (self):
+
+		output = '<?php header("Location: /%s"); die(); ?>' % self.jump
 		print('%s' % output)
 
 if len(sys.argv) < 3:
