@@ -50,6 +50,8 @@ class Splitter:
 		self.state = newstate
 		self.content = False
 
+		return self
+
 	def split_file (self, filename):
 
 		if self.debug:
@@ -105,7 +107,7 @@ class Splitter:
 					self.content = line
 
 		self.update_state('meta')
-		return
+		return self
 
 		if state == 'meta':
 			meta += content
@@ -169,6 +171,7 @@ class Splitter:
 		self.dump_touch()
 
 Splitter().load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
+exit()
 
 with open(sys.argv[1]) as f:
 	for i in f:
