@@ -47,6 +47,7 @@ class Splitter:
 		elif self.state == 'page':
 			self.tabs[tabname] = self.content
 
+		self.state = newstate
 		self.content = False
 
 	def split_file (self, filename):
@@ -75,6 +76,9 @@ class Splitter:
 
 				if command == 'start':
 
+					self.update_state(token[1])
+					continue
+
 					if state == 'meta':
 						meta += content
 					elif state == 'side':
@@ -99,6 +103,9 @@ class Splitter:
 					content += ('\n%s' % line)
 				else:
 					content = line
+
+		self.update_state('meta')
+		return
 
 		if state == 'meta':
 			meta += content
