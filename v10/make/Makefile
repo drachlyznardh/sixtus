@@ -10,7 +10,11 @@ include $(MAKE_DIR)sixtus-runtime.Makefile
 
 PAG_FILES := $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 TCH_FILES := $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(PAG_FILES))
-SIX_FILES := $(sort $(shell find $(BUILD_DIR) -name '*.six'))
+
+ifneq ($(MAKECDMGOAL), clean)
+-include $(TCH_FILES)
+endif
+
 PHP_FILES := $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 
 sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
@@ -20,10 +24,9 @@ sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
 	@#echo PHP FILES: $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
-	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR)
 	@mkdir -p $(dir $@)
-	@touch $@
-	@echo Splitting source file $@
+	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) > $@
+	@echo Splitting source file $<
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@mkdir -p $(dir $@)

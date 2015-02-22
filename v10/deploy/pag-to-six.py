@@ -87,11 +87,14 @@ filecontent = ("jump#%s/%s/" % (pagepath, first.upper()))
 with open(filepath, 'w') as outfile:
 	outfile.write(filecontent)
 
+touchlist = []
+
 for name, value in tabs.items():
 
 	if name == None: continue
 	
 	filepath = '%s%s/%s/index.six' % (sys.argv[5], pagepath, name.upper())
+	touchlist.append(filepath)
 	
 	dirpath = os.path.dirname(filepath)
 	if not os.path.exists(dirpath):
@@ -108,3 +111,7 @@ for name, value in tabs.items():
 	filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, side, value))
 	with open(filepath, 'w') as outfile:
 		outfile.write(filecontent)
+
+print('SIX_FILES += %s' % (' '.join(touchlist)))
+for i in touchlist:
+	print('%s: %s' % (i, sys.argv[1]))
