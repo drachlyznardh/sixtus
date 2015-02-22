@@ -38,6 +38,75 @@ class Splitter:
 
 		return self
 
+	def update_state (self, newstate):
+
+		if self.state == 'meta':
+			self.meta += self.content
+		elif self.state == 'side':
+			self.side += self.content
+		elif self.state == 'page':
+			self.tabs[tabname] = self.content
+
+		self.content = False
+
+	def split_file (self, filename):
+
+		if self.debug:
+			print('Now splitting file %s' % filename, file=sys.stderr)
+
+		with open(sys.argv[1]) as f:
+			for i in f:
+
+				line = i.strip()
+				if self.debug: print(line)
+
+				if line[0] == '#':
+					if self.debug: print('Line is a comment, skip')
+					continue
+
+				if '#' not in line:
+					if content: content += ('\n%s' % line)
+					else: content = line
+					if self.debug: print('Line is simple content, appending')
+					continue
+
+				token = line.split('#')
+				command = token[0]
+
+				if command == 'start':
+
+					if state == 'meta':
+						meta += content
+					elif state == 'side':
+						side += content
+					elif state == 'page':
+						tabs[tabname] = content
+
+					content = False
+					state = token[1]
+					continue
+
+				elif command == 'tab':
+					if not first: first = token[1]
+					tabs[tabname] = content
+					content = False
+					nexts[tabname] = token[1]
+					prevs[token[1]] = tabname
+					tabname = token[1]
+					continue
+
+				elif content:
+					content += ('\n%s' % line)
+				else:
+					content = line
+
+		if state == 'meta':
+			meta += content
+		elif state == 'side':
+			side += content
+		elif state == 'page':
+			tabs[tabname] = content
+
 Splitter().load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
 
 with open(sys.argv[1]) as f:
