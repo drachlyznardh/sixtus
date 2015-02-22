@@ -143,11 +143,16 @@ class Splitter:
 		with open(self.index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
+		with open(sys.argv[6], 'w') as f:
+			print('SIX_FILES += %s' % self.index_path, file=f)
+			print('%s: %s' % (self.index_path, sys.argv[1]), file=f)
+
 	def dump_touch (self):
 
-		print('SIX_FILES += %s' % (' '.join(self.touchlist)))
-		for i in self.touchlist:
-			print('%s: %s' % (i, sys.argv[1]))
+		with open(sys.argv[6], 'w') as f:
+			print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
+			for i in self.touchlist:
+				print('%s: %s' % (i, sys.argv[1]), file=f)
 
 	def dump_output (self):
 
