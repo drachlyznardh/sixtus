@@ -77,9 +77,7 @@ elif state == 'page':
 with open(sys.argv[2]) as f: sitemap = eval(f.read())
 
 pagepath = '%s/%s' % (sitemap[sys.argv[3]], sys.argv[4].upper())
-
 filepath = '%s%s/index.six' % (sys.argv[5], pagepath)
-print("Default %s" % filepath, file=sys.stderr)
 
 dirpath = os.path.dirname(filepath)
 if not os.path.exists(dirpath):
