@@ -114,6 +114,60 @@ class Splitter:
 		elif state == 'page':
 			tabs[tabname] = content
 
+	def check_dir_path (self, filepath):
+
+		dirpath = os.path.dirname(filepath)
+		if not os.path.exists(dirpath):
+			os.makedirs(dirpath)
+
+	def dump_index (self):
+
+		self.check_dir_path(self.index_path)
+
+		filecontent = ("jump#%s/%s/" % (self.pag_path, self.first.upper()))
+		with open(self.index_path, 'w') as outfile:
+			outfile.write(filecontent)
+
+	def dump_tabs (self):
+
+		self.touchlist = []
+
+		for name, value in self.tabs.items():
+
+			if name == None: continue
+
+			file_path = '%s%s/%s/index.six' % (sys.argv[5], self.pag_path, name.upper())
+			self.touchlist.append(file_path)
+
+			self.check_dir_path(file_path)
+			#dirpath = os.path.dirname(file_path)
+			#if not os.path.exists(dirpath):
+			#	os.makedirs(dirpath)
+
+			varmeta = self.meta
+
+			if name in self.prevs.keys() and self.prevs[name]:
+				varmeta += '\ntabprev#/%s/%s/' % (self.pag_path, self.prevs[name].upper())
+
+			if name in self.nexts.keys() and self.nexts[name]:
+				varmeta += '\ntabnext#/%s/%s/' % (self.pag_path, self.nexts[name].upper())
+
+			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, self.side, value))
+			with open(file_path, 'w') as outfile:
+				outfile.write(filecontent)
+
+	def dump_touch (self):
+
+		print('SIX_FILES += %s' % (' '.join(self.touchlist)))
+		for i in self.touchlist:
+			print('%s: %s' % (i, sys.argv[1]))
+
+	def dump_output (self):
+
+		self.dump_index()
+		self.dump_tabs()
+		self.dump_touch()
+
 Splitter().load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
 
 with open(sys.argv[1]) as f:
