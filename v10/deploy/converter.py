@@ -196,7 +196,7 @@ class Converter:
 	def dump_output (self, filename):
 
 		if self.jump:
-			self.dump_jump()
+			self.dump_jump(filename)
 			return
 
 		self.state_update('meta')
@@ -233,7 +233,7 @@ class Converter:
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
 
-	def dump_jump (self):
+	def dump_jump (self, filename):
 
 		output = '<?php header("Location: /%s"); die(); ?>' % self.jump
 		with open(filename, 'w') as f: print('%s' % output, file=f)
