@@ -26,7 +26,7 @@ class Splitter:
 
 		self.filename = ''
 		self.lineno = 0
-		self.touchlist = []
+		self.touch_files = []
 
 	def update_state (self, newstate):
 
@@ -107,7 +107,7 @@ class Splitter:
 			if name == None: continue
 
 			file_path = '%s%s/%s/index.six' % (sys.argv[5], self.pag_path, name.upper())
-			self.touchlist.append(file_path)
+			self.touch_files.append(file_path)
 
 			self.check_dir_path(file_path)
 
@@ -147,7 +147,7 @@ class Splitter:
 	def output_tab_files (self, base, page_name, build_dir):
 
 		index_path = '%s%s/%s/index.six' % (build_dir, base, page_name)
-		self.touchlist.append(index_path)
+		self.touch_files.append(index_path)
 
 		if self.first:
 			self.output_index_file(index_path)
@@ -160,21 +160,6 @@ class Splitter:
 
 		with open(touch_file, 'w') as f:
 
-			if self.first:
-
-				print('SIX_FILES += %sindex.six' % self.base, file=f)
-				print('%s: %s' % (self.index_path, origin_files), file=f)
-
-			else:
-
-				#self.touchlist.append(self.index_path)
-
-				print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
-				for i in self.touchlist:
-					#print('%s: %s' % (i, sys.argv[1]), file=f)
-					print('%s: %s' % (i, origin_list), file=f)
-
-		return
-		with open(sys.argv[6], 'w') as f:
-			print('SIX_FILES += %s' % self.index_path, file=f)
-			print('%s: %s' % (self.index_path, sys.argv[1]), file=f)
+			print('SIX_FILES += %s' % (' '.join(self.touch_files)), file=f)
+			for i in self.touch_files:
+				print('%s: %s' % (i, origin_list), file=f)
