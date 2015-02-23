@@ -12,6 +12,7 @@ class Preprocessor:
 		self.debug = True
 
 		self.base = base
+		self.origin_files = []
 
 		self.filename = False
 		self.lineno = 0
@@ -25,6 +26,7 @@ class Preprocessor:
 		print('Preprocessing %s from %s' % (filename, self.base), file=sys.stderr)
 
 		self.filename = filename
+		self.origin_files.append(filename)
 		self.lineno = 0
 
 		with open(filename, 'r') as input_file:
