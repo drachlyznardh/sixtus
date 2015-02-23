@@ -88,14 +88,14 @@ class Splitter:
 		if not os.path.exists(dirpath):
 			os.makedirs(dirpath)
 
-	def dump_index (self):
+	def output_index_file (self, base, index_path):
 
 		if self.debug: print('Dump Index', file=sys.stderr)
 
-		self.check_dir_path(self.index_path)
+		self.check_dir_path(index_path)
 
-		filecontent = ("jump#%s/%s/" % (self.pag_path, self.first.upper()))
-		with open(self.index_path, 'w') as outfile:
+		filecontent = ("jump#%s/%s/" % (base, self.first.upper()))
+		with open(index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
 	def dump_tabs (self):
@@ -150,7 +150,7 @@ class Splitter:
 		self.touch_files.append(index_path)
 
 		if self.first:
-			self.output_index_file(index_path)
+			self.output_index_file(base, index_path)
 			self.output_many_tabs()
 		else: self.output_single_tab(index_path)
 
