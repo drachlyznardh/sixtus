@@ -4,6 +4,7 @@
 from __future__ import print_function
 import sys
 
+import mapper
 import preprocessor
 import splitter
 
@@ -20,21 +21,7 @@ pp.parse_file(sys.argv[1])
 
 #print('%s' % '\n'.join(pp.content), file=sys.stderr)
 
-class Mapper:
-
-	def __init__ (self, map_file, page_origin):#, build_dir):
-
-		with open(map_file) as file_content:
-			site_map = eval(f.read())
-
-		if page_origin not in site_map:
-			print('Cannot map [%s] from [%s]!' % (page_origin, map_file), file=sys.stderr)
-			sys.exit(1)
-
-		#self.page_destination = '%s%s' % (build_dir, site_map[page_origin])
-		self.base = site_map[page_origin]
-
-mp = mapper.Mapper(sys.argv[2], sys.argv[3], sys.argv[5])
+mp = mapper.Mapper(sys.argv[2], sys.argv[3])
 
 sp = splitter.Splitter()#mp.page_destination, sys.argv[4].upper(), sys.argv[6]) #.load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
 sp.split_content(pp.content)
