@@ -56,21 +56,24 @@ class Splitter:
 
 		return self
 
-	def split_file (self, filename):
+	#def split_file (self, filename):
+	def split_content (self, lines):
 
-		if self.filename:
-			self.inclusion.append((self.filename, self.lineno + 1))
-		self.filename = filename
-		self.lineno = 0
-		self.append_content('filename#%s#0' % filename)
+		#if self.filename:
+		#	self.inclusion.append((self.filename, self.lineno + 1))
+		#self.filename = filename
+		#self.lineno = 0
+		#self.append_content('filename#%s#0' % filename)
 
-		if self.debug:
-			print('Now splitting file %s' % filename, file=sys.stderr)
+		#if self.debug:
+		#	print('Now splitting file %s' % filename, file=sys.stderr)
 
-		with open(filename) as f:
-			for i in f:
+		#with open(filename) as f:
+		#	for i in f:
+		for line in lines:
 
-				line = i.strip()
+				#line = i.strip()
+				self.lineno += 1
 				if self.debug: print(line)
 
 				if len(line) and line[0] == '#':
