@@ -3,7 +3,9 @@
 
 from __future__ import print_function
 import sys
-from splitter import Splitter
+
+import preprocessor
+import splitter
 
 if len(sys.argv) != 7:
 	args = ['<pag file>', '<map file>',
@@ -13,7 +15,7 @@ if len(sys.argv) != 7:
 	sys.exit(1)
 
 pag_local_dir = '%s/' % '/'.join(sys.argv[1].split('/')[:-1])
-pp = splitter.Preprocessor(pag_local_dir)
+pp = preprocessor.Preprocessor(pag_local_dir)
 pp.parse_file(sys.argv[1])
 
 print('%s' % '\n'.join(pp.content), file=sys.stderr)
