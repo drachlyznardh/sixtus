@@ -28,20 +28,6 @@ class Splitter:
 		self.lineno = 0
 		self.touchlist = []
 
-	def load_parameters (self, args):
-
-		with open(args[0]) as f:
-			sitemap = eval(f.read())
-
-		if args[1] not in sitemap:
-			print('Cannot map [%s] from [%s]!' % (args[1], args[0]), file=sys.stderr)
-			sys.exit(1)
-
-		self.pag_path = '%s/%s' % (sitemap[args[1]], sys.argv[4].upper())
-		self.index_path = '%s%s/index.six' % (sys.argv[5], self.pag_path)
-
-		return self
-
 	def update_state (self, newstate):
 
 		if self.state == 'meta':
@@ -53,8 +39,6 @@ class Splitter:
 
 		self.state = newstate
 		self.content = ''
-
-		return self
 
 	def split_content (self, lines):
 
