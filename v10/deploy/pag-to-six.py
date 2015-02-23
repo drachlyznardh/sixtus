@@ -19,12 +19,9 @@ pag_local_dir = '%s/' % '/'.join(sys.argv[1].split('/')[:-1])
 pp = preprocessor.Preprocessor(pag_local_dir)
 pp.parse_file(sys.argv[1])
 
-#print('%s' % '\n'.join(pp.content), file=sys.stderr)
-
 mp = mapper.Mapper(sys.argv[2], sys.argv[3])
 
-sp = splitter.Splitter()#mp.page_destination, sys.argv[4].upper(), sys.argv[6]) #.load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
+sp = splitter.Splitter()
 sp.split_content(pp.content)
-#sp.dump_output(sys.argv[6])
-#sp.output_tab_files(mp.base, sys.argv[4].upper(), sys.argv[5])
-#sp.output_touch_file(sys.argv[6], sys.argv[1], pp.required_files)
+sp.output_tab_files(mp.base, sys.argv[4].upper(), sys.argv[5])
+sp.output_touch_file(sys.argv[6], sys.argv[1], pp.required_files)
