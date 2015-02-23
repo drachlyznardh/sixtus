@@ -37,5 +37,5 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 
 clean:
-	@rm -rf $(SIX_FILES)
+	@rm -rf $(BUILD_DIR)
 	@rm -rf $(PHP_FILES)
