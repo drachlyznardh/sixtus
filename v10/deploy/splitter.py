@@ -172,7 +172,7 @@ class Splitter:
 				print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
 				for i in self.touchlist:
 					#print('%s: %s' % (i, sys.argv[1]), file=f)
-					print('%s: %s' % (i, origin_files), file=f)
+					print('%s: %s' % (i, origin_list), file=f)
 
 		return
 		with open(sys.argv[6], 'w') as f:
