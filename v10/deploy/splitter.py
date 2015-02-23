@@ -7,7 +7,7 @@ import os
 
 class Splitter:
 
-	def __init__ (self, base, page_name)
+	def __init__ (self):
 
 		self.debug = True
 
@@ -26,7 +26,7 @@ class Splitter:
 
 		self.filename = ''
 		self.lineno = 0
-		self.inclusion = []
+		self.touchlist = []
 
 	def load_parameters (self, args):
 
@@ -141,8 +141,6 @@ class Splitter:
 
 		if self.debug: print('Dump Tabs', file=sys.stderr)
 
-		self.touchlist = []
-
 		for name, value in self.tabs.items():
 
 			if name == None: continue
@@ -181,13 +179,6 @@ class Splitter:
 
 		if self.debug: print('Dump Touch', file=sys.stderr)
 
-		self.touchlist.append(self.index_path)
-
-		with open(sys.argv[6], 'w') as f:
-			print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
-			for i in self.touchlist:
-				print('%s: %s' % (i, sys.argv[1]), file=f)
-
 	def dump_output (self):
 
 		if self.first:
@@ -205,10 +196,21 @@ class Splitter:
 
 	def output_touch_file (self, touch_file, origin_files):
 
-		if self.first:
-		return
+		origin_list = ' '.join(origin_files)
 
 		with open(touch_file, 'w') as f:
-			print('SIX_FILES += %sindex.six' % self.base, file=f)
-			print('%s: %s' % (self.index_path, ' '.join(origin_files)), file=f)
+
+			if self.first:
+
+				print('SIX_FILES += %sindex.six' % self.base, file=f)
+				print('%s: %s' % (self.index_path, origin_files), file=f)
+
+			else:
+
+				self.touchlist.append(self.index_path)
+
+				print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
+				for i in self.touchlist:
+					#print('%s: %s' % (i, sys.argv[1]), file=f)
+					print('%s: %s' % (i, origin_files), file=f)
 

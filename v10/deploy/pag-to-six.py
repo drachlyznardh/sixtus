@@ -28,7 +28,7 @@ class Mapper:
 			site_map = eval(f.read())
 
 		if page_origin not in site_map:
-			print('Cannot map [%s] from [%s]!' % (page_origin, map_file, file=sys.stderr)
+			print('Cannot map [%s] from [%s]!' % (page_origin, map_file), file=sys.stderr)
 			sys.exit(1)
 
 		#self.page_destination = '%s%s' % (build_dir, site_map[page_origin])
@@ -40,4 +40,4 @@ sp = splitter.Splitter()#mp.page_destination, sys.argv[4].upper(), sys.argv[6]) 
 sp.split_content(pp.content)
 #sp.dump_output(sys.argv[6])
 #sp.output_tab_files(mp.base, sys.argv[4].upper(), sys.argv[5])
-#sp.output_touch_file(sys.argv[6], pp.origin_files)
+#sp.output_touch_file(sys.argv[6], sys.argv[1], pp.required_files)
