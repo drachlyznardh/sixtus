@@ -18,6 +18,8 @@ pag_local_dir = '%s/' % '/'.join(sys.argv[1].split('/')[:-1])
 pp = preprocessor.Preprocessor(pag_local_dir)
 pp.parse_file(sys.argv[1])
 
-print('%s' % '\n'.join(pp.content), file=sys.stderr)
+#print('%s' % '\n'.join(pp.content), file=sys.stderr)
 
-Splitter().load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
+sp = splitter.Splitter() #.load_parameters(sys.argv[2:]).split_file(sys.argv[1]).dump_output()
+sp.split_content(pp.content)
+#sp.dump_output()
