@@ -123,11 +123,9 @@ class Splitter:
 			with open(file_path, 'w') as outfile:
 				outfile.write(filecontent)
 
-	def output_single_tab (self, base, page_name, build_dir):
+	def output_single_tab (self, index_path):
 
 		if self.debug: print('Dump Single Tab', file=sys.stderr)
-
-		index_path = '%s%s/%s/index.six' % (build_dir, base, page_name)
 
 		self.check_dir_path(index_path)
 		filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
@@ -148,10 +146,13 @@ class Splitter:
 
 	def output_tab_files (self, base, page_name, build_dir):
 
+		index_path = '%s%s/%s/index.six' % (build_dir, base, page_name)
+		self.touchlist.append(index_path)
+
 		if self.first:
-			self.output_index_file()
+			self.output_index_file(index_path)
 			self.output_many_tabs()
-		else: self.output_single_tab(base, page_name, build_dir)
+		else: self.output_single_tab(index_path)
 
 	def output_touch_file (self, touch_file, origin_files):
 
@@ -166,7 +167,7 @@ class Splitter:
 
 			else:
 
-				self.touchlist.append(self.index_path)
+				#self.touchlist.append(self.index_path)
 
 				print('SIX_FILES += %s' % (' '.join(self.touchlist)), file=f)
 				for i in self.touchlist:
