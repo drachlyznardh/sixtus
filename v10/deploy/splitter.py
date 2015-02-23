@@ -67,7 +67,7 @@ class Splitter:
 		if self.debug:
 			print('Now splitting file %s' % filename, file=sys.stderr)
 
-		with open(sys.argv[1]) as f:
+		with open(filename) as f:
 			for i in f:
 
 				line = i.strip()
