@@ -62,7 +62,7 @@ class Splitter:
 			self.inclusion.append((self.filename, self.lineno + 1))
 		self.filename = filename
 		self.lineno = 0
-		self.content += ('filename#%s#0' % filename)
+		self.append_content('filename#%s#0' % filename)
 
 		if self.debug:
 			print('Now splitting file %s' % filename, file=sys.stderr)
@@ -90,6 +90,13 @@ class Splitter:
 
 					self.update_state(token[1])
 
+				elif command == 'require':
+
+					print('Requiring file %s' % token[1], file=sys.stderr)
+					file_path = '%s/%s' % ('/'.join(sys.argv[1].split('/')[:-1]), token[1])
+					print('Including file %s' % file_path, file=sys.stderr)
+					self.split_file(file_path)
+
 				elif command == 'tab':
 
 					if not self.first: self.first = token[1]
@@ -106,10 +113,16 @@ class Splitter:
 
 		if len(self.inclusion):
 			self.filename, self.lineno = self.inclusion.pop()
-			self.content += ('filename#%s#%d' % (self.filename, self.lineno))
+			self.append_content('filename#%s#%d' % (self.filename, self.lineno))
 		else: self.update_state('meta')
 
 		return self
+
+	def append_content (self, text):
+
+		if self.content:
+			self.content += ('\n%s' % text)
+		else: self.content = text
 
 	def check_dir_path (self, filepath):
 
