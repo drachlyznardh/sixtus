@@ -78,8 +78,7 @@ class Splitter:
 					continue
 
 				if '#' not in line:
-					if self.content: self.content += ('\n%s' % line)
-					else: self.content = line
+					self.append_content(line)
 					if self.debug: print('Line is simple content, appending')
 					continue
 
@@ -106,15 +105,13 @@ class Splitter:
 					self.prevs[token[1]] = self.tabname
 					self.tabname = token[1]
 
-				elif self.content:
-					self.content += ('\n%s' % line)
-				else:
-					self.content = line
+				else: self.append_content(line)
+
+		self.update_state('meta')
 
 		if len(self.inclusion):
 			self.filename, self.lineno = self.inclusion.pop()
 			self.append_content('filename#%s#%d' % (self.filename, self.lineno))
-		else: self.update_state('meta')
 
 		return self
 
