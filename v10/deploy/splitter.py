@@ -7,7 +7,7 @@ import os
 
 class Splitter:
 
-	def __init__ (self):
+	def __init__ (self, base, page_name)
 
 		self.debug = True
 
@@ -37,8 +37,8 @@ class Splitter:
 			print('Cannot map [%s] from [%s]!' % (args[1], args[0]), file=sys.stderr)
 			sys.exit(1)
 
-		self.pag_path = '%s/%s' % (sitemap[args[1]], args[2].upper())
-		self.index_path = '%s%s/index.six' % (args[3], self.pag_path)
+		self.pag_path = '%s/%s' % (sitemap[args[1]], sys.argv[4].upper())
+		self.index_path = '%s%s/index.six' % (sys.argv[5], self.pag_path)
 
 		return self
 
@@ -195,4 +195,20 @@ class Splitter:
 			self.dump_tabs()
 			self.dump_touch()
 		else: self.dump_single_tab()
+
+	def output_tab_files (self, base, page_name, build_dir):
+
+		if self.first:
+			self.output_index_file()
+			self.output_many_tabs()
+		else: self.output_single_tab()
+
+	def output_touch_file (self, touch_file, origin_files):
+
+		if self.first:
+		return
+
+		with open(touch_file, 'w') as f:
+			print('SIX_FILES += %sindex.six' % self.base, file=f)
+			print('%s: %s' % (self.index_path, ' '.join(origin_files)), file=f)
 
