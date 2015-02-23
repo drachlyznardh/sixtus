@@ -23,8 +23,6 @@ class Preprocessor:
 
 	def parse_file (self, filename):
 
-		print('Preprocessing %s from %s' % (filename, self.base), file=sys.stderr)
-
 		self.filename = filename
 		self.origin_files.append(filename)
 		self.lineno = 0
@@ -50,9 +48,7 @@ class Preprocessor:
 
 		if self.match.match(line): # Require directive
 			target_name = self.match.sub(self.extract, line)
-			print('Target name %s' % target_name, file=sys.stderr)
 			target_file = '%s%s' % (self.base, target_name)
-			print('Target file %s' % target_file, file=sys.stderr)
 			self.inclusion.append((self.filename, self.lineno))
 			self.content.append('source#%s#%d' % (target_name, 0))
 			self.parse_file(target_file)
