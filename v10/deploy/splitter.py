@@ -112,9 +112,9 @@ class Splitter:
 
 		self.update_state('meta')
 
-		if len(self.inclusion):
-			self.filename, self.lineno = self.inclusion.pop()
-			self.append_content('filename#%s#%d' % (self.filename, self.lineno))
+		#if len(self.inclusion):
+		#	self.filename, self.lineno = self.inclusion.pop()
+		#	self.append_content('filename#%s#%d' % (self.filename, self.lineno))
 
 		return self
 
