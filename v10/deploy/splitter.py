@@ -9,7 +9,7 @@ class Splitter:
 
 	def __init__ (self):
 
-		self.debug = True
+		self.debug = False
 
 		self.state = 'meta'
 

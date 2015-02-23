@@ -9,7 +9,7 @@ class Preprocessor:
 
 	def __init__ (self, base):
 
-		self.debug = True
+		self.debug = False
 
 		self.base = base
 		self.origin_files = []
