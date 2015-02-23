@@ -6,6 +6,9 @@ MAKE_DIR   := $(SIXTUS_DIR)make/
 MAP_FILE := $(SOURCE_DIR)map.txt
 PAG_DIR  := $(SOURCE_DIR)src/
 
+.PHONY: sixtus-runtime sixtus-pages
+.PHONY: clean
+
 include $(MAKE_DIR)sixtus-runtime.Makefile
 
 PAG_FILES := $(sort $(shell find $(PAG_DIR) -name '*.pag'))
@@ -32,3 +35,7 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@mkdir -p $(dir $@)
 	@$(CMD_DIR)six-to-php.py $< $(*D) $@
 	@echo Generating page file $@
+
+clean:
+	@rm -rf $(SIX_FILES)
+	@rm -rf $(PHP_FILES)
