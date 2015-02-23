@@ -106,7 +106,7 @@ class Splitter:
 
 			if name == None: continue
 
-			file_path = '%s%s%s/%s/index.six' % (build_dir, base, page_name, name.upper())
+			file_path = '%s%s/%s/%s/index.six' % (build_dir, base, page_name, name.upper())
 			self.touch_files.append(file_path)
 
 			self.check_dir_path(file_path)
