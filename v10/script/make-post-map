@@ -3,11 +3,13 @@
 
 import sys
 
+month_list = []
 post_map = {}
 
 for line in sys.stdin:
 	for word in line.strip().split():
 
+		month_list.append(word)
 		print '[%s]' % word
 		year, month = word.split('/')
 
@@ -16,3 +18,8 @@ for line in sys.stdin:
 		else: post_map[year] = [month]
 
 print post_map
+
+prev = month_list[0]
+for month in month_list[1:]:
+	print('%s: %s' % (prev, month))
+	print('%s: %s' % (month, prev))
