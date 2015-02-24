@@ -35,6 +35,9 @@ class Converter:
 
 	def parse_file (self, filename, location):
 
+		if self.debug:
+			print('Parsing file %s' % filename, file=sys.stderr)
+
 		self.location = location
 		self.pagelocation = '/'.join(location.split('/')[:-1])
 		self.filename = filename
@@ -99,6 +102,8 @@ class Converter:
 			self.meta['tabprev'] = args[0]
 		elif command == 'tabnext':
 			self.meta['tabnext'] = args[0]
+		else:
+			self.error('Unknown command')
 
 	def parse_content (self, command, args):
 
@@ -115,6 +120,8 @@ class Converter:
 			self.append_content(self.make_link(args))
 		elif command == 'p' or command == 'c' or command == 'r':
 			self.start_writing(command, self.parse_args(args))
+		else:
+			self.error('Unknown command [%s]' % command)
 
 	def parse_args (self, args):
 
