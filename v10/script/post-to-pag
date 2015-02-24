@@ -1,0 +1,48 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+import sys
+import re
+
+print sys.argv
+
+input_file  = sys.argv[1]
+output_file = sys.argv[1]
+
+this_year  = sys.argv[3]
+this_month = sys.argv[4]
+
+check = re.compile(r'^post#')
+
+print('title#%s %s' % (this_month, this_year))
+
+with open(input_file) as f:
+	for i in f:
+		line = i.strip()
+		
+		if len(line) == 0:
+			print line
+			continue
+
+		if line[0] == '#':
+			print
+			continue
+
+		if check.match(line):
+			
+			token = line.split('#')
+			size = len(token)
+
+			print('p#%s/%s/%02d' % (this_year, this_month, int(token[1])))
+			if size == 4:
+				print('\t/ %s' % token[3])
+			if size > 4:
+				print('\t/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
+			print('tab#%s' % token[1])
+			print('title#%s' % token[2])
+				
+			continue
+
+		print line
+
+sys.exit(1)
