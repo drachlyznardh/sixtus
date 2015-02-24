@@ -28,6 +28,17 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@mkdir -p $(dir $@)
 	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 
+%.six:
+	@echo Splitting source file $<
+	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
+	@$(CMD_DIR)pag-to-six.py\
+		$(filter %.pag, $^)\
+		$(MAP_FILE)\
+		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
+		$(basename $(notdir $<))\
+		$(BUILD_DIR)\
+		$(patsubst %.pag, %.tch, $(filter %.pag, $^))
+
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 	@mkdir -p $(dir $@)
