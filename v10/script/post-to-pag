@@ -12,36 +12,48 @@ output_file = sys.argv[1]
 this_year  = sys.argv[3]
 this_month = sys.argv[4]
 
-check = re.compile(r'^post#')
+class Poster:
 
-print('title#%s %s' % (this_month, this_year))
+	def __init__ (self, year, month):
 
-with open(input_file) as f:
-	for i in f:
-		line = i.strip()
-		
-		if len(line) == 0:
-			print line
-			continue
+		self.year = year
+		self.month = month
+		self.check = re.compile(r'^post#')
 
-		if line[0] == '#':
-			print
-			continue
+	def parse_file (self, filename):
+		with open(filename) as f:
+			for i in f:
+				line = i.strip()
 
-		if check.match(line):
-			
-			token = line.split('#')
-			size = len(token)
+				if len(line) == 0:
+					print line
+					continue
 
-			print('tab#%s' % token[1])
-			print('p#%s/%s/%02d' % (this_year, this_month, int(token[1])))
-			if size == 4:
-				print('\t/ %s' % token[3])
-			if size > 4:
-				print('\t/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
-			print('title#%s' % token[2])
-			continue
+				if line[0] == '#':
+					print
+					continue
 
-		print line
+				if self.check.match(line):
+
+					token = line.split('#')
+					size = len(token)
+
+					print('tab#%s' % token[1])
+					print('p#%s/%s/%02d' % (this_year, this_month, int(token[1])))
+					if size == 4:
+						print('\t/ %s' % token[3])
+					if size > 4:
+						print('\t/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
+					print('title#%s' % token[2])
+					continue
+
+				print line
+
+	def output_post_file (self, filename):
+
+		print('title#%s %s' % (self.month, self.year))
+
+p = Poster(this_year, this_month)
+p.parse_file(input_file)
 
 sys.exit(1)
