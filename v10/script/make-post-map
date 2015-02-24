@@ -16,27 +16,32 @@ for word in sys.stdin.read().split():
 	year, month = word.split('/')
 	rel[year].append(month)
 
-prev = ''
-current = years[0]
-for year in years[1:]:
-	if prev: print('%s: %s %s' % (current, prev, year))
-	else: print('%s: %s' % (current, year))
+if len(years) > 1:
 
-	prev = current
-	current = year
+	prev = ''
+	current = years[0]
+	for year in years[1:]:
+		if prev: print('%s: %s %s' % (current, prev, year))
+		else: print('%s: %s' % (current, year))
 
-print('%s: %s' % (current, prev))
+		prev = current
+		current = year
 
-prev = ''
-current = months[0]
-for month in months[1:]:
-	if prev: print('%s: %s %s' % (current, prev, month))
-	else: print('%s: %s' % (current, month))
+	print('%s: %s' % (current, prev))
 
-	prev = current
-	current = month
+if len(months) > 1:
 
-print('%s: %s' % (current, prev))
+	prev = ''
+	current = months[0]
+	for month in months[1:]:
+		if prev: print('%s: %s %s' % (current, prev, month))
+		else: print('%s: %s' % (current, month))
+
+		prev = current
+		current = month
+
+	print('%s: %s' % (current, prev))
+
 sys.exit(1)
 
 prev = years[0]
