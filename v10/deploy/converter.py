@@ -223,13 +223,13 @@ class Converter:
 		output += ('array("%s"),' % ('","'.join(self.location.split('/'))))
 		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
 		if 'prev' in self.meta.keys():
-			prev = self.meta['prev']
-			output += ('array("%s","%s")' % (prev[0], prev[1]))
+			pagprev = self.meta['prev']
+			output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))
 		else: output += 'false'
 		output += ','
 		if 'next' in self.meta.keys():
-			next = self.meta['next']
-			output += ('array("%s","%s")' % (next[0], next[1]))
+			pagnext = self.meta['next']
+			output += ('array("%s","%s")' % (pagnext[0], pagnext[1]))
 		else: output += 'false'
 		output += ','
 		if 'tabprev' in self.meta.keys():
