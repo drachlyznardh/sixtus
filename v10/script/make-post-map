@@ -3,23 +3,14 @@
 
 import sys
 
+years = []
 months = []
-post_map = {}
 
 for word in sys.stdin.readline().split():
-	post_map[word] = []
+	years.append(word)
 
 for word in sys.stdin.read().split():
-
 	months.append(word)
-	print '[%s]' % word
-	year, month = word.split('/')
-
-	if year in post_map:
-		post_map[year].append(month)
-	else: post_map[year] = [month]
-
-print post_map
 
 prev_month = months[0]
 prev_dep = []
