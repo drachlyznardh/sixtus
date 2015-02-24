@@ -15,7 +15,7 @@ include $(MAKE_DIR)sixtus-pages.Makefile
 
 POST_FILES  := $(sort $(shell find $(BLOG_DIR) -name '*.post'))
 POST_MONTHS := $(patsubst $(BLOG_DIR)%.post, %, $(POST_FILES))
-POST_YEARS  := $(patsubst $(BLOG_DIR)%/, %, $(dir $(POST_FILES)))
+POST_YEARS  := $(sort $(patsubst $(BLOG_DIR)%/, %, $(dir $(POST_FILES))))
 POST_MAP    := $(BUILD_DIR)blog.Makefile
 
 ifeq ($(filter clean, $(MAKECMDGOALS)),)
@@ -28,6 +28,7 @@ sixtus-blog:
 	@echo $(POST_YEARS)
 
 $(POST_MAP): $(POST_FILES)
+	@echo $(POST_YEARS)
 	@echo $(POST_MONTHS)
-	@echo $(POST_MONTHS) | $(SCRIPT_DIR)make-post-map $(BLOG_DIR) $(POST_MAP) $(BUILD_DIR)
+	@echo "$(POST_YEARS)\n$(POST_MONTHS)" | $(SCRIPT_DIR)make-post-map $(BLOG_DIR) $(POST_MAP) $(BUILD_DIR)
 	@echo Map generated

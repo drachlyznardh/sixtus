@@ -3,23 +3,33 @@
 
 import sys
 
-month_list = []
+months = []
 post_map = {}
 
-for line in sys.stdin:
-	for word in line.strip().split():
+for word in sys.stdin.readline().split():
+	post_map[word] = []
 
-		month_list.append(word)
-		print '[%s]' % word
-		year, month = word.split('/')
+for word in sys.stdin.read().split():
 
-		if year in post_map:
-			post_map[year].append(month)
-		else: post_map[year] = [month]
+	months.append(word)
+	print '[%s]' % word
+	year, month = word.split('/')
+
+	if year in post_map:
+		post_map[year].append(month)
+	else: post_map[year] = [month]
 
 print post_map
 
-prev = month_list[0]
-for month in month_list[1:]:
-	print('%s: %s' % (prev, month))
-	print('%s: %s' % (month, prev))
+prev_month = months[0]
+prev_dep = []
+for month in months[1:]:
+
+	prev_dep.append('%s%s.post' % (sys.argv[1], month))
+	print('%sBlog/%s.six: %s' % (sys.argv[3], prev_month, ' '.join(prev_dep)))
+
+	prev_dep.pop()
+	prev_dep.append('%s%s.post' % (sys.argv[1], prev_month))
+	prev_month = month
+
+print('%sBlog/%s.six: %s' % (sys.argv[3], prev_month, ' '.join(prev_dep)))
