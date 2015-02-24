@@ -50,7 +50,7 @@ class Preprocessor:
 			target_name = self.match.sub(self.extract, line)
 			target_file = '%s%s' % (self.base, target_name)
 			self.inclusion.append((self.filename, self.lineno))
-			self.content.append('source#%s#%d' % (target_name, 0))
+			self.content.append('source#%s#%d' % (target_file, 0))
 			self.parse_file(target_file)
 			self.filename, self.lineno = self.inclusion.pop()
 			self.content.append('source#%s#%d' % (self.filename, self.lineno))
