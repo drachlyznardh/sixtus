@@ -7,10 +7,10 @@ import re
 print sys.argv
 
 input_file  = sys.argv[1]
-output_file = sys.argv[1]
-
-this_year  = sys.argv[3]
-this_month = sys.argv[4]
+output_file = sys.argv[2]
+map_file    = sys.argv[3]
+this_year   = sys.argv[4]
+this_month  = sys.argv[5]
 
 class Poster:
 
