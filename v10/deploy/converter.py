@@ -51,6 +51,7 @@ class Converter:
 
 		if '#' not in line:
 			self.append_content(line);
+			return
 
 		token = line.split('#')
 		command = token[0]
