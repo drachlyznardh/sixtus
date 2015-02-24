@@ -25,6 +25,9 @@ class Converter:
 
 		self.jump = False
 
+		self.filename = ''
+		self.lineno = 0
+
 	def error (self, message):
 
 		print('%s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
@@ -46,6 +49,8 @@ class Converter:
 
 	def parse_line (self, line):
 
+		self.lineno += 1
+
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
@@ -55,6 +60,11 @@ class Converter:
 
 		token = line.split('#')
 		command = token[0]
+
+		if command == 'source':
+			self.filename = token[1]
+			self.lineno = int(token[2])
+			return
 
 		if command == 'start':
 			self.state_update(token[1])
