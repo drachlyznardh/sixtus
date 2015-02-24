@@ -15,8 +15,18 @@ include $(MAKE_DIR)sixtus-pages.Makefile
 
 POST_FILES := $(sort $(shell find $(BLOG_DIR) -name '*.post'))
 POST_YEARS := $(patsubst $(BLOG_DIR)%/, %, $(dir $(POST_FILES)))
+POST_MAP   := $(BUILD_DIR)blog.Makefile
+
+ifeq ($(filter clean, $(MAKECMDGOALS)),)
+-include $(POST_MAP)
+endif
 
 sixtus-blog:
 	@echo Blog is ready
 	@echo $(POST_FILES)
 	@echo $(POST_YEARS)
+
+$(POST_MAP): $(POST_FILES)
+	@echo $(POST_FILES)
+	@echo $(POST_FILES) | $(SCRIPT_DIR)make-post-map $(BLOG_DIR) $(POST_MAP) $(BUILD_DIR)
+	@echo Map generated

@@ -1,0 +1,13 @@
+#!/usr/bin/python
+# -*- enconding: utf-8 -*-
+
+import sys
+
+print "Hello"
+
+for line in sys.stdin:
+	for word in line.strip().split():
+
+		print '[%s]' % word
+
+print "Hello"
