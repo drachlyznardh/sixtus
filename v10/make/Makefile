@@ -1,6 +1,6 @@
 
 SIXTUS_DIR := /opt/devel/web/sixtus/v10/
-CMD_DIR    := $(SIXTUS_DIR)deploy/
+SCRIPT_DIR := $(SIXTUS_DIR)script/
 MAKE_DIR   := $(SIXTUS_DIR)make/
 
 MAP_FILE := $(SOURCE_DIR)map.txt
@@ -26,12 +26,12 @@ sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@echo Splitting source file $<
 	@mkdir -p $(dir $@)
-	@$(CMD_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
+	@$(SCRIPT_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 
 %.six:
 	@echo Splitting source file $<
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
-	@$(CMD_DIR)pag-to-six.py\
+	@$(SCRIPT_DIR)pag-to-six.py\
 		$(filter %.pag, $^)\
 		$(MAP_FILE)\
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
@@ -42,7 +42,7 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 	@mkdir -p $(dir $@)
-	@$(CMD_DIR)six-to-php.py $< $(*D) $@
+	@$(SCRIPT_DIR)six-to-php.py $< $(*D) $@
 
 clean:
 	@rm -rf $(BUILD_DIR)
