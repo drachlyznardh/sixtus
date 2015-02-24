@@ -25,12 +25,18 @@ class Converter:
 
 		self.jump = False
 
+		self.filename = ''
+		self.lineno = 0
+
 	def error (self, message):
 
 		print('%s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename, location):
+
+		if self.debug:
+			print('Parsing file %s' % filename, file=sys.stderr)
 
 		self.location = location
 		self.pagelocation = '/'.join(location.split('/')[:-1])
@@ -46,14 +52,22 @@ class Converter:
 
 	def parse_line (self, line):
 
+		self.lineno += 1
+
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
 		if '#' not in line:
 			self.append_content(line);
+			return
 
 		token = line.split('#')
 		command = token[0]
+
+		if command == 'source':
+			self.filename = token[1]
+			self.lineno = int(token[2])
+			return
 
 		if command == 'start':
 			self.state_update(token[1])
@@ -88,6 +102,8 @@ class Converter:
 			self.meta['tabprev'] = args[0]
 		elif command == 'tabnext':
 			self.meta['tabnext'] = args[0]
+		else:
+			self.error('Unknown command')
 
 	def parse_content (self, command, args):
 
@@ -104,6 +120,8 @@ class Converter:
 			self.append_content(self.make_link(args))
 		elif command == 'p' or command == 'c' or command == 'r':
 			self.start_writing(command, self.parse_args(args))
+		else:
+			self.error('Unknown command [%s]' % command)
 
 	def parse_args (self, args):
 
@@ -193,10 +211,10 @@ class Converter:
 
 		self.state = newstate
 
-	def dump_output (self):
+	def dump_output (self, filename):
 
 		if self.jump:
-			self.dump_jump()
+			self.dump_jump(filename)
 			return
 
 		self.state_update('meta')
@@ -205,13 +223,13 @@ class Converter:
 		output += ('array("%s"),' % ('","'.join(self.location.split('/'))))
 		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
 		if 'prev' in self.meta.keys():
-			prev = self.meta['prev']
-			output += ('array("%s","%s")' % (prev[0], prev[1]))
+			pagprev = self.meta['prev']
+			output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))
 		else: output += 'false'
 		output += ','
 		if 'next' in self.meta.keys():
-			next = self.meta['next']
-			output += ('array("%s","%s")' % (next[0], next[1]))
+			pagnext = self.meta['next']
+			output += ('array("%s","%s")' % (pagnext[0], pagnext[1]))
 		else: output += 'false'
 		output += ','
 		if 'tabprev' in self.meta.keys():
@@ -231,9 +249,9 @@ class Converter:
 		output += '%s' % self.side
 		output += '<?php require_once($sixtus."page-bottom.php"); ?>'
 
-		print('%s' % output)
+		with open(filename, 'w') as f: print('%s' % output, file=f)
 
-	def dump_jump (self):
+	def dump_jump (self, filename):
 
 		output = '<?php header("Location: /%s"); die(); ?>' % self.jump
-		print('%s' % output)
+		with open(filename, 'w') as f: print('%s' % output, file=f)
