@@ -20,11 +20,8 @@ endif
 
 PHP_FILES := $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 
+sixtus-deploy: sixtus-pages sixtus-runtime
 sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
-	@#echo PAG FILES: $(PAG_FILES)
-	@#echo TCH FILES: $(TCH_FILES)
-	@#echo SIX FILES: $(SIX_FILES)
-	@#echo PHP FILES: $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@echo Splitting source file $<
