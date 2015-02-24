@@ -3,11 +3,16 @@
 
 import sys
 
-print "Hello"
+post_map = {}
 
 for line in sys.stdin:
 	for word in line.strip().split():
 
 		print '[%s]' % word
+		year, month = word.split('/')
 
-print "Hello"
+		if year in post_map:
+			post_map[year].append(month)
+		else: post_map[year] = [month]
+
+print post_map
