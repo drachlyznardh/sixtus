@@ -83,4 +83,31 @@ p = Poster(this_year, this_month)
 p.parse_file(input_file)
 p.output_post_file(output_file)
 
+with open(map_file) as f:
+	rel_map = eval(f.read())
+print rel_map
+
+rel_list = []
+for year,content in rel_map.items():
+	for month in content:
+		rel_list.append('%s/%s' % (year, month))
+
+print rel_list
+
+this_page = '%s/%s' % (this_year, this_month)
+print this_page
+
+index = rel_list.index(this_page)
+print index
+
+if index > 0:
+	prev_rel = rel_list[index - 1]
+else: prev_rel = False
+
+if index < len(rel_list) - 1:
+	next_rel = rel_list[index + 1]
+else: next_rel = False
+
+print prev_rel, next_rel
+
 sys.exit(1)

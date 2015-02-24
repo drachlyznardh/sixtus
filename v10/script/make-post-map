@@ -16,6 +16,9 @@ for word in sys.stdin.read().split():
 	year, month = word.split('/')
 	rel[year].append(month)
 
+print rel
+sys.exit(1)
+
 if len(years) > 1:
 
 	prev = ''

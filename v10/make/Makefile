@@ -26,10 +26,10 @@ BLOG_SIX_FILES   += $(BLOG_MONTH_FILES)
 BLOG_PHP_FILES   := $(patsubst $(BLOG_BUILD_DIR)%.six, $(BLOG_OUT_DIR)%.php, $(BLOG_SIX_FILES))
 
 ifeq ($(filter clean, $(MAKECMDGOALS)),)
--include $(POST_MAP)
+#-include $(POST_MAP)
 endif
 
-$(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post $(POST_MAP)
+$(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(POST_MAP)
 	$(SCRIPT_DIR)post-to-pag $< $@ $(POST_MAP) $(*D) $(*F)
 
 sixtus-blog: $(BLOG_PHP_FILES)
@@ -40,5 +40,6 @@ sixtus-blog: $(BLOG_PHP_FILES)
 	@echo $(BLOG_PHP_FILES)
 
 $(POST_MAP): $(POST_FILES)
-	@echo "$(POST_YEARS)\n$(POST_MONTHS)" | $(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(POST_MAP) $(BUILD_DIR)
+	@echo "$(POST_YEARS)\n$(POST_MONTHS)" |\
+		$(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(POST_MAP) $(BUILD_DIR) > $(POST_MAP)
 	@echo Map generated
