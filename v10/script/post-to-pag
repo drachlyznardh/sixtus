@@ -33,14 +33,13 @@ with open(input_file) as f:
 			token = line.split('#')
 			size = len(token)
 
+			print('tab#%s' % token[1])
 			print('p#%s/%s/%02d' % (this_year, this_month, int(token[1])))
 			if size == 4:
 				print('\t/ %s' % token[3])
 			if size > 4:
 				print('\t/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
-			print('tab#%s' % token[1])
 			print('title#%s' % token[2])
-				
 			continue
 
 		print line
