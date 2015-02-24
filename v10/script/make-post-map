@@ -5,22 +5,64 @@ import sys
 
 years = []
 months = []
+rel = {}
 
-for word in sys.stdin.readline().split():
-	years.append(word)
+for year in sys.stdin.readline().split():
+	years.append(year)
+	rel[year] = []
 
 for word in sys.stdin.read().split():
 	months.append(word)
+	year, month = word.split('/')
+	rel[year].append(month)
 
-prev_month = months[0]
-prev_dep = []
+prev = ''
+current = years[0]
+for year in years[1:]:
+	if prev: print('%s: %s %s' % (current, prev, year))
+	else: print('%s: %s' % (current, year))
+
+	prev = current
+	current = year
+
+print('%s: %s' % (current, prev))
+
+prev = ''
+current = months[0]
+for month in months[1:]:
+	if prev: print('%s: %s %s' % (current, prev, month))
+	else: print('%s: %s' % (current, month))
+
+	prev = current
+	current = month
+
+print('%s: %s' % (current, prev))
+sys.exit(1)
+
+prev = years[0]
+dep = []
+for year in years[1:]:
+
+	dep.append('%s%s.six' % (sys.argv[1], year))
+	print('%sBlog/%s.six: %s' % (sys.argv[3], prev, ' '.join(dep)))
+
+	dep.pop(0)
+	dep.append('%s%s.six' % (sys.argv[1], prev))
+	prev = year
+
+dep.pop(0)
+print('%sBlog/%s.six: %s' % (sys.argv[3], prev, ' '.join(dep)))
+
+prev = months[0]
+dep = []
 for month in months[1:]:
 
-	prev_dep.append('%s%s.post' % (sys.argv[1], month))
-	print('%sBlog/%s.six: %s' % (sys.argv[3], prev_month, ' '.join(prev_dep)))
+	dep.append('%s%s.post' % (sys.argv[1], month))
+	print('%sBlog/%s.six: %s' % (sys.argv[3], prev, ' '.join(dep)))
 
-	prev_dep.pop()
-	prev_dep.append('%s%s.post' % (sys.argv[1], prev_month))
-	prev_month = month
+	dep.pop(0)
+	dep.append('%s%s.post' % (sys.argv[1], prev))
+	prev = month
 
-print('%sBlog/%s.six: %s' % (sys.argv[3], prev_month, ' '.join(prev_dep)))
+#dep.pop(0)
+print('%sBlog/%s.six: %s' % (sys.argv[3], prev, ' '.join(dep)))
