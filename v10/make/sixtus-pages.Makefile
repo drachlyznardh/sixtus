@@ -16,7 +16,7 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@$(SCRIPT_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 
 %.six:
-	@echo Splitting source file $<
+	@echo Splitting source file [$<] [$@]
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
 	@$(SCRIPT_DIR)pag-to-six.py\
 		$(filter %.pag, $^)\
