@@ -68,7 +68,9 @@ class Poster:
 	def output_post_file (self, filename):
 
 		print('title#%s %s' % (self.this_page[2], self.this_page[0]))
-		#print('prev#%s%' % ())
-		#print('next#%s%' % ())
+		if self.prev_page:
+			print('prev#Blog/%s/%s/#%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]))
+		if self.next_page:
+			print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]))
 		for number, value in self.post_map.items():
 			print('%s' % value)
