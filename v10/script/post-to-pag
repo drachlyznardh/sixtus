@@ -10,8 +10,9 @@ print sys.argv
 input_file  = sys.argv[1]
 output_file = sys.argv[2]
 rel_file    = sys.argv[3]
-this_year   = sys.argv[4]
-this_month  = sys.argv[5]
+name_file   = sys.argv[4]
+this_year   = sys.argv[5]
+this_month  = sys.argv[6]
 
 class Relater:
 
@@ -68,7 +69,7 @@ class Relater:
 
 		#print('%s, %s' % (self.prev_page, self.next_page))
 
-r = Relater(rel_file, '#name_file')
+r = Relater(rel_file, name_file)
 r.relate(this_year, this_month)
 
 p = Poster(r.this_page, r.prev_page, r.next_page)

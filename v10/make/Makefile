@@ -19,6 +19,7 @@ POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
 POST_MONTHS := $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
 POST_YEARS  := $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
 POST_MAP    := $(BUILD_DIR)blog.Makefile
+MONTH_NAMES := $(BUILD_DIR)month_names.txt
 
 BLOG_MONTH_FILES := $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_SIX_FILES   += $(BLOG_MONTH_FILES)
@@ -29,8 +30,8 @@ ifeq ($(filter clean, $(MAKECMDGOALS)),)
 #-include $(POST_MAP)
 endif
 
-$(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(POST_MAP)
-	$(SCRIPT_DIR)post-to-pag $< $@ $(POST_MAP) $(*D) $(*F)
+$(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(POST_MAP) $(MONTH_NAMES)
+	$(SCRIPT_DIR)post-to-pag $< $@ $(POST_MAP) $(MONTH_NAMES) $(*D) $(*F)
 
 sixtus-blog: $(BLOG_PHP_FILES)
 	@echo Blog is ready
