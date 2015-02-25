@@ -40,7 +40,10 @@ sixtus-blog: $(BLOG_PAG_FILES)
 	@echo $(BLOG_PHP_FILES)
 
 $(BLOG_REL_FILE): $(POST_FILES)
-	@echo $(POST_MONTHS) | $(SCRIPT_DIR)make-rel-file $(BLOG_REL_FILE)
+	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-rel-file $(BLOG_REL_FILE)
+
+$(BLOG_NAME_FILE): $(POST_FILES)
+	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE)
 	
 culo:
 	@#echo "$(POST_YEARS)\n$(POST_MONTHS)" |\
