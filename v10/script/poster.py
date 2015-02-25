@@ -62,7 +62,6 @@ class Poster:
 					self.store_content()
 					self.current = token[1]
 
-					self.append_content('tab#%s' % token[1])
 					self.append_content('p#%s/%s/%02d' % (self.this_page[0], self.this_page[1], int(token[1])))
 					if size == 4:
 						self.append_content('/ %s' % token[3])
@@ -91,4 +90,6 @@ class Poster:
 			print('\n&amp;\n'.join(['link##%s#%s/%s' % (value[i], number, i) for i in xrange(len(value))]))
 		print('start#page')
 		for number, value in self.post_content.items():
-			print('%s' % value)
+			for index in xrange(len(value)):
+				print('id#%s/%s' % (number, index))
+				print('%s' % value[index])
