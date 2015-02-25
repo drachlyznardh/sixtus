@@ -86,7 +86,6 @@ class Poster:
 		print('start#side')
 		for number, value in self.post_title.items():
 			print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]))
-			print value
 			print('\n&amp;\n'.join(['link##%s#%s/%s' % (value[i], number, i) for i in xrange(len(value))]))
 		print('start#page')
 		for number, value in self.post_content.items():
