@@ -25,6 +25,4 @@ r.relate(this_year, this_month)
 
 p = Poster(r.this_page, r.prev_page, r.next_page)
 p.parse_file(input_file)
-p.output_post_file(output_file)
-
-sys.exit(1)
+p.output_pag_file(output_file)

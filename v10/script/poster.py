@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- encoding: utf-8 -*-
 
+from __future__ import print_function
+
 import sys
 import re
 
@@ -76,19 +78,20 @@ class Poster:
 
 		self.store_content()
 
-	def output_post_file (self, filename):
+	def output_pag_file (self, filename):
 
-		print('title#%s %s' % (self.this_page[2], self.this_page[0]))
-		if self.prev_page:
-			print('prev#Blog/%s/%s/#%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]))
-		if self.next_page:
-			print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]))
-		print('start#side')
-		for number, value in self.post_title.items():
-			print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]))
-			print('\n&amp;\n'.join(['link##%s#%s/%s' % (value[i], number, i) for i in xrange(len(value))]))
-		print('start#page')
-		for number, value in self.post_content.items():
-			for index in xrange(len(value)):
-				print('id#%s/%s' % (number, index))
-				print('%s' % value[index])
+		with open(filename, 'w') as f:
+			print('title#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
+			if self.prev_page:
+				print('prev#Blog/%s/%s/#%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]), file=f)
+			if self.next_page:
+				print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]), file=f)
+			print('start#side', file=f)
+			for number, value in self.post_title.items():
+				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
+				print('\n&amp;\n'.join(['link##%s#%s/%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
+			print('start#page', file=f)
+			for number, value in self.post_content.items():
+				for index in xrange(len(value)):
+					print('id#%s/%s' % (number, index), file=f)
+					print('%s' % value[index], file=f)

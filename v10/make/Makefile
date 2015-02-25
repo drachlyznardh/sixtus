@@ -32,7 +32,8 @@ ifeq ($(filter clean, $(MAKECMDGOALS)),)
 endif
 
 $(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FILE) $(BLOG_NAME_FILE)
-	$(SCRIPT_DIR)post-to-pag $< $@ $(BLOG_REL_FILE) $(BLOG_NAME_FILE) $(*D) $(*F)
+	@mkdir -p $(dir $@)
+	@$(SCRIPT_DIR)post-to-pag $< $@ $(BLOG_REL_FILE) $(BLOG_NAME_FILE) $(*D) $(*F)
 
 sixtus-blog: $(BLOG_PHP_FILES)
 	@echo Blog is ready
