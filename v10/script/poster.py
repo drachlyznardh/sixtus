@@ -15,13 +15,13 @@ class Poster:
 		self.check = re.compile(r'^post#')
 
 		self.content = ''
-		self.post_map = {}
+		self.post_content = {}
 		self.current = False
 
 	def store_content (self):
 
 		if self.current:
-			self.post_map[self.current] = self.content
+			self.post_content[self.current] = self.content
 		self.content = ''
 
 	def append_content (self, text):
@@ -72,5 +72,7 @@ class Poster:
 			print('prev#Blog/%s/%s/#%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]))
 		if self.next_page:
 			print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]))
-		for number, value in self.post_map.items():
+		print('start#side')
+		print('start#page')
+		for number, value in self.post_content.items():
 			print('%s' % value)
