@@ -44,5 +44,6 @@ include $(MAKE_DIR)sixtus-runtime.Makefile
 include $(MAKE_DIR)sixtus-pages.Makefile
 
 clean:
+	@rm -f $(BLOG_PAG_FILES)
 	@rm -rf $(BUILD_DIR)
-	@rm -rf $(PHP_FILES)
+	@rm -f $(PHP_FILES)
