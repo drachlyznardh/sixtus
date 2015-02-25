@@ -18,7 +18,8 @@ $(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
 		$(SITE_TAB_PREV_BEFORE) $(SITE_TAB_PREV_LINK) $(SITE_TAB_PREV_AFTER)
 	@echo page top [$@] generated
 
-$(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in $(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
+$(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in \
+		$(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
 	@$(SCRIPT_DIR)page-make-middle $^ $@ \
 		$(SITE_COPYRIGHT_YEARS) $(SITE_COPYRIGHT_OWNER) \
 		$(SITE_TAB_NEXT_BEFORE) $(SITE_TAB_NEXT_LINK) $(SITE_TAB_NEXT_AFTER) \
