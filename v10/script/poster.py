@@ -21,8 +21,11 @@ class Poster:
 
 	def store_content (self):
 
-		if self.current:
-			self.post_content[self.current] = self.content
+		if self.current in self.post_content.keys():
+			self.post_content[self.current].append(self.content)
+		elif self.current:
+			self.post_content[self.current] = [self.content]
+
 		self.content = ''
 
 	def append_title (self, number, title):
