@@ -12,16 +12,17 @@ BLOG_OUT_DIR   := $(PAG_DIR)Blog/
 .PHONY: sixtus-runtime sixtus-pages
 .PHONY: clean
 
-POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
-POST_MONTHS := $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
-POST_YEARS  := $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
+POST_FILES  += $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
+POST_MONTHS += $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
+POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
 
 BLOG_REL_FILE  := $(BUILD_DIR)blog-rel.py
 BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 
-BLOG_MONTH_FILES := $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
+BLOG_MONTH_FILES += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_PAG_FILES   += $(BLOG_MONTH_FILES)
 #BLOG_PAG_FILES   += archive_page, years pages…
+PAG_FILES        += $(BLOG_PAG_FILES)
 
 ifeq ($(filter clean, $(MAKECMDGOALS)),)
 #-include $(BLOG_REL_FILE)
