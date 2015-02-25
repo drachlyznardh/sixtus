@@ -3,6 +3,7 @@
 
 import sys
 import re
+from poster import Poster
 
 print sys.argv
 
@@ -11,12 +12,6 @@ output_file = sys.argv[2]
 rel_file    = sys.argv[3]
 this_year   = sys.argv[4]
 this_month  = sys.argv[5]
-
-from poster import Poster
-
-p = Poster(this_year, this_month)
-p.parse_file(input_file)
-p.output_post_file(output_file)
 
 with open(rel_file) as f:
 	rel_map = eval(f.read())
@@ -44,5 +39,9 @@ if index < len(rel_list) - 1:
 else: next_rel = False
 
 print prev_rel, next_rel
+
+p = Poster(this_year, this_month)
+p.parse_file(input_file)
+p.output_post_file(output_file)
 
 sys.exit(1)
