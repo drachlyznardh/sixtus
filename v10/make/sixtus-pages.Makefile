@@ -30,7 +30,3 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-to-php.py $< $(*D) $@
-
-clean:
-	@rm -rf $(BUILD_DIR)
-	@rm -rf $(PHP_FILES)

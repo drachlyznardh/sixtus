@@ -43,3 +43,6 @@ $(BLOG_NAME_FILE): $(POST_FILES)
 include $(MAKE_DIR)sixtus-runtime.Makefile
 include $(MAKE_DIR)sixtus-pages.Makefile
 
+clean:
+	@rm -rf $(BUILD_DIR)
+	@rm -rf $(PHP_FILES)
