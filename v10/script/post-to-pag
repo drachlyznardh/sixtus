@@ -27,15 +27,18 @@ print rel_list
 this_page = '%s/%s' % (this_year, this_month)
 print this_page
 
-index = rel_list.index(this_page)
+try: index = rel_list.index(this_page)
+except:
+	print('This_Page (%s) is not in the list (%s)')
+	sys.exit(1)
 print index
 
 if index > 0:
-	prev_rel = rel_list[index - 1]
+	prev_rel = rel_list[index - 1].split('/')
 else: prev_rel = False
 
 if index < len(rel_list) - 1:
-	next_rel = rel_list[index + 1]
+	next_rel = rel_list[index + 1].split('/')
 else: next_rel = False
 
 print prev_rel, next_rel
