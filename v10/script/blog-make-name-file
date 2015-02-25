@@ -1,0 +1,20 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+if len(sys.argv) != 2:
+	print('Usage: %s %s' % (sys.argv[0], '<output file>'))
+	sys.exit(1)
+
+name_map = {}
+outfile = sys.argv[1]
+index = 0
+
+for name in sys.stdin.readline().split():
+	index += 1
+	key = '%02d' % index
+	name_map[key] = name
+
+with open(outfile, 'w') as f: print('%s' % name_map, file=f)
