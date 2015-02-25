@@ -120,8 +120,10 @@ class Converter:
 			self.append_content(self.make_link(args))
 		elif command == 'p' or command == 'c' or command == 'r':
 			self.start_writing(command, self.parse_args(args))
-		else:
-			self.error('Unknown command [%s]' % command)
+		elif command == 'id':
+			self.stop_writing()
+			self.content += ('<a id="%s"></a>' % args[0])
+		else: self.error('Unknown command [%s]' % command)
 
 	def parse_args (self, args):
 
