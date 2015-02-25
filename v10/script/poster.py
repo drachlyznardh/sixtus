@@ -6,10 +6,12 @@ import re
 
 class Poster:
 
-	def __init__ (self, year, month):
+	def __init__ (self, this_page, prev_page, next_page):
 
-		self.year = year
-		self.month = month
+		self.this_page = this_page
+		self.prev_page = prev_page
+		self.next_page = next_page
+
 		self.check = re.compile(r'^post#')
 
 		self.content = ''
