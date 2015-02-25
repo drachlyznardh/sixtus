@@ -29,20 +29,8 @@ class Relater:
 
 		#print self.rel_list
 
-		self.name_map = {
-			'01':'Gennaio',
-			'02':'Febbraio',
-			'03':'Marzo',
-			'04':'Aprile',
-			'05':'Maggio',
-			'06':'Giugno',
-			'07':'Luglio',
-			'08':'Agosto',
-			'09':'Settembre',
-			'10':'Ottobre',
-			'11':'Novembre',
-			'12':'Dicembre'
-		}
+		with open(name_file) as f:
+			self.name_map = eval(f.read())
 
 	def relate (self, year, month):
 
