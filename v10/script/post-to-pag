@@ -8,7 +8,7 @@ print sys.argv
 
 input_file  = sys.argv[1]
 output_file = sys.argv[2]
-map_file    = sys.argv[3]
+rel_file    = sys.argv[3]
 this_year   = sys.argv[4]
 this_month  = sys.argv[5]
 
@@ -83,7 +83,7 @@ p = Poster(this_year, this_month)
 p.parse_file(input_file)
 p.output_post_file(output_file)
 
-with open(map_file) as f:
+with open(rel_file) as f:
 	rel_map = eval(f.read())
 print rel_map
 

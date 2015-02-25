@@ -41,5 +41,5 @@ sixtus-blog: $(BLOG_PHP_FILES)
 
 $(POST_MAP): $(POST_FILES)
 	@echo "$(POST_YEARS)\n$(POST_MONTHS)" |\
-		$(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(POST_MAP) $(BUILD_DIR) > $(POST_MAP)
+		$(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(POST_MAP) $(BUILD_DIR) # > $(POST_MAP)
 	@echo Map generated
