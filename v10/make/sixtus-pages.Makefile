@@ -13,12 +13,12 @@ sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@echo Splitting source file $<
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)pag-to-six.py $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
+	@$(SCRIPT_DIR)pag-to-six $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 
 %.six:
 	@echo Splitting source file [$<] [$@]
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
-	@$(SCRIPT_DIR)pag-to-six.py\
+	@$(SCRIPT_DIR)pag-to-six\
 		$(filter %.pag, $^)\
 		$(MAP_FILE)\
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
@@ -29,4 +29,4 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)six-to-php.py $< $(*D) $@
+	@$(SCRIPT_DIR)six-to-php $< $(*D) $@
