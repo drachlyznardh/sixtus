@@ -18,8 +18,9 @@ include $(MAKE_DIR)sixtus-pages.Makefile
 POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
 POST_MONTHS := $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
 POST_YEARS  := $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
-POST_MAP    := $(BUILD_DIR)blog.Makefile
-MONTH_NAMES := $(BUILD_DIR)month_names.txt
+
+BLOG_REL_FILE  := $(BUILD_DIR)blog-rel.py
+BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 
 BLOG_MONTH_FILES := $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_SIX_FILES   += $(BLOG_MONTH_FILES)
@@ -27,11 +28,11 @@ BLOG_SIX_FILES   += $(BLOG_MONTH_FILES)
 BLOG_PHP_FILES   := $(patsubst $(BLOG_BUILD_DIR)%.six, $(BLOG_OUT_DIR)%.php, $(BLOG_SIX_FILES))
 
 ifeq ($(filter clean, $(MAKECMDGOALS)),)
-#-include $(POST_MAP)
+#-include $(BLOG_REL_FILE)
 endif
 
-$(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(POST_MAP) $(MONTH_NAMES)
-	$(SCRIPT_DIR)post-to-pag $< $@ $(POST_MAP) $(MONTH_NAMES) $(*D) $(*F)
+$(BLOG_MONTH_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FILE) $(BLOG_NAME_FILE)
+	$(SCRIPT_DIR)post-to-pag $< $@ $(BLOG_REL_FILE) $(BLOG_NAME_FILE) $(*D) $(*F)
 
 sixtus-blog: $(BLOG_PHP_FILES)
 	@echo Blog is ready
@@ -40,7 +41,7 @@ sixtus-blog: $(BLOG_PHP_FILES)
 	@echo $(BLOG_SIX_FILES)
 	@echo $(BLOG_PHP_FILES)
 
-$(POST_MAP): $(POST_FILES)
+$(BLOG_REL_FILE): $(POST_FILES)
 	@echo "$(POST_YEARS)\n$(POST_MONTHS)" |\
-		$(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(POST_MAP) $(BUILD_DIR) # > $(POST_MAP)
+		$(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(BLOG_REL_FILE) $(BUILD_DIR) # > $(BLOG_REL_FILE)
 	@echo Map generated
