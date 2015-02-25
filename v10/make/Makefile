@@ -42,6 +42,10 @@ sixtus-blog: $(BLOG_PHP_FILES)
 	@echo $(BLOG_PHP_FILES)
 
 $(BLOG_REL_FILE): $(POST_FILES)
-	@echo "$(POST_YEARS)\n$(POST_MONTHS)" |\
+	@echo $(POST_MONTHS) | $(SCRIPT_DIR)make-rel-file $(BLOG_REL_FILE)
+	
+	
+culo:
+	@#echo "$(POST_YEARS)\n$(POST_MONTHS)" |\
 		$(SCRIPT_DIR)make-post-map $(BLOG_IN_DIR) $(BLOG_REL_FILE) $(BUILD_DIR) # > $(BLOG_REL_FILE)
 	@echo Map generated
