@@ -11,7 +11,7 @@ if len(sys.argv) != 7:
 	sys.exit(1)
 
 input_file  = sys.argv[1]
-output_file = sys.argv[2]
+pag_file    = sys.argv[2]
 rel_file    = sys.argv[3]
 name_file   = sys.argv[4]
 this_year   = sys.argv[5]
@@ -25,4 +25,4 @@ r.relate(this_year, this_month)
 
 p = Poster(r.this_page, r.prev_page, r.next_page)
 p.parse_file(input_file)
-p.output_pag_file(output_file)
+p.output_pag_file(pag_file)
