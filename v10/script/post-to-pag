@@ -13,35 +13,63 @@ rel_file    = sys.argv[3]
 this_year   = sys.argv[4]
 this_month  = sys.argv[5]
 
-with open(rel_file) as f:
-	rel_map = eval(f.read())
-print rel_map
+class Relater:
 
-rel_list = []
-for year,content in rel_map.items():
-	for month in content:
-		rel_list.append('%s/%s' % (year, month))
+	def __init__ (self, rel_file, name_file):
 
-print rel_list
+		with open(rel_file) as f:
+			rel_map = eval(f.read())
+		print rel_map
 
-this_page = '%s/%s' % (this_year, this_month)
-print this_page
+		self.rel_list = []
+		for year,content in rel_map.items():
+			for month in content:
+				self.rel_list.append('%s/%s' % (year, month))
 
-try: index = rel_list.index(this_page)
-except:
-	print('This_Page (%s) is not in the list (%s)')
-	sys.exit(1)
-print index
+		print self.rel_list
 
-if index > 0:
-	prev_rel = rel_list[index - 1].split('/')
-else: prev_rel = False
+		self.name_map = {
+			'01':'Gennaio',
+			'02':'Febbraio',
+			'03':'Marzo',
+			'04':'Aprile',
+			'05':'Maggio',
+			'06':'Giugno',
+			'07':'Luglio',
+			'08':'Agosto',
+			'09':'Settembre',
+			'10':'Ottobre',
+			'11':'Novembre',
+			'12':'Dicembre'
+		}
 
-if index < len(rel_list) - 1:
-	next_rel = rel_list[index + 1].split('/')
-else: next_rel = False
+	def relate (self, year, month):
 
-print prev_rel, next_rel
+		self.this_page = [year, month, self.name_map[month]]
+
+		short_name = '%s/%s' % (this_year, this_month)
+		print self.this_page
+
+		try: index = self.rel_list.index(short_name)
+		except:
+			print('This_Page (%s) is not in the list (%s)' % (short_name, self.rel_list))
+			sys.exit(1)
+		print index
+
+		if index > 0:
+			self.prev_page = self.rel_list[index - 1].split('/')
+			self.prev_page.append(self.name_map[self.prev_page[1]])
+		else: self.prev_page = False
+
+		if index < len(self.rel_list) - 1:
+			self.next_page = self.rel_list[index + 1].split('/')
+			self.next_page.append(self.name_map[self.next_page[1]])
+		else: self.next_page = False
+
+		print('%s, %s' % (self.prev_page, self.next_page))
+
+r = Relater(rel_file, '#name_file')
+r.relate(this_year, this_month)
 
 p = Poster(this_year, this_month)
 p.parse_file(input_file)
