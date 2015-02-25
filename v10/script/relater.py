@@ -8,12 +8,7 @@ class Relater:
 	def __init__ (self, rel_file, name_file):
 
 		with open(rel_file) as f:
-			rel_map = eval(f.read())
-
-		self.rel_list = []
-		for year,content in rel_map.items():
-			for month in content:
-				self.rel_list.append('%s/%s' % (year, month))
+			self.rel_list = eval(f.read())
 
 		with open(name_file) as f:
 			self.name_map = eval(f.read())
