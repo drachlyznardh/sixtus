@@ -13,8 +13,6 @@ class Mapper:
 		with open(map_file) as f:
 			site_map = eval(f.read())
 
-		if page_origin not in site_map:
-			print('Cannot map [%s] from [%s]!' % (page_origin, map_file), file=sys.stderr)
-			sys.exit(1)
-
-		self.base = site_map[page_origin]
+		if page_origin in site_map:
+			self.base = site_map[page_origin]
+		else: self.base = page_origin
