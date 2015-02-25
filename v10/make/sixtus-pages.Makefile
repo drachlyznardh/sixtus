@@ -15,8 +15,8 @@ $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)pag-to-six $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 
-%.six:
-	@echo Splitting source file [$<] [$@]
+$(BUILD_DIR)%.six:
+	@echo Splitting source file $<
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
 	@$(SCRIPT_DIR)pag-to-six\
 		$(filter %.pag, $^)\

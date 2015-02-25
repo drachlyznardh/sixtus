@@ -120,8 +120,13 @@ class Converter:
 			self.append_content(self.make_link(args))
 		elif command == 'p' or command == 'c' or command == 'r':
 			self.start_writing(command, self.parse_args(args))
-		else:
-			self.error('Unknown command [%s]' % command)
+		elif command == 'id':
+			self.stop_writing()
+			self.content += ('<a id="%s"></a>' % args[0])
+		elif command == 'br':
+			self.stop_writing()
+			self.content += '<br/>'
+		else: self.error('Unknown command [%s]' % command)
 
 	def parse_args (self, args):
 
@@ -180,7 +185,7 @@ class Converter:
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], args[2])
 
-		if href[0] != '/': href = '/%s' % href
+		if len(args[0]) and href[0] != '/': href = '/%s' % href
 
 		if '@' not in args[1]:
 			title = args[1]
