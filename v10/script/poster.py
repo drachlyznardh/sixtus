@@ -16,6 +16,7 @@ class Poster:
 
 		self.content = ''
 		self.post_content = {}
+		self.post_title = {}
 		self.current = False
 
 	def store_content (self):
@@ -23,6 +24,12 @@ class Poster:
 		if self.current:
 			self.post_content[self.current] = self.content
 		self.content = ''
+
+	def append_title (self, number, title):
+
+		if number in self.post_title.keys():
+			self.post_title[number].append(title)
+		else: self.post_title[number] = [title]
 
 	def append_content (self, text):
 
@@ -58,6 +65,8 @@ class Poster:
 						self.append_content('/ %s' % token[3])
 					if size > 4:
 						self.append_content('/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
+
+					self.append_title(token[1], token[2])
 					self.append_content('title#%s' % token[2])
 					continue
 
@@ -73,6 +82,10 @@ class Poster:
 		if self.next_page:
 			print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]))
 		print('start#side')
+		for number, value in self.post_title.items():
+			print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]))
+			print value
+			print('&'.join(['link##%s#%s/%s' % (value[i], number, i) for i in xrange(len(value))]))
 		print('start#page')
 		for number, value in self.post_content.items():
 			print('%s' % value)
