@@ -53,7 +53,7 @@ class Poster:
 					self.current = token[1]
 
 					self.append_content('tab#%s' % token[1])
-					self.append_content('p#%s/%s/%02d' % (self.year, self.month, int(token[1])))
+					self.append_content('p#%s/%s/%02d' % (self.this_page[0], self.this_page[1], int(token[1])))
 					if size == 4:
 						self.append_content('/ %s' % token[3])
 					if size > 4:
@@ -67,7 +67,7 @@ class Poster:
 
 	def output_post_file (self, filename):
 
-		print('title#%s %s' % (self.month, self.year))
+		print('title#%s %s' % (self.this_page[2], self.this_page[0]))
 		#print('prev#%s%' % ())
 		#print('next#%s%' % ())
 		for number, value in self.post_map.items():
