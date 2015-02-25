@@ -123,6 +123,9 @@ class Converter:
 		elif command == 'id':
 			self.stop_writing()
 			self.content += ('<a id="%s"></a>' % args[0])
+		elif command == 'br':
+			self.stop_writing()
+			self.content += '<br/>'
 		else: self.error('Unknown command [%s]' % command)
 
 	def parse_args (self, args):
