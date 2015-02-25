@@ -19,14 +19,14 @@ class Relater:
 
 		with open(rel_file) as f:
 			rel_map = eval(f.read())
-		print rel_map
+		#print rel_map
 
 		self.rel_list = []
 		for year,content in rel_map.items():
 			for month in content:
 				self.rel_list.append('%s/%s' % (year, month))
 
-		print self.rel_list
+		#print self.rel_list
 
 		self.name_map = {
 			'01':'Gennaio',
@@ -48,13 +48,13 @@ class Relater:
 		self.this_page = [year, month, self.name_map[month]]
 
 		short_name = '%s/%s' % (this_year, this_month)
-		print self.this_page
+		#print self.this_page
 
 		try: index = self.rel_list.index(short_name)
 		except:
 			print('This_Page (%s) is not in the list (%s)' % (short_name, self.rel_list))
 			sys.exit(1)
-		print index
+		#print index
 
 		if index > 0:
 			self.prev_page = self.rel_list[index - 1].split('/')
@@ -66,7 +66,7 @@ class Relater:
 			self.next_page.append(self.name_map[self.next_page[1]])
 		else: self.next_page = False
 
-		print('%s, %s' % (self.prev_page, self.next_page))
+		#print('%s, %s' % (self.prev_page, self.next_page))
 
 r = Relater(rel_file, '#name_file')
 r.relate(this_year, this_month)
