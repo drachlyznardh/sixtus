@@ -42,7 +42,7 @@ $(BLOG_REL_FILE): $(POST_FILES)
 	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-rel-file $(BLOG_REL_FILE)
 
 $(BLOG_NAME_FILE): $(POST_FILES)
-	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE)
+	@echo $(SITE_BLOG_MONTH_NAMES) | $(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE)
 	
 culo:
 	@#echo "$(POST_YEARS)\n$(POST_MONTHS)" |\

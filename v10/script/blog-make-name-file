@@ -14,7 +14,7 @@ index = 0
 
 for name in sys.stdin.readline().split():
 	index += 1
-	key = '%02s' % index
+	key = '%02d' % index
 	name_map[key] = name
 
 with open(outfile, 'w') as f: print('%s' % name_map, file=f)
