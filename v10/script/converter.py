@@ -28,6 +28,125 @@ class ContentConverter:
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
+	def parse_line (self, line):
+
+		self.lineno += 1
+
+		if self.debug:
+			print('Parse_Line (%s)' % (line), file=sys.stderr)
+
+		if '#' not in line:
+			self.append_content(line);
+			return
+
+		token = line.split('#')
+		command = token[0]
+
+		if command == 'source':
+			self.filename = token[1]
+			self.lineno = int(token[2])
+			return
+
+		self.parse_content(token[0], token[1:])
+
+	def parse_content (self, command, args):
+
+		if self.debug:
+			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
+
+		if command == 'title':
+			self.stop_writing()
+			self.content += ('<h2>%s</h2>' % self.parse_args(args))
+		elif command == 'stitle':
+			self.stop_writing()
+			self.content += ('<h3>%s</h3>' % self.parse_args(args))
+		elif command == 'link':
+			self.append_content(self.make_link(args))
+		elif command == 'p' or command == 'c' or command == 'r':
+			self.start_writing(command, self.parse_args(args))
+		elif command == 'id':
+			self.stop_writing()
+			self.content += ('<a id="%s"></a>' % args[0])
+		elif command == 'br':
+			self.stop_writing()
+			self.content += '<br/>'
+		else: self.error('Unknown command [%s]' % command)
+
+	def parse_args (self, args):
+
+		if len(args) == 1: return args[0]
+
+		if args[0] == 'link':
+			return self.make_link(args[1:])
+		elif args[0] == 'tid':
+			linkargs = []
+			linkargs.append('/%s/%s/' % (self.pagelocation, args[2].upper()))
+			linkargs.append(args[1])
+			if len(args) > 3: linkargs.append(args[3:])
+			return self.make_link(linkargs)
+		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
+
+	def start_writing (self, type, text):
+
+		if self.writing: self.stop_writing()
+
+		if type == 'p':
+			self.content += ('<p>%s' % text)
+		elif type == 'c':
+			self.content += ('<p class="center">%s' % text)
+		elif type == 'r':
+			self.content += ('<p class="reverse">%s' % text)
+
+		self.writing = True
+
+	def stop_writing (self):
+
+		if not self.writing: return
+
+		if self.p_or_li:
+			self.content += '</p>'
+		else:
+			self.content += '</li>'
+
+		self.writing = False
+
+	def append_content (self, text):
+
+		if self.writing:
+			self.content += (' %s' % text)
+		elif self.p_or_li:
+			self.content += ('<p>%s' % text)
+		else:
+			self.content += ('<li>%s' % text)
+
+		self.writing = True
+
+	def make_link (self, args):
+
+		if self.debug:
+			print('Make_Link (%s)' % args, file=sys.stderr)
+
+		if len(args) == 2: href = args[0]
+		else: href = '%s#%s' % (args[0], args[2])
+
+		if len(args[0]) and href[0] != '/': href = '/%s' % href
+
+		if '@' not in args[1]:
+			title = args[1]
+			prev = next = ''
+		else:
+			token = args[1].split('@')
+			if len(token) == 2:
+				prev = ''
+				title = token[0]
+				next = token[1]
+			else:
+				prev = token[0]
+				title = token[1]
+				next = token[2]
+
+		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
+
 class Converter:
 
 	def __init__ (self):
