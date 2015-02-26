@@ -159,10 +159,7 @@ class FullConverter(ContentConverter):
 
 		self.page = ''
 		self.side = ''
-
-		self.jump = False
-		self.sideonly = False
-		self.sideinclude = False
+		self.side_location = False
 
 	def error (self, message):
 
@@ -254,14 +251,6 @@ class FullConverter(ContentConverter):
 
 	def dump_output (self, filename):
 
-		if self.jump:
-			self.dump_jump(filename)
-			return
-
-		#if self.sideonly:
-			#self.output_side_file(filename)
-			#return
-
 		self.state_update('meta')
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
@@ -291,14 +280,9 @@ class FullConverter(ContentConverter):
 		output += 'require_once($sixtus."page-top.php");}if($i[1]){?>'
 		output += '%s' % self.page
 		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");'
-		if self.sideinclude:
-			output += 'if($i[2])require_once("%s");' % self.sideinclude
+		if self.side_location:
+			output += 'if($i[2])require_once("%s");' % self.side_location
 		else: output += 'if($i[2]){?>%s<?php }' % self.side
 		output += 'if($i[0])require_once($sixtus."page-bottom.php");?>'
 
-		with open(filename, 'w') as f: print('%s' % output, file=f)
-
-	def dump_jump (self, filename):
-
-		output = '<?php header("Location: /%s"); die(); ?>' % self.jump
 		with open(filename, 'w') as f: print('%s' % output, file=f)
