@@ -90,6 +90,10 @@ class Converter:
 			self.jump = args[0]
 			return
 
+		if command == 'side':
+			self.sideinclude = args[0]
+			return
+
 		if command == 'title':
 			self.meta['title'] = args[0]
 		elif command == 'subtitle':
