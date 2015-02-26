@@ -281,7 +281,7 @@ class FullConverter(ContentConverter):
 			return self.make_link(args[1:])
 		elif args[0] == 'tid':
 			linkargs = []
-			linkargs.append('/%s/%s/' % (self.pagelocation, args[2].upper()))
+			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs)
