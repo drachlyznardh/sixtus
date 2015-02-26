@@ -113,7 +113,8 @@ class ContentConverter:
 	def append_content (self, text):
 
 		if self.writing:
-			self.content += (' %s' % text)
+			if len(text): self.content += (' %s' % text)
+			else: self.stop_writing()
 		elif self.p_or_li:
 			self.content += ('<p>%s' % text)
 		else:
