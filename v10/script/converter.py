@@ -148,7 +148,7 @@ class ContentConverter:
 
 		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
 
-class Converter:
+class FullConverter(ContentConverter):
 
 	def __init__ (self):
 

@@ -28,15 +28,17 @@ $(BUILD_DIR)%.six:
 		$(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^))
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
-	@echo .page.six match $< $@
+	@echo -n "Generating page file $@… "
+	@$(SCRIPT_DIR)six-page-to-php $< $(*D) $@
+	@echo Done
 
 $(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
-	@echo -n Generating side file $@…
+	@echo -n "Generating side file $@… "
 	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
 	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
-	@echo -n Generating jump file $@…
+	@echo -n "Generating jump file $@… "
 	@$(SCRIPT_DIR)six-jump-to-php $< $@
 	@echo Done
 
