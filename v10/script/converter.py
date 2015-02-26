@@ -8,7 +8,7 @@ import re
 
 class ContentConverter:
 
-	def __init__ (self):
+	def __init__ (self, page_location):
 
 		self.debug = True
 
@@ -16,9 +16,17 @@ class ContentConverter:
 		self.writing     = False
 		self.p_or_li     = True
 
+		self.page_location = page_location
+
 		self.content  = ''
 		self.filename = ''
 		self.lineno   = 0
+
+	def error (self, message):
+
+		line = '%s @line %d: %s' % (self.filename, self.lineno, message)
+		print(line, file=sys.stderr)
+		sys.exit(1)
 
 class Converter:
 
