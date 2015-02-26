@@ -224,6 +224,10 @@ class Converter:
 			self.dump_jump(filename)
 			return
 
+		#if self.sideonly:
+			#self.output_side_file(filename)
+			#return
+
 		self.state_update('meta')
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
