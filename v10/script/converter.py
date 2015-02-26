@@ -249,7 +249,7 @@ class FullConverter(ContentConverter):
 
 		self.state = newstate
 
-	def dump_output (self, filename):
+	def output_page_file (self, filename):
 
 		self.state_update('meta')
 

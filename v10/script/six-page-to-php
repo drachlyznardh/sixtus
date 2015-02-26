@@ -15,6 +15,4 @@ output_file   = sys.argv[3]
 
 c = Converter(page_location)
 c.parse_file(input_file)
-c.dump_output(output_file)
-
-#Converter().parse_file(sys.argv[1], sys.argv[2]).dump_output(sys.argv[3]);
+c.output_page_file(output_file)
