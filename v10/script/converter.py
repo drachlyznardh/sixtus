@@ -12,7 +12,13 @@ class ContentConverter:
 
 		self.debug = True
 
-		print('Hello')
+		self.environment = None
+		self.writing     = False
+		self.p_or_li     = True
+
+		self.content  = ''
+		self.filename = ''
+		self.lineno   = 0
 
 class Converter:
 
