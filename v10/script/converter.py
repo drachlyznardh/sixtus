@@ -150,7 +150,9 @@ class ContentConverter:
 
 class FullConverter(ContentConverter):
 
-	def __init__ (self):
+	def __init__ (self, page_location):
+
+		ContentConverter.__init__(self, page_location)
 
 		self.debug = False
 
