@@ -25,7 +25,7 @@ $(BUILD_DIR)%.six:
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
 		$(basename $(notdir $<))\
 		$(BUILD_DIR)\
-		$(patsubst %.pag, %.tch, $(filter %.pag, $^))
+		$(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^))
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
 	@echo .page.six match $< $@
