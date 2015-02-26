@@ -41,8 +41,3 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 	@echo -n "Generating jump file $@… "
 	@$(SCRIPT_DIR)six-jump-to-php $< $@
 	@echo Done
-
-$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
-	@echo Generating page file $@
-	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)six-to-php $< $(*D) $@
