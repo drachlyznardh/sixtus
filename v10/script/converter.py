@@ -256,9 +256,11 @@ class Converter:
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
 		output += 'require_once($sixtus."page-top.php");}if($i[1]){?>'
 		output += '%s' % self.page
-		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");if($i[2]){?>'
-		output += '%s' % self.side
-		output += '<?php }if($i[0])require_once($sixtus."page-bottom.php");?>'
+		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");'
+		if self.sideinclude:
+			output += 'if($i[2])require_once("%s");' % self.sideinclude
+		else: output += 'if($i[2]){?>%s<?php }' % self.side
+		output += 'if($i[0])require_once($sixtus."page-bottom.php");?>'
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
 
