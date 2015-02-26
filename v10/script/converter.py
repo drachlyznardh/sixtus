@@ -157,35 +157,34 @@ class FullConverter(ContentConverter):
 		self.debug = False
 
 		self.meta = {}
-		self.location = ''
 		self.state = 'meta'
-		self.environment = None
-		self.writing = False
-		self.p_or_li = True
+		#self.environment = None
+		#self.writing = False
+		#self.p_or_li = True
 
 		self.page = ''
 		self.side = ''
-		self.content = ''
+		#self.content = ''
 
 		self.jump = False
 		self.sideonly = False
 		self.sideinclude = False
 
-		self.filename = ''
-		self.lineno = 0
+		#self.filename = ''
+		#self.lineno = 0
 
 	def error (self, message):
 
 		print('%s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
-	def parse_file (self, filename, location):
+	def parse_file (self, filename):#, location):
 
 		if self.debug:
 			print('Parsing file %s' % filename, file=sys.stderr)
 
-		self.location = location
-		self.pagelocation = '/'.join(location.split('/')[:-1])
+		#self.location = location
+		#self.pagelocation = '/'.join(location.split('/')[:-1])
 		self.filename = filename
 		self.lineno = 0
 
@@ -249,9 +248,9 @@ class FullConverter(ContentConverter):
 		elif command == 'tabnext':
 			self.meta['tabnext'] = args[0]
 		else:
-			self.error('Unknown command')
+			self.error('Unknown command %s' % args)
 
-	def parse_content (self, command, args):
+	def parse____content (self, command, args):
 
 		if self.debug:
 			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
