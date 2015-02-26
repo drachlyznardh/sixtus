@@ -34,9 +34,8 @@ $(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
 	@echo .side.six match $< $@
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
-	@echo .jump.six match $< $@
-	@cat $< | xargs echo
-	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
+	@$(SCRIPT_DIR)six-side-to-php $< $@
+	@echo Jump file $@ generated
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
