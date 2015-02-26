@@ -88,13 +88,9 @@ class Converter:
 
 		if command == 'jump':
 			self.jump = args[0]
-			return
-
-		if command == 'side':
+		elif command == 'side':
 			self.sideinclude = args[0]
-			return
-
-		if command == 'title':
+		elif command == 'title':
 			self.meta['title'] = args[0]
 		elif command == 'subtitle':
 			self.meta['subtitle'] = args[0]
