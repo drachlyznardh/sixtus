@@ -88,14 +88,14 @@ class Splitter:
 		if not os.path.exists(dirpath):
 			os.makedirs(dirpath)
 
-	def output_index_file (self, base, page_name, index_path):
+	def output_index_file (self, base, page_name, jumpfile_path):
 
 		if self.debug: print('Dump Index', file=sys.stderr)
 
-		self.check_dir_path(index_path)
+		self.check_dir_path(jumpfile_path)
 
 		filecontent = ("jump#%s/%s/%s/" % (base, page_name, self.first.upper()))
-		with open(index_path, 'w') as outfile:
+		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
 	def output_many_tabs (self, base, page_name, build_dir):
@@ -106,7 +106,7 @@ class Splitter:
 
 			if name == None: continue
 
-			file_path = '%s%s/%s/%s/index.six' % (build_dir, base, page_name, name.upper())
+			file_path = '%s%s/%s/%s/index.page.six' % (build_dir, base, page_name, name.upper())
 			self.touch_files.append(file_path)
 
 			self.check_dir_path(file_path)
@@ -134,12 +134,13 @@ class Splitter:
 
 	def output_tab_files (self, base, page_name, build_dir):
 
-		index_path = '%s%s/%s/index.six' % (build_dir, base, page_name)
+		index_path = '%s%s/%s/index.%s.six' % (build_dir, base, page_name, 'jump' if self.first else 'page')
 		self.touch_files.append(index_path)
 
 		if self.first:
 			self.output_index_file(base, page_name, index_path)
 			self.output_many_tabs(base, page_name, build_dir)
+			#self.output_side_file(base, page_name)
 		else: self.output_single_tab(index_path)
 
 	def output_touch_file (self, touch_file, origin_files):
