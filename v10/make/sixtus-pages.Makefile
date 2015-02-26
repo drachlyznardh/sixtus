@@ -5,10 +5,11 @@ ifeq ($(filter clean,$(MAKECMDGOALS)),)
 -include $(TCH_FILES)
 endif
 
-PHP_FILES += $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
+PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.page.six, $(SIX_FILES)))
+PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.side.php, $(filter %.side.six, $(SIX_FILES)))
+PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
 
-sixtus-deploy: sixtus-pages sixtus-runtime
-sixtus-pages: sixtus-runtime $(TCH_FILES) $(PHP_FILES)
+sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@echo Splitting source file $<
@@ -24,7 +25,22 @@ $(BUILD_DIR)%.six:
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
 		$(basename $(notdir $<))\
 		$(BUILD_DIR)\
-		$(patsubst %.pag, %.tch, $(filter %.pag, $^))
+		$(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^))
+
+$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
+	@echo -n "Generating page file $@… "
+	@$(SCRIPT_DIR)six-page-to-php $< $(*D) $@
+	@echo Done
+
+$(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
+	@echo -n "Generating side file $@… "
+	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
+	@echo Done
+
+$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
+	@echo -n "Generating jump file $@… "
+	@$(SCRIPT_DIR)six-jump-to-php $< $@
+	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@

@@ -11,6 +11,7 @@ BLOG_OUT_DIR   := $(PAG_DIR)Blog/
 
 .PHONY: sixtus-runtime sixtus-pages
 .PHONY: clean
+sixtus-deploy: sixtus-pages sixtus-runtime
 
 POST_FILES  += $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
 POST_MONTHS += $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
