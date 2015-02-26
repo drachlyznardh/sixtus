@@ -8,7 +8,6 @@ endif
 PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.page.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.side.php, $(filter %.side.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
-#PHP_FILES += $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 
 sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 
@@ -36,10 +35,9 @@ $(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 	@echo .jump.six match $< $@
+	@cat $< | xargs echo
+	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
 
-#$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
-#$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.side.six
-#$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 	@mkdir -p $(dir $@)
