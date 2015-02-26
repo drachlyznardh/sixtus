@@ -24,6 +24,8 @@ class Converter:
 		self.content = ''
 
 		self.jump = False
+		self.sideonly = False
+		self.sideinclude = False
 
 		self.filename = ''
 		self.lineno = 0
