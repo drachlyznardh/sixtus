@@ -31,11 +31,14 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
 	@echo .page.six match $< $@
 
 $(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
-	@echo .side.six match $< $@
+	@echo -n Generating side file $@…
+	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
+	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
-	@$(SCRIPT_DIR)six-side-to-php $< $@
-	@echo Jump file $@ generated
+	@echo -n Generating jump file $@…
+	@$(SCRIPT_DIR)six-jump-to-php $< $@
+	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
