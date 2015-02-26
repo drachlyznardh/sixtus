@@ -10,7 +10,7 @@ class ContentConverter:
 
 	def __init__ (self, page_location):
 
-		self.debug = True
+		self.debug = False
 
 		self.environment = None
 		self.writing     = False
