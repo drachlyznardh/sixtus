@@ -224,7 +224,7 @@ class Converter:
 
 		self.state_update('meta')
 
-		output = '<?php $d=array('
+		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
 		output += ('array("%s"),' % ('","'.join(self.location.split('/'))))
 		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
 		if 'prev' in self.meta.keys():
@@ -248,11 +248,11 @@ class Converter:
 		else: output += 'false'
 		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
-		output += 'require_once($sixtus."page-top.php"); ?>'
+		output += 'require_once($sixtus."page-top.php");}if($i[1]){?>'
 		output += '%s' % self.page
-		output += '<?php require_once($sixtus."page-middle.php"); ?>'
+		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");if($i[2]){?>'
 		output += '%s' % self.side
-		output += '<?php require_once($sixtus."page-bottom.php"); ?>'
+		output += '<?php }if($i[0])require_once($sixtus."page-bottom.php");?>'
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
 
