@@ -101,3 +101,13 @@ class Poster:
 					else: manyposts = True
 					print('id#%s/%s' % (number, index), file=f)
 					print('%s' % value[index], file=f)
+
+	def output_list_file (self, filename):
+
+		this_url = 'Blog/%s/%s/' % (self.this_page[0], self.this_page[1])
+
+		with open(filename, 'w') as f:
+			print('stitle#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
+			for number, value in self.post_title.items():
+				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
+				print('\n&amp;\n'.join(['link#%s#%s#%s/%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)
