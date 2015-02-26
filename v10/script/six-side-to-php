@@ -3,7 +3,7 @@
 
 from __future__ import print_function
 import sys
-from converter import Converter
+from converter import ContentConverter as Converter
 
 if len(sys.argv) != 4:
 	params = ['<six side file>', '<page location>', '<php file>']
@@ -14,8 +14,12 @@ input_file    = sys.argv[1]
 page_location = sys.argv[2]
 output_file   = sys.argv[3]
 
-c = Converter()
-c.parse_file(input_file, page_location)
+c = Converter(page_location)
+with open(input_file, 'r') as f:
+	for line in f.readlines():
+		c.parse_line(line.strip())
+
+sys.exit(1)
 
 with open(output_file, 'w') as f:
 	print('<?php header("Location: /%s");die();?>' % token[1], file=f)

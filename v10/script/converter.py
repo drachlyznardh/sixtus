@@ -6,6 +6,14 @@ from __future__ import print_function
 import sys
 import re
 
+class ContentConverter:
+
+	def __init__ (self):
+
+		self.debug = True
+
+		print('Hello')
+
 class Converter:
 
 	def __init__ (self):
