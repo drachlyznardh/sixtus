@@ -5,6 +5,9 @@ ifeq ($(filter clean,$(MAKECMDGOALS)),)
 -include $(TCH_FILES)
 endif
 
+#PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
+#PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
+#PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 
 sixtus-pages: $(TCH_FILES) $(PHP_FILES)
@@ -25,6 +28,9 @@ $(BUILD_DIR)%.six:
 		$(BUILD_DIR)\
 		$(patsubst %.pag, %.tch, $(filter %.pag, $^))
 
+#$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
+#$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.side.six
+#$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.six
 	@echo Generating page file $@
 	@mkdir -p $(dir $@)
