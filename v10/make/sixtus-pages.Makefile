@@ -6,7 +6,7 @@ ifeq ($(filter clean,$(MAKECMDGOALS)),)
 endif
 
 PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.page.six, $(SIX_FILES)))
-PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.php, $(filter %.side.six, $(SIX_FILES)))
+PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.side.php, $(filter %.side.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
 #PHP_FILES += $(patsubst $(BUILD_DIR)%.six, $(DEPLOY_DIR)%.php, $(SIX_FILES))
 
@@ -31,7 +31,7 @@ $(BUILD_DIR)%.six:
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
 	@echo .page.six match $< $@
 
-$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.side.six
+$(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
 	@echo .side.six match $< $@
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six

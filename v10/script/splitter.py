@@ -123,6 +123,11 @@ class Splitter:
 			with open(file_path, 'w') as outfile:
 				outfile.write(filecontent)
 
+	def output_side_file (self, filename):
+
+		with open(filename, 'w') as f:
+			print('%s' % self.side, file=f)
+
 	def output_single_tab (self, index_path):
 
 		if self.debug: print('Dump Single Tab', file=sys.stderr)
@@ -134,14 +139,24 @@ class Splitter:
 
 	def output_tab_files (self, base, page_name, build_dir):
 
-		index_path = '%s%s/%s/index.%s.six' % (build_dir, base, page_name, 'jump' if self.first else 'page')
-		self.touch_files.append(index_path)
-
 		if self.first:
-			self.output_index_file(base, page_name, index_path)
+
+			indexfile_path = '%s%s/%s/index.jump.six' % (build_dir, base, page_name)
+			self.touch_files.append(indexfile_path)
+
+			sidefile_path = '%s%s/%s/index.side.six' % (build_dir, base, page_name)
+			self.touch_files.append(sidefile_path)
+
+			self.output_index_file(base, page_name, indexfile_path)
 			self.output_many_tabs(base, page_name, build_dir)
-			#self.output_side_file(base, page_name)
-		else: self.output_single_tab(index_path)
+			self.output_side_file(sidefile_path)
+
+		else:
+
+			indexfile_path = '%s%s/%s/index.page.six' % (build_dir, base, page_name)
+			self.touch_files.append(indexfile_path)
+
+			self.output_single_tab(indexfile_path)
 
 	def output_touch_file (self, touch_file, origin_files):
 
