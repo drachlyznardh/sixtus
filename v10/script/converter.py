@@ -374,7 +374,7 @@ class FullConverter(ContentConverter):
 		self.state_update('meta')
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
-		output += ('array("%s"),' % ('","'.join(self.location.split('/'))))
+		output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
 		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
 		if 'prev' in self.meta.keys():
 			pagprev = self.meta['prev']
