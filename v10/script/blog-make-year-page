@@ -76,7 +76,9 @@ if True:
 			index = 1 + i * 4 + j
 			number = '%02d' % index
 			name = name_map[number]
-			line.append('%s' % name)
+			if number in side:
+				line.append('link#Blog/%s/%s/#%s' % (this_year, number, name))
+			else: line.append('%s' % name)
 		print('p#%s' % ('\n/\n'.join(line)))
 
 sys.exit(1)
