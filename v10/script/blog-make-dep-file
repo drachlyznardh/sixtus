@@ -4,8 +4,10 @@
 from __future__ import print_function
 import sys
 
-if len(sys.argv) != 4:
-	params = ['<output file>', '<source dir>', '<build dir>']
+if len(sys.argv) != 6:
+	params = ['<output file>',
+		'<source dir>', '<build dir>',
+		'<archive file>', '<index file>']
 	print('Usage: %s %s' % (sys.argv[0], ' '.join(params)))
 	sys.exit(1)
 
@@ -14,9 +16,11 @@ def get_old_list (filename):
 	with open(filename, 'r') as f:
 		return eval(f.read())
 
-outfile    = sys.argv[1]
-source_dir = sys.argv[2]
-build_dir  = sys.argv[3]
+outfile      = sys.argv[1]
+source_dir   = sys.argv[2]
+build_dir    = sys.argv[3]
+archive_file = sys.argv[4]
+index_file   = sys.argv[5]
 
 rel_list = []
 for word in sys.stdin.readline().split():
@@ -46,3 +50,5 @@ for i in rel_list:
 for target, value in year_map.items():
 	print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.list' % (source_dir, i) for i in value])))
 
+print('%s: %s' % (archive_file, ' '.join(['%s%s.list' % (source_dir, i) for i in year_map])))
+print('%s: %s' % (index_file, sorted(month_rel)[-1]))
