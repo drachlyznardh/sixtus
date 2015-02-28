@@ -42,7 +42,7 @@ $(BLOG_REL_FILE): $(POST_FILES)
 	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-rel-file $(BLOG_REL_FILE)
 	@echo Done
 
-$(BLOG_NAME_FILE): $(POST_FILES)
+$(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 	@echo -n "Generating blog names file $@… "
 	@echo $(SITE_BLOG_MONTH_NAMES) | $(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE)
 	@echo Done
