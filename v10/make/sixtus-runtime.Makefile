@@ -10,8 +10,9 @@ sixtus-runtime: $(SIXTUS_RUNTIME_OUT_FILES)
 $(SIXTUS_RUNTIME_OUT_FILES): $(SITE_CONF_FILE)
 
 $(SIXTUS_RUNTIME_OUT_DIR)%: $(SIXTUS_RUNTIME_IN_DIR)%
+	@echo -n "Copying page component $@… "
 	@cp $< $@
-	@echo page component [$@] copied
+	@echo Done
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
 	@echo -n "Generating page top section $@… "
