@@ -4,14 +4,14 @@
 from __future__ import print_function
 import sys
 
+if len(sys.argv) != 2:
+	print('Usage: %s %s' % (sys.argv[0], '<output file>'))
+	sys.exit(1)
+
 def get_old_list (filename):
 
 	with open(filename, 'r') as f:
 		return eval(f.read())
-
-if len(sys.argv) != 2:
-	print('Usage: %s %s' % (sys.argv[0], '<output file>'))
-	sys.exit(1)
 
 rel_list = []
 outfile = sys.argv[1]
