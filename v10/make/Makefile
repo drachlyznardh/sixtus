@@ -30,17 +30,22 @@ ifeq ($(filter clean, $(MAKECMDGOALS)),)
 endif
 
 $(BLOG_POST_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FILE) $(BLOG_NAME_FILE)
+	@echo -n "Generating blog page $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(BLOG_REL_FILE) $(BLOG_NAME_FILE) $(*D) $(*F)
-	@echo Generating blog page $@
+	@echo Done
 
 sixtus-blog: $(BLOG_PAG_FILES)
 
 $(BLOG_REL_FILE): $(POST_FILES)
+	@echo -n "Generating blog relations file $@… "
 	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-rel-file $(BLOG_REL_FILE)
+	@echo Done
 
 $(BLOG_NAME_FILE): $(POST_FILES)
+	@echo -n "Generating blog names file $@… "
 	@echo $(SITE_BLOG_MONTH_NAMES) | $(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE)
+	@echo Done
 	
 include $(MAKE_DIR)sixtus-runtime.Makefile
 include $(MAKE_DIR)sixtus-pages.Makefile
