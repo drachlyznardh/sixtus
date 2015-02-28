@@ -47,15 +47,19 @@ $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FIL
 
 $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag:
 	@echo -n "Generating blog year page $@… "
+	echo $^
+	exit 1
 	@echo Done
 
 $(BLOG_ARCHIVE_PAGE):
 	@echo -n "Generating blog archive page $@… "
+	echo $^
 	exit 1
 	@echo Done
 
 $(BLOG_INDEX_PAGE):
 	@echo -n "Generating blog index page $@… "
+	echo $^
 	exit 1
 	@echo Done
 
