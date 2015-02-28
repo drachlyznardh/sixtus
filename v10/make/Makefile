@@ -26,8 +26,8 @@ BLOG_PAG_FILES  += $(BLOG_POST_FILES)
 #BLOG_PAG_FILES  += news page, archive_page, years pages…
 PAG_FILES       += $(BLOG_PAG_FILES)
 
-ifeq ($(filter clean, $(MAKECMDGOALS)),)
-#-include $(BLOG_REL_FILE)
+ifeq ($(filter sixtus-blog-clean clean, $(MAKECMDGOALS)),)
+-include $(BLOG_MAKE_FILE)
 endif
 
 $(BLOG_POST_FILES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FILE) $(BLOG_NAME_FILE)
