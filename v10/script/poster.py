@@ -107,6 +107,7 @@ class Poster:
 		this_url = 'Blog/%s/%s/' % (self.this_page[0], self.this_page[1])
 
 		with open(filename, 'w') as f:
+			print('id#%s-%s' % (self.this_page[0], self.this_page[1]), file=f)
 			print('stitle#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
 			for number, value in self.post_title.items():
 				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
