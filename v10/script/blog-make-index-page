@@ -12,4 +12,4 @@ if len(sys.argv) != 3:
 pag_file = sys.argv[1]
 target   = sys.argv[2]
 
-with open(pag_file, 'w') as f: print('jump#Blog/%s' % target, file=f)
+with open(pag_file, 'w') as f: print('jump#Blog/%s/' % target, file=f)
