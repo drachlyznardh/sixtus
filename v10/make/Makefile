@@ -77,7 +77,7 @@ $(BLOG_REL_FILE): $(POST_FILES)
 
 $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 	@echo -n "Generating blog names file $@… "
-	@echo $(SITE_BLOG_MONTH_NAMES) | $(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE)
+	@$(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE) $(SITE_BLOG_MONTH_NAMES)
 	@echo Done
 	
 $(BLOG_MAKE_FILE):
