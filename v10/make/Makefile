@@ -40,7 +40,8 @@ sixtus-blog: $(BLOG_PAG_FILES)
 
 $(BLOG_REL_FILE): $(POST_FILES)
 	@echo -n "Generating blog relations file $@… "
-	@echo $(POST_MONTHS) | $(SCRIPT_DIR)blog-make-rel-file $(BLOG_REL_FILE)
+	@echo $(POST_MONTHS) |\
+		$(SCRIPT_DIR)blog-make-rel-file $(BLOG_REL_FILE) $(BLOG_OUT_DIR)
 	@echo Done
 
 $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
