@@ -23,11 +23,10 @@ BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
 
 BLOG_HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(BLOG_NAME_FILE)
-$(BLOG_HELP_FILES): | $(BLOG_MAKE_FILE)
+$(BLOG_HELP_FILES): | $(BUILD_DIR) $(BLOG_OUT_DIR) $(BLOG_MAKE_FILE)
 
-$(BLOG_HELP_FILES): | $(BLOG_OUT_DIR)
-
-$(BLOG_OUT_DIR):
+# Ensuring directory presence
+$(DEPLOY_DIR) $(BUILD_DIR) $(BLOG_OUT_DIR): %:
 	@mkdir -p $@
 
 BLOG_MONTH_PAGES  += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
@@ -111,10 +110,11 @@ sixtus-blog-clean:
 	@rm -f $(BLOG_MAKE_FILE)
 	@echo Done
 
-include $(MAKE_DIR)sixtus-runtime.Makefile
-include $(MAKE_DIR)sixtus-pages.Makefile
+#include $(MAKE_DIR)sixtus-runtime.Makefile
+#include $(MAKE_DIR)sixtus-pages.Makefile
 
-clean: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
+clean:
+	#sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
 	@rm -f $(BLOG_PAG_FILES)
 	@rm -rf $(BUILD_DIR)
 	@rm -f $(PHP_FILES)
