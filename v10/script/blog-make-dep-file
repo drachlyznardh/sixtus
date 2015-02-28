@@ -44,7 +44,7 @@ with open(outfile, 'w') as f:
 		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.post' % (source_dir, i) for i in value])), file=f)
 
 	for target, value in year_map.items():
-		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.list' % (source_dir, i) for i in value])), file=f)
+		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.list' % (build_dir, i) for i in value])), file=f)
 
-	print('%s: %s' % (archive_file, ' '.join(['%s%s.list' % (source_dir, i) for i in year_map])), file=f)
+	print('%s: %s' % (archive_file, ' '.join(['%s%s.list' % (build_dir, i) for i in year_map])), file=f)
 	print('%s: %s' % (index_file, sorted(month_rel)[-1]), file=f)
