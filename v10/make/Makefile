@@ -53,8 +53,7 @@ $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag: | $(YEAR_REL_FILE)
 
 $(BLOG_ARCHIVE_PAGE):
 	@echo -n "Generating blog archive page $@… "
-	echo $^
-	exit 1
+	@$(SCRIPT_DIR)blog-make-archive-page $@ $(BLOG_NAME_FILE) $^
 	@echo Done
 
 $(BLOG_INDEX_PAGE):
