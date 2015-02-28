@@ -22,9 +22,7 @@ for filename in sys.argv[3:]:
 	with open(filename, 'r') as f:
 		page.append(f.read().strip())
 
-f = sys.stdout
-#with open(pag_file, 'w') as f:
-if True:
+with open(pag_file, 'w') as f:
 
 	print('title#%s' % name_map['14'], file=f)
 	print('subtitle#%s' % (name_map['15']), file=f)
@@ -33,4 +31,4 @@ if True:
 	print('\nbr#\n'.join(page), file=f)
 
 	print('start#side', file=f)
-	print('p#%s' % ('\n/\n'.join(['link##%s#%s' % (i, i) for i in side])))
+	print('p#%s' % ('\n/\n'.join(['link##%s#%s' % (i, i) for i in side])), file=f)
