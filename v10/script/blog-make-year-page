@@ -39,7 +39,7 @@ f = sys.stdout
 if True:
 
 	print('title#%s' % this_year, file=f)
-	print('subtitle#%s' % ('News from the year %s' % this_year), file=f)
+	print('subtitle#%s' % (name_map['13'] % this_year), file=f)
 	print('prev#%s#%s', file=f)
 	print('next#%s#%s', file=f)
 
