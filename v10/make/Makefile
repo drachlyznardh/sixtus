@@ -57,7 +57,8 @@ $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 	
 $(BLOG_MAKE_FILE):
 	@echo -n "Generating blog dependencies… "
-	@$(SCRIPT_DIR)blog-make-makefile
+	echo $(POST_MONTHS) |\
+		$(SCRIPT_DIR)blog-make-dep-file $@ $(BLOG_IN_DIR) $(BLOG_OUT_DIR)
 	@echo Done
 
 include $(MAKE_DIR)sixtus-runtime.Makefile
