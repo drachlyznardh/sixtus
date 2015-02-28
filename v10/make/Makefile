@@ -36,6 +36,9 @@ ifeq ($(filter sixtus-blog-clean clean, $(MAKECMDGOALS)),)
 -include $(BLOG_MAKE_FILE)
 endif
 
+$(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag
+$(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag
+
 $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FILE) $(BLOG_NAME_FILE)
 	@echo -n "Generating blog month page $@… "
 	@mkdir -p $(dir $@)
@@ -45,8 +48,6 @@ $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(BLOG_REL_FIL
 $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag:
 	@echo -n "Generating blog year page $@… "
 	@echo Done
-
-$(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag
 
 $(BLOG_ARCHIVE_PAGE):
 	@echo -n "Generating blog archive page $@… "
