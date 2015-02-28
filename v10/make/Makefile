@@ -21,6 +21,7 @@ MONTH_REL_FILE := $(BUILD_DIR)blog-month-rel.py
 YEAR_REL_FILE  := $(BUILD_DIR)blog-year-rel.py
 BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
+BLOG_HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(BLOG_NAME_FILE) $(BLOG_MAKE_FILE)
 
 BLOG_MONTH_PAGES  += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_YEAR_PAGES   += $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
@@ -37,9 +38,12 @@ ifeq ($(filter sixtus-blog-clean clean, $(MAKECMDGOALS)),)
 -include $(BLOG_MAKE_FILE)
 endif
 
+sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
+$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
+
 $(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag
 $(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag
-$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE):| $(BLOG_MAKE_FILE)
+$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE):| $(BLOG_HELP_FILES)
 
 $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FILE) $(BLOG_NAME_FILE)
 	@echo -n "Generating blog month page $@… "
@@ -65,9 +69,6 @@ $(BLOG_INDEX_PAGE):
 $(BLOG_YEAR_FILES): $(BLOG_OUT_DIR)%.pag:
 	@echo -n "Generating year page $@… "
 	@echo Done
-
-sixtus-blog: $(BLOG_PAG_FILES)
-$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 $(MONTH_REL_FILE): $(POST_FILES)
 	@echo -n "Generating month relations file $@… "
