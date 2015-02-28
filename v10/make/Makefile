@@ -73,13 +73,13 @@ $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 $(MONTH_REL_FILE): $(POST_FILES)
 	@echo -n "Generating month relations file $@… "
 	@echo $(POST_MONTHS) |\
-		$(SCRIPT_DIR)blog-make-month-rel-file $(MONTH_REL_FILE) $(BLOG_IN_DIR)
+		$(SCRIPT_DIR)blog-make-month-rel-file $(MONTH_REL_FILE)
 	@echo Done
 
 $(YEAR_REL_FILE): $(POST_FILES)
 	@echo -n "Generating year relations file $@… "
 	@echo $(POST_YEARS) |\
-		$(SCRIPT_DIR)blog-make-year-rel-file $(YEAR_REL_FILE) $(BLOG_IN_DIR)
+		$(SCRIPT_DIR)blog-make-year-rel-file $(YEAR_REL_FILE)
 	@echo Done
 
 $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
