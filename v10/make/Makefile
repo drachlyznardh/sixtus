@@ -39,6 +39,7 @@ endif
 
 $(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag
 $(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag
+$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE):| $(BLOG_MAKE_FILE)
 
 $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FILE) $(BLOG_NAME_FILE)
 	@echo -n "Generating blog month page $@… "
@@ -58,8 +59,7 @@ $(BLOG_ARCHIVE_PAGE):
 
 $(BLOG_INDEX_PAGE):
 	@echo -n "Generating blog index page $@… "
-	echo $^
-	exit 1
+	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 	@echo Done
 
 $(BLOG_YEAR_FILES): $(BLOG_OUT_DIR)%.pag:

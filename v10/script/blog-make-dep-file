@@ -47,4 +47,4 @@ with open(outfile, 'w') as f:
 		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s/%s.list' % (build_dir, target, i) for i in value])), file=f)
 
 	print('%s: %s' % (archive_file, ' '.join(['%s%s.list' % (build_dir, i) for i in year_map])), file=f)
-	print('%s: %s' % (index_file, sorted(month_rel)[-1]), file=f)
+	print('%s: %s%s.post' % (index_file, source_dir, sorted(month_rel)[-1]), file=f)
