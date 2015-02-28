@@ -19,6 +19,7 @@ POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
 
 BLOG_REL_FILE  := $(BUILD_DIR)blog-rel.py
 BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
+BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
 
 BLOG_POST_FILES += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_PAG_FILES  += $(BLOG_POST_FILES)
