@@ -4,6 +4,11 @@
 from __future__ import print_function
 import sys
 
+def get_old_list (filename):
+
+	with open(filename, 'r') as f:
+		return eval(f.read())
+
 if len(sys.argv) != 2:
 	print('Usage: %s %s' % (sys.argv[0], '<output file>'))
 	sys.exit(1)
@@ -11,7 +16,14 @@ if len(sys.argv) != 2:
 rel_list = []
 outfile = sys.argv[1]
 
+try: old_list = get_old_list(outfile)
+except: old_list = []
+
+print(old_list)
+
 for word in sys.stdin.readline().split():
 	rel_list.append(word)
+
+print(rel_list)
 
 with open(outfile, 'w') as f: print('%s' % rel_list, file=f)
