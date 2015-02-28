@@ -22,5 +22,27 @@ rel_list = []
 for word in sys.stdin.readline().split():
 	rel_list.append(word)
 
-print(rel_list)
+month_rel = {i:[] for i in rel_list}
+
+prev = rel_list[0]
+for i in rel_list[1:]:
+	month_rel[i].append(prev)
+	prev = i
+
+prev = rel_list[0]
+for i in rel_list[1:]:
+	month_rel[prev].append(i)
+	prev = i
+
+for target, value in sorted(month_rel.items()):
+	print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.post' % (source_dir, i) for i in value])))
+
+year_map = {}
+for i in rel_list:
+	year, month = i.split('/')
+	if year in year_map: year_map[year].append(month)
+	else: year_map[year] = [month]
+
+for target, value in year_map.items():
+	print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.list' % (source_dir, i) for i in value])))
 
