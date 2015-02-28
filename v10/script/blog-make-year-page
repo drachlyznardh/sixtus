@@ -31,11 +31,6 @@ else: prev_year = False
 if index < len(rel_list) - 1: next_year = rel_list[index + 1]
 else: next_year = False
 
-print()
-print()
-print(sys.argv)
-print()
-
 with open(name_file, 'r') as f:
 	name_map = eval(f.read())
 
@@ -46,12 +41,7 @@ for filename in sys.argv[5:]:
 	with open(filename, 'r') as f:
 		page.append(f.read())
 
-print(rel_list)
-print(name_map)
-
-#with sys.stdout as f:
-f = sys.stdout
-if True:
+with open(pag_file, 'w') as f:
 
 	print('title#%s' % this_year, file=f)
 	print('subtitle#%s' % (name_map['13'] % this_year), file=f)
@@ -79,5 +69,3 @@ with open(list_file, 'w') as f:
 				line.append('link#Blog/%s/%s/#%s' % (this_year, number, name))
 			else: line.append('%s' % name)
 		print('p#%s' % ('\n/\n'.join(line)), file=f)
-
-sys.exit(1)
