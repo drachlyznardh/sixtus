@@ -16,10 +16,17 @@ this_year = sys.argv[2]
 relfile   = sys.argv[3]
 namefile  = sys.argv[4]
 
+with open(relfile, 'r') as f:
+	rel_list = eval(f.read())
+
+
 print()
 print()
 print(sys.argv)
 print()
+
+with open(namefile, 'r') as f:
+	name_map = eval(f.read())
 
 page = []
 side = []
@@ -27,12 +34,6 @@ for filename in sys.argv[5:]:
 	side.append(filename.split('/')[-1].split('.')[0])
 	with open(filename, 'r') as f:
 		page.append(f.read())
-
-with open(relfile, 'r') as f:
-	rel_list = eval(f.read())
-
-with open(namefile, 'r') as f:
-	name_map = eval(f.read())
 
 print(rel_list)
 print(name_map)
