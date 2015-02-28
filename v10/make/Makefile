@@ -18,6 +18,7 @@ POST_MONTHS += $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
 POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
 
 MONTH_REL_FILE := $(BUILD_DIR)blog-month-rel.py
+YEAR_REL_FILE  := $(BUILD_DIR)blog-year-rel.py
 BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
 
@@ -73,6 +74,12 @@ $(MONTH_REL_FILE): $(POST_FILES)
 	@echo -n "Generating month relations file $@… "
 	@echo $(POST_MONTHS) |\
 		$(SCRIPT_DIR)blog-make-month-rel-file $(MONTH_REL_FILE) $(BLOG_IN_DIR)
+	@echo Done
+
+$(YEAR_REL_FILE): $(POST_FILES)
+	@echo -n "Generating year relations file $@… "
+	@echo $(POST_YEARS) |\
+		$(SCRIPT_DIR)blog-make-year-rel-file $(YEAR_REL_FILE) $(BLOG_IN_DIR)
 	@echo Done
 
 $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
