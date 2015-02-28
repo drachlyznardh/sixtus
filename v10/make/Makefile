@@ -46,6 +46,8 @@ $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag:
 	@echo -n "Generating blog year page $@… "
 	@echo Done
 
+$(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag
+
 $(BLOG_ARCHIVE_PAGE):
 	@echo -n "Generating blog archive page $@… "
 	@echo Done
