@@ -22,7 +22,7 @@ BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 
 BLOG_POST_FILES += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_PAG_FILES  += $(BLOG_POST_FILES)
-#BLOG_PAG_FILES  += archive_page, years pages…
+#BLOG_PAG_FILES  += news page, archive_page, years pages…
 PAG_FILES       += $(BLOG_PAG_FILES)
 
 ifeq ($(filter clean, $(MAKECMDGOALS)),)
