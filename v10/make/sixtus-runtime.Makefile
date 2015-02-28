@@ -12,6 +12,8 @@ $(SIXTUS_RUNTIME_OUT_DIR)%: $(SIXTUS_RUNTIME_IN_DIR)%
 	@cp $< $@
 	@echo page component [$@] copied
 
+$(SIXTUS_RUNTIME_OUT_DIR)%.php: $(SITE_CONF_FILE)
+
 $(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
 	@$(SCRIPT_DIR)page-make-top $< $@ \
 		$(SITE_AUTHOR) \
