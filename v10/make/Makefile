@@ -99,6 +99,10 @@ $(BLOG_MAKE_FILE):
 sixtus-blog-clean:
 	@echo -n "Cleaning blog files… "
 	@rm -rf $(BLOG_OUT_DIR)
+	@rm -f $(MONTH_REL_FILE)
+	@rm -f $(YEAR_REL_FILE)
+	@rm -f $(BLOG_NAME_FILE)
+	@rm -f $(BLOG_MAKE_FILE)
 	@echo Done
 
 include $(MAKE_DIR)sixtus-runtime.Makefile
