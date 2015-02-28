@@ -25,6 +25,11 @@ BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
 BLOG_HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(BLOG_NAME_FILE)
 $(BLOG_HELP_FILES): | $(BLOG_MAKE_FILE)
 
+$(BLOG_HELP_FILES): | $(BLOG_OUT_DIR)
+
+$(BLOG_OUT_DIR):
+	@mkdir -p $@
+
 BLOG_MONTH_PAGES  += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_YEAR_PAGES   += $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
 BLOG_ARCHIVE_PAGE += $(BLOG_OUT_DIR)archive.pag
@@ -35,11 +40,6 @@ BLOG_PAG_FILES  += $(BLOG_YEAR_FILES)
 BLOG_PAG_FILES  += $(BLOG_ARCHIVE_PAGE)
 BLOG_PAG_FILES  += $(BLOG_INDEX_PAGE)
 PAG_FILES       += $(BLOG_PAG_FILES)
-
-$(BLOG_HELP_FILES): | $(BLOG_OUT_DIR)
-
-$(BLOG_OUT_DIR):
-	@mkdir -p $@
 
 ifeq ($(filter sixtus-blog-clean clean, $(MAKECMDGOALS)),)
 -include $(BLOG_MAKE_FILE)
