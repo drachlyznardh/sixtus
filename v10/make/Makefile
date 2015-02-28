@@ -88,7 +88,7 @@ $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 	
 $(BLOG_MAKE_FILE):
 	@echo -n "Generating blog dependencies… "
-	echo $(POST_MONTHS) |\
+	@echo $(POST_MONTHS) |\
 		$(SCRIPT_DIR)blog-make-dep-file $@ \
 		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
 		$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE)
