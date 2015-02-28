@@ -48,7 +48,7 @@ if True:
 
 	print('start#side', file=f)
 	for i in side:
-		print('p#link##%s#%s-%s' % ('Name', this_year, i), file=f)
+		print('p#link##%s#%s-%s' % (name_map[i], this_year, i), file=f)
 
 print()
 
