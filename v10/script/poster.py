@@ -89,7 +89,7 @@ class Poster:
 			print('start#side', file=f)
 			for number, value in self.post_title.items():
 				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
-				print('\n&amp;\n'.join(['link##%s#%s/%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
+				print('\n&amp;\n'.join(['link##%s#%s-%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
 			print('start#page', file=f)
 			manydays = False
 			for number, value in self.post_content.items():
@@ -99,7 +99,7 @@ class Poster:
 				for index in xrange(len(value)):
 					if manyposts: print('br#', file=f)
 					else: manyposts = True
-					print('id#%s/%s' % (number, index), file=f)
+					print('id#%s-%s' % (number, index), file=f)
 					print('%s' % value[index], file=f)
 
 	def output_list_file (self, filename):
