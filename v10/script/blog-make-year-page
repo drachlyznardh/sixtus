@@ -36,7 +36,7 @@ with open(name_file, 'r') as f:
 
 page = []
 side = []
-for filename in sys.argv[5:]:
+for filename in sys.argv[6:]:
 	side.append(filename.split('/')[-1].split('.')[0])
 	with open(filename, 'r') as f:
 		page.append(f.read())
