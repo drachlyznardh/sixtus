@@ -12,12 +12,13 @@ PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.j
 sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
-	@echo Splitting source file $<
+	@echo -n "Splitting source file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)pag-to-six $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
+	@echo Done
 
 $(BUILD_DIR)%.six:
-	@echo Splitting source file $<
+	@echo -n "Splitting source file $<… "
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
 	@$(SCRIPT_DIR)pag-to-six\
 		$(filter %.pag, $^)\
@@ -26,6 +27,7 @@ $(BUILD_DIR)%.six:
 		$(basename $(notdir $<))\
 		$(BUILD_DIR)\
 		$(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^))
+	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
 	@echo -n "Generating page file $@… "
