@@ -59,6 +59,7 @@ $(BLOG_YEAR_FILES): $(BLOG_OUT_DIR)%.pag:
 	@echo Done
 
 sixtus-blog: $(BLOG_PAG_FILES)
+$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 $(BLOG_REL_FILE): $(POST_FILES)
 	@echo -n "Generating blog relations file $@… "
