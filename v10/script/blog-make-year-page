@@ -62,8 +62,9 @@ if True:
 		line = []
 		for j in xrange(4):
 			index = 1 + i * 4 + j
-			name = '%02d' % index
-			line.append('%s' % name_map[name])
+			number = '%02d' % index
+			name = name_map[number]
+			line.append('%s' % name)
 		print('p#%s' % ('\n/\n'.join(line)))
 
 sys.exit(1)
