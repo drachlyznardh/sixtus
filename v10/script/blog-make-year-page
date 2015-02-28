@@ -34,6 +34,9 @@ with open(relfile, 'r') as f:
 with open(namefile, 'r') as f:
 	name_map = eval(f.read())
 
+print(rel_list)
+print(name_map)
+
 #with sys.stdout as f:
 f = sys.stdout
 if True:
@@ -51,5 +54,16 @@ if True:
 		print('p#link##%s#%s-%s' % (name_map[i], this_year, i), file=f)
 
 print()
+
+if True:
+
+	print('id#%s' % this_year)
+	for i in xrange(3):
+		line = []
+		for j in xrange(4):
+			index = 1 + i * 4 + j
+			name = '%02d' % index
+			line.append('%s' % name_map[name])
+		print('p#%s' % ('\n/\n'.join(line)))
 
 sys.exit(1)
