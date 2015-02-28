@@ -46,9 +46,9 @@ $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FI
 	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(MONTH_REL_FILE) $(BLOG_NAME_FILE) $(*D) $(*F)
 	@echo Done
 
-$(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag:
+$(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag: | $(YEAR_REL_FILE)
 	@echo -n "Generating blog year page $@… "
-	$(SCRIPT_DIR)blog-make-year-page $@ $(*F) $(MONTH_REL_FILE) $(BLOG_NAME_FILE) $^
+	$(SCRIPT_DIR)blog-make-year-page $@ $(*F) $(YEAR_REL_FILE) $(BLOG_NAME_FILE) $^
 	@echo Done
 
 $(BLOG_ARCHIVE_PAGE):
@@ -78,8 +78,7 @@ $(MONTH_REL_FILE): $(POST_FILES)
 
 $(YEAR_REL_FILE): $(POST_FILES)
 	@echo -n "Generating year relations file $@… "
-	@echo $(POST_YEARS) |\
-		$(SCRIPT_DIR)blog-make-year-rel-file $(YEAR_REL_FILE)
+	@$(SCRIPT_DIR)blog-make-year-rel-file $(YEAR_REL_FILE) $(POST_YEARS)
 	@echo Done
 
 $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
