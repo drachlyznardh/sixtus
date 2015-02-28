@@ -34,6 +34,11 @@ BLOG_PAG_FILES  += $(BLOG_ARCHIVE_PAGE)
 BLOG_PAG_FILES  += $(BLOG_INDEX_PAGE)
 PAG_FILES       += $(BLOG_PAG_FILES)
 
+$(BLOG_HELP_FILES): | $(BLOG_OUT_DIR)
+
+$(BLOG_OUT_DIR):
+	@mkdir -p $@
+
 ifeq ($(filter sixtus-blog-clean clean, $(MAKECMDGOALS)),)
 -include $(BLOG_MAKE_FILE)
 endif
