@@ -50,7 +50,7 @@ $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 include $(MAKE_DIR)sixtus-runtime.Makefile
 include $(MAKE_DIR)sixtus-pages.Makefile
 
-clean:
+clean: sixtus-runtime-clean
 	@rm -f $(BLOG_PAG_FILES)
 	@rm -rf $(BUILD_DIR)
 	@rm -f $(PHP_FILES)

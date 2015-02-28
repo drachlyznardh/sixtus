@@ -31,3 +31,9 @@ $(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.
 $(SIXTUS_RUNTIME_OUT_DIR)page-bottom.php: $(SIXTUS_RUNTIME_IN_DIR)page-foot.php.in
 	@$(SCRIPT_DIR)page-make-bottom $< $@
 	@echo page bottom [$@] generated
+
+.PHONY: sixtus-runtime-clean
+sixtus-runtime-clean:
+	@echo -n "Cleaning runtime files… "
+	@rm -f $(SIXTUS_RUNTIME_FILES)
+	@echo Done
