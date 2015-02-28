@@ -51,10 +51,12 @@ $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag:
 
 $(BLOG_ARCHIVE_PAGE):
 	@echo -n "Generating blog archive page $@… "
+	exit 1
 	@echo Done
 
 $(BLOG_INDEX_PAGE):
 	@echo -n "Generating blog index page $@… "
+	exit 1
 	@echo Done
 
 $(BLOG_YEAR_FILES): $(BLOG_OUT_DIR)%.pag:
