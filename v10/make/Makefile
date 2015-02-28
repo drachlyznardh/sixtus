@@ -48,7 +48,7 @@ $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FI
 
 $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag: | $(YEAR_REL_FILE)
 	@echo -n "Generating blog year page $@… "
-	$(SCRIPT_DIR)blog-make-year-page $@ $(*F) $(YEAR_REL_FILE) $(BLOG_NAME_FILE) $^
+	$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(YEAR_REL_FILE) $(BLOG_NAME_FILE) $^
 	@echo Done
 
 $(BLOG_ARCHIVE_PAGE):
