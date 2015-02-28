@@ -17,12 +17,12 @@ print()
 print(sys.argv)
 print()
 
-content = []
-
+page = []
+side = []
 for filename in sys.argv[3:]:
-	print('Reading %s' % filename)
+	side.append(filename.split('/')[-1].split('.')[0])
 	with open(filename, 'r') as f:
-		content.append(f.read())
+		page.append(f.read())
 
 #with sys.stdout as f:
 f = sys.stdout
@@ -34,7 +34,11 @@ if True:
 	print('next#%s#%s', file=f)
 
 	print('start#page', file=f)
-	print('br#\n'.join(content), file=f)
+	print('br#\n'.join(page), file=f)
+
+	print('start#side', file=f)
+	for i in side:
+		print('p#link##%s#%s-%s' % ('Name', this_year, i), file=f)
 
 print()
 
