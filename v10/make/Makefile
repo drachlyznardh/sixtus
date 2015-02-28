@@ -32,7 +32,7 @@ $(DEPLOY_DIR) $(BUILD_DIR) $(BLOG_OUT_DIR): %:
 
 BLOG_MONTH_PAGES  += $(patsubst $(BLOG_IN_DIR)%.post, $(BLOG_OUT_DIR)%.pag, $(POST_FILES))
 BLOG_YEAR_PAGES   += $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
-BLOG_ARCHIVE_PAGE += $(BLOG_OUT_DIR)$(SITE_BLOG_ARCHIVE_TITLE).pag
+BLOG_ARCHIVE_PAGE += $(BLOG_OUT_DIR)$(SITE_BLOG_ARCHIVE_BASENAME).pag
 BLOG_INDEX_PAGE   += $(abspath $(BLOG_OUT_DIR)../Blog.pag)
 
 BLOG_PAG_FILES  += $(BLOG_MONTH_PAGES)
@@ -114,8 +114,7 @@ sixtus-blog-clean:
 #include $(MAKE_DIR)sixtus-runtime.Makefile
 #include $(MAKE_DIR)sixtus-pages.Makefile
 
-clean:
-	#sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
+clean: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
 	@rm -f $(BLOG_PAG_FILES)
 	@rm -rf $(BUILD_DIR)
 	@rm -f $(PHP_FILES)
