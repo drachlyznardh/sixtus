@@ -19,6 +19,16 @@ namefile  = sys.argv[4]
 with open(relfile, 'r') as f:
 	rel_list = eval(f.read())
 
+try: index = rel_list.index(this_year)
+except:
+	print('This year (%s) is not in the list! (%s)' % (this_year, rel_list), file=sys.stderr)
+	sys.exit(1)
+
+if index > 0: prev_year = rel_list[index - 1]
+else: prev_year = False
+
+if index > 0: next_year = rel_list[index + 1]
+else: next_year = False
 
 print()
 print()
