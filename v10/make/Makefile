@@ -58,8 +58,7 @@ $(BLOG_ARCHIVE_PAGE):
 
 $(BLOG_INDEX_PAGE):
 	@echo -n "Generating blog index page $@… "
-	echo $^
-	exit 1
+	@$(SCRIPT_DIR)blog-make-index-page $@ $^
 	@echo Done
 
 $(BLOG_YEAR_FILES): $(BLOG_OUT_DIR)%.pag:
