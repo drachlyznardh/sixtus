@@ -14,21 +14,21 @@ $(SIXTUS_RUNTIME_OUT_DIR)%: $(SIXTUS_RUNTIME_IN_DIR)%
 	@echo page component [$@] copied
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
-	@$(SCRIPT_DIR)page-make-top $< $@ \
+	$(SCRIPT_DIR)page-make-top $(filter %.php.in, $^) $@ \
 		$(SITE_AUTHOR) \
 		$(SITE_TAB_PREV_BEFORE) $(SITE_TAB_PREV_LINK) $(SITE_TAB_PREV_AFTER)
 	@echo page top [$@] generated
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in \
 		$(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
-	@$(SCRIPT_DIR)page-make-middle $^ $@ \
+	$(SCRIPT_DIR)page-make-middle $(filter %.php.in, $^) $@ \
 		$(SITE_COPYRIGHT_YEARS) $(SITE_COPYRIGHT_OWNER) \
 		$(SITE_TAB_NEXT_BEFORE) $(SITE_TAB_NEXT_LINK) $(SITE_TAB_NEXT_AFTER) \
 		$(SITE_PAGE_PREV) $(SITE_PAGE_NEXT)
 	@echo page middle [$@] generated
 
 $(SIXTUS_RUNTIME_OUT_DIR)page-bottom.php: $(SIXTUS_RUNTIME_IN_DIR)page-foot.php.in
-	@$(SCRIPT_DIR)page-make-bottom $< $@
+	$(SCRIPT_DIR)page-make-bottom $(filter %.php.in, $^) $@
 	@echo page bottom [$@] generated
 
 .PHONY: sixtus-runtime-clean
