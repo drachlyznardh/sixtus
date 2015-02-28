@@ -48,8 +48,8 @@ endif
 sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
 $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
-#$(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
-#$(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
+$(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
+$(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
 $(BLOG_PAG_FILES): | $(BLOG_HELP_FILES)
 
 $(BLOG_MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FILE) $(BLOG_NAME_FILE)
