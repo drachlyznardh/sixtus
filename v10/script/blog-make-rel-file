@@ -14,17 +14,21 @@ def get_old_list (filename):
 	with open(filename, 'r') as f:
 		return eval(f.read())
 
-rel_list = []
-outfile = sys.argv[1]
+outfile  = sys.argv[1]
+builddir = sys.argv[2]
 
 try: old_list = get_old_list(outfile)
 except: old_list = []
 
-print(old_list)
+#print(old_list)
 
+rel_list = []
 for word in sys.stdin.readline().split():
 	rel_list.append(word)
 
-print(rel_list)
+#rel_list.append('2038/12345')
+
+#print(rel_list)
+#print(' '.join([('%s%s.post' % (builddir, a)) for a in rel_list if a not in old_list]))
 
 with open(outfile, 'w') as f: print('%s' % rel_list, file=f)
