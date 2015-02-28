@@ -23,6 +23,7 @@ BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
 
 BLOG_HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(BLOG_NAME_FILE)
+$(BLOG_MAKE_FILE): | $(BUILD_DIR)
 $(BLOG_HELP_FILES): | $(BUILD_DIR) $(BLOG_OUT_DIR) $(BLOG_MAKE_FILE)
 
 # Ensuring directory presence
