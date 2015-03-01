@@ -111,8 +111,8 @@ sixtus-blog-clean:
 	@rm -f $(BLOG_MAKE_FILE)
 	@echo Done
 
-#include $(MAKE_DIR)sixtus-runtime.Makefile
-#include $(MAKE_DIR)sixtus-pages.Makefile
+include $(MAKE_DIR)sixtus-runtime.Makefile
+include $(MAKE_DIR)sixtus-pages.Makefile
 
 clean: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
 	@rm -f $(BLOG_PAG_FILES)
