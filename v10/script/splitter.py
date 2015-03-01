@@ -17,6 +17,7 @@ class Splitter:
 		self.side    = ''
 		self.content = ''
 
+		self.jump    = False
 		self.first   = False
 		self.tabname = None
 
@@ -44,35 +45,33 @@ class Splitter:
 
 		for line in lines:
 
-				self.lineno += 1
-				if self.debug: print(line)
+			self.lineno += 1
+			if self.debug: print(line)
 
-				if len(line) and line[0] == '#':
-					if self.debug: print('Line is a comment, skip')
-					continue
+			if len(line) and line[0] == '#':
+				if self.debug: print('Line is a comment, skip')
+				continue
 
-				if '#' not in line:
-					self.append_content(line)
-					if self.debug: print('Line is simple content, appending')
-					continue
+			if '#' not in line:
+				self.append_content(line)
+				if self.debug: print('Line is simple content, appending')
+				continue
 
-				token = line.split('#')
-				command = token[0]
+			token = line.split('#')
+			command = token[0]
 
-				if command == 'start':
+			if command == 'jump': self.jump = token[1]
+			elif command == 'start': self.update_state(token[1])
+			elif command == 'tab':
 
-					self.update_state(token[1])
+				if not self.first: self.first = token[1]
+				self.tabs[self.tabname] = self.content
+				self.content = ''
+				self.nexts[self.tabname] = token[1]
+				self.prevs[token[1]] = self.tabname
+				self.tabname = token[1]
 
-				elif command == 'tab':
-
-					if not self.first: self.first = token[1]
-					self.tabs[self.tabname] = self.content
-					self.content = ''
-					self.nexts[self.tabname] = token[1]
-					self.prevs[token[1]] = self.tabname
-					self.tabname = token[1]
-
-				else: self.append_content(line)
+			else: self.append_content(line)
 
 		self.update_state('meta')
 
@@ -133,13 +132,23 @@ class Splitter:
 		if self.debug: print('Dump Single Tab', file=sys.stderr)
 
 		self.check_dir_path(index_path)
-		filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
+		if self.jump:
+			filecontent = 'jump#%s' % self.jump
+		else:
+			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
 		with open(index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
 	def output_tab_files (self, base, page_name, build_dir):
 
-		if self.first:
+		if self.jump:
+
+			indexfile_path = '%s%s/%s/index.jump.six' % (build_dir, base, page_name)
+			self.touch_files.append(indexfile_path)
+
+			self.output_single_tab(indexfile_path)
+
+		elif self.first:
 
 			indexfile_path = '%s%s/%s/index.jump.six' % (build_dir, base, page_name)
 			self.touch_files.append(indexfile_path)

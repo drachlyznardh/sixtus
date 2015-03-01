@@ -31,16 +31,19 @@ $(BUILD_DIR)%.six:
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
 	@echo -n "Generating page file $@… "
+	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-page-to-php $< $(*D) $@
 	@echo Done
 
 $(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
 	@echo -n "Generating side file $@… "
+	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
 	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 	@echo -n "Generating jump file $@… "
+	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-jump-to-php $< $@
 	@echo Done
 
