@@ -104,11 +104,9 @@ $(BLOG_MAKE_FILE):
 .PHONY: sixtus-blog-clean
 sixtus-blog-clean:
 	@echo -n "Cleaning blog files… "
-	@rm -rf $(BLOG_OUT_DIR)
-	@rm -f $(MONTH_REL_FILE)
-	@rm -f $(YEAR_REL_FILE)
-	@rm -f $(BLOG_NAME_FILE)
-	@rm -f $(BLOG_MAKE_FILE)
+	@rm -rf $(BLOG_OUT_DIR) $(BLOG_INDEX_PAGE)
+	@rm -f $(MONTH_REL_FILE) $(YEAR_REL_FILE)
+	@rm -f $(BLOG_NAME_FILE) $(BLOG_MAKE_FILE)
 	@echo Done
 
 include $(MAKE_DIR)sixtus-runtime.Makefile
