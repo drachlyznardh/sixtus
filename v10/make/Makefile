@@ -10,7 +10,7 @@ export BLOG_IN_DIR    := $(SOURCE_DIR)blog/
 export BLOG_OUT_DIR   := $(PAG_DIR)Blog/
 
 .PHONY: sixtus-blog sixtus-pages sixtus-runtime
-sixtus-deploy: sixtus-pages sixtus-runtime
+sixtus-deploy: sixtus-runtime sixtus-pages
 
 MAKE_BLOG    := $(MAKE_DIR)sixtus-blog.Makefile
 MAKE_RUNTIME := $(MAKE_DIR)sixtus-runtime.Makefile
