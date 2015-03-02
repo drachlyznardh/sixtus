@@ -3,7 +3,6 @@ PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 TCH_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(PAG_FILES))
 
 all: sixtus-pages
-sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 
 ifeq ($(filter %clean,$(MAKECMDGOALS)),)
 -include $(TCH_FILES)
@@ -12,6 +11,8 @@ endif
 PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.page.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.side.php, $(filter %.side.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
+
+sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@echo -n "Splitting source file $<… "
