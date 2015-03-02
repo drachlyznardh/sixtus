@@ -1,0 +1,24 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+print(sys.argv, file=sys.stderr)
+sys.exit(1)
+
+stable_file = sys.argv[1]
+
+try:
+	with open(stable_file, 'r') as f:
+		stable = eval(f.read())
+except:
+	stable = []
+
+current = []
+for i in sys.argv[2:]:
+	print(i, file=sys.stderr)
+
+result = set(stable).symmetric_difference(set(sys.argv[2:]))
+
+print(result, file=sys.stderr)

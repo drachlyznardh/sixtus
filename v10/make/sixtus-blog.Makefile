@@ -33,7 +33,7 @@ $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 $(warning Filter clean triggerd)
-ifneq ($(shell $(SCRIPT_DIR)blog-updates $(STABLE_MAP) $(POST_MONTHS)),)
+ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
 $(warning Blog Uppdates triggered)
 -include $(BLOG_MAKE_FILE)
 endif
@@ -57,6 +57,7 @@ $(BLOG_YEAR_PAGES): $(BLOG_OUT_DIR)%.pag: | $(YEAR_REL_FILE)
 $(BLOG_ARCHIVE_PAGE):
 	@echo -n "Generating blog archive page $@… "
 	@$(SCRIPT_DIR)blog-make-archive-page $@ $(BLOG_NAME_FILE) $^
+	@$(SCRIPT_DIR)blog-update $(STABLE_MAP) $(POST_MONTHS)
 	@echo Done
 
 $(BLOG_INDEX_PAGE):
