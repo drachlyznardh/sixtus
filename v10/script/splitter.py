@@ -9,7 +9,8 @@ class Splitter:
 
 	def __init__ (self):
 
-		self.debug = False
+		self.verbose = False
+		self.debug   = False
 
 		self.state = 'meta'
 
@@ -90,6 +91,7 @@ class Splitter:
 	def output_index_file (self, base, page_name, jumpfile_path):
 
 		if self.debug: print('Dump Index', file=sys.stderr)
+		if self.verbose: print('\tIndex file %s' % jumpfile_path, file=sys.stderr)
 
 		self.check_dir_path(jumpfile_path)
 
@@ -105,10 +107,13 @@ class Splitter:
 
 			if name == None: continue
 
-			file_path = '%s%s/%s/%s/index.page.six' % (build_dir, base, page_name, name.upper())
-			self.touch_files.append(file_path)
+			path = os.path.normpath(os.path.join(build_dir, base, page_name, name.upper(), 'index.page.six'))
+			self.touch_files.append(path)
 
-			self.check_dir_path(file_path)
+			if self.verbose:
+				print('\tTab file %s' % path, file=sys.stdout)
+
+			self.check_dir_path(path)
 
 			varmeta = self.meta
 
@@ -119,7 +124,7 @@ class Splitter:
 				varmeta += '\ntabnext#/%s/%s/%s/' % (base, page_name, self.nexts[name].upper())
 
 			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, self.side, value))
-			with open(file_path, 'w') as outfile:
+			with open(path, 'w') as outfile:
 				outfile.write(filecontent)
 
 	def output_side_file (self, filename):
@@ -129,6 +134,7 @@ class Splitter:
 
 	def output_single_tab (self, index_path):
 
+		if self.verbose: print('\tSingle tab file %s' % index_path, file=sys.stdout)
 		if self.debug: print('Dump Single Tab', file=sys.stderr)
 
 		self.check_dir_path(index_path)
@@ -143,31 +149,32 @@ class Splitter:
 
 		if self.jump:
 
-			indexfile_path = '%s%s/%s/index.jump.six' % (build_dir, base, page_name)
-			self.touch_files.append(indexfile_path)
-
-			self.output_single_tab(indexfile_path)
+			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.jump.six'))
+			self.touch_files.append(path)
+			self.output_single_tab(path)
 
 		elif self.first:
 
-			indexfile_path = '%s%s/%s/index.jump.six' % (build_dir, base, page_name)
-			self.touch_files.append(indexfile_path)
+			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.jump.six'))
+			self.touch_files.append(path)
+			self.output_index_file(base, page_name, path)
 
-			sidefile_path = '%s%s/%s/index.side.six' % (build_dir, base, page_name)
-			self.touch_files.append(sidefile_path)
+			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.size.six'))
+			self.touch_files.append(path)
+			self.output_side_file(path)
 
-			self.output_index_file(base, page_name, indexfile_path)
 			self.output_many_tabs(base, page_name, build_dir)
-			self.output_side_file(sidefile_path)
 
 		else:
 
-			indexfile_path = '%s%s/%s/index.page.six' % (build_dir, base, page_name)
-			self.touch_files.append(indexfile_path)
-
-			self.output_single_tab(indexfile_path)
+			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.page.six'))
+			self.touch_files.append(path)
+			self.output_single_tab(path)
 
 	def output_touch_file (self, touch_file, origin_files):
+
+		if self.verbose:
+			print('\tTouch file %s' % touch_file, file=sys.stdout)
 
 		origin_list = ' '.join(origin_files)
 
