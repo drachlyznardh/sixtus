@@ -9,7 +9,7 @@ PAG_DIR  := $(SOURCE_DIR)src/
 BLOG_IN_DIR    := $(SOURCE_DIR)blog/
 BLOG_OUT_DIR   := $(PAG_DIR)Blog/
 
-.PHONY: sixtus-runtime sixtus-pages
+.PHONY: sixtus-blog sixtus-pages sixtus-runtime
 .PHONY: clean
 sixtus-deploy: sixtus-pages sixtus-runtime
 
