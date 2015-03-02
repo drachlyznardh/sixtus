@@ -60,10 +60,6 @@ $(BLOG_INDEX_PAGE):
 	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 	@echo Done
 
-$(BLOG_YEAR_FILES): $(BLOG_OUT_DIR)%.pag:
-	@echo -n "Generating year page $@… "
-	@echo Done
-
 $(MONTH_REL_FILE): $(POST_FILES)
 	@echo -n "Generating month relations file $@… "
 	@echo $(POST_MONTHS) |\
