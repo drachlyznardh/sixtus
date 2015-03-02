@@ -4,8 +4,6 @@
 from __future__ import print_function
 import sys
 
-print(sys.argv, file=sys.stderr)
-
 stable_file = sys.argv[1]
 
 try:
@@ -14,10 +12,5 @@ try:
 except:
 	stable = []
 
-current = []
-for i in sys.argv[2:]:
-	print(i, file=sys.stderr)
-
-result = set(stable).symmetric_difference(set(sys.argv[2:]))
-
-print(result, file=sys.stderr)
+for i in set(stable).symmetric_difference(set(sys.argv[2:])):
+	print(i)
