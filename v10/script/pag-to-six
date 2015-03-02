@@ -23,17 +23,12 @@ pag_name      = sys.argv[5]
 build_dir     = sys.argv[6]
 touch_file    = sys.argv[7]
 
-pag_local_dir = '%s/' % '/'.join(sys.argv[1].split('/')[:-1])
-print('{%s * %s * %s}' % (pag_file, page_location, pag_local_dir))
-
-pp = preprocessor.Preprocessor(pag_base) #local_dir)
+pp = preprocessor.Preprocessor(pag_base)
 pp.parse_file(pag_file)
 
 mp = mapper.Mapper(map_file, page_location)
 
 sp = splitter.Splitter()
 sp.split_content(pp.content)
-#sp.output_tab_files(mp.base, sys.argv[4].upper(), sys.argv[5])
 sp.output_tab_files(mp.base, pag_name, build_dir)
-#sp.output_touch_file(sys.argv[6], pp.origin_files)
 sp.output_touch_file(touch_file, pp.origin_files)
