@@ -41,7 +41,7 @@ BLOG_PAG_FILES += $(BLOG_ARCHIVE_PAGE)
 BLOG_PAG_FILES += $(BLOG_INDEX_PAGE)
 PAG_FILES      += $(BLOG_PAG_FILES)
 
-ifeq ($(filter sixtus-blog-clean clean, $(MAKECMDGOALS)),)
+ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 -include $(BLOG_MAKE_FILE)
 endif
 

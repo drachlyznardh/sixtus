@@ -1,7 +1,7 @@
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 TCH_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(PAG_FILES))
 
-ifeq ($(filter sixtus-pages-clean clean,$(MAKECMDGOALS)),)
+ifeq ($(filter %clean,$(MAKECMDGOALS)),)
 -include $(TCH_FILES)
 endif
 
