@@ -5,6 +5,7 @@ POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
 
 MONTH_REL_FILE := $(BUILD_DIR)blog-month-rel.py
 YEAR_REL_FILE  := $(BUILD_DIR)blog-year-rel.py
+STABLE_MAP     := $(BUILD_DIR)stable-map.py
 BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
 BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
 
@@ -31,7 +32,11 @@ sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
 $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
+$(warning Filter clean triggerd)
+ifneq ($(shell $(SCRIPT_DIR)blog-updates $(STABLE_MAP) $(POST_MONTHS)),)
+$(warning Blog Uppdates triggered)
 -include $(BLOG_MAKE_FILE)
+endif
 endif
 
 $(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
