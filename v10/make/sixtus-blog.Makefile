@@ -34,7 +34,7 @@ $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
-$(warning Blog structure unchanged)
+$(warning Blog structure update)
 -include $(BLOG_FULL_DEPS)
 else
 $(warning Blog structure unchanged)
@@ -85,9 +85,17 @@ $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 	@echo Done
 	
 $(BLOG_FULL_DEPS):
-	@echo -n "Generating blog dependencies… "
+	@echo -n "Generating blog full dependencies… "
 	@echo $(POST_MONTHS) |\
 		$(SCRIPT_DIR)blog-make-dep-full $@ \
+		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
+		$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE)
+	@echo Done
+
+$(BLOG_FAST_DEPS):
+	@echo -n "Generating blog fast dependencies… "
+	@echo $(POST_MONTHS) |\
+		$(SCRIPT_DIR)blog-make-dep-fast $@ \
 		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
 		$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE)
 	@echo Done
