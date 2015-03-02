@@ -1,18 +1,4 @@
 
-SIXTUS_DIR := /opt/devel/web/sixtus/v10/
-SCRIPT_DIR := $(SIXTUS_DIR)script/
-MAKE_DIR   := $(SIXTUS_DIR)make/
-
-MAP_FILE := $(SOURCE_DIR)map.txt
-PAG_DIR  := $(SOURCE_DIR)src/
-
-BLOG_IN_DIR    := $(SOURCE_DIR)blog/
-BLOG_OUT_DIR   := $(PAG_DIR)Blog/
-
-.PHONY: sixtus-runtime sixtus-pages
-.PHONY: clean
-sixtus-deploy: sixtus-pages sixtus-runtime
-
 POST_FILES  += $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
 POST_MONTHS += $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
 POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
@@ -108,11 +94,3 @@ sixtus-blog-clean:
 	@rm -f $(MONTH_REL_FILE) $(YEAR_REL_FILE)
 	@rm -f $(BLOG_NAME_FILE) $(BLOG_MAKE_FILE)
 	@echo Done
-
-include $(MAKE_DIR)sixtus-runtime.Makefile
-include $(MAKE_DIR)sixtus-pages.Makefile
-
-clean: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
-	@rm -f $(BLOG_PAG_FILES)
-	@rm -rf $(BUILD_DIR)
-	@rm -f $(PHP_FILES)
