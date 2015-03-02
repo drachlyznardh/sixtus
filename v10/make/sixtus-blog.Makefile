@@ -34,7 +34,7 @@ $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 $(warning Filter clean triggerd)
 ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
-$(warning Blog Uppdates triggered)
+$(warning Blog Updates triggered)
 -include $(BLOG_MAKE_FILE)
 endif
 endif
