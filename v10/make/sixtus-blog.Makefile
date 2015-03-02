@@ -7,11 +7,12 @@ MONTH_REL_FILE := $(BUILD_DIR)blog-month-rel.py
 YEAR_REL_FILE  := $(BUILD_DIR)blog-year-rel.py
 STABLE_MAP     := $(BUILD_DIR)stable-map.py
 BLOG_NAME_FILE := $(BUILD_DIR)blog-names.py
-BLOG_MAKE_FILE := $(BUILD_DIR)blog.Makefile
+BLOG_FULL_DEPS := $(BUILD_DIR)blog-full.dep
+BLOG_FAST_DEPS := $(BUILD_DIR)blog-fast.dep
 
 BLOG_HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(BLOG_NAME_FILE)
-$(BLOG_MAKE_FILE): | $(BUILD_DIR)
-$(BLOG_HELP_FILES): | $(BUILD_DIR) $(BLOG_OUT_DIR) $(BLOG_MAKE_FILE)
+$(BLOG_FULL_DEPS): | $(BUILD_DIR)
+$(BLOG_HELP_FILES): | $(BUILD_DIR) $(BLOG_OUT_DIR) $(BLOG_FULL_DEPS)
 
 # Ensuring directory presence
 $(DEPLOY_DIR) $(BUILD_DIR) $(BLOG_OUT_DIR): %:
@@ -32,10 +33,12 @@ sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
 $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
-$(warning Filter clean triggered)
 ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
-$(warning Blog Updates triggered)
--include $(BLOG_MAKE_FILE)
+$(warning Blog structure unchanged)
+-include $(BLOG_FULL_DEPS)
+else
+$(warning Blog structure unchanged)
+-include $(BLOG_FAST_DEPS)
 endif
 endif
 
@@ -81,10 +84,10 @@ $(BLOG_NAME_FILE): $(SITE_CONF_FILE)
 	@$(SCRIPT_DIR)blog-make-name-file $(BLOG_NAME_FILE) $(SITE_BLOG_MONTH_NAMES)
 	@echo Done
 	
-$(BLOG_MAKE_FILE):
+$(BLOG_FULL_DEPS):
 	@echo -n "Generating blog dependencies… "
 	@echo $(POST_MONTHS) |\
-		$(SCRIPT_DIR)blog-make-dep-file $@ \
+		$(SCRIPT_DIR)blog-make-dep-full $@ \
 		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
 		$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE)
 	@echo Done
@@ -95,5 +98,5 @@ sixtus-blog-clean:
 	@echo -n "Cleaning blog files… "
 	@rm -rf $(BLOG_OUT_DIR) $(BLOG_INDEX_PAGE)
 	@rm -f $(MONTH_REL_FILE) $(YEAR_REL_FILE)
-	@rm -f $(BLOG_NAME_FILE) $(BLOG_MAKE_FILE)
+	@rm -f $(BLOG_NAME_FILE) $(BLOG_FAST_DEPS) $(BLOG_FULL_DEPS)
 	@echo Done
