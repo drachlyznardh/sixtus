@@ -27,12 +27,13 @@ BLOG_PAG_FILES += $(BLOG_ARCHIVE_PAGE)
 BLOG_PAG_FILES += $(BLOG_INDEX_PAGE)
 PAG_FILES      += $(BLOG_PAG_FILES)
 
+all: sixtus-blog
+sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
+$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
+
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 -include $(BLOG_MAKE_FILE)
 endif
-
-sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
-$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 $(BLOG_MONTH_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
 $(BLOG_YEAR_PAGES:.pag=.list): %.list: %.pag | $(BLOG_HELP_FILES)
@@ -87,7 +88,8 @@ $(BLOG_MAKE_FILE):
 		$(BLOG_ARCHIVE_PAGE) $(BLOG_INDEX_PAGE)
 	@echo Done
 
-.PHONY: sixtus-blog-clean
+.PHONY: clean sixtus-blog-clean
+clean: sixtus-blog-clean
 sixtus-blog-clean:
 	@echo -n "Cleaning blog files… "
 	@rm -rf $(BLOG_OUT_DIR) $(BLOG_INDEX_PAGE)
