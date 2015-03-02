@@ -1,5 +1,8 @@
+
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 TCH_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(PAG_FILES))
+
+all: sixtus-pages
 
 ifeq ($(filter %clean,$(MAKECMDGOALS)),)
 -include $(TCH_FILES)
@@ -47,7 +50,8 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 	@$(SCRIPT_DIR)six-jump-to-php $< $@
 	@echo Done
 
-.PHONY: sixtus-pages-clean
+.PHONY: clean sixtus-pages-clean
+clean: sixtus-pages-clean
 sixtus-pages-clean:
 	@echo -n "Cleaning pages files… "
 	@rm -f $(TCH_FILES)

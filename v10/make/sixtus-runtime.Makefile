@@ -6,6 +6,7 @@ SIXTUS_RUNTIME_FILES += page-top.php page-middle.php page-bottom.php
 
 SIXTUS_RUNTIME_OUT_FILES += $(addprefix $(SIXTUS_RUNTIME_OUT_DIR), $(SIXTUS_RUNTIME_FILES))
 
+all: sixtus-runtime
 sixtus-runtime: $(SIXTUS_RUNTIME_OUT_FILES)
 $(SIXTUS_RUNTIME_OUT_FILES): $(SITE_CONF_FILE)
 
@@ -35,7 +36,8 @@ $(SIXTUS_RUNTIME_OUT_DIR)page-bottom.php: $(SIXTUS_RUNTIME_IN_DIR)page-foot.php.
 	@$(SCRIPT_DIR)page-make-bottom $(filter %.php.in, $^) $@
 	@echo Done
 
-.PHONY: sixtus-runtime-clean
+.PHONY: clean sixtus-runtime-clean
+clean: sixtus-runtime-clean
 sixtus-runtime-clean:
 	@echo -n "Cleaning runtime files… "
 	@rm -f $(SIXTUS_RUNTIME_OUT_FILES)
