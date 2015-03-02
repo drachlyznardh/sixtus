@@ -19,7 +19,6 @@ sixtus-runtime:
 
 include $(MAKE_DIR)sixtus-blog.Makefile
 include $(MAKE_DIR)sixtus-pages.Makefile
-include $(MAKE_DIR)sixtus-runtime.Makefile
 
 .PHONY: clean
 .PHONY: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
