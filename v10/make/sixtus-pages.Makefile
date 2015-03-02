@@ -17,7 +17,7 @@ sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
 	@echo -n "Splitting source file $<… "
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)pag-to-six $< $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
+	@$(SCRIPT_DIR)pag-to-six $< $(dir $<) $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 	@echo Done
 
 $(BUILD_DIR)%.six:
@@ -25,6 +25,7 @@ $(BUILD_DIR)%.six:
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
 	@$(SCRIPT_DIR)pag-to-six\
 		$(filter %.pag, $^)\
+		$(dir $(filter %.pag, $^))\
 		$(MAP_FILE)\
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
 		$(basename $(notdir $<))\

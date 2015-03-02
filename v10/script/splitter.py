@@ -9,7 +9,8 @@ class Splitter:
 
 	def __init__ (self):
 
-		self.debug = False
+		self.verbose = True
+		self.debug   = False
 
 		self.state = 'meta'
 
@@ -90,6 +91,7 @@ class Splitter:
 	def output_index_file (self, base, page_name, jumpfile_path):
 
 		if self.debug: print('Dump Index', file=sys.stderr)
+		if self.verbose: print('\tIndex file %s' % jumpfile_path, file=sys.stderr)
 
 		self.check_dir_path(jumpfile_path)
 
@@ -107,6 +109,9 @@ class Splitter:
 
 			file_path = '%s%s/%s/%s/index.page.six' % (build_dir, base, page_name, name.upper())
 			self.touch_files.append(file_path)
+
+			if self.verbose:
+				print('\tTab file %s' % file_path, file=sys.stdout)
 
 			self.check_dir_path(file_path)
 
@@ -129,6 +134,7 @@ class Splitter:
 
 	def output_single_tab (self, index_path):
 
+		if self.verbose: print('\tSingle tab file %s' % index_path, file=sys.stdout)
 		if self.debug: print('Dump Single Tab', file=sys.stderr)
 
 		self.check_dir_path(index_path)
@@ -168,6 +174,9 @@ class Splitter:
 			self.output_single_tab(indexfile_path)
 
 	def output_touch_file (self, touch_file, origin_files):
+
+		if self.verbose:
+			print('\tTouch file %s' % touch_file, file=sys.stdout)
 
 		origin_list = ' '.join(origin_files)
 
