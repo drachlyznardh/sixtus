@@ -15,7 +15,7 @@ sixtus-deploy: sixtus-pages sixtus-runtime
 MAKE_RUNTIME := $(MAKE_DIR)sixtus-runtime.Makefile
 
 sixtus-runtime:
-	$(MAKE) -f $(MAKE_RUNTIME)
+	@$(MAKE) -f $(MAKE_RUNTIME)
 
 include $(MAKE_DIR)sixtus-blog.Makefile
 include $(MAKE_DIR)sixtus-pages.Makefile
@@ -29,5 +29,5 @@ clean: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
 	@rm -f $(PHP_FILES)
 
 sixtus-runtime-clean:
-	$(MAKE) -f $(MAKE_RUNTIME) clean
+	@$(MAKE) -f $(MAKE_RUNTIME) clean
 
