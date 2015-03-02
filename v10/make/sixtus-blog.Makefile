@@ -32,7 +32,7 @@ sixtus-blog: $(BLOG_PAG_FILES) | $(BLOG_HELP_FILES)
 $(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
-$(warning Filter clean triggerd)
+$(warning Filter clean triggered)
 ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
 $(warning Blog Updates triggered)
 -include $(BLOG_MAKE_FILE)
