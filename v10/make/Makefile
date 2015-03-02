@@ -14,14 +14,16 @@ sixtus-deploy: sixtus-pages sixtus-runtime
 
 MAKE_BLOG    := $(MAKE_DIR)sixtus-blog.Makefile
 MAKE_RUNTIME := $(MAKE_DIR)sixtus-runtime.Makefile
+MAKE_PAGES   := $(MAKE_DIR)sixtus-pages.Makefile
 
 sixtus-blog:
-	@$(MAKE) -f $(MAKE_BLOG)
+	@$(MAKE) -f $(MAKE_BLOG) all
 
 sixtus-runtime:
-	@$(MAKE) -f $(MAKE_RUNTIME)
+	@$(MAKE) -f $(MAKE_RUNTIME) all
 
-include $(MAKE_DIR)sixtus-pages.Makefile
+sixtus-pages:
+	@$(MAKE) -f $(MAKE_PAGES) all
 
 .PHONY: clean
 .PHONY: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
@@ -36,3 +38,5 @@ sixtus-blog-clean:
 sixtus-runtime-clean:
 	@$(MAKE) -f $(MAKE_RUNTIME) clean
 
+sixtus-pages-clean:
+	@$(MAKE) -f $(MAKE_PAGES) clean
