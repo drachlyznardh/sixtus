@@ -50,7 +50,7 @@ with open(pag_file, 'w') as f:
 	if next_year: print('next#Blog/%s/#%s' % (next_year, next_year), file=f)
 
 	print('start#page', file=f)
-	print('br#\n'.join(page), file=f)
+	print('\nbr#\n'.join(page), file=f)
 
 	print('start#side', file=f)
 	for i in side:
