@@ -40,11 +40,6 @@ for i in rel_list:
 	else: year_map[year] = [month]
 
 with open(outfile, 'w') as f:
-	for target, value in sorted(month_rel.items()):
-		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s.post' % (source_dir, i) for i in value])), file=f)
-
 	for target, value in year_map.items():
 		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s/%s.list' % (build_dir, target, i) for i in value])), file=f)
-
-	print('%s: %s' % (archive_file, ' '.join(['%s%s.list' % (build_dir, i) for i in year_map])), file=f)
 	print('%s: %s%s.post' % (index_file, source_dir, sorted(month_rel)[-1]), file=f)
