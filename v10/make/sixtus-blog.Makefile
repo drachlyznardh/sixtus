@@ -56,10 +56,10 @@ $(YEAR_PAGES:.pag=.list): %.list: %.pag
 	@touch $@
 	@echo Done
 
-$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post
+$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post $(REL_FILE)
 	@echo -n "Generating month page $@… "
 	@mkdir -p $(dir $@)
-	@touch $@
+	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(REL_FILE) $(NAME_FILE) $(*D) $(*F)
 	@echo Done
 
 $(YEAR_PAGES): %.pag: $(REL_FILE)
