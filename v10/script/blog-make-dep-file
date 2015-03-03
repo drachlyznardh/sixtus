@@ -54,6 +54,9 @@ with open(sys.argv[1], 'w') as f:
 		for year in sorted(years.keys()):
 			print(s % year, file=f)
 
+		# Blog map must be updated after the archive
+		print('$(MAP_FILE): $(ARCHIVE_PAGE)', file=f)
+
 		# Index page depends on the most recent month
 		print(file=f)
 		s = '$(INDEX_PAGE): $(BLOG_IN_DIR)%s.post'

@@ -18,17 +18,17 @@ rel_file  = sys.argv[4]
 name_file = sys.argv[5]
 
 with open(rel_file, 'r') as f:
-	rel_list = eval(f.read())
+	rel_years = sorted(set([word.split('/')[0] for word in eval(f.read())]))
 
-try: index = rel_list.index(this_year)
+try: index = rel_years.index(this_year)
 except:
-	print('This year (%s) is not in the list! (%s)' % (this_year, rel_list), file=sys.stderr)
+	print('This year (%s) is not in the list! (%s)' % (this_year, rel_years), file=sys.stderr)
 	sys.exit(1)
 
-if index > 0: prev_year = rel_list[index - 1]
+if index > 0: prev_year = rel_years[index - 1]
 else: prev_year = False
 
-if index < len(rel_list) - 1: next_year = rel_list[index + 1]
+if index < len(rel_years) - 1: next_year = rel_years[index + 1]
 else: next_year = False
 
 with open(name_file, 'r') as f:
