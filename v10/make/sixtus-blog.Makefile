@@ -103,10 +103,10 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 #	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 #	@echo Done
 
-#$(NAME_FILE): $(SITE_CONF_FILE)
-#	@echo -n "Generating blog names file $@… "
-#	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_MONTH_NAMES)
-#	@echo Done
+$(NAME_FILE): $(SITE_CONF_FILE)
+	@echo -n "Generating blog names file $@… "
+	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_MONTH_NAMES)
+	@echo Done
 	
 .PHONY: clean sixtus-blog-clean
 clean: sixtus-blog-clean
