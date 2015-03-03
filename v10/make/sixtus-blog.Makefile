@@ -31,7 +31,7 @@ $(BLOG_OUT_DIR):
 MONTH_PAGES  := $(patsubst $(BLOG_IN_DIR)%.post,$(BLOG_OUT_DIR)%.pag,$(POST_FILES))
 #YEAR_PAGES   := $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
 YEAR_PAGES   := $(patsubst $(BLOG_IN_DIR)%/,$(BLOG_OUT_DIR)%.pag,$(sort $(dir $(POSTS))))
-ARCHIVE_PAGE := $(BLOG_OUT_DIR)$(SITE_ARCHIVE_BASENAME).pag
+ARCHIVE_PAGE := $(BLOG_OUT_DIR)$(SITE_BLOG_ARCHIVE_BASENAME).pag
 INDEX_PAGE   := $(BLOG_OUT_DIR)index.pag
 
 PAG_FILES += $(MONTH_PAGES)
