@@ -1,0 +1,7 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+with open(sys.argv[1],'w') as f: print(sys.argv[2:], file=f)
