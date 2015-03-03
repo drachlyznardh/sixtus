@@ -159,7 +159,7 @@ class Splitter:
 			self.touch_files.append(path)
 			self.output_index_file(base, page_name, path)
 
-			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.size.six'))
+			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.side.six'))
 			self.touch_files.append(path)
 			self.output_side_file(path)
 
