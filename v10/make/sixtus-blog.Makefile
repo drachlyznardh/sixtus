@@ -81,7 +81,7 @@ $(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post
 	@touch $@
 	@echo Done
 
-$(YEAR_PAGES): %.pag
+$(YEAR_PAGES): %.pag:
 	@echo -n "Generating year page $@… "
 	@touch $@
 	@echo Done
