@@ -9,27 +9,10 @@ MAP_FILE := $(BLOG_OUT_DIR)blog.map
 POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
 POST_MONTHS := $(patsubst $(BLOG_IN_DIR)%.post,%,$(POST_FILES))
 
-#POST_MONTHS += $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
-#POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
-
-#MONTH_REL_FILE := $(BUILD_DIR)blog-month-rel.py
-#YEAR_REL_FILE  := $(BUILD_DIR)blog-year-rel.py
-#STABLE_MAP     := $(BUILD_DIR)stable-map.py
-#NAME_FILE := $(BUILD_DIR)blog-names.py
-#FULL_DEPS := $(BUILD_DIR)blog-full.dep
-#FAST_DEPS := $(BUILD_DIR)blog-fast.dep
-
-#HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(NAME_FILE)
-#$(FULL_DEPS): | $(BUILD_DIR)
-#$(HELP_FILES): | $(BUILD_DIR) $(BLOG_OUT_DIR) $(FULL_DEPS)
-
-# Ensuring directory presence
-#$(DEPLOY_DIR) $(BUILD_DIR) $(BLOG_OUT_DIR): %:
 $(BLOG_OUT_DIR):
 	@mkdir -p $@
 
 MONTH_PAGES  := $(patsubst $(BLOG_IN_DIR)%.post,$(BLOG_OUT_DIR)%.pag,$(POST_FILES))
-#YEAR_PAGES   := $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
 YEAR_PAGES   := $(patsubst $(BLOG_IN_DIR)%/,$(BLOG_OUT_DIR)%.pag,$(sort $(dir $(POST_FILES))))
 ARCHIVE_PAGE := $(BLOG_OUT_DIR)$(SITE_BLOG_ARCHIVE_BASENAME).pag
 INDEX_PAGE   := $(BLOG_OUT_DIR)index.pag
@@ -49,18 +32,9 @@ $(warning $$ARCHIVE_PAGE = [$(ARCHIVE_PAGE)])
 $(warning $$INDEX_PAGE   = [$(INDEX_PAGE)])
 endif
 
-#sixtus-blog: $(PAG_FILES) | $(HELP_FILES)
 sixtus-blog: $(PAG_FILES) $(MAP_FILE)
-#$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
-#ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
-#$(warning Blog structure update)
-#-include $(FULL_DEPS)
-#else
-#$(warning Blog structure unchanged)
-#-include $(FAST_DEPS)
-#endif
 -include $(DEP_FILE)
 endif
 
