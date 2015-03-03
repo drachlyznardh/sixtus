@@ -3,8 +3,9 @@ SIXTUS_DEBUG=1
 
 all: sixtus-blog
 
-DEP_FILE := $(BLOG_OUT_DIR)blog.dep
-MAP_FILE := $(BLOG_OUT_DIR)blog.map
+DEP_FILE  := $(BLOG_OUT_DIR)blog.dep
+MAP_FILE  := $(BLOG_OUT_DIR)blog.map
+NAME_FILE := $(BLOG_OUT_DIR)blog.names
 
 POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
 POST_MONTHS := $(patsubst $(BLOG_IN_DIR)%.post,%,$(POST_FILES))
