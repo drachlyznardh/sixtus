@@ -66,7 +66,7 @@ $(YEAR_PAGES): %.pag:
 
 $(INDEX_PAGE):
 	@echo -n "Generating index page $@… "
-	@touch $@
+	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 	@echo Done
 
 $(ARCHIVE_PAGE):
