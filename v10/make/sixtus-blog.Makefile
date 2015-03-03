@@ -81,16 +81,6 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 
 ########
 
-#%.list: %.pag | $(HELP_FILES)
-#	@echo Hello! $< $@
-#	@touch $@
-
-#$(YEAR_PAGES:.pag=.list): %.list: %.post | $(HELP_FILES)
-#	@echo Hello! $< $@
-#	@touch $@
-
-#$(PAG_FILES): | $(HELP_FILES)
-
 #$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FILE) $(NAME_FILE)
 #	@echo -n "Generating blog month page $@… "
 #	@mkdir -p $(dir $@)
