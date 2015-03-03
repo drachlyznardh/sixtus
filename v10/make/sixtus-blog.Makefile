@@ -40,9 +40,13 @@ PAG_FILES += $(ARCHIVE_PAGE)
 PAG_FILES += $(INDEX_PAGE)
 
 ifdef SIXTUS_DEBUG
-$(warning $$POST_FILES = [$(POST_FILES)])
-$(warning $$POST_MONTHS = [$(POST_MONTHS)])
-$(warning $$YEAR_PAGES = [$(YEAR_PAGES)])
+$(warning $$POST_FILES   = [$(POST_FILES)])
+$(warning $$POST_MONTHS  = [$(POST_MONTHS)])
+$(warning )
+$(warning $$MONTH_PAGES  = [$(MONTH_PAGES)])
+$(warning $$YEAR_PAGES   = [$(YEAR_PAGES)])
+$(warning $$ARCHIVE_PAGE = [$(ARCHIVE_PAGE)])
+$(warning $$INDEX_PAGE   = [$(INDEX_PAGE)])
 endif
 
 #sixtus-blog: $(PAG_FILES) | $(HELP_FILES)
