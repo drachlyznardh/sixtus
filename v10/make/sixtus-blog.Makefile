@@ -149,7 +149,5 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 clean: sixtus-blog-clean
 sixtus-blog-clean:
 	@echo -n "Cleaning blog files… "
-	@rm -rf $(BLOG_OUT_DIR) $(INDEX_PAGE)
-	@rm -f $(MONTH_REL_FILE) $(YEAR_REL_FILE)
-	@rm -f $(NAME_FILE) $(FAST_DEPS) $(FULL_DEPS)
+	@rm -rf $(BLOG_OUT_DIR)
 	@echo Done
