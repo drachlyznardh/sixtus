@@ -145,21 +145,35 @@ class Splitter:
 		with open(index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
+	def get_path (self, build_dir, base, page_name, six_type):
+
+		filename = 'index.%s.six' % six_type
+		if page_name == 'index':
+			path = os.path.join(build_dir, base, filename)
+		else:
+			path = os.path.join(build_dir, base, page_name, filename)
+
+		print('%s → %s' % (page_name, path))
+
+		return os.path.normpath(path)
+
 	def output_tab_files (self, base, page_name, build_dir):
 
 		if self.jump:
 
-			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.jump.six'))
+			path = self.get_path(build_dir, base, page_name, 'jump')
 			self.touch_files.append(path)
 			self.output_single_tab(path)
 
 		elif self.first:
 
 			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.jump.six'))
+			path = self.get_path(build_dir, base, page_name, 'jump')
 			self.touch_files.append(path)
 			self.output_index_file(base, page_name, path)
 
 			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.side.six'))
+			path = self.get_path(build_dir, base, page_name, 'side')
 			self.touch_files.append(path)
 			self.output_side_file(path)
 
@@ -168,6 +182,7 @@ class Splitter:
 		else:
 
 			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.page.six'))
+			path = self.get_path(build_dir, base, page_name, 'page')
 			self.touch_files.append(path)
 			self.output_single_tab(path)
 
