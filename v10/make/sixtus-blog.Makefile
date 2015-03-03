@@ -46,7 +46,7 @@ endif
 
 #sixtus-blog: $(PAG_FILES) | $(HELP_FILES)
 sixtus-blog: $(PAG_FILES) $(MAP_FILE)
-$(OUT_DIR)%.list: $(OUT_DIR)%.pag
+#$(OUT_DIR)%.list: $(OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 #ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
