@@ -113,38 +113,11 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 #	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 #	@echo Done
 
-#$(MONTH_REL_FILE): $(POST_FILES)
-#	@echo -n "Generating month relations file $@… "
-#	@echo $(POST_MONTHS) |\
-#		$(SCRIPT_DIR)blog-make-month-rel-file $(MONTH_REL_FILE)
-#	@echo Done
-
-#$(YEAR_REL_FILE): $(POST_FILES)
-#	@echo -n "Generating year relations file $@… "
-#	@$(SCRIPT_DIR)blog-make-year-rel-file $(YEAR_REL_FILE) $(POST_YEARS)
-#	@echo Done
-
 #$(NAME_FILE): $(SITE_CONF_FILE)
 #	@echo -n "Generating blog names file $@… "
 #	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_MONTH_NAMES)
 #	@echo Done
 	
-#$(FULL_DEPS):
-#	@echo -n "Generating blog full dependencies… "
-#	@echo $(POST_MONTHS) |\
-#		$(SCRIPT_DIR)blog-make-dep-full $@ \
-#		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
-#		$(ARCHIVE_PAGE) $(INDEX_PAGE)
-#	@echo Done
-
-#$(FAST_DEPS):
-#	@echo -n "Generating blog fast dependencies… "
-#	@echo $(POST_MONTHS) |\
-#		$(SCRIPT_DIR)blog-make-dep-fast $@ \
-#		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
-#		$(ARCHIVE_PAGE) $(INDEX_PAGE)
-#	@echo Done
-
 .PHONY: clean sixtus-blog-clean
 clean: sixtus-blog-clean
 sixtus-blog-clean:
