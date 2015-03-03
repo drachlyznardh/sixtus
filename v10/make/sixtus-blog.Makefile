@@ -30,18 +30,19 @@ $(BLOG_OUT_DIR):
 
 MONTH_PAGES  := $(patsubst $(BLOG_IN_DIR)%.post,$(BLOG_OUT_DIR)%.pag,$(POST_FILES))
 #YEAR_PAGES   := $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
-YEAR_PAGES   := $(patsubst $(BLOG_IN_DIR)%/,$(BLOG_OUT_DIR)%.pag,$(sort $(dir $(POSTS))))
+YEAR_PAGES   := $(patsubst $(BLOG_IN_DIR)%/,$(BLOG_OUT_DIR)%.pag,$(sort $(dir $(POST_FILES))))
 ARCHIVE_PAGE := $(BLOG_OUT_DIR)$(SITE_BLOG_ARCHIVE_BASENAME).pag
 INDEX_PAGE   := $(BLOG_OUT_DIR)index.pag
 
 PAG_FILES += $(MONTH_PAGES)
-PAG_FILES += $(YEAR_FILES)
+PAG_FILES += $(YEAR_PAGES)
 PAG_FILES += $(ARCHIVE_PAGE)
 PAG_FILES += $(INDEX_PAGE)
 
 ifdef SIXTUS_DEBUG
 $(warning $$POST_FILES = [$(POST_FILES)])
 $(warning $$POST_MONTHS = [$(POST_MONTHS)])
+$(warning $$YEAR_PAGES = [$(YEAR_PAGES)])
 endif
 
 #sixtus-blog: $(PAG_FILES) | $(HELP_FILES)
