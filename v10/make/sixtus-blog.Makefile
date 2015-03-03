@@ -1,5 +1,5 @@
 
-SIXTUS_DEBUG=1
+SIXTUS_DEBUG=
 
 all: sixtus-blog
 
