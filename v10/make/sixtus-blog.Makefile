@@ -84,19 +84,6 @@ $(MAP_FILE) $(REL_FILE): %:
 	@$(SCRIPT_DIR)blog-update-map $@ $(POST_MONTHS)
 	@echo Done
 
-########
-
-#$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FILE) $(NAME_FILE)
-#	@echo -n "Generating blog month page $@… "
-#	@mkdir -p $(dir $@)
-#	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(MONTH_REL_FILE) $(NAME_FILE) $(*D) $(*F)
-#	@echo Done
-
-#$(YEAR_PAGES): $(BLOG_OUT_DIR)%.pag: | $(YEAR_REL_FILE)
-#	@echo -n "Generating blog year page $@… "
-#	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(YEAR_REL_FILE) $(NAME_FILE) $^
-#	@echo Done
-
 $(NAME_FILE): $(SITE_CONF_FILE)
 	@echo -n "Generating blog names file $@… "
 	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_BLOG_MONTH_NAMES)
