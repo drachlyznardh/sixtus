@@ -75,7 +75,7 @@ $(INDEX_PAGE):
 
 $(ARCHIVE_PAGE):
 	@echo -n "Generating archive page $@… "
-	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(filter %.list,$^)
+	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(YEAR_PAGES:.pag=.list)
 	@echo Done
 
 $(MAP_FILE) $(REL_FILE): %:
