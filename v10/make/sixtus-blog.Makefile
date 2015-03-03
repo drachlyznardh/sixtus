@@ -36,6 +36,7 @@ endif
 
 sixtus-blog: $(PAG_FILES) $(MAP_FILE)
 $(PAG_FILES): $(NAME_FILE)
+$(MAP_FILE): $(ARCHIVE_PAGE)
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 -include $(DEP_FILE)
@@ -76,8 +77,6 @@ $(ARCHIVE_PAGE):
 	@echo -n "Generating archive page $@… "
 	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(filter %.list,$^)
 	@echo Done
-
-$(MAP_FILE): $(ARCHIVE_PAGE)
 
 $(MAP_FILE) $(REL_FILE): %:
 	@echo -n "Updating blog map $@… "

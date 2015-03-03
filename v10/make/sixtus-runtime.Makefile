@@ -1,29 +1,32 @@
-SIXTUS_RUNTIME_IN_DIR := $(SIXTUS_DIR)runtime/
-SIXTUS_RUNTIME_OUT_DIR := $(DEPLOY_DIR)sixtus/
+IN_DIR := $(SIXTUS_DIR)runtime/
+OUT_DIR := $(DEPLOY_DIR)sixtus/
 
-SIXTUS_RUNTIME_FILES += style.css icon.ico panel.js
-SIXTUS_RUNTIME_FILES += page-top.php page-middle.php page-bottom.php
+IN_FILES += style.css icon.ico panel.js
+IN_FILES += page-top.php page-middle.php page-bottom.php
 
-SIXTUS_RUNTIME_OUT_FILES += $(addprefix $(SIXTUS_RUNTIME_OUT_DIR), $(SIXTUS_RUNTIME_FILES))
+OUT_FILES += $(addprefix $(OUT_DIR), $(IN_FILES))
 
 all: sixtus-runtime
-sixtus-runtime: $(SIXTUS_RUNTIME_OUT_FILES)
-$(SIXTUS_RUNTIME_OUT_FILES): $(SITE_CONF_FILE)
+sixtus-runtime: $(OUT_FILES)
+$(OUT_FILES): $(SITE_CONF_FILE) | $(OUT_DIR)
 
-$(SIXTUS_RUNTIME_OUT_DIR)%: $(SIXTUS_RUNTIME_IN_DIR)%
+$(OUT_DIR):
+	@mkdir -p $@
+
+$(OUT_DIR)%: $(IN_DIR)%
 	@echo -n "Copying page component $@… "
 	@cp $< $@
 	@echo Done
 
-$(SIXTUS_RUNTIME_OUT_DIR)page-top.php: $(SIXTUS_RUNTIME_IN_DIR)page-head.php.in
+$(OUT_DIR)page-top.php: $(IN_DIR)page-head.php.in
 	@echo -n "Generating page top section $@… "
 	@$(SCRIPT_DIR)page-make-top $(filter %.php.in, $^) $@ \
 		$(SITE_AUTHOR) \
 		$(SITE_TAB_PREV_BEFORE) $(SITE_TAB_PREV_LINK) $(SITE_TAB_PREV_AFTER)
 	@echo Done
 
-$(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.in \
-		$(SIXTUS_RUNTIME_IN_DIR)page-left-side.php.in $(SIXTUS_RUNTIME_IN_DIR)page-knee.php.in
+$(OUT_DIR)page-middle.php: $(IN_DIR)page-neck.php.in \
+		$(IN_DIR)page-left-side.php.in $(IN_DIR)page-knee.php.in
 	@echo -n "Generating page middle section $@… "
 	@$(SCRIPT_DIR)page-make-middle $(filter %.php.in, $^) $@ \
 		$(SITE_COPYRIGHT_YEARS) $(SITE_COPYRIGHT_OWNER) \
@@ -31,7 +34,7 @@ $(SIXTUS_RUNTIME_OUT_DIR)page-middle.php: $(SIXTUS_RUNTIME_IN_DIR)page-neck.php.
 		$(SITE_PAGE_PREV) $(SITE_PAGE_NEXT)
 	@echo Done
 
-$(SIXTUS_RUNTIME_OUT_DIR)page-bottom.php: $(SIXTUS_RUNTIME_IN_DIR)page-foot.php.in
+$(OUT_DIR)page-bottom.php: $(IN_DIR)page-foot.php.in
 	@echo -n "Generating page bottom section $@… "
 	@$(SCRIPT_DIR)page-make-bottom $(filter %.php.in, $^) $@
 	@echo Done
@@ -40,5 +43,5 @@ $(SIXTUS_RUNTIME_OUT_DIR)page-bottom.php: $(SIXTUS_RUNTIME_IN_DIR)page-foot.php.
 clean: sixtus-runtime-clean
 sixtus-runtime-clean:
 	@echo -n "Cleaning runtime files… "
-	@rm -f $(SIXTUS_RUNTIME_OUT_FILES)
+	@rm -f $(OUT_FILES)
 	@echo Done
