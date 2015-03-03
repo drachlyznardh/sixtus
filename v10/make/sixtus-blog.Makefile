@@ -105,7 +105,7 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 
 $(NAME_FILE): $(SITE_CONF_FILE)
 	@echo -n "Generating blog names file $@… "
-	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_MONTH_NAMES)
+	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_BLOG_MONTH_NAMES)
 	@echo Done
 	
 .PHONY: clean sixtus-blog-clean
