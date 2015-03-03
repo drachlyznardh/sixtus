@@ -69,4 +69,4 @@ with open(list_file, 'w') as f:
 			if number in side:
 				line.append('link#Blog/%s/%s/#%s' % (this_year, number, name))
 			else: line.append('%s' % name)
-		print('p#%s' % ('\n/\n'.join(line)), file=f)
+		print('c#%s' % ('\n/\n'.join(line)), file=f)
