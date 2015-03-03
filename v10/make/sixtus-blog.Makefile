@@ -35,6 +35,7 @@ $(warning $$INDEX_PAGE   = [$(INDEX_PAGE)])
 endif
 
 sixtus-blog: $(PAG_FILES) $(MAP_FILE)
+$(PAG_FILES): $(NAME_FILE)
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 -include $(DEP_FILE)
@@ -63,17 +64,17 @@ $(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post
 
 $(YEAR_PAGES): %.pag: $(REL_FILE)
 	@echo -n "Generating year page $@… "
-	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(REL_FILE) $(NAME_FILE) $(filter %.list, $^)
+	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(REL_FILE) $(NAME_FILE) $(filter %.list,$^)
 	@echo Done
 
 $(INDEX_PAGE):
 	@echo -n "Generating index page $@… "
-	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
+	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post,%,$(filter %.post,$^))
 	@echo Done
 
-$(ARCHIVE_PAGE): $(NAME_FILE)
+$(ARCHIVE_PAGE):
 	@echo -n "Generating archive page $@… "
-	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(filter %.list, $^)
+	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(filter %.list,$^)
 	@echo Done
 
 $(MAP_FILE): $(ARCHIVE_PAGE)
