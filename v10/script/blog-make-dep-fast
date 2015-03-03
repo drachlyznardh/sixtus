@@ -1,0 +1,45 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+if len(sys.argv) != 6:
+	params = ['<output file>',
+		'<source dir>', '<build dir>',
+		'<archive file>', '<index file>']
+	print('Usage: %s %s' % (sys.argv[0], ' '.join(params)))
+	sys.exit(1)
+
+outfile      = sys.argv[1]
+source_dir   = sys.argv[2]
+build_dir    = sys.argv[3]
+archive_file = sys.argv[4]
+index_file   = sys.argv[5]
+
+rel_list = []
+for word in sys.stdin.readline().split():
+	rel_list.append(word)
+
+month_rel = {i:[] for i in rel_list}
+
+prev = rel_list[0]
+for i in rel_list[1:]:
+	month_rel[i].append(prev)
+	prev = i
+
+prev = rel_list[0]
+for i in rel_list[1:]:
+	month_rel[prev].append(i)
+	prev = i
+
+year_map = {}
+for i in rel_list:
+	year, month = i.split('/')
+	if year in year_map: year_map[year].append(month)
+	else: year_map[year] = [month]
+
+with open(outfile, 'w') as f:
+	for target, value in year_map.items():
+		print('%s%s.pag: %s' % (build_dir, target, ' '.join(['%s%s/%s.list' % (build_dir, target, i) for i in value])), file=f)
+	print('%s: %s%s.post' % (index_file, source_dir, sorted(month_rel)[-1]), file=f)

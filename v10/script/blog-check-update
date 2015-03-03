@@ -1,0 +1,16 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+stable_file = sys.argv[1]
+
+try:
+	with open(stable_file, 'r') as f:
+		stable = eval(f.read())
+except:
+	stable = []
+
+for i in set(stable).symmetric_difference(set(sys.argv[2:])):
+	print(i)
