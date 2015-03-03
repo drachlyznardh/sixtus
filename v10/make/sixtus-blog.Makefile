@@ -74,7 +74,7 @@ $(YEAR_PAGES:.pag=.list): %.list: %.pag
 	@touch $@
 	@echo Done
 
-$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post:
+$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post
 	@echo -n "Generating month page $@… "
 	@touch $@
 	@echo Done
