@@ -77,7 +77,7 @@ $(ARCHIVE_PAGE): $(NAME_FILE)
 
 $(MAP_FILE): $(ARCHIVE_PAGE)
 	@echo -n "Updating blog map $@… "
-	@$(SCRIPT_DIR)blog-update-map $@ $(POST_MONHTS)
+	@$(SCRIPT_DIR)blog-update-map $@ $(POST_MONTHS)
 	@echo Done
 
 ########
