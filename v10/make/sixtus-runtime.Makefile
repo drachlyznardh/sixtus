@@ -8,7 +8,10 @@ OUT_FILES += $(addprefix $(OUT_DIR), $(IN_FILES))
 
 all: sixtus-runtime
 sixtus-runtime: $(OUT_FILES)
-$(OUT_FILES): $(SITE_CONF_FILE)
+$(OUT_FILES): $(SITE_CONF_FILE) | $(OUT_DIR)
+
+$(OUT_DIR):
+	@mkdir -p $@
 
 $(OUT_DIR)%: $(IN_DIR)%
 	@echo -n "Copying page component $@… "
