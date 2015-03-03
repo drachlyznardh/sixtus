@@ -69,9 +69,9 @@ $(INDEX_PAGE):
 	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 	@echo Done
 
-$(ARCHIVE_PAGE):
+$(ARCHIVE_PAGE): $(NAME_FILE)
 	@echo -n "Generating archive page $@… "
-	@touch $@
+	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(filter %.list, $^)
 	@echo Done
 
 $(MAP_FILE): $(ARCHIVE_PAGE)
