@@ -1,4 +1,6 @@
 
+SIXTUS_DEBUG=1
+
 all: sixtus-blog
 
 DEP_FILE := $(OUT_DIR)blog.dep
@@ -36,6 +38,11 @@ PAG_FILES += $(MONTH_PAGES)
 PAG_FILES += $(YEAR_FILES)
 PAG_FILES += $(ARCHIVE_PAGE)
 PAG_FILES += $(INDEX_PAGE)
+
+ifdef SIXTUS_DEBUG
+$(warning $$POST_FILES = [$(POST_FILES)])
+$(warning $$POST_MONTHS = [$(POST_MONTHS)])
+endif
 
 #sixtus-blog: $(PAG_FILES) | $(HELP_FILES)
 sixtus-blog: $(PAG_FILES) $(MAP_FILE)
