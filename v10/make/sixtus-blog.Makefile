@@ -93,17 +93,6 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 #	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(YEAR_REL_FILE) $(NAME_FILE) $^
 #	@echo Done
 
-#$(ARCHIVE_PAGE):
-#	@echo -n "Generating blog archive page $@… "
-#	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $^
-#	@$(SCRIPT_DIR)blog-update $(STABLE_MAP) $(POST_MONTHS)
-#	@echo Done
-
-#$(INDEX_PAGE):
-#	@echo -n "Generating blog index page $@… "
-#	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
-#	@echo Done
-
 $(NAME_FILE): $(SITE_CONF_FILE)
 	@echo -n "Generating blog names file $@… "
 	@$(SCRIPT_DIR)blog-make-name-file $(NAME_FILE) $(SITE_BLOG_MONTH_NAMES)
