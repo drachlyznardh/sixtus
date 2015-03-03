@@ -153,8 +153,6 @@ class Splitter:
 		else:
 			path = os.path.join(build_dir, base, page_name, filename)
 
-		print('%s → %s' % (page_name, path))
-
 		return os.path.normpath(path)
 
 	def output_tab_files (self, base, page_name, build_dir):
