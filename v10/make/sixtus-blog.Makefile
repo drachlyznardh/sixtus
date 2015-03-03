@@ -3,14 +3,14 @@ SIXTUS_DEBUG=1
 
 all: sixtus-blog
 
-DEP_FILE := $(OUT_DIR)blog.dep
-MAP_FILE := $(OUT_DIR)blog.map
+DEP_FILE := $(BLOG_OUT_DIR)blog.dep
+MAP_FILE := $(BLOG_OUT_DIR)blog.map
 
-POST_FILES  := $(sort $(shell find $(IN_DIR) -name '*.post'))
-POST_MONTHS := $(patsubst $(IN_DIR)%.post,%,$(POST_FILES))
+POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
+POST_MONTHS := $(patsubst $(BLOG_IN_DIR)%.post,%,$(POST_FILES))
 
-#POST_MONTHS += $(sort $(patsubst $(IN_DIR)%.post, %, $(POST_FILES)))
-#POST_YEARS  += $(sort $(patsubst $(IN_DIR)%/, %, $(dir $(POST_FILES))))
+#POST_MONTHS += $(sort $(patsubst $(BLOG_IN_DIR)%.post, %, $(POST_FILES)))
+#POST_YEARS  += $(sort $(patsubst $(BLOG_IN_DIR)%/, %, $(dir $(POST_FILES))))
 
 #MONTH_REL_FILE := $(BUILD_DIR)blog-month-rel.py
 #YEAR_REL_FILE  := $(BUILD_DIR)blog-year-rel.py
@@ -21,18 +21,18 @@ POST_MONTHS := $(patsubst $(IN_DIR)%.post,%,$(POST_FILES))
 
 #HELP_FILES := $(MONTH_REL_FILE ) $(YEAR_REL_FILE ) $(NAME_FILE)
 #$(FULL_DEPS): | $(BUILD_DIR)
-#$(HELP_FILES): | $(BUILD_DIR) $(OUT_DIR) $(FULL_DEPS)
+#$(HELP_FILES): | $(BUILD_DIR) $(BLOG_OUT_DIR) $(FULL_DEPS)
 
 # Ensuring directory presence
-#$(DEPLOY_DIR) $(BUILD_DIR) $(OUT_DIR): %:
-$(OUT_DIR):
+#$(DEPLOY_DIR) $(BUILD_DIR) $(BLOG_OUT_DIR): %:
+$(BLOG_OUT_DIR):
 	@mkdir -p $@
 
-MONTH_PAGES  := $(patsubst $(IN_DIR)%.post,$(OUT_DIR)%.pag,$(POST_FILES))
-#YEAR_PAGES   := $(patsubst %, $(OUT_DIR)%.pag, $(POST_YEARS))
-YEAR_PAGES   := $(patsubst $(IN_DIR)%/,$(OUT_DIR)%.pag,$(sort $(dir $(POSTS))))
-ARCHIVE_PAGE := $(OUT_DIR)$(SITE_ARCHIVE_BASENAME).pag
-INDEX_PAGE   := $(OUT_DIR)index.pag
+MONTH_PAGES  := $(patsubst $(BLOG_IN_DIR)%.post,$(BLOG_OUT_DIR)%.pag,$(POST_FILES))
+#YEAR_PAGES   := $(patsubst %, $(BLOG_OUT_DIR)%.pag, $(POST_YEARS))
+YEAR_PAGES   := $(patsubst $(BLOG_IN_DIR)%/,$(BLOG_OUT_DIR)%.pag,$(sort $(dir $(POSTS))))
+ARCHIVE_PAGE := $(BLOG_OUT_DIR)$(SITE_ARCHIVE_BASENAME).pag
+INDEX_PAGE   := $(BLOG_OUT_DIR)index.pag
 
 PAG_FILES += $(MONTH_PAGES)
 PAG_FILES += $(YEAR_FILES)
@@ -46,7 +46,7 @@ endif
 
 #sixtus-blog: $(PAG_FILES) | $(HELP_FILES)
 sixtus-blog: $(PAG_FILES) $(MAP_FILE)
-#$(OUT_DIR)%.list: $(OUT_DIR)%.pag
+#$(BLOG_OUT_DIR)%.list: $(BLOG_OUT_DIR)%.pag
 
 ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 #ifneq ($(shell $(SCRIPT_DIR)blog-check-update $(STABLE_MAP) $(POST_MONTHS)),)
@@ -59,7 +59,7 @@ ifeq ($(filter %clean, $(MAKECMDGOALS)),)
 -include $(DEP_FILE)
 endif
 
-$(DEP_FILE): $(POST_FILES) | $(OUT_DIR)
+$(DEP_FILE): $(POST_FILES) | $(BLOG_OUT_DIR)
 	@echo -n "Generating dependency file $@… "
 	@$(SCRIPT_DIR)blog-make-dep-file $(DEP_FILE) $(MAP_FILE) $(POST_MONTHS)
 	@echo Done
@@ -74,7 +74,7 @@ $(YEAR_PAGES:.pag=.list): %.list: %.pag
 	@touch $@
 	@echo Done
 
-$(MONTH_PAGES): $(OUT_DIR)%.pag: $(IN_DIR)%.post:
+$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post:
 	@echo -n "Generating month page $@… "
 	@touch $@
 	@echo Done
@@ -111,13 +111,13 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 
 #$(PAG_FILES): | $(HELP_FILES)
 
-#$(MONTH_PAGES): $(OUT_DIR)%.pag: $(IN_DIR)%.post | $(MONTH_REL_FILE) $(NAME_FILE)
+#$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post | $(MONTH_REL_FILE) $(NAME_FILE)
 #	@echo -n "Generating blog month page $@… "
 #	@mkdir -p $(dir $@)
 #	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(MONTH_REL_FILE) $(NAME_FILE) $(*D) $(*F)
 #	@echo Done
 
-#$(YEAR_PAGES): $(OUT_DIR)%.pag: | $(YEAR_REL_FILE)
+#$(YEAR_PAGES): $(BLOG_OUT_DIR)%.pag: | $(YEAR_REL_FILE)
 #	@echo -n "Generating blog year page $@… "
 #	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(YEAR_REL_FILE) $(NAME_FILE) $^
 #	@echo Done
@@ -130,7 +130,7 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 
 #$(INDEX_PAGE):
 #	@echo -n "Generating blog index page $@… "
-#	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(IN_DIR)%.post, %, $^)
+#	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post, %, $^)
 #	@echo Done
 
 #$(MONTH_REL_FILE): $(POST_FILES)
@@ -153,7 +153,7 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 #	@echo -n "Generating blog full dependencies… "
 #	@echo $(POST_MONTHS) |\
 #		$(SCRIPT_DIR)blog-make-dep-full $@ \
-#		$(IN_DIR) $(OUT_DIR) \
+#		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
 #		$(ARCHIVE_PAGE) $(INDEX_PAGE)
 #	@echo Done
 
@@ -161,7 +161,7 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 #	@echo -n "Generating blog fast dependencies… "
 #	@echo $(POST_MONTHS) |\
 #		$(SCRIPT_DIR)blog-make-dep-fast $@ \
-#		$(IN_DIR) $(OUT_DIR) \
+#		$(BLOG_IN_DIR) $(BLOG_OUT_DIR) \
 #		$(ARCHIVE_PAGE) $(INDEX_PAGE)
 #	@echo Done
 
@@ -169,7 +169,7 @@ $(MAP_FILE): $(ARCHIVE_PAGE)
 clean: sixtus-blog-clean
 sixtus-blog-clean:
 	@echo -n "Cleaning blog files… "
-	@rm -rf $(OUT_DIR) $(INDEX_PAGE)
+	@rm -rf $(BLOG_OUT_DIR) $(INDEX_PAGE)
 	@rm -f $(MONTH_REL_FILE) $(YEAR_REL_FILE)
 	@rm -f $(NAME_FILE) $(FAST_DEPS) $(FULL_DEPS)
 	@echo Done
