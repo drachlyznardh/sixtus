@@ -5,6 +5,7 @@ all: sixtus-blog
 
 DEP_FILE  := $(BLOG_OUT_DIR)blog.dep
 MAP_FILE  := $(BLOG_OUT_DIR)blog.map
+REL_FILE  := $(BLOG_OUT_DIR)blog.rel
 NAME_FILE := $(BLOG_OUT_DIR)blog.names
 
 POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
@@ -60,9 +61,9 @@ $(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post
 	@touch $@
 	@echo Done
 
-$(YEAR_PAGES): %.pag:
+$(YEAR_PAGES): %.pag: $(REL_FILE)
 	@echo -n "Generating year page $@… "
-	@touch $@
+	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(REL_FILE) $(NAME_FILE) $(filter %.list, $^)
 	@echo Done
 
 $(INDEX_PAGE):
@@ -76,6 +77,8 @@ $(ARCHIVE_PAGE): $(NAME_FILE)
 	@echo Done
 
 $(MAP_FILE): $(ARCHIVE_PAGE)
+
+$(MAP_FILE) $(REL_FILE): %:
 	@echo -n "Updating blog map $@… "
 	@$(SCRIPT_DIR)blog-update-map $@ $(POST_MONTHS)
 	@echo Done
