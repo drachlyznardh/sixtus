@@ -45,10 +45,15 @@ def upgrade_line (line):
 		return line
 
 	token = line.split('#')
-	c = token[0].strip()
+	copts = token[0].strip().split('@')
+	c = copts[0]
 
 	if c == 'title' or c == 'subtitle' or c == 'stitle':
-		return line
+		if copts[1] == 'left' or copts[1] == 'right':
+			return line
+		else:
+			print('Unknown command %s' % token)
+			sys.exit(1)
 
 	elif c == 'p' or c == 'c' or c == 'r':
 		return '%s#%s' % (token[0], upgrade_line('#'.join(token[1:])))
