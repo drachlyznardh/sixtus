@@ -177,10 +177,12 @@ class ContentConverter:
 			self.content += '<div class="outside">'
 			self.environment.append('</div>')
 
+		else: self.error('Unknown environment %s' % args)
+
 	def close_env (self, args):
 
 		try: closure = self.environment.pop()
-		except: self.error('There is no environment to close!!!')
+		except: self.error('There is no environment to close!!! %s' % args)
 
 		self.content += closure
 
