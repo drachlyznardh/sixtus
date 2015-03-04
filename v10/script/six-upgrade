@@ -46,7 +46,7 @@ def upgrade_line (line):
 		return line
 
 	elif c == 'p' or c == 'c' or c == 'r':
-		return '%s%s' % (token[0], upgrade_line('#'.join(token[1:])))
+		return '%s#%s' % (token[0], upgrade_line('#'.join(token[1:])))
 
 	elif c == 'post':
 		return line
