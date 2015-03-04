@@ -56,6 +56,9 @@ def upgrade_line (line):
 	elif command == 'end':
 		return '\tend#\n'
 
+	elif command == 'br' or command == 'sec':
+		return '\tbr#\n'
+
 	else:
 		print('Unknown command %s' % token)
 		sys.exit(1)
