@@ -76,4 +76,4 @@ def upgrade_line (line):
 
 with open(sys.argv[2], 'w') as outf:
 	for line in open(sys.argv[1], 'r').readlines():
-		print('%s' % upgrade_line(line), file=outf)
+		print('%s' % upgrade_line(line[:-1]), file=outf)
