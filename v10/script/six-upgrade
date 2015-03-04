@@ -26,12 +26,20 @@ def upgrade_speak (line, args):
 
 def upgrade_begin (line, args):
 
-	env = args[1].strip()
+	opt = args[1].strip().split('@')
+	env = opt[0]
 
 	if env == 'inside':
 		return line
 	elif env == 'outside':
 		return line
+
+	elif env == 'mini':
+		if opt[1] == 'left' or opt[1] == 'right':
+			return line
+		else:
+			print('Unknown env %s' % args)
+			sys.exit(1)
 
 	else:
 		print('Unknown env %s' % args)
