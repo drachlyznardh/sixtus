@@ -57,9 +57,15 @@ class ContentConverter:
 		if command == 'title':
 			self.stop_writing()
 			self.content += ('<h2>%s</h2>' % self.parse_args(args))
+		elif command == 'title@right':
+			self.stop_writing()
+			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_args(args))
 		elif command == 'stitle':
 			self.stop_writing()
 			self.content += ('<h3>%s</h3>' % self.parse_args(args))
+		elif command == 'stitle@right':
+			self.stop_writing()
+			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_args(args))
 		elif command == 'link':
 			self.append_content(self.make_link(args))
 		elif command == 'p' or command == 'c' or command == 'r':
