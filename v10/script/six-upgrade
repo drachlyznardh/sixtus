@@ -23,7 +23,7 @@ def upgrade_begin (line, args):
 
 def upgrade_line (line):
 
-	print('%s' % line)
+	print('%s' % line[:-1])
 
 	if '#' not in line:
 		return line
