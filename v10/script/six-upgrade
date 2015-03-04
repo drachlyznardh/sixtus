@@ -8,6 +8,19 @@ if len(sys.argv) != 3:
 	print('Usage: %s <input file> <output file>' % sys.argv[0])
 	sys.exit(1)
 
+def upgrade_begin (args):
+
+	env = args[1]
+
+	if env == 'inside':
+		return '\tbegin#inside\n'
+	elif env == 'outside':
+		return '\tbegin#outside\n'
+
+	else:
+		print('Unknown env %s' % args)
+		sys.exit(1)
+
 def upgrade_line (line):
 
 	print('%s' % line)
@@ -23,6 +36,11 @@ def upgrade_line (line):
 
 	elif command == 'post':
 		return line
+
+	elif command == 'begin':
+		return upgrade_begin(token)
+	elif command == 'end':
+		return '\tend#\n'
 
 	else:
 		print('Unknown command %s' % token)
