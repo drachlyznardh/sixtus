@@ -158,10 +158,7 @@ class ContentConverter:
 
 	def make_speak (self, args):
 
-		print()
-		print(args)
-		print()
-		sys.exit(1)
+		return '<span title="%s">«%s»</span>' % (args[1], ' – '.join(args[2].split('@')))
 
 	def open_env (self, args):
 
