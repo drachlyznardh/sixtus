@@ -12,7 +12,7 @@ class ContentConverter:
 
 		self.debug = False
 
-		self.environment = None
+		self.environment = []
 		self.writing     = False
 		self.p_or_li     = True
 
@@ -70,6 +70,12 @@ class ContentConverter:
 		elif command == 'br':
 			self.stop_writing()
 			self.content += '<br/>'
+		elif command == 'begin':
+			self.stop_writing()
+			self.open_env(args)
+		elif command == 'end':
+			self.stop_writing()
+			self.close_env(args)
 		else: self.error('Unknown command [%s]' % command)
 
 	def parse_args (self, args):
@@ -147,6 +153,24 @@ class ContentConverter:
 				next = token[2]
 
 		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
+
+	def open_env (self, args):
+
+		env = args[0]
+
+		if env == 'inside':
+			self.content += '<div class="inside">'
+			self.environment.append('</div>')
+		elif env == 'outside':
+			self.content += '<div class="outside">'
+			self.environment.append('</div>')
+
+	def close_env (self, args):
+
+		try: closure = self.environment.pop()
+		except: self.error('There is no environment to close!!!')
+
+		self.content += closure
 
 class FullConverter(ContentConverter):
 
