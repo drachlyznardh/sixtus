@@ -65,9 +65,9 @@ class Poster:
 					self.current = token[1]
 
 					if size == 4:
-						self.append_content('/ %s' % token[3])
+						self.append_content('/ %s' % token[3].capitalize())
 					if size > 4:
-						self.append_content('/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
+						self.append_content('/ %s &amp; %s' % (', '.join(w.capitalize() for w in token[3:-1]), token[-1].capitalize()))
 
 					self.append_title(token[1], token[2])
 					self.append_content('title#%s' % token[2])
