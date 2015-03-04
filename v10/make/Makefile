@@ -25,12 +25,14 @@ sixtus-runtime:
 sixtus-pages:
 	@$(MAKE) -f $(MAKE_PAGES) all
 
-.PHONY: clean
+.PHONY: clean veryclean
 .PHONY: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
 clean: sixtus-runtime-clean sixtus-pages-clean sixtus-blog-clean
-	@rm -f $(BLOG_PAG_FILES)
-	@rm -rf $(BUILD_DIR)
-	@rm -f $(PHP_FILES)
+	@echo All is clean
+
+veryclean: clean
+	@rm -rf $(DEPLOY_DIR)/*
+	@echo All is very clean
 
 sixtus-blog-clean:
 	@$(MAKE) -f $(MAKE_BLOG) clean
