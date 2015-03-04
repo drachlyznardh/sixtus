@@ -21,7 +21,7 @@ def upgrade_link (line, args):
 
 def upgrade_begin (line, args):
 
-	env = args[1]
+	env = args[1].strip()
 
 	if env == 'inside':
 		return line
@@ -39,8 +39,8 @@ def upgrade_line (line):
 	if '#' not in line:
 		return line
 
-	token = line.strip().split('#')
-	c = token[0]
+	token = line.split('#')
+	c = token[0].strip()
 
 	if c == 'title' or c == 'subtitle' or c == 'stitle':
 		return line
