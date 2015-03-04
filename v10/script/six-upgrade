@@ -40,23 +40,23 @@ def upgrade_line (line):
 		return line
 
 	token = line.strip().split('#')
-	command = token[0]
+	c = token[0]
 
-	if command == 'title' or command == 'subtitle' or command == 'stitle':
+	if c == 'title' or c == 'subtitle' or c == 'stitle':
 		return line
 
-	elif command == 'post':
+	elif c == 'post':
 		return line
 
-	elif command == 'link':
+	elif c == 'link':
 		return upgrade_link(line, token)
 
-	elif command == 'begin':
+	elif c == 'begin':
 		return upgrade_begin(line, token)
-	elif command == 'end':
+	elif c == 'end':
 		return '\tend#\n'
 
-	elif command == 'br' or command == 'sec':
+	elif c == 'br' or c == 'sec':
 		return '\tbr#\n'
 
 	else:
