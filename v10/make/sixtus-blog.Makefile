@@ -70,12 +70,12 @@ $(YEAR_PAGES): %.pag: $(REL_FILE)
 
 $(INDEX_PAGE):
 	@echo -n "Generating index page $@… "
-	@$(SCRIPT_DIR)blog-make-index-page $@ $(patsubst $(BLOG_IN_DIR)%.post,%,$(filter %.post,$^))
+	@$(SCRIPT_DIR)blog-make-index-page $@ $(REL_FILE)
 	@echo Done
 
 $(ARCHIVE_PAGE):
 	@echo -n "Generating archive page $@… "
-	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(filter %.list,$^)
+	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(YEAR_PAGES:.pag=.list)
 	@echo Done
 
 $(MAP_FILE) $(REL_FILE): %:

@@ -62,6 +62,8 @@ p,h2 { text-align: justify; text-indent: .5em; margin: .5em 0em .5em 0em; }
 .reverse { text-align: right; }
 .center { text-align: center; }
 
+h2, h3 { border-bottom: 2px solid #111111; }
+
 div.inside, div.outside,
 div#footnote, div#location, div#subtitle
 { background-color: #111111; padding: .1em .7em; }

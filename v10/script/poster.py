@@ -64,7 +64,6 @@ class Poster:
 					self.store_content()
 					self.current = token[1]
 
-					self.append_content('p#%s/%s/%02d' % (self.this_page[0], self.this_page[1], int(token[1])))
 					if size == 4:
 						self.append_content('/ %s' % token[3])
 					if size > 4:
@@ -100,6 +99,7 @@ class Poster:
 					if manyposts: print('br#', file=f)
 					else: manyposts = True
 					print('id#%s-%s' % (number, index), file=f)
+					print('p#link##%s/%s/%02d#%02d-%d' % (self.this_page[0], self.this_page[1], int(number), int(number), index), file=f)
 					print('%s' % value[index], file=f)
 
 	def output_list_file (self, filename):

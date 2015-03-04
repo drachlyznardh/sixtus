@@ -55,5 +55,5 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
 clean: sixtus-pages-clean
 sixtus-pages-clean:
 	@echo -n "Cleaning pages files… "
-	@rm -f $(TCH_FILES)
+	@rm -rf $(BUILD_DIR)
 	@echo Done
