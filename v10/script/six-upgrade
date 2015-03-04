@@ -19,6 +19,11 @@ def upgrade_link (line, args):
 		print('Too many args for link %s' % args)
 		sys.exit(1)
 
+def upgrade_speak (line, args):
+
+	author = args[0].split('@')[1]
+	return '\tspeak#%s#%s' % (author, args[1])
+
 def upgrade_begin (line, args):
 
 	env = args[1].strip()
@@ -61,6 +66,9 @@ def upgrade_line (line):
 
 	elif c == 'br' or c == 'sec':
 		return '\tbr#\n'
+
+	elif 'speak' in c:
+		return upgrade_speak(line, token)
 
 	else:
 		print('Unknown command %s' % token)
