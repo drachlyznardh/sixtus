@@ -90,6 +90,8 @@ class ContentConverter:
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs)
+		elif args[0] == 'speak':
+			return self.make_speak(args)
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
@@ -153,6 +155,13 @@ class ContentConverter:
 				next = token[2]
 
 		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
+
+	def make_speak (self, args):
+
+		print()
+		print(args)
+		print()
+		sys.exit(1)
 
 	def open_env (self, args):
 
