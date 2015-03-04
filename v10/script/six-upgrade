@@ -1,0 +1,17 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+if len(sys.argv) != 3:
+	print('Usage: %s <input file> <output file>' % sys.argv[0])
+	sys.exit(1)
+
+def upgrade_line (line):
+	print('%s' % line)
+	return line
+
+with open(sys.argv[2], 'w') as outf:
+	for line in open(sys.argv[1], 'r').readlines():
+		print('%s' % upgrade_line(line), file=outf)
