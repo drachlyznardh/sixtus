@@ -84,6 +84,9 @@ class ContentConverter:
 		elif command == 'begin':
 			self.stop_writing()
 			self.open_env(args)
+		elif command == 'clear':
+			self.stop_writing()
+			self.make_clear(args)
 		elif command == 'end':
 			self.stop_writing()
 			self.close_env(args)
@@ -221,6 +224,14 @@ class ContentConverter:
 
 		self.p_or_li = p_or_li
 		self.content += closure
+
+	def make_clear (self, args):
+
+		side = args[0]
+		if side != 'left' and side != 'right' and side != 'both':
+			self.error('Unknown side for clear# %s' % args)
+
+		self.content += ('<div style="float:none;clear:%s"></div>' % side)
 
 class FullConverter(ContentConverter):
 
