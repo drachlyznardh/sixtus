@@ -86,6 +86,9 @@ def upgrade_line (line):
 	elif c == 'img':
 		return line
 
+	elif c == 'clear':
+		return line
+
 	else:
 		print('Unknown command %s' % token)
 		sys.exit(1)
