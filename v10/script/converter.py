@@ -54,13 +54,13 @@ class ContentConverter:
 		if self.debug:
 			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
 
-		if command == 'title':
+		if command == 'title' or command == 'title@left':
 			self.stop_writing()
 			self.content += ('<h2>%s</h2>' % self.parse_args(args))
 		elif command == 'title@right':
 			self.stop_writing()
 			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_args(args))
-		elif command == 'stitle':
+		elif command == 'stitle' or command == 'stitle@left':
 			self.stop_writing()
 			self.content += ('<h3>%s</h3>' % self.parse_args(args))
 		elif command == 'stitle@right':
