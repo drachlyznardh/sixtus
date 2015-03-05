@@ -63,6 +63,8 @@ def upgrade_line (line):
 	copts = token[0].strip().split('@')
 	c = copts[0]
 
+	if c == '': return line
+
 	if c == 'title' or c == 'subtitle' or c == 'stitle':
 		if len(copts) == 1 or copts[1] == 'left' or copts[1] == 'right':
 			return line
