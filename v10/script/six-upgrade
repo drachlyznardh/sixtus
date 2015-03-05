@@ -34,11 +34,7 @@ def upgrade_begin (line, args):
 	opt = args[1].strip().split('@')
 	env = opt[0]
 
-	if env == 'inside':
-		return line
-	elif env == 'outside':
-		return line
-
+	if env == 'inside' or env == 'outside': return line
 	elif env == 'ul' or env == 'ol': return line
 
 	elif env == 'mini':
