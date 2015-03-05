@@ -12,8 +12,13 @@ def upgrade_link (line, args):
 
 	size = len(args)
 
-	if size < 5:
-		return line
+	if size == 3: return line
+
+	elif size == 4:
+		return '%s#%s%s/#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2])
+
+	elif size == 5:
+		return '%s#%s%s/#%s#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2], args[4])
 
 	else:
 		print('Too many args for link %s' % args)
