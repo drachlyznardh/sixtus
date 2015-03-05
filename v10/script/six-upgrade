@@ -83,6 +83,9 @@ def upgrade_line (line):
 	elif 'speak' in c:
 		return upgrade_speak(line, token)
 
+	elif c == 'img':
+		return line
+
 	else:
 		print('Unknown command %s' % token)
 		sys.exit(1)
