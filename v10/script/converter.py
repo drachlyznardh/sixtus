@@ -82,7 +82,7 @@ class ContentConverter:
 		elif command == 'end':
 			self.stop_writing()
 			self.close_env(args)
-		else: self.error('Unknown command [%s]' % command)
+		else: self.error('Unknown command [%s] %s' % (command, args))
 
 	def parse_args (self, args):
 
