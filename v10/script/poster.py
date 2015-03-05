@@ -65,9 +65,9 @@ class Poster:
 					self.current = token[1]
 
 					if size == 4:
-						self.append_content('/ %s' % token[3])
+						self.append_content('/ %s' % token[3].capitalize())
 					if size > 4:
-						self.append_content('/ %s &amp; %s' % (', '.join(token[3:-1]), token[-1]))
+						self.append_content('/ %s &amp; %s' % (', '.join(w.capitalize() for w in token[3:-1]), token[-1].capitalize()))
 
 					self.append_title(token[1], token[2])
 					self.append_content('title#%s' % token[2])
@@ -91,7 +91,7 @@ class Poster:
 				print('\n&amp;\n'.join(['link##%s#%s-%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
 			print('start#page', file=f)
 			manydays = False
-			for number, value in self.post_content.items():
+			for number, value in sorted(self.post_content.items()):
 				if manydays: print('br#', file=f)
 				else: manydays = True
 				manyposts = False
@@ -109,6 +109,6 @@ class Poster:
 		with open(filename, 'w') as f:
 			print('id#%s-%s' % (self.this_page[0], self.this_page[1]), file=f)
 			print('stitle#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
-			for number, value in self.post_title.items():
+			for number, value in sorted(self.post_title.items()):
 				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
 				print('\n&amp;\n'.join(['link#%s#%s#%s/%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)

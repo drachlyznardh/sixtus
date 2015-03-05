@@ -12,7 +12,7 @@ class ContentConverter:
 
 		self.debug = False
 
-		self.environment = None
+		self.environment = []
 		self.writing     = False
 		self.p_or_li     = True
 
@@ -54,23 +54,43 @@ class ContentConverter:
 		if self.debug:
 			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
 
-		if command == 'title':
+		if command == 'title' or command == 'title@left':
 			self.stop_writing()
 			self.content += ('<h2>%s</h2>' % self.parse_args(args))
-		elif command == 'stitle':
+		elif command == 'title@right':
+			self.stop_writing()
+			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_args(args))
+		elif command == 'stitle' or command == 'stitle@left':
 			self.stop_writing()
 			self.content += ('<h3>%s</h3>' % self.parse_args(args))
+		elif command == 'stitle@right':
+			self.stop_writing()
+			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_args(args))
 		elif command == 'link':
 			self.append_content(self.make_link(args))
+		elif command == 'speak':
+			self.append_content(self.make_speak(args))
 		elif command == 'p' or command == 'c' or command == 'r':
 			self.start_writing(command, self.parse_args(args))
 		elif command == 'id':
 			self.stop_writing()
 			self.content += ('<a id="%s"></a>' % args[0])
+		elif command == 'img':
+			self.stop_writing()
+			self.content += self.make_image(args)
 		elif command == 'br':
 			self.stop_writing()
 			self.content += '<br/>'
-		else: self.error('Unknown command [%s]' % command)
+		elif command == 'begin':
+			self.stop_writing()
+			self.open_env(args)
+		elif command == 'clear':
+			self.stop_writing()
+			self.make_clear(args)
+		elif command == 'end':
+			self.stop_writing()
+			self.close_env(args)
+		else: self.error('Unknown command [%s] %s' % (command, args))
 
 	def parse_args (self, args):
 
@@ -84,6 +104,8 @@ class ContentConverter:
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs)
+		elif args[0] == 'speak':
+			return self.make_speak(args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
@@ -147,6 +169,70 @@ class ContentConverter:
 				next = token[2]
 
 		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
+
+	def make_speak (self, args):
+
+		if len(args) != 2:
+			self.error('speak# excepts 2 arguments %s' % args)
+
+		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
+
+	def make_image (self, args):
+
+		size = len(args)
+		if size == 1:
+			src = thumb = args[0]
+		elif size == 2:
+			src = args[0]
+			thumb = args[1]
+		else: self.error('img# espects one or two args %s' % args)
+
+		return '<p class="image"><a target="_blank" href="%s" class="image"><img src="%s" /></a></p>' % (src,
+		thumb)
+
+	def open_env (self, args):
+
+		env = args[0]
+
+		if env == 'inside':
+			self.content += '<div class="inside">'
+			self.environment.append((self.p_or_li, '</div>'))
+		elif env == 'outside':
+			self.content += '<div class="outside">'
+			self.environment.append((self.p_or_li, '</div>'))
+
+		elif env == 'ul' or env == 'ol':
+			if len(args) != 1:
+				self.error('Missing support!!! %s' % args)
+			self.content += '<%s>' % env
+			self.environment.append((self.p_or_li, '</%s>' % env))
+			self.p_or_li = False
+
+		elif env == 'mini' or env == 'half':
+			side = args[1]
+			if side != 'left' and side != 'right':
+				self.error('Unknown side %s' % args)
+			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
+			self.environment.append((self.p_or_li, '</div></div>'))
+
+		else: self.error('Unknown environment %s' % args)
+
+	def close_env (self, args):
+
+		try: p_or_li, closure = self.environment.pop()
+		except: self.error('There is no environment to close!!! %s' % args)
+
+		self.p_or_li = p_or_li
+		self.content += closure
+
+	def make_clear (self, args):
+
+		side = args[0]
+		if len(side) == 0: side = 'both'
+		if side != 'left' and side != 'right' and side != 'both':
+			self.error('Unknown side for clear# %s' % args)
+
+		self.content += ('<div style="float:none;clear:%s"></div>' % side)
 
 class FullConverter(ContentConverter):
 

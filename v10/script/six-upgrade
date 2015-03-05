@@ -1,0 +1,103 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+if len(sys.argv) != 3:
+	print('Usage: %s <input file> <output file>' % sys.argv[0])
+	sys.exit(1)
+
+def upgrade_link (line, args):
+
+	size = len(args)
+
+	if size == 3: return line
+
+	elif size == 4:
+		return '%s#%s%s/#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2])
+
+	elif size == 5:
+		return '%s#%s%s/#%s#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2], args[4])
+
+	else:
+		print('Too many args for link %s' % args)
+		sys.exit(1)
+
+def upgrade_speak (line, args):
+
+	author = args[0].split('@')[1]
+	return 'speak#%s#%s' % (author, args[1])
+
+def upgrade_begin (line, args):
+
+	opt = args[1].strip().split('@')
+	env = opt[0]
+
+	if env == 'inside' or env == 'outside': return line
+	elif env == 'ul' or env == 'ol': return line
+
+	elif env == 'mini' or env == 'half':
+		if opt[1] == 'left' or opt[1] == 'right':
+			return '\tbegin#%s#%s\n' % (env, opt[1])
+		else:
+			print('Unknown env %s' % args)
+			sys.exit(1)
+
+	else:
+		print('Unknown env %s' % args)
+		sys.exit(1)
+
+def upgrade_line (line):
+
+	print('%s' % line)
+
+	if '#' not in line:
+		return line
+
+	token = line.split('#')
+	copts = token[0].strip().split('@')
+	c = copts[0]
+
+	if c == '': return line
+
+	if c == 'title' or c == 'subtitle' or c == 'stitle':
+		if len(copts) == 1 or copts[1] == 'left' or copts[1] == 'right':
+			return line
+		else:
+			print('Unknown command %s' % token)
+			sys.exit(1)
+
+	elif c == 'p' or c == 'c' or c == 'r':
+		return '%s#%s' % (token[0], upgrade_line('#'.join(token[1:])))
+
+	elif c == 'post':
+		return line
+
+	elif c == 'link':
+		return upgrade_link(line, token)
+
+	elif c == 'begin':
+		return upgrade_begin(line, token)
+	elif c == 'end':
+		return '\tend#\n'
+
+	elif c == 'br' or c == 'sec':
+		return '\tbr#\n'
+
+	elif 'speak' in c:
+		return upgrade_speak(line, token)
+
+	elif c == 'img':
+		return line
+
+	elif c == 'clear':
+		return line
+
+	else:
+		print('Unknown command %s' % token)
+		sys.exit(1)
+
+with open(sys.argv[2], 'w') as outf:
+	for line in open(sys.argv[1], 'r').readlines():
+		print('%s' % upgrade_line(line[:-1]), file=outf)
