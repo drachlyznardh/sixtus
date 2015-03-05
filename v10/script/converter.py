@@ -177,16 +177,16 @@ class ContentConverter:
 
 		if env == 'inside':
 			self.content += '<div class="inside">'
-			self.environment.append('</div>')
+			self.environment.append((self.p_or_li, '</div>'))
 		elif env == 'outside':
 			self.content += '<div class="outside">'
-			self.environment.append('</div>')
+			self.environment.append((self.p_or_li, '</div>'))
 
 		elif env == 'ul' or env == 'ol':
 			if len(args) != 1:
 				self.error('Missing support!!! %s' % args)
 			self.content += '<%s>' % env
-			self.environment.append('</%s>' % env)
+			self.environment.append((self.p_or_li, '</%s>' % env))
 			self.p_or_li = False
 
 		elif env == 'mini':
@@ -194,15 +194,16 @@ class ContentConverter:
 			if side != 'left' and side != 'right':
 				self.error('Unknown side %s' % args)
 			self.content += '<div class="mini-%s-out"><div class="mini-%s-in">' % (side, side)
-			self.environment.append('</div></div>')
+			self.environment.append((self.p_or_li, '</div></div>'))
 
 		else: self.error('Unknown environment %s' % args)
 
 	def close_env (self, args):
 
-		try: closure = self.environment.pop()
+		try: p_or_li, closure = self.environment.pop()
 		except: self.error('There is no environment to close!!! %s' % args)
 
+		self.p_or_li = p_or_li
 		self.content += closure
 
 class FullConverter(ContentConverter):
