@@ -34,6 +34,8 @@ def upgrade_begin (line, args):
 	elif env == 'outside':
 		return line
 
+	elif env == 'ul' or env == 'ol': return line
+
 	elif env == 'mini':
 		if opt[1] == 'left' or opt[1] == 'right':
 			return '\tbegin#mini#%s\n' % opt[1]
