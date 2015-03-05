@@ -181,6 +181,14 @@ class ContentConverter:
 		elif env == 'outside':
 			self.content += '<div class="outside">'
 			self.environment.append('</div>')
+
+		elif env == 'ul' or env == 'ol':
+			if len(args) != 1:
+				self.error('Missing support!!! %s' % args)
+			self.content += '<%s>' % env
+			self.environment.append('</%s>' % env)
+			self.p_or_li = False
+
 		elif env == 'mini':
 			side = args[1]
 			if side != 'left' and side != 'right':
