@@ -105,7 +105,7 @@ class ContentConverter:
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs)
 		elif args[0] == 'speak':
-			return self.make_speak(args)
+			return self.make_speak(args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
@@ -172,10 +172,10 @@ class ContentConverter:
 
 	def make_speak (self, args):
 
-		if len(args) != 3:
-			self.error('speak# excepts 3 arguments %s' % args)
+		if len(args) != 2:
+			self.error('speak# excepts 2 arguments %s' % args)
 
-		return '<span title="%s">«%s»</span>' % (args[1], ' – '.join(args[2].split('@')))
+		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
 
 	def make_image (self, args):
 
