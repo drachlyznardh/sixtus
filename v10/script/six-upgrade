@@ -36,7 +36,7 @@ def upgrade_begin (line, args):
 
 	elif env == 'mini':
 		if opt[1] == 'left' or opt[1] == 'right':
-			return line
+			return '\tbegin#mini#%s\n' % opt[1]
 		else:
 			print('Unknown env %s' % args)
 			sys.exit(1)
