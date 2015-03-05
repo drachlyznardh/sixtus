@@ -169,10 +169,10 @@ class ContentConverter:
 
 	def make_speak (self, args):
 
-		if len(args) != 2:
+		if len(args) != 3:
 			self.error('speak# excepts 3 arguments %s' % args)
 
-		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
+		return '<span title="%s">«%s»</span>' % (args[1], ' – '.join(args[2].split('@')))
 
 	def make_image (self, args):
 
