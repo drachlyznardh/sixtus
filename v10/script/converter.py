@@ -176,6 +176,12 @@ class ContentConverter:
 		elif env == 'outside':
 			self.content += '<div class="outside">'
 			self.environment.append('</div>')
+		elif env == 'mini':
+			side = args[1]
+			if side != 'left' and side != 'right':
+				self.error('Unknown side %s' % args)
+			self.content += '<div class="mini-%s-out"><div class="mini-%s-in">' % (side, side)
+			self.environment.append('</div></div>')
 
 		else: self.error('Unknown environment %s' % args)
 
