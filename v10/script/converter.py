@@ -208,11 +208,11 @@ class ContentConverter:
 			self.environment.append((self.p_or_li, '</%s>' % env))
 			self.p_or_li = False
 
-		elif env == 'mini':
+		elif env == 'mini' or env == 'half':
 			side = args[1]
 			if side != 'left' and side != 'right':
 				self.error('Unknown side %s' % args)
-			self.content += '<div class="mini-%s-out"><div class="mini-%s-in">' % (side, side)
+			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
 			self.environment.append((self.p_or_li, '</div></div>'))
 
 		else: self.error('Unknown environment %s' % args)
