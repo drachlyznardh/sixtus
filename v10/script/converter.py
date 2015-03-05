@@ -228,6 +228,7 @@ class ContentConverter:
 	def make_clear (self, args):
 
 		side = args[0]
+		if len(side) == 0: side = 'both'
 		if side != 'left' and side != 'right' and side != 'both':
 			self.error('Unknown side for clear# %s' % args)
 
