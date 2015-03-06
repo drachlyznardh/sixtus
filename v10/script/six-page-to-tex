@@ -14,6 +14,7 @@ class Converter:
 		self.verbose = verbose
 
 		self.content = ''
+		self.not_page = True
 
 	def parse_file (self, filename):
 
@@ -26,6 +27,12 @@ class Converter:
 			print('%s' % self.content, file=f)
 
 	def parse_line (self, line):
+
+		# Skipping everything before the start#page directive
+		if self.not_page:
+			if line == 'start#page':
+				self.not_page = False
+			return
 
 		print('%s' % line)
 
