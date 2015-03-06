@@ -6,6 +6,13 @@ import sys
 import getopt
 #from converter import FullConverter as Converter
 
+class Converter:
+
+	def __init__ (self, debug, verbose):
+
+		self.debug   = debug
+		self.verbose = verbose
+
 opts, args = getopt.gnu_getopt(sys.argv[1:], 'vdh', ['verbose', 'debug', 'help'])
 
 verbose   = False
@@ -19,8 +26,6 @@ for opt in opts:
 		debug == True
 	elif opt == '-h' or opt == '--help':
 		help_flag == True
-
-print(help_flag)
 
 def help_message (f):
 
@@ -38,10 +43,8 @@ if len(args) != 2:
 	help_message(sys.stderr)
 	sys.exit(1)
 
-print(sys.argv)
-sys.exit(1)
-
 c = Converter(debug, verbose)
+sys.exit(1)
 
 input_file    = sys.argv[1]
 page_location = sys.argv[2]
