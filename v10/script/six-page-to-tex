@@ -8,6 +8,10 @@ import getopt
 
 opts, args = getopt.gnu_getopt(sys.argv[1:], 'vdh', ['verbose', 'debug', 'help'])
 
+verbose   = False
+debug     = False
+help_flag = False
+
 for opt in opts:
 	if opt == '-v' or opt == '--verbose':
 		verbose = True
@@ -18,20 +22,20 @@ for opt in opts:
 
 print(help_flag)
 
-def help_message ():
+def help_message (f):
 
-	print ("Usage: %s <six file> <tex file>" % sys.argv[0], file=sys.stderr)
-	print ()
-	print (" -v --verbose : print many messages")
-	print (" -d --debug   : print debug messages")
-	print (" -h --help    : print this message")
+	print ("Usage: %s <six file> <tex file>" % sys.argv[0],file=f)
+	print (file=f)
+	print (" -v --verbose : print many messages",file=f)
+	print (" -d --debug   : print debug messages",file=f)
+	print (" -h --help    : print this message",file=f)
 
-if help:
-	help_message()
+if help_flag:
+	help_message(sys.stdout)
 	sys.exit(0)
 
 if len(args) != 2:
-	help_message()
+	help_message(sys.stderr)
 	sys.exit(1)
 
 print(sys.argv)
