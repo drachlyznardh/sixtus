@@ -16,6 +16,11 @@ class Converter:
 		self.content = ''
 		self.not_page = True
 
+		self.p_or_li = True
+		self.writing = False
+
+		self.closure = []
+
 	def parse_file (self, filename):
 
 		for line in open(filename, 'r').readlines():
@@ -26,6 +31,27 @@ class Converter:
 		with open(filename, 'w') as f:
 			print('%s' % self.content, file=f)
 
+	def make_begin (self, args):
+
+		env = args[1]
+
+		if env == 'ul':
+			self.content += '\\begin{itemize}'
+			self.closure.append('\\end{itemize}')
+
+	def make_end (self):
+
+		try: self.content += self.closure.pop()
+		except: self.error ('No environment to close')
+
+	def append_content (self, line):
+
+		if self.writing:
+			self.content += ('\n%s' % line)
+		else:
+			self.content += ('\n\n%s' % line)
+			self.writing = True
+
 	def parse_line (self, line):
 
 		# Skipping everything before the start#page directive
@@ -33,6 +59,17 @@ class Converter:
 			if line == 'start#page':
 				self.not_page = False
 			return
+
+		if '#' not in line:
+			self.append_content(line)
+			return
+
+		token = line.split('#')
+		c = token[0]
+
+		if c == 'begin':
+			self.stop_writing()
+			self.make_begin(token)
 
 		print('%s' % line)
 
