@@ -13,6 +13,22 @@ class Converter:
 		self.debug   = debug
 		self.verbose = verbose
 
+		self.content = ''
+
+	def parse_file (self, filename):
+
+		for line in open(filename, 'r').readlines():
+			self.parse_line (line[:-1])
+
+	def output_file (self, filename):
+
+		with open(filename, 'w') as f:
+			print('%s' % self.content, file=f)
+
+	def parse_line (self, line):
+
+		print('%s' % line)
+
 opts, args = getopt.gnu_getopt(sys.argv[1:], 'vdh', ['verbose', 'debug', 'help'])
 
 verbose   = False
