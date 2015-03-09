@@ -112,7 +112,7 @@ class Upgrader:
 
 		for line in open(sys.argv[1], 'r').readlines():
 			self.lineno += 1
-			self.parse_line (line)
+			self.parse_line (line.strip())
 
 if len(sys.argv) != 3:
 	print('Usage: %s <input file> <output file>' % sys.argv[0])
