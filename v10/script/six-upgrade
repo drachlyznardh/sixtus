@@ -11,6 +11,12 @@ class Upgrader:
 		self.content = ''
 		self.state = True
 
+	def error (self, message):
+
+		print('%s @ %d: %s' % (self.filename, self.lineno, message),
+			file=sys.stderr)
+		sys.exit(1)
+
 	def upgrade_link (self, line, args):
 
 		size = len(args)
@@ -73,6 +79,8 @@ class Upgrader:
 			if size > 1 and size < 3: return '\t%s' % '#'.join(args)
 			else: self.error('Title expects 1-2 args %s' % args)
 
+		else: self.error('Unknown meta command %s' % args)
+
 	def parse_content (self, args):
 
 		copts = token[0].strip().split('@')
@@ -118,9 +126,7 @@ class Upgrader:
 		elif c == 'clear':
 			return line
 
-		else:
-			print('Unknown command %s' % token)
-			sys.exit(1)
+		else: self.error('Unknown content command %s' % args)
 
 	def parse_file (self, filename):
 
