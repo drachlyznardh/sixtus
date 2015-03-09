@@ -103,10 +103,22 @@ class Upgrader:
 
 		self.error('Unknown meta command %s' % args)
 
+	def parse_title (self, c, args, option):
+
+		if len(option) == 1: direction = 'left'
+		elif option[1] == 'right': direction = 'right'
+		elif option[1] == 'center': direction = 'center'
+		else: self.error('Unknown direction %s %s %s' % (c, option, args))
+
+		if len(args) > 2: content = self.parse_recursive(args)
+		else: content = args[0]
+
+		return '\t%s#%s' % (c, content)
+
 	def parse_content (self, args):
 
-		copts = token[0].strip().split('@')
-		c = copts[0]
+		option = args[0].split('@')
+		c = option[0]
 
 		if c == '': return line
 
