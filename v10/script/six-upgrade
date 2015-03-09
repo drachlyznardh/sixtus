@@ -17,7 +17,17 @@ class Upgrader:
 			file=sys.stderr)
 		sys.exit(1)
 
-	def upgrade_link (self, line, args):
+	def parse_recursive (self, args):
+
+		if len(args) == 1: return args[0]
+
+		c = args[0]
+
+		if c == 'link': return self.parse_link(args)
+
+		self.error('Cannot recur on %s' % args)
+
+	def parse_link (self, args):
 
 		size = len(args)
 
