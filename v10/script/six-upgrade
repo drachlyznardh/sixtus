@@ -76,17 +76,17 @@ class Upgrader:
 		size = len(args)
 
 		if c == 'title':
-			if size > 1 and size < 4: return '\t%s' % '#'.join(args)
+			if size > 1 and size < 4: return '%s' % '#'.join(args)
 			else: self.error('Title expects 1-2 args %s' % args)
 
 		if c == 'subtitle':
-			if size == 2: return '\t%s' % '#'.join(args)
+			if size == 2: return '%s' % '#'.join(args)
 			else: self.error('Subtitle expects 1 arg %s' % args)
 
 		if c == 'prev' or c == 'next':
 			if size == 3:
 				args[2] = ''.join(args[2].split('@'))
-				return '\t%s' % '#'.join(args)
+				return '%s' % '#'.join(args)
 			else: self.error('Relations expect 2 args %s' % args)
 
 		self.error('Unknown meta command %s' % args)
