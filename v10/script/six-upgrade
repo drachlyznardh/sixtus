@@ -83,6 +83,12 @@ class Upgrader:
 			if size == 2: return '\t%s' % '#'.join(args)
 			else: self.error('Subtitle expects 1 arg %s' % args)
 
+		if c == 'prev' or c == 'next':
+			if size == 3:
+				args[2] = ''.join(args[2].split('@'))
+				return '\t%s' % '#'.join(args)
+			else: self.error('Relations expect 2 args %s' % args)
+
 		self.error('Unknown meta command %s' % args)
 
 	def parse_content (self, args):
