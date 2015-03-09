@@ -76,7 +76,7 @@ class Upgrader:
 		size = len(args)
 
 		if c == 'title':
-			if size > 1 and size < 3: return '\t%s' % '#'.join(args)
+			if size > 1 and size < 4: return '\t%s' % '#'.join(args)
 			else: self.error('Title expects 1-2 args %s' % args)
 
 		else: self.error('Unknown meta command %s' % args)
