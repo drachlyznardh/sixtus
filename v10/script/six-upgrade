@@ -8,8 +8,7 @@ class Upgrader:
 
 	def __init__ (self):
 
-		self.filename = ''
-		self.lineno   = 0
+		self.content = ''
 
 	def upgrade_link (self, line, args):
 
@@ -123,4 +122,4 @@ up = Upgrader()
 up.parse_file(sys.argv[1])
 
 with open(sys.argv[2], 'w') as outf:
-	print('%s' % upgrade_line(line[:-1]), file=outf)
+	print('%s' % up.content, file=outf)
