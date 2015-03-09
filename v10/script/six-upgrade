@@ -127,15 +127,11 @@ class Upgrader:
 		if c == 'tab': return line
 		if c == 'tid': return line
 
-		if c == 'title' or c == 'subtitle' or c == 'stitle':
-			if len(copts) == 1 or copts[1] == 'left' or copts[1] == 'center' or copts[1] == 'right':
-				return line
-			else:
-				print('Unknown command %s' % token)
-				sys.exit(1)
+		if c == 'title' or c == 'stitle':
+			return self.parse_title (c, args[1:], option)
 
 		elif c == 'p' or c == 'c' or c == 'r':
-			return '%s#%s' % (token[0], upgrade_line('#'.join(token[1:])))
+			return '\t%s#%s' % (c, self.parse_recursive(args[1:]))
 
 		elif c == 'post':
 			return line
