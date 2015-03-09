@@ -59,8 +59,6 @@ class Upgrader:
 
 	def parse_line (self, line):
 
-		print('%s' % line)
-
 		if '#' not in line:
 			return line
 
