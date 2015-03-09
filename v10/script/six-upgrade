@@ -49,6 +49,10 @@ class Upgrader:
 			if len(opt) == 1: return '\tbegin#%s' % env
 			else: self.error('%s expects no options %s' % (env, args))
 
+		if env == 'roman':
+			if len(opt) > 4: self.error('%s expects 0-2 options %s' % (env, args))
+			return '\tbegin#ol#%s' % '#'.join(opt[1:])
+
 		if env == 'ul' or env == 'ol':
 			if len(opt) > 4: self.error('%s expects 0-2 options %s' % (env, args))
 			return '\tbegin#' % '#'.join(opt)
