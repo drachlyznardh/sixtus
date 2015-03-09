@@ -4,10 +4,6 @@
 from __future__ import print_function
 import sys
 
-if len(sys.argv) != 3:
-	print('Usage: %s <input file> <output file>' % sys.argv[0])
-	sys.exit(1)
-
 def upgrade_link (line, args):
 
 	size = len(args)
@@ -102,6 +98,10 @@ def upgrade_line (line):
 	else:
 		print('Unknown command %s' % token)
 		sys.exit(1)
+
+if len(sys.argv) != 3:
+	print('Usage: %s <input file> <output file>' % sys.argv[0])
+	sys.exit(1)
 
 with open(sys.argv[2], 'w') as outf:
 	for line in open(sys.argv[1], 'r').readlines():
