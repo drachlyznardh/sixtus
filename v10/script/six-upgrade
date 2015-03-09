@@ -155,4 +155,5 @@ up = Upgrader()
 up.parse_file(sys.argv[1])
 
 with open(sys.argv[2], 'w') as outf:
+	print('%s' % up.content, file=sys.stdout)
 	print('%s' % up.content, file=outf)
