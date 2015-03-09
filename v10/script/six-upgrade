@@ -9,6 +9,7 @@ class Upgrader:
 	def __init__ (self):
 
 		self.content = ''
+		self.state = True
 
 	def upgrade_link (self, line, args):
 
