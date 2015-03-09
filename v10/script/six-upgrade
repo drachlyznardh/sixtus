@@ -66,13 +66,17 @@ class Upgrader:
 		if token[0] == '': return line
 
 		if token[0] == 'start':
+
 			if len(token) > 2: self.error('Start expectes 1 arg %s' % args)
+
 			if token[1] == 'meta':
 				self.state == True
 				return '#'.join(token)
+
 			if token[1] == 'page' or token[1] == 'side':
 				self.state == False
 				return '#'.join(token)
+
 			self.error('Unknown state %s' % args)
 
 		if self.state: return self.parse_meta(token)
