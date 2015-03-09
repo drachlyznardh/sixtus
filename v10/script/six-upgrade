@@ -4,6 +4,13 @@
 from __future__ import print_function
 import sys
 
+class Upgrader:
+
+	def __init__ (self):
+
+		self.filename = ''
+		self.lineno   = 0
+
 	def upgrade_link (line, args):
 
 		size = len(args)
