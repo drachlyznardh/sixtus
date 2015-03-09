@@ -59,6 +59,22 @@ class Upgrader:
 			return line
 
 		token = line.split('#')
+		if token[0] == '': return line
+
+		if self.state: return self.parse_meta(token)
+		else: return self.parse_content(token)
+
+	def parse_meta (self, args):
+
+		c = args[0]
+		size = len(args)
+
+		if c == 'title':
+			if size > 1 and size < 3: return '\t%s' % '#'.join(args)
+			else: self.error('Title expects 1-2 args %s' % args)
+
+	def parse_content (self, args):
+
 		copts = token[0].strip().split('@')
 		c = copts[0]
 
