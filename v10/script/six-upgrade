@@ -24,6 +24,7 @@ class Upgrader:
 		c = args[0]
 
 		if c == 'link': return self.parse_link(args)
+		if c == 'tid': return self.parse_tid(args)
 
 		self.error('Cannot recur on %s' % args)
 
@@ -39,9 +40,14 @@ class Upgrader:
 		elif size == 5:
 			return '%s#%s%s/#%s#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2], args[4])
 
-		else:
-			print('Too many args for link %s' % args)
-			sys.exit(1)
+		else: self.error('Too many args for link %s' % args)
+
+	def parse_tid (self, args):
+
+		size = len(args)
+
+		if size == 3: return '\t%s' % '#'.join(args)
+		else: self.error('Tid espects 2 args %s' % args)
 
 	def upgrade_speak (self, line, args):
 
@@ -66,6 +72,8 @@ class Upgrader:
 
 		if env == 'ul' or env == 'ol':
 			if len(opt) > 4: self.error('%s expects 0-2 options %s' % (env, args))
+			return '\tbegin#%s' % '#'.join(opt)
+
 		if env == 'mini' or env == 'half':
 			if opt[1] == 'left' or opt[1] == 'right':
 				return '\tbegin#%s#%s\n' % (env, opt[1])
@@ -143,7 +151,7 @@ class Upgrader:
 			if len(args) == 2: return '#'.join(args)
 			else: self.error('Tab expects 1 arg %s' % args)
 
-		if c == 'tid': return line
+		if c == 'tid': return self.parse_tid(args)
 
 		if c == 'title' or c == 'stitle':
 			return self.parse_title (c, args[1:], option)
