@@ -166,7 +166,7 @@ class Upgrader:
 		elif option[1] == 'center': direction = 'center'
 		else: self.error('Unknown direction %s %s %s' % (c, option, args))
 
-		if len(args) > 2: content = self.parse_recursive(args)
+		if len(args) > 2: content = self.parse_recursive(args)[1:]
 		else: content = args[0]
 
 		return '\t%s#%s' % (c, content)
