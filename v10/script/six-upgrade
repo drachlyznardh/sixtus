@@ -184,7 +184,8 @@ class Upgrader:
 			return line
 
 		elif c == 'clear':
-			return line
+			if len(args) == 2: return '\tclear#%s' % args[1]
+			return '\tclear#'
 
 		if 'require' in c:
 			self.error('Require# command is no longer supported. Manually add content instead.')
