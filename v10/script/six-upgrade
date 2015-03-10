@@ -119,6 +119,10 @@ class Upgrader:
 			if size > 1 and size < 4: return '%s' % '#'.join(args)
 			else: self.error('Title expects 1-2 args %s' % args)
 
+		if c == 'short':
+			if size == 2: return '#'.join(args)
+			self.error('Short title expects 1 arg %s' % args)
+
 		if c == 'subtitle':
 			if size == 2: return '%s' % '#'.join(args)
 			else: self.error('Subtitle expects 1 arg %s' % args)
