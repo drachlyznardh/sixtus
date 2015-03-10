@@ -13,7 +13,7 @@ class Upgrader:
 
 	def error (self, message):
 
-		print('%s @ %d: %s' % (self.filename, self.lineno, message),
+		print('\nUpgrader: %s @ %d: %s' % (self.filename, self.lineno, message),
 			file=sys.stderr)
 		sys.exit(1)
 
