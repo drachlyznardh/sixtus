@@ -36,10 +36,10 @@ class Upgrader:
 		if size == 3: return '\t%s' % '#'.join(args)
 
 		elif size == 4:
-			return '%s#%s%s/#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2])
+			return '\t%s#%s%s/#%s' % (args[0], args[1], args[3].upper(), args[2])
 
 		elif size == 5:
-			return '%s#%s%s/#%s#%s' % (line.split('#')[0], args[1], args[3].upper(), args[2], args[4])
+			return '\t%s#%s%s/#%s#%s' % (args[0], args[1], args[3].upper(), args[2], args[4])
 
 		else: self.error('Too many args for link %s' % args)
 
