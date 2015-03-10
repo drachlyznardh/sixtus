@@ -91,7 +91,7 @@ class Upgrader:
 
 			if start: output.append(start)
 
-			return '\t%s' % '#'.join(output)
+			return '\tbegin#%s' % '#'.join(output)
 
 		if env == 'roman':
 			return '\tbegin#%s' % '#'.join(['ol'] + args[0].split('@')[1:2])
