@@ -68,6 +68,8 @@ class ContentConverter:
 			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_recursive(args))
 		elif command == 'link':
 			self.append_content(self.make_link(args))
+		elif command == 'tid':
+			self.append_content(self.make_link(args))
 		elif command == 'speak':
 			self.append_content(self.make_speak(args))
 		elif command == 'p' or command == 'c' or command == 'r':
