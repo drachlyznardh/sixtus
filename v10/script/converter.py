@@ -218,11 +218,30 @@ class ContentConverter:
 			self.content += '<div class="outside">'
 			self.environment.append((self.p_or_li, '</div>'))
 
-		elif env == 'ul' or env == 'ol':
+		elif env == 'ul':
 			if len(args) != 1:
-				self.error('Missing support!!! %s' % args)
-			self.content += '<%s>' % env
-			self.environment.append((self.p_or_li, '</%s>' % env))
+				self.error('ul# expects 1 arg %s' % args)
+			self.content += '<ul>'
+			self.environment.append((self.p_or_li, '</ul>'))
+			self.p_or_li = False
+
+		elif env == 'ol' or env == 'dl':
+
+			size = len(args)
+
+			if size > 3:
+				self.error('%s# expects 1-3 args %s' % (env, args))
+
+			output = []
+
+			if env == 'ol': output.append('class="roman"')
+			else: output.apppend('class="decimal"')
+
+			if size > 1: output.append('style="margin-left:%s"' % args[1])
+			if size > 2: output.append('start="%s"' % args[2])
+
+			self.content += ('<ul %s>' % ' '.join(output))
+			self.environment.append((self.p_or_li, '</ul>'))
 			self.p_or_li = False
 
 		elif env == 'mini' or env == 'half':
