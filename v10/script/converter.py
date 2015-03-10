@@ -305,8 +305,6 @@ class FullConverter(ContentConverter):
 
 	def parse_line (self, line):
 
-		self.lineno += 1
-
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
