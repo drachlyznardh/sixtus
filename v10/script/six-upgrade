@@ -80,6 +80,9 @@ class Upgrader:
 				return '\tbegin#%s#%s\n' % (env, opt[1])
 			else: self.error('Illegal direction %s' % args)
 
+		if env == 'double' or env == 'triple':
+			self.error('Environment [%s] is no longer supported. Removing or use mini# or half# instead.' % env)
+
 		self.error('Unknown env %s' % args)
 
 	def parse_line (self, line):
