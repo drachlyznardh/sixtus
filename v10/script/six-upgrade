@@ -188,7 +188,8 @@ class Upgrader:
 			return self.parse_speak(args)
 
 		elif c == 'img':
-			return line
+			if len(args) > 3: self.error('img# expects 2-3 args %s' % args)
+			return '\t%s' % '#'.join(args)
 
 		elif c == 'clear':
 			if len(args) == 2: return '\tclear#%s' % args[1]
