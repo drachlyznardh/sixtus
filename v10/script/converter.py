@@ -159,7 +159,7 @@ class ContentConverter:
 		link_args.append(args[0])
 		if size == 3: link_args.append(args[2])
 
-		return self.make_file (link_args)
+		return self.make_link (link_args)
 
 	def make_link (self, args):
 
