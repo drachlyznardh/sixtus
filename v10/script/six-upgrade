@@ -47,8 +47,8 @@ class Upgrader:
 
 		size = len(args)
 
-		if size == 3: return '\t%s' % '#'.join(args)
-		else: self.error('Tid espects 2 args %s' % args)
+		if size > 2 and size < 5: return '\t%s' % '#'.join(args)
+		else: self.error('Tid expects 2-3 args %s' % args)
 
 	def parse_speak (self, args):
 
