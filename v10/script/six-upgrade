@@ -76,7 +76,7 @@ class Upgrader:
 	def parse_line (self, line):
 
 		if '#' not in line:
-			return line
+			return '\t%s' % line
 
 		token = line.split('#')
 		if token[0] == '': return line
@@ -158,10 +158,10 @@ class Upgrader:
 		elif c == 'begin':
 			return self.parse_begin(args)
 		elif c == 'end':
-			return '\tend#\n'
+			return '\tend#'
 
 		elif c == 'br' or c == 'sec':
-			return '\tbr#\n'
+			return '\tbr#'
 
 		elif 'speak' in c:
 			return upgrade_speak(line, token)
