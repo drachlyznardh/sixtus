@@ -164,7 +164,7 @@ class Upgrader:
 			return line
 
 		elif c == 'link':
-			return upgrade_link(line, token)
+			return self.parse_link(args)
 
 		elif c == 'begin':
 			return self.parse_begin(args)
@@ -175,7 +175,7 @@ class Upgrader:
 			return '\tbr#'
 
 		elif 'speak' in c:
-			return self.parse_speak(token)
+			return self.parse_speak(args)
 
 		elif c == 'img':
 			return line
