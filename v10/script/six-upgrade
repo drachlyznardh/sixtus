@@ -190,8 +190,5 @@ if len(sys.argv) != 3:
 up = Upgrader()
 up.parse_file(sys.argv[1])
 
-print('%s' % up.content, file=sys.stdout)
-sys.exit(1)
-
 with open(sys.argv[2], 'w') as outf:
 	print('%s' % up.content, file=outf)
