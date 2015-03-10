@@ -155,7 +155,7 @@ class ContentConverter:
 			self.error('Tid expects 2-3 args %s' % args)
 
 		link_args = []
-		link_args.append('/%s/%s/' % self.page_location, args[1].upper())
+		link_args.append('/%s/%s/' % (self.page_location, args[1].upper()))
 		link_args.append(args[0])
 		if size == 3: link_args.append(args[2])
 
