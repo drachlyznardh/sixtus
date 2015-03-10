@@ -341,6 +341,8 @@ class FullConverter(ContentConverter):
 			self.sideinclude = args[0]
 		elif command == 'title':
 			self.meta['title'] = args[0]
+		elif command == 'short':
+			self.meta['short'] = args[0]
 		elif command == 'subtitle':
 			self.meta['subtitle'] = args[0]
 		elif command == 'prev':
@@ -375,7 +377,10 @@ class FullConverter(ContentConverter):
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
 		output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
-		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
+		output += ('"%s",' % self.meta.get('title','title'))
+		if 'short' in self.meta: output += ('"%s",' % self.meta.get('short'))
+		else: output += ('"%s",' % self.meta.get('title','title'))
+		output += ('"%s",' % self.meta.get('subtitle','subtitle'))
 		if 'prev' in self.meta.keys():
 			pagprev = self.meta['prev']
 			output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))
