@@ -83,6 +83,8 @@ class Upgrader:
 				if keyword == 'start': start = int(value)
 				elif keyword == 'list-style-type' and value == 'decimal-leading-zero': style = True
 
+				specs.pop(0)
+				specs.pop(0)
 
 			if style: output.append('dl')
 			else: output.append('ol')
