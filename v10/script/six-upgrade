@@ -126,6 +126,9 @@ class Upgrader:
 				return '%s' % '#'.join(args)
 			else: self.error('Relations expect 2 args %s' % args)
 
+		if 'related' in c:
+			return '#%s' % '#'.join(args)
+
 		self.error('Unknown meta command %s' % args)
 
 	def parse_title (self, c, args, option):
