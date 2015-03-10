@@ -127,7 +127,7 @@ class Upgrader:
 			else: self.error('Relations expect 2 args %s' % args)
 
 		if 'related' in c:
-			return '#%s' % '#'.join(args)
+			self.error('Related# command is no longer supported. Manually add reference within the side section.')
 
 		self.error('Unknown meta command %s' % args)
 
@@ -185,6 +185,9 @@ class Upgrader:
 
 		elif c == 'clear':
 			return line
+
+		if 'require' in c:
+			self.error('Require# command is no longer supported. Manually add content instead.')
 
 		else: self.error('Unknown content command %s' % args)
 
