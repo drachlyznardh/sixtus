@@ -24,7 +24,7 @@ class ContentConverter:
 
 	def error (self, message):
 
-		line = '%s @line %d: %s' % (self.filename, self.lineno, message)
+		line = '\nContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
@@ -56,22 +56,24 @@ class ContentConverter:
 
 		if command == 'title' or command == 'title@left':
 			self.stop_writing()
-			self.content += ('<h2>%s</h2>' % self.parse_args(args))
+			self.content += ('<h2>%s</h2>' % self.parse_recursive(args))
 		elif command == 'title@right':
 			self.stop_writing()
-			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_args(args))
+			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_recursive(args))
 		elif command == 'stitle' or command == 'stitle@left':
 			self.stop_writing()
-			self.content += ('<h3>%s</h3>' % self.parse_args(args))
+			self.content += ('<h3>%s</h3>' % self.parse_recursive(args))
 		elif command == 'stitle@right':
 			self.stop_writing()
-			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_args(args))
+			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_recursive(args))
 		elif command == 'link':
+			self.append_content(self.make_link(args))
+		elif command == 'tid':
 			self.append_content(self.make_link(args))
 		elif command == 'speak':
 			self.append_content(self.make_speak(args))
 		elif command == 'p' or command == 'c' or command == 'r':
-			self.start_writing(command, self.parse_args(args))
+			self.start_writing(command, self.parse_recursive(args))
 		elif command == 'id':
 			self.stop_writing()
 			self.content += ('<a id="%s"></a>' % args[0])
@@ -90,15 +92,16 @@ class ContentConverter:
 		elif command == 'end':
 			self.stop_writing()
 			self.close_env(args)
-		else: self.error('Unknown command [%s] %s' % (command, args))
+		else: self.error('Unknown content command [%s] %s' % (command, args))
 
-	def parse_args (self, args):
+	def parse_recursive (self, args):
 
 		if len(args) == 1: return args[0]
 
 		if args[0] == 'link':
 			return self.make_link(args[1:])
 		elif args[0] == 'tid':
+			return self.make_tid(args[1:])
 			linkargs = []
 			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
 			linkargs.append(args[1])
@@ -143,6 +146,20 @@ class ContentConverter:
 			self.content += ('<li>%s' % text)
 
 		self.writing = True
+
+	def make_tid (self, args):
+
+		size = len(args)
+
+		if size < 2 or size > 3:
+			self.error('Tid expects 2-3 args %s' % args)
+
+		link_args = []
+		link_args.append('/%s/%s/' % self.page_location, args[1].upper())
+		link_args.append(args[0])
+		if size == 3: link_args.append(args[2])
+
+		return self.make_file (link_args)
 
 	def make_link (self, args):
 
@@ -249,7 +266,7 @@ class FullConverter(ContentConverter):
 
 	def error (self, message):
 
-		print('%s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
+		print('\nFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename):
@@ -320,7 +337,7 @@ class FullConverter(ContentConverter):
 		elif command == 'tabnext':
 			self.meta['tabnext'] = args[0]
 		else:
-			self.error('Unknown command %s' % args)
+			self.error('Unknown meta command %s' % args)
 
 	def state_update (self, newstate):
 
