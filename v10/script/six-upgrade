@@ -136,8 +136,6 @@ class Upgrader:
 		option = args[0].split('@')
 		c = option[0]
 
-		if c == '': return line
-
 		if c == 'start': return line
 		if c == 'stop': return ''
 		if c == 'tab': return line
