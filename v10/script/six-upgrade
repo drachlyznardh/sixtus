@@ -49,7 +49,7 @@ class Upgrader:
 		if size == 3: return '\t%s' % '#'.join(args)
 		else: self.error('Tid espects 2 args %s' % args)
 
-	def upgrade_speak (self, line, args):
+	def parse_speak (self, line, args):
 
 		author = args[0].split('@')[1]
 		return 'speak#%s#%s' % (author, args[1])
@@ -174,7 +174,7 @@ class Upgrader:
 			return '\tbr#'
 
 		elif 'speak' in c:
-			return upgrade_speak(line, token)
+			return self.parse_speak(line, token)
 
 		elif c == 'img':
 			return line
