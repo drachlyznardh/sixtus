@@ -178,7 +178,10 @@ class Upgrader:
 		elif c == 'end':
 			return '\tend#'
 
-		elif c == 'br' or c == 'sec':
+		elif c == 'br': return '\tbr#'
+
+		if c == 'sec':
+			if len(option) == 2: return '\tid#%s\n\tbr#' % option[1]
 			return '\tbr#'
 
 		elif 'speak' in c:
