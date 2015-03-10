@@ -68,10 +68,30 @@ class Upgrader:
 
 		if env == 'ul': return '\tbegin#ul'
 
-		if env == 'roman' or env == 'ol':
-			opt[0] = 'ol'
-			if len(opt) > 4: self.error('%s expects 0-2 options %s' % (env, args))
-			return '\tbegin#%s' % '#'.join(opt)
+		if env == 'ol':
+
+			start = 0
+			style = False
+			output = []
+			specs = opt[:]
+
+			while len(specs) > 1:
+
+				keyword = specs[0]
+				value = specs[1]
+
+				if keyword == 'start': start = int(value)
+				elif keyword == 'list-style-type' and value == 'decimal-leading-zero': style = True
+
+
+			if style: output.append('dl')
+			else: output.append('ol')
+
+			if start: output.append(start)
+
+			return '\t%s' % '#'.join(output)
+
+		if env == 'roman': self.error('HELP')
 
 		if env == 'mini' or env == 'half':
 			if opt[1] == 'left' or opt[1] == 'right':
