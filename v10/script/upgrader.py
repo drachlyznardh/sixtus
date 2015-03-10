@@ -93,7 +93,8 @@ class Upgrader:
 
 			return '\t%s' % '#'.join(output)
 
-		if env == 'roman': self.error('HELP')
+		if env == 'roman':
+			return '\tbegin#%s' % '#'.join(['ol'] + args[0].split('@')[1:2])
 
 		if env == 'mini' or env == 'half':
 			if opt[1] == 'left' or opt[1] == 'right':
