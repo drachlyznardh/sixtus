@@ -14,7 +14,7 @@ class Upgrader:
 
 		if ext == '.post':
 			self.state = False
-		elif exp == '.pag' or exp == '.six':
+		elif ext == '.pag' or ext == '.six':
 			self.state = True
 		else: self.error('Unknown extension %s' % ext)
 
