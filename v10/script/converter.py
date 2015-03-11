@@ -49,50 +49,52 @@ class ContentConverter:
 
 		self.parse_content(token[0], token[1:])
 
-	def parse_content (self, command, args):
+	def parse_content (self, c, args):
 
 		if self.debug:
-			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
+			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
-		if command == 'title' or command == 'title@left':
+		if c == 'title' or c == 'title@left':
 			self.stop_writing()
 			self.content += ('<h2>%s</h2>' % self.parse_recursive(args))
-		elif command == 'title@right':
+		elif c == 'title@right':
 			self.stop_writing()
 			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_recursive(args))
-		elif command == 'stitle' or command == 'stitle@left':
+		elif c == 'stitle' or c == 'stitle@left':
 			self.stop_writing()
 			self.content += ('<h3>%s</h3>' % self.parse_recursive(args))
-		elif command == 'stitle@right':
+		elif c == 'stitle@right':
 			self.stop_writing()
 			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_recursive(args))
-		elif command == 'link':
+		elif c == 'link':
 			self.append_content(self.make_link(args))
-		elif command == 'tid':
+		elif c == 'tid':
 			self.append_content(self.make_link(args))
-		elif command == 'speak':
+		elif c == 'speak':
 			self.append_content(self.make_speak(args))
-		elif command == 'p' or command == 'c' or command == 'r':
-			self.start_writing(command, self.parse_recursive(args))
-		elif command == 'id':
+		elif c == 'p' or c == 'c' or c == 'r':
+			self.start_writing(c, self.parse_recursive(args))
+		elif c == 'id':
 			self.stop_writing()
 			self.content += ('<a id="%s"></a>' % args[0])
-		elif command == 'img':
+		elif c == 'img':
 			self.stop_writing()
 			self.content += self.make_image(args)
-		elif command == 'br':
+		elif c == 'br':
 			self.stop_writing()
 			self.content += '<br/>'
-		elif command == 'begin':
+		elif c == 'begin':
 			self.stop_writing()
 			self.open_env(args)
-		elif command == 'clear':
+		elif c == 'clear':
 			self.stop_writing()
 			self.make_clear(args)
-		elif command == 'end':
+		elif c == 'end':
 			self.stop_writing()
 			self.close_env(args)
-		else: self.error('Unknown content command [%s] %s' % (command, args))
+		elif c == 'tag':
+			pass # Tags are supported, right now…
+		else: self.error('Unknown content c [%s] %s' % (c, args))
 
 	def parse_recursive (self, args):
 
@@ -155,11 +157,11 @@ class ContentConverter:
 			self.error('Tid expects 2-3 args %s' % args)
 
 		link_args = []
-		link_args.append('/%s/%s/' % self.page_location, args[1].upper())
+		link_args.append('/%s/%s/' % (self.page_location, args[1].upper()))
 		link_args.append(args[0])
 		if size == 3: link_args.append(args[2])
 
-		return self.make_file (link_args)
+		return self.make_link (link_args)
 
 	def make_link (self, args):
 
@@ -218,11 +220,30 @@ class ContentConverter:
 			self.content += '<div class="outside">'
 			self.environment.append((self.p_or_li, '</div>'))
 
-		elif env == 'ul' or env == 'ol':
+		elif env == 'ul':
 			if len(args) != 1:
-				self.error('Missing support!!! %s' % args)
-			self.content += '<%s>' % env
-			self.environment.append((self.p_or_li, '</%s>' % env))
+				self.error('ul# expects 1 arg %s' % args)
+			self.content += '<ul>'
+			self.environment.append((self.p_or_li, '</ul>'))
+			self.p_or_li = False
+
+		elif env == 'ol' or env == 'dl':
+
+			size = len(args)
+
+			if size > 3:
+				self.error('%s# expects 1-3 args %s' % (env, args))
+
+			output = []
+
+			if env == 'ol': output.append('class="roman"')
+			else: output.apppend('class="decimal"')
+
+			if size > 1: output.append('style="margin-left:%s"' % args[1])
+			if size > 2: output.append('start="%s"' % args[2])
+
+			self.content += ('<ul %s>' % ' '.join(output))
+			self.environment.append((self.p_or_li, '</ul>'))
 			self.p_or_li = False
 
 		elif env == 'mini' or env == 'half':
@@ -286,8 +307,6 @@ class FullConverter(ContentConverter):
 
 	def parse_line (self, line):
 
-		self.lineno += 1
-
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
@@ -313,31 +332,35 @@ class FullConverter(ContentConverter):
 
 		self.parse_content(token[0], token[1:])
 
-	def parse_meta (self, command, args):
+	def parse_meta (self, c, args):
 
 		if self.debug:
-			print('Parse_Meta (%s, %s)' % (command, args), file=sys.stderr)
+			print('Parse_Meta (%s, %s)' % (c, args), file=sys.stderr)
 
-		if command == 'jump':
+		if c == 'jump':
 			self.jump = args[0]
-		elif command == 'side':
+		elif c == 'side':
 			self.sideinclude = args[0]
-		elif command == 'title':
+		elif c == 'title':
 			self.meta['title'] = args[0]
-		elif command == 'subtitle':
+		elif c == 'short':
+			self.meta['short'] = args[0]
+		elif c == 'subtitle':
 			self.meta['subtitle'] = args[0]
-		elif command == 'prev':
+		elif c == 'prev':
 			try: self.meta['prev'] = (args[0], args[1])
 			except: self.error('Parse_Meta/Prev: need two arguments')
-		elif command == 'next':
+		elif c == 'next':
 			try: self.meta['next'] = (args[0], args[1])
 			except: self.error('Parse_Meta/Next: need two arguments')
-		elif command == 'tabprev':
+		elif c == 'tabprev':
 			self.meta['tabprev'] = args[0]
-		elif command == 'tabnext':
+		elif c == 'tabnext':
 			self.meta['tabnext'] = args[0]
+		elif c == 'tag':
+			pass # Tags are supported, right now…
 		else:
-			self.error('Unknown meta command %s' % args)
+			self.error('Unknown meta c [%s] %s' % (c, args))
 
 	def state_update (self, newstate):
 
@@ -358,7 +381,10 @@ class FullConverter(ContentConverter):
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
 		output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
-		output += ('"%s","%s",' % (self.meta.get('title','title'), self.meta.get('subtitle','subtitle')))
+		output += ('"%s",' % self.meta.get('title','title'))
+		if 'short' in self.meta: output += ('"%s",' % self.meta.get('short'))
+		else: output += ('"%s",' % self.meta.get('title','title'))
+		output += ('"%s",' % self.meta.get('subtitle','subtitle'))
 		if 'prev' in self.meta.keys():
 			pagprev = self.meta['prev']
 			output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))

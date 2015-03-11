@@ -78,9 +78,7 @@ class Splitter:
 
 	def append_content (self, text):
 
-		if self.content:
-			self.content += ('\n%s' % text)
-		else: self.content = text
+		self.content += ('\n%s' % text)
 
 	def check_dir_path (self, filepath):
 
