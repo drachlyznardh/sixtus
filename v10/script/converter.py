@@ -356,7 +356,7 @@ class FullConverter(ContentConverter):
 		elif command == 'tabnext':
 			self.meta['tabnext'] = args[0]
 		else:
-			self.error('Unknown meta command %s' % args)
+			self.error('Unknown meta command [%s] %s' % (command, args))
 
 	def state_update (self, newstate):
 
