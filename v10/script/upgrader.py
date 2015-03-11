@@ -161,6 +161,10 @@ class Upgrader:
 				return '%s' % '#'.join(args)
 			else: self.error('Relations expect 2 args %s' % args)
 
+		if c == 'tag':
+			if size < 2: self.error('Tag# expects one or more args %s' % args)
+			return '#'.join(args)
+
 		if 'related' in c:
 			self.error('Related# command is no longer supported. Manually add reference within the side section.')
 
@@ -189,6 +193,10 @@ class Upgrader:
 		if c == 'tab':
 			if len(args) == 2: return '#'.join(args)
 			else: self.error('Tab expects 1 arg %s' % args)
+
+		if c == 'tag':
+			if len(args) < 2: self.error('Tag# expects one or more args %s' % args)
+			return '#'.join(args)
 
 		if c == 'post':
 			if len(args) < 3: self.error('Post# expects 2 or more args %s' % args)
