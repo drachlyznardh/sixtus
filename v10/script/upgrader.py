@@ -123,7 +123,7 @@ class Upgrader:
 
 		if token[0] == 'start':
 
-			if len(token) > 2: self.error('Start expectes 1 arg %s' % args)
+			if len(token) > 2: self.error('Start expectes 1 arg %s' % token)
 
 			if token[1] == 'meta':
 				self.state = True
@@ -133,12 +133,12 @@ class Upgrader:
 				self.state = False
 				return '#'.join(token)
 
-			self.error('Unknown state %s' % args)
+			self.error('Unknown state %s' % token)
 
 		if token[0] == 'include':
 
-			if len(token) != 2: self.error('Include# expects 1 arg %s' % args)
-			return 'require#%s' % args[1]
+			if len(token) != 2: self.error('Include# expects 1 arg %s' % token)
+			return 'require#%s' % token[1]
 
 		if self.state: return self.parse_meta(token)
 		else: return self.parse_content(token)
