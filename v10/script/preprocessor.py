@@ -27,10 +27,14 @@ class Preprocessor:
 		self.origin_files.append(filename)
 		self.lineno = 0
 
-		with open(filename, 'r') as input_file:
-			for line in input_file:
-				self.lineno += 1
-				self.parse_line(line.strip())
+		try:
+			with open(filename, 'r') as input_file:
+				for line in input_file:
+					self.lineno += 1
+					self.parse_line(line.strip())
+		except EnvironmentError as e:
+			print('Could not open %s: %s' % (filename, e.strerror), file=sys.stderr)
+			sys.exit(1)
 
 	def parse_line (self, line):
 
