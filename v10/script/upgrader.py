@@ -135,6 +135,11 @@ class Upgrader:
 
 			self.error('Unknown state %s' % args)
 
+		if token[0] == 'include':
+
+			if len(token) != 2: self.error('Include# expects 1 arg %s' % args)
+			return 'require#%s' % args[1]
+
 		if self.state: return self.parse_meta(token)
 		else: return self.parse_content(token)
 
