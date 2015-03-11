@@ -33,7 +33,7 @@ class Preprocessor:
 					self.lineno += 1
 					self.parse_line(line.strip())
 		except EnvironmentError as e:
-			print('Could not open %s: %s' % (filename, e.strerror), file=sys.stderr)
+			print('\nPreprocessor could not open %s: %s' % (filename, e.strerror), file=sys.stderr)
 			sys.exit(1)
 
 	def parse_line (self, line):
