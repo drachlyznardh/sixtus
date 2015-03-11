@@ -92,6 +92,8 @@ class ContentConverter:
 		elif command == 'end':
 			self.stop_writing()
 			self.close_env(args)
+		elif command == 'tag':
+			pass # Tags are supported, right now…
 		else: self.error('Unknown content command [%s] %s' % (command, args))
 
 	def parse_recursive (self, args):
@@ -355,6 +357,8 @@ class FullConverter(ContentConverter):
 			self.meta['tabprev'] = args[0]
 		elif command == 'tabnext':
 			self.meta['tabnext'] = args[0]
+		elif command == 'tag':
+			pass # Tags are supported, right now…
 		else:
 			self.error('Unknown meta command [%s] %s' % (command, args))
 
