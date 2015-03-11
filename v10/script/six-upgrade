@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import os
 
 from upgrader import Upgrader
 
@@ -10,7 +11,9 @@ if len(sys.argv) != 3:
 	print('Usage: %s <input file> <output file>' % sys.argv[0])
 	sys.exit(1)
 
-up = Upgrader()
+filename, extension = os.path.splitext(sys.argv[1])
+
+up = Upgrader(extension)
 up.parse_file(sys.argv[1])
 
 with open(sys.argv[2], 'w') as outf:
