@@ -49,52 +49,52 @@ class ContentConverter:
 
 		self.parse_content(token[0], token[1:])
 
-	def parse_content (self, command, args):
+	def parse_content (self, c, args):
 
 		if self.debug:
-			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
+			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
-		if command == 'title' or command == 'title@left':
+		if c == 'title' or c == 'title@left':
 			self.stop_writing()
 			self.content += ('<h2>%s</h2>' % self.parse_recursive(args))
-		elif command == 'title@right':
+		elif c == 'title@right':
 			self.stop_writing()
 			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_recursive(args))
-		elif command == 'stitle' or command == 'stitle@left':
+		elif c == 'stitle' or c == 'stitle@left':
 			self.stop_writing()
 			self.content += ('<h3>%s</h3>' % self.parse_recursive(args))
-		elif command == 'stitle@right':
+		elif c == 'stitle@right':
 			self.stop_writing()
 			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_recursive(args))
-		elif command == 'link':
+		elif c == 'link':
 			self.append_content(self.make_link(args))
-		elif command == 'tid':
+		elif c == 'tid':
 			self.append_content(self.make_link(args))
-		elif command == 'speak':
+		elif c == 'speak':
 			self.append_content(self.make_speak(args))
-		elif command == 'p' or command == 'c' or command == 'r':
-			self.start_writing(command, self.parse_recursive(args))
-		elif command == 'id':
+		elif c == 'p' or c == 'c' or c == 'r':
+			self.start_writing(c, self.parse_recursive(args))
+		elif c == 'id':
 			self.stop_writing()
 			self.content += ('<a id="%s"></a>' % args[0])
-		elif command == 'img':
+		elif c == 'img':
 			self.stop_writing()
 			self.content += self.make_image(args)
-		elif command == 'br':
+		elif c == 'br':
 			self.stop_writing()
 			self.content += '<br/>'
-		elif command == 'begin':
+		elif c == 'begin':
 			self.stop_writing()
 			self.open_env(args)
-		elif command == 'clear':
+		elif c == 'clear':
 			self.stop_writing()
 			self.make_clear(args)
-		elif command == 'end':
+		elif c == 'end':
 			self.stop_writing()
 			self.close_env(args)
-		elif command == 'tag':
+		elif c == 'tag':
 			pass # Tags are supported, right now…
-		else: self.error('Unknown content command [%s] %s' % (command, args))
+		else: self.error('Unknown content c [%s] %s' % (c, args))
 
 	def parse_recursive (self, args):
 
@@ -332,35 +332,35 @@ class FullConverter(ContentConverter):
 
 		self.parse_content(token[0], token[1:])
 
-	def parse_meta (self, command, args):
+	def parse_meta (self, c, args):
 
 		if self.debug:
-			print('Parse_Meta (%s, %s)' % (command, args), file=sys.stderr)
+			print('Parse_Meta (%s, %s)' % (c, args), file=sys.stderr)
 
-		if command == 'jump':
+		if c == 'jump':
 			self.jump = args[0]
-		elif command == 'side':
+		elif c == 'side':
 			self.sideinclude = args[0]
-		elif command == 'title':
+		elif c == 'title':
 			self.meta['title'] = args[0]
-		elif command == 'short':
+		elif c == 'short':
 			self.meta['short'] = args[0]
-		elif command == 'subtitle':
+		elif c == 'subtitle':
 			self.meta['subtitle'] = args[0]
-		elif command == 'prev':
+		elif c == 'prev':
 			try: self.meta['prev'] = (args[0], args[1])
 			except: self.error('Parse_Meta/Prev: need two arguments')
-		elif command == 'next':
+		elif c == 'next':
 			try: self.meta['next'] = (args[0], args[1])
 			except: self.error('Parse_Meta/Next: need two arguments')
-		elif command == 'tabprev':
+		elif c == 'tabprev':
 			self.meta['tabprev'] = args[0]
-		elif command == 'tabnext':
+		elif c == 'tabnext':
 			self.meta['tabnext'] = args[0]
-		elif command == 'tag':
+		elif c == 'tag':
 			pass # Tags are supported, right now…
 		else:
-			self.error('Unknown meta command [%s] %s' % (command, args))
+			self.error('Unknown meta c [%s] %s' % (c, args))
 
 	def state_update (self, newstate):
 
