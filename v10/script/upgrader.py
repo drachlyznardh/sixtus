@@ -6,10 +6,17 @@ import sys
 
 class Upgrader:
 
-	def __init__ (self):
+	def __init__ (self, ext):
 
+		self.filename = ''
+		self.lineno = 0
 		self.content = ''
-		self.state = True
+
+		if ext == '.post':
+			self.state = False
+		elif exp == '.pag' or exp == '.six':
+			self.state = True
+		else: self.error('Unknown extension %s' % ext)
 
 	def error (self, message):
 
