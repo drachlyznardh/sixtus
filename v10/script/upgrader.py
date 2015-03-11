@@ -173,9 +173,10 @@ class Upgrader:
 	def parse_title (self, c, args, option):
 
 		if len(option) == 1: direction = 'left'
+		elif option[1] == 'left': direction = 'left'
 		elif option[1] == 'right': direction = 'right'
 		elif option[1] == 'center': direction = 'center'
-		else: self.error('Unknown direction %s %s %s' % (c, option, args))
+		else: self.error('Unknown direction [%s] [%s] [%s]' % (c, option, args))
 
 		if len(args) > 2: content = self.parse_recursive(args)[1:]
 		else: content = args[0]
