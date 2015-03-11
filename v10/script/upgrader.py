@@ -135,7 +135,7 @@ class Upgrader:
 
 			self.error('Unknown state %s' % token)
 
-		if token[0] == 'include':
+		if token[0] == 'include' or token[0] == 'include@static':
 
 			if len(token) != 2: self.error('Include# expects 1 arg %s' % token)
 			return 'require#%s' % token[1]
