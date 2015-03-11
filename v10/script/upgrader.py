@@ -191,7 +191,7 @@ class Upgrader:
 			else: self.error('Tab expects 1 arg %s' % args)
 
 		if c == 'post':
-			if size < 3: self.error('Post# expects 2 or more args %s' % args)
+			if len(args) < 3: self.error('Post# expects 2 or more args %s' % args)
 			return '#'.join(args)
 
 		if c == 'id':
