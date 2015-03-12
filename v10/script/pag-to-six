@@ -27,6 +27,7 @@ pp = preprocessor.Preprocessor(pag_base)
 pp.parse_file(pag_file)
 
 mp = mapper.Mapper(map_file, page_location)
+mp = mapper.get(map_file, page_location)
 
 sp = splitter.Splitter()
 sp.split_content(pp.content)
