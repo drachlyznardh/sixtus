@@ -24,4 +24,5 @@ for key, value in inmap.items():
 	else:
 		outmap[key] = (value, False)
 
-sys.exit(1)
+with open(sys.argv[2], 'w') as f:
+	print(outmap, file=f)
