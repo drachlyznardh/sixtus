@@ -24,13 +24,13 @@ $(BUILD_DIR)%.six:
 	@echo -n "Splitting source file $<… "
 	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
 	@$(SCRIPT_DIR)pag-to-six\
-		$(filter %.pag, $^)\
-		$(dir $(filter %.pag, $^))\
+		$(firstword $(filter %.pag, $^))\
+		$(dir $(firstword $(filter %.pag, $^)))\
 		$(MAP_FILE)\
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
 		$(basename $(notdir $<))\
 		$(BUILD_DIR)\
-		$(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^))
+		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^)))
 	@echo Done
 
 $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
