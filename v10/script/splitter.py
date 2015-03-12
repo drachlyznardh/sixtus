@@ -157,8 +157,6 @@ class Splitter:
 
 	def output_tab_files (self, page_name, build_dir):
 
-		page_name = self.name(page_name)
-
 		if self.jump:
 
 			path = self.get_path(build_dir, page_name, 'jump')
