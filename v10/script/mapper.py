@@ -18,9 +18,17 @@ def get (map_file, page_origin):
 
 	partial = page_origin
 
-	while partial not in sitemap:
-		print('%s not found' % partial)
-		partial = '/'.join(partial.split('/'))[:-1]
+	while partial and partial not in sitemap:
+		print('%s not found' % partial, file=sys.stderr)
+		partial = '/'.join(partial.split('/')[:-1])
+
+	if partial in sitemap:
+		print('Match on %s' % partial, file=sys.stderr)
+		value = sitemap[partial]
+		if value[1]: func = map_capitalize
+		else: func = map_upper
+		name = '%s/%s' % (value[0], page_origin[len(partial):])
+		return (name, func)
 
 	return (page_origin, map_capitalize)
 
