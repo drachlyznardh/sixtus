@@ -161,10 +161,12 @@ class Upgrader:
 			else: self.error('Subtitle expects 1 arg %s' % args)
 
 		if c == 'prev' or c == 'next':
+			if size == 2 and args[1] == '':
+				return '%s#' % args[0]
 			if size == 3:
 				args[2] = ''.join(args[2].split('@'))
 				return '%s' % '#'.join(args)
-			else: self.error('Relations expect 2 args %s' % args)
+			self.error('Relations expect 0 or 2 args %s' % args)
 
 		if c == 'tag':
 			if size < 2: self.error('Tag# expects one or more args %s' % args)
