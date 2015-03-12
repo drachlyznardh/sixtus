@@ -153,7 +153,7 @@ class Splitter:
 
 		return os.path.normpath(path)
 
-	def output_tab_files (self, base, page_name, build_dir):
+	def output_tab_files (self, base, name_function, page_name, build_dir):
 
 		if self.jump:
 

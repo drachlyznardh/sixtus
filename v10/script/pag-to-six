@@ -29,7 +29,10 @@ pp.parse_file(pag_file)
 mp = mapper.Mapper(map_file, page_location)
 mp = mapper.get(map_file, page_location)
 
+print(mp)
+sys.exit(1)
+
 sp = splitter.Splitter()
 sp.split_content(pp.content)
-sp.output_tab_files(mp.base, pag_name, build_dir)
+sp.output_tab_files(mp[0], mp[1], pag_name, build_dir)
 sp.output_touch_file(touch_file, pp.origin_files)
