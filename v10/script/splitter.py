@@ -118,10 +118,10 @@ class Splitter:
 			varmeta = self.meta
 
 			if name in self.prevs.keys() and self.prevs[name]:
-				varmeta += '\ntabprev#/%s/%s/%s/' % (base, page_name, self.prevs[name].upper())
+				varmeta += '\ntabprev#/%s/%s/%s/' % (self.base, page_name, self.prevs[name].upper())
 
 			if name in self.nexts.keys() and self.nexts[name]:
-				varmeta += '\ntabnext#/%s/%s/%s/' % (base, page_name, self.nexts[name].upper())
+				varmeta += '\ntabnext#/%s/%s/%s/' % (self.base, page_name, self.nexts[name].upper())
 
 			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, self.side, value))
 			with open(path, 'w') as outfile:
