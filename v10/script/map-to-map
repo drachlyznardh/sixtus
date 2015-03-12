@@ -17,17 +17,11 @@ with open(sys.argv[1], 'r') as f:
 outmap = {}
 
 for key, value in inmap.items():
-	print('%s: %s' % (key, value))
-
 	if isinstance (value, tuple):
-		print('Tuple')
 		if value[1] == True or value[1] == False:
 			outmap[key] = value
 		else: error('What is this? %s' % value)
 	else:
-		print('Single value')
 		outmap[key] = (value, False)
 
-print(inmap)
-print(outmap)
 sys.exit(1)
