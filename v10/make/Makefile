@@ -7,7 +7,7 @@ export MAP_FILE := $(SOURCE_DIR)map.py
 export PAG_DIR  := $(SOURCE_DIR)src/
 
 export BLOG_IN_DIR    := $(SOURCE_DIR)blog/
-export BLOG_OUT_DIR   := $(PAG_DIR)Blog/
+export BLOG_OUT_DIR   := $(PAG_DIR)blog/
 
 .PHONY: sixtus-blog sixtus-pages sixtus-runtime
 sixtus-deploy: sixtus-runtime sixtus-pages
