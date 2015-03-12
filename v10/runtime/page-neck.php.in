@@ -1,4 +1,4 @@
-				<?php if ($d[6]) { ?><div id="tab_next" class="outside"><p>@SITE_TAB_NEXT_BEFORE@<a href="<?=$d[6]?>">@SITE_TAB_NEXT_LINK@</a>@SITE_TAB_NEXT_AFTER@</p></div><?php } ?>
+				<?php if ($d[7]) { ?><div id="tab_next" class="outside"><p>@SITE_TAB_NEXT_BEFORE@<a href="<?=$d[7]?>">@SITE_TAB_NEXT_LINK@</a>@SITE_TAB_NEXT_AFTER@</p></div><?php } ?>
 			</div>
 			<div id="footnote"><p>Copyright © @SITE_COPYRIGHT_YEARS@ @SITE_COPYRIGHT_OWNER@ – Si&chi;tus X</p></div>
 		</div>
