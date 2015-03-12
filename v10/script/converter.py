@@ -347,12 +347,11 @@ class FullConverter(ContentConverter):
 			self.meta['short'] = args[0]
 		elif c == 'subtitle':
 			self.meta['subtitle'] = args[0]
-		elif c == 'prev':
-			try: self.meta['prev'] = (args[0], args[1])
-			except: self.error('Parse_Meta/Prev: need two arguments')
-		elif c == 'next':
-			try: self.meta['next'] = (args[0], args[1])
-			except: self.error('Parse_Meta/Next: need two arguments')
+		elif c == 'prev' or c == 'next':
+			size = len(args)
+			if size == 1 and args[0] == '': self.meta[c] = False
+			elif size == 2: self.meta[c] = (args[0], args[1])
+			else: self.error('Parse_Meta: %s# expects 0 or 2 arguments %s' % args)
 		elif c == 'tabprev':
 			self.meta['tabprev'] = args[0]
 		elif c == 'tabnext':
@@ -387,12 +386,14 @@ class FullConverter(ContentConverter):
 		output += ('"%s",' % self.meta.get('subtitle','subtitle'))
 		if 'prev' in self.meta.keys():
 			pagprev = self.meta['prev']
-			output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))
+			if pagprev: output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))
+			else: output += 'false'
 		else: output += 'false'
 		output += ','
 		if 'next' in self.meta.keys():
 			pagnext = self.meta['next']
-			output += ('array("%s","%s")' % (pagnext[0], pagnext[1]))
+			if pagnext: output += ('array("%s","%s")' % (pagnext[0], pagnext[1]))
+			else: output += 'false'
 		else: output += 'false'
 		output += ','
 		if 'tabprev' in self.meta.keys():

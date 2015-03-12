@@ -9,14 +9,14 @@
 		<link rel="stylesheet" href="/sixtus/style.css" />
 		<script src="/sixtus/panel.js"></script>
 
-		<title><?=$d[1]?></title>
+		<title><?=$d[2]?></title>
 	</head><body>
 		<div id="content" onclick="hide_all_sides();">
 			<div id="header">
 
 				<div id="location"><p>/ <?php $dest='/';foreach($d[0]as$w){$dest.=$w.'/';printf('<a href="%s">%s</a> / ',$dest,$w);}?></p></div>
 				<div id="maintitle"><h1><?=$d[1]?></h1></div>
-				<div id="subtitle"><p><?=$d[2]?></p></div>
+				<div id="subtitle"><p><?=$d[3]?></p></div>
 
 			</div><div class="content">
-				<?php if ($d[5]) { ?><div id="tab_prev" class="inside"><p>@SITE_TAB_PREV_BEFORE@<a href="<?=$d[5]?>">@SITE_TAB_PREV_LINK@</a>@SITE_TAB_PREV_AFTER@</p></div><?php } ?>
+				<?php if ($d[6]) { ?><div id="tab_prev" class="inside"><p>@SITE_TAB_PREV_BEFORE@<a href="<?=$d[6]?>">@SITE_TAB_PREV_LINK@</a>@SITE_TAB_PREV_AFTER@</p></div><?php } ?>
