@@ -1,0 +1,33 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+import os
+
+print(sys.argv)
+
+if not os.path.exists(sys.argv[1]):
+	print('Map file does not exist', file=f)
+	sys.exit(1)
+
+with open(sys.argv[1], 'r') as f:
+	inmap = eval(f.read())
+
+outmap = {}
+
+for key, value in inmap.items():
+	print('%s: %s' % (key, value))
+
+	if isinstance (value, tuple):
+		print('Tuple')
+		if value[1] == True or value[1] == False:
+			outmap[key] = value
+		else: error('What is this? %s' % value)
+	else:
+		print('Single value')
+		outmap[key] = (value, False)
+
+print(inmap)
+print(outmap)
+sys.exit(1)
