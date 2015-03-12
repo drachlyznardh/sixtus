@@ -19,11 +19,9 @@ def get (map_file, page_origin):
 	partial = page_origin
 
 	while partial and partial not in sitemap:
-		print('%s not found' % partial, file=sys.stderr)
 		partial = '/'.join(partial.split('/')[:-1])
 
 	if partial in sitemap:
-		print('Match on %s' % partial, file=sys.stderr)
 		value = sitemap[partial]
 		if value[1]: func = map_capitalize
 		else: func = map_upper
@@ -31,16 +29,3 @@ def get (map_file, page_origin):
 		return (name, func)
 
 	return (page_origin, map_capitalize)
-
-class Mapper:
-
-	def __init__ (self, map_file, page_origin):
-
-		self.debug = False
-
-		with open(map_file) as f:
-			site_map = eval(f.read())
-
-		if page_origin in site_map:
-			self.base = site_map[page_origin]
-		else: self.base = page_origin
