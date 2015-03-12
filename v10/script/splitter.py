@@ -7,10 +7,12 @@ import os
 
 class Splitter:
 
-	def __init__ (self):
+	def __init__ (self, base):
 
 		self.verbose = False
 		self.debug   = False
+
+		self.base = base
 
 		self.state = 'meta'
 
@@ -86,18 +88,18 @@ class Splitter:
 		if not os.path.exists(dirpath):
 			os.makedirs(dirpath)
 
-	def output_index_file (self, base, page_name, jumpfile_path):
+	def output_index_file (self, page_name, jumpfile_path):
 
 		if self.debug: print('Dump Index', file=sys.stderr)
 		if self.verbose: print('\tIndex file %s' % jumpfile_path, file=sys.stderr)
 
 		self.check_dir_path(jumpfile_path)
 
-		filecontent = ("jump#%s/%s/%s/" % (base, page_name, self.first.upper()))
+		filecontent = ("jump#%s/%s/%s/" % (self.base, page_name, self.first.upper()))
 		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
-	def output_many_tabs (self, base, page_name, build_dir):
+	def output_many_tabs (self, page_name, build_dir):
 
 		if self.debug: print('Dump Tabs', file=sys.stderr)
 
@@ -105,7 +107,7 @@ class Splitter:
 
 			if name == None: continue
 
-			path = os.path.normpath(os.path.join(build_dir, base, page_name, name.upper(), 'index.page.six'))
+			path = os.path.normpath(os.path.join(build_dir, self.base, page_name, name.upper(), 'index.page.six'))
 			self.touch_files.append(path)
 
 			if self.verbose:
@@ -143,42 +145,44 @@ class Splitter:
 		with open(index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
-	def get_path (self, build_dir, base, page_name, six_type):
+	def get_path (self, build_dir, page_name, six_type):
 
 		filename = 'index.%s.six' % six_type
 		if page_name == 'index':
-			path = os.path.join(build_dir, base, filename)
+			path = os.path.join(build_dir, self.base, filename)
 		else:
-			path = os.path.join(build_dir, base, page_name, filename)
+			path = os.path.join(build_dir, self.base, page_name, filename)
 
 		return os.path.normpath(path)
 
-	def output_tab_files (self, base, name_function, page_name, build_dir):
+	def output_tab_files (self, page_name, build_dir):
+
+		page_name = self.name(page_name)
 
 		if self.jump:
 
-			path = self.get_path(build_dir, base, page_name, 'jump')
+			path = self.get_path(build_dir, page_name, 'jump')
 			self.touch_files.append(path)
 			self.output_single_tab(path)
 
 		elif self.first:
 
-			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.jump.six'))
-			path = self.get_path(build_dir, base, page_name, 'jump')
+			#path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.jump.six'))
+			path = self.get_path(build_dir, page_name, 'jump')
 			self.touch_files.append(path)
-			self.output_index_file(base, page_name, path)
+			self.output_index_file(page_name, path)
 
-			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.side.six'))
-			path = self.get_path(build_dir, base, page_name, 'side')
+			#path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.side.six'))
+			path = self.get_path(build_dir, page_name, 'side')
 			self.touch_files.append(path)
 			self.output_side_file(path)
 
-			self.output_many_tabs(base, page_name, build_dir)
+			self.output_many_tabs(page_name, build_dir)
 
 		else:
 
-			path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.page.six'))
-			path = self.get_path(build_dir, base, page_name, 'page')
+			#path = os.path.normpath(os.path.join(build_dir, base, page_name, 'index.page.six'))
+			path = self.get_path(build_dir, page_name, 'page')
 			self.touch_files.append(path)
 			self.output_single_tab(path)
 
