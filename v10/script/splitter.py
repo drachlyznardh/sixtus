@@ -150,7 +150,7 @@ class Splitter:
 	def get_path (self, build_dir, page_name, six_type):
 
 		filename = 'index.%s.six' % six_type
-		if page_name == 'index':
+		if page_name == 'Index':
 			path = os.path.join(build_dir, self.base, filename)
 		else:
 			path = os.path.join(build_dir, self.base, page_name, filename)
