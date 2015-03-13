@@ -12,12 +12,7 @@ PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.p
 PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.side.php, $(filter %.side.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
 
-#PAGE_MAP_FILE := $(BUILD_DIR)page_map.py
-
 sixtus-pages: $(TCH_FILES) $(PHP_FILES)
-
-$(MAP_FILE): $(MAP_FILE)
-	$(SCRIPT_DIR)map-to-map $< $@
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(MAP_FILE)
 	@echo -n "Splitting source file $<… "
