@@ -346,6 +346,7 @@ class FullConverter(ContentConverter):
 			self.sideinclude = args[0]
 		elif c == 'title':
 			self.meta['title'] = args[0]
+			if len(args) == 2: self.meta['subtitle'] = args[1]
 		elif c == 'short':
 			self.meta['short'] = args[0]
 		elif c == 'subtitle':
