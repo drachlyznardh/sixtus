@@ -245,8 +245,8 @@ class ContentConverter:
 			if size > 1: output.append('style="margin-left:%s"' % args[1])
 			if size > 2: output.append('start="%s"' % args[2])
 
-			self.content += ('<ul %s>' % ' '.join(output))
-			self.environment.append((self.p_or_li, '</ul>'))
+			self.content += ('<ol %s>' % ' '.join(output))
+			self.environment.append((self.p_or_li, '</ol>'))
 			self.p_or_li = False
 
 		elif env == 'mini' or env == 'half':
