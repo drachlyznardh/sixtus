@@ -14,7 +14,7 @@ PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.j
 
 sixtus-pages: $(TCH_FILES) $(PHP_FILES)
 
-$(BUILD_DIR)%.tch: $(PAG_DIR)%.pag
+$(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(MAP_FILE)
 	@echo -n "Splitting source file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)pag-to-six $< $(dir $<) $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@

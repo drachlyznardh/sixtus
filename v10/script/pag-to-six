@@ -7,6 +7,7 @@ import sys
 import mapper
 import preprocessor
 import splitter
+import roman
 
 if len(sys.argv) != 8:
 	args = ['<pag file>', '<pag base>', '<map file>',
@@ -26,9 +27,7 @@ touch_file    = sys.argv[7]
 pp = preprocessor.Preprocessor(pag_base)
 pp.parse_file(pag_file)
 
-mp = mapper.Mapper(map_file, page_location)
-
-sp = splitter.Splitter()
+sp = splitter.Splitter(mapper.get(map_file, page_location))
 sp.split_content(pp.content)
-sp.output_tab_files(mp.base, pag_name, build_dir)
+sp.output_tab_files(roman.convert(pag_name), build_dir)
 sp.output_touch_file(touch_file, pp.origin_files)

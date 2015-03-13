@@ -3,16 +3,16 @@
 
 from __future__ import print_function
 import sys
+import os
 
-class Mapper:
+def get (map_file, page_origin):
 
-	def __init__ (self, map_file, page_origin):
+	with open(map_file, 'r') as f:
+		sitemap = eval(f.read())
 
-		self.debug = False
+	partial = page_origin
 
-		with open(map_file) as f:
-			site_map = eval(f.read())
+	while partial and partial not in sitemap:
+		partial = '/'.join(partial.split('/')[:-1])
 
-		if page_origin in site_map:
-			self.base = site_map[page_origin]
-		else: self.base = page_origin
+	return sitemap.get(partial, page_origin)
