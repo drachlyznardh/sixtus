@@ -108,7 +108,8 @@ class Splitter:
 
 			if name == None: continue
 
-			path = os.path.normpath(os.path.join(build_dir, self.base, page_name, roman.convert(name), 'index.page.six'))
+			tab_name = '%s/%s' % (page_name, roman.convert(name))
+			path = self.get_path(build_dir, tab_name, 'page')
 			self.touch_files.append(path)
 
 			if self.verbose:
