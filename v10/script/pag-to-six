@@ -26,9 +26,7 @@ touch_file    = sys.argv[7]
 pp = preprocessor.Preprocessor(pag_base)
 pp.parse_file(pag_file)
 
-base, func = mapper.get(map_file, page_location)
-
-sp = splitter.Splitter(base)
+sp = splitter.Splitter(mapper.get(map_file, page_location))
 sp.split_content(pp.content)
-sp.output_tab_files(func(pag_name), build_dir)
+sp.output_tab_files(roman.convert(pag_name), build_dir)
 sp.output_touch_file(touch_file, pp.origin_files)
