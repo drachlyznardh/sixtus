@@ -117,12 +117,15 @@ class ContentConverter:
 
 		if self.writing: self.stop_writing()
 
+		if self.p_or_li: tag = 'p'
+		else: tag = 'li'
+
 		if type == 'p':
-			self.content += ('<p>%s' % text)
+			self.content += ('<%s>%s' % (tag, text))
 		elif type == 'c':
-			self.content += ('<p class="center">%s' % text)
+			self.content += ('<%s class="center">%s' % (tag, text))
 		elif type == 'r':
-			self.content += ('<p class="reverse">%s' % text)
+			self.content += ('<%s class="reverse">%s' % (tag, text))
 
 		self.writing = True
 
