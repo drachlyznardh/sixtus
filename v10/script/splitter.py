@@ -95,7 +95,7 @@ class Splitter:
 
 		self.check_dir_path(jumpfile_path)
 
-		filecontent = ("jump#%s/%s/%s/" % (self.base, page_name, self.first.upper()))
+		filecontent = ("jump#%s/%s/%s/" % (self.base, page_name, roman.convert(self.first)))
 		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
@@ -107,7 +107,7 @@ class Splitter:
 
 			if name == None: continue
 
-			path = os.path.normpath(os.path.join(build_dir, self.base, page_name, name.upper(), 'index.page.six'))
+			path = os.path.normpath(os.path.join(build_dir, self.base, page_name, roman.convert(name), 'index.page.six'))
 			self.touch_files.append(path)
 
 			if self.verbose:
@@ -118,10 +118,10 @@ class Splitter:
 			varmeta = self.meta
 
 			if name in self.prevs.keys() and self.prevs[name]:
-				varmeta += '\ntabprev#/%s/%s/%s/' % (self.base, page_name, self.prevs[name].upper())
+				varmeta += '\ntabprev#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.prevs[name]))
 
 			if name in self.nexts.keys() and self.nexts[name]:
-				varmeta += '\ntabnext#/%s/%s/%s/' % (self.base, page_name, self.nexts[name].upper())
+				varmeta += '\ntabnext#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.nexts[name]))
 
 			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, self.side, value))
 			with open(path, 'w') as outfile:
