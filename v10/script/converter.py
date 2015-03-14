@@ -36,11 +36,11 @@ class ContentConverter:
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
-		if '#' not in line:
+		if '|' not in line:
 			self.append_content(line);
 			return
 
-		token = line.split('#')
+		token = line.split('|')
 		command = token[0]
 
 		if command == 'source':
@@ -321,12 +321,12 @@ class FullConverter(ContentConverter):
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
-		if '#' not in line:
+		if '|' not in line:
 			if self.state == 'meta': pass
 			else: self.append_content(line);
 			return
 
-		token = line.split('#')
+		token = line.split('|')
 		command = token[0]
 
 		if command == 'source':
