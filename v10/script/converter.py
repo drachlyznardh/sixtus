@@ -145,14 +145,9 @@ class ContentConverter:
 	def append_content (self, text):
 
 		if self.writing:
-			if len(text): self.content += (' %s' % text)
-			else: self.stop_writing()
-		elif self.p_or_li:
-			self.content += ('<p>%s' % text)
-		else:
-			self.content += ('<li>%s' % text)
-
-		self.writing = True
+			if len(text) == 0: self.stop_writing()
+			else: self.content += (' %s' % text)
+		else: self.start_writing('p', text)
 
 	def make_tid (self, args):
 
