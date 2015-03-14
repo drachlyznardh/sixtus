@@ -5,6 +5,7 @@ from __future__ import print_function
 
 import sys
 import re
+import roman
 
 class ContentConverter:
 
@@ -104,6 +105,7 @@ class ContentConverter:
 			return self.make_link(args[1:])
 		elif args[0] == 'tid':
 			return self.make_tid(args[1:])
+
 			linkargs = []
 			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
 			linkargs.append(args[1])
@@ -159,9 +161,9 @@ class ContentConverter:
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
-		link_args = []
-		link_args.append('/%s/%s/' % (self.page_location, args[1].upper()))
-		link_args.append(args[0])
+		tab_location = '/%s/%s/' % ('/'.join(self.page_location.split('/')[:-1]), roman.convert(args[1]))
+
+		link_args = [tab_location, args[0]]
 		if size == 3: link_args.append(args[2])
 
 		return self.make_link (link_args)
