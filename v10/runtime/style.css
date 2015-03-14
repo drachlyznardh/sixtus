@@ -50,6 +50,10 @@ div.content { margin: 1em; }
 a { color: #ffffff; text-shadow: 3px 3px black; }
 div.spacer { margin: 1em; }
 
+table, img,
+div.half-right-out, div.half-left-out,
+div.mini-right-out, div.mini-left-out { background-color: #222222; }
+
 div.half-right-out, div.half-left-out { width: 50%; }
 div.mini-right-out, div.mini-left-out { width: 33%; }
 
