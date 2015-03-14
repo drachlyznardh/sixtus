@@ -90,10 +90,11 @@ ol.roman { list-style-type:upper-roman; }
 ol.decimal { }
 
 @media screen and (min-device-width: 801px) {
-	div#content { width: 50%; padding-left: 25%; padding-right: 25%; }
-	div#right-side-panel { left: 76%; }
+	div#content { width: 56%; padding-left: 15%; padding-right: 29%; }
+	div#right-side-panel { left: 71%; }
 	div#left-side-icon, div#right-side-icon,
 	div#left-back, div#right-back { display: none; }
-	div#left-side-panel, div#right-side-panel { width: 24%; display: block; border: 0; }
+	div#right-side-panel { width: 29%; display: block; border: 0; }
+	div#left-side-panel { width: 14%; display: block; border: 0; }
 }
 
