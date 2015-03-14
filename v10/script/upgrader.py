@@ -81,7 +81,7 @@ class Upgrader:
 			start = 0
 			style = False
 			output = []
-			specs = opt[:]
+			specs = opt[1:]
 
 			while len(specs) > 1:
 
