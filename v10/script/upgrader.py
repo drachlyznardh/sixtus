@@ -40,7 +40,7 @@ class Upgrader:
 
 		size = len(args)
 
-		if size == 3: return '\t%s' % '#'.join(args)
+		if size == 3: return '\t%s' % '|'.join(args)
 
 		elif size == 4:
 			return '\t%s|%s%s/|%s' % (args[0], args[1], args[3].upper(), args[2])
@@ -54,7 +54,7 @@ class Upgrader:
 
 		size = len(args)
 
-		if size > 2 and size < 5: return '\t%s' % '#'.join(args)
+		if size > 2 and size < 5: return '\t%s' % '|'.join(args)
 		else: self.error('Tid expects 2-3 args %s' % args)
 
 	def parse_speak (self, args):
@@ -115,7 +115,7 @@ class Upgrader:
 
 	def parse_line (self, line):
 
-		if '|' not in line:
+		if '#' not in line:
 			return '\t%s' % line
 
 		token = line.split('#')
