@@ -311,7 +311,8 @@ class FullConverter(ContentConverter):
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
 		if '#' not in line:
-			self.append_content(line);
+			if self.state == 'meta': pass
+			else: self.append_content(line);
 			return
 
 		token = line.split('#')
