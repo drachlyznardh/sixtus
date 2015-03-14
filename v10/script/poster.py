@@ -14,7 +14,7 @@ class Poster:
 		self.prev_page = prev_page
 		self.next_page = next_page
 
-		self.check = re.compile(r'^post#')
+		self.check = re.compile(r'^post\|')
 
 		self.content = ''
 		self.post_content = {}
@@ -58,11 +58,14 @@ class Poster:
 
 				if self.check.match(line):
 
-					token = line.split('#')
+					token = line.split('|')
 					size = len(token)
 
 					self.store_content()
-					self.current = token[1]
+					try: self.current = token[1]
+					except:
+						print('(%s), (%s)' % (line, token), file=sys.stderr)
+						sys.exit(1)
 
 					if size == 4:
 						self.append_content('/ %s' % token[3].capitalize())
@@ -70,7 +73,7 @@ class Poster:
 						self.append_content('/ %s &amp; %s' % (', '.join(w.capitalize() for w in token[3:-1]), token[-1].capitalize()))
 
 					self.append_title(token[1], token[2])
-					self.append_content('title#%s' % token[2])
+					self.append_content('title|%s' % token[2])
 					continue
 
 				self.append_content(line)
@@ -80,27 +83,27 @@ class Poster:
 	def output_pag_file (self, filename):
 
 		with open(filename, 'w') as f:
-			print('title#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
+			print('title|%s %s' % (self.this_page[2], self.this_page[0]), file=f)
 			if self.prev_page:
-				print('prev#Blog/%s/%s/#%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]), file=f)
+				print('prev|Blog/%s/%s/|%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]), file=f)
 			if self.next_page:
-				print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]), file=f)
-			print('start#side', file=f)
-			print('stitle#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
+				print('next|Blog/%s/%s/|%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]), file=f)
+			print('start|side', file=f)
+			print('stitle|%s %s' % (self.this_page[2], self.this_page[0]), file=f)
 			for number, value in self.post_title.items():
-				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
-				print('\n&amp;\n'.join(['link##%s#%s-%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
-			print('start#page', file=f)
+				print('p|<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
+				print('\n&amp;\n'.join(['link||%s|%s-%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
+			print('start|page', file=f)
 			manydays = False
 			for number, value in sorted(self.post_content.items()):
-				if manydays: print('br#', file=f)
+				if manydays: print('br|', file=f)
 				else: manydays = True
 				manyposts = False
 				for index in xrange(len(value)):
-					if manyposts: print('br#', file=f)
+					if manyposts: print('br|', file=f)
 					else: manyposts = True
-					print('id#%s-%s' % (number, index), file=f)
-					print('p#link##%s/%s/%02d#%02d-%d' % (self.this_page[0], self.this_page[1], int(number), int(number), index), file=f)
+					print('id|%s-%s' % (number, index), file=f)
+					print('p|link||%s/%s/%02d|%02d-%d' % (self.this_page[0], self.this_page[1], int(number), int(number), index), file=f)
 					print('%s' % value[index], file=f)
 
 	def output_list_file (self, filename):
@@ -108,8 +111,8 @@ class Poster:
 		this_url = 'Blog/%s/%s/' % (self.this_page[0], self.this_page[1])
 
 		with open(filename, 'w') as f:
-			print('id#%s-%s' % (self.this_page[0], self.this_page[1]), file=f)
-			print('stitle#link#Blog/%s/%s/#%s %s' % (self.this_page[0], self.this_page[1], self.this_page[2], self.this_page[0]), file=f)
+			print('id|%s-%s' % (self.this_page[0], self.this_page[1]), file=f)
+			print('stitle|link|Blog/%s/%s/|%s %s' % (self.this_page[0], self.this_page[1], self.this_page[2], self.this_page[0]), file=f)
 			for number, value in sorted(self.post_title.items()):
-				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
-				print('\n&amp;\n'.join(['link#%s#%s#%s/%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)
+				print('p|<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
+				print('\n&amp;\n'.join(['link|%s|%s|%s/%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)
