@@ -100,7 +100,7 @@ class Splitter:
 		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
-	def output_many_tabs (self, page_name, build_dir):
+	def output_many_tabs (self, page_name, side_path, build_dir):
 
 		if self.debug: print('Dump Tabs', file=sys.stderr)
 
@@ -125,7 +125,9 @@ class Splitter:
 			if name in self.nexts.keys() and self.nexts[name]:
 				varmeta += '\ntabnext#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.nexts[name]))
 
-			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, self.side, value))
+			varmeta += '\nside#%s' % side_path
+
+			filecontent = ('%s\nstart#page\n%s' % (varmeta, value))
 			with open(path, 'w') as outfile:
 				outfile.write(filecontent)
 
