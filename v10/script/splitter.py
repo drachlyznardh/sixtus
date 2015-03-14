@@ -81,7 +81,7 @@ class Splitter:
 
 	def append_content (self, text):
 
-		self.content += ('\n%s' % text)
+		self.content += ('%s\n' % text)
 
 	def check_dir_path (self, filepath):
 
@@ -120,14 +120,14 @@ class Splitter:
 			varmeta = self.meta
 
 			if name in self.prevs.keys() and self.prevs[name]:
-				varmeta += '\ntabprev#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.prevs[name]))
+				varmeta += 'tabprev#/%s/%s/%s/\n' % (self.base, page_name, roman.convert(self.prevs[name]))
 
 			if name in self.nexts.keys() and self.nexts[name]:
-				varmeta += '\ntabnext#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.nexts[name]))
+				varmeta += 'tabnext#/%s/%s/%s/\n' % (self.base, page_name, roman.convert(self.nexts[name]))
 
-			varmeta += '\nside#%s' % side_path
+			varmeta += 'side#%s\n' % side_path
 
-			filecontent = ('%s\nstart#page\n%s' % (varmeta, value))
+			filecontent = ('%sstart#page\n%s' % (varmeta, value))
 			with open(path, 'w') as outfile:
 				outfile.write(filecontent)
 
