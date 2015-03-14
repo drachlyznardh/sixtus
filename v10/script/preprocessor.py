@@ -71,7 +71,7 @@ class Preprocessor:
 			self.content.append('')
 			return
 
-		if '#' not in line: # Plain content
+		if '|' not in line: # Plain content
 			self.content.append(line)
 			return
 
@@ -79,10 +79,10 @@ class Preprocessor:
 			target_name = self.re_require.sub(self.extract, line)
 			target_file = self.get_existing_path(self.base, target_name)
 			self.inclusion.append((self.filename, self.lineno))
-			self.content.append('source#%s#%d' % (target_file, 0))
+			self.content.append('source|%s|%d' % (target_file, 0))
 			self.parse_file(target_file)
 			self.filename, self.lineno = self.inclusion.pop()
-			self.content.append('source#%s#%d' % (self.filename, self.lineno))
+			self.content.append('source|%s|%d' % (self.filename, self.lineno))
 			return
 
 		self.content.append(line) # Ordinany command
