@@ -40,10 +40,18 @@ class Splitter:
 		elif self.state == 'side':
 			self.side += self.content
 		elif self.state == 'page':
-			self.tabs[self.tabname] = self.content
+			self.save_tab()
+		else: self.error('What is state %s supposed to be?' % (self.state, newstate))
 
 		self.state = newstate
 		self.content = ''
+
+	def save_tab (self):
+
+		if self.tabname:
+			if self.tabname in self.tabs:
+				self.tabs[self.tabname] += self.content
+			else: self.tabs[self.tabname] = self.content
 
 	def split_content (self, lines):
 
@@ -69,11 +77,11 @@ class Splitter:
 			elif command == 'tab':
 
 				if not self.first: self.first = token[1]
-				self.tabs[self.tabname] = self.content
-				self.content = ''
+				self.save_tab()
 				self.nexts[self.tabname] = token[1]
 				self.prevs[token[1]] = self.tabname
 				self.tabname = token[1]
+				self.content = ''
 
 			else: self.append_content(line)
 
