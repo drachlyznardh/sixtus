@@ -52,7 +52,7 @@ class Splitter:
 			self.lineno += 1
 			if self.debug: print(line)
 
-			if len(line) and line[0] == '|':
+			if len(line) and line[0] == '#':
 				if self.debug: print('Line is a comment, skip')
 				continue
 
