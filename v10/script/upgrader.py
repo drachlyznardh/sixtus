@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import re
 
 class Upgrader:
 
@@ -114,6 +115,9 @@ class Upgrader:
 		self.error('Unknown env %s' % args)
 
 	def parse_line (self, line):
+
+		line = line.strip()
+		line = line.replace('|','@PIPE@')
 
 		if '#' not in line:
 			return '\t%s' % line
@@ -266,4 +270,4 @@ class Upgrader:
 
 		for line in open(sys.argv[1], 'r').readlines():
 			self.lineno += 1
-			self.content += ('%s\n' % self.parse_line (line.strip()))
+			self.content += ('%s\n' % self.parse_line(line).replace('@SHARP@', '#'))
