@@ -20,7 +20,16 @@ class Preprocessor:
 		self.inclusion = []
 		self.content = []
 		self.re_require = re.compile(r'^require#(.*)')
+		self.re_pipe = re.compile(r'(@PIPE@)')
+		self.re_at = re.compile(r'(@AT@)')
 		self.extract = r'\1'
+
+	def clean_line (self, line):
+
+		line = line.strip()
+		if self.re_pipe.match(line): line = self.re_pipe.sub('&#124;')
+		if self.re_at.match(line): line = self.re_at.sub('&#64;')
+		return line
 
 	def parse_file (self, filename):
 
