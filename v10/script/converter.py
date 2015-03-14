@@ -69,7 +69,7 @@ class ContentConverter:
 		elif c == 'link':
 			self.append_content(self.make_link(args))
 		elif c == 'tid':
-			self.append_content(self.make_link(args))
+			self.append_content(self.make_tid(args))
 		elif c == 'speak':
 			self.append_content(self.make_speak(args))
 		elif c == 'p' or c == 'c' or c == 'r':
