@@ -53,6 +53,7 @@ with open(pag_file, 'w') as f:
 	print('\nbr#\n'.join(page), file=f)
 
 	print('start#side', file=f)
+	print('title#%s' % this_year, file=f)
 	for i in side:
 		print('p#link##%s#%s-%s' % (name_map[i], this_year, i), file=f)
 
