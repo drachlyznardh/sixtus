@@ -31,4 +31,5 @@ with open(pag_file, 'w') as f:
 	print('\nbr#\n'.join(page), file=f)
 
 	print('start#side', file=f)
+	print('stitle#%s' % name_map['14'], file=f)
 	print('p#%s' % ('\n/\n'.join(['link##%s#%s' % (i, i) for i in side])), file=f)

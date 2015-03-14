@@ -5,6 +5,7 @@ from __future__ import print_function
 
 import sys
 import re
+import roman
 
 class ContentConverter:
 
@@ -69,7 +70,7 @@ class ContentConverter:
 		elif c == 'link':
 			self.append_content(self.make_link(args))
 		elif c == 'tid':
-			self.append_content(self.make_link(args))
+			self.append_content(self.make_tid(args))
 		elif c == 'speak':
 			self.append_content(self.make_speak(args))
 		elif c == 'p' or c == 'c' or c == 'r':
@@ -104,6 +105,7 @@ class ContentConverter:
 			return self.make_link(args[1:])
 		elif args[0] == 'tid':
 			return self.make_tid(args[1:])
+
 			linkargs = []
 			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
 			linkargs.append(args[1])
@@ -143,14 +145,9 @@ class ContentConverter:
 	def append_content (self, text):
 
 		if self.writing:
-			if len(text): self.content += (' %s' % text)
-			else: self.stop_writing()
-		elif self.p_or_li:
-			self.content += ('<p>%s' % text)
-		else:
-			self.content += ('<li>%s' % text)
-
-		self.writing = True
+			if len(text) == 0: self.stop_writing()
+			else: self.content += (' %s' % text)
+		else: self.start_writing('p', text)
 
 	def make_tid (self, args):
 
@@ -159,9 +156,9 @@ class ContentConverter:
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
-		link_args = []
-		link_args.append('/%s/%s/' % (self.page_location, args[1].upper()))
-		link_args.append(args[0])
+		tab_location = '/%s/%s/' % ('/'.join(self.page_location.split('/')[:-1]), roman.convert(args[1]))
+
+		link_args = [tab_location, args[0]]
 		if size == 3: link_args.append(args[2])
 
 		return self.make_link (link_args)
@@ -314,7 +311,8 @@ class FullConverter(ContentConverter):
 			print('Parse_Line (%s)' % (line), file=sys.stderr)
 
 		if '#' not in line:
-			self.append_content(line);
+			if self.state == 'meta': pass
+			else: self.append_content(line);
 			return
 
 		token = line.split('#')
@@ -343,7 +341,7 @@ class FullConverter(ContentConverter):
 		if c == 'jump':
 			self.jump = args[0]
 		elif c == 'side':
-			self.sideinclude = args[0]
+			self.side_location = args[0]
 		elif c == 'title':
 			self.meta['title'] = args[0]
 			if len(args) == 2: self.meta['subtitle'] = args[1]

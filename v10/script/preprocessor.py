@@ -39,15 +39,17 @@ class Preprocessor:
 
 	def get_existing_path (self, base, required):
 
-		while base != '/':
+		trial = base
 
-			target = os.path.join(base, required)
+		while trial != '/':
+
+			target = os.path.join(trial, required)
 			if os.path.exists(target):
 				return target
 
-			base = os.path.split(os.path.dirname(base))[0]
+			trial = os.path.dirname(trial)
 
-		print('Cannot split anymore')
+		print('Cannot find %s anywhere from %s' % (required, base), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_line (self, line):

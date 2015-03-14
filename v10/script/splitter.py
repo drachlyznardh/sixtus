@@ -81,7 +81,7 @@ class Splitter:
 
 	def append_content (self, text):
 
-		self.content += ('\n%s' % text)
+		self.content += ('%s\n' % text)
 
 	def check_dir_path (self, filepath):
 
@@ -96,11 +96,15 @@ class Splitter:
 
 		self.check_dir_path(jumpfile_path)
 
-		filecontent = ("jump#%s/%s/%s/" % (self.base, page_name, roman.convert(self.first)))
+		if page_name == 'Index':
+			destination = ("%s/%s/" % (self.base, roman.convert(self.first)))
+		else:
+			destination = ("%s/%s/%s/" % (self.base, page_name, roman.convert(self.first)))
+		filecontent = ("jump#%s" % destination)
 		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
-	def output_many_tabs (self, page_name, build_dir):
+	def output_many_tabs (self, page_name, side_path, build_dir):
 
 		if self.debug: print('Dump Tabs', file=sys.stderr)
 
@@ -108,7 +112,8 @@ class Splitter:
 
 			if name == None: continue
 
-			tab_name = '%s/%s' % (page_name, roman.convert(name))
+			if page_name == 'Index': tab_name = roman.convert(name)
+			else: tab_name = '%s/%s' % (page_name, roman.convert(name))
 			path = self.get_path(build_dir, tab_name, 'page')
 			self.touch_files.append(path)
 
@@ -120,12 +125,22 @@ class Splitter:
 			varmeta = self.meta
 
 			if name in self.prevs.keys() and self.prevs[name]:
-				varmeta += '\ntabprev#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.prevs[name]))
+				if page_name == 'Index':
+					destination = '%s/%s' % (self.base, roman.convert(self.prevs[name]))
+				else:
+					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.prevs[name]))
+				varmeta += 'tabprev#/%s/\n' % destination
 
 			if name in self.nexts.keys() and self.nexts[name]:
-				varmeta += '\ntabnext#/%s/%s/%s/' % (self.base, page_name, roman.convert(self.nexts[name]))
+				if page_name == 'Index':
+					destination = '%s/%s' % (self.base, roman.convert(self.nexts[name]))
+				else:
+					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.nexts[name]))
+				varmeta += 'tabnext#/%s/\n' % destination
 
-			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (varmeta, self.side, value))
+			varmeta += 'side#%s\n' % side_path
+
+			filecontent = ('%sstart#page\n%s' % (varmeta, value))
 			with open(path, 'w') as outfile:
 				outfile.write(filecontent)
 
@@ -175,7 +190,7 @@ class Splitter:
 			self.touch_files.append(path)
 			self.output_side_file(path)
 
-			self.output_many_tabs(page_name, build_dir)
+			self.output_many_tabs(page_name, '../index.side.php', build_dir)
 
 		else:
 

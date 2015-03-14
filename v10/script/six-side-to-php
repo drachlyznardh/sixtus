@@ -14,7 +14,7 @@ input_file    = sys.argv[1]
 page_location = sys.argv[2]
 output_file   = sys.argv[3]
 
-c = Converter(page_location)
+c = Converter('%s/LOLSIDE' % page_location)
 with open(input_file, 'r') as f:
 	for line in f.readlines():
 		c.parse_line(line.strip())
