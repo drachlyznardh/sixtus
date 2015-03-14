@@ -43,24 +43,24 @@ for filename in sys.argv[6:]:
 
 with open(pag_file, 'w') as f:
 
-	print('title#%s' % this_year, file=f)
-	print('subtitle#%s' % (name_map['13'] % this_year), file=f)
+	print('title|%s' % this_year, file=f)
+	print('subtitle|%s' % (name_map['13'] % this_year), file=f)
 
-	if prev_year: print('prev#Blog/%s/#%s' % (prev_year, prev_year), file=f)
-	if next_year: print('next#Blog/%s/#%s' % (next_year, next_year), file=f)
+	if prev_year: print('prev|Blog/%s/|%s' % (prev_year, prev_year), file=f)
+	if next_year: print('next|Blog/%s/|%s' % (next_year, next_year), file=f)
 
-	print('start#page', file=f)
-	print('\nbr#\n'.join(page), file=f)
+	print('start|page', file=f)
+	print('\nbr|\n'.join(page), file=f)
 
-	print('start#side', file=f)
-	print('title#%s' % this_year, file=f)
+	print('start|side', file=f)
+	print('title|%s' % this_year, file=f)
 	for i in side:
-		print('p#link##%s#%s-%s' % (name_map[i], this_year, i), file=f)
+		print('p|link||%s|%s-%s' % (name_map[i], this_year, i), file=f)
 
 with open(list_file, 'w') as f:
 
-	print('id#%s' % this_year, file=f)
-	print('stitle#link#Blog/%s/#%s' % (this_year, this_year), file=f)
+	print('id|%s' % this_year, file=f)
+	print('stitle|link|Blog/%s/|%s' % (this_year, this_year), file=f)
 	for i in xrange(3):
 		line = []
 		for j in xrange(4):
@@ -68,6 +68,6 @@ with open(list_file, 'w') as f:
 			number = '%02d' % index
 			name = name_map[number]
 			if number in side:
-				line.append('link#Blog/%s/%s/#%s' % (this_year, number, name))
+				line.append('link|Blog/%s/%s/|%s' % (this_year, number, name))
 			else: line.append('%s' % name)
-		print('c#%s' % ('\n/\n'.join(line)), file=f)
+		print('c|%s' % ('\n/\n'.join(line)), file=f)

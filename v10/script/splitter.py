@@ -40,10 +40,18 @@ class Splitter:
 		elif self.state == 'side':
 			self.side += self.content
 		elif self.state == 'page':
-			self.tabs[self.tabname] = self.content
+			self.save_tab()
+		else: self.error('What is state %s supposed to be?' % (self.state, newstate))
 
 		self.state = newstate
 		self.content = ''
+
+	def save_tab (self):
+
+		if self.tabname:
+			if self.tabname in self.tabs:
+				self.tabs[self.tabname] += self.content
+			else: self.tabs[self.tabname] = self.content
 
 	def split_content (self, lines):
 
@@ -56,12 +64,12 @@ class Splitter:
 				if self.debug: print('Line is a comment, skip')
 				continue
 
-			if '#' not in line:
+			if '|' not in line:
 				self.append_content(line)
 				if self.debug: print('Line is simple content, appending')
 				continue
 
-			token = line.split('#')
+			token = line.split('|')
 			command = token[0]
 
 			if command == 'jump': self.jump = token[1]
@@ -69,11 +77,11 @@ class Splitter:
 			elif command == 'tab':
 
 				if not self.first: self.first = token[1]
-				self.tabs[self.tabname] = self.content
-				self.content = ''
+				self.save_tab()
 				self.nexts[self.tabname] = token[1]
 				self.prevs[token[1]] = self.tabname
 				self.tabname = token[1]
+				self.content = ''
 
 			else: self.append_content(line)
 
@@ -100,7 +108,7 @@ class Splitter:
 			destination = ("%s/%s/" % (self.base, roman.convert(self.first)))
 		else:
 			destination = ("%s/%s/%s/" % (self.base, page_name, roman.convert(self.first)))
-		filecontent = ("jump#%s" % destination)
+		filecontent = ("jump|%s" % destination)
 		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
@@ -129,18 +137,18 @@ class Splitter:
 					destination = '%s/%s' % (self.base, roman.convert(self.prevs[name]))
 				else:
 					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.prevs[name]))
-				varmeta += 'tabprev#/%s/\n' % destination
+				varmeta += 'tabprev|/%s/\n' % destination
 
 			if name in self.nexts.keys() and self.nexts[name]:
 				if page_name == 'Index':
 					destination = '%s/%s' % (self.base, roman.convert(self.nexts[name]))
 				else:
 					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.nexts[name]))
-				varmeta += 'tabnext#/%s/\n' % destination
+				varmeta += 'tabnext|/%s/\n' % destination
 
-			varmeta += 'side#%s\n' % side_path
+			varmeta += 'side|%s\n' % side_path
 
-			filecontent = ('%sstart#page\n%s' % (varmeta, value))
+			filecontent = ('%sstart|page\n%s' % (varmeta, value))
 			with open(path, 'w') as outfile:
 				outfile.write(filecontent)
 
@@ -156,9 +164,9 @@ class Splitter:
 
 		self.check_dir_path(index_path)
 		if self.jump:
-			filecontent = 'jump#%s' % self.jump
+			filecontent = 'jump|%s' % self.jump
 		else:
-			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
+			filecontent = ('%s\nstart|side\n%s\nstart|page\n%s' % (self.meta, self.side, self.tabs[None]))
 		with open(index_path, 'w') as outfile:
 			outfile.write(filecontent)
 

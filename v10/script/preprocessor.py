@@ -19,8 +19,17 @@ class Preprocessor:
 		self.lineno = 0
 		self.inclusion = []
 		self.content = []
-		self.re_require = re.compile(r'^require#(.*)')
+		self.re_require = re.compile(r'^require\|(.*)')
+		self.re_pipe = re.compile(r'(@PIPE@)')
+		self.re_at = re.compile(r'(@AT@)')
 		self.extract = r'\1'
+
+	def clean_line (self, line):
+
+		line = line.strip()
+		line = line.replace('@PIPE@','&#124;')
+		line = line.replace('@AT@','&#64;')
+		return line
 
 	def parse_file (self, filename):
 
@@ -32,7 +41,7 @@ class Preprocessor:
 			with open(filename, 'r') as input_file:
 				for line in input_file:
 					self.lineno += 1
-					self.parse_line(line.strip())
+					self.parse_line(self.clean_line(line))
 		except EnvironmentError as e:
 			print('\nPreprocessor could not open %s: %s' % (filename, e.strerror), file=sys.stderr)
 			sys.exit(1)
@@ -62,7 +71,7 @@ class Preprocessor:
 			self.content.append('')
 			return
 
-		if '#' not in line: # Plain content
+		if '|' not in line: # Plain content
 			self.content.append(line)
 			return
 
@@ -70,10 +79,10 @@ class Preprocessor:
 			target_name = self.re_require.sub(self.extract, line)
 			target_file = self.get_existing_path(self.base, target_name)
 			self.inclusion.append((self.filename, self.lineno))
-			self.content.append('source#%s#%d' % (target_file, 0))
+			self.content.append('source|%s|%d' % (target_file, 0))
 			self.parse_file(target_file)
 			self.filename, self.lineno = self.inclusion.pop()
-			self.content.append('source#%s#%d' % (self.filename, self.lineno))
+			self.content.append('source|%s|%d' % (self.filename, self.lineno))
 			return
 
 		self.content.append(line) # Ordinany command

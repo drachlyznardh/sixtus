@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import re
 
 class Upgrader:
 
@@ -40,13 +41,13 @@ class Upgrader:
 
 		size = len(args)
 
-		if size == 3: return '\t%s' % '#'.join(args)
+		if size == 3: return '\t%s' % '|'.join(args)
 
 		elif size == 4:
-			return '\t%s#%s%s/#%s' % (args[0], args[1], args[3].upper(), args[2])
+			return '\t%s|%s%s/|%s' % (args[0], args[1], args[3].upper(), args[2])
 
 		elif size == 5:
-			return '\t%s#%s%s/#%s#%s' % (args[0], args[1], args[3].upper(), args[2], args[4])
+			return '\t%s|%s%s/|%s|%s' % (args[0], args[1], args[3].upper(), args[2], args[4])
 
 		else: self.error('Too many args for link %s' % args)
 
@@ -54,13 +55,13 @@ class Upgrader:
 
 		size = len(args)
 
-		if size > 2 and size < 5: return '\t%s' % '#'.join(args)
+		if size > 2 and size < 5: return '\t%s' % '|'.join(args)
 		else: self.error('Tid expects 2-3 args %s' % args)
 
 	def parse_speak (self, args):
 
 		author = args[0].split('@')[1]
-		return 'speak#%s#%s' % (author, args[1])
+		return 'speak|%s|%s' % (author, args[1])
 
 	def parse_begin (self, args):
 
@@ -70,17 +71,17 @@ class Upgrader:
 		env = opt[0]
 
 		if env == 'inside' or env == 'outside':
-			if len(opt) == 1: return '\tbegin#%s' % env
+			if len(opt) == 1: return '\tbegin|%s' % env
 			else: self.error('%s expects no options %s' % (env, args))
 
-		if env == 'ul': return '\tbegin#ul'
+		if env == 'ul': return '\tbegin|ul'
 
 		if env == 'ol':
 
 			start = 0
 			style = False
 			output = []
-			specs = opt[:]
+			specs = opt[1:]
 
 			while len(specs) > 1:
 
@@ -96,16 +97,18 @@ class Upgrader:
 			if style: output.append('dl')
 			else: output.append('ol')
 
-			if start: output.append(start)
+			if start:
+				output.append('') # Start is actually the second parameter
+				output.append('%d' % start)
 
-			return '\tbegin#%s' % '#'.join(output)
+			return '\tbegin|%s' % '|'.join(output)
 
 		if env == 'roman':
-			return '\tbegin#%s' % '#'.join(['ol'] + args[0].split('@')[1:])
+			return '\tbegin|%s' % '|'.join(['ol'] + args[0].split('@')[1:])
 
 		if env == 'mini' or env == 'half':
 			if opt[1] == 'left' or opt[1] == 'right':
-				return '\tbegin#%s#%s\n' % (env, opt[1])
+				return '\tbegin|%s|%s\n' % (env, opt[1])
 			else: self.error('Illegal direction %s' % args)
 
 		if env == 'double' or env == 'triple':
@@ -114,6 +117,9 @@ class Upgrader:
 		self.error('Unknown env %s' % args)
 
 	def parse_line (self, line):
+
+		line = line.strip()
+		line = line.replace('|','@PIPE@')
 
 		if '#' not in line:
 			return '\t%s' % line
@@ -127,18 +133,18 @@ class Upgrader:
 
 			if token[1] == 'meta':
 				self.state = True
-				return '#'.join(token)
+				return '|'.join(token)
 
 			if token[1] == 'page' or token[1] == 'side':
 				self.state = False
-				return '#'.join(token)
+				return '|'.join(token)
 
 			self.error('Unknown state %s' % token)
 
 		if token[0] == 'include' or token[0] == 'include@static':
 
 			if len(token) != 2: self.error('Include# expects 1 arg %s' % token)
-			return 'require#%s' % token[1]
+			return 'require|%s' % token[1]
 
 		if self.state: return self.parse_meta(token)
 		else: return self.parse_content(token)
@@ -149,28 +155,28 @@ class Upgrader:
 		size = len(args)
 
 		if c == 'title':
-			if size > 1 and size < 4: return '%s' % '#'.join(args)
+			if size > 1 and size < 4: return '%s' % '|'.join(args)
 			else: self.error('Title expects 1-2 args %s' % args)
 
 		if c == 'short':
-			if size == 2: return '#'.join(args)
+			if size == 2: return '|'.join(args)
 			self.error('Short title expects 1 arg %s' % args)
 
 		if c == 'subtitle':
-			if size == 2: return '%s' % '#'.join(args)
+			if size == 2: return '|'.join(args)
 			else: self.error('Subtitle expects 1 arg %s' % args)
 
 		if c == 'prev' or c == 'next':
 			if size == 2 and args[1] == '':
-				return '%s#' % args[0]
+				return '%s|' % args[0]
 			if size == 3:
 				args[2] = ''.join(args[2].split('@'))
-				return '%s' % '#'.join(args)
+				return '|'.join(args)
 			self.error('Relations expect 0 or 2 args %s' % args)
 
 		if c == 'tag':
 			if size < 2: self.error('Tag# expects one or more args %s' % args)
-			return '#'.join(args)
+			return '|'.join(args)
 
 		if 'related' in c:
 			self.error('Related# command is no longer supported. Manually add reference within the side section.')
@@ -188,7 +194,7 @@ class Upgrader:
 		if len(args) > 2: content = self.parse_recursive(args)[1:]
 		else: content = args[0]
 
-		return '\t%s@%s#%s' % (c, direction, content)
+		return '\t%s@%s|%s' % (c, direction, content)
 
 	def parse_content (self, args):
 
@@ -199,19 +205,19 @@ class Upgrader:
 		if c == 'stop': return ''
 
 		if c == 'tab':
-			if len(args) == 2: return '#'.join(args)
+			if len(args) == 2: return '|'.join(args)
 			else: self.error('Tab expects 1 arg %s' % args)
 
 		if c == 'tag':
 			if len(args) < 2: self.error('Tag# expects one or more args %s' % args)
-			return '#'.join(args)
+			return '|'.join(args)
 
 		if c == 'post':
 			if len(args) < 3: self.error('Post# expects 2 or more args %s' % args)
-			return '#'.join(args)
+			return '|'.join(args)
 
 		if c == 'id':
-			if len(args) == 2: return '\tid#%s' % args[1]
+			if len(args) == 2: return '\tid|%s' % args[1]
 			else: self.error('Id@ expects 1 arg %s' % args)
 
 		if c == 'tid': return self.parse_tid(args)
@@ -220,7 +226,7 @@ class Upgrader:
 			return self.parse_title (c, args[1:], option)
 
 		elif c == 'p' or c == 'c' or c == 'r':
-			return '\t%s#\n%s' % (c, self.parse_recursive(args[1:]))
+			return '\t%s|\n%s' % (c, self.parse_recursive(args[1:]))
 
 		elif c == 'post':
 			return line
@@ -231,27 +237,27 @@ class Upgrader:
 		elif c == 'begin':
 			return self.parse_begin(args)
 		elif c == 'end':
-			return '\tend#'
+			return '\tend|'
 
-		elif c == 'br': return '\tbr#'
+		elif c == 'br': return '\tbr|'
 
 		if c == 'sec':
-			if len(option) == 2: return '\tid#%s\n\tbr#' % option[1]
-			return '\tbr#'
+			if len(option) == 2: return '\tid|%s\n\tbr|' % option[1]
+			return '\tbr|'
 
 		elif 'speak' in c:
 			return self.parse_speak(args)
 
 		elif c == 'img':
 			if len(args) > 3: self.error('img# expects 2-3 args %s' % args)
-			return '\t%s' % '#'.join(args)
+			return '\t%s' % '|'.join(args)
 
 		elif c == 'clear':
-			if len(args) == 2: return '\tclear#%s' % args[1]
-			return '\tclear#'
+			if len(args) == 2: return '\tclear|%s' % args[1]
+			return '\tclear|'
 
 		if c == 'include':
-			if len(args) == 2: return '\trequire#%s' % args[1]
+			if len(args) == 2: return '\trequire|%s' % args[1]
 			else: self.error('include# expects 1 arg %s' % args)
 
 		if 'require' in c:
@@ -266,4 +272,4 @@ class Upgrader:
 
 		for line in open(sys.argv[1], 'r').readlines():
 			self.lineno += 1
-			self.content += ('%s\n' % self.parse_line (line.strip()))
+			self.content += ('%s\n' % self.parse_line(line).replace('@SHARP@', '#'))

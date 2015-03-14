@@ -13,7 +13,7 @@ input_file    = sys.argv[1]
 output_file   = sys.argv[2]
 
 with open(input_file, 'r') as f:
-	token = f.readline().split('#')
+	token = f.readline().split('|')
 
 if token[0] != 'jump':
 	print('Line does not contain a jump directive! %s' % line, file=sys.stderr)
