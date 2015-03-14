@@ -52,16 +52,16 @@ class Splitter:
 			self.lineno += 1
 			if self.debug: print(line)
 
-			if len(line) and line[0] == '#':
+			if len(line) and line[0] == '|':
 				if self.debug: print('Line is a comment, skip')
 				continue
 
-			if '#' not in line:
+			if '|' not in line:
 				self.append_content(line)
 				if self.debug: print('Line is simple content, appending')
 				continue
 
-			token = line.split('#')
+			token = line.split('|')
 			command = token[0]
 
 			if command == 'jump': self.jump = token[1]
@@ -100,7 +100,7 @@ class Splitter:
 			destination = ("%s/%s/" % (self.base, roman.convert(self.first)))
 		else:
 			destination = ("%s/%s/%s/" % (self.base, page_name, roman.convert(self.first)))
-		filecontent = ("jump#%s" % destination)
+		filecontent = ("jump|%s" % destination)
 		with open(jumpfile_path, 'w') as outfile:
 			outfile.write(filecontent)
 
@@ -129,18 +129,18 @@ class Splitter:
 					destination = '%s/%s' % (self.base, roman.convert(self.prevs[name]))
 				else:
 					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.prevs[name]))
-				varmeta += 'tabprev#/%s/\n' % destination
+				varmeta += 'tabprev|/%s/\n' % destination
 
 			if name in self.nexts.keys() and self.nexts[name]:
 				if page_name == 'Index':
 					destination = '%s/%s' % (self.base, roman.convert(self.nexts[name]))
 				else:
 					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.nexts[name]))
-				varmeta += 'tabnext#/%s/\n' % destination
+				varmeta += 'tabnext|/%s/\n' % destination
 
-			varmeta += 'side#%s\n' % side_path
+			varmeta += 'side|%s\n' % side_path
 
-			filecontent = ('%sstart#page\n%s' % (varmeta, value))
+			filecontent = ('%sstart|page\n%s' % (varmeta, value))
 			with open(path, 'w') as outfile:
 				outfile.write(filecontent)
 
@@ -156,9 +156,9 @@ class Splitter:
 
 		self.check_dir_path(index_path)
 		if self.jump:
-			filecontent = 'jump#%s' % self.jump
+			filecontent = 'jump|%s' % self.jump
 		else:
-			filecontent = ('%s\nstart#side\n%s\nstart#page\n%s' % (self.meta, self.side, self.tabs[None]))
+			filecontent = ('%s\nstart|side\n%s\nstart|page\n%s' % (self.meta, self.side, self.tabs[None]))
 		with open(index_path, 'w') as outfile:
 			outfile.write(filecontent)
 
