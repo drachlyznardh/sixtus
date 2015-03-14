@@ -97,7 +97,7 @@ class Upgrader:
 			if style: output.append('dl')
 			else: output.append('ol')
 
-			if start: output.append(start)
+			if start: output.append('%d' % start)
 
 			return '\tbegin|%s' % '|'.join(output)
 
