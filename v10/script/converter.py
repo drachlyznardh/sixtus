@@ -117,12 +117,15 @@ class ContentConverter:
 
 		if self.writing: self.stop_writing()
 
+		if self.p_or_li: tag = 'p'
+		else: tag = 'li'
+
 		if type == 'p':
-			self.content += ('<p>%s' % text)
+			self.content += ('<%s>%s' % (tag, text))
 		elif type == 'c':
-			self.content += ('<p class="center">%s' % text)
+			self.content += ('<%s class="center">%s' % (tag, text))
 		elif type == 'r':
-			self.content += ('<p class="reverse">%s' % text)
+			self.content += ('<%s class="reverse">%s' % (tag, text))
 
 		self.writing = True
 
@@ -242,8 +245,8 @@ class ContentConverter:
 			if size > 1: output.append('style="margin-left:%s"' % args[1])
 			if size > 2: output.append('start="%s"' % args[2])
 
-			self.content += ('<ul %s>' % ' '.join(output))
-			self.environment.append((self.p_or_li, '</ul>'))
+			self.content += ('<ol %s>' % ' '.join(output))
+			self.environment.append((self.p_or_li, '</ol>'))
 			self.p_or_li = False
 
 		elif env == 'mini' or env == 'half':
@@ -343,6 +346,7 @@ class FullConverter(ContentConverter):
 			self.sideinclude = args[0]
 		elif c == 'title':
 			self.meta['title'] = args[0]
+			if len(args) == 2: self.meta['subtitle'] = args[1]
 		elif c == 'short':
 			self.meta['short'] = args[0]
 		elif c == 'subtitle':
