@@ -345,7 +345,7 @@ class FullConverter(ContentConverter):
 		if c == 'jump':
 			self.jump = args[0]
 		elif c == 'side':
-			self.sideinclude = args[0]
+			self.side_location = args[0]
 		elif c == 'title':
 			self.meta['title'] = args[0]
 			if len(args) == 2: self.meta['subtitle'] = args[1]
