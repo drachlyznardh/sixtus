@@ -86,6 +86,7 @@ class Poster:
 			if self.next_page:
 				print('next#Blog/%s/%s/#%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]), file=f)
 			print('start#side', file=f)
+			print('stitle#%s %s' % (self.this_page[2], self.this_page[0]), file=f)
 			for number, value in self.post_title.items():
 				print('p#<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
 				print('\n&amp;\n'.join(['link##%s#%s-%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
