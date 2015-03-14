@@ -188,7 +188,7 @@ class Upgrader:
 		if len(args) > 2: content = self.parse_recursive(args)[1:]
 		else: content = args[0]
 
-		return '\t%s#%s' % (c, content)
+		return '\t%s@%s#%s' % (c, direction, content)
 
 	def parse_content (self, args):
 

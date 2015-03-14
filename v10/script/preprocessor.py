@@ -19,7 +19,7 @@ class Preprocessor:
 		self.lineno = 0
 		self.inclusion = []
 		self.content = []
-		self.match = re.compile(r'^require#(.*)')
+		self.re_require = re.compile(r'^require#(.*)')
 		self.extract = r'\1'
 
 	def parse_file (self, filename):
@@ -66,8 +66,8 @@ class Preprocessor:
 			self.content.append(line)
 			return
 
-		if self.match.match(line): # Require directive
-			target_name = self.match.sub(self.extract, line)
+		if self.re_require.match(line): # Require directive
+			target_name = self.re_require.sub(self.extract, line)
 			target_file = self.get_existing_path(self.base, target_name)
 			self.inclusion.append((self.filename, self.lineno))
 			self.content.append('source#%s#%d' % (target_file, 0))

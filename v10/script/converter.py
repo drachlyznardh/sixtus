@@ -55,19 +55,7 @@ class ContentConverter:
 		if self.debug:
 			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
-		if c == 'title' or c == 'title@left':
-			self.stop_writing()
-			self.content += ('<h2>%s</h2>' % self.parse_recursive(args))
-		elif c == 'title@right':
-			self.stop_writing()
-			self.content += ('<h2 class="reverse">%s</h2>' % self.parse_recursive(args))
-		elif c == 'stitle' or c == 'stitle@left':
-			self.stop_writing()
-			self.content += ('<h3>%s</h3>' % self.parse_recursive(args))
-		elif c == 'stitle@right':
-			self.stop_writing()
-			self.content += ('<h3 class="reverse">%s</h3>' % self.parse_recursive(args))
-		elif c == 'link':
+		if c == 'link':
 			self.append_content(self.make_link(args))
 		elif c == 'tid':
 			self.append_content(self.make_tid(args))
@@ -95,7 +83,30 @@ class ContentConverter:
 			self.close_env(args)
 		elif c == 'tag':
 			pass # Tags are supported, right now…
+		elif c == 'title' or c == 'stitle' or '@' in c:
+			self.parse_title(c, args)
 		else: self.error('Unknown content c [%s] %s' % (c, args))
+
+	def parse_title (self, command, args):
+
+			option = command.split('@')
+			c = option[0]
+
+			if c == 'title': tag = 'h2'
+			elif c == 'stitle': tag = 'h3'
+			else: self.error('What title is %s supposed to be? %s %s' % (c, command, args))
+
+			if len(option) == 1 or option[1] == 'left': direction = False
+			elif option[1] == 'center': direction = 'class="center"'
+			elif option[1] == 'right': direction = 'class="reverse"'
+			else: self.error('What direction is %s supposed to be? %s %s' % (option[1], command, args))
+
+			content = self.parse_recursive(args)
+			self.stop_writing()
+			if direction:
+				self.content += '<%s %s>%s</%s>' % (tag, direction, content, tag)
+			else:
+				self.content += '<%s>%s</%s>' % (tag, content, tag)
 
 	def parse_recursive (self, args):
 
