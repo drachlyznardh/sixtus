@@ -58,7 +58,8 @@ div.half-left-out, div.mini-left-out { float: left; }
 div.half-right-in, div.mini-right-in { margin-left: .5em; }
 div.half-left-in, div.mini-left-in { margin-right: .5em; }
 
-p,h2 { text-align: justify; text-indent: .5em; margin: .5em 0em .5em 0em; }
+p,h2 { text-indent: .5em; margin: .5em 0em .5em 0em; }
+p,li { text-align: justify }
 .reverse { text-align: right; }
 .center { text-align: center; }
 
