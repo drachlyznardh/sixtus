@@ -57,23 +57,23 @@ $(YEAR_PAGES:.pag=.list): %.list: %.pag
 	@touch $@
 	@echo Done
 
-$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post $(REL_FILE)
+$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post $(REL_FILE) $(SITE_CONF_FILE)
 	@echo -n "Generating month page $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(REL_FILE) $(NAME_FILE) $(*D) $(*F)
 	@echo Done
 
-$(YEAR_PAGES): %.pag: $(REL_FILE)
+$(YEAR_PAGES): %.pag: $(REL_FILE) $(SITE_CONF_FILE)
 	@echo -n "Generating year page $@… "
 	@$(SCRIPT_DIR)blog-make-year-page $@ $(@:.pag=.list) $(*F) $(REL_FILE) $(NAME_FILE) $(filter %.list,$^)
 	@echo Done
 
-$(INDEX_PAGE):
+$(INDEX_PAGE): $(SITE_CONF_FILE)
 	@echo -n "Generating index page $@… "
 	@$(SCRIPT_DIR)blog-make-index-page $@ $(REL_FILE)
 	@echo Done
 
-$(ARCHIVE_PAGE):
+$(ARCHIVE_PAGE): $(SITE_CONF_FILE)
 	@echo -n "Generating archive page $@… "
 	@$(SCRIPT_DIR)blog-make-archive-page $@ $(NAME_FILE) $(YEAR_PAGES:.pag=.list)
 	@echo Done
