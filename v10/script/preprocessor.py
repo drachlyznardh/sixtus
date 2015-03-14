@@ -41,7 +41,7 @@ class Preprocessor:
 			with open(filename, 'r') as input_file:
 				for line in input_file:
 					self.lineno += 1
-					self.parse_line(line.strip())
+					self.parse_line(self.clean_line(line))
 		except EnvironmentError as e:
 			print('\nPreprocessor could not open %s: %s' % (filename, e.strerror), file=sys.stderr)
 			sys.exit(1)
