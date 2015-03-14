@@ -60,7 +60,7 @@ with open(pag_file, 'w') as f:
 with open(list_file, 'w') as f:
 
 	print('id#%s' % this_year, file=f)
-	print('title#%s' % this_year, file=f)
+	print('stitle#link#Blog/%s/#%s' % (this_year, this_year), file=f)
 	for i in xrange(3):
 		line = []
 		for j in xrange(4):
