@@ -5,27 +5,34 @@ from __future__ import print_function
 import sys
 import re
 
-re_include = re.compile(r'^source\|(.*)\|.*\n$')
-re_tab     = re.compile(r'^tab\|(.*)\n$')
-
 Six_file = sys.argv[1]
 
-sources = set()
-tabs = set()
+def extract_deps (filename):
 
-with open(Six_file, 'r') as f:
-	for line in f.readlines():
+	debug = False
 
-		if re_include.match(line):
-			source = re_include.sub(r'\1', line)
-			sources.add(source)
-			print('Source match with (%s), (%s)' % (line, source))
-			sys.exit(1)
-		elif re_tab.match(line):
-			tab = re_tab.sub(r'\1', line)
-			tabs.add(tab)
-			print('Tab match with %s' % tab)
-		else: print('Line [%s]' % line[:-1])
+	re_include = re.compile(r'^source\|(.*)\|.*\n$')
+	re_tab     = re.compile(r'^tab\|(.*)\n$')
+
+	sources = set()
+	tabs = set()
+
+	with open(filename, 'r') as f:
+		for line in f.readlines():
+
+			if re_include.match(line):
+				source = re_include.sub(r'\1', line)
+				sources.add(source)
+				if debug: print('Source match with (%s), (%s)' % (line, source))
+			elif re_tab.match(line):
+				tab = re_tab.sub(r'\1', line)
+				tabs.add(tab)
+				if debug: print('Tab match with (%s), (%s)' % (line, tab))
+			elif debug: print('Line [%s]' % line[:-1])
+
+	return sources, tabs
+
+sources, tabs = extract_deps(Six_file)
 
 print(sources)
 print(tabs)
