@@ -4,5 +4,15 @@
 from __future__ import print_function
 import sys
 
+from preprocessor import Preprocessor
+
+if len(sys.argv) != 4:
+	args = ['.pag file', 'page base', '.Six file']
+	usage = '\nUsage: %s <%s>' % (sys.argv[0], '> <'.join(args))
+	print(usage, file=sys.stderr)
+	call = 'Call was %s' % ' '.join(sys.argv)
+	print(call, file=sys.stderr)
+	sys.exit(1)
+
 print(sys.argv)
 sys.exit(1)
