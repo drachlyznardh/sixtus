@@ -37,19 +37,19 @@ $(BUILD_DIR)%.six:
 		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^)))
 	@echo Done
 
-$(PHP_PAGE_FILES): $(DEPLOY_DIR)%/index.php: $(BUILD_DIR)%/page.six
+$(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six
 	@echo -n "Generating page file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-page-to-php $< $(*D) $@
 	@echo Done
 
-$(PHP_SIDE_FILES): $(DEPLOY_DIR)%/side.php: $(BUILD_DIR)%/side.six
+$(PHP_SIDE_FILES): $(DEPLOY_DIR)%side.php: $(BUILD_DIR)%side.six
 	@echo -n "Generating side file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
 	@echo Done
 
-$(PHP_JUMP_FILES): $(DEPLOY_DIR)%/index.php: $(BUILD_DIR)%/jump.six
+$(PHP_JUMP_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%jump.six
 	@echo -n "Generating jump file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-jump-to-php $< $@
