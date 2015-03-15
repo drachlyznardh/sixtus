@@ -9,7 +9,7 @@ ifeq ($(filter %clean,$(MAKECMDGOALS)),)
 endif
 
 PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.page.six, $(SIX_FILES)))
-PHP_FILES += $(patsubst $(BUILD_DIR)%.side.six, $(DEPLOY_DIR)%.side.php, $(filter %.side.six, $(SIX_FILES)))
+PHP_FILES += $(patsubst $(BUILD_DIR)%/index.side.six, $(DEPLOY_DIR)%/side.php, $(filter %.side.six, $(SIX_FILES)))
 PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
 
 sixtus-pages: $(TCH_FILES) $(PHP_FILES)
@@ -39,7 +39,7 @@ $(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
 	@$(SCRIPT_DIR)six-page-to-php $< $(*D) $@
 	@echo Done
 
-$(DEPLOY_DIR)%.side.php: $(BUILD_DIR)%.side.six
+$(DEPLOY_DIR)%/side.php: $(BUILD_DIR)%/index.side.six
 	@echo -n "Generating side file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
