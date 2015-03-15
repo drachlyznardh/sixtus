@@ -7,82 +7,28 @@ import re
 
 import mapper
 import roman
+import deps
 
-print(sys.argv)
+if len(sys.argv) != 7:
+	args = ['.Six file', 'map file',
+		'build dir', 'this dir', 'this page',
+		'.dep file']
+	usage = 'Usage: %s <%s>' % (sys.argv[0], ' '.join(args))
+	print(usage, file=sys.stderr)
+	sys.exit(1)
 
 Six_file  = sys.argv[1]
 map_file  = sys.argv[2]
 build_dir = sys.argv[3]
 this_dir  = sys.argv[4]
 this_page = sys.argv[5]
+dep_file  = sys.argv[6]
 
-def extract_deps (filename):
-
-	debug = False
-
-	re_include = re.compile(r'^source\|(.*)\|.*\n$')
-	re_tab     = re.compile(r'^tab\|(.*)\n$')
-
-	sources = set()
-	tabs = set()
-
-	with open(filename, 'r') as f:
-		for line in f.readlines():
-
-			if re_include.match(line):
-				source = re_include.sub(r'\1', line)
-				sources.add(source)
-				if debug: print('Source match with (%s), (%s)' % (line, source))
-			elif re_tab.match(line):
-				tab = re_tab.sub(r'\1', line)
-				tabs.add(tab)
-				if debug: print('Tab match with (%s), (%s)' % (line, tab))
-			elif debug: print('Line [%s]' % line[:-1])
-
-	return list(sources), list(tabs)
-
-sources, tabs = extract_deps(Six_file)
-
-print(sources)
-print(tabs)
-
-print(this_dir)
-print(this_page)
+sources, tabs = deps.extract(Six_file)
 
 mapped_dir = mapper.get(map_file, this_dir)
 mapped_page = roman.convert(this_page)
 
 destination = '%s%s/%s/' % (build_dir, mapped_dir, mapped_page)
-print(destination)
 
-if len(tabs) == 0:
-	print('SIX_FILES += %spage.six' % destination)
-	print('%spage.six: %s' % (destination, ' '.join(sources)))
-	sys.exit(0)
-
-files = ['%sjump.six' % destination]
-files.append('%sside.six' % destination)
-for tab in tabs:
-	files.append('%s%s/page.six' % (destination, roman.convert(tab)))
-
-print('SIX_FILES += %s' % ' '.join(files))
-print('%s: %s' % (' '.join(files), ' '.join(sources)))
-
-print(sys.argv)
-sys.exit(1)
-
-if len(sys.argv) != 4:
-	args = ['.pag file', 'page base', '.Six file']
-	usage = '\nUsage: %s <%s>' % (sys.argv[0], '> <'.join(args))
-	print(usage, file=sys.stderr)
-	call = 'Call was %s' % ' '.join(sys.argv)
-	print(call, file=sys.stderr)
-	sys.exit(1)
-
-pag_file  = sys.argv[1]
-page_base = sys.argv[2]
-Six_file  = sys.argv[3]
-
-pp = Preprocessor(page_base)
-pp.parse_file(pag_file)
-pp.output_file(Six_file)
+deps.insert(dep_file, destination, sources, tabs)
