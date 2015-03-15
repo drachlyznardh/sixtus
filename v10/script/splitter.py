@@ -197,7 +197,7 @@ class Splitter:
 			self.touch_files.append(path)
 			self.output_side_file(path)
 
-			self.output_many_tabs(page_name, '../index.side.php', build_dir)
+			self.output_many_tabs(page_name, '../side.php', build_dir)
 
 		else:
 
