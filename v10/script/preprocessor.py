@@ -86,3 +86,9 @@ class Preprocessor:
 			return
 
 		self.content.append(line) # Ordinany command
+
+	def output_file (self, filename):
+
+		with open(filename, 'w') as f:
+			for line in self.content:
+				print(line, file=f)
