@@ -28,6 +28,7 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@echo -n "Extracting dependencies for file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)Six-to-dep $< $(dir $<) $(SITE_MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
+	@#$(SCRIPT_DIR)pag-to-tch $< $(dir $<) $(SITE_MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 	@echo Done
 
 $(BUILD_DIR)%.six:
