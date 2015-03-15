@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- encoding: utf-8 -*-
 
+from __future__ import print_function
+import re
 import roman
 
 def extract (filename):
@@ -28,7 +30,7 @@ def insert (filename, destination, sources, tabs):
 		if len(tabs) == 0:
 			print('SIX_FILES += %spage.six' % destination, file=f)
 			print('%spage.six: %s' % (destination, ' '.join(sources)), file=f)
-			sys.exit(0)
+			return
 
 		files = ['%sjump.six' % destination]
 		files.append('%sside.six' % destination)
