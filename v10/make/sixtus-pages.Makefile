@@ -8,11 +8,15 @@ ifeq ($(filter %clean,$(MAKECMDGOALS)),)
 -include $(TCH_FILES)
 endif
 
-PHP_FILES += $(patsubst $(BUILD_DIR)%.page.six, $(DEPLOY_DIR)%.php, $(filter %.page.six, $(SIX_FILES)))
-PHP_FILES += $(patsubst $(BUILD_DIR)%/index.side.six, $(DEPLOY_DIR)%/side.php, $(filter %.side.six, $(SIX_FILES)))
-PHP_FILES += $(patsubst $(BUILD_DIR)%.jump.six, $(DEPLOY_DIR)%.php, $(filter %.jump.six, $(SIX_FILES)))
+SIX_PAGE_FILES := $(filter %page.six, $(SIX_FILES))
+SIX_SIDE_FILES := $(filter %side.six, $(SIX_FILES))
+SIX_JUMP_FILES := $(filter %jump.six, $(SIX_FILES))
 
-sixtus-pages: $(TCH_FILES) $(PHP_FILES)
+PHP_PAGE_FILES := $(patsubst $(BUILD_DIR)%page.six, $(DEPLOY_DIR)%index.php, $(SIX_PAGE_FILES))
+PHP_SIDE_FILES := $(patsubst $(BUILD_DIR)%side.six, $(DEPLOY_DIR)%side.php, $(SIX_SIDE_FILES))
+PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(SIX_JUMP_FILES))
+
+sixtus-pages: $(TCH_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
 
 $(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(MAP_FILE)
 	@echo -n "Splitting source file $<… "
@@ -33,19 +37,19 @@ $(BUILD_DIR)%.six:
 		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^)))
 	@echo Done
 
-$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.page.six
+$(PHP_PAGE_FILES): $(DEPLOY_DIR)%/index.php: $(BUILD_DIR)%/page.six
 	@echo -n "Generating page file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-page-to-php $< $(*D) $@
 	@echo Done
 
-$(DEPLOY_DIR)%/side.php: $(BUILD_DIR)%/index.side.six
+$(PHP_SIDE_FILES): $(DEPLOY_DIR)%/side.php: $(BUILD_DIR)%/side.six
 	@echo -n "Generating side file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-side-to-php $< $(*D) $@
 	@echo Done
 
-$(DEPLOY_DIR)%.php: $(BUILD_DIR)%.jump.six
+$(PHP_JUMP_FILES): $(DEPLOY_DIR)%/index.php: $(BUILD_DIR)%/jump.six
 	@echo -n "Generating jump file $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)six-jump-to-php $< $@
