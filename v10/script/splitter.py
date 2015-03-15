@@ -48,10 +48,9 @@ class Splitter:
 
 	def save_tab (self):
 
-		if self.tabname:
-			if self.tabname in self.tabs:
-				self.tabs[self.tabname] += self.content
-			else: self.tabs[self.tabname] = self.content
+		if self.tabname in self.tabs:
+			self.tabs[self.tabname] += self.content
+		else: self.tabs[self.tabname] = self.content
 
 	def split_content (self, lines):
 
