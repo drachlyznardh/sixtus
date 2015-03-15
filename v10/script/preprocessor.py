@@ -20,8 +20,6 @@ class Preprocessor:
 		self.inclusion = []
 		self.content = []
 		self.re_require = re.compile(r'^require\|(.*)')
-		self.re_pipe = re.compile(r'(@PIPE@)')
-		self.re_at = re.compile(r'(@AT@)')
 		self.extract = r'\1'
 
 	def clean_line (self, line):
