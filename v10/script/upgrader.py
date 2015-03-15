@@ -31,9 +31,9 @@ class Upgrader:
 
 		c = args[0]
 
-		if c == 'link': return self.parse_link(args)
-		if c == 'tid': return self.parse_tid(args)
-		if 'speak' in c: return self.parse_speak(args)
+		if c == 'link': return self.parse_link(args)[1:]
+		if c == 'tid': return self.parse_tid(args)[1:]
+		if 'speak' in c: return self.parse_speak(args)[1:]
 
 		self.error('Cannot recur on %s' % args)
 
@@ -61,7 +61,7 @@ class Upgrader:
 	def parse_speak (self, args):
 
 		author = args[0].split('@')[1]
-		return 'speak|%s|%s' % (author, args[1])
+		return '\tspeak|%s|%s' % (author, args[1])
 
 	def parse_begin (self, args):
 
@@ -191,10 +191,7 @@ class Upgrader:
 		elif option[1] == 'center': direction = 'center'
 		else: self.error('Unknown direction [%s] [%s] [%s]' % (c, option, args))
 
-		if len(args) > 2: content = self.parse_recursive(args)[1:]
-		else: content = args[0]
-
-		return '\t%s@%s|%s' % (c, direction, content)
+		return '\t%s@%s|%s' % (c, direction, self.parse_recursive(args))
 
 	def parse_content (self, args):
 
@@ -226,7 +223,7 @@ class Upgrader:
 			return self.parse_title (c, args[1:], option)
 
 		elif c == 'p' or c == 'c' or c == 'r':
-			return '\t%s|\n%s' % (c, self.parse_recursive(args[1:]))
+			return '\t%s|%s' % (c, self.parse_recursive(args[1:]))
 
 		elif c == 'post':
 			return line
