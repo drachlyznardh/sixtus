@@ -111,7 +111,7 @@ ol.roman { list-style-type:upper-roman; }
 ol.decimal { }
 
 @media screen and (min-device-width: 801px) {
-	div#content { width: 56%; padding-left: 15%; padding-right: 29%; }
+	div#content { width: 55%; padding-left: 15%; padding-right: 30%; }
 	div#right-side-panel { left: 71%; }
 	div#left-side-icon, div#right-side-icon,
 	div#left-back, div#right-back { display: none; }
