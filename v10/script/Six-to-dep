@@ -55,6 +55,19 @@ mapped_page = roman.convert(this_page)
 destination = '%s%s/%s/' % (build_dir, mapped_dir, mapped_page)
 print(destination)
 
+if len(tabs) == 0:
+	print('SIX_FILES += %spage.six' % destination)
+	print('%spage.six: %s' % (destination, ' '.join(sources)))
+	sys.exit(0)
+
+files = ['%sjump.six' % destination]
+files.append('%sside.six' % destination)
+for tab in tabs:
+	files.append('%s%s/page.six' % (destination, roman.convert(tab)))
+
+print('SIX_FILES += %s' % ' '.join(files))
+print('%s: %s' % (' '.join(files), ' '.join(sources)))
+
 print(sys.argv)
 sys.exit(1)
 
