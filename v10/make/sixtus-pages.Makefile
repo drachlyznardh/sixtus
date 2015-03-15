@@ -31,17 +31,24 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@echo Done
 
 $(BUILD_DIR)%.six:
-	@echo -n "Splitting source file $<… "
-	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
-	@$(SCRIPT_DIR)pag-to-six\
-		$(firstword $(filter %.pag, $^))\
-		$(dir $(firstword $(filter %.pag, $^)))\
-		$(SITE_MAP_FILE)\
-		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
-		$(basename $(notdir $<))\
-		$(BUILD_DIR)\
-		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(filter %.pag, $^)))
+	@echo -n "Splipping source file [$<]… "
+	@echo $(SCRIPT_DIR)Six-to-six \
+		$(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.Six, $(firstword $(filter %.pag, $^))) \
+		$(*D)
 	@echo Done
+
+#$(BUILD_DIR)%.six:
+#	@echo -n "Splitting source file $<… "
+#	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
+#	@$(SCRIPT_DIR)pag-to-six\
+#		$(firstword $(filter %.pag, $^))\
+#		$(dir $(firstword $(filter %.pag, $^)))\
+#		$(SITE_MAP_FILE)\
+#		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
+#		$(basename $(notdir $<))\
+#		$(BUILD_DIR)\
+#		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(filter %.pag, $^)))
+#	@echo Done
 
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six
 	@echo -n "Generating page file $@… "
