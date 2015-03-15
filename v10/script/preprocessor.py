@@ -35,6 +35,8 @@ class Preprocessor:
 		self.origin_files.append(filename)
 		self.lineno = 0
 
+		self.content.append('source|%s|%d' % (filename, 0))
+
 		try:
 			with open(filename, 'r') as input_file:
 				for line in input_file:
