@@ -1,0 +1,50 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+import re
+
+re_include = re.compile(r'^source\|(.*)\|.*\n$')
+re_tab     = re.compile(r'^tab\|(.*)\n$')
+
+Six_file = sys.argv[1]
+
+sources = set()
+tabs = set()
+
+with open(Six_file, 'r') as f:
+	for line in f.readlines():
+
+		if re_include.match(line):
+			source = re_include.sub(r'\1', line)
+			sources.add(source)
+			print('Source match with (%s), (%s)' % (line, source))
+			sys.exit(1)
+		elif re_tab.match(line):
+			tab = re_tab.sub(r'\1', line)
+			tabs.add(tab)
+			print('Tab match with %s' % tab)
+		else: print('Line [%s]' % line[:-1])
+
+print(sources)
+print(tabs)
+
+print(sys.argv)
+sys.exit(1)
+
+if len(sys.argv) != 4:
+	args = ['.pag file', 'page base', '.Six file']
+	usage = '\nUsage: %s <%s>' % (sys.argv[0], '> <'.join(args))
+	print(usage, file=sys.stderr)
+	call = 'Call was %s' % ' '.join(sys.argv)
+	print(call, file=sys.stderr)
+	sys.exit(1)
+
+pag_file  = sys.argv[1]
+page_base = sys.argv[2]
+Six_file  = sys.argv[3]
+
+pp = Preprocessor(page_base)
+pp.parse_file(pag_file)
+pp.output_file(Six_file)
