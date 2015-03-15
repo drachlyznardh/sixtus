@@ -1,11 +1,11 @@
 
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
-TCH_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(PAG_FILES))
+DEP_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(PAG_FILES))
 
 all: sixtus-pages
 
 ifeq ($(filter %clean,$(MAKECMDGOALS)),)
--include $(TCH_FILES)
+-include $(DEP_FILES)
 endif
 
 SIX_PAGE_FILES := $(filter %page.six, $(SIX_FILES))
@@ -16,9 +16,9 @@ PHP_PAGE_FILES := $(patsubst $(BUILD_DIR)%page.six, $(DEPLOY_DIR)%index.php, $(S
 PHP_SIDE_FILES := $(patsubst $(BUILD_DIR)%side.six, $(DEPLOY_DIR)%side.php, $(SIX_SIDE_FILES))
 PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(SIX_JUMP_FILES))
 
-sixtus-pages: $(TCH_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
+sixtus-pages: $(DEP_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
 
-$(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(SITE_MAP_FILE)
+$(BUILD_DIR)%.dep: $(PAG_DIR)%.pag $(SITE_MAP_FILE)
 	@echo -n "Splitting source file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)pag-to-six $< $(dir $<) $(SITE_MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
@@ -34,7 +34,7 @@ $(BUILD_DIR)%.six:
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
 		$(basename $(notdir $<))\
 		$(BUILD_DIR)\
-		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^)))
+		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(filter %.pag, $^)))
 	@echo Done
 
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six
