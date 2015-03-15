@@ -199,7 +199,7 @@ class Upgrader:
 		c = option[0]
 
 		if c == 'start': return line
-		if c == 'stop': return ''
+		if c == 'stop': return False
 
 		if c == 'tab':
 			if len(args) == 2: return '|'.join(args)
@@ -269,4 +269,6 @@ class Upgrader:
 
 		for line in open(sys.argv[1], 'r').readlines():
 			self.lineno += 1
-			self.content += ('%s\n' % self.parse_line(line).replace('@SHARP@', '#'))
+			result = self.parse_line(line)
+			if result:
+				self.content += '%s\n' % result.replace('@SHARP@', '#')
