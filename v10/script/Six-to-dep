@@ -5,7 +5,16 @@ from __future__ import print_function
 import sys
 import re
 
-Six_file = sys.argv[1]
+import mapper
+import roman
+
+print(sys.argv)
+
+Six_file  = sys.argv[1]
+map_file  = sys.argv[2]
+build_dir = sys.argv[3]
+this_dir  = sys.argv[4]
+this_page = sys.argv[5]
 
 def extract_deps (filename):
 
@@ -30,12 +39,21 @@ def extract_deps (filename):
 				if debug: print('Tab match with (%s), (%s)' % (line, tab))
 			elif debug: print('Line [%s]' % line[:-1])
 
-	return sources, tabs
+	return list(sources), list(tabs)
 
 sources, tabs = extract_deps(Six_file)
 
 print(sources)
 print(tabs)
+
+print(this_dir)
+print(this_page)
+
+mapped_dir = mapper.get(map_file, this_dir)
+mapped_page = roman.convert(this_page)
+
+destination = '%s%s/%s/' % (build_dir, mapped_dir, mapped_page)
+print(destination)
 
 print(sys.argv)
 sys.exit(1)
