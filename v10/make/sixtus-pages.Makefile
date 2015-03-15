@@ -18,10 +18,10 @@ PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(S
 
 sixtus-pages: $(TCH_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
 
-$(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(MAP_FILE)
+$(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(SITE_MAP_FILE)
 	@echo -n "Splitting source file $<… "
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)pag-to-six $< $(dir $<) $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
+	@$(SCRIPT_DIR)pag-to-six $< $(dir $<) $(SITE_MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
 	@echo Done
 
 $(BUILD_DIR)%.six:
@@ -30,7 +30,7 @@ $(BUILD_DIR)%.six:
 	@$(SCRIPT_DIR)pag-to-six\
 		$(firstword $(filter %.pag, $^))\
 		$(dir $(firstword $(filter %.pag, $^)))\
-		$(MAP_FILE)\
+		$(SITE_MAP_FILE)\
 		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
 		$(basename $(notdir $<))\
 		$(BUILD_DIR)\
