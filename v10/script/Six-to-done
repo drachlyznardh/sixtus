@@ -86,6 +86,12 @@ class Splitter:
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
 
+	def output_all_files (self, base):
+
+		for name in self.tabs:
+			if name: print('%s/%s' % (base, roman.convert(name)))
+		raise Exception('%s/%s' % (base, roman.convert(name)))
+
 	def output_default_tab (self, base):
 
 		page_path = os.path.normpath('%s/page.six' % base)
@@ -105,11 +111,7 @@ class Splitter:
 
 		if self.jump: self.output_single_jump_file(base)
 
-		elif len(self.tabs) > 1:
-
-			for name in self.tabs:
-				print('%s/%s' % (base, roman.convert(name)))
-			raise Exception('%s/%s' % (base, roman.convert(name)))
+		elif len(self.tabs) > 1: self.output_all_files(base)
 
 		elif None in self.tabs: self.output_default_tab(base)
 
