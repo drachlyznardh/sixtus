@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import os
 
 import roman
 
@@ -65,6 +66,18 @@ class Splitter:
 		elif c == 'start': self.update_state(token[1])
 		else: self.append(line)
 
+	def output_default_tab (self, base):
+
+		page_path = os.path.normpath('%s/page.six' % base)
+		print('Page file on [%s]' % page_path)
+
+	def output_single_tab (self, base):
+
+		page_path = os.path.normpath('%s/%s/page.six' % (base, name))
+		print('Page file on [%s]' % page_path)
+		jump_path = os.path.normpath('%s/jump.six' % (base, name))
+		print('Jump file on [%s]' % jump_path)
+
 	def output_files (self, base):
 
 		if len(self.tabs) > 1:
@@ -75,6 +88,7 @@ class Splitter:
 
 		elif None in self.tabs:
 
+			self.output_default_tab(base)
 			raise('Default tab %s' % base)
 
 		else:
