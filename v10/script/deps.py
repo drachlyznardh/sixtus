@@ -25,6 +25,8 @@ def extract (filename):
 
 def insert (filename, destination, sources, tabs):
 
+	destination = roman.clear(destination)
+
 	with open(filename, 'w') as f:
 
 		if len(tabs) == 0:
