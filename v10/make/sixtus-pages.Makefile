@@ -34,7 +34,7 @@ $(BUILD_DIR)%.six:
 	@echo -n "Splipping source file [$<]… "
 	@$(SCRIPT_DIR)Six-to-six \
 		$(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$(firstword $(filter %.pag,$^))) \
-		$(*D)
+		$(BUILD_DIR)$(*D)
 	@echo Done
 
 #$(BUILD_DIR)%.six:
