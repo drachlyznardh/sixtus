@@ -97,16 +97,16 @@ class Splitter:
 
 			raise 'Many tabs'
 			for name in self.tabs:
-				raise('%s/%s' % (base, roman.convert(name)))
+				raise Exception('%s/%s' % (base, roman.convert(name)))
 
 		elif None in self.tabs:
 
 			self.output_default_tab(base)
-			raise('Default tab %s' % base)
+			raise Exception('Default tab %s' % base)
 
 		else:
 
-			print('Single tab %s/%s' % (base, roman.convert(self.tabs.keys()[0])))
+			raise Exception('Single tab %s/%s' % (base, roman.convert(self.tabs.keys()[0])))
 
 print(sys.argv)
 
