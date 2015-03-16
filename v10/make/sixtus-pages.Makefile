@@ -2,6 +2,8 @@
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 DEP_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(PAG_FILES))
 
+.PRECIOUS: $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.Six, $(PAG_FILES))
+
 all: sixtus-pages
 
 ifeq ($(filter %clean,$(MAKECMDGOALS)),)
