@@ -29,12 +29,15 @@ $(BUILD_DIR)%.Six: $(PAG_DIR)%.pag
 $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@echo -n "Extracting dependencies for file $<… "
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)Six-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $(<:.Six=.done) $@
+	@$(SCRIPT_DIR)Six-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $@
 	@echo Done
 
 $(BUILD_DIR)%.done:
 	@echo -n "Splipping source file [$<]… "
-	@$(SCRIPT_DIR)Six-to-done $< $(BUILD_DIR)$(*D) $@
+	@echo
+	@echo "@: $@"
+	@echo Deps: [$^]
+	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$(firstword $^)) $(BUILD_DIR)$(*D) $@
 	@echo Done
 
 #$(BUILD_DIR)%.six:
