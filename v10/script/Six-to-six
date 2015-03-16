@@ -10,15 +10,58 @@ class Splitter:
 
 		self.debug = True
 
+		self.state = 0
+
+		self.content = ''
+		self.tabs = {}
+		self.meta = ''
+		self.side = ''
+		self.tabname = None
+
+	def append (self, text):
+
+		self.content += '%s\n' % text
+
+	def update_tab (self):
+
+		if self.tabname in self.tabs:
+			self.tabs[self.tabname] += self.content
+		else: self.tabs[self.tabname] = self.content
+
+		self.content = ''
+		self.tabname = None
+
+	def update_state (self, newstate):
+
+		if self.state == 0:
+			self.meta += self.content
+			self.content = ''
+		elif self.state == 2:
+			self.side += self.content
+			self.content = ''
+		else: self.update_tab()
+
+		if newstate == 'meta': self.state = 0
+		elif newstate == 'page': self.state = 1
+		elif newstate == 'side': self.state = 2
+		else: raise 'What state is %s supposed to be?' % newstate
+
 	def parse_file (self, filename):
 
 		with open(filename, 'r') as f:
 			for i in f.readlines():
-				self.parse_line(i)
+				self.parse_line(i.strip())
 
 	def parse_line (self, line):
 
-		return
+		if '|' not in line: self.append(line)
+
+		token = line.split('|')
+		c = token[0]
+
+		if c == 'tab': raise TAB
+		elif c == 'start': self.update_state(token[1])
+		else: self.append(line)
 
 	def output_files (self, this_page):
 
