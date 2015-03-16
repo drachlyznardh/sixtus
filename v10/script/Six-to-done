@@ -21,6 +21,27 @@ class Splitter:
 		self.meta = ''
 		self.side = ''
 		self.tabname = None
+		self.tabnames = []
+
+	def get_tab_order (self):
+
+		seen = set()
+		f = seen.add
+		return [x for x in self.tabnames if x and not (x in seen or f(x))]
+
+	def get_tab_relation (self, order):
+
+		tabnext = {}
+		tabprev = {}
+		current = order[0]
+
+		for i in order[1:]:
+			print('%s → %s, %s ← %s' % (current, i, i, current))
+			tabnext[current] = i
+			tabprev[i] = current
+			current = i
+
+		return tabnext, tabprev
 
 	def mkdir (self, filepath):
 
@@ -39,6 +60,7 @@ class Splitter:
 		else: self.tabs[self.tabname] = self.content
 
 		self.content = ''
+		self.tabnames.append(self.tabname)
 		self.tabname = None
 
 	def update_state (self, newstate):
@@ -87,6 +109,9 @@ class Splitter:
 			print('jump|%s' % self.jump, file=f)
 
 	def output_all_files (self, base):
+
+		order = self.get_tab_order()
+		tabnext, tabprev = self.get_tab_relation(order)
 
 		for name in self.tabs:
 			if name: print('%s/%s' % (base, roman.convert(name)))
