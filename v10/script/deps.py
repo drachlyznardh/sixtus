@@ -30,8 +30,8 @@ def insert (filename, destination, sources, tabs):
 	with open(filename, 'w') as f:
 
 		if len(tabs) == 0:
-			print('SIX_FILES += %spage.six' % destination, file=f)
-			print('%spage.six: %s' % (destination, ' '.join(sources)), file=f)
+			print('SIX_FILES += %sjump.six' % destination, file=f)
+			print('%sjump.six: %s' % (destination, ' '.join(sources)), file=f)
 			return
 
 		files = ['%sjump.six' % destination]
