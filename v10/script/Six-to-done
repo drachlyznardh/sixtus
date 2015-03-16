@@ -36,7 +36,7 @@ class Splitter:
 		current = order[0]
 
 		for i in order[1:]:
-			print('%s → %s, %s ← %s' % (current, i, i, current))
+
 			tabnext[current] = i
 			tabprev[i] = current
 			current = i
