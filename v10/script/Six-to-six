@@ -12,6 +12,12 @@ class Splitter:
 
 	def parse_file (self, filename):
 
+		with open(filename, 'r') as f:
+			for i in f.readlines():
+				self.parse_line(i)
+
+	def parse_line (self, line):
+
 		return
 
 	def output_files (self, this_page):
