@@ -80,7 +80,9 @@ class Splitter:
 	def output_default_tab (self, base):
 
 		page_path = os.path.normpath('%s/page.six' % base)
-		print('Page file on [%s]' % page_path)
+		if self.debug: print('Page file on [%s]' % page_path)
+		with open(page_path, 'w') as f:
+			print('%sstart|side%sstart|page%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
 	def output_single_tab (self, base):
 
@@ -99,10 +101,7 @@ class Splitter:
 			for name in self.tabs:
 				raise Exception('%s/%s' % (base, roman.convert(name)))
 
-		elif None in self.tabs:
-
-			self.output_default_tab(base)
-			raise Exception('Default tab %s' % base)
+		elif None in self.tabs: self.output_default_tab(base)
 
 		else:
 
