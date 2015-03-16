@@ -71,7 +71,9 @@ class Splitter:
 		token = line.split('|')
 		c = token[0]
 
-		if c == 'tab': raise TAB
+		if c == 'tab':
+			self.update_tab()
+			self.tabname = token[1]
 		elif c == 'start': self.update_state(token[1])
 		elif c == 'jump': self.jump = token[1]
 		else: self.append(line)
@@ -105,9 +107,9 @@ class Splitter:
 
 		elif len(self.tabs) > 1:
 
-			raise 'Many tabs'
 			for name in self.tabs:
-				raise Exception('%s/%s' % (base, roman.convert(name)))
+				print('%s/%s' % (base, roman.convert(name)))
+			raise Exception('%s/%s' % (base, roman.convert(name)))
 
 		elif None in self.tabs: self.output_default_tab(base)
 
