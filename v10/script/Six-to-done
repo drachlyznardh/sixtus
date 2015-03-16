@@ -113,8 +113,21 @@ class Splitter:
 		order = self.get_tab_order()
 		tabnext, tabprev = self.get_tab_relation(order)
 
-		for name in self.tabs:
-			if name: print('%s/%s' % (base, roman.convert(name)))
+		for name in order:
+
+			tab_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+			if self.debug: print(' Tab file on [%s]' % tab_path)
+
+			varmeta = self.meta
+			if name in tabprev:
+				prevtab = roman.convert(tabprev[name])
+				varmeta += 'tabprev|%s/%s/\n' % (base, prevtab)
+			if name in tabnext:
+				nexttab = roman.convert(tabnext[name])
+				varmeta += 'tabnext|%s/%s/\n' % (base, nexttab)
+
+			print(varmeta)
+
 		raise Exception('%s/%s' % (base, roman.convert(name)))
 
 	def output_default_tab (self, base):
