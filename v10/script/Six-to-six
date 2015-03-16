@@ -15,6 +15,7 @@ class Splitter:
 
 		self.state = 0
 
+		self.jump = False
 		self.content = ''
 		self.tabs = {}
 		self.meta = ''
@@ -55,6 +56,8 @@ class Splitter:
 			for i in f.readlines():
 				self.parse_line(i.strip())
 
+		self.update_state('meta')
+
 	def parse_line (self, line):
 
 		if '|' not in line: self.append(line)
@@ -64,7 +67,15 @@ class Splitter:
 
 		if c == 'tab': raise TAB
 		elif c == 'start': self.update_state(token[1])
+		elif c == 'jump': self.jump = token[1]
 		else: self.append(line)
+
+	def output_single_jump_file (self, base):
+
+		page_path = os.path.normpath('%s/jump.six' % base)
+		if self.debug: print('Jump file on [%s]' % page_path)
+		with open(page_path, 'w') as f:
+			print('jump|%s' % self.jump, file=f)
 
 	def output_default_tab (self, base):
 
@@ -80,7 +91,9 @@ class Splitter:
 
 	def output_files (self, base):
 
-		if len(self.tabs) > 1:
+		if self.jump: self.output_single_jump_file(base)
+
+		elif len(self.tabs) > 1:
 
 			raise 'Many tabs'
 			for name in self.tabs:
