@@ -142,8 +142,6 @@ class Splitter:
 			with open(tab_path, 'w') as f:
 				print('%sstart|page%s\n' % (varmeta, self.tabs[name]), file=f)
 
-		raise Exception('%s/%s' % (base, roman.convert(name)))
-
 	def output_default_tab (self, base):
 
 		page_path = os.path.normpath('%s/page.six' % base)
