@@ -4,5 +4,27 @@
 from __future__ import print_function
 import sys
 
+class Splitter:
+
+	def __init__ (self):
+
+		self.debug = True
+
+	def parse_file (self, filename):
+
+		return
+
+	def output_files (self, this_page):
+
+		return
+
 print(sys.argv)
+
+Six_file  = sys.argv[1]
+this_page = sys.argv[2]
+
+sp = Splitter()
+sp.parse_file(Six_file)
+sp.output_files(this_page)
+
 sys.exit(1)
