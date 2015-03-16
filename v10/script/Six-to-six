@@ -116,5 +116,3 @@ page_base = sys.argv[2]
 sp = Splitter()
 sp.parse_file(Six_file)
 sp.output_files(page_base)
-
-sys.exit(1)
