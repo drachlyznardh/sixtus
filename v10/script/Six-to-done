@@ -113,10 +113,19 @@ class Splitter:
 		order = self.get_tab_order()
 		tabnext, tabprev = self.get_tab_relation(order)
 
-		for name in order:
+		jump_path = os.path.normpath('%s/jump.six' % base)
+		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
+		self.mkdir(jump_path)
+		with open(jump_path, 'w') as f:
+			print('jump|%s/%s/' % (base, roman.convert(order[0])), file=f)
 
-			tab_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
-			if self.debug: print(' Tab file on [%s]' % tab_path)
+		side_path = os.path.normpath('%s/side.six' % base)
+		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
+		#self.mkdir(side_path)
+		with open(side_path, 'w') as f:
+			print(self.side, file=f)
+
+		for name in order:
 
 			varmeta = self.meta
 			if name in tabprev:
@@ -125,8 +134,13 @@ class Splitter:
 			if name in tabnext:
 				nexttab = roman.convert(tabnext[name])
 				varmeta += 'tabnext|%s/%s/\n' % (base, nexttab)
+			varmeta += 'side|../side.php\n'
 
-			print(varmeta)
+			tab_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+			if self.debug: print(' Tab file on [%s]' % tab_path)
+			self.mkdir(tab_path)
+			with open(tab_path, 'w') as f:
+				print('%sstart|page%s\n' % (varmeta, self.tabs[name]), file=f)
 
 		raise Exception('%s/%s' % (base, roman.convert(name)))
 
