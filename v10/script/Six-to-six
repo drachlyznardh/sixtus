@@ -4,6 +4,8 @@
 from __future__ import print_function
 import sys
 
+import roman
+
 class Splitter:
 
 	def __init__ (self):
@@ -65,7 +67,19 @@ class Splitter:
 
 	def output_files (self, this_page):
 
-		return
+		if len(self.tabs) > 1:
+
+			for name in self.tabs:
+				print('Name %s' % name)
+				print('%s/%s' % (this_page, roman.convert(name)))
+
+		elif None in self.tabs:
+
+			print('Default tab %s' % this_page)
+
+		else:
+
+			print('Single tab %s/%s' % (this_page, roman.convert(self.tabs.keys()[0])))
 
 print(sys.argv)
 
