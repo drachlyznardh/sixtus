@@ -69,13 +69,13 @@ class Splitter:
 
 		if len(self.tabs) > 1:
 
+			raise 'Many tabs'
 			for name in self.tabs:
-				print('Name %s' % name)
-				print('%s/%s' % (base, roman.convert(name)))
+				raise('%s/%s' % (base, roman.convert(name)))
 
 		elif None in self.tabs:
 
-			print('Default tab %s' % base)
+			raise('Default tab %s' % base)
 
 		else:
 
