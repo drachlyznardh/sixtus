@@ -32,11 +32,9 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@$(SCRIPT_DIR)Six-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $(<:.Six=.done) $@
 	@echo Done
 
-$(BUILD_DIR)%.six:
+$(BUILD_DIR)%.done:
 	@echo -n "Splipping source file [$<]… "
-	@$(SCRIPT_DIR)Six-to-six \
-		$(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$(firstword $(filter %.pag,$^))) \
-		$(BUILD_DIR)$(*D)
+	@$(SCRIPT_DIR)Six-to-done $< $(BUILD_DIR)$(*D) $@
 	@echo Done
 
 #$(BUILD_DIR)%.six:
