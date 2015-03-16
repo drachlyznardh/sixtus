@@ -23,7 +23,7 @@ def extract (filename):
 
 	return list(sources), list(tabs)
 
-def insert (filename, done, destination, sources, tabs):
+def insert (filename, destination, sources, tabs):
 
 	destination = roman.clear(destination)
 
@@ -31,8 +31,8 @@ def insert (filename, done, destination, sources, tabs):
 
 		if len(tabs) == 0:
 			print('SIX_FILES += %sjump.six' % destination, file=f)
-			print('%sjump.six: %s' % (destination, done), file=f)
-			print('%s: %s' % (done, ' '.join(sources)), file=f)
+			print('%sjump.six: %s.done' % (destination, destination), file=f)
+			print('%s.done: %s' % (destination, ' '.join(sources)), file=f)
 			return
 
 		files = ['%sjump.six' % destination]
@@ -41,5 +41,5 @@ def insert (filename, done, destination, sources, tabs):
 			files.append('%s%s/page.six' % (destination, roman.convert(tab)))
 
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
-		print('%s: %s' % (' '.join(files), done), file=f)
-		print('%s: %s' % (done, ' '.join(sources)), file=f)
+		print('%s: %s.done' % (' '.join(files), destination), file=f)
+		print('%s.done: %s' % (destination, ' '.join(sources)), file=f)
