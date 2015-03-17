@@ -20,7 +20,9 @@ PHP_PAGE_FILES := $(patsubst $(BUILD_DIR)%page.six, $(DEPLOY_DIR)%index.php, $(S
 PHP_SIDE_FILES := $(patsubst $(BUILD_DIR)%side.six, $(DEPLOY_DIR)%side.php, $(SIX_SIDE_FILES))
 PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(SIX_JUMP_FILES))
 
-sixtus-pages: $(DEP_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
+PHP_FILES = $(sort $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES))
+
+sixtus-pages: $(DEP_FILES) $(PHP_FILES)
 
 $(BUILD_DIR)%.Six: $(PAG_DIR)%.pag
 	@#echo -n "Expanding source file $<… "
