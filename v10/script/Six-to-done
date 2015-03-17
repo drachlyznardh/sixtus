@@ -11,7 +11,7 @@ class Splitter:
 
 	def __init__ (self):
 
-		self.debug = True
+		self.debug = False
 
 		self.state = 0
 
@@ -187,8 +187,6 @@ class Splitter:
 		if size == 1: self.output_default_tab(base, done)
 		elif size == 2: self.output_default_tab(base, done)
 		else: self.output_all_files(base, done)
-
-print(sys.argv)
 
 if len(sys.argv) != 4:
 	args = ['.Six file', 'page base', '.done file']

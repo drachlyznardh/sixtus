@@ -35,7 +35,7 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@echo Done
 
 $(DONE_FILES): %:
-	@echo -n "Splipping source file [$<] [$@]… "
+	@echo -n "Splipping source file $<… "
 	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(*D) $@
 	@echo Done
 
