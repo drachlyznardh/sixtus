@@ -14,6 +14,8 @@ SIX_PAGE_FILES := $(filter %page.six, $(SIX_FILES))
 SIX_SIDE_FILES := $(filter %side.six, $(SIX_FILES))
 SIX_JUMP_FILES := $(filter %jump.six, $(SIX_FILES))
 
+DONE_FILES := $(addsuffix .done, $(SIX_DIRS))
+
 PHP_PAGE_FILES := $(patsubst $(BUILD_DIR)%page.six, $(DEPLOY_DIR)%index.php, $(SIX_PAGE_FILES))
 PHP_SIDE_FILES := $(patsubst $(BUILD_DIR)%side.six, $(DEPLOY_DIR)%side.php, $(SIX_SIDE_FILES))
 PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(SIX_JUMP_FILES))
@@ -32,10 +34,9 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@$(SCRIPT_DIR)Six-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $@
 	@echo Done
 
-$(BUILD_DIR)%.done:
-	@echo -n "Splipping source file [$<]… "
-	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(BUILD_DIR)$(*D)
-	@touch $@
+$(DONE_FILES): %:
+	@echo -n "Splipping source file [$<] [$@]… "
+	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(*D) $@
 	@echo Done
 
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six
