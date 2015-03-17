@@ -35,9 +35,15 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 $(BUILD_DIR)%.done:
 	@echo -n "Splipping source file [$<]… "
 	@echo
-	@echo "@: $@"
-	@echo Deps: [$^]
-	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$(firstword $^)) $(BUILD_DIR)$(*D) $@
+	@echo
+	@echo IMPORTANT
+	@echo $^
+	@echo IMPORTANT
+	@echo $@ → $(BUILD_DIR)$(*D)
+	@echo IMPORTANT
+	@echo
+	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$(firstword $^)) $(BUILD_DIR)$(*D)
+	@touch $@
 	@echo Done
 
 #$(BUILD_DIR)%.six:
