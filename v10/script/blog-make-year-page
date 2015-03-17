@@ -5,7 +5,7 @@ from __future__ import print_function
 import sys
 
 if len(sys.argv) < 7:
-	params = ['<output file>', '<list file>'
+	params = ['<output file>', '<list file>',
 		'<years relation file>', '<blog names file>',
 		'<this year>', '<months list files…>']
 	print('Usage: %s %s' % (sys.argv[0], ' '.join(params)))
