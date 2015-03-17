@@ -178,10 +178,15 @@ class Splitter:
 
 	def output_files (self, base, done):
 
-		if self.jump: self.output_single_jump_file(base, done)
-		elif len(self.tabs) > 1: self.output_all_files(base, done)
-		elif None in self.tabs: self.output_default_tab(base, done)
-		else: self.output_default_tab(base, done)
+		if self.jump:
+			self.output_single_jump_file(base, done)
+			return
+
+		size = len(self.tabs)
+
+		if size == 1: self.output_default_tab(base, done)
+		elif size == 2: self.output_default_tab(base, done)
+		else: self.output_all_files(base, done)
 
 print(sys.argv)
 
