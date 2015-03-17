@@ -1,11 +1,13 @@
 
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
-TCH_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(PAG_FILES))
+DEP_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(PAG_FILES))
+
+.PRECIOUS: $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.Six, $(PAG_FILES))
 
 all: sixtus-pages
 
 ifeq ($(filter %clean,$(MAKECMDGOALS)),)
--include $(TCH_FILES)
+-include $(DEP_FILES)
 endif
 
 SIX_PAGE_FILES := $(filter %page.six, $(SIX_FILES))
@@ -16,25 +18,24 @@ PHP_PAGE_FILES := $(patsubst $(BUILD_DIR)%page.six, $(DEPLOY_DIR)%index.php, $(S
 PHP_SIDE_FILES := $(patsubst $(BUILD_DIR)%side.six, $(DEPLOY_DIR)%side.php, $(SIX_SIDE_FILES))
 PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(SIX_JUMP_FILES))
 
-sixtus-pages: $(TCH_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
+sixtus-pages: $(DEP_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
 
-$(BUILD_DIR)%.tch: $(PAG_DIR)%.pag $(MAP_FILE)
-	@echo -n "Splitting source file $<… "
+$(BUILD_DIR)%.Six: $(PAG_DIR)%.pag
+	@#echo -n "Expanding source file $<… "
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)pag-to-six $< $(dir $<) $(MAP_FILE) $(*D) $(*F) $(BUILD_DIR) $@
-	@echo Done
+	@$(SCRIPT_DIR)pag-to-Six $< $(dir $<) $@
+	@#echo Done
 
-$(BUILD_DIR)%.six:
-	@echo -n "Splitting source file $<… "
-	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
-	@$(SCRIPT_DIR)pag-to-six\
-		$(firstword $(filter %.pag, $^))\
-		$(dir $(firstword $(filter %.pag, $^)))\
-		$(MAP_FILE)\
-		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
-		$(basename $(notdir $<))\
-		$(BUILD_DIR)\
-		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tch, $(filter %.pag, $^)))
+$(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
+	#echo -n "Extracting dependencies for file $<… "
+	@mkdir -p $(dir $@)
+	@$(SCRIPT_DIR)Six-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $@
+	#echo Done
+
+$(BUILD_DIR)%.done:
+	@echo -n "Splipping source file [$<]… "
+	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(BUILD_DIR)$(*D)
+	@touch $@
 	@echo Done
 
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six

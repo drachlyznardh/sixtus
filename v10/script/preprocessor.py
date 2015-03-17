@@ -20,8 +20,6 @@ class Preprocessor:
 		self.inclusion = []
 		self.content = []
 		self.re_require = re.compile(r'^require\|(.*)')
-		self.re_pipe = re.compile(r'(@PIPE@)')
-		self.re_at = re.compile(r'(@AT@)')
 		self.extract = r'\1'
 
 	def clean_line (self, line):
@@ -36,6 +34,8 @@ class Preprocessor:
 		self.filename = filename
 		self.origin_files.append(filename)
 		self.lineno = 0
+
+		self.content.append('source|%s|%d' % (filename, 0))
 
 		try:
 			with open(filename, 'r') as input_file:
@@ -86,3 +86,9 @@ class Preprocessor:
 			return
 
 		self.content.append(line) # Ordinany command
+
+	def output_file (self, filename):
+
+		with open(filename, 'w') as f:
+			for line in self.content:
+				print(line, file=f)

@@ -1,0 +1,23 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+
+from preprocessor import Preprocessor
+
+if len(sys.argv) != 4:
+	args = ['.pag file', 'page base', '.Six file']
+	usage = '\nUsage: %s <%s>' % (sys.argv[0], '> <'.join(args))
+	print(usage, file=sys.stderr)
+	call = 'Call was %s' % ' '.join(sys.argv)
+	print(call, file=sys.stderr)
+	sys.exit(1)
+
+pag_file  = sys.argv[1]
+page_base = sys.argv[2]
+Six_file  = sys.argv[3]
+
+pp = Preprocessor(page_base)
+pp.parse_file(pag_file)
+pp.output_file(Six_file)
