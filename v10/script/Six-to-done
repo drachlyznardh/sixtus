@@ -150,7 +150,7 @@ class Splitter:
 		if self.debug: print('Page file on [%s]' % page_path)
 		self.mkdir(page_path)
 		with open(page_path, 'w') as f:
-			print('%sstart|side%sstart|page%s' % (self.meta, self.side, self.tabs[None]), file=f)
+			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
 	def output_single_tab (self, base):
 
