@@ -140,7 +140,7 @@ class Splitter:
 			if self.debug: print(' Tab file on [%s]' % tab_path)
 			self.mkdir(tab_path)
 			with open(tab_path, 'w') as f:
-				print('%sstart|page%s\n' % (varmeta, self.tabs[name]), file=f)
+				print('%sstart|page\n%s' % (varmeta, self.tabs[name]), file=f)
 
 	def output_default_tab (self, base):
 
