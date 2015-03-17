@@ -164,7 +164,7 @@ class Splitter:
 		if self.jump: self.output_single_jump_file(base)
 		elif None in self.tabs: self.output_default_tab(base)
 		elif len(self.tabs) > 1: self.output_all_files(base)
-		else: raise Exception('Single tab %s/%s' % (base, roman.convert(self.tabs.keys()[0])))
+		else: self.output_default_tab(base)
 
 print(sys.argv)
 
