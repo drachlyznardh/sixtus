@@ -170,10 +170,18 @@ class Splitter:
 
 		name = [name for name in self.tabs if name][0]
 
-		page_path = os.path.normpath('%s/%s/page.six' % (base, name))
-		print('Page file on [%s]' % page_path)
+		page_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+		if self.debug: print('Page file on [%s]' % page_path)
+		self.mkdir(page_path)
+		with open(page_path, 'w') as f:
+			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side,
+			self.tabs[name]), file=f)
+
 		jump_path = os.path.normpath('%s/jump.six' % base)
-		print('Jump file on [%s]' % jump_path)
+		if self.debug: print('Jump file on [%s]' % jump_path)
+		with open(jump_path, 'w') as f:
+			print('jump|%s/%s/' % (base, roman.convert(name)), file=f)
+
 		with open(done, 'w') as f:
 			print(page_path, file=f)
 			print(jump_path, file=f)
