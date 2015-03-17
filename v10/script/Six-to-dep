@@ -24,11 +24,11 @@ this_dir  = sys.argv[4]
 this_page = sys.argv[5]
 dep_file  = sys.argv[6]
 
-sources, tabs = deps.extract(Six_file)
+jump, sources, tabs = deps.extract(Six_file)
 
 mapped_dir = mapper.get(map_file, this_dir)
 mapped_page = roman.convert(this_page)
 
 destination = '%s%s/%s/' % (build_dir, mapped_dir, mapped_page)
 
-deps.insert(dep_file, destination, sources, tabs)
+deps.insert(dep_file, destination, jump, sources, tabs)

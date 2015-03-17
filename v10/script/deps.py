@@ -9,6 +9,7 @@ def extract (filename):
 
 	re_include = re.compile(r'^source\|(.*)\|.*\n$')
 	re_tab     = re.compile(r'^tab\|(.*)\n$')
+	re_jump    = re.compile(r'^jump\|(.*)\n$')
 
 	sources = []
 	tabs = []
@@ -20,10 +21,12 @@ def extract (filename):
 				sources.append(re_include.sub(r'\1', line))
 			elif re_tab.match(line):
 				tabs.append(re_tab.sub(r'\1', line))
+			elif re_jump.match(line):
+				return True, [], []
 
-	return roman.unique(sources), roman.unique(tabs)
+	return False, roman.unique(sources), roman.unique(tabs)
 
-def insert (filename, destination, sources, tabs):
+def insert (filename, destination, jump, sources, tabs):
 
 	destination = roman.clear(destination)
 
