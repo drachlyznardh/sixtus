@@ -42,7 +42,7 @@ $(BUILD_DIR)%.done:
 	@echo $@ → $(BUILD_DIR)$(*D)
 	@echo IMPORTANT
 	@echo
-	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$(firstword $^)) $(BUILD_DIR)$(*D)
+	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(BUILD_DIR)$(*D)
 	@touch $@
 	@echo Done
 
