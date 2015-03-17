@@ -11,7 +11,7 @@ class Splitter:
 
 	def __init__ (self):
 
-		self.debug = False
+		self.debug = True
 
 		self.state = 0
 
@@ -168,9 +168,11 @@ class Splitter:
 
 	def output_single_tab (self, base, done):
 
+		name = [name for name in self.tabs if name][0]
+
 		page_path = os.path.normpath('%s/%s/page.six' % (base, name))
 		print('Page file on [%s]' % page_path)
-		jump_path = os.path.normpath('%s/jump.six' % (base, name))
+		jump_path = os.path.normpath('%s/jump.six' % base)
 		print('Jump file on [%s]' % jump_path)
 		with open(done, 'w') as f:
 			print(page_path, file=f)
