@@ -28,8 +28,6 @@ def extract (filename):
 
 def insert (filename, destination, jump, sources, tabs):
 
-	destination = roman.clear(destination)
-
 	with open(filename, 'w') as f:
 
 		if jump:
