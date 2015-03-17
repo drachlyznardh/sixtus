@@ -42,7 +42,17 @@ def insert (filename, destination, jump, sources, tabs):
 			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
 			return
 
-		if len(tabs) == 1:
+		size = len(tabs)
+
+		if size == 0:
+
+			print('SIX_FILES += %spage.six' % d, file=f)
+			print('SIX_DIRS += %s' % d, file=f)
+			print('%spage.six: %s.done' % (d, d), file=f)
+			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
+			return
+
+		if size == 1:
 
 			files = []
 			files.append('%s%s/page.six' % (d, roman.convert(tabs[0])))
