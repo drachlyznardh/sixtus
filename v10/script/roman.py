@@ -17,3 +17,9 @@ def clear (name):
 	if index.match(name):
 		return index.sub(r'\1', name)
 	return name
+
+def unique (origin):
+
+	seen = set()
+	f = seen.add
+	return [x for x in origin if x and not (x in seen or f(x))]
