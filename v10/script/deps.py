@@ -10,18 +10,18 @@ def extract (filename):
 	re_include = re.compile(r'^source\|(.*)\|.*\n$')
 	re_tab     = re.compile(r'^tab\|(.*)\n$')
 
-	sources = set()
-	tabs = set()
+	sources = []
+	tabs = []
 
 	with open(filename, 'r') as f:
 		for line in f.readlines():
 
 			if re_include.match(line):
-				sources.add(re_include.sub(r'\1', line))
+				sources.append(re_include.sub(r'\1', line))
 			elif re_tab.match(line):
-				tabs.add(re_tab.sub(r'\1', line))
+				tabs.append(re_tab.sub(r'\1', line))
 
-	return list(sources), list(tabs)
+	return roman.unique(sources), roman.unique(tabs)
 
 def insert (filename, destination, sources, tabs):
 
