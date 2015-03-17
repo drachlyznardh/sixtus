@@ -46,10 +46,9 @@ def insert (filename, destination, jump, sources, tabs):
 			print('%s.done: %s' % (destination, ' '.join(sources)), file=f)
 			return
 
-		files = ['%sjump.six' % destination]
+		files = ['%s%s/page.six' % (destination, roman.convert(name)) for name in tabs ]
+		files.append('%sjump.six' % destination)
 		files.append('%sside.six' % destination)
-		for tab in tabs:
-			files.append('%s%s/page.six' % (destination, roman.convert(tab)))
 
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
 		print('%s: %s.done' % (' '.join(files), destination), file=f)
