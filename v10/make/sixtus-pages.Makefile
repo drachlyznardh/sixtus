@@ -38,19 +38,6 @@ $(BUILD_DIR)%.done:
 	@touch $@
 	@echo Done
 
-#$(BUILD_DIR)%.six:
-#	@echo -n "Splitting source file $<… "
-#	@mkdir -p $(patsubst $(PAG_DIR)%, $(BUILD_DIR)%, $(dir $<))
-#	@$(SCRIPT_DIR)pag-to-six\
-#		$(firstword $(filter %.pag, $^))\
-#		$(dir $(firstword $(filter %.pag, $^)))\
-#		$(SITE_MAP_FILE)\
-#		$(patsubst $(PAG_DIR)%/, %, $(dir $<))\
-#		$(basename $(notdir $<))\
-#		$(BUILD_DIR)\
-#		$(firstword $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(filter %.pag, $^)))
-#	@echo Done
-
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six
 	@echo -n "Generating page file $@… "
 	@mkdir -p $(dir $@)
