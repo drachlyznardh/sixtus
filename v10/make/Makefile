@@ -1,13 +1,13 @@
 
-export SIXTUS_DIR := /opt/devel/web/sixtus/v10/
-export SCRIPT_DIR := $(SIXTUS_DIR)script/
-export MAKE_DIR   := $(SIXTUS_DIR)make/
+export SIXTUS_DIR := /opt/devel/web/sixtus/v10
+export SCRIPT_DIR := $(SIXTUS_DIR)/script/
+export MAKE_DIR   := $(SIXTUS_DIR)/make/
 
-export SITE_MAP_FILE := $(SOURCE_DIR)map.py
-export PAG_DIR       := $(SOURCE_DIR)src/
+export SITE_MAP_FILE := $(SOURCE_DIR)/map.py
+export PAG_DIR       := $(SOURCE_DIR)/src
 
-export BLOG_IN_DIR    := $(SOURCE_DIR)blog/
-export BLOG_OUT_DIR   := $(PAG_DIR)blog/
+export BLOG_IN_DIR    := $(SOURCE_DIR)/blog
+export BLOG_OUT_DIR   := $(PAG_DIR)/blog
 
 .PHONY: sixtus-blog sixtus-pages sixtus-runtime
 sixtus-deploy: sixtus-runtime sixtus-pages

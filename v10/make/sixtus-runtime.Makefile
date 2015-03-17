@@ -1,10 +1,10 @@
-IN_DIR := $(SIXTUS_DIR)runtime/
-OUT_DIR := $(DEPLOY_DIR)sixtus/
+IN_DIR := $(SIXTUS_DIR)/runtime
+OUT_DIR := $(DEPLOY_DIR)/sixtus
 
 IN_FILES += style.css icon.ico panel.js
 IN_FILES += page-top.php page-middle.php page-bottom.php
 
-OUT_FILES += $(addprefix $(OUT_DIR), $(IN_FILES))
+OUT_FILES += $(addprefix $(OUT_DIR)/, $(IN_FILES))
 
 all: sixtus-runtime
 sixtus-runtime: $(OUT_FILES)

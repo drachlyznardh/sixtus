@@ -3,21 +3,21 @@ SIXTUS_DEBUG=
 
 all: sixtus-blog
 
-DEP_FILE  := $(BLOG_OUT_DIR)blog.dep
-MAP_FILE  := $(BLOG_OUT_DIR)blog.map
-REL_FILE  := $(BLOG_OUT_DIR)blog.rel
-NAME_FILE := $(BLOG_OUT_DIR)blog.names
+DEP_FILE  := $(BLOG_OUT_DIR)/blog.dep
+MAP_FILE  := $(BLOG_OUT_DIR)/blog.map
+REL_FILE  := $(BLOG_OUT_DIR)/blog.rel
+NAME_FILE := $(BLOG_OUT_DIR)/blog.names
 
 POST_FILES  := $(sort $(shell find $(BLOG_IN_DIR) -name '*.post'))
-POST_MONTHS := $(patsubst $(BLOG_IN_DIR)%.post,%,$(POST_FILES))
+POST_MONTHS := $(patsubst $(BLOG_IN_DIR)/%.post,%,$(POST_FILES))
 
 $(BLOG_OUT_DIR):
 	@mkdir -p $@
 
 MONTH_PAGES  := $(patsubst $(BLOG_IN_DIR)%.post,$(BLOG_OUT_DIR)%.pag,$(POST_FILES))
 YEAR_PAGES   := $(patsubst $(BLOG_IN_DIR)%/,$(BLOG_OUT_DIR)%.pag,$(sort $(dir $(POST_FILES))))
-ARCHIVE_PAGE := $(BLOG_OUT_DIR)$(SITE_BLOG_ARCHIVE_BASENAME).pag
-INDEX_PAGE   := $(BLOG_OUT_DIR)index.pag
+ARCHIVE_PAGE := $(BLOG_OUT_DIR)/$(SITE_BLOG_ARCHIVE_BASENAME).pag
+INDEX_PAGE   := $(BLOG_OUT_DIR)/index.pag
 
 PAG_FILES += $(MONTH_PAGES)
 PAG_FILES += $(YEAR_PAGES)
@@ -57,7 +57,7 @@ $(YEAR_PAGES:.pag=.list): %.list: %.pag
 	@touch $@
 	@echo Done
 
-$(MONTH_PAGES): $(BLOG_OUT_DIR)%.pag: $(BLOG_IN_DIR)%.post $(REL_FILE) $(SITE_CONF_FILE)
+$(MONTH_PAGES): $(BLOG_OUT_DIR)/%.pag: $(BLOG_IN_DIR)/%.post $(REL_FILE) $(SITE_CONF_FILE)
 	@echo -n "Generating month page $@… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)post-to-pag $< $@ $(@:.pag=.list) $(REL_FILE) $(NAME_FILE) $(*D) $(*F)
