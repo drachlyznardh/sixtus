@@ -88,7 +88,9 @@ class Splitter:
 
 	def parse_line (self, line):
 
-		if '|' not in line: self.append(line)
+		if '|' not in line:
+			self.append(line)
+			return
 
 		token = line.split('|')
 		c = token[0]
