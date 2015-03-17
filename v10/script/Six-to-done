@@ -102,16 +102,19 @@ class Splitter:
 		elif c == 'jump': self.jump = token[1]
 		else: self.append(line)
 
-	def output_single_jump_file (self, base):
+	def output_single_jump_file (self, base, done):
 
 		jump_path = os.path.normpath('%s/jump.six' % base)
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		self.mkdir(jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
+		with open(done, 'w') as f:
+			print(jump_path, file=f)
 
-	def output_all_files (self, base):
+	def output_all_files (self, base, done):
 
+		files = []
 		order = self.get_tab_order()
 		tabnext, tabprev = self.get_tab_relation(order)
 
@@ -126,6 +129,9 @@ class Splitter:
 		#self.mkdir(side_path)
 		with open(side_path, 'w') as f:
 			print(self.side, file=f)
+
+		files.append(jump_path)
+		files.append(side_path)
 
 		for name in order:
 
@@ -144,27 +150,38 @@ class Splitter:
 			with open(tab_path, 'w') as f:
 				print('%sstart|page\n%s' % (varmeta, self.tabs[name]), file=f)
 
-	def output_default_tab (self, base):
+			files.append(tab_path)
+
+		with open(done, 'w') as f:
+			for name in files:
+				print(name, file=f)
+
+	def output_default_tab (self, base, done):
 
 		page_path = os.path.normpath('%s/page.six' % base)
 		if self.debug: print('Page file on [%s]' % page_path)
 		self.mkdir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
+		with open(done, 'w') as f:
+			print(page_path, file=f)
 
-	def output_single_tab (self, base):
+	def output_single_tab (self, base, done):
 
 		page_path = os.path.normpath('%s/%s/page.six' % (base, name))
 		print('Page file on [%s]' % page_path)
 		jump_path = os.path.normpath('%s/jump.six' % (base, name))
 		print('Jump file on [%s]' % jump_path)
+		with open(done, 'w') as f:
+			print(page_path, file=f)
+			print(jump_path, file=f)
 
-	def output_files (self, base):
+	def output_files (self, base, done):
 
-		if self.jump: self.output_single_jump_file(base)
-		elif None in self.tabs: self.output_default_tab(base)
-		elif len(self.tabs) > 1: self.output_all_files(base)
-		else: self.output_default_tab(base)
+		if self.jump: self.output_single_jump_file(base, done)
+		elif None in self.tabs: self.output_default_tab(base, done)
+		elif len(self.tabs) > 1: self.output_all_files(base, done)
+		else: self.output_default_tab(base, done)
 
 print(sys.argv)
 
@@ -180,4 +197,4 @@ done_file = sys.argv[3]
 
 sp = Splitter()
 sp.parse_file(Six_file)
-sp.output_files(page_base)
+sp.output_files(page_base, done_file)
