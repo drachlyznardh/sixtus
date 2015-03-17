@@ -37,6 +37,7 @@ def insert (filename, destination, jump, sources, tabs):
 		if jump:
 
 			print('SIX_FILES += %sjump.six' % d, file=f)
+			print('SIX_DIRS += %s' % d, file=f)
 			print('%sjump.six: %s.done' % (d, d), file=f)
 			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
 			return
@@ -44,6 +45,7 @@ def insert (filename, destination, jump, sources, tabs):
 		if len(tabs) == 0:
 
 			print('SIX_FILES += %spage.six' % d, file=f)
+			print('SIX_DIRS += %s' % d, file=f)
 			print('%spage.six: %s.done' % (d, d), file=f)
 			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
 			return
@@ -53,5 +55,6 @@ def insert (filename, destination, jump, sources, tabs):
 		files.append('%sside.six' % d)
 
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
+		print('SIX_DIRS += %s' % d, file=f)
 		print('%s: %s.done' % (' '.join(files), d), file=f)
 		print('%s.done: %s' % (d, ' '.join(sources)), file=f)
