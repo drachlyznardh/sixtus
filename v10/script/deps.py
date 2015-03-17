@@ -32,9 +32,17 @@ def insert (filename, destination, jump, sources, tabs):
 
 	with open(filename, 'w') as f:
 
-		if len(tabs) == 0:
+		if jump:
+
 			print('SIX_FILES += %sjump.six' % destination, file=f)
 			print('%sjump.six: %s.done' % (destination, destination), file=f)
+			print('%s.done: %s' % (destination, ' '.join(sources)), file=f)
+			return
+
+		if len(tabs) == 0:
+
+			print('SIX_FILES += %spage.six' % destination, file=f)
+			print('%spage.six: %s.done' % (destination, destination), file=f)
 			print('%s.done: %s' % (destination, ' '.join(sources)), file=f)
 			return
 
