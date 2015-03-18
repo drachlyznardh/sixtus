@@ -47,41 +47,6 @@ def insert (filename, destination, jump, sources, tabs):
 		files.append('%sside.six' % d)
 
 	with open(filename, 'w') as f:
-
-		if jump:
-
-			print('SIX_FILES += %sjump.six' % d, file=f)
-			print('SIX_DIRS += %s' % d, file=f)
-			print('%sjump.six: %s.done' % (d, d), file=f)
-			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
-			return
-
-		size = len(tabs)
-
-		if size == 0:
-
-			print('SIX_FILES += %spage.six' % d, file=f)
-			print('SIX_DIRS += %s' % d, file=f)
-			print('%spage.six: %s.done' % (d, d), file=f)
-			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
-			return
-
-		if size == 1:
-
-			files = []
-			files.append('%s%s/page.six' % (d, roman.convert(tabs[0])))
-			files.append('%sjump.six' % d)
-
-			print('SIX_FILES += %s' % ' '.join(files), file=f)
-			print('SIX_DIRS += %s' % d, file=f)
-			print('%s: %s.done' % (' '.join(files), d), file=f)
-			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
-			return
-
-		files = ['%s%s/page.six' % (d, roman.convert(name)) for name in tabs ]
-		files.append('%sjump.six' % d)
-		files.append('%sside.six' % d)
-
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
 		print('SIX_DIRS += %s' % d, file=f)
 		print('%s: %s.done' % (' '.join(files), d), file=f)
