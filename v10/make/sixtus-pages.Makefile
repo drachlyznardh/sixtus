@@ -23,10 +23,10 @@ PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(S
 sixtus-pages: $(DEP_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
 
 $(BUILD_DIR)%.Six: $(PAG_DIR)%.pag
-	@#echo -n "Expanding source file $<… "
+	@echo -n "Expanding source file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)pag-to-Six $< $(dir $<) $@
-	@#echo Done
+	@echo Done
 
 $(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
 	@echo -n "Extracting dependencies for file $<… "
