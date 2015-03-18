@@ -1,0 +1,37 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+import re
+
+import mapper
+import roman
+import deps
+
+if len(sys.argv) != 3:
+	args = ['.Six file', 'tab file']
+	usage = 'Usage: %s <%s>' % (sys.argv[0], '> <'.join(args))
+	print(usage, file=sys.stderr)
+	sys.exit(1)
+
+Six_file  = sys.argv[1]
+tab_file  = sys.argv[2]
+
+with open(tab_file, 'w') as f:
+	print(deps.extract(Six_file), file=f)
+sys.exit(0)
+
+jump, sources, tabs = deps.extract(Six_file)
+
+print(jump)
+print(sources)
+print(tabs)
+sys.exit(1)
+
+mapped_dir = mapper.get(map_file, this_dir)
+mapped_page = roman.convert(this_page)
+
+destination = roman.clear('%s%s/%s/' % (build_dir, mapped_dir, mapped_page))
+
+deps.insert(dep_file, destination, jump, sources, tabs)
