@@ -35,11 +35,11 @@ def insert (filename, destination, jump, sources, tabs):
 	size = len(tabs)
 
 	if jump:
-		files = ['sjump.six' % d]
+		files = ['%sjump.six' % d]
 	elif size == 0:
-		files = ['spage.six' % d]
+		files = ['%spage.six' % d]
 	elif size == 1:
-		files = ['s%s/page.six' % (d, roman.convert(tabs[0]))]
+		files = ['%s%s/page.six' % (d, roman.convert(tabs[0]))]
 		files.append('%sjump.six' % d)
 	else:
 		files = ['%s%s/page.six' % (d, roman.convert(name)) for name in tabs ]
