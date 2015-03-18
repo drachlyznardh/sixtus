@@ -16,4 +16,4 @@ Six_file  = sys.argv[1]
 tab_file  = sys.argv[2]
 
 with open(tab_file, 'w') as f:
-	print(deps.extract(Six_file), file=f)
+	print('(%s, %s, %s)' % deps.extract(Six_file), file=f)
