@@ -102,17 +102,15 @@ class Splitter:
 		elif c == 'jump': self.jump = token[1]
 		else: self.append(line)
 
-	def output_single_jump_file (self, base, done):
+	def output_single_jump_file (self, base):
 
 		jump_path = os.path.normpath('%s/jump.six' % base)
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		self.mkdir(jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
-		with open(done, 'w') as f:
-			print(jump_path, file=f)
 
-	def output_all_files (self, base, done):
+	def output_all_files (self, base):
 
 		files = []
 		order = self.get_tab_order()
@@ -152,21 +150,15 @@ class Splitter:
 
 			files.append(tab_path)
 
-		with open(done, 'w') as f:
-			for name in files:
-				print(name, file=f)
-
-	def output_default_tab (self, base, done):
+	def output_default_tab (self, base):
 
 		page_path = os.path.normpath('%s/page.six' % base)
 		if self.debug: print('Page file on [%s]' % page_path)
 		self.mkdir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
-		with open(done, 'w') as f:
-			print(page_path, file=f)
 
-	def output_single_tab (self, base, done):
+	def output_single_tab (self, base):
 
 		name = [name for name in self.tabs if name][0]
 
@@ -182,32 +174,27 @@ class Splitter:
 		with open(jump_path, 'w') as f:
 			print('jump|%s/%s/' % (base, roman.convert(name)), file=f)
 
-		with open(done, 'w') as f:
-			print(page_path, file=f)
-			print(jump_path, file=f)
-
-	def output_files (self, base, done):
+	def output_files (self, base):
 
 		if self.jump:
-			self.output_single_jump_file(base, done)
+			self.output_single_jump_file(base)
 			return
 
 		size = len(self.tabs)
 
-		if size == 1: self.output_default_tab(base, done)
-		elif size == 2: self.output_single_tab(base, done)
-		else: self.output_all_files(base, done)
+		if size == 1: self.output_default_tab(base)
+		elif size == 2: self.output_single_tab(base)
+		else: self.output_all_files(base)
 
-if len(sys.argv) != 4:
-	args = ['.Six file', 'page base', '.done file']
+if len(sys.argv) != 3:
+	args = ['.Six file', 'page base']
 	usage = 'Usage: %s <%s>' % (sys.argv[0], '> <'.join(args))
 	print(usage, file=sys.stderr)
 	sys.exit(1)
 
 Six_file  = sys.argv[1]
 page_base = sys.argv[2]
-done_file = sys.argv[3]
 
 sp = Splitter()
 sp.parse_file(Six_file)
-sp.output_files(page_base, done_file)
+sp.output_files(page_base)
