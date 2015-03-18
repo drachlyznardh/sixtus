@@ -46,8 +46,15 @@ def insert (filename, destination, jump, sources, tabs):
 		files.append('%sjump.six' % d)
 		files.append('%sside.six' % d)
 
+	Six_file = sources[0].replace('.pag','.Six')
+
 	with open(filename, 'w') as f:
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
 		print('SIX_DIRS += %s' % d, file=f)
 		print('%s: %s.done' % (' '.join(files), d), file=f)
 		print('%s.done: %s' % (d, ' '.join(sources)), file=f)
+
+		print('%s: %s' % (' '.join(files), ' '.join(sources)), file=f)
+		print('\t@echo -n "Splitting source file %s… "' % Six_file, file=f)
+		print('\t@$(SCRIPT_DIR)Six-to-six %s %s' % (Six_file, d), file=f)
+		print('\t@echo "Done"', file=f)
