@@ -38,7 +38,7 @@ $(BUILD_DIR)%.tab: $(BUILD_DIR)%.Six
 $(BUILD_DIR)%.dep: $(BUILD_DIR)%.tab $(SITE_MAP_FILE)
 	@echo -n "Extracting dependencies from file $<… "
 	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)tab-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $@
+	@$(SCRIPT_DIR)tab-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $(<:.tab=.Six) $@
 	@echo Done
 
 $(DONE_FILES): %:

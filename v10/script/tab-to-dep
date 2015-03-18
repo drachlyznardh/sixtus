@@ -9,10 +9,10 @@ import mapper
 import roman
 import deps
 
-if len(sys.argv) != 7:
+if len(sys.argv) != 8:
 	args = ['.tab file', 'map file',
 		'build dir', 'this dir', 'this page',
-		'.dep file']
+		'.Six file', '.dep file']
 	usage = 'Usage: %s <%s>' % (sys.argv[0], '> <'.join(args))
 	print(usage, file=sys.stderr)
 	sys.exit(1)
@@ -22,7 +22,8 @@ map_file  = sys.argv[2]
 build_dir = sys.argv[3]
 this_dir  = sys.argv[4]
 this_page = sys.argv[5]
-dep_file  = sys.argv[6]
+Six_file  = sys.argv[6]
+dep_file  = sys.argv[7]
 
 with open(tab_file, 'r') as f:
 	jump, sources, tabs = eval(f.read())
@@ -32,4 +33,4 @@ mapped_page = roman.convert(this_page)
 
 destination = roman.clear('%s%s/%s/' % (build_dir, mapped_dir, mapped_page))
 
-deps.insert(dep_file, destination, jump, sources, tabs)
+deps.insert(dep_file, Six_file, destination, jump, sources, tabs)

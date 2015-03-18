@@ -28,7 +28,7 @@ def extract (filename):
 
 	return False, roman.unique(sources), roman.unique(tabs)
 
-def insert (filename, destination, jump, sources, tabs):
+def insert (dep_file, Six_file, destination, jump, sources, tabs):
 
 	d = '%s/' % os.path.normpath(destination)
 
@@ -46,9 +46,7 @@ def insert (filename, destination, jump, sources, tabs):
 		files.append('%sjump.six' % d)
 		files.append('%sside.six' % d)
 
-	Six_file = sources[0].replace('.pag','.Six')
-
-	with open(filename, 'w') as f:
+	with open(dep_file, 'w') as f:
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
 		print('SIX_DIRS += %s' % d, file=f)
 		print('%s: %s.done' % (' '.join(files), d), file=f)
