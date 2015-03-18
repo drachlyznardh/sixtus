@@ -29,6 +29,6 @@ jump, sources, tabs = deps.extract(Six_file)
 mapped_dir = mapper.get(map_file, this_dir)
 mapped_page = roman.convert(this_page)
 
-destination = roman.clear('%s/%s/%s/' % (build_dir, mapped_dir, mapped_page))
+destination = roman.clear('%s%s/%s/' % (build_dir, mapped_dir, mapped_page))
 
 deps.insert(dep_file, destination, jump, sources, tabs)

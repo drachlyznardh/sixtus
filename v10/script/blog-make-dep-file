@@ -31,7 +31,7 @@ update = len(set(months).symmetric_difference(set(ye_old_map)))
 with open(sys.argv[1], 'w') as f:
 
 	# Each .list file depends on its .pag file
-	s = '$(BLOG_OUT_DIR)/%s.pag: $(BLOG_OUT_DIR)/%s/%s.list'
+	s = '$(BLOG_OUT_DIR)%s.pag: $(BLOG_OUT_DIR)%s/%s.list'
 	for year, value in sorted(years.items()):
 		for month in value:
 			print(s % (year, year, month), file=f)
@@ -41,7 +41,7 @@ with open(sys.argv[1], 'w') as f:
 
 		# Relations between months: previous and next
 		print(file=f)
-		s = '$(BLOG_OUT_DIR)/%s.pag: $(BLOG_IN_DIR)/%s.post'
+		s = '$(BLOG_OUT_DIR)%s.pag: $(BLOG_IN_DIR)%s.post'
 		other = months[0]
 		for month in months[1:]:
 			print(s % (other, month), file=f)
@@ -50,7 +50,7 @@ with open(sys.argv[1], 'w') as f:
 
 		# Archive page depends on the .list file for each year
 		print(file=f)
-		s = '$(ARCHIVE_PAGE): $(BLOG_OUT_DIR)/%s.list'
+		s = '$(ARCHIVE_PAGE): $(BLOG_OUT_DIR)%s.list'
 		for year in sorted(years.keys()):
 			print(s % year, file=f)
 
@@ -60,5 +60,5 @@ with open(sys.argv[1], 'w') as f:
 
 		# Index page depends on the most recent month
 		print(file=f)
-		s = '$(INDEX_PAGE): $(BLOG_IN_DIR)/%s.post'
+		s = '$(INDEX_PAGE): $(BLOG_IN_DIR)%s.post'
 		print(s % sorted(months)[-1], file=f)
