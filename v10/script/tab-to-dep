@@ -1,0 +1,34 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+from __future__ import print_function
+import sys
+import re
+
+import mapper
+import roman
+import deps
+
+if len(sys.argv) != 7:
+	args = ['.Six file', 'map file',
+		'build dir', 'this dir', 'this page',
+		'.dep file']
+	usage = 'Usage: %s <%s>' % (sys.argv[0], '> <'.join(args))
+	print(usage, file=sys.stderr)
+	sys.exit(1)
+
+Six_file  = sys.argv[1]
+map_file  = sys.argv[2]
+build_dir = sys.argv[3]
+this_dir  = sys.argv[4]
+this_page = sys.argv[5]
+dep_file  = sys.argv[6]
+
+jump, sources, tabs = deps.extract(Six_file)
+
+mapped_dir = mapper.get(map_file, this_dir)
+mapped_page = roman.convert(this_page)
+
+destination = roman.clear('%s%s/%s/' % (build_dir, mapped_dir, mapped_page))
+
+deps.insert(dep_file, destination, jump, sources, tabs)
