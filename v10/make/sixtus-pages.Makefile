@@ -1,4 +1,5 @@
 
+TRICK_DIR := $(patsubst %/,%,$(BUILD_DIR))
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 DEP_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(PAG_FILES))
 
@@ -39,11 +40,6 @@ $(BUILD_DIR)%.dep: $(BUILD_DIR)%.tab $(SITE_MAP_FILE)
 	@echo -n "Extracting dependencies from file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)tab-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $(<:.tab=.Six) $@
-	@echo Done
-
-$(DONE_FILES): %:
-	@echo -n "Splipping source file $<… "
-	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(*D) $@
 	@echo Done
 
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six
