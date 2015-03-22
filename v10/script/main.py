@@ -43,10 +43,13 @@ Six_files = [re.sub(r'^src(.*)\.pag$', r'build\1.Six', i) for i in pag_files]
 print('pag_files = %s' % pag_files)
 print('Six_files = %s' % Six_files)
 
-for f in Six_files:
+for Six_file in Six_files:
 
-	if not os.path.exists(f):
-		print('Six file [%s] does not exists!' % f)
+	if not os.path.exists(Six_file):
+		print('Six file [%s] does not exists!' % Six_file)
+		pag_file = re.sub(r'^build(.*)\.Six$',r'src\1.pag', Six_file)
+		page_base = os.path.dirname(pag_file)
+		print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
 
 print('Siχtus 0.10, done')
 sys.exit(0)
