@@ -28,7 +28,7 @@ def find_all_files (root_dir, pattern):
 	for d in visit:
 		for f in os.listdir(d):
 			if fnmatch.fnmatch(f, pattern):
-				all_files.append(f)
+				all_files.append(os.path.join(d,f))
 
 	return all_files
 
