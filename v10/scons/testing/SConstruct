@@ -1,5 +1,5 @@
 #!/usr/bin/python
 # encoding: utf-8
 
-Program('MyHelloWorld', Glob('src/*.c'), CPPPATH='hdr')
+Program('MyHelloWorld', Glob('src/*.c'), CPPPATH='hdr', LIBS='Hello', LIBPATH='.')
 SharedLibrary('Hello', Glob('src/libhello/*.c'), CPPPATH='hdr')
