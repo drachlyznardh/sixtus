@@ -43,5 +43,10 @@ Six_files = [re.sub(r'^src(.*)\.pag$', r'build\1.Six', i) for i in pag_files]
 print('pag_files = %s' % pag_files)
 print('Six_files = %s' % Six_files)
 
+for f in Six_files:
+
+	if not os.path.exists(f):
+		print('Six file [%s] does not exists!' % f)
+
 print('Siχtus 0.10, done')
 sys.exit(0)
