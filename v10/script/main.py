@@ -38,8 +38,10 @@ import os
 import fnmatch
 
 pag_files = find_all_files ('src', '*.pag')
+Six_files = [i.replace('src', 'build').replace('.pag', '.Six') for i in pag_files]
 
 print('pag_files = %s' % pag_files)
+print('Six_files = %s' % Six_files)
 
 print('Siχtus 0.10, done')
 sys.exit(0)
