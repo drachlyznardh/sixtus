@@ -39,7 +39,7 @@ import fnmatch
 
 pag_files = find_all_files ('src', '*.pag')
 
-print(pag_files)
+print('pag_files = %s' % pag_files)
 
 print('Siχtus 0.10, done')
 sys.exit(0)
