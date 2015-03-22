@@ -3,6 +3,9 @@
 
 from __future__ import print_function
 import sys
+import os
+import fnmatch
+import re
 
 def find_all_dirs (source):
 
@@ -34,11 +37,8 @@ def find_all_files (root_dir, pattern):
 
 print('Siχtus 0.10')
 
-import os
-import fnmatch
-
 pag_files = find_all_files ('src', '*.pag')
-Six_files = [i.replace('src', 'build').replace('.pag', '.Six') for i in pag_files]
+Six_files = [re.sub(r'^src(.*)\.pag$', r'build\1.Six', i) for i in pag_files]
 
 print('pag_files = %s' % pag_files)
 print('Six_files = %s' % Six_files)
