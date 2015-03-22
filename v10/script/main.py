@@ -46,14 +46,16 @@ print('Siχtus 0.10')
 
 pag_files = find_all_files ('src', '*.pag')
 Six_files = [re.sub(r'^src(.*)\.pag$', r'build\1.Six', i) for i in pag_files]
+dep_files = [re.sub(r'(.*).Six$', r'\1.dep', i) for i in Six_files]
 
 print('pag_files = %s' % pag_files)
 print('Six_files = %s' % Six_files)
+print('dep_files = %s' % dep_files)
 
 for Six_file in Six_files:
 
 	if not os.path.exists(Six_file):
-		print('Six file [%s] does not exists!' % Six_file)
+		print('Six file [%s] does not exist!' % Six_file)
 		pag_file = re.sub(r'^build(.*)\.Six$',r'src\1.pag', Six_file)
 		page_base = os.path.dirname(pag_file)
 		print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
@@ -63,6 +65,20 @@ for Six_file in Six_files:
 		pp.parse_file(pag_file)
 		assert_dir(Six_file)
 		pp.output_file(Six_file)
+
+import deps
+
+for dep_file in dep_files:
+
+	if not os.path.exists(dep_file):
+		print('dep file [%s] does not exist!' % dep_file)
+
+		Six_file = re.sub(r'(.*).dep', r'\1.Six', dep_file)
+		print('Reading dependencies from %s' % Six_file)
+		dep_list = deps.extract(Six_file)
+		assert_dir(dep_file)
+		with open(dep_file, 'w') as f:
+			print('(%s, %s, %s)' % dep_list, file=f)
 
 print('Siχtus 0.10, done')
 sys.exit(0)
