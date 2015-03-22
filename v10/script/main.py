@@ -96,15 +96,17 @@ for dep_file in dep_files:
 	stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
 	mapped = '%s' % mapper.get('map.py', os.path.dirname(stem))
 	if len(mapped): mapped = '%s/' % mapped
+	basename = os.path.basename(stem)
+	if basename != 'index': mapped += '%s' % roman.convert(basename)
 	size = len(tab_names)
 	if size == 0:
-		tab_files.append('%sindex' % mapped)
+		tab_files.append('%s/index' % mapped)
 	elif size == 1:
-		tab_files.append('%sjump' % mapped)
-		tab_files.append('%s%s' % (mapped, tab_names[0]))
+		tab_files.append('%s/jump' % mapped)
+		tab_files.append('%s%s/page' % (mapped, tab_names[0]))
 	else:
-		tab_files.append('%sjump' % mapped)
-		tab_files.append('%sside' % mapped)
+		tab_files.append('%s/jump' % mapped)
+		tab_files.append('%s/side' % mapped)
 		for name in tab_names:
 			tab_files.append('%s%s/page' % (mapped, roman.convert(name)))
 
