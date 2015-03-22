@@ -95,7 +95,6 @@ for dep_file in dep_files:
 	stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
 	mapped = '%s' % mapper.get('map.py', os.path.dirname(stem))
 	if len(mapped): mapped = '%s/' % mapped
-	print('Stem %s → %s → %s' % (dep_file, stem, mapped))
 	size = len(tab_names)
 	if size == 0:
 		tab_files.append('%sindex' % mapped)
@@ -109,7 +108,6 @@ for dep_file in dep_files:
 			tab_files.append('%s%s/page' % (mapped, roman.convert(name)))
 
 	php_names += tab_files
-	print(tab_files)
 
 php_files = [os.path.join('/opt/web/mobile', '%s.php' % name) for name in php_names]
 print('php_files = %s' % php_files)
