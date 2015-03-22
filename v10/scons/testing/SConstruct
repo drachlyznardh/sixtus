@@ -2,4 +2,4 @@
 # encoding: utf-8
 
 Program('MyHelloWorld', Glob('src/*.c'), CPPPATH='hdr')
-Library('Hello', Glob('src/libhello/*.c'), CPPPATH='hdr')
+SharedLibrary('Hello', Glob('src/libhello/*.c'), CPPPATH='hdr')
