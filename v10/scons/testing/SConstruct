@@ -1,4 +1,6 @@
 #!/usr/bin/python
 # encoding: utf-8
 
-Program('MyHelloWorld', ['main.c', 'hello.c'])
+print (Glob('*.c'))
+print (Glob('src/*.c'))
+Program('MyHelloWorld', Glob('src/*.c'), CPPPATH='hdr')
