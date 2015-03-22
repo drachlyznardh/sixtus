@@ -120,5 +120,19 @@ php_files = [os.path.join('/opt/web/mobile', '%s.php' % name) for name in php_na
 print('six_files = %s' % six_files)
 print('php_files = %s' % php_files)
 
+for name in php_names:
+
+	php_file = os.path.join('/opt/web/mobile', '%s.php' % name)
+	if not os.path.exists(php_file):
+		print('PHP file %60s does not exist!' % php_file)
+
+		php_dir = os.path.dirname(name)
+		while php_dir and php_dir not in six_dirs:
+			print('%s does not match' % php_dir)
+			php_dir = os.path.dirname(php_dir)
+
+		if php_dir in six_dirs:
+			print('Match found! %s → %s' % (php_dir, six_dirs[php_dir]))
+
 print('Siχtus 0.10, done')
 sys.exit(0)
