@@ -95,10 +95,7 @@ for dep_file in dep_files:
 	tab_files = []
 
 	stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
-	print('Stem (%10s, %10s, %10s)' % (stem, os.path.dirname(stem), os.path.basename(stem)))
-
 	mapped = '%s' % mapper.get('map.py', os.path.dirname(stem))
-
 	basename = os.path.basename(stem)
 	if basename != 'index':
 		mapped = os.path.join(mapped, roman.convert(basename))
@@ -117,9 +114,6 @@ for dep_file in dep_files:
 
 	six_dirs[mapped] = stem
 	php_names += tab_files
-
-for key, value in six_dirs.items():
-	print('%s → %s' % (key, value))
 
 six_files = [os.path.join('build', '%s.six' % name) for name in php_names]
 php_files = [os.path.join('/opt/web/mobile', '%s.php' % name) for name in php_names]
