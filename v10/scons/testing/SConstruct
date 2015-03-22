@@ -1,1 +1,1 @@
-Program('MyHelloWorld', 'main.c')
+Program('MyHelloWorld', ['main.c', 'hello.c'])
