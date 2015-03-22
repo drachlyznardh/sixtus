@@ -4,7 +4,7 @@
 from __future__ import print_function
 import sys
 
-def get_all_dirs (source):
+def find_all_dirs (source):
 
 	found = []
 
@@ -12,7 +12,7 @@ def get_all_dirs (source):
 		child = os.path.join(source, each)
 		if os.path.isdir(child):
 			found.append(child)
-			found += get_all_dirs(child)
+			found += find_all_dirs(child)
 
 	return found
 
@@ -25,7 +25,7 @@ if not os.path.exists('src'):
 	print('Path [src] does not exist!', file=sys.stderr)
 	sys.exit(1)
 
-visit = ['src'] + get_all_dirs('src')
+visit = ['src'] + find_all_dirs('src')
 print(visit)
 pag_files = []
 
