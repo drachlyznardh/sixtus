@@ -93,22 +93,27 @@ for dep_file in dep_files:
 
 	tab_names = dep_list[2]
 	tab_files = []
+
 	stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
+	print('Stem (%10s, %10s, %10s)' % (stem, os.path.dirname(stem), os.path.basename(stem)))
+
 	mapped = '%s' % mapper.get('map.py', os.path.dirname(stem))
-	if len(mapped): mapped = '%s/' % mapped
+
 	basename = os.path.basename(stem)
-	if basename != 'index': mapped += '%s' % roman.convert(basename)
+	if basename != 'index':
+		mapped = os.path.join(mapped, roman.convert(basename))
+
 	size = len(tab_names)
 	if size == 0:
-		tab_files.append('%s/index' % mapped)
+		tab_files.append(os.path.join(mapped, 'index'))
 	elif size == 1:
-		tab_files.append('%s/jump' % mapped)
-		tab_files.append('%s%s/page' % (mapped, tab_names[0]))
+		tab_files.append(os.path.join(mapped, 'jump'))
+		tab_files.append(os.path.join(mapped, roman.convert(tab_names[0]), 'page'))
 	else:
-		tab_files.append('%s/jump' % mapped)
-		tab_files.append('%s/side' % mapped)
+		tab_files.append(os.path.join(mapped, 'jump'))
+		tab_files.append(os.path.join(mapped, 'side'))
 		for name in tab_names:
-			tab_files.append('%s%s/page' % (mapped, roman.convert(name)))
+			tab_files.append(os.path.join(mapped, roman.convert(name), 'page'))
 
 	six_dirs[mapped] = stem
 	php_names += tab_files
