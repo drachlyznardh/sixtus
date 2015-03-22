@@ -1,1 +1,4 @@
+#!/usr/bin/python
+# encoding: utf-8
+
 Program('MyHelloWorld', ['main.c', 'hello.c'])
