@@ -18,6 +18,10 @@ def find_all_dirs (source):
 
 def find_all_files (root_dir, pattern):
 
+	if not os.path.exists(root_dir):
+		print('Specified root_dir [%s] does not exist!' % root_dir, file=sys.stderr)
+		sys.exit(1)
+
 	visit = [root_dir] + find_all_dirs(root_dir)
 	all_files = []
 
@@ -32,10 +36,6 @@ print('Siχtus 0.10')
 
 import os
 import fnmatch
-
-if not os.path.exists('src'):
-	print('Path [src] does not exist!', file=sys.stderr)
-	sys.exit(1)
 
 #visit = ['src'] + find_all_dirs('src')
 #print(visit)
