@@ -131,8 +131,15 @@ for name in php_names:
 			print('%s does not match' % php_dir)
 			php_dir = os.path.dirname(php_dir)
 
-		if php_dir in six_dirs:
-			print('Match found! %s → %s' % (php_dir, six_dirs[php_dir]))
+		if php_dir not in six_dirs:
+			print('Shit!')
+			sys.exit(1)
+
+		print('Match found! %s → %s' % (php_dir, six_dirs[php_dir]))
+
+		pag_file = '%s.pag' % six_dirs[php_dir]
+
+		print('Invoking splitter (%s, %s)' % (pag_file, os.path.dirname(php_dir)))
 
 print('Siχtus 0.10, done')
 sys.exit(0)
