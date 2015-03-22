@@ -37,18 +37,7 @@ print('Siχtus 0.10')
 import os
 import fnmatch
 
-#visit = ['src'] + find_all_dirs('src')
-#print(visit)
 pag_files = find_all_files ('src', '*.pag')
-
-#for d in visit:
-#	for i in os.listdir(d):
-#
-#		print('Found [%s]' % i)
-#
-#		if fnmatch.fnmatch(i, '*.pag'):
-#			print('%s matches *.pag' % i)
-#			pag_files.append(i)
 
 print(pag_files)
 
