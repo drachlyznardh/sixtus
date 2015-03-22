@@ -16,5 +16,8 @@ if not os.path.exists('src'):
 for i in os.listdir('src'):
 	print('Found [%s]' % i)
 
+	if fnmatch.fnmatch(i, '*.pag'):
+		print('%s matches *.pag' % i)
+
 print('Siχtus 0.10, done')
 sys.exit(0)
