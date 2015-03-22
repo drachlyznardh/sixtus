@@ -137,9 +137,14 @@ for name in php_names:
 
 		print('Match found! %s → %s' % (php_dir, six_dirs[php_dir]))
 
-		pag_file = '%s.pag' % six_dirs[php_dir]
+		Six_file = os.path.join('build', '%s.Six' % six_dirs[php_dir])
+		output_dir = os.path.dirname(php_dir)
 
-		print('Invoking splitter (%s, %s)' % (pag_file, os.path.dirname(php_dir)))
+		print('Invoking splitter (%s, %s)' % (Six_file, output_dir))
+		from splitter import Splitter
+		sp = Splitter()
+		sp.parse_file(Six_file)
+		sp.output_files(output_dir)
 
 print('Siχtus 0.10, done')
 sys.exit(0)
