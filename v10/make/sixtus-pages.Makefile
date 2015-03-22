@@ -1,8 +1,10 @@
 
+TRICK_DIR := $(patsubst %/,%,$(BUILD_DIR))
 PAG_FILES += $(sort $(shell find $(PAG_DIR) -name '*.pag'))
 DEP_FILES += $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.dep, $(PAG_FILES))
 
 .PRECIOUS: $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.Six, $(PAG_FILES))
+.PRECIOUS: $(patsubst $(PAG_DIR)%.pag, $(BUILD_DIR)%.tab, $(PAG_FILES))
 
 all: sixtus-pages
 
@@ -23,20 +25,21 @@ PHP_JUMP_FILES := $(patsubst $(BUILD_DIR)%jump.six, $(DEPLOY_DIR)%index.php, $(S
 sixtus-pages: $(DEP_FILES) $(PHP_PAGE_FILES) $(PHP_SIDE_FILES) $(PHP_JUMP_FILES)
 
 $(BUILD_DIR)%.Six: $(PAG_DIR)%.pag
-	@#echo -n "Expanding source file $<… "
+	@echo -n "Expanding source file $<… "
 	@mkdir -p $(dir $@)
 	@$(SCRIPT_DIR)pag-to-Six $< $(dir $<) $@
-	@#echo Done
-
-$(BUILD_DIR)%.dep: $(BUILD_DIR)%.Six $(SITE_MAP_FILE)
-	@echo -n "Extracting dependencies for file $<… "
-	@mkdir -p $(dir $@)
-	@$(SCRIPT_DIR)Six-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $@
 	@echo Done
 
-$(DONE_FILES): %:
-	@echo -n "Splipping source file $<… "
-	@$(SCRIPT_DIR)Six-to-done $(patsubst $(PAG_DIR)%.pag,$(BUILD_DIR)%.Six,$<) $(*D) $@
+$(BUILD_DIR)%.tab: $(BUILD_DIR)%.Six
+	@echo -n "Extracting components from file $<… "
+	@mkdir -p $(dir $@)
+	@$(SCRIPT_DIR)Six-to-tab $< $@
+	@echo Done
+
+$(BUILD_DIR)%.dep: $(BUILD_DIR)%.tab $(SITE_MAP_FILE)
+	@echo -n "Extracting dependencies from file $<… "
+	@mkdir -p $(dir $@)
+	@$(SCRIPT_DIR)tab-to-dep $< $(SITE_MAP_FILE) $(BUILD_DIR) $(*D) $(*F) $(<:.tab=.Six) $@
 	@echo Done
 
 $(PHP_PAGE_FILES): $(DEPLOY_DIR)%index.php: $(BUILD_DIR)%page.six

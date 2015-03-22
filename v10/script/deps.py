@@ -28,47 +28,43 @@ def extract (filename):
 
 	return False, roman.unique(sources), roman.unique(tabs)
 
-def insert (filename, destination, jump, sources, tabs):
+def rreplace (name):
+
+	k = name.rfind('/')
+	return '%s%%%s' % (name[:k], name[k+1:])
+
+def insert (dep_file, Six_file, destination, jump, sources, tabs):
 
 	d = '%s/' % os.path.normpath(destination)
+	_d = os.path.normpath(destination)
 
-	with open(filename, 'w') as f:
+	size = len(tabs)
 
-		if jump:
-
-			print('SIX_FILES += %sjump.six' % d, file=f)
-			print('SIX_DIRS += %s' % d, file=f)
-			print('%sjump.six: %s.done' % (d, d), file=f)
-			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
-			return
-
-		size = len(tabs)
-
-		if size == 0:
-
-			print('SIX_FILES += %spage.six' % d, file=f)
-			print('SIX_DIRS += %s' % d, file=f)
-			print('%spage.six: %s.done' % (d, d), file=f)
-			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
-			return
-
-		if size == 1:
-
-			files = []
-			files.append('%s%s/page.six' % (d, roman.convert(tabs[0])))
-			files.append('%sjump.six' % d)
-
-			print('SIX_FILES += %s' % ' '.join(files), file=f)
-			print('SIX_DIRS += %s' % d, file=f)
-			print('%s: %s.done' % (' '.join(files), d), file=f)
-			print('%s.done: %s' % (d, ' '.join(sources)), file=f)
-			return
-
+	if jump:
+		files = ['%sjump.six' % d]
+		names = ['jump']
+	elif size == 0:
+		files = ['%spage.six' % d]
+		names = ['page']
+	elif size == 1:
+		files = ['%s%s/page.six' % (d, roman.convert(tabs[0]))]
+		files.append('%sjump.six' % d)
+		names = ['page', 'jump']
+	else:
 		files = ['%s%s/page.six' % (d, roman.convert(name)) for name in tabs ]
 		files.append('%sjump.six' % d)
 		files.append('%sside.six' % d)
+		names = ['%s/page' % roman.convert(name) for name in tabs]
+		names.append('jump')
+		names.append('side')
 
+
+	with open(dep_file, 'w') as f:
 		print('SIX_FILES += %s' % ' '.join(files), file=f)
 		print('SIX_DIRS += %s' % d, file=f)
-		print('%s: %s.done' % (' '.join(files), d), file=f)
-		print('%s.done: %s' % (d, ' '.join(sources)), file=f)
+		#print('%s: %s' % (' '.join(files), ' '.join(sources)), file=f)
+		#print('%s: %s' % (' '.join(['%s%%%s.six' % (_d, name) for name in names]), ' '.join([rreplace(i) for i in sources])), file=f)
+		print('%s: %s' % (' '.join(['%s%%%s.six' % (_d, name) for name in names]), Six_file), file=f)
+		print('\t@echo -n "Splitting source file %s… [$*]… "' % Six_file, file=f)
+		print('\t@$(SCRIPT_DIR)Six-to-six %s %s' % (Six_file, d), file=f)
+		print('\t@echo "Done"', file=f)
