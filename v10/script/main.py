@@ -83,6 +83,7 @@ for dep_file in dep_files:
 import mapper
 import roman
 
+six_dirs  = {}
 php_names = []
 
 for dep_file in dep_files:
@@ -107,9 +108,15 @@ for dep_file in dep_files:
 		for name in tab_names:
 			tab_files.append('%s%s/page' % (mapped, roman.convert(name)))
 
+	six_dirs[mapped] = stem
 	php_names += tab_files
 
+for key, value in six_dirs.items():
+	print('%s → %s' % (key, value))
+
+six_files = [os.path.join('build', '%s.six' % name) for name in php_names]
 php_files = [os.path.join('/opt/web/mobile', '%s.php' % name) for name in php_names]
+print('six_files = %s' % six_files)
 print('php_files = %s' % php_files)
 
 print('Siχtus 0.10, done')
