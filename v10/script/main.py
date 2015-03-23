@@ -158,10 +158,10 @@ for name in six_files:
 			print('Shit!')
 			sys.exit(1)
 
-		print('Match found! %s → %s' % (six_dir, six_dirs[six_dir]))
+		print('Match found! "%s" → "%s"' % (six_dir, six_dirs[six_dir]))
 
 		Six_file = os.path.join('build', '%s.Six' % six_dirs[six_dir])
-		output_dir = os.path.join('build', six_dir)#os.path.dirname(six_dir))
+		output_dir = os.path.join('build', six_dir)
 
 		print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
 		from splitter import Splitter
