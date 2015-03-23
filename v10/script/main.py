@@ -138,8 +138,8 @@ for dep_file in dep_files:
 	six_dirs[mapped] = stem
 	php_names += tab_files
 
-six_files = [os.path.join('build', '%s.six' % name) for name in php_names]
-php_files = [os.path.join('/opt/web/mobile', '%s.php' % name) for name in php_names]
+six_files = [get_six_filename(boundle) for boundle in php_names]
+php_files = [get_php_filename(boundle) for boundle in php_names]
 print('six_files = %s' % six_files)
 print('php_files = %s' % php_files)
 
