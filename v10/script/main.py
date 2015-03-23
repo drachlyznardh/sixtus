@@ -57,41 +57,20 @@ php_files = [util.get_php_filename(bundle) for bundle in php_names]
 print('six_files = %s' % six_files)
 print('php_files = %s' % php_files)
 
-def build_six_files (Six_file, output_dir):
-
-	print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
-	from splitter import Splitter
-	sp = Splitter()
-	sp.parse_file(Six_file)
-	sp.output_files(output_dir)
-
-def locate_six_dir (dirname):
-
-	six_dir = os.path.dirname(name)
-	while six_dir and six_dir not in six_dirs:
-		print('%s does not match' % six_dir)
-		six_dir = os.path.dirname(six_dir)
-
-	if six_dir not in six_dirs:
-		print('Shit!')
-		sys.exit(1)
-
-	return six_dir
-
 for name in six_files:
 
 	six_file = os.path.join(build_dir, name)
 	if not os.path.exists(six_file):
 		print('six file %60s does not exist!' % six_file)
 
-		six_dir = locate_six_dir(os.path.dirname(name))
+		six_dir = build.locate_six_dir(os.path.dirname(name), six_dirs)
 
 		print('Match found! "%s" → "%s"' % (six_dir, six_dirs[six_dir]))
 
 		Six_file = os.path.join('build', '%s.Six' % six_dirs[six_dir])
 		output_dir = os.path.join('build', six_dir)
 
-		build_six_files(Six_file, output_dir)
+		build.build_six_files(Six_file, output_dir)
 
 def build_page_file (php_base, six_file, php_file):
 

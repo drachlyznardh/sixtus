@@ -60,3 +60,24 @@ def parse_dep_file (dep_file):
 
 	return mapped, stem, tab_files
 
+def build_six_files (Six_file, output_dir):
+
+	print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
+	from splitter import Splitter
+	sp = Splitter()
+	sp.parse_file(Six_file)
+	sp.output_files(output_dir)
+
+def locate_six_dir (dirname, six_dirs):
+
+	six_dir = dirname
+	while six_dir and six_dir not in six_dirs:
+		print('%s does not match' % six_dir)
+		six_dir = os.path.dirname(six_dir)
+
+	if six_dir not in six_dirs:
+		print('Shit!')
+		sys.exit(1)
+
+	return six_dir
+
