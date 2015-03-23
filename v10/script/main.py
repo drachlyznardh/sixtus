@@ -143,9 +143,9 @@ php_files = [get_php_filename(boundle) for boundle in php_names]
 print('six_files = %s' % six_files)
 print('php_files = %s' % php_files)
 
-for name in php_names:
+for name in six_files:
 
-	six_file = os.path.join('build', '%s.six' % name)
+	six_file = os.path.join(build_dir, name)
 	if not os.path.exists(six_file):
 		print('six file %60s does not exist!' % six_file)
 
