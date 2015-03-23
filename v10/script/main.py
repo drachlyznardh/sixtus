@@ -70,19 +70,13 @@ def build_dep_file (dep_file):
 
 def get_six_filename (boundle):
 
-	file_type, file_base = boundle
-	if file_type == 0: return os.path.join('build', file_base, 'page.six')
-	if file_type == 1: return os.path.join('build', file_base, 'jump.six')
-	if file_type == 2: return os.path.join('build', file_base, 'side.six')
-	raise Exception('get six filename: unknown type (%d, %s)' % boundle)
+	extension = ['page.six', 'jump.six', 'side.six']
+	return os.path.join(boundle[1], extension[boundle[0]])
 
 def get_php_filename (boundle):
 
-	file_type, file_base = boundle
-	if file_type == 0: return os.path.join('/opt/web/mobile', file_base, 'index.php')
-	if file_type == 1: return os.path.join('/opt/web/mobile', file_base, 'index.php')
-	if file_type == 2: return os.path.join('/opt/web/mobile', file_base, 'side.php')
-	raise Exception('get php filename: unknown type (%d, %s)' % boundle)
+	extension = ['index.php', 'index.php', 'side.php']
+	return os.path.join(boundle[1], extension[boundle[0]])
 
 print('Siχtus 0.10')
 
