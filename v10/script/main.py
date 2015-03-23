@@ -122,25 +122,25 @@ print('php_files = %s' % php_files)
 
 for name in php_names:
 
-	php_file = os.path.join('/opt/web/mobile', '%s.php' % name)
-	if not os.path.exists(php_file):
-		print('PHP file %60s does not exist!' % php_file)
+	six_file = os.path.join('build', '%s.six' % name)
+	if not os.path.exists(six_file):
+		print('six file %60s does not exist!' % six_file)
 
-		php_dir = os.path.dirname(name)
-		while php_dir and php_dir not in six_dirs:
-			print('%s does not match' % php_dir)
-			php_dir = os.path.dirname(php_dir)
+		six_dir = os.path.dirname(name)
+		while six_dir and six_dir not in six_dirs:
+			print('%s does not match' % six_dir)
+			six_dir = os.path.dirname(six_dir)
 
-		if php_dir not in six_dirs:
+		if six_dir not in six_dirs:
 			print('Shit!')
 			sys.exit(1)
 
-		print('Match found! %s → %s' % (php_dir, six_dirs[php_dir]))
+		print('Match found! %s → %s' % (six_dir, six_dirs[six_dir]))
 
-		Six_file = os.path.join('build', '%s.Six' % six_dirs[php_dir])
-		output_dir = os.path.dirname(php_dir)
+		Six_file = os.path.join('build', '%s.Six' % six_dirs[six_dir])
+		output_dir = os.path.join('build', six_dir)#os.path.dirname(six_dir))
 
-		print('Invoking splitter (%s, %s)' % (Six_file, output_dir))
+		print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
 		from splitter import Splitter
 		sp = Splitter()
 		sp.parse_file(Six_file)
