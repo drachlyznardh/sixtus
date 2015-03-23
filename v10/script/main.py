@@ -7,6 +7,12 @@ import os
 import fnmatch
 import re
 
+import deps
+import mapper
+import roman
+import converter
+from preprocessor import Preprocessor
+
 def find_all_dirs (source):
 
 	found = []
@@ -60,13 +66,11 @@ for Six_file in Six_files:
 		page_base = os.path.dirname(pag_file)
 		print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
 
-		from preprocessor import Preprocessor
 		pp = Preprocessor(page_base)
 		pp.parse_file(pag_file)
 		assert_dir(Six_file)
 		pp.output_file(Six_file)
 
-import deps
 
 for dep_file in dep_files:
 
@@ -79,9 +83,6 @@ for dep_file in dep_files:
 		assert_dir(dep_file)
 		with open(dep_file, 'w') as f:
 			print('(%s, %s, %s)' % dep_list, file=f)
-
-import mapper
-import roman
 
 six_dirs  = {}
 php_names = []
@@ -149,8 +150,6 @@ for name in php_names:
 page_re = re.compile(r'(.*)page$')
 jump_re = re.compile(r'(.*)jump$')
 side_re = re.compile(r'(.*)side$')
-
-import converter
 
 for name in php_names:
 
