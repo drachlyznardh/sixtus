@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # encoding: utf-8
 
+from __future__ import print_function
+
 def build_Six_file (Six_file):
 
 	pag_file = re.sub(r'^build(.*)\.Six$',r'src\1.pag', Six_file)
