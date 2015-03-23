@@ -4,14 +4,7 @@
 from __future__ import print_function
 import sys
 import os
-import fnmatch
 import re
-
-import deps
-import mapper
-import roman
-import converter
-from preprocessor import Preprocessor
 
 import util
 import build
