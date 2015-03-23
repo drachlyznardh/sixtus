@@ -107,14 +107,10 @@ for dep_file in dep_files:
 six_dirs  = {}
 php_names = []
 
-def load_dep_file (dep_file):
+def parse_dep_file (dep_file):
 
 	with open(dep_file, 'r') as f:
-		return eval(f.read())
-
-for dep_file in dep_files:
-
-	jump, sources, tab_names = load_dep_file(dep_file)
+		jump, sources, tab_names = eval(f.read())
 
 	tab_files = []
 
@@ -137,6 +133,12 @@ for dep_file in dep_files:
 		tab_files.append((2, mapped))
 		for name in tab_names:
 			tab_files.append((0, os.path.join(mapped, roman.convert(name))))
+
+	return mapped, stem, tab_files
+
+for dep_file in dep_files:
+
+	mapped, stem, tab_files = parse_dep_file(dep_file)
 
 	six_dirs[mapped] = stem
 	php_names += tab_files
