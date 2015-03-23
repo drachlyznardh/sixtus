@@ -68,6 +68,22 @@ def build_dep_file (dep_file):
 	with open(dep_file, 'w') as f:
 		print('(%s, %s, %s)' % dep_list, file=f)
 
+def get_six_filename (boundle):
+
+	file_type, file_base = boundle
+	if file_type == 0: return os.path.join('build', file_base, 'page.six')
+	if file_type == 1: return os.path.join('build', file_base, 'jump.six')
+	if file_type == 2: return os.path.join('build', file_base, 'side.six')
+	raise Exception('get six filename: unknown type (%d, %s)' % boundle)
+
+def get_php_filename (boundle):
+
+	file_type, file_base = boundle
+	if file_type == 0: return os.path.join('/opt/web/mobile', file_base, 'index.php')
+	if file_type == 1: return os.path.join('/opt/web/mobile', file_base, 'index.php')
+	if file_type == 2: return os.path.join('/opt/web/mobile', file_base, 'side.php')
+	raise Exception('get php filename: unknown type (%d, %s)' % boundle)
+
 print('Siχtus 0.10')
 
 pag_files = find_all_files ('src', '*.pag')
