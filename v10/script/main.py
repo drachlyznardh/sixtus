@@ -110,9 +110,8 @@ php_names = []
 for dep_file in dep_files:
 
 	with open(dep_file, 'r') as f:
-		dep_list = eval(f.read())
+		jump, sources, tab_names = eval(f.read())
 
-	jump, sources, tab_names = dep_list
 	tab_files = []
 
 	stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
