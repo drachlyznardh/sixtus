@@ -176,6 +176,7 @@ side_re = re.compile(r'(.*)side$')
 for boundle in php_names:
 
 	php_type = boundle[0]
+	php_base = boundle[1]
 	six_file = os.path.join(build_dir, get_six_filename(boundle))
 	php_file = os.path.join(deploy_dir, get_php_filename(boundle))
 
