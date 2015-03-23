@@ -102,7 +102,7 @@ for dep_file in dep_files:
 
 	size = len(tab_names)
 	if size == 0:
-		tab_files.append(os.path.join(mapped, 'index'))
+		tab_files.append(os.path.join(mapped, 'page'))
 	elif size == 1:
 		tab_files.append(os.path.join(mapped, 'jump'))
 		tab_files.append(os.path.join(mapped, roman.convert(tab_names[0]), 'page'))
