@@ -191,5 +191,17 @@ for name in php_names:
 			with open(php_file, 'w') as f:
 				print('<?php header("Location: /%s");die();?>' % token[1], file=f)
 
+		elif php_type == 2: # side
+			print('Invoking Converter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+
+			c = converter.ContentConverter(php_file)
+
+			with open(six_file, 'r') as f:
+				for line in f.readlines():
+					c.parse_line(line.strip())
+
+			with open(php_file, 'w') as f:
+				print(c.content, file=f)
+
 print('Siχtus 0.10, done')
 sys.exit(0)
