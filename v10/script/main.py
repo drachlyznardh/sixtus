@@ -184,10 +184,6 @@ for name in six_files:
 
 		build_six_files(Six_file, output_dir)
 
-page_re = re.compile(r'(.*)page$')
-jump_re = re.compile(r'(.*)jump$')
-side_re = re.compile(r'(.*)side$')
-
 def build_page_file (php_base, six_file, php_file):
 
 	print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
