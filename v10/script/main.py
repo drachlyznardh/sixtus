@@ -173,6 +173,14 @@ page_re = re.compile(r'(.*)page$')
 jump_re = re.compile(r'(.*)jump$')
 side_re = re.compile(r'(.*)side$')
 
+def build_page_file (php_base, six_file, php_file):
+
+	print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+	c = converter.FullConverter(os.path.dirname(php_file))
+	c.parse_file(six_file)
+	assert_dir(php_file)
+	c.output_page_file(php_file)
+
 for bundle in php_names:
 
 	php_type = bundle[0]
@@ -184,11 +192,7 @@ for bundle in php_names:
 		print('PHP file %60s does not exist!' % php_file)
 
 		if php_type == 0: # page
-			print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
-			c = converter.FullConverter(os.path.dirname(php_file))
-			c.parse_file(six_file)
-			assert_dir(php_file)
-			c.output_page_file(php_file)
+			build_page_file(php_base, six_file, php_file)
 		elif php_type == 1: # jump
 			print('Invoking Jumper (%s,%s)' % (six_file, php_file))
 
