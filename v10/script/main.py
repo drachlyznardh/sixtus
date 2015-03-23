@@ -190,6 +190,7 @@ for name in php_names:
 				print('Line does not contain a jump directive! %s' % line, file=sys.stderr)
 				sys.exit(1)
 
+			assert_dir(php_file)
 			with open(php_file, 'w') as f:
 				print('<?php header("Location: /%s");die();?>' % token[1], file=f)
 
@@ -202,6 +203,7 @@ for name in php_names:
 				for line in f.readlines():
 					c.parse_line(line.strip())
 
+			assert_dir(php_file)
 			with open(php_file, 'w') as f:
 				print(c.content, file=f)
 
