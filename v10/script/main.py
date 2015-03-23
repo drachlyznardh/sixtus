@@ -146,9 +146,26 @@ for name in php_names:
 		sp.parse_file(Six_file)
 		sp.output_files(output_dir)
 
+page_re = re.compile(r'(.*)page$')
+jump_re = re.compile(r'(.*)jump$')
+side_re = re.compile(r'(.*)side$')
+
 for name in php_names:
 
-	php_file = os.path.join('/opt/web/mobile', '%s.php' % name)
+	if page_re.match(name):
+		php_type = 0
+		php_name = page_re.sub(r'\1index', name)
+	elif jump_re.match(name):
+		php_type = 1
+		php_name = jump_re.sub(r'\1index', name)
+	elif side_re.match(name):
+		php_type = 2
+		php_name = name
+	else:
+		print('No match on %s' % name)
+		sys.exit(1)
+
+	php_file = os.path.join('/opt/web/mobile', '%s.php' % php_name)
 	if not os.path.exists(php_file):
 		print('PHP file %60s does not exist!' % php_file)
 
