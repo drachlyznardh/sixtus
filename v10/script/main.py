@@ -59,6 +59,15 @@ def build_Six_file (Six_file):
 	assert_dir(Six_file)
 	pp.output_file(Six_file)
 
+def build_dep_file (dep_file):
+
+	Six_file = re.sub(r'(.*)\.dep', r'\1.Six', dep_file)
+	print('Reading dependencies from %s' % Six_file)
+	dep_list = deps.extract(Six_file)
+	assert_dir(dep_file)
+	with open(dep_file, 'w') as f:
+		print('(%s, %s, %s)' % dep_list, file=f)
+
 print('Siχtus 0.10')
 
 pag_files = find_all_files ('src', '*.pag')
@@ -79,13 +88,7 @@ for dep_file in dep_files:
 
 	if not os.path.exists(dep_file):
 		print('dep file [%s] does not exist!' % dep_file)
-
-		Six_file = re.sub(r'(.*)\.dep', r'\1.Six', dep_file)
-		print('Reading dependencies from %s' % Six_file)
-		dep_list = deps.extract(Six_file)
-		assert_dir(dep_file)
-		with open(dep_file, 'w') as f:
-			print('(%s, %s, %s)' % dep_list, file=f)
+		build_dep_file(dep_file)
 
 six_dirs  = {}
 php_names = []
