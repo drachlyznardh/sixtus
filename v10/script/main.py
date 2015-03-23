@@ -178,6 +178,18 @@ for name in php_names:
 			c.parse_file(six_file)
 			assert_dir(php_file)
 			c.output_page_file(php_file)
+		elif php_type == 1: # jump
+			print('Invoking Jumper (%s,%s)' % (six_file, php_file))
+
+			with open(six_file, 'r') as f:
+				token = f.readline().split('|')
+
+			if token[0] != 'jump':
+				print('Line does not contain a jump directive! %s' % line, file=sys.stderr)
+				sys.exit(1)
+
+			with open(php_file, 'w') as f:
+				print('<?php header("Location: /%s");die();?>' % token[1], file=f)
 
 print('Siχtus 0.10, done')
 sys.exit(0)
