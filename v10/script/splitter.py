@@ -8,212 +8,179 @@ import roman
 
 class Splitter:
 
-	def __init__ (self, base):
+	def __init__ (self):
 
-		self.verbose = False
-		self.debug   = False
+		self.debug = False
 
-		self.base = base
+		self.state = 0
 
-		self.state = 'meta'
-
-		self.meta    = ''
-		self.side    = ''
+		self.jump = False
 		self.content = ''
-
-		self.jump    = False
-		self.first   = False
+		self.tabs = {}
+		self.meta = ''
+		self.side = ''
 		self.tabname = None
+		self.tabnames = []
 
-		self.tabs  = {}
-		self.prevs = {}
-		self.nexts = {}
+	def get_tab_order (self):
 
-		self.filename = ''
-		self.lineno = 0
-		self.touch_files = []
+		seen = set()
+		f = seen.add
+		return [x for x in self.tabnames if x and not (x in seen or f(x))]
 
-	def update_state (self, newstate):
+	def get_tab_relation (self, order):
 
-		if self.state == 'meta':
-			self.meta += self.content
-		elif self.state == 'side':
-			self.side += self.content
-		elif self.state == 'page':
-			self.save_tab()
-		else: self.error('What is state %s supposed to be?' % (self.state, newstate))
+		tabnext = {}
+		tabprev = {}
+		current = order[0]
 
-		self.state = newstate
-		self.content = ''
+		for i in order[1:]:
 
-	def save_tab (self):
+			tabnext[current] = i
+			tabprev[i] = current
+			current = i
 
-		if self.tabname in self.tabs:
-			self.tabs[self.tabname] += self.content
-		else: self.tabs[self.tabname] = self.content
+		return tabnext, tabprev
 
-	def split_content (self, lines):
-
-		for line in lines:
-
-			self.lineno += 1
-			if self.debug: print(line)
-
-			if len(line) and line[0] == '#':
-				if self.debug: print('Line is a comment, skip')
-				continue
-
-			if '|' not in line:
-				self.append_content(line)
-				if self.debug: print('Line is simple content, appending')
-				continue
-
-			token = line.split('|')
-			command = token[0]
-
-			if command == 'jump': self.jump = token[1]
-			elif command == 'start': self.update_state(token[1])
-			elif command == 'tab':
-
-				if not self.first: self.first = token[1]
-				self.save_tab()
-				self.nexts[self.tabname] = token[1]
-				self.prevs[token[1]] = self.tabname
-				self.tabname = token[1]
-				self.content = ''
-
-			else: self.append_content(line)
-
-		self.update_state('meta')
-
-	def append_content (self, text):
-
-		self.content += ('%s\n' % text)
-
-	def check_dir_path (self, filepath):
+	def mkdir (self, filepath):
 
 		dirpath = os.path.dirname(filepath)
 		if not os.path.exists(dirpath):
 			os.makedirs(dirpath)
 
-	def output_index_file (self, page_name, jumpfile_path):
+	def append (self, text):
 
-		if self.debug: print('Dump Index', file=sys.stderr)
-		if self.verbose: print('\tIndex file %s' % jumpfile_path, file=sys.stderr)
+		self.content += '%s\n' % text
 
-		self.check_dir_path(jumpfile_path)
+	def update_tab (self):
 
-		if page_name == 'Index':
-			destination = ("%s/%s/" % (self.base, roman.convert(self.first)))
-		else:
-			destination = ("%s/%s/%s/" % (self.base, page_name, roman.convert(self.first)))
-		filecontent = ("jump|%s" % destination)
-		with open(jumpfile_path, 'w') as outfile:
-			outfile.write(filecontent)
+		if self.tabname in self.tabs:
+			self.tabs[self.tabname] += self.content
+		else: self.tabs[self.tabname] = self.content
 
-	def output_many_tabs (self, page_name, side_path, build_dir):
+		self.content = ''
+		self.tabnames.append(self.tabname)
+		self.tabname = None
 
-		if self.debug: print('Dump Tabs', file=sys.stderr)
+	def update_state (self, newstate):
 
-		for name, value in self.tabs.items():
+		if self.state == 0:
+			self.meta += self.content
+			self.content = ''
+		elif self.state == 2:
+			self.side += self.content
+			self.content = ''
+		else: self.update_tab()
 
-			if name == None: continue
+		if newstate == 'meta': self.state = 0
+		elif newstate == 'page': self.state = 1
+		elif newstate == 'side': self.state = 2
+		else: raise 'What state is %s supposed to be?' % newstate
 
-			if page_name == 'Index': tab_name = roman.convert(name)
-			else: tab_name = '%s/%s' % (page_name, roman.convert(name))
-			path = self.get_path(build_dir, tab_name, 'page')
-			self.touch_files.append(path)
+	def parse_file (self, filename):
 
-			if self.verbose:
-				print('\tTab file %s' % path, file=sys.stdout)
+		with open(filename, 'r') as f:
+			for i in f.readlines():
+				self.parse_line(i.strip())
 
-			self.check_dir_path(path)
+		self.update_state('meta')
+
+	def parse_line (self, line):
+
+		if '|' not in line:
+			self.append(line)
+			return
+
+		token = line.split('|')
+		c = token[0]
+
+		if c == 'tab':
+			self.update_tab()
+			self.tabname = token[1]
+		elif c == 'start': self.update_state(token[1])
+		elif c == 'jump': self.jump = token[1]
+		else: self.append(line)
+
+	def output_single_jump_file (self, base):
+
+		jump_path = os.path.normpath('%s/jump.six' % base)
+		if self.debug: print('Jump file on [%s]' % jump_path)
+		self.mkdir(jump_path)
+		with open(jump_path, 'w') as f:
+			print('jump|%s' % self.jump, file=f)
+
+	def output_all_files (self, base):
+
+		files = []
+		order = self.get_tab_order()
+		tabnext, tabprev = self.get_tab_relation(order)
+
+		jump_path = os.path.normpath('%s/jump.six' % base)
+		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
+		self.mkdir(jump_path)
+		with open(jump_path, 'w') as f:
+			print('jump|%s/%s/' % (base, roman.convert(order[0])), file=f)
+
+		side_path = os.path.normpath('%s/side.six' % base)
+		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
+		#self.mkdir(side_path)
+		with open(side_path, 'w') as f:
+			print(self.side, file=f)
+
+		files.append(jump_path)
+		files.append(side_path)
+
+		for name in order:
 
 			varmeta = self.meta
+			if name in tabprev:
+				prevtab = roman.convert(tabprev[name])
+				varmeta += 'tabprev|%s/%s/\n' % (base, prevtab)
+			if name in tabnext:
+				nexttab = roman.convert(tabnext[name])
+				varmeta += 'tabnext|%s/%s/\n' % (base, nexttab)
+			varmeta += 'side|../side.php\n'
 
-			if name in self.prevs.keys() and self.prevs[name]:
-				if page_name == 'Index':
-					destination = '%s/%s' % (self.base, roman.convert(self.prevs[name]))
-				else:
-					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.prevs[name]))
-				varmeta += 'tabprev|/%s/\n' % destination
+			tab_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+			if self.debug: print(' Tab file on [%s]' % tab_path)
+			self.mkdir(tab_path)
+			with open(tab_path, 'w') as f:
+				print('%sstart|page\n%s' % (varmeta, self.tabs[name]), file=f)
 
-			if name in self.nexts.keys() and self.nexts[name]:
-				if page_name == 'Index':
-					destination = '%s/%s' % (self.base, roman.convert(self.nexts[name]))
-				else:
-					destination = '%s/%s/%s' % (self.base, page_name, roman.convert(self.nexts[name]))
-				varmeta += 'tabnext|/%s/\n' % destination
+			files.append(tab_path)
 
-			varmeta += 'side|%s\n' % side_path
+	def output_default_tab (self, base):
 
-			filecontent = ('%sstart|page\n%s' % (varmeta, value))
-			with open(path, 'w') as outfile:
-				outfile.write(filecontent)
+		page_path = os.path.normpath('%s/page.six' % base)
+		if self.debug: print('Page file on [%s]' % page_path)
+		self.mkdir(page_path)
+		with open(page_path, 'w') as f:
+			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
-	def output_side_file (self, filename):
+	def output_single_tab (self, base):
 
-		with open(filename, 'w') as f:
-			print('%s' % self.side, file=f)
+		name = [name for name in self.tabs if name][0]
 
-	def output_single_tab (self, index_path):
+		page_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+		if self.debug: print('Page file on [%s]' % page_path)
+		self.mkdir(page_path)
+		with open(page_path, 'w') as f:
+			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side,
+			self.tabs[name]), file=f)
 
-		if self.verbose: print('\tSingle tab file %s' % index_path, file=sys.stdout)
-		if self.debug: print('Dump Single Tab', file=sys.stderr)
+		jump_path = os.path.normpath('%s/jump.six' % base)
+		if self.debug: print('Jump file on [%s]' % jump_path)
+		with open(jump_path, 'w') as f:
+			print('jump|%s/%s/' % (base, roman.convert(name)), file=f)
 
-		self.check_dir_path(index_path)
-		if self.jump:
-			filecontent = 'jump|%s' % self.jump
-		else:
-			filecontent = ('%s\nstart|side\n%s\nstart|page\n%s' % (self.meta, self.side, self.tabs[None]))
-		with open(index_path, 'w') as outfile:
-			outfile.write(filecontent)
-
-	def get_path (self, build_dir, page_name, six_type):
-
-		filename = '%s.six' % six_type
-		if page_name == 'Index':
-			path = os.path.join(build_dir, self.base, filename)
-		else:
-			path = os.path.join(build_dir, self.base, page_name, filename)
-
-		return os.path.normpath(path)
-
-	def output_tab_files (self, page_name, build_dir):
+	def output_files (self, base):
 
 		if self.jump:
+			self.output_single_jump_file(base)
+			return
 
-			path = self.get_path(build_dir, page_name, 'jump')
-			self.touch_files.append(path)
-			self.output_single_tab(path)
+		size = len(self.tabs)
 
-		elif self.first:
-
-			path = self.get_path(build_dir, page_name, 'jump')
-			self.touch_files.append(path)
-			self.output_index_file(page_name, path)
-
-			path = self.get_path(build_dir, page_name, 'side')
-			self.touch_files.append(path)
-			self.output_side_file(path)
-
-			self.output_many_tabs(page_name, '../side.php', build_dir)
-
-		else:
-
-			path = self.get_path(build_dir, page_name, 'page')
-			self.touch_files.append(path)
-			self.output_single_tab(path)
-
-	def output_touch_file (self, touch_file, origin_files):
-
-		if self.verbose:
-			print('\tTouch file %s' % touch_file, file=sys.stdout)
-
-		origin_list = ' '.join(origin_files)
-
-		with open(touch_file, 'w') as f:
-
-			print('SIX_FILES += %s' % (' '.join(self.touch_files)), file=f)
-			for i in self.touch_files:
-				print('%s: %s' % (i, origin_list), file=f)
+		if size == 1: self.output_default_tab(base)
+		elif size == 2: self.output_single_tab(base)
+		else: self.output_all_files(base)
