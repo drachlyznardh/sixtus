@@ -68,15 +68,15 @@ def build_dep_file (dep_file):
 	with open(dep_file, 'w') as f:
 		print('(%s, %s, %s)' % dep_list, file=f)
 
-def get_six_filename (boundle):
+def get_six_filename (bundle):
 
 	extension = ['page.six', 'jump.six', 'side.six']
-	return os.path.join(boundle[1], extension[boundle[0]])
+	return os.path.join(bundle[1], extension[bundle[0]])
 
-def get_php_filename (boundle):
+def get_php_filename (bundle):
 
 	extension = ['index.php', 'index.php', 'side.php']
-	return os.path.join(boundle[1], extension[boundle[0]])
+	return os.path.join(bundle[1], extension[bundle[0]])
 
 print('Siχtus 0.10')
 
@@ -138,8 +138,8 @@ for dep_file in dep_files:
 	six_dirs[mapped] = stem
 	php_names += tab_files
 
-six_files = [get_six_filename(boundle) for boundle in php_names]
-php_files = [get_php_filename(boundle) for boundle in php_names]
+six_files = [get_six_filename(bundle) for bundle in php_names]
+php_files = [get_php_filename(bundle) for bundle in php_names]
 print('six_files = %s' % six_files)
 print('php_files = %s' % php_files)
 
@@ -173,12 +173,12 @@ page_re = re.compile(r'(.*)page$')
 jump_re = re.compile(r'(.*)jump$')
 side_re = re.compile(r'(.*)side$')
 
-for boundle in php_names:
+for bundle in php_names:
 
-	php_type = boundle[0]
-	php_base = boundle[1]
-	six_file = os.path.join(build_dir, get_six_filename(boundle))
-	php_file = os.path.join(deploy_dir, get_php_filename(boundle))
+	php_type = bundle[0]
+	php_base = bundle[1]
+	six_file = os.path.join(build_dir, get_six_filename(bundle))
+	php_file = os.path.join(deploy_dir, get_php_filename(bundle))
 
 	if not os.path.exists(php_file):
 		print('PHP file %60s does not exist!' % php_file)
