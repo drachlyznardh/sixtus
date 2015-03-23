@@ -112,7 +112,7 @@ for dep_file in dep_files:
 	with open(dep_file, 'r') as f:
 		dep_list = eval(f.read())
 
-	tab_names = dep_list[2]
+	jump, sources, tab_names = dep_list
 	tab_files = []
 
 	stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
@@ -122,7 +122,9 @@ for dep_file in dep_files:
 		mapped = os.path.join(mapped, roman.convert(basename))
 
 	size = len(tab_names)
-	if size == 0:
+	if jump:
+		tab_files.append((1, mapped))
+	elif size == 0:
 		tab_files.append((0, mapped))
 	elif size == 1:
 		tab_files.append((1, mapped))
