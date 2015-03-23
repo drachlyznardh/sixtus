@@ -80,6 +80,10 @@ def get_php_filename (boundle):
 
 print('Siχtus 0.10')
 
+src_dir = 'src'
+build_dir = 'build'
+deploy_dir = '/opt/web/mobile'
+
 pag_files = find_all_files ('src', '*.pag')
 Six_files = [re.sub(r'^src(.*)\.pag$', r'build\1.Six', i) for i in pag_files]
 dep_files = [re.sub(r'(.*)\.Six$', r'\1.dep', i) for i in Six_files]
