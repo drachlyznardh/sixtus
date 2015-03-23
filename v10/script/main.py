@@ -107,10 +107,14 @@ for dep_file in dep_files:
 six_dirs  = {}
 php_names = []
 
-for dep_file in dep_files:
+def load_dep_file (dep_file):
 
 	with open(dep_file, 'r') as f:
-		jump, sources, tab_names = eval(f.read())
+		return eval(f.read())
+
+for dep_file in dep_files:
+
+	jump, sources, tab_names = load_dep_file(dep_file)
 
 	tab_files = []
 
