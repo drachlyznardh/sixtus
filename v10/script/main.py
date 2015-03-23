@@ -146,5 +146,11 @@ for name in php_names:
 		sp.parse_file(Six_file)
 		sp.output_files(output_dir)
 
+for name in php_names:
+
+	php_file = os.path.join('/opt/web/mobile', '%s.php' % name)
+	if not os.path.exists(php_file):
+		print('PHP file %60s does not exist!' % php_file)
+
 print('Siχtus 0.10, done')
 sys.exit(0)
