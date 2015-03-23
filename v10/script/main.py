@@ -150,6 +150,8 @@ page_re = re.compile(r'(.*)page$')
 jump_re = re.compile(r'(.*)jump$')
 side_re = re.compile(r'(.*)side$')
 
+import converter
+
 for name in php_names:
 
 	if page_re.match(name):
@@ -165,9 +167,17 @@ for name in php_names:
 		print('No match on %s' % name)
 		sys.exit(1)
 
+	six_file = os.path.join('build', '%s.six' % name)
 	php_file = os.path.join('/opt/web/mobile', '%s.php' % php_name)
 	if not os.path.exists(php_file):
 		print('PHP file %60s does not exist!' % php_file)
+
+		if php_type == 0: # page
+			print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+			c = converter.FullConverter(os.path.dirname(php_file))
+			c.parse_file(six_file)
+			assert_dir(php_file)
+			c.output_page_file(php_file)
 
 print('Siχtus 0.10, done')
 sys.exit(0)
