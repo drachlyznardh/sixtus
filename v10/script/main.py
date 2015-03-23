@@ -123,15 +123,15 @@ for dep_file in dep_files:
 
 	size = len(tab_names)
 	if size == 0:
-		tab_files.append(os.path.join(mapped, 'page'))
+		tab_files.append((0, mapped))
 	elif size == 1:
-		tab_files.append(os.path.join(mapped, 'jump'))
-		tab_files.append(os.path.join(mapped, roman.convert(tab_names[0]), 'page'))
+		tab_files.append((1, mapped))
+		tab_files.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
 	else:
-		tab_files.append(os.path.join(mapped, 'jump'))
-		tab_files.append(os.path.join(mapped, 'side'))
+		tab_files.append((1, mapped))
+		tab_files.append((2, mapped))
 		for name in tab_names:
-			tab_files.append(os.path.join(mapped, roman.convert(name), 'page'))
+			tab_files.append((0, os.path.join(mapped, roman.convert(name))))
 
 	six_dirs[mapped] = stem
 	php_names += tab_files
