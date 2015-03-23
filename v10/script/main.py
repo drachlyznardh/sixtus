@@ -48,6 +48,17 @@ def assert_dir (filename):
 	if not os.path.exists(dirname):
 		os.makedirs(dirname)
 
+def build_Six_file (Six_file):
+
+	pag_file = re.sub(r'^build(.*)\.Six$',r'src\1.pag', Six_file)
+	page_base = os.path.dirname(pag_file)
+	print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
+
+	pp = Preprocessor(page_base)
+	pp.parse_file(pag_file)
+	assert_dir(Six_file)
+	pp.output_file(Six_file)
+
 print('Siχtus 0.10')
 
 pag_files = find_all_files ('src', '*.pag')
@@ -62,15 +73,7 @@ for Six_file in Six_files:
 
 	if not os.path.exists(Six_file):
 		print('Six file [%s] does not exist!' % Six_file)
-		pag_file = re.sub(r'^build(.*)\.Six$',r'src\1.pag', Six_file)
-		page_base = os.path.dirname(pag_file)
-		print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
-
-		pp = Preprocessor(page_base)
-		pp.parse_file(pag_file)
-		assert_dir(Six_file)
-		pp.output_file(Six_file)
-
+		build_Six_file(Six_file)
 
 for dep_file in dep_files:
 
