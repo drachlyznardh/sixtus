@@ -51,18 +51,21 @@ class Sixtus:
 		self.load_Six_files()
 		self.load_dep_files()
 
-	def build_wave_one (self):
-
+	def build_Six_files (self):
 		for name in self.files['Six']:
 			if not os.path.exists(name):
 				build.build_Six_file(name)
 
+	def build_dep_files (self):
 		for name in self.files['dep']:
 			if not os.path.exists(name):
 				build.build_dep_file(name)
 
-	def build (self):
+	def build_wave_one (self):
+		self.build_Six_files()
+		self.build_dep_files()
 
+	def build (self):
 		self.load_wave_one()
 		self.build_wave_one()
 		return
