@@ -91,11 +91,24 @@ class Sixtus:
 		self.load_six_files()
 		self.load_php_files()
 
+	def locate_six_dir (self, dirname, six_dirs):
+
+		six_dir = dirname
+		while six_dir and six_dir not in six_dirs:
+			print('%s does not match' % six_dir)
+			six_dir = os.path.dirname(six_dir)
+
+		if six_dir not in six_dirs:
+			print('Shit!')
+			sys.exit(1)
+
+		return six_dir
+
 	def build_six_files (self):
 		for stem in self.files['six']:
 			name = os.path.join(self.location['build'], stem)
 			if not os.path.exists(name):
-				six_dir = build.locate_six_dir(os.path.dirname(stem), self.dirmap)
+				six_dir = self.locate_six_dir(os.path.dirname(stem), self.dirmap)
 				Six_file = os.path.join(self.location['build'], '%s.Six' %
 				self.dirmap[six_dir])
 				destination = os.path.join(self.location['build'], six_dir)

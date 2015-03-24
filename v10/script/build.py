@@ -69,19 +69,6 @@ def build_six_files (Six_file, output_dir):
 	sp.parse_file(Six_file)
 	sp.output_files(output_dir)
 
-def locate_six_dir (dirname, six_dirs):
-
-	six_dir = dirname
-	while six_dir and six_dir not in six_dirs:
-		print('%s does not match' % six_dir)
-		six_dir = os.path.dirname(six_dir)
-
-	if six_dir not in six_dirs:
-		print('Shit!')
-		sys.exit(1)
-
-	return six_dir
-
 def build_page_file (php_base, six_file, php_file):
 
 	print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
