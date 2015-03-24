@@ -62,8 +62,14 @@ class Sixtus:
 			print('Six file %s does not appear in deps' % name)
 			return False
 		print('%s was modified on %s' % (name, os.path.getmtime(name)))
+		this_time = os.path.getmtime(name)
 		for dep in self.deps[name]:
 			print('%s was modified on %s' % (dep, os.path.getmtime(dep)))
+			other_time = os.path.getmtime(dep)
+			if this_time <= other_time:
+				print('Six file %s is more recent than source file %s' % (name, dep))
+				return True
+		return False
 
 	def build_Six_files (self):
 		for name in self.files['Six']:
