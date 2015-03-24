@@ -103,9 +103,26 @@ class Sixtus:
 			elif self.debug:
 				print('six file %s already exists!' % name)
 
+	def build_php_files (self):
+		for bundle in self.bundles:
+			six_file = os.path.join(self.location['build'],
+				util.get_six_filename(bundle))
+			php_file = os.path.join(self.location['deploy'],
+				util.get_php_filename(bundle))
+
+			if not os.path.exists(php_file):
+				if bundle[0] == 0:
+					build.build_page_file(bundle[1], six_file, php_file)
+				elif bundle[0] == 1:
+					build.build_jump_file(bundle[1], six_file, php_file)
+				elif bundle[0] == 2:
+					build.build_side_file(bundle[1], six_file, php_file)
+			elif self.debug:
+				print('php file %s already exists!' % php_file)
+
 	def build_wave_two (self):
 		self.build_six_files()
-
+		self.build_php_files()
 
 	def build (self):
 		self.load_wave_one()
