@@ -72,9 +72,22 @@ class Sixtus:
 			elif self.debug:
 				print('Six file %30s already exists' % name)
 
+	def check_dep_file (self, name):
+		if not os.path.exists(name):
+			print('dep file %s does not exist' % name)
+			return True
+		this_time = os.path.getmtime(name)
+		Six_file = name.replace('.dep', '.Six')
+		other_time = os.path.getmtime(Six_file)
+		if this_time <= other_time:
+			print('dep file %s is more recent than Six file %s' % (name, Six_file))
+			return True
+		print('dep file %s is up to date' % name)
+		return False
+
 	def build_dep_files (self):
 		for name in self.files['dep']:
-			if not os.path.exists(name):
+			if self.check_dep_file(name):
 				build.build_dep_file(name)
 			elif self.debug:
 				print('dep file %30s already exists' % name)
