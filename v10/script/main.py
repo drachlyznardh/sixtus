@@ -47,9 +47,20 @@ class Sixtus:
 
 		return
 
+	def build_wave_one (self):
+
+		for name in self.files['Six']:
+			if not os.path.exists(name):
+				build.build_Six_file(name)
+
+		for name in self.files['dep']:
+			if not os.path.exists(name):
+				build.build_dep_file(name)
+
 	def build (self):
 
 		self.load_wave_one()
+		self.build_wave_one()
 		return
 
 print('Siχtus 0.10')
