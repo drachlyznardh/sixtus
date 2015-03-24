@@ -29,6 +29,7 @@ class Sixtus:
 
 		self.replace = {}
 		self.replace['Six'] = r'%s\1.Six' % self.location['build']
+		self.replace['dep'] = r'%s\1.dep' % self.location['build']
 
 		print(self.location)
 		print(self.files)
@@ -36,10 +37,13 @@ class Sixtus:
 	def build (self):
 
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
-		print('Files[pag] = %s' % self.files['pag'])
+		if self.debug: print('Files[pag] = %s' % self.files['pag'])
 
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
-		print('Files[Six] = %s' % self.files['Six'])
+		if self.debug: print('Files[Six] = %s' % self.files['Six'])
+
+		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
+		if self.debug: print('Files[dep] = %s' % self.files['dep'])
 
 		return
 
