@@ -9,6 +9,28 @@ import re
 import util
 import build
 
+class Sixtus:
+
+	def __init__ (self):
+
+		self.debug = True
+
+		self.location = {}
+
+		self.location['pag'] = 'src'
+		self.location['blog'] = 'blog'
+		self.location['build'] = 'build'
+		self.location['deploy'] = '/opt/web/mobile'
+
+		self.files = {key:[] for key in 'pag Six dep six php'.split()}
+
+		print(self.location)
+		print(self.files)
+
+	def build (self):
+
+		return
+
 print('Siχtus 0.10')
 
 src_dir = 'src'
@@ -83,4 +105,7 @@ for bundle in php_names:
 			build.build_side_file(php_base, six_file, php_file)
 
 print('Siχtus 0.10, done')
+
+sixtus = Sixtus()
+
 sys.exit(0)
