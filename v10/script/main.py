@@ -108,7 +108,7 @@ class Sixtus:
 			for name in tab_names:
 				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
 
-	def load_bundles (self):
+	def parse_dep_files (self):
 		for name in self.files['dep']:
 			self.parse_dep_file(name)
 
@@ -121,7 +121,7 @@ class Sixtus:
 		if self.debug: print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
-		self.load_bundles()
+		self.parse_dep_files()
 		self.load_six_files()
 		self.load_php_files()
 
