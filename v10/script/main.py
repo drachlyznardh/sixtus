@@ -83,12 +83,12 @@ class Sixtus:
 
 	def parse_dep_file (self, dep_file):
 
-		with open(dep_file, 'r') as f:
-			jump, sources, tab_names = eval(f.read())
-
 		stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
 		mapped = self.parse_Six_six_mapping (stem)
 		self.dirmap[mapped] = stem
+
+		with open(dep_file, 'r') as f:
+			jump, sources, tab_names = eval(f.read())
 
 		size = len(tab_names)
 		if jump:
