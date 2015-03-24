@@ -33,6 +33,7 @@ class Sixtus:
 		self.replace['Six'] = r'%s\1.Six' % self.location['build']
 		self.replace['dep'] = r'%s\1.dep' % self.location['build']
 
+		self.deps = {}
 		self.dirmap = {}
 		self.bundles = []
 
@@ -89,6 +90,9 @@ class Sixtus:
 
 		with open(dep_file, 'r') as f:
 			jump, sources, tab_names = eval(f.read())
+
+		Six_file = os.path.join(self.location['build'], '%s.Six' % stem)
+		self.deps[Six_file] = sources
 
 		size = len(tab_names)
 		if jump:
