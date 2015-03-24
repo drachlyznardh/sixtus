@@ -132,10 +132,12 @@ class Sixtus:
 		return
 
 sixtus = Sixtus()
+print('Siχtus 0.10')
 sixtus.build()
+print('Siχtus 0.10, done')
+
 sys.exit(0)
 
-print('Siχtus 0.10')
 
 src_dir = 'src'
 build_dir = 'build'
@@ -208,6 +210,5 @@ for bundle in php_names:
 		elif php_type == 2: # side
 			build.build_side_file(php_base, six_file, php_file)
 
-print('Siχtus 0.10, done')
 
 sys.exit(0)
