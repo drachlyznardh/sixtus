@@ -91,15 +91,15 @@ class Sixtus:
 		self.load_six_files()
 		self.load_php_files()
 
-	def locate_six_dir (self, dirname, six_dirs):
+	def locate_six_dir (self, name, six_dirs):
 
-		six_dir = dirname
+		six_dir = name
 		while six_dir and six_dir not in six_dirs:
 			print('%s does not match' % six_dir)
 			six_dir = os.path.dirname(six_dir)
 
 		if six_dir not in six_dirs:
-			print('Shit!')
+			print('Could not map %s!' % name)
 			sys.exit(1)
 
 		return six_dir
