@@ -31,6 +31,9 @@ class Sixtus:
 		self.replace['Six'] = r'%s\1.Six' % self.location['build']
 		self.replace['dep'] = r'%s\1.dep' % self.location['build']
 
+		self.dirmap = {}
+		self.bundles = []
+
 		print(self.location)
 		print(self.files)
 
@@ -69,9 +72,19 @@ class Sixtus:
 		self.build_Six_files()
 		self.build_dep_files()
 
+	def load_bundles (self):
+		for name in self.files['dep']:
+			destination, source, bundles = build.parse_dep_file(name)
+			self.dirmap[destination] = source
+			self.bundles += bundles
+
+	def load_wave_two (self):
+		self.load_bundles()
+
 	def build (self):
 		self.load_wave_one()
 		self.build_wave_one()
+		self.load_wave_two()
 		return
 
 print('Siχtus 0.10')
