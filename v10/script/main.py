@@ -80,8 +80,6 @@ class Sixtus:
 		with open(dep_file, 'r') as f:
 			jump, sources, tab_names = eval(f.read())
 
-		tab_files = []
-
 		stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
 		mapped = '%s' % mapper.get('map.py', os.path.dirname(stem))
 		basename = os.path.basename(stem)
@@ -90,25 +88,24 @@ class Sixtus:
 
 		size = len(tab_names)
 		if jump:
-			tab_files.append((1, mapped))
+			self.bundles.append((1, mapped))
 		elif size == 0:
-			tab_files.append((0, mapped))
+			self.bundles.append((0, mapped))
 		elif size == 1:
-			tab_files.append((1, mapped))
-			tab_files.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
+			self.bundles.append((1, mapped))
+			self.bundles.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
 		else:
-			tab_files.append((1, mapped))
-			tab_files.append((2, mapped))
+			self.bundles.append((1, mapped))
+			self.bundles.append((2, mapped))
 			for name in tab_names:
-				tab_files.append((0, os.path.join(mapped, roman.convert(name))))
+				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
 
-		return stem, mapped, sources, tab_files
+		return stem, mapped, sources
 
 	def load_bundles (self):
 		for name in self.files['dep']:
-			origin, destination, sources, bundles = self.parse_dep_file(name)
+			origin, destination, sources = self.parse_dep_file(name)
 			self.dirmap[destination] = origin
-			self.bundles += bundles
 			print('Name(%s)' % name)
 			print('Sources(%s)' % sources)
 
