@@ -93,7 +93,7 @@ class Sixtus:
 
 	def locate_six_dir (self, name):
 
-		six_dir = name
+		six_dir = os.path.dirname(name)
 		while six_dir and six_dir not in self.dirmap:
 			print('%s does not match' % six_dir)
 			six_dir = os.path.dirname(six_dir)
@@ -108,7 +108,7 @@ class Sixtus:
 		for stem in self.files['six']:
 			name = os.path.join(self.location['build'], stem)
 			if not os.path.exists(name):
-				six_dir = self.locate_six_dir(os.path.dirname(stem))
+				six_dir = self.locate_six_dir(stem)
 				Six_file = os.path.join(self.location['build'], '%s.Six' %
 				self.dirmap[six_dir])
 				destination = os.path.join(self.location['build'], six_dir)
