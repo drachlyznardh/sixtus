@@ -148,6 +148,7 @@ class Sixtus:
 
 	def load_wave_two (self):
 		self.parse_dep_files()
+		self.build_wave_one()
 		self.load_six_files()
 		self.load_php_files()
 
