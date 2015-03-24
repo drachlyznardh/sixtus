@@ -24,10 +24,22 @@ class Sixtus:
 
 		self.files = {key:[] for key in 'pag Six dep six php'.split()}
 
+		self.match = {}
+		self.match['pag'] = re.compile(r'^%s(.*)\.pag$' % self.location['pag'])
+
+		self.replace = {}
+		self.replace['Six'] = r'%s\1.Six' % self.location['build']
+
 		print(self.location)
 		print(self.files)
 
 	def build (self):
+
+		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
+		print('Files[pag] = %s' % self.files['pag'])
+
+		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
+		print('Files[Six] = %s' % self.files['Six'])
 
 		return
 
@@ -107,5 +119,6 @@ for bundle in php_names:
 print('Siχtus 0.10, done')
 
 sixtus = Sixtus()
+sixtus.build()
 
 sys.exit(0)
