@@ -56,7 +56,14 @@ class Sixtus:
 
 	def check_Six_file (self, name):
 		if not os.path.exists(name):
+			print('Six file %s does not exist' % name)
 			return True
+		if name not in self.deps:
+			print('Six file %s does not appear in deps' % name)
+			return False
+		print('%s was modified on %s' % (name, os.path.getmtime(name)))
+		for dep in self.deps[name]:
+			print('%s was modified on %s' % (dep, os.path.getmtime(dep)))
 
 	def build_Six_files (self):
 		for name in self.files['Six']:
