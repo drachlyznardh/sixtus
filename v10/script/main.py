@@ -34,9 +34,6 @@ class Sixtus:
 		self.dirmap = {}
 		self.bundles = []
 
-		print(self.location)
-		print(self.files)
-
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
 		if self.debug: print('Files[pag] = %s' % self.files['pag'])
