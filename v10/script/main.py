@@ -104,12 +104,11 @@ class Sixtus:
 			for name in tab_names:
 				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
 
-		return stem, mapped, sources
+		return sources
 
 	def load_bundles (self):
 		for name in self.files['dep']:
-			origin, destination, sources = self.parse_dep_file(name)
-			self.dirmap[destination] = origin
+			sources = self.parse_dep_file(name)
 			print('Name(%s)' % name)
 			print('Sources(%s)' % sources)
 
