@@ -8,6 +8,8 @@ import re
 
 import util
 import build
+import mapper
+import roman
 
 class Sixtus:
 
@@ -31,11 +33,9 @@ class Sixtus:
 		self.replace['Six'] = r'%s\1.Six' % self.location['build']
 		self.replace['dep'] = r'%s\1.dep' % self.location['build']
 
+		self.deps = {}
 		self.dirmap = {}
 		self.bundles = []
-
-		print(self.location)
-		print(self.files)
 
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
@@ -54,16 +54,46 @@ class Sixtus:
 		self.load_Six_files()
 		self.load_dep_files()
 
+	def check_Six_file (self, name):
+		if not os.path.exists(name):
+			print('Six file %s does not exist' % name)
+			return True
+		if name not in self.deps:
+			print('Six file %s does not appear in deps' % name)
+			return False
+		print('%s was modified on %s' % (name, os.path.getmtime(name)))
+		this_time = os.path.getmtime(name)
+		for dep in self.deps[name]:
+			print('%s was modified on %s' % (dep, os.path.getmtime(dep)))
+			other_time = os.path.getmtime(dep)
+			if this_time <= other_time:
+				print('Six file %s is more recent than source file %s' % (name, dep))
+				return True
+		return False
+
 	def build_Six_files (self):
 		for name in self.files['Six']:
-			if not os.path.exists(name):
+			if self.check_Six_file(name):
 				build.build_Six_file(name)
 			elif self.debug:
 				print('Six file %30s already exists' % name)
 
+	def check_dep_file (self, name):
+		if not os.path.exists(name):
+			print('dep file %s does not exist' % name)
+			return True
+		this_time = os.path.getmtime(name)
+		Six_file = name.replace('.dep', '.Six')
+		other_time = os.path.getmtime(Six_file)
+		if this_time <= other_time:
+			print('dep file %s is more recent than Six file %s' % (name, Six_file))
+			return True
+		print('dep file %s is up to date' % name)
+		return False
+
 	def build_dep_files (self):
 		for name in self.files['dep']:
-			if not os.path.exists(name):
+			if self.check_dep_file(name):
 				build.build_dep_file(name)
 			elif self.debug:
 				print('dep file %30s already exists' % name)
@@ -72,11 +102,41 @@ class Sixtus:
 		self.build_Six_files()
 		self.build_dep_files()
 
-	def load_bundles (self):
+	def parse_Six_six_mapping (self, Six_dir):
+		mapped = mapper.get('map.py', os.path.dirname(Six_dir))
+		basename = os.path.basename(Six_dir)
+		if basename == 'index': return mapped
+		return os.path.join(mapped, roman.convert(basename))
+
+	def parse_dep_file (self, dep_file):
+
+		stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
+		mapped = self.parse_Six_six_mapping (stem)
+		self.dirmap[mapped] = stem
+
+		with open(dep_file, 'r') as f:
+			jump, sources, tab_names = eval(f.read())
+
+		Six_file = os.path.join(self.location['build'], '%s.Six' % stem)
+		self.deps[Six_file] = sources
+
+		size = len(tab_names)
+		if jump:
+			self.bundles.append((1, mapped))
+		elif size == 0:
+			self.bundles.append((0, mapped))
+		elif size == 1:
+			self.bundles.append((1, mapped))
+			self.bundles.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
+		else:
+			self.bundles.append((1, mapped))
+			self.bundles.append((2, mapped))
+			for name in tab_names:
+				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
+
+	def parse_dep_files (self):
 		for name in self.files['dep']:
-			destination, source, bundles = build.parse_dep_file(name)
-			self.dirmap[destination] = source
-			self.bundles += bundles
+			self.parse_dep_file(name)
 
 	def load_six_files (self):
 		self.files['six'] += [util.get_six_filename(bundle) for bundle in self.bundles]
@@ -87,7 +147,8 @@ class Sixtus:
 		if self.debug: print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
-		self.load_bundles()
+		self.parse_dep_files()
+		self.build_wave_one()
 		self.load_six_files()
 		self.load_php_files()
 
