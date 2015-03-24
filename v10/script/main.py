@@ -102,13 +102,13 @@ class Sixtus:
 			print('Could not map %s!' % name)
 			sys.exit(1)
 
-		return six_dir
+		return self.dirmap[six_dir], six_dir
 
 	def build_six_files (self):
 		for stem in self.files['six']:
 			name = os.path.join(self.location['build'], stem)
 			if not os.path.exists(name):
-				six_dir = self.get_split_directories(stem)
+				Six_dir, six_dir = self.get_split_directories(stem)
 				Six_file = os.path.join(self.location['build'], '%s.Six' %
 				self.dirmap[six_dir])
 				destination = os.path.join(self.location['build'], six_dir)
