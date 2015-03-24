@@ -75,8 +75,8 @@ class Sixtus:
 
 	def load_bundles (self):
 		for name in self.files['dep']:
-			destination, source, bundles = build.parse_dep_file(name)
-			self.dirmap[destination] = source
+			origin, destination, sources, bundles = build.parse_dep_file(name)
+			self.dirmap[destination] = origin
 			self.bundles += bundles
 
 	def load_six_files (self):

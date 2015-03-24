@@ -59,7 +59,7 @@ def parse_dep_file (dep_file):
 		for name in tab_names:
 			tab_files.append((0, os.path.join(mapped, roman.convert(name))))
 
-	return mapped, stem, tab_files
+	return stem, mapped, sources, tab_files
 
 def build_six_files (Six_file, output_dir):
 
