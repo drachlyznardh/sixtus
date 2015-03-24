@@ -55,11 +55,15 @@ class Sixtus:
 		for name in self.files['Six']:
 			if not os.path.exists(name):
 				build.build_Six_file(name)
+			elif self.debug:
+				print('Six file %30s already exists' % name)
 
 	def build_dep_files (self):
 		for name in self.files['dep']:
 			if not os.path.exists(name):
 				build.build_dep_file(name)
+			elif self.debug:
+				print('dep file %30s already exists' % name)
 
 	def build_wave_one (self):
 		self.build_Six_files()
