@@ -51,9 +51,13 @@ class Sixtus:
 		self.load_Six_files()
 		self.load_dep_files()
 
+	def check_Six_file (self, name):
+		if not os.path.exists(name):
+			return True
+
 	def build_Six_files (self):
 		for name in self.files['Six']:
-			if not os.path.exists(name):
+			if self.check_Six_file(name):
 				build.build_Six_file(name)
 			elif self.debug:
 				print('Six file %30s already exists' % name)
