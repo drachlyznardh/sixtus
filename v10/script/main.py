@@ -131,6 +131,10 @@ class Sixtus:
 		self.build_wave_two()
 		return
 
+sixtus = Sixtus()
+sixtus.build()
+sys.exit(0)
+
 print('Siχtus 0.10')
 
 src_dir = 'src'
@@ -205,8 +209,5 @@ for bundle in php_names:
 			build.build_side_file(php_base, six_file, php_file)
 
 print('Siχtus 0.10, done')
-
-sixtus = Sixtus()
-sixtus.build()
 
 sys.exit(0)
