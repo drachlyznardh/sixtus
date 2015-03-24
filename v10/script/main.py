@@ -91,10 +91,27 @@ class Sixtus:
 		self.load_six_files()
 		self.load_php_files()
 
+	def build_six_files (self):
+		for stem in self.files['six']:
+			name = os.path.join(self.location['build'], stem)
+			if not os.path.exists(name):
+				six_dir = build.locate_six_dir(os.path.dirname(name), self.dirmap)
+				Six_file = os.path.join(self.location['build'], '%s.Six' %
+				self.dirmap[six_dir])
+				destination = os.path.join(self.location['build'], six_dir)
+				build.build_six_files(Six_file, destination)
+			elif self.debug:
+				print('six file %s already exists!' % name)
+
+	def build_wave_two (self):
+		self.build_six_files()
+
+
 	def build (self):
 		self.load_wave_one()
 		self.build_wave_one()
 		self.load_wave_two()
+		self.build_wave_two()
 		return
 
 print('Siχtus 0.10')
