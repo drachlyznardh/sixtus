@@ -109,8 +109,7 @@ class Sixtus:
 			name = os.path.join(self.location['build'], stem)
 			if not os.path.exists(name):
 				Six_dir, six_dir = self.get_split_directories(stem)
-				Six_file = os.path.join(self.location['build'], '%s.Six' %
-				self.dirmap[six_dir])
+				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 				destination = os.path.join(self.location['build'], six_dir)
 				build.build_six_files(Six_file, destination)
 			elif self.debug:
