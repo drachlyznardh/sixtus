@@ -91,7 +91,7 @@ class Sixtus:
 		self.load_six_files()
 		self.load_php_files()
 
-	def locate_six_dir (self, name):
+	def get_split_directories (self, name):
 
 		six_dir = os.path.dirname(name)
 		while six_dir and six_dir not in self.dirmap:
@@ -108,7 +108,7 @@ class Sixtus:
 		for stem in self.files['six']:
 			name = os.path.join(self.location['build'], stem)
 			if not os.path.exists(name):
-				six_dir = self.locate_six_dir(stem)
+				six_dir = self.get_split_directories(stem)
 				Six_file = os.path.join(self.location['build'], '%s.Six' %
 				self.dirmap[six_dir])
 				destination = os.path.join(self.location['build'], six_dir)
