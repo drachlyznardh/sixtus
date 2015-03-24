@@ -78,8 +78,18 @@ class Sixtus:
 			self.dirmap[destination] = source
 			self.bundles += bundles
 
+	def load_six_files (self):
+		self.files['six'] += [util.get_six_filename(bundle) for bundle in self.bundles]
+		if self.debug: print('Files[six] = %s' % self.files['six'])
+
+	def load_php_files (self):
+		self.files['php'] += [util.get_php_filename(bundle) for bundle in self.bundles]
+		if self.debug: print('Files[php] = %s' % self.files['php'])
+
 	def load_wave_two (self):
 		self.load_bundles()
+		self.load_six_files()
+		self.load_php_files()
 
 	def build (self):
 		self.load_wave_one()
