@@ -34,18 +34,22 @@ class Sixtus:
 		print(self.location)
 		print(self.files)
 
-	def load_wave_one (self):
-
+	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
 		if self.debug: print('Files[pag] = %s' % self.files['pag'])
 
+	def load_Six_files (self):
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
 		if self.debug: print('Files[Six] = %s' % self.files['Six'])
 
+	def load_dep_files (self):
 		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
 		if self.debug: print('Files[dep] = %s' % self.files['dep'])
 
-		return
+	def load_wave_one (self):
+		self.load_pag_files()
+		self.load_Six_files()
+		self.load_dep_files()
 
 	def build_wave_one (self):
 
