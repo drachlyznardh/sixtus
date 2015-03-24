@@ -95,7 +95,7 @@ class Sixtus:
 		for stem in self.files['six']:
 			name = os.path.join(self.location['build'], stem)
 			if not os.path.exists(name):
-				six_dir = build.locate_six_dir(os.path.dirname(name), self.dirmap)
+				six_dir = build.locate_six_dir(os.path.dirname(stem), self.dirmap)
 				Six_file = os.path.join(self.location['build'], '%s.Six' %
 				self.dirmap[six_dir])
 				destination = os.path.join(self.location['build'], six_dir)
