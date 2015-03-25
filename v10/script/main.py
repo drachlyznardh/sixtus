@@ -37,6 +37,14 @@ class Sixtus:
 		self.dirmap = {}
 		self.bundles = []
 
+	def get_six_filename (self, bundle):
+		extension = ['page.six', 'jump.six', 'side.six']
+		return os.path.join(self.location['build'], bundle[1], extension[bundle[0]])
+
+	def get_php_filename (self, bundle):
+		extension = ['index.php', 'index.php', 'side.php']
+		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
+
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
 		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
