@@ -223,9 +223,9 @@ class Sixtus:
 			return True
 		six_time = os.path.getmtime(six_file)
 		php_time = os.path.getmtime(php_file)
-		if six_time <= php_time:
+		if php_time <= six_time:
 			if self.debug.get('explain',False):
-				print('six file %s is more recent than php file %s' % (six_file, php_file))
+				print('php file %s is more recent than six file %s' % (php_file, six_file))
 			return True
 		return False
 
