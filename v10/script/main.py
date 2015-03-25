@@ -160,11 +160,13 @@ class Sixtus:
 
 		six_dir = os.path.dirname(name)
 		while six_dir and six_dir not in self.dirmap:
-			print('%s does not match' % six_dir)
+			if self.debug.get('search',False):
+				print('%s does not match' % six_dir)
 			six_dir = os.path.dirname(six_dir)
 
 		if six_dir not in self.dirmap:
-			print('Could not map %s!' % name)
+			if self.debug.get('search',False):
+				print('Could not map %s!' % name)
 			sys.exit(1)
 
 		return self.dirmap[six_dir], six_dir
