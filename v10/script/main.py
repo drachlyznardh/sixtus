@@ -181,11 +181,13 @@ class Sixtus:
 		return self.dirmap[six_dir], six_dir
 
 	def get_Six_filename (self, bundle):
-		direct = os.path.join(self.location['build'], '%s.Six' % bundle[1])
+		Six_dir = self.dirmap[bundle[1]]
+		direct = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 		if os.path.exists(direct): return direct
-		indirect = os.path.join(self.location['build'], bundle[1], 'index.Six')
+		indirect = os.path.join(self.location['build'], Six_dir, 'index.Six')
 		if os.path.exists(indirect): return indirect
 		print('Cannot locate a Six file for %s, [%s]' % bundle)
+		print('Nor %s nor %s exist' % (direct, indirect))
 		sys.exit(1)
 
 	def check_six_file (self, bundle):
