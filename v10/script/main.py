@@ -15,7 +15,9 @@ class Sixtus:
 
 	def __init__ (self):
 
-		self.debug = {'step':True, 'explain':True}
+		self.debug = {}
+
+		self.delta_time = 0.5
 
 		self.location = {}
 
@@ -36,6 +38,14 @@ class Sixtus:
 		self.deps = {}
 		self.dirmap = {}
 		self.bundles = []
+
+	def get_six_filename (self, bundle):
+		extension = ['page.six', 'jump.six', 'side.six']
+		return os.path.join(self.location['build'], bundle[1], extension[bundle[0]])
+
+	def get_php_filename (self, bundle):
+		extension = ['index.php', 'index.php', 'side.php']
+		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
 
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
@@ -66,7 +76,7 @@ class Sixtus:
 		this_time = os.path.getmtime(name)
 		for dep in self.deps[name]:
 			other_time = os.path.getmtime(dep)
-			if this_time <= other_time:
+			if other_time - this_time > self.delta_time:
 				if self.debug.get('explain',False):
 					print('Six file %s is more recent than source file %s' % (name, dep))
 				return True
@@ -87,7 +97,7 @@ class Sixtus:
 		this_time = os.path.getmtime(name)
 		Six_file = name.replace('.dep', '.Six')
 		other_time = os.path.getmtime(Six_file)
-		if this_time <= other_time:
+		if other_time - this_time > self.delta_time:
 			if self.debug.get('search',False):
 				print('dep file %s is more recent than Six file %s' % (name, Six_file))
 			return True
@@ -143,11 +153,11 @@ class Sixtus:
 			self.parse_dep_file(name)
 
 	def load_six_files (self):
-		self.files['six'] += [util.get_six_filename(bundle) for bundle in self.bundles]
+		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.bundles]
 		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
 
 	def load_php_files (self):
-		self.files['php'] += [util.get_php_filename(bundle) for bundle in self.bundles]
+		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.bundles]
 		if self.debug.get('list', False): print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
@@ -156,38 +166,74 @@ class Sixtus:
 		self.load_six_files()
 		self.load_php_files()
 
-	def get_split_directories (self, name):
+	def get_split_directories (self, bundle):
 
-		six_dir = os.path.dirname(name)
+		six_dir = bundle[1]
 		while six_dir and six_dir not in self.dirmap:
-			print('%s does not match' % six_dir)
+			if self.debug.get('search',False):
+				print('%s does not match' % six_dir)
 			six_dir = os.path.dirname(six_dir)
 
 		if six_dir not in self.dirmap:
-			print('Could not map %s!' % name)
-			sys.exit(1)
+			raise Exception('Could not map %s' % bundle[1])
 
 		return self.dirmap[six_dir], six_dir
 
+	def get_Six_filename (self, bundle):
+		try: Six_dir = self.dirmap[bundle[1]]
+		except: Six_dir = self.dirmap[os.path.dirname(bundle[1])]
+		direct = os.path.join(self.location['build'], '%s.Six' % Six_dir)
+		if os.path.exists(direct): return direct
+		indirect = os.path.join(self.location['build'], Six_dir, 'index.Six')
+		if os.path.exists(indirect): return indirect
+		raise Exception('Cannot locate a Six file for %s, [%s]' % bundle)
+		print('Nor %s nor %s exist' % (direct, indirect))
+
+	def check_six_file (self, bundle):
+		six_file = self.get_six_filename(bundle)
+		if not os.path.exists(six_file):
+			if self.debug.get('search',False):
+				print('six file %s does not exist' % six_file)
+			return True
+		six_time = os.path.getmtime(six_file)
+		Six_file = self.get_Six_filename(bundle)
+		Six_time = os.path.getmtime(Six_file)
+		if Six_time - six_time > self.delta_time:
+			if self.debug.get('search',True):
+				print('six file %s is more recent than Six file %s' % (six_file, Six_file))
+			return True
+		return False
+
 	def build_six_files (self):
-		for stem in self.files['six']:
-			name = os.path.join(self.location['build'], stem)
-			if not os.path.exists(name):
-				Six_dir, six_dir = self.get_split_directories(stem)
+		for bundle in self.bundles:
+			if self.check_six_file(bundle):
+				Six_dir, six_dir = self.get_split_directories(bundle)
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 				destination = os.path.join(self.location['build'], six_dir)
 				build.build_six_files(Six_file, destination)
 			elif self.debug.get('already',False):
 				print('six file %s already exists!' % name)
 
+	def check_php_file (self, six_file, php_file):
+		if not os.path.exists(php_file):
+			if self.debug.getg('explain',False):
+				print('php file %s does not exist' % php_file)
+			return True
+		six_time = os.path.getmtime(six_file)
+		php_time = os.path.getmtime(php_file)
+		if six_time - php_time > self.delta_time:
+			if self.debug.get('explain',False):
+				print('six file %s is more recent than php file %s' % (six_file, php_file))
+			return True
+		return False
+
 	def build_php_files (self):
 		for bundle in self.bundles:
-			six_file = os.path.join(self.location['build'],
-				util.get_six_filename(bundle))
-			php_file = os.path.join(self.location['deploy'],
-				util.get_php_filename(bundle))
 
-			if not os.path.exists(php_file):
+			six_file = self.get_six_filename(bundle)
+			php_file = self.get_php_filename(bundle)
+
+			if self.check_php_file(six_file, php_file):
 				if bundle[0] == 0:
 					build.build_page_file(bundle[1], six_file, php_file)
 				elif bundle[0] == 1:
@@ -208,7 +254,6 @@ class Sixtus:
 		self.build_wave_two()
 		return
 
-sixtus = Sixtus()
 print('Siχtus 0.10')
-sixtus.build()
+Sixtus().build()
 print('Siχtus 0.10, done')

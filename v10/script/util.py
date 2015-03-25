@@ -40,13 +40,3 @@ def assert_dir (filename):
 	if not os.path.exists(dirname):
 		os.makedirs(dirname)
 
-def get_six_filename (bundle):
-
-	extension = ['page.six', 'jump.six', 'side.six']
-	return os.path.join(bundle[1], extension[bundle[0]])
-
-def get_php_filename (bundle):
-
-	extension = ['index.php', 'index.php', 'side.php']
-	return os.path.join(bundle[1], extension[bundle[0]])
-
