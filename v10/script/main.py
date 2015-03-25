@@ -15,7 +15,7 @@ class Sixtus:
 
 	def __init__ (self):
 
-		self.debug = {'step':True, 'explain':True}
+		self.debug = {}
 
 		self.delta_time = 0.5
 
