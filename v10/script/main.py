@@ -164,8 +164,9 @@ class Sixtus:
 		self.load_six_files()
 		self.load_php_files()
 
-	def get_split_directories (self, name):
+	def get_split_directories (self, bundle):
 
+		name = bundle[1]
 		six_dir = os.path.dirname(name)
 		while six_dir and six_dir not in self.dirmap:
 			if self.debug.get('search',False):
@@ -179,27 +180,33 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
+	def get_Six_filename (self, bundle):
+		direct = os.path.join(self.location['build'], '%s.Six' % bundle[1])
+		if os.path.exists(direct): return direct
+		indirect = os.path.join(self.location['build'], bundle[1], 'index.Six')
+		if os.path.exists(indirect): return indirect
+		print('Cannot locate a Six file for %s, [%s]' % bundle)
+		sys.exit(1)
+
 	def check_six_file (self, bundle):
-		print('%s, [%s]' % bundle)
-		print(self.get_six_filename(bundle))
-		return True
-		print('\nnow checking six file %s' % name)
-		if not os.path.exists(name):
+		six_file = self.get_six_filename(bundle)
+		if not os.path.exists(six_file):
 			if self.debug.get('search',False):
-				print('six file %s does not exist' % name)
+				print('six file %s does not exist' % six_file)
 			return True
-		this_time = os.path.getmtime(name)
-		print('six file %s was edited on %s' % (name, this_time))
-		print(stem)
-		print(self.dirmap)
-		return True
+		six_time = os.path.getmtime(six_file)
+		Six_file = self.get_Six_filename(bundle)
+		Six_time = os.path.getmtime(Six_file)
+		if six_time <= Six_time:
+			if self.debug.get('search',True):
+				print('six file %s is more recent than Six file %s' % (six_file, Six_file))
+			return True
+		return False
 
 	def build_six_files (self):
-		#for stem in self.files['six']:
 		for bundle in self.bundles:
-			#name = os.path.join(self.location['build'], stem)
 			if self.check_six_file(bundle):
-				Six_dir, six_dir = self.get_split_directories(stem)
+				Six_dir, six_dir = self.get_split_directories(bundle)
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 				destination = os.path.join(self.location['build'], six_dir)
 				build.build_six_files(Six_file, destination)
