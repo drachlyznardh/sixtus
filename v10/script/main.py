@@ -15,7 +15,7 @@ class Sixtus:
 
 	def __init__ (self):
 
-		self.debug = {'step':True}
+		self.debug = {'step':True, 'explain':True}
 
 		self.location = {}
 
@@ -56,18 +56,19 @@ class Sixtus:
 
 	def check_Six_file (self, name):
 		if not os.path.exists(name):
-			print('Six file %s does not exist' % name)
+			if self.debug.get('explain',False):
+				print('Six file %s does not exist' % name)
 			return True
 		if name not in self.deps:
-			print('Six file %s does not appear in deps' % name)
+			if self.debug.get('search',False):
+				print('Six file %s does not appear in deps' % name)
 			return False
-		print('%s was modified on %s' % (name, os.path.getmtime(name)))
 		this_time = os.path.getmtime(name)
 		for dep in self.deps[name]:
-			print('%s was modified on %s' % (dep, os.path.getmtime(dep)))
 			other_time = os.path.getmtime(dep)
 			if this_time <= other_time:
-				print('Six file %s is more recent than source file %s' % (name, dep))
+				if self.debug.get('explain',False):
+					print('Six file %s is more recent than source file %s' % (name, dep))
 				return True
 		return False
 
@@ -75,20 +76,23 @@ class Sixtus:
 		for name in self.files['Six']:
 			if self.check_Six_file(name):
 				build.build_Six_file(name)
-			elif self.debug:
+			elif self.debug.get('search',False):
 				print('Six file %30s already exists' % name)
 
 	def check_dep_file (self, name):
 		if not os.path.exists(name):
-			print('dep file %s does not exist' % name)
+			if self.debug.get('search',False):
+				print('dep file %s does not exist' % name)
 			return True
 		this_time = os.path.getmtime(name)
 		Six_file = name.replace('.dep', '.Six')
 		other_time = os.path.getmtime(Six_file)
 		if this_time <= other_time:
-			print('dep file %s is more recent than Six file %s' % (name, Six_file))
+			if self.debug.get('search',False):
+				print('dep file %s is more recent than Six file %s' % (name, Six_file))
 			return True
-		print('dep file %s is up to date' % name)
+		if self.debug.get('search',False):
+			print('dep file %s is up to date' % name)
 		return False
 
 	def build_dep_files (self):
