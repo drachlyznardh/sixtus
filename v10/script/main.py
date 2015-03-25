@@ -17,6 +17,8 @@ class Sixtus:
 
 		self.debug = {'step':True, 'explain':True}
 
+		self.delta_time = 0.5
+
 		self.location = {}
 
 		self.location['pag'] = 'src'
@@ -74,7 +76,7 @@ class Sixtus:
 		this_time = os.path.getmtime(name)
 		for dep in self.deps[name]:
 			other_time = os.path.getmtime(dep)
-			if this_time <= other_time:
+			if other_time - this_time > self.delta_time:
 				if self.debug.get('explain',False):
 					print('Six file %s is more recent than source file %s' % (name, dep))
 				return True
@@ -95,7 +97,7 @@ class Sixtus:
 		this_time = os.path.getmtime(name)
 		Six_file = name.replace('.dep', '.Six')
 		other_time = os.path.getmtime(Six_file)
-		if this_time <= other_time:
+		if other_time - this_time > self.delta_time:
 			if self.debug.get('search',False):
 				print('dep file %s is more recent than Six file %s' % (name, Six_file))
 			return True
@@ -196,7 +198,7 @@ class Sixtus:
 		six_time = os.path.getmtime(six_file)
 		Six_file = self.get_Six_filename(bundle)
 		Six_time = os.path.getmtime(Six_file)
-		if six_time <= Six_time:
+		if Six_time - six_time > self.delta_time:
 			if self.debug.get('search',True):
 				print('six file %s is more recent than Six file %s' % (six_file, Six_file))
 			return True
@@ -219,7 +221,7 @@ class Sixtus:
 			return True
 		six_time = os.path.getmtime(six_file)
 		php_time = os.path.getmtime(php_file)
-		if php_time <= six_time:
+		if six_time - php_time > self.delta_time:
 			if self.debug.get('explain',False):
 				print('six file %s is more recent than php file %s' % (six_file, php_file))
 			return True
