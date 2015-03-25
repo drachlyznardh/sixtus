@@ -76,7 +76,7 @@ class Sixtus:
 		for name in self.files['Six']:
 			if self.check_Six_file(name):
 				build.build_Six_file(name)
-			elif self.debug.get('search',False):
+			elif self.debug.get('already',False):
 				print('Six file %30s already exists' % name)
 
 	def check_dep_file (self, name):
@@ -99,7 +99,7 @@ class Sixtus:
 		for name in self.files['dep']:
 			if self.check_dep_file(name):
 				build.build_dep_file(name)
-			elif self.debug:
+			elif self.debug.get('already',False):
 				print('dep file %30s already exists' % name)
 
 	def build_wave_one (self):
@@ -177,7 +177,7 @@ class Sixtus:
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 				destination = os.path.join(self.location['build'], six_dir)
 				build.build_six_files(Six_file, destination)
-			elif self.debug:
+			elif self.debug.get('already',False):
 				print('six file %s already exists!' % name)
 
 	def build_php_files (self):
@@ -194,7 +194,7 @@ class Sixtus:
 					build.build_jump_file(bundle[1], six_file, php_file)
 				elif bundle[0] == 2:
 					build.build_side_file(bundle[1], six_file, php_file)
-			elif self.debug:
+			elif self.debug.get('already',False):
 				print('php file %s already exists!' % php_file)
 
 	def build_wave_two (self):
