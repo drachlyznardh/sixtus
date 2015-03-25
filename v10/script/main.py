@@ -169,10 +169,20 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
+	def check_six_file (self, name):
+		print('\nnow checking six file %s' % name)
+		if not os.path.exists(name):
+			if self.debug.get('search',False):
+				print('six file %s does not exist' % name)
+			return True
+		this_time = os.path.getmtime(name)
+		print('six file %s was edited on %s' % (name, this_time))
+		return True
+
 	def build_six_files (self):
 		for stem in self.files['six']:
 			name = os.path.join(self.location['build'], stem)
-			if not os.path.exists(name):
+			if self.check_six_file(name):
 				Six_dir, six_dir = self.get_split_directories(stem)
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 				destination = os.path.join(self.location['build'], six_dir)
