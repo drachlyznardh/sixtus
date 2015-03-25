@@ -151,11 +151,11 @@ class Sixtus:
 			self.parse_dep_file(name)
 
 	def load_six_files (self):
-		self.files['six'] += [util.get_six_filename(bundle) for bundle in self.bundles]
+		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.bundles]
 		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
 
 	def load_php_files (self):
-		self.files['php'] += [util.get_php_filename(bundle) for bundle in self.bundles]
+		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.bundles]
 		if self.debug.get('list', False): print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
@@ -179,7 +179,10 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
-	def check_six_file (self, name):
+	def check_six_file (self, bundle):
+		print('%s, [%s]' % bundle)
+		print(self.get_six_filename(bundle))
+		return True
 		print('\nnow checking six file %s' % name)
 		if not os.path.exists(name):
 			if self.debug.get('search',False):
@@ -187,12 +190,15 @@ class Sixtus:
 			return True
 		this_time = os.path.getmtime(name)
 		print('six file %s was edited on %s' % (name, this_time))
+		print(stem)
+		print(self.dirmap)
 		return True
 
 	def build_six_files (self):
-		for stem in self.files['six']:
-			name = os.path.join(self.location['build'], stem)
-			if self.check_six_file(name):
+		#for stem in self.files['six']:
+		for bundle in self.bundles:
+			#name = os.path.join(self.location['build'], stem)
+			if self.check_six_file(bundle):
 				Six_dir, six_dir = self.get_split_directories(stem)
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
 				destination = os.path.join(self.location['build'], six_dir)
