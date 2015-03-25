@@ -14,7 +14,8 @@ def build_Six_file (Six_file):
 
 	pag_file = re.sub(r'^build(.*)\.Six$',r'src\1.pag', Six_file)
 	page_base = os.path.dirname(pag_file)
-	print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
+	#print('Invoking preprocessor %s %s %s' % (pag_file, page_base, Six_file))
+	print('Preprocessing source file %s' % pag_file)
 
 	pp = preprocessor.Preprocessor(page_base)
 	pp.parse_file(pag_file)
@@ -24,7 +25,7 @@ def build_Six_file (Six_file):
 def build_dep_file (dep_file):
 
 	Six_file = re.sub(r'(.*)\.dep', r'\1.Six', dep_file)
-	print('Extracting dependencies from %s' % Six_file)
+	print('Extracting dependencies from content file %s' % Six_file)
 	dep_list = deps.extract(Six_file)
 	util.assert_dir(dep_file)
 	with open(dep_file, 'w') as f:
@@ -32,7 +33,8 @@ def build_dep_file (dep_file):
 
 def build_six_files (Six_file, output_dir):
 
-	print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
+	#print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
+	print('Splitting content file %s' % Six_file)
 	from splitter import Splitter
 	sp = Splitter()
 	sp.parse_file(Six_file)
@@ -40,7 +42,9 @@ def build_six_files (Six_file, output_dir):
 
 def build_page_file (php_base, six_file, php_file):
 
-	print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+	#print('Invoking FullConverter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+	print('Building page file %s' % php_file)
+
 	c = converter.FullConverter(os.path.dirname(php_file))
 	c.parse_file(six_file)
 	util.assert_dir(php_file)
@@ -48,7 +52,8 @@ def build_page_file (php_base, six_file, php_file):
 
 def build_jump_file (php_base, six_file, php_file):
 
-	print('Invoking Jumper (%s,%s)' % (six_file, php_file))
+	#print('Invoking Jumper (%s,%s)' % (six_file, php_file))
+	print('Building jump file %s' % php_file)
 
 	with open(six_file, 'r') as f:
 		token = f.readline().split('|')
@@ -63,7 +68,8 @@ def build_jump_file (php_base, six_file, php_file):
 
 def build_side_file (php_base, six_file, php_file):
 
-	print('Invoking Converter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+	#print('Invoking Converter (%s,%s,%s)' % (os.path.dirname(php_file), six_file, php_file))
+	print('Building side file %s' % php_file)
 
 	c = converter.ContentConverter(php_file)
 
