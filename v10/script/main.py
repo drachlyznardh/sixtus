@@ -15,7 +15,7 @@ class Sixtus:
 
 	def __init__ (self):
 
-		self.debug = True
+		self.debug = {'step':True}
 
 		self.location = {}
 
@@ -39,15 +39,15 @@ class Sixtus:
 
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
-		if self.debug: print('Files[pag] = %s' % self.files['pag'])
+		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
 
 	def load_Six_files (self):
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
-		if self.debug: print('Files[Six] = %s' % self.files['Six'])
+		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
 
 	def load_dep_files (self):
 		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
-		if self.debug: print('Files[dep] = %s' % self.files['dep'])
+		if self.debug.get('list', False): print('Files[dep] = %s' % self.files['dep'])
 
 	def load_wave_one (self):
 		self.load_pag_files()
@@ -140,11 +140,11 @@ class Sixtus:
 
 	def load_six_files (self):
 		self.files['six'] += [util.get_six_filename(bundle) for bundle in self.bundles]
-		if self.debug: print('Files[six] = %s' % self.files['six'])
+		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
 
 	def load_php_files (self):
 		self.files['php'] += [util.get_php_filename(bundle) for bundle in self.bundles]
-		if self.debug: print('Files[php] = %s' % self.files['php'])
+		if self.debug.get('list', False): print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
 		self.parse_dep_files()
