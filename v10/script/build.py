@@ -24,7 +24,7 @@ def build_Six_file (Six_file):
 def build_dep_file (dep_file):
 
 	Six_file = re.sub(r'(.*)\.dep', r'\1.Six', dep_file)
-	print('Reading dependencies from %s' % Six_file)
+	print('Extracting dependencies from %s' % Six_file)
 	dep_list = deps.extract(Six_file)
 	util.assert_dir(dep_file)
 	with open(dep_file, 'w') as f:
