@@ -166,15 +166,14 @@ class Sixtus:
 
 	def get_split_directories (self, bundle):
 
-		name = bundle[1]
-		six_dir = os.path.dirname(name)
+		six_dir = bundle[1]
 		while six_dir and six_dir not in self.dirmap:
 			if self.debug.get('search',False):
 				print('%s does not match' % six_dir)
 			six_dir = os.path.dirname(six_dir)
 
 		if six_dir not in self.dirmap:
-			raise Exception('Could not map %s' % name)
+			raise Exception('Could not map %s' % bundle[1])
 
 		return self.dirmap[six_dir], six_dir
 
