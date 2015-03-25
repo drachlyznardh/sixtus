@@ -254,7 +254,6 @@ class Sixtus:
 		self.build_wave_two()
 		return
 
-sixtus = Sixtus()
 print('Siχtus 0.10')
-sixtus.build()
+Sixtus().build()
 print('Siχtus 0.10, done')
