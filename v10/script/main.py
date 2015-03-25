@@ -218,10 +218,9 @@ class Sixtus:
 
 	def build_php_files (self):
 		for bundle in self.bundles:
-			six_file = os.path.join(self.location['build'],
-				util.get_six_filename(bundle))
-			php_file = os.path.join(self.location['deploy'],
-				util.get_php_filename(bundle))
+
+			six_file = self.get_six_filename(bundle)
+			php_file = self.get_php_filename(bundle)
 
 			if not os.path.exists(php_file):
 				if bundle[0] == 0:
