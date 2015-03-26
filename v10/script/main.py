@@ -380,9 +380,9 @@ class Sixtus:
 		print('Sources = %s' % self.sources)
 		print('Products = %s' % self.products)
 
-		self.build_wave_one()
-		self.load_wave_two()
-		self.build_wave_two()
+		#self.build_wave_one()
+		#self.load_wave_two()
+		#self.build_wave_two()
 		return
 
 print('Siχtus 0.10')
