@@ -113,15 +113,17 @@ class Sixtus:
 		if pag_time - Six_time > self.delta_time:
 			if self.debug.get('explain', False):
 				print('pag file %s is more recent than Six file %s' % (pag_file, Six_file))
+			self.build_Six_file(stem)
 			return True
 
-		if not stem in self.deps: return False
+		if not stem in self.sources: return False
 
 		for each in self.deps[stem]:
 			each_time = os.path.getmtime(each)
 			if each_time - Six_time > self.delta_time:
 				if self.debug.get('explain', False):
 					print('pag file %s is more recent than source file %s' % (pag_file, each_file))
+				self.build_Six_file(stem)
 				return True
 
 		return False
@@ -164,7 +166,7 @@ class Sixtus:
 	def load_dep_file (self, stem):
 		dep_file = self.get_dep_filename(stem)
 		print('Loading dep file %s' % dep_file)
-		if self.update_dep_file(stem):
+		if not self.update_dep_file(stem):
 			sources, products = dep.from_dep_file(dep_file)
 			self.deps[stem] = sources
 			self.products += products
@@ -377,6 +379,10 @@ class Sixtus:
 				self.get_pag_filename(stem),
 				self.get_dep_filename(stem),
 				self.get_Six_filename(stem)))
+
+		print(self.sources)
+		print(self.deps)
+		print(self.bundles)
 
 		self.build_wave_one()
 		self.load_wave_two()
