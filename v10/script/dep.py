@@ -56,7 +56,7 @@ def digest (jump, tabs):
 def write (dep_file, sources, products):
 	
 	with open(dep_file, 'w') as f:
-		print((source, products), file=f)
+		print((sources, products), file=f)
 
 def from_Six_to_dep_file (Six_file, dep_file):
 
