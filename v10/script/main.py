@@ -53,11 +53,14 @@ class Sixtus:
 	def get_pag_filename (self, name):
 		return os.path.join(self.location['pag'], '%s.pag' % name)
 
-	def get_dep_filename (self, name):
-		return os.path.join(self.location['dep'], '%s.dep' % name)
-
 	def get_Six_filename (self, name):
 		return os.path.join(self.location['Six'], '%s.Six' % name)
+
+	def get_src_filename (self, name):
+		return os.path.join(self.location['src'], '%s.src' % name)
+
+	def get_dep_filename (self, name):
+		return os.path.join(self.location['dep'], '%s.dep' % name)
 
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
