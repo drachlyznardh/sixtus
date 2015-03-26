@@ -25,6 +25,7 @@ class Sixtus:
 		self.location['blog'] = 'blog'
 		self.location['build'] = 'build'
 		self.location['dep'] = 'build/dep'
+		self.location['Six'] = 'build/dep'
 		self.location['six'] = 'build/six'
 		self.location['deploy'] = '/opt/web/mobile'
 
@@ -43,8 +44,14 @@ class Sixtus:
 
 		self.sources = {}
 
+	def get_pag_filename (self, name):
+		return os.path.join(self.location['pag'], '%s.pag' % name)
+
 	def get_dep_filename (self, name):
 		return os.path.join(self.location['dep'], '%s.dep' % name)
+
+	def get_Six_filename (self, name):
+		return os.path.join(self.location['Six'], '%s.Six' % name)
 
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
@@ -264,7 +271,10 @@ class Sixtus:
 		self.find_page_sources()
 
 		for stem in self.sources['page']:
-			print('%15s → %30s' % (stem, self.get_dep_filename(stem)))
+			print('%15s → %30s %30s %30s' % (stem,
+				self.get_pag_filename(stem),
+				self.get_dep_filename(stem),
+				self.get_Six_filename(stem)))
 
 		self.build_wave_one()
 		self.load_wave_two()
