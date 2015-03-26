@@ -75,6 +75,13 @@ class Sixtus:
 		extension = ['index.php', 'index.php', 'side.php']
 		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
 
+	# Locate source pages
+	def find_page_sources (self):
+		pages  = util.find_all_sources(self.location['pag'], r'(.*).pag')
+		if self.debug.get('list', False):
+			print('Page source = %s' % pages)
+		return pages
+
 	# Loads existings .src files, compiles the sources dictionary
 	def load_src_file (self, stem):
 
@@ -85,12 +92,6 @@ class Sixtus:
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
 		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
-
-	def find_page_sources (self):
-		pages  = util.find_all_sources(self.location['pag'], r'(.*).pag')
-		if self.debug.get('list', False):
-			print('Page source = %s' % pages)
-		return pages
 
 	def load_Six_files (self):
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
