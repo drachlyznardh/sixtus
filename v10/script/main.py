@@ -89,14 +89,6 @@ class Sixtus:
 		if os.path.exists(src_file):
 			self.sources[stem] = Six.from_src_file(src_file)
 
-	def load_pag_files (self):
-		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
-		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
-
-	def load_Six_files (self):
-		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
-		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
-
 	# Builds .Six files, also loading their .src updates into the sources dictionary
 	def build_Six_file (self, stem):
 		pag_file = self.get_pag_filename(stem)
