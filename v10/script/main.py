@@ -95,13 +95,13 @@ class Sixtus:
 				print('dep file %s does not exist' % dep_file)
 			self.update_Six_file(stem)
 			self.build_dep_file(stem)
-			return False
+			return True
 
 		if self.update_Six_file(stem):
 			if self.debug.get('explain', False):
 				print('Six file %s was just remade' % Six_file)
 			self.build_dep_file(stem)
-			return False
+			return True
 
 		dep_time = os.path.getmtime(dep_file)
 		Six_file = self.get_Six_filename(stem)
@@ -110,9 +110,9 @@ class Sixtus:
 			if self.debug.get('explain', False):
 				print('Six file %s is more recent than dep file %s' % (Six_file, dep_file))
 			self.build_dep_file(stem)
-			return False
+			return True
 
-		return True
+		return False
 
 	def load_dep_file (self, stem):
 		dep_file = self.get_dep_filename(stem)
