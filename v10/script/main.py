@@ -79,6 +79,34 @@ class Sixtus:
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
 		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
 
+	def update_Six_file (self, stem):
+		Six_file = self.get_Six_filename(stem)
+		if not os.path.exists(Six_file):
+			if self.debug.get('explain', False):
+				print('Six file %s does not exist' % Six_file)
+			self.build_Six_file(stem)
+			return True
+
+		Six_time = os.path.getmtime(Six_file)
+		pag_file = self.get_pag_filename(stem)
+		pag_time = os.path.getmtime(pag_file)
+
+		if pag_time - Six_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('pag file %s is more recent than Six file %s' % (pag_file, Six_file))
+			return True
+
+		if not stem in self.deps: return False
+
+		for each in self.deps[stem]:
+			each_time = os.path.getmtime(each)
+			if each_time - Six_time > self.delta_time:
+				if self.debug.get('explain', False):
+					print('pag file %s is more recent than source file %s' % (pag_file, each_file))
+				return True
+
+		return False
+
 	def build_dep_file (self, stem):
 		Six_file = self.get_Six_filename(stem)
 		dep_file = self.get_dep_filename(stem)
