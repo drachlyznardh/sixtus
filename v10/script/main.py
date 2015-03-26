@@ -118,7 +118,7 @@ class Sixtus:
 
 		if not stem in self.sources: return False
 
-		for each in self.deps[stem]:
+		for each in self.sources[stem]:
 			each_time = os.path.getmtime(each)
 			if each_time - Six_time > self.delta_time:
 				if self.debug.get('explain', False):
