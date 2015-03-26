@@ -96,6 +96,7 @@ class Sixtus:
 		src_file = self.get_src_filename(stem)
 		self.sources[stem] = Six.from_pag_to_Six_file(pag_file, Six_file, src_file)
 
+	# Updates a .Six file when needed. Returns true if updated
 	def update_Six_file (self, stem):
 		Six_file = self.get_Six_filename(stem)
 		if not os.path.exists(Six_file):
@@ -126,12 +127,14 @@ class Sixtus:
 
 		return False
 
+	# Builds a .dep file, also loading product list
 	def build_dep_file (self, stem):
 		Six_file = self.get_Six_filename(stem)
 		dep_file = self.get_dep_filename(stem)
 		mapped = self.parse_Six_six_mapping (stem)
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
+	# Build a .dep file when needed. Returns true if updated
 	def update_dep_file (self, stem):
 
 		dep_file = self.get_dep_filename(stem)
@@ -160,6 +163,7 @@ class Sixtus:
 
 		return False
 
+	# Loads the content of a .dep file, creating it if needed
 	def load_dep_file (self, stem):
 		dep_file = self.get_dep_filename(stem)
 		print('Loading dep file %s' % dep_file)
