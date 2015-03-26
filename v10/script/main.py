@@ -66,9 +66,10 @@ class Sixtus:
 		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
 
 	def find_page_sources (self):
-		self.sources['page'] = util.find_all_sources(self.location['pag'], r'(.*).pag')
+		pages  = util.find_all_sources(self.location['pag'], r'(.*).pag')
 		if self.debug.get('list', False):
-			print('Page source = %s' % self.sources['page'])
+			print('Page source = %s' % pages)
+		return pages
 
 	def load_Six_files (self):
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
@@ -276,12 +277,12 @@ class Sixtus:
 		self.build_php_files()
 
 	def build (self):
-		self.find_page_sources()
-		for stem in self.sources['page']:
+
+		for stem in self.find_page_sources():
 			self.load_dep_file(stem)
 		#self.update_Six_files()
 
-		for stem in self.sources['page']:
+		for stem in self.find_page_sources():
 			print('%15s → %30s %30s %30s' % (stem,
 				self.get_pag_filename(stem),
 				self.get_dep_filename(stem),
