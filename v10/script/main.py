@@ -322,9 +322,9 @@ class Sixtus:
 		print('Products = %s' % self.products)
 		print('PHP = %s' % '\n'.join([self.get_php_filename(b) for b in self.products]))
 
-		#self.build_wave_one()
-		#self.load_wave_two()
-		#self.build_wave_two()
+		for stem in self.products:
+			self.update_php_file(stem)
+
 		return
 
 print('Siχtus 0.10')
