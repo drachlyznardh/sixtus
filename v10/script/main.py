@@ -74,6 +74,10 @@ class Sixtus:
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
 		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
 
+	def load_dep_file (self, stem):
+		dep_file = self.get_dep_filename(stem)
+		print('Loading dep file %s' % dep_file)
+
 	def load_dep_files (self):
 		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
 		if self.debug.get('list', False): print('Files[dep] = %s' % self.files['dep'])
@@ -100,6 +104,11 @@ class Sixtus:
 					print('Six file %s is more recent than source file %s' % (name, dep))
 				return True
 		return False
+
+	def update_Six_files (self):
+		for stem in self.sources['page']:
+			Six_file = self.get_Six_filename(stem)
+			pag_file = self.get_pag_filename(stem)
 
 	def build_Six_files (self):
 		for name in self.files['Six']:
@@ -268,6 +277,9 @@ class Sixtus:
 
 	def build (self):
 		self.find_page_sources()
+		for stem in self.sources['page']:
+			self.load_dep_file(stem)
+		#self.update_Six_files()
 
 		for stem in self.sources['page']:
 			print('%15s → %30s %30s %30s' % (stem,
