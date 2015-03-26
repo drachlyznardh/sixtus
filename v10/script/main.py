@@ -191,7 +191,7 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
-	def get_Six_filename (self, bundle):
+	def map_Six_filename (self, bundle):
 		try: Six_dir = self.dirmap[bundle[1]]
 		except: Six_dir = self.dirmap[os.path.dirname(bundle[1])]
 		direct = os.path.join(self.location['build'], '%s.Six' % Six_dir)
@@ -208,7 +208,7 @@ class Sixtus:
 				print('six file %s does not exist' % six_file)
 			return True
 		six_time = os.path.getmtime(six_file)
-		Six_file = self.get_Six_filename(bundle)
+		Six_file = self.map_Six_filename(bundle)
 		Six_time = os.path.getmtime(Six_file)
 		if Six_time - six_time > self.delta_time:
 			if self.debug.get('search',True):
