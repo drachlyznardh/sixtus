@@ -39,6 +39,8 @@ class Sixtus:
 		self.dirmap = {}
 		self.bundles = []
 
+		self.sources = {}
+
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
 		return os.path.join(self.location['build'], bundle[1], extension[bundle[0]])
@@ -50,6 +52,11 @@ class Sixtus:
 	def load_pag_files (self):
 		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
 		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
+
+	def find_page_sources (self):
+		self.sources['page'] = util.find_all_sources(self.location['pag'], r'(.*).pag')
+		if self.debug.get('list', False):
+			print('Page source = %s' % self.sources['page'])
 
 	def load_Six_files (self):
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
@@ -248,7 +255,8 @@ class Sixtus:
 		self.build_php_files()
 
 	def build (self):
-		self.load_wave_one()
+		#self.load_wave_one()
+		self.find_page_sources()
 		self.build_wave_one()
 		self.load_wave_two()
 		self.build_wave_two()
