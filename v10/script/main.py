@@ -320,6 +320,7 @@ class Sixtus:
 
 		print('Sources = %s' % self.sources)
 		print('Products = %s' % self.products)
+		print('PHP = %s' % '\n'.join([self.get_php_filename(b) for b in self.products]))
 
 		#self.build_wave_one()
 		#self.load_wave_two()
