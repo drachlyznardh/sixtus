@@ -28,8 +28,9 @@ class Sixtus:
 		self.location['pag'] = 'src'
 		self.location['blog'] = 'blog'
 		self.location['build'] = 'build'
-		self.location['dep'] = 'build/dep'
 		self.location['Six'] = 'build/dep'
+		self.location['src'] = 'build/dep'
+		self.location['dep'] = 'build/dep'
 		self.location['six'] = 'build/six'
 		self.location['deploy'] = '/opt/web/mobile'
 
