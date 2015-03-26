@@ -49,22 +49,28 @@ class Sixtus:
 		self.sources = {}
 		self.products = []
 
+	# Returns full path for a .pag file
 	def get_pag_filename (self, name):
 		return os.path.join(self.location['pag'], '%s.pag' % name)
 
+	# Returns full path for a .Six file
 	def get_Six_filename (self, name):
 		return os.path.join(self.location['Six'], '%s.Six' % name)
 
+	# Returns full path for a .src file
 	def get_src_filename (self, name):
 		return os.path.join(self.location['src'], '%s.src' % name)
 
+	# Returns full path for a .dep file
 	def get_dep_filename (self, name):
 		return os.path.join(self.location['dep'], '%s.dep' % name)
 
+	# Returns full path for a .six file
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
 		return os.path.join(self.location['build'], bundle[1], extension[bundle[0]])
 
+	# Returns full path for a .php file
 	def get_php_filename (self, bundle):
 		extension = ['index.php', 'index.php', 'side.php']
 		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
