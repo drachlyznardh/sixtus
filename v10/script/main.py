@@ -369,8 +369,8 @@ class Sixtus:
 	def build (self):
 
 		for stem in self.find_page_sources():
+			self.load_src_file(stem)
 			self.load_dep_file(stem)
-		#self.update_Six_files()
 
 		for stem in self.find_page_sources():
 			print('%15s → %30s %30s %30s' % (stem,
