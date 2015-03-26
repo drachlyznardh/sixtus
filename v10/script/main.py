@@ -43,9 +43,8 @@ class Sixtus:
 		self.replace['Six'] = r'%s\1.Six' % self.location['build']
 		self.replace['dep'] = r'%s\1.dep' % self.location['build']
 
-		self.deps = {}
 		self.dirmap = {}
-		self.bundles = []
+		self.products = []
 
 		self.sources = {}
 		self.products = []
@@ -253,28 +252,28 @@ class Sixtus:
 
 		size = len(tab_names)
 		if jump:
-			self.bundles.append((1, mapped))
+			self.products.append((1, mapped))
 		elif size == 0:
-			self.bundles.append((0, mapped))
+			self.products.append((0, mapped))
 		elif size == 1:
-			self.bundles.append((1, mapped))
-			self.bundles.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
+			self.products.append((1, mapped))
+			self.products.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
 		else:
-			self.bundles.append((1, mapped))
-			self.bundles.append((2, mapped))
+			self.products.append((1, mapped))
+			self.products.append((2, mapped))
 			for name in tab_names:
-				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
+				self.products.append((0, os.path.join(mapped, roman.convert(name))))
 
 	def parse_dep_files (self):
 		for name in self.files['dep']:
 			self.parse_dep_file(name)
 
 	def load_six_files (self):
-		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.bundles]
+		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.products]
 		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
 
 	def load_php_files (self):
-		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.bundles]
+		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.products]
 		if self.debug.get('list', False): print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
@@ -322,7 +321,7 @@ class Sixtus:
 		return False
 
 	def build_six_files (self):
-		for bundle in self.bundles:
+		for bundle in self.products:
 			if self.check_six_file(bundle):
 				Six_dir, six_dir = self.get_split_directories(bundle)
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
@@ -345,7 +344,7 @@ class Sixtus:
 		return False
 
 	def build_php_files (self):
-		for bundle in self.bundles:
+		for bundle in self.products:
 
 			six_file = self.get_six_filename(bundle)
 			php_file = self.get_php_filename(bundle)
@@ -376,9 +375,8 @@ class Sixtus:
 				self.get_dep_filename(stem),
 				self.get_Six_filename(stem)))
 
-		print(self.sources)
-		print(self.deps)
-		print(self.bundles)
+		print('Sources = %s' % self.sources)
+		print('Products = %s' % self.products)
 
 		self.build_wave_one()
 		self.load_wave_two()
