@@ -93,6 +93,7 @@ class Sixtus:
 		if not os.path.exists(dep_file):
 			if self.debug.get('explain', False):
 				print('dep file %s does not exist' % dep_file)
+			self.update_Six_file(stem)
 			self.build_dep_file(stem)
 			return False
 
