@@ -12,6 +12,7 @@ import mapper
 import roman
 
 # Builders
+import Six
 import dep
 
 class Sixtus:
@@ -78,6 +79,12 @@ class Sixtus:
 	def load_Six_files (self):
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
 		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
+
+	def build_Six_file (self, stem):
+		pag_file = self.get_pag_filename(stem)
+		Six_file = self.get_Six_filename(stem)
+		#self.sources[stem] = Six.from_pag_to_Six_file(pag_file, Six_file)
+		Six.from_pag_to_Six_file(pag_file, Six_file)
 
 	def update_Six_file (self, stem):
 		Six_file = self.get_Six_filename(stem)
