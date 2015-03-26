@@ -7,7 +7,7 @@ import os
 
 import roman
 
-def read (Six_file):
+def read_Six_file (Six_file):
 
 	re_include = re.compile(r'^source\|(.*)\|.*\n$')
 	re_tab     = re.compile(r'^tab\|(.*)\n$')
@@ -27,6 +27,11 @@ def read (Six_file):
 				return roman.unique(sources), True, []
 
 	return roman.unique(sources), False, roman.unique(tabs)
+
+def from_dep_file (dep_file):
+
+	with open(dep_file, 'r') as f:
+		return eval(f.read())
 
 def digest (jump, tabs):
 
@@ -53,9 +58,9 @@ def write (dep_file, sources, products):
 	with open(dep_file, 'w') as f:
 		print((source, products), file=f)
 
-def build (Six_file, dep_file):
+def from_Six_to_dep_file (Six_file, dep_file):
 
-	sources, jump, tabs = read(Six_file)
+	sources, jump, tabs = read_Six_file(Six_file)
 	products = digest(jump, tabs)
 	write(dep_file, sources, products)
 	return sources, products
