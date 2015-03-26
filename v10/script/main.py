@@ -11,6 +11,9 @@ import build
 import mapper
 import roman
 
+# Builders
+import dep
+
 class Sixtus:
 
 	def __init__ (self):
@@ -43,6 +46,7 @@ class Sixtus:
 		self.bundles = []
 
 		self.sources = {}
+		self.products = []
 
 	def get_pag_filename (self, name):
 		return os.path.join(self.location['pag'], '%s.pag' % name)
@@ -75,30 +79,47 @@ class Sixtus:
 		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
 		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
 
+	def build_dep_file (self, stem):
+		Six_file = self.get_Six_filename(stem)
+		dep_file = self.get_dep_filename(stem)
+		sources, products = dep.from_Six_to_dep_file(Six_file, dep_file)
+		self.deps[stem] = sources
+		self.products += products
+
+	def update_dep_file (self, stem):
+
+		dep_file = self.get_dep_filename(stem)
+
+		if not os.path.exists(dep_file):
+			if self.debug.get('explain', False):
+				print('dep file %s does not exist' % dep_file)
+			self.build_dep_file(stem)
+			return False
+
+		if self.update_Six_file(stem):
+			if self.debug.get('explain', False):
+				print('Six file %s was just remade' % Six_file)
+			self.build_dep_file(stem)
+			return False
+
+		dep_time = os.path.getmtime(dep_file)
+		Six_file = self.get_Six_filename(stem)
+		Six_time = os.path.getmtime(stem)
+		if Six_time - dep_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('Six file %s is more recent than dep file %s' % (Six_file, dep_file))
+			self.build_dep_file(stem)
+			return False
+
+		return True
+
 	def load_dep_file (self, stem):
 		dep_file = self.get_dep_filename(stem)
 		print('Loading dep file %s' % dep_file)
-		self.update_Six_file(stem)
-		self.update_dep_file(stem)
-
-		with open(dep_file, 'r') as f:
-			jump, sources, tabs = eval(f.read())
-
-		self.deps[self.get_Six_filename(stem)] = sources
-
-		size = len(tab_names)
-		if jump:
-			self.bundles.append((1, mapped))
-		elif size == 0:
-			self.bundles.append((0, mapped))
-		elif size == 1:
-			self.bundles.append((1, mapped))
-			self.bundles.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
-		else:
-			self.bundles.append((1, mapped))
-			self.bundles.append((2, mapped))
-			for name in tab_names:
-				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
+		if self.update_dep_file(stem):
+			sources, products = dep.from_dep_file(dep_file)
+			self.deps[stem] = sources
+			self.products += products
 
 	def load_dep_files (self):
 		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
