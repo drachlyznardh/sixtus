@@ -130,7 +130,8 @@ class Sixtus:
 	def build_dep_file (self, stem):
 		Six_file = self.get_Six_filename(stem)
 		dep_file = self.get_dep_filename(stem)
-		self.products += dep.from_Six_to_dep_file(Six_file, dep_file)
+		mapped = self.parse_Six_six_mapping (stem)
+		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
 	def update_dep_file (self, stem):
 
@@ -164,7 +165,8 @@ class Sixtus:
 		dep_file = self.get_dep_filename(stem)
 		print('Loading dep file %s' % dep_file)
 		if not self.update_dep_file(stem):
-			self.products += dep.from_dep_file(dep_file)
+			mapped = self.parse_Six_six_mapping (stem)
+			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
 	def load_dep_files (self):
 		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
