@@ -78,6 +78,27 @@ class Sixtus:
 	def load_dep_file (self, stem):
 		dep_file = self.get_dep_filename(stem)
 		print('Loading dep file %s' % dep_file)
+		self.update_Six_file(stem)
+		self.update_dep_file(stem)
+
+		with open(dep_file, 'r') as f:
+			jump, sources, tabs = eval(f.read())
+
+		self.deps[self.get_Six_filename(stem)] = sources
+
+		size = len(tab_names)
+		if jump:
+			self.bundles.append((1, mapped))
+		elif size == 0:
+			self.bundles.append((0, mapped))
+		elif size == 1:
+			self.bundles.append((1, mapped))
+			self.bundles.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
+		else:
+			self.bundles.append((1, mapped))
+			self.bundles.append((2, mapped))
+			for name in tab_names:
+				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
 
 	def load_dep_files (self):
 		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
