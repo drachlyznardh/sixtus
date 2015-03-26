@@ -171,15 +171,6 @@ class Sixtus:
 			mapped = self.parse_Six_six_mapping (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
-	def load_dep_files (self):
-		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
-		if self.debug.get('list', False): print('Files[dep] = %s' % self.files['dep'])
-
-	def load_wave_one (self):
-		self.load_pag_files()
-		self.load_Six_files()
-		self.load_dep_files()
-
 	def check_Six_file (self, name):
 		if not os.path.exists(name):
 			if self.debug.get('explain',False):
