@@ -171,63 +171,6 @@ class Sixtus:
 			mapped = self.parse_Six_six_mapping (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
-	def check_Six_file (self, name):
-		if not os.path.exists(name):
-			if self.debug.get('explain',False):
-				print('Six file %s does not exist' % name)
-			return True
-		if name not in self.deps:
-			if self.debug.get('search',False):
-				print('Six file %s does not appear in deps' % name)
-			return False
-		this_time = os.path.getmtime(name)
-		for dep in self.deps[name]:
-			other_time = os.path.getmtime(dep)
-			if other_time - this_time > self.delta_time:
-				if self.debug.get('explain',False):
-					print('Six file %s is more recent than source file %s' % (name, dep))
-				return True
-		return False
-
-	def update_Six_files (self):
-		for stem in self.sources['page']:
-			Six_file = self.get_Six_filename(stem)
-			pag_file = self.get_pag_filename(stem)
-
-	def build_Six_files (self):
-		for name in self.files['Six']:
-			if self.check_Six_file(name):
-				build.build_Six_file(name)
-			elif self.debug.get('already',False):
-				print('Six file %30s already exists' % name)
-
-	def check_dep_file (self, name):
-		if not os.path.exists(name):
-			if self.debug.get('search',False):
-				print('dep file %s does not exist' % name)
-			return True
-		this_time = os.path.getmtime(name)
-		Six_file = name.replace('.dep', '.Six')
-		other_time = os.path.getmtime(Six_file)
-		if other_time - this_time > self.delta_time:
-			if self.debug.get('search',False):
-				print('dep file %s is more recent than Six file %s' % (name, Six_file))
-			return True
-		if self.debug.get('search',False):
-			print('dep file %s is up to date' % name)
-		return False
-
-	def build_dep_files (self):
-		for name in self.files['dep']:
-			if self.check_dep_file(name):
-				build.build_dep_file(name)
-			elif self.debug.get('already',False):
-				print('dep file %30s already exists' % name)
-
-	def build_wave_one (self):
-		self.build_Six_files()
-		self.build_dep_files()
-
 	def parse_Six_six_mapping (self, Six_dir):
 		mapped = mapper.get('map.py', os.path.dirname(Six_dir))
 		basename = os.path.basename(Six_dir)
