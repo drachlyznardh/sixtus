@@ -267,7 +267,6 @@ class Sixtus:
 		self.build_php_files()
 
 	def build (self):
-		#self.load_wave_one()
 		self.find_page_sources()
 
 		for stem in self.sources['page']:
