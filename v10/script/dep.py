@@ -39,17 +39,17 @@ def digest (jump, tabs):
 	size = len(tabs)
 
 	if jump:
-		bundles.append((1, mapped))
+		bundles.append((1, ''))
 	elif size == 0:
-		bundles.append((0, mapped))
+		bundles.append((0, ''))
 	elif size == 1:
-		bundles.append((1, mapped))
-		bundles.append((0, os.path.join(mapped, roman.convert(tabs[0]))))
+		bundles.append((1, ''))
+		bundles.append((0, roman.convert(tabs[0])))
 	else:
-		bundles.append((1, mapped))
-		bundles.append((2, mapped))
+		bundles.append((1, ''))
+		bundles.append((2, ''))
 		for name in tabs:
-			bundles.append((0, os.path.join(mapped, roman.convert(name))))
+			bundles.append((0, roman.convert(name)))
 
 	return bundles
 
