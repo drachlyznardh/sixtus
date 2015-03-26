@@ -13,7 +13,7 @@ class Preprocessor:
 		self.debug = False
 
 		self.base = base
-		self.origin_files = []
+		self.sources = []
 
 		self.filename = False
 		self.lineno = 0
@@ -32,7 +32,7 @@ class Preprocessor:
 	def parse_file (self, filename):
 
 		self.filename = filename
-		self.origin_files.append(filename)
+		self.sources.append(filename)
 		self.lineno = 0
 
 		self.content.append('source|%s|%d' % (filename, 0))
@@ -86,8 +86,12 @@ class Preprocessor:
 
 		self.content.append(line) # Ordinany command
 
-	def output_file (self, filename):
-
-		with open(filename, 'w') as f:
+	def output_Six_file (self, Six_file):
+		with open(Six_file, 'w') as f:
 			for line in self.content:
 				print(line, file=f)
+
+	def output_src_file (self, src_file):
+		with open(src_file, 'w') as f:
+			print(self.sources, file=f)
+
