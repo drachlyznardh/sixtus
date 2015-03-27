@@ -244,19 +244,16 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
-	def map_six_to_Six (self, (pagetype, pagename)):
+	def map_six_to_Six (self, stem):
 
-		if pagename in self.sixSixmap:
-			print('%s → %s' % (pagename, self.sixSixmap[pagename]))
-			return self.sixSixmap[pagename]
+		if stem[1] in self.sixSixmap:
+			return self.sixSixmap[stem[1]]
 
-		directory = os.path.dirname(pagename)
+		directory = os.path.dirname(stem[1])
 		if directory in self.sixSixmap:
-			print('%s → %s' % (directory, self.sixSixmap[directory]))
 			return self.sixSixmap[directory]
 
-		raise Exception('Could not locate a Six file for (%s,%s)' % (pagetype,
-		pagename))
+		raise Exception('Could not locate a Six file for (%s,%s)' % stem)
 
 	def map_Six_filename (self, bundle):
 		try: Six_dir = self.dirmap[bundle[1]]
@@ -327,20 +324,14 @@ class Sixtus:
 		self.build_php_files()
 
 	def build_six_file (self, stem):
-
-		six_file = self.get_six_filename(stem)
-		print(stem)
-		print(self.sources)
-		print(self.sixSixmap)
-		print(self.sixSixmap[stem[1]])
-		Six_file = self.get_Six_filename(self.sixSixmap[stem[1]])
-		print(Six_file)
-		print('%s → %s' % (Six_file, six_file))
+		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
+		destination = os.path.join(self.location['six'], stem[1])
+		build.build_six_files(Six_file, destination)
 
 	def update_six_file (self, stem):
 
 		six_file = self.get_six_filename(stem)
-		Six_stem = self.sixSixmap[stem[1]]
+		Six_stem = self.map_six_to_Six(stem)
 		if not os.path.exists(six_file):
 			if self.debug.get('explain', False):
 				print('six file %s does not exist' % six_file)
