@@ -323,6 +323,7 @@ class Sixtus:
 		if not os.path.exists(php_file):
 			if self.debug.get('explain', False):
 				print('php file %s does not exist' % php_file)
+			self.update_six_file(stem)
 			self.build_php_file(stem)
 			return True
 
