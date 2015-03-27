@@ -198,49 +198,6 @@ class Sixtus:
 
 		raise Exception('Could not locate a Six file for (%s,%s)' % stem)
 
-	def build_six_files (self):
-		for bundle in self.products:
-			if self.check_six_file(bundle):
-				Six_dir, six_dir = self.get_split_directories(bundle)
-				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
-				destination = os.path.join(self.location['build'], six_dir)
-				build.build_six_files(Six_file, destination)
-			elif self.debug.get('already',False):
-				print('six file %s already exists!' % name)
-
-	def check_php_file (self, six_file, php_file):
-		if not os.path.exists(php_file):
-			if self.debug.getg('explain',False):
-				print('php file %s does not exist' % php_file)
-			return True
-		six_time = os.path.getmtime(six_file)
-		php_time = os.path.getmtime(php_file)
-		if six_time - php_time > self.delta_time:
-			if self.debug.get('explain',False):
-				print('six file %s is more recent than php file %s' % (six_file, php_file))
-			return True
-		return False
-
-	def build_php_files (self):
-		for bundle in self.products:
-
-			six_file = self.get_six_filename(bundle)
-			php_file = self.get_php_filename(bundle)
-
-			if self.check_php_file(six_file, php_file):
-				if bundle[0] == 0:
-					build.build_page_file(bundle[1], six_file, php_file)
-				elif bundle[0] == 1:
-					build.build_jump_file(bundle[1], six_file, php_file)
-				elif bundle[0] == 2:
-					build.build_side_file(bundle[1], six_file, php_file)
-			elif self.debug.get('already',False):
-				print('php file %s already exists!' % php_file)
-
-	def build_wave_two (self):
-		self.build_six_files()
-		self.build_php_files()
-
 	def build_six_file (self, stem):
 		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
 		destination = os.path.join(self.location['six'], stem[1])
