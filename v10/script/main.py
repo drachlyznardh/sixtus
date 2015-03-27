@@ -187,32 +187,6 @@ class Sixtus:
 		if basename == 'index': return mapped
 		return os.path.join(mapped, roman.convert(basename))
 
-	def parse_dep_file (self, dep_file):
-
-		stem = re.sub(r'build/(.*)\.dep', r'\1', dep_file)
-		mapped = self.parse_Six_six_mapping (stem)
-		self.dirmap[mapped] = stem
-
-		with open(dep_file, 'r') as f:
-			jump, sources, tab_names = eval(f.read())
-
-		Six_file = os.path.join(self.location['build'], '%s.Six' % stem)
-		self.deps[Six_file] = sources
-
-		size = len(tab_names)
-		if jump:
-			self.products.append((1, mapped))
-		elif size == 0:
-			self.products.append((0, mapped))
-		elif size == 1:
-			self.products.append((1, mapped))
-			self.products.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
-		else:
-			self.products.append((1, mapped))
-			self.products.append((2, mapped))
-			for name in tab_names:
-				self.products.append((0, os.path.join(mapped, roman.convert(name))))
-
 	def parse_dep_files (self):
 		for name in self.files['dep']:
 			self.parse_dep_file(name)
