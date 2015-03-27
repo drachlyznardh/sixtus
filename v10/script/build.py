@@ -34,7 +34,7 @@ def build_dep_file (dep_file):
 def build_six_files (Six_file, output_dir):
 
 	#print('Invoking splitter ("%s", "%s")' % (Six_file, output_dir))
-	print('Splitting content file %s' % Six_file)
+	print('Splitting content file %s over %s' % (Six_file, output_dir))
 	from splitter import Splitter
 	sp = Splitter()
 	sp.parse_file(Six_file)
