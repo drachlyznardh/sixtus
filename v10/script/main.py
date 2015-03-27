@@ -308,6 +308,17 @@ class Sixtus:
 		self.build_six_files()
 		self.build_php_files()
 
+	def update_six_file (self, stem):
+
+		six_file = self.get_six_filename(stem)
+		print(stem)
+		print(self.sources)
+		print(self.sixSixmap)
+		print(self.sixSixmap[stem[1]])
+		Six_file = self.get_Six_filename(self.sixSixmap[stem[1]])
+		print(Six_file)
+		print('%s → %s' % (Six_file, six_file))
+
 	def build_php_file (self, stem):
 		six_file = self.get_six_filename(stem)
 		php_file = self.get_php_filename(stem)
