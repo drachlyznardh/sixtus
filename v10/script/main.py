@@ -187,19 +187,6 @@ class Sixtus:
 		if basename == 'index': return mapped
 		return os.path.join(mapped, roman.convert(basename))
 
-	def get_split_directories (self, bundle):
-
-		six_dir = bundle[1]
-		while six_dir and six_dir not in self.dirmap:
-			if self.debug.get('search',False):
-				print('%s does not match' % six_dir)
-			six_dir = os.path.dirname(six_dir)
-
-		if six_dir not in self.dirmap:
-			raise Exception('Could not map %s' % bundle[1])
-
-		return self.dirmap[six_dir], six_dir
-
 	def map_six_to_Six (self, stem):
 
 		if stem[1] in self.sixSixmap:
