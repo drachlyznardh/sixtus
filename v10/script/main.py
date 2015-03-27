@@ -244,6 +244,20 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
+	def map_six_to_Six (self, (pagetype, pagename)):
+
+		if pagename in self.sixSixmap:
+			print('%s → %s' % (pagename, self.sixSixmap[pagename]))
+			return self.sixSixmap[pagename]
+
+		directory = os.path.dirname(pagename)
+		if directory in self.sixSixmap:
+			print('%s → %s' % (directory, self.sixSixmap[directory]))
+			return self.sixSixmap[directory]
+
+		raise Exception('Could not locate a Six file for (%s,%s)' % (pagetype,
+		pagename))
+
 	def map_Six_filename (self, bundle):
 		try: Six_dir = self.dirmap[bundle[1]]
 		except: Six_dir = self.dirmap[os.path.dirname(bundle[1])]
