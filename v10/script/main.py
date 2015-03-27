@@ -308,7 +308,7 @@ class Sixtus:
 		self.build_six_files()
 		self.build_php_files()
 
-	def update_six_file (self, stem):
+	def build_six_file (self, stem):
 
 		six_file = self.get_six_filename(stem)
 		print(stem)
@@ -318,6 +318,29 @@ class Sixtus:
 		Six_file = self.get_Six_filename(self.sixSixmap[stem[1]])
 		print(Six_file)
 		print('%s → %s' % (Six_file, six_file))
+
+	def update_six_file (self, stem):
+
+		six_file = self.get_six_filename(stem)
+		Six_stem = self.sixSixmap[stem[1]]
+		if not os.path.exists(six_file):
+			if self.debug.get('explain', False):
+				print('six file %s does not exist' % six_file)
+			self.update_Six_file(Six_stem)
+			self.build_six_file(stem)
+			return True
+
+		self.update_Six_file(Six_stem)
+		six_time = os.path.getmtime(six_file)
+		Six_file = self.get_Six_filename(Six_stem)
+		Six_time = os.path.getmtime(Six_file)
+		if Six_file - six_file > self.delta_time:
+			if self.debug.get('explain', False):
+				print('Six file %s is more recent than six file %s' % (Six_file, six_file))
+			self.build_six_file(stem)
+			return True
+
+		return False
 
 	def build_php_file (self, stem):
 		six_file = self.get_six_filename(stem)
