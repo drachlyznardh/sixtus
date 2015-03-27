@@ -198,31 +198,6 @@ class Sixtus:
 
 		raise Exception('Could not locate a Six file for (%s,%s)' % stem)
 
-	def map_Six_filename (self, bundle):
-		try: Six_dir = self.dirmap[bundle[1]]
-		except: Six_dir = self.dirmap[os.path.dirname(bundle[1])]
-		direct = os.path.join(self.location['build'], '%s.Six' % Six_dir)
-		if os.path.exists(direct): return direct
-		indirect = os.path.join(self.location['build'], Six_dir, 'index.Six')
-		if os.path.exists(indirect): return indirect
-		raise Exception('Cannot locate a Six file for %s, [%s]' % bundle)
-		print('Nor %s nor %s exist' % (direct, indirect))
-
-	def check_six_file (self, bundle):
-		six_file = self.get_six_filename(bundle)
-		if not os.path.exists(six_file):
-			if self.debug.get('search',False):
-				print('six file %s does not exist' % six_file)
-			return True
-		six_time = os.path.getmtime(six_file)
-		Six_file = self.map_Six_filename(bundle)
-		Six_time = os.path.getmtime(Six_file)
-		if Six_time - six_time > self.delta_time:
-			if self.debug.get('search',True):
-				print('six file %s is more recent than Six file %s' % (six_file, Six_file))
-			return True
-		return False
-
 	def build_six_files (self):
 		for bundle in self.products:
 			if self.check_six_file(bundle):
