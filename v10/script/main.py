@@ -11,6 +11,10 @@ import build
 import mapper
 import roman
 
+# Builders
+import Six
+import dep
+
 class Sixtus:
 
 	def __init__ (self):
@@ -24,6 +28,10 @@ class Sixtus:
 		self.location['pag'] = 'src'
 		self.location['blog'] = 'blog'
 		self.location['build'] = 'build'
+		self.location['Six'] = 'build/dep'
+		self.location['src'] = 'build/dep'
+		self.location['dep'] = 'build/dep'
+		self.location['six'] = 'build/six'
 		self.location['deploy'] = '/opt/web/mobile'
 
 		self.files = {key:[] for key in 'pag Six dep six php'.split()}
@@ -35,86 +43,143 @@ class Sixtus:
 		self.replace['Six'] = r'%s\1.Six' % self.location['build']
 		self.replace['dep'] = r'%s\1.dep' % self.location['build']
 
-		self.deps = {}
 		self.dirmap = {}
-		self.bundles = []
+		self.products = []
 
+		self.sixSixmap = {}
+		self.sources = {}
+		self.products = []
+
+	# Returns full path for a .pag file
+	def get_pag_filename (self, name):
+		return os.path.join(self.location['pag'], '%s.pag' % name)
+
+	# Returns full path for a .Six file
+	def get_Six_filename (self, name):
+		return os.path.join(self.location['Six'], '%s.Six' % name)
+
+	# Returns full path for a .src file
+	def get_src_filename (self, name):
+		return os.path.join(self.location['src'], '%s.src' % name)
+
+	# Returns full path for a .dep file
+	def get_dep_filename (self, name):
+		return os.path.join(self.location['dep'], '%s.dep' % name)
+
+	# Returns full path for a .six file
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
-		return os.path.join(self.location['build'], bundle[1], extension[bundle[0]])
+		return os.path.join(self.location['six'], bundle[1], extension[bundle[0]])
 
+	# Returns full path for a .php file
 	def get_php_filename (self, bundle):
 		extension = ['index.php', 'index.php', 'side.php']
 		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
 
-	def load_pag_files (self):
-		self.files['pag'] += util.find_all_files(self.location['pag'], '*.pag')
-		if self.debug.get('list', False): print('Files[pag] = %s' % self.files['pag'])
+	# Locate source pages
+	def find_page_sources (self):
+		pages  = util.find_all_sources(self.location['pag'], r'(.*).pag')
+		if self.debug.get('list', False):
+			print('Page source = %s' % pages)
+		return pages
 
-	def load_Six_files (self):
-		self.files['Six'] += [self.match['pag'].sub(self.replace['Six'], name) for name in self.files['pag']]
-		if self.debug.get('list', False): print('Files[Six] = %s' % self.files['Six'])
+	# Loads existings .src files, compiles the sources dictionary
+	def load_src_file (self, stem):
 
-	def load_dep_files (self):
-		self.files['dep'] += [self.match['pag'].sub(self.replace['dep'], name) for name in self.files['pag']]
-		if self.debug.get('list', False): print('Files[dep] = %s' % self.files['dep'])
+		src_file = self.get_src_filename(stem)
+		if self.debug.get('loading', False):
+			print('Loading src file %s' % src_file)
+		if os.path.exists(src_file):
+			self.sources[stem] = Six.from_src_file(src_file)
 
-	def load_wave_one (self):
-		self.load_pag_files()
-		self.load_Six_files()
-		self.load_dep_files()
+	# Builds .Six files, also loading their .src updates into the sources dictionary
+	def build_Six_file (self, stem):
+		pag_file = self.get_pag_filename(stem)
+		Six_file = self.get_Six_filename(stem)
+		src_file = self.get_src_filename(stem)
+		self.sources[stem] = Six.from_pag_to_Six_file(pag_file, Six_file, src_file)
 
-	def check_Six_file (self, name):
-		if not os.path.exists(name):
-			if self.debug.get('explain',False):
-				print('Six file %s does not exist' % name)
+	# Updates a .Six file when needed. Returns true if updated
+	def update_Six_file (self, stem):
+		Six_file = self.get_Six_filename(stem)
+		if not os.path.exists(Six_file):
+			if self.debug.get('explain', False):
+				print('Six file %s does not exist' % Six_file)
+			self.build_Six_file(stem)
 			return True
-		if name not in self.deps:
-			if self.debug.get('search',False):
-				print('Six file %s does not appear in deps' % name)
-			return False
-		this_time = os.path.getmtime(name)
-		for dep in self.deps[name]:
-			other_time = os.path.getmtime(dep)
-			if other_time - this_time > self.delta_time:
-				if self.debug.get('explain',False):
-					print('Six file %s is more recent than source file %s' % (name, dep))
+
+		Six_time = os.path.getmtime(Six_file)
+		pag_file = self.get_pag_filename(stem)
+		pag_time = os.path.getmtime(pag_file)
+
+		if pag_time - Six_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('pag file %s is more recent than Six file %s' % (pag_file, Six_file))
+			self.build_Six_file(stem)
+			return True
+
+		if not stem in self.sources: return False
+
+		for each in self.sources[stem]:
+			each_time = os.path.getmtime(each)
+			if each_time - Six_time > self.delta_time:
+				if self.debug.get('explain', False):
+					print('pag file %s is more recent than source file %s' % (pag_file, each_file))
+				self.build_Six_file(stem)
 				return True
+
+		if self.debug.get('explain', False):
+			print('Six file %s is up to date' % Six_file)
 		return False
 
-	def build_Six_files (self):
-		for name in self.files['Six']:
-			if self.check_Six_file(name):
-				build.build_Six_file(name)
-			elif self.debug.get('already',False):
-				print('Six file %30s already exists' % name)
+	# Builds a .dep file, also loading product list
+	def build_dep_file (self, stem):
+		Six_file = self.get_Six_filename(stem)
+		dep_file = self.get_dep_filename(stem)
+		mapped = self.parse_Six_six_mapping (stem)
+		self.sixSixmap[mapped] = stem
+		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
-	def check_dep_file (self, name):
-		if not os.path.exists(name):
-			if self.debug.get('search',False):
-				print('dep file %s does not exist' % name)
+	# Build a .dep file when needed. Returns true if updated
+	def update_dep_file (self, stem):
+
+		dep_file = self.get_dep_filename(stem)
+
+		if not os.path.exists(dep_file):
+			if self.debug.get('explain', False):
+				print('dep file %s does not exist' % dep_file)
+			self.update_Six_file(stem)
+			self.build_dep_file(stem)
 			return True
-		this_time = os.path.getmtime(name)
-		Six_file = name.replace('.dep', '.Six')
-		other_time = os.path.getmtime(Six_file)
-		if other_time - this_time > self.delta_time:
-			if self.debug.get('search',False):
-				print('dep file %s is more recent than Six file %s' % (name, Six_file))
+
+		if self.update_Six_file(stem):
+			if self.debug.get('explain', False):
+				print('Six file %s was just remade' % Six_file)
+			self.build_dep_file(stem)
 			return True
-		if self.debug.get('search',False):
-			print('dep file %s is up to date' % name)
+
+		dep_time = os.path.getmtime(dep_file)
+		Six_file = self.get_Six_filename(stem)
+		Six_time = os.path.getmtime(Six_file)
+		if Six_time - dep_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('Six file %s is more recent than dep file %s' % (Six_file, dep_file))
+			self.build_dep_file(stem)
+			return True
+
+		if self.debug.get('explain', False):
+			print('dep file %s is up to date' % dep_file)
 		return False
 
-	def build_dep_files (self):
-		for name in self.files['dep']:
-			if self.check_dep_file(name):
-				build.build_dep_file(name)
-			elif self.debug.get('already',False):
-				print('dep file %30s already exists' % name)
+	# Loads the content of a .dep file, creating it if needed
+	def load_dep_file (self, stem):
 
-	def build_wave_one (self):
-		self.build_Six_files()
-		self.build_dep_files()
+		dep_file = self.get_dep_filename(stem)
+		if self.debug.get('loading',False):
+			print('Loading dep file %s' % dep_file)
+		if not self.update_dep_file(stem):
+			mapped = self.parse_Six_six_mapping (stem)
+			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
 	def parse_Six_six_mapping (self, Six_dir):
 		mapped = mapper.get('map.py', os.path.dirname(Six_dir))
@@ -136,28 +201,28 @@ class Sixtus:
 
 		size = len(tab_names)
 		if jump:
-			self.bundles.append((1, mapped))
+			self.products.append((1, mapped))
 		elif size == 0:
-			self.bundles.append((0, mapped))
+			self.products.append((0, mapped))
 		elif size == 1:
-			self.bundles.append((1, mapped))
-			self.bundles.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
+			self.products.append((1, mapped))
+			self.products.append((0, os.path.join(mapped, roman.convert(tab_names[0]))))
 		else:
-			self.bundles.append((1, mapped))
-			self.bundles.append((2, mapped))
+			self.products.append((1, mapped))
+			self.products.append((2, mapped))
 			for name in tab_names:
-				self.bundles.append((0, os.path.join(mapped, roman.convert(name))))
+				self.products.append((0, os.path.join(mapped, roman.convert(name))))
 
 	def parse_dep_files (self):
 		for name in self.files['dep']:
 			self.parse_dep_file(name)
 
 	def load_six_files (self):
-		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.bundles]
+		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.products]
 		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
 
 	def load_php_files (self):
-		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.bundles]
+		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.products]
 		if self.debug.get('list', False): print('Files[php] = %s' % self.files['php'])
 
 	def load_wave_two (self):
@@ -179,7 +244,18 @@ class Sixtus:
 
 		return self.dirmap[six_dir], six_dir
 
-	def get_Six_filename (self, bundle):
+	def map_six_to_Six (self, stem):
+
+		if stem[1] in self.sixSixmap:
+			return self.sixSixmap[stem[1]]
+
+		directory = os.path.dirname(stem[1])
+		if directory in self.sixSixmap:
+			return self.sixSixmap[directory]
+
+		raise Exception('Could not locate a Six file for (%s,%s)' % stem)
+
+	def map_Six_filename (self, bundle):
 		try: Six_dir = self.dirmap[bundle[1]]
 		except: Six_dir = self.dirmap[os.path.dirname(bundle[1])]
 		direct = os.path.join(self.location['build'], '%s.Six' % Six_dir)
@@ -196,7 +272,7 @@ class Sixtus:
 				print('six file %s does not exist' % six_file)
 			return True
 		six_time = os.path.getmtime(six_file)
-		Six_file = self.get_Six_filename(bundle)
+		Six_file = self.map_Six_filename(bundle)
 		Six_time = os.path.getmtime(Six_file)
 		if Six_time - six_time > self.delta_time:
 			if self.debug.get('search',True):
@@ -205,7 +281,7 @@ class Sixtus:
 		return False
 
 	def build_six_files (self):
-		for bundle in self.bundles:
+		for bundle in self.products:
 			if self.check_six_file(bundle):
 				Six_dir, six_dir = self.get_split_directories(bundle)
 				Six_file = os.path.join(self.location['build'], '%s.Six' % Six_dir)
@@ -228,7 +304,7 @@ class Sixtus:
 		return False
 
 	def build_php_files (self):
-		for bundle in self.bundles:
+		for bundle in self.products:
 
 			six_file = self.get_six_filename(bundle)
 			php_file = self.get_php_filename(bundle)
@@ -247,11 +323,81 @@ class Sixtus:
 		self.build_six_files()
 		self.build_php_files()
 
+	def build_six_file (self, stem):
+		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
+		destination = os.path.join(self.location['six'], stem[1])
+		build.build_six_files(Six_file, destination)
+
+	def update_six_file (self, stem):
+
+		six_file = self.get_six_filename(stem)
+		Six_stem = self.map_six_to_Six(stem)
+		if not os.path.exists(six_file):
+			if self.debug.get('explain', False):
+				print('six file %s does not exist' % six_file)
+			self.update_Six_file(Six_stem)
+			self.build_six_file(stem)
+			return True
+
+		self.update_Six_file(Six_stem)
+		six_time = os.path.getmtime(six_file)
+		Six_file = self.get_Six_filename(Six_stem)
+		Six_time = os.path.getmtime(Six_file)
+		if Six_time - six_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('Six file %s is more recent than six file %s' % (Six_file, six_file))
+			self.build_six_file(stem)
+			return True
+
+		if self.debug.get('explain', False):
+			print('six file %s is up to date' % six_file)
+		return False
+
+	def build_php_file (self, stem):
+		six_file = self.get_six_filename(stem)
+		php_file = self.get_php_filename(stem)
+		if stem[0] == 0:
+			build.build_page_file(stem[1], six_file, php_file)
+		elif stem[0] == 1:
+			build.build_jump_file(stem[1], six_file, php_file)
+		elif stem[0] == 2:
+			build.build_side_file(stem[1], six_file, php_file)
+
+	def update_php_file (self, stem):
+
+		php_file = self.get_php_filename(stem)
+
+		if not os.path.exists(php_file):
+			if self.debug.get('explain', False):
+				print('php file %s does not exist' % php_file)
+			self.update_six_file(stem)
+			self.build_php_file(stem)
+			return True
+
+		self.update_six_file(stem)
+		php_time = os.path.getmtime(php_file)
+		six_file = self.get_six_filename(stem)
+		six_time = os.path.getmtime(six_file)
+		if six_time - php_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('six file %s is more recent than php file %s' % (six_file,
+				php_file))
+			self.build_php_file(stem)
+			return True
+
+		if self.debug.get('explain', False):
+			print('php file %s is up to date' % php_file)
+		return False
+
 	def build (self):
-		self.load_wave_one()
-		self.build_wave_one()
-		self.load_wave_two()
-		self.build_wave_two()
+
+		for stem in self.find_page_sources():
+			self.load_src_file(stem)
+			self.load_dep_file(stem)
+
+		for stem in self.products:
+			self.update_php_file(stem)
+
 		return
 
 print('Siχtus 0.10')
