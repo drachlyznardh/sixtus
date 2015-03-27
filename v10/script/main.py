@@ -8,7 +8,6 @@ import re
 
 import util
 import build
-import mapper
 import roman
 
 # Builders
@@ -189,12 +188,7 @@ class Sixtus:
 			translated = os.path.join(translated,
 				os.path.join(*discarded))
 
-		print('Translated = %s' % translated)
-		mapped = mapper.get('map.py', os.path.dirname(stem))
-		print('    Mapped = %s' % mapped)
-		basename = os.path.basename(stem)
-		if basename == 'index': return mapped
-		return os.path.join(mapped, roman.convert(basename))
+		return translated
 
 	def map_six_to_Six (self, stem):
 
