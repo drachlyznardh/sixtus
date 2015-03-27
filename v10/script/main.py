@@ -69,7 +69,7 @@ class Sixtus:
 	# Returns full path for a .six file
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
-		return os.path.join(self.location['build'], bundle[1], extension[bundle[0]])
+		return os.path.join(self.location['six'], bundle[1], extension[bundle[0]])
 
 	# Returns full path for a .php file
 	def get_php_filename (self, bundle):
