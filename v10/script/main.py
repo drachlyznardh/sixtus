@@ -126,7 +126,7 @@ class Sixtus:
 	def build_dep_file (self, stem):
 		Six_file = self.get_Six_filename(stem)
 		dep_file = self.get_dep_filename(stem)
-		mapped = self.parse_Six_six_mapping (stem)
+		mapped = self.map_Six_to_six (stem)
 		self.sixSixmap[mapped] = stem
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
@@ -168,10 +168,10 @@ class Sixtus:
 		if self.debug.get('loading',False):
 			print('Loading dep file %s' % dep_file)
 		if not self.update_dep_file(stem):
-			mapped = self.parse_Six_six_mapping (stem)
+			mapped = self.map_Six_to_six (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
-	def parse_Six_six_mapping (self, Six_dir):
+	def map_Six_to_six (self, Six_dir):
 		mapped = mapper.get('map.py', os.path.dirname(Six_dir))
 		basename = os.path.basename(Six_dir)
 		if basename == 'index': return mapped
