@@ -27,26 +27,14 @@ class Sixtus:
 
 		self.location['pag'] = 'src'
 		self.location['blog'] = 'blog'
-		self.location['build'] = 'build'
 		self.location['Six'] = 'build/dep'
 		self.location['src'] = 'build/dep'
 		self.location['dep'] = 'build/dep'
 		self.location['six'] = 'build/six'
 		self.location['deploy'] = '/opt/web/mobile'
 
-		self.files = {key:[] for key in 'pag Six dep six php'.split()}
-
-		self.match = {}
-		self.match['pag'] = re.compile(r'^%s(.*)\.pag$' % self.location['pag'])
-
-		self.replace = {}
-		self.replace['Six'] = r'%s\1.Six' % self.location['build']
-		self.replace['dep'] = r'%s\1.dep' % self.location['build']
-
-		self.dirmap = {}
-		self.products = []
-
 		self.sixSixmap = {}
+
 		self.sources = {}
 		self.products = []
 
