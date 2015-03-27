@@ -139,8 +139,6 @@ class Sixtus:
 		mapped = self.parse_Six_six_mapping (stem)
 		self.sixSixmap[mapped] = stem
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
-		print(dep.from_Six_to_dep_file(Six_file, dep_file))
-		print([(p[0], p[1], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)])
 
 	# Build a .dep file when needed. Returns true if updated
 	def update_dep_file (self, stem):
