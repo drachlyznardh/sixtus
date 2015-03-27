@@ -171,9 +171,28 @@ class Sixtus:
 			mapped = self.map_Six_to_six (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
-	def map_Six_to_six (self, Six_dir):
-		mapped = mapper.get('map.py', os.path.dirname(Six_dir))
-		basename = os.path.basename(Six_dir)
+	def map_Six_to_six (self, stem):
+
+		discarded = []
+		partial = stem
+		print('\t%s' % partial)
+
+		while partial and partial not in self.Sixsixmap:
+			partial, last = os.path.split(partial)
+			if last != 'index':
+				discarded.append(roman.convert(last))
+			print('\t%s, %s' % (partial, last))
+
+		translated = self.Sixsixmap.get(partial, '')
+		if len(discarded):
+			discarded.reverse()
+			translated = os.path.join(translated,
+				os.path.join(*discarded))
+
+		print('Translated = %s' % translated)
+		mapped = mapper.get('map.py', os.path.dirname(stem))
+		print('    Mapped = %s' % mapped)
+		basename = os.path.basename(stem)
 		if basename == 'index': return mapped
 		return os.path.join(mapped, roman.convert(basename))
 
