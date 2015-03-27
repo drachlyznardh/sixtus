@@ -306,6 +306,16 @@ class Sixtus:
 		self.build_six_files()
 		self.build_php_files()
 
+	def build_php_file (self, stem):
+		six_file = self.get_six_filename(stem)
+		php_file = self.get_php_filename(stem)
+		if stem[0] == 0:
+			build.build_page_file(stem[1], six_file, php_file)
+		elif stem[0] == 1:
+			build.build_jump_file(stem[1], six_file, php_file)
+		elif stem[0] == 2:
+			build.build_side_file(stem[1], six_file, php_file)
+
 	def update_php_file (self, stem):
 
 		php_file = self.get_php_filename(stem)
