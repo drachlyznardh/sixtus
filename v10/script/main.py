@@ -187,20 +187,6 @@ class Sixtus:
 		if basename == 'index': return mapped
 		return os.path.join(mapped, roman.convert(basename))
 
-	def load_six_files (self):
-		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.products]
-		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
-
-	def load_php_files (self):
-		self.files['php'] += [self.get_php_filename(bundle) for bundle in self.products]
-		if self.debug.get('list', False): print('Files[php] = %s' % self.files['php'])
-
-	def load_wave_two (self):
-		self.parse_dep_files()
-		self.build_wave_one()
-		self.load_six_files()
-		self.load_php_files()
-
 	def get_split_directories (self, bundle):
 
 		six_dir = bundle[1]
