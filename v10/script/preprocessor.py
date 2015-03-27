@@ -94,4 +94,5 @@ class Preprocessor:
 	def output_src_file (self, src_file):
 		with open(src_file, 'w') as f:
 			print(self.sources, file=f)
+		return self.sources
 
