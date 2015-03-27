@@ -46,6 +46,7 @@ class Sixtus:
 		self.dirmap = {}
 		self.products = []
 
+		self.sixSixmap = {}
 		self.sources = {}
 		self.products = []
 
@@ -134,6 +135,7 @@ class Sixtus:
 		Six_file = self.get_Six_filename(stem)
 		dep_file = self.get_dep_filename(stem)
 		mapped = self.parse_Six_six_mapping (stem)
+		self.sixSixmap[mapped] = stem
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
 	# Build a .dep file when needed. Returns true if updated
