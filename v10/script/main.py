@@ -34,6 +34,8 @@ class Sixtus:
 		self.location['deploy'] = '/opt/web/mobile'
 
 		self.sixSixmap = {}
+		with open('map.py', 'r') as f:
+			self.Sixsixmap = eval(f.read())
 
 		self.sources = {}
 		self.products = []
