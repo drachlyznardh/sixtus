@@ -343,7 +343,7 @@ class Sixtus:
 		six_time = os.path.getmtime(six_file)
 		Six_file = self.get_Six_filename(Six_stem)
 		Six_time = os.path.getmtime(Six_file)
-		if Six_file - six_file > self.delta_time:
+		if Six_time - six_time > self.delta_time:
 			if self.debug.get('explain', False):
 				print('Six file %s is more recent than six file %s' % (Six_file, six_file))
 			self.build_six_file(stem)
