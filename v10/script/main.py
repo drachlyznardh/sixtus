@@ -306,6 +306,29 @@ class Sixtus:
 		self.build_six_files()
 		self.build_php_files()
 
+	def update_php_file (self, stem):
+
+		php_file = self.get_php_filename(stem)
+
+		if not os.path.exists(php_file):
+			if self.debug.get('explain', False):
+				print('php file %s does not exist' % php_file)
+			self.build_php_file(stem)
+			return True
+
+		self.update_six_file(stem)
+		php_time = os.path.getmtime(php_file)
+		six_file = self.get_six_filename(stem)
+		six_time = os.path.getmtime(six_file)
+		if six_time - php_time > self.delta_time:
+			if self.debug.get('explain', False):
+				print('six file %s is more recent than php file %s' % (six_file,
+				php_file))
+			self.build_php_file(stem)
+			return True
+
+		return False
+
 	def build (self):
 
 		for stem in self.find_page_sources():
