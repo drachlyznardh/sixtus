@@ -139,6 +139,8 @@ class Sixtus:
 		mapped = self.parse_Six_six_mapping (stem)
 		self.sixSixmap[mapped] = stem
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
+		print(dep.from_Six_to_dep_file(Six_file, dep_file))
+		print([(p[0], p[1], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)])
 
 	# Build a .dep file when needed. Returns true if updated
 	def update_dep_file (self, stem):
@@ -394,16 +396,6 @@ class Sixtus:
 		for stem in self.find_page_sources():
 			self.load_src_file(stem)
 			self.load_dep_file(stem)
-
-		for stem in self.find_page_sources():
-			print('%15s → %30s %30s %30s' % (stem,
-				self.get_pag_filename(stem),
-				self.get_dep_filename(stem),
-				self.get_Six_filename(stem)))
-
-		print('Sources = %s' % self.sources)
-		print('Products = %s' % self.products)
-		print('PHP = %s' % '\n'.join([self.get_php_filename(b) for b in self.products]))
 
 		for stem in self.products:
 			self.update_php_file(stem)
