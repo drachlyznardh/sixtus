@@ -128,6 +128,8 @@ class Sixtus:
 				self.build_Six_file(stem)
 				return True
 
+		if self.debug.get('explain', False):
+			print('Six file %s is up to date' % Six_file)
 		return False
 
 	# Builds a .dep file, also loading product list
@@ -165,6 +167,8 @@ class Sixtus:
 			self.build_dep_file(stem)
 			return True
 
+		if self.debug.get('explain', False):
+			print('dep file %s is up to date' % dep_file)
 		return False
 
 	# Loads the content of a .dep file, creating it if needed
@@ -340,6 +344,8 @@ class Sixtus:
 			self.build_six_file(stem)
 			return True
 
+		if self.debug.get('explain', False):
+			print('six file %s is up to date' % six_file)
 		return False
 
 	def build_php_file (self, stem):
@@ -374,6 +380,8 @@ class Sixtus:
 			self.build_php_file(stem)
 			return True
 
+		if self.debug.get('explain', False):
+			print('php file %s is up to date' % php_file)
 		return False
 
 	def build (self):
