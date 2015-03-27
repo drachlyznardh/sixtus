@@ -187,10 +187,6 @@ class Sixtus:
 		if basename == 'index': return mapped
 		return os.path.join(mapped, roman.convert(basename))
 
-	def parse_dep_files (self):
-		for name in self.files['dep']:
-			self.parse_dep_file(name)
-
 	def load_six_files (self):
 		self.files['six'] += [self.get_six_filename(bundle) for bundle in self.products]
 		if self.debug.get('list', False): print('Files[six] = %s' % self.files['six'])
