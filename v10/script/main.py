@@ -8,7 +8,6 @@ import re
 
 import util
 import build
-import roman
 
 # Builders
 import Six
@@ -195,7 +194,7 @@ class Sixtus:
 		while partial and partial not in self.Sixsixmap:
 			partial, last = os.path.split(partial)
 			if last != 'index':
-				discarded.append(roman.convert(last))
+				discarded.append(util.convert(last))
 
 		translated = self.Sixsixmap.get(partial, '')
 		if len(discarded):
