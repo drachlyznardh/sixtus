@@ -14,6 +14,7 @@ import roman
 import Six
 import dep
 import six
+import php
 
 class Sixtus:
 
@@ -258,15 +259,15 @@ class Sixtus:
 		if stem[0] == 0:
 			if self.debug.get('loud',False):
 				print('Generating page file %s' % php_file)
-			build.build_page_file(stem[1], six_file, php_file)
+			php.from_page_six_to_php_file(stem[1], six_file, php_file)
 		elif stem[0] == 1:
 			if self.debug.get('loud',False):
 				print('Generating jump file %s' % php_file)
-			build.build_jump_file(stem[1], six_file, php_file)
+			php.from_jump_six_to_php_file(stem[1], six_file, php_file)
 		elif stem[0] == 2:
 			if self.debug.get('loud',False):
 				print('Generating side file %s' % php_file)
-			build.build_side_file(stem[1], six_file, php_file)
+			php.from_side_six_to_php_file(stem[1], six_file, php_file)
 
 	def update_php_file (self, stem):
 
