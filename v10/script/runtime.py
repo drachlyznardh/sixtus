@@ -23,12 +23,39 @@ class Runtime:
 		self.location = self.conf['location']
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
+	def copy (self, source, destination):
+
+		util.assert_dir(destination)
+		with open(destination, 'w') as df:
+			with open(source, 'r') as sf:
+				print(sf.read(), file=df)
+
 	def copy_static_file (self, name):
 
 		in_file = os.path.join(self.location['runtime'], name)
 		out_file = os.path.join(self.location['deploy'], 'sixtus', name)
 		print('%s → %s' % (in_file, out_file))
 
+		if not os.path.exists(out_file):
+			if self.debug.get('explain', False):
+				print('out file %s does not exist' % out_file)
+			self.copy(in_file, out_file)
+			return True
+
+		in_time = os.path.getmtime(in_file)
+		out_time = os.path.getmtime(out_file)
+		if in_time - out_time > self.time_delta:
+			if self.debug.get('explain', False):
+				print('in file %s is more recent than out file %s' % (in_file, out_file))
+			self.copy(in_file, out_file)
+			return True
+
+		if self.debug.get('explain', False):
+			print('out file %s is up to date' % out_file)
+		return False
+
 	def build (self):
 
 		self.copy_static_file('icon.ico')
+		self.copy_static_file('panel.js')
+		self.copy_static_file('style.css')
