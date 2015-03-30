@@ -13,6 +13,7 @@ import roman
 # Builders
 import Six
 import dep
+import six
 
 class Sixtus:
 
@@ -222,7 +223,7 @@ class Sixtus:
 		if self.debug.get('loud',False):
 			print('Splitting Six file %s' % Six_file)
 
-		build.build_six_files(Six_file, destination)
+		six.from_Six_to_six_files(Six_file, destination)
 
 	def update_six_file (self, stem):
 
