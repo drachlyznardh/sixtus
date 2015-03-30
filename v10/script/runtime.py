@@ -34,7 +34,6 @@ class Runtime:
 
 		in_file = os.path.join(self.location['runtime'], name)
 		out_file = os.path.join(self.location['deploy'], 'sixtus', name)
-		print('%s → %s' % (in_file, out_file))
 
 		if not os.path.exists(out_file):
 			if self.debug.get('explain', False):
