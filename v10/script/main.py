@@ -7,18 +7,18 @@ import os
 import re
 
 import util
-import build
-import roman
 
 # Builders
 import Six
 import dep
+import six
+import php
 
 class Sixtus:
 
 	def __init__ (self):
 
-		self.debug = {}
+		self.debug = {key:True for key in ['loud']}
 
 		self.delta_time = 0.5
 
@@ -83,14 +83,21 @@ class Sixtus:
 
 	# Builds .Six files, also loading their .src updates into the sources dictionary
 	def build_Six_file (self, stem):
+
 		pag_file = self.get_pag_filename(stem)
 		Six_file = self.get_Six_filename(stem)
 		src_file = self.get_src_filename(stem)
+
+		if self.debug.get('loud',False):
+			print('Expanding source file %s' % pag_file)
+
 		self.sources[stem] = Six.from_pag_to_Six_file(pag_file, Six_file, src_file)
 
 	# Updates a .Six file when needed. Returns true if updated
 	def update_Six_file (self, stem):
+
 		Six_file = self.get_Six_filename(stem)
+
 		if not os.path.exists(Six_file):
 			if self.debug.get('explain', False):
 				print('Six file %s does not exist' % Six_file)
@@ -123,10 +130,16 @@ class Sixtus:
 
 	# Builds a .dep file, also loading product list
 	def build_dep_file (self, stem):
+
 		Six_file = self.get_Six_filename(stem)
 		dep_file = self.get_dep_filename(stem)
+
 		mapped = self.map_Six_to_six (stem)
 		self.sixSixmap[mapped] = stem
+
+		if self.debug.get('loud',False):
+			print('Extracting dependencies from Six file %s' % Six_file)
+
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
 	# Build a .dep file when needed. Returns true if updated
@@ -143,6 +156,7 @@ class Sixtus:
 
 		if self.update_Six_file(stem):
 			if self.debug.get('explain', False):
+				Six_file = self.get_Six_filename(stem)
 				print('Six file %s was just remade' % Six_file)
 			self.build_dep_file(stem)
 			return True
@@ -156,6 +170,7 @@ class Sixtus:
 			self.build_dep_file(stem)
 			return True
 
+		self.sixSixmap[self.map_Six_to_six(stem)] = stem
 		if self.debug.get('explain', False):
 			print('dep file %s is up to date' % dep_file)
 		return False
@@ -174,13 +189,11 @@ class Sixtus:
 
 		discarded = []
 		partial = stem
-		print('\t%s' % partial)
 
 		while partial and partial not in self.Sixsixmap:
 			partial, last = os.path.split(partial)
 			if last != 'index':
-				discarded.append(roman.convert(last))
-			print('\t%s, %s' % (partial, last))
+				discarded.append(util.convert(last))
 
 		translated = self.Sixsixmap.get(partial, '')
 		if len(discarded):
@@ -202,9 +215,14 @@ class Sixtus:
 		raise Exception('Could not locate a Six file for (%s,%s)' % stem)
 
 	def build_six_file (self, stem):
+
 		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
 		destination = os.path.join(self.location['six'], stem[1])
-		build.build_six_files(Six_file, destination)
+
+		if self.debug.get('loud',False):
+			print('Splitting Six file %s' % Six_file)
+
+		six.from_Six_to_six_files(Six_file, destination)
 
 	def update_six_file (self, stem):
 
@@ -232,14 +250,22 @@ class Sixtus:
 		return False
 
 	def build_php_file (self, stem):
+
 		six_file = self.get_six_filename(stem)
 		php_file = self.get_php_filename(stem)
+
 		if stem[0] == 0:
-			build.build_page_file(stem[1], six_file, php_file)
+			if self.debug.get('loud',False):
+				print('Generating page file %s' % php_file)
+			php.from_page_six_to_php_file(stem[1], six_file, php_file)
 		elif stem[0] == 1:
-			build.build_jump_file(stem[1], six_file, php_file)
+			if self.debug.get('loud',False):
+				print('Generating jump file %s' % php_file)
+			php.from_jump_six_to_php_file(stem[1], six_file, php_file)
 		elif stem[0] == 2:
-			build.build_side_file(stem[1], six_file, php_file)
+			if self.debug.get('loud',False):
+				print('Generating side file %s' % php_file)
+			php.from_side_six_to_php_file(stem[1], six_file, php_file)
 
 	def update_php_file (self, stem):
 

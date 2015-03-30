@@ -4,7 +4,7 @@
 from __future__ import print_function
 import sys
 import os
-import roman
+import util
 
 class Splitter:
 
@@ -119,7 +119,7 @@ class Splitter:
 		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
 		self.mkdir(jump_path)
 		with open(jump_path, 'w') as f:
-			print('jump|%s/%s/' % (base, roman.convert(order[0])), file=f)
+			print('jump|%s/%s/' % (base, util.convert(order[0])), file=f)
 
 		side_path = os.path.normpath('%s/side.six' % base)
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
@@ -134,14 +134,14 @@ class Splitter:
 
 			varmeta = self.meta
 			if name in tabprev:
-				prevtab = roman.convert(tabprev[name])
+				prevtab = util.convert(tabprev[name])
 				varmeta += 'tabprev|%s/%s/\n' % (base, prevtab)
 			if name in tabnext:
-				nexttab = roman.convert(tabnext[name])
+				nexttab = util.convert(tabnext[name])
 				varmeta += 'tabnext|%s/%s/\n' % (base, nexttab)
 			varmeta += 'side|../side.php\n'
 
-			tab_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+			tab_path = os.path.normpath('%s/%s/page.six' % (base, util.convert(name)))
 			if self.debug: print(' Tab file on [%s]' % tab_path)
 			self.mkdir(tab_path)
 			with open(tab_path, 'w') as f:
@@ -161,7 +161,7 @@ class Splitter:
 
 		name = [name for name in self.tabs if name][0]
 
-		page_path = os.path.normpath('%s/%s/page.six' % (base, roman.convert(name)))
+		page_path = os.path.normpath('%s/%s/page.six' % (base, util.convert(name)))
 		if self.debug: print('Page file on [%s]' % page_path)
 		self.mkdir(page_path)
 		with open(page_path, 'w') as f:
@@ -171,7 +171,7 @@ class Splitter:
 		jump_path = os.path.normpath('%s/jump.six' % base)
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		with open(jump_path, 'w') as f:
-			print('jump|%s/%s/' % (base, roman.convert(name)), file=f)
+			print('jump|%s/%s/' % (base, util.convert(name)), file=f)
 
 	def output_files (self, base):
 

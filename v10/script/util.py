@@ -6,33 +6,8 @@ import os
 import re
 import fnmatch
 
-def find_all_dirs (source):
-
-	found = []
-
-	for each in os.listdir(source):
-		child = os.path.join(source, each)
-		if os.path.isdir(child):
-			found.append(child)
-			found += find_all_dirs(child)
-
-	return found
-
-def find_all_files (root_dir, pattern):
-
-	if not os.path.exists(root_dir):
-		print('Specified root_dir [%s] does not exist!' % root_dir, file=sys.stderr)
-		sys.exit(1)
-
-	visit = [root_dir] + find_all_dirs(root_dir)
-	all_files = []
-
-	for d in visit:
-		for f in os.listdir(d):
-			if fnmatch.fnmatch(f, pattern):
-				all_files.append(os.path.join(d,f))
-
-	return all_files
+test = re.compile(r'''^(m{0,3})(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$''')
+index = re.compile(r'(.*)/Index')
 
 def find_all_sources (root_dir, pattern):
 
@@ -59,4 +34,16 @@ def assert_dir (filename):
 
 	if not os.path.exists(dirname):
 		os.makedirs(dirname)
+
+def convert (name):
+
+	if test.match(name): return name.upper()
+	if name.islower(): return name.capitalize()
+	return name
+
+def unique (origin):
+
+	seen = set()
+	f = seen.add
+	return [x for x in origin if x and not (x in seen or f(x))]
 

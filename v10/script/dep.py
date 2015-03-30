@@ -3,9 +3,8 @@
 
 from __future__ import print_function
 import re
-import os
 
-import roman
+import util
 
 def read (Six_file):
 
@@ -22,18 +21,18 @@ def read (Six_file):
 			elif re_jump.match(line):
 				return [(1, '')]
 
-	return digest(roman.unique(tabs))
+	return digest(util.unique(tabs))
 
 def digest (tabs):
 
 	size = len(tabs)
 
 	if size == 0: return [(0, '')]
-	if size == 1: return [(1, ''), (0, roman.convert(tabs[0]))]
+	if size == 1: return [(1, ''), (0, util.convert(tabs[0]))]
 	
 	products = [(1, ''), (2, '')]
 	for name in tabs:
-		products.append((0, roman.convert(name)))
+		products.append((0, util.convert(name)))
 
 	return products
 
