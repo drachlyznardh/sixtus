@@ -7,7 +7,6 @@ import os
 import re
 
 import util
-import build
 
 # Builders
 import Six
