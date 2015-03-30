@@ -156,6 +156,7 @@ class Sixtus:
 			self.build_dep_file(stem)
 			return True
 
+		self.sixSixmap[self.map_Six_to_six(stem)] = stem
 		if self.debug.get('explain', False):
 			print('dep file %s is up to date' % dep_file)
 		return False
