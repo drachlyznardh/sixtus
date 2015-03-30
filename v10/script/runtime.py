@@ -55,6 +55,5 @@ class Runtime:
 
 	def build (self):
 
-		self.copy_static_file('icon.ico')
-		self.copy_static_file('panel.js')
-		self.copy_static_file('style.css')
+		for name in ['icon.ico', 'panel.js', 'style.css']:
+			self.copy_static_file(name)
