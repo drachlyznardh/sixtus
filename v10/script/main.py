@@ -175,13 +175,11 @@ class Sixtus:
 
 		discarded = []
 		partial = stem
-		print('\t%s' % partial)
 
 		while partial and partial not in self.Sixsixmap:
 			partial, last = os.path.split(partial)
 			if last != 'index':
 				discarded.append(roman.convert(last))
-			print('\t%s, %s' % (partial, last))
 
 		translated = self.Sixsixmap.get(partial, '')
 		if len(discarded):
