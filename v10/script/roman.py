@@ -12,12 +12,6 @@ def convert (name):
 	if name.islower(): return name.capitalize()
 	return name
 
-def clear (name):
-
-	if index.match(name):
-		return index.sub(r'\1', name)
-	return name
-
 def unique (origin):
 
 	seen = set()
