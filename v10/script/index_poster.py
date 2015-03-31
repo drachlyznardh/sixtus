@@ -9,9 +9,9 @@ class Poster:
 
 		self.home = home
 
-	def parse_target (target):
+	def parse_target (targetlist):
 
-		self.target = target
+		self.target = '%s/%s' % (targetlist[-1])
 
 	def output_pag_file (pag_file):
 
