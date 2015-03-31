@@ -12,6 +12,7 @@ import util
 import poster
 import year_poster
 import archive_poster
+import index_poster
 
 class Blog:
 
@@ -197,6 +198,8 @@ class Blog:
 	def build_index (self):
 
 		p = index_poster.Poster(self.home)
+		p.parse_target(self.month)
+		p.output_pag_file(self.get_index_filename())
 
 	def build_struct (self):
 
