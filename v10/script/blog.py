@@ -41,10 +41,10 @@ class Blog:
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
-		self.months = [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
+		self.month = [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
 
-		old = self.months[0]
-		for current in self.months[1:]:
+		old = self.month[0]
+		for current in self.month[1:]:
 			self.prevmap[current] = old
 			self.nextmap[old] = current
 			old = current
@@ -176,6 +176,15 @@ class Blog:
 
 		return old_struct
 
+	def update_struct (self):
+
+		struct = self.load_struct()
+
+		print(struct)
+		print(self.month)
+
+		if len(struct) != len(self.month)
+
 	def build (self):
 
 		print('Blog stuff')
@@ -184,10 +193,7 @@ class Blog:
 		for year in sorted(self.blogmap.keys()):
 			self.update_year(year)
 
-		old_struct = self.load_struct()
-
-		print(old_struct)
-		print(self.months)
+		self.update_struct()
 
 		print('Blog stuff done')
 
