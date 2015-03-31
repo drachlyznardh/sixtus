@@ -25,6 +25,10 @@ class Blog:
 
 		self.blogmap = {}
 
+	def get_post_filename (self, stem):
+
+		return os.path.join(self.location['blog'], stem[0], '%s.post' % stem[1])
+
 	def get_months (self):
 
 		return [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
@@ -33,7 +37,8 @@ class Blog:
 
 		year, month = stem
 
-		print('%s %s' % stem)
+		post_file = self.get_post_filename(stem)
+		print('post file %s' % post_file)
 
 	def build (self):
 
@@ -46,7 +51,9 @@ class Blog:
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
-		print([os.path.join(year, month) for year in sorted(blogmap.keys()) for month in sorted(blogmap[year])])
+		#print([os.path.join(year, month) for year in sorted(blogmap.keys()) for month in sorted(blogmap[year])])
+		for stem in self.get_months():
+			self.update_month(stem)
 
 		print('Blog stuff done')
 
