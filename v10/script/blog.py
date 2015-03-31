@@ -26,6 +26,17 @@ class Blog:
 	def build (self):
 
 		print('Blog stuff')
-		print(util.find_all_sources(self.location['blog'], r'(.*).post'))
+		blogmap = {}
+		root = self.location['blog']
+		month_pattern = re.compile(r'^(.*).post$')
+		for year in os.listdir(root):
+			blogmap[year] = []
+			for month in os.listdir(os.path.join(root, year)):
+				if month_pattern.match(month):
+					blogmap[year].append(month_pattern.sub(r'\1', month))
+
+		for year, months in sorted(blogmap.items()):
+			print('%s: %s' % (year, ', '.join(sorted(months))))
+
 		print('Blog stuff done')
 
