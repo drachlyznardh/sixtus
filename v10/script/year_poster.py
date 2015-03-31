@@ -5,7 +5,9 @@ from __future__ import print_function
 
 class Poster:
 
-	def __init__ (self, this_year, prev_year, next_year, names, subtitle):
+	def __init__ (self, home, this_year, prev_year, next_year, names, subtitle):
+
+		self.home = home
 
 		self.this_year = this_year
 		self.prev_year = prev_year
@@ -32,9 +34,9 @@ class Poster:
 			print('subtitle|%s' % (self.subtitle % self.this_year), file=f)
 
 			if self.prev_year:
-				print('prev|Blog/%s/|%s' % (self.prev_year, self.prev_year), file=f)
+				print('prev|%s/%s/|%s' % (self.home, self.prev_year, self.prev_year), file=f)
 			if self.next_year:
-				print('next|Blog/%s/|%s' % (self.next_year, self.next_year), file=f)
+				print('next|%s/%s/|%s' % (self.home, self.next_year, self.next_year), file=f)
 
 			print('start|page', file=f)
 			print('\nbr|\n'.join(self.page), file=f)
@@ -49,7 +51,7 @@ class Poster:
 		with open(list_file, 'w') as f:
 
 			print('id|%s' % self.this_year, file=f)
-			print('stitle|link|Blog/%s/|%s' % (self.this_year, self.this_year), file=f)
+			print('stitle|link|%s/%s/|%s' % (self.home, self.this_year, self.this_year), file=f)
 			for i in xrange(3):
 				line = []
 				for j in xrange(4):
@@ -57,7 +59,7 @@ class Poster:
 					number = '%02d' % index
 					name = self.names[number]
 					if number in self.side:
-						line.append('link|Blog/%s/%s/|%s' % (self.this_year, number, name))
+						line.append('link|%s/%s/%s/|%s' % (self.home, self.this_year, number, name))
 					else: line.append('%s' % name)
 				print('c|%s' % ('\n/\n'.join(line)), file=f)
 
