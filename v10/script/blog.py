@@ -8,6 +8,9 @@ import re
 
 import util
 
+# Builders
+import poster
+
 class Blog:
 
 	def __init__ (self):
@@ -58,12 +61,34 @@ class Blog:
 	def get_pag_filename (self, stem):
 		return os.path.join(self.location['blog-out'], stem[0], '%s.pag' % stem[1])
 
+	def get_list_filename (self, stem):
+		if isinstance(stem, tuple):
+			return os.path.join(self.location['six'], stem[0], '%s.list' % stem[1])
+		if isinstance(stem, str):
+			return os.path.join(self.location['six'], '%s.list' % stem)
+
+	def pair_to_triplet (self, stem):
+		if stem:
+			name = self.conf.get('lang').get('month').get(stem[1])
+			return (stem[0], stem[1], name)
+		return None
+
 	def build_month (self, stem):
 
 		post_file = self.get_post_filename(stem)
 		pag_file = self.get_pag_filename(stem)
+		list_file = self.get_list_filename(stem)
 
-		raise Exception('Not yet implemented')
+		this_page = self.pair_to_triplet(stem)
+		prev_page = self.pair_to_triplet(self.prevmap.get(stem, None))
+		next_page = self.pair_to_triplet(self.nextmap.get(stem, None))
+
+		p = poster.Poster(this_page, prev_page, next_page)
+		p.parse_file(post_file)
+		util.assert_dir(pag_file)
+		p.output_pag_file(pag_file)
+		util.assert_dir(list_file)
+		p.output_list_file(list_file)
 
 	def update_month (self, stem):
 
@@ -87,7 +112,7 @@ class Blog:
 			return True
 
 		if self.debug.get('explain', False):
-			print('')
+			print('pag file %s is up to date' % pag_file)
 		return False
 
 		print('%s → %s' % (post_file, pag_file))
@@ -97,13 +122,8 @@ class Blog:
 		print('Blog stuff')
 		self.populate()
 
-		print('Prev = %s' % ', '.join('%s: %s' % (k, v) for k, v in
-		sorted(self.prevmap.items())))
-		print('Next = %s' % self.nextmap)
-
-		#print([os.path.join(year, month) for year in sorted(blogmap.keys()) for month in sorted(blogmap[year])])
-		#for stem in self.get_months():
-		#	self.update_month(stem)
+		for stem in self.months:
+			self.update_month(stem)
 
 		print('Blog stuff done')
 
