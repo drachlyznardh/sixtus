@@ -117,7 +117,7 @@ class Blog:
 			return True
 
 		if self.debug.get('explain', False):
-			print('pag file %s is up to date' % pag_file)
+			print('month page file %s is up to date' % pag_file)
 		return False
 
 		print('%s → %s' % (post_file, pag_file))
@@ -159,6 +159,8 @@ class Blog:
 				self.build_year(year)
 				return True
 
+		if self.debug.get('explain', False):
+			print('year page file %s is up to date' % pag_file)
 		return False
 
 	def build (self):
