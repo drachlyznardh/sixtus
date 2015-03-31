@@ -208,9 +208,6 @@ class Blog:
 
 		struct = self.load_struct()
 
-		print(struct)
-		print(self.month)
-
 		if len(struct) != len(self.month) or len([a for a in struct if a not in self.month]) or len([a for a in self.month if a not in struct]):
 			if self.debug.get('explain', False):
 				print('blog structure changed')
