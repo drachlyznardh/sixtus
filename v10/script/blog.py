@@ -59,6 +59,12 @@ class Blog:
 	def get_struct_filename (self):
 		return os.path.join(self.location.get('list'), 'blog-struct.py')
 
+	def get_archive_filename (self):
+		return os.path.join(self.location.get('blog-out'), '%.pag' % self.conf.get('lang').get('blog').get('archive_title'))
+
+	def get_index_filename (self):
+		return os.path.join(self.location.get('blog-out'), 'index.pag')
+
 	def get_post_filename (self, stem):
 		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
 
