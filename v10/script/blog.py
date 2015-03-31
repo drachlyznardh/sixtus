@@ -35,6 +35,13 @@ class Blog:
 
 		return [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
 
+	def build_month (self, stem):
+
+		post_file = self.get_post_filename(stem)
+		pag_file = self.get_pag_filename(stem)
+
+		raise Exception('Not yet implemented')
+
 	def update_month (self, stem):
 
 		year, month = stem
