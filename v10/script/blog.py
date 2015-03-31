@@ -11,6 +11,7 @@ import util
 # Builders
 import poster
 import year_poster
+import archive_poster
 
 class Blog:
 
