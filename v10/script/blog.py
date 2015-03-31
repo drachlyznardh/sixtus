@@ -126,7 +126,6 @@ class Blog:
 
 		pag_file = self.get_pag_filename(year)
 		list_file = self.get_list_filename(year)
-		print('Update year %s' % pag_file)
 
 		prev_year = self.prevmap.get(year, None)
 		next_year = self.nextmap.get(year, None)
