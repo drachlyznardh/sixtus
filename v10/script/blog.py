@@ -26,8 +26,8 @@ class Blog:
 		self.blogmap = {}
 
 	def get_post_filename (self, stem):
+		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
 
-		return os.path.join(self.location['blog'], stem[0], '%s.post' % stem[1])
 
 	def get_months (self):
 
@@ -43,7 +43,7 @@ class Blog:
 	def build (self):
 
 		print('Blog stuff')
-		root = self.location['blog']
+		root = self.location['blog-in']
 		month_pattern = re.compile(r'^(.*).post$')
 		for year in os.listdir(root):
 			self.blogmap[year] = []
