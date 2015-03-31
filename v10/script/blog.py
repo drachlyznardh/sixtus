@@ -10,6 +10,7 @@ import util
 
 # Builders
 import poster
+import year_poster
 
 class Blog:
 
@@ -66,9 +67,9 @@ class Blog:
 
 	def get_list_filename (self, stem):
 		if isinstance(stem, tuple):
-			return os.path.join(self.location['six'], stem[0], '%s.list' % stem[1])
+			return os.path.join(self.location['list'], stem[0], '%s.list' % stem[1])
 		if isinstance(stem, str):
-			return os.path.join(self.location['six'], '%s.list' % stem)
+			return os.path.join(self.location['list'], '%s.list' % stem)
 		raise Exception('What stem is %s supposed to be?' % (stem))
 
 	def pair_to_triplet (self, stem):
@@ -124,7 +125,19 @@ class Blog:
 	def build_year (self, year):
 
 		pag_file = self.get_pag_filename(year)
+		list_file = self.get_list_filename(year)
 		print('Update year %s' % pag_file)
+
+		prev_year = self.prevmap.get(year, None)
+		next_year = self.nextmap.get(year, None)
+
+		names = self.conf.get('lang').get('month')
+		subtitle = self.conf.get('lang').get('blog').get('year_subtitle')
+
+		p = year_poster.Poster(year, prev_year, next_year, names, subtitle)
+		p.parse_files([(month, self.get_list_filename((year, month))) for month in self.blogmap.get(year)])
+		p.output_pag_file(pag_file)
+		p.output_list_file(list_file)
 
 	def update_year (self, year):
 
@@ -138,7 +151,7 @@ class Blog:
 
 		pag_time = os.path.getmtime(pag_file)
 		for month in sorted(self.blogmap[year]):
-			list_file = self.get_list_file((year, month))
+			list_file = self.get_list_filename((year, month))
 			self.update_month((year, month))
 			list_time = os.path.getmtime(list_file)
 			if list_time - pag_time > self.time_delta:
