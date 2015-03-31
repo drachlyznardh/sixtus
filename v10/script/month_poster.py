@@ -2,8 +2,6 @@
 # -*- encoding: utf-8 -*-
 
 from __future__ import print_function
-
-import sys
 import re
 
 class Poster:
@@ -63,9 +61,7 @@ class Poster:
 
 					self.store_content()
 					try: self.current = token[1]
-					except:
-						print('(%s), (%s)' % (line, token), file=sys.stderr)
-						sys.exit(1)
+					except: raise Exception('(%s), (%s)' % (line, token))
 
 					if size == 4:
 						self.append_content('/ %s' % token[3].capitalize())
