@@ -10,6 +10,9 @@ class Poster:
 		self.title = title
 		self.subtitle = subtitle
 
+		self.side = []
+		self.page = []
+
 	def parse_files (self, list_files):
 
 		for stem in list_files:
