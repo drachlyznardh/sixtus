@@ -176,6 +176,11 @@ class Blog:
 
 		return old_struct
 
+	def build_struct (self):
+
+		with open(self.get_struct_filename(), 'w') as f:
+			print(self.month, file=f)
+
 	def update_struct (self):
 
 		struct = self.load_struct()
@@ -183,7 +188,15 @@ class Blog:
 		print(struct)
 		print(self.month)
 
-		if len(struct) != len(self.month)
+		if len(struct) != len(self.month) or len([a for a in struct if a not in self.month]) or len([a for a in self.month if a not in struct]):
+			if self.debug.get('explain', False):
+				print('blog structure changed')
+			self.update_archive()
+			self.update_index()
+			self.build_struct()
+			return True
+
+		return False
 
 	def build (self):
 
