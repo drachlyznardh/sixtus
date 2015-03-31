@@ -28,6 +28,8 @@ class Blog:
 	def get_post_filename (self, stem):
 		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
 
+	def get_pag_filename (self, stem):
+		return os.path.join(self.location['blog-out'], stem[0], '%s.pag' % stem[1])
 
 	def get_months (self):
 
@@ -38,7 +40,9 @@ class Blog:
 		year, month = stem
 
 		post_file = self.get_post_filename(stem)
-		print('post file %s' % post_file)
+		pag_file = self.get_pag_filename(stem)
+
+		print('%s → %s' % (post_file, pag_file))
 
 	def build (self):
 
