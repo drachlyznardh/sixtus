@@ -9,7 +9,7 @@ import re
 import util
 
 # Builders
-import poster
+import month_poster
 import year_poster
 import archive_poster
 import index_poster
@@ -101,7 +101,7 @@ class Blog:
 		prev_page = self.pair_to_triplet(self.prevmap.get(stem, None))
 		next_page = self.pair_to_triplet(self.nextmap.get(stem, None))
 
-		p = poster.Poster(this_page, prev_page, next_page)
+		p = month_poster.Poster(this_page, prev_page, next_page)
 		p.parse_file(post_file)
 		util.assert_dir(pag_file)
 		p.output_pag_file(pag_file)
