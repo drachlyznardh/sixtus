@@ -159,10 +159,12 @@ class Blog:
 			self.build_year(year)
 			return True
 
+		for month in sorted(self.blogmap[year]):
+			self.update_month((year, month))
 		pag_time = os.path.getmtime(pag_file)
+
 		for month in sorted(self.blogmap[year]):
 			list_file = self.get_list_filename((year, month))
-			self.update_month((year, month))
 			list_time = os.path.getmtime(list_file)
 			if list_time - pag_time > self.time_delta:
 				if self.debug.get('explain', False):
