@@ -23,20 +23,30 @@ class Blog:
 		self.location = self.conf['location']
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
+		self.blogmap = {}
+
+	def get_months (self):
+
+		return [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
+
+	def update_month (self, stem):
+
+		year, month = stem
+
+		print('%s %s' % stem)
+
 	def build (self):
 
 		print('Blog stuff')
-		blogmap = {}
 		root = self.location['blog']
 		month_pattern = re.compile(r'^(.*).post$')
 		for year in os.listdir(root):
-			blogmap[year] = []
+			self.blogmap[year] = []
 			for month in os.listdir(os.path.join(root, year)):
 				if month_pattern.match(month):
-					blogmap[year].append(month_pattern.sub(r'\1', month))
+					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
-		for year, months in sorted(blogmap.items()):
-			print('%s: %s' % (year, ', '.join(sorted(months))))
+		print([os.path.join(year, month) for year in sorted(blogmap.keys()) for month in sorted(blogmap[year])])
 
 		print('Blog stuff done')
 
