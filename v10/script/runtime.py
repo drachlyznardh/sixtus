@@ -12,7 +12,7 @@ class Runtime:
 
 	def __init__ (self):
 
-		self.debug = {key:True for key in ['explain']}
+		self.debug = {} #key:True for key in ['explain']}
 		self.time_delta = 0.5
 
 		with open('conf.py', 'r') as f:
