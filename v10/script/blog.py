@@ -121,11 +121,33 @@ class Blog:
 
 		print('%s → %s' % (post_file, pag_file))
 
+	def build_year (self, year):
+
+		pag_file = self.get_pag_filename(year)
+		print('Update year %s' % pag_file)
+
 	def update_year (self, year):
 
 		pag_file = self.get_pag_filename(year)
 
-		print('Update year %s' % pag_file)
+		if not os.path.exists(pag_file):
+			if self.debug.get('explain', False):
+				print('pag file %s does not exist' % pag_file)
+			self.build_year(year)
+			return True
+
+		pag_time = os.path.getmtime(pag_file)
+		for month in sorted(self.blogmap[year]):
+			list_file = self.get_list_file((year, month))
+			self.update_month((year, month))
+			list_time = os.path.getmtime(list_file)
+			if list_time - pag_time > self.time_delta:
+				if self.debug.get('explain', False):
+					print('list file %s is more recent than pag file %s' % (list_file, pag_file))
+				self.build_year(year)
+				return True
+
+		return False
 
 	def build (self):
 
