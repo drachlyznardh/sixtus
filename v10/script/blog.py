@@ -135,7 +135,7 @@ class Blog:
 		subtitle = self.conf.get('lang').get('blog').get('year_subtitle')
 
 		p = year_poster.Poster(year, prev_year, next_year, names, subtitle)
-		p.parse_files([(month, self.get_list_filename((year, month))) for month in self.blogmap.get(year)])
+		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap.get(year))])
 		p.output_pag_file(pag_file)
 		p.output_list_file(list_file)
 
