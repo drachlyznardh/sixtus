@@ -59,7 +59,10 @@ class Blog:
 		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
 
 	def get_pag_filename (self, stem):
-		return os.path.join(self.location['blog-out'], stem[0], '%s.pag' % stem[1])
+		if isinstance(stem, tuple):
+			return os.path.join(self.location['blog-out'], stem[0], '%s.pag' % stem[1])
+		if isinstance(stem, str):
+			return os.path.join(self.location['blog-out'], '%s.pag' % stem)
 
 	def get_list_filename (self, stem):
 		if isinstance(stem, tuple):
@@ -118,6 +121,12 @@ class Blog:
 
 		print('%s → %s' % (post_file, pag_file))
 
+	def update_year (self, year):
+
+		pag_file = self.get_pag_filename(year)
+
+		print('Update year %s' % pag_file)
+
 	def build (self):
 
 		print('Blog stuff')
@@ -125,6 +134,9 @@ class Blog:
 
 		for stem in self.months:
 			self.update_month(stem)
+
+		for year in sorted(self.blogmap.keys()):
+			self.update_year(year)
 
 		print('Blog stuff done')
 
