@@ -56,6 +56,9 @@ class Blog:
 			self.nextmap[old] = current
 			old = current
 
+	def get_struct_filename (self):
+		return os.path.join(self.location.get('list'), 'blog-struct.py')
+
 	def get_post_filename (self, stem):
 		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
 
@@ -163,6 +166,16 @@ class Blog:
 			print('year page file %s is up to date' % pag_file)
 		return False
 
+	def load_struct (self):
+
+		struct_file = self.get_struct_filename()
+		if os.path.exists(struct_file):
+			with open(struct_file, 'r') as f:
+				old_struct = eval(f.read())
+		else: old_struct = []
+
+		return old_struct
+
 	def build (self):
 
 		print('Blog stuff')
@@ -171,11 +184,10 @@ class Blog:
 		for year in sorted(self.blogmap.keys()):
 			self.update_year(year)
 
-		struct_file = os.path.join(self.location.get('list'), 'blog-struct.py')
-		if os.path.exists(struct_file):
-			with open(struct_file, 'r') as f:
-				old_struct = eval(f.read())
-		else: old_struct = []
+		old_struct = self.load_struct()
+
+		print(old_struct)
+		print(self.months)
 
 		print('Blog stuff done')
 
