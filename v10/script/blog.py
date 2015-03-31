@@ -168,9 +168,6 @@ class Blog:
 		print('Blog stuff')
 		self.populate()
 
-		for stem in self.months:
-			self.update_month(stem)
-
 		for year in sorted(self.blogmap.keys()):
 			self.update_year(year)
 
