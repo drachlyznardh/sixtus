@@ -66,6 +66,7 @@ class Blog:
 			return os.path.join(self.location['six'], stem[0], '%s.list' % stem[1])
 		if isinstance(stem, str):
 			return os.path.join(self.location['six'], '%s.list' % stem)
+		raise Exception('What stem is %s supposed to be?' % (stem))
 
 	def pair_to_triplet (self, stem):
 		if stem:
