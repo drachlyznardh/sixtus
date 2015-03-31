@@ -17,14 +17,16 @@ class Poster:
 			with open(stem[1], 'r') as f:
 				self.page.append(f.read().strip())
 
-with open(pag_file, 'w') as f:
+	def output_pag_file (self, pag_file):
 
-	print('title|%s' % name_map['14'], file=f)
-	print('subtitle|%s' % (name_map['15']), file=f)
+		with open(pag_file, 'w') as f:
 
-	print('start|page', file=f)
-	print('\nbr|\n'.join(page), file=f)
+			print('title|%s' % self.title, file=f)
+			print('subtitle|%s' % self.subtitle, file=f)
 
-	print('start|side', file=f)
-	print('stitle|%s' % name_map['14'], file=f)
-	print('p|%s' % ('\n/\n'.join(['link||%s|%s' % (i, i) for i in side])), file=f)
+			print('start|page', file=f)
+			print('\nbr|\n'.join(self.page), file=f)
+
+			print('start|side', file=f)
+			print('stitle|%s' % self.title, file=f)
+			print('p|%s' % ('\n/\n'.join(['link||%s|%s' % (i, i) for i in self.side])), file=f)
