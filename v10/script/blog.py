@@ -24,6 +24,8 @@ class Blog:
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 		self.blogmap = {}
+		self.prevmap = {}
+		self.nextmap = {}
 
 	def get_post_filename (self, stem):
 		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
@@ -80,9 +82,21 @@ class Blog:
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
+		months = self.get_months()
+
+		old = months[0]
+		for current in months[1:]:
+			self.prevmap[current] = old
+			self.nextmap[old] = current
+			old = current
+
+		print('Prev = %s' % ', '.join('%s: %s' % (k, v) for k, v in
+		sorted(self.prevmap.items())))
+		print('Next = %s' % self.nextmap)
+
 		#print([os.path.join(year, month) for year in sorted(blogmap.keys()) for month in sorted(blogmap[year])])
-		for stem in self.get_months():
-			self.update_month(stem)
+		#for stem in self.get_months():
+		#	self.update_month(stem)
 
 		print('Blog stuff done')
 
