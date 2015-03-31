@@ -133,8 +133,6 @@ class Blog:
 			print('month page file %s is up to date' % pag_file)
 		return False
 
-		print('%s → %s' % (post_file, pag_file))
-
 	def build_year (self, year):
 
 		pag_file = self.get_pag_filename(year)
