@@ -171,5 +171,11 @@ class Blog:
 		for year in sorted(self.blogmap.keys()):
 			self.update_year(year)
 
+		struct_file = os.path.join(self.location.get('list'), 'blog-struct.py')
+		if os.path.exists(struct_file):
+			with open(struct_file, 'r') as f:
+				old_struct = eval(f.read())
+		else: old_struct = []
+
 		print('Blog stuff done')
 
