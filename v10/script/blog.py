@@ -26,5 +26,6 @@ class Blog:
 	def build (self):
 
 		print('Blog stuff')
+		print(util.find_all_sources(self.location['blog'], r'(.*).post'))
 		print('Blog stuff done')
 
