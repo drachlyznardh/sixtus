@@ -164,7 +164,7 @@ class Blog:
 			list_file = self.get_list_filename((year, month))
 			self.update_month((year, month))
 			list_time = os.path.getmtime(list_file)
-			if list_time - pag_time > self.time_delta:
+			if pag_time - list_time > self.time_delta:
 				if self.debug.get('explain', False):
 					print('list file %s is more recent than pag file %s' % (list_file, pag_file))
 				self.build_year(year)
