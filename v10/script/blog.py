@@ -188,7 +188,7 @@ class Blog:
 		subtitle = self.conf.get('lang').get('blog').get('archive_subtitle')
 
 		p = archive_poster.Poster(title, subtitle)
-		p.parse_files([…])
+		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_files(self.get_archive_filename())
 
 	def build_struct (self):
