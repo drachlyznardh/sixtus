@@ -176,6 +176,12 @@ class Blog:
 
 		return old_struct
 
+	def build_archive (self):
+
+		p = archive_poster.Poster(title, subtitle)
+		p.parse_files([…])
+		p.output_pag_files(self.get_archive_filename())
+
 	def build_struct (self):
 
 		with open(self.get_struct_filename(), 'w') as f:
