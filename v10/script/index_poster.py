@@ -13,6 +13,9 @@ class Poster:
 
 		self.target = target
 
-pag_file = sys.argv[1]
+	def output_pag_file (pag_file):
 
-with open(pag_file, 'w') as f: print('jump|Blog/%s/' % sorted(target)[-1], file=f)
+		content = 'jump|%s/%s/' % (self.home, self.target)
+
+		with open(pag_file, 'w') as f:
+			print(content, file=f)
