@@ -9,9 +9,10 @@ class Poster:
 
 		self.home = home
 
-pag_file = sys.argv[1]
+	def parse_target (target):
 
-with open(sys.argv[2], 'r') as f:
-	target = eval(f.read())
+		self.target = target
+
+pag_file = sys.argv[1]
 
 with open(pag_file, 'w') as f: print('jump|Blog/%s/' % sorted(target)[-1], file=f)
