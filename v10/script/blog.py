@@ -27,15 +27,36 @@ class Blog:
 		self.prevmap = {}
 		self.nextmap = {}
 
+	def populate (self):
+
+		root = self.location['blog-in']
+		month_pattern = re.compile(r'^(.*).post$')
+		for year in os.listdir(root):
+			self.blogmap[year] = []
+			for month in os.listdir(os.path.join(root, year)):
+				if month_pattern.match(month):
+					self.blogmap[year].append(month_pattern.sub(r'\1', month))
+
+		self.months = [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
+
+		old = self.months[0]
+		for current in self.months[1:]:
+			self.prevmap[current] = old
+			self.nextmap[old] = current
+			old = current
+
+		years = sorted(self.blogmap.keys())
+		old = years[0]
+		for current in years[1:]:
+			self.prevmap[current] = old
+			self.nextmap[old] = current
+			old = current
+
 	def get_post_filename (self, stem):
 		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
 
 	def get_pag_filename (self, stem):
 		return os.path.join(self.location['blog-out'], stem[0], '%s.pag' % stem[1])
-
-	def get_months (self):
-
-		return [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
 
 	def build_month (self, stem):
 
@@ -74,21 +95,7 @@ class Blog:
 	def build (self):
 
 		print('Blog stuff')
-		root = self.location['blog-in']
-		month_pattern = re.compile(r'^(.*).post$')
-		for year in os.listdir(root):
-			self.blogmap[year] = []
-			for month in os.listdir(os.path.join(root, year)):
-				if month_pattern.match(month):
-					self.blogmap[year].append(month_pattern.sub(r'\1', month))
-
-		months = self.get_months()
-
-		old = months[0]
-		for current in months[1:]:
-			self.prevmap[current] = old
-			self.nextmap[old] = current
-			old = current
+		self.populate()
 
 		print('Prev = %s' % ', '.join('%s: %s' % (k, v) for k, v in
 		sorted(self.prevmap.items())))
