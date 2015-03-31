@@ -32,6 +32,8 @@ class Blog:
 		self.prevmap = {}
 		self.nextmap = {}
 
+		self.home = self.location.get('blog-home')
+
 	def populate (self):
 
 		root = self.location['blog-in']
@@ -191,6 +193,10 @@ class Blog:
 		p = archive_poster.Poster(title, subtitle)
 		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_file(self.get_archive_filename())
+
+	def build_index (self):
+
+		p = index_poster.Poster(self.home)
 
 	def build_struct (self):
 
