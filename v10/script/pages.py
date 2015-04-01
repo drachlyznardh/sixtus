@@ -22,15 +22,9 @@ class Pages:
 
 		self.delta_time = 0.5
 
-		self.location = {}
-
-		self.location['pag'] = 'src'
-		self.location['blog'] = 'blog'
-		self.location['Six'] = 'build/dep'
-		self.location['src'] = 'build/dep'
-		self.location['dep'] = 'build/dep'
-		self.location['six'] = 'build/six'
-		self.location['deploy'] = '/opt/web/mobile'
+		with open('conf.py', 'r') as f:
+			self.conf = eval(f.read())
+		self.location = self.conf.get('location')
 
 		self.sixSixmap = {}
 		with open('map.py', 'r') as f:
