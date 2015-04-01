@@ -156,6 +156,8 @@ class Blog:
 		if not os.path.exists(pag_file):
 			if self.debug.get('explain', False):
 				print('pag file %s does not exist' % pag_file)
+			for month in self.blogmap[year]:
+				self.update_month((year, month))
 			self.build_year(year)
 			return True
 
