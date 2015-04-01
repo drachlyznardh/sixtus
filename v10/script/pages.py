@@ -67,7 +67,7 @@ class Pages:
 
 	# Locate source pages
 	def find_page_sources (self):
-		pages  = util.find_all_sources(self.location['pag'], r'(.*).pag')
+		pages  = util.find_all_sources(self.location['pag'], r'^(.*)\.pag$')
 		if self.debug.get('list', False):
 			print('Page source = %s' % pages)
 		return pages
