@@ -109,7 +109,7 @@ class Splitter:
 		order = self.get_tab_order()
 		tabnext, tabprev = self.get_tab_relation(order)
 
-		jump_path = os.join(destination, 'jump.six')
+		jump_path = os.path.join(destination, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
 		util.assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
