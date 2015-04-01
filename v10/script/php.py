@@ -9,7 +9,7 @@ import converter
 
 def from_page_six_to_php_file (php_base, six_file, php_file):
 
-	c = converter.FullConverter(os.path.dirname(php_file))
+	c = converter.FullConverter(php_base)
 	c.parse_file(six_file)
 	util.assert_dir(php_file)
 	c.output_page_file(php_file)
