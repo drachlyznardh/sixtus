@@ -18,7 +18,7 @@ class Blog:
 
 	def __init__ (self):
 
-		self.debug = {key:True for key in ['explain']}
+		self.debug = {} #key:True for key in ['explain']}
 		self.time_delta = 0.5
 
 		with open('conf.py', 'r') as f:
@@ -222,13 +222,10 @@ class Blog:
 
 	def build (self):
 
-		print('Blog stuff')
 		self.populate()
 
 		for year in sorted(self.blogmap.keys()):
 			self.update_year(year)
 
 		self.update_struct()
-
-		print('Blog stuff done')
 
