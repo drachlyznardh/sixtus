@@ -29,7 +29,7 @@ def from_jump_six_to_php_file (php_base, six_file, php_file):
 
 def from_side_six_to_php_file (php_base, six_file, php_file):
 
-	c = converter.ContentConverter(php_file)
+	c = converter.ContentConverter(php_base)
 
 	with open(six_file, 'r') as f:
 		for line in f.readlines():
