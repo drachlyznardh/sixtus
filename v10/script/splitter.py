@@ -97,7 +97,7 @@ class Splitter:
 
 	def output_single_jump_file (self, base, destination):
 
-		jump_path = os.path.join(base, 'jump.six')
+		jump_path = os.path.join(destination, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		util.assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
