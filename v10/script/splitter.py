@@ -42,12 +42,6 @@ class Splitter:
 
 		return tabnext, tabprev
 
-	def mkdir (self, filepath):
-
-		dirpath = os.path.dirname(filepath)
-		if not os.path.exists(dirpath):
-			os.makedirs(dirpath)
-
 	def append (self, text):
 
 		self.content += '%s\n' % text
@@ -105,7 +99,7 @@ class Splitter:
 
 		jump_path = os.path.join(base, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path)
-		self.mkdir(jump_path)
+		util.assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
 
@@ -117,13 +111,13 @@ class Splitter:
 
 		jump_path = os.join(destination, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
-		self.mkdir(jump_path)
+		util.assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s/' % os.path.join(base, util.convert(order[0])), file=f)
 
 		side_path = os.path.join(destination, 'side.six')
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
-		#self.mkdir(side_path)
+		#util.assert_dir(side_path)
 		with open(side_path, 'w') as f:
 			print(self.side, file=f)
 
@@ -143,7 +137,7 @@ class Splitter:
 
 			tab_path = os.path.join(destination, util.convert(name), 'page.six')
 			if self.debug: print(' Tab file on [%s]' % tab_path)
-			self.mkdir(tab_path)
+			util.assert_dir(tab_path)
 			with open(tab_path, 'w') as f:
 				print('%sstart|page\n%s' % (varmeta, self.tabs[name]), file=f)
 
@@ -153,7 +147,7 @@ class Splitter:
 
 		page_path = os.path.join(destination, 'page.six')
 		if self.debug: print('Page file on [%s]' % page_path)
-		self.mkdir(page_path)
+		util.assert_dir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
@@ -163,7 +157,7 @@ class Splitter:
 
 		page_path = os.path.join(destination, util.convert(name), 'page.six')
 		if self.debug: print('Page file on [%s]' % page_path)
-		self.mkdir(page_path)
+		util.assert_dir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side,
 			self.tabs[name]), file=f)
