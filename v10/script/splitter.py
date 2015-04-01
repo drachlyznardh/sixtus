@@ -119,7 +119,7 @@ class Splitter:
 		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
 		self.mkdir(jump_path)
 		with open(jump_path, 'w') as f:
-			print('jump|%s/%s/' % (base, util.convert(order[0])), file=f)
+			print('jump|%s/' % os.path.join(base, util.convert(order[0])), file=f)
 
 		side_path = os.path.normpath('%s/side.six' % destination)
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
@@ -171,7 +171,7 @@ class Splitter:
 		jump_path = os.path.normpath('%s/jump.six' % destination)
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		with open(jump_path, 'w') as f:
-			print('jump|%s/%s/' % (base, util.convert(name)), file=f)
+			print('jump|%s/' % os.path.join(base, util.convert(name)), file=f)
 
 	def output_files (self, base, destination):
 

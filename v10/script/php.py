@@ -25,7 +25,7 @@ def from_jump_six_to_php_file (php_base, six_file, php_file):
 
 	util.assert_dir(php_file)
 	with open(php_file, 'w') as f:
-		print('<?php header("Location: /%s");die();?>' % token[1], file=f)
+		print('<?php header("Location: /%s");die();?>' % token[1].strip(), file=f)
 
 def from_side_six_to_php_file (php_base, six_file, php_file):
 
