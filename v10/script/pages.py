@@ -217,12 +217,13 @@ class Pages:
 	def build_six_file (self, stem):
 
 		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
+		base = stem[1]
 		destination = os.path.join(self.location['six'], stem[1])
 
 		if self.debug.get('loud',False):
 			print('Splitting Six file %s' % Six_file)
 
-		six.from_Six_to_six_files(Six_file, destination)
+		six.from_Six_to_six_files(Six_file, base, destination)
 
 	def update_six_file (self, stem):
 

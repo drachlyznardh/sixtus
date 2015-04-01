@@ -101,7 +101,7 @@ class Splitter:
 		elif c == 'jump': self.jump = token[1]
 		else: self.append(line)
 
-	def output_single_jump_file (self, base):
+	def output_single_jump_file (self, base, destination):
 
 		jump_path = os.path.normpath('%s/jump.six' % base)
 		if self.debug: print('Jump file on [%s]' % jump_path)
@@ -109,19 +109,19 @@ class Splitter:
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
 
-	def output_all_files (self, base):
+	def output_all_files (self, base, destination):
 
 		files = []
 		order = self.get_tab_order()
 		tabnext, tabprev = self.get_tab_relation(order)
 
-		jump_path = os.path.normpath('%s/jump.six' % base)
+		jump_path = os.path.normpath('%s/jump.six' % destination)
 		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
 		self.mkdir(jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s/%s/' % (base, util.convert(order[0])), file=f)
 
-		side_path = os.path.normpath('%s/side.six' % base)
+		side_path = os.path.normpath('%s/side.six' % destination)
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
 		#self.mkdir(side_path)
 		with open(side_path, 'w') as f:
@@ -135,13 +135,13 @@ class Splitter:
 			varmeta = self.meta
 			if name in tabprev:
 				prevtab = util.convert(tabprev[name])
-				varmeta += 'tabprev|%s/%s/\n' % (base, prevtab)
+				varmeta += 'tabprev|%s/%s/\n' % (destination, prevtab)
 			if name in tabnext:
 				nexttab = util.convert(tabnext[name])
-				varmeta += 'tabnext|%s/%s/\n' % (base, nexttab)
+				varmeta += 'tabnext|%s/%s/\n' % (destination, nexttab)
 			varmeta += 'side|../side.php\n'
 
-			tab_path = os.path.normpath('%s/%s/page.six' % (base, util.convert(name)))
+			tab_path = os.path.normpath('%s/%s/page.six' % (destination, util.convert(name)))
 			if self.debug: print(' Tab file on [%s]' % tab_path)
 			self.mkdir(tab_path)
 			with open(tab_path, 'w') as f:
@@ -149,38 +149,38 @@ class Splitter:
 
 			files.append(tab_path)
 
-	def output_default_tab (self, base):
+	def output_default_tab (self, base, destination):
 
-		page_path = os.path.normpath('%s/page.six' % base)
+		page_path = os.path.normpath('%s/page.six' % destination)
 		if self.debug: print('Page file on [%s]' % page_path)
 		self.mkdir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
-	def output_single_tab (self, base):
+	def output_single_tab (self, base, destination):
 
 		name = [name for name in self.tabs if name][0]
 
-		page_path = os.path.normpath('%s/%s/page.six' % (base, util.convert(name)))
+		page_path = os.path.normpath('%s/%s/page.six' % (destination, util.convert(name)))
 		if self.debug: print('Page file on [%s]' % page_path)
 		self.mkdir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side,
 			self.tabs[name]), file=f)
 
-		jump_path = os.path.normpath('%s/jump.six' % base)
+		jump_path = os.path.normpath('%s/jump.six' % destination)
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s/%s/' % (base, util.convert(name)), file=f)
 
-	def output_files (self, base):
+	def output_files (self, base, destination):
 
 		if self.jump:
-			self.output_single_jump_file(base)
+			self.output_single_jump_file(base, destination)
 			return
 
 		size = len(self.tabs)
 
-		if size == 1: self.output_default_tab(base)
-		elif size == 2: self.output_single_tab(base)
-		else: self.output_all_files(base)
+		if size == 1: self.output_default_tab(base, destination)
+		elif size == 2: self.output_single_tab(base, destination)
+		else: self.output_all_files(base, destination)
