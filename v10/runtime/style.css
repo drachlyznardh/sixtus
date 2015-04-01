@@ -70,6 +70,7 @@ div.half-right-in, div.mini-right-in { margin-left: .5em; }
 div.half-left-in, div.mini-left-in { margin-right: .5em; }
 
 p,li { text-indent: .5em; margin: .5em 0em .5em 0em; }
+#right-side-panel p,li { text-indent: .5em; margin: .2em 0em .2em 0em; }
 p,li { text-align: justify }
 .reverse { text-align: right; }
 .center { text-align: center; }
