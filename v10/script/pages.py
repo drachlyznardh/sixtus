@@ -14,7 +14,7 @@ import dep
 import six
 import php
 
-class Sixtus:
+class Pages:
 
 	def __init__ (self):
 
