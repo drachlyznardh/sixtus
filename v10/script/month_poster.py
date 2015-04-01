@@ -6,9 +6,10 @@ import re
 
 class Poster:
 
-	def __init__ (self, home, this_page, prev_page, next_page):
+	def __init__ (self, home, subtitle, this_page, prev_page, next_page):
 
 		self.home = home
+		self.subtitle = subtitle
 
 		self.this_page = this_page
 		self.prev_page = prev_page
@@ -82,6 +83,7 @@ class Poster:
 
 		with open(filename, 'w') as f:
 			print('title|%s %s' % (self.this_page[2], self.this_page[0]), file=f)
+			print('subtitle|%s' % self.subtitle % (self.this_page[2], self.this_page[0]), file=f)
 			if self.prev_page:
 				print('prev|%s/%s/%s/|%s %s' % (self.home, self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]), file=f)
 			if self.next_page:
