@@ -23,6 +23,9 @@ class Resources:
 		self.location = self.conf['location']
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
+		with open('map.py', 'r') as f:
+			self.Sixsixmap = eval(f.read())
+
 	def copy_static (self, source, destination):
 
 		util.assert_dir(destination)
@@ -60,10 +63,30 @@ class Resources:
 			print('out file %s is up to date' % out_file)
 		return False
 
+	def map_Six_to_six (self, stem):
+
+		discarded = []
+		partial = stem
+
+		while partial and partial not in self.Sixsixmap:
+			partial, last = os.path.split(partial)
+			if last != 'index':
+				discarded.append(util.convert(last))
+
+		translated = self.Sixsixmap.get(partial, '')
+		if len(discarded):
+			discarded.reverse()
+			translated = os.path.join(translated,
+				os.path.join(*discarded))
+
+		return translated
+
 	def build (self):
 
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
-			print(name)
+			in_file = os.path.join(self.location.get('res'), name)
+			out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
+			print('%s → %s' % (in_file, out_file))
 
 		return
 
