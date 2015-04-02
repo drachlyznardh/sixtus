@@ -4,6 +4,7 @@
 from __future__ import print_function
 
 from runtime import Runtime
+from resources import Resources
 from blog import Blog
 from pages import Pages
 
