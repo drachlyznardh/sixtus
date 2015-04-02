@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<meta name="author" content="@SITE_AUTHOR@" />
+		<meta name="author" content="@SIXTUS_AUTHOR_NAME@ &lt;@SIXTUS_AUTHOR_MAIL@&gt;" />
 
 		<link rel="icon" href="/sixtus/icon.ico" />
 		<link rel="stylesheet" href="/sixtus/style.css" />
@@ -19,4 +19,4 @@
 				<div id="subtitle"><p><?=$d[3]?></p></div>
 
 			</div><div class="content">
-				<?php if ($d[6]) { ?><div id="tab_prev" class="inside"><p>@SITE_TAB_PREV_BEFORE@<a href="<?=$d[6]?>">@SITE_TAB_PREV_LINK@</a>@SITE_TAB_PREV_AFTER@</p></div><?php } ?>
+				<?php if ($d[6]) { ?><div id="tab_prev" class="inside"><p>@SIXTUS_TAB_PREV@</p></div><?php } ?>

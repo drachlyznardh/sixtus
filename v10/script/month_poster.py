@@ -2,13 +2,14 @@
 # -*- encoding: utf-8 -*-
 
 from __future__ import print_function
-
-import sys
 import re
 
 class Poster:
 
-	def __init__ (self, this_page, prev_page, next_page):
+	def __init__ (self, home, subtitle, this_page, prev_page, next_page):
+
+		self.home = home
+		self.subtitle = subtitle
 
 		self.this_page = this_page
 		self.prev_page = prev_page
@@ -63,9 +64,7 @@ class Poster:
 
 					self.store_content()
 					try: self.current = token[1]
-					except:
-						print('(%s), (%s)' % (line, token), file=sys.stderr)
-						sys.exit(1)
+					except: raise Exception('(%s), (%s)' % (line, token))
 
 					if size == 4:
 						self.append_content('/ %s' % token[3].capitalize())
@@ -84,13 +83,14 @@ class Poster:
 
 		with open(filename, 'w') as f:
 			print('title|%s %s' % (self.this_page[2], self.this_page[0]), file=f)
+			print('subtitle|%s' % self.subtitle % (self.this_page[2], self.this_page[0]), file=f)
 			if self.prev_page:
-				print('prev|Blog/%s/%s/|%s %s' % (self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]), file=f)
+				print('prev|%s/%s/%s/|%s %s' % (self.home, self.prev_page[0], self.prev_page[1], self.prev_page[2], self.prev_page[0]), file=f)
 			if self.next_page:
-				print('next|Blog/%s/%s/|%s %s' % (self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]), file=f)
+				print('next|%s/%s/%s/|%s %s' % (self.home, self.next_page[0], self.next_page[1], self.next_page[2], self.next_page[0]), file=f)
 			print('start|side', file=f)
 			print('stitle|%s %s' % (self.this_page[2], self.this_page[0]), file=f)
-			for number, value in self.post_title.items():
+			for number, value in sorted(self.post_title.items()):
 				print('p|<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
 				print('\n&amp;\n'.join(['link||%s|%s-%s' % (value[i], number, i) for i in xrange(len(value))]), file=f)
 			print('start|page', file=f)
