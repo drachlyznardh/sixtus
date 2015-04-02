@@ -8,7 +8,7 @@ import re
 
 import util
 
-class Runtime:
+class Resources:
 
 	def __init__ (self):
 
@@ -29,34 +29,6 @@ class Runtime:
 		with open(destination, 'w') as df:
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
-
-	def replace_line (self, line):
-
-		line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
-		line = line.replace('@SIXTUS_AUTHOR_MAIL@', self.conf.get('author').get('mail'))
-
-		line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
-		line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
-
-		line = line.replace('@SIXTUS_TAB_PREV@', self.conf.get('lang').get('tab').get('prev'))
-		link = '<a href="<?=$d[6]?>">%s</a>' % self.conf.get('lang').get('tab').get('prev_title')
-		line = line.replace('@SIXTUS_TAB_PREV_TITLE@', link)
-		line = line.replace('@SIXTUS_TAB_NEXT@', self.conf.get('lang').get('tab').get('next'))
-		link = '<a href="<?=$d[7]?>">%s</a>' % self.conf.get('lang').get('tab').get('next_title')
-		line = line.replace('@SIXTUS_TAB_NEXT_TITLE@', link)
-
-		line = line.replace('@SIXTUS_PAGE_PREV@', self.conf.get('lang').get('prev'))
-		line = line.replace('@SIXTUS_PAGE_NEXT@', self.conf.get('lang').get('next'))
-
-		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
-
-		return line
-
-	def copy_replace (self, source, destination):
-
-		with open(destination, 'w') as df:
-			for line in open(source, 'r').readlines():
-				print(self.replace_line(line[:-1]), file=df)
 
 	def update_file (self, name, callback):
 
@@ -89,6 +61,11 @@ class Runtime:
 		return False
 
 	def build (self):
+
+		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$'):
+			print(name)
+
+		return
 
 		for name in ['icon.ico', 'panel.js', 'style.css']:
 			self.update_file(name, self.copy_static)

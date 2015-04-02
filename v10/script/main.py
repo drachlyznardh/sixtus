@@ -10,6 +10,7 @@ from pages import Pages
 
 print('Siχtus 0.10')
 Runtime().build()
+Resources().build()
 Blog().build()
 Pages().build()
 print('Siχtus 0.10, done')
