@@ -24,7 +24,7 @@ class Filler:
 
 		self.match = sorted(sitemap.values())
 
-	def get_all_dirs (self, root):
+	def find_all_dirs (self, root):
 
 		result = []
 
@@ -50,18 +50,33 @@ class Filler:
 
 		return result
 
+	def find_all_pairs (self):
+
+		result = []
+		root = self.location.get('deploy')
+
+		for source in self.find_all_dirs(root):
+			for destination in self.match:
+				if destination.startswith(source):
+					result.append((source, destination))
+
+		return result
+
 	def build (self):
 
 		#for match in sorted(self.match):
 		#	print('Match (%s)' % match)
 
-		for name in self.get_all_dirs(self.location.get('deploy')):
-			#print(name)
-			for match in self.match:
-				#if name in match:
-				if match.startswith(name):
-					print ('%s → %s' % (name, match))
-					break
+		#for name in self.get_all_dirs(self.location.get('deploy')):
+		#	#print(name)
+		#	for match in self.match:
+		#		#if name in match:
+		#		if match.startswith(name):
+		#			print ('%s → %s' % (name, match))
+		#			break
+
+		for source, destination in self.find_all_pairs():
+			print('%s → %s' % (source, destination))
 
 print('Siχtus 0.10')
 Runtime().build()
