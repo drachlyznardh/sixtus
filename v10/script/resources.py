@@ -28,6 +28,9 @@ class Resources:
 
 	def copy_static (self, source, destination):
 
+		if self.debug.get('loud', False):
+			print('Copying resource file %s to %s' % (source, destination))
+
 		util.assert_dir(destination)
 		with open(destination, 'w') as df:
 			with open(source, 'r') as sf:
@@ -40,7 +43,7 @@ class Resources:
 
 		if not os.path.exists(out_file):
 			if self.debug.get('explain', False):
-				print('out file %s does not exist' % out_file)
+				print('resource file %s does not exist' % out_file)
 			callback(in_file, out_file)
 			return True
 
@@ -48,12 +51,12 @@ class Resources:
 		out_time = os.path.getmtime(out_file)
 		if in_time - out_time > self.time_delta:
 			if self.debug.get('explain', False):
-				print('in file %s is more recent than out file %s' % (in_file, out_file))
+				print('origin file %s is more recent than resource file %s' % (in_file, out_file))
 			callback(in_file, out_file)
 			return True
 
 		if self.debug.get('explain', False):
-			print('out file %s is up to date' % out_file)
+			print('resource file %s is up to date' % out_file)
 		return False
 
 	def map_Six_to_six (self, stem):
