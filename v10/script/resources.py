@@ -35,15 +35,8 @@ class Resources:
 
 	def update_file (self, name, callback):
 
-		if isinstance (name, str):
-			in_file = os.path.join(self.location['runtime'], name)
-			out_file = os.path.join(self.location['deploy'], 'sixtus', name)
-		elif isinstance (name, tuple):
-			in_name, out_name = name
-			in_file = os.path.join(self.location['runtime'], in_name)
-			out_file = os.path.join(self.location['deploy'], 'sixtus', out_name)
-		else:
-			raise Exception('What is %s supposed to be?' % name)
+		in_file = os.path.join(self.location.get('res'), name)
+		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
 
 		if not os.path.exists(out_file):
 			if self.debug.get('explain', False):
@@ -84,16 +77,4 @@ class Resources:
 	def build (self):
 
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
-			in_file = os.path.join(self.location.get('res'), name)
-			out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
-			print('%s → %s' % (in_file, out_file))
-
-		return
-
-		for name in ['icon.ico', 'panel.js', 'style.css']:
 			self.update_file(name, self.copy_static)
-
-		for pair in [('page-head.php.in', 'page-top.php'),
-				('page-foot.php.in', 'page-bottom.php'),
-				('page-waist.php.in', 'page-middle.php')]:
-			self.update_file(pair, self.copy_replace)
