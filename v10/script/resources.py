@@ -62,7 +62,7 @@ class Resources:
 
 	def build (self):
 
-		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$'):
+		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
 			print(name)
 
 		return
