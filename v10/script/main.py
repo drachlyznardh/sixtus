@@ -8,6 +8,7 @@ from resources import Resources
 from blog import Blog
 from pages import Pages
 
+import util
 import os
 
 class Filler:
@@ -64,7 +65,17 @@ class Filler:
 
 	def build_pair (self, pair):
 
-		print('Building  %s → %s' % (pair))
+		source, destination = pair
+
+		#print('Building  %s → %s' % (pair))
+		content = 'jump|%s/' % destination
+		jump_file = os.path.join(self.location.get('six'), source, 'jump.six')
+
+		print('Dumping [%s] on %s' % (content, jump_file))
+
+		util.assert_dir(jump_file)
+		with open(jump_file, 'w') as f:
+			print(content, file=f)
 
 	def update_pair (self, pair):
 
