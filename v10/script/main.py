@@ -62,14 +62,17 @@ class Filler:
 
 		return result
 
-	def update_pair (self, pair):
+	def build_pair (self, pair):
 
-		print('Checking %s → %s' % (pair))
+		print('Building  %s → %s' % (pair))
+
+	def update_pair (self, pair):
 
 		source, destination = pair
 
 		if not os.path.exists(destination):
 			print('destination %s does not exist!' % destination)
+			self.build_pair(pair)
 			return True
 
 		source_time = os.path.getmtime(source)
@@ -77,6 +80,7 @@ class Filler:
 
 		if source_time - dest_time > 0.5:
 			print('source %s is more recent than destination %s' % (source, destination))
+			self.build_pair(pair)
 			return True
 
 		print('destination %s is up to date' % destination)
