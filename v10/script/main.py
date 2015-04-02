@@ -62,6 +62,26 @@ class Filler:
 
 		return result
 
+	def update_pair (self, pair):
+
+		print('Checking %s → %s' % (pair))
+
+		source, destination = pair
+
+		if not os.path.exists(destination):
+			print('destination %s does not exist!' % destination)
+			return True
+
+		source_time = os.path.getmtime(source)
+		dest_time = os.path.getmtime(destination)
+
+		if source_time - dest_time > 0.5:
+			print('source %s is more recent than destination %s' % (source, destination))
+			return True
+
+		print('destination %s is up to date' % destination)
+		return False
+
 	def build (self):
 
 		#for match in sorted(self.match):
@@ -75,8 +95,11 @@ class Filler:
 		#			print ('%s → %s' % (name, match))
 		#			break
 
-		for source, destination in self.find_all_pairs():
-			print('%s → %s' % (source, destination))
+		#for source, destination in self.find_all_pairs():
+		#	print('%s → %s' % (source, destination))
+
+		for pair in self.find_all_pairs():
+			self.update_pair(pair)
 
 print('Siχtus 0.10')
 Runtime().build()
