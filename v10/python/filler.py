@@ -2,26 +2,20 @@
 # encoding: utf-8
 
 from __future__ import print_function
-
-import util
 import os
+
+from sixtus import Sixtus
+import util
+
 import php
 
-class Filler:
+class Filler(Sixtus):
 
 	def __init__ (self):
 
-		self.debug = {} # key:True for key in ['explain']}
-
-		with open('conf.py', 'r') as f:
-			conf = eval(f.read())
-
-		self.location = conf.get('location')
-
-		with open('map.py', 'r') as f:
-			sitemap = eval(f.read())
-
-		self.match = sorted(sitemap.values())
+		Sixtus.__init__(self)
+		self.load_location('conf.py')
+		self.load_sitematch('map.py')
 
 	def find_all_dirs (self, root):
 

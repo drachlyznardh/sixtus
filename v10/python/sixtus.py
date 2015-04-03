@@ -29,6 +29,12 @@ class Sixtus:
 		with open(map_file, 'r') as f:
 			self.sitemap = eval(f.read())
 
+	def load_sitematch (self, map_file):
+		with open(map_file, 'r') as f:
+			sitemap = eval(f.read())
+
+		self.match = sorted(sitemap.values())
+
 	def loud (self, message):
 		if self.debug.get('loud', False):
 			print(message)
