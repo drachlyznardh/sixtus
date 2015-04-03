@@ -24,7 +24,7 @@ class Resources:
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 		with open('map.py', 'r') as f:
-			self.Sixsixmap = eval(f.read())
+			self.sitemap = eval(f.read())
 
 	def copy_static (self, source, destination):
 
@@ -64,12 +64,12 @@ class Resources:
 		discarded = []
 		partial = stem
 
-		while partial and partial not in self.Sixsixmap:
+		while partial and partial not in self.sitemap:
 			partial, last = os.path.split(partial)
 			if last != 'index':
 				discarded.append(util.convert(last))
 
-		translated = self.Sixsixmap.get(partial, '')
+		translated = self.sitemap.get(partial, '')
 		if len(discarded):
 			discarded.reverse()
 			translated = os.path.join(translated,
