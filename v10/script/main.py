@@ -67,7 +67,10 @@ class Filler:
 	def find_all_pairs (self):
 
 		print(self.match)
-		raise Exception('I\'m not done')
+		print([name for name in self.match])
+		print([name for name in [name.split('/') for name in self.match] if len(name) > 1])
+
+		#raise Exception('I\'m not done')
 
 		result = []
 		root = self.location.get('deploy')
@@ -77,7 +80,7 @@ class Filler:
 				if destination.startswith(source):
 					result.append((source, destination))
 
-		return result
+		return sorted(result)
 
 	def build_pair (self, pair):
 
@@ -98,7 +101,7 @@ class Filler:
 		source, destination = pair
 
 		if not os.path.exists(destination):
-			print('destination %s does not exist!' % destination)
+			#print('destination %s does not exist!' % destination)
 			self.build_pair(pair)
 			return True
 
@@ -106,11 +109,11 @@ class Filler:
 		dest_time = os.path.getmtime(destination)
 
 		if source_time - dest_time > 0.5:
-			print('source %s is more recent than destination %s' % (source, destination))
+			#print('source %s is more recent than destination %s' % (source, destination))
 			self.build_pair(pair)
 			return True
 
-		print('destination %s is up to date' % destination)
+		#print('destination %s is up to date' % destination)
 		return False
 
 	def build (self):
