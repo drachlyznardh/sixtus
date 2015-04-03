@@ -96,8 +96,8 @@ class Pages(Sixtus):
 
 		if not stem in self.sources: return False
 
-		for each in self.sources[stem]:
-			each_time = os.path.getmtime(each)
+		for each_file in self.sources[stem]:
+			each_time = os.path.getmtime(each_file)
 			if each_time - Six_time > self.time_delta:
 				self.explain('pag file %s is more recent than source file %s' % (pag_file, each_file))
 				self.build_Six_file(stem)
