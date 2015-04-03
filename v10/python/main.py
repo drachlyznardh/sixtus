@@ -16,22 +16,28 @@ import util
 
 def sixtus_build (bag):
 
-	print('Siχtus 0.10')
+	d = bag[0].get('loud', False)
+	if d: print('Siχtus 0.10')
+
 	Runtime(bag).build()
 	Resources(bag).build()
 	Blog(bag).build()
 	Pages(bag).build()
 	Filler(bag).build()
-	print('Siχtus 0.10, done')
+
+	if d: print('Siχtus 0.10, done')
 
 def sixtus_clean (bag):
 
-	print('Siχtus 0.10, cleaning')
+	d = bag[0].get('loud', False)
+	if d: print('Siχtus 0.10, cleaning')
+
 	import shutil
-	print('Removing build dir %s' % bag[3].get('location').get('build'))
-	print('Removing build blog dir %s' % bag[3].get('location').get('blog-out'))
+	if d: print('Removing build dir %s' % bag[3].get('location').get('build'))
+	if d: print('Removing build blog dir %s' % bag[3].get('location').get('blog-out'))
 	#shutil.rmtree(bag[3].get('location').get('build'))
-	print('Siχtus 0.10, cleaning done')
+
+	if d: print('Siχtus 0.10, cleaning done')
 
 def sixtus_veryclean (bag):
 	pass
