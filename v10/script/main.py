@@ -66,9 +66,9 @@ class Filler:
 
 	def find_all_pairs (self):
 
-		print(self.match)
-		print([name for name in self.match])
-		print([name for name in [name.split('/') for name in self.match] if len(name) > 1])
+		#print(self.match)
+		#print([name for name in self.match])
+		#print([name for name in [name.split('/') for name in self.match] if len(name) > 1])
 
 		result = []
 		found = set()
