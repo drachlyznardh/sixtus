@@ -6,6 +6,7 @@ import sys
 import os
 import re
 
+from sixtus import Sixtus
 import util
 
 # Builders
@@ -14,26 +15,18 @@ import year_poster
 import archive_poster
 import index_poster
 
-class Blog:
+class Blog(Sixtus):
 
 	def __init__ (self):
 
-		self.debug = {} #key:True for key in ['explain']}
-		self.time_delta = 0.5
+		Sixtus.__init__(self)
 
-		with open('conf.py', 'r') as f:
-			self.conf = eval(f.read())
-
-		if 'location' not in self.conf:
-			raise Exception('Location does not appear in the configuration')
-		self.location = self.conf['location']
-		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
+		self.load_configuration('conf.py')
+		self.home = self.location.get('blog-home')
 
 		self.blogmap = {}
 		self.prevmap = {}
 		self.nextmap = {}
-
-		self.home = self.location.get('blog-home')
 
 	def populate (self):
 
