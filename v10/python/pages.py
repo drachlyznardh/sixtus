@@ -263,5 +263,3 @@ class Pages(Sixtus):
 		for stem in self.products:
 			self.update_php_file(stem)
 
-		return
-
