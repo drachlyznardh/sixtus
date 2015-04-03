@@ -77,8 +77,7 @@ class Pages(Sixtus):
 		Six_file = self.get_Six_filename(stem)
 		src_file = self.get_src_filename(stem)
 
-		if self.debug.get('loud',False):
-			print('Expanding source file %s' % pag_file)
+		self.loud('Expanding source file %s' % pag_file)
 
 		self.sources[stem] = Six.from_pag_to_Six_file(pag_file, Six_file, src_file)
 
@@ -126,8 +125,7 @@ class Pages(Sixtus):
 		mapped = self.map_Six_to_six (stem)
 		self.sixSixmap[mapped] = stem
 
-		if self.debug.get('loud',False):
-			print('Extracting dependencies from Six file %s' % Six_file)
+		self.loud('Extracting dependencies from Six file %s' % Six_file)
 
 		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
 
@@ -209,8 +207,7 @@ class Pages(Sixtus):
 		base = stem[1]
 		destination = os.path.join(self.location['six'], stem[1])
 
-		if self.debug.get('loud',False):
-			print('Splitting Six file %s' % Six_file)
+		self.loud('Splitting Six file %s' % Six_file)
 
 		six.from_Six_to_six_files(Six_file, base, destination)
 
@@ -245,16 +242,13 @@ class Pages(Sixtus):
 		php_file = self.get_php_filename(stem)
 
 		if stem[0] == 0:
-			if self.debug.get('loud',False):
-				print('Generating page file %s' % php_file)
+			self.loud('Generating page file %s' % php_file)
 			php.from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
 		elif stem[0] == 1:
-			if self.debug.get('loud',False):
-				print('Generating jump file %s' % php_file)
+			self.loud('Generating jump file %s' % php_file)
 			php.from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
 		elif stem[0] == 2:
-			if self.debug.get('loud',False):
-				print('Generating side file %s' % php_file)
+			self.loud('Generating side file %s' % php_file)
 			php.from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
 
 	def update_php_file (self, stem):
