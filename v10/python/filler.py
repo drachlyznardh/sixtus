@@ -74,8 +74,7 @@ class Filler(Sixtus):
 		root = self.location.get('deploy')
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
-		if self.debug.get('loud',False):
-			print('Generating jump file %s' % php_file)
+		self.loud('Generating jump file %s' % php_file)
 		php.from_jump_target_to_php_file(pair[1], jump_file)
 
 	def update_pair (self, pair):
@@ -83,8 +82,7 @@ class Filler(Sixtus):
 		source, destination = pair
 
 		if not os.path.exists(destination):
-			if self.debug.get('explain', False):
-				print('destination %s does not exist!' % destination)
+			self.explain('destination %s does not exist!' % destination)
 			self.build_pair(pair)
 			return True
 
@@ -92,16 +90,15 @@ class Filler(Sixtus):
 		dest_time = os.path.getmtime(destination)
 
 		if source_time - dest_time > 0.5:
-			if self.debug.get('explain', False):
-				print('source %s is more recent than destination %s' % (source, destination))
+			self.explain('source %s is more recent than destination %s' % (source, destination))
 			self.build_pair(pair)
 			return True
 
-		if self.debug.get('explain', False):
-			print('destination %s is up to date' % destination)
+		self.explain('destination %s is up to date' % destination)
 		return False
 
 	def build (self):
 
 		for pair in self.find_all_pairs():
 			self.update_pair(pair)
+
