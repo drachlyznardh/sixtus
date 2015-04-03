@@ -8,19 +8,45 @@ import re
 
 import util
 
-class Runtime:
+class Sixtus:
 
 	def __init__ (self):
 
-		self.debug = {} #key:True for key in ['explain']}
 		self.time_delta = 0.5
+		self.debug = {} #key:True for key in ['explain', 'loud']}
 
-		with open('conf.py', 'r') as f:
+	def load_configuration (self, conf_file):
+
+		with open(conf_file, 'r') as f:
 			self.conf = eval(f.read())
 
-		if 'location' not in self.conf:
-			raise Exception('Location does not appear in the configuration')
-		self.location = self.conf['location']
+		self.location = self.conf.get('location')
+
+	def load_location (self, conf_file):
+		with open(conf_file, 'r') as f:
+			conf = eval(f.read())
+
+		self.location = conf.get('location')
+
+	def load_sitemap (self, map_file):
+		with open(map_file, 'r') as f:
+			self.sitemap = eval(f.read())
+
+	def loud (self, message):
+		if self.debug.get('loud', False):
+			print(message)
+
+	def explain (self, message):
+		if self.debug.get('explain', False):
+			print(message)
+
+class Runtime(Sixtus):
+
+	def __init__ (self):
+
+		Sixtus.__init__(self)
+
+		self.load_configuration('conf.py')
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 	def copy_static (self, source, destination):
@@ -71,21 +97,18 @@ class Runtime:
 			raise Exception('What is %s supposed to be?' % name)
 
 		if not os.path.exists(out_file):
-			if self.debug.get('explain', False):
-				print('out file %s does not exist' % out_file)
+			self.explain('out file %s does not exist' % out_file)
 			callback(in_file, out_file)
 			return True
 
 		in_time = os.path.getmtime(in_file)
 		out_time = os.path.getmtime(out_file)
 		if in_time - out_time > self.time_delta:
-			if self.debug.get('explain', False):
-				print('in file %s is more recent than out file %s' % (in_file, out_file))
+			self.explain('in file %s is more recent than out file %s' % (in_file, out_file))
 			callback(in_file, out_file)
 			return True
 
-		if self.debug.get('explain', False):
-			print('out file %s is up to date' % out_file)
+		self.explain('out file %s is up to date' % out_file)
 		return False
 
 	def build (self):
