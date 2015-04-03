@@ -29,7 +29,12 @@ def sixtus_veryclean ():
 
 def sixtus_help ():
 	print('usage: %s [options] <target…>')
-	print(' -h --help : show this help')
+	print(' -h --help          : shows this help')
+	print(' -v --verbose       : shows performed operations')
+	print('    --version       : shows version number')
+	print(' -x --explain       : shows explanation for each operation')
+	print(' -w --why           : shows explanation on out-of-date files')
+	print(' -n --not --why-not : shows explanation on up-to-date files')
 
 def sixtus_version ():
 	print('Siχtus 0.10')
