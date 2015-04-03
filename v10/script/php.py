@@ -23,9 +23,13 @@ def from_jump_six_to_php_file (php_base, six_file, php_file):
 		print('Line does not contain a jump directive! %s' % line, file=sys.stderr)
 		sys.exit(1)
 
+	from_jump_target_to_php_file (token[1].strip(), php_file)
+
+def from_jump_target_to_php_file (target, php_file):
+
 	util.assert_dir(php_file)
 	with open(php_file, 'w') as f:
-		print('<?php header("Location: /%s");die();?>' % token[1].strip(), file=f)
+		print('<?php header("Location: /%s");die();?>' % target, file=f)
 
 def from_side_six_to_php_file (php_base, six_file, php_file):
 
