@@ -6,6 +6,7 @@ import sys
 import os
 import re
 
+from sixtus import Sixtus
 import util
 
 # Builders
@@ -14,22 +15,16 @@ import dep
 import six
 import php
 
-class Pages:
+class Pages(Sixtus):
 
 	def __init__ (self):
 
-		self.debug = {key:True for key in ['loud']}
+		Sixtus.__init__(self)
 
-		self.time_delta = 0.5
-
-		with open('conf.py', 'r') as f:
-			self.conf = eval(f.read())
-		self.location = self.conf.get('location')
+		self.load_configuration('conf.py')
+		self.load_sitemap('map.py')
 
 		self.sixSixmap = {}
-		with open('map.py', 'r') as f:
-			self.sitemap = eval(f.read())
-
 		self.sources = {}
 		self.products = []
 
