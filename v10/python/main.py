@@ -93,15 +93,14 @@ def sixtus_read_args ():
 	bag = (debug, time_delta, sitemap, conf)
 
 	if len(args) == 0:
-		print('No args: building')
 		sixtus_build(bag)
 		return
 
 	for target in args:
-		print('Target %s' % target)
 		if target == 'build': sixtus_build(bag)
 		elif target == 'clean': sixtus_clean(bag)
 		elif target == 'veryclean': sixtus_veryclean(bag)
+		else: raise Exception('What target is %s supposed to be?' % target)
 
 if __name__ == "__main__":
 	sixtus_read_args()
