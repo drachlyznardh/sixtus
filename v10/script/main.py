@@ -16,6 +16,8 @@ class Filler:
 
 	def __init__ (self):
 
+		self.debug = {} # key:True for key in ['explain']}
+
 		with open('conf.py', 'r') as f:
 			conf = eval(f.read())
 
@@ -92,7 +94,8 @@ class Filler:
 		source, destination = pair
 
 		if not os.path.exists(destination):
-			print('destination %s does not exist!' % destination)
+			if self.debug.get('explain', False):
+				print('destination %s does not exist!' % destination)
 			self.build_pair(pair)
 			return True
 
@@ -100,11 +103,13 @@ class Filler:
 		dest_time = os.path.getmtime(destination)
 
 		if source_time - dest_time > 0.5:
-			print('source %s is more recent than destination %s' % (source, destination))
+			if self.debug.get('explain', False):
+				print('source %s is more recent than destination %s' % (source, destination))
 			self.build_pair(pair)
 			return True
 
-		print('destination %s is up to date' % destination)
+		if self.debug.get('explain', False):
+			print('destination %s is up to date' % destination)
 		return False
 
 	def build (self):
