@@ -31,6 +31,13 @@ class Filler:
 
 		self.match = sorted(sitemap.values())
 
+	'''
+	There's no need to explore the whole deployment space for candidate
+	directories, since they can only be matched with names in the map.
+
+	I can generate the list from there, and then check whether they have an
+	index or not.
+	'''
 	def find_all_dirs (self, root):
 
 		result = []
@@ -59,6 +66,9 @@ class Filler:
 
 	def find_all_pairs (self):
 
+		print(self.match)
+		raise Exception('I\'m not done')
+
 		result = []
 		root = self.location.get('deploy')
 
@@ -79,9 +89,9 @@ class Filler:
 
 		print('Dumping [%s] on %s' % (content, jump_file))
 
-		util.assert_dir(jump_file)
-		with open(jump_file, 'w') as f:
-			print(content, file=f)
+		#util.assert_dir(jump_file)
+		#with open(jump_file, 'w') as f:
+		#	print(content, file=f)
 
 	def update_pair (self, pair):
 
