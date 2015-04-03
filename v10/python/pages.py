@@ -87,8 +87,7 @@ class Pages(Sixtus):
 		Six_file = self.get_Six_filename(stem)
 
 		if not os.path.exists(Six_file):
-			if self.debug.get('explain', False):
-				print('Six file %s does not exist' % Six_file)
+			self.explain('Six file %s does not exist' % Six_file)
 			self.build_Six_file(stem)
 			return True
 
@@ -97,8 +96,7 @@ class Pages(Sixtus):
 		pag_time = os.path.getmtime(pag_file)
 
 		if pag_time - Six_time > self.time_delta:
-			if self.debug.get('explain', False):
-				print('pag file %s is more recent than Six file %s' % (pag_file, Six_file))
+			self.explain('pag file %s is more recent than Six file %s' % (pag_file, Six_file))
 			self.build_Six_file(stem)
 			return True
 
@@ -107,13 +105,11 @@ class Pages(Sixtus):
 		for each in self.sources[stem]:
 			each_time = os.path.getmtime(each)
 			if each_time - Six_time > self.time_delta:
-				if self.debug.get('explain', False):
-					print('pag file %s is more recent than source file %s' % (pag_file, each_file))
+				self.explain('pag file %s is more recent than source file %s' % (pag_file, each_file))
 				self.build_Six_file(stem)
 				return True
 
-		if self.debug.get('explain', False):
-			print('Six file %s is up to date' % Six_file)
+		self.explain('Six file %s is up to date' % Six_file)
 		return False
 
 	# Builds a .dep file, also loading product list
@@ -135,16 +131,13 @@ class Pages(Sixtus):
 		dep_file = self.get_dep_filename(stem)
 
 		if not os.path.exists(dep_file):
-			if self.debug.get('explain', False):
-				print('dep file %s does not exist' % dep_file)
+			self.explain('dep file %s does not exist' % dep_file)
 			self.update_Six_file(stem)
 			self.build_dep_file(stem)
 			return True
 
 		if self.update_Six_file(stem):
-			if self.debug.get('explain', False):
-				Six_file = self.get_Six_filename(stem)
-				print('Six file %s was just remade' % Six_file)
+			self.explain('Six file %s was just remade' % self.get_Six_filename(stem))
 			self.build_dep_file(stem)
 			return True
 
@@ -152,14 +145,12 @@ class Pages(Sixtus):
 		Six_file = self.get_Six_filename(stem)
 		Six_time = os.path.getmtime(Six_file)
 		if Six_time - dep_time > self.time_delta:
-			if self.debug.get('explain', False):
-				print('Six file %s is more recent than dep file %s' % (Six_file, dep_file))
+			self.explain('Six file %s is more recent than dep file %s' % (Six_file, dep_file))
 			self.build_dep_file(stem)
 			return True
 
 		self.sixSixmap[self.map_Six_to_six(stem)] = stem
-		if self.debug.get('explain', False):
-			print('dep file %s is up to date' % dep_file)
+		self.explain('dep file %s is up to date' % dep_file)
 		return False
 
 	# Loads the content of a .dep file, creating it if needed
@@ -216,8 +207,7 @@ class Pages(Sixtus):
 		six_file = self.get_six_filename(stem)
 		Six_stem = self.map_six_to_Six(stem)
 		if not os.path.exists(six_file):
-			if self.debug.get('explain', False):
-				print('six file %s does not exist' % six_file)
+			self.explain('six file %s does not exist' % six_file)
 			self.update_Six_file(Six_stem)
 			self.build_six_file(stem)
 			return True
@@ -227,13 +217,11 @@ class Pages(Sixtus):
 		Six_file = self.get_Six_filename(Six_stem)
 		Six_time = os.path.getmtime(Six_file)
 		if Six_time - six_time > self.time_delta:
-			if self.debug.get('explain', False):
-				print('Six file %s is more recent than six file %s' % (Six_file, six_file))
+			self.explain('Six file %s is more recent than six file %s' % (Six_file, six_file))
 			self.build_six_file(stem)
 			return True
 
-		if self.debug.get('explain', False):
-			print('six file %s is up to date' % six_file)
+		self.explain('six file %s is up to date' % six_file)
 		return False
 
 	def build_php_file (self, stem):
@@ -256,8 +244,7 @@ class Pages(Sixtus):
 		php_file = self.get_php_filename(stem)
 
 		if not os.path.exists(php_file):
-			if self.debug.get('explain', False):
-				print('php file %s does not exist' % php_file)
+			self.explain('php file %s does not exist' % php_file)
 			self.update_six_file(stem)
 			self.build_php_file(stem)
 			return True
@@ -267,14 +254,12 @@ class Pages(Sixtus):
 		six_file = self.get_six_filename(stem)
 		six_time = os.path.getmtime(six_file)
 		if six_time - php_time > self.time_delta:
-			if self.debug.get('explain', False):
-				print('six file %s is more recent than php file %s' % (six_file,
+			self.explain('six file %s is more recent than php file %s' % (six_file,
 				php_file))
 			self.build_php_file(stem)
 			return True
 
-		if self.debug.get('explain', False):
-			print('php file %s is up to date' % php_file)
+		self.explain('php file %s is up to date' % php_file)
 		return False
 
 	def build (self):
