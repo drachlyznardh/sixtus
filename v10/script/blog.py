@@ -115,6 +115,7 @@ class Blog:
 
 		post_file = self.get_post_filename(stem)
 		pag_file = self.get_pag_filename(stem)
+		list_file = self.get_list_filename(stem)
 
 		if not os.path.exists(pag_file):
 			if self.debug.get('explain', False):
@@ -122,11 +123,25 @@ class Blog:
 			self.build_month(stem)
 			return True
 
+		if not os.path.exists(list_file):
+			if self.debug.get('explain', False):
+				print('list file %s does not exist' % pag_file)
+			self.build_month(stem)
+			return True
+
 		post_time = os.path.getmtime(post_file)
 		pag_time = os.path.getmtime(pag_file)
+		list_time = os.path.getmtime(list_file)
+
 		if post_time - pag_time > self.time_delta:
 			if self.debug.get('explain', False):
 				print('post file %s is more recent than pag file %s' % (post_file, pag_file))
+			self.build_month(stem)
+			return True
+
+		if post_time - list_time > self.time_delta:
+			if self.debug.get('explain', False):
+				print('post file %s is more recent than list file %s' % (post_file, list_file))
 			self.build_month(stem)
 			return True
 

@@ -9,7 +9,7 @@ import fnmatch
 test = re.compile(r'''^(m{0,3})(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$''')
 index = re.compile(r'(.*)/Index')
 
-def find_all_sources (root_dir, pattern):
+def find_all_sources (root_dir, pattern, nameonly):
 
 	if not os.path.exists(root_dir):
 		raise Exception('Root dir %s does not exist' % root_dir)
@@ -25,7 +25,10 @@ def find_all_sources (root_dir, pattern):
 			if os.path.isdir(this_name):
 				visit.append(os.path.join(this_dir, each))
 			elif re_pattern.match(this_name):
-				result.append(os.path.splitext(os.path.join(this_dir, each))[0])
+				this_file = os.path.join(this_dir, each)
+				if nameonly:
+					result.append(os.path.splitext(this_file)[0])
+				else: result.append(this_file)
 	return result
 
 def assert_dir (filename):
