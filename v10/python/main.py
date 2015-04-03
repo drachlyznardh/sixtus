@@ -48,7 +48,7 @@ def sixtus_veryclean (bag):
 	pass
 
 def sixtus_help ():
-	print('usage: %s [options] (build|clean|veryclean)*')
+	print('usage: %s [options] (build|clean|veryclean)*' % sys.argv[0])
 	print(' -h --help          : shows this help')
 	print(' -v --verbose       : shows performed operations')
 	print('    --version       : shows version number')
