@@ -111,7 +111,7 @@ class Filler:
 
 		#print('Building  %s → %s' % (pair))
 		content = 'jump|%s/' % destination
-		jump_file = os.path.join(self.location.get('six'), source, 'jump.six')
+		jump_file = os.path.join(self.location.get('deploy'), source, 'index.php')
 
 		print('Dumping [%s] on %s' % (content, jump_file))
 
