@@ -22,7 +22,13 @@ def sixtus_build (bag):
 	print('Siχtus 0.10, done')
 
 def sixtus_clean (bag):
-	pass
+
+	print('Siχtus 0.10, cleaning')
+	import shutil
+	print('Removing build dir %s' % bag[3].get('location').get('build'))
+	print('Removing build blog dir %s' % bag[3].get('location').get('blog-out'))
+	#shutil.rmtree(bag[3].get('location').get('build'))
+	print('Siχtus 0.10, cleaning done')
 
 def sixtus_veryclean (bag):
 	pass
