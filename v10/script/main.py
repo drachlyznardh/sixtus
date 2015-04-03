@@ -10,6 +10,7 @@ from pages import Pages
 
 import util
 import os
+import php
 
 '''
 Actual destination is not destination, but the jump file
@@ -118,6 +119,8 @@ class Filler:
 		#util.assert_dir(jump_file)
 		#with open(jump_file, 'w') as f:
 		#	print(content, file=f)
+
+		php.from_jump_target_to_php_file(destination, jump_file)
 
 	def update_pair (self, pair):
 
