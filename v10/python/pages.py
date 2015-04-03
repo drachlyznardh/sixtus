@@ -20,7 +20,7 @@ class Pages:
 
 		self.debug = {key:True for key in ['loud']}
 
-		self.delta_time = 0.5
+		self.time_delta = 0.5
 
 		with open('conf.py', 'r') as f:
 			self.conf = eval(f.read())
@@ -102,7 +102,7 @@ class Pages:
 		pag_file = self.get_pag_filename(stem)
 		pag_time = os.path.getmtime(pag_file)
 
-		if pag_time - Six_time > self.delta_time:
+		if pag_time - Six_time > self.time_delta:
 			if self.debug.get('explain', False):
 				print('pag file %s is more recent than Six file %s' % (pag_file, Six_file))
 			self.build_Six_file(stem)
@@ -112,7 +112,7 @@ class Pages:
 
 		for each in self.sources[stem]:
 			each_time = os.path.getmtime(each)
-			if each_time - Six_time > self.delta_time:
+			if each_time - Six_time > self.time_delta:
 				if self.debug.get('explain', False):
 					print('pag file %s is more recent than source file %s' % (pag_file, each_file))
 				self.build_Six_file(stem)
@@ -158,7 +158,7 @@ class Pages:
 		dep_time = os.path.getmtime(dep_file)
 		Six_file = self.get_Six_filename(stem)
 		Six_time = os.path.getmtime(Six_file)
-		if Six_time - dep_time > self.delta_time:
+		if Six_time - dep_time > self.time_delta:
 			if self.debug.get('explain', False):
 				print('Six file %s is more recent than dep file %s' % (Six_file, dep_file))
 			self.build_dep_file(stem)
@@ -234,7 +234,7 @@ class Pages:
 		six_time = os.path.getmtime(six_file)
 		Six_file = self.get_Six_filename(Six_stem)
 		Six_time = os.path.getmtime(Six_file)
-		if Six_time - six_time > self.delta_time:
+		if Six_time - six_time > self.time_delta:
 			if self.debug.get('explain', False):
 				print('Six file %s is more recent than six file %s' % (Six_file, six_file))
 			self.build_six_file(stem)
@@ -277,7 +277,7 @@ class Pages:
 		php_time = os.path.getmtime(php_file)
 		six_file = self.get_six_filename(stem)
 		six_time = os.path.getmtime(six_file)
-		if six_time - php_time > self.delta_time:
+		if six_time - php_time > self.time_delta:
 			if self.debug.get('explain', False):
 				print('six file %s is more recent than php file %s' % (six_file,
 				php_file))
