@@ -35,6 +35,7 @@ def sixtus_help ():
 	print()
 	print(' -f,--conf=<file>   : load configuration from <file>')
 	print(' -m,--map=<file>    : load sitemap from <file>')
+	print(' -t,--time=<float>  : use <float> as time delta for date comparison')
 	print()
 	print(' -x --explain       : shows explanation for each operation')
 	print(' -w --why           : shows explanation on out-of-date files')
@@ -46,13 +47,14 @@ def sixtus_version ():
 def sixtus_read_args ():
 
 	debug = {}
+	time_delta = 0.5
 	map_file = 'map.py'
 	conf_file = 'conf.py'
 
-	short_opt = 'hvxwnf:m:'
+	short_opt = 'hvxwnf:m:t:'
 	long_opt = ['help', 'verbose', 'version',
 		'explain', 'why', 'not', 'why-not',
-		'map', 'conf']
+		'map', 'conf', 'time']
 
 	try: optlist, args = getopt.gnu_getopt(sys.argv[1:], short_opt, long_opt)
 	except getopot.GetoptError as err:
@@ -79,6 +81,8 @@ def sixtus_read_args ():
 			map_file = value
 		elif key in ('-f', '--conf'):
 			conf_file = value
+		elif key in ('-t', '--time'):
+			time_delta = float(value)
 
 	with open(map_file, 'r') as f:
 		sitemap = eval(f.read())
@@ -86,7 +90,7 @@ def sixtus_read_args ():
 	with open(conf_file, 'r') as f:
 		conf = eval(f.read())
 
-	bag = (debug, sitemap, conf)
+	bag = (debug, time_delta, sitemap, conf)
 
 	if len(args) == 0:
 		print('No args: building')
