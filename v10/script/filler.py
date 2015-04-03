@@ -77,12 +77,12 @@ class Filler:
 
 	def build_pair (self, pair):
 
-		source, destination = pair
+		root = self.location.get('deploy')
+		jump_file = os.path.join(root, pair[0], 'index.php')
 
-		content = 'jump|%s/' % destination
-		jump_file = os.path.join(self.location.get('deploy'), source, 'index.php')
-
-		php.from_jump_target_to_php_file(destination, jump_file)
+		if self.debug.get('loud',False):
+			print('Generating jump file %s' % php_file)
+		php.from_jump_target_to_php_file(pair[1], jump_file)
 
 	def update_pair (self, pair):
 
