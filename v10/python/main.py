@@ -68,8 +68,6 @@ def sixtus_read_args ():
 		elif key in ('-n', '--not', '--why-not'):
 			debug['not'] = True
 
-	print(debug)
-
 	if len(args) == 0:
 		print('No args: building')
 		sixtus_build()
