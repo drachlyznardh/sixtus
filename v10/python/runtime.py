@@ -6,45 +6,14 @@ import sys
 import os
 import re
 
+import sixtus
 import util
 
-class Sixtus:
+class Runtime(sixtus.Sixtus):
 
 	def __init__ (self):
 
-		self.time_delta = 0.5
-		self.debug = {} #key:True for key in ['explain', 'loud']}
-
-	def load_configuration (self, conf_file):
-
-		with open(conf_file, 'r') as f:
-			self.conf = eval(f.read())
-
-		self.location = self.conf.get('location')
-
-	def load_location (self, conf_file):
-		with open(conf_file, 'r') as f:
-			conf = eval(f.read())
-
-		self.location = conf.get('location')
-
-	def load_sitemap (self, map_file):
-		with open(map_file, 'r') as f:
-			self.sitemap = eval(f.read())
-
-	def loud (self, message):
-		if self.debug.get('loud', False):
-			print(message)
-
-	def explain (self, message):
-		if self.debug.get('explain', False):
-			print(message)
-
-class Runtime(Sixtus):
-
-	def __init__ (self):
-
-		Sixtus.__init__(self)
+		sixtus.Sixtus.__init__(self)
 
 		self.load_configuration('conf.py')
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
