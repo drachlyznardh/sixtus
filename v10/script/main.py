@@ -70,6 +70,29 @@ class Filler:
 		print([name for name in self.match])
 		print([name for name in [name.split('/') for name in self.match] if len(name) > 1])
 
+		result = []
+		found = set()
+		root = self.location.get('deploy')
+
+		#for cat in [i for i in [i.split('/') for i in self.match] if len(i) > 1]:
+		for cat in self.match:
+			pieces = cat.split(os.sep)
+			if len(pieces) < 2: pass
+			#print('Category %s' % cat)
+			candidate = ''
+			for piece in pieces:
+				candidate = os.path.join(candidate, piece)
+				#print('Candidate %s' % candidate)
+				candir = os.path.join(root, candidate)
+				#print('Candir %s' % candir)
+				if os.path.isdir(candir) and 'index.php' not in os.listdir(candir):
+					if candidate not in found:
+						#print('%45s has no index' % candir)
+						found.add(candidate)
+						print('Pair: %25s → %35s' % (candidate, cat))
+						result.append((candidate, cat))
+		return result
+
 		#raise Exception('I\'m not done')
 
 		result = []
