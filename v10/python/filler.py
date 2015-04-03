@@ -11,11 +11,10 @@ import php
 
 class Filler(Sixtus):
 
-	def __init__ (self):
+	def __init__ (self, bag):
 
-		Sixtus.__init__(self)
-		self.load_location('conf.py')
-		self.load_sitematch('map.py')
+		Sixtus.__init__(self, bag)
+		self.match = sorted(self.sitemap.values())
 
 	def find_all_dirs (self, root):
 

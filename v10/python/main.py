@@ -14,11 +14,11 @@ from filler import Filler
 def sixtus_build (bag):
 
 	print('Siχtus 0.10')
-	Runtime().build()
-	Resources().build()
-	Blog().build()
-	Pages().build()
-	Filler().build()
+	Runtime(bag).build()
+	Resources(bag).build()
+	Blog(bag).build()
+	Pages(bag).build()
+	Filler(bag).build()
 	print('Siχtus 0.10, done')
 
 def sixtus_clean (bag):

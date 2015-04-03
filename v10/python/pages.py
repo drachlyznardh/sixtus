@@ -16,12 +16,9 @@ import php
 
 class Pages(Sixtus):
 
-	def __init__ (self):
+	def __init__ (self, bag):
 
-		Sixtus.__init__(self)
-
-		self.load_configuration('conf.py')
-		self.load_sitemap('map.py')
+		Sixtus.__init__(self, bag)
 
 		self.sixSixmap = {}
 		self.sources = {}

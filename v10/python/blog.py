@@ -17,11 +17,9 @@ import index_poster
 
 class Blog(Sixtus):
 
-	def __init__ (self):
+	def __init__ (self, bag):
 
-		Sixtus.__init__(self)
-
-		self.load_configuration('conf.py')
+		Sixtus.__init__(self, bag)
 		self.home = self.location.get('blog-home')
 
 		self.blogmap = {}

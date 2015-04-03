@@ -11,11 +11,9 @@ import util
 
 class Runtime(Sixtus):
 
-	def __init__ (self):
+	def __init__ (self, bag):
 
-		Sixtus.__init__(self)
-
-		self.load_configuration('conf.py')
+		Sixtus.__init__(self, bag)
 
 	def copy_static (self, source, destination):
 
