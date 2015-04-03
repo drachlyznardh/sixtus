@@ -32,6 +32,10 @@ def sixtus_help ():
 	print(' -h --help          : shows this help')
 	print(' -v --verbose       : shows performed operations')
 	print('    --version       : shows version number')
+	print()
+	print(' -f,--conf=<file>   : load configuration from <file>')
+	print(' -m,--map=<file>    : load sitemap from <file>')
+	print()
 	print(' -x --explain       : shows explanation for each operation')
 	print(' -w --why           : shows explanation on out-of-date files')
 	print(' -n --not --why-not : shows explanation on up-to-date files')
@@ -42,9 +46,13 @@ def sixtus_version ():
 def sixtus_read_args ():
 
 	debug = {}
-	short_opt = 'hvxwn'
+	map_file = 'map.py'
+	conf_file = 'conf.py'
+
+	short_opt = 'hvxwnf:m:'
 	long_opt = ['help', 'verbose', 'version',
-		'explain', 'why', 'not', 'why-not']
+		'explain', 'why', 'not', 'why-not',
+		'map', 'conf']
 
 	try: optlist, args = getopt.gnu_getopt(sys.argv[1:], short_opt, long_opt)
 	except getopot.GetoptError as err:
@@ -67,6 +75,10 @@ def sixtus_read_args ():
 			debug['why'] = True
 		elif key in ('-n', '--not', '--why-not'):
 			debug['not'] = True
+		elif key in ('-m', '--map'):
+			map_file = value
+		elif key in ('-f', '--conf'):
+			conf_file = value
 
 	if len(args) == 0:
 		print('No args: building')
