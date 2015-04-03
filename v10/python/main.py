@@ -80,6 +80,14 @@ def sixtus_read_args ():
 		elif key in ('-f', '--conf'):
 			conf_file = value
 
+	with open(map_file, 'r') as f:
+		sitemap = eval(f.read())
+
+	with open(conf_file, 'r') as f:
+		conf = eval(f.read())
+
+	bag = (debug, sitemap, conf)
+
 	if len(args) == 0:
 		print('No args: building')
 		sixtus_build()
