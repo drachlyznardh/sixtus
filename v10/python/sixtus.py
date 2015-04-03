@@ -8,7 +8,7 @@ class Sixtus:
 	def __init__ (self):
 
 		self.time_delta = 0.5
-		self.debug = {} #key:True for key in ['explain', 'loud']}
+		self.debug = {key:True for key in ['explain', 'loud']}
 
 	def load_configuration (self, conf_file):
 
@@ -39,7 +39,11 @@ class Sixtus:
 		if self.debug.get('loud', False):
 			print(message)
 
-	def explain (self, message):
-		if self.debug.get('explain', False):
+	def explain_why (self, message):
+		if self.debug.get('explain-why', False):
+			print(message)
+
+	def explain_why_not (self, message):
+		if self.debug.get('explain-why-not', False):
 			print(message)
 

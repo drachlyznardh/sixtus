@@ -33,18 +33,18 @@ class Resources(Sixtus):
 		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
 
 		if not os.path.exists(out_file):
-			self.explain('resource file %s does not exist' % out_file)
+			self.explain_why('resource file %s does not exist' % out_file)
 			callback(in_file, out_file)
 			return True
 
 		in_time = os.path.getmtime(in_file)
 		out_time = os.path.getmtime(out_file)
 		if in_time - out_time > self.time_delta:
-			self.explain('origin file %s is more recent than resource file %s' % (in_file, out_file))
+			self.explain_why('origin file %s is more recent than resource file %s' % (in_file, out_file))
 			callback(in_file, out_file)
 			return True
 
-		self.explain('resource file %s is up to date' % out_file)
+		self.explain_why_not('resource file %s is up to date' % out_file)
 		return False
 
 	def map_Six_to_six (self, stem):

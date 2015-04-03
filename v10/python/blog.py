@@ -111,12 +111,12 @@ class Blog(Sixtus):
 		list_file = self.get_list_filename(stem)
 
 		if not os.path.exists(pag_file):
-			self.explain('pag file %s does not exist' % pag_file)
+			self.explain_why('pag file %s does not exist' % pag_file)
 			self.build_month(stem)
 			return True
 
 		if not os.path.exists(list_file):
-			self.explain('list file %s does not exist' % pag_file)
+			self.explain_why('list file %s does not exist' % pag_file)
 			self.build_month(stem)
 			return True
 
@@ -125,16 +125,16 @@ class Blog(Sixtus):
 		list_time = os.path.getmtime(list_file)
 
 		if post_time - pag_time > self.time_delta:
-			self.explain('post file %s is more recent than pag file %s' % (post_file, pag_file))
+			self.explain_why('post file %s is more recent than pag file %s' % (post_file, pag_file))
 			self.build_month(stem)
 			return True
 
 		if post_time - list_time > self.time_delta:
-			self.explain('post file %s is more recent than list file %s' % (post_file, list_file))
+			self.explain_why('post file %s is more recent than list file %s' % (post_file, list_file))
 			self.build_month(stem)
 			return True
 
-		self.explain('month page file %s is up to date' % pag_file)
+		self.explain_why_not('month page file %s is up to date' % pag_file)
 		return False
 
 	def build_year (self, year):
@@ -158,7 +158,7 @@ class Blog(Sixtus):
 		pag_file = self.get_pag_filename(year)
 
 		if not os.path.exists(pag_file):
-			self.explain('pag file %s does not exist' % pag_file)
+			self.explain_why('pag file %s does not exist' % pag_file)
 			for month in self.blogmap[year]:
 				self.update_month((year, month))
 			self.build_year(year)
@@ -172,11 +172,11 @@ class Blog(Sixtus):
 			list_file = self.get_list_filename((year, month))
 			list_time = os.path.getmtime(list_file)
 			if list_time - pag_time > self.time_delta:
-				self.explain('list file %s is more recent than pag file %s' % (list_file, pag_file))
+				self.explain_why('list file %s is more recent than pag file %s' % (list_file, pag_file))
 				self.build_year(year)
 				return True
 
-		self.explain('year page file %s is up to date' % pag_file)
+		self.explain_why_not('year page file %s is up to date' % pag_file)
 		return False
 
 	def load_struct (self):
@@ -214,7 +214,7 @@ class Blog(Sixtus):
 		struct = self.load_struct()
 
 		if len(struct) != len(self.month) or len([a for a in struct if a not in self.month]) or len([a for a in self.month if a not in struct]):
-			self.explain('blog structure changed')
+			self.explain_why('blog structure changed')
 			self.build_archive()
 			self.build_index()
 			self.build_struct()
