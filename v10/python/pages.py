@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # encoding: utf-8
 
-from __future__ import print_function
 import sys
 import os
 import re
@@ -56,17 +55,12 @@ class Pages(Sixtus):
 
 	# Locate source pages
 	def find_page_sources (self):
-		pages  = util.find_all_sources(self.location['pag'], r'^(.*)\.pag$', True)
-		if self.debug.get('list', False):
-			print('Page source = %s' % pages)
-		return pages
+		return util.find_all_sources(self.location['pag'], r'^(.*)\.pag$', True)
 
 	# Loads existings .src files, compiles the sources dictionary
 	def load_src_file (self, stem):
 
 		src_file = self.get_src_filename(stem)
-		if self.debug.get('loading', False):
-			print('Loading src file %s' % src_file)
 		if os.path.exists(src_file):
 			self.sources[stem] = Six.from_src_file(src_file)
 
@@ -157,8 +151,6 @@ class Pages(Sixtus):
 	def load_dep_file (self, stem):
 
 		dep_file = self.get_dep_filename(stem)
-		if self.debug.get('loading',False):
-			print('Loading dep file %s' % dep_file)
 		if not self.update_dep_file(stem):
 			mapped = self.map_Six_to_six (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
