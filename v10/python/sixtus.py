@@ -16,12 +16,14 @@ class Sixtus:
 			self.conf = eval(f.read())
 
 		self.location = self.conf.get('location')
+		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 	def load_location (self, conf_file):
 		with open(conf_file, 'r') as f:
 			conf = eval(f.read())
 
 		self.location = conf.get('location')
+		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 	def load_sitemap (self, map_file):
 		with open(map_file, 'r') as f:

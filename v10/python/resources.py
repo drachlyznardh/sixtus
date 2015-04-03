@@ -21,7 +21,6 @@ class Resources:
 		if 'location' not in self.conf:
 			raise Exception('Location does not appear in the configuration')
 		self.location = self.conf['location']
-		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 		with open('map.py', 'r') as f:
 			self.sitemap = eval(f.read())

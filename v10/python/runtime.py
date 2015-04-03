@@ -16,7 +16,6 @@ class Runtime(Sixtus):
 		Sixtus.__init__(self)
 
 		self.load_configuration('conf.py')
-		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
 
 	def copy_static (self, source, destination):
 
