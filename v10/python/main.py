@@ -11,7 +11,7 @@ from blog import Blog
 from pages import Pages
 from filler import Filler
 
-def sixtus_build ():
+def sixtus_build (bag):
 
 	print('Siχtus 0.10')
 	Runtime().build()
@@ -21,10 +21,10 @@ def sixtus_build ():
 	Filler().build()
 	print('Siχtus 0.10, done')
 
-def sixtus_clean ():
+def sixtus_clean (bag):
 	pass
 
-def sixtus_veryclean ():
+def sixtus_veryclean (bag):
 	pass
 
 def sixtus_help ():
@@ -90,14 +90,14 @@ def sixtus_read_args ():
 
 	if len(args) == 0:
 		print('No args: building')
-		sixtus_build()
+		sixtus_build(bag)
 		return
 
 	for target in args:
 		print('Target %s' % target)
-		if target == 'build': sixtus_build()
-		elif target == 'clean': sixtus_clean()
-		elif target == 'veryclean': sixtus_veryclean()
+		if target == 'build': sixtus_build(bag)
+		elif target == 'clean': sixtus_clean(bag)
+		elif target == 'veryclean': sixtus_veryclean(bag)
 
 if __name__ == "__main__":
 	sixtus_read_args()
