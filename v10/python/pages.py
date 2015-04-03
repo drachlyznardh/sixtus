@@ -28,7 +28,7 @@ class Pages:
 
 		self.sixSixmap = {}
 		with open('map.py', 'r') as f:
-			self.Sixsixmap = eval(f.read())
+			self.sitemap = eval(f.read())
 
 		self.sources = {}
 		self.products = []
@@ -184,12 +184,12 @@ class Pages:
 		discarded = []
 		partial = stem
 
-		while partial and partial not in self.Sixsixmap:
+		while partial and partial not in self.sitemap:
 			partial, last = os.path.split(partial)
 			if last != 'index':
 				discarded.append(util.convert(last))
 
-		translated = self.Sixsixmap.get(partial, '')
+		translated = self.sitemap.get(partial, '')
 		if len(discarded):
 			discarded.reverse()
 			translated = os.path.join(translated,
