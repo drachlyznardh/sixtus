@@ -6,14 +6,14 @@ import sys
 import os
 import re
 
-import sixtus
+from sixtus import Sixtus
 import util
 
-class Runtime(sixtus.Sixtus):
+class Runtime(Sixtus):
 
 	def __init__ (self):
 
-		sixtus.Sixtus.__init__(self)
+		Sixtus.__init__(self)
 
 		self.load_configuration('conf.py')
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
