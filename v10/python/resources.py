@@ -20,8 +20,7 @@ class Resources(Sixtus):
 
 	def copy_static (self, source, destination):
 
-		if self.debug.get('loud', False):
-			print('Copying resource file %s to %s' % (source, destination))
+		self.loud('Copying resource file %s to %s' % (source, destination))
 
 		util.assert_dir(destination)
 		with open(destination, 'w') as df:
