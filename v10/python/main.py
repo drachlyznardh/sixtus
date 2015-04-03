@@ -32,10 +32,15 @@ def sixtus_clean (bag):
 	d = bag[0].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning')
 
+	build_dir = bag[3].get('location').get('build')
+	blog_build_dir = bag[3].get('location').get('blog-out')
+
 	import shutil
-	if d: print('Removing build dir %s' % bag[3].get('location').get('build'))
-	if d: print('Removing build blog dir %s' % bag[3].get('location').get('blog-out'))
-	#shutil.rmtree(bag[3].get('location').get('build'))
+	if d: print('Removing build dir %s' % build_dir)
+	if os.path.exists(build_dir): shutil.rmtree(build_dir)
+
+	if d: print('Removing build blog dir %s' % blog_build_dir)
+	if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
 
 	if d: print('Siχtus 0.10, cleaning done')
 
