@@ -89,7 +89,7 @@ class Filler(Sixtus):
 		source_time = os.path.getmtime(source)
 		dest_time = os.path.getmtime(destination)
 
-		if source_time - dest_time > 0.5:
+		if source_time - dest_time > self.time_delta:
 			self.explain('source %s is more recent than destination %s' % (source, destination))
 			self.build_pair(pair)
 			return True
