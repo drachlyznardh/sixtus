@@ -11,6 +11,12 @@ from pages import Pages
 import util
 import os
 
+'''
+Actual destination is not destination, but the jump file
+Filler should write it and invoke its php conversion
+Or it could directly build the final index.php file
+'''
+
 class Filler:
 
 	def __init__ (self):
