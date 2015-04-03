@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import os
 import getopt
 
 from runtime import Runtime
@@ -10,6 +11,8 @@ from resources import Resources
 from blog import Blog
 from pages import Pages
 from filler import Filler
+
+import util
 
 def sixtus_build (bag):
 
@@ -49,6 +52,28 @@ def sixtus_help ():
 
 def sixtus_version ():
 	print('Siχtus 0.10')
+
+def digest_location (source):
+
+	if 'blog-in' not in source:
+		source['blog-in'] = source.get('blog')
+	if 'blog-out' not in source:
+		source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
+	if 'blog-home' not in source:
+		source['blog-home'] = util.convert(source.get('blog'))
+	if 'list' not in source:
+		source['list'] = os.path.join(source.get('build'), 'list')
+
+	if 'Six' not in source:
+		source['Six'] = os.path.join(source.get('build'), 'dep')
+	if 'src' not in source:
+		source['src'] = os.path.join(source.get('build'), 'dep')
+	if 'dep' not in source:
+		source['dep'] = os.path.join(source.get('build'), 'dep')
+	if 'six' not in source:
+		source['six'] = os.path.join(source.get('build'), 'six')
+
+	return source
 
 def sixtus_read_args ():
 
@@ -95,6 +120,8 @@ def sixtus_read_args ():
 
 	with open(conf_file, 'r') as f:
 		conf = eval(f.read())
+
+	conf['location'] = digest_location(conf.get('location'))
 
 	bag = (debug, time_delta, sitemap, conf)
 
