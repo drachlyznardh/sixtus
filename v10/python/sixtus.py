@@ -40,10 +40,10 @@ class Sixtus:
 			print(message)
 
 	def explain_why (self, message):
-		if self.debug.get('explain-why', False):
+		if self.debug.get('why', False):
 			print(message)
 
 	def explain_why_not (self, message):
-		if self.debug.get('explain-why-not', False):
+		if self.debug.get('not', False):
 			print(message)
 
