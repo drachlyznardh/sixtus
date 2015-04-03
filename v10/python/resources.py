@@ -6,24 +6,17 @@ import sys
 import os
 import re
 
+from sixtus import Sixtus
 import util
 
-class Resources:
+class Resources(Sixtus):
 
 	def __init__ (self):
 
-		self.debug = {} #key:True for key in ['explain']}
-		self.time_delta = 0.5
+		Sixtus.__init__(self)
 
-		with open('conf.py', 'r') as f:
-			self.conf = eval(f.read())
-
-		if 'location' not in self.conf:
-			raise Exception('Location does not appear in the configuration')
-		self.location = self.conf['location']
-
-		with open('map.py', 'r') as f:
-			self.sitemap = eval(f.read())
+		self.load_location('conf.py')
+		self.load_sitemap('map.py')
 
 	def copy_static (self, source, destination):
 
