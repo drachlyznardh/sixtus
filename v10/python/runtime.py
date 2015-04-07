@@ -53,6 +53,19 @@ class Runtime(Sixtus):
 			for line in open(source, 'r').readlines():
 				print(self.replace_line(line[:-1]), file=df)
 
+	def remove_file (self, name):
+
+		if isinstance (name, str):
+			out_file = os.path.join(self.location['deploy'], 'sixtus', name)
+		elif isinstance (name, tuple):
+			out_file = os.path.join(self.location['deploy'], 'sixtus', name[1])
+		else:
+			raise Exception('What is %s supposed to be?' % (name))
+
+		if os.path.exists(out_file):
+			self.loud('Removing system file %s' % out_file)
+			os.unlink(out_file)
+
 	def update_file (self, name, callback):
 
 		if isinstance (name, str):
@@ -87,3 +100,11 @@ class Runtime(Sixtus):
 
 		for pair in self.dynamic_files:
 			self.update_file(pair, self.copy_replace)
+
+	def remove (self):
+
+		for name in self.static_files:
+			self.remove_file(name)
+
+		for pair in self.dynamic_files:
+			self.remove_file(pair)

@@ -48,8 +48,11 @@ def sixtus_veryclean (bag):
 
 	d = bag[0].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning hard')
+
 	Resources(bag).remove()
+	Runtime(bag).remove()
 	sixtus_clean(bag)
+
 	if d: print('Siχtus 0.10, cleaning hard done')
 
 def sixtus_help ():
