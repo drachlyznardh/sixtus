@@ -14,34 +14,9 @@ class Filler(Sixtus):
 	def __init__ (self, bag):
 
 		Sixtus.__init__(self, bag)
-		self.match = sorted(self.sitemap.values())
 
 	def get_jump_filename (self, pair):
-
 		return os.path.join(self.location.get('deploy'), pair[0], 'index.php')
-
-	def find_all_dirs (self, root):
-
-		result = []
-
-		if not os.path.exists(root):
-			raise Exception('root dir %s does not exist' % root)
-
-		if not os.path.isdir(root):
-			raise Exception('root dir %s is not a directory' % root)
-
-		visit = os.listdir(root)
-
-		while len(visit):
-			name = visit.pop(0)
-			dirname = os.path.join(root, name)
-			if os.path.isdir(dirname) and name[0] != '.' and name != 'sixtus':
-				content = os.listdir(dirname)
-				if 'index.php' not in content:
-					result.append(name)
-				for i in content: visit.append(os.path.join(name,i))
-
-		return result
 
 	def find_all_pairs (self):
 
@@ -49,42 +24,21 @@ class Filler(Sixtus):
 		found = set()
 		root = self.location.get('deploy')
 
-		for cat in self.match:
+		values = sorted(self.sitemap.values())
+
+		for cat in values:
+
 			pieces = cat.split('/')
 			if len(pieces) == 1: pass
+
 			source = ''
 			for piece in pieces[:-1]:
 				source = os.path.join(source, piece)
-				if source not in self.match and source not in found:
+				if source not in values and source not in found:
 					found.add(source)
 					result.append((source, cat))
 
 		return result
-
-		print('%s → %s' % (source, cat))
-
-		for cat in self.match:
-			pieces = cat.split(os.sep)
-			if len(pieces) < 2: pass
-			candidate = ''
-			for piece in pieces[:-1]:
-				candidate = os.path.join(candidate, piece)
-				candir = os.path.join(root, candidate)
-				#if os.path.isdir(candir) and 'index.php' not in os.listdir(candir):
-				if candidate not in found:
-					found.add(candidate)
-					result.append((candidate, cat))
-		return result
-
-		result = []
-		root = self.location.get('deploy')
-
-		for source in self.find_all_dirs(root):
-			for destination in self.match:
-				if destination.startswith(source):
-					result.append((source, destination))
-
-		return sorted(result)
 
 	def build_pair (self, pair):
 
