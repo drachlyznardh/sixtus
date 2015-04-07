@@ -6,22 +6,17 @@ import sys
 import os
 import re
 
+from sixtus import Sixtus
 import util
 
-class Runtime:
+class Runtime(Sixtus):
 
-	def __init__ (self):
+	def __init__ (self, bag):
 
-		self.debug = {} #key:True for key in ['explain']}
-		self.time_delta = 0.5
+		Sixtus.__init__(self, bag)
 
-		with open('conf.py', 'r') as f:
-			self.conf = eval(f.read())
-
-		if 'location' not in self.conf:
-			raise Exception('Location does not appear in the configuration')
-		self.location = self.conf['location']
-		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
+		self.static_files = ['icon.ico', 'panel.js', 'style.css']
+		self.dynamic_files = [('page-head.php.in', 'page-top.php'), ('page-foot.php.in', 'page-bottom.php'), ('page-waist.php.in', 'page-middle.php')]
 
 	def copy_static (self, source, destination):
 
@@ -58,6 +53,19 @@ class Runtime:
 			for line in open(source, 'r').readlines():
 				print(self.replace_line(line[:-1]), file=df)
 
+	def remove_file (self, name):
+
+		if isinstance (name, str):
+			out_file = os.path.join(self.location['deploy'], 'sixtus', name)
+		elif isinstance (name, tuple):
+			out_file = os.path.join(self.location['deploy'], 'sixtus', name[1])
+		else:
+			raise Exception('What is %s supposed to be?' % (name))
+
+		if os.path.exists(out_file):
+			self.loud('Removing system file %s' % out_file)
+			os.unlink(out_file)
+
 	def update_file (self, name, callback):
 
 		if isinstance (name, str):
@@ -71,29 +79,32 @@ class Runtime:
 			raise Exception('What is %s supposed to be?' % name)
 
 		if not os.path.exists(out_file):
-			if self.debug.get('explain', False):
-				print('out file %s does not exist' % out_file)
+			self.explain_why('out file %s does not exist' % out_file)
 			callback(in_file, out_file)
 			return True
 
 		in_time = os.path.getmtime(in_file)
 		out_time = os.path.getmtime(out_file)
 		if in_time - out_time > self.time_delta:
-			if self.debug.get('explain', False):
-				print('in file %s is more recent than out file %s' % (in_file, out_file))
+			self.explain_why('in file %s is more recent than out file %s' % (in_file, out_file))
 			callback(in_file, out_file)
 			return True
 
-		if self.debug.get('explain', False):
-			print('out file %s is up to date' % out_file)
+		self.explain_why_not('out file %s is up to date' % out_file)
 		return False
 
 	def build (self):
 
-		for name in ['icon.ico', 'panel.js', 'style.css']:
+		for name in self.static_files:
 			self.update_file(name, self.copy_static)
 
-		for pair in [('page-head.php.in', 'page-top.php'),
-				('page-foot.php.in', 'page-bottom.php'),
-				('page-waist.php.in', 'page-middle.php')]:
+		for pair in self.dynamic_files:
 			self.update_file(pair, self.copy_replace)
+
+	def remove (self):
+
+		for name in self.static_files:
+			self.remove_file(name)
+
+		for pair in self.dynamic_files:
+			self.remove_file(pair)

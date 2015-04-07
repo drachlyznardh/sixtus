@@ -2,49 +2,21 @@
 # encoding: utf-8
 
 from __future__ import print_function
-
-import util
 import os
+
+from sixtus import Sixtus
+import util
+
 import php
 
-class Filler:
+class Filler(Sixtus):
 
-	def __init__ (self):
+	def __init__ (self, bag):
 
-		self.debug = {} # key:True for key in ['explain']}
+		Sixtus.__init__(self, bag)
 
-		with open('conf.py', 'r') as f:
-			conf = eval(f.read())
-
-		self.location = conf.get('location')
-
-		with open('map.py', 'r') as f:
-			sitemap = eval(f.read())
-
-		self.match = sorted(sitemap.values())
-
-	def find_all_dirs (self, root):
-
-		result = []
-
-		if not os.path.exists(root):
-			raise Exception('root dir %s does not exist' % root)
-
-		if not os.path.isdir(root):
-			raise Exception('root dir %s is not a directory' % root)
-
-		visit = os.listdir(root)
-
-		while len(visit):
-			name = visit.pop(0)
-			dirname = os.path.join(root, name)
-			if os.path.isdir(dirname) and name[0] != '.' and name != 'sixtus':
-				content = os.listdir(dirname)
-				if 'index.php' not in content:
-					result.append(name)
-				for i in content: visit.append(os.path.join(name,i))
-
-		return result
+	def get_jump_filename (self, pair):
+		return os.path.join(self.location.get('deploy'), pair[0], 'index.php')
 
 	def find_all_pairs (self):
 
@@ -52,62 +24,76 @@ class Filler:
 		found = set()
 		root = self.location.get('deploy')
 
-		for cat in self.match:
-			pieces = cat.split(os.sep)
-			if len(pieces) < 2: pass
-			candidate = ''
-			for piece in pieces:
-				candidate = os.path.join(candidate, piece)
-				candir = os.path.join(root, candidate)
-				if os.path.isdir(candir) and 'index.php' not in os.listdir(candir):
-					if candidate not in found:
-						found.add(candidate)
-						result.append((candidate, cat))
+		values = sorted(self.sitemap.values())
+
+		for cat in values:
+
+			pieces = cat.split('/')
+			if len(pieces) == 1: pass
+
+			source = ''
+			for piece in pieces[:-1]:
+				source = os.path.join(source, piece)
+				if source not in values and source not in found:
+					found.add(source)
+					result.append((source, cat))
+
 		return result
-
-		result = []
-		root = self.location.get('deploy')
-
-		for source in self.find_all_dirs(root):
-			for destination in self.match:
-				if destination.startswith(source):
-					result.append((source, destination))
-
-		return sorted(result)
 
 	def build_pair (self, pair):
 
 		root = self.location.get('deploy')
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
-		if self.debug.get('loud',False):
-			print('Generating jump file %s' % php_file)
+		self.loud('Generating jump file %s' % jump_file)
+		util.assert_dir(jump_file)
 		php.from_jump_target_to_php_file(pair[1], jump_file)
+
+	def remove_pair (self, pair):
+
+		root = self.location.get('deploy')
+		jump_file = os.path.join(root, pair[0], 'index.php')
+
+		if os.path.exists(jump_file):
+			self.loud('Removing jump file %s' % jump_file)
+			os.unlink(jump_file)
 
 	def update_pair (self, pair):
 
 		source, destination = pair
+		jump_file = self.get_jump_filename(pair)
 
-		if not os.path.exists(destination):
-			if self.debug.get('explain', False):
-				print('destination %s does not exist!' % destination)
+		if not os.path.exists(jump_file):
+			self.explain_why('jump_file %s does not exist!' % jump_file)
 			self.build_pair(pair)
 			return True
 
-		source_time = os.path.getmtime(source)
-		dest_time = os.path.getmtime(destination)
+		#source_time = os.path.getmtime(source)
+		#dest_time = os.path.getmtime(jump_file)
 
-		if source_time - dest_time > 0.5:
-			if self.debug.get('explain', False):
-				print('source %s is more recent than destination %s' % (source, destination))
-			self.build_pair(pair)
-			return True
+		#if source_time - dest_time > self.time_delta:
+		#	self.explain_why('source %s is more recent than destination %s' % (source, destination))
+		#	self.build_pair(pair)
+		#	return True
 
-		if self.debug.get('explain', False):
-			print('destination %s is up to date' % destination)
+		self.explain_why_not('destination %s is up to date' % destination)
 		return False
+
+	def remove_pair (self, pair):
+
+		jump_file = os.path.join(self.location.get('deploy'), pair[0], 'index.php')
+
+		if os.path.exists(jump_file):
+			self.loud('Removing jump file %s' % jump_file)
+			os.unlink(jump_file)
 
 	def build (self):
 
 		for pair in self.find_all_pairs():
 			self.update_pair(pair)
+
+	def remove (self):
+
+		for pair in self.find_all_pairs():
+			self.remove_pair(pair)
+
