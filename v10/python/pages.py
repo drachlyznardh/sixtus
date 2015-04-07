@@ -259,20 +259,22 @@ class Pages(Sixtus):
 			self.loud('Removing php file %s' % php_file)
 			os.unlink(php_file)
 
-	def build (self):
+	def load_products (self):
 
 		for stem in self.find_page_sources():
 			self.load_src_file(stem)
 			self.load_dep_file(stem)
+
+	def build (self):
+
+		self.load_products()
 
 		for stem in self.products:
 			self.update_php_file(stem)
 
 	def remove (self):
 
-		for stem in self.find_page_sources():
-			self.load_src_file(stem)
-			self.load_dep_file(stem)
+		self.load_products()
 
 		for stem in self.products:
 			self.remove_php_file(stem)
