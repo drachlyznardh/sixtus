@@ -51,6 +51,7 @@ def sixtus_veryclean (bag):
 
 	Resources(bag).remove()
 	Runtime(bag).remove()
+	Pages(bag).remove()
 	sixtus_clean(bag)
 
 	if d: print('Siχtus 0.10, cleaning hard done')

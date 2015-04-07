@@ -251,6 +251,14 @@ class Pages(Sixtus):
 		self.explain_why_not('php file %s is up to date' % php_file)
 		return False
 
+	def remove_php_file (self, name):
+
+		php_file = self.get_php_filename(name)
+
+		if os.path.exists(php_file):
+			self.loud('Removing php file %s' % php_file)
+			os.unlink(php_file)
+
 	def build (self):
 
 		for stem in self.find_page_sources():
@@ -259,4 +267,13 @@ class Pages(Sixtus):
 
 		for stem in self.products:
 			self.update_php_file(stem)
+
+	def remove (self):
+
+		for stem in self.find_page_sources():
+			self.load_src_file(stem)
+			self.load_dep_file(stem)
+
+		for stem in self.products:
+			self.remove_php_file(stem)
 
