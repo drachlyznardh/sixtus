@@ -66,3 +66,8 @@ class Resources(Sixtus):
 
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
 			self.update_file(name, self.copy_static)
+
+	def remove (self):
+
+		print('ResourcesVeryClean')
+		print('ResourcesVeryClean')

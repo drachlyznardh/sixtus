@@ -45,7 +45,12 @@ def sixtus_clean (bag):
 	if d: print('Siχtus 0.10, cleaning done')
 
 def sixtus_veryclean (bag):
-	pass
+
+	d = bag[0].get('loud', False)
+	if d: print('Siχtus 0.10, cleaning hard')
+	Resources(bag).remove()
+	sixtus_clean(bag)
+	if d: print('Siχtus 0.10, cleaning hard done')
 
 def sixtus_help ():
 	print('usage: %s [options] (build|clean|veryclean)*' % sys.argv[0])
