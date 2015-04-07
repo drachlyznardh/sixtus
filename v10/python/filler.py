@@ -50,6 +50,20 @@ class Filler(Sixtus):
 		root = self.location.get('deploy')
 
 		for cat in self.match:
+			pieces = cat.split('/')
+			if len(pieces) == 1: pass
+			source = ''
+			for piece in pieces[:-1]:
+				source = os.path.join(source, piece)
+				if source not in self.match and source not in found:
+					found.add(source)
+					result.append((source, cat))
+
+		return result
+
+		print('%s → %s' % (source, cat))
+
+		for cat in self.match:
 			pieces = cat.split(os.sep)
 			if len(pieces) < 2: pass
 			candidate = ''
@@ -77,7 +91,8 @@ class Filler(Sixtus):
 		root = self.location.get('deploy')
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
-		self.loud('Generating jump file %s' % php_file)
+		self.loud('Generating jump file %s' % jump_file)
+		util.assert_dir(jump_file)
 		php.from_jump_target_to_php_file(pair[1], jump_file)
 
 	def remove_pair (self, pair):
@@ -92,27 +107,23 @@ class Filler(Sixtus):
 	def update_pair (self, pair):
 
 		source, destination = pair
+		jump_file = self.get_jump_filename(pair)
 
-		if not os.path.exists(destination):
-			self.explain('destination %s does not exist!' % destination)
+		if not os.path.exists(jump_file):
+			self.explain_why('jump_file %s does not exist!' % jump_file)
 			self.build_pair(pair)
 			return True
 
-		source_time = os.path.getmtime(source)
-		dest_time = os.path.getmtime(destination)
+		#source_time = os.path.getmtime(source)
+		#dest_time = os.path.getmtime(jump_file)
 
-		if source_time - dest_time > self.time_delta:
-			self.explain('source %s is more recent than destination %s' % (source, destination))
-			self.build_pair(pair)
-			return True
+		#if source_time - dest_time > self.time_delta:
+		#	self.explain_why('source %s is more recent than destination %s' % (source, destination))
+		#	self.build_pair(pair)
+		#	return True
 
-		self.explain('destination %s is up to date' % destination)
+		self.explain_why_not('destination %s is up to date' % destination)
 		return False
-
-	def build (self):
-
-		for pair in self.find_all_pairs():
-			self.update_pair(pair)
 
 	def remove_pair (self, pair):
 
@@ -122,25 +133,13 @@ class Filler(Sixtus):
 			self.loud('Removing jump file %s' % jump_file)
 			os.unlink(jump_file)
 
-	def remove (self):
-
-		root = self.location.get('deploy')
-		culo = []
-		qulo = set()
-		print(self.match)
-
-		for cat in self.match:
-			pieces = cat.split('/')
-			if len(pieces) == 1: pass
-			source = ''
-			for piece in pieces[:-1]:
-				source = os.path.join(source, piece)
-				if source not in self.match and source not in qulo:
-					qulo.add(source)
-					culo.append((source, cat))
-					print('%s → %s' % (source, cat))
+	def build (self):
 
 		for pair in self.find_all_pairs():
-			print(pair)
+			self.update_pair(pair)
+
+	def remove (self):
+
+		for pair in self.find_all_pairs():
 			self.remove_pair(pair)
 
