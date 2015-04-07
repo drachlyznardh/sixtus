@@ -15,7 +15,7 @@ class Resources(Sixtus):
 
 		Sixtus.__init__(self, bag)
 
-	def copy_static (self, source, destination):
+	def copy_file (self, source, destination):
 
 		self.loud('Copying resource file %s to %s' % (source, destination))
 
@@ -24,21 +24,21 @@ class Resources(Sixtus):
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
 
-	def update_file (self, name, callback):
+	def update_file (self, name):
 
 		in_file = os.path.join(self.location.get('res'), name)
 		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
 
 		if not os.path.exists(out_file):
 			self.explain_why('resource file %s does not exist' % out_file)
-			callback(in_file, out_file)
+			copy_file(in_file, out_file)
 			return True
 
 		in_time = os.path.getmtime(in_file)
 		out_time = os.path.getmtime(out_file)
 		if in_time - out_time > self.time_delta:
 			self.explain_why('origin file %s is more recent than resource file %s' % (in_file, out_file))
-			callback(in_file, out_file)
+			copy_file(in_file, out_file)
 			return True
 
 		self.explain_why_not('resource file %s is up to date' % out_file)
@@ -65,7 +65,7 @@ class Resources(Sixtus):
 	def build (self):
 
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
-			self.update_file(name, self.copy_static)
+			self.update_file(name)
 
 	def remove (self):
 
@@ -73,6 +73,6 @@ class Resources(Sixtus):
 
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
 			print('name [%s]' % name)
-			#self.update_file(name, self.copy_static)
+			#self.update_file(name, self.copy_file)
 
 		print('ResourcesVeryClean')
