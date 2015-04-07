@@ -16,6 +16,10 @@ class Filler(Sixtus):
 		Sixtus.__init__(self, bag)
 		self.match = sorted(self.sitemap.values())
 
+	def get_jump_filename (self, pair):
+
+		return os.path.join(self.location.get('deploy'), pair[0], 'index.php')
+
 	def find_all_dirs (self, root):
 
 		result = []
