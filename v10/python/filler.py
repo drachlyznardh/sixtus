@@ -49,13 +49,13 @@ class Filler(Sixtus):
 			pieces = cat.split(os.sep)
 			if len(pieces) < 2: pass
 			candidate = ''
-			for piece in pieces:
+			for piece in pieces[:-1]:
 				candidate = os.path.join(candidate, piece)
 				candir = os.path.join(root, candidate)
-				if os.path.isdir(candir) and 'index.php' not in os.listdir(candir):
-					if candidate not in found:
-						found.add(candidate)
-						result.append((candidate, cat))
+				#if os.path.isdir(candir) and 'index.php' not in os.listdir(candir):
+				if candidate not in found:
+					found.add(candidate)
+					result.append((candidate, cat))
 		return result
 
 		result = []
@@ -110,8 +110,33 @@ class Filler(Sixtus):
 		for pair in self.find_all_pairs():
 			self.update_pair(pair)
 
+	def remove_pair (self, pair):
+
+		jump_file = os.path.join(self.location.get('deploy'), pair[0], 'index.php')
+
+		if os.path.exists(jump_file):
+			self.loud('Removing jump file %s' % jump_file)
+			os.unlink(jump_file)
+
 	def remove (self):
 
+		root = self.location.get('deploy')
+		culo = []
+		qulo = set()
+		print(self.match)
+
+		for cat in self.match:
+			pieces = cat.split('/')
+			if len(pieces) == 1: pass
+			source = ''
+			for piece in pieces[:-1]:
+				source = os.path.join(source, piece)
+				if source not in self.match and source not in qulo:
+					qulo.add(source)
+					culo.append((source, cat))
+					print('%s → %s' % (source, cat))
+
 		for pair in self.find_all_pairs():
+			print(pair)
 			self.remove_pair(pair)
 
