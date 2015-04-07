@@ -15,6 +15,9 @@ class Runtime(Sixtus):
 
 		Sixtus.__init__(self, bag)
 
+		self.static_files = ['icon.ico', 'panel.js', 'style.css']
+		self.dynamic_files = [('page-head.php.in', 'page-top.php'), ('page-foot.php.in', 'page-bottom.php'), ('page-waist.php.in', 'page-middle.php')]
+
 	def copy_static (self, source, destination):
 
 		util.assert_dir(destination)
@@ -79,10 +82,8 @@ class Runtime(Sixtus):
 
 	def build (self):
 
-		for name in ['icon.ico', 'panel.js', 'style.css']:
+		for name in self.static_files:
 			self.update_file(name, self.copy_static)
 
-		for pair in [('page-head.php.in', 'page-top.php'),
-				('page-foot.php.in', 'page-bottom.php'),
-				('page-waist.php.in', 'page-middle.php')]:
+		for pair in self.dynamic_files:
 			self.update_file(pair, self.copy_replace)
