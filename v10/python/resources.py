@@ -24,6 +24,13 @@ class Resources(Sixtus):
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
 
+	def remove_file (self, name):
+
+		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
+		print('Removing file %s' % out_file)
+		if os.path.exists(out_file):
+			os.unlink(out_file)
+
 	def update_file (self, name):
 
 		in_file = os.path.join(self.location.get('res'), name)
@@ -72,7 +79,6 @@ class Resources(Sixtus):
 		print('ResourcesVeryClean')
 
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
-			print('name [%s]' % name)
-			#self.update_file(name, self.copy_file)
+			self.remove_file(name)
 
 		print('ResourcesVeryClean')
