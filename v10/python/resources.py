@@ -27,8 +27,9 @@ class Resources(Sixtus):
 	def remove_file (self, name):
 
 		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
-		print('Removing file %s' % out_file)
+
 		if os.path.exists(out_file):
+			self.loud('Unlinking resources file %s' % out_file)
 			os.unlink(out_file)
 
 	def update_file (self, name):
@@ -76,9 +77,6 @@ class Resources(Sixtus):
 
 	def remove (self):
 
-		print('ResourcesVeryClean')
-
 		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
 			self.remove_file(name)
 
-		print('ResourcesVeryClean')
