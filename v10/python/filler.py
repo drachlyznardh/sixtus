@@ -76,6 +76,15 @@ class Filler(Sixtus):
 		self.loud('Generating jump file %s' % php_file)
 		php.from_jump_target_to_php_file(pair[1], jump_file)
 
+	def remove_pair (self, pair):
+
+		root = self.location.get('deploy')
+		jump_file = os.path.join(root, pair[0], 'index.php')
+
+		if os.path.exists(jump_file):
+			self.loud('Removing jump file %s' % jump_file)
+			os.unlink(jump_file)
+
 	def update_pair (self, pair):
 
 		source, destination = pair
@@ -100,4 +109,9 @@ class Filler(Sixtus):
 
 		for pair in self.find_all_pairs():
 			self.update_pair(pair)
+
+	def remove (self):
+
+		for pair in self.find_all_pairs():
+			self.remove_pair(pair)
 
