@@ -81,14 +81,14 @@ class Runtime(Sixtus):
 			raise Exception('What is %s supposed to be?' % name)
 
 		if not os.path.exists(out_file):
-			self.explain_why('out file %s does not exist' % out_file)
+			self.explain_why('resource file %s does not exist' % out_file)
 			callback(in_file, out_file)
 			return True
 
 		in_time = os.path.getmtime(in_file)
 		out_time = os.path.getmtime(out_file)
 		if in_time - out_time > self.time_delta:
-			self.explain_why('in file %s is more recent than out file %s' % (in_file, out_file))
+			self.explain_why('source file %s is more recent than resource file %s' % (in_file, out_file))
 			callback(in_file, out_file)
 			return True
 
