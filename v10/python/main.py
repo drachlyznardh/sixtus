@@ -15,7 +15,7 @@ import util
 
 def sixtus_build (bag):
 
-	d = bag[0].get('loud', False)
+	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10')
 
 	Runtime(bag).build()
@@ -27,7 +27,7 @@ def sixtus_build (bag):
 
 def sixtus_clean (bag):
 
-	d = bag[0].get('loud', False)
+	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning')
 
 	build_dir = bag[3].get('location').get('build')
@@ -44,7 +44,7 @@ def sixtus_clean (bag):
 
 def sixtus_veryclean (bag):
 
-	d = bag[0].get('loud', False)
+	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning hard')
 
 	Resources(bag).remove()
@@ -96,15 +96,16 @@ def digest_location (source):
 
 def sixtus_read_args ():
 
-	debug = {}
+	flags = {}
 	time_delta = 0.5
+	force = False
 	map_file = 'map.py'
 	conf_file = 'conf.py'
 
-	short_opt = 'hvxwnf:m:t:'
+	short_opt = 'hvxwnBf:m:t:'
 	long_opt = ['help', 'verbose', 'version',
 		'explain', 'why', 'not', 'why-not',
-		'map', 'conf', 'time']
+		'force', 'conf', 'map', 'time']
 
 	try: optlist, args = getopt.gnu_getopt(sys.argv[1:], short_opt, long_opt)
 	except getopot.GetoptError as err:
@@ -116,17 +117,19 @@ def sixtus_read_args ():
 			sixtus_help()
 			return
 		elif key in ('-v', '--verbose'):
-			debug['loud'] = True
+			flags['loud'] = True
 		elif key in ('--version'):
 			sixtus_version()
 			return
 		elif key in ('-x', '--explain'):
-			debug['why'] = True
-			debug['not'] = True
+			flags['why'] = True
+			flags['not'] = True
 		elif key in ('-w', '--why'):
-			debug['why'] = True
+			flags['why'] = True
 		elif key in ('-n', '--not', '--why-not'):
-			debug['not'] = True
+			flags['not'] = True
+		elif key in ('-B', '--force'):
+			force = True
 		elif key in ('-m', '--map'):
 			map_file = value
 		elif key in ('-f', '--conf'):
@@ -142,7 +145,7 @@ def sixtus_read_args ():
 
 	conf['location'] = digest_location(conf.get('location'))
 
-	bag = (debug, time_delta, sitemap, conf)
+	bag = (force, flags, time_delta, sitemap, conf)
 
 	if len(args) == 0:
 		sixtus_build(bag)

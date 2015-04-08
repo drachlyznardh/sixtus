@@ -39,6 +39,11 @@ class Resources(Sixtus):
 		in_file = os.path.join(self.location.get('res'), name)
 		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
 
+		if self.force:
+			self.explain_why('Force rebuild of resource file %s' % out_file)
+			self.copy_file(in_file, out_file)
+			return True
+
 		if not os.path.exists(out_file):
 			self.explain_why('resource file %s does not exist' % out_file)
 			self.copy_file(in_file, out_file)
