@@ -50,3 +50,13 @@ def unique (origin):
 	f = seen.add
 	return [x for x in origin if x and not (x in seen or f(x))]
 
+def clean_empty_dirs (filename):
+
+	dirname = os.path.dirname(filename)
+
+	if not os.path.exists(dirname): return
+
+	while len(os.listdir(dirname)) == 0:
+		os.rmdir(dirname)
+		dirname = os.path.dirname(dirname)
+

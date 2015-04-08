@@ -66,6 +66,8 @@ class Runtime(Sixtus):
 			self.loud('Removing system file %s' % out_file)
 			os.unlink(out_file)
 
+		util.clean_empty_dirs(out_file)
+
 	def update_file (self, name, callback):
 
 		if isinstance (name, str):

@@ -10,7 +10,6 @@ from runtime import Runtime
 from resources import Resources
 from blog import Blog
 from pages import Pages
-from filler import Filler
 
 import util
 
@@ -23,7 +22,6 @@ def sixtus_build (bag):
 	Resources(bag).build()
 	Blog(bag).build()
 	Pages(bag).build()
-	Filler(bag).build()
 
 	if d: print('Siχtus 0.10, done')
 
@@ -52,7 +50,6 @@ def sixtus_veryclean (bag):
 	Resources(bag).remove()
 	Runtime(bag).remove()
 	Pages(bag).remove()
-	Filler(bag).remove()
 	sixtus_clean(bag)
 
 	if d: print('Siχtus 0.10, cleaning hard done')

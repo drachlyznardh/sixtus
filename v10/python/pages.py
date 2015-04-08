@@ -50,6 +50,10 @@ class Pages(Sixtus):
 		extension = ['index.php', 'index.php', 'side.php']
 		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
 
+	# Returns full path for a category jump index.php file
+	def get_cat_jump_filename (self, bundle):
+		return os.path.join(self.location.get('deploy'), bundle[0], 'index.php')
+
 	# Locate source pages
 	def find_page_sources (self):
 		return util.find_all_sources(self.location['pag'], r'^(.*)\.pag$', True)
@@ -259,6 +263,64 @@ class Pages(Sixtus):
 			self.loud('Removing php file %s' % php_file)
 			os.unlink(php_file)
 
+	def find_all_cat_jumps (self):
+
+		result = []
+		found = set()
+		root = self.location.get('deploy')
+
+		values = sorted(self.sitemap.values())
+
+		for cat in values:
+
+			pieces = cat.split('/')
+			if len(pieces) == 1: pass
+
+			source = ''
+			for piece in pieces[:-1]:
+				source = os.path.join(source, piece)
+				if source not in values and source not in found:
+					found.add(source)
+					result.append((source, cat))
+
+		return result
+
+	def build_cat_jump_file (self, pair):
+
+		root = self.location.get('deploy')
+		jump_file = os.path.join(root, pair[0], 'index.php')
+
+		self.loud('Generating jump file %s' % jump_file)
+		util.assert_dir(jump_file)
+		php.from_jump_target_to_php_file(pair[1], jump_file)
+
+	def update_cat_jump_file (self, pair):
+
+		source, destination = pair
+		jump_file = self.get_cat_jump_filename(pair)
+
+		if not os.path.exists(jump_file):
+			self.explain_why('jump_file %s does not exist!' % jump_file)
+			self.build_cat_jump_file(pair)
+			return True
+
+		self.explain_why_not('destination %s is up to date' % destination)
+		return False
+
+	def remove_php_dirs (self):
+
+		targets = self.products + [(1,i) for i, j in self.find_all_cat_jumps()]
+
+		for target in reversed(sorted(targets)):
+
+			php_file = self.get_php_filename(target)
+
+			if os.path.exists(php_file):
+				self.loud('Removing file %s' % php_file)
+				os.unlink(php_file)
+
+			util.clean_empty_dirs(php_file)
+
 	def load_products (self):
 
 		for stem in self.find_page_sources():
@@ -272,6 +334,9 @@ class Pages(Sixtus):
 		for stem in self.products:
 			self.update_php_file(stem)
 
+		for pair in self.find_all_cat_jumps():
+			self.update_cat_jump_file(pair)
+
 	def remove (self):
 
 		self.load_products()
@@ -279,3 +344,4 @@ class Pages(Sixtus):
 		for stem in self.products:
 			self.remove_php_file(stem)
 
+		self.remove_php_dirs()
