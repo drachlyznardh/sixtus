@@ -32,6 +32,8 @@ class Resources(Sixtus):
 			self.loud('Removing resources file %s' % out_file)
 			os.unlink(out_file)
 
+		util.clean_empty_dirs(out_file)
+
 	def update_file (self, name):
 
 		in_file = os.path.join(self.location.get('res'), name)
