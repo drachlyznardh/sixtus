@@ -96,7 +96,7 @@ def digest_location (source):
 
 def sixtus_read_args ():
 
-	debug = {}
+	flags = {}
 	time_delta = 0.5
 	map_file = 'map.py'
 	conf_file = 'conf.py'
@@ -116,19 +116,19 @@ def sixtus_read_args ():
 			sixtus_help()
 			return
 		elif key in ('-v', '--verbose'):
-			debug['loud'] = True
+			flags['loud'] = True
 		elif key in ('--version'):
 			sixtus_version()
 			return
 		elif key in ('-x', '--explain'):
-			debug['why'] = True
-			debug['not'] = True
+			flags['why'] = True
+			flags['not'] = True
 		elif key in ('-w', '--why'):
-			debug['why'] = True
+			flags['why'] = True
 		elif key in ('-n', '--not', '--why-not'):
-			debug['not'] = True
+			flags['not'] = True
 		elif key in ('-B', '--force'):
-			debug['force'] = True
+			flags['force'] = True
 		elif key in ('-m', '--map'):
 			map_file = value
 		elif key in ('-f', '--conf'):
@@ -144,7 +144,7 @@ def sixtus_read_args ():
 
 	conf['location'] = digest_location(conf.get('location'))
 
-	bag = (debug, time_delta, sitemap, conf)
+	bag = (flags, time_delta, sitemap, conf)
 
 	if len(args) == 0:
 		sixtus_build(bag)
