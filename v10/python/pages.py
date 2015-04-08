@@ -50,6 +50,10 @@ class Pages(Sixtus):
 		extension = ['index.php', 'index.php', 'side.php']
 		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
 
+	# Returns full path for a category jump index.php file
+	def get_cat_jump_filename (self, bundle):
+		return os.path.join(self.location.get('deploy'), bundle[0], 'index.php')
+
 	# Locate source pages
 	def find_page_sources (self):
 		return util.find_all_sources(self.location['pag'], r'^(.*)\.pag$', True)
