@@ -285,6 +285,28 @@ class Pages(Sixtus):
 
 		return result
 
+	def build_cat_jump_file (self, pair):
+
+		root = self.location.get('deploy')
+		jump_file = os.path.join(root, pair[0], 'index.php')
+
+		self.loud('Generating jump file %s' % jump_file)
+		util.assert_dir(jump_file)
+		php.from_jump_target_to_php_file(pair[1], jump_file)
+
+	def update_cat_jump_file (self, pair):
+
+		source, destination = pair
+		jump_file = self.get_cat_jump_filename(pair)
+
+		if not os.path.exists(jump_file):
+			self.explain_why('jump_file %s does not exist!' % jump_file)
+			self.build_cat_jump_file(pair)
+			return True
+
+		self.explain_why_not('destination %s is up to date' % destination)
+		return False
+
 	def remove_php_dirs (self):
 
 		targets = self.products + [(1,i) for i, j in self.find_all_cat_jumps()]
@@ -311,6 +333,9 @@ class Pages(Sixtus):
 
 		for stem in self.products:
 			self.update_php_file(stem)
+
+		for pair in self.find_all_cat_jumps():
+			self.update_cat_jump_file(pair)
 
 	def remove (self):
 
