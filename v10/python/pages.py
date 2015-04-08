@@ -295,14 +295,13 @@ class Pages(Sixtus):
 
 			dirname = os.path.dirname(php_file)
 			if os.path.exists(dirname):
-				print('%s → %d' % (dirname, len(os.listdir(dirname))))
 				while len(os.listdir(dirname)) == 0:
-					print('Removing empty dir %s, then %s' % (dirname,
-					os.path.dirname(dirname)))
+					self.loud('Removing empty dir %s' % dirname)
+					#print('Removing empty dir %s, then %s' % (dirname, os.path.dirname(dirname)))
 					os.rmdir(dirname)
 					dirname = os.path.dirname(dirname)
 
-			print('%s → %s' % (target, self.get_php_filename(target)))
+			#print('%s → %s' % (target, self.get_php_filename(target)))
 
 			#dirname = os.path.join(self.location.get('deploy'), stem[1])
 			#print('(%s) → %s' % (stem, dirname))
