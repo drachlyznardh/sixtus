@@ -259,6 +259,56 @@ class Pages(Sixtus):
 			self.loud('Removing php file %s' % php_file)
 			os.unlink(php_file)
 
+	def find_all_cat_jumps (self):
+
+		result = []
+		found = set()
+		root = self.location.get('deploy')
+
+		values = sorted(self.sitemap.values())
+
+		for cat in values:
+
+			pieces = cat.split('/')
+			if len(pieces) == 1: pass
+
+			source = ''
+			for piece in pieces[:-1]:
+				source = os.path.join(source, piece)
+				if source not in values and source not in found:
+					found.add(source)
+					result.append((source, cat))
+
+		return result
+
+	def remove_php_dirs (self):
+
+		targets = self.products + [(1,i) for i, j in self.find_all_cat_jumps()]
+
+		for target in reversed(sorted(targets)):
+
+			php_file = self.get_php_filename(target)
+
+			if os.path.exists(php_file):
+				self.loud('Removing file %s' % php_file)
+				os.unlink(php_file)
+
+			dirname = os.path.dirname(php_file)
+			if os.path.exists(dirname):
+				print('%s → %d' % (dirname, len(os.listdir(dirname))))
+				while len(os.listdir(dirname)) == 0:
+					print('Removing empty dir %s, then %s' % (dirname,
+					os.path.dirname(dirname)))
+					os.rmdir(dirname)
+					dirname = os.path.dirname(dirname)
+
+			print('%s → %s' % (target, self.get_php_filename(target)))
+
+			#dirname = os.path.join(self.location.get('deploy'), stem[1])
+			#print('(%s) → %s' % (stem, dirname))
+			#if os.path.exists(dirname): os.rmdir(dirname)
+			#print('Dir %s removed' % dirname)
+
 	def load_products (self):
 
 		for stem in self.find_page_sources():
@@ -279,3 +329,4 @@ class Pages(Sixtus):
 		for stem in self.products:
 			self.remove_php_file(stem)
 
+		self.remove_php_dirs()
