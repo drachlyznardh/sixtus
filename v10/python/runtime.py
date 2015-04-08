@@ -80,6 +80,11 @@ class Runtime(Sixtus):
 		else:
 			raise Exception('What is %s supposed to be?' % name)
 
+		if self.flags.get('force', False):
+			self.explain_why('Force rebuild of resource file %s' % out_file)
+			callback(in_file, out_file)
+			return True
+
 		if not os.path.exists(out_file):
 			self.explain_why('resource file %s does not exist' % out_file)
 			callback(in_file, out_file)
