@@ -108,6 +108,11 @@ class Blog(Sixtus):
 		pag_file = self.get_pag_filename(stem)
 		list_file = self.get_list_filename(stem)
 
+		if self.flags.get('force', False):
+			self.explain_why('Force rebuild of pag file %s' % pag_file)
+			self.build_month(stem)
+			return True
+
 		if not os.path.exists(pag_file):
 			self.explain_why('pag file %s does not exist' % pag_file)
 			self.build_month(stem)
@@ -154,6 +159,13 @@ class Blog(Sixtus):
 	def update_year (self, year):
 
 		pag_file = self.get_pag_filename(year)
+
+		if self.flags.get('force', False):
+			self.explain_why('Force rebuild of pag file %s' % pag_file)
+			for month in self.blogmap[year]:
+				self.update_month((year, month))
+			self.build_year(year)
+			return True
 
 		if not os.path.exists(pag_file):
 			self.explain_why('pag file %s does not exist' % pag_file)
@@ -210,6 +222,13 @@ class Blog(Sixtus):
 	def update_struct (self):
 
 		struct = self.load_struct()
+
+		if self.flags.get('force', False):
+			self.explain_why('Force blog rebuild')
+			self.build_archive()
+			self.build_index()
+			self.build_struct()
+			return True
 
 		if len(struct) != len(self.month) or len([a for a in struct if a not in self.month]) or len([a for a in self.month if a not in struct]):
 			self.explain_why('blog structure changed')
