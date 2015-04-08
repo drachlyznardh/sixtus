@@ -101,10 +101,10 @@ def sixtus_read_args ():
 	map_file = 'map.py'
 	conf_file = 'conf.py'
 
-	short_opt = 'hvxwnf:m:t:'
+	short_opt = 'hvxwnBf:m:t:'
 	long_opt = ['help', 'verbose', 'version',
 		'explain', 'why', 'not', 'why-not',
-		'map', 'conf', 'time']
+		'force', 'conf', 'map', 'time']
 
 	try: optlist, args = getopt.gnu_getopt(sys.argv[1:], short_opt, long_opt)
 	except getopot.GetoptError as err:
@@ -127,6 +127,8 @@ def sixtus_read_args ():
 			debug['why'] = True
 		elif key in ('-n', '--not', '--why-not'):
 			debug['not'] = True
+		elif key in ('-B', '--force'):
+			debug['force'] = True
 		elif key in ('-m', '--map'):
 			map_file = value
 		elif key in ('-f', '--conf'):
