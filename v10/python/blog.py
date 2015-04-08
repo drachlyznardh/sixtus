@@ -108,7 +108,7 @@ class Blog(Sixtus):
 		pag_file = self.get_pag_filename(stem)
 		list_file = self.get_list_filename(stem)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of pag file %s' % pag_file)
 			self.build_month(stem)
 			return True
@@ -160,7 +160,7 @@ class Blog(Sixtus):
 
 		pag_file = self.get_pag_filename(year)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of pag file %s' % pag_file)
 			for month in self.blogmap[year]:
 				self.update_month((year, month))
@@ -223,7 +223,7 @@ class Blog(Sixtus):
 
 		struct = self.load_struct()
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force blog rebuild')
 			self.build_archive()
 			self.build_index()

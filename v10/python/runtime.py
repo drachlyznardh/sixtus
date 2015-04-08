@@ -80,7 +80,7 @@ class Runtime(Sixtus):
 		else:
 			raise Exception('What is %s supposed to be?' % name)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of resource file %s' % out_file)
 			callback(in_file, out_file)
 			return True

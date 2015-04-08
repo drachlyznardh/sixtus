@@ -81,7 +81,7 @@ class Pages(Sixtus):
 
 		Six_file = self.get_Six_filename(stem)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of Six file %s' % Six_file)
 			self.build_Six_file(stem)
 			return True
@@ -130,7 +130,7 @@ class Pages(Sixtus):
 
 		dep_file = self.get_dep_filename(stem)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of dep file %s' % dep_file)
 			self.build_dep_file(stem)
 			return True
@@ -210,7 +210,7 @@ class Pages(Sixtus):
 		Six_stem = self.map_six_to_Six(stem)
 		six_file = self.get_six_filename(stem)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of six file %s' % six_file)
 			self.update_Six_file(Six_stem)
 			self.build_six_file(stem)
@@ -253,7 +253,7 @@ class Pages(Sixtus):
 
 		php_file = self.get_php_filename(stem)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of php file %s' % php_file)
 			self.update_six_file(stem)
 			self.build_php_file(stem)
@@ -322,7 +322,7 @@ class Pages(Sixtus):
 		source, destination = pair
 		jump_file = self.get_cat_jump_filename(pair)
 
-		if self.flags.get('force', False):
+		if self.force:
 			self.explain_why('Force rebuild of cat jump file %s' % jump_file)
 			self.build_cat_jump_file(pair)
 			return True
