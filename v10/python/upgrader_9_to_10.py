@@ -246,8 +246,7 @@ class Upgrader:
 			return self.parse_speak(args)
 
 		elif c == 'img':
-			if len(args) > 3: self.error('img# expects 2-3 args %s' % args)
-			return '\t%s' % '|'.join(args)
+			self.error('img# command is no longer supported. Manually add content instead.')
 
 		elif c == 'clear':
 			if len(args) == 2: return '\tclear|%s' % args[1]
