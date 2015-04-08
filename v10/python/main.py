@@ -15,7 +15,7 @@ import util
 
 def sixtus_build (bag):
 
-	d = bag[0].get('loud', False)
+	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10')
 
 	Runtime(bag).build()
@@ -27,7 +27,7 @@ def sixtus_build (bag):
 
 def sixtus_clean (bag):
 
-	d = bag[0].get('loud', False)
+	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning')
 
 	build_dir = bag[3].get('location').get('build')
@@ -44,7 +44,7 @@ def sixtus_clean (bag):
 
 def sixtus_veryclean (bag):
 
-	d = bag[0].get('loud', False)
+	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning hard')
 
 	Resources(bag).remove()
@@ -98,6 +98,7 @@ def sixtus_read_args ():
 
 	flags = {}
 	time_delta = 0.5
+	force = False
 	map_file = 'map.py'
 	conf_file = 'conf.py'
 
@@ -128,7 +129,7 @@ def sixtus_read_args ():
 		elif key in ('-n', '--not', '--why-not'):
 			flags['not'] = True
 		elif key in ('-B', '--force'):
-			flags['force'] = True
+			force = True
 		elif key in ('-m', '--map'):
 			map_file = value
 		elif key in ('-f', '--conf'):
@@ -144,7 +145,7 @@ def sixtus_read_args ():
 
 	conf['location'] = digest_location(conf.get('location'))
 
-	bag = (flags, time_delta, sitemap, conf)
+	bag = (force, flags, time_delta, sitemap, conf)
 
 	if len(args) == 0:
 		sixtus_build(bag)

@@ -7,7 +7,7 @@ class Sixtus:
 
 	def __init__ (self, bag):
 
-		self.flags, self.time_delta, self.sitemap, self.conf = bag
+		self.force, self.flags, self.time_delta, self.sitemap, self.conf = bag
 
 		self.location = self.conf.get('location')
 		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
