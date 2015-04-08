@@ -66,9 +66,6 @@ class ContentConverter:
 		elif c == 'id':
 			self.stop_writing()
 			self.content += ('<a id="%s"></a>' % args[0])
-		elif c == 'img':
-			self.stop_writing()
-			self.content += self.make_image(args)
 		elif c == 'br':
 			self.stop_writing()
 			self.content += '<br/>'
@@ -206,19 +203,6 @@ class ContentConverter:
 			self.error('speak# excepts 2 arguments %s' % args)
 
 		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
-
-	def make_image (self, args):
-
-		size = len(args)
-		if size == 1:
-			src = thumb = args[0]
-		elif size == 2:
-			src = args[0]
-			thumb = args[1]
-		else: self.error('img# espects one or two args %s' % args)
-
-		return '<p class="image"><a target="_blank" href="%s" class="image"><img src="%s" /></a></p>' % (src,
-		thumb)
 
 	def open_env (self, args):
 
