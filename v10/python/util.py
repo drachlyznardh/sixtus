@@ -50,3 +50,15 @@ def unique (origin):
 	f = seen.add
 	return [x for x in origin if x and not (x in seen or f(x))]
 
+def clean_empty_dirs (filename):
+
+	dirname = os.path.dirname(filename)
+	if os.path.exists(dirname):
+		while len(os.listdir(dirname)) == 0:
+			self.loud('Removing empty dir %s' % dirname)
+			#print('Removing empty dir %s, then %s' % (dirname, os.path.dirname(dirname)))
+			os.rmdir(dirname)
+			dirname = os.path.dirname(dirname)
+
+	#print('%s → %s' % (target, self.get_php_filename(target)))
+
