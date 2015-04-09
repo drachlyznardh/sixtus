@@ -211,7 +211,7 @@ class Blog(Sixtus):
 	def build_index (self):
 
 		p = index_poster.Poster(self.home)
-		p.parse_target(self.month)
+		p.parse_target(self.get_list_filename(self.month[-1]))
 		p.output_pag_file(self.get_index_filename())
 
 	def build_struct (self):
