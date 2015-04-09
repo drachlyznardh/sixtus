@@ -10,7 +10,7 @@ class Sixtus:
 		self.force, self.flags, self.time_delta, self.sitemap, self.conf = bag
 
 		self.location = self.conf.get('location')
-		self.location['runtime'] = '/opt/devel/web/sixtus/v10/runtime'
+		self.location['runtime'] = '/opt/devel/web/sixtus/runtime'
 
 	def loud (self, message):
 		if self.flags.get('loud', False):
