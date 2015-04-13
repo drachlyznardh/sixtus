@@ -8,9 +8,7 @@ class Sixtus:
 
 	def __init__ (self, bag):
 
-		self.force, self.flags, self.time_delta, self.sitemap, self.conf = bag
-
-		self.location = self.conf.get('location')
+		self.force, self.flags, self.time_delta, self.sitemap, self.loc, self.conf = bag
 
 	def loud (self, message):
 		if self.flags.get('loud', False):

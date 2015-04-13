@@ -20,7 +20,7 @@ class Blog(Sixtus):
 	def __init__ (self, bag):
 
 		Sixtus.__init__(self, bag)
-		self.home = self.location.get('blog-home')
+		self.home = self.loc.get('blog-home')
 
 		self.blogmap = {}
 		self.prevmap = {}
@@ -28,7 +28,7 @@ class Blog(Sixtus):
 
 	def populate (self):
 
-		root = self.location['blog-in']
+		root = self.loc['blog-in']
 		month_pattern = re.compile(r'^(.*)\.post$')
 		for year in os.listdir(root):
 			self.blogmap[year] = []
@@ -52,28 +52,28 @@ class Blog(Sixtus):
 			old = current
 
 	def get_struct_filename (self):
-		return os.path.join(self.location.get('list'), 'blog-struct.py')
+		return os.path.join(self.loc.get('list'), 'blog-struct.py')
 
 	def get_archive_filename (self):
-		return os.path.join(self.location.get('blog-out'), '%s.pag' % self.conf.get('lang').get('blog').get('archive_title'))
+		return os.path.join(self.loc.get('blog-out'), '%s.pag' % self.conf.get('lang').get('blog').get('archive_title'))
 
 	def get_index_filename (self):
-		return os.path.join(self.location.get('blog-out'), 'index.pag')
+		return os.path.join(self.loc.get('blog-out'), 'index.pag')
 
 	def get_post_filename (self, stem):
-		return os.path.join(self.location['blog-in'], stem[0], '%s.post' % stem[1])
+		return os.path.join(self.loc['blog-in'], stem[0], '%s.post' % stem[1])
 
 	def get_pag_filename (self, stem):
 		if isinstance(stem, tuple):
-			return os.path.join(self.location['blog-out'], stem[0], '%s.pag' % stem[1])
+			return os.path.join(self.loc['blog-out'], stem[0], '%s.pag' % stem[1])
 		if isinstance(stem, str):
-			return os.path.join(self.location['blog-out'], '%s.pag' % stem)
+			return os.path.join(self.loc['blog-out'], '%s.pag' % stem)
 
 	def get_list_filename (self, stem):
 		if isinstance(stem, tuple):
-			return os.path.join(self.location['list'], stem[0], '%s.list' % stem[1])
+			return os.path.join(self.loc['list'], stem[0], '%s.list' % stem[1])
 		if isinstance(stem, str):
-			return os.path.join(self.location['list'], '%s.list' % stem)
+			return os.path.join(self.loc['list'], '%s.list' % stem)
 		raise Exception('What stem is %s supposed to be?' % (stem))
 
 	def pair_to_triplet (self, stem):

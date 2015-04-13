@@ -26,7 +26,7 @@ class Resources(Sixtus):
 
 	def remove_file (self, name):
 
-		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
+		out_file = os.path.join(self.loc.get('deploy'), self.map_Six_to_six(name))
 
 		if os.path.exists(out_file):
 			self.loud('Removing resources file %s' % out_file)
@@ -36,8 +36,8 @@ class Resources(Sixtus):
 
 	def update_file (self, name):
 
-		in_file = os.path.join(self.location.get('res'), name)
-		out_file = os.path.join(self.location.get('deploy'), self.map_Six_to_six(name))
+		in_file = os.path.join(self.loc.get('res'), name)
+		out_file = os.path.join(self.loc.get('deploy'), self.map_Six_to_six(name))
 
 		if self.force:
 			self.explain_why('Force rebuild of resource file %s' % out_file)
@@ -79,11 +79,11 @@ class Resources(Sixtus):
 
 	def build (self):
 
-		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
+		for name in util.find_all_sources(self.loc.get('res'), r'^(.*)$', False):
 			self.update_file(name)
 
 	def remove (self):
 
-		for name in util.find_all_sources(self.location.get('res'), r'^(.*)$', False):
+		for name in util.find_all_sources(self.loc.get('res'), r'^(.*)$', False):
 			self.remove_file(name)
 

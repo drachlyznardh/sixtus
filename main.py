@@ -145,9 +145,9 @@ def sixtus_read_args ():
 	with open(conf_file, 'r') as f:
 		conf = eval(f.read())
 
-	conf['location'] = digest_location(conf.get('location'))
+	loc = digest_location(conf.get('location'))
 
-	bag = (force, flags, time_delta, sitemap, conf)
+	bag = (force, flags, time_delta, sitemap, loc, conf)
 
 	if len(args) == 0:
 		sixtus_build(bag)

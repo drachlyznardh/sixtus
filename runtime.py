@@ -56,9 +56,9 @@ class Runtime(Sixtus):
 	def remove_file (self, name):
 
 		if isinstance (name, str):
-			out_file = os.path.join(self.location['deploy'], 'sixtus', name)
+			out_file = os.path.join(self.loc['deploy'], 'sixtus', name)
 		elif isinstance (name, tuple):
-			out_file = os.path.join(self.location['deploy'], 'sixtus', name[1])
+			out_file = os.path.join(self.loc['deploy'], 'sixtus', name[1])
 		else:
 			raise Exception('What is %s supposed to be?' % (name))
 
@@ -71,12 +71,12 @@ class Runtime(Sixtus):
 	def update_file (self, name, callback):
 
 		if isinstance (name, str):
-			in_file = os.path.join(self.location['runtime'], name)
-			out_file = os.path.join(self.location['deploy'], 'sixtus', name)
+			in_file = os.path.join(self.loc['runtime'], name)
+			out_file = os.path.join(self.loc['deploy'], 'sixtus', name)
 		elif isinstance (name, tuple):
 			in_name, out_name = name
-			in_file = os.path.join(self.location['runtime'], in_name)
-			out_file = os.path.join(self.location['deploy'], 'sixtus', out_name)
+			in_file = os.path.join(self.loc['runtime'], in_name)
+			out_file = os.path.join(self.loc['deploy'], 'sixtus', out_name)
 		else:
 			raise Exception('What is %s supposed to be?' % name)
 
