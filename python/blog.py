@@ -214,6 +214,31 @@ class Blog(Sixtus):
 		p.parse_target(self.get_list_filename(self.month[-1]))
 		p.output_pag_file(self.get_index_filename())
 
+	def update_index (self):
+
+		index_file = self.get_index_filename()
+
+		if self.force:
+			self.explain_why('Force rebuild of index file %s' % index_file)
+			self.build_index()
+			return True
+
+		if not os.path.exists(index_file):
+			self.explain_why('Index file %s does not exist' % index_file)
+			self.build_index()
+			return True
+
+		index_time = os.path.getmtime(index_file)
+		list_file = self.get_list_filename(self.month[-1])
+		list_time = os.path.getmtime(list_file)
+		if list_time - index_time > self.time_delta:
+			self.explain_why('list file %s is more recent than index file %s' % (list_file, index_file))
+			self.build_index()
+			return True
+
+		self.explain_why_not('index file %s is up to date' % index_file)
+		return False
+
 	def build_struct (self):
 
 		with open(self.get_struct_filename(), 'w') as f:
@@ -237,6 +262,7 @@ class Blog(Sixtus):
 			self.build_struct()
 			return True
 
+		self.update_index()
 		return False
 
 	def build (self):
