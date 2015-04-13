@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 from __future__ import print_function
+import os
 
 class Sixtus:
 
@@ -10,7 +11,10 @@ class Sixtus:
 		self.force, self.flags, self.time_delta, self.sitemap, self.conf = bag
 
 		self.location = self.conf.get('location')
-		self.location['runtime'] = '/opt/devel/web/sixtus/runtime'
+		this_dir = os.path.dirname(__file__)
+		print('This_dir is %s' % this_dir)
+		self.location['runtime'] = os.path.join(this_dir, 'data')
+		print('Location[Runtime] is %s' % self.location['runtime'])
 
 	def loud (self, message):
 		if self.flags.get('loud', False):
