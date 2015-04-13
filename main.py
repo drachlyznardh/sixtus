@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # encoding: utf-8
 
 from __future__ import print_function
@@ -92,6 +91,9 @@ def digest_location (source):
 	if 'six' not in source:
 		source['six'] = os.path.join(source.get('build'), 'six')
 
+	this_dir = os.path.dirname(__file__)
+	source['runtime'] = os.path.join(this_dir, 'data')
+
 	return source
 
 def sixtus_read_args ():
@@ -143,9 +145,9 @@ def sixtus_read_args ():
 	with open(conf_file, 'r') as f:
 		conf = eval(f.read())
 
-	conf['location'] = digest_location(conf.get('location'))
+	loc = digest_location(conf.get('location'))
 
-	bag = (force, flags, time_delta, sitemap, conf)
+	bag = (force, flags, time_delta, sitemap, loc, conf)
 
 	if len(args) == 0:
 		sixtus_build(bag)
