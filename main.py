@@ -93,7 +93,6 @@ def digest_location (source):
 
 	this_dir = os.path.dirname(__file__)
 	source['runtime'] = os.path.join(this_dir, 'data')
-	print('Source[Runtime] = %s' % source.get('runtime'))
 
 	return source
 
