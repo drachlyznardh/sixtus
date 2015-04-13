@@ -11,10 +11,6 @@ class Sixtus:
 		self.force, self.flags, self.time_delta, self.sitemap, self.conf = bag
 
 		self.location = self.conf.get('location')
-		this_dir = os.path.dirname(__file__)
-		print('This_dir is %s' % this_dir)
-		self.location['runtime'] = os.path.join(this_dir, 'data')
-		print('Location[Runtime] is %s' % self.location['runtime'])
 
 	def loud (self, message):
 		if self.flags.get('loud', False):

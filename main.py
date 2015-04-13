@@ -92,6 +92,10 @@ def digest_location (source):
 	if 'six' not in source:
 		source['six'] = os.path.join(source.get('build'), 'six')
 
+	this_dir = os.path.dirname(__file__)
+	source['runtime'] = os.path.join(this_dir, 'data')
+	print('Source[Runtime] = %s' % source.get('runtime'))
+
 	return source
 
 def sixtus_read_args ():
