@@ -64,10 +64,10 @@ class ContentConverter:
 			self.start_writing(c, self.parse_recursive(args))
 		elif c == 'id':
 			self.stop_writing()
-			self.content += ('<a id="%s"></a>' % args[0])
+			self.content += ('<a id="%s"></a>\n' % args[0])
 		elif c == 'br':
 			self.stop_writing()
-			self.content += '<br/>'
+			self.content += '<br/>\n'
 		elif c == 'begin':
 			self.stop_writing()
 			self.open_env(args)
@@ -100,9 +100,9 @@ class ContentConverter:
 			content = self.parse_recursive(args)
 			self.stop_writing()
 			if direction:
-				self.content += '<%s %s>%s</%s>' % (tag, direction, content, tag)
+				self.content += '<%s %s>%s</%s>\n' % (tag, direction, content, tag)
 			else:
-				self.content += '<%s>%s</%s>' % (tag, content, tag)
+				self.content += '<%s>%s</%s>\n' % (tag, content, tag)
 
 	def parse_recursive (self, args):
 
@@ -143,9 +143,9 @@ class ContentConverter:
 		if not self.writing: return
 
 		if self.p_or_li:
-			self.content += '</p>'
+			self.content += '</p>\n'
 		else:
-			self.content += '</li>'
+			self.content += '</li>\n'
 
 		self.writing = False
 
@@ -154,7 +154,7 @@ class ContentConverter:
 		if self.writing:
 			if len(text) == 0: self.stop_writing()
 			else: self.content += (' %s' % text)
-		else: self.start_writing('p', text)
+		elif len(text): self.start_writing('p', text)
 
 	def make_tid (self, args):
 
@@ -237,7 +237,7 @@ class ContentConverter:
 			if size > 2: output.append('start="%s"' % args[2])
 
 			self.content += ('<ol %s>' % ' '.join(output))
-			self.environment.append((self.p_or_li, '</ol>'))
+			self.environment.append((self.p_or_li, '</ol>\n'))
 			self.p_or_li = False
 
 		elif env == 'mini' or env == 'half':
@@ -245,7 +245,7 @@ class ContentConverter:
 			if side != 'left' and side != 'right':
 				self.error('Unknown side %s' % args)
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
-			self.environment.append((self.p_or_li, '</div></div>'))
+			self.environment.append((self.p_or_li, '</div></div>\n'))
 
 		else: self.error('Unknown environment %s' % args)
 
@@ -264,7 +264,7 @@ class ContentConverter:
 		if side != 'left' and side != 'right' and side != 'both':
 			self.error('Unknown side for clear# %s' % args)
 
-		self.content += ('<div style="float:none;clear:%s"></div>' % side)
+		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
 class FullConverter(ContentConverter):
 
