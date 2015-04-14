@@ -143,9 +143,9 @@ class ContentConverter:
 		if not self.writing: return
 
 		if self.p_or_li:
-			self.content += '</p>'
+			self.content += '</p>\n'
 		else:
-			self.content += '</li>'
+			self.content += '</li>\n'
 
 		self.writing = False
 
