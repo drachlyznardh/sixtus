@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # encoding: utf-8
 
 import sys
@@ -26,37 +25,37 @@ class Pages(Sixtus):
 
 	# Returns full path for a .pag file
 	def get_pag_filename (self, name):
-		return os.path.join(self.location['pag'], '%s.pag' % name)
+		return os.path.join(self.loc['pag'], '%s.pag' % name)
 
 	# Returns full path for a .Six file
 	def get_Six_filename (self, name):
-		return os.path.join(self.location['Six'], '%s.Six' % name)
+		return os.path.join(self.loc['Six'], '%s.Six' % name)
 
 	# Returns full path for a .src file
 	def get_src_filename (self, name):
-		return os.path.join(self.location['src'], '%s.src' % name)
+		return os.path.join(self.loc['src'], '%s.src' % name)
 
 	# Returns full path for a .dep file
 	def get_dep_filename (self, name):
-		return os.path.join(self.location['dep'], '%s.dep' % name)
+		return os.path.join(self.loc['dep'], '%s.dep' % name)
 
 	# Returns full path for a .six file
 	def get_six_filename (self, bundle):
 		extension = ['page.six', 'jump.six', 'side.six']
-		return os.path.join(self.location['six'], bundle[1], extension[bundle[0]])
+		return os.path.join(self.loc['six'], bundle[1], extension[bundle[0]])
 
 	# Returns full path for a .php file
 	def get_php_filename (self, bundle):
 		extension = ['index.php', 'index.php', 'side.php']
-		return os.path.join(self.location['deploy'], bundle[1], extension[bundle[0]])
+		return os.path.join(self.loc['deploy'], bundle[1], extension[bundle[0]])
 
 	# Returns full path for a category jump index.php file
 	def get_cat_jump_filename (self, bundle):
-		return os.path.join(self.location.get('deploy'), bundle[0], 'index.php')
+		return os.path.join(self.loc.get('deploy'), bundle[0], 'index.php')
 
 	# Locate source pages
 	def find_page_sources (self):
-		return util.find_all_sources(self.location['pag'], r'^(.*)\.pag$', True)
+		return util.find_all_sources(self.loc['pag'], r'^(.*)\.pag$', True)
 
 	# Loads existings .src files, compiles the sources dictionary
 	def load_src_file (self, stem):
@@ -199,7 +198,7 @@ class Pages(Sixtus):
 
 		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
 		base = stem[1]
-		destination = os.path.join(self.location['six'], stem[1])
+		destination = os.path.join(self.loc['six'], stem[1])
 
 		self.loud('Splitting Six file %s' % Six_file)
 
@@ -290,7 +289,7 @@ class Pages(Sixtus):
 
 		result = []
 		found = set()
-		root = self.location.get('deploy')
+		root = self.loc.get('deploy')
 
 		values = sorted(self.sitemap.values())
 
@@ -310,7 +309,7 @@ class Pages(Sixtus):
 
 	def build_cat_jump_file (self, pair):
 
-		root = self.location.get('deploy')
+		root = self.loc.get('deploy')
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
 		self.loud('Generating jump file %s' % jump_file)

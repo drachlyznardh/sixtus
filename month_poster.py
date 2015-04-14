@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- encoding: utf-8 -*-
 
 from __future__ import print_function
@@ -115,4 +114,4 @@ class Poster:
 			print('stitle|link|Blog/%s/%s/|%s %s' % (self.this_page[0], self.this_page[1], self.this_page[2], self.this_page[0]), file=f)
 			for number, value in sorted(self.post_title.items()):
 				print('p|<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
-				print('\n&amp;\n'.join(['link|%s|%s|%s/%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)
+				print('\n&amp;\n'.join(['link|%s|%s|%s-%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)
