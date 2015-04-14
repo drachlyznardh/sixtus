@@ -154,7 +154,7 @@ class ContentConverter:
 		if self.writing:
 			if len(text) == 0: self.stop_writing()
 			else: self.content += (' %s' % text)
-		else: self.start_writing('p', text)
+		elif len(text): self.start_writing('p', text)
 
 	def make_tid (self, args):
 
