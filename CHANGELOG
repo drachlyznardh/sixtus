@@ -1,3 +1,6 @@
+0.10.6 14/04/2015
+Rebuild target, better handling of invalid targets
+
 0.10.5 14/04/2015
 Multiline PHP files are easier to read. Multiple subsequent empty lines don't
 leave a trail of empty paragraphs anymore.
