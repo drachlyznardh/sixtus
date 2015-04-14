@@ -54,7 +54,7 @@ def sixtus_veryclean (bag):
 	if d: print('Siχtus 0.10, cleaning hard done')
 
 def sixtus_help ():
-	print('usage: %s [options] (build|clean|veryclean)*' % sys.argv[0])
+	print('usage: %s [options] (build|clean|veryclean|rebuild)*' % sys.argv[0])
 	print()
 	print(' -h --help          : shows this help')
 	print(' -v --verbose       : shows performed operations')
@@ -157,6 +157,9 @@ def sixtus_read_args ():
 		if target == 'build': sixtus_build(bag)
 		elif target == 'clean': sixtus_clean(bag)
 		elif target == 'veryclean': sixtus_veryclean(bag)
+		elif target == 'rebuild':
+			sixtus_veryclean(bag)
+			sixtus_build(bag)
 		else: raise Exception('What target is %s supposed to be?' % target)
 
 if __name__ == "__main__":
