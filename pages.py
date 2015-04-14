@@ -22,6 +22,7 @@ class Pages(Sixtus):
 		self.sixSixmap = {}
 		self.sources = {}
 		self.products = []
+		self.forced = set()
 
 	# Returns full path for a .pag file
 	def get_pag_filename (self, name):
@@ -197,6 +198,10 @@ class Pages(Sixtus):
 	def build_six_file (self, stem):
 
 		Six_file = self.get_Six_filename(self.map_six_to_Six(stem))
+
+		if Six_file in self.forced: return
+
+		self.forced.add(Six_file)
 		base = stem[1]
 		destination = os.path.join(self.loc['six'], stem[1])
 
