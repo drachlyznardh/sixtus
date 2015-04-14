@@ -155,11 +155,11 @@ def sixtus_read_args ():
 
 	calls = []
 	for target in args:
-		if target == 'build': #sixtus_build(bag)
+		if target == 'build':
 			calls.append(sixtus_build)
-		elif target == 'clean': #sixtus_clean(bag)
+		elif target == 'clean':
 			calls.append(sixtus_clean)
-		elif target == 'veryclean': #sixtus_veryclean(bag)
+		elif target == 'veryclean':
 			calls.append(sixtus_veryclean)
 		elif target == 'rebuild':
 			calls.append(sixtus_veryclean)
