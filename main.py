@@ -29,8 +29,8 @@ def sixtus_clean (bag):
 	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning')
 
-	build_dir = bag[4].get('location').get('build')
-	blog_build_dir = bag[4].get('location').get('blog-out')
+	build_dir = bag[4].get('build')
+	blog_build_dir = bag[4].get('blog-out')
 
 	import shutil
 	if d: print('Removing build dir %s' % build_dir)
