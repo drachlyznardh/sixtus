@@ -1,3 +1,7 @@
+0.10.8 15/04/2015
+Including VIM syntax file, bash completion script and renaming class Sixtus in
+Base to avoid confusion
+
 0.10.7 15/04/2015
 Dynamically loaded version number, more data files included
 
