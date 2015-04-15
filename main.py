@@ -69,7 +69,8 @@ def sixtus_help ():
 	print(' -n --not --why-not : shows explanation on up-to-date files')
 
 def sixtus_version ():
-	print('Siχtus 0.10')
+	__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
+	print('Siχtus v%s' % __version__)
 
 def digest_location (source):
 
