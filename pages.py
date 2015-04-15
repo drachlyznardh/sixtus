@@ -4,7 +4,7 @@ import sys
 import os
 import re
 
-from sixtus import Sixtus
+from base import Base
 import util
 
 # Builders
@@ -13,11 +13,11 @@ import dep
 import six
 import php
 
-class Pages(Sixtus):
+class Pages(Base):
 
 	def __init__ (self, bag):
 
-		Sixtus.__init__(self, bag)
+		Base.__init__(self, bag)
 
 		self.sixSixmap = {}
 		self.sources = {}

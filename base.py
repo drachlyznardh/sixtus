@@ -3,7 +3,7 @@
 from __future__ import print_function
 import os
 
-class Sixtus:
+class Base:
 
 	def __init__ (self, bag):
 

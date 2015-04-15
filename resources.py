@@ -5,14 +5,14 @@ import sys
 import os
 import re
 
-from sixtus import Sixtus
+from base import Base
 import util
 
-class Resources(Sixtus):
+class Resources(Base):
 
 	def __init__ (self, bag):
 
-		Sixtus.__init__(self, bag)
+		Base.__init__(self, bag)
 
 	def copy_file (self, source, destination):
 
