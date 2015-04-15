@@ -2,6 +2,21 @@
 
 from __future__ import print_function
 
+class Helper:
+	def __init__ (self):
+		self.content = ''
+		self.post = {}
+		self.title = {}
+		self.current = False
+
+	def store_content (self):
+		if self.current in self.post:
+			self.post[self.current].append(self.content)
+		elif self.current:
+			self.post[self.current] = [self.content]
+
+		self.content = ''
+
 class Poster:
 
 	def __init__ (self, home):
