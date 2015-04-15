@@ -8,5 +8,5 @@ setup(
 	author_email='drachlyznardh@gmail.com',
 	package_dir={'sixtus':''},
 	packages=['sixtus'],
-	package_data={'sixtus':['data/*']}
+	package_data={'sixtus':['data/*', 'README.md', 'CHANGELOG', 'VERSION']}
 )
