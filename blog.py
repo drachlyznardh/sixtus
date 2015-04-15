@@ -208,10 +208,17 @@ class Blog(Base):
 		p.output_pag_file(self.get_archive_filename())
 
 	def build_index (self):
+	#def build_news (self):
+
+		#title = self.conf.get('lang').get('blog').get('news_title')
+		#subtitle = self.conf.get('lang').get('blog').get('news_subtitle')
 
 		p = index_poster.Poster(self.home)
+		#p = news_poster.Poster(self.home, title, subtitle)
 		p.parse_target(self.get_list_filename(self.month[-1]))
+		#p.parse_target_list([self.get_post_filename(i) for i in reversed(self.month)])
 		p.output_pag_file(self.get_index_filename())
+		#p.output_pag_file(self.get_news_filename())
 
 	def update_index (self):
 
