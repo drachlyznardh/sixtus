@@ -5,14 +5,14 @@ import sys
 import os
 import re
 
-from sixtus import Sixtus
+from base import Base
 import util
 
-class Runtime(Sixtus):
+class Runtime(Base):
 
 	def __init__ (self, bag):
 
-		Sixtus.__init__(self, bag)
+		Base.__init__(self, bag)
 
 		self.static_files = ['icon.ico', 'panel.js', 'style.css']
 		self.dynamic_files = [('page-head.php.in', 'page-top.php'), ('page-foot.php.in', 'page-bottom.php'), ('page-waist.php.in', 'page-middle.php')]

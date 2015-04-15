@@ -5,7 +5,7 @@ import sys
 import os
 import re
 
-from sixtus import Sixtus
+from base import Base
 import util
 
 # Builders
@@ -14,11 +14,11 @@ import year_poster
 import archive_poster
 import index_poster
 
-class Blog(Sixtus):
+class Blog(Base):
 
 	def __init__ (self, bag):
 
-		Sixtus.__init__(self, bag)
+		Base.__init__(self, bag)
 		self.home = self.loc.get('blog-home')
 
 		self.blogmap = {}

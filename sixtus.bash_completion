@@ -1,0 +1,25 @@
+__sixtus()
+{
+	local cur sopts lopts targets
+
+	sopts="-h -x -w -n -l"
+	lopts="--help --version --verbose --explain --explain-why --explain-why-not --loud"
+
+	targets="build clean veryclean rebuild"
+
+	cur="${COMP_WORDS[COMP_CWORD]}"
+
+	if [[ ${cur} == --* ]]; then
+		COMPREPLY=( $(compgen -W "${lopts}" -- ${cur}) )
+		return 0
+	elif [[ ${cur} == -* ]]; then
+		COMPREPLY=( $(compgen -W "${sopts}" -- ${cur}) )
+		return 0
+	elif [[ ${cur} == * ]]; then
+		COMPREPLY=( $(compgen -W "${targets}" -- ${cur}) )
+		return 0
+	fi
+
+}
+
+complete -F __sixtus sixtus
