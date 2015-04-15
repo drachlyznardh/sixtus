@@ -6,9 +6,11 @@ from month_poster import Poster as Helper
 
 class Poster:
 
-	def __init__ (self, home):
+	def __init__ (self, home):#, title, subtitle):
 
 		self.home = home
+		#self.title = title
+		#self.subtitle = subtitle
 
 	def parse_line (self, line):
 
@@ -33,8 +35,8 @@ class Poster:
 				self.parse_line(line.strip())
 
 	def output_pag_file (self, pag_file):
+		pass
+		#content = 'jump|%s#%s' % (self.post_url, self.post_hash)
 
-		content = 'jump|%s#%s' % (self.post_url, self.post_hash)
-
-		with open(pag_file, 'w') as f:
-			print(content, file=f)
+		#with open(pag_file, 'w') as f:
+		#	print(content, file=f)
