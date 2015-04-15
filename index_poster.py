@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 
+from month_poster import Poster as Helper
 
 class Poster:
 
@@ -16,6 +17,14 @@ class Poster:
 		token = line.split('|')
 		self.post_url = token[1]
 		self.post_hash = token[3]
+
+	def parse_target_list (self, target_list):
+		for target in target_list:
+			print('Targeting file [%s]' % target)
+			h = Helper(False, False, False, False, False)
+			h.parse_file(target)
+			count = sum([len(i) for i in h.post_content.values()])
+			print('[%s] has %d posts' % (target, count))
 
 	def parse_target (self, list_file):
 
