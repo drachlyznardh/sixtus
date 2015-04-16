@@ -76,6 +76,7 @@ class Poster:
 						ref = '%s-%d' % (day, progress)
 
 						output += '\t\tlink|%s|%s|%s\n' % (destination, post.title, ref)
+						progress += 1
 
 		output += 'start|page\n'
 		many = False
