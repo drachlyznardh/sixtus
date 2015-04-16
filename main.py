@@ -105,8 +105,8 @@ def sixtus_read_args ():
 	map_file = 'map.py'
 	conf_file = 'conf.py'
 
-	short_opt = 'hvxwnBf:m:t:'
-	long_opt = ['help', 'verbose', 'version',
+	short_opt = 'hvqxwnBf:m:t:'
+	long_opt = ['help', 'verbose', 'quiet', 'version',
 		'explain', 'why', 'not', 'why-not',
 		'force', 'conf', 'map', 'time']
 
@@ -121,6 +121,9 @@ def sixtus_read_args ():
 			return
 		elif key in ('-v', '--verbose'):
 			flags['loud'] = True
+		elif key in ('-q', '--quiet'):
+			flags['stats'] = False
+			flags['loud'] = False
 		elif key in ('--version'):
 			sixtus_version()
 			return
