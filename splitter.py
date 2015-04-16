@@ -104,6 +104,9 @@ class Splitter:
 
 	def output_all_files (self, base, destination):
 
+		if len(self.tabnames) == 0:
+			raise Exception('Not tabs in page %s' % base)
+
 		files = []
 		order = self.get_tab_order()
 		tabnext, tabprev = self.get_tab_relation(order)
