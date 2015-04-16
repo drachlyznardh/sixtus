@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 from __future__ import print_function
+import os
 
 from month_poster import Poster as Helper
 from itertools import groupby
@@ -102,3 +103,18 @@ class Poster:
 
 		with open(pag_file, 'w') as f:
 			print(output, file=f)
+
+	def output_feed_file (self, filename):
+
+		output = '<?xml version="1.0" encoding="utf-8"?>\n'
+		output += '<rss version="2.0">\n'
+		output += '\t<channel>\n'
+
+		__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
+		output += '\t\t<generator>Siχtus v%s</generator>\n' % __version__
+
+		output += '\t</channel>\n'
+		output += '</rss>'
+
+		with open(filename, 'w') as f:
+			print(output)#, file=f)

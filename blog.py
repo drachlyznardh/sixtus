@@ -62,6 +62,9 @@ class Blog(Base):
 	def get_post_filename (self, stem):
 		return os.path.join(self.loc['blog-in'], stem[0], '%s.post' % stem[1])
 
+	def get_feed_filename (self):
+		return self.loc.get('feed')
+
 	def get_pag_filename (self, stem):
 		if isinstance(stem, tuple):
 			return os.path.join(self.loc['blog-out'], stem[0], '%s.pag' % stem[1])
@@ -218,6 +221,7 @@ class Blog(Base):
 		p = news_poster.Poster(self.home, title, subtitle, archive, names)
 		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)], threshold)
 		p.output_pag_file(self.get_news_filename())
+		p.output_feed_file(self.get_feed_filename())
 
 	def update_index (self):
 
