@@ -41,15 +41,32 @@ class Poster:
 			self.collect(stem, h, count)
 			threshold -= count
 
-	def parse_target (self, list_file):
-
-		with open(list_file, 'r') as f:
-			for line in f.readlines():
-				self.parse_line(line.strip())
-
 	def output_pag_file (self, pag_file):
-		pass
-		#content = 'jump|%s#%s' % (self.post_url, self.post_hash)
 
-		#with open(pag_file, 'w') as f:
-		#	print(content, file=f)
+		output = ''
+
+		output += 'title|%s\n' % self.title
+		output += 'subtitle|%s\n' % self.subtitle
+		output += 'start|side\n'
+
+		for year, month, content in [(year, month, content) for year, x in reversed(sorted(self.content.items())) for (month, content) in reversed(sorted((x.items())))]:
+			output += '\tstitle@right|%s %s\n' % (year, month)
+			#print(content)
+			#print(dict(content))
+			compact = {}
+			for day, post in reversed(sorted(content)):
+				if day in compact: compact.get(day).append(post)
+				else: compact[day] = [post]
+
+			for day, post_list in reversed(sorted(compact.items())):
+				output += '\t<code>%02d/%02d</code> –\n' % (int(day), int(month))
+				output += '\t\tlink|%s/%s/%02d/|%s|%02d-%d\n' % (self.home, year, int(month), post_list[0].title, int(day), 0)
+				progress = 1
+				for post in post_list[1:]:
+					output += '\t\t&amp;\n'
+					output += '\t\tlink|%s/%s/%02d/|%s|%02d-%d\n' % (self.home, year, int(month), post.title, int(day), progress)
+
+		output += 'start|page\n'
+
+
+		print(output)
