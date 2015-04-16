@@ -117,15 +117,21 @@ class Poster:
 
 		for year in sorted(self.content, reverse=True):
 			for month in sorted(self.content.get(year), reverse=True):
+				destination = '%s/%s/%s/' % (self.home, year, month)
 				for day in sorted(self.content.get(year).get(month), reverse=True):
+					progress = 0
 					for post in self.content.get(year).get(month).get(day):
 
+						ref = '%s-%d' % (day, progress)
+						if len(post.content) < 100: content = post.content;
+						else: content = '%s…' % post.content[:99]
+
 						output += '\t\t<item>\n'
-						output += '\t\t\t<description>'
-						if len(post.content) < 100: output += post.content;
-						else: output += '%s…' % post.content[:99]
-						output += '</description>\n'
+						output += '\t\t\t<description>%s</description>\n' % content
+						output += '\t\t<guid><?=$_SERVER["SERVER_NAME"]?>/%s#%s</guid>\n' % (destination, ref)
 						output += '\t\t</item>\n'
+
+						progress += 1
 
 		output += '\t</channel>\n'
 		output += '</rss>'
