@@ -128,8 +128,13 @@ class Poster:
 					for post in self.content.get(year).get(month).get(day):
 
 						ref = '%s-%d' % (day, howmany - progress)
-						if len(post.content) < 100: content = post.content;
-						else: content = '%s…' % post.content[:99]
+
+						content = ''
+						for line in post.content.split('\n'):
+							if len(content) > 99: break
+							if line.startswith('#'): continue
+							if '|' in line: continue
+							content += line
 
 						output += '\t\t<item>\n'
 						output += '\t\t\t<title>%s – %s</title>\n' % (date, post.title)
