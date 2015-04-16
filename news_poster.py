@@ -82,7 +82,7 @@ class Poster:
 						if many: output += 'br|\n'
 						else: many = True
 
-						destination = '%s/%s/%s' % (self.home, year, month)
+						destination = '%s/%s/%s/' % (self.home, year, month)
 						date = '%s/%s/%s' % (day, month, year)
 						ref = '%s-%d' % (day, progress)
 						output += 'link|%s|%s|%s\n' % (destination, date, ref)
