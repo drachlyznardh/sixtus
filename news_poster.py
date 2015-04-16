@@ -3,6 +3,7 @@
 from __future__ import print_function
 
 from month_poster import Poster as Helper
+from itertools import groupby
 
 class Poster:
 
@@ -24,7 +25,9 @@ class Poster:
 	def collect (self, stem, helper, count):
 		year, month = stem
 		if year not in self.content: self.content[year] = {}
-		self.content.get(year)[month] = ([(i, x) for i, j in reversed(sorted(helper.post.items())) for x in j][:count])
+		selected = [(i, x) for i, j in reversed(sorted(helper.post.items())) for x in j][:count]
+		addenda = {k:[i for i in reversed([i for j,i in list(v)])] for k,v in groupby(selected, lambda x:x[0])}
+		self.content.get(year)[month] = addenda
 
 	def parse_target_list (self, target_list, threshold):
 
