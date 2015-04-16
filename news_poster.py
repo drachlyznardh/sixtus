@@ -91,7 +91,7 @@ class Poster:
 						else: many = True
 
 						destination = '%s/%s/%s/' % (self.home, year, month)
-						date = '%s/%s/%s' % (day, month, year)
+						date = '%s/%s/%s' % (year, month, day)
 						ref = '%s-%d' % (day, progress)
 						output += 'link|%s|%s|%s\n' % (destination, date, ref)
 						output += post.display_category()
