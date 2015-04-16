@@ -92,4 +92,5 @@ class Poster:
 
 						progress += 1
 
-		print(output)
+		with open(pag_file, 'w') as f:
+			print(output, file=f)
