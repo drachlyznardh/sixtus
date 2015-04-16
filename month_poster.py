@@ -14,6 +14,17 @@ class Post:
 			self.content += ('\n%s' % text)
 		else: self.content = text
 
+	def display_category (self):
+
+		size = len(self.category)
+
+		if size == 0: return ''
+		if size == 1: result = '/ %s' % self.category[0].capitalize()
+		if size > 1:
+			result = '/ %s &amp; %s' % (', '.join(w.capitalize() for w in self.category[0:-1]), self.category[-1].capitalize())
+
+		return '%s\n' % result
+
 class Poster:
 
 	def __init__ (self, home, subtitle, this_page, prev_page, next_page):
@@ -85,7 +96,7 @@ class Poster:
 					post = Post()
 					day = token[1]
 					post.title = token[2]
-					if size > 3: post.catogory = token[3:]
+					if size > 3: post.category = token[3:]
 
 					self.store_content()
 					try: self.current = token[1]
