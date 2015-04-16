@@ -68,8 +68,28 @@ class Poster:
 				for post in post_list[1:]:
 					output += '\t\t&amp;\n'
 					output += '\t\tlink|%s/%s/%02d/|%s|%02d-%d\n' % (self.home, year, int(month), post.title, int(day), progress)
+					progress += 1
 
 		output += 'start|page\n'
+		many = False
 
+		for year in sorted(self.content, reverse=True):
+			for month in sorted(self.content.get(year), reverse=True):
+				for day in sorted(self.content.get(year).get(month), reverse=True):
+					progress = 0
+					for post in self.content.get(year).get(month).get(day):
+
+						if many: output += 'br|\n'
+						else: many = True
+
+						destination = '%s/%s/%s' % (self.home, year, month)
+						date = '%s/%s/%s' % (day, month, year)
+						ref = '%s-%d' % (day, progress)
+						output += 'link|%s|%s|%s\n' % (destination, date, ref)
+						output += post.display_category()
+						output += 'title|%s\n' % post.title
+						output += '%s\n' % post.content
+
+						progress += 1
 
 		print(output)
