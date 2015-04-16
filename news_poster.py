@@ -52,23 +52,22 @@ class Poster:
 		output += 'subtitle|%s\n' % self.subtitle
 		output += 'start|side\n'
 
-		for year, month, content in [(year, month, content) for year, x in reversed(sorted(self.content.items())) for (month, content) in reversed(sorted((x.items())))]:
-			output += '\tstitle@right|%s %s\n' % (year, month)
-			#print(content)
-			#print(dict(content))
-			compact = {}
-			for day, post in reversed(sorted(content)):
-				if day in compact: compact.get(day).append(post)
-				else: compact[day] = [post]
+		for year in sorted(self.content, reverse=True):
+			for month in sorted(self.content.get(year), reverse=True):
+				for day in sorted(self.content.get(year).get(month), reverse=True):
+					progress = 0
+					for post in self.content.get(year).get(month).get(day):
 
-			for day, post_list in reversed(sorted(compact.items())):
-				output += '\t<code>%02d/%02d</code> –\n' % (int(day), int(month))
-				output += '\t\tlink|%s/%s/%02d/|%s|%02d-%d\n' % (self.home, year, int(month), post_list[0].title, int(day), 0)
-				progress = 1
-				for post in post_list[1:]:
-					output += '\t\t&amp;\n'
-					output += '\t\tlink|%s/%s/%02d/|%s|%02d-%d\n' % (self.home, year, int(month), post.title, int(day), progress)
-					progress += 1
+						if progress:
+							output += '\t\t&amp;\n'
+						else:
+							date = '%s/%s' % (day, month)
+							output += '\tp|<code>%s</code> –\n' % date
+
+						destination = '%s/%s/%s/' % (self.home, year, month)
+						ref = '%s-%d' % (day, progress)
+
+						output += '\t\tlink|%s|%s|%s\n' % (destination, post.title, ref)
 
 		output += 'start|page\n'
 		many = False
