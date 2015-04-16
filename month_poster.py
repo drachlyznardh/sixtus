@@ -18,11 +18,14 @@ class Post:
 		size = len(self.category)
 
 		if size == 0: return ''
-		if size == 1: result = '/ %s' % self.category[0].capitalize()
-		if size > 1:
-			result = '/ %s &amp; %s' % (', '.join(w.capitalize() for w in self.category[0:-1]), self.category[-1].capitalize())
 
-		return '%s\n' % result
+		if size == 1:
+			return '/ %s\n' % self.category[0].capitalize()
+
+		all_but_last = ', '.join(w.capitalize() for w in self.category[0:-1])
+		last = self.category[-1].capitalize()
+
+		return '/ %s &amp; %s\n' % (all_but_last, last)
 
 class Poster:
 
