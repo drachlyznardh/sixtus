@@ -21,12 +21,19 @@ class Poster:
 		self.post_hash = token[3]
 
 	def parse_target_list (self, target_list):
+		threshold = 10
 		for target in target_list:
 			print('Targeting file [%s]' % target)
 			h = Helper(False, False, False, False, False)
 			h.parse_file(target)
 			count = sum([len(i) for i in h.post_content.values()])
 			print('[%s] has %d posts' % (target, count))
+			if count > threshold:
+				print('Using %d posts from %s' % (threshold, target))
+				break
+			else:
+				print('Using %d posts from %s' % (count, target))
+				threshold -= count
 
 	def parse_target (self, list_file):
 
