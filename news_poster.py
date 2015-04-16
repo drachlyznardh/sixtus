@@ -6,11 +6,11 @@ from month_poster import Poster as Helper
 
 class Poster:
 
-	def __init__ (self, home):#, title, subtitle):
+	def __init__ (self, home, title, subtitle):
 
 		self.home = home
-		#self.title = title
-		#self.subtitle = subtitle
+		self.title = title
+		self.subtitle = subtitle
 		self.content = {}
 
 	def parse_line (self, line):
