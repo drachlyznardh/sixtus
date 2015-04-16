@@ -136,6 +136,8 @@ class Poster:
 							if '|' in line: continue
 							content += line
 
+						if len(content) > 99: content = '%s…' % content[:99]
+
 						output += '\t\t<item>\n'
 						output += '\t\t\t<title>%s – %s</title>\n' % (date, post.title)
 						output += '\t\t\t<description>%s</description>\n' % content
