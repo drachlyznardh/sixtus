@@ -120,11 +120,12 @@ class Poster:
 			for month in sorted(self.content.get(year), reverse=True):
 				destination = '%s/%s/%s/' % (self.home, year, month)
 				for day in sorted(self.content.get(year).get(month), reverse=True):
+					howmany = len(self.content.get(year).get(month).get(day)) -1
 					progress = 0
 					date = '%s/%s/%s' % (year, month, day)
 					for post in self.content.get(year).get(month).get(day):
 
-						ref = '%s-%d' % (day, progress)
+						ref = '%s-%d' % (day, howmany - progress)
 						if len(post.content) < 100: content = post.content;
 						else: content = '%s…' % post.content[:99]
 
