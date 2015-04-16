@@ -23,6 +23,7 @@ class Poster:
 
 	def collect (self, stem, helper, count):
 		year, month = stem
+		if year not in self.content: self.content[year] = {}
 		self.content.get(year)[month] = ([(i, x) for i, j in reversed(sorted(helper.post.items())) for x in j][:count])
 
 	def parse_target_list (self, target_list):
