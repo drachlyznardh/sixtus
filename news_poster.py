@@ -3,6 +3,7 @@
 from __future__ import print_function
 import os
 
+from util import assert_dir
 from month_poster import Poster as Helper
 from itertools import groupby
 
@@ -128,5 +129,7 @@ class Poster:
 		output += '\t</channel>\n'
 		output += '</rss>'
 
+		assert_dir(filename)
 		with open(filename, 'w') as f:
-			print(output)#, file=f)
+			print(output)
+			print(output, file=f)

@@ -63,7 +63,7 @@ class Blog(Base):
 		return os.path.join(self.loc['blog-in'], stem[0], '%s.post' % stem[1])
 
 	def get_feed_filename (self):
-		return self.loc.get('feed')
+		return os.path.join(self.loc['deploy'], self.loc.get('feed'))
 
 	def get_pag_filename (self, stem):
 		if isinstance(stem, tuple):
