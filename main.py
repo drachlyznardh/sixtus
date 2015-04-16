@@ -58,6 +58,7 @@ def sixtus_help ():
 	print()
 	print(' -h --help          : shows this help')
 	print(' -v --verbose       : shows performed operations')
+	print(' -q --quiet         : avoids showing performed operations and stats')
 	print('    --version       : shows version number')
 	print()
 	print(' -f,--conf=<file>   : load configuration from <file>')
