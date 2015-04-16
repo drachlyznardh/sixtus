@@ -212,9 +212,10 @@ class Blog(Base):
 		title = self.conf.get('lang').get('blog').get('news_title')
 		subtitle = self.conf.get('lang').get('blog').get('news_subtitle')
 		threshold = self.conf.get('lang').get('blog').get('news_threshold')
+		archive = self.conf.get('lang').get('blog').get('archive_title')
 		names = self.conf.get('lang').get('month')
 
-		p = news_poster.Poster(self.home, title, subtitle, names)
+		p = news_poster.Poster(self.home, title, subtitle, archive, names)
 		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)], threshold)
 		p.output_pag_file(self.get_news_filename())
 

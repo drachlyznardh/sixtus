@@ -7,11 +7,12 @@ from itertools import groupby
 
 class Poster:
 
-	def __init__ (self, home, title, subtitle, names):
+	def __init__ (self, home, title, subtitle, archive, names):
 
 		self.home = home
 		self.title = title
 		self.subtitle = subtitle
+		self.archive = archive
 		self.names = names
 		self.content = {}
 
@@ -51,6 +52,7 @@ class Poster:
 
 		output += 'title|%s\n' % self.title
 		output += 'subtitle|%s\n' % self.subtitle
+		output += 'next|%s/%s/|%s\n' % (self.home, self.archive, self.archive)
 
 		output += 'start|side\n'
 		many = False
