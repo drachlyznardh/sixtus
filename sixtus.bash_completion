@@ -2,8 +2,8 @@ __sixtus()
 {
 	local cur sopts lopts targets
 
-	sopts="-h -x -w -n -l"
-	lopts="--help --version --verbose --explain --explain-why --explain-why-not --loud"
+	sopts="-h -v -q -f -m -t -x -w -n"
+	lopts="--help --version --verbose --quit --conf --map --time --explain --explain-why --explain-why-not"
 
 	targets="build clean veryclean rebuild"
 
