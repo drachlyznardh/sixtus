@@ -111,7 +111,7 @@ def sixtus_read_args ():
 		'force', 'conf', 'map', 'time']
 
 	try: optlist, args = getopt.gnu_getopt(sys.argv[1:], short_opt, long_opt)
-	except getopot.GetoptError as err:
+	except getopt.GetoptError as err:
 		sixtus_help()
 		raise err
 
