@@ -3,6 +3,12 @@
 from __future__ import print_function
 import re
 
+class Post:
+	def __init__ (self):
+		self.title = False
+		self.category = []
+		self.content = ''
+
 class Poster:
 
 	def __init__ (self, home, subtitle, this_page, prev_page, next_page):
