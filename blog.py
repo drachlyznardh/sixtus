@@ -12,7 +12,7 @@ import util
 import month_poster
 import year_poster
 import archive_poster
-import index_poster
+import news_poster
 
 class Blog(Base):
 
@@ -56,7 +56,7 @@ class Blog(Base):
 	def get_archive_filename (self):
 		return os.path.join(self.loc.get('blog-out'), '%s.pag' % self.conf.get('lang').get('blog').get('archive_title'))
 
-	def get_index_filename (self):
+	def get_news_filename (self):
 		return os.path.join(self.loc.get('blog-out'), 'index.pag')
 
 	def get_post_filename (self, stem):
@@ -207,24 +207,30 @@ class Blog(Base):
 		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_file(self.get_archive_filename())
 
-	def build_index (self):
+	def build_news (self):
 
-		p = index_poster.Poster(self.home)
-		p.parse_target(self.get_list_filename(self.month[-1]))
-		p.output_pag_file(self.get_index_filename())
+		title = self.conf.get('lang').get('blog').get('news_title')
+		subtitle = self.conf.get('lang').get('blog').get('news_subtitle')
+		threshold = self.conf.get('lang').get('blog').get('news_threshold')
+		archive = self.conf.get('lang').get('blog').get('archive_title')
+		names = self.conf.get('lang').get('month')
+
+		p = news_poster.Poster(self.home, title, subtitle, archive, names)
+		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)], threshold)
+		p.output_pag_file(self.get_news_filename())
 
 	def update_index (self):
 
-		index_file = self.get_index_filename()
+		index_file = self.get_news_filename()
 
 		if self.force:
 			self.explain_why('Force rebuild of index file %s' % index_file)
-			self.build_index()
+			self.build_news()
 			return True
 
 		if not os.path.exists(index_file):
 			self.explain_why('Index file %s does not exist' % index_file)
-			self.build_index()
+			self.build_news()
 			return True
 
 		index_time = os.path.getmtime(index_file)
@@ -232,7 +238,7 @@ class Blog(Base):
 		list_time = os.path.getmtime(list_file)
 		if list_time - index_time > self.time_delta:
 			self.explain_why('list file %s is more recent than index file %s' % (list_file, index_file))
-			self.build_index()
+			self.build_news()
 			return True
 
 		self.explain_why_not('index file %s is up to date' % index_file)
@@ -250,14 +256,14 @@ class Blog(Base):
 		if self.force:
 			self.explain_why('Force blog rebuild')
 			self.build_archive()
-			self.build_index()
+			self.build_news()
 			self.build_struct()
 			return True
 
 		if len(struct) != len(self.month) or len([a for a in struct if a not in self.month]) or len([a for a in self.month if a not in struct]):
 			self.explain_why('blog structure changed')
 			self.build_archive()
-			self.build_index()
+			self.build_news()
 			self.build_struct()
 			return True
 

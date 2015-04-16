@@ -3,6 +3,28 @@
 from __future__ import print_function
 import re
 
+class Post:
+	def __init__ (self):
+		self.title = False
+		self.category = []
+		self.content = ''
+
+	def append_content (self, text):
+		if len(self.content):
+			self.content += ('\n%s' % text)
+		else: self.content = text
+
+	def display_category (self):
+
+		size = len(self.category)
+
+		if size == 0: return ''
+		if size == 1: result = '/ %s' % self.category[0].capitalize()
+		if size > 1:
+			result = '/ %s &amp; %s' % (', '.join(w.capitalize() for w in self.category[0:-1]), self.category[-1].capitalize())
+
+		return '%s\n' % result
+
 class Poster:
 
 	def __init__ (self, home, subtitle, this_page, prev_page, next_page):
@@ -19,6 +41,7 @@ class Poster:
 		self.content = ''
 		self.post_content = {}
 		self.post_title = {}
+		self.post = {}
 		self.current = False
 
 	def store_content (self):
@@ -42,7 +65,15 @@ class Poster:
 			self.content += ('\n%s' % text)
 		else: self.content = text
 
+	def store_post (self, day, post):
+		if post == None: return
+		if day not in self.post: self.post[day] = []
+		self.post.get(day).append(post)
+
 	def parse_file (self, filename):
+
+		day = False
+		post = None
 
 		with open(filename) as f:
 			for i in f:
@@ -61,6 +92,12 @@ class Poster:
 					token = line.split('|')
 					size = len(token)
 
+					self.store_post(day, post)
+					post = Post()
+					day = token[1]
+					post.title = token[2]
+					if size > 3: post.category = token[3:]
+
 					self.store_content()
 					try: self.current = token[1]
 					except: raise Exception('(%s), (%s)' % (line, token))
@@ -75,8 +112,10 @@ class Poster:
 					continue
 
 				self.append_content(line)
+				post.append_content(line)
 
 		self.store_content()
+		self.store_post(day, post)
 
 	def output_pag_file (self, filename):
 
