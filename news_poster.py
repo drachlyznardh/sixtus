@@ -113,6 +113,18 @@ class Poster:
 		__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 		output += '\t\t<generator>Siχtus v%s</generator>\n' % __version__
 
+		for year in sorted(self.content, reverse=True):
+			for month in sorted(self.content.get(year), reverse=True):
+				for day in sorted(self.content.get(year).get(month), reverse=True):
+					for post in self.content.get(year).get(month).get(day):
+
+						output += '\t\t<item>\n'
+						output += '\t\t\t<description>'
+						if len(post.content) < 100: output += post.content;
+						else: output += '%s…' % post.content[:99]
+						output += '</description>\n'
+						output += '\t\t</item>\n'
+
 		output += '\t</channel>\n'
 		output += '</rss>'
 
