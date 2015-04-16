@@ -21,3 +21,7 @@ class Base:
 		if self.flags.get('not', False):
 			print(message)
 
+	def stats (self, message):
+		if self.flags.get('stats', False):
+			print(message)
+

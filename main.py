@@ -58,6 +58,7 @@ def sixtus_help ():
 	print()
 	print(' -h --help          : shows this help')
 	print(' -v --verbose       : shows performed operations')
+	print(' -q --quiet         : avoids showing performed operations and stats')
 	print('    --version       : shows version number')
 	print()
 	print(' -f,--conf=<file>   : load configuration from <file>')
@@ -99,14 +100,14 @@ def digest_location (source):
 
 def sixtus_read_args ():
 
-	flags = {}
+	flags = {'stats':True}
 	time_delta = 0.5
 	force = False
 	map_file = 'map.py'
 	conf_file = 'conf.py'
 
-	short_opt = 'hvxwnBf:m:t:'
-	long_opt = ['help', 'verbose', 'version',
+	short_opt = 'hvqxwnBf:m:t:'
+	long_opt = ['help', 'verbose', 'quiet', 'version',
 		'explain', 'why', 'not', 'why-not',
 		'force', 'conf', 'map', 'time']
 
@@ -121,6 +122,9 @@ def sixtus_read_args ():
 			return
 		elif key in ('-v', '--verbose'):
 			flags['loud'] = True
+		elif key in ('-q', '--quiet'):
+			flags['stats'] = False
+			flags['loud'] = False
 		elif key in ('--version'):
 			sixtus_version()
 			return

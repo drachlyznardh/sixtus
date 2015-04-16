@@ -78,8 +78,12 @@ class Resources(Base):
 
 	def build (self):
 
-		for name in util.find_all_sources(self.loc.get('res'), r'^(.*)$', False):
+		sources = util.find_all_sources(self.loc.get('res'), r'^(.*)$', False)
+
+		for name in sources:
 			self.update_file(name)
+
+		self.stats('%03d resource files' % len(sources))
 
 	def remove (self):
 

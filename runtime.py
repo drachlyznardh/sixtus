@@ -107,6 +107,9 @@ class Runtime(Base):
 		for pair in self.dynamic_files:
 			self.update_file(pair, self.copy_replace)
 
+		sources = len(self.static_files) + len(self.dynamic_files)
+		self.stats('%03d runtime files' % sources)
+
 	def remove (self):
 
 		for name in self.static_files:
