@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
 
 from __future__ import print_function
-import re
 
 class Post:
 	def __init__ (self):
@@ -35,8 +34,6 @@ class Poster:
 		self.this_page = this_page
 		self.prev_page = prev_page
 		self.next_page = next_page
-
-		self.check = re.compile(r'^post\|')
 
 		self.content = ''
 		self.post_content = {}
@@ -87,7 +84,7 @@ class Poster:
 					self.append_content('')
 					continue
 
-				if self.check.match(line):
+				if line.startswith('post|'):
 
 					token = line.split('|')
 					size = len(token)
