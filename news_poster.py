@@ -37,7 +37,7 @@ class Poster:
 
 			h = Helper(False, False, False, False, False)
 			h.parse_file(target)
-			count = sum([len(i) for i in h.post_content.values()])
+			count = sum([len(i) for i in h.post.values()])
 
 			if count >= threshold:
 				self.collect(stem, h, threshold)
