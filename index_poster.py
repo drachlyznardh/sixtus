@@ -22,21 +22,8 @@ class Poster:
 		self.post_hash = token[3]
 
 	def collect (self, stem, helper, count):
-		print('Collecting %d posts from %s' % (count, stem))
-
 		year, month = stem
-		if year not in self.content: self.content[year] = {}
-		self.content[year][month] = {}
-
-		c = count
-		for day, post_list in reversed(sorted(helper.post.items())):
-			if day not in self.content[year][month]:
-				self.content[year][month][day] = []
-
-			for post in post_list:
-				if c == 0: break
-				print('title: %s %s' % (day, post.title))
-				c -= 1
+		self.content.get(year)[month] = ([(i, x) for i, j in reversed(sorted(helper.post.items())) for x in j][:count])
 
 	def parse_target_list (self, target_list):
 		threshold = 10
