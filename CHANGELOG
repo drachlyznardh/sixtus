@@ -1,3 +1,6 @@
+0.10.9 16/04/2015
+The blog home page is now dynamic, it contains the most recent posts
+
 0.10.8 15/04/2015
 Including VIM syntax file, bash completion script and renaming class Sixtus in
 Base to avoid confusion
