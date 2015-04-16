@@ -11,6 +11,7 @@ class Poster:
 		self.home = home
 		#self.title = title
 		#self.subtitle = subtitle
+		self.content = {}
 
 	def parse_line (self, line):
 
@@ -22,8 +23,20 @@ class Poster:
 
 	def collect (self, stem, helper, count):
 		print('Collecting %d posts from %s' % (count, stem))
-		print(helper.post_title)
-		print(helper.post_content)
+
+		year, month = stem
+		if year not in self.content: self.content[year] = {}
+		self.content[year][month] = {}
+
+		c = count
+		for day, post_list in reversed(sorted(helper.post.items())):
+			if day not in self.content[year][month]:
+				self.content[year][month][day] = []
+
+			for post in post_list:
+				if c == 0: break
+				print('title: %s %s' % (day, post.title))
+				c -= 1
 
 	def parse_target_list (self, target_list):
 		threshold = 10
