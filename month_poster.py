@@ -171,11 +171,21 @@ class Poster:
 
 	def output_list_file (self, filename):
 
-		this_url = 'Blog/%s/%s/' % (self.this_page[0], self.this_page[1])
+		output = 'id|%s-%s\n' % (self.this_page[0], self.this_page[1])
+		destination = '%s/%s/%s/' % (self.home, self.this_page[0], self.this_page[1])
+		output = 'stitle|link|%s|%s %s\n' % (destination, self.this_page[2], self.this_page[0])
+
+		for day, post_list in sorted(self.post.items()):
+			progress = 0
+			for post in post_list:
+				if progress:
+					output += '\t\t&amp;\n'
+				else:
+					date = '%s/%s' % (day, self.this_page[1])
+					output += '\tp|<code>%s</code> –\n' % date
+				destination = '%s/%s/%s/' % (self.home, self.this_page[0], self.this_page[1])
+				output += '\t\tlink|%s|%s|%s-%d\n' % (destination, post.title, day, progress)
+				progress += 1
 
 		with open(filename, 'w') as f:
-			print('id|%s-%s' % (self.this_page[0], self.this_page[1]), file=f)
-			print('stitle|link|Blog/%s/%s/|%s %s' % (self.this_page[0], self.this_page[1], self.this_page[2], self.this_page[0]), file=f)
-			for number, value in sorted(self.post_title.items()):
-				print('p|<code>%s/%s</code> – ' % (number, self.this_page[1]), file=f)
-				print('\n&amp;\n'.join(['link|%s|%s|%s-%s' % (this_url, value[i], number, i) for i in xrange(len(value))]), file=f)
+			print(output, file=f)
