@@ -121,6 +121,7 @@ class Poster:
 				destination = '%s/%s/%s/' % (self.home, year, month)
 				for day in sorted(self.content.get(year).get(month), reverse=True):
 					progress = 0
+					date = '%s/%s/%s' % (year, month, day)
 					for post in self.content.get(year).get(month).get(day):
 
 						ref = '%s-%d' % (day, progress)
@@ -128,7 +129,7 @@ class Poster:
 						else: content = '%s…' % post.content[:99]
 
 						output += '\t\t<item>\n'
-						output += '\t\t\t<title>%s</title>\n' % post.title
+						output += '\t\t\t<title>%s – %s</title>\n' % (date, post.title)
 						output += '\t\t\t<description>%s</description>\n' % content
 						output += '\t\t\t<guid>http://<?=$_SERVER["SERVER_NAME"]?>/%s#%s</guid>\n' % (destination, ref)
 						output += '\t\t</item>\n'
