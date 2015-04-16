@@ -211,9 +211,10 @@ class Blog(Base):
 
 		title = self.conf.get('lang').get('blog').get('news_title')
 		subtitle = self.conf.get('lang').get('blog').get('news_subtitle')
+		threshold = self.conf.get('lang').get('blog').get('news_threshold')
 
 		p = news_poster.Poster(self.home, title, subtitle)
-		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)])
+		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)], threshold)
 		p.output_pag_file(self.get_news_filename())
 
 	def update_index (self):

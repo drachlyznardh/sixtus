@@ -26,20 +26,18 @@ class Poster:
 		if year not in self.content: self.content[year] = {}
 		self.content.get(year)[month] = ([(i, x) for i, j in reversed(sorted(helper.post.items())) for x in j][:count])
 
-	def parse_target_list (self, target_list):
-		threshold = 10
+	def parse_target_list (self, target_list, threshold):
+
 		for stem, target in target_list:
-			#print('Targeting file [%s]' % target)
+
 			h = Helper(False, False, False, False, False)
 			h.parse_file(target)
 			count = sum([len(i) for i in h.post_content.values()])
-			#print('[%s] has %d posts' % (target, count))
+
 			if count >= threshold:
-				#print('Using %d posts from %s' % (threshold, target))
 				self.collect(stem, h, threshold)
 				break
 
-			#print('Using %d posts from %s' % (count, target))
 			self.collect(stem, h, count)
 			threshold -= count
 
