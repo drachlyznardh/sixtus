@@ -134,9 +134,7 @@ class Poster:
 							if len(content) > 99: break
 							if line.startswith('#'): continue
 							if '|' in line: continue
-							content += line
-
-						if len(content) > 99: content = '%s…' % content[:99]
+							content += ' %s' % line.replace('<', '&lt;').replace('>', '&gt;')
 
 						output += '\t\t<item>\n'
 						output += '\t\t\t<title>%s – %s</title>\n' % (date, post.title)
