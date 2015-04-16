@@ -128,7 +128,7 @@ class Poster:
 
 						output += '\t\t<item>\n'
 						output += '\t\t\t<description>%s</description>\n' % content
-						output += '\t\t<guid><?=$_SERVER["SERVER_NAME"]?>/%s#%s</guid>\n' % (destination, ref)
+						output += '\t\t\t<guid>http://<?=$_SERVER["SERVER_NAME"]?>/%s#%s</guid>\n' % (destination, ref)
 						output += '\t\t</item>\n'
 
 						progress += 1
