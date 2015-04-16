@@ -355,19 +355,27 @@ class Pages(Base):
 
 	def load_products (self):
 
-		for stem in self.find_page_sources():
+		sources = self.find_page_sources()
+
+		for stem in sources:
 			self.load_src_file(stem)
 			self.load_dep_file(stem)
 
+		return len(sources)
+
 	def build (self):
 
-		self.load_products()
+		sources = self.load_products()
 
 		for stem in self.products:
 			self.update_php_file(stem)
 
-		for pair in self.find_all_cat_jumps():
+		jumps = self.find_all_cat_jumps()
+		for pair in jumps:
 			self.update_cat_jump_file(pair)
+
+		self.stats('%03d source pages' % sources)
+		self.stats('%03d php files' % (len(self.products) + len(jumps)))
 
 	def remove (self):
 

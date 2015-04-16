@@ -99,7 +99,7 @@ def digest_location (source):
 
 def sixtus_read_args ():
 
-	flags = {}
+	flags = {'stats':True}
 	time_delta = 0.5
 	force = False
 	map_file = 'map.py'
