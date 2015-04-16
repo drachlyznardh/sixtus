@@ -7,11 +7,12 @@ from itertools import groupby
 
 class Poster:
 
-	def __init__ (self, home, title, subtitle):
+	def __init__ (self, home, title, subtitle, names):
 
 		self.home = home
 		self.title = title
 		self.subtitle = subtitle
+		self.names = names
 		self.content = {}
 
 	def parse_line (self, line):
@@ -50,10 +51,15 @@ class Poster:
 
 		output += 'title|%s\n' % self.title
 		output += 'subtitle|%s\n' % self.subtitle
+
 		output += 'start|side\n'
+		many = False
 
 		for year in sorted(self.content, reverse=True):
 			for month in sorted(self.content.get(year), reverse=True):
+				if many : output += '\tbr|\n'
+				else: many = True
+				output += '\tstitle@right|%s %s\n' % (self.names.get(month), year)
 				for day in sorted(self.content.get(year).get(month), reverse=True):
 					progress = 0
 					for post in self.content.get(year).get(month).get(day):
