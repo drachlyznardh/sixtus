@@ -28,12 +28,12 @@ class Poster:
 			h.parse_file(target)
 			count = sum([len(i) for i in h.post_content.values()])
 			print('[%s] has %d posts' % (target, count))
-			if count > threshold:
+			if count >= threshold:
 				print('Using %d posts from %s' % (threshold, target))
 				break
-			else:
-				print('Using %d posts from %s' % (count, target))
-				threshold -= count
+
+			print('Using %d posts from %s' % (count, target))
+			threshold -= count
 
 	def parse_target (self, list_file):
 
