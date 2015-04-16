@@ -65,6 +65,7 @@ class Poster:
 				else: many = True
 				output += '\tstitle@right|%s %s\n' % (self.names.get(month), year)
 				for day in sorted(self.content.get(year).get(month), reverse=True):
+					howmany = len(self.content.get(year).get(month).get(day)) -1
 					progress = 0
 					for post in self.content.get(year).get(month).get(day):
 
@@ -75,7 +76,7 @@ class Poster:
 							output += '\tp|<code>%s</code> –\n' % date
 
 						destination = '%s/%s/%s/' % (self.home, year, month)
-						ref = '%s-%d' % (day, progress)
+						ref = '%s-%d' % (day, howmany - progress)
 
 						output += '\t\tlink|%s|%s|%s\n' % (destination, post.title, ref)
 						progress += 1
@@ -86,6 +87,7 @@ class Poster:
 		for year in sorted(self.content, reverse=True):
 			for month in sorted(self.content.get(year), reverse=True):
 				for day in sorted(self.content.get(year).get(month), reverse=True):
+					howmany = len(self.content.get(year).get(month).get(day)) -1
 					progress = 0
 					for post in self.content.get(year).get(month).get(day):
 
@@ -94,7 +96,7 @@ class Poster:
 
 						destination = '%s/%s/%s/' % (self.home, year, month)
 						date = '%s/%s/%s' % (year, month, day)
-						ref = '%s-%d' % (day, progress)
+						ref = '%s-%d' % (day, howmany - progress)
 						output += 'link|%s|%s|%s\n' % (destination, date, ref)
 						output += post.display_category()
 						output += 'title|%s\n' % post.title
