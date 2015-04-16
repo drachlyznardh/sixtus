@@ -35,32 +35,7 @@ class Poster:
 		self.prev_page = prev_page
 		self.next_page = next_page
 
-		self.content = ''
-		self.post_content = {}
-		self.post_title = {}
 		self.post = {}
-		self.current = False
-
-	def store_content (self):
-
-		if self.current in self.post_content.keys():
-			self.post_content[self.current].append(self.content)
-		elif self.current:
-			self.post_content[self.current] = [self.content]
-
-		self.content = ''
-
-	def append_title (self, number, title):
-
-		if number in self.post_title.keys():
-			self.post_title[number].append(title)
-		else: self.post_title[number] = [title]
-
-	def append_content (self, text):
-
-		if len(self.content):
-			self.content += ('\n%s' % text)
-		else: self.content = text
 
 	def store_post (self, day, post):
 		if post == None: return
@@ -77,11 +52,11 @@ class Poster:
 				line = i.strip()
 
 				if len(line) == 0:
-					self.append_content(line)
+					post.append_content(line)
 					continue
 
 				if line[0] == '#':
-					self.append_content('')
+					post.append_content('')
 					continue
 
 				if line.startswith('post|'):
@@ -95,23 +70,10 @@ class Poster:
 					post.title = token[2]
 					if size > 3: post.category = token[3:]
 
-					self.store_content()
-					try: self.current = token[1]
-					except: raise Exception('(%s), (%s)' % (line, token))
-
-					if size == 4:
-						self.append_content('/ %s' % token[3].capitalize())
-					if size > 4:
-						self.append_content('/ %s &amp; %s' % (', '.join(w.capitalize() for w in token[3:-1]), token[-1].capitalize()))
-
-					self.append_title(token[1], token[2])
-					self.append_content('title|%s' % token[2])
 					continue
 
-				self.append_content(line)
 				post.append_content(line)
 
-		self.store_content()
 		self.store_post(day, post)
 
 	def output_pag_file (self, filename):
