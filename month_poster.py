@@ -116,7 +116,7 @@ class Poster:
 			progress = 0
 			for post in post_list:
 
-				date = '%s/%s/%s' % (day, self.this_page[1], self.this_page[0])
+				date = '%s/%s/%s' % (self.this_page[0], self.this_page[1], day)
 				ref = '%s-%d' % (day, progress)
 
 				output += 'id|%s\n' % ref
