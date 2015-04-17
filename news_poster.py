@@ -149,5 +149,4 @@ class Poster:
 
 		assert_dir(filename)
 		with open(filename, 'w') as f:
-			print(output)
 			print(output, file=f)
