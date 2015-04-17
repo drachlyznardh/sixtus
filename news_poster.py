@@ -116,7 +116,7 @@ class Poster:
 
 		__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 		output += '\t\t<generator>Siχtus v%s</generator>\n' % __version__
-		output += '\t\t<title><?=$_SERVER["SERVER_NAME"]?></title>\n'
+		output += '\t\t<title><?=$_SERVER["HTTP_HOST"]?></title>\n'
 
 		for year in sorted(self.content, reverse=True):
 			for month in sorted(self.content.get(year), reverse=True):
@@ -139,7 +139,7 @@ class Poster:
 						output += '\t\t<item>\n'
 						output += '\t\t\t<title>%s – %s</title>\n' % (date, post.title)
 						output += '\t\t\t<description>%s</description>\n' % content
-						output += '\t\t\t<guid>http://<?=$_SERVER["SERVER_NAME"]?>/%s#%s</guid>\n' % (destination, ref)
+						output += '\t\t\t<guid>http://<?=$_SERVER["HTTP_HOST"]?>/%s#%s</guid>\n' % (destination, ref)
 						output += '\t\t</item>\n'
 
 						progress += 1
