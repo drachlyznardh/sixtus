@@ -116,12 +116,11 @@ class Poster:
 			progress = 0
 			for post in post_list:
 
-				destination = '%s/%s/%s/' % (self.home, self.this_page[0], self.this_page[1])
-				date = '%s/%s/%s' % (day, self.this_page[1], self.this_page[0])
+				date = '%s/%s/%s' % (self.this_page[0], self.this_page[1], day)
 				ref = '%s-%d' % (day, progress)
 
 				output += 'id|%s\n' % ref
-				output += 'p|link|%s|%s|%s\n' % (destination, date, ref)
+				output += 'p|link||%s|%s\n' % (date, ref)
 				output += post.display_category()
 				output += 'title|%s\n' % post.title
 				output += '%s\n' % post.content

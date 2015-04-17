@@ -404,11 +404,11 @@ class FullConverter(ContentConverter):
 		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
 		output += 'require_once($sixtus."page-top.php");}if($i[1]){?>'
-		output += '%s' % self.page
+		output += '\n%s\n' % self.page
 		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");'
 		if self.side_location:
 			output += 'if($i[2])require_once("%s");' % self.side_location
-		else: output += 'if($i[2]){?>%s<?php }' % self.side
+		else: output += 'if($i[2]){?>\n%s\n<?php }' % self.side
 		output += 'if($i[0])require_once($sixtus."page-bottom.php");?>'
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
