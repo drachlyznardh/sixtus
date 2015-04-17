@@ -109,8 +109,8 @@ class Poster:
 
 	def output_feed_file (self, filename):
 
-		output = '<?php header("Content-Type: application/xml; charset=utf-8"); ?>'
-		output += '<?xml version="1.0" encoding="utf-8"?>\n'
+		output = '<?php header("Content-Type: application/xml; charset=utf-8"); '
+		output += 'echo (\'<?xml version="1.0" encoding="utf-8"?>\') ?>\n'
 		output += '<rss version="2.0">\n'
 		output += '\t<channel>\n'
 
