@@ -36,8 +36,9 @@ def sixtus_clean (bag):
 	if d: print('Removing build dir %s' % build_dir)
 	if os.path.exists(build_dir): shutil.rmtree(build_dir)
 
-	if d: print('Removing build blog dir %s' % blog_build_dir)
-	if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
+	if blog_build_dir:
+		if d: print('Removing build blog dir %s' % blog_build_dir)
+		if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
 
 	if d: print('Siχtus 0.10, cleaning done')
 
