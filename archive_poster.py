@@ -4,13 +4,16 @@ from __future__ import print_function
 
 class Poster:
 
-	def __init__ (self, title, subtitle):
-
-		self.title = title
-		self.subtitle = subtitle
+	def __init__ (self):
 
 		self.side = []
 		self.page = []
+
+	def parse_conf (self, conf):
+
+		archive_conf = conf.get('lang').get('blog').get('archive')
+		self.title = archive_conf.get('title')
+		self.subtitle = archive_conf.get('subtitle')
 
 	def parse_files (self, list_files):
 

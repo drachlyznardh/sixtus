@@ -4,7 +4,7 @@ from __future__ import print_function
 
 class Poster:
 
-	def __init__ (self, home, this_year, prev_year, next_year, names, subtitle):
+	def __init__ (self, home, this_year, prev_year, next_year, names):
 
 		self.home = home
 
@@ -13,10 +13,21 @@ class Poster:
 		self.next_year = next_year
 
 		self.names = names
-		self.subtitle = subtitle
 
 		self.page = []
 		self.side = []
+
+	def apply_values (self, fmt):
+
+		result = fmt.replace('@THIS_YEAR@', self.this_year or '')
+		result = result.replace('@PREV_YEAR@', self.prev_year or '')
+		return result.replace('@NEXT_YEAR@', self.next_year or '')
+
+	def parse_conf (self, conf):
+
+		year_conf = conf.get('lang').get('blog').get('year')
+		self.title = self.apply_values(year_conf.get('title'))
+		self.subtitle = self.apply_values(year_conf.get('subtitle'))
 
 	def parse_files (self, list_files):
 
@@ -29,8 +40,8 @@ class Poster:
 
 		with open(pag_file, 'w') as f:
 
-			print('title|%s' % self.this_year, file=f)
-			print('subtitle|%s' % (self.subtitle % self.this_year), file=f)
+			print('title|%s' % self.title, file=f)
+			print('subtitle|%s' % self.subtitle, file=f)
 
 			if self.prev_year:
 				print('prev|%s/%s/|%s' % (self.home, self.prev_year, self.prev_year), file=f)
@@ -43,7 +54,7 @@ class Poster:
 			print('start|side', file=f)
 			print('title|%s' % self.this_year, file=f)
 			for i in self.side:
-				print('p|link||%s|%s-%s' % (self.names[i], self.this_year, i), file=f)
+				print('p|link||%s|%s-%s' % (self.names.get(i), self.this_year, i), file=f)
 
 	def output_list_file (self, list_file):
 
