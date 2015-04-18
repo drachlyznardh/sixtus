@@ -96,6 +96,7 @@ class Blog(Base):
 		next_page = self.pair_to_triplet(self.nextmap.get(stem, None))
 
 		p = month_poster.Poster(self.home, subtitle, this_page, prev_page, next_page)
+		p.parse_conf(self.conf)
 		p.parse_file(post_file)
 		util.assert_dir(pag_file)
 		p.output_pag_file(pag_file)

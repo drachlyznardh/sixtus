@@ -40,6 +40,18 @@ class Poster:
 
 		self.post = {}
 
+	def apply_values (self, fmt):
+
+		result = fmt.replace('@THIS_YEAR@', self.this_page[0])
+		result = result.replace('@THIS_MONTH@', self.this_page[1])
+		return result.replace('@THIS_MONTH_NAME@', self.this_page[2])
+
+	def parse_conf (self, conf):
+
+		month_conf = conf.get('lang').get('blog').get('month')
+		self.title = self.apply_values(month_conf.get('title'))
+		self.subtitle = self.apply_values(month_conf.get('subtitle'))
+
 	def store_post (self, day, post):
 		if post == None: return
 		if day not in self.post: self.post[day] = []
@@ -81,8 +93,8 @@ class Poster:
 
 	def output_pag_file (self, filename):
 
-		output = 'title|%s %s\n' % (self.this_page[2], self.this_page[0])
-		output += 'subtitle|%s\n' % self.subtitle % (self.this_page[2], self.this_page[0])
+		output = 'title|%s\n' % self.title
+		output += 'subtitle|%s\n' % self.subtitle
 
 		if self.prev_page:
 			destination = '%s/%s/%s/' % (self.home, self.prev_page[0], self.prev_page[1])
