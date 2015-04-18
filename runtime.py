@@ -50,6 +50,18 @@ class Runtime(Base):
 			body = next_conf.get('body').replace('@SIXTUS_PAGE_NEXT_LINK@', link)
 			line = line.replace('@SIXTUS_PAGE_NEXT@', body)
 
+		if '@SIXTUS_TAB_PREV@' in line:
+
+			prev_conf = self.conf.get('lang').get('tab').get('prev')
+
+			title = prev_conf.get('title')
+			if '@SIXTUS_TAB_PREV_TITLE@' in title:
+				title = title.replace('@SIXTUS_TAB_PREV_TITLE@', "'.$d[6].'")
+
+			link = '<a href="%s">%s</a>' % ("'.$d[6].'", title)
+			body = prev_conf.get('body').replace('@SIXTUS_TAB_PREV_LINK@', link)
+			line = line.replace('@SIXTUS_TAB_PREV@', body)
+
 		return line
 
 	def replace_line (self, line):
@@ -62,9 +74,6 @@ class Runtime(Base):
 		line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
 		line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
 
-		line = line.replace('@SIXTUS_TAB_PREV@', self.conf.get('lang').get('tab').get('prev'))
-		link = '<a href="<?=$d[6]?>">%s</a>' % self.conf.get('lang').get('tab').get('prev_title')
-		line = line.replace('@SIXTUS_TAB_PREV_TITLE@', link)
 		line = line.replace('@SIXTUS_TAB_NEXT@', self.conf.get('lang').get('tab').get('next'))
 		link = '<a href="<?=$d[7]?>">%s</a>' % self.conf.get('lang').get('tab').get('next_title')
 		line = line.replace('@SIXTUS_TAB_NEXT_TITLE@', link)
