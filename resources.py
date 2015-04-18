@@ -78,6 +78,8 @@ class Resources(Base):
 
 	def build (self):
 
+		if 'res' not in self.loc: return
+
 		sources = util.find_all_sources(self.loc.get('res'), r'^(.*)$', False)
 
 		for name in sources:
@@ -86,6 +88,8 @@ class Resources(Base):
 		self.stats('%03d resource files' % len(sources))
 
 	def remove (self):
+
+		if 'res' not in self.loc: return
 
 		for name in util.find_all_sources(self.loc.get('res'), r'^(.*)$', False):
 			self.remove_file(name)
