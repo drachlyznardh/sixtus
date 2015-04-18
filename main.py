@@ -19,7 +19,7 @@ def sixtus_build (bag):
 
 	Runtime(bag).build()
 	Resources(bag).build()
-	Blog(bag).build()
+	if bag[4].get('blog'): Blog(bag).build()
 	Pages(bag).build()
 
 	if d: print('Siχtus 0.10, done')
@@ -36,8 +36,9 @@ def sixtus_clean (bag):
 	if d: print('Removing build dir %s' % build_dir)
 	if os.path.exists(build_dir): shutil.rmtree(build_dir)
 
-	if d: print('Removing build blog dir %s' % blog_build_dir)
-	if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
+	if blog_build_dir:
+		if d: print('Removing build blog dir %s' % blog_build_dir)
+		if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
 
 	if d: print('Siχtus 0.10, cleaning done')
 
@@ -75,12 +76,21 @@ def sixtus_version ():
 
 def digest_location (source):
 
-	if 'blog-in' not in source:
-		source['blog-in'] = source.get('blog')
-	if 'blog-out' not in source:
-		source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
-	if 'blog-home' not in source:
-		source['blog-home'] = util.convert(source.get('blog'))
+	if 'pag' not in source:
+		raise Exception('Location for pag files was not specified')
+
+	pag_location = source.get('pag')
+	if not os.path.exists(pag_location):
+		raise Exception('Specified location for pag files %s does not exist!' % pag_location)
+
+	if 'blog' in source:
+		if 'blog-in' not in source:
+			source['blog-in'] = source.get('blog')
+		if 'blog-out' not in source:
+			source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
+		if 'blog-home' not in source:
+			source['blog-home'] = util.convert(source.get('blog'))
+
 	if 'list' not in source:
 		source['list'] = os.path.join(source.get('build'), 'list')
 
@@ -103,8 +113,12 @@ def sixtus_read_args ():
 	flags = {'stats':True}
 	time_delta = 0.5
 	force = False
-	map_file = 'map.py'
-	conf_file = 'conf.py'
+
+	def_map_file = 'map.py'
+	def_conf_file = 'conf.py'
+
+	map_file = def_map_file
+	conf_file = def_conf_file
 
 	short_opt = 'hvqxwnBf:m:t:'
 	long_opt = ['help', 'verbose', 'quiet', 'version',
@@ -144,11 +158,19 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
-	with open(map_file, 'r') as f:
-		sitemap = eval(f.read())
+	if os.path.exists(map_file):
+		with open(map_file, 'r') as f:
+			sitemap = eval(f.read())
+	elif map_file != def_map_file:
+		raise Exception('Specified map file %s does not exist!' % map_file)
+	else: sitemap = {}
 
-	with open(conf_file, 'r') as f:
-		conf = eval(f.read())
+	if os.path.exists(conf_file):
+		with open(conf_file, 'r') as f:
+			conf = eval(f.read())
+	elif conf_file != def_conf_file:
+		raise Exception('Specified conf file %s does not exist!' % conf_file)
+	else: raise Exception('Required conf file %s does not exist!' % conf_file)
 
 	loc = digest_location(conf.get('location'))
 

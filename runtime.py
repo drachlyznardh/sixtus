@@ -92,7 +92,8 @@ class Runtime(Base):
 
 	def replace_line (self, line):
 
-		line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
+		if 'feed' in self.conf.get('location'):
+			line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
 
 		line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
 		line = line.replace('@SIXTUS_AUTHOR_MAIL@', self.conf.get('author').get('mail'))
