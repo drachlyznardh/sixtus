@@ -7,5 +7,6 @@
 	'pag':'src',
 	'build':'build',
 	'deploy':'deploy'
-	}
+	},
+'side':'<div><p>This is a sample site</p></div>'
 }
