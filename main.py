@@ -155,8 +155,12 @@ def sixtus_read_args ():
 		raise Exception('Specified map file %s does not exist!' % map_file)
 	else: sitemap = {}
 
-	with open(conf_file, 'r') as f:
-		conf = eval(f.read())
+	if os.path.exists(conf_file):
+		with open(conf_file, 'r') as f:
+			conf = eval(f.read())
+	elif conf_file != def_conf_file:
+		raise Exception('Specified conf file %s does not exist!' % conf_file)
+	else: raise Exception('Required conf file %s does not exist!' % conf_file)
 
 	loc = digest_location(conf.get('location'))
 
