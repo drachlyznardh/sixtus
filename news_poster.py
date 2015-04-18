@@ -18,6 +18,13 @@ class Poster:
 		self.names = names
 		self.content = {}
 
+	def parse_conf (self, conf):
+
+		news_conf = conf.get('lang').get('blog').get('news')
+		self.title = news_conf.get('title')
+		self.subtitle = news_conf.get('subtitle')
+		self.threshold = news_conf.get('threshold')
+
 	def parse_line (self, line):
 
 		if not line.startswith('link|'): return
