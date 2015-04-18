@@ -64,14 +64,17 @@ class Runtime(Base):
 
 		if '@SIXTUS_TAB_NEXT@' in line:
 
+			php_target = "'.$d[7].'"
 			next_conf = self.conf.get('lang').get('tab').get('next')
 
-			title = next_conf.get('title')
-			if '@SIXTUS_TAB_NEXT_TITLE@' in title:
-				title = title.replace('@SIXTUS_TAB_NEXT_TITLE@', "'.$d[7].'")
+			target = next_conf.get('target', php_target)
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_target)
 
-			link = '<a href="%s">%s</a>' % ("'.$d[7].'", title)
-			body = next_conf.get('body').replace('@SIXTUS_TAB_NEXT_LINK@', link)
+			link = '<a href="%s">%s</a>' % (php_target, target)
+			body = next_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_target)
+
 			line = line.replace('@SIXTUS_TAB_NEXT@', body)
 
 		return line
