@@ -54,7 +54,9 @@ class Blog(Base):
 		return os.path.join(self.loc.get('list'), 'blog-struct.py')
 
 	def get_archive_filename (self):
-		return os.path.join(self.loc.get('blog-out'), '%s.pag' % self.conf.get('lang').get('blog').get('archive_title'))
+		archive_conf = self.conf.get('lang').get('blog').get('archive')
+		archive_basename = '%s.pag' % archive_conf.get('title')
+		return os.path.join(self.loc.get('blog-out'), archive_basename)
 
 	def get_news_filename (self):
 		return os.path.join(self.loc.get('blog-out'), 'index.pag')
