@@ -1,4 +1,4 @@
-				<?php if ($d[7]) { ?><div id="tab_next" class="outside"><p>@SIXTUS_TAB_NEXT@</p></div><?php } ?>
+				<?php if ($d[7]) echo('@SIXTUS_TAB_NEXT@'); ?>
 			</div>
 			<div id="footnote"><p>Copyright © @SIXTUS_COPYRIGHT_YEARS@ @SIXTUS_COPYRIGHT_OWNER@ – Si&chi;tus X</p></div>
 		</div>

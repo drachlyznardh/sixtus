@@ -62,6 +62,18 @@ class Runtime(Base):
 			body = prev_conf.get('body').replace('@SIXTUS_TAB_PREV_LINK@', link)
 			line = line.replace('@SIXTUS_TAB_PREV@', body)
 
+		if '@SIXTUS_TAB_NEXT@' in line:
+
+			next_conf = self.conf.get('lang').get('tab').get('next')
+
+			title = next_conf.get('title')
+			if '@SIXTUS_TAB_NEXT_TITLE@' in title:
+				title = title.replace('@SIXTUS_TAB_NEXT_TITLE@', "'.$d[7].'")
+
+			link = '<a href="%s">%s</a>' % ("'.$d[7].'", title)
+			body = next_conf.get('body').replace('@SIXTUS_TAB_NEXT_LINK@', link)
+			line = line.replace('@SIXTUS_TAB_NEXT@', body)
+
 		return line
 
 	def replace_line (self, line):
@@ -73,10 +85,6 @@ class Runtime(Base):
 
 		line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
 		line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
-
-		line = line.replace('@SIXTUS_TAB_NEXT@', self.conf.get('lang').get('tab').get('next'))
-		link = '<a href="<?=$d[7]?>">%s</a>' % self.conf.get('lang').get('tab').get('next_title')
-		line = line.replace('@SIXTUS_TAB_NEXT_TITLE@', link)
 
 		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
 
