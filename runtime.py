@@ -28,26 +28,32 @@ class Runtime(Base):
 
 		if '@SIXTUS_PAGE_PREV@' in line:
 
+			php_href = "'.$d[4][0].'"
+			php_title = "'.$d[4][1].'"
 			prev_conf = self.conf.get('lang').get('page').get('prev')
 
-			title = prev_conf.get('title')
-			if '@SIXTUS_PAGE_PREV_TITLE@' in title:
-				title = title.replace('@SIXTUS_PAGE_PREV_TITLE@', "'.$d[4][1].'")
+			target = prev_conf.get('target')
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_title)
 
-			link = '<a href="/%s">%s</a>' % ("'.$d[4][0].'", title)
-			body = prev_conf.get('body').replace('@SIXTUS_PAGE_PREV_LINK@', link)
+			link = '<a href="/%s">%s</a>' % (php_href, target)
+			body = prev_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_title)
 			line = line.replace('@SIXTUS_PAGE_PREV@', body)
 
 		if '@SIXTUS_PAGE_NEXT@' in line:
 
+			php_href = "'.$d[5][0].'"
+			php_title = "'.$d[5][1].'"
 			next_conf = self.conf.get('lang').get('page').get('next')
 
-			title = next_conf.get('title')
-			if '@SIXTUS_PAGE_NEXT_TITLE@' in title:
-				title = title.replace('@SIXTUS_PAGE_NEXT_TITLE@', "'.$d[5][1].'")
+			target = next_conf.get('target')
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_title)
 
-			link = '<a href="/%s">%s</a>' % ("'.$d[5][0].'", title)
-			body = next_conf.get('body').replace('@SIXTUS_PAGE_NEXT_LINK@', link)
+			link = '<a href="/%s">%s</a>' % (php_href, target)
+			body = next_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_title)
 			line = line.replace('@SIXTUS_PAGE_NEXT@', body)
 
 		if '@SIXTUS_TAB_PREV@' in line:
