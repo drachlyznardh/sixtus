@@ -55,7 +55,7 @@ class Poster:
 			print('start|side', file=f)
 			print('title|%s' % self.this_year, file=f)
 			for i in self.side:
-				print('p|link||%s|%s-%s' % (self.names[i], self.this_year, i), file=f)
+				print('p|link||%s|%s-%s' % (self.names.get(i), self.this_year, i), file=f)
 
 	def output_list_file (self, list_file):
 
