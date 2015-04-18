@@ -32,7 +32,7 @@ class Runtime(Base):
 			php_title = "'.$d[4][1].'"
 			prev_conf = self.conf.get('lang').get('page').get('prev')
 
-			target = prev_conf.get('target')
+			target = prev_conf.get('target', php_title)
 			if '@TITLE@' in target:
 				target = target.replace('@TITLE@', php_title)
 
@@ -47,7 +47,7 @@ class Runtime(Base):
 			php_title = "'.$d[5][1].'"
 			next_conf = self.conf.get('lang').get('page').get('next')
 
-			target = next_conf.get('target')
+			target = next_conf.get('target', php_title)
 			if '@TITLE@' in target:
 				target = target.replace('@TITLE@', php_title)
 
