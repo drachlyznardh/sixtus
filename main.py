@@ -103,8 +103,12 @@ def sixtus_read_args ():
 	flags = {'stats':True}
 	time_delta = 0.5
 	force = False
-	map_file = 'map.py'
-	conf_file = 'conf.py'
+
+	def_map_file = 'map.py'
+	def_conf_file = 'conf.py'
+
+	map_file = def_map_file
+	conf_file = def_conf_file
 
 	short_opt = 'hvqxwnBf:m:t:'
 	long_opt = ['help', 'verbose', 'quiet', 'version',
@@ -144,8 +148,12 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
-	with open(map_file, 'r') as f:
-		sitemap = eval(f.read())
+	if os.path.exists(map_file):
+		with open(map_file, 'r') as f:
+			sitemap = eval(f.read())
+	elif map_file != def_map_file:
+		raise Exception('Specified map file %s does not exist!' % map_file)
+	else: sitemap = {}
 
 	with open(conf_file, 'r') as f:
 		conf = eval(f.read())
