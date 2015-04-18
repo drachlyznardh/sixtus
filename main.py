@@ -75,6 +75,13 @@ def sixtus_version ():
 
 def digest_location (source):
 
+	if 'pag' not in source:
+		raise Exception('Location for pag files was not specified')
+
+	pag_location = source.get('pag')
+	if not os.path.exists(pag_location):
+		raise Exception('Specified location for pag files %s does not exist!' % pag_location)
+
 	if 'blog' in source:
 		if 'blog-in' not in source:
 			source['blog-in'] = source.get('blog')
