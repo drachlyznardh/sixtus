@@ -24,6 +24,22 @@ class Runtime(Base):
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
 
+	def replace_relations (self, line):
+
+		if '@SIXTUS_PAGE_PREV@' in line:
+
+			prev_conf = self.conf.get('lang').get('page').get('prev')
+
+			title = prev_conf.get('title')
+			if '@SIXTUS_PAGE_PREV_TITLE@' in title:
+				title = title.replace('@SIXTUS_PAGE_PREV_TITLE@', "'.$d[4][1].'")
+
+			link = '<a href="/%s">%s</a>' % ("'.$d[4][0].'", title)
+			body = prev_conf.get('body').replace('@SIXTUS_PAGE_PREV_LINK@', link)
+			line = line.replace('@SIXTUS_PAGE_PREV@', body)
+
+		return line
+
 	def replace_line (self, line):
 
 		line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
@@ -41,12 +57,11 @@ class Runtime(Base):
 		link = '<a href="<?=$d[7]?>">%s</a>' % self.conf.get('lang').get('tab').get('next_title')
 		line = line.replace('@SIXTUS_TAB_NEXT_TITLE@', link)
 
-		line = line.replace('@SIXTUS_PAGE_PREV@', self.conf.get('lang').get('prev'))
 		line = line.replace('@SIXTUS_PAGE_NEXT@', self.conf.get('lang').get('next'))
 
 		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
 
-		return line
+		return self.replace_relations(line)
 
 	def copy_replace (self, source, destination):
 
