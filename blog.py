@@ -54,7 +54,9 @@ class Blog(Base):
 		return os.path.join(self.loc.get('list'), 'blog-struct.py')
 
 	def get_archive_filename (self):
-		return os.path.join(self.loc.get('blog-out'), '%s.pag' % self.conf.get('lang').get('blog').get('archive_title'))
+		archive_conf = self.conf.get('lang').get('blog').get('archive')
+		archive_basename = '%s.pag' % archive_conf.get('title')
+		return os.path.join(self.loc.get('blog-out'), archive_basename)
 
 	def get_news_filename (self):
 		return os.path.join(self.loc.get('blog-out'), 'index.pag')
@@ -210,10 +212,7 @@ class Blog(Base):
 
 	def build_news (self):
 
-		archive = self.conf.get('lang').get('blog').get('archive_title')
-		names = self.conf.get('lang').get('month')
-
-		p = news_poster.Poster(self.home, archive, names)
+		p = news_poster.Poster(self.home)
 		p.parse_conf(self.conf)
 		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)])
 		p.output_pag_file(self.get_news_filename())

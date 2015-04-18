@@ -24,6 +24,72 @@ class Runtime(Base):
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
 
+	def replace_relations (self, line):
+
+		if '@SIXTUS_PAGE_PREV@' in line:
+
+			php_href = "'.$d[4][0].'"
+			php_title = "'.$d[4][1].'"
+			prev_conf = self.conf.get('lang').get('page').get('prev')
+
+			target = prev_conf.get('target')
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_title)
+
+			link = '<a href="/%s">%s</a>' % (php_href, target)
+			body = prev_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_title)
+			line = line.replace('@SIXTUS_PAGE_PREV@', body)
+
+		if '@SIXTUS_PAGE_NEXT@' in line:
+
+			php_href = "'.$d[5][0].'"
+			php_title = "'.$d[5][1].'"
+			next_conf = self.conf.get('lang').get('page').get('next')
+
+			target = next_conf.get('target')
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_title)
+
+			link = '<a href="/%s">%s</a>' % (php_href, target)
+			body = next_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_title)
+			line = line.replace('@SIXTUS_PAGE_NEXT@', body)
+
+		if '@SIXTUS_TAB_PREV@' in line:
+
+			php_href = "'.$d[6][0].'"
+			php_title = "'.$d[6][1].'"
+			prev_conf = self.conf.get('lang').get('tab').get('prev')
+
+			target = prev_conf.get('target', php_title)
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_title)
+
+			link = '<a href="%s">%s</a>' % (php_href, target)
+			body = prev_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_title)
+
+			line = line.replace('@SIXTUS_TAB_PREV@', body)
+
+		if '@SIXTUS_TAB_NEXT@' in line:
+
+			php_href = "'.$d[7][0].'"
+			php_title = "'.$d[7][1].'"
+			next_conf = self.conf.get('lang').get('tab').get('next')
+
+			target = next_conf.get('target', php_title)
+			if '@TITLE@' in target:
+				target = target.replace('@TITLE@', php_title)
+
+			link = '<a href="%s">%s</a>' % (php_href, target)
+			body = next_conf.get('body').replace('@LINK@', link)
+			body = body.replace('@TITLE@', php_title)
+
+			line = line.replace('@SIXTUS_TAB_NEXT@', body)
+
+		return line
+
 	def replace_line (self, line):
 
 		line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
@@ -34,19 +100,9 @@ class Runtime(Base):
 		line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
 		line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
 
-		line = line.replace('@SIXTUS_TAB_PREV@', self.conf.get('lang').get('tab').get('prev'))
-		link = '<a href="<?=$d[6]?>">%s</a>' % self.conf.get('lang').get('tab').get('prev_title')
-		line = line.replace('@SIXTUS_TAB_PREV_TITLE@', link)
-		line = line.replace('@SIXTUS_TAB_NEXT@', self.conf.get('lang').get('tab').get('next'))
-		link = '<a href="<?=$d[7]?>">%s</a>' % self.conf.get('lang').get('tab').get('next_title')
-		line = line.replace('@SIXTUS_TAB_NEXT_TITLE@', link)
-
-		line = line.replace('@SIXTUS_PAGE_PREV@', self.conf.get('lang').get('prev'))
-		line = line.replace('@SIXTUS_PAGE_NEXT@', self.conf.get('lang').get('next'))
-
 		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
 
-		return line
+		return self.replace_relations(line)
 
 	def copy_replace (self, source, destination):
 

@@ -9,11 +9,9 @@ from itertools import groupby
 
 class Poster:
 
-	def __init__ (self, home, archive, names):
+	def __init__ (self, home):
 
 		self.home = home
-		self.archive = archive
-		self.names = names
 		self.content = {}
 
 	def parse_conf (self, conf):
@@ -22,6 +20,11 @@ class Poster:
 		self.title = news_conf.get('title')
 		self.subtitle = news_conf.get('subtitle')
 		self.threshold = news_conf.get('threshold')
+
+		archive_conf = conf.get('lang').get('blog').get('archive')
+		self.archive = archive_conf.get('title')
+
+		self.names = conf.get('lang').get('month')
 
 	def parse_line (self, line):
 
