@@ -75,12 +75,14 @@ def sixtus_version ():
 
 def digest_location (source):
 
-	if 'blog-in' not in source:
-		source['blog-in'] = source.get('blog')
-	if 'blog-out' not in source:
-		source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
-	if 'blog-home' not in source:
-		source['blog-home'] = util.convert(source.get('blog'))
+	if 'blog' in source:
+		if 'blog-in' not in source:
+			source['blog-in'] = source.get('blog')
+		if 'blog-out' not in source:
+			source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
+		if 'blog-home' not in source:
+			source['blog-home'] = util.convert(source.get('blog'))
+
 	if 'list' not in source:
 		source['list'] = os.path.join(source.get('build'), 'list')
 
