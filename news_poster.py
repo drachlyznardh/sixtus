@@ -9,11 +9,9 @@ from itertools import groupby
 
 class Poster:
 
-	def __init__ (self, home, title, subtitle, archive, names):
+	def __init__ (self, home, archive, names):
 
 		self.home = home
-		self.title = title
-		self.subtitle = subtitle
 		self.archive = archive
 		self.names = names
 		self.content = {}
@@ -40,7 +38,7 @@ class Poster:
 		addenda = {k:[i for i in reversed([i for j,i in list(v)])] for k,v in groupby(selected, lambda x:x[0])}
 		self.content.get(year)[month] = addenda
 
-	def parse_target_list (self, target_list, threshold):
+	def parse_target_list (self, target_list):
 
 		for stem, target in target_list:
 
@@ -48,12 +46,12 @@ class Poster:
 			h.parse_file(target)
 			count = sum([len(i) for i in h.post.values()])
 
-			if count >= threshold:
-				self.collect(stem, h, threshold)
+			if count >= self.threshold:
+				self.collect(stem, h, self.threshold)
 				break
 
 			self.collect(stem, h, count)
-			threshold -= count
+			self.threshold -= count
 
 	def output_pag_file (self, pag_file):
 
