@@ -212,10 +212,7 @@ class Blog(Base):
 
 	def build_news (self):
 
-		archive = self.conf.get('lang').get('blog').get('archive_title')
-		names = self.conf.get('lang').get('month')
-
-		p = news_poster.Poster(self.home, archive, names)
+		p = news_poster.Poster(self.home)
 		p.parse_conf(self.conf)
 		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)])
 		p.output_pag_file(self.get_news_filename())
