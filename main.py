@@ -19,7 +19,7 @@ def sixtus_build (bag):
 
 	Runtime(bag).build()
 	Resources(bag).build()
-	Blog(bag).build()
+	if bag[4].get('blog'): Blog(bag).build()
 	Pages(bag).build()
 
 	if d: print('Siχtus 0.10, done')
