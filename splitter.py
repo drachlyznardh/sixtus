@@ -131,10 +131,10 @@ class Splitter:
 			varmeta = self.meta
 			if name in tabprev:
 				prevtab = util.convert(tabprev[name])
-				varmeta += 'tabprev|/%s/\n' % os.path.join(base, prevtab)
+				varmeta += 'tabprev|/%s/|%s\n' % (os.path.join(base, prevtab), prevtab)
 			if name in tabnext:
 				nexttab = util.convert(tabnext[name])
-				varmeta += 'tabnext|/%s/\n' % os.path.join(base, nexttab)
+				varmeta += 'tabnext|/%s/|%s\n' % (os.path.join(base, nexttab), nexttab)
 			varmeta += 'side|../side.php\n'
 
 			tab_path = os.path.join(destination, util.convert(name), 'page.six')

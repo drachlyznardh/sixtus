@@ -349,9 +349,9 @@ class FullConverter(ContentConverter):
 			elif size == 2: self.meta[c] = (args[0], args[1])
 			else: self.error('Parse_Meta: %s# expects 0 or 2 arguments %s' % args)
 		elif c == 'tabprev':
-			self.meta['tabprev'] = args[0]
+			self.meta['tabprev'] = (args[0], args[1])
 		elif c == 'tabnext':
-			self.meta['tabnext'] = args[0]
+			self.meta['tabnext'] = (args[0], args[1])
 		elif c == 'tag':
 			pass # Tags are supported, right now…
 		else:
@@ -394,12 +394,12 @@ class FullConverter(ContentConverter):
 		output += ','
 		if 'tabprev' in self.meta.keys():
 			tabprev = self.meta['tabprev']
-			output += ('"%s"' % tabprev)
+			output += ('array("%s","%s")' % (tabprev[0], tabprev[1]))
 		else: output += 'false'
 		output += ','
 		if 'tabnext' in self.meta.keys():
 			tabnext = self.meta['tabnext']
-			output += ('"%s"' % tabnext)
+			output += ('array("%s","%s")' % (tabnext[0], tabnext[1]))
 		else: output += 'false'
 		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
