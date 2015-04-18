@@ -9,14 +9,22 @@ from itertools import groupby
 
 class Poster:
 
-	def __init__ (self, home, title, subtitle, archive, names):
+	def __init__ (self, home):
 
 		self.home = home
-		self.title = title
-		self.subtitle = subtitle
-		self.archive = archive
-		self.names = names
 		self.content = {}
+
+	def parse_conf (self, conf):
+
+		news_conf = conf.get('lang').get('blog').get('news')
+		self.title = news_conf.get('title')
+		self.subtitle = news_conf.get('subtitle')
+		self.threshold = news_conf.get('threshold')
+
+		archive_conf = conf.get('lang').get('blog').get('archive')
+		self.archive = archive_conf.get('title')
+
+		self.names = conf.get('lang').get('month')
 
 	def parse_line (self, line):
 
@@ -33,20 +41,20 @@ class Poster:
 		addenda = {k:[i for i in reversed([i for j,i in list(v)])] for k,v in groupby(selected, lambda x:x[0])}
 		self.content.get(year)[month] = addenda
 
-	def parse_target_list (self, target_list, threshold):
+	def parse_target_list (self, target_list):
 
 		for stem, target in target_list:
 
-			h = Helper(False, False, False, False, False)
+			h = Helper(False, False, False, False)
 			h.parse_file(target)
 			count = sum([len(i) for i in h.post.values()])
 
-			if count >= threshold:
-				self.collect(stem, h, threshold)
+			if count >= self.threshold:
+				self.collect(stem, h, self.threshold)
 				break
 
 			self.collect(stem, h, count)
-			threshold -= count
+			self.threshold -= count
 
 	def output_pag_file (self, pag_file):
 
