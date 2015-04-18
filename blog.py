@@ -203,10 +203,8 @@ class Blog(Base):
 
 	def build_archive (self):
 
-		title = self.conf.get('lang').get('blog').get('archive_title')
-		subtitle = self.conf.get('lang').get('blog').get('archive_subtitle')
-
-		p = archive_poster.Poster(title, subtitle)
+		p = archive_poster.Poster()
+		p.parse_conf(self.conf)
 		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_file(self.get_archive_filename())
 
