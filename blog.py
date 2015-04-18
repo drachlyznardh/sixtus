@@ -90,12 +90,11 @@ class Blog(Base):
 		pag_file = self.get_pag_filename(stem)
 		list_file = self.get_list_filename(stem)
 
-		subtitle = self.conf.get('lang').get('blog').get('month_subtitle')
 		this_page = self.pair_to_triplet(stem)
 		prev_page = self.pair_to_triplet(self.prevmap.get(stem, None))
 		next_page = self.pair_to_triplet(self.nextmap.get(stem, None))
 
-		p = month_poster.Poster(self.home, subtitle, this_page, prev_page, next_page)
+		p = month_poster.Poster(self.home, this_page, prev_page, next_page)
 		p.parse_conf(self.conf)
 		p.parse_file(post_file)
 		util.assert_dir(pag_file)
@@ -152,9 +151,8 @@ class Blog(Base):
 		next_year = self.nextmap.get(year, None)
 
 		names = self.conf.get('lang').get('month')
-		subtitle = self.conf.get('lang').get('blog').get('year_subtitle')
 
-		p = year_poster.Poster(self.home, year, prev_year, next_year, names, subtitle)
+		p = year_poster.Poster(self.home, year, prev_year, next_year, names)
 		p.parse_conf(self.conf)
 		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap.get(year))])
 		p.output_pag_file(pag_file)

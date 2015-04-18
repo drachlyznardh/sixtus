@@ -4,7 +4,7 @@ from __future__ import print_function
 
 class Poster:
 
-	def __init__ (self, home, this_year, prev_year, next_year, names, subtitle):
+	def __init__ (self, home, this_year, prev_year, next_year, names):
 
 		self.home = home
 
@@ -13,7 +13,6 @@ class Poster:
 		self.next_year = next_year
 
 		self.names = names
-		self.subtitle = subtitle
 
 		self.page = []
 		self.side = []

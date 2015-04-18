@@ -29,10 +29,9 @@ class Post:
 
 class Poster:
 
-	def __init__ (self, home, subtitle, this_page, prev_page, next_page):
+	def __init__ (self, home, this_page, prev_page, next_page):
 
 		self.home = home
-		self.subtitle = subtitle
 
 		self.this_page = this_page
 		self.prev_page = prev_page

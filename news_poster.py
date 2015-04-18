@@ -37,7 +37,7 @@ class Poster:
 
 		for stem, target in target_list:
 
-			h = Helper(False, False, False, False, False)
+			h = Helper(False, False, False, False)
 			h.parse_file(target)
 			count = sum([len(i) for i in h.post.values()])
 
