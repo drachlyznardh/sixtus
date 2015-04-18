@@ -18,6 +18,18 @@ class Poster:
 		self.page = []
 		self.side = []
 
+	def apply_values (self, fmt):
+
+		result = fmt.replace('@THIS_YEAR@', self.this_year or '')
+		result = result.replace('@PREV_YEAR@', self.prev_year or '')
+		return result.replace('@NEXT_YEAR@', self.next_year or '')
+
+	def parse_conf (self, conf):
+
+		year_conf = conf.get('lang').get('blog').get('year')
+		self.title = self.apply_values(year_conf.get('title'))
+		self.subtitle = self.apply_values(year_conf.get('subtitle'))
+
 	def parse_files (self, list_files):
 
 		for stem in list_files:
@@ -29,8 +41,8 @@ class Poster:
 
 		with open(pag_file, 'w') as f:
 
-			print('title|%s' % self.this_year, file=f)
-			print('subtitle|%s' % (self.subtitle % self.this_year), file=f)
+			print('title|%s' % self.title, file=f)
+			print('subtitle|%s' % self.subtitle, file=f)
 
 			if self.prev_year:
 				print('prev|%s/%s/|%s' % (self.home, self.prev_year, self.prev_year), file=f)
