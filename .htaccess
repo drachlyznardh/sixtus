@@ -1,3 +1,0 @@
-ReWriteEngine On
-
-ReWriteRule ^.*$ d.php
