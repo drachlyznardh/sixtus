@@ -7,7 +7,7 @@ class Base:
 
 	def __init__ (self, bag):
 
-		self.force, self.flags, self.time_delta, self.sitemap, self.loc, self.conf = bag
+		self.force, self.flags, self.time_delta, self.sitemap, self.loc, self.conf, self.version = bag
 
 	def loud (self, message):
 		if self.flags.get('loud', False):

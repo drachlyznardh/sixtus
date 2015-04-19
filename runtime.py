@@ -110,6 +110,7 @@ class Runtime(Base):
 			line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
 
 		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
+		line = line.replace('@SIXTUS_VERSION@', self.version)
 
 		if '@SIXTUS_' in line:
 			return self.replace_relations(line)

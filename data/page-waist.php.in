@@ -1,6 +1,8 @@
 				<?php if ($d[7]) echo('@SIXTUS_TAB_NEXT@'); ?>
 			</div>
-			<div id="footnote"><p>Copyright © @SIXTUS_COPYRIGHT_YEARS@ @SIXTUS_COPYRIGHT_OWNER@ – Si&chi;tus X</p></div>
+			<div id="footnote">
+				<p>Copyright © @SIXTUS_COPYRIGHT_YEARS@ @SIXTUS_COPYRIGHT_OWNER@ – built by <a href="https://github.com/drachlyznardh/sixtus">Si&chi;tus</a> <code>@SIXTUS_VERSION@</code></p>
+			</div>
 		</div>
 		<div id="left-side-icon"><a href="#" onclick="show_left_side();">[ &gt; ]</a></div>
 		<div id="right-side-icon"><a href="#" onclick="show_right_side();">[ &lt; ]</a></div>
