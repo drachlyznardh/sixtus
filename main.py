@@ -174,7 +174,8 @@ def sixtus_read_args ():
 
 	loc = digest_location(conf.get('location'))
 
-	bag = (force, flags, time_delta, sitemap, loc, conf)
+	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
+	bag = (force, flags, time_delta, sitemap, loc, conf, version)
 
 	if len(args) == 0:
 		sixtus_build(bag)
