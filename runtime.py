@@ -92,18 +92,24 @@ class Runtime(Base):
 
 	def replace_line (self, line):
 
+		if '@SIXTUS_' not in line: return line
+
 		if 'feed' in self.conf.get('location'):
 			line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
 
-		line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
-		line = line.replace('@SIXTUS_AUTHOR_MAIL@', self.conf.get('author').get('mail'))
+		if '@SIXTUS_AUTHOR' in line:
+			line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
+			line = line.replace('@SIXTUS_AUTHOR_MAIL@', self.conf.get('author').get('mail'))
 
-		line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
-		line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
+		if '@SIXTUS_COPYRIGHT' in line:
+			line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
+			line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
 
 		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
 
-		return self.replace_relations(line)
+		if '@SIXTUS_' in line:
+			return self.replace_relations(line)
+		return line
 
 	def copy_replace (self, source, destination):
 
