@@ -14,9 +14,9 @@
 		<div id="content" onclick="hide_all_sides();">
 			<div id="header">
 
-				<div id="location"><p>/ <?php $dest='/';foreach($d[0]as$w){$dest.=$w.'/';printf('<a href="%s">%s</a> / ',$dest,$w);}?></p></div>
-				<div id="maintitle"><h1><?=$d[1]?></h1></div>
+				<?php $href='/';$cats=array();if($d[0])foreach($d[0]as$w){$href.=$w.'/';$cats[]='<a href="'.$href.'">'.$w.'</a>';}
+				if($d[0])echo('<div id="location"><p>/ '.join(' / ',$cats)).' /</p></div>'."\n\t\t"?><div id="maintitle"><h1><?=$d[1]?></h1></div>
 				<div id="subtitle"><p><?=$d[3]?></p></div>
 
 			</div><div class="content">
-				<?php if ($d[6]) echo('@SIXTUS_TAB_PREV@'); ?>
+				<?php if($d[6])echo('@SIXTUS_TAB_PREV@')?>

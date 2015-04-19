@@ -375,7 +375,9 @@ class FullConverter(ContentConverter):
 		self.state_update('meta')
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
-		output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
+		if len(self.page_location):
+			output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
+		else: output += 'False,'
 		output += ('"%s",' % self.meta.get('title','title'))
 		if 'short' in self.meta: output += ('"%s",' % self.meta.get('short'))
 		else: output += ('"%s",' % self.meta.get('title','title'))
