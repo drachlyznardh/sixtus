@@ -8,7 +8,7 @@
 	'build':'build',
 	'deploy':'deploy'
 	},
-'side':'<div><p>This is a sample site</p></div>',
+'side':'<div><p>This is the left side.</p></div>',
 'lang':{
 	'page':{
 		'prev':{'body':'Link to next page @LINK@'},
