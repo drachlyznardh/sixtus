@@ -96,6 +96,7 @@ class Runtime(Base):
 
 		if 'feed' in self.conf.get('location'):
 			line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
+		else: line = line.replace('@SIXTUS_FEED_FILE@', '')
 
 		if '@SIXTUS_AUTHOR' in line:
 			line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
