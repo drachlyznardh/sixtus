@@ -5,8 +5,7 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<meta name="author" content="@SIXTUS_AUTHOR_NAME@ &lt;@SIXTUS_AUTHOR_MAIL@&gt;" />
 
-		@SIXTUS_FEED@
-		<link rel="icon" href="/sixtus/icon.ico" />
+		@SIXTUS_FEED@<link rel="icon" href="/sixtus/icon.ico" />
 		<link rel="stylesheet" href="/sixtus/style.css" />
 		<script src="/sixtus/panel.js"></script>
 

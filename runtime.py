@@ -97,7 +97,7 @@ class Runtime(Base):
 		if '@SIXTUS_FEED' in line:
 			if 'feed' in self.conf.get('location'):
 				feed_file = self.conf.get('location').get('feed')
-				feed_link = '<link rel="alternate" type="application/rss+xml" title="<?=$_SERVER[\'SERVER_NAME\']?>" href="/%s"/>' % feed_file
+				feed_link = '<link rel="alternate" type="application/rss+xml" title="<?=$_SERVER[\'SERVER_NAME\']?>" href="/%s"/>\n\t\t' % feed_file
 				line = line.replace('@SIXTUS_FEED@', feed_link)
 			else: line = line.replace('@SIXTUS_FEED@', '')
 
