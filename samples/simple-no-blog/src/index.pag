@@ -1,0 +1,7 @@
+short|Sample
+title|Very simple page
+subtitle|This is a sample page
+start|page
+	This is the index page of a sample site.
+start|side
+	This is the side of this page.
