@@ -94,9 +94,12 @@ class Runtime(Base):
 
 		if '@SIXTUS_' not in line: return line
 
-		if 'feed' in self.conf.get('location'):
-			line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
-		else: line = line.replace('@SIXTUS_FEED_FILE@', '')
+		if '@SIXTUS_FEED' in line:
+			if 'feed' in self.conf.get('location'):
+				feed_file = self.conf.get('location').get('feed')
+				feed_link = '<link rel="alternate" type="application/rss+xml" title="<?=$_SERVER[\'SERVER_NAME\']?>" href="/%s"/>' % feed_file
+				line = line.replace('@SIXTUS_FEED@', feed_link)
+			else: line = line.replace('@SIXTUS_FEED@', '')
 
 		if '@SIXTUS_AUTHOR' in line:
 			line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
