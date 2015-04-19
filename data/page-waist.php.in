@@ -15,10 +15,7 @@
 		<div id="right-side-panel">
 			<div id="right-back"><a href="#" onclick="hide_right_side();">[ &gt; ]</a></div>
 			<div class="content"><?php
-	if ($d[4]) echo('@SIXTUS_PAGE_PREV@');
-	printf('<p class="center">/ ');
-	$dest = '/';
-	foreach ($d[0] as $w) { $dest.=$w.'/'; printf(' <a href="%s">%s</a> /', $dest, $w); }
-	printf('</p>');
-	if ($d[5]) echo('@SIXTUS_PAGE_NEXT@');
+	if($d[4])echo('@SIXTUS_PAGE_PREV@');
+	if($d[0])echo('<p class="center">/ '.join(' / ',$cats).' /</p>');
+	if($d[5])echo('@SIXTUS_PAGE_NEXT@');
 ?><br/>
