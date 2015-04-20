@@ -236,12 +236,13 @@ class Blog(Base):
 			return True
 
 		index_time = os.path.getmtime(index_file)
-		list_file = self.get_list_filename(self.month[-1])
-		list_time = os.path.getmtime(list_file)
-		if list_time - index_time > self.time_delta:
-			self.explain_why('list file %s is more recent than index file %s' % (list_file, index_file))
-			self.build_news()
-			return True
+		for month in reversed(self.month):
+			list_file = self.get_list_filename(month)
+			list_time = os.path.getmtime(list_file)
+			if list_time - index_time > self.time_delta:
+				self.explain_why('list file %s is more recent than index file %s' % (list_file, index_file))
+				self.build_news()
+				return True
 
 		self.explain_why_not('index file %s is up to date' % index_file)
 		return False
