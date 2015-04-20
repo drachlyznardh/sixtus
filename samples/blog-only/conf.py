@@ -18,6 +18,10 @@
 	'tab':{
 		'prev':{'body':'Link to next tab @LINK@'},
 		'next':{'body':'Link to previous tab @LINK@'}
+		},
+	'blog':{
+		'news':{},
+		'archive':{}
 		}
 	}
 }
