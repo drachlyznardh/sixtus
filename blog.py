@@ -249,7 +249,9 @@ class Blog(Base):
 
 	def build_struct (self):
 
-		with open(self.get_struct_filename(), 'w') as f:
+		struct_file = self.get_struct_filename()
+		util.assert_dir(struct_file)
+		with open(struct_file, 'w') as f:
 			print(self.month, file=f)
 
 	def update_struct (self):
