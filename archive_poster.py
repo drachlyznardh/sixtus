@@ -2,6 +2,8 @@
 
 from __future__ import print_function
 
+from util import assert_dir
+
 class Poster:
 
 	def __init__ (self, home):

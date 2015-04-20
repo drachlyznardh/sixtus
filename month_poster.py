@@ -2,6 +2,8 @@
 
 from __future__ import print_function
 
+from util import assert_dir
+
 class Post:
 	def __init__ (self):
 		self.title = False
@@ -138,6 +140,7 @@ class Poster:
 
 				progress += 1
 
+		assert_dir(filename)
 		with open(filename, 'w') as f:
 			print(output, file=f)
 
@@ -159,5 +162,6 @@ class Poster:
 				output += '\t\tlink|%s|%s|%s-%d\n' % (destination, post.title, day, progress)
 				progress += 1
 
+		assert_dir(filename)
 		with open(filename, 'w') as f:
 			print(output, file=f)
