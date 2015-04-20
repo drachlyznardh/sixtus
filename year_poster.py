@@ -38,38 +38,56 @@ class Poster:
 
 	def output_pag_file (self, pag_file):
 
+		output = 'title|%s\n' % self.title
+		output += 'subtitle|%s\n' % self.subtitle
+
+		if self.prev_year:
+			destination = '%s/%s/' % (self.home, self.prev_year)
+			output += 'prev|%s|%s\n' % (destination, self.prev_year)
+
+		if self.next_year:
+			destination = '%s/%s/' % (self.home, self.next_year)
+			output += 'next|%s|%s\n' % (destination, self.next_year)
+
+		output += 'start|page\n'
+		output += '%s\n' % '\nbr|\n'.join(self.page)
+
+		output += 'start|side\n'
+		output += 'title|%s\n'  % self.this_year
+
+		for i in xrange(3):
+			line = []
+			for j in xrange(4):
+				month = '%02d' % (1 + j + 4 * i)
+				name = self.names[month]
+				if month in self.side:
+					ref = '%s-%s' % (self.this_year, month)
+					line.append('link||%s|%s' % (name, ref))
+				else: line.append(name)
+			output += 'c|%s\n' % '\n/\n'.join(line)
+
+		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
-
-			print('title|%s' % self.title, file=f)
-			print('subtitle|%s' % self.subtitle, file=f)
-
-			if self.prev_year:
-				print('prev|%s/%s/|%s' % (self.home, self.prev_year, self.prev_year), file=f)
-			if self.next_year:
-				print('next|%s/%s/|%s' % (self.home, self.next_year, self.next_year), file=f)
-
-			print('start|page', file=f)
-			print('\nbr|\n'.join(self.page), file=f)
-
-			print('start|side', file=f)
-			print('title|%s' % self.this_year, file=f)
-			for i in self.side:
-				print('p|link||%s|%s-%s' % (self.names.get(i), self.this_year, i), file=f)
+			print(output, file=f)
 
 	def output_list_file (self, list_file):
 
+		output = 'id|%s\n' % self.this_year
+
+		destination = '%s/%s/' % (self.home, self.this_year)
+		output += 'stitle@center|link|%s|%s\n' % (destination, self.this_year)
+
+		for i in xrange(3):
+			line = []
+			for j in xrange(4):
+				month = '%02d' % (1 + j + 4 * i)
+				name = self.names[month]
+				if month in self.side:
+					destination = '%s/%s/%s/' % (self.home, self.this_year, month)
+					line.append('link|%s|%s' % (destination, name))
+				else: line.append(name)
+			output += 'c|%s\n' % '\n/\n'.join(line)
+
+		assert_dir(list_file)
 		with open(list_file, 'w') as f:
-
-			print('id|%s' % self.this_year, file=f)
-			print('stitle|link|%s/%s/|%s' % (self.home, self.this_year, self.this_year), file=f)
-			for i in xrange(3):
-				line = []
-				for j in xrange(4):
-					index = 1 + i * 4 + j
-					number = '%02d' % index
-					name = self.names[number]
-					if number in self.side:
-						line.append('link|%s/%s/%s/|%s' % (self.home, self.this_year, number, name))
-					else: line.append('%s' % name)
-				print('c|%s' % ('\n/\n'.join(line)), file=f)
-
+			print(output, file=f)

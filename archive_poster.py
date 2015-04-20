@@ -24,14 +24,17 @@ class Poster:
 
 	def output_pag_file (self, pag_file):
 
+		output = 'title|%s\n' % self.title
+		output += 'subtitle|%s\n' % self.subtitle
+		output += 'prev|%s|%s\n' % (self.home, self.news)
+
+		output += 'start|page\n'
+		output += '%s\n' % '\nbr|\n'.join(self.page)
+
+		output += 'start|side\n'
+		output += 'stitle|%s\n' % self.title
+		output += 'c|%s' % '\n/\n'.join(['link||%s|%s' % (i,i) for i in self.side])
+
+		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
-
-			print('title|%s' % self.title, file=f)
-			print('subtitle|%s' % self.subtitle, file=f)
-
-			print('start|page', file=f)
-			print('\nbr|\n'.join(self.page), file=f)
-
-			print('start|side', file=f)
-			print('stitle|%s' % self.title, file=f)
-			print('p|%s' % ('\n/\n'.join(['link||%s|%s' % (i, i) for i in self.side])), file=f)
+			print(output, file=f)
