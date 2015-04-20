@@ -20,8 +20,12 @@
 		'next':{'body':'Link to previous tab @LINK@'}
 		},
 	'blog':{
-		'news':{},
-		'archive':{}
-		}
-	}
+		'news':{'title':'News title',
+			'subtitle':'News subtitle',
+			'threshold':10},
+		'archive':{'title':'Archive title',
+			'subtitle':'Archive subtitle'}
+		},
+	'month':{}
+	},
 }

@@ -6,7 +6,7 @@ import os
 import re
 
 from base import Base
-import util
+from util import assert_dir
 
 # Builders
 import month_poster
@@ -102,9 +102,9 @@ class Blog(Base):
 		p = month_poster.Poster(self.home, this_page, prev_page, next_page)
 		p.parse_conf(self.conf)
 		p.parse_file(post_file)
-		util.assert_dir(pag_file)
+		assert_dir(pag_file)
 		p.output_pag_file(pag_file)
-		util.assert_dir(list_file)
+		assert_dir(list_file)
 		p.output_list_file(list_file)
 
 	def update_month (self, stem):
@@ -249,7 +249,9 @@ class Blog(Base):
 
 	def build_struct (self):
 
-		with open(self.get_struct_filename(), 'w') as f:
+		struct_file = self.get_struct_filename()
+		assert_dir(struct_file)
+		with open(struct_file, 'w') as f:
 			print(self.month, file=f)
 
 	def update_struct (self):
