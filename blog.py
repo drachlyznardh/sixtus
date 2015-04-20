@@ -153,9 +153,7 @@ class Blog(Base):
 		prev_year = self.prevmap.get(year, None)
 		next_year = self.nextmap.get(year, None)
 
-		names = self.conf.get('lang').get('month')
-
-		p = year_poster.Poster(self.home, year, prev_year, next_year, names)
+		p = year_poster.Poster(self.home, year, prev_year, next_year)
 		p.parse_conf(self.conf)
 		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap[year])])
 		p.output_pag_file(pag_file)
@@ -206,7 +204,7 @@ class Blog(Base):
 
 	def build_archive (self):
 
-		p = archive_poster.Poster()
+		p = archive_poster.Poster(self.home)
 		p.parse_conf(self.conf)
 		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_file(self.get_archive_filename())

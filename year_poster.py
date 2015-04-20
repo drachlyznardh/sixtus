@@ -4,15 +4,13 @@ from __future__ import print_function
 
 class Poster:
 
-	def __init__ (self, home, this_year, prev_year, next_year, names):
+	def __init__ (self, home, this_year, prev_year, next_year):
 
 		self.home = home
 
 		self.this_year = this_year
 		self.prev_year = prev_year
 		self.next_year = next_year
-
-		self.names = names
 
 		self.page = []
 		self.side = []

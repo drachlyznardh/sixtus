@@ -4,7 +4,9 @@ from __future__ import print_function
 
 class Poster:
 
-	def __init__ (self):
+	def __init__ (self, home):
+
+		self.home = home
 
 		self.side = []
 		self.page = []
