@@ -132,6 +132,7 @@ class Pages(Base):
 
 		if self.force:
 			self.explain_why('Force rebuild of dep file %s' % dep_file)
+			self.update_Six_file(stem)
 			self.build_dep_file(stem)
 			return True
 
