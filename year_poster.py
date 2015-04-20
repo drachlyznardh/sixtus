@@ -55,10 +55,10 @@ class Poster:
 		output += 'start|side\n'
 		output += 'title|%s\n'  % self.this_year
 
-		for i in xrange(3):
+		for i in xrange(4):
 			line = []
-			for j in xrange(4):
-				month = '%02d' % (1 + j + 4 * i)
+			for j in xrange(3):
+				month = '%02d' % (1 + j + 3 * i)
 				name = self.names[month]
 				if month in self.side:
 					ref = '%s-%s' % (self.this_year, month)
@@ -77,10 +77,10 @@ class Poster:
 		destination = '%s/%s/' % (self.home, self.this_year)
 		output += 'stitle@center|link|%s|%s\n' % (destination, self.this_year)
 
-		for i in xrange(3):
+		for i in xrange(4):
 			line = []
-			for j in xrange(4):
-				month = '%02d' % (1 + j + 4 * i)
+			for j in xrange(3):
+				month = '%02d' % (1 + j + 3 * i)
 				name = self.names[month]
 				if month in self.side:
 					destination = '%s/%s/%s/' % (self.home, self.this_year, month)
