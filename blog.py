@@ -96,8 +96,8 @@ class Blog(Base):
 		list_file = self.get_list_filename(stem)
 
 		this_page = self.pair_to_triplet(stem)
-		prev_page = self.pair_to_triplet(self.prevmap.get(stem, None))
-		next_page = self.pair_to_triplet(self.nextmap.get(stem, None))
+		prev_page = self.pair_to_triplet(self.prevmap.get(stem))
+		next_page = self.pair_to_triplet(self.nextmap.get(stem))
 
 		p = month_poster.Poster(self.home, this_page, prev_page, next_page)
 		p.parse_conf(self.conf)
