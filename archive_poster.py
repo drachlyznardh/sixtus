@@ -22,6 +22,9 @@ class Poster:
 		news_conf = conf['lang']['blog']['news']
 		self.news = news_conf['title']
 
+		news_conf = conf.get('lang').get('blog').get('news')
+		self.news = news_conf.get('title')
+
 	def parse_files (self, list_files):
 
 		for stem in list_files:
