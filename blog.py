@@ -37,6 +37,8 @@ class Blog(Base):
 
 		self.month = [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
 
+		if len(self.month) == 0: return
+
 		old = self.month[0]
 		for current in self.month[1:]:
 			self.prevmap[current] = old
