@@ -152,8 +152,8 @@ class Blog(Base):
 		pag_file = self.get_pag_filename(year)
 		list_file = self.get_list_filename(year)
 
-		prev_year = self.prevmap.get(year, None)
-		next_year = self.nextmap.get(year, None)
+		prev_year = self.prevmap.get(year)
+		next_year = self.nextmap.get(year)
 
 		p = year_poster.Poster(self.home, year, prev_year, next_year)
 		p.parse_conf(self.conf)
