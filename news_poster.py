@@ -16,15 +16,15 @@ class Poster:
 
 	def parse_conf (self, conf):
 
-		news_conf = conf.get('lang').get('blog').get('news')
-		self.title = news_conf.get('title')
-		self.subtitle = news_conf.get('subtitle')
-		self.threshold = news_conf.get('threshold')
+		news_conf = conf['lang']['blog']['news']
+		self.title = news_conf['title']
+		self.subtitle = news_conf['subtitle']
+		self.threshold = news_conf['threshold']
 
-		archive_conf = conf.get('lang').get('blog').get('archive')
-		self.archive = archive_conf.get('title')
+		archive_conf = conf['lang']['blog']['archive']
+		self.archive = archive_conf['title']
 
-		self.names = conf.get('lang').get('month')
+		self.names = conf['lang']['month']
 
 	def parse_line (self, line):
 
@@ -39,7 +39,7 @@ class Poster:
 		if year not in self.content: self.content[year] = {}
 		selected = [(i, x) for i, j in reversed(sorted(helper.post.items())) for x in j][:count]
 		addenda = {k:[i for i in reversed([i for j,i in list(v)])] for k,v in groupby(selected, lambda x:x[0])}
-		self.content.get(year)[month] = addenda
+		self.content[year][month] = addenda
 
 	def parse_target_list (self, target_list):
 
@@ -68,14 +68,14 @@ class Poster:
 		many = False
 
 		for year in sorted(self.content, reverse=True):
-			for month in sorted(self.content.get(year), reverse=True):
+			for month in sorted(self.content[year], reverse=True):
 				if many : output += '\tbr|\n'
 				else: many = True
-				output += '\tstitle@right|%s %s\n' % (self.names.get(month), year)
-				for day in sorted(self.content.get(year).get(month), reverse=True):
-					howmany = len(self.content.get(year).get(month).get(day)) -1
+				output += '\tstitle@right|%s %s\n' % (self.names[month], year)
+				for day in sorted(self.content[year][month], reverse=True):
+					howmany = len(self.content[year][month][day]) -1
 					progress = 0
-					for post in self.content.get(year).get(month).get(day):
+					for post in self.content[year][month][day]:
 
 						if progress:
 							output += '\t\t&amp;\n'
@@ -93,11 +93,11 @@ class Poster:
 		many = False
 
 		for year in sorted(self.content, reverse=True):
-			for month in sorted(self.content.get(year), reverse=True):
-				for day in sorted(self.content.get(year).get(month), reverse=True):
-					howmany = len(self.content.get(year).get(month).get(day)) -1
+			for month in sorted(self.content[year], reverse=True):
+				for day in sorted(self.content[year][month], reverse=True):
+					howmany = len(self.content[year][month][day]) -1
 					progress = 0
-					for post in self.content.get(year).get(month).get(day):
+					for post in self.content[year][month][day]:
 
 						if many: output += 'br|\n'
 						else: many = True
@@ -127,13 +127,13 @@ class Poster:
 		output += '\t\t<title><?=$_SERVER["HTTP_HOST"]?></title>\n'
 
 		for year in sorted(self.content, reverse=True):
-			for month in sorted(self.content.get(year), reverse=True):
+			for month in sorted(self.content[year], reverse=True):
 				destination = '%s/%s/%s/' % (self.home, year, month)
-				for day in sorted(self.content.get(year).get(month), reverse=True):
-					howmany = len(self.content.get(year).get(month).get(day)) -1
+				for day in sorted(self.content[year][month], reverse=True):
+					howmany = len(self.content[year][month][day]) -1
 					progress = 0
 					date = '%s/%s/%s' % (year, month, day)
-					for post in self.content.get(year).get(month).get(day):
+					for post in self.content[year][month][day]:
 
 						ref = '%s-%d' % (day, howmany - progress)
 

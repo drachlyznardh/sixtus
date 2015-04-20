@@ -25,7 +25,7 @@ class Resources(Base):
 
 	def remove_file (self, name):
 
-		out_file = os.path.join(self.loc.get('deploy'), self.map_Six_to_six(name))
+		out_file = os.path.join(self.loc['deploy'], self.map_Six_to_six(name))
 
 		if os.path.exists(out_file):
 			self.loud('Removing resources file %s' % out_file)
@@ -35,8 +35,8 @@ class Resources(Base):
 
 	def update_file (self, name):
 
-		in_file = os.path.join(self.loc.get('res'), name)
-		out_file = os.path.join(self.loc.get('deploy'), self.map_Six_to_six(name))
+		in_file = os.path.join(self.loc['res'], name)
+		out_file = os.path.join(self.loc['deploy'], self.map_Six_to_six(name))
 
 		if self.force:
 			self.explain_why('Force rebuild of resource file %s' % out_file)
@@ -62,7 +62,7 @@ class Resources(Base):
 
 		if 'res' not in self.loc: return
 
-		sources = util.find_all_sources(self.loc.get('res'), r'^(.*)$', False)
+		sources = util.find_all_sources(self.loc['res'], r'^(.*)$', False)
 
 		for name in sources:
 			self.update_file(name)
@@ -73,6 +73,6 @@ class Resources(Base):
 
 		if 'res' not in self.loc: return
 
-		for name in util.find_all_sources(self.loc.get('res'), r'^(.*)$', False):
+		for name in util.find_all_sources(self.loc['res'], r'^(.*)$', False):
 			self.remove_file(name)
 

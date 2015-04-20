@@ -19,7 +19,7 @@ class Blog(Base):
 	def __init__ (self, bag):
 
 		Base.__init__(self, bag)
-		self.home = self.loc.get('blog-home')
+		self.home = self.loc['blog-home']
 
 		self.blogmap = {}
 		self.prevmap = {}
@@ -51,21 +51,22 @@ class Blog(Base):
 			old = current
 
 	def get_struct_filename (self):
-		return os.path.join(self.loc.get('list'), 'blog-struct.py')
+		return os.path.join(self.loc['list'], 'blog-struct.py')
 
 	def get_archive_filename (self):
-		archive_conf = self.conf.get('lang').get('blog').get('archive')
-		archive_basename = '%s.pag' % archive_conf.get('title')
-		return os.path.join(self.loc.get('blog-out'), archive_basename)
+		archive_conf = self.conf['lang']['blog']['archive']
+		archive_basename = '%s.pag' % archive_conf['title']
+		return os.path.join(self.loc['blog-out'], archive_basename)
 
 	def get_news_filename (self):
-		return os.path.join(self.loc.get('blog-out'), 'index.pag')
+		return os.path.join(self.loc['blog-out'], 'index.pag')
 
 	def get_post_filename (self, stem):
 		return os.path.join(self.loc['blog-in'], stem[0], '%s.post' % stem[1])
 
 	def get_feed_filename (self):
-		return os.path.join(self.loc['deploy'], self.loc.get('feed'))
+		if 'feed' not in self.loc: return False
+		return os.path.join(self.loc['deploy'], self.loc['feed'])
 
 	def get_pag_filename (self, stem):
 		if isinstance(stem, tuple):
@@ -82,7 +83,7 @@ class Blog(Base):
 
 	def pair_to_triplet (self, stem):
 		if stem:
-			name = self.conf.get('lang').get('month').get(stem[1])
+			name = self.conf['lang']['month'][stem[1]]
 			return (stem[0], stem[1], name)
 		return None
 
@@ -156,7 +157,7 @@ class Blog(Base):
 
 		p = year_poster.Poster(self.home, year, prev_year, next_year, names)
 		p.parse_conf(self.conf)
-		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap.get(year))])
+		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap[year])])
 		p.output_pag_file(pag_file)
 		p.output_list_file(list_file)
 

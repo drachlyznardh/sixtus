@@ -52,7 +52,7 @@ class Pages(Base):
 
 	# Returns full path for a category jump index.php file
 	def get_cat_jump_filename (self, bundle):
-		return os.path.join(self.loc.get('deploy'), bundle[0], 'index.php')
+		return os.path.join(self.loc['deploy'], bundle[0], 'index.php')
 
 	# Locate source pages
 	def find_page_sources (self):
@@ -276,7 +276,7 @@ class Pages(Base):
 
 		result = []
 		found = set()
-		root = self.loc.get('deploy')
+		root = self.loc['deploy']
 
 		values = sorted(self.sitemap.values())
 
@@ -296,7 +296,7 @@ class Pages(Base):
 
 	def build_cat_jump_file (self, pair):
 
-		root = self.loc.get('deploy')
+		root = self.loc['deploy']
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
 		self.loud('Generating jump file %s' % jump_file)

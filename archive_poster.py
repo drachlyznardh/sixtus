@@ -11,9 +11,12 @@ class Poster:
 
 	def parse_conf (self, conf):
 
-		archive_conf = conf.get('lang').get('blog').get('archive')
-		self.title = archive_conf.get('title')
-		self.subtitle = archive_conf.get('subtitle')
+		archive_conf = conf['lang']['blog']['archive']
+		self.title = archive_conf['title']
+		self.subtitle = archive_conf['subtitle']
+
+		news_conf = conf['lang']['blog']['news']
+		self.news = news_conf['title']
 
 	def parse_files (self, list_files):
 

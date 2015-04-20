@@ -25,9 +25,11 @@ class Poster:
 
 	def parse_conf (self, conf):
 
-		year_conf = conf.get('lang').get('blog').get('year')
-		self.title = self.apply_values(year_conf.get('title'))
-		self.subtitle = self.apply_values(year_conf.get('subtitle'))
+		year_conf = conf['lang']['blog']['year']
+		self.title = self.apply_values(year_conf['title'])
+		self.subtitle = self.apply_values(year_conf['subtitle'])
+
+		self.names = conf['lang']['month']
 
 	def parse_files (self, list_files):
 
