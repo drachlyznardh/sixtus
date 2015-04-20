@@ -166,24 +166,6 @@ class Pages(Base):
 			mapped = self.map_Six_to_six (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
-	def map_Six_to_six (self, stem):
-
-		discarded = []
-		partial = stem
-
-		while partial and partial not in self.sitemap:
-			partial, last = os.path.split(partial)
-			if last != 'index':
-				discarded.append(util.convert(last))
-
-		translated = self.sitemap.get(partial, '')
-		if len(discarded):
-			discarded.reverse()
-			translated = os.path.join(translated,
-				os.path.join(*discarded))
-
-		return translated
-
 	def map_six_to_Six (self, stem):
 
 		if stem[1] in self.sixSixmap:

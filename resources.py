@@ -58,24 +58,6 @@ class Resources(Base):
 		self.explain_why_not('resource file %s is up to date' % out_file)
 		return False
 
-	def map_Six_to_six (self, stem):
-
-		discarded = []
-		partial = stem
-
-		while partial and partial not in self.sitemap:
-			partial, last = os.path.split(partial)
-			if last != 'index':
-				discarded.append(util.convert(last))
-
-		translated = self.sitemap.get(partial, '')
-		if len(discarded):
-			discarded.reverse()
-			translated = os.path.join(translated,
-				os.path.join(*discarded))
-
-		return translated
-
 	def build (self):
 
 		if 'res' not in self.loc: return

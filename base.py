@@ -3,6 +3,8 @@
 from __future__ import print_function
 import os
 
+from util import convert
+
 class Base:
 
 	def __init__ (self, bag):
@@ -24,4 +26,22 @@ class Base:
 	def stats (self, message):
 		if self.flags.get('stats', False):
 			print(message)
+
+	def map_Six_to_six (self, stem):
+
+		discarded = []
+		partial = stem
+
+		while partial and partial not in self.sitemap:
+			partial, last = os.path.split(partial)
+			if last != 'index':
+				discarded.append(convert(last))
+
+		translated = self.sitemap.get(partial, '')
+
+		if len(discarded):
+			discarded.reverse()
+			return os.path.join(translated, os.path.join(*discarded))
+
+		return translated
 
