@@ -19,7 +19,7 @@ def sixtus_build (bag):
 
 	Runtime(bag).build()
 	Resources(bag).build()
-	if bag[4].get('blog'): Blog(bag).build()
+	if bag[4]['blog']: Blog(bag).build()
 	Pages(bag).build()
 
 	if d: print('Siχtus 0.10, done')
@@ -29,8 +29,8 @@ def sixtus_clean (bag):
 	d = bag[1].get('loud', False)
 	if d: print('Siχtus 0.10, cleaning')
 
-	build_dir = bag[4].get('build')
-	blog_build_dir = bag[4].get('blog-out')
+	build_dir = bag[4]['build']
+	blog_build_dir = bag[4]['blog-out']
 
 	import shutil
 	if d: print('Removing build dir %s' % build_dir)
@@ -79,29 +79,29 @@ def digest_location (source):
 	if 'pag' not in source:
 		raise Exception('Location for pag files was not specified')
 
-	pag_location = source.get('pag')
+	pag_location = source['pag']
 	if not os.path.exists(pag_location):
 		raise Exception('Specified location for pag files %s does not exist!' % pag_location)
 
 	if 'blog' in source:
 		if 'blog-in' not in source:
-			source['blog-in'] = source.get('blog')
+			source['blog-in'] = source['blog']
 		if 'blog-out' not in source:
-			source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
+			source['blog-out'] = os.path.join(source['pag'], source['blog'])
 		if 'blog-home' not in source:
-			source['blog-home'] = util.convert(source.get('blog'))
+			source['blog-home'] = util.convert(source['blog'])
 
 	if 'list' not in source:
-		source['list'] = os.path.join(source.get('build'), 'list')
+		source['list'] = os.path.join(source['build'], 'list')
 
 	if 'Six' not in source:
-		source['Six'] = os.path.join(source.get('build'), 'dep')
+		source['Six'] = os.path.join(source['build'], 'dep')
 	if 'src' not in source:
-		source['src'] = os.path.join(source.get('build'), 'dep')
+		source['src'] = os.path.join(source['build'], 'dep')
 	if 'dep' not in source:
-		source['dep'] = os.path.join(source.get('build'), 'dep')
+		source['dep'] = os.path.join(source['build'], 'dep')
 	if 'six' not in source:
-		source['six'] = os.path.join(source.get('build'), 'six')
+		source['six'] = os.path.join(source['build'], 'six')
 
 	this_dir = os.path.dirname(__file__)
 	source['runtime'] = os.path.join(this_dir, 'data')
@@ -172,7 +172,7 @@ def sixtus_read_args ():
 		raise Exception('Specified conf file %s does not exist!' % conf_file)
 	else: raise Exception('Required conf file %s does not exist!' % conf_file)
 
-	loc = digest_location(conf.get('location'))
+	loc = digest_location(conf['location'])
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 	bag = (force, flags, time_delta, sitemap, loc, conf, version)

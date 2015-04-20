@@ -378,10 +378,10 @@ class FullConverter(ContentConverter):
 		if len(self.page_location):
 			output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
 		else: output += 'False,'
-		output += ('"%s",' % self.meta.get('title','title'))
-		if 'short' in self.meta: output += ('"%s",' % self.meta.get('short'))
-		else: output += ('"%s",' % self.meta.get('title','title'))
-		output += ('"%s",' % self.meta.get('subtitle','subtitle'))
+		output += ('"%s",' % self.meta['title'])
+		if 'short' in self.meta: output += ('"%s",' % self.meta['short'])
+		else: output += ('"%s",' % self.meta['title'])
+		output += ('"%s",' % self.meta['subtitle'])
 		if 'prev' in self.meta.keys():
 			pagprev = self.meta['prev']
 			if pagprev: output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))

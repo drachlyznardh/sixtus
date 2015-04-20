@@ -52,7 +52,7 @@ class Pages(Base):
 
 	# Returns full path for a category jump index.php file
 	def get_cat_jump_filename (self, bundle):
-		return os.path.join(self.loc.get('deploy'), bundle[0], 'index.php')
+		return os.path.join(self.loc['deploy'], bundle[0], 'index.php')
 
 	# Locate source pages
 	def find_page_sources (self):
@@ -166,24 +166,6 @@ class Pages(Base):
 			mapped = self.map_Six_to_six (stem)
 			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
 
-	def map_Six_to_six (self, stem):
-
-		discarded = []
-		partial = stem
-
-		while partial and partial not in self.sitemap:
-			partial, last = os.path.split(partial)
-			if last != 'index':
-				discarded.append(util.convert(last))
-
-		translated = self.sitemap.get(partial, '')
-		if len(discarded):
-			discarded.reverse()
-			translated = os.path.join(translated,
-				os.path.join(*discarded))
-
-		return translated
-
 	def map_six_to_Six (self, stem):
 
 		if stem[1] in self.sixSixmap:
@@ -294,7 +276,7 @@ class Pages(Base):
 
 		result = []
 		found = set()
-		root = self.loc.get('deploy')
+		root = self.loc['deploy']
 
 		values = sorted(self.sitemap.values())
 
@@ -314,7 +296,7 @@ class Pages(Base):
 
 	def build_cat_jump_file (self, pair):
 
-		root = self.loc.get('deploy')
+		root = self.loc['deploy']
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
 		self.loud('Generating jump file %s' % jump_file)

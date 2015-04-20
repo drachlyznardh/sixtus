@@ -2,18 +2,25 @@
 
 from __future__ import print_function
 
+from util import assert_dir
+
 class Poster:
 
-	def __init__ (self):
+	def __init__ (self, home):
+
+		self.home = home
 
 		self.side = []
 		self.page = []
 
 	def parse_conf (self, conf):
 
-		archive_conf = conf.get('lang').get('blog').get('archive')
-		self.title = archive_conf.get('title')
-		self.subtitle = archive_conf.get('subtitle')
+		archive_conf = conf['lang']['blog']['archive']
+		self.title = archive_conf['title']
+		self.subtitle = archive_conf['subtitle']
+
+		news_conf = conf['lang']['blog']['news']
+		self.news = news_conf['title']
 
 	def parse_files (self, list_files):
 
@@ -24,14 +31,17 @@ class Poster:
 
 	def output_pag_file (self, pag_file):
 
+		output = 'title|%s\n' % self.title
+		output += 'subtitle|%s\n' % self.subtitle
+		output += 'prev|%s|%s\n' % (self.home, self.news)
+
+		output += 'start|page\n'
+		output += '%s\n' % '\nbr|\n'.join(self.page)
+
+		output += 'start|side\n'
+		output += 'stitle|%s\n' % self.title
+		output += 'c|%s' % '\n/\n'.join(['link||%s|%s' % (i,i) for i in self.side])
+
+		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
-
-			print('title|%s' % self.title, file=f)
-			print('subtitle|%s' % self.subtitle, file=f)
-
-			print('start|page', file=f)
-			print('\nbr|\n'.join(self.page), file=f)
-
-			print('start|side', file=f)
-			print('stitle|%s' % self.title, file=f)
-			print('p|%s' % ('\n/\n'.join(['link||%s|%s' % (i, i) for i in self.side])), file=f)
+			print(output, file=f)
