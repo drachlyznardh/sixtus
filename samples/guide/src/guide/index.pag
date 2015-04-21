@@ -18,18 +18,83 @@ tab|intro
 	produce this document.
 
 tab|i
+	There is plain text, there is <em>emphasys</em>, there is <code>code</code>,
+	there is <strong>strong content</strong>.
+
+	To make a paragraph, you can leave an empty line.
+	p|Or you can force it with the <code>p@PIPE@[…]</code> directive.
+	c|There are centered paragraphs.
+	r|There are paragraph pushed to the right.
+	br|
+	You can display an empty line using a break, with a <code>br@PIPE@</code>
+	directive.
+	br|
 	title|A title
 	title@center|A centered title
 	title@right|A right-aligned title
 	title@left|This is the same as the first
-
+	br|
 	stitle|A subtitle
 	stitle@center|A subtitle in the middle
 	stitle@right|A subtitle on the right
 	stitle@left|A subtitle on the left
+	br|
+	begin|ol
+		p|You
+		p|can
+		p|write
+		p|lists
+	end|ol
+	begin|ul
+		p|List
+		p|can
+		p|be
+		p|unordered
+	end|ul
+	begin|ol|4em
+		even lists with exceptionally large margins
+	end|ol
+	begin|ol||12
+		even lists
+
+		starting from
+
+		arbitrary values
+	end|ol
+	begin|inside
+		You can display blocks of text inside two kind of panels.
+	end|inside
+	begin|outside
+		This is the other kind.
+	end|outside
+	Text flow can be pushed around by floating blocks.
+	begin|half|right
+		This is an half-block on the right.
+	end|right
+	begin|half|left
+		This is an half-block on the left.
+	end|right
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	begin|mini|left
+		This is a mini block on the left.
+	end|
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	begin|mini|right
+		This is a mini block on the right.
+	end|
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	Text flow can be pushed around by floating blocks.
+	clear|
+	Please remember to put a <code>clear@PIPE@</code> directive after these
+	block, so that the floating block won't bleed outside their container.
 # This is the content of the side panel
 start|side
 	title|Guide
 	r|tid|Introduction|intro
-	p|tid|Text examples|i
-	p|tid|Title examples|ii
+	p|tid|Some examples|i
