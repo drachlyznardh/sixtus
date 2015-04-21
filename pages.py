@@ -362,7 +362,8 @@ class Pages(Base):
 
 	def remove (self):
 
-		self.load_products()
+		try: self.load_products()
+		except: return
 
 		for stem in self.products:
 			self.remove_php_file(stem)
