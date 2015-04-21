@@ -27,11 +27,17 @@ class Blog(Base):
 
 	def populate (self):
 
-		root = self.loc['blog-in']
+		root_dir = self.loc['blog-in']
+		if not os.path.exists(root_dir):
+			raise Exception('Root dir %s does not exist' % root_dir)
+
 		month_pattern = re.compile(r'^(\d\d)\.post$')
-		for year in os.listdir(root):
+		year_pattern = re.compile(r'^\d{4}$')
+		for year in os.listdir(root_dir):
+			if not os.path.isdir(year): continue
+			if not year_pattern.match(year): continue
 			self.blogmap[year] = []
-			for month in os.listdir(os.path.join(root, year)):
+			for month in os.listdir(os.path.join(root_dir, year)):
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 

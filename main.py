@@ -87,8 +87,6 @@ def digest_location (source):
 		raise Exception('Location for pag files was not specified')
 
 	pag_location = source['pag']
-	if not os.path.exists(pag_location):
-		raise Exception('Specified location for pag files %s does not exist!' % pag_location)
 
 	if 'blog' in source:
 		if 'blog-in' not in source:
