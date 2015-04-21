@@ -16,6 +16,6 @@
 			<div id="right-back"><a href="#" onclick="hide_right_side();">[ &gt; ]</a></div>
 			<div class="content"><?php
 	if($d[4])echo('@SIXTUS_PAGE_PREV@');
-	if($d[0])echo('<p class="center">/ '.join(' / ',$cats).' /</p>');
+	if(count($cats))echo('<p class="center">/ '.join(' / ',$cats).' /</p>');
 	if($d[5])echo('@SIXTUS_PAGE_NEXT@');
 ?><br/>
