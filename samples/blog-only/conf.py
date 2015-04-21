@@ -20,11 +20,11 @@
 		'next':{'body':''}
 		},
 	'blog':{
-		'news':{'title':'News title',
-			'subtitle':'News subtitle',
+		'news':{'title':'News',
+			'subtitle':'The most recent news',
 			'threshold':10},
-		'archive':{'title':'Archive title',
-			'subtitle':'Archive subtitle'},
+		'archive':{'title':'Archive',
+			'subtitle':'All the news ever'},
 		'year':{'title':'@THIS_YEAR@',
 			'subtitle':'All the news from @THIS_YEAR@'},
 		'month':{'title':'@THIS_MONTH_NAME@ @THIS_YEAR@',
