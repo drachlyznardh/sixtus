@@ -58,8 +58,8 @@ class Poster:
 		output += '%s\n' % '\nbr|\n'.join(self.page)
 
 		output += 'start|side\n'
-		output += 'r|link|%s/%s/|%s\n' % (self.home, self.archive, self.archive)
-		output += 'title|%s\n'  % self.this_year
+		output += 'c|link|%s/%s/|%s\n' % (self.home, self.archive, self.archive)
+		output += 'title@center|%s\n'  % self.this_year
 
 		for i in xrange(4):
 			line = []
