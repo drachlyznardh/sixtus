@@ -12,6 +12,16 @@ from pages import Pages
 
 import util
 
+class Bag:
+	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
+		self.force = force
+		self.flags = flags
+		self.time_delta = time_delta
+		self.sitemap = sitemap
+		self.location = location
+		self.conf = conf
+		self.version = version
+
 def sixtus_build (bag):
 
 	d = bag[1].get('loud', False)
