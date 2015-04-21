@@ -16,8 +16,10 @@
 		'next':{'body':'<div id="pag_next" class="outside"><p class="reverse">Following / @LINK@ /</p></div>'}
 		},
 	'tab':{
-		'prev':{'body':''},
-		'next':{'body':''}
+		'prev':{'body':'<div class="inside"><p>The @LINK@ was / @TITLE@ /.</p></div>',
+			'target':'previous tab'},
+		'next':{'body':'<div class="outside"><p class="reverse">/ @TITLE@ / is the @LINK@.</p></div>',
+			'target':'following tab'},
 		},
 	'blog':{
 		'news':{'title':'News',
