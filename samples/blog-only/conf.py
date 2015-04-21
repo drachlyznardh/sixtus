@@ -24,8 +24,25 @@
 			'subtitle':'News subtitle',
 			'threshold':10},
 		'archive':{'title':'Archive title',
-			'subtitle':'Archive subtitle'}
+			'subtitle':'Archive subtitle'},
+		'year':{'title':'@THIS_YEAR@',
+			'subtitle':'All the news from @THIS_YEAR@'},
+		'month':{'title':'@THIS_MONTH_NAME@ @THIS_YEAR@',
+			'subtitle':'All the news from @THIS_MONTH_NAME@ @THIS_YEAR@'}
 		},
-	'month':{}
-	},
+	'month':{
+		'01':'January',
+		'02':'February',
+		'03':'March',
+		'04':'April',
+		'05':'May',
+		'06':'June',
+		'07':'July',
+		'08':'August',
+		'09':'September',
+		'10':'October',
+		'11':'November',
+		'12':'Dicember'
+		}
+	}
 }
