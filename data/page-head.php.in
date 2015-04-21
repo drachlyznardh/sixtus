@@ -14,8 +14,13 @@
 		<div id="content" onclick="hide_all_sides();">
 			<div id="header">
 
-				<?php $href='/';$cats=array();if($d[0])foreach($d[0]as$w){$href.=$w.'/';$cats[]='<a href="'.$href.'">'.$w.'</a>';}
-				if(count($cats))echo('<div id="location"><p>/ '.join(' / ',$cats)).' /</p></div>'."\n\t\t"?><div id="maintitle"><h1><?=$d[1]?></h1></div>
+				<?php
+	$href='/';$cats=array();
+	if($d[0])foreach($d[0]as$w){$href.=$w.'/';$cats[]='<a href="'.$href.'">'.$w.'</a>';}
+	if(count($cats))
+		echo('<div id="location"><p>/ '.join(' / ',$cats).' /</p></div>'."\n\t\t");
+	array_pop($cats);
+	?><div id="maintitle"><h1><?=$d[1]?></h1></div>
 				<div id="subtitle"><p><?=$d[3]?></p></div>
 
 			</div><div class="content">
