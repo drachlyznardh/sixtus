@@ -129,6 +129,7 @@ class Splitter:
 		for name in order:
 
 			varmeta = self.meta
+			varmeta += 'tabself|%s\n' % util.convert(name)
 			if name in tabprev:
 				prevtab = util.convert(tabprev[name])
 				varmeta += 'tabprev|/%s/|%s\n' % (os.path.join(base, prevtab), prevtab)
