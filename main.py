@@ -24,12 +24,12 @@ class Bag:
 
 def sixtus_build (bag):
 
-	d = bag[1].get('loud', False)
+	d = bag.flags.get('loud', False)
 	if d: print('Siχtus 0.10')
 
 	Runtime(bag).build()
-	Resources(bag).build()
-	if 'blog' in bag[4]: Blog(bag).build()
+	if 'res' in bag.location: Resources(bag).build()
+	if 'blog' in bag.location: Blog(bag).build()
 	Pages(bag).build()
 
 	if d: print('Siχtus 0.10, done')
@@ -38,16 +38,16 @@ def sixtus_clean (bag):
 
 	import shutil
 
-	d = bag[1].get('loud', False)
+	d = bag.flags.get('loud', False)
 	if d: print('Siχtus 0.10, cleaning')
 
 
-	if 'blog-out' in bag[4]:
-		blog_build_dir = bag[4]['blog-out']
+	if 'blog-out' in bag.location:
+		blog_build_dir = bag.location['blog-out']
 		if d: print('Removing build blog dir %s' % blog_build_dir)
 		if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
 
-	build_dir = bag[4]['build']
+	build_dir = bag.location['build']
 	if d: print('Removing build dir %s' % build_dir)
 	if os.path.exists(build_dir): shutil.rmtree(build_dir)
 
@@ -55,7 +55,7 @@ def sixtus_clean (bag):
 
 def sixtus_veryclean (bag):
 
-	d = bag[1].get('loud', False)
+	d = bag.flags.get('loud', False)
 	if d: print('Siχtus 0.10, cleaning hard')
 
 	Resources(bag).remove()
@@ -67,9 +67,9 @@ def sixtus_veryclean (bag):
 
 def sixtus_rebuild (bag):
 
-	force_bag = (True, bag[1], bag[2], bag[3], bag[4], bag[5], bag[6])
-	sixtus_veryclean(force_bag)
-	sixtus_build(force_bag)
+	bag.force = True
+	sixtus_veryclean(bag)
+	sixtus_build(bag)
 
 def sixtus_help ():
 	print('usage: %s [options] (build|clean|veryclean|rebuild)*' % sys.argv[0])
@@ -190,7 +190,7 @@ def sixtus_read_args ():
 	loc = digest_location(conf['location'])
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
-	bag = (force, flags, time_delta, sitemap, loc, conf, version)
+	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
 
 	if len(args) == 0:
 		sixtus_build(bag)
