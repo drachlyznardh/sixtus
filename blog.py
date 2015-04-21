@@ -281,6 +281,16 @@ class Blog(Base):
 			self.build_struct()
 			return True
 
+		archive_file = self.get_archive_filename()
+		if not os.path.exists(archive_file):
+			self.explain_why('archive file %s does not exist' % archive_file)
+			self.build_archive()
+
+		news_file = self.get_news_filename()
+		if not os.path.exists(news_file):
+			self.explain_why('news file %s does not exist' % news_file)
+			self.build_news()
+
 		self.update_index()
 		return False
 
