@@ -12,12 +12,12 @@
 'side':'<div><p>This is the left side.</p></div>',
 'lang':{
 	'page':{
-		'prev':{'body':'Link to next page @LINK@'},
-		'next':{'body':'Link to previous page @LINK@'}
+		'prev':{'body':'<div id="pag_prev" class="inside"><p>/ @LINK@ / Previous</p></div>'},
+		'next':{'body':'<div id="pag_next" class="outside"><p class="reverse">Following / @LINK@ /</p></div>'}
 		},
 	'tab':{
-		'prev':{'body':'Link to next tab @LINK@'},
-		'next':{'body':'Link to previous tab @LINK@'}
+		'prev':{'body':''},
+		'next':{'body':''}
 		},
 	'blog':{
 		'news':{'title':'News title',
