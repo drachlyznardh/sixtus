@@ -1,0 +1,15 @@
+# This is the index file for the guide/ folder. The folder hierarchy appears
+# above the title.
+
+# This page is titled Guide, of course
+title|Guide
+# Under the title goes the subtitle
+subtitle|All you need to know to use Siχtus
+
+# This page's content starts here
+start|page
+	Hello there
+
+# This is the content of the side panel
+start|side
+	title|Guide
