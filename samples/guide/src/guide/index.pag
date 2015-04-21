@@ -6,6 +6,10 @@ title|Guide
 # Under the title goes the subtitle
 subtitle|All you need to know to use Siχtus
 
+# Pages relations can be expressed here. This page loops on itself
+prev|Guide/|Back to the guide
+next|Guide/|On to the guide
+
 # This page's content starts here
 start|page
 
