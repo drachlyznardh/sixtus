@@ -9,7 +9,14 @@
 	'build':'build',
 	'deploy':'deploy'
 	},
-'side':'<div><p>This is the left side.</p></div>',
+'side':'''
+	<div>
+		<h2>Guide</h2><p>This is the left panel of the guide.</p><p>You can edit
+		it in the configuration file, it's a simple HTML block.</p><p>This panel
+		will appear or be accessible on the left of each page of the side, so it
+		can be used as the main bar.</p>
+	</div>
+''',
 'lang':{
 	'page':{
 		'prev':{'body':'<div id="pag_prev" class="inside"><p>/ @LINK@ / Previous</p></div>'},
