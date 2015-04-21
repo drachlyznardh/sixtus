@@ -67,7 +67,6 @@ def sixtus_veryclean (bag):
 
 def sixtus_rebuild (bag):
 
-	bag.force = True
 	sixtus_veryclean(bag)
 	sixtus_build(bag)
 
