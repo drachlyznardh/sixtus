@@ -34,10 +34,13 @@ class Blog(Base):
 		month_pattern = re.compile(r'^(\d\d)\.post$')
 		year_pattern = re.compile(r'^\d{4}$')
 		for year in os.listdir(root_dir):
-			if not os.path.isdir(year): continue
+
+			year_dir = os.path.join(root_dir, year)
+			if not os.path.isdir(year_dir): continue
 			if not year_pattern.match(year): continue
+
 			self.blogmap[year] = []
-			for month in os.listdir(os.path.join(root_dir, year)):
+			for month in os.listdir(year_dir):
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
