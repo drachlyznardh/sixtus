@@ -27,11 +27,11 @@ class Blog(Base):
 
 	def populate (self):
 
-		root = self.loc['blog-in']
+		root_dir = self.loc['blog-in']
 		month_pattern = re.compile(r'^(\d\d)\.post$')
-		for year in os.listdir(root):
+		for year in os.listdir(root_dir):
 			self.blogmap[year] = []
-			for month in os.listdir(os.path.join(root, year)):
+			for month in os.listdir(os.path.join(root_dir, year)):
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
