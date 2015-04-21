@@ -8,8 +8,28 @@ subtitle|All you need to know to use Siχtus
 
 # This page's content starts here
 start|page
-	Hello there
 
+# A page can be broken into tabs, or not.
+tab|intro
+	title|Introduction
+	Hello there. I see you read the README file. Now please go back and read the
+	content of file <code>src/guide/index.pag</code>, which is the source for
+	this page: it contains a bunch of comments that should explain how to
+	produce this document.
+
+tab|i
+	title|A title
+	title@center|A centered title
+	title@right|A right-aligned title
+	title@left|This is the same as the first
+
+	stitle|A subtitle
+	stitle@center|A subtitle in the middle
+	stitle@right|A subtitle on the right
+	stitle@left|A subtitle on the left
 # This is the content of the side panel
 start|side
 	title|Guide
+	r|tid|Introduction|intro
+	p|tid|Text examples|i
+	p|tid|Title examples|ii
