@@ -32,7 +32,10 @@ class Blog(Base):
 			raise Exception('Root dir %s does not exist' % root_dir)
 
 		month_pattern = re.compile(r'^(\d\d)\.post$')
+		year_pattern = re.compile(r'^\d{4}$')
 		for year in os.listdir(root_dir):
+			if not os.path.isdir(year): continue
+			if not year_pattern.match(year): continue
 			self.blogmap[year] = []
 			for month in os.listdir(os.path.join(root_dir, year)):
 				if month_pattern.match(month):
