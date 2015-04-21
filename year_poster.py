@@ -29,6 +29,9 @@ class Poster:
 		self.title = self.apply_values(year_conf['title'])
 		self.subtitle = self.apply_values(year_conf['subtitle'])
 
+		archive_conf = conf['lang']['blog']['archive']
+		self.archive = archive_conf['title']
+
 		self.names = conf['lang']['month']
 
 	def parse_files (self, list_files):
@@ -55,7 +58,8 @@ class Poster:
 		output += '%s\n' % '\nbr|\n'.join(self.page)
 
 		output += 'start|side\n'
-		output += 'title|%s\n'  % self.this_year
+		output += 'c|link|%s/%s/|%s\n' % (self.home, self.archive, self.archive)
+		output += 'title@center|%s\n'  % self.this_year
 
 		for i in xrange(4):
 			line = []
