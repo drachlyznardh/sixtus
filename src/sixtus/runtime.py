@@ -5,8 +5,8 @@ import sys
 import os
 import re
 
-from base import Base
-import util
+from .base import Base
+from .util import assert_dir, clean_empty_dirs
 
 class Runtime(Base):
 
@@ -19,7 +19,7 @@ class Runtime(Base):
 
 	def copy_static (self, source, destination):
 
-		util.assert_dir(destination)
+		assert_dir(destination)
 		with open(destination, 'w') as df:
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
@@ -135,7 +135,7 @@ class Runtime(Base):
 			self.loud('Removing system file %s' % out_file)
 			os.unlink(out_file)
 
-		util.clean_empty_dirs(out_file)
+		clean_empty_dirs(out_file)
 
 	def update_file (self, name, callback):
 

@@ -5,8 +5,8 @@ import sys
 import os
 import re
 
-from base import Base
-import util
+from .base import Base
+from .util import assert_dir, clean_empty_dirs, find_all_sources
 
 class Resources(Base):
 
@@ -18,7 +18,7 @@ class Resources(Base):
 
 		self.loud('Copying resource file %s to %s' % (source, destination))
 
-		util.assert_dir(destination)
+		assert_dir(destination)
 		with open(destination, 'w') as df:
 			with open(source, 'r') as sf:
 				print(sf.read(), file=df)
@@ -31,7 +31,7 @@ class Resources(Base):
 			self.loud('Removing resources file %s' % out_file)
 			os.unlink(out_file)
 
-		util.clean_empty_dirs(out_file)
+		clean_empty_dirs(out_file)
 
 	def update_file (self, name):
 
@@ -62,7 +62,7 @@ class Resources(Base):
 
 		if 'res' not in self.loc: return
 
-		sources = util.find_all_sources(self.loc['res'], r'^(.*)$', False)
+		sources = find_all_sources(self.loc['res'], r'^(.*)$', False)
 
 		for name in sources:
 			self.update_file(name)
@@ -73,6 +73,6 @@ class Resources(Base):
 
 		if 'res' not in self.loc: return
 
-		for name in util.find_all_sources(self.loc['res'], r'^(.*)$', False):
+		for name in find_all_sources(self.loc['res'], r'^(.*)$', False):
 			self.remove_file(name)
 
