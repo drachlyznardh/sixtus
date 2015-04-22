@@ -1,0 +1,7 @@
+GUIDE
+
+This sample site is the proper guide for Siχtus. You need but invoke sixtus to
+generate the site and then link the generated deploy folder as the document root
+of your local webserver.
+
+Comments in the source files and the site's content will guide you.
