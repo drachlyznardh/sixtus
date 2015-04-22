@@ -1,5 +1,5 @@
 from distutils.core import setup
-__version__ = open('VERSION').read().strip()
+__version__ = open('src/sixtus/VERSION').read().strip()
 setup(
 	name='sixtus',
 	version=__version__,
