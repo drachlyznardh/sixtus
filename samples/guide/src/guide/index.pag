@@ -131,6 +131,30 @@ tab|ii
 	The <em>lang</em> entry in the map is a hub for many things. The easiest one
 	is <em>month</em>, which associates a name to each month. The other as a bit
 	more complex.
+	stitle|Page relations
+	Pages can be related to other pages in a sequence. Any page can optionally
+	declare its relation with the previous and following pages via the directive
+	<code>prev@PIPE@</code> and <code>next@PIPE@</code>. Both directive take two
+	arguments: the <code>&lt;destination&gt;</code> is the relative URL of the
+	related page, the <code>&lt;title&gt;</code> is the title of the page.
+
+	The right panel of each page will display these two related pages if they
+	are declared. The style corresponds to the <em>page</em> entry in the
+	configuration. Both entries in this dictionary – <em>prev</em> &amp;
+	<em>next</em> – accept two values:
+	begin|ul
+		p|<em>body</em> is the HTML block that will appear when the relation is
+		declared; it may contain the meta variables <code>@LINK@</code> and
+		<code>@TITLE@</code>; this value is required;
+		p|<em>target</em> is the HTML content of the link; it may contain the
+		<code>@TITLE@</code> meta variable;
+	end|ul
+
+	The content of <em>body</em> will be displayed in the right panel of the
+	page. The meta variable <code>@LINK@</code> will be replaced with a link to
+	the related page, which content is the value of <em>target</em> or – if
+	unspecified – with the value of <code>@TITLE@</code>, which is the
+	<code>title</code> argument of the directive.
 # This is the content of the side panel
 start|side
 	title|Guide
