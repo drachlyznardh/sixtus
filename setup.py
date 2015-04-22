@@ -1,12 +1,12 @@
 from distutils.core import setup
-__version__ = open('VERSION').read().strip()
+__version__ = open('src/sixtus/VERSION').read().strip()
 setup(
 	name='sixtus',
 	version=__version__,
 	url='https://github.com/drachlyznardh/sixtus',
 	author='Ivan Simonini',
 	author_email='drachlyznardh@gmail.com',
-	package_dir={'sixtus':''},
+	package_dir={'sixtus':'src/sixtus'},
 	packages=['sixtus'],
-	package_data={'sixtus':['data/*', 'README.md', 'CHANGELOG', 'VERSION']}
+	package_data={'sixtus':['data/*', 'VERSION']}
 )

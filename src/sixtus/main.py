@@ -5,12 +5,12 @@ import sys
 import os
 import getopt
 
-from runtime import Runtime
-from resources import Resources
-from blog import Blog
-from pages import Pages
+from .runtime import Runtime
+from .resources import Resources
+from .blog import Blog
+from .pages import Pages
 
-import util
+from .util import convert
 
 class Bag:
 	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
@@ -103,7 +103,7 @@ def digest_location (source):
 		if 'blog-out' not in source:
 			source['blog-out'] = os.path.join(source['pag'], source['blog'])
 		if 'blog-home' not in source:
-			source['blog-home'] = util.convert(source['blog'])
+			source['blog-home'] = convert(source['blog'])
 
 	if 'list' not in source:
 		source['list'] = os.path.join(source['build'], 'list')

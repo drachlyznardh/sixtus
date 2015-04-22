@@ -3,7 +3,7 @@
 from __future__ import print_function
 import os
 
-from util import convert
+from .util import convert
 
 class Base:
 

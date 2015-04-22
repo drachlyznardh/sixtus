@@ -1,0 +1,6 @@
+include TODO CHANGELOG
+recursive-include samples/empty README conf.py map.py *.pag *.post
+recursive-include samples/simple-no-blog README conf.py map.py *.pag *.post
+recursive-include samples/blog-empty README conf.py map.py *.pag *.post
+recursive-include samples/blog-only README conf.py map.py *.pag *.post
+recursive-include samples/guide README conf.py map.py *.pag *.post

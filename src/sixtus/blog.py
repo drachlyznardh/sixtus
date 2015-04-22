@@ -5,14 +5,14 @@ import sys
 import os
 import re
 
-from base import Base
-from util import assert_dir
+from .base import Base
+from .util import assert_dir
 
 # Builders
-import month_poster
-import year_poster
-import archive_poster
-import news_poster
+from .month_poster import Poster as Month_Poster
+from .year_poster import Poster as Year_Poster
+from .archive_poster import Poster as Archive_Poster
+from .news_poster import Poster as News_Poster
 
 class Blog(Base):
 
@@ -108,7 +108,7 @@ class Blog(Base):
 		prev_page = self.pair_to_triplet(self.prevmap.get(stem, None))
 		next_page = self.pair_to_triplet(self.nextmap.get(stem, None))
 
-		p = month_poster.Poster(self.home, this_page, prev_page, next_page)
+		p = Month_Poster(self.home, this_page, prev_page, next_page)
 		p.parse_conf(self.conf)
 		p.parse_file(post_file)
 		assert_dir(pag_file)
@@ -164,7 +164,7 @@ class Blog(Base):
 		prev_year = self.prevmap.get(year, None)
 		next_year = self.nextmap.get(year, None)
 
-		p = year_poster.Poster(self.home, year, prev_year, next_year)
+		p = Year_Poster(self.home, year, prev_year, next_year)
 		p.parse_conf(self.conf)
 		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap[year])])
 		p.output_pag_file(pag_file)
@@ -215,14 +215,14 @@ class Blog(Base):
 
 	def build_archive (self):
 
-		p = archive_poster.Poster(self.home)
+		p = Archive_Poster(self.home)
 		p.parse_conf(self.conf)
 		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_file(self.get_archive_filename())
 
 	def build_news (self):
 
-		p = news_poster.Poster(self.home)
+		p = News_Poster(self.home)
 		p.parse_conf(self.conf)
 		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)])
 		p.output_pag_file(self.get_news_filename())

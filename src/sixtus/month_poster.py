@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 
-from util import assert_dir
+from .util import assert_dir
 
 class Post:
 	def __init__ (self):
@@ -61,7 +61,7 @@ class Poster:
 	def parse_file (self, filename):
 
 		day = False
-		post = None
+		post = Post()
 
 		with open(filename) as f:
 			for i in f:
