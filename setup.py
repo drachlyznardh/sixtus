@@ -6,7 +6,8 @@ setup(
 	url='https://github.com/drachlyznardh/sixtus',
 	author='Ivan Simonini',
 	author_email='drachlyznardh@gmail.com',
-	package_dir={'sixtus':''},
+	package_dir={'sixtus':'src/sixtus'},
 	packages=['sixtus'],
-	package_data={'sixtus':['data/*', 'README.md', 'CHANGELOG', 'VERSION']}
+	package_data={'sixtus':['README.md', 'data/*', 'README.md', 'CHANGELOG', 'VERSION']},
+	data_files=[('samples', ['samples/*'])]
 )
