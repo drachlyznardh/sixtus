@@ -1,0 +1,7 @@
+title|Another page
+subtitle|Another subtitle
+start|page
+	This page shows how a <code>.pag</code> file with a short name can be mapped
+	to a very long path.
+start|side
+	Hello!
