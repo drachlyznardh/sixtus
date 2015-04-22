@@ -2,10 +2,10 @@
 
 from __future__ import print_function
 import os
-
-from util import assert_dir
-from month_poster import Poster as Helper
 from itertools import groupby
+
+from .util import assert_dir
+from .month_poster import Poster as Helper
 
 class Poster:
 

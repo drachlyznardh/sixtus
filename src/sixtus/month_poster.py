@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 
-from util import assert_dir
+from .util import assert_dir
 
 class Post:
 	def __init__ (self):

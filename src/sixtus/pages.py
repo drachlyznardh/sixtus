@@ -4,14 +4,15 @@ import sys
 import os
 import re
 
-from base import Base
-import util
+from .base import Base
+from .util import find_all_sources, assert_dir, clean_empty_dirs
 
 # Builders
-import Six
-import dep
-import six
-import php
+from .Six import from_src_file, from_pag_to_Six_file
+from .dep import from_dep_file, from_Six_to_dep_file
+from .six import from_Six_to_six_files
+from .php import from_jump_six_to_php_file, from_jump_target_to_php_file
+from .php import from_page_six_to_php_file, from_side_six_to_php_file
 
 class Pages(Base):
 
@@ -56,14 +57,14 @@ class Pages(Base):
 
 	# Locate source pages
 	def find_page_sources (self):
-		return util.find_all_sources(self.loc['pag'], r'^(.*)\.pag$', True)
+		return find_all_sources(self.loc['pag'], r'^(.*)\.pag$', True)
 
 	# Loads existings .src files, compiles the sources dictionary
 	def load_src_file (self, stem):
 
 		src_file = self.get_src_filename(stem)
 		if os.path.exists(src_file):
-			self.sources[stem] = Six.from_src_file(src_file)
+			self.sources[stem] = from_src_file(src_file)
 
 	# Builds .Six files, also loading their .src updates into the sources dictionary
 	def build_Six_file (self, stem):
@@ -74,7 +75,7 @@ class Pages(Base):
 
 		self.loud('Expanding source file %s' % pag_file)
 
-		self.sources[stem] = Six.from_pag_to_Six_file(pag_file, Six_file, src_file)
+		self.sources[stem] = from_pag_to_Six_file(pag_file, Six_file, src_file)
 
 	# Updates a .Six file when needed. Returns true if updated
 	def update_Six_file (self, stem):
@@ -123,7 +124,7 @@ class Pages(Base):
 
 		self.loud('Extracting dependencies from Six file %s' % Six_file)
 
-		self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_Six_to_dep_file(Six_file, dep_file)]
+		self.products += [(p[0], os.path.join(mapped, p[1])) for p in from_Six_to_dep_file(Six_file, dep_file)]
 
 	# Build a .dep file when needed. Returns true if updated
 	def update_dep_file (self, stem):
@@ -165,7 +166,7 @@ class Pages(Base):
 		dep_file = self.get_dep_filename(stem)
 		if not self.update_dep_file(stem):
 			mapped = self.map_Six_to_six (stem)
-			self.products += [(p[0], os.path.join(mapped, p[1])) for p in dep.from_dep_file(dep_file)]
+			self.products += [(p[0], os.path.join(mapped, p[1])) for p in from_dep_file(dep_file)]
 
 	def map_six_to_Six (self, stem):
 
@@ -190,7 +191,7 @@ class Pages(Base):
 
 		self.loud('Splitting Six file %s' % Six_file)
 
-		six.from_Six_to_six_files(Six_file, base, destination)
+		from_Six_to_six_files(Six_file, base, destination)
 
 	def update_six_file (self, stem):
 
@@ -228,13 +229,13 @@ class Pages(Base):
 
 		if stem[0] == 0:
 			self.loud('Generating page file %s' % php_file)
-			php.from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
 		elif stem[0] == 1:
 			self.loud('Generating jump file %s' % php_file)
-			php.from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
 		elif stem[0] == 2:
 			self.loud('Generating side file %s' % php_file)
-			php.from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
 
 	def update_php_file (self, stem):
 
@@ -301,8 +302,8 @@ class Pages(Base):
 		jump_file = os.path.join(root, pair[0], 'index.php')
 
 		self.loud('Generating jump file %s' % jump_file)
-		util.assert_dir(jump_file)
-		php.from_jump_target_to_php_file(pair[1], jump_file)
+		assert_dir(jump_file)
+		from_jump_target_to_php_file(pair[1], jump_file)
 
 	def update_cat_jump_file (self, pair):
 
@@ -334,7 +335,7 @@ class Pages(Base):
 				self.loud('Removing file %s' % php_file)
 				os.unlink(php_file)
 
-			util.clean_empty_dirs(php_file)
+			clean_empty_dirs(php_file)
 
 	def load_products (self):
 
