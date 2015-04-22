@@ -119,7 +119,7 @@ class Splitter:
 
 		side_path = os.path.join(destination, 'side.six')
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
-		#util.assert_dir(side_path)
+		util.assert_dir(side_path)
 		with open(side_path, 'w') as f:
 			print(self.side, file=f)
 
