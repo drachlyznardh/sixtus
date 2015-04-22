@@ -100,7 +100,7 @@ tab|i
 tab|ii
 	title|Some explanation
 	Now, not everything you need to know can be explained here. Some things
-	appear only inside the <em>configuratio file</em> <code>conf.py</code>,
+	appear only inside the <em>configuration file</em> <code>conf.py</code>,
 	which is a Python dictionary.
 	begin|ul
 		p|the <em>author</em> information – name and mail address – will appear in
@@ -177,9 +177,42 @@ tab|ii
 	month in the configuration); the year page can only access
 	<code>@THIS_YEAR@</code>; the news and archive pages do not have access to
 	meta variables.
+tab|iii
+	title|Name mapping
+	Filenames may be mapped from their original form in the <em>pag</em> folder
+	to another form in the <em>deploy</em>. The mapping applies to names that
+	are not fully lowercase. If a name contains at least an uppercase character,
+	it won't be mapped at all.
+
+	If a name is lowercase, one of three kinds of mapping will be applied. If a
+	name is a roman number, it will be displayed in full uppercase; if the name
+	is <code>index</code>, it will be implyed and not shown; in any other case,
+	the name will be capitalized.
+
+	This process works on files and on folders.
+	br|
+	But name mapping become pretty complex, for me at least. For example, back
+	in the day, I wanted a particular folder to be mapped to a two-level
+	hierarchy.
+
+	To this purpose, I introduced a direct mapping for names. The <em>map
+	file</em> <code>map.py</code> can contain a Python dictionary that
+	associates source folder or file to complex names. See
+	link|Very/Complex/Category/Hierarchy/Made/Simple/|this
+	for example.
+
+	The left side of the map will be checked against any valid prefix for all
+	pages.
+
+	Should a complex mapping introduce many empty layers, <em>Siχtus</em>
+	will automatically add an index file to redirect the request to the actual
+	index page. Please note that I assume that your mapping does not conflict,
+	so that each stage of hierarchy jumping is unambigous. <em>Siχtus</em>'s
+	behavior is unspecified otherwise.
 # This is the content of the side panel
 start|side
 	title|Guide
 	r|tid|Introduction|intro
 	p|tid|Some examples|i
 	p|tid|Some explanation|ii
+	p|tid|Name mapping|iii

@@ -2,6 +2,7 @@ title|Another page
 subtitle|Another subtitle
 start|page
 	This page shows how a <code>.pag</code> file with a short name can be mapped
-	to a very long path.
+	to a very long path. This page spawns from the
+	<code>src/plain-name.pag</code> file.
 start|side
 	Hello!
