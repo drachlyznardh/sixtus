@@ -1,3 +1,3 @@
 {
-	'plain-name':'Very/Complex/Category/Hierachy/Made/Simple'
+	'plain-name':'Very/Complex/Category/Hierarchy/Made/Simple'
 }
