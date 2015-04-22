@@ -155,6 +155,16 @@ tab|ii
 	the related page, which content is the value of <em>target</em> or – if
 	unspecified – with the value of <code>@TITLE@</code>, which is the
 	<code>title</code> argument of the directive.
+	stitle|Tab relations
+	The content of a page can be broken down to many tabs. Relations between
+	tabs are automatically established by their order of appearence in the page
+	source.
+
+	These relations are displayed at the top and at the bottom of each tab. The
+	style depends of the <em>tab</em> entry in the configuration. Both
+	<em>prev</em> &amp; <em>next</em> accept a <em>body</em> and a
+	<em>target</em>, which can contain <code>@LINK@</code> and
+	<code>@TITLE@</code> exactly as the page relations do.
 # This is the content of the side panel
 start|side
 	title|Guide
