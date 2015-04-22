@@ -119,7 +119,7 @@ class Splitter:
 
 		side_path = os.path.join(destination, 'side.six')
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
-		#util.assert_dir(side_path)
+		util.assert_dir(side_path)
 		with open(side_path, 'w') as f:
 			print(self.side, file=f)
 
@@ -129,6 +129,7 @@ class Splitter:
 		for name in order:
 
 			varmeta = self.meta
+			varmeta += 'tabself|%s\n' % util.convert(name)
 			if name in tabprev:
 				prevtab = util.convert(tabprev[name])
 				varmeta += 'tabprev|/%s/|%s\n' % (os.path.join(base, prevtab), prevtab)

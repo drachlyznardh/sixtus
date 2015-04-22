@@ -350,6 +350,8 @@ class FullConverter(ContentConverter):
 			else: self.error('Parse_Meta: %s# expects 0 or 2 arguments %s' % args)
 		elif c == 'tabprev':
 			self.meta['tabprev'] = (args[0], args[1])
+		elif c == 'tabself':
+			self.meta['tabself'] = args[0]
 		elif c == 'tabnext':
 			self.meta['tabnext'] = (args[0], args[1])
 		elif c == 'tag':
@@ -376,7 +378,9 @@ class FullConverter(ContentConverter):
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
 		if len(self.page_location):
-			output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
+			loc = self.page_location.split('/')
+			if 'tabself' in self.meta: loc.append(self.meta['tabself'])
+			output += ('array("%s"),' % ('","'.join(loc)))
 		else: output += 'False,'
 		output += ('"%s",' % self.meta['title'])
 		if 'short' in self.meta: output += ('"%s",' % self.meta['short'])
