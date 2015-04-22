@@ -58,4 +58,5 @@ def clean_empty_dirs (filename):
 	while len(os.listdir(dirname)) == 0:
 		os.rmdir(dirname)
 		dirname = os.path.dirname(dirname)
+		if not os.path.exists(dirname): break
 

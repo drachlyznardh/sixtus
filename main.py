@@ -12,46 +12,63 @@ from pages import Pages
 
 import util
 
+class Bag:
+	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
+		self.force = force
+		self.flags = flags
+		self.time_delta = time_delta
+		self.sitemap = sitemap
+		self.location = location
+		self.conf = conf
+		self.version = version
+
 def sixtus_build (bag):
 
-	d = bag[1].get('loud', False)
-	if d: print('Siχtus 0.10')
+	d = bag.flags.get('loud', False)
+	if d: print('Siχtus v%s -- build' % bag.version)
 
 	Runtime(bag).build()
-	Resources(bag).build()
-	Blog(bag).build()
+	if 'res' in bag.location: Resources(bag).build()
+	if 'blog' in bag.location: Blog(bag).build()
 	Pages(bag).build()
 
-	if d: print('Siχtus 0.10, done')
+	if d: print('Siχtus v%s -- build done' % bag.version)
 
 def sixtus_clean (bag):
 
-	d = bag[1].get('loud', False)
-	if d: print('Siχtus 0.10, cleaning')
-
-	build_dir = bag[4].get('build')
-	blog_build_dir = bag[4].get('blog-out')
-
 	import shutil
+
+	d = bag.flags.get('loud', False)
+	if d: print('Siχtus v%s -- cleaning' % bag.version)
+
+
+	if 'blog-out' in bag.location:
+		blog_build_dir = bag.location['blog-out']
+		if d: print('Removing build blog dir %s' % blog_build_dir)
+		if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
+
+	build_dir = bag.location['build']
 	if d: print('Removing build dir %s' % build_dir)
 	if os.path.exists(build_dir): shutil.rmtree(build_dir)
 
-	if d: print('Removing build blog dir %s' % blog_build_dir)
-	if os.path.exists(blog_build_dir): shutil.rmtree(blog_build_dir)
-
-	if d: print('Siχtus 0.10, cleaning done')
+	if d: print('Siχtus v%s -- cleaning done' % bag.version)
 
 def sixtus_veryclean (bag):
 
-	d = bag[1].get('loud', False)
-	if d: print('Siχtus 0.10, cleaning hard')
+	d = bag.flags.get('loud', False)
+	if d: print('Siχtus v%s -- cleaning hard' % bag.version)
 
 	Resources(bag).remove()
 	Runtime(bag).remove()
 	Pages(bag).remove()
 	sixtus_clean(bag)
 
-	if d: print('Siχtus 0.10, cleaning hard done')
+	if d: print('Siχtus v%s -- cleaning hard done' % bag.version)
+
+def sixtus_rebuild (bag):
+
+	sixtus_veryclean(bag)
+	sixtus_build(bag)
 
 def sixtus_help ():
 	print('usage: %s [options] (build|clean|veryclean|rebuild)*' % sys.argv[0])
@@ -75,23 +92,30 @@ def sixtus_version ():
 
 def digest_location (source):
 
-	if 'blog-in' not in source:
-		source['blog-in'] = source.get('blog')
-	if 'blog-out' not in source:
-		source['blog-out'] = os.path.join(source.get('pag'), source.get('blog'))
-	if 'blog-home' not in source:
-		source['blog-home'] = util.convert(source.get('blog'))
+	if 'pag' not in source:
+		raise Exception('Location for pag files was not specified')
+
+	pag_location = source['pag']
+
+	if 'blog' in source:
+		if 'blog-in' not in source:
+			source['blog-in'] = source['blog']
+		if 'blog-out' not in source:
+			source['blog-out'] = os.path.join(source['pag'], source['blog'])
+		if 'blog-home' not in source:
+			source['blog-home'] = util.convert(source['blog'])
+
 	if 'list' not in source:
-		source['list'] = os.path.join(source.get('build'), 'list')
+		source['list'] = os.path.join(source['build'], 'list')
 
 	if 'Six' not in source:
-		source['Six'] = os.path.join(source.get('build'), 'dep')
+		source['Six'] = os.path.join(source['build'], 'dep')
 	if 'src' not in source:
-		source['src'] = os.path.join(source.get('build'), 'dep')
+		source['src'] = os.path.join(source['build'], 'dep')
 	if 'dep' not in source:
-		source['dep'] = os.path.join(source.get('build'), 'dep')
+		source['dep'] = os.path.join(source['build'], 'dep')
 	if 'six' not in source:
-		source['six'] = os.path.join(source.get('build'), 'six')
+		source['six'] = os.path.join(source['build'], 'six')
 
 	this_dir = os.path.dirname(__file__)
 	source['runtime'] = os.path.join(this_dir, 'data')
@@ -103,8 +127,12 @@ def sixtus_read_args ():
 	flags = {'stats':True}
 	time_delta = 0.5
 	force = False
-	map_file = 'map.py'
-	conf_file = 'conf.py'
+
+	def_map_file = 'map.py'
+	def_conf_file = 'conf.py'
+
+	map_file = def_map_file
+	conf_file = def_conf_file
 
 	short_opt = 'hvqxwnBf:m:t:'
 	long_opt = ['help', 'verbose', 'quiet', 'version',
@@ -144,15 +172,24 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
-	with open(map_file, 'r') as f:
-		sitemap = eval(f.read())
+	if os.path.exists(map_file):
+		with open(map_file, 'r') as f:
+			sitemap = eval(f.read())
+	elif map_file != def_map_file:
+		raise Exception('Specified map file %s does not exist!' % map_file)
+	else: sitemap = {}
 
-	with open(conf_file, 'r') as f:
-		conf = eval(f.read())
+	if os.path.exists(conf_file):
+		with open(conf_file, 'r') as f:
+			conf = eval(f.read())
+	elif conf_file != def_conf_file:
+		raise Exception('Specified conf file %s does not exist!' % conf_file)
+	else: raise Exception('Required conf file %s does not exist!' % conf_file)
 
-	loc = digest_location(conf.get('location'))
+	loc = digest_location(conf['location'])
 
-	bag = (force, flags, time_delta, sitemap, loc, conf)
+	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
+	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
 
 	if len(args) == 0:
 		sixtus_build(bag)
@@ -167,8 +204,7 @@ def sixtus_read_args ():
 		elif target == 'veryclean':
 			calls.append(sixtus_veryclean)
 		elif target == 'rebuild':
-			calls.append(sixtus_veryclean)
-			calls.append(sixtus_build)
+			calls.append(sixtus_rebuild)
 		else: raise Exception('What target is %s supposed to be?' % target)
 
 	for call in calls: call(bag)

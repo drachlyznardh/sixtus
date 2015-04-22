@@ -47,7 +47,7 @@ div#left-side-icon { left: 0; }
 div#right-side-icon { left: 92%; }
 
 div.content { margin: 1em; }
-a { color: #ffffff; text-shadow: 3px 3px black; }
+a { color: #ffffff; text-decoration: none; text-shadow: 3px 3px black; }
 div.spacer { margin: 1em; }
 
 table, img { width: 100%; }

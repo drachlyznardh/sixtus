@@ -350,6 +350,8 @@ class FullConverter(ContentConverter):
 			else: self.error('Parse_Meta: %s# expects 0 or 2 arguments %s' % args)
 		elif c == 'tabprev':
 			self.meta['tabprev'] = (args[0], args[1])
+		elif c == 'tabself':
+			self.meta['tabself'] = args[0]
 		elif c == 'tabnext':
 			self.meta['tabnext'] = (args[0], args[1])
 		elif c == 'tag':
@@ -375,11 +377,15 @@ class FullConverter(ContentConverter):
 		self.state_update('meta')
 
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
-		output += ('array("%s"),' % ('","'.join(self.page_location.split('/'))))
-		output += ('"%s",' % self.meta.get('title','title'))
-		if 'short' in self.meta: output += ('"%s",' % self.meta.get('short'))
-		else: output += ('"%s",' % self.meta.get('title','title'))
-		output += ('"%s",' % self.meta.get('subtitle','subtitle'))
+		if len(self.page_location):
+			loc = self.page_location.split('/')
+			if 'tabself' in self.meta: loc.append(self.meta['tabself'])
+			output += ('array("%s"),' % ('","'.join(loc)))
+		else: output += 'False,'
+		output += ('"%s",' % self.meta['title'])
+		if 'short' in self.meta: output += ('"%s",' % self.meta['short'])
+		else: output += ('"%s",' % self.meta['title'])
+		output += ('"%s",' % self.meta['subtitle'])
 		if 'prev' in self.meta.keys():
 			pagprev = self.meta['prev']
 			if pagprev: output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))

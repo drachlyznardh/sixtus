@@ -30,14 +30,14 @@ class Runtime(Base):
 
 			php_href = "'.$d[4][0].'"
 			php_title = "'.$d[4][1].'"
-			prev_conf = self.conf.get('lang').get('page').get('prev')
+			prev_conf = self.conf['lang']['page']['prev']
 
 			target = prev_conf.get('target', php_title)
 			if '@TITLE@' in target:
 				target = target.replace('@TITLE@', php_title)
 
 			link = '<a href="/%s">%s</a>' % (php_href, target)
-			body = prev_conf.get('body').replace('@LINK@', link)
+			body = prev_conf['body'].replace('@LINK@', link)
 			body = body.replace('@TITLE@', php_title)
 			line = line.replace('@SIXTUS_PAGE_PREV@', body)
 
@@ -45,14 +45,14 @@ class Runtime(Base):
 
 			php_href = "'.$d[5][0].'"
 			php_title = "'.$d[5][1].'"
-			next_conf = self.conf.get('lang').get('page').get('next')
+			next_conf = self.conf['lang']['page']['next']
 
 			target = next_conf.get('target', php_title)
 			if '@TITLE@' in target:
 				target = target.replace('@TITLE@', php_title)
 
 			link = '<a href="/%s">%s</a>' % (php_href, target)
-			body = next_conf.get('body').replace('@LINK@', link)
+			body = next_conf['body'].replace('@LINK@', link)
 			body = body.replace('@TITLE@', php_title)
 			line = line.replace('@SIXTUS_PAGE_NEXT@', body)
 
@@ -60,14 +60,14 @@ class Runtime(Base):
 
 			php_href = "'.$d[6][0].'"
 			php_title = "'.$d[6][1].'"
-			prev_conf = self.conf.get('lang').get('tab').get('prev')
+			prev_conf = self.conf['lang']['tab']['prev']
 
 			target = prev_conf.get('target', php_title)
 			if '@TITLE@' in target:
 				target = target.replace('@TITLE@', php_title)
 
 			link = '<a href="%s">%s</a>' % (php_href, target)
-			body = prev_conf.get('body').replace('@LINK@', link)
+			body = prev_conf['body'].replace('@LINK@', link)
 			body = body.replace('@TITLE@', php_title)
 
 			line = line.replace('@SIXTUS_TAB_PREV@', body)
@@ -76,14 +76,14 @@ class Runtime(Base):
 
 			php_href = "'.$d[7][0].'"
 			php_title = "'.$d[7][1].'"
-			next_conf = self.conf.get('lang').get('tab').get('next')
+			next_conf = self.conf['lang']['tab']['next']
 
 			target = next_conf.get('target', php_title)
 			if '@TITLE@' in target:
 				target = target.replace('@TITLE@', php_title)
 
 			link = '<a href="%s">%s</a>' % (php_href, target)
-			body = next_conf.get('body').replace('@LINK@', link)
+			body = next_conf['body'].replace('@LINK@', link)
 			body = body.replace('@TITLE@', php_title)
 
 			line = line.replace('@SIXTUS_TAB_NEXT@', body)
@@ -92,17 +92,29 @@ class Runtime(Base):
 
 	def replace_line (self, line):
 
-		line = line.replace('@SIXTUS_FEED_FILE@', self.conf.get('location').get('feed'))
+		if '@SIXTUS_' not in line: return line
 
-		line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf.get('author').get('name'))
-		line = line.replace('@SIXTUS_AUTHOR_MAIL@', self.conf.get('author').get('mail'))
+		if '@SIXTUS_FEED' in line:
+			if 'feed' in self.conf['location']:
+				feed_file = self.conf['location']['feed']
+				feed_link = '<link rel="alternate" type="application/rss+xml" title="<?=$_SERVER[\'SERVER_NAME\']?>" href="/%s"/>\n\t\t' % feed_file
+				line = line.replace('@SIXTUS_FEED@', feed_link)
+			else: line = line.replace('@SIXTUS_FEED@', '')
 
-		line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf.get('copyright').get('owner'))
-		line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf.get('copyright').get('years'))
+		if '@SIXTUS_AUTHOR' in line:
+			line = line.replace('@SIXTUS_AUTHOR_NAME@', self.conf['author']['name'])
+			line = line.replace('@SIXTUS_AUTHOR_MAIL@', self.conf['author']['mail'])
 
-		line = line.replace('@SIXTUS_SIDE@', self.conf.get('side'))
+		if '@SIXTUS_COPYRIGHT' in line:
+			line = line.replace('@SIXTUS_COPYRIGHT_OWNER@', self.conf['copyright']['owner'])
+			line = line.replace('@SIXTUS_COPYRIGHT_YEARS@', self.conf['copyright']['years'])
 
-		return self.replace_relations(line)
+		line = line.replace('@SIXTUS_SIDE@', self.conf['side'])
+		line = line.replace('@SIXTUS_VERSION@', self.version)
+
+		if '@SIXTUS_' in line:
+			return self.replace_relations(line)
+		return line
 
 	def copy_replace (self, source, destination):
 

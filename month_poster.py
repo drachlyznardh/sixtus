@@ -2,6 +2,8 @@
 
 from __future__ import print_function
 
+from util import assert_dir
+
 class Post:
 	def __init__ (self):
 		self.title = False
@@ -47,14 +49,14 @@ class Poster:
 
 	def parse_conf (self, conf):
 
-		month_conf = conf.get('lang').get('blog').get('month')
-		self.title = self.apply_values(month_conf.get('title'))
-		self.subtitle = self.apply_values(month_conf.get('subtitle'))
+		month_conf = conf['lang']['blog']['month']
+		self.title = self.apply_values(month_conf['title'])
+		self.subtitle = self.apply_values(month_conf['subtitle'])
 
 	def store_post (self, day, post):
 		if post == None: return
 		if day not in self.post: self.post[day] = []
-		self.post.get(day).append(post)
+		self.post[day].append(post)
 
 	def parse_file (self, filename):
 
@@ -138,6 +140,7 @@ class Poster:
 
 				progress += 1
 
+		assert_dir(filename)
 		with open(filename, 'w') as f:
 			print(output, file=f)
 
@@ -159,5 +162,6 @@ class Poster:
 				output += '\t\tlink|%s|%s|%s-%d\n' % (destination, post.title, day, progress)
 				progress += 1
 
+		assert_dir(filename)
 		with open(filename, 'w') as f:
 			print(output, file=f)

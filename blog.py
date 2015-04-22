@@ -6,7 +6,7 @@ import os
 import re
 
 from base import Base
-import util
+from util import assert_dir
 
 # Builders
 import month_poster
@@ -19,7 +19,7 @@ class Blog(Base):
 	def __init__ (self, bag):
 
 		Base.__init__(self, bag)
-		self.home = self.loc.get('blog-home')
+		self.home = self.loc['blog-home']
 
 		self.blogmap = {}
 		self.prevmap = {}
@@ -27,15 +27,26 @@ class Blog(Base):
 
 	def populate (self):
 
-		root = self.loc['blog-in']
-		month_pattern = re.compile(r'^(.*)\.post$')
-		for year in os.listdir(root):
+		root_dir = self.loc['blog-in']
+		if not os.path.exists(root_dir):
+			raise Exception('Root dir %s does not exist' % root_dir)
+
+		month_pattern = re.compile(r'^(\d\d)\.post$')
+		year_pattern = re.compile(r'^\d{4}$')
+		for year in os.listdir(root_dir):
+
+			year_dir = os.path.join(root_dir, year)
+			if not os.path.isdir(year_dir): continue
+			if not year_pattern.match(year): continue
+
 			self.blogmap[year] = []
-			for month in os.listdir(os.path.join(root, year)):
+			for month in os.listdir(year_dir):
 				if month_pattern.match(month):
 					self.blogmap[year].append(month_pattern.sub(r'\1', month))
 
 		self.month = [(year, month) for year in sorted(self.blogmap.keys()) for month in sorted(self.blogmap[year])]
+
+		if len(self.month) == 0: return
 
 		old = self.month[0]
 		for current in self.month[1:]:
@@ -51,21 +62,22 @@ class Blog(Base):
 			old = current
 
 	def get_struct_filename (self):
-		return os.path.join(self.loc.get('list'), 'blog-struct.py')
+		return os.path.join(self.loc['list'], 'blog-struct.py')
 
 	def get_archive_filename (self):
-		archive_conf = self.conf.get('lang').get('blog').get('archive')
-		archive_basename = '%s.pag' % archive_conf.get('title')
-		return os.path.join(self.loc.get('blog-out'), archive_basename)
+		archive_conf = self.conf['lang']['blog']['archive']
+		archive_basename = '%s.pag' % archive_conf['title']
+		return os.path.join(self.loc['blog-out'], archive_basename)
 
 	def get_news_filename (self):
-		return os.path.join(self.loc.get('blog-out'), 'index.pag')
+		return os.path.join(self.loc['blog-out'], 'index.pag')
 
 	def get_post_filename (self, stem):
 		return os.path.join(self.loc['blog-in'], stem[0], '%s.post' % stem[1])
 
 	def get_feed_filename (self):
-		return os.path.join(self.loc['deploy'], self.loc.get('feed'))
+		if 'feed' not in self.loc: return False
+		return os.path.join(self.loc['deploy'], self.loc['feed'])
 
 	def get_pag_filename (self, stem):
 		if isinstance(stem, tuple):
@@ -82,7 +94,7 @@ class Blog(Base):
 
 	def pair_to_triplet (self, stem):
 		if stem:
-			name = self.conf.get('lang').get('month').get(stem[1])
+			name = self.conf['lang']['month'][stem[1]]
 			return (stem[0], stem[1], name)
 		return None
 
@@ -99,9 +111,9 @@ class Blog(Base):
 		p = month_poster.Poster(self.home, this_page, prev_page, next_page)
 		p.parse_conf(self.conf)
 		p.parse_file(post_file)
-		util.assert_dir(pag_file)
+		assert_dir(pag_file)
 		p.output_pag_file(pag_file)
-		util.assert_dir(list_file)
+		assert_dir(list_file)
 		p.output_list_file(list_file)
 
 	def update_month (self, stem):
@@ -152,11 +164,9 @@ class Blog(Base):
 		prev_year = self.prevmap.get(year, None)
 		next_year = self.nextmap.get(year, None)
 
-		names = self.conf.get('lang').get('month')
-
-		p = year_poster.Poster(self.home, year, prev_year, next_year, names)
+		p = year_poster.Poster(self.home, year, prev_year, next_year)
 		p.parse_conf(self.conf)
-		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap.get(year))])
+		p.parse_files([(month, self.get_list_filename((year, month))) for month in sorted(self.blogmap[year])])
 		p.output_pag_file(pag_file)
 		p.output_list_file(list_file)
 
@@ -205,7 +215,7 @@ class Blog(Base):
 
 	def build_archive (self):
 
-		p = archive_poster.Poster()
+		p = archive_poster.Poster(self.home)
 		p.parse_conf(self.conf)
 		p.parse_files([(year, self.get_list_filename(year)) for year in sorted(self.blogmap.keys())])
 		p.output_pag_file(self.get_archive_filename())
@@ -216,7 +226,9 @@ class Blog(Base):
 		p.parse_conf(self.conf)
 		p.parse_target_list([(i, self.get_post_filename(i)) for i in reversed(self.month)])
 		p.output_pag_file(self.get_news_filename())
-		p.output_feed_file(self.get_feed_filename())
+
+		feed_file = self.get_feed_filename()
+		if feed_file: p.output_feed_file(feed_file)
 
 	def update_index (self):
 
@@ -233,19 +245,22 @@ class Blog(Base):
 			return True
 
 		index_time = os.path.getmtime(index_file)
-		list_file = self.get_list_filename(self.month[-1])
-		list_time = os.path.getmtime(list_file)
-		if list_time - index_time > self.time_delta:
-			self.explain_why('list file %s is more recent than index file %s' % (list_file, index_file))
-			self.build_news()
-			return True
+		for month in reversed(self.month):
+			list_file = self.get_list_filename(month)
+			list_time = os.path.getmtime(list_file)
+			if list_time - index_time > self.time_delta:
+				self.explain_why('list file %s is more recent than index file %s' % (list_file, index_file))
+				self.build_news()
+				return True
 
 		self.explain_why_not('index file %s is up to date' % index_file)
 		return False
 
 	def build_struct (self):
 
-		with open(self.get_struct_filename(), 'w') as f:
+		struct_file = self.get_struct_filename()
+		assert_dir(struct_file)
+		with open(struct_file, 'w') as f:
 			print(self.month, file=f)
 
 	def update_struct (self):
@@ -265,6 +280,16 @@ class Blog(Base):
 			self.build_news()
 			self.build_struct()
 			return True
+
+		archive_file = self.get_archive_filename()
+		if not os.path.exists(archive_file):
+			self.explain_why('archive file %s does not exist' % archive_file)
+			self.build_archive()
+
+		news_file = self.get_news_filename()
+		if not os.path.exists(news_file):
+			self.explain_why('news file %s does not exist' % news_file)
+			self.build_news()
 
 		self.update_index()
 		return False

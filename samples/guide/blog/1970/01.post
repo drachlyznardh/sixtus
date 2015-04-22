@@ -1,0 +1,9 @@
+# This is a post. Posts have dates (the year is given by the folder, the month
+# is given by the filename, the day must be specified, but can also appear more
+# than once) and titles.
+
+# Posts can appear in any order, they will always be displayed in chronological
+# order in the corresponding month page. The news page will display the most
+# recent posts in reverse order.
+post|01|GNU time starts!
+	Today, <code>01/01/1970 00:00:00 UCT</code>, starts the GNU epoch.
