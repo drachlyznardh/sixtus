@@ -61,7 +61,7 @@ class Poster:
 	def parse_file (self, filename):
 
 		day = False
-		post = None
+		post = Post()
 
 		with open(filename) as f:
 			for i in f:
