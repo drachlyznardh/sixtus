@@ -303,3 +303,4 @@ class Blog(Base):
 
 		self.update_struct()
 		self.stats('%03d blog pages' % len(self.month))
+
