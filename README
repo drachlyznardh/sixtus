@@ -15,4 +15,7 @@ Would you like Siχtus to do something else? Try asking, I'm open to suggestion.
 - Reintroducing tag support in pages, the tag cloud and tag search from v0.9?
 - Configuration support for additional custom CSS files, JS scripts, other
   stuff…
-
+- Bring back voices support
+- Of all the TIDs on a page, the current one should be highlighted. The current
+  tab, if any, is the last element of $d[0]; a JS script may be able to take
+  care of this;

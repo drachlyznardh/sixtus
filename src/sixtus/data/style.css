@@ -2,7 +2,12 @@ body {
 	margin: 0em;
 	color: #999999;
 	background-color: #222222;
+	font-style: italic;
 }
+
+em { font-style: normal; text-shadow: 1px 1px black; }
+em em { font-style: italic; }
+code { font-style: normal; font-family: monospace; }
 
 div#content {
 	position: fixed;
