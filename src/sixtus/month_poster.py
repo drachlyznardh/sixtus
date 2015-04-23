@@ -124,10 +124,11 @@ class Poster:
 		many = False
 
 		for day, post_list in sorted(self.post.items()):
-			if many: output += 'br|\n'
-			else: many = True
 			progress = 0
 			for post in post_list:
+
+				if many: output += 'br|\n'
+				else: many = True
 
 				date = '%s/%s/%s' % (self.this_page[0], self.this_page[1], day)
 				ref = '%s-%d' % (day, progress)
