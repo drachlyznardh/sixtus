@@ -7,3 +7,12 @@ development since 2007 to serve my personal needs and now it goes public. I do
 not expect it to be used by anyone else, really, but at least the existence of
 this public release should push me to keep it stable, instead of changing
 everything and breaking compatibility at each new version.
+
+# TODO
+
+Would you like Siχtus to do something else? Try asking, I'm open to suggestion.
+
+- Reintroducing tag support in pages, the tag cloud and tag search from v0.9?
+- Configuration support for additional custom CSS files, JS scripts, other
+  stuff…
+
