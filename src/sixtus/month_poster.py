@@ -55,6 +55,7 @@ class Poster:
 
 	def store_post (self, day, post):
 		if post == None: return
+		if post.title == False: return
 		if day not in self.post: self.post[day] = []
 		self.post[day].append(post)
 
