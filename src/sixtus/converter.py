@@ -419,3 +419,4 @@ class FullConverter(ContentConverter):
 		output += 'if($i[0])require_once($sixtus."page-bottom.php");?>'
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
+

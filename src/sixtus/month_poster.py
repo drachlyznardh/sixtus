@@ -5,12 +5,15 @@ from __future__ import print_function
 from .util import assert_dir
 
 class Post:
-	def __init__ (self):
-		self.title = False
-		self.category = []
+
+	def __init__ (self, title=False, category=[]):
+
+		self.title = title
+		self.category = category
 		self.content = ''
 
 	def append_content (self, text):
+
 		if len(self.content):
 			self.content += ('\n%s' % text)
 		else: self.content = text
@@ -54,7 +57,8 @@ class Poster:
 		self.subtitle = self.apply_values(month_conf['subtitle'])
 
 	def store_post (self, day, post):
-		if post == None: return
+
+		if post.title == False: return
 		if day not in self.post: self.post[day] = []
 		self.post[day].append(post)
 
@@ -77,15 +81,11 @@ class Poster:
 
 				if line.startswith('post|'):
 
-					token = line.split('|')
-					size = len(token)
-
 					self.store_post(day, post)
-					post = Post()
-					day = token[1]
-					post.title = token[2]
-					if size > 3: post.category = token[3:]
 
+					token = line.split('|')
+					day = token[1]
+					post = Post(token[2], token[3:])
 					continue
 
 				post.append_content(line)
@@ -165,3 +165,4 @@ class Poster:
 		assert_dir(filename)
 		with open(filename, 'w') as f:
 			print(output, file=f)
+

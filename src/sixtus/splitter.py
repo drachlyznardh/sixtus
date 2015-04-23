@@ -181,3 +181,4 @@ class Splitter:
 		if size == 1: self.output_default_tab(base, destination)
 		elif size == 2: self.output_single_tab(base, destination)
 		else: self.output_all_files(base, destination)
+

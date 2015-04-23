@@ -27,6 +27,7 @@ def find_all_sources (root_dir, pattern, nameonly):
 				if nameonly:
 					result.append(os.path.splitext(this_file)[0])
 				else: result.append(this_file)
+
 	return result
 
 def assert_dir (filename):
