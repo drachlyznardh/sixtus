@@ -5,8 +5,8 @@ from __future__ import print_function
 from .util import assert_dir
 
 class Post:
-	def __init__ (self):
-		self.title = False
+	def __init__ (self, title=False):
+		self.title = title
 		self.category = []
 		self.content = ''
 
@@ -81,9 +81,8 @@ class Poster:
 					size = len(token)
 
 					self.store_post(day, post)
-					post = Post()
+					post = Post(token[2])
 					day = token[1]
-					post.title = token[2]
 					if size > 3: post.category = token[3:]
 
 					continue
