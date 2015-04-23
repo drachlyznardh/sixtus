@@ -370,3 +370,4 @@ class Pages(Base):
 			self.remove_php_file(stem)
 
 		self.remove_php_dirs()
+

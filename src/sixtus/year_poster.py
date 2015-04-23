@@ -97,3 +97,4 @@ class Poster:
 		assert_dir(list_file)
 		with open(list_file, 'w') as f:
 			print(output, file=f)
+

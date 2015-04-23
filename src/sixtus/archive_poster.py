@@ -45,3 +45,4 @@ class Poster:
 		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
 			print(output, file=f)
+

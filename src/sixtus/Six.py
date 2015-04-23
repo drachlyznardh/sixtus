@@ -17,3 +17,4 @@ def from_pag_to_Six_file (pag_file, Six_file, src_file):
 def from_src_file (src_file):
 	with open(src_file, 'r') as f:
 		return eval(f.read())
+

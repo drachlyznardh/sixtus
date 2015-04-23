@@ -71,6 +71,7 @@ def sixtus_rebuild (bag):
 	sixtus_build(bag)
 
 def sixtus_help ():
+
 	print('usage: %s [options] (build|clean|veryclean|rebuild)*' % sys.argv[0])
 	print()
 	print(' -h --help          : shows this help')
@@ -211,3 +212,4 @@ def sixtus_read_args ():
 
 if __name__ == "__main__":
 	sixtus_read_args()
+
