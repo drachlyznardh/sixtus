@@ -17,9 +17,9 @@
 				<?php
 	$href='/';$cats=array();
 	if($d[0])foreach($d[0]as$w){$href.=$w.'/';$cats[]='<a href="'.$href.'">'.$w.'</a>';}
-	if(count($cats))
-		echo('<div id="location"><p>/ '.join(' / ',$cats).' /</p></div>'."\n\t\t\t\t");
-	array_pop($cats);
+	$full_cats=$cats;if($d[8])$full_cats[]='<a href="'.$href.$d[8].'/">'.$d[8].'</a>';
+	if(count($full_cats))
+		echo('<div id="location"><p>/ '.join(' / ',$full_cats).' /</p></div>'."\n\t\t\t\t");
 	?><div id="maintitle"><h1><?=$d[1]?></h1></div>
 				<div id="subtitle"><p><?=$d[3]?></p></div>
 
