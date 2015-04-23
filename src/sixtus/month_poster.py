@@ -77,13 +77,11 @@ class Poster:
 
 				if line.startswith('post|'):
 
-					token = line.split('|')
-					size = len(token)
-
 					self.store_post(day, post)
-					post = Post(token[2], token[3:])
-					day = token[1]
 
+					token = line.split('|')
+					day = token[1]
+					post = Post(token[2], token[3:])
 					continue
 
 				post.append_content(line)
