@@ -380,7 +380,6 @@ class FullConverter(ContentConverter):
 		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
 		if len(self.page_location):
 			loc = self.page_location.split('/')
-			if 'tabself' in self.meta: loc.append(self.meta['tabself'])
 			output += ('array("%s"),' % ('","'.join(loc)))
 		else: output += 'False,'
 		output += ('"%s",' % self.meta['title'])
@@ -407,6 +406,9 @@ class FullConverter(ContentConverter):
 		if 'tabnext' in self.meta.keys():
 			tabnext = self.meta['tabnext']
 			output += ('array("%s","%s")' % (tabnext[0], tabnext[1]))
+		else: output += 'false'
+		output += ','
+		if 'tabself' in self.meta: output += '"%s"' % self.meta['tabself']
 		else: output += 'false'
 		output += ');'
 		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
