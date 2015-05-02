@@ -164,7 +164,7 @@ class ContentConverter:
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
-		tab_location = '/%s/%s/' % ('/'.join(self.page_location.split('/')), convert(args[1]))
+		tab_location = '/'.join(self.page_location.split('/') + [convert(args[1])])
 
 		link_args = [tab_location, args[0]]
 		if size == 3: link_args.append(args[2])
