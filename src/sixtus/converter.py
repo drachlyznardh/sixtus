@@ -65,7 +65,7 @@ class ContentConverter:
 			self.start_writing(c, self.parse_recursive(args))
 		elif c == 'id':
 			self.stop_writing()
-			self.content += ('<a id="%s"></a>\n' % args[0])
+			self.content += '<a id="%s"></a>\n' % convert(args[0])
 		elif c == 'br':
 			self.stop_writing()
 			self.content += '<br/>\n'
@@ -177,7 +177,7 @@ class ContentConverter:
 			print('Make_Link (%s)' % args, file=sys.stderr)
 
 		if len(args) == 2: href = args[0]
-		else: href = '%s#%s' % (args[0], args[2])
+		else: href = '%s#%s' % (args[0], convert(args[2]))
 
 		if len(args[0]) and href[0] != '/': href = '/%s' % href
 
