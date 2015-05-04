@@ -5,9 +5,10 @@ body {
 	font-style: italic;
 }
 
-em { font-style: normal; text-shadow: 1px 1px black; }
-em em { font-style: italic; }
-code { font-style: normal; font-family: monospace; }
+em, div.em { font-style: normal; text-shadow: 1px 1px black; }
+em em, div.em em { font-style: italic; }
+code, div.code { font-style: normal; font-family: monospace; }
+strong, div.strong { font-weight: bold; }
 
 div#content {
 	position: fixed;

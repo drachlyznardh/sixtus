@@ -248,6 +248,10 @@ class ContentConverter:
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
 			self.environment.append((self.p_or_li, '</div></div>\n'))
 
+		elif env == 'code' or env == 'em' or env == 'strong':
+			self.content += '<div class="%s">' % env
+			self.environment.append((self.p_or_li, '</div>\n'))
+
 		else: self.error('Unknown environment %s' % args)
 
 	def close_env (self, args):
