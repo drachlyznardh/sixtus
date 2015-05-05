@@ -1,4 +1,7 @@
 
+0.10.1.20 05/05/2015
+New environments em/strong/code are now supported
+
 0.10.0.20 05/05/2015
 Versioning update. The version number will now be in the form of a.b.c.d:
 	- a, major number: this will stay 0 until something terrible happens;
