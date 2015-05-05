@@ -1,4 +1,12 @@
 
+0.10.0.20 05/05/2015
+Versioning update. The version number will now be in the form of a.b.c.d:
+	- a, major number: this will stay 0 until something terrible happens;
+	- b, minor number: this will stay 10 until I rewrite the whole thing again;
+	- c, power number: this will start at 0 and will be incremented each time
+	  something is added to Siχtus, like new options, new modes, new features…
+	- d, issue number: this will be bumped each time I fix something
+
 0.10.20 02/05/2015
 Convertion for IDs and HASHREFs too
 
