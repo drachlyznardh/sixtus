@@ -10,6 +10,9 @@ em em, div.em em { font-style: italic; }
 code, div.code { font-style: normal; font-family: monospace; }
 strong, div.strong { font-weight: bold; }
 
+.spoiler { color: black; background-color: black; }
+.spoiler:hover { color: white; }
+
 div#content {
 	position: fixed;
 	height: 100%;
