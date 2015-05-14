@@ -15,7 +15,7 @@ class ContentConverter:
 
 		self.environment = []
 		self.writing     = False
-		self.p_or_li     = True
+		self.mode        = True
 
 		self.page_location = page_location
 
@@ -127,7 +127,7 @@ class ContentConverter:
 
 		if self.writing: self.stop_writing()
 
-		if self.p_or_li: tag = 'p'
+		if self.mode: tag = 'p'
 		else: tag = 'li'
 
 		if type == 'p':
@@ -143,7 +143,7 @@ class ContentConverter:
 
 		if not self.writing: return
 
-		if self.p_or_li:
+		if self.mode:
 			self.content += '</p>\n'
 		else:
 			self.content += '</li>\n'
@@ -215,17 +215,17 @@ class ContentConverter:
 
 		if env == 'inside':
 			self.content += '<div class="inside">'
-			self.environment.append((self.p_or_li, '</div>'))
+			self.environment.append((self.mode, '</div>'))
 		elif env == 'outside':
 			self.content += '<div class="outside">'
-			self.environment.append((self.p_or_li, '</div>'))
+			self.environment.append((self.mode, '</div>'))
 
 		elif env == 'ul':
 			if len(args) != 1:
 				self.error('ul# expects 1 arg %s' % args)
 			self.content += '<ul>'
-			self.environment.append((self.p_or_li, '</ul>'))
-			self.p_or_li = False
+			self.environment.append((self.mode, '</ul>'))
+			self.mode = False
 
 		elif env == 'ol' or env == 'dl':
 
@@ -243,28 +243,28 @@ class ContentConverter:
 			if size > 2: output.append('start="%s"' % args[2])
 
 			self.content += ('<ol %s>' % ' '.join(output))
-			self.environment.append((self.p_or_li, '</ol>\n'))
-			self.p_or_li = False
+			self.environment.append((self.mode, '</ol>\n'))
+			self.mode = False
 
 		elif env == 'mini' or env == 'half':
 			side = args[1]
 			if side != 'left' and side != 'right':
 				self.error('Unknown side %s' % args)
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
-			self.environment.append((self.p_or_li, '</div></div>\n'))
+			self.environment.append((self.mode, '</div></div>\n'))
 
 		elif env == 'code' or env == 'em' or env == 'strong':
 			self.content += '<div class="%s">' % env
-			self.environment.append((self.p_or_li, '</div>\n'))
+			self.environment.append((self.mode, '</div>\n'))
 
 		else: self.error('Unknown environment %s' % args)
 
 	def close_env (self, args):
 
-		try: p_or_li, closure = self.environment.pop()
+		try: mode, closure = self.environment.pop()
 		except: self.error('There is no environment to close!!! %s' % args)
 
-		self.p_or_li = p_or_li
+		self.mode = mode
 		self.content += closure
 
 	def make_clear (self, args):
