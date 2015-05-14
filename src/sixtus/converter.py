@@ -56,7 +56,7 @@ class ContentConverter:
 			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
 		if c == 'link':
-			self.append_content(self.make_link(args))
+			self.append_content(self.make_link(args, False))
 		elif c == 'tid':
 			self.append_content(self.make_tid(args))
 		elif c == 'speak':
@@ -110,7 +110,7 @@ class ContentConverter:
 		if len(args) == 1: return args[0]
 
 		if args[0] == 'link':
-			return self.make_link(args[1:])
+			return self.make_link(args[1:], False)
 		elif args[0] == 'tid':
 			return self.make_tid(args[1:])
 
@@ -118,7 +118,7 @@ class ContentConverter:
 			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
-			return self.make_link(linkargs)
+			return self.make_link(linkargs, False)
 		elif args[0] == 'speak':
 			return self.make_speak(args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
@@ -170,9 +170,9 @@ class ContentConverter:
 		link_args = [tab_location, args[0]]
 		if size == 3: link_args.append(args[2])
 
-		return self.make_link (link_args)
+		return self.make_link (link_args, tab_target)
 
-	def make_link (self, args):
+	def make_link (self, args, tab_target):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
