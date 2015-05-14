@@ -130,12 +130,14 @@ class ContentConverter:
 		if self.mode == 'p': tag = 'p'
 		elif self.mode == 'li': tag = 'li'
 
-		if type == 'p':
-			self.content += ('<%s>%s' % (tag, text))
-		elif type == 'c':
-			self.content += ('<%s class="center">%s' % (tag, text))
-		elif type == 'r':
-			self.content += ('<%s class="reverse">%s' % (tag, text))
+		if self.mode != 'pre':
+			if type == 'p':
+				self.content += ('<%s>%s' % (tag, text))
+			elif type == 'c':
+				self.content += ('<%s class="center">%s' % (tag, text))
+			elif type == 'r':
+				self.content += ('<%s class="reverse">%s' % (tag, text))
+		else: self.content += text
 
 		self.writing = True
 
@@ -147,6 +149,8 @@ class ContentConverter:
 			self.content += '</p>\n'
 		elif self.mode == 'li':
 			self.content += '</li>\n'
+		elif self.mode == 'pre':
+			self.content += '\n'
 
 		self.writing = False
 
@@ -256,6 +260,10 @@ class ContentConverter:
 		elif env == 'code' or env == 'em' or env == 'strong':
 			self.content += '<div class="%s">' % env
 			self.environment.append((self.mode, '</div>\n'))
+
+		elif env == 'pre':
+			self.environment.append((self.mode, '\n'))
+			self.mode = 'pre'
 
 		else: self.error('Unknown environment %s' % args)
 
