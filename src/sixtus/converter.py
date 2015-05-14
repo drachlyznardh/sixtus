@@ -15,7 +15,7 @@ class ContentConverter:
 
 		self.environment = []
 		self.writing     = False
-		self.mode        = True
+		self.mode        = 'p'
 
 		self.page_location = page_location
 
@@ -127,8 +127,8 @@ class ContentConverter:
 
 		if self.writing: self.stop_writing()
 
-		if self.mode: tag = 'p'
-		else: tag = 'li'
+		if self.mode == 'p': tag = 'p'
+		elif self.mode == 'li': tag = 'li'
 
 		if type == 'p':
 			self.content += ('<%s>%s' % (tag, text))
@@ -143,9 +143,9 @@ class ContentConverter:
 
 		if not self.writing: return
 
-		if self.mode:
+		if self.mode == 'p':
 			self.content += '</p>\n'
-		else:
+		elif self.mode == 'li':
 			self.content += '</li>\n'
 
 		self.writing = False
@@ -225,7 +225,7 @@ class ContentConverter:
 				self.error('ul# expects 1 arg %s' % args)
 			self.content += '<ul>'
 			self.environment.append((self.mode, '</ul>'))
-			self.mode = False
+			self.mode = 'li'
 
 		elif env == 'ol' or env == 'dl':
 
@@ -244,7 +244,7 @@ class ContentConverter:
 
 			self.content += ('<ol %s>' % ' '.join(output))
 			self.environment.append((self.mode, '</ol>\n'))
-			self.mode = False
+			self.mode = 'li'
 
 		elif env == 'mini' or env == 'half':
 			side = args[1]
