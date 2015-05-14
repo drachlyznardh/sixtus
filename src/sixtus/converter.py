@@ -196,7 +196,11 @@ class ContentConverter:
 				title = token[1]
 				next = token[2]
 
-		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
+		if tab_target:
+			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
+		else: check = ''
+
+		return '%s<a %s href="%s">%s</a>%s' % (prev, check, href, title, next)
 
 	def make_speak (self, args):
 
