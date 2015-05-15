@@ -193,24 +193,24 @@ class ContentConverter:
 		if len(args[0]) and href[0] != '/': href = '/%s' % href
 
 		if '@' not in args[1]:
-			title = args[1]
-			prev = next = ''
+			text = args[1]
+			before = after = ''
 		else:
 			token = args[1].split('@')
 			if len(token) == 2:
-				prev = ''
-				title = token[0]
-				next = token[1]
+				before = ''
+				text = token[0]
+				after = token[1]
 			else:
-				prev = token[0]
-				title = token[1]
-				next = token[2]
+				before = token[0]
+				text = token[1]
+				after = token[2]
 
 		if tab_target:
 			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
 		else: check = ''
 
-		return '%s<a %s href="%s">%s</a>%s' % (prev, check, href, title, next)
+		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
 
 	def style_text (self, c, content):
 
