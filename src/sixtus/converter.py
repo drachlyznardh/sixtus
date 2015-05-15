@@ -125,6 +125,8 @@ class ContentConverter:
 			return self.make_link(linkargs, False)
 		elif c == 'speak':
 			return self.make_speak(args[1:])
+		elif c == 'em' or c == 'code' or c == 'strong':
+			return '<%s>%s</%s>' % (c, args[1], c)
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
