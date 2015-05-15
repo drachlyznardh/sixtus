@@ -365,7 +365,7 @@ class FullConverter(ContentConverter):
 			size = len(args)
 			if size == 1 and args[0] == '': self.meta[c] = False
 			elif size == 2: self.meta[c] = (args[0], args[1])
-			else: self.error('Parse_Meta: %s# expects 0 or 2 arguments %s' % args)
+			else: self.error('Parse_Meta: %s| expects 0 or 2 arguments %s' % (args[0], args))
 		elif c == 'tabprev':
 			self.meta['tabprev'] = (args[0], args[1])
 		elif c == 'tabself':
