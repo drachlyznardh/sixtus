@@ -109,11 +109,13 @@ class ContentConverter:
 
 	def parse_recursive (self, args):
 
-		if len(args) == 1: return args[0]
+		c = args[0]
 
-		if args[0] == 'link':
+		if len(args) == 1: return c
+
+		if c == 'link':
 			return self.make_link(args[1:], False)
-		elif args[0] == 'tid':
+		elif c == 'tid':
 			return self.make_tid(args[1:])
 
 			linkargs = []
@@ -121,7 +123,7 @@ class ContentConverter:
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs, False)
-		elif args[0] == 'speak':
+		elif c == 'speak':
 			return self.make_speak(args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
