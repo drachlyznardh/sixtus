@@ -149,7 +149,7 @@ class Poster:
 
 		output = 'id|%s-%s\n' % (self.this_page[0], self.this_page[1])
 		destination = '%s/%s/%s/' % (self.home, self.this_page[0], self.this_page[1])
-		output += 'stitle|link|%s|%s %s\n' % (destination, self.this_page[2], self.this_page[0])
+		output += 'stitle|link|%s|%s@ %s\n' % (destination, self.this_page[2], self.this_page[0])
 
 		for day, post_list in sorted(self.post.items()):
 			progress = 0
