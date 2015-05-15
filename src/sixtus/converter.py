@@ -64,7 +64,7 @@ class ContentConverter:
 		elif c == 'p' or c == 'c' or c == 'r':
 			self.start_writing(c, self.parse_recursive(args))
 		elif c == 'em' or c == 'code' or c == 'strong':
-			self.append_content('<%s>%s</%s>' % (c, args[0], c))
+			self.append_content(self.style_text(c, args[0]))
 		elif c == 'id':
 			self.stop_writing()
 			self.content += '<a id="%s"></a>\n' % convert(args[0])
@@ -126,7 +126,7 @@ class ContentConverter:
 		elif c == 'speak':
 			return self.make_speak(args[1:])
 		elif c == 'em' or c == 'code' or c == 'strong':
-			return '<%s>%s</%s>' % (c, args[1], c)
+			return self.style_text(c, args[1])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
@@ -211,6 +211,26 @@ class ContentConverter:
 		else: check = ''
 
 		return '%s<a %s href="%s">%s</a>%s' % (prev, check, href, title, next)
+
+	def style_text (self, c, content):
+
+		if '@' not in content:
+			text = content
+			before = after = ''
+		else:
+			token = content.split('@')
+			size = len(token)
+			if size == 2:
+				before = ''
+				text = token[0]
+				after = token[1]
+			elif size == 3:
+				before = token[0]
+				text = token[1]
+				after = token[2]
+			else: self.error('Styling %s, too many options in %s' % (c, content))
+
+		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
 
 	def make_speak (self, args):
 
