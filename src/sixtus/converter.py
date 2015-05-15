@@ -15,7 +15,7 @@ class ContentConverter:
 
 		self.environment = []
 		self.writing     = False
-		self.p_or_li     = True
+		self.mode        = 'p'
 
 		self.page_location = page_location
 
@@ -56,7 +56,7 @@ class ContentConverter:
 			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
 		if c == 'link':
-			self.append_content(self.make_link(args))
+			self.append_content(self.make_link(args, False))
 		elif c == 'tid':
 			self.append_content(self.make_tid(args))
 		elif c == 'speak':
@@ -110,7 +110,7 @@ class ContentConverter:
 		if len(args) == 1: return args[0]
 
 		if args[0] == 'link':
-			return self.make_link(args[1:])
+			return self.make_link(args[1:], False)
 		elif args[0] == 'tid':
 			return self.make_tid(args[1:])
 
@@ -118,7 +118,7 @@ class ContentConverter:
 			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
-			return self.make_link(linkargs)
+			return self.make_link(linkargs, False)
 		elif args[0] == 'speak':
 			return self.make_speak(args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
@@ -127,15 +127,17 @@ class ContentConverter:
 
 		if self.writing: self.stop_writing()
 
-		if self.p_or_li: tag = 'p'
-		else: tag = 'li'
+		if self.mode == 'p': tag = 'p'
+		elif self.mode == 'li': tag = 'li'
 
-		if type == 'p':
-			self.content += ('<%s>%s' % (tag, text))
-		elif type == 'c':
-			self.content += ('<%s class="center">%s' % (tag, text))
-		elif type == 'r':
-			self.content += ('<%s class="reverse">%s' % (tag, text))
+		if self.mode != 'pre':
+			if type == 'p':
+				self.content += ('<%s>%s' % (tag, text))
+			elif type == 'c':
+				self.content += ('<%s class="center">%s' % (tag, text))
+			elif type == 'r':
+				self.content += ('<%s class="reverse">%s' % (tag, text))
+		else: self.content += text
 
 		self.writing = True
 
@@ -143,10 +145,12 @@ class ContentConverter:
 
 		if not self.writing: return
 
-		if self.p_or_li:
+		if self.mode == 'p':
 			self.content += '</p>\n'
-		else:
+		elif self.mode == 'li':
 			self.content += '</li>\n'
+		elif self.mode == 'pre':
+			self.content += '\n'
 
 		self.writing = False
 
@@ -164,14 +168,15 @@ class ContentConverter:
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
-		tab_location = '/'.join(self.page_location.split('/') + [convert(args[1])])
+		tab_target = convert(args[1])
+		tab_location = '/'.join(self.page_location.split('/') + [tab_target])
 
 		link_args = [tab_location, args[0]]
 		if size == 3: link_args.append(args[2])
 
-		return self.make_link (link_args)
+		return self.make_link (link_args, tab_target)
 
-	def make_link (self, args):
+	def make_link (self, args, tab_target):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
@@ -195,7 +200,11 @@ class ContentConverter:
 				title = token[1]
 				next = token[2]
 
-		return '%s<a href="%s">%s</a>%s' % (prev, href, title, next)
+		if tab_target:
+			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
+		else: check = ''
+
+		return '%s<a %s href="%s">%s</a>%s' % (prev, check, href, title, next)
 
 	def make_speak (self, args):
 
@@ -210,17 +219,17 @@ class ContentConverter:
 
 		if env == 'inside':
 			self.content += '<div class="inside">'
-			self.environment.append((self.p_or_li, '</div>'))
+			self.environment.append((self.mode, '</div>'))
 		elif env == 'outside':
 			self.content += '<div class="outside">'
-			self.environment.append((self.p_or_li, '</div>'))
+			self.environment.append((self.mode, '</div>'))
 
 		elif env == 'ul':
 			if len(args) != 1:
 				self.error('ul# expects 1 arg %s' % args)
 			self.content += '<ul>'
-			self.environment.append((self.p_or_li, '</ul>'))
-			self.p_or_li = False
+			self.environment.append((self.mode, '</ul>'))
+			self.mode = 'li'
 
 		elif env == 'ol' or env == 'dl':
 
@@ -238,28 +247,32 @@ class ContentConverter:
 			if size > 2: output.append('start="%s"' % args[2])
 
 			self.content += ('<ol %s>' % ' '.join(output))
-			self.environment.append((self.p_or_li, '</ol>\n'))
-			self.p_or_li = False
+			self.environment.append((self.mode, '</ol>\n'))
+			self.mode = 'li'
 
 		elif env == 'mini' or env == 'half':
 			side = args[1]
 			if side != 'left' and side != 'right':
 				self.error('Unknown side %s' % args)
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
-			self.environment.append((self.p_or_li, '</div></div>\n'))
+			self.environment.append((self.mode, '</div></div>\n'))
 
 		elif env == 'code' or env == 'em' or env == 'strong':
 			self.content += '<div class="%s">' % env
-			self.environment.append((self.p_or_li, '</div>\n'))
+			self.environment.append((self.mode, '</div>\n'))
+
+		elif env == 'pre':
+			self.environment.append((self.mode, '\n'))
+			self.mode = 'pre'
 
 		else: self.error('Unknown environment %s' % args)
 
 	def close_env (self, args):
 
-		try: p_or_li, closure = self.environment.pop()
+		try: mode, closure = self.environment.pop()
 		except: self.error('There is no environment to close!!! %s' % args)
 
-		self.p_or_li = p_or_li
+		self.mode = mode
 		self.content += closure
 
 	def make_clear (self, args):

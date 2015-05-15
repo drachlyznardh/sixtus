@@ -10,6 +10,11 @@ em em, div.em em { font-style: italic; }
 code, div.code { font-style: normal; font-family: monospace; }
 strong, div.strong { font-weight: bold; }
 
+.spoiler { color: black; background-color: black; }
+.spoiler:hover { color: white; }
+
+a.highlighted { color: black; text-shadow: 1px 1px white; }
+
 div#content {
 	position: fixed;
 	height: 100%;
@@ -72,8 +77,8 @@ div.mini-right-out, div.mini-left-out { width: 33%; }
 
 div.half-right-out, div.mini-right-out { float: right; }
 div.half-left-out, div.mini-left-out { float: left; }
-div.half-right-in, div.mini-right-in { margin-left: .5em; }
-div.half-left-in, div.mini-left-in { margin-right: .5em; }
+div.half-right-in, div.mini-right-in { margin-left: .5em; padding-right: 0em; }
+div.half-left-in, div.mini-left-in { margin-right: .5em; padding-left: 0em; }
 
 p,li { text-indent: .5em; margin: .5em 0em .5em 0em; }
 #right-side-panel p,li { text-indent: .5em; margin: .2em 0em .2em 0em; }
