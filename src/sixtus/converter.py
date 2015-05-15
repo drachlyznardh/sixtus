@@ -63,6 +63,8 @@ class ContentConverter:
 			self.append_content(self.make_speak(args))
 		elif c == 'p' or c == 'c' or c == 'r':
 			self.start_writing(c, self.parse_recursive(args))
+		elif c == 'em' or c == 'code' or c == 'strong':
+			self.append_content('<%s>%s</%s>' % (c, args[0], c))
 		elif c == 'id':
 			self.stop_writing()
 			self.content += '<a id="%s"></a>\n' % convert(args[0])
