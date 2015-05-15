@@ -63,6 +63,8 @@ class ContentConverter:
 			self.append_content(self.make_speak(args))
 		elif c == 'p' or c == 'c' or c == 'r':
 			self.start_writing(c, self.parse_recursive(args))
+		elif c == 'em' or c == 'code' or c == 'strong':
+			self.append_content(self.style_text(c, args[0]))
 		elif c == 'id':
 			self.stop_writing()
 			self.content += '<a id="%s"></a>\n' % convert(args[0])
@@ -107,11 +109,13 @@ class ContentConverter:
 
 	def parse_recursive (self, args):
 
-		if len(args) == 1: return args[0]
+		c = args[0]
 
-		if args[0] == 'link':
+		if len(args) == 1: return c
+
+		if c == 'link':
 			return self.make_link(args[1:], False)
-		elif args[0] == 'tid':
+		elif c == 'tid':
 			return self.make_tid(args[1:])
 
 			linkargs = []
@@ -119,8 +123,10 @@ class ContentConverter:
 			linkargs.append(args[1])
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs, False)
-		elif args[0] == 'speak':
+		elif c == 'speak':
 			return self.make_speak(args[1:])
+		elif c == 'em' or c == 'code' or c == 'strong':
+			return self.style_text(c, args[1])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
@@ -187,24 +193,44 @@ class ContentConverter:
 		if len(args[0]) and href[0] != '/': href = '/%s' % href
 
 		if '@' not in args[1]:
-			title = args[1]
-			prev = next = ''
+			text = args[1]
+			before = after = ''
 		else:
 			token = args[1].split('@')
 			if len(token) == 2:
-				prev = ''
-				title = token[0]
-				next = token[1]
+				before = ''
+				text = token[0]
+				after = token[1]
 			else:
-				prev = token[0]
-				title = token[1]
-				next = token[2]
+				before = token[0]
+				text = token[1]
+				after = token[2]
 
 		if tab_target:
 			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
 		else: check = ''
 
-		return '%s<a %s href="%s">%s</a>%s' % (prev, check, href, title, next)
+		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
+
+	def style_text (self, c, content):
+
+		if '@' not in content:
+			text = content
+			before = after = ''
+		else:
+			token = content.split('@')
+			size = len(token)
+			if size == 2:
+				before = ''
+				text = token[0]
+				after = token[1]
+			elif size == 3:
+				before = token[0]
+				text = token[1]
+				after = token[2]
+			else: self.error('Styling %s, too many options in %s' % (c, content))
+
+		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
 
 	def make_speak (self, args):
 
