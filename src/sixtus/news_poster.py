@@ -71,7 +71,8 @@ class Poster:
 			for month in sorted(self.content[year], reverse=True):
 				if many : output += '\tbr|\n'
 				else: many = True
-				output += '\tstitle@right|%s %s\n' % (self.names[month], year)
+				destination = '%s/%s/%s/' % (self.home, year, month)
+				output += '\tstitle@right|link|%s|%s@ %s\n' % (destination, self.names[month], year)
 				for day in sorted(self.content[year][month], reverse=True):
 					howmany = len(self.content[year][month][day]) -1
 					progress = 0

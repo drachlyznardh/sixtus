@@ -1,4 +1,8 @@
 
+0.10.2.23 15/04/2015
+- News page has direct links to each related month
+- Month link in year pages have the month highlighted, but not the year
+
 0.10.2.22 15/04/2015
 Fixing error message syntax
 
