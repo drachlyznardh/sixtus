@@ -278,7 +278,7 @@ class ContentConverter:
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
 			self.environment.append((self.mode, '</div></div>\n'))
 
-		elif env == 'code' or env == 'em' or env == 'strong':
+		elif env == 'code' or env == 'em' or env == 'strong' or env == 'spoiler':
 			self.content += '<div class="%s">' % env
 			self.environment.append((self.mode, '</div>\n'))
 
