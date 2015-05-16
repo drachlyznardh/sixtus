@@ -1,4 +1,10 @@
 
+0.10.4.24 16/04/2015
+- Adding spolier block and style
+- Adding wrong block and style
+- Minor refactoring
+- Updating vim syntax highlight
+
 0.10.3.23 15/04/2015
 Style commands for em, code and strong text
 
