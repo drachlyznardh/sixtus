@@ -12,6 +12,7 @@ strong, div.strong { font-weight: bold; }
 
 .spoiler { color: black; background-color: black; }
 .spoiler:hover { color: white; }
+.wrong { text-decoration: line-through; }
 
 a.highlighted { color: black; text-shadow: 1px 1px white; }
 
