@@ -171,6 +171,17 @@ class ContentConverter:
 			else: self.content += (' %s' % text)
 		elif len(text): self.start_writing('p', text)
 
+	def split_triplet (self, content):
+
+		if '@' not in content:
+			return ('', content, '')
+
+		token = content.split('@')
+		if len(token) == 2:
+			return ('', token[0], token[1])
+
+		return (token[0], token[1], token[2])
+
 	def make_tid (self, args):
 
 		size = len(args)
@@ -196,19 +207,7 @@ class ContentConverter:
 
 		if len(args[0]) and href[0] != '/': href = '/%s' % href
 
-		if '@' not in args[1]:
-			text = args[1]
-			before = after = ''
-		else:
-			token = args[1].split('@')
-			if len(token) == 2:
-				before = ''
-				text = token[0]
-				after = token[1]
-			else:
-				before = token[0]
-				text = token[1]
-				after = token[2]
+		before, text, after = self.split_triplet(args[1])
 
 		if tab_target:
 			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
@@ -218,41 +217,13 @@ class ContentConverter:
 
 	def style_text (self, c, content):
 
-		if '@' not in content:
-			text = content
-			before = after = ''
-		else:
-			token = content.split('@')
-			size = len(token)
-			if size == 2:
-				before = ''
-				text = token[0]
-				after = token[1]
-			elif size == 3:
-				before = token[0]
-				text = token[1]
-				after = token[2]
-			else: self.error('Styling %s, too many options in %s' % (c, content))
+		before, text, after = self.split_triplet(content)
 
 		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
 
 	def style_spoiler (self, c, content):
 
-		if '@' not in content:
-			text = content
-			before = after = ''
-		else:
-			token = content.split('@')
-			size = len(token)
-			if size == 2:
-				before = ''
-				text = token[0]
-				after = token[1]
-			elif size == 3:
-				before = token[0]
-				text = token[1]
-				after = token[2]
-			else: self.error('Styling %s, too many options in %s' % (c, content))
+		before, text, after = self.split_triplet(content)
 
 		return '%s<span class="spoiler">%s</span>%s' % (before, content, after)
 
