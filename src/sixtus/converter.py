@@ -65,7 +65,7 @@ class ContentConverter:
 			self.start_writing(c, self.parse_recursive(args))
 		elif c == 'em' or c == 'code' or c == 'strong':
 			self.append_content(self.style_text(c, args[0]))
-		elif c == 'spoiler':
+		elif c == 'wrong' or c == 'spoiler':
 			self.append_content(self.style_spoiler(c, args[0]))
 		elif c == 'id':
 			self.stop_writing()
@@ -129,7 +129,7 @@ class ContentConverter:
 			return self.make_speak(args[1:])
 		elif c == 'em' or c == 'code' or c == 'strong':
 			return self.style_text(c, args[1])
-		elif c == 'spoiler':
+		elif c == 'wrong' or c == 'spoiler':
 			return self.style_spoiler(c, args[1])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
@@ -225,7 +225,7 @@ class ContentConverter:
 
 		before, text, after = self.split_triplet(content)
 
-		return '%s<span class="spoiler">%s</span>%s' % (before, content, after)
+		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
 
 	def make_speak (self, args):
 
@@ -278,7 +278,11 @@ class ContentConverter:
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
 			self.environment.append((self.mode, '</div></div>\n'))
 
-		elif env == 'code' or env == 'em' or env == 'strong' or env == 'spoiler':
+		elif env == 'code' or env == 'em' or env == 'strong':
+			self.content += '<div class="%s">' % env
+			self.environment.append((self.mode, '</div>\n'))
+
+		elif env == 'wrong' or env == 'spoiler':
 			self.content += '<div class="%s">' % env
 			self.environment.append((self.mode, '</div>\n'))
 
