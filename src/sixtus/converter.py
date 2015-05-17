@@ -309,12 +309,12 @@ class PHPContentConverter:
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
-class PHPFullConverter():
+class FullConverter:
 
-	def __init__ (self, page_location):
+	def __init__ (self, page_location, helper):
 
 		self.page_location = page_location
-		self.helper = PHPContentConverter(page_location)
+		self.helper = helper
 
 		self.debug = False
 		self.meta = {}
@@ -466,3 +466,8 @@ class PHPFullConverter():
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
 
+class PHPFullConverter(FullConverter):
+
+	def __init__ (self, page_location):
+
+		FullConverter.__init__(self, page_location, PHPContentConverter(page_location))
