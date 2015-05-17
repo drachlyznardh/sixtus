@@ -314,8 +314,10 @@ class PHPFullConverter():#PHPContentConverter):
 	def __init__ (self, page_location):
 
 		#PHPContentConverter.__init__(self, page_location)
+		self.page_location = page_location
 		self.helper = PHPContentConverter(page_location)
 
+		self.debug = False
 		self.meta = {}
 		self.state = 'meta'
 
@@ -350,7 +352,7 @@ class PHPFullConverter():#PHPContentConverter):
 
 		if '|' not in line:
 			if self.state == 'meta': pass
-			else: self.append_content(line);
+			else: self.helper.append_content(line);
 			return
 
 		token = line.split('|')
@@ -406,14 +408,14 @@ class PHPFullConverter():#PHPContentConverter):
 
 	def state_update (self, newstate):
 
-		self.stop_writing()
+		self.helper.stop_writing()
 
 		if self.state == 'page':
-			self.page += self.content
-			self.content = ''
+			self.page += self.helper.content
+			self.helper.content = ''
 		elif self.state == 'side':
-			self.side += self.content
-			self.content = ''
+			self.side += self.helper.content
+			self.helper.content = ''
 
 		self.state = newstate
 
