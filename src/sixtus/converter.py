@@ -309,12 +309,6 @@ class ContentConverter:
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
-class PHPContentConverter(ContentConverter):
-
-	def __init__ (self, page_location):
-
-		ContentConverter.__init__(self, page_location)
-
 class FullConverter:
 
 	def __init__ (self, page_location, helper):
@@ -422,6 +416,12 @@ class FullConverter:
 			self.helper.content = ''
 
 		self.state = newstate
+
+class PHPContentConverter(ContentConverter):
+
+	def __init__ (self, page_location):
+
+		ContentConverter.__init__(self, page_location)
 
 class PHPFullConverter(FullConverter):
 
