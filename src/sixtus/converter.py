@@ -417,6 +417,12 @@ class FullConverter:
 
 		self.state = newstate
 
+class PHPFullConverter(FullConverter):
+
+	def __init__ (self, page_location):
+
+		FullConverter.__init__(self, page_location, PHPContentConverter(page_location))
+
 	def output_page_file (self, filename):
 
 		self.state_update('meta')
@@ -466,8 +472,3 @@ class FullConverter:
 
 		with open(filename, 'w') as f: print('%s' % output, file=f)
 
-class PHPFullConverter(FullConverter):
-
-	def __init__ (self, page_location):
-
-		FullConverter.__init__(self, page_location, PHPContentConverter(page_location))
