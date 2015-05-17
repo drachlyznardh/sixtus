@@ -7,7 +7,7 @@ import re
 
 from .util import convert
 
-class ContentConverter:
+class PHPContentConverter:
 
 	def __init__ (self, page_location):
 
@@ -25,7 +25,7 @@ class ContentConverter:
 
 	def error (self, message):
 
-		line = '\nContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
+		line = '\nPHPContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
@@ -309,11 +309,11 @@ class ContentConverter:
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
-class FullConverter(ContentConverter):
+class PHPFullConverter(PHPContentConverter):
 
 	def __init__ (self, page_location):
 
-		ContentConverter.__init__(self, page_location)
+		PHPContentConverter.__init__(self, page_location)
 
 		self.meta = {}
 		self.state = 'meta'
@@ -324,7 +324,7 @@ class FullConverter(ContentConverter):
 
 	def error (self, message):
 
-		print('\nFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
+		print('\nPHPFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename):
