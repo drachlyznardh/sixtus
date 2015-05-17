@@ -90,24 +90,24 @@ class ContentConverter:
 
 	def parse_title (self, command, args):
 
-			option = command.split('@')
-			c = option[0]
+		option = command.split('@')
+		c = option[0]
 
-			if c == 'title': tag = 'h2'
-			elif c == 'stitle': tag = 'h3'
-			else: self.error('What title is %s supposed to be? %s %s' % (c, command, args))
+		if c == 'title': tag = 'h2'
+		elif c == 'stitle': tag = 'h3'
+		else: self.error('What title is %s supposed to be? %s %s' % (c, command, args))
 
-			if len(option) == 1 or option[1] == 'left': direction = False
-			elif option[1] == 'center': direction = 'class="center"'
-			elif option[1] == 'right': direction = 'class="reverse"'
-			else: self.error('What direction is %s supposed to be? %s %s' % (option[1], command, args))
+		if len(option) == 1 or option[1] == 'left': direction = False
+		elif option[1] == 'center': direction = 'class="center"'
+		elif option[1] == 'right': direction = 'class="reverse"'
+		else: self.error('What direction is %s supposed to be? %s %s' % (option[1], command, args))
 
-			content = self.parse_recursive(args)
-			self.stop_writing()
-			if direction:
-				self.content += '<%s %s>%s</%s>\n' % (tag, direction, content, tag)
-			else:
-				self.content += '<%s>%s</%s>\n' % (tag, content, tag)
+		content = self.parse_recursive(args)
+		self.stop_writing()
+		if direction:
+			self.content += '<%s %s>%s</%s>\n' % (tag, direction, content, tag)
+		else:
+			self.content += '<%s>%s</%s>\n' % (tag, content, tag)
 
 	def parse_recursive (self, args):
 
