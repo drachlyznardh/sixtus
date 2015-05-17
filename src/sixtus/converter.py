@@ -7,7 +7,7 @@ import re
 
 from .util import convert
 
-class ContentConverter:
+class PHPContentConverter:
 
 	def __init__ (self, page_location):
 
@@ -25,7 +25,7 @@ class ContentConverter:
 
 	def error (self, message):
 
-		line = '\nContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
+		line = '\nPHPContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
@@ -309,12 +309,14 @@ class ContentConverter:
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
-class FullConverter(ContentConverter):
+class PHPFullConverter():
 
 	def __init__ (self, page_location):
 
-		ContentConverter.__init__(self, page_location)
+		self.page_location = page_location
+		self.helper = PHPContentConverter(page_location)
 
+		self.debug = False
 		self.meta = {}
 		self.state = 'meta'
 
@@ -324,7 +326,7 @@ class FullConverter(ContentConverter):
 
 	def error (self, message):
 
-		print('\nFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
+		print('\nPHPFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename):
@@ -349,7 +351,7 @@ class FullConverter(ContentConverter):
 
 		if '|' not in line:
 			if self.state == 'meta': pass
-			else: self.append_content(line);
+			else: self.helper.append_content(line);
 			return
 
 		token = line.split('|')
@@ -368,7 +370,7 @@ class FullConverter(ContentConverter):
 			self.parse_meta(token[0], token[1:])
 			return
 
-		self.parse_content(token[0], token[1:])
+		self.helper.parse_content(token[0], token[1:])
 
 	def parse_meta (self, c, args):
 
@@ -404,14 +406,14 @@ class FullConverter(ContentConverter):
 
 	def state_update (self, newstate):
 
-		self.stop_writing()
+		self.helper.stop_writing()
 
 		if self.state == 'page':
-			self.page += self.content
-			self.content = ''
+			self.page += self.helper.content
+			self.helper.content = ''
 		elif self.state == 'side':
-			self.side += self.content
-			self.content = ''
+			self.side += self.helper.content
+			self.helper.content = ''
 
 		self.state = newstate
 
