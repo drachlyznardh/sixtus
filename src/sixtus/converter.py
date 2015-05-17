@@ -309,11 +309,10 @@ class PHPContentConverter:
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
-class PHPFullConverter():#PHPContentConverter):
+class PHPFullConverter():
 
 	def __init__ (self, page_location):
 
-		#PHPContentConverter.__init__(self, page_location)
 		self.page_location = page_location
 		self.helper = PHPContentConverter(page_location)
 
@@ -371,7 +370,6 @@ class PHPFullConverter():#PHPContentConverter):
 			self.parse_meta(token[0], token[1:])
 			return
 
-		#self.parse_content(token[0], token[1:])
 		self.helper.parse_content(token[0], token[1:])
 
 	def parse_meta (self, c, args):
