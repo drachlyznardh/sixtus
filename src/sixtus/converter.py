@@ -7,7 +7,7 @@ import re
 
 from .util import convert
 
-class PHPContentConverter:
+class ContentConverter:
 
 	def __init__ (self, page_location):
 
@@ -25,7 +25,7 @@ class PHPContentConverter:
 
 	def error (self, message):
 
-		line = '\nPHPContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
+		line = '\nContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
@@ -69,10 +69,10 @@ class PHPContentConverter:
 			self.append_content(self.style_spoiler(c, args[0]))
 		elif c == 'id':
 			self.stop_writing()
-			self.content += '<a id="%s"></a>\n' % convert(args[0])
+			self.make_id(convert(args[0]))
 		elif c == 'br':
 			self.stop_writing()
-			self.content += '<br/>\n'
+			self.make_break()
 		elif c == 'begin':
 			self.stop_writing()
 			self.open_env(args)
@@ -90,24 +90,24 @@ class PHPContentConverter:
 
 	def parse_title (self, command, args):
 
-			option = command.split('@')
-			c = option[0]
+		option = command.split('@')
+		c = option[0]
 
-			if c == 'title': tag = 'h2'
-			elif c == 'stitle': tag = 'h3'
-			else: self.error('What title is %s supposed to be? %s %s' % (c, command, args))
+		if c == 'title': tag = 'h2'
+		elif c == 'stitle': tag = 'h3'
+		else: self.error('What title is %s supposed to be? %s %s' % (c, command, args))
 
-			if len(option) == 1 or option[1] == 'left': direction = False
-			elif option[1] == 'center': direction = 'class="center"'
-			elif option[1] == 'right': direction = 'class="reverse"'
-			else: self.error('What direction is %s supposed to be? %s %s' % (option[1], command, args))
+		if len(option) == 1 or option[1] == 'left': direction = False
+		elif option[1] == 'center': direction = 'class="center"'
+		elif option[1] == 'right': direction = 'class="reverse"'
+		else: self.error('What direction is %s supposed to be? %s %s' % (option[1], command, args))
 
-			content = self.parse_recursive(args)
-			self.stop_writing()
-			if direction:
-				self.content += '<%s %s>%s</%s>\n' % (tag, direction, content, tag)
-			else:
-				self.content += '<%s>%s</%s>\n' % (tag, content, tag)
+		content = self.parse_recursive(args)
+		self.stop_writing()
+		if direction:
+			self.content += '<%s %s>%s</%s>\n' % (tag, direction, content, tag)
+		else:
+			self.content += '<%s>%s</%s>\n' % (tag, content, tag)
 
 	def parse_recursive (self, args):
 
@@ -234,6 +234,12 @@ class PHPContentConverter:
 
 		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
 
+	def make_id (self, ref):
+		self.content += '<a id="%s"></a>\n' % convert(args[0])
+
+	def make_break (self):
+		self.content += '<br/>\n'
+
 	def open_env (self, args):
 
 		env = args[0]
@@ -309,12 +315,12 @@ class PHPContentConverter:
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
-class PHPFullConverter():
+class FullConverter:
 
-	def __init__ (self, page_location):
+	def __init__ (self, page_location, helper):
 
 		self.page_location = page_location
-		self.helper = PHPContentConverter(page_location)
+		self.helper = helper
 
 		self.debug = False
 		self.meta = {}
@@ -326,7 +332,7 @@ class PHPFullConverter():
 
 	def error (self, message):
 
-		print('\nPHPFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
+		print('\nFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename):
@@ -416,6 +422,18 @@ class PHPFullConverter():
 			self.helper.content = ''
 
 		self.state = newstate
+
+class PHPContentConverter(ContentConverter):
+
+	def __init__ (self, page_location):
+
+		ContentConverter.__init__(self, page_location)
+
+class PHPFullConverter(FullConverter):
+
+	def __init__ (self, page_location):
+
+		FullConverter.__init__(self, page_location, PHPContentConverter(page_location))
 
 	def output_page_file (self, filename):
 
