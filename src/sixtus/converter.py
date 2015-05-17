@@ -25,7 +25,7 @@ class ContentConverter:
 
 	def error (self, message):
 
-		line = '\nPHPContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
+		line = '\nContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
@@ -332,7 +332,7 @@ class FullConverter:
 
 	def error (self, message):
 
-		print('\nPHPFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
+		print('\nFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
 		sys.exit(1)
 
 	def parse_file (self, filename):
