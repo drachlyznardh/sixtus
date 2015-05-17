@@ -69,10 +69,10 @@ class ContentConverter:
 			self.append_content(self.style_spoiler(c, args[0]))
 		elif c == 'id':
 			self.stop_writing()
-			self.content += '<a id="%s"></a>\n' % convert(args[0])
+			self.make_id(convert(args[0]))
 		elif c == 'br':
 			self.stop_writing()
-			self.content += '<br/>\n'
+			self.make_break()
 		elif c == 'begin':
 			self.stop_writing()
 			self.open_env(args)
@@ -233,6 +233,12 @@ class ContentConverter:
 			self.error('speak# excepts 2 arguments %s' % args)
 
 		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
+
+	def make_id (self, ref):
+		self.content += '<a id="%s"></a>\n' % convert(args[0])
+
+	def make_break (self):
+		self.content += '<br/>\n'
 
 	def open_env (self, args):
 
