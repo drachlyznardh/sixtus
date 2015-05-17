@@ -7,7 +7,7 @@ import re
 
 from .util import convert
 
-class PHPContentConverter:
+class ContentConverter:
 
 	def __init__ (self, page_location):
 
@@ -308,6 +308,12 @@ class PHPContentConverter:
 			self.error('Unknown side for clear# %s' % args)
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
+
+class PHPContentConverter(ContentConverter):
+
+	def __init__ (self, page_location):
+
+		ContentConverter.__init__(self, page_location)
 
 class FullConverter:
 
