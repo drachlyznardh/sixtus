@@ -71,9 +71,7 @@ class ContentConverter:
 		elif c == 'br': self.make_break(c, args)
 		elif c == 'begin': self.make_begin(c, args)
 		elif c == 'end': self.make_end(c, args)
-		elif c == 'clear':
-			self.stop_writing()
-			self.make_clear(args)
+		elif c == 'clear': self.make_clear(c, args)
 		elif c == 'tag':
 			pass # Tags are supported, right now…
 		elif c == 'title' or c == 'stitle' or '@' in c:
@@ -311,12 +309,15 @@ class ContentConverter:
 		self.mode = mode
 		self.content += closure
 
-	def make_clear (self, args):
+	def make_clear (self, c, args):
+		self.stop_writing()
+		self.do_make_clear(args[0])
 
-		side = args[0]
+	def do_make_clear (self, side):
+
 		if len(side) == 0: side = 'both'
 		if side != 'left' and side != 'right' and side != 'both':
-			self.error('Unknown side for clear# %s' % args)
+			self.error('Unknown side for clear# %s' % side)
 
 		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
