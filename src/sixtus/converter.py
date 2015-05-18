@@ -113,22 +113,11 @@ class ContentConverter:
 
 		if len(args) == 1: return c
 
-		if c == 'link':
-			return self.do_make_link(args[1:], False)
-		elif c == 'tid':
-			return self.do_make_tid(args[1:])
-
-			linkargs = []
-			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
-			linkargs.append(args[1])
-			if len(args) > 3: linkargs.append(args[3:])
-			return self.make_link(linkargs, False)
-		elif c == 'speak':
-			return self.do_make_speak(args[1:])
-		elif c == 'em' or c == 'code' or c == 'strong':
-			return self.make_style(c, args[1:])
-		elif c == 'wrong' or c == 'spoiler':
-			return self.make_decoration(c, args[1:])
+		if c == 'link': return self.do_make_link(args[1:], False)
+		elif c == 'tid': return self.do_make_tid(args[1:])
+		elif c == 'speak': return self.do_make_speak(args[1:])
+		elif c == 'em' or c == 'code' or c == 'strong': return self.make_style(c, args[1:])
+		elif c == 'wrong' or c == 'spoiler': return self.make_decoration(c, args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
