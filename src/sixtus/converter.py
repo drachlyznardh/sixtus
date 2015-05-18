@@ -50,10 +50,18 @@ class ContentConverter:
 
 		self.parse_content(token[0], token[1:])
 
+	def split_at_at (self, text):
+		if '@' in text:
+			s = text.split('@')
+			return (s[0], s[1:])
+		return (text, [])
+
 	def parse_content (self, c, args):
 
 		if self.debug:
 			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
+
+		c, opt = self.split_at_at(c)
 
 		if c == 'link': self.make_link(c, args)
 		elif c == 'tid': self.make_tid(c, args)
@@ -68,22 +76,24 @@ class ContentConverter:
 		elif c == 'clear': self.make_clear(c, args)
 		elif c == 'tag': pass # Tags are supported, right now…
 		elif c == 'title' or c == 'stitle' or '@' in c:
-			self.parse_title(c, args)
+			self.parse_title(c, opt, args)
 		else: self.error('Unknown content c [%s] %s' % (c, args))
 
-	def parse_title (self, command, args):
-
-		option = command.split('@')
-		c = option[0]
+	def parse_title (self, c, opt, args):
 
 		if c == 'title': tag = 'h2'
 		elif c == 'stitle': tag = 'h3'
-		else: self.error('What title is %s supposed to be? %s %s' % (c, command, args))
+		else: self.error('What title is %s supposed to be? %s %s' % (c, opt, args))
 
-		if len(option) == 1 or option[1] == 'left': direction = False
-		elif option[1] == 'center': direction = 'class="center"'
-		elif option[1] == 'right': direction = 'class="reverse"'
-		else: self.error('What direction is %s supposed to be? %s %s' % (option[1], command, args))
+		size = len(opt)
+
+		if size > 1:
+			self.error('Only one direction applicable %s %s %s' % (c, opt, args))
+
+		if size == 0 or opt[0] == 'left': direction = False
+		elif opt[0] == 'center': direction = 'class="center"'
+		elif opt[0] == 'right': direction = 'class="reverse"'
+		else: self.error('What direction is %s supposed to be? %s %s' % (opt[0], c, args))
 
 		content = self.parse_recursive(args)
 		self.stop_writing()
