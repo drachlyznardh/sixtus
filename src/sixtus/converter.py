@@ -70,8 +70,7 @@ class ContentConverter:
 		elif c == 'begin': self.make_begin(c, args)
 		elif c == 'end': self.make_end(c, args)
 		elif c == 'clear': self.make_clear(c, args)
-		elif c == 'tag':
-			pass # Tags are supported, right now…
+		elif c == 'tag': pass # Tags are supported, right now…
 		elif c == 'title' or c == 'stitle' or '@' in c:
 			self.parse_title(c, args)
 		else: self.error('Unknown content c [%s] %s' % (c, args))
