@@ -118,7 +118,7 @@ class ContentConverter:
 		elif c == 'speak': return self.do_make_speak(args[1:])
 		elif c in ('em', 'code', 'strong'): return self.make_style(c, args[1:])
 		elif c in ('wrong', 'spoiler'): return self.make_decoration(c, args[1:])
-		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
+		else: self.error('Parse_Args: %s is not a valid recursive directived' % args)
 
 	def start_writing (self, type, text):
 
