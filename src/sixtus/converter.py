@@ -68,9 +68,7 @@ class ContentConverter:
 		elif c == 'wrong' or c == 'spoiler':
 			self.append_content(self.style_spoiler(c, args[0]))
 		elif c == 'id': self.make_id(c, args)
-		elif c == 'br':
-			self.stop_writing()
-			self.make_break()
+		elif c == 'br': self.make_break(c, args)
 		elif c == 'begin':
 			self.stop_writing()
 			self.open_env(args)
@@ -239,7 +237,11 @@ class ContentConverter:
 	def do_make_id (self, ref):
 		self.content += '<a id="%s"></a>\n' % ref
 
-	def make_break (self):
+	def make_break (self, c, args):
+		self.stop_writing()
+		self.do_make_break()
+
+	def do_make_break (self):
 		self.content += '<br/>\n'
 
 	def open_env (self, args):
