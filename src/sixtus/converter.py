@@ -65,8 +65,7 @@ class ContentConverter:
 			self.start_writing(c, self.parse_recursive(args))
 		elif c == 'em' or c == 'code' or c == 'strong':
 			self.append_content(self.style_text(c, args[0]))
-		elif c == 'wrong' or c == 'spoiler':
-			self.append_content(self.style_spoiler(c, args[0]))
+		elif c == 'wrong' or c == 'spoiler': self.make_decoration(c, args)
 		elif c == 'id': self.make_id(c, args)
 		elif c == 'br': self.make_break(c, args)
 		elif c == 'begin': self.make_begin(c, args)
@@ -211,10 +210,11 @@ class ContentConverter:
 
 		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
 
-	def style_spoiler (self, c, content):
+	def make_decoration (self, c, args):
+		before, text, after = self.split_triplet(args[0])
+		self.append_content(self.do_make_decoration(c, before, text, after))
 
-		before, text, after = self.split_triplet(content)
-
+	def do_make_decoration (self, c, before, text, after):
 		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
 
 	def make_speak (self, args):
