@@ -63,8 +63,7 @@ class ContentConverter:
 			self.append_content(self.make_speak(args))
 		elif c == 'p' or c == 'c' or c == 'r':
 			self.start_writing(c, self.parse_recursive(args))
-		elif c == 'em' or c == 'code' or c == 'strong':
-			self.append_content(self.style_text(c, args[0]))
+		elif c == 'em' or c == 'code' or c == 'strong': self.make_style(c, args)
 		elif c == 'wrong' or c == 'spoiler': self.make_decoration(c, args)
 		elif c == 'id': self.make_id(c, args)
 		elif c == 'br': self.make_break(c, args)
@@ -117,9 +116,9 @@ class ContentConverter:
 		elif c == 'speak':
 			return self.make_speak(args[1:])
 		elif c == 'em' or c == 'code' or c == 'strong':
-			return self.style_text(c, args[1])
+			return self.make_style(c, args[1:])
 		elif c == 'wrong' or c == 'spoiler':
-			return self.style_spoiler(c, args[1])
+			return self.make_decoration(c, args[1:])
 		else: self.error('Parse_Args: not a [link|tid]! %s' % args)
 
 	def start_writing (self, type, text):
@@ -204,10 +203,11 @@ class ContentConverter:
 
 		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
 
-	def style_text (self, c, content):
+	def make_style (self, c, args):
+		before, text, after = self.split_triplet(args[0])
+		self.append_content(self.do_make_style(c, before, text, after))
 
-		before, text, after = self.split_triplet(content)
-
+	def do_make_style (self, c, before, text, after):
 		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
 
 	def make_decoration (self, c, args):
