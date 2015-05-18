@@ -69,15 +69,11 @@ class ContentConverter:
 			self.append_content(self.style_spoiler(c, args[0]))
 		elif c == 'id': self.make_id(c, args)
 		elif c == 'br': self.make_break(c, args)
-		elif c == 'begin':
-			self.stop_writing()
-			self.open_env(args)
+		elif c == 'begin': self.make_begin(c, args)
+		elif c == 'end': self.make_end(c, args)
 		elif c == 'clear':
 			self.stop_writing()
 			self.make_clear(args)
-		elif c == 'end':
-			self.stop_writing()
-			self.close_env(args)
 		elif c == 'tag':
 			pass # Tags are supported, right now…
 		elif c == 'title' or c == 'stitle' or '@' in c:
@@ -244,6 +240,10 @@ class ContentConverter:
 	def do_make_break (self):
 		self.content += '<br/>\n'
 
+	def make_begin (self, c, args):
+		self.stop_writing()
+		self.open_env(args)
+
 	def open_env (self, args):
 
 		env = args[0]
@@ -302,7 +302,8 @@ class ContentConverter:
 
 		else: self.error('Unknown environment %s' % args)
 
-	def close_env (self, args):
+	def make_end (self, c, args):
+		self.stop_writing()
 
 		try: mode, closure = self.environment.pop()
 		except: self.error('There is no environment to close!!! %s' % args)
