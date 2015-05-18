@@ -66,17 +66,16 @@ class ContentConverter:
 		if c == 'link': self.make_link(c, args)
 		elif c == 'tid': self.make_tid(c, args)
 		elif c == 'speak': self.make_speak(c, args)
-		elif c == 'p' or c == 'c' or c == 'r': self.start_writing(c, self.parse_recursive(args))
-		elif c == 'em' or c == 'code' or c == 'strong': self.make_style(c, args)
-		elif c == 'wrong' or c == 'spoiler': self.make_decoration(c, args)
+		elif c in ('p', 'c', 'r'): self.start_writing(c, self.parse_recursive(args))
+		elif c in ('em', 'code', 'strong'): self.make_style(c, args)
+		elif c in ('wrong', 'spoiler'): self.make_decoration(c, args)
 		elif c == 'id': self.make_id(c, args)
 		elif c == 'br': self.make_break(c, args)
 		elif c == 'begin': self.make_begin(c, args)
 		elif c == 'end': self.make_end(c, args)
 		elif c == 'clear': self.make_clear(c, args)
 		elif c == 'tag': pass # Tags are supported, right now…
-		elif c == 'title' or c == 'stitle' or '@' in c:
-			self.parse_title(c, opt, args)
+		elif c in ('title', 'stitle'): self.parse_title(c, opt, args)
 		else: self.error('Unknown content c [%s] %s' % (c, args))
 
 	def parse_title (self, c, opt, args):
