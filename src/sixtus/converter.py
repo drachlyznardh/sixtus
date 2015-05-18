@@ -56,8 +56,7 @@ class ContentConverter:
 			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
 		if c == 'link': self.make_link(c, args)
-		elif c == 'tid':
-			self.append_content(self.make_tid(args))
+		elif c == 'tid': self.make_tid(c, args)
 		elif c == 'speak':
 			self.append_content(self.make_speak(args))
 		elif c == 'p' or c == 'c' or c == 'r': self.start_writing(c, self.parse_recursive(args))
@@ -103,7 +102,7 @@ class ContentConverter:
 		if c == 'link':
 			return self.do_make_link(args[1:], False)
 		elif c == 'tid':
-			return self.make_tid(args[1:])
+			return self.do_make_tid(args[1:])
 
 			linkargs = []
 			linkargs.append('/%s/%s/' % (self.page_location, args[2].upper()))
@@ -167,7 +166,11 @@ class ContentConverter:
 
 		return (token[0], token[1], token[2])
 
-	def make_tid (self, args):
+	def make_tid (self, c, args):
+		content = self.do_make_tid(args)
+		self.append_content(content)
+
+	def do_make_tid (self, args):
 
 		size = len(args)
 
