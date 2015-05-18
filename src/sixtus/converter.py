@@ -56,12 +56,12 @@ class ContentConverter:
 			return (s[0], s[1:])
 		return (text, [])
 
-	def parse_content (self, c, args):
+	def parse_content (self, command, args):
 
 		if self.debug:
-			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
+			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
 
-		c, opt = self.split_at_at(c)
+		c, opt = self.split_at_at(command)
 
 		if c == 'link': self.make_link(c, args)
 		elif c == 'tid': self.make_tid(c, args)
