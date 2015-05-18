@@ -55,14 +55,12 @@ class ContentConverter:
 		if self.debug:
 			print('Parse_Content (%s, %s)' % (c, args), file=sys.stderr)
 
-		if c == 'link':
-			self.append_content(self.make_link(args, False))
+		if c == 'link': self.make_link(c, args)
 		elif c == 'tid':
 			self.append_content(self.make_tid(args))
 		elif c == 'speak':
 			self.append_content(self.make_speak(args))
-		elif c == 'p' or c == 'c' or c == 'r':
-			self.start_writing(c, self.parse_recursive(args))
+		elif c == 'p' or c == 'c' or c == 'r': self.start_writing(c, self.parse_recursive(args))
 		elif c == 'em' or c == 'code' or c == 'strong': self.make_style(c, args)
 		elif c == 'wrong' or c == 'spoiler': self.make_decoration(c, args)
 		elif c == 'id': self.make_id(c, args)
@@ -103,7 +101,7 @@ class ContentConverter:
 		if len(args) == 1: return c
 
 		if c == 'link':
-			return self.make_link(args[1:], False)
+			return self.do_make_link(args[1:], False)
 		elif c == 'tid':
 			return self.make_tid(args[1:])
 
@@ -182,9 +180,13 @@ class ContentConverter:
 		link_args = [tab_location, args[0]]
 		if size == 3: link_args.append(args[2])
 
-		return self.make_link (link_args, tab_target)
+		return self.do_make_link (link_args, tab_target)
 
-	def make_link (self, args, tab_target):
+	def make_link (self, c, args):
+		content = self.do_make_link(args, False)
+		self.append_content(content)
+
+	def do_make_link (self, args, tab_target):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
