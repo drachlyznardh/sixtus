@@ -57,8 +57,7 @@ class ContentConverter:
 
 		if c == 'link': self.make_link(c, args)
 		elif c == 'tid': self.make_tid(c, args)
-		elif c == 'speak':
-			self.append_content(self.make_speak(args))
+		elif c == 'speak': self.make_speak(c, args)
 		elif c == 'p' or c == 'c' or c == 'r': self.start_writing(c, self.parse_recursive(args))
 		elif c == 'em' or c == 'code' or c == 'strong': self.make_style(c, args)
 		elif c == 'wrong' or c == 'spoiler': self.make_decoration(c, args)
@@ -110,7 +109,7 @@ class ContentConverter:
 			if len(args) > 3: linkargs.append(args[3:])
 			return self.make_link(linkargs, False)
 		elif c == 'speak':
-			return self.make_speak(args[1:])
+			return self.do_make_speak(args[1:])
 		elif c == 'em' or c == 'code' or c == 'strong':
 			return self.make_style(c, args[1:])
 		elif c == 'wrong' or c == 'spoiler':
@@ -221,7 +220,11 @@ class ContentConverter:
 	def do_make_decoration (self, c, before, text, after):
 		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
 
-	def make_speak (self, args):
+	def make_speak (self, c, args):
+		content = self.do_make_speak(args)
+		self.append_content(content)
+
+	def do_make_speak (self, args):
 
 		if len(args) != 2:
 			self.error('speak# excepts 2 arguments %s' % args)
