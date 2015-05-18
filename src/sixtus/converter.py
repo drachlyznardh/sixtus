@@ -81,26 +81,31 @@ class ContentConverter:
 
 	def parse_title (self, c, opt, args):
 
-		if c == 'title': tag = 'h2'
-		elif c == 'stitle': tag = 'h3'
-		else: self.error('What title is %s supposed to be? %s %s' % (c, opt, args))
+		if c not in ('title', 'stitle', 'subtitle'):
+			self.error('What title is %s supposed to be? %s %s' % (c, opt, args))
 
 		size = len(opt)
-
-		if size > 1:
+		if size == 0: direction = ''
+		elif size > 1:
 			self.error('Only one direction applicable %s %s %s' % (c, opt, args))
-
-		if size == 0 or opt[0] == 'left': direction = False
-		elif opt[0] == 'center': direction = 'class="center"'
-		elif opt[0] == 'right': direction = 'class="reverse"'
-		else: self.error('What direction is %s supposed to be? %s %s' % (opt[0], c, args))
+		elif opt[0] not in ('left', 'center', 'right'):
+			self.error('What direction is %s supposed to be? %s %s' % (opt[0], c, args))
+		else: direction = opt[0]
 
 		content = self.parse_recursive(args)
 		self.stop_writing()
-		if direction:
-			self.content += '<%s %s>%s</%s>\n' % (tag, direction, content, tag)
-		else:
-			self.content += '<%s>%s</%s>\n' % (tag, content, tag)
+		self.content += self.do_make_title(c, direction, content)
+
+	def do_make_title (self, grade, direction, content):
+
+		if grade == 'title': tag = 'h2'
+		elif grade == 'stitle': tag = 'h3'
+
+		if direction in ('', 'left'): style = ''
+		elif direction == 'center': style = ' class="center"'
+		elif direction == 'right': style = ' class="reverse"'
+
+		return '<%s%s>%s</%s>' % (tag, style, content, tag)
 
 	def parse_recursive (self, args):
 
