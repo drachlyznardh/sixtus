@@ -119,23 +119,26 @@ class ContentConverter:
 		elif c in ('wrong', 'spoiler'): return self.make_decoration(c, args[1:])
 		else: self.error('Parse_Args: %s is not a valid recursive directived' % args)
 
-	def start_writing (self, type, text):
+	def make_paragraph (self, c, args):
+		content = self.parse_recursive(args)
+		self.start_writing(c)
+		self.append_content(content)
 
+	def start_writing (self, align):
 		if self.writing: self.stop_writing()
+		self.writing = True
+		self.content += self.do_start_writing(align)
+
+	def do_start_writing (self, align):
 
 		if self.mode == 'p': tag = 'p'
 		elif self.mode == 'li': tag = 'li'
 
 		if self.mode != 'pre':
-			if type == 'p':
-				self.content += ('<%s>%s' % (tag, text))
-			elif type == 'c':
-				self.content += ('<%s class="center">%s' % (tag, text))
-			elif type == 'r':
-				self.content += ('<%s class="reverse">%s' % (tag, text))
-		else: self.content += text
-
-		self.writing = True
+			if align == 'p': return '<%s>' % tag
+			elif align == 'c': return '<%s class="center">' % tag
+			elif align == 'r': return '<%s class="reverse">' % tag
+		else: return ''
 
 	def stop_writing (self):
 
