@@ -15,6 +15,7 @@ class Content:
 
 		self.environment = []
 		self.writing     = False
+		self.written     = False
 		self.mode        = 'p'
 
 		self.page_location = page_location
@@ -116,18 +117,24 @@ class Content:
 	def start_writing (self, align):
 		if self.writing: self.stop_writing()
 		self.writing = True
+		self.written = False
 		self.content += self.do_start_writing(align)
 
 	def stop_writing (self):
 		if not self.writing: return
 		self.writing = False
+		self.written = False
 		self.content += self.do_stop_writing()
 
 	def append_content (self, text):
 
 		if self.writing:
-			if len(text) == 0: self.stop_writing()
-			else: self.content += (' %s' % text)
+			if len(text) == 0: return self.stop_writing()
+			if self.written:
+				self.content += ' %s' % text
+			else:
+				self.content += text
+				self.written = True
 		elif len(text):
 			self.start_writing('p')
 			self.append_content(text)
