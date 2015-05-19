@@ -63,7 +63,7 @@ class ContentConverter:
 
 		c, opt = self.split_at_at(command)
 
-		if c == 'link': self.append_content(self.make_link(c, args))
+		if c == 'link': self.append_content(self.make_link(c, args, False))
 		elif c == 'tid': self.append_content(self.make_tid(c, args))
 		elif c == 'speak': self.append_content(self.make_speak(c, args))
 		elif c in ('p', 'c', 'r'): self.make_paragraph(c, args)
@@ -101,7 +101,7 @@ class ContentConverter:
 
 		if len(args) == 1: return c
 
-		if c == 'link': return self.make_link(c, args[1:])
+		if c == 'link': return self.make_link(c, args[1:], False)
 		elif c == 'tid': return self.make_tid(c, args[1:])
 		elif c == 'speak': return self.make_speak(c, args[1:])
 		elif c in ('em', 'code', 'strong'): return self.make_style(c, args[1:])
@@ -144,31 +144,23 @@ class ContentConverter:
 		return (token[0], token[1], token[2])
 
 	def make_tid (self, c, args):
-		return self.do_make_tid(args)
-
-	def do_make_tid (self, args):
 
 		size = len(args)
-
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
-		tab_target = convert(args[1])
-		tab_location = '/'.join(self.page_location.split('/') + [tab_target])
+		tab = convert(args[1])
+		href = '/'.join(self.page_location.split('/') + [tab])
 
-		link_args = [tab_location, args[0]]
+		link_args = [href, args[0]]
 		if size == 3: link_args.append(args[2])
 
-		return self.do_make_link (link_args, tab_target)
+		return self.make_link ('tid', link_args, tab)
 
-	def make_link (self, c, args):
+	def make_link (self, c, args, tab):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
-
-		return self.do_make_link(args, False)
-
-	def do_make_link (self, args, tab_target):
 
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], convert(args[2]))
@@ -177,8 +169,12 @@ class ContentConverter:
 
 		before, text, after = self.split_triplet(args[1])
 
-		if tab_target:
-			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
+		return self.do_make_link(href, before, text, after, tab)
+
+	def do_make_link (self, href, before, text, after, tab):
+
+		if tab:
+			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
 		else: check = ''
 
 		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
