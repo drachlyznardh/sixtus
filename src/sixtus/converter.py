@@ -63,9 +63,9 @@ class ContentConverter:
 
 		c, opt = self.split_at_at(command)
 
-		if c == 'link': self.make_link(c, args)
-		elif c == 'tid': self.make_tid(c, args)
-		elif c == 'speak': self.make_speak(c, args)
+		if c == 'link': self.append_content(self.make_link(c, args, False))
+		elif c == 'tid': self.append_content(self.make_tid(c, args))
+		elif c == 'speak': self.append_content(self.make_speak(c, args))
 		elif c in ('p', 'c', 'r'): self.make_paragraph(c, args)
 		elif c in ('em', 'code', 'strong'): self.append_content(self.make_style(c, args))
 		elif c in ('wrong', 'spoiler'): self.append_content(self.make_decoration(c, args))
@@ -95,26 +95,15 @@ class ContentConverter:
 		self.stop_writing()
 		self.content += self.do_make_title(c, direction, content)
 
-	def do_make_title (self, grade, direction, content):
-
-		if grade == 'title': tag = 'h2'
-		elif grade == 'stitle': tag = 'h3'
-
-		if direction in ('', 'left'): style = ''
-		elif direction == 'center': style = ' class="center"'
-		elif direction == 'right': style = ' class="reverse"'
-
-		return '<%s%s>%s</%s>' % (tag, style, content, tag)
-
 	def parse_recursive (self, args):
 
 		c = args[0]
 
 		if len(args) == 1: return c
 
-		if c == 'link': return self.do_make_link(args[1:], False)
-		elif c == 'tid': return self.do_make_tid(args[1:])
-		elif c == 'speak': return self.do_make_speak(args[1:])
+		if c == 'link': return self.make_link(c, args[1:], False)
+		elif c == 'tid': return self.make_tid(c, args[1:])
+		elif c == 'speak': return self.make_speak(c, args[1:])
 		elif c in ('em', 'code', 'strong'): return self.make_style(c, args[1:])
 		elif c in ('wrong', 'spoiler'): return self.make_decoration(c, args[1:])
 		else: self.error('Parse_Args: %s is not a valid recursive directived' % args)
@@ -129,26 +118,10 @@ class ContentConverter:
 		self.writing = True
 		self.content += self.do_start_writing(align)
 
-	def do_start_writing (self, align):
-
-		if self.mode == 'pre': return ''
-
-		if self.mode == 'p': tag = 'p'
-		elif self.mode == 'li': tag = 'li'
-
-		if align == 'p': return '<%s>' % tag
-		if align == 'c': return '<%s class="center">' % tag
-		if align == 'r': return '<%s class="reverse">' % tag
-
 	def stop_writing (self):
 		if not self.writing: return
 		self.writing = False
 		self.content += self.do_stop_writing()
-
-	def do_stop_writing (self):
-		if self.mode == 'p': return '</p>\n'
-		if self.mode == 'li': return '</li>\n'
-		if self.mode == 'pre': return '\n'
 
 	def append_content (self, text):
 
@@ -171,29 +144,20 @@ class ContentConverter:
 		return (token[0], token[1], token[2])
 
 	def make_tid (self, c, args):
-		content = self.do_make_tid(args)
-		self.append_content(content)
-
-	def do_make_tid (self, args):
 
 		size = len(args)
-
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
-		tab_target = convert(args[1])
-		tab_location = '/'.join(self.page_location.split('/') + [tab_target])
+		tab = convert(args[1])
+		href = '/'.join(self.page_location.split('/') + [tab])
 
-		link_args = [tab_location, args[0]]
+		link_args = [href, args[0]]
 		if size == 3: link_args.append(args[2])
 
-		return self.do_make_link (link_args, tab_target)
+		return self.make_link ('tid', link_args, tab)
 
-	def make_link (self, c, args):
-		content = self.do_make_link(args, False)
-		self.append_content(content)
-
-	def do_make_link (self, args, tab_target):
+	def make_link (self, c, args, tab):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
@@ -205,89 +169,32 @@ class ContentConverter:
 
 		before, text, after = self.split_triplet(args[1])
 
-		if tab_target:
-			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab_target
-		else: check = ''
-
-		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
+		return self.do_make_link(href, before, text, after, tab)
 
 	def make_style (self, c, args):
 		before, text, after = self.split_triplet(args[0])
 		return self.do_make_style(c, before, text, after)
 
-	def do_make_style (self, c, before, text, after):
-		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
-
 	def make_decoration (self, c, args):
 		before, text, after = self.split_triplet(args[0])
 		return self.do_make_decoration(c, before, text, after)
 
-	def do_make_decoration (self, c, before, text, after):
-		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
-
 	def make_speak (self, c, args):
 		if len(args) != 2:
 			self.error('speak| excepts 2 arguments %s' % args)
-		content = self.do_make_speak(args)
-		self.append_content(content)
-
-	def do_make_speak (self, args):
-		author = args[0]
-		dialog = args[1].split('@')
-		return '<span title="%s">«%s»</span>' % (author, ' – '.join(dialog))
+		return self.do_make_speak(args)
 
 	def make_id (self, c, args):
 		self.stop_writing()
 		self.do_make_id(convert(args[0]))
 
-	def do_make_id (self, ref):
-		self.content += '<a id="%s"></a>\n' % ref
-
 	def make_break (self, c, args):
 		self.stop_writing()
 		self.do_make_break()
 
-	def do_make_break (self):
-		self.content += '<br/>\n'
-
 	def make_begin (self, c, args):
 		self.stop_writing()
 		self.open_env(args)
-
-	def do_make_side (self, side):
-		self.content += '<div class="%s">\n' % side
-		self.environment.append((self.mode, '</div>\n'))
-
-	def do_make_list (self, style, margin, start):
-
-		output = []
-
-		if style == 'ul': output.append('ul')
-		elif style == 'ol': output.append('ol class="roman"')
-		elif style == 'dl': output.append('ol class="decimal"')
-
-		if margin: output.append('style="margin-left;%s"' % margin)
-		if start: output.append('start="%s"' % start)
-
-		self.content += '<%s>' % ' '.join(output)
-		self.environment.append((self.mode, '</%s>\n' % style))
-		self.mode = 'li'
-
-	def do_make_floating_block (self, style, side):
-		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
-		self.environment.append((self.mode, '</div></div>\n'))
-
-	def do_make_style_block (self, style):
-		self.content += '<div class="%s">\n' % style
-		self.environment.append((self.mode, '</div>\n'))
-
-	def do_make_decoration_block (self, decoration):
-		self.content += '<div class="%s">\n' % decoration
-		self.environment.append((self.mode, '</div>\n'))
-
-	def do_make_pre_block (self):
-		self.environment.append((self.mode, '\n'))
-		self.mode = 'pre'
 
 	def open_env (self, args):
 
@@ -330,14 +237,6 @@ class ContentConverter:
 	def make_clear (self, c, args):
 		self.stop_writing()
 		self.do_make_clear(args[0])
-
-	def do_make_clear (self, side):
-
-		if len(side) == 0: side = 'both'
-		if side != 'left' and side != 'right' and side != 'both':
-			self.error('Unknown side for clear# %s' % side)
-
-		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
 class FullConverter:
 
@@ -452,6 +351,98 @@ class PHPContentConverter(ContentConverter):
 	def __init__ (self, page_location):
 
 		ContentConverter.__init__(self, page_location)
+
+	def do_make_title (self, grade, direction, content):
+
+		if grade == 'title': tag = 'h2'
+		elif grade == 'stitle': tag = 'h3'
+
+		if direction in ('', 'left'): style = ''
+		elif direction == 'center': style = ' class="center"'
+		elif direction == 'right': style = ' class="reverse"'
+
+		return '<%s%s>%s</%s>' % (tag, style, content, tag)
+
+	def do_start_writing (self, align):
+
+		if self.mode == 'pre': return ''
+
+		if self.mode == 'p': tag = 'p'
+		elif self.mode == 'li': tag = 'li'
+
+		if align == 'p': return '<%s>' % tag
+		if align == 'c': return '<%s class="center">' % tag
+		if align == 'r': return '<%s class="reverse">' % tag
+
+	def do_stop_writing (self):
+		if self.mode == 'p': return '</p>\n'
+		if self.mode == 'li': return '</li>\n'
+		if self.mode == 'pre': return '\n'
+
+	def do_make_link (self, href, before, text, after, tab):
+		if tab: check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
+		else: check = ''
+		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
+
+	def do_make_style (self, c, before, text, after):
+		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
+
+	def do_make_decoration (self, c, before, text, after):
+		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
+
+	def do_make_speak (self, args):
+		author = args[0]
+		dialog = args[1].split('@')
+		return '<span title="%s">«%s»</span>' % (author, ' – '.join(dialog))
+
+	def do_make_id (self, ref):
+		self.content += '<a id="%s"></a>\n' % ref
+
+	def do_make_break (self):
+		self.content += '<br/>\n'
+
+	def do_make_side (self, side):
+		self.content += '<div class="%s">\n' % side
+		self.environment.append((self.mode, '</div>\n'))
+
+	def do_make_list (self, style, margin, start):
+
+		output = []
+
+		if style == 'ul': output.append('ul')
+		elif style == 'ol': output.append('ol class="roman"')
+		elif style == 'dl': output.append('ol class="decimal"')
+
+		if margin: output.append('style="margin-left;%s"' % margin)
+		if start: output.append('start="%s"' % start)
+
+		self.content += '<%s>' % ' '.join(output)
+		self.environment.append((self.mode, '</%s>\n' % style))
+		self.mode = 'li'
+
+	def do_make_floating_block (self, style, side):
+		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
+		self.environment.append((self.mode, '</div></div>\n'))
+
+	def do_make_style_block (self, style):
+		self.content += '<div class="%s">\n' % style
+		self.environment.append((self.mode, '</div>\n'))
+
+	def do_make_decoration_block (self, decoration):
+		self.content += '<div class="%s">\n' % decoration
+		self.environment.append((self.mode, '</div>\n'))
+
+	def do_make_pre_block (self):
+		self.environment.append((self.mode, '\n'))
+		self.mode = 'pre'
+
+	def do_make_clear (self, side):
+
+		if len(side) == 0: side = 'both'
+		if side != 'left' and side != 'right' and side != 'both':
+			self.error('Unknown side for clear# %s' % side)
+
+		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
 
 class PHPFullConverter(FullConverter):
 
