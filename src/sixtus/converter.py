@@ -254,16 +254,15 @@ class ContentConverter:
 		self.stop_writing()
 		self.open_env(args)
 
+	def do_make_side (self, direction):
+		self.content += '<div class="%s">\n' % direction
+		self.environment.append((self.mode, '</div>\n'))
+
 	def open_env (self, args):
 
 		env = args[0]
 
-		if env == 'inside':
-			self.content += '<div class="inside">'
-			self.environment.append((self.mode, '</div>'))
-		elif env == 'outside':
-			self.content += '<div class="outside">'
-			self.environment.append((self.mode, '</div>'))
+		if env in ('inside', 'outside'): return self.do_make_side(env)
 
 		elif env == 'ul':
 			if len(args) != 1:
