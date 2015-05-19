@@ -226,15 +226,15 @@ class ContentConverter:
 		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
 
 	def make_speak (self, c, args):
+		if len(args) != 2:
+			self.error('speak| excepts 2 arguments %s' % args)
 		content = self.do_make_speak(args)
 		self.append_content(content)
 
 	def do_make_speak (self, args):
-
-		if len(args) != 2:
-			self.error('speak# excepts 2 arguments %s' % args)
-
-		return '<span title="%s">«%s»</span>' % (args[0], ' – '.join(args[1].split('@')))
+		author = args[0]
+		dialog = args[1].split('@')
+		return '<span title="%s">«%s»</span>' % (author, ' – '.join(dialog))
 
 	def make_id (self, c, args):
 		self.stop_writing()
