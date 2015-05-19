@@ -4,11 +4,11 @@ from __future__ import print_function
 import os
 
 from .util import assert_dir
-from .converter import PHPContentConverter, PHPFullConverter
+from .conversion_php import PHPContent, PHPFull
 
 def from_page_six_to_php_file (php_base, six_file, php_file):
 
-	c = PHPFullConverter(php_base)
+	c = PHPFull(php_base)
 	c.parse_file(six_file)
 	assert_dir(php_file)
 	c.output_page_file(php_file)
@@ -32,7 +32,7 @@ def from_jump_target_to_php_file (target, php_file):
 
 def from_side_six_to_php_file (php_base, six_file, php_file):
 
-	c = PHPContentConverter(php_base)
+	c = PHPContent(php_base)
 
 	with open(six_file, 'r') as f:
 		for line in f.readlines():
