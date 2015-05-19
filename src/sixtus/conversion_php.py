@@ -21,7 +21,7 @@ class PHPContent(Content):
 		elif direction == 'center': style = ' class="center"'
 		elif direction == 'right': style = ' class="reverse"'
 
-		return '<%s%s>%s</%s>' % (tag, style, content, tag)
+		return '<%s%s>%s</%s>\n' % (tag, style, content, tag)
 
 	def do_start_writing (self, align):
 
@@ -62,7 +62,7 @@ class PHPContent(Content):
 		self.content += '<br/>\n'
 
 	def do_make_side (self, side):
-		self.content += '<div class="%s">\n' % side
+		self.content += '<div class="%s">' % side
 		self.environment.append((self.mode, '</div>\n'))
 
 	def do_make_list (self, style, margin, start):
@@ -85,11 +85,11 @@ class PHPContent(Content):
 		self.environment.append((self.mode, '</div></div>\n'))
 
 	def do_make_style_block (self, style):
-		self.content += '<div class="%s">\n' % style
+		self.content += '<div class="%s">' % style
 		self.environment.append((self.mode, '</div>\n'))
 
 	def do_make_decoration_block (self, decoration):
-		self.content += '<div class="%s">\n' % decoration
+		self.content += '<div class="%s">' % decoration
 		self.environment.append((self.mode, '</div>\n'))
 
 	def do_make_pre_block (self):
