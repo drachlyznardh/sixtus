@@ -258,6 +258,21 @@ class ContentConverter:
 		self.content += '<div class="%s">\n' % side
 		self.environment.append((self.mode, '</div>\n'))
 
+	def do_make_list (self, style, margin, start):
+
+		output = []
+
+		if style == 'ul': output.append('ul')
+		elif style == 'ol': output.append('ol class="roman"')
+		elif style == 'dl': output.append('ol class="decimal"')
+
+		if margin: output.append('style="margin-left;%s"' % margin)
+		if start: output.append('start="%s"' % start)
+
+		self.content += '<%s>' % ' '.join(output)
+		self.environment.append((self.mode, '</%s>\n' % style))
+		self.mode = 'li'
+
 	def do_make_floating_block (self, style, side):
 		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
 		self.environment.append((self.mode, '</div></div>\n'))
@@ -283,28 +298,16 @@ class ContentConverter:
 		elif env == 'ul':
 			if len(args) != 1:
 				self.error('ul# expects 1 arg %s' % args)
-			self.content += '<ul>'
-			self.environment.append((self.mode, '</ul>'))
-			self.mode = 'li'
+			return self.do_make_list(env, 0, 0)
 
 		elif env == 'ol' or env == 'dl':
-
 			size = len(args)
-
-			if size > 3:
-				self.error('%s# expects 1-3 args %s' % (env, args))
-
-			output = []
-
-			if env == 'ol': output.append('class="roman"')
-			else: output.apppend('class="decimal"')
-
-			if size > 1: output.append('style="margin-left:%s"' % args[1])
-			if size > 2: output.append('start="%s"' % args[2])
-
-			self.content += ('<ol %s>' % ' '.join(output))
-			self.environment.append((self.mode, '</ol>\n'))
-			self.mode = 'li'
+			margin = 0
+			start = 0
+			if size > 3: self.error('%s# expects 1-3 args %s' % (env, args))
+			if size > 1: margin = args[1]
+			if size > 2: start = args[2]
+			return self.do_make_list(env, margin, start)
 
 		elif env in ('mini', 'half'):
 			if args[1] not in ('left', 'right'):
