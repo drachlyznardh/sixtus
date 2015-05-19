@@ -66,9 +66,9 @@ class ContentConverter:
 		if c == 'link': self.make_link(c, args)
 		elif c == 'tid': self.make_tid(c, args)
 		elif c == 'speak': self.make_speak(c, args)
-		elif c in ('p', 'c', 'r'): self.start_writing(c, self.parse_recursive(args))
-		elif c in ('em', 'code', 'strong'): self.make_style(c, args)
-		elif c in ('wrong', 'spoiler'): self.make_decoration(c, args)
+		elif c in ('p', 'c', 'r'): self.make_paragraph(c, args)
+		elif c in ('em', 'code', 'strong'): self.append_content(self.make_style(c, args))
+		elif c in ('wrong', 'spoiler'): self.append_content(self.make_decoration(c, args))
 		elif c == 'id': self.make_id(c, args)
 		elif c == 'br': self.make_break(c, args)
 		elif c == 'begin': self.make_begin(c, args)
@@ -158,7 +158,9 @@ class ContentConverter:
 		if self.writing:
 			if len(text) == 0: self.stop_writing()
 			else: self.content += (' %s' % text)
-		elif len(text): self.start_writing('p', text)
+		elif len(text):
+			self.start_writing('p')
+			self.append_content(text)
 
 	def split_triplet (self, content):
 
@@ -214,14 +216,14 @@ class ContentConverter:
 
 	def make_style (self, c, args):
 		before, text, after = self.split_triplet(args[0])
-		self.append_content(self.do_make_style(c, before, text, after))
+		return self.do_make_style(c, before, text, after)
 
 	def do_make_style (self, c, before, text, after):
 		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
 
 	def make_decoration (self, c, args):
 		before, text, after = self.split_triplet(args[0])
-		self.append_content(self.do_make_decoration(c, before, text, after))
+		return self.do_make_decoration(c, before, text, after)
 
 	def do_make_decoration (self, c, before, text, after):
 		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
