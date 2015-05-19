@@ -294,13 +294,15 @@ class ContentConverter:
 		env = args[0]
 
 		if env in ('inside', 'outside'): return self.do_make_side(env)
-
-		elif env == 'ul':
+		if env in ('code', 'em', 'strong'): return self.do_make_style_block(env)
+		if env in ('wrong', 'spoiler'): return self.do_make_decoration_block(env)
+		if env == 'pre': return self.do_make_pre_block()
+		if env == 'ul':
 			if len(args) != 1:
 				self.error('ul# expects 1 arg %s' % args)
 			return self.do_make_list(env, 0, 0)
 
-		elif env == 'ol' or env == 'dl':
+		if env == 'ol' or env == 'dl':
 			size = len(args)
 			margin = 0
 			start = 0
@@ -309,18 +311,12 @@ class ContentConverter:
 			if size > 2: start = args[2]
 			return self.do_make_list(env, margin, start)
 
-		elif env in ('mini', 'half'):
+		if env in ('mini', 'half'):
 			if args[1] not in ('left', 'right'):
 				self.error('Unknown side %s' % args)
 			return self.do_make_floating_block(env, args[1])
 
-		elif env in ('code', 'em', 'strong'): return self.do_make_style_block(env)
-
-		elif env in ('wrong', 'spoiler'): return self.do_make_decoration_block(env)
-
-		elif env == 'pre': return self.do_make_pre_block()
-
-		else: self.error('Unknown environment %s' % args)
+		self.error('Unknown environment %s' % args)
 
 	def make_end (self, c, args):
 		self.stop_writing()
