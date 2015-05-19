@@ -131,14 +131,14 @@ class ContentConverter:
 
 	def do_start_writing (self, align):
 
+		if self.mode == 'pre': return ''
+
 		if self.mode == 'p': tag = 'p'
 		elif self.mode == 'li': tag = 'li'
 
-		if self.mode != 'pre':
-			if align == 'p': return '<%s>' % tag
-			elif align == 'c': return '<%s class="center">' % tag
-			elif align == 'r': return '<%s class="reverse">' % tag
-		else: return ''
+		if align == 'p': return '<%s>' % tag
+		if align == 'c': return '<%s class="center">' % tag
+		if align == 'r': return '<%s class="reverse">' % tag
 
 	def stop_writing (self):
 		if not self.writing: return
@@ -147,8 +147,8 @@ class ContentConverter:
 
 	def do_stop_writing (self):
 		if self.mode == 'p': return '</p>\n'
-		elif self.mode == 'li': return '</li>\n'
-		elif self.mode == 'pre': return '\n'
+		if self.mode == 'li': return '</li>\n'
+		if self.mode == 'pre': return '\n'
 
 	def append_content (self, text):
 
