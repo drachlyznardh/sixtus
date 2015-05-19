@@ -258,6 +258,18 @@ class ContentConverter:
 		self.content += '<div class="%s">\n' % direction
 		self.environment.append((self.mode, '</div>\n'))
 
+	def do_make_style_block (self, style):
+		self.content += '<div class="%s">\n' % style
+		self.environment.append((self.mode, '</div>\n'))
+
+	def do_make_decoration_block (self, decoration):
+		self.content += '<div class="%s">\n' % decoration
+		self.environment.append((self.mode, '</div>\n'))
+
+	def do_make_pre_block (self):
+		self.environment.append((self.mode, '\n'))
+		self.mode = 'pre'
+
 	def open_env (self, args):
 
 		env = args[0]
@@ -297,17 +309,11 @@ class ContentConverter:
 			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
 			self.environment.append((self.mode, '</div></div>\n'))
 
-		elif env == 'code' or env == 'em' or env == 'strong':
-			self.content += '<div class="%s">' % env
-			self.environment.append((self.mode, '</div>\n'))
+		elif env in ('code', 'em', 'strong'): return self.do_make_style_block(env)
 
-		elif env == 'wrong' or env == 'spoiler':
-			self.content += '<div class="%s">' % env
-			self.environment.append((self.mode, '</div>\n'))
+		elif env in ('wrong', 'spoiler'): return self.do_make_decoration_block(env)
 
-		elif env == 'pre':
-			self.environment.append((self.mode, '\n'))
-			self.mode = 'pre'
+		elif env == 'pre': return self.do_make_pre_block()
 
 		else: self.error('Unknown environment %s' % args)
 
