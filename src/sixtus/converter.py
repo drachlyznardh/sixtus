@@ -171,14 +171,6 @@ class ContentConverter:
 
 		return self.do_make_link(href, before, text, after, tab)
 
-	def do_make_link (self, href, before, text, after, tab):
-
-		if tab:
-			check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
-		else: check = ''
-
-		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
-
 	def make_style (self, c, args):
 		before, text, after = self.split_triplet(args[0])
 		return self.do_make_style(c, before, text, after)
@@ -386,6 +378,11 @@ class PHPContentConverter(ContentConverter):
 		if self.mode == 'p': return '</p>\n'
 		if self.mode == 'li': return '</li>\n'
 		if self.mode == 'pre': return '\n'
+
+	def do_make_link (self, href, before, text, after, tab):
+		if tab: check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
+		else: check = ''
+		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
 
 	def do_make_style (self, c, before, text, after):
 		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
