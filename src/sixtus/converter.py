@@ -254,9 +254,13 @@ class ContentConverter:
 		self.stop_writing()
 		self.open_env(args)
 
-	def do_make_side (self, direction):
-		self.content += '<div class="%s">\n' % direction
+	def do_make_side (self, side):
+		self.content += '<div class="%s">\n' % side
 		self.environment.append((self.mode, '</div>\n'))
+
+	def do_make_floating_block (self, style, side):
+		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
+		self.environment.append((self.mode, '</div></div>\n'))
 
 	def do_make_style_block (self, style):
 		self.content += '<div class="%s">\n' % style
@@ -302,12 +306,10 @@ class ContentConverter:
 			self.environment.append((self.mode, '</ol>\n'))
 			self.mode = 'li'
 
-		elif env == 'mini' or env == 'half':
-			side = args[1]
-			if side != 'left' and side != 'right':
+		elif env in ('mini', 'half'):
+			if args[1] not in ('left', 'right'):
 				self.error('Unknown side %s' % args)
-			self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (env, side, env, side)
-			self.environment.append((self.mode, '</div></div>\n'))
+			return self.do_make_floating_block(env, args[1])
 
 		elif env in ('code', 'em', 'strong'): return self.do_make_style_block(env)
 
