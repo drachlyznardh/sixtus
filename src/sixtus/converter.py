@@ -63,9 +63,9 @@ class ContentConverter:
 
 		c, opt = self.split_at_at(command)
 
-		if c == 'link': self.make_link(c, args)
-		elif c == 'tid': self.make_tid(c, args)
-		elif c == 'speak': self.make_speak(c, args)
+		if c == 'link': self.append_content(self.make_link(c, args))
+		elif c == 'tid': self.append_content(self.make_tid(c, args))
+		elif c == 'speak': self.append_content(self.make_speak(c, args))
 		elif c in ('p', 'c', 'r'): self.make_paragraph(c, args)
 		elif c in ('em', 'code', 'strong'): self.append_content(self.make_style(c, args))
 		elif c in ('wrong', 'spoiler'): self.append_content(self.make_decoration(c, args))
@@ -144,8 +144,7 @@ class ContentConverter:
 		return (token[0], token[1], token[2])
 
 	def make_tid (self, c, args):
-		content = self.do_make_tid(args)
-		self.append_content(content)
+		return self.do_make_tid(args)
 
 	def do_make_tid (self, args):
 
@@ -163,13 +162,13 @@ class ContentConverter:
 		return self.do_make_link (link_args, tab_target)
 
 	def make_link (self, c, args):
-		content = self.do_make_link(args, False)
-		self.append_content(content)
-
-	def do_make_link (self, args, tab_target):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
+
+		return self.do_make_link(args, False)
+
+	def do_make_link (self, args, tab_target):
 
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], convert(args[2]))
@@ -195,8 +194,7 @@ class ContentConverter:
 	def make_speak (self, c, args):
 		if len(args) != 2:
 			self.error('speak| excepts 2 arguments %s' % args)
-		content = self.do_make_speak(args)
-		self.append_content(content)
+		return self.do_make_speak(args)
 
 	def make_id (self, c, args):
 		self.stop_writing()
