@@ -141,17 +141,14 @@ class ContentConverter:
 		else: return ''
 
 	def stop_writing (self):
-
 		if not self.writing: return
-
-		if self.mode == 'p':
-			self.content += '</p>\n'
-		elif self.mode == 'li':
-			self.content += '</li>\n'
-		elif self.mode == 'pre':
-			self.content += '\n'
-
 		self.writing = False
+		self.content += self.do_stop_writing()
+
+	def do_stop_writing (self):
+		if self.mode == 'p': return '</p>\n'
+		elif self.mode == 'li': return '</li>\n'
+		elif self.mode == 'pre': return '\n'
 
 	def append_content (self, text):
 
