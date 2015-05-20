@@ -8,6 +8,7 @@ import re
 from .util import unique
 
 from .Six import from_pag_to_Six_file
+from .dep import from_Six_to_dep_file
 
 def _search_for_target_list (root):
 
@@ -63,12 +64,14 @@ class Tex:
 
 	def parse_target (self, seed):
 		isfile, target = seed
-		print('%s → %s' % (isfile, target))
 		if isfile: self.parse_file(target)
 		else: self.parse_dir(target)
 
 	def parse_file (self, target):
-		sixes = from_pag_to_Six_file(target, self.Six_file, False)
+		from_pag_to_Six_file(target, self.Six_file, False)
+		sixes = from_Six_to_dep_file(self.Six_file, False)
+		print('%s' % target)
+		for each in sixes: print('\t(%s, %s)' % each)
 
 	def parse_dir (self, target):
 		pass

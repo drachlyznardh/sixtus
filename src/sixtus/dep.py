@@ -45,6 +45,6 @@ def from_dep_file (dep_file):
 
 def from_Six_to_dep_file (Six_file, dep_file):
 	products = read(Six_file)
-	write(dep_file, products)
+	if dep_file: write(dep_file, products)
 	return products
 
