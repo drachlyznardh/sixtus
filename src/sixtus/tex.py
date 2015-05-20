@@ -5,7 +5,7 @@ from __future__ import print_function
 import os
 import re
 
-def _search_for_targets (root):
+def _search_for_target_list (root):
 
 	if not os.path.exists(root):
 		raise Exception('Root dir %s does not exist' % root)
@@ -35,13 +35,10 @@ class Tex:
 	def __init__ (self):
 		pass
 
-	def parse (self, targets):
-		if len(targets):
-			for target in targets:
-				print('Target %s' % target)
-		else:
-			root = os.getcwd()
-			print('Empty target, using current dir %s' % root)
-			target_list = _search_for_targets(root)
-			for each in target_list: print(each)
+	def parse (self, target_list):
+
+		if len(target_list) == 0:
+			target_list = _search_for_target_list(os.getcwd())
+
+		for each in target_list: print(each)
 
