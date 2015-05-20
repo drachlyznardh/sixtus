@@ -59,4 +59,12 @@ class Tex:
 	def parse_target (self, seed):
 		isfile, target = seed
 		print('%s → %s' % (isfile, target))
+		if isfile: self.parse_file(target)
+		else: self.parse_dir(target)
+
+	def parse_file (self, target):
+		pass
+
+	def parse_dir (self, target):
+		pass
 
