@@ -13,7 +13,7 @@ def _search_for_targets (root):
 	if not os.path.isdir(root):
 		raise Exception('Root %s is not a directory' % root)
 
-	pattern = re.compile(r'.*\.(pag|six)')
+	pattern = re.compile(r'.*\.pag')
 
 	result = []
 	visit = ['']
