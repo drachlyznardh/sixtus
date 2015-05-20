@@ -9,7 +9,6 @@ from .runtime import Runtime
 from .resources import Resources
 from .blog import Blog
 from .pages import Pages
-from .docs import Docs
 
 from .util import convert
 
@@ -32,7 +31,6 @@ def sixtus_build (bag):
 	if 'res' in bag.location: Resources(bag).build()
 	if 'blog' in bag.location: Blog(bag).build()
 	Pages(bag).build()
-	Docs(bag).build()
 
 	if d: print('Siχtus v%s -- build done' % bag.version)
 
@@ -63,7 +61,6 @@ def sixtus_veryclean (bag):
 	Resources(bag).remove()
 	Runtime(bag).remove()
 	Pages(bag).remove()
-	Docs(bag).remove()
 	sixtus_clean(bag)
 
 	if d: print('Siχtus v%s -- cleaning hard done' % bag.version)
