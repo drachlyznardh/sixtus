@@ -9,6 +9,7 @@ from .runtime import Runtime
 from .resources import Resources
 from .blog import Blog
 from .pages import Pages
+from .tex import Tex
 
 from .util import convert
 
@@ -69,6 +70,10 @@ def sixtus_rebuild (bag):
 
 	sixtus_veryclean(bag)
 	sixtus_build(bag)
+
+def sixtus_texmode (texes):
+	print('Hello Teχmode %s' % texes)
+	Tex().parse(texes)
 
 def sixtus_help ():
 
@@ -173,6 +178,31 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
+	if len(args) == 0:
+		sixtus_build(bag)
+		return
+
+	texmode = False
+	calls = []
+	texes = []
+	for target in args:
+		if target == 'build':
+			calls.append(sixtus_build)
+		elif target == 'clean':
+			calls.append(sixtus_clean)
+		elif target == 'veryclean':
+			calls.append(sixtus_veryclean)
+		elif target == 'rebuild':
+			calls.append(sixtus_rebuild)
+		elif target == 'tex':
+			texmode = True
+		elif texmode:
+			texes.append(target)
+		else: raise Exception('What target is %s supposed to be?' % target)
+
+	if texmode:
+		return sixtus_texmode(texes)
+
 	if os.path.exists(map_file):
 		with open(map_file, 'r') as f:
 			sitemap = eval(f.read())
@@ -191,22 +221,6 @@ def sixtus_read_args ():
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
-
-	if len(args) == 0:
-		sixtus_build(bag)
-		return
-
-	calls = []
-	for target in args:
-		if target == 'build':
-			calls.append(sixtus_build)
-		elif target == 'clean':
-			calls.append(sixtus_clean)
-		elif target == 'veryclean':
-			calls.append(sixtus_veryclean)
-		elif target == 'rebuild':
-			calls.append(sixtus_rebuild)
-		else: raise Exception('What target is %s supposed to be?' % target)
 
 	for call in calls: call(bag)
 
