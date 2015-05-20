@@ -70,6 +70,9 @@ def sixtus_rebuild (bag):
 	sixtus_veryclean(bag)
 	sixtus_build(bag)
 
+def sixtus_texmode (texes):
+	print('Hello Teχmode %s' % texes)
+
 def sixtus_help ():
 
 	print('usage: %s [options] (build|clean|veryclean|rebuild)*' % sys.argv[0])
@@ -177,7 +180,9 @@ def sixtus_read_args ():
 		sixtus_build(bag)
 		return
 
+	texmode = False
 	calls = []
+	texes = []
 	for target in args:
 		if target == 'build':
 			calls.append(sixtus_build)
@@ -187,7 +192,14 @@ def sixtus_read_args ():
 			calls.append(sixtus_veryclean)
 		elif target == 'rebuild':
 			calls.append(sixtus_rebuild)
+		elif target == 'tex':
+			texmode = True
+		elif texmode:
+			texes.append(target)
 		else: raise Exception('What target is %s supposed to be?' % target)
+
+	if texmode:
+		return sixtus_texmode(texes)
 
 	if os.path.exists(map_file):
 		with open(map_file, 'r') as f:
