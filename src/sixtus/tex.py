@@ -30,15 +30,33 @@ def _search_for_target_list (root):
 
 	return result
 
+def _tag_target_list (targets):
+
+	result = []
+
+	for each in targets:
+		if not os.path.exists(each):
+			raise Exception('Target %s does not exist' % each)
+		if os.path.isdir(each):
+			result.extend(_search_for_target_list(each))
+		else: result.append((1, each))
+
+	return result
+
 class Tex:
 
 	def __init__ (self):
 		pass
 
-	def parse (self, target_list):
+	def parse (self, targets):
 
-		if len(target_list) == 0:
+		if len(targets) == 0:
 			target_list = _search_for_target_list(os.getcwd())
+		else: target_list = _tag_target_list(targets)
 
-		for each in target_list: print(each)
+		for each in target_list: self.parse_target(each)
+
+	def parse_target (self, seed):
+		isfile, target = seed
+		print('%s → %s' % (isfile, target))
 
