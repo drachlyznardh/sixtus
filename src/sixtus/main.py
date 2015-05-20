@@ -9,6 +9,7 @@ from .runtime import Runtime
 from .resources import Resources
 from .blog import Blog
 from .pages import Pages
+from .tex import Tex
 
 from .util import convert
 
@@ -72,6 +73,7 @@ def sixtus_rebuild (bag):
 
 def sixtus_texmode (texes):
 	print('Hello Teχmode %s' % texes)
+	Tex().parse(texes)
 
 def sixtus_help ():
 
