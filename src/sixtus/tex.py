@@ -7,6 +7,8 @@ import re
 
 from .util import unique
 
+from .Six import from_pag_to_Six_file
+
 def _search_for_target_list (root):
 
 	if not os.path.exists(root):
@@ -48,7 +50,8 @@ def _tag_target_list (targets):
 class Tex:
 
 	def __init__ (self):
-		pass
+		self.six_file = os.path.abspath('.six')
+		self.Six_file = os.path.abspath('.Six')
 
 	def parse (self, targets):
 
@@ -65,7 +68,7 @@ class Tex:
 		else: self.parse_dir(target)
 
 	def parse_file (self, target):
-		pass
+		sixes = from_pag_to_Six_file(target, self.Six_file, False)
 
 	def parse_dir (self, target):
 		pass
