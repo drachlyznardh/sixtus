@@ -5,6 +5,8 @@ from __future__ import print_function
 import os
 import re
 
+from .util import unique
+
 def _search_for_target_list (root):
 
 	if not os.path.exists(root):
@@ -28,20 +30,20 @@ def _search_for_target_list (root):
 			elif pattern.match(item):
 				result.append((1, item_path))
 
-	return result
+	return unique(result)
 
 def _tag_target_list (targets):
 
 	result = []
 
-	for each in targets:
+	for each in unique(targets):
 		if not os.path.exists(each):
 			raise Exception('Target %s does not exist' % each)
 		if os.path.isdir(each):
 			result.extend(_search_for_target_list(each))
 		else: result.append((1, each))
 
-	return result
+	return unique(result)
 
 class Tex:
 
