@@ -5,11 +5,12 @@ from __future__ import print_function
 import os
 import re
 
-from .util import unique
+from .util import unique, assert_dir
 
 from .Six import from_pag_to_Six_file
 from .dep import from_Six_to_dep_file
 from .six import from_Six_to_six_files
+from .conversion_tex import TexContent, TexFull
 
 def _search_for_target_list (root):
 
@@ -49,6 +50,17 @@ def _tag_target_list (targets):
 
 	return unique(result)
 
+def _get_page_filenames(target_dir, filepath):
+	six_file = os.path.join(target_dir, 'tab-%s.six' % filepath)
+	tex_file = os.path.join(target_dir, 'tab-%s.tex' % filepath)
+	return (six_file, tex_file)
+
+def _from_page_six_to_tex_file (six_file, tex_file):
+	c = TexFull('')
+	c.parse_file(six_file)
+	assert_dir(tex_file)
+	c.output_page_file(tex_file)
+
 class Tex:
 
 	def __init__ (self):
@@ -76,7 +88,12 @@ class Tex:
 		from_Six_to_six_files(self.Six_file, '', target_dir, False)
 		print('%s' % target)
 		for filetype, filepath in sixes:
-			if filetype == 0: print('\tConverting %s' % filepath)
+			if filetype == 0:
+				print('\tConverting %s' % filepath)
+				six_file, tex_file = _get_page_filenames(target_dir, filepath)
+				_from_page_six_to_tex_file(six_file, tex_file)
+			if filetype == 1: print('\tConverting index')
+			if filetype == 2: print('\tConverting side')
 
 	def parse_dir (self, target):
 		pass
