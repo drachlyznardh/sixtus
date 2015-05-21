@@ -51,15 +51,35 @@ def _tag_target_list (targets):
 	return unique(result)
 
 def _get_page_filenames(target_dir, filepath):
+
 	six_file = os.path.join(target_dir, 'tab-%s.six' % filepath)
 	tex_file = os.path.join(target_dir, 'tab-%s.tex' % filepath)
 	return (six_file, tex_file)
 
+def _get_side_filenames(target_dir, filepath):
+
+	six_file = os.path.join(target_dir, 'side.six')
+	tex_file = os.path.join(target_dir, 'side.tex')
+	return (six_file, tex_file)
+
 def _from_page_six_to_tex_file (six_file, tex_file):
+
 	c = TexFull('')
 	c.parse_file(six_file)
 	assert_dir(tex_file)
 	c.output_page_file(tex_file)
+
+def _from_side_six_to_tex_file (six_file, tex_file):
+
+	c = TexContent('')
+
+	with open(six_file, 'r') as f:
+		for line in f.readlines():
+			c.parse_line(line.strip())
+
+	assert_dir(tex_file)
+	with open(tex_file, 'w') as f:
+		print(c.content, file=f)
 
 class Tex:
 
@@ -84,16 +104,14 @@ class Tex:
 		target_dir = '%s.d' % target
 		from_pag_to_Six_file(target, self.Six_file, False)
 		sixes = from_Six_to_dep_file(self.Six_file, False)
-		print('%s → %s' % (target, target_dir))
 		from_Six_to_six_files(self.Six_file, '', target_dir, False)
-		print('%s' % target)
 		for filetype, filepath in sixes:
 			if filetype == 0:
-				print('\tConverting %s' % filepath)
 				six_file, tex_file = _get_page_filenames(target_dir, filepath)
 				_from_page_six_to_tex_file(six_file, tex_file)
-			if filetype == 1: print('\tConverting index')
-			if filetype == 2: print('\tConverting side')
+			if filetype == 2:
+				six_file, tex_file = _get_side_filenames(target_dir, filepath)
+				_from_side_six_to_tex_file(six_file, tex_file)
 
 	def parse_dir (self, target):
 		pass
