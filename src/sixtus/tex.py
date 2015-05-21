@@ -73,7 +73,7 @@ class Tex:
 		from_pag_to_Six_file(target, self.Six_file, False)
 		sixes = from_Six_to_dep_file(self.Six_file, False)
 		print('%s → %s' % (target, target_dir))
-		from_Six_to_six_files(self.Six_file, '', target_dir)
+		from_Six_to_six_files(self.Six_file, '', target_dir, False)
 		print('%s' % target)
 		for filetype, filepath in sixes:
 			if filetype == 0: print('\tConverting %s' % filepath)

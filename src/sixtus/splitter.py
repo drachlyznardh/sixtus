@@ -94,7 +94,7 @@ class Splitter:
 		elif c == 'jump': self.jump = token[1]
 		else: self.append(line)
 
-	def output_single_jump_file (self, base, destination):
+	def output_single_jump_file (self, base, destination, naming):
 
 		jump_path = os.path.join(destination, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path)
@@ -102,7 +102,7 @@ class Splitter:
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
 
-	def output_all_files (self, base, destination):
+	def output_all_files (self, base, destination, naming):
 
 		if len(self.tabnames) == 0:
 			raise Exception('Not tabs in page %s' % base)
@@ -146,7 +146,7 @@ class Splitter:
 
 			files.append(tab_path)
 
-	def output_default_tab (self, base, destination):
+	def output_default_tab (self, base, destination, naming):
 
 		page_path = os.path.join(destination, 'page.six')
 		if self.debug: print('Page file on [%s]' % page_path)
@@ -154,7 +154,7 @@ class Splitter:
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
-	def output_single_tab (self, base, destination):
+	def output_single_tab (self, base, destination, naming):
 
 		name = [name for name in self.tabs if name][0]
 
@@ -170,15 +170,15 @@ class Splitter:
 		with open(jump_path, 'w') as f:
 			print('jump|%s/' % os.path.join(base, util.convert(name)), file=f)
 
-	def output_files (self, base, destination):
+	def output_files (self, base, destination, naming):
 
 		if self.jump:
-			self.output_single_jump_file(base, destination)
+			self.output_single_jump_file(base, destination, naming)
 			return
 
 		size = len(self.tabs)
 
-		if size == 1: self.output_default_tab(base, destination)
-		elif size == 2: self.output_single_tab(base, destination)
-		else: self.output_all_files(base, destination)
+		if size == 1: self.output_default_tab(base, destination, naming)
+		elif size == 2: self.output_single_tab(base, destination, naming)
+		else: self.output_all_files(base, destination, naming)
 
