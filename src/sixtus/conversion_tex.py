@@ -14,8 +14,10 @@ class TexContent(Content):
 
 	def do_make_title (self, grade, direction, content):
 
-		if grade == 'title': tag = 'h2'
-		elif grade == 'stitle': tag = 'h3'
+		if grade == 'title': tag = 'Big'
+		elif grade == 'stitle': tag = 'Huge'
+
+		return '{\\%s %s}\n\n' % (tag, content)
 
 		if direction in ('', 'left'): style = ''
 		elif direction == 'center': style = ' class="center"'
@@ -24,6 +26,9 @@ class TexContent(Content):
 		return '<%s%s>%s</%s>\n' % (tag, style, content, tag)
 
 	def do_start_writing (self, align):
+
+		if self.mode == 'li': return '\\item'
+		return ''
 
 		if self.mode == 'pre': return ''
 
@@ -35,17 +40,15 @@ class TexContent(Content):
 		if align == 'r': return '<%s class="reverse">' % tag
 
 	def do_stop_writing (self):
-		if self.mode == 'p': return '</p>\n'
-		if self.mode == 'li': return '</li>\n'
-		if self.mode == 'pre': return '\n'
+		return '\n'
 
 	def do_make_link (self, href, before, text, after, tab):
-		if tab: check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
-		else: check = ''
-		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
+		return '%s\url[%s]{%s}%s' % (before, href, text, after)
 
 	def do_make_style (self, c, before, text, after):
-		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)
+		if c == 'em': return '%s\\emph{%s}%s' % (before, text, after)
+		if c == 'code': return '%s\\ttseris{%s}%s' % (before, text, after)
+		if c == 'strong': return '%s\\bfseries{%s}%s' % (before, text, after)
 
 	def do_make_decoration (self, c, before, text, after):
 		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
@@ -56,10 +59,10 @@ class TexContent(Content):
 		return '<span title="%s">«%s»</span>' % (author, ' – '.join(dialog))
 
 	def do_make_id (self, ref):
-		self.content += '<a id="%s"></a>\n' % ref
+		pass
 
 	def do_make_break (self):
-		self.content += '<br/>\n'
+		self.content += '\n\\vspace{1em}\n\n'
 
 	def do_make_side (self, side):
 		self.content += '<div class="%s">' % side
