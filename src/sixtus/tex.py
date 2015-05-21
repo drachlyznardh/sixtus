@@ -9,6 +9,7 @@ from .util import unique
 
 from .Six import from_pag_to_Six_file
 from .dep import from_Six_to_dep_file
+from .six import from_Six_to_six_files
 
 def _search_for_target_list (root):
 
@@ -68,10 +69,14 @@ class Tex:
 		else: self.parse_dir(target)
 
 	def parse_file (self, target):
+		target_dir = '%s.d' % target
 		from_pag_to_Six_file(target, self.Six_file, False)
 		sixes = from_Six_to_dep_file(self.Six_file, False)
+		print('%s → %s' % (target, target_dir))
+		from_Six_to_six_files(self.Six_file, '', target_dir)
 		print('%s' % target)
-		for each in sixes: print('\t(%s, %s)' % each)
+		for filetype, filepath in sixes:
+			if filetype == 0: print('\tConverting %s' % filepath)
 
 	def parse_dir (self, target):
 		pass
