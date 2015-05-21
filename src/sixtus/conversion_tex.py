@@ -116,49 +116,5 @@ class TexFull(Full):
 	def output_page_file (self, filename):
 
 		self.state_update('meta')
-
-		output = '<?php if(!isset($i))$i=array(1,1,1);if($i[0]){$d=array('
-		if len(self.page_location):
-			loc = self.page_location.split('/')
-			output += ('array("%s"),' % ('","'.join(loc)))
-		else: output += 'False,'
-		output += ('"%s",' % self.meta['title'])
-		if 'short' in self.meta: output += ('"%s",' % self.meta['short'])
-		else: output += ('"%s",' % self.meta['title'])
-		output += ('"%s",' % self.meta['subtitle'])
-		if 'prev' in self.meta.keys():
-			pagprev = self.meta['prev']
-			if pagprev: output += ('array("%s","%s")' % (pagprev[0], pagprev[1]))
-			else: output += 'false'
-		else: output += 'false'
-		output += ','
-		if 'next' in self.meta.keys():
-			pagnext = self.meta['next']
-			if pagnext: output += ('array("%s","%s")' % (pagnext[0], pagnext[1]))
-			else: output += 'false'
-		else: output += 'false'
-		output += ','
-		if 'tabprev' in self.meta.keys():
-			tabprev = self.meta['tabprev']
-			output += ('array("%s","%s")' % (tabprev[0], tabprev[1]))
-		else: output += 'false'
-		output += ','
-		if 'tabnext' in self.meta.keys():
-			tabnext = self.meta['tabnext']
-			output += ('array("%s","%s")' % (tabnext[0], tabnext[1]))
-		else: output += 'false'
-		output += ','
-		if 'tabself' in self.meta: output += '"%s"' % self.meta['tabself']
-		else: output += 'false'
-		output += ');'
-		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
-		output += 'require_once($sixtus."page-top.php");}if($i[1]){?>'
-		output += '\n%s\n' % self.page
-		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");'
-		if self.side_location:
-			output += 'if($i[2])require_once("%s");' % self.side_location
-		else: output += 'if($i[2]){?>\n%s\n<?php }' % self.side
-		output += 'if($i[0])require_once($sixtus."page-bottom.php");?>'
-
-		with open(filename, 'w') as f: print('%s' % output, file=f)
+		with open(filename, 'w') as f: print('%s' % self.page, file=f)
 
