@@ -97,6 +97,7 @@ class Splitter:
 	def output_single_jump_file (self, base, destination, naming):
 
 		jump_path = os.path.join(destination, 'jump.six')
+
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		util.assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
@@ -138,7 +139,10 @@ class Splitter:
 				varmeta += 'tabnext|/%s/|%s\n' % (os.path.join(base, nexttab), nexttab)
 			varmeta += 'side|../side.php\n'
 
-			tab_path = os.path.join(destination, util.convert(name), 'page.six')
+			if naming:
+				tab_path = os.path.join(destination, util.convert(name), 'page.six')
+			else: tab_path = os.path.join(destination, 'tab-%s.six' % util.convert(name))
+
 			if self.debug: print(' Tab file on [%s]' % tab_path)
 			util.assert_dir(tab_path)
 			with open(tab_path, 'w') as f:
@@ -158,7 +162,10 @@ class Splitter:
 
 		name = [name for name in self.tabs if name][0]
 
-		page_path = os.path.join(destination, util.convert(name), 'page.six')
+		if naming:
+			page_path = os.path.join(destination, util.convert(name), 'page.six')
+		else: page_path = os.path.join(destination, 'tab-%s.six' % util.convert(name))
+
 		if self.debug: print('Page file on [%s]' % page_path)
 		util.assert_dir(page_path)
 		with open(page_path, 'w') as f:
