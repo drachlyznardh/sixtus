@@ -3,7 +3,8 @@
 from __future__ import print_function
 import sys
 import os
-import util
+
+from .util import assert_dir, convert
 
 class Splitter:
 
@@ -99,7 +100,7 @@ class Splitter:
 		jump_path = os.path.join(destination, 'jump.six')
 
 		if self.debug: print('Jump file on [%s]' % jump_path)
-		util.assert_dir(jump_path)
+		assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
 			print('jump|%s' % self.jump, file=f)
 
@@ -114,13 +115,13 @@ class Splitter:
 
 		jump_path = os.path.join(destination, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path, file=sys.stderr)
-		util.assert_dir(jump_path)
+		assert_dir(jump_path)
 		with open(jump_path, 'w') as f:
-			print('jump|%s/' % os.path.join(base, util.convert(order[0])), file=f)
+			print('jump|%s/' % os.path.join(base, convert(order[0])), file=f)
 
 		side_path = os.path.join(destination, 'side.six')
 		if self.debug: print('Side file on [%s]' % side_path, file=sys.stderr)
-		util.assert_dir(side_path)
+		assert_dir(side_path)
 		with open(side_path, 'w') as f:
 			print(self.side, file=f)
 
@@ -130,21 +131,21 @@ class Splitter:
 		for name in order:
 
 			varmeta = self.meta
-			varmeta += 'tabself|%s\n' % util.convert(name)
+			varmeta += 'tabself|%s\n' % convert(name)
 			if name in tabprev:
-				prevtab = util.convert(tabprev[name])
+				prevtab = convert(tabprev[name])
 				varmeta += 'tabprev|/%s/|%s\n' % (os.path.join(base, prevtab), prevtab)
 			if name in tabnext:
-				nexttab = util.convert(tabnext[name])
+				nexttab = convert(tabnext[name])
 				varmeta += 'tabnext|/%s/|%s\n' % (os.path.join(base, nexttab), nexttab)
 			varmeta += 'side|../side.php\n'
 
 			if naming:
-				tab_path = os.path.join(destination, util.convert(name), 'page.six')
-			else: tab_path = os.path.join(destination, 'tab-%s.six' % util.convert(name))
+				tab_path = os.path.join(destination, convert(name), 'page.six')
+			else: tab_path = os.path.join(destination, 'tab-%s.six' % convert(name))
 
 			if self.debug: print(' Tab file on [%s]' % tab_path)
-			util.assert_dir(tab_path)
+			assert_dir(tab_path)
 			with open(tab_path, 'w') as f:
 				print('%sstart|page\n%s' % (varmeta, self.tabs[name]), file=f)
 
@@ -154,7 +155,7 @@ class Splitter:
 
 		page_path = os.path.join(destination, 'page.six')
 		if self.debug: print('Page file on [%s]' % page_path)
-		util.assert_dir(page_path)
+		assert_dir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side, self.tabs[None]), file=f)
 
@@ -163,11 +164,11 @@ class Splitter:
 		name = [name for name in self.tabs if name][0]
 
 		if naming:
-			page_path = os.path.join(destination, util.convert(name), 'page.six')
-		else: page_path = os.path.join(destination, 'tab-%s.six' % util.convert(name))
+			page_path = os.path.join(destination, convert(name), 'page.six')
+		else: page_path = os.path.join(destination, 'tab-%s.six' % convert(name))
 
 		if self.debug: print('Page file on [%s]' % page_path)
-		util.assert_dir(page_path)
+		assert_dir(page_path)
 		with open(page_path, 'w') as f:
 			print('%sstart|side\n%sstart|page\n%s' % (self.meta, self.side,
 			self.tabs[name]), file=f)
@@ -175,7 +176,7 @@ class Splitter:
 		jump_path = os.path.join(destination, 'jump.six')
 		if self.debug: print('Jump file on [%s]' % jump_path)
 		with open(jump_path, 'w') as f:
-			print('jump|%s/' % os.path.join(base, util.convert(name)), file=f)
+			print('jump|%s/' % os.path.join(base, convert(name)), file=f)
 
 	def output_files (self, base, destination, naming):
 
