@@ -14,10 +14,10 @@ class TexContent(Content):
 
 	def do_make_title (self, grade, direction, content):
 
-		if grade == 'title': tag = 'Big'
+		if grade == 'title': tag = 'Large'
 		elif grade == 'stitle': tag = 'Huge'
 
-		return '{\\%s %s}\n\n' % (tag, content)
+		return '\\bigskip{\\%s %s}\\bigskip\n\n' % (tag, content)
 
 		if direction in ('', 'left'): style = ''
 		elif direction == 'center': style = ' class="center"'
@@ -28,7 +28,7 @@ class TexContent(Content):
 	def do_start_writing (self, align):
 
 		if self.mode == 'li': return '\\item'
-		return ''
+		return '\n'
 
 		if self.mode == 'pre': return ''
 
@@ -43,12 +43,12 @@ class TexContent(Content):
 		return '\n'
 
 	def do_make_link (self, href, before, text, after, tab):
-		return '%s\url[%s]{%s}%s' % (before, href, text, after)
+		return '%s\href{%s}{%s}%s' % (before, href, text, after)
 
 	def do_make_style (self, c, before, text, after):
 		if c == 'em': return '%s\\emph{%s}%s' % (before, text, after)
-		if c == 'code': return '%s\\ttseris{%s}%s' % (before, text, after)
-		if c == 'strong': return '%s\\bfseries{%s}%s' % (before, text, after)
+		if c == 'code': return '%s\\texttt{%s}%s' % (before, text, after)
+		if c == 'strong': return '%s\\textbf{%s}%s' % (before, text, after)
 
 	def do_make_decoration (self, c, before, text, after):
 		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
@@ -62,7 +62,7 @@ class TexContent(Content):
 		pass
 
 	def do_make_break (self):
-		self.content += '\n\\vspace{1em}\n\n'
+		self.content += '\n\\bigskip\n\n'
 
 	def do_make_side (self, side):
 		self.content += '<div class="%s">' % side
