@@ -39,10 +39,14 @@ class PHPContent(Content):
 		if self.mode == 'li': return '</li>\n'
 		if self.mode == 'pre': return '\n'
 
-	def do_make_link (self, href, before, text, after, tab):
+	def do_make_tid (self, href, before, text, after, tab):
+
 		if tab: check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
 		else: check = ''
 		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
+
+	def do_make_link (self, href, before, text, after):
+		return '%s<a href="%s">%s</a>%s' % (before, href, text, after)
 
 	def do_make_style (self, c, before, text, after):
 		return '%s<%s>%s</%s>%s' % (before, c, text, c, after)

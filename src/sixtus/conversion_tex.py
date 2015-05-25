@@ -42,7 +42,11 @@ class TexContent(Content):
 	def do_stop_writing (self):
 		return '\n'
 
-	def do_make_link (self, href, before, text, after, tab):
+	def do_make_tid (self, href, before, text, after, tab):
+		wholetext = before + text + after
+		return '\section{%s}\n\input{tab-%s.tex}' % (wholetext, tab)
+
+	def do_make_link (self, href, before, text, after):
 		return '%s\href{%s}{%s}%s' % (before, href, text, after)
 
 	def do_make_style (self, c, before, text, after):

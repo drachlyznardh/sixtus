@@ -64,7 +64,7 @@ class Content:
 
 		c, opt = self.split_at_at(command)
 
-		if c == 'link': self.append_content(self.make_link(c, args, False))
+		if c == 'link': self.append_content(self.make_link(c, args))
 		elif c == 'tid': self.append_content(self.make_tid(c, args))
 		elif c == 'speak': self.append_content(self.make_speak(c, args))
 		elif c in ('p', 'c', 'r'): self.make_paragraph(c, args)
@@ -102,7 +102,7 @@ class Content:
 
 		if len(args) == 1: return c
 
-		if c == 'link': return self.make_link(c, args[1:], False)
+		if c == 'link': return self.make_link(c, args[1:])
 		elif c == 'tid': return self.make_tid(c, args[1:])
 		elif c == 'speak': return self.make_speak(c, args[1:])
 		elif c in ('em', 'code', 'strong'): return self.make_style(c, args[1:])
@@ -156,15 +156,17 @@ class Content:
 		if size < 2 or size > 3:
 			self.error('Tid expects 2-3 args %s' % args)
 
+		before, text, after = self.split_triplet(args[0])
 		tab = convert(args[1])
-		href = '/'.join(self.page_location.split('/') + [tab])
+		path = self.page_location.split('/')
+		path.append(tab)
 
-		link_args = [href, args[0]]
-		if size == 3: link_args.append(args[2])
+		href = '/%s' % '/'.join(path)
+		if size == 3: href += '#%s' % args[2]
 
-		return self.make_link ('tid', link_args, tab)
+		return self.do_make_tid(href, before, text, after, tab)
 
-	def make_link (self, c, args, tab):
+	def make_link (self, c, args):
 
 		if self.debug:
 			print('Make_Link (%s)' % args, file=sys.stderr)
@@ -176,7 +178,7 @@ class Content:
 
 		before, text, after = self.split_triplet(args[1])
 
-		return self.do_make_link(href, before, text, after, tab)
+		return self.do_make_link(href, before, text, after)
 
 	def make_style (self, c, args):
 		before, text, after = self.split_triplet(args[0])
