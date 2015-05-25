@@ -62,18 +62,18 @@ def _get_side_filenames(target_dir, filepath):
 	tex_file = os.path.join(target_dir, 'side.tex')
 	return (six_file, tex_file)
 
-def _from_page_six_to_tex_file (six_file, tex_file):
+def _from_page_six_to_tex_file (page_location, six_file, tex_file):
 
-	c = TexFull('')
+	c = TexFull(page_location)
 	c.parse_file(six_file)
 	assert_dir(tex_file)
 	c.output_page_file(tex_file)
 
 	return c.meta['title'], c.meta['subtitle']
 
-def _from_side_six_to_tex_file (six_file, tex_file):
+def _from_side_six_to_tex_file (page_location, six_file, tex_file):
 
-	c = TexContent('')
+	c = TexContent(page_location)
 
 	with open(six_file, 'r') as f:
 		for line in f.readlines():
@@ -164,10 +164,10 @@ class Tex:
 		for filetype, filepath in sixes:
 			if filetype == 0:
 				six_file, tex_file = _get_page_filenames(target_dir, filepath)
-				self.title, self.subtitle = _from_page_six_to_tex_file(six_file, tex_file)
+				self.title, self.subtitle = _from_page_six_to_tex_file(target_dir, six_file, tex_file)
 			if filetype == 2:
 				six_file, tex_file = _get_side_filenames(target_dir, filepath)
-				tids += _from_side_six_to_tex_file(six_file, tex_file)
+				tids += _from_side_six_to_tex_file(target_dir, six_file, tex_file)
 				has_side = True
 
 		self.tid_list = unique(tids)

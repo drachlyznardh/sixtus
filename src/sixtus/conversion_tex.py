@@ -45,7 +45,8 @@ class TexContent(Content):
 
 	def do_make_tid (self, href, before, text, after, tab):
 		self.tids.append((before + text + after, tab))
-		return '%s\\ref{tab-%s}{%s}%s' % (before, href, text, after)
+		ref = '%s/tab-%s.tex' % (self.page_location, tab)
+		return '\\ref{%s}~%s%s%s' % (ref, before, text, after)
 
 	def do_make_link (self, href, before, text, after):
 		return '%s\\href{%s}{%s}%s' % (before, href, text, after)
@@ -122,6 +123,6 @@ class TexFull(Full):
 
 		self.state_update('meta')
 		with open(filename, 'w') as f:
-			print('\label{%s.%s}\n' % (filename, self.meta['tabself']), file=f)
+			print('\label{%s}' % filename, file=f)
 			print('%s' % self.page, file=f)
 
