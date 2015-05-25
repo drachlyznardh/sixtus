@@ -178,10 +178,6 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
-	if len(args) == 0:
-		sixtus_build(bag)
-		return
-
 	texmode = False
 	calls = []
 	texes = []
@@ -221,6 +217,10 @@ def sixtus_read_args ():
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
+
+	if len(args) == 0:
+		sixtus_build(bag)
+		return
 
 	for call in calls: call(bag)
 
