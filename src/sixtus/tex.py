@@ -83,7 +83,7 @@ def _from_side_six_to_tex_file (six_file, tex_file):
 
 	return c.tids
 
-def _from_metadata_to_system_files (target, tid_list, root_dir):
+def _from_metadata_to_Makefile (target, root_dir):
 
 	main_filename = target.replace('.pag', '.tex')
 	make_filename = '%s/Makefile' % root_dir
@@ -91,7 +91,7 @@ def _from_metadata_to_system_files (target, tid_list, root_dir):
 	srcs = [main_filename, 'side.tex']
 	srcs.extend(['tab-%s.tex' % e for d, e in tid_list])
 
-	content = 'TARGET := %s\n' % main_filename
+	content  = 'TARGET := %s\n' % main_filename
 	content += 'SRCS := %s\n' % ' '.join(srcs)
 	content += 'PDF := $(TARGET:.tex=.pdf)\n'
 	content += 'all: $(PDF)\n'
@@ -101,6 +101,12 @@ def _from_metadata_to_system_files (target, tid_list, root_dir):
 
 	with open(make_filename, 'w') as f:
 		print(content, file=f)
+
+def _from_metadata_to_main_tex_file (target, tid_list, root_dir):
+
+	content = ''
+
+	print(content)
 
 class Tex:
 
@@ -134,7 +140,8 @@ class Tex:
 			if filetype == 2:
 				six_file, tex_file = _get_side_filenames(target_dir, filepath)
 				tids += _from_side_six_to_tex_file(six_file, tex_file)
-		_from_metadata_to_system_files(target, unique(tids), target_dir)
+		_from_metadata_to_Makefile(target, target_dir)
+		_from_metadata_to_main_tex_file(target, unique(tids), target_dir)
 
 	def parse_dir (self, target):
 		pass
