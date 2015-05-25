@@ -42,7 +42,7 @@ class TexContent(Content):
 	def do_make_tid (self, href, before, text, after, tab):
 		self.tids.append((before + text + after, tab))
 		ref = '%s/tab-%s.tex' % (self.page_location, tab)
-		return '\\ref{%s}~%s%s%s' % (ref, before, text, after)
+		return '\\textbf{%s%s%s}\\hfill\\pageref{%s}' % (before, text, after, ref)
 
 	def do_make_link (self, href, before, text, after):
 		return '%s\\href{%s}{%s}%s' % (before, href, text, after)
