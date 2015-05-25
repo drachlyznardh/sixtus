@@ -60,3 +60,14 @@ def clean_empty_dirs (filename):
 		dirname = os.path.dirname(dirname)
 		if not os.path.exists(dirname): break
 
+def locate_file (root, name):
+	base = root
+	oldbase = None
+	location = os.path.join(base, name)
+	while base != oldbase and not os.path.exists(location):
+		oldbase = base
+		base = os.path.dirname(base)
+		location = os.path.join(base, name)
+	if base != oldbase: return location
+	return False
+

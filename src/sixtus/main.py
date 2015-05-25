@@ -11,7 +11,7 @@ from .blog import Blog
 from .pages import Pages
 from .tex import Tex
 
-from .util import convert
+from .util import convert, locate_file
 
 class Bag:
 	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
@@ -71,9 +71,9 @@ def sixtus_rebuild (bag):
 	sixtus_veryclean(bag)
 	sixtus_build(bag)
 
-def sixtus_texmode (texes):
+def sixtus_texmode (bag, texes):
 	print('Hello Teχmode %s' % texes)
-	Tex().parse(texes)
+	Tex(bag.location['runtime'], bag.conf['author']['name']).parse(texes)
 
 def sixtus_help ():
 
@@ -178,10 +178,6 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
-	if len(args) == 0:
-		sixtus_build(bag)
-		return
-
 	texmode = False
 	calls = []
 	texes = []
@@ -200,18 +196,19 @@ def sixtus_read_args ():
 			texes.append(target)
 		else: raise Exception('What target is %s supposed to be?' % target)
 
-	if texmode:
-		return sixtus_texmode(texes)
+	map_filename = locate_file(os.getcwd(), map_file)
 
-	if os.path.exists(map_file):
-		with open(map_file, 'r') as f:
+	if map_filename:
+		with open(map_filename, 'r') as f:
 			sitemap = eval(f.read())
 	elif map_file != def_map_file:
 		raise Exception('Specified map file %s does not exist!' % map_file)
 	else: sitemap = {}
 
-	if os.path.exists(conf_file):
-		with open(conf_file, 'r') as f:
+	conf_filename = locate_file(os.getcwd(), conf_file)
+
+	if conf_filename:
+		with open(conf_filename, 'r') as f:
 			conf = eval(f.read())
 	elif conf_file != def_conf_file:
 		raise Exception('Specified conf file %s does not exist!' % conf_file)
@@ -221,6 +218,13 @@ def sixtus_read_args ():
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
+
+	if texmode:
+		return sixtus_texmode(bag, texes)
+
+	if len(args) == 0:
+		sixtus_build(bag)
+		return
 
 	for call in calls: call(bag)
 
