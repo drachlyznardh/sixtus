@@ -73,7 +73,7 @@ def sixtus_rebuild (bag):
 
 def sixtus_texmode (bag, texes):
 	print('Hello Teχmode %s' % texes)
-	Tex(bag.loc['runtime'], bag.conf['author']['name']).parse(texes)
+	Tex(bag.location['runtime'], bag.conf['author']['name']).parse(texes)
 
 def sixtus_help ():
 
