@@ -28,17 +28,9 @@ class TexContent(Content):
 
 	def do_start_writing (self, align):
 
-		if self.mode == 'li': return '\\item'
+		if self.mode == 'li': return '\\item '
+		if align == 'r': return '\n\hfill '
 		return '\n'
-
-		if self.mode == 'pre': return ''
-
-		if self.mode == 'p': tag = 'p'
-		elif self.mode == 'li': tag = 'li'
-
-		if align == 'p': return '<%s>' % tag
-		if align == 'c': return '<%s class="center">' % tag
-		if align == 'r': return '<%s class="reverse">' % tag
 
 	def do_stop_writing (self):
 		return '\n'
