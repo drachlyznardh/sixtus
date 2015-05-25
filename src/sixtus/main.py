@@ -11,7 +11,7 @@ from .blog import Blog
 from .pages import Pages
 from .tex import Tex
 
-from .util import convert
+from .util import convert, locate_file
 
 class Bag:
 	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
@@ -127,18 +127,6 @@ def digest_location (source):
 	source['runtime'] = os.path.join(this_dir, 'data')
 
 	return source
-
-def locate_file (root, name):
-	base = root
-	oldbase = None
-	location = os.path.join(base, name)
-	while base != oldbase and not os.path.exists(location):
-		print('%s not in %s' % (name, base))
-		oldbase = base
-		base = os.path.dirname(base)
-		location = os.path.join(base, name)
-	if base != oldbase: return location
-	return False
 
 def sixtus_read_args ():
 
