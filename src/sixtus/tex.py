@@ -83,7 +83,7 @@ def _from_side_six_to_tex_file (six_file, tex_file):
 
 	return c.tids
 
-def _from_metadata_to_Makefile (target, root_dir):
+def _from_metadata_to_Makefile (target, tid_list, root_dir):
 
 	main_filename = target.replace('.pag', '.tex')
 	make_filename = '%s/Makefile' % root_dir
@@ -102,17 +102,18 @@ def _from_metadata_to_Makefile (target, root_dir):
 	with open(make_filename, 'w') as f:
 		print(content, file=f)
 
-def _from_metadata_to_main_tex_file (target, tid_list, root_dir):
+def _from_metadata_to_main_tex_file (source, target, tid_list, root_dir):
 
-	content = ''
-
-	print(content)
+	for line in open(source, 'r').readlines():
+		print(line)
 
 class Tex:
 
-	def __init__ (self):
+	def __init__ (self, data_dir):
 		self.six_file = os.path.abspath('.six')
 		self.Six_file = os.path.abspath('.Six')
+		self.article = os.path.join(data_dir, 'article.tex')
+		self.report = os.path.join(data_dir, 'report.tex')
 
 	def parse (self, targets):
 
@@ -140,8 +141,9 @@ class Tex:
 			if filetype == 2:
 				six_file, tex_file = _get_side_filenames(target_dir, filepath)
 				tids += _from_side_six_to_tex_file(six_file, tex_file)
-		_from_metadata_to_Makefile(target, target_dir)
-		_from_metadata_to_main_tex_file(target, unique(tids), target_dir)
+		tid_list = unique(tids)
+		_from_metadata_to_Makefile(target, tid_list, target_dir)
+		_from_metadata_to_main_tex_file(self.article, target, tid_list, target_dir)
 
 	def parse_dir (self, target):
 		pass

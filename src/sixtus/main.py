@@ -73,7 +73,9 @@ def sixtus_rebuild (bag):
 
 def sixtus_texmode (texes):
 	print('Hello Teχmode %s' % texes)
-	Tex().parse(texes)
+	this_dir = os.path.dirname(__file__)
+	data_dir = os.path.join(this_dir, 'data')
+	Tex(data_dir).parse(texes)
 
 def sixtus_help ():
 
