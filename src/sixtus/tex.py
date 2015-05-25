@@ -88,28 +88,29 @@ def _from_side_six_to_tex_file (page_location, six_file, tex_file):
 def _from_metadata_to_Makefile (target, tid_list, root_dir):
 
 	main_filename = target.replace('.pag', '.tex')
-	make_filename = '%s/Makefile' % root_dir
+	make_filename = 'Makefile'
 
 	srcs = [main_filename, 'side.tex']
 	srcs.extend(['tab-%s.tex' % e for d, e in tid_list])
 
-	content  = 'TARGET := %s\n' % main_filename
-	content += 'SRCS := %s\n' % ' '.join(srcs)
-	content += 'PDF := $(TARGET:.tex=.pdf)\n'
+	content  = 'TEX := %s\n' % main_filename
+	content += 'SRCS := $(TEX)\n'
+	content += 'SRCS := $(wildcard %s/*.tex)\n' % root_dir
+	content += 'PDF := $(TEX:.tex=.pdf)\n'
 	content += 'all: $(PDF)\n'
 	content += '$(PDF):$(SRCS)\n'
-	content += '\txelatex $(TARGET)\n'
-	content += '\txelatex $(TARGET)\n'
+	content += '\txelatex $(TEX)\n'
+	content += '\txelatex $(TEX)\n'
 
 	with open(make_filename, 'w') as f:
 		print(content, file=f)
 
-def _list_content (has_side, tid_list):
+def _list_content (has_side, tid_list, root_dir):
 
-	if has_side: content = '\\section*{}\n\\input{side.tex}\n'
+	if has_side: content = '\\section*{}\n\\input{%s/side.tex}\n' % root_dir
 	else: content = ''
 	for title, ref in tid_list:
-		content += '\\section{%s}\n\\input{tab-%s.tex}\n' % (title, ref)
+		content += '\\section{%s}\n\\input{%s/tab-%s.tex}\n' % (title, root_dir, ref)
 
 	return content
 
@@ -142,12 +143,11 @@ class Tex:
 		line = line.replace('@CONTENT@', self.content)
 		return line
 
-	def from_metadata_to_main_tex_file (self, filename, root_dir):
+	def from_metadata_to_main_tex_file (self, filename):
 
-		target = os.path.join(root_dir, filename)
 		source = self.article
 
-		with open(target, 'w') as f:
+		with open(filename, 'w') as f:
 			for line in open(source, 'r').readlines():
 				print(self.replace_line(line.strip()), file=f)
 
@@ -155,7 +155,9 @@ class Tex:
 
 		tids = []
 		has_side = False
-		target_dir = '%s.d' % target
+
+		target_tex_file = target.replace('.pag', '.tex')
+		target_dir = '%s.d' % target_tex_file
 
 		from_pag_to_Six_file(target, self.Six_file, False)
 		sixes = from_Six_to_dep_file(self.Six_file, False)
@@ -171,11 +173,10 @@ class Tex:
 				has_side = True
 
 		self.tid_list = unique(tids)
-		self.content = _list_content(has_side, self.tid_list)
+		self.content = _list_content(has_side, self.tid_list, target_dir)
 
-		target_tex_file = target.replace('.pag', '.tex')
 		_from_metadata_to_Makefile(target_tex_file, self.tid_list, target_dir)
-		self.from_metadata_to_main_tex_file(target_tex_file, target_dir)
+		self.from_metadata_to_main_tex_file(target_tex_file)
 
 	def parse_dir (self, target):
 		pass
