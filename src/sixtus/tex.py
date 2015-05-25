@@ -69,6 +69,8 @@ def _from_page_six_to_tex_file (six_file, tex_file):
 	assert_dir(tex_file)
 	c.output_page_file(tex_file)
 
+	return c.meta['title'], c.meta['subtitle']
+
 def _from_side_six_to_tex_file (six_file, tex_file):
 
 	c = TexContent('')
@@ -146,7 +148,7 @@ class Tex:
 		for filetype, filepath in sixes:
 			if filetype == 0:
 				six_file, tex_file = _get_page_filenames(target_dir, filepath)
-				_from_page_six_to_tex_file(six_file, tex_file)
+				self.title, self.subtitle = _from_page_six_to_tex_file(six_file, tex_file)
 			if filetype == 2:
 				six_file, tex_file = _get_side_filenames(target_dir, filepath)
 				tids += _from_side_six_to_tex_file(six_file, tex_file)
