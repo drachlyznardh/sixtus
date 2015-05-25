@@ -116,5 +116,7 @@ class TexFull(Full):
 	def output_page_file (self, filename):
 
 		self.state_update('meta')
-		with open(filename, 'w') as f: print('%s' % self.page, file=f)
+		with open(filename, 'w') as f:
+			print('\label{%s.%s}\n' % (filename, self.meta['tabself']), file=f)
+			print('%s' % self.page, file=f)
 
