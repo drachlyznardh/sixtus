@@ -43,7 +43,7 @@ class PHPContent(Content):
 
 		if tab: check = '''<?=$d[8]=='%s'?'class="highlighted"':''?>''' % tab
 		else: check = ''
-		return '%s<a %s href="%s">%s</a>%s' % (before, check, href, text, after)
+		return '%s<a %s href="/%s">%s</a>%s' % (before, check, href, text, after)
 
 	def do_make_link (self, href, before, text, after):
 		return '%s<a href="%s">%s</a>%s' % (before, href, text, after)

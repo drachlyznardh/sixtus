@@ -19,6 +19,7 @@ class Content:
 		self.mode        = 'p'
 
 		self.page_location = page_location
+		self.path = [e for e in page_location.split('/') if e]
 
 		self.content  = ''
 		self.filename = ''
@@ -161,7 +162,7 @@ class Content:
 		path = self.page_location.split('/')
 		path.append(tab)
 
-		href = '/%s' % '/'.join(path)
+		href = '/'.join(self.path + [tab])
 		if size == 3: href += '#%s' % args[2]
 
 		return self.do_make_tid(href, before, text, after, tab)

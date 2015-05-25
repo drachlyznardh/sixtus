@@ -11,6 +11,7 @@ class TexContent(Content):
 	def __init__ (self, page_location):
 
 		Content.__init__(self, page_location)
+		self.tids = []
 
 	def do_make_title (self, grade, direction, content):
 
@@ -43,11 +44,11 @@ class TexContent(Content):
 		return '\n'
 
 	def do_make_tid (self, href, before, text, after, tab):
-		wholetext = before + text + after
-		return '\section{%s}\n\input{tab-%s.tex}' % (wholetext, tab)
+		self.tids.append((before + text + after, tab))
+		return '%s\\ref{tab-%s}{%s}%s' % (before, href, text, after)
 
 	def do_make_link (self, href, before, text, after):
-		return '%s\href{%s}{%s}%s' % (before, href, text, after)
+		return '%s\\href{%s}{%s}%s' % (before, href, text, after)
 
 	def do_make_style (self, c, before, text, after):
 		if c == 'em': return '%s\\emph{%s}%s' % (before, text, after)

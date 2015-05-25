@@ -101,6 +101,7 @@ class Tex:
 		else: self.parse_dir(target)
 
 	def parse_file (self, target):
+		tids = []
 		target_dir = '%s.d' % target
 		from_pag_to_Six_file(target, self.Six_file, False)
 		sixes = from_Six_to_dep_file(self.Six_file, False)
