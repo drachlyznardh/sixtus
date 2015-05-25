@@ -102,11 +102,6 @@ def _from_metadata_to_Makefile (target, tid_list, root_dir):
 	with open(make_filename, 'w') as f:
 		print(content, file=f)
 
-def _from_metadata_to_main_tex_file (source, target, tid_list, root_dir):
-
-	for line in open(source, 'r').readlines():
-		print(line)
-
 class Tex:
 
 	def __init__ (self, data_dir):
@@ -128,6 +123,13 @@ class Tex:
 		if isfile: self.parse_file(target)
 		else: self.parse_dir(target)
 
+	def from_metadata_to_main_tex_file (self, target, tid_list, root_dir):
+
+		source = self.article
+
+		for line in open(source, 'r').readlines():
+			print(line)
+
 	def parse_file (self, target):
 		tids = []
 		target_dir = '%s.d' % target
@@ -143,7 +145,7 @@ class Tex:
 				tids += _from_side_six_to_tex_file(six_file, tex_file)
 		tid_list = unique(tids)
 		_from_metadata_to_Makefile(target, tid_list, target_dir)
-		_from_metadata_to_main_tex_file(self.article, target, tid_list, target_dir)
+		self.from_metadata_to_main_tex_file(target, tid_list, target_dir)
 
 	def parse_dir (self, target):
 		pass
