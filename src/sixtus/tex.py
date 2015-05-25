@@ -106,11 +106,12 @@ def _from_metadata_to_Makefile (target, tid_list, root_dir):
 
 class Tex:
 
-	def __init__ (self, data_dir):
+	def __init__ (self, data_dir, author):
 		self.six_file = os.path.abspath('.six')
 		self.Six_file = os.path.abspath('.Six')
 		self.article = os.path.join(data_dir, 'article.tex')
 		self.report = os.path.join(data_dir, 'report.tex')
+		self.author = author
 
 	def parse (self, targets):
 

@@ -71,11 +71,9 @@ def sixtus_rebuild (bag):
 	sixtus_veryclean(bag)
 	sixtus_build(bag)
 
-def sixtus_texmode (texes):
+def sixtus_texmode (bag, texes):
 	print('Hello Teχmode %s' % texes)
-	this_dir = os.path.dirname(__file__)
-	data_dir = os.path.join(this_dir, 'data')
-	Tex(data_dir).parse(texes)
+	Tex(bag.loc['runtime'], bag.conf['author']['name']).parse(texes)
 
 def sixtus_help ():
 
@@ -198,9 +196,6 @@ def sixtus_read_args ():
 			texes.append(target)
 		else: raise Exception('What target is %s supposed to be?' % target)
 
-	if texmode:
-		return sixtus_texmode(texes)
-
 	if os.path.exists(map_file):
 		with open(map_file, 'r') as f:
 			sitemap = eval(f.read())
@@ -219,6 +214,9 @@ def sixtus_read_args ():
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
+
+	if texmode:
+		return sixtus_texmode(bag, texes)
 
 	if len(args) == 0:
 		sixtus_build(bag)
