@@ -104,6 +104,14 @@ def _from_metadata_to_Makefile (target, tid_list, root_dir):
 	with open(make_filename, 'w') as f:
 		print(content, file=f)
 
+def _list_content (tid_list):
+
+	content = ''
+	for title, ref in tid_list:
+		content += '\\section{%s}\n\\input{tab-%s.tex}\n' % (title, ref)
+
+	return content
+
 class Tex:
 
 	def __init__ (self, data_dir, author):
