@@ -128,14 +128,16 @@ def digest_location (source):
 
 	return source
 
-def locate_file (name):
-	base = os.getcwd()
+def locate_file (root, name):
+	base = root
+	oldbase = None
 	location = os.path.join(base, name)
-	while not os.path.exists(location):
+	while base != oldbase and not os.path.exists(location):
 		print('%s not in %s' % (name, base))
+		oldbase = base
 		base = os.path.dirname(base)
 		location = os.path.join(base, name)
-	if base: return location
+	if base != oldbase: return location
 	return False
 
 def sixtus_read_args ():
@@ -206,19 +208,19 @@ def sixtus_read_args ():
 			texes.append(target)
 		else: raise Exception('What target is %s supposed to be?' % target)
 
-	map_file = locate_file(map_file)
+	map_filename = locate_file(os.getcwd(), map_file)
 
-	if map_file:
-		with open(map_file, 'r') as f:
+	if map_filename:
+		with open(map_filename, 'r') as f:
 			sitemap = eval(f.read())
 	elif map_file != def_map_file:
 		raise Exception('Specified map file %s does not exist!' % map_file)
 	else: sitemap = {}
 
-	conf_file = locate_file(conf_file)
+	conf_filename = locate_file(os.getcwd(), conf_file)
 
-	if conf_file:
-		with open(conf_file, 'r') as f:
+	if conf_filename:
+		with open(conf_filename, 'r') as f:
 			conf = eval(f.read())
 	elif conf_file != def_conf_file:
 		raise Exception('Specified conf file %s does not exist!' % conf_file)
