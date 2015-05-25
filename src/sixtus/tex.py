@@ -123,12 +123,19 @@ class Tex:
 		if isfile: self.parse_file(target)
 		else: self.parse_dir(target)
 
+	def replace_line (self, line):
+		line = line.replace('@TITLE@', self.title)
+		line = line.replace('@SUBTITLE@', self.subtitle)
+		line = line.replace('@AUTHOR@', self.author)
+		line = line.replace('@CONTENT@', self.content)
+		return line
+
 	def from_metadata_to_main_tex_file (self, target, tid_list, root_dir):
 
 		source = self.article
 
 		for line in open(source, 'r').readlines():
-			print(line)
+			print(self.replace_line(line))
 
 	def parse_file (self, target):
 		tids = []
