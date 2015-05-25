@@ -81,6 +81,27 @@ def _from_side_six_to_tex_file (six_file, tex_file):
 	with open(tex_file, 'w') as f:
 		print(c.content, file=f)
 
+	return c.tids
+
+def _from_metadata_to_system_files (target, tid_list, root_dir):
+
+	main_filename = target.replace('.pag', '.tex')
+	make_filename = '%s/Makefile' % root_dir
+
+	srcs = [main_filename, 'side.tex']
+	srcs.extend(['tab-%s.tex' % e for d, e in tid_list])
+
+	content = 'TARGET := %s\n' % main_filename
+	content += 'SRCS := %s\n' % ' '.join(srcs)
+	content += 'PDF := $(TARGET:.tex=.pdf)\n'
+	content += 'all: $(PDF)\n'
+	content += '$(PDF):$(SRCS)\n'
+	content += '\txelatex $(TARGET)\n'
+	content += '\txelatex $(TARGET)\n'
+
+	with open(make_filename, 'w') as f:
+		print(content, file=f)
+
 class Tex:
 
 	def __init__ (self):
@@ -112,7 +133,8 @@ class Tex:
 				_from_page_six_to_tex_file(six_file, tex_file)
 			if filetype == 2:
 				six_file, tex_file = _get_side_filenames(target_dir, filepath)
-				_from_side_six_to_tex_file(six_file, tex_file)
+				tids += _from_side_six_to_tex_file(six_file, tex_file)
+		_from_metadata_to_system_files(target, unique(tids), target_dir)
 
 	def parse_dir (self, target):
 		pass
