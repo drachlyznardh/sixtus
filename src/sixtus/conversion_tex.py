@@ -14,7 +14,9 @@ class TexContent(Content):
 		self.tids = []
 
 	def escape_line (self, line):
+		line = line.replace('\\', '\\textbackslash')
 		line = line.replace('&amp;', '\\&')
+		line = line.replace('~', '\\textasciitilde')
 		return line
 
 	def do_make_title (self, grade, direction, text):
