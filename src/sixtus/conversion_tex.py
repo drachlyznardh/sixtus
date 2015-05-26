@@ -22,7 +22,7 @@ class TexContent(Content):
 		if grade == 'title': tag = 'Large'
 		elif grade == 'stitle': tag = 'Huge'
 
-		return '\\bigskip{\\%s %s}\\bigskip\n\n' % (tag, content)
+		return '\n\n\\bigskip{\\%s %s}\\bigskip\n\n' % (tag, content)
 
 		if direction in ('', 'left'): style = ''
 		elif direction == 'center': style = ' class="center"'
