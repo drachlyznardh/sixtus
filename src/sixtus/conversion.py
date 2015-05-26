@@ -37,6 +37,7 @@ class Content:
 
 	def parse_line (self, line):
 
+		line = self.escape_line(line)
 		self.lineno += 1
 
 		if self.debug:
@@ -46,7 +47,7 @@ class Content:
 			self.append_content(line);
 			return
 
-		token = self.escape_line(line).split('|')
+		token = line.split('|')
 		command = token[0]
 
 		if command == 'source':
@@ -290,6 +291,8 @@ class Full:
 		return self
 
 	def parse_line (self, line):
+
+		line = self.helper.escape_line(line)
 
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)

@@ -13,6 +13,10 @@ class TexContent(Content):
 		Content.__init__(self, page_location)
 		self.tids = []
 
+	def escape_line (self, line):
+		line = line.replace('&amp;', '\\&')
+		return line
+
 	def do_make_title (self, grade, direction, content):
 
 		if grade == 'title': tag = 'Large'
