@@ -17,18 +17,22 @@ class TexContent(Content):
 		line = line.replace('&amp;', '\\&')
 		return line
 
-	def do_make_title (self, grade, direction, content):
+	def do_make_title (self, grade, direction, text):
 
 		if grade == 'title': tag = 'Large'
 		elif grade == 'stitle': tag = 'Huge'
 
-		return '\n\n\\bigskip{\\%s %s}\\bigskip\n\n' % (tag, content)
+		if direction in ('', 'left'):
+			before = '\\begin{flushleft}\n'
+			after = '\\end{flushleft}\n'
+		elif direction == 'center':
+			before = '\\begin{center}\n'
+			after = '\\end{center}\n'
+		elif direction == 'right':
+			before = '\\begin{flushright}\n'
+			after = '\\end{flushright}\n'
 
-		if direction in ('', 'left'): style = ''
-		elif direction == 'center': style = ' class="center"'
-		elif direction == 'right': style = ' class="reverse"'
-
-		return '<%s%s>%s</%s>\n' % (tag, style, content, tag)
+		return '\n%s\\bigskip{\\%s %s}\n%s' % (before, tag, text, after)
 
 	def do_start_writing (self, align):
 
