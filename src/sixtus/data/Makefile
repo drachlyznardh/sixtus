@@ -1,7 +1,7 @@
 
 TEX := @TEX@
 SRCS := $(TEX)
-SRCS := $(wildcard @DIR@/*.tex)
+SRCS += $(wildcard @DIR@/*.tex)
 PDF := $(TEX:.tex=.pdf)
 
 .PHONY:clean,veryclean
