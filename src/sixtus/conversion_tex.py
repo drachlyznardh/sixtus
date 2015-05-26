@@ -74,9 +74,8 @@ class TexContent(Content):
 
 		output = []
 
-		if style == 'ul': output.append('ul')
-		elif style == 'ol': output.append('ol class="roman"')
-		elif style == 'dl': output.append('ol class="decimal"')
+		if style == 'ul': output.append('\n\\begin{itemize}\n')
+		elif style in ('ol', 'dl'): output.append('\n\\begin{enumerate}\n')
 
 		if margin: output.append('style="margin-left;%s"' % margin)
 		if start: output.append('start="%s"' % start)

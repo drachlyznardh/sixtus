@@ -32,6 +32,9 @@ class Content:
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
+	def escape_line (self, line):
+		return line
+
 	def parse_line (self, line):
 
 		self.lineno += 1
@@ -43,7 +46,7 @@ class Content:
 			self.append_content(line);
 			return
 
-		token = line.split('|')
+		token = self.escape_line(line).split('|')
 		command = token[0]
 
 		if command == 'source':
