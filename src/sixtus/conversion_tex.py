@@ -75,8 +75,11 @@ class TexContent(Content):
 		self.content += '\n\\bigskip\n\n'
 
 	def do_make_side (self, side):
-		self.content += '<div class="%s">' % side
-		self.environment.append((self.mode, '</div>\n'))
+		if side == 'inside':
+			self.content += '\n\\begin{addmargin}[-1em]{2em}\n'
+		elif side == 'outside':
+			self.content += '\n\\begin{addmargin}[2em]{-1em}\n'
+		self.environment.append((self.mode, '\n\\end{addmargin}\n'))
 
 	def do_make_list (self, style, margin, start):
 
@@ -92,8 +95,15 @@ class TexContent(Content):
 		self.mode = 'li'
 
 	def do_make_floating_block (self, style, side):
-		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
-		self.environment.append((self.mode, '</div></div>\n'))
+
+		if style == 'mini': size = '.33'
+		elif style == 'half': size = '.45'
+
+		if side == 'left': lr = 'l'
+		elif side == 'right': lr = 'r'
+
+		self.content += '\n\\begin{wrapfigure}{%s}{%s\\textwidth}\n' % (lr, size)
+		self.environment.append((self.mode, '\n\\end{wrapfigure}\n'))
 
 	def do_make_style_block (self, style):
 		self.content += '<div class="%s">' % style
