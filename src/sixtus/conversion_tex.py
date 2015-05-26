@@ -77,11 +77,19 @@ class TexContent(Content):
 		self.content += '\n\\bigskip\n\n'
 
 	def do_make_side (self, side):
-		if side == 'inside':
-			self.content += '\n\\begin{addmargin}[-1em]{2em}\n'
-		elif side == 'outside':
-			self.content += '\n\\begin{addmargin}[2em]{-1em}\n'
-		self.environment.append((self.mode, '\n\\end{addmargin}\n'))
+
+		self.content += '\n\\begin{addmargin}'
+		if side == 'inside': self.content += '[-1em]{2em}'
+		elif side == 'outside': self.content += '[2em]{-1em}'
+		self.content += '\\begin{flushleft}'
+		self.content += '\\xhrulefill{black}{1pt}\n'
+
+		ending  = '\n\\xhrulefill{black}{1pt}'
+		ending += '\\end{flushleft}'
+		ending += '\\end{addmargin}'
+		ending += '\\smallskip\n'
+
+		self.environment.append((self.mode, ending))
 
 	def do_make_list (self, style, margin, start):
 
