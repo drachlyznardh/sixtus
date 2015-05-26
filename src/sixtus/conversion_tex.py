@@ -78,14 +78,13 @@ class TexContent(Content):
 
 		output = []
 
-		if style == 'ul': output.append('\n\\begin{itemize}\n')
-		elif style in ('ol', 'dl'): output.append('\n\\begin{enumerate}\n')
+		if style == 'ul':
+			self.content += '\n\\begin{itemize}\n'
+			self.environment.append((self.mode, '\n\\end{itemize}\n'))
+		elif style in ('ol', 'dl'):
+			self.content += '\n\\begin{enumerate}\n'
+			self.environment.append((self.mode, '\n\\end{enumerate}\n'))
 
-		if margin: output.append('style="margin-left;%s"' % margin)
-		if start: output.append('start="%s"' % start)
-
-		self.content += '<%s>' % ' '.join(output)
-		self.environment.append((self.mode, '</%s>\n' % style))
 		self.mode = 'li'
 
 	def do_make_floating_block (self, style, side):
