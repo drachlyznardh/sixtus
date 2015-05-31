@@ -15,7 +15,11 @@ class TexContent(Content):
 
 	def escape_line (self, line):
 		line = line.replace('\\', '\\textbackslash')
-		line = line.replace('&amp;', '\\&')
+		line = line.replace('&', '\\&')
+		line = line.replace('\\\\&amp;', '\\&')
+		line = line.replace('$', '\\$')
+		line = line.replace('%', '\\%')
+		line = line.replace('_', '\\_')
 		line = line.replace('~', '\\textasciitilde')
 		return line
 
