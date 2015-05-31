@@ -32,8 +32,12 @@ class Content:
 		print(line, file=sys.stderr)
 		sys.exit(1)
 
+	def escape_line (self, line):
+		return line
+
 	def parse_line (self, line):
 
+		line = self.escape_line(line)
 		self.lineno += 1
 
 		if self.debug:
@@ -287,6 +291,8 @@ class Full:
 		return self
 
 	def parse_line (self, line):
+
+		line = self.helper.escape_line(line)
 
 		if self.debug:
 			print('Parse_Line (%s)' % (line), file=sys.stderr)

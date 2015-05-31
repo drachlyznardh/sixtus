@@ -16,6 +16,8 @@
     urlcolor={blue!80!black}
 }
 \usepackage{listings}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[normalem]{ulem}
 \usepackage{tabularx, multicol, multirow, booktabs}  % Better tables
 
 % TOC style with no dots
@@ -41,6 +43,28 @@
 }
 \newcolumntype{Y}{>{\centering}X}                 % X column, center align
 \newcolumntype{Z}{>{\raggedleft\arraybackslash}X} % X column, right align
+
+\newenvironment{nscenter}{\parskip=0pt\par\nopagebreak\centering}{\par\noindent\ignorespacesafterend}
+
+% Framed stuff
+\newenvironment{inside}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[leftline=false,leftmargin=-1em,rightmargin=2em,
+	roundcorner=4pt,linewidth=3pt,linecolor=lightgray]{inside}
+\newenvironment{outside}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[rightline=false,leftmargin=2em,rightmargin=-1em,
+	roundcorner=4pt,linewidth=3pt,linecolor=lightgray]{outside}
+\newenvironment{halfright}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=5em,rightmargin=1em,linewidth=3pt,linecolor=gray]{halfright}
+\newenvironment{halfleft}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=1em,leftmargin=5em,linewidth=3pt,linecolor=gray]{halfleft}
+\newenvironment{miniright}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=7em,rightmargin=2em,linewidth=3pt,linecolor=lightgray]{miniright}
+\newenvironment{minileft}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=2em,leftmargin=7em,linewidth=3pt,linecolor=lightgray]{minileft}
 
 \begin{document}
 

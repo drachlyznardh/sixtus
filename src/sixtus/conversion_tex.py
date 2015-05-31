@@ -13,36 +13,49 @@ class TexContent(Content):
 		Content.__init__(self, page_location)
 		self.tids = []
 
-	def do_make_title (self, grade, direction, content):
+	def escape_line (self, line):
+		line = line.replace('\\', '\\textbackslash')
+		line = line.replace('&', '\\&')
+		line = line.replace('\\\\&amp;', '\\&')
+		line = line.replace('$', '\\$')
+		line = line.replace('%', '\\%')
+		line = line.replace('_', '\\_')
+		line = line.replace('~', '\\textasciitilde')
+		return line
+
+	def do_make_title (self, grade, direction, text):
 
 		if grade == 'title': tag = 'Large'
 		elif grade == 'stitle': tag = 'Huge'
 
-		return '\\bigskip{\\%s %s}\\bigskip\n\n' % (tag, content)
+		if direction in ('', 'left'):
+			before = '\\begin{flushleft}\n'
+			after = '\\end{flushleft}\n'
+		elif direction == 'center':
+			before = '\\begin{center}\n'
+			after = '\\end{center}\n'
+		elif direction == 'right':
+			before = '\\begin{flushright}\n'
+			after = '\\end{flushright}\n'
 
-		if direction in ('', 'left'): style = ''
-		elif direction == 'center': style = ' class="center"'
-		elif direction == 'right': style = ' class="reverse"'
-
-		return '<%s%s>%s</%s>\n' % (tag, style, content, tag)
+		return '\n%s\\bigskip{\\%s %s}\n%s' % (before, tag, text, after)
 
 	def do_start_writing (self, align):
 
 		if self.mode == 'li': return '\\item '
-		if align == 'c': return '\n\\begin{center}\n'
-		if align == 'r': return '\n\\begin{flushright}\n'
+		if align == 'c': return '\n\\begin{nscenter}\n'
+		if align == 'r': return '\n\\hfill\\ '
 		return '\n'
 
 	def do_stop_writing (self):
 
-		if self.align == 'c': return '\n\\end{center}\n'
-		if self.align == 'r': return '\n\\end{flushright}\n'
+		if self.align == 'c': return '\n\\end{nscenter}\n\n'
 		return '\n'
 
 	def do_make_tid (self, href, before, text, after, tab):
 		self.tids.append((before + text + after, tab))
 		ref = '%s/tab-%s.tex' % (self.page_location, tab)
-		return '\\textbf{%s%s%s}\\hfill\\pageref{%s}' % (before, text, after, ref)
+		return '\\textbf{%s%s%s}~~\\pageref{%s}' % (before, text, after, ref)
 
 	def do_make_link (self, href, before, text, after):
 		return '%s\\href{%s}{%s}%s' % (before, href, text, after)
@@ -53,12 +66,14 @@ class TexContent(Content):
 		if c == 'strong': return '%s\\textbf{%s}%s' % (before, text, after)
 
 	def do_make_decoration (self, c, before, text, after):
-		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
+		if c == 'spoiler':
+			return before+text+after
+		elif c == 'wrong':
+			return '%s\\sout{%s}%s' % (before, text, after)
 
 	def do_make_speak (self, args):
-		author = args[0]
 		dialog = args[1].split('@')
-		return '<span title="%s">«%s»</span>' % (author, ' – '.join(dialog))
+		return '«%s»' % ' – '.join(dialog)
 
 	def do_make_id (self, ref):
 		pass
@@ -67,27 +82,33 @@ class TexContent(Content):
 		self.content += '\n\\bigskip\n\n'
 
 	def do_make_side (self, side):
-		self.content += '<div class="%s">' % side
-		self.environment.append((self.mode, '</div>\n'))
+
+		if side == 'inside':
+			self.content += '\n\\begin{inside}'
+			ending = '\\end{inside}\n'
+		elif side == 'outside':
+			self.content += '\n\\begin{outside}'
+			ending = '\\end{outside}\n'
+
+		self.environment.append((self.mode, ending))
 
 	def do_make_list (self, style, margin, start):
 
 		output = []
 
-		if style == 'ul': output.append('ul')
-		elif style == 'ol': output.append('ol class="roman"')
-		elif style == 'dl': output.append('ol class="decimal"')
+		if style == 'ul':
+			self.content += '\n\\begin{itemize}\n'
+			self.environment.append((self.mode, '\n\\end{itemize}\n'))
+		elif style in ('ol', 'dl'):
+			self.content += '\n\\begin{enumerate}\n'
+			self.environment.append((self.mode, '\n\\end{enumerate}\n'))
 
-		if margin: output.append('style="margin-left;%s"' % margin)
-		if start: output.append('start="%s"' % start)
-
-		self.content += '<%s>' % ' '.join(output)
-		self.environment.append((self.mode, '</%s>\n' % style))
 		self.mode = 'li'
 
 	def do_make_floating_block (self, style, side):
-		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
-		self.environment.append((self.mode, '</div></div>\n'))
+		envname = style + side
+		self.content += '\n\\begin{%s}' % envname
+		self.environment.append((self.mode, '\\end{%s}\n' % envname))
 
 	def do_make_style_block (self, style):
 		self.content += '<div class="%s">' % style
@@ -102,12 +123,7 @@ class TexContent(Content):
 		self.mode = 'pre'
 
 	def do_make_clear (self, side):
-
-		if len(side) == 0: side = 'both'
-		if side != 'left' and side != 'right' and side != 'both':
-			self.error('Unknown side for clear# %s' % side)
-
-		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
+		pass
 
 class TexFull(Full):
 
