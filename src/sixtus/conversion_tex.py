@@ -40,13 +40,12 @@ class TexContent(Content):
 
 		if self.mode == 'li': return '\\item '
 		if align == 'c': return '\n\\begin{center}\n'
-		if align == 'r': return '\n\\begin{flushright}\n'
+		if align == 'r': return '\n\\hfill\\ '
 		return '\n'
 
 	def do_stop_writing (self):
 
 		if self.align == 'c': return '\n\\end{center}\n'
-		if self.align == 'r': return '\n\\end{flushright}\n'
 		return '\n'
 
 	def do_make_tid (self, href, before, text, after, tab):
