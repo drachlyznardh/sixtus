@@ -50,10 +50,14 @@ def _tag_target_list (targets):
 
 	return unique(result)
 
-def _get_page_filenames(target_dir, filepath):
+def _get_tabs_filenames(target_dir, filepath):
 
-	six_file = os.path.join(target_dir, 'tab-%s.six' % filepath)
-	tex_file = os.path.join(target_dir, 'tab-%s.tex' % filepath)
+	if filepath:
+		six_file = os.path.join(target_dir, 'tab-%s.six' % filepath)
+		tex_file = os.path.join(target_dir, 'tab-%s.tex' % filepath)
+	else:
+		six_file = os.path.join(target_dir, 'page.six')
+		tex_file = os.path.join(target_dir, 'page.tex')
 	return (six_file, tex_file)
 
 def _get_side_filenames(target_dir, filepath):
@@ -89,8 +93,11 @@ def _list_content (has_side, tid_list, root_dir):
 
 	if has_side: content = '\\section*{}\n\\input{%s/side.tex}\n' % root_dir
 	else: content = ''
-	for title, ref in tid_list:
-		content += '\\section{%s}\n\\input{%s/tab-%s.tex}\n' % (title, root_dir, ref)
+
+	if len(tid_list):
+		for title, ref in tid_list:
+			content += '\\section{%s}\n\\input{%s/tab-%s.tex}\n' % (title, root_dir, ref)
+	else: content += '\\input{%s/page.tex}\n' % root_dir
 
 	return content
 
@@ -164,9 +171,9 @@ class Tex:
 
 		for filetype, filepath in sixes:
 			if filetype == 0:
-				six_file, tex_file = _get_page_filenames(target_dir, filepath)
+				six_file, tex_file = _get_tabs_filenames(target_dir, filepath)
 				self.title, self.subtitle = _from_page_six_to_tex_file(target_dir, six_file, tex_file)
-			if filetype == 2:
+			elif filetype == 2:
 				six_file, tex_file = _get_side_filenames(target_dir, filepath)
 				tids += _from_side_six_to_tex_file(target_dir, six_file, tex_file)
 				has_side = True
