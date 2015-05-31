@@ -111,12 +111,20 @@ class TexContent(Content):
 		self.environment.append((self.mode, '\\end{%s}\n' % envname))
 
 	def do_make_style_block (self, style):
-		self.content += '<div class="%s">' % style
-		self.environment.append((self.mode, '</div>\n'))
+		if style == 'em':
+			self.content += '{\\bfseries'
+		elif style == 'strong':
+			self.content += '{\\em'
+		elif style == 'code':
+			self.content += '{\\ttfamily'
+		self.environment.append((self.mode, '}\n\n'))
 
 	def do_make_decoration_block (self, decoration):
-		self.content += '<div class="%s">' % decoration
-		self.environment.append((self.mode, '</div>\n'))
+
+		if decoration == 'wrong':
+			self.content += '\\sout{'
+			self.environment.append((self.mode, '}\n\n'))
+		else: self.environment.append((self.mode, '\n'))
 
 	def do_make_pre_block (self):
 		self.environment.append((self.mode, '\n'))
