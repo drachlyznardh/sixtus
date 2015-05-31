@@ -104,15 +104,9 @@ class TexContent(Content):
 		self.mode = 'li'
 
 	def do_make_floating_block (self, style, side):
-
-		if style == 'mini': size = '.33'
-		elif style == 'half': size = '.45'
-
-		if side == 'left': lr = 'l'
-		elif side == 'right': lr = 'r'
-
-		self.content += '\n\\begin{wrapfigure}{%s}{%s\\textwidth}\n' % (lr, size)
-		self.environment.append((self.mode, '\n\\end{wrapfigure}\n'))
+		envname = style + side
+		self.content += '\n\\begin{%s}' % envname
+		self.environment.append((self.mode, '\\end{%s}\n' % envname))
 
 	def do_make_style_block (self, style):
 		self.content += '<div class="%s">' % style
