@@ -16,6 +16,7 @@
     urlcolor={blue!80!black}
 }
 \usepackage{listings}
+\usepackage[framemethod=tikz]{mdframed}
 \usepackage{wrapfig, xhfill}
 \usepackage{tabularx, multicol, multirow, booktabs}  % Better tables
 
@@ -42,6 +43,16 @@
 }
 \newcolumntype{Y}{>{\centering}X}                 % X column, center align
 \newcolumntype{Z}{>{\raggedleft\arraybackslash}X} % X column, right align
+
+% Framed stuff
+\newenvironment{inside}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[backgroundcolor=lightgray,leftline=false,
+	leftmargin=-1em,rightmargin=2em,
+	roundcorner=1em,linewidth=3pt]{inside}
+\newenvironment{outside}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[backgroundcolor=lightgray,rightline=false,
+	leftmargin=2em,rightmargin=-1em,
+	roundcorner=1em,linewidth=3pt]{outside}
 
 \begin{document}
 

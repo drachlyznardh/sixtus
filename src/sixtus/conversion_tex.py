@@ -78,16 +78,12 @@ class TexContent(Content):
 
 	def do_make_side (self, side):
 
-		self.content += '\n\\begin{addmargin}'
-		if side == 'inside': self.content += '[-1em]{2em}'
-		elif side == 'outside': self.content += '[2em]{-1em}'
-		self.content += '\\begin{flushleft}'
-		self.content += '\\xhrulefill{black}{1pt}\n'
-
-		ending  = '\n\\xhrulefill{black}{1pt}'
-		ending += '\\end{flushleft}'
-		ending += '\\end{addmargin}'
-		ending += '\\smallskip\n'
+		if side == 'inside':
+			self.content += '\n\\begin{inside}'
+			ending = '\\end{inside}\n'
+		elif side == 'outside':
+			self.content += '\n\\begin{outside}'
+			ending = '\\end{outside}\n'
 
 		self.environment.append((self.mode, ending))
 
