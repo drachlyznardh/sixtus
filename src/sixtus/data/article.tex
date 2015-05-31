@@ -17,7 +17,7 @@
 }
 \usepackage{listings}
 \usepackage[framemethod=tikz]{mdframed}
-\usepackage{wrapfig, xhfill}
+\usepackage[normalem]{ulem}
 \usepackage{tabularx, multicol, multirow, booktabs}  % Better tables
 
 % TOC style with no dots
@@ -43,6 +43,8 @@
 }
 \newcolumntype{Y}{>{\centering}X}                 % X column, center align
 \newcolumntype{Z}{>{\raggedleft\arraybackslash}X} % X column, right align
+
+\newenvironment{nscenter}{\parskip=0pt\par\nopagebreak\centering}{\par\noindent\ignorespacesafterend}
 
 % Framed stuff
 \newenvironment{inside}{\noindent\hspace*{\parindent}}{}

@@ -43,13 +43,13 @@ class TexContent(Content):
 	def do_start_writing (self, align):
 
 		if self.mode == 'li': return '\\item '
-		if align == 'c': return '\n\\begin{center}\n'
+		if align == 'c': return '\n\\begin{nscenter}\n'
 		if align == 'r': return '\n\\hfill\\ '
 		return '\n'
 
 	def do_stop_writing (self):
 
-		if self.align == 'c': return '\n\\end{center}\n'
+		if self.align == 'c': return '\n\\end{nscenter}\n\n'
 		return '\n'
 
 	def do_make_tid (self, href, before, text, after, tab):
@@ -66,12 +66,14 @@ class TexContent(Content):
 		if c == 'strong': return '%s\\textbf{%s}%s' % (before, text, after)
 
 	def do_make_decoration (self, c, before, text, after):
-		return '%s<span class="%s">%s</span>%s' % (before, c, text, after)
+		if c == 'spoiler':
+			return before+text+after
+		elif c == 'wrong':
+			return '%s\\sout{%s}%s' % (before, text, after)
 
 	def do_make_speak (self, args):
-		author = args[0]
 		dialog = args[1].split('@')
-		return '<span title="%s">«%s»</span>' % (author, ' – '.join(dialog))
+		return '«%s»' % ' – '.join(dialog)
 
 	def do_make_id (self, ref):
 		pass
@@ -121,12 +123,7 @@ class TexContent(Content):
 		self.mode = 'pre'
 
 	def do_make_clear (self, side):
-
-		if len(side) == 0: side = 'both'
-		if side != 'left' and side != 'right' and side != 'both':
-			self.error('Unknown side for clear# %s' % side)
-
-		self.content += ('<div style="float:none;clear:%s"></div>\n' % side)
+		pass
 
 class TexFull(Full):
 
