@@ -86,11 +86,13 @@ class Preprocessor:
 		self.content.append(line) # Ordinany command
 
 	def output_Six_file (self, Six_file):
+		if not Six_file: pass
 		with open(Six_file, 'w') as f:
 			for line in self.content:
 				print(line, file=f)
 
 	def output_src_file (self, src_file):
+		if not src_file: return self.sources
 		with open(src_file, 'w') as f:
 			print(self.sources, file=f)
 		return self.sources

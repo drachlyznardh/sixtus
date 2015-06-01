@@ -9,8 +9,9 @@ from .runtime import Runtime
 from .resources import Resources
 from .blog import Blog
 from .pages import Pages
+from .tex import Tex
 
-from .util import convert
+from .util import convert, locate_file
 
 class Bag:
 	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
@@ -69,6 +70,10 @@ def sixtus_rebuild (bag):
 
 	sixtus_veryclean(bag)
 	sixtus_build(bag)
+
+def sixtus_texmode (bag, texes):
+	print('Hello Teχmode %s' % texes)
+	Tex(bag.location['runtime'], bag.conf['author']['name']).parse(texes)
 
 def sixtus_help ():
 
@@ -173,15 +178,37 @@ def sixtus_read_args ():
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
 
-	if os.path.exists(map_file):
-		with open(map_file, 'r') as f:
+	texmode = False
+	calls = []
+	texes = []
+	for target in args:
+		if target == 'build':
+			calls.append(sixtus_build)
+		elif target == 'clean':
+			calls.append(sixtus_clean)
+		elif target == 'veryclean':
+			calls.append(sixtus_veryclean)
+		elif target == 'rebuild':
+			calls.append(sixtus_rebuild)
+		elif target == 'tex':
+			texmode = True
+		elif texmode:
+			texes.append(target)
+		else: raise Exception('What target is %s supposed to be?' % target)
+
+	map_filename = locate_file(os.getcwd(), map_file)
+
+	if map_filename:
+		with open(map_filename, 'r') as f:
 			sitemap = eval(f.read())
 	elif map_file != def_map_file:
 		raise Exception('Specified map file %s does not exist!' % map_file)
 	else: sitemap = {}
 
-	if os.path.exists(conf_file):
-		with open(conf_file, 'r') as f:
+	conf_filename = locate_file(os.getcwd(), conf_file)
+
+	if conf_filename:
+		with open(conf_filename, 'r') as f:
 			conf = eval(f.read())
 	elif conf_file != def_conf_file:
 		raise Exception('Specified conf file %s does not exist!' % conf_file)
@@ -192,21 +219,12 @@ def sixtus_read_args ():
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
 	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
 
+	if texmode:
+		return sixtus_texmode(bag, texes)
+
 	if len(args) == 0:
 		sixtus_build(bag)
 		return
-
-	calls = []
-	for target in args:
-		if target == 'build':
-			calls.append(sixtus_build)
-		elif target == 'clean':
-			calls.append(sixtus_clean)
-		elif target == 'veryclean':
-			calls.append(sixtus_veryclean)
-		elif target == 'rebuild':
-			calls.append(sixtus_rebuild)
-		else: raise Exception('What target is %s supposed to be?' % target)
 
 	for call in calls: call(bag)
 

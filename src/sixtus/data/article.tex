@@ -1,0 +1,75 @@
+\documentclass[12pt, a4paper]{scrartcl}
+
+% Basic stuff
+\usepackage{polyglossia}
+\setmainlanguage{italian}%{english}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Linux Libertine O}
+
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{listings}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[normalem]{ulem}
+\usepackage{tabularx, multicol, multirow, booktabs}  % Better tables
+
+% TOC style with no dots
+\usepackage{tocstyle}
+\usetocstyle{noonewithdot}
+
+% Floating black magic
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+
+\title{@TITLE@}
+\subtitle{@SUBTITLE@}
+\author{@AUTHOR@}
+\date{}
+
+\newcommand{\takeabreak}[0]{\vspace{1em}}         % Vertical gap
+\newcommand{\grayrule}[0]{%
+	\vspace{.1em}%
+	\hspace\fill \textcolor{gray}{\rule{.5\textwidth}{1pt}} \hspace\fill%
+	\vspace{1.9em}%
+}
+\newcolumntype{Y}{>{\centering}X}                 % X column, center align
+\newcolumntype{Z}{>{\raggedleft\arraybackslash}X} % X column, right align
+
+\newenvironment{nscenter}{\parskip=0pt\par\nopagebreak\centering}{\par\noindent\ignorespacesafterend}
+
+% Framed stuff
+\newenvironment{inside}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[leftline=false,leftmargin=-1em,rightmargin=2em,
+	roundcorner=4pt,linewidth=3pt,linecolor=lightgray]{inside}
+\newenvironment{outside}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[rightline=false,leftmargin=2em,rightmargin=-1em,
+	roundcorner=4pt,linewidth=3pt,linecolor=lightgray]{outside}
+\newenvironment{halfright}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=5em,rightmargin=1em,linewidth=3pt,linecolor=gray]{halfright}
+\newenvironment{halfleft}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=1em,leftmargin=5em,linewidth=3pt,linecolor=gray]{halfleft}
+\newenvironment{miniright}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=7em,rightmargin=2em,linewidth=3pt,linecolor=lightgray]{miniright}
+\newenvironment{minileft}{\noindent\hspace*{\parindent}}{}
+\surroundwithmdframed[topline=false,leftline=false,bottomline=false,
+	leftmargin=2em,leftmargin=7em,linewidth=3pt,linecolor=lightgray]{minileft}
+
+\begin{document}
+
+	\maketitle
+	\tableofcontents
+	@CONTENT@
+
+\end{document}
