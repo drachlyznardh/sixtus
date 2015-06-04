@@ -128,7 +128,22 @@ def digest_location (source):
 
 	return source
 
-def sixtus_read_args ():
+def main_read_args ():
+	print(sys.argv)
+	if len(sys.argv) == 1:
+		return sixtus_read_args([])
+	elif sys.argv[1] in ('tex', 'textus'):
+		return textus_read_args(sys.argv[2:])
+	elif sys.argv[1] in ('six', 'sixtus'):
+		return sixtus_read_args(sys.argv[2:])
+	else:
+		return sixtus_read_args(sys.argv[1:])
+
+def textus_read_args (args):
+	print('This is Textus')
+	print('Textus out')
+
+def sixtus_read_args (args):
 
 	flags = {'stats':True}
 	time_delta = 0.5
@@ -145,7 +160,7 @@ def sixtus_read_args ():
 		'explain', 'why', 'not', 'why-not',
 		'force', 'conf', 'map', 'time']
 
-	try: optlist, args = getopt.gnu_getopt(sys.argv[1:], short_opt, long_opt)
+	try: optlist, args = getopt.gnu_getopt(args, short_opt, long_opt)
 	except getopt.GetoptError as err:
 		sixtus_help()
 		raise err
