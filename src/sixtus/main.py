@@ -13,6 +13,9 @@ from .tex import Tex
 
 from .util import convert, locate_file
 
+_def_map_file = 'map.py'
+_def_conf_file = 'conf.py'
+
 class Bag:
 	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
 		self.force = force
@@ -141,6 +144,12 @@ def main_read_args ():
 
 def textus_read_args (args):
 	print('This is Textus')
+	print(args)
+
+	map_file  = _def_map_file
+	conf_file = _def_conf_file
+
+	Tex(bag.location['runtime'], bag.conf['author']['name']).parse(texes)
 	print('Textus out')
 
 def sixtus_read_args (args):
@@ -149,11 +158,8 @@ def sixtus_read_args (args):
 	time_delta = 0.5
 	force = False
 
-	def_map_file = 'map.py'
-	def_conf_file = 'conf.py'
-
-	map_file = def_map_file
-	conf_file = def_conf_file
+	map_file  = _def_map_file
+	conf_file = _def_conf_file
 
 	short_opt = 'hvqxwnBf:m:t:'
 	long_opt = ['help', 'verbose', 'quiet', 'version',
