@@ -149,6 +149,22 @@ def textus_read_args (args):
 	map_file  = _def_map_file
 	conf_file = _def_conf_file
 
+	short_opt = 'hvqf:m:'
+	long_opt = ['help', 'verbose', 'quiet', 'version',
+		'conf', 'map']
+
+	try: optlist, args = getopt.gnu_getopt(args, short_opt, long_opt)
+	except getopt.GetoptError as err:
+		sixtus_help()
+		raise err
+
+	for key, value in optlist:
+		if key in ('-h', '--help'):
+			return sixtus_help() # textus_help()
+
+	site_map, site_conf = find_required_files(map_file, conf_file)
+	version = find_version()
+
 	Tex(bag.location['runtime'], bag.conf['author']['name']).parse(texes)
 	print('Textus out')
 
