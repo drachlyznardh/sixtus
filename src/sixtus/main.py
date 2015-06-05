@@ -129,7 +129,7 @@ def digest_location (source):
 	return source
 
 def main_read_args ():
-	print(sys.argv)
+
 	if len(sys.argv) == 1:
 		return sixtus_read_args([])
 	elif sys.argv[1] in ('tex', 'textus'):
