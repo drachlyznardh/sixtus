@@ -1,2 +1,2 @@
-from .main import sixtus_read_args as parse_args
+from .main import main_read_args as parse_args
 parse_args()

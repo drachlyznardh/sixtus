@@ -28,4 +28,23 @@ __sixtus()
 
 }
 
+__textus()
+{
+	local cur sopts lopts
+
+	sopts="-h -v"
+	lopts="--help --version --verbose"
+
+	cur="${COMP_WORDS[COMP_CWORD]}"
+
+	if [[ ${cur} == --* ]]; then
+		COMPREPLY=( $(compgen -W "${lopts}" -- ${cur}) )
+	elif [[ ${cur} == -* ]]; then
+		COMPREPLY=( $(compgen -W "${sopts}" -- ${cur}) )
+	else
+		COMPREPLY=( $(compgen -f ${cur}) )
+	fi
+}
+
 complete -F __sixtus sixtus
+complete -F __textus textus
