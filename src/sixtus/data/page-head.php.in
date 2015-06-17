@@ -10,7 +10,7 @@
 		<script src="/sixtus/panel.js"></script>
 
 		<title><?=$d[2]?></title>
-	</head><body>
+	</head><body onload="document.getElementById('highlighted').scrollIntoView()">
 		<div id="content" onclick="hide_all_sides();">
 			<div id="header">
 
