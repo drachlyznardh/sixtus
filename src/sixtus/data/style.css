@@ -14,7 +14,7 @@ strong, div.strong { font-weight: bold; }
 .spoiler:hover { color: white; }
 .wrong { text-decoration: line-through; }
 
-a.highlighted { color: black; text-shadow: 1px 1px white; }
+a#highlighted { color: black; text-shadow: 1px 1px white; }
 
 div#content {
 	position: fixed;
