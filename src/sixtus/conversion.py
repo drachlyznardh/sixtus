@@ -226,6 +226,16 @@ class Content:
 				self.error('ul# expects 1 arg %s' % args)
 			return self.do_make_list(env, 0, 0)
 
+		if env in ('title', 'stitle'):
+			size = len(args)
+			align = 'left'
+			if size > 1:
+				if args[1] in ('', 'left', 'center', 'right'):
+					align = args[1]
+			if size > 2: self.error('Too many args for %s block' % env)
+
+			return self.do_make_title_block(env, align)
+
 		if env == 'ol' or env == 'dl':
 			size = len(args)
 			margin = 0
