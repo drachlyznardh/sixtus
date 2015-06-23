@@ -29,6 +29,7 @@ class PHPContent(Content):
 
 		if self.mode == 'p': tag = 'p'
 		elif self.mode == 'li': tag = 'li'
+		elif self.mode == 'h': return ''
 
 		if align == 'p': return '<%s>' % tag
 		if align == 'c': return '<%s class="center">' % tag
@@ -37,7 +38,7 @@ class PHPContent(Content):
 	def do_stop_writing (self):
 		if self.mode == 'p': return '</p>\n'
 		if self.mode == 'li': return '</li>\n'
-		if self.mode == 'pre': return '\n'
+		if self.mode in ('pre', 'h'): return '\n'
 
 	def do_make_tid (self, href, before, text, after, tab):
 
@@ -83,6 +84,19 @@ class PHPContent(Content):
 		self.content += '<%s>' % ' '.join(output)
 		self.environment.append((self.mode, '</%s>\n' % style))
 		self.mode = 'li'
+
+	def do_make_title_block (self, level, side):
+
+		if level == 'title': style = 'h2'
+		elif level == 'stitle': style = 'h3'
+		output = [style]
+
+		if side == 'center': output.append('class="center"')
+		elif side == 'right': output.append('class="reverse"')
+
+		self.content += '<%s>' % ' '.join(output)
+		self.environment.append((self.mode, '</%s>' % style))
+		self.mode = 'h'
 
 	def do_make_floating_block (self, style, side):
 		self.content += '<div class="%s-%s-out"><div class="%s-%s-in">' % (style, side, style, side)
