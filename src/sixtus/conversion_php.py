@@ -78,7 +78,7 @@ class PHPContent(Content):
 		elif style == 'ol': output.append('ol class="roman"')
 		elif style == 'dl': output.append('ol class="decimal"')
 
-		if margin: output.append('style="margin-left;%s"' % margin)
+		if margin: output.append('style="margin-left:%s"' % margin)
 		if start: output.append('start="%s"' % start)
 
 		self.content += '<%s>' % ' '.join(output)
