@@ -104,6 +104,9 @@ def digest_location (source):
 	if 'pag' not in source:
 		raise Exception('Location for pag files was not specified')
 
+	for key, value in source.items():
+		source[key] = os.path.expanduser(os.path.expandvars(value))
+
 	pag_location = source['pag']
 
 	if 'blog' in source:

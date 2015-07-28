@@ -1,4 +1,7 @@
 
+0.10.7.29 28/07/2015
+- variable expansion in paths inside conf file
+
 0.10.7.28 01/07/2015
 - hotfix: typo on dynamic list margin fix'd
 
