@@ -1,4 +1,7 @@
 
+0.10.7.30 24/09/2015
+- exception messages highlight their target
+
 0.10.7.29 28/07/2015
 - variable expansion in paths inside conf file
 
