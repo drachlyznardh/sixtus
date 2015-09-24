@@ -29,7 +29,7 @@ class Blog(Base):
 
 		root_dir = self.loc['blog-in']
 		if not os.path.exists(root_dir):
-			raise Exception('Root dir %s does not exist' % root_dir)
+			raise Exception('Root dir "%s" does not exist' % root_dir)
 
 		month_pattern = re.compile(r'^(\d\d)\.post$')
 		year_pattern = re.compile(r'^\d{4}$')
@@ -90,7 +90,7 @@ class Blog(Base):
 			return os.path.join(self.loc['list'], stem[0], '%s.list' % stem[1])
 		if isinstance(stem, str):
 			return os.path.join(self.loc['list'], '%s.list' % stem)
-		raise Exception('What stem is %s supposed to be?' % (stem))
+		raise Exception('What stem is "%s" supposed to be?' % (stem))
 
 	def pair_to_triplet (self, stem):
 		if stem:

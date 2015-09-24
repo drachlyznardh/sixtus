@@ -129,7 +129,7 @@ class Runtime(Base):
 		elif isinstance (name, tuple):
 			out_file = os.path.join(self.loc['deploy'], 'sixtus', name[1])
 		else:
-			raise Exception('What is %s supposed to be?' % (name))
+			raise Exception('What file is "%s" supposed to be?' % (name))
 
 		if os.path.exists(out_file):
 			self.loud('Removing system file %s' % out_file)
@@ -147,7 +147,7 @@ class Runtime(Base):
 			in_file = os.path.join(self.loc['runtime'], in_name)
 			out_file = os.path.join(self.loc['deploy'], 'sixtus', out_name)
 		else:
-			raise Exception('What is %s supposed to be?' % name)
+			raise Exception('What file is "%s" supposed to be?' % name)
 
 		if self.force:
 			self.explain_why('Force rebuild of resource file %s' % out_file)
