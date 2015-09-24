@@ -69,7 +69,7 @@ class Splitter:
 		if newstate == 'meta': self.state = 0
 		elif newstate == 'page': self.state = 1
 		elif newstate == 'side': self.state = 2
-		else: raise 'What state is %s supposed to be?' % newstate
+		else: raise Exception('What state is "%s" supposed to be?' % newstate)
 
 	def parse_file (self, filename):
 
@@ -107,7 +107,7 @@ class Splitter:
 	def output_all_files (self, base, destination, naming):
 
 		if len(self.tabnames) == 0:
-			raise Exception('Not tabs in page %s' % base)
+			raise Exception('Not tabs in page "%s"' % base)
 
 		files = []
 		order = self.get_tab_order()
