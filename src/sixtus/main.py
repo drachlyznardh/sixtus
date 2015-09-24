@@ -234,7 +234,7 @@ def sixtus_read_args (args):
 			texmode = True
 		elif texmode:
 			texes.append(target)
-		else: raise Exception('What target is %s supposed to be?' % target)
+		else: raise Exception('What target is "%s" supposed to be?' % target)
 
 	map_filename = locate_file(os.getcwd(), map_file)
 
@@ -242,7 +242,7 @@ def sixtus_read_args (args):
 		with open(map_filename, 'r') as f:
 			sitemap = eval(f.read())
 	elif map_file != def_map_file:
-		raise Exception('Specified map file %s does not exist!' % map_file)
+		raise Exception('Specified map file "%s" does not exist!' % map_file)
 	else: sitemap = {}
 
 	conf_filename = locate_file(os.getcwd(), conf_file)
@@ -251,8 +251,8 @@ def sixtus_read_args (args):
 		with open(conf_filename, 'r') as f:
 			conf = eval(f.read())
 	elif conf_file != def_conf_file:
-		raise Exception('Specified conf file %s does not exist!' % conf_file)
-	else: raise Exception('Required conf file %s does not exist!' % conf_file)
+		raise Exception('Specified conf file "%s" does not exist!' % conf_file)
+	else: raise Exception('Required conf file "%s" does not exist!' % conf_file)
 
 	loc = digest_location(conf['location'])
 

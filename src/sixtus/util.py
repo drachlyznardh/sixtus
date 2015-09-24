@@ -10,7 +10,7 @@ index = re.compile(r'(.*)/Index')
 def find_all_sources (root_dir, pattern, nameonly):
 
 	if not os.path.exists(root_dir):
-		raise Exception('Root dir %s does not exist' % root_dir)
+		raise Exception('Root dir "%s" does not exist' % root_dir)
 
 	visit = ['']
 	result = []

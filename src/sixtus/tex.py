@@ -15,10 +15,10 @@ from .conversion_tex import TexContent, TexFull
 def _search_for_target_list (root):
 
 	if not os.path.exists(root):
-		raise Exception('Root dir %s does not exist' % root)
+		raise Exception('Root dir "%s" does not exist' % root)
 
 	if not os.path.isdir(root):
-		raise Exception('Root %s is not a directory' % root)
+		raise Exception('Root "%s" is not a directory' % root)
 
 	pattern = re.compile(r'.*\.pag')
 
@@ -43,7 +43,7 @@ def _tag_target_list (targets):
 
 	for each in unique(targets):
 		if not os.path.exists(each):
-			raise Exception('Target %s does not exist' % each)
+			raise Exception('Target "%s" does not exist' % each)
 		if os.path.isdir(each):
 			result.extend(_search_for_target_list(each))
 		else: result.append((1, each))
