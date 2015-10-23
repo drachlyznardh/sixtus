@@ -67,7 +67,7 @@ class Resources(Base):
 		for name in sources:
 			self.update_file(name)
 
-		self.stats('%03d resource files' % len(sources))
+		self.stats('%5d resource files' % len(sources))
 
 	def remove (self):
 
