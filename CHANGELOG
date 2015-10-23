@@ -1,4 +1,7 @@
 
+0.10.7.31 23/10/2015
+- stats numbers are now aligned on five digits
+
 0.10.7.30 24/09/2015
 - exception messages highlight their target
 

@@ -358,8 +358,8 @@ class Pages(Base):
 		for pair in jumps:
 			self.update_cat_jump_file(pair)
 
-		self.stats('%03d source pages' % sources)
-		self.stats('%03d php files' % (len(self.products) + len(jumps)))
+		self.stats('%5d source pages' % sources)
+		self.stats('%5d php files' % (len(self.products) + len(jumps)))
 
 	def remove (self):
 
