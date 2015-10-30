@@ -82,7 +82,10 @@ class PHPContent(Content):
 		if start: output.append('start="%s"' % start)
 
 		self.content += '<%s>' % ' '.join(output)
-		self.environment.append((self.mode, '</%s>\n' % style))
+		if style == 'ul':
+			self.environment.append((self.mode, '</ul>\n'))
+		else:
+			self.environment.append((self.mode, '</ol>\n'))
 		self.mode = 'li'
 
 	def do_make_title_block (self, level, side):
