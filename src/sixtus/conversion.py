@@ -220,8 +220,8 @@ class Content:
 		if env in ('inside', 'outside'): return self.do_make_side(env)
 		if env in ('code', 'em', 'strong'): return self.do_make_style_block(env)
 		if env in ('wrong', 'spoiler'): return self.do_make_decoration_block(env)
-		if env == 'pre': return self.do_make_pre_block()
-		if env == 'ul':
+		if env in ('pre'): return self.do_make_pre_block()
+		if env in ('ul'):
 			if len(args) != 1:
 				self.error('ul# expects 1 arg %s' % args)
 			return self.do_make_list(env, 0, 0)
@@ -236,7 +236,7 @@ class Content:
 
 			return self.do_make_title_block(env, align)
 
-		if env == 'ol' or env == 'dl':
+		if env in ('ol', 'dl'):
 			size = len(args)
 			margin = 0
 			start = 0
