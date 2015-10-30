@@ -1,4 +1,7 @@
 
+0.10.7.32 30/10/2015
+- dl| directive was broken, now fix'd
+
 0.10.7.31 23/10/2015
 - stats numbers are now aligned on five digits
 
