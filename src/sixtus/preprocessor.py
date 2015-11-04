@@ -7,9 +7,9 @@ import re
 
 class Preprocessor:
 
-	def __init__ (self, base):
+	def __init__ (self, base, debug):
 
-		self.debug = False
+		self.debug = debug
 
 		self.base = base
 		self.sources = []

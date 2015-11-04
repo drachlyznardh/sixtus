@@ -24,6 +24,7 @@ class Pages(Base):
 		self.sources = {}
 		self.products = []
 		self.forced = set()
+		self.debug = bag.debug
 
 	# Returns full path for a .pag file
 	def get_pag_filename (self, name):
@@ -75,7 +76,7 @@ class Pages(Base):
 
 		self.loud('Expanding source file %s' % pag_file)
 
-		self.sources[stem] = from_pag_to_Six_file(pag_file, Six_file, src_file)
+		self.sources[stem] = from_pag_to_Six_file(pag_file, Six_file, src_file, self.debug)
 
 	# Updates a .Six file when needed. Returns true if updated
 	def update_Six_file (self, stem):
