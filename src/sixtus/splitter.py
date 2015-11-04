@@ -21,6 +21,10 @@ class Splitter:
 		self.side = ''
 		self.tabname = None
 		self.tabnames = []
+		self.tabsource = ''
+		self.tabsources = {}
+		self.tabline = 0
+		self.tablines = {}
 
 	def get_tab_order (self):
 
@@ -51,6 +55,9 @@ class Splitter:
 		if self.tabname in self.tabs:
 			self.tabs[self.tabname] += self.content
 		else: self.tabs[self.tabname] = self.content
+
+		self.tabsources[self.tabname] = self.tabsource
+		self.tablines[self.tabname] = self.tabline
 
 		self.content = ''
 		self.tabnames.append(self.tabname)
@@ -91,8 +98,13 @@ class Splitter:
 		if c == 'tab':
 			self.update_tab()
 			self.tabname = token[1]
+			self.tabsource = self.source
+			self.tabline = self.lineno
 		elif c == 'start': self.update_state(token[1])
 		elif c == 'jump': self.jump = token[1]
+		elif c == 'source':
+			self.source = token[1]
+			self.lineno = token[2]
 		else: self.append(line)
 
 	def output_single_jump_file (self, base, destination, naming):
@@ -139,6 +151,7 @@ class Splitter:
 				nexttab = convert(tabnext[name])
 				varmeta += 'tabnext|/%s/|%s\n' % (os.path.join(base, nexttab), nexttab)
 			varmeta += 'side|../side.php\n'
+			varmeta += 'source|%s|%s\n' % (self.tabsources[name], self.tablines[name])
 
 			if naming:
 				tab_path = os.path.join(destination, convert(name), 'page.six')
