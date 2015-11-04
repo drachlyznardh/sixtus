@@ -282,12 +282,12 @@ class Full:
 
 		if self.debug: self.message('Parsing file %s' % filename)
 
-		self.filename = filename
-		self.lineno = 0
+		self.helper.filename = filename
+		self.helper.lineno = 0
 
 		f = open(filename, 'r')
 		for line in f:
-			self.lineno += 1
+			self.helper.lineno += 1
 			self.parse_line(line.strip())
 
 		return self
@@ -307,8 +307,6 @@ class Full:
 		command = token[0]
 
 		if command == 'source':
-			self.filename = token[1]
-			self.lineno = int(token[2])
 			self.helper.filename = token[1]
 			self.helper.lineno = int(token[2])
 			return
