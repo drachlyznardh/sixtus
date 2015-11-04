@@ -23,6 +23,7 @@ class Splitter:
 		self.tabnames = []
 		self.tabsource = ''
 		self.tabsources = {}
+		self.lineno = 0
 		self.tabline = 0
 		self.tablines = {}
 
@@ -88,6 +89,8 @@ class Splitter:
 
 	def parse_line (self, line):
 
+		self.lineno += 1
+
 		if '|' not in line:
 			self.append(line)
 			return
@@ -104,7 +107,7 @@ class Splitter:
 		elif c == 'jump': self.jump = token[1]
 		elif c == 'source':
 			self.source = token[1]
-			self.lineno = token[2]
+			self.lineno = int(token[2])
 		else: self.append(line)
 
 	def output_single_jump_file (self, base, destination, naming):
