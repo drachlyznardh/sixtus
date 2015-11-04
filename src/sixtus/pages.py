@@ -24,6 +24,7 @@ class Pages(Base):
 		self.sources = {}
 		self.products = []
 		self.forced = set()
+		self.debug = bag.debug
 
 	# Returns full path for a .pag file
 	def get_pag_filename (self, name):
@@ -75,7 +76,7 @@ class Pages(Base):
 
 		self.loud('Expanding source file %s' % pag_file)
 
-		self.sources[stem] = from_pag_to_Six_file(pag_file, Six_file, src_file)
+		self.sources[stem] = from_pag_to_Six_file(pag_file, Six_file, src_file, self.debug)
 
 	# Updates a .Six file when needed. Returns true if updated
 	def update_Six_file (self, stem):
@@ -191,7 +192,7 @@ class Pages(Base):
 
 		self.loud('Splitting Six file %s' % Six_file)
 
-		from_Six_to_six_files(Six_file, base, destination, True)
+		from_Six_to_six_files(Six_file, base, destination, True, self.debug)
 
 	def update_six_file (self, stem):
 
@@ -229,13 +230,13 @@ class Pages(Base):
 
 		if stem[0] == 0:
 			self.loud('Generating page file %s' % php_file)
-			from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file, self.debug)
 		elif stem[0] == 1:
 			self.loud('Generating jump file %s' % php_file)
-			from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file, self.debug)
 		elif stem[0] == 2:
 			self.loud('Generating side file %s' % php_file)
-			from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file, self.debug)
 
 	def update_php_file (self, stem):
 

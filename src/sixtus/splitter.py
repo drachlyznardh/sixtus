@@ -8,9 +8,9 @@ from .util import assert_dir, convert
 
 class Splitter:
 
-	def __init__ (self):
+	def __init__ (self, debug):
 
-		self.debug = False
+		self.debug = debug
 
 		self.state = 0
 

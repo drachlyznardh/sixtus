@@ -87,7 +87,11 @@ p,li { text-align: justify }
 .reverse { text-align: right; }
 .center { text-align: center; }
 
-h2, h3 { border-bottom: 2px solid #111111; margin: .3em 0em; padding: 0em .3em; }
+ul, ol { margin: 0em; }
+
+h2, div.title, h3, div.stitle { border-bottom: 2px solid #111111; margin: .3em 0em; padding: 0em .3em; }
+div.title p { font-weight: bold; font-size: 1.5em; }
+div.stitle p { font-weight: bold; font-size: 1.2em; }
 
 div.inside, div.outside,
 div#footnote, div#location, div#subtitle
