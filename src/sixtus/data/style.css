@@ -87,6 +87,8 @@ p,li { text-align: justify }
 .reverse { text-align: right; }
 .center { text-align: center; }
 
+ul, ol { margin: 0em; }
+
 h2, h3 { border-bottom: 2px solid #111111; margin: .3em 0em; padding: 0em .3em; }
 
 div.inside, div.outside,
