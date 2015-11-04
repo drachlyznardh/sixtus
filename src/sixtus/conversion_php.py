@@ -90,6 +90,12 @@ class PHPContent(Content):
 
 	def do_make_title_block (self, level, side):
 
+		if side not in ('center', 'right'): side = 'left'
+		self.content += '<div class="%s %s">' % (level, side)
+		self.environment.append((self.mode, '</div>'))
+		self.mode = 'h'
+		return
+
 		if level == 'title': style = 'h2'
 		elif level == 'stitle': style = 'h3'
 		output = [style]
