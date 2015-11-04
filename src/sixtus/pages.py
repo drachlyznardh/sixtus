@@ -192,7 +192,7 @@ class Pages(Base):
 
 		self.loud('Splitting Six file %s' % Six_file)
 
-		from_Six_to_six_files(Six_file, base, destination, True)
+		from_Six_to_six_files(Six_file, base, destination, True, self.debug)
 
 	def update_six_file (self, stem):
 

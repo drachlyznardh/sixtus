@@ -30,6 +30,8 @@ class Preprocessor:
 
 	def parse_file (self, filename):
 
+		if self.debug: print('Preproccessor: now parsing file %s' % filename)
+
 		self.filename = filename
 		self.sources.append(filename)
 		self.lineno = 0
