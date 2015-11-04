@@ -229,13 +229,13 @@ class Pages(Base):
 
 		if stem[0] == 0:
 			self.loud('Generating page file %s' % php_file)
-			from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_page_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file, self.debug)
 		elif stem[0] == 1:
 			self.loud('Generating jump file %s' % php_file)
-			from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_jump_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file, self.debug)
 		elif stem[0] == 2:
 			self.loud('Generating side file %s' % php_file)
-			from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file)
+			from_side_six_to_php_file(os.path.dirname(stem[1]), six_file, php_file, self.debug)
 
 	def update_php_file (self, stem):
 

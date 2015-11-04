@@ -9,9 +9,9 @@ from .util import convert
 
 class Content:
 
-	def __init__ (self, page_location):
+	def __init__ (self, page_location, debug):
 
-		self.debug = False
+		self.debug = debug
 
 		self.environment = []
 		self.writing     = False
@@ -273,7 +273,7 @@ class Full:
 		self.page_location = page_location
 		self.helper = helper
 
-		self.debug = False
+		self.debug = self.helper.debug
 		self.meta = {}
 		self.state = 'meta'
 
@@ -319,6 +319,8 @@ class Full:
 		if command == 'source':
 			self.filename = token[1]
 			self.lineno = int(token[2])
+			self.helper.filename = token[1]
+			self.helper.lineno = int(token[2])
 			return
 
 		if command == 'start':

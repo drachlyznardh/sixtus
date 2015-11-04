@@ -8,9 +8,9 @@ from .conversion import Content, Full
 
 class PHPContent(Content):
 
-	def __init__ (self, page_location):
+	def __init__ (self, page_location, debug):
 
-		Content.__init__(self, page_location)
+		Content.__init__(self, page_location, debug)
 
 	def do_make_title (self, grade, direction, content):
 
@@ -88,10 +88,9 @@ class PHPContent(Content):
 			self.environment.append((self.mode, '</ol>\n'))
 		self.mode = 'li'
 
-	def do_make_title_block (self, level, side):
+	def do_make_title_block (self, level):
 
-		if side not in ('center', 'right'): side = 'left'
-		self.content += '<div class="%s %s">' % (level, side)
+		self.content += '<div class="%s">' % level
 		self.environment.append((self.mode, '</div>'))
 		self.mode = 'h'
 		return
@@ -133,9 +132,9 @@ class PHPContent(Content):
 
 class PHPFull(Full):
 
-	def __init__ (self, page_location):
+	def __init__ (self, page_location, debug):
 
-		Full.__init__(self, page_location, PHPContent(page_location))
+		Full.__init__(self, page_location, PHPContent(page_location, debug))
 
 	def output_page_file (self, filename):
 
