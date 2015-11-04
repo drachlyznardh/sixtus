@@ -27,10 +27,12 @@ class Content:
 		self.lineno   = 0
 
 	def error (self, message):
-
-		line = '\nContentConverter: %s @line %d: %s' % (self.filename, self.lineno, message)
-		print(line, file=sys.stderr)
+		self.message(message)
 		sys.exit(1)
+
+	def message (self, line):
+		print('ContentConverter: %s @line %d: %s' % (self.filename,
+			self.lineno, line))
 
 	def escape_line (self, line):
 		return line
@@ -40,8 +42,7 @@ class Content:
 		line = self.escape_line(line)
 		self.lineno += 1
 
-		if self.debug:
-			print('Parse_Line (%s)' % (line), file=sys.stderr)
+		if self.debug: self.message('Parse_Line (%s)' % line)
 
 		if '|' not in line:
 			self.append_content(line);
@@ -65,8 +66,7 @@ class Content:
 
 	def parse_content (self, command, args):
 
-		if self.debug:
-			print('Parse_Content (%s, %s)' % (command, args), file=sys.stderr)
+		if self.debug: self.message('Parse_Content (%s, %s)' % (command, args))
 
 		c, opt = self.split_at_at(command)
 
@@ -176,8 +176,7 @@ class Content:
 
 	def make_link (self, c, args):
 
-		if self.debug:
-			print('Make_Link (%s)' % args, file=sys.stderr)
+		if self.debug: self.message('Make_Link (%s)' % args)
 
 		if len(args) == 2: href = args[0]
 		else: href = '%s#%s' % (args[0], convert(args[2]))
@@ -281,15 +280,13 @@ class Full:
 		self.side = ''
 		self.side_location = False
 
-	def error (self, message):
-
-		print('\nFullConverter: %s @line %d: %s' % (self.filename, self.lineno, message), file=sys.stderr)
-		sys.exit(1)
+	def message (self, message):
+		print('FullConverter: %s @line %d: %s' % (self.helper.filename,
+				self.helper.lineno, message))
 
 	def parse_file (self, filename):
 
-		if self.debug:
-			print('Parsing file %s' % filename, file=sys.stderr)
+		if self.debug: self.message('Parsing file %s' % filename)
 
 		self.filename = filename
 		self.lineno = 0
@@ -305,8 +302,7 @@ class Full:
 
 		line = self.helper.escape_line(line)
 
-		if self.debug:
-			print('Parse_Line (%s)' % (line), file=sys.stderr)
+		if self.debug: self.message('Parse_Line (%s)' % (line))
 
 		if '|' not in line:
 			if self.state == 'meta': pass
@@ -335,8 +331,7 @@ class Full:
 
 	def parse_meta (self, c, args):
 
-		if self.debug:
-			print('Parse_Meta (%s, %s)' % (c, args), file=sys.stderr)
+		if self.debug: self.message('Parse_Meta (%s, %s)' % (c, args))
 
 		if c == 'jump':
 			self.jump = args[0]
