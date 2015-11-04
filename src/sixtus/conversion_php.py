@@ -29,7 +29,7 @@ class PHPContent(Content):
 
 		if self.mode == 'p': tag = 'p'
 		elif self.mode == 'li': tag = 'li'
-		elif self.mode == 'h': return ''
+		elif self.mode == 'h': tag = 'p'
 
 		if align == 'p': return '<%s>' % tag
 		if align == 'c': return '<%s class="center">' % tag
