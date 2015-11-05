@@ -34,6 +34,13 @@ class Content:
 		print('ContentConverter: %s @line %d: %s' % (self.filename,
 			self.lineno, line))
 
+	def set_fileinfo (self, filename, lineno):
+		self.filename = filename
+		self.lineno = lineno
+
+	def bump_lineno (self):
+		self.lineno += 1
+
 	def escape_line (self, line):
 		return line
 
@@ -282,12 +289,11 @@ class Full:
 
 		if self.debug: self.message('Parsing file %s' % filename)
 
-		self.helper.filename = filename
-		self.helper.lineno = 0
+		self.helper.set_fileinfo(filename, 0)
 
 		f = open(filename, 'r')
 		for line in f:
-			self.helper.lineno += 1
+			self.helper.bump_lineno()
 			self.parse_line(line.strip())
 
 		return self

@@ -304,7 +304,7 @@ class Pages(Base):
 
 		self.loud('Generating jump file %s' % jump_file)
 		assert_dir(jump_file)
-		from_jump_target_to_php_file(pair[1], jump_file)
+		from_jump_target_to_php_file(pair[1], jump_file, self.debug)
 
 	def update_cat_jump_file (self, pair):
 
