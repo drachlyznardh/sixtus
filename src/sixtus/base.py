@@ -16,6 +16,7 @@ class Base:
 		self.loc = bag.location
 		self.conf = bag.conf
 		self.version = bag.version
+		self.debug = bag.debug
 
 	def loud (self, message):
 		if self.flags.get('loud', False):

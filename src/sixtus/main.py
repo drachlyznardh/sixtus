@@ -17,7 +17,10 @@ _def_map_file = 'map.py'
 _def_conf_file = 'conf.py'
 
 class Bag:
-	def __init__ (self, force, flags, time_delta, sitemap, location, conf, version):
+	def __init__ (self,
+			force, flags, time_delta,
+			sitemap, location, conf,
+			version, debug):
 		self.force = force
 		self.flags = flags
 		self.time_delta = time_delta
@@ -25,6 +28,7 @@ class Bag:
 		self.location = location
 		self.conf = conf
 		self.version = version
+		self.debug = debug
 
 def sixtus_build (bag):
 
@@ -94,6 +98,7 @@ def sixtus_help ():
 	print(' -x --explain       : shows explanation for each operation')
 	print(' -w --why           : shows explanation on out-of-date files')
 	print(' -n --not --why-not : shows explanation on up-to-date files')
+	print(' -d --debug         : shows all the messages')
 
 def sixtus_version ():
 	__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
@@ -176,14 +181,15 @@ def sixtus_read_args (args):
 	flags = {'stats':True}
 	time_delta = 0.5
 	force = False
+	debug = False
 
 	map_file  = _def_map_file
 	conf_file = _def_conf_file
 
-	short_opt = 'hvqxwnBf:m:t:'
+	short_opt = 'hvqxwnBf:m:t:d'
 	long_opt = ['help', 'verbose', 'quiet', 'version',
 		'explain', 'why', 'not', 'why-not',
-		'force', 'conf', 'map', 'time']
+		'force', 'conf', 'map', 'time', 'debug']
 
 	try: optlist, args = getopt.gnu_getopt(args, short_opt, long_opt)
 	except getopt.GetoptError as err:
@@ -217,6 +223,8 @@ def sixtus_read_args (args):
 			conf_file = value
 		elif key in ('-t', '--time'):
 			time_delta = float(value)
+		elif key in ('-d', '--debug'):
+			debug = True
 
 	texmode = False
 	calls = []
@@ -257,7 +265,7 @@ def sixtus_read_args (args):
 	loc = digest_location(conf['location'])
 
 	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
-	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version)
+	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version, debug)
 
 	if texmode:
 		return sixtus_texmode(bag, texes)

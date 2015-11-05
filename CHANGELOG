@@ -1,4 +1,7 @@
 
+0.10.8.33 05/11/2015
+- New title blocks, CSS fixes, debug messages fixes
+
 0.10.7.32 30/10/2015
 - dl| directive was broken, now fix'd
 

@@ -7,9 +7,9 @@ import re
 
 class Preprocessor:
 
-	def __init__ (self, base):
+	def __init__ (self, base, debug):
 
-		self.debug = False
+		self.debug = debug
 
 		self.base = base
 		self.sources = []
@@ -29,6 +29,8 @@ class Preprocessor:
 		return line
 
 	def parse_file (self, filename):
+
+		if self.debug: print('Preproccessor: now parsing file %s' % filename)
 
 		self.filename = filename
 		self.sources.append(filename)
