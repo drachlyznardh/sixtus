@@ -76,7 +76,9 @@ class Splitter:
 
 		if newstate == 'meta': self.state = 0
 		elif newstate == 'page': self.state = 1
-		elif newstate == 'side': self.state = 2
+		elif newstate == 'side':
+			self.state = 2
+			self.side += 'source|%s|%d\n' % (self.source, self.lineno)
 		else: raise Exception('What state is "%s" supposed to be?' % newstate)
 
 	def parse_file (self, filename):
