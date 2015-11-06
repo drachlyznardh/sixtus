@@ -83,10 +83,6 @@ class Preprocessor:
 			content = self.re_close_style.sub(r'\1', line)
 			after = self.re_close_style.sub(r'\2', line)
 
-			print('   Line is [%s]' % line)
-			print('Content is [%s]' % content)
-			print('  After is [%s]' % after)
-
 			self.style_content.append(content)
 			self.content.append('%s|%s' % (self.style_command,
 				' '.join(self.style_content)))
