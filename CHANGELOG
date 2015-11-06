@@ -1,4 +1,7 @@
 
+0.10.9.34 06/11/2015
+- Forgot to remove some debug messages
+
 0.10.9.33 06/11/2015
 - Inline style is now supported
 
