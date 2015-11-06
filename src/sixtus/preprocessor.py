@@ -110,16 +110,17 @@ class Preprocessor:
 			content = self.re_open_close_style.sub(r'\3', line)
 			after = self.re_open_close_style.sub(r'\4', line)
 
-			self.content.append(before)
+			if before: self.content.append(before)
 			self.content.append('%s|%s' % (command, content))
-			line = after
+			if after: line = after
+			else: return
 
 		if self.re_open_style.match(line):
 			before = self.re_open_style.sub(r'\1', line)
 			command = self.re_open_style.sub(r'\2', line)
 			content = self.re_open_style.sub(r'\3', line)
 
-			self.content.append(before)
+			if before: self.content.append(before)
 			self.style_command = command
 			self.style_content.append(content)
 			self.style_is_active = True
