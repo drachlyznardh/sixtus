@@ -79,6 +79,22 @@ class Preprocessor:
 			self.content.append('')
 			return
 
+		if self.style_is_active and self.re_close_style.match(line):
+			content = self.re_close_style.sub(r'\1', line)
+			after = self.re_close_style.sub(r'\2', line)
+
+			print('   Line is [%s]' % line)
+			print('Content is [%s]' % content)
+			print('  After is [%s]' % after)
+
+			self.style_content.append(content)
+			self.content.append('%s|%s' % (self.style_command,
+				' '.join(self.style_content)))
+
+			self.style_content = []
+			self.style_is_active = False
+			line = after
+
 		if '|' not in line: # Plain content
 			if self.style_is_active: self.style_content += line
 			else: self.content.append(line)
@@ -92,17 +108,6 @@ class Preprocessor:
 			self.filename, self.lineno = self.inclusion.pop()
 			self.content.append('source|%s|%d' % (self.filename, self.lineno))
 			return
-
-		if self.style_is_active and self.re_close_style.match(line):
-			content = self.re_close_style.sub(r'\1', line)
-			remainder = self.re_close_style.sub(r'\2', line)
-			self.style_content.append(content)
-			self.content.append('%s|%s' % (self.style_command,
-				' '.join(self.style_content)))
-
-			self.style_content = []
-			line = remainder
-			self.style_is_active = False
 
 		while self.re_open_close_style.match(line):
 			before = self.re_open_close_style.sub(r'\1', line)
