@@ -20,6 +20,13 @@ class Preprocessor:
 		self.content = []
 		self.re_require = re.compile(r'^require\|(.*)')
 		self.extract = r'\1'
+		self.re_open_close_style = re.compile(r'^([^{]*){([^\|]*)\|([^}]*)}(.*)$')
+		self.re_open_style = re.compile(r'^([^{]*){([^\|]*)\|(.*)$')
+		self.re_close_style = re.compile(r'^([^}]*)}(.*)$')
+
+		self.style_is_active = False
+		self.style_command = ''
+		self.style_content = []
 
 	def clean_line (self, line):
 
@@ -72,8 +79,26 @@ class Preprocessor:
 			self.content.append('')
 			return
 
+		if self.style_is_active and self.re_close_style.match(line):
+			content = self.re_close_style.sub(r'\1', line)
+			after = self.re_close_style.sub(r'\2', line)
+
+			print('   Line is [%s]' % line)
+			print('Content is [%s]' % content)
+			print('  After is [%s]' % after)
+
+			self.style_content.append(content)
+			self.content.append('%s|%s' % (self.style_command,
+				' '.join(self.style_content)))
+
+			self.style_content = []
+			self.style_is_active = False
+			if after: line = after
+			else: return
+
 		if '|' not in line: # Plain content
-			self.content.append(line)
+			if self.style_is_active: self.style_content.append(line)
+			else: self.content.append(line)
 			return
 
 		if self.re_require.match(line): # Require directive
@@ -83,6 +108,28 @@ class Preprocessor:
 			self.parse_file(target_file)
 			self.filename, self.lineno = self.inclusion.pop()
 			self.content.append('source|%s|%d' % (self.filename, self.lineno))
+			return
+
+		while self.re_open_close_style.match(line):
+			before = self.re_open_close_style.sub(r'\1', line)
+			command = self.re_open_close_style.sub(r'\2', line)
+			content = self.re_open_close_style.sub(r'\3', line)
+			after = self.re_open_close_style.sub(r'\4', line)
+
+			if before: self.content.append(before)
+			self.content.append('%s|%s' % (command, content))
+			if after: line = after
+			else: return
+
+		if self.re_open_style.match(line):
+			before = self.re_open_style.sub(r'\1', line)
+			command = self.re_open_style.sub(r'\2', line)
+			content = self.re_open_style.sub(r'\3', line)
+
+			if before: self.content.append(before)
+			self.style_command = command
+			self.style_content.append(content)
+			self.style_is_active = True
 			return
 
 		self.content.append(line) # Ordinany command
