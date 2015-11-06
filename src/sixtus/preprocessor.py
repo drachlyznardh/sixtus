@@ -93,10 +93,11 @@ class Preprocessor:
 
 			self.style_content = []
 			self.style_is_active = False
-			line = after
+			if after: line = after
+			else: return
 
 		if '|' not in line: # Plain content
-			if self.style_is_active: self.style_content += line
+			if self.style_is_active: self.style_content.append(line)
 			else: self.content.append(line)
 			return
 
