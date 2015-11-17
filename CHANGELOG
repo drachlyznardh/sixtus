@@ -1,4 +1,7 @@
 
+0.10.9.35 06/11/2015
+- Consecutive style directives introducing empty lines, now fix'd
+
 0.10.9.34 06/11/2015
 - Forgot to remove some debug messages
 
