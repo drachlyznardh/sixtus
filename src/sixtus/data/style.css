@@ -60,14 +60,14 @@ div#right-side-icon, div#left-side-icon {
 div#left-side-icon { left: 0; }
 div#right-side-icon { left: 92%; }
 
-div#right-side-panel div.content {
+div.sliding-content {
 	max-height: calc(100% - 7em);
 	overflow: auto;
 	margin: 0em;
 	padding: .3em;
 }
 
-div.relationship, div.content { margin: 0em 1em; }
+div.content { margin: 1em; }
 a { color: #ffffff; text-decoration: none; text-shadow: 3px 3px black; }
 div.spacer { margin: 1em; }
 

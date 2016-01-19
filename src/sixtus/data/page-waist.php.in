@@ -14,8 +14,8 @@
 		</div>
 		<div id="right-side-panel">
 			<div id="right-back"><a href="#" onclick="hide_right_side();">[ &gt; ]</a></div>
-			<div class="relationship"><?php
+			<div class="content"><?php
 	if($d[4])echo('@SIXTUS_PAGE_PREV@');
 	if(count($cats))echo('<p class="center">/ '.join(' / ',$cats).' /</p>');
 	if($d[5])echo('@SIXTUS_PAGE_NEXT@');
-?></div><!--br/--><div class="content">
+?></div><!--br/--><div class="sliding-content">
