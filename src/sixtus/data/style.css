@@ -25,7 +25,7 @@ div#content {
 
 div#left-side-panel, div#right-side-panel {
 	display: none;
-	background-color: red; #222222;
+	background-color: #222222;
 	position: fixed;
 	overflow: auto;
 	width: 92%;
