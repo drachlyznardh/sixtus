@@ -60,7 +60,7 @@ div#right-side-icon, div#left-side-icon {
 div#left-side-icon { left: 0; }
 div#right-side-icon { left: 92%; }
 
-div.sliding-content {
+div#sliding-content {
 	max-height: calc(100% - 7em);
 	overflow: auto;
 	margin: 0em;
