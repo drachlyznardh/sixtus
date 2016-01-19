@@ -29,6 +29,7 @@ div#left-side-panel, div#right-side-panel {
 	position: fixed;
 	overflow: auto;
 	width: 92%;
+	height: 100%;
 	max-height: 100%;
 	top: 0;
 	border-bottom: 1px solid white;

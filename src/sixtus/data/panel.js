@@ -36,16 +36,10 @@ var makeTidVisible = function () {
 function adjustHeight () {
 	var relation = document.getElementById('relations');
 	var relstyle = window.getComputedStyle(relation);
-	var h = document.getElementById('right-side-panel').clientHeight
 	var sliding = document.getElementById('sliding-content');
 	var slistyle = window.getComputedStyle(sliding);
-	h -= relation.offsetHeight + parseFloat(relstyle.marginTop) + parseFloat(relstyle.marginBottom);
+	var h = document.getElementById('right-side-panel').clientHeight * 0.98 - relation.offsetHeight;
+	h -= parseFloat(relstyle.marginTop) + parseFloat(relstyle.marginBottom) + parseFloat(relstyle.paddingTop) + parseFloat(relstyle.paddingBottom);;
 	h -= parseFloat(slistyle.marginTop) + parseFloat(slistyle.marginBottom) + parseFloat(slistyle.paddingTop) + parseFloat(slistyle.paddingBottom);
-	//alert(style);
-	//alert(document.getElementById('right-side-panel').clientHeight);
-	//alert(relation.offsetHeight);
-	//alert(style.marginTop);
-	//alert(style.marginBottom);
-	//alert(h);
 	sliding.style.height = h.toString().concat('px');
 }
