@@ -11,8 +11,6 @@
 
 		<title><?=$d[2]?></title>
 	</head><body onload="
-		//var h = document.getElementById('right-side-panel').offsetHeight-document.getElementById('relations').offsetHeight;
-		//document.getElementById('sliding-content').style.height=h.toString().concat('px');
 		document.getElementById('highlighted').scrollIntoView();
 		adjustHeight();
 	">
