@@ -25,11 +25,11 @@ div#content {
 
 div#left-side-panel, div#right-side-panel {
 	display: none;
-	background-color: #222222;
+	background-color: red; #222222;
 	position: fixed;
 	overflow: auto;
 	width: 92%;
-	max-height: 98%;
+	max-height: 100%;
 	top: 0;
 	border-bottom: 1px solid white;
 }
@@ -45,7 +45,6 @@ div#right-side-panel {
 	border-left: 1px solid white;
 	border-bottom-left-radius: 3px;
 	overflow: hidden;
-	height: 100%;
 }
 
 div#right-side-icon, div#right-back { text-align: right; }

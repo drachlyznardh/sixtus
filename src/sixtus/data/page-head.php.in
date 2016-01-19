@@ -10,7 +10,12 @@
 		<script src="/sixtus/panel.js"></script>
 
 		<title><?=$d[2]?></title>
-	</head><body onload="document.getElementById('highlighted').scrollIntoView()">
+	</head><body onload="
+		//var h = document.getElementById('right-side-panel').offsetHeight-document.getElementById('relations').offsetHeight;
+		//document.getElementById('sliding-content').style.height=h.toString().concat('px');
+		document.getElementById('highlighted').scrollIntoView();
+		adjustHeight();
+	">
 		<div id="content" onclick="hide_all_sides();">
 			<div id="header">
 
