@@ -32,3 +32,14 @@ var makeTidVisible = function () {
 	if (rtid > rdiv) div.scrollTop = rtid - rdiv;
 	return;
 }
+
+function adjustHeight () {
+	var relation = document.getElementById('relations');
+	var relstyle = window.getComputedStyle(relation);
+	var sliding = document.getElementById('sliding-content');
+	var slistyle = window.getComputedStyle(sliding);
+	var h = document.getElementById('right-side-panel').clientHeight * 0.98 - relation.offsetHeight;
+	h -= parseFloat(relstyle.marginTop) + parseFloat(relstyle.marginBottom) + parseFloat(relstyle.paddingTop) + parseFloat(relstyle.paddingBottom);;
+	h -= parseFloat(slistyle.marginTop) + parseFloat(slistyle.marginBottom) + parseFloat(slistyle.paddingTop) + parseFloat(slistyle.paddingBottom);
+	sliding.style.height = h.toString().concat('px');
+}
