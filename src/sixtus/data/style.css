@@ -127,6 +127,9 @@ div.inside {
 div.outside { margin: 0em -1em 0em 2em; }
 div.inside { margin: 0 2em 0 -1em; }
 
+div#sliding-content > div.outside { margin-right: 0em; }
+div#sliding-content > div.inside { margin-left: 0em; }
+
 div.outside, div.inside,
 div.mini-left-out, div.mini-right-out,
 div.half-left-out, div.half-right-out
