@@ -1,4 +1,7 @@
 
+0.10.9.36 20/01/2016
+- Relations div is now fixed on top
+
 0.10.9.35 06/11/2015
 - Consecutive style directives introducing empty lines, now fix'd
 
