@@ -39,8 +39,11 @@ class Poster:
 		output += '%s\n' % '\nbr|\n'.join(self.page)
 
 		output += 'start|side\n'
-		output += 'stitle|%s\n' % self.title
-		output += 'c|%s' % '\n/\n'.join(['link||%s|%s' % (i,i) for i in self.side])
+		output += 'stitle@center|%s\n' % self.title
+
+		lustra = {}
+		for e in self.side: lustra.setdefault(int(e) / 5, []).append(e)
+		output += '%s' % '\n'.join(['c|%s' % '\n\t/\n\t'.join(['link||%s|%s' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
 
 		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
