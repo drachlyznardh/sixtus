@@ -42,6 +42,23 @@ class Poster:
 		output += 'stitle|%s\n' % self.title
 		output += 'c|%s' % '\n/\n'.join(['link||%s|%s' % (i,i) for i in self.side])
 
+		lustra = {}
+		for e in self.side: lustra[int(e) / 5] = []
+		for e in self.side: lustra[int(e) / 5].append(e)
+
+
+		output += '\nbr|\n'
+		output += '%s' % sorted(lustra.items())
+		output += '\nbr|\n'
+		output += '%s' % '\n\n'.join(['c|%s' % ' / '.join([e for e in v]) for k, v in sorted(lustra.items())])
+		output += '\nbr|\n'
+		output += '%s' % '\n\n'.join(['c|%s' % '\n/\n'.join(['link||%s|%s' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
+		output += '\nbr|\n'
+		output += '%s' % '\n'.join(['c|%s' % '/\n'.join(['{link||%s|%s}' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
+		output += '\nbr|\n'
+		output += '\n'.join(['c|%s' % '/'.join(['link||%s|%s' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
+		output += '\nbr|\n'
+
 		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
 			print(output, file=f)
