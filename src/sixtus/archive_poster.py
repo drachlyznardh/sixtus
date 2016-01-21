@@ -44,19 +44,7 @@ class Poster:
 
 		lustra = {}
 		for e in self.side: lustra.setdefault(int(e) / 5, []).append(e)
-
-
-		output += '\nbr|\n'
-		output += '%s' % sorted(lustra.items())
-		output += '\nbr|\n'
-		output += '%s' % '\n\n'.join(['c|%s' % ' / '.join([e for e in v]) for k, v in sorted(lustra.items())])
-		output += '\nbr|\n'
 		output += '%s' % '\n\n'.join(['c|%s' % '\n/\n'.join(['link||%s|%s' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
-		output += '\nbr|\n'
-		output += '%s' % '\n'.join(['c|%s' % '/\n'.join(['{link||%s|%s}' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
-		output += '\nbr|\n'
-		output += '\n'.join(['c|%s' % '/'.join(['link||%s|%s' % (e, e) for e in v]) for k, v in sorted(lustra.items())])
-		output += '\nbr|\n'
 
 		assert_dir(pag_file)
 		with open(pag_file, 'w') as f:
