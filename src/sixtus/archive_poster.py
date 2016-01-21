@@ -39,7 +39,7 @@ class Poster:
 		output += '%s\n' % '\nbr|\n'.join(self.page)
 
 		output += 'start|side\n'
-		output += 'stitle|%s\n' % self.title
+		output += 'stitle@center|%s\n' % self.title
 
 		lustra = {}
 		for e in self.side: lustra.setdefault(int(e) / 5, []).append(e)
