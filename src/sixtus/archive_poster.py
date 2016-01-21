@@ -43,8 +43,7 @@ class Poster:
 		output += 'c|%s' % '\n/\n'.join(['link||%s|%s' % (i,i) for i in self.side])
 
 		lustra = {}
-		for e in self.side: lustra[int(e) / 5] = []
-		for e in self.side: lustra[int(e) / 5].append(e)
+		for e in self.side: lustra.setdefault(int(e) / 5, []).append(e)
 
 
 		output += '\nbr|\n'
