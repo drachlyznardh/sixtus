@@ -336,16 +336,16 @@ class Full:
 		elif c == 'side':
 			self.side_location = args[0]
 		elif c == 'title':
-			self.meta['title'] = args[0]
-			if len(args) == 2: self.meta['subtitle'] = args[1]
+			self.meta['title'] = args[0].replace('$', '\$')
+			if len(args) == 2: self.meta['subtitle'] = args[1].replace('$', '\$')
 		elif c == 'short':
-			self.meta['short'] = args[0]
+			self.meta['short'] = args[0].replace('$', '\$')
 		elif c == 'subtitle':
-			self.meta['subtitle'] = args[0]
+			self.meta['subtitle'] = args[0].replace('$', '\$')
 		elif c == 'prev' or c == 'next':
 			size = len(args)
 			if size == 1 and args[0] == '': self.meta[c] = False
-			elif size == 2: self.meta[c] = (args[0], args[1])
+			elif size == 2: self.meta[c] = (args[0], args[1].replace('$', '\$'))
 			else: self.error('Parse_Meta: %s| expects 0 or 2 arguments %s' % (args[0], args))
 		elif c == 'tabprev':
 			self.meta['tabprev'] = (args[0], args[1])
