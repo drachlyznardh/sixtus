@@ -1,4 +1,7 @@
 
+0.10.9.38 29/03/2017
+- Page's meta attribute can now contain the $ sign
+
 0.10.9.37 21/01/2016
 - Years in the archive are now grouped by lustrum
 
