@@ -1,4 +1,7 @@
 
+0.10.9.39 07/06/2017
+- Fixing foot by removing excessive </div> tag
+
 0.10.9.38 29/03/2017
 - Page's meta attribute can now contain the $ sign
 
