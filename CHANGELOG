@@ -1,4 +1,7 @@
 
+0.10.9.40 12/10/2017
+- Braces can now appear in commands using @LBRACE@ and @RBRACE@
+
 0.10.9.39 07/06/2017
 - Fixing foot by removing excessive </div> tag
 
