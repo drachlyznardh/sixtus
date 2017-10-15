@@ -33,6 +33,8 @@ class Preprocessor:
 		line = line.strip()
 		line = line.replace('@PIPE@','&#124;')
 		line = line.replace('@AT@','&#64;')
+		line = line.replace('@LBRACE@','&#123;')
+		line = line.replace('@RBRACE@','&#125;')
 		return line
 
 	def parse_file (self, filename):
