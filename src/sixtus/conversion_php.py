@@ -174,7 +174,7 @@ class PHPFull(Full):
 		if 'tabself' in self.meta: output += '"%s"' % self.meta['tabself']
 		else: output += 'false'
 		output += ');'
-		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."sixtus/";'
+		output += '$sixtus=$_SERVER["DOCUMENT_ROOT"]."/sixtus/";'
 		output += 'require_once($sixtus."page-top.php");}if($i[1]){?>'
 		output += '\n%s\n' % self.page
 		output += '<?php }if($i[0])require_once($sixtus."page-middle.php");'

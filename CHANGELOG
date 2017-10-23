@@ -1,4 +1,7 @@
 
+0.10.9.41 23/10/2017
+- Sites won't break if DOCUMENT ROOT does not end with a slash
+
 0.10.9.40 12/10/2017
 - Braces can now appear in commands using @LBRACE@ and @RBRACE@
 
