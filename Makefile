@@ -2,13 +2,13 @@
 all: check test
 
 check:
-	@python setup.py check
+	@python3 setup.py check
 
 test:
 	@./test-all-samples.sh
 
 install:
-	@python setup.py install
+	@python3 setup.py install --user
 
 clean:
 	@$(RM) -rf dist/ build/
