@@ -20,9 +20,8 @@ class Runtime(Base):
 	def copy_static (self, source, destination):
 
 		assert_dir(destination)
-		with open(destination, 'w') as df:
-			with open(source, 'r') as sf:
-				print(sf.read(), file=df)
+		from shutil import copyfile
+		copyfile(source, destination)
 
 	def replace_relations (self, line):
 
