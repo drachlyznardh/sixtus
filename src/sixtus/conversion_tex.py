@@ -1,9 +1,7 @@
 # encoding: utf-8
 
-from __future__ import print_function
+import sys, re
 
-import sys
-import re
 from .conversion import Content, Full
 
 class TexContent(Content):

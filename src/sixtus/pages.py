@@ -1,8 +1,6 @@
 # encoding: utf-8
 
-import sys
-import os
-import re
+import sys, os, re
 
 from .base import Base
 from .util import find_all_sources, assert_dir, clean_empty_dirs

@@ -1,18 +1,17 @@
 
 all: check test
 
-run:
-	@PYTHONPATH=src python -m sixtus
-
 check:
-	@python setup.py check
+	@python3 setup.py check
 
 test:
 	@./test-all-samples.sh
 
-dist:
-	@python setup.py sdist
-
 install:
-	@python setup.py install
+	@python3 setup.py install --user
+
+clean:
+	@$(RM) -rf dist/ build/
+
+.PHONY: clean
 

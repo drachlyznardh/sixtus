@@ -1,9 +1,6 @@
 # encoding: utf-8
 
-from __future__ import print_function
-
-import os
-import re
+import os, re
 
 from .util import unique, assert_dir
 

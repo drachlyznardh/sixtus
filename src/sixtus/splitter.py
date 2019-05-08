@@ -1,8 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-from __future__ import print_function
-import sys
-import os
+import sys, os
 
 from .util import assert_dir, convert
 

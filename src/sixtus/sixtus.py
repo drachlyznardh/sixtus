@@ -1,9 +1,6 @@
 # encoding: utf-8
 
-from __future__ import print_function
-import sys
-import os
-import getopt
+import sys, os, getopt
 
 from .runtime import Runtime
 from .resources import Resources
@@ -139,7 +136,7 @@ def digest_location (source):
 
 	return source
 
-def main_read_args ():
+def main ():
 
 	if len(sys.argv) == 1:
 		return sixtus_read_args([])
@@ -275,7 +272,4 @@ def sixtus_read_args (args):
 		return
 
 	for call in calls: call(bag)
-
-if __name__ == "__main__":
-	sixtus_read_args()
 
