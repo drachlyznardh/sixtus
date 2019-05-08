@@ -1,6 +1,7 @@
 *.swp
 .*.swp
 *.pyc
+*.egg-info
 
 MANIFEST
 dist
