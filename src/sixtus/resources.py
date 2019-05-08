@@ -1,9 +1,6 @@
 # encoding: utf-8
 
-from __future__ import print_function
-import sys
-import os
-import re
+import sys, os, re
 
 from .base import Base
 from .util import assert_dir, clean_empty_dirs, find_all_sources

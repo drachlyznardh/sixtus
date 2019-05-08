@@ -1,9 +1,6 @@
 # encoding: utf-8
 
-from __future__ import print_function
-import sys
-import os
-import getopt
+import sys, os, getopt
 
 from .runtime import Runtime
 from .resources import Resources
