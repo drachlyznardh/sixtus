@@ -19,3 +19,16 @@ Would you like Siχtus to do something else? Try asking, I'm open to suggestion.
 - Of all the TIDs on a page, the current one should be highlighted. The current
   tab, if any, is the last element of $d[0]; a JS script may be able to take
   care of this;
+
+# INSTALLATION
+
+Just run `make install` to get the Python module installed. Then install the VIM
+syntax file with `make syntax-install` and finally `make completion-install` to
+install the BASH completion script.
+
+To activate VIM syntax highlight, append this line to your `~/.vimrc` file:
+ au BufRead,BufNewFile *.six,*.pag,*.post set filetype=sixtus
+
+To activate BASH completion, source file
+`~/.config/sixtus/sixtus.bash_completion` into your `~/.bashrc`.
+
