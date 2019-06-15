@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-import sys, os, re
+import sys, os, re, shutil
 
 from .base import Base
 from .util import assert_dir, clean_empty_dirs, find_all_sources
@@ -16,9 +16,7 @@ class Resources(Base):
 		self.loud('Copying resource file %s to %s' % (source, destination))
 
 		assert_dir(destination)
-		with open(destination, 'w') as df:
-			with open(source, 'r') as sf:
-				print(sf.read(), file=df)
+		shutil.copy(source, destination)
 
 	def remove_file (self, name):
 
