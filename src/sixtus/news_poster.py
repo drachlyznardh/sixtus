@@ -123,8 +123,9 @@ class Poster:
 		output += '<rss version="2.0">\n'
 		output += '\t<channel>\n'
 
-		__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
-		output += '\t\t<generator>Siχtus v%s</generator>\n' % __version__
+		import pkg_resources
+		with open(pkg_resources.resource_filename(__name__, 'VERSION'), 'rt') as ifd:
+			output += '\t\t<generator>Siχtus v{}</generator>\n'.format(ifd.read().strip())
 		output += '\t\t<title><?=$_SERVER["HTTP_HOST"]?></title>\n'
 
 		for year in sorted(self.content, reverse=True):

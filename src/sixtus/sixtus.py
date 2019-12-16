@@ -98,8 +98,9 @@ def sixtus_help ():
 	print(' -d --debug         : shows all the messages')
 
 def sixtus_version ():
-	__version__ = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
-	print('Siχtus v%s' % __version__)
+	import pkg_resources
+	with open(pkg_resources.resource_filename(__name__, 'VERSION'), 'rt') as ifd:
+		print('Siχtus v{}'.format(ifd.read().strip()))
 
 def digest_location (source):
 
@@ -261,8 +262,9 @@ def sixtus_read_args (args):
 
 	loc = digest_location(conf['location'])
 
-	version = open(os.path.join(os.path.dirname(__file__),'VERSION')).read().strip()
-	bag = Bag(force, flags, time_delta, sitemap, loc, conf, version, debug)
+	import pkg_resources
+	with open(pkg_resources.resource_filename(__name__, 'VERSION'), 'rt') as ifd:
+		bag = Bag(force, flags, time_delta, sitemap, loc, conf, ifd.read().strip(), debug)
 
 	if texmode:
 		return sixtus_texmode(bag, texes)
